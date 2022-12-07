@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="it-IT">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Congruenze in gruppi e monoidi</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Algebra">
+<meta property="book:author" content="Valerio Monti">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Vai all'indice generale</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{mathtools}\require{cancel}\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\cont}{c}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\Inv}{Inv}
+\DeclareMathOperator{\MCD}{MCD}
+\DeclareMathOperator{\mcm}{mcm}
+\DeclareMathOperator{\centro}{Z}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Soc}{Soc}
+\DeclareMathOperator{\Rad}{Rad}
+\DeclareMathOperator{\car}{char}
+
+
+\newcommand{\Sym}{\mathrm{Sym}}
+\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\Idmatrix}{\mathrm{I}}
+\newcommand{\dist}{\mathrm{d}}
+
+\newcommand{\Reali}{\mathbf{R}}
+\newcommand{\Naturali}{\mathbf{N}}
+\newcommand{\Interi}{\mathbf{Z}}
+ \newcommand{\Razionali}{\mathbf{Q}}
+ \newcommand{\Complessi}{\mathbf{C}}
+
+ \newcommand{\grgen}[1]{\langle#1\rangle}
+ \newcommand{\ideal}[1]{\left(#1\right)}
+ \newcommand{\alg}[1]{\left\lbrack#1\right\rvert}
+ \newcommand{\seg}[1]{\left\lvert#1\right)}
+ \newcommand{\ann}[1]{\operatorname{Ann}\left(#1\right)}
+ \newcommand{\len}[1]{\operatorname{l}\left(#1\right)}
+ \newcommand{\class}[2][\sim]{\lbrack #2\rbrack_{#1}}
+ \newcommand{\cent}[2]{\operatorname{C}_{#1}\left(#2\right)}
+ \newcommand{\nrm}[2]{\operatorname{N}_{#1}\left(#2\right)}
+ \newcommand{\stab}[2]{\operatorname{Stab}_{#1}\left(#2\right)}
+ \newcommand{\Supp}[1]{\operatorname{Supp}\left(#1\right)}
+ \newcommand{\Gal}[1]{\operatorname{Gal}\left(#1\right)}
+ \newcommand{\tr}[1]{#1^{\intercal}}
+ \newcommand{\vuoto}{\varnothing}
+ \newcommand{\parti}[1]{\mathcal{P}(#1)}
+ \newcommand{\euler}[1]{\varphi(#1)}
+ \newcommand{\euclidean}{\delta}
+
+ \newcommand{\vect}[1]{\boldsymbol{#1}}
+ 
+ \newcommand{\mat}[2]{\operatorname{M}_{#1}(#2)}
+ \newcommand{\matt}[3]{\operatorname{M}_{#1,#2}(#3)}
+ \newcommand{\Sim}[2]{\operatorname{S}(#1,#2)}
+ \newcommand{\AntiSim}[2]{\operatorname{A}(#1,#2)}
+ \newcommand{\Diag}[2]{\operatorname{D}(#1,#2)}
+ \newcommand{\TS}[2]{\operatorname{T}^{#1}(#2)}
+ \newcommand{\TI}[2]{\operatorname{T}_{#1}(#2)}
+ \newcommand{\GL}[2]{\operatorname{GL}(#1,#2)}
+ \newcommand{\SL}[2]{\operatorname{SL}(#1,#2)}
+ \newcommand{\Ort}[2]{\operatorname{O}(#1,#2)}
+
+ \newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+ \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+ \newcommand{\ind}[2]{\left\lvert#1:#2\right\rvert}
+ \newcommand{\degext}[2]{\left\lbrack#1:#2\right\rbrack}
+
+ \newcommand{\invprov}[1]{\widehat{#1}}
+
+ \newcommand\YoungTableau[1]{
+ \begin{tikzpicture}[scale=0.4,keepsize]
+ \foreach \y [count=\yi] in {#1}
+ \foreach \x in {1,...,\y}
+ {
+ \draw (\x,\yi) rectangle +(1,1);
+ }
+ \end{tikzpicture}
+ }
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-algebra.html"><span class="title">Algebra</span></a></h1>
+<p class="byline">Valerio Monti</p>
+</div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Risultati: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>Nessun risultato.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Indice</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="indice.html" title="Indice analitico">Indice analitico</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ch-quozienti.html" title="Precedente">Prec</a><a id="upbutton" class="up-button button toolbar-item" href="ch-quozienti.html" title="Su">Su</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-proprieta_quozienti.html" title="Successivo">Succ</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Indice</button><a class="previous-button toolbar-item button" href="ch-quozienti.html" title="Precedente">Prec</a><a class="up-button button toolbar-item" href="ch-quozienti.html" title="Su">Su</a><a class="next-button button toolbar-item" href="sec-proprieta_quozienti.html" title="Successivo">Succ</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Materiale iniziale</span></a><ul>
+<li><a href="front-colophon.html" data-scroll="front-colophon" class="internal">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Prefazione</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-preliminari.html" data-scroll="part-preliminari" class="internal"><span class="codenumber">I</span> <span class="title">Preliminari</span></a></li>
+<li class="link">
+<a href="ch-insiemi.html" data-scroll="ch-insiemi" class="internal"><span class="codenumber">1</span> <span class="title">Insiemi</span></a><ul>
+<li><a href="sec-insiemi.html" data-scroll="sec-insiemi" class="internal">Concetti di base</a></li>
+<li><a href="sec-operazioni_insiemi.html" data-scroll="sec-operazioni_insiemi" class="internal">Operazioni tra insiemi</a></li>
+<li><a href="sec-prodotto-cartesiano.html" data-scroll="sec-prodotto-cartesiano" class="internal">Prodotto cartesiano</a></li>
+<li><a href="sec-Russell.html" data-scroll="sec-Russell" class="internal">Il paradosso di Russell</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-corrispondenze.html" data-scroll="ch-corrispondenze" class="internal"><span class="codenumber">2</span> <span class="title">Corrispondenze e relazioni</span></a><ul>
+<li><a href="sec-corrispondenze_definizione.html" data-scroll="sec-corrispondenze_definizione" class="internal">Corrispondenze tra insiemi</a></li>
+<li><a href="sec-relazioni_equivalenza.html" data-scroll="sec-relazioni_equivalenza" class="internal">Relazioni di equivalenza</a></li>
+<li><a href="sec-relazioni_ordine.html" data-scroll="sec-relazioni_ordine" class="internal">Relazioni d'ordine</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-funzioni.html" data-scroll="ch-funzioni" class="internal"><span class="codenumber">3</span> <span class="title">Funzioni</span></a><ul>
+<li><a href="sec-funzioni_definizione.html" data-scroll="sec-funzioni_definizione" class="internal">Definizioni di base</a></li>
+<li><a href="sec-funzioni_iniettive_suriettive.html" data-scroll="sec-funzioni_iniettive_suriettive" class="internal">Funzioni iniettive, suriettive e biiettive</a></li>
+<li><a href="sec-cardinalita.html" data-scroll="sec-cardinalita" class="internal">Cenni sulla cardinalità</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-aritmetica.html" data-scroll="part-aritmetica" class="internal"><span class="codenumber">II</span> <span class="title">Aritmetica</span></a></li>
+<li class="link">
+<a href="ch-interi.html" data-scroll="ch-interi" class="internal"><span class="codenumber">4</span> <span class="title">I numeri interi</span></a><ul>
+<li><a href="sec-naturali_base.html" data-scroll="sec-naturali_base" class="internal">I numeri naturali e i numeri interi</a></li>
+<li><a href="sec-induzione_ricorrenza.html" data-scroll="sec-induzione_ricorrenza" class="internal">Dimostrazioni per induzione e definizioni per ricorrenza</a></li>
+<li><a href="sec-divisibilita_interi.html" data-scroll="sec-divisibilita_interi" class="internal">Divisibilità negli interi</a></li>
+<li><a href="sec-fattorizzazione_interi.html" data-scroll="sec-fattorizzazione_interi" class="internal">Il teorema fondamentale dell'aritmetica</a></li>
+<li><a href="sec-equazioni_lineari_diofantine.html" data-scroll="sec-equazioni_lineari_diofantine" class="internal">Equazioni lineari diofantine</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-classidiresto.html" data-scroll="ch-classidiresto" class="internal"><span class="codenumber">5</span> <span class="title">Classi di resto</span></a><ul>
+<li><a href="sec-congruenzemodulon.html" data-scroll="sec-congruenzemodulon" class="internal">Congruenze modulo un intero</a></li>
+<li><a href="sec-operazioniclassiresto.html" data-scroll="sec-operazioniclassiresto" class="internal">Operazioni tra classi di resto</a></li>
+<li><a href="sec-eulero.html" data-scroll="sec-eulero" class="internal">Il teorema di Eulero</a></li>
+<li><a href="sec-congruenze_con_incognite.html" data-scroll="sec-congruenze_con_incognite" class="internal">Congruenze con incognite</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-gruppi.html" data-scroll="part-gruppi" class="internal"><span class="codenumber">III</span> <span class="title">Gruppi</span></a></li>
+<li class="link">
+<a href="ch-operazioni.html" data-scroll="ch-operazioni" class="internal"><span class="codenumber">6</span> <span class="title">Operazioni</span></a><ul>
+<li><a href="sec-operazioni_definizioni.html" data-scroll="sec-operazioni_definizioni" class="internal">Definizioni ed esempi</a></li>
+<li><a href="sec-proprieta_operazioni.html" data-scroll="sec-proprieta_operazioni" class="internal">Proprietà delle operazioni</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppi.html" data-scroll="ch-gruppi" class="internal"><span class="codenumber">7</span> <span class="title">Monoidi e gruppi</span></a><ul>
+<li><a href="sec-monoidi.html" data-scroll="sec-monoidi" class="internal">Monoidi</a></li>
+<li><a href="sec-gruppi.html" data-scroll="sec-gruppi" class="internal">Gruppi</a></li>
+<li><a href="sec-gruppi_piccoli.html" data-scroll="sec-gruppi_piccoli" class="internal">Alcuni esempi di gruppi piccoli</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-sottogruppi.html" data-scroll="ch-sottogruppi" class="internal"><span class="codenumber">8</span> <span class="title">Sottogruppi</span></a><ul>
+<li><a href="sec-sottomonoidi_sottogruppi.html" data-scroll="sec-sottomonoidi_sottogruppi" class="internal">Sottomonoidi e sottogruppi</a></li>
+<li><a href="sec-prime_proprieta_sottogruppi.html" data-scroll="sec-prime_proprieta_sottogruppi" class="internal">Prime proprietà dei sottogruppi</a></li>
+<li><a href="sec-gruppi_del_piano.html" data-scroll="sec-gruppi_del_piano" class="internal">Gruppi di trasformazioni del piano</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppi_ciclici.html" data-scroll="ch-gruppi_ciclici" class="internal"><span class="codenumber">9</span> <span class="title">Gruppi ciclici</span></a><ul>
+<li><a href="sec-definizione_gruppi_ciclici.html" data-scroll="sec-definizione_gruppi_ciclici" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-sottogruppi_di_ciclici.html" data-scroll="sec-sottogruppi_di_ciclici" class="internal">Sottogruppi di gruppi ciclici</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppi_permutazioni.html" data-scroll="ch-gruppi_permutazioni" class="internal"><span class="codenumber">10</span> <span class="title">Gruppi di permutazioni</span></a><ul>
+<li><a href="sec-definizioni_gruppi_permutazioni.html" data-scroll="sec-definizioni_gruppi_permutazioni" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-cicli.html" data-scroll="sec-cicli" class="internal">Cicli</a></li>
+<li><a href="sec-scambi.html" data-scroll="sec-scambi" class="internal">Scambi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-laterali.html" data-scroll="ch-laterali" class="internal"><span class="codenumber">11</span> <span class="title">Laterali e teorema di Lagrange</span></a><ul>
+<li><a href="sec-prodotto_sottoinsiemi.html" data-scroll="sec-prodotto_sottoinsiemi" class="internal">Prodotto di sottoinsiemi</a></li>
+<li><a href="sec-teorema_di_lagrange.html" data-scroll="sec-teorema_di_lagrange" class="internal">Teorema di Lagrange</a></li>
+<li><a href="sec-prodotto_sottogruppi.html" data-scroll="sec-prodotto_sottogruppi" class="internal">Prodotto di sottogruppi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-omomorfismi.html" data-scroll="ch-omomorfismi" class="internal"><span class="codenumber">12</span> <span class="title">Omomorfismi</span></a><ul>
+<li><a href="sec-definizione_omomorfismo.html" data-scroll="sec-definizione_omomorfismo" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-nucleo_immagine.html" data-scroll="sec-nucleo_immagine" class="internal">Immagine e nucleo di un omomorfismo</a></li>
+<li><a href="sec-omomorfismi_da_gruppi_ciclici.html" data-scroll="sec-omomorfismi_da_gruppi_ciclici" class="internal">Omomorfismi da gruppi ciclici</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-azioni.html" data-scroll="ch-azioni" class="internal"><span class="codenumber">13</span> <span class="title">Azioni di gruppi su insiemi</span></a><ul>
+<li><a href="sec-azioni_definizioni.html" data-scroll="sec-azioni_definizioni" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-orbite_stabilizzatori.html" data-scroll="sec-orbite_stabilizzatori" class="internal">Orbite e stabilizzatori</a></li>
+<li><a href="sec-sottogruppi_normali.html" data-scroll="sec-sottogruppi_normali" class="internal">Sottogruppi normali</a></li>
+<li><a href="sec-coniugati_simmetrico_alterno.html" data-scroll="sec-coniugati_simmetrico_alterno" class="internal">Classi di coniugio nel gruppo simmetrico e nel gruppo alterno</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-quozienti.html" data-scroll="ch-quozienti" class="internal"><span class="codenumber">14</span> <span class="title">Gruppi quoziente</span></a><ul>
+<li><a href="sec-congruenze.html" data-scroll="sec-congruenze" class="active">Congruenze in gruppi e monoidi</a></li>
+<li><a href="sec-proprieta_quozienti.html" data-scroll="sec-proprieta_quozienti" class="internal">Proprietà dei gruppi quoziente</a></li>
+<li><a href="sec-teoremi_di_isomorfismo.html" data-scroll="sec-teoremi_di_isomorfismo" class="internal">I teoremi di isomorfismo</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-direttosemidiretto.html" data-scroll="ch-direttosemidiretto" class="internal"><span class="codenumber">15</span> <span class="title">Prodotto diretto e semidiretto</span></a><ul>
+<li><a href="sec-prodotto_diretto_esterno.html" data-scroll="sec-prodotto_diretto_esterno" class="internal">Prodotto diretto esterno</a></li>
+<li><a href="sec-prodotto_diretto_interno.html" data-scroll="sec-prodotto_diretto_interno" class="internal">Prodotto diretto interno</a></li>
+<li><a href="sec-prodotto_semidiretto.html" data-scroll="sec-prodotto_semidiretto" class="internal">Prodotto semidiretto</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-sylow.html" data-scroll="ch-sylow" class="internal"><span class="codenumber">16</span> <span class="title">Il teorema di Sylow</span></a><ul>
+<li><a href="sec-inversione_lagrange.html" data-scroll="sec-inversione_lagrange" class="internal">Inversione del teorema di Lagrange</a></li>
+<li><a href="sec-sylow.html" data-scroll="sec-sylow" class="internal">Il teorema di Sylow</a></li>
+<li><a href="sec-applicazioni_sylow.html" data-scroll="sec-applicazioni_sylow" class="internal">Applicazioni del teorema di Sylow</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-anelli.html" data-scroll="part-anelli" class="internal"><span class="codenumber">IV</span> <span class="title">Anelli</span></a></li>
+<li class="link">
+<a href="ch-anelli.html" data-scroll="ch-anelli" class="internal"><span class="codenumber">17</span> <span class="title">Anelli</span></a><ul>
+<li><a href="sec-prime_proprieta_anelli.html" data-scroll="sec-prime_proprieta_anelli" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-multipli_potenze.html" data-scroll="sec-multipli_potenze" class="internal">Multipli e potenze in un anello</a></li>
+<li><a href="sec-sottoanelli.html" data-scroll="sec-sottoanelli" class="internal">Sottoanelli</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-omomorfismiideali.html" data-scroll="ch-omomorfismiideali" class="internal"><span class="codenumber">18</span> <span class="title">Omomorfismi e ideali</span></a><ul>
+<li><a href="sec-omomorfismi_anelli.html" data-scroll="sec-omomorfismi_anelli" class="internal">Omomorfismi di anelli</a></li>
+<li><a href="sec-anelli_quoziente.html" data-scroll="sec-anelli_quoziente" class="internal">Anelli quoziente e ideali</a></li>
+<li><a href="sec-campo_dei_quozienti.html" data-scroll="sec-campo_dei_quozienti" class="internal">Campo dei quozienti di un dominio</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-polinomi.html" data-scroll="ch-polinomi" class="internal"><span class="codenumber">19</span> <span class="title">Polinomi</span></a><ul>
+<li><a href="sec-anello_polinomi.html" data-scroll="sec-anello_polinomi" class="internal">Anello dei polinomi</a></li>
+<li><a href="sec-valutazione_polinomi.html" data-scroll="sec-valutazione_polinomi" class="internal">Valutazione di polinomi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-divisibilita.html" data-scroll="ch-divisibilita" class="internal"><span class="codenumber">20</span> <span class="title">Divisibilità nei domini</span></a><ul>
+<li><a href="sec-divisibilita.html" data-scroll="sec-divisibilita" class="internal">Relazione di divisibilità</a></li>
+<li><a href="sec-fattorizzazione.html" data-scroll="sec-fattorizzazione" class="internal">Fattorizzazione</a></li>
+<li><a href="sec-PID_euclidei.html" data-scroll="sec-PID_euclidei" class="internal">Domini a ideali principali e domini euclidei</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-fattorizzazione_polinomi.html" data-scroll="ch-fattorizzazione_polinomi" class="internal"><span class="codenumber">21</span> <span class="title">Fattorizzazione dei polinomi</span></a><ul>
+<li><a href="sec-trasporto_UFD.html" data-scroll="sec-trasporto_UFD" class="internal">Il teorema del trasporto per domini a fattorizzazione unica</a></li>
+<li><a href="sec-esempi_fattorizzazione_polinomi.html" data-scroll="sec-esempi_fattorizzazione_polinomi" class="internal">Tecniche di fattorizzazione</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-estensione_campi.html" data-scroll="ch-estensione_campi" class="internal"><span class="codenumber">22</span> <span class="title">Estensioni di campi</span></a><ul>
+<li><a href="sec-elementi_algebrici_e_trascendenti.html" data-scroll="sec-elementi_algebrici_e_trascendenti" class="internal">Elementi algebrici e trascendenti</a></li>
+<li><a href="sec-campo_di_spezzamento.html" data-scroll="sec-campo_di_spezzamento" class="internal">Campi di spezzamento</a></li>
+<li><a href="sec-chiusure_algebriche.html" data-scroll="sec-chiusure_algebriche" class="internal">Cenni su campi algebricamente chiusi</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-moduli.html" data-scroll="part-moduli" class="internal"><span class="codenumber">V</span> <span class="title">Moduli</span></a></li>
+<li class="link">
+<a href="ch-moduli.html" data-scroll="ch-moduli" class="internal"><span class="codenumber">23</span> <span class="title">Moduli</span></a><ul>
+<li><a href="sec-definizione_di_moduli.html" data-scroll="sec-definizione_di_moduli" class="internal">Definizione di modulo</a></li>
+<li><a href="sec-sottomoduli.html" data-scroll="sec-sottomoduli" class="internal">Sottomoduli</a></li>
+<li><a href="sec-omomorfismi_moduli.html" data-scroll="sec-omomorfismi_moduli" class="internal">Omomorfismi di moduli</a></li>
+<li><a href="sec-moduli_quoziente.html" data-scroll="sec-moduli_quoziente" class="internal">Moduli quoziente</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-moduli_liberi.html" data-scroll="ch-moduli_liberi" class="internal"><span class="codenumber">24</span> <span class="title">Moduli liberi</span></a><ul>
+<li><a href="sec-somma_diretta_moduli.html" data-scroll="sec-somma_diretta_moduli" class="internal">Somma diretta di moduli</a></li>
+<li><a href="sec-dipendenza_lineare.html" data-scroll="sec-dipendenza_lineare" class="internal">Dipendenza e indipendenza lineare</a></li>
+<li><a href="sec-elementi_di_torsione.html" data-scroll="sec-elementi_di_torsione" class="internal">Elementi di torsione</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-modulisupid.html" data-scroll="ch-modulisupid" class="internal"><span class="codenumber">25</span> <span class="title">Moduli finitamente generati su PID</span></a><ul>
+<li><a href="sec-moduli_ciclici.html" data-scroll="sec-moduli_ciclici" class="internal">Moduli ciclici</a></li>
+<li><a href="sec-moduli_primari.html" data-scroll="sec-moduli_primari" class="internal">Moduli primari</a></li>
+<li><a href="sec-moduli_liberi.html" data-scroll="sec-moduli_liberi" class="internal">Moduli liberi</a></li>
+<li><a href="sec-classificazione_moduli_pid.html" data-scroll="sec-classificazione_moduli_pid" class="internal">La classificazione dei moduli finitamente generati su un dominio a ideali principali</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppiabeliani.html" data-scroll="ch-gruppiabeliani" class="internal"><span class="codenumber">26</span> <span class="title">Gruppi abeliani finitamente generati</span></a><ul><li><a href="sec-gruppiabeliani.html" data-scroll="sec-gruppiabeliani" class="internal">Classificazione dei gruppi abeliani finitamente generati</a></li></ul>
+</li>
+<li class="link">
+<a href="ch-formecanoniche.html" data-scroll="ch-formecanoniche" class="internal"><span class="codenumber">27</span> <span class="title">Forme canoniche di matrici</span></a><ul>
+<li><a href="sec-kx_moduli.html" data-scroll="sec-kx_moduli" class="internal">Spazi vettoriali con endomorfismi visti come moduli</a></li>
+<li><a href="sec-matrici_rappresentative.html" data-scroll="sec-matrici_rappresentative" class="internal">Matrici rappresentative</a></li>
+<li><a href="sec-matrici_compagne.html" data-scroll="sec-matrici_compagne" class="internal">Matrici compagne</a></li>
+<li><a href="sec-jordan.html" data-scroll="sec-jordan" class="internal">Forma canonica di Jordan</a></li>
+<li><a href="sec-polinomio_minimo_matrici.html" data-scroll="sec-polinomio_minimo_matrici" class="internal">Polinomio minimo di matrici</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Appendici</span></a></li>
+<li class="link">
+<a href="appendix-peano.html" data-scroll="appendix-peano" class="internal"><span class="codenumber">A</span> <span class="title">Numeri naturali e interi</span></a><ul>
+<li><a href="sec-algebre_induttive.html" data-scroll="sec-algebre_induttive" class="internal">Algebre induttive</a></li>
+<li><a href="sec-assiomi_peano.html" data-scroll="sec-assiomi_peano" class="internal">Gli assiomi di Peano</a></li>
+<li><a href="sec-insiemi_finiti_infiniti.html" data-scroll="sec-insiemi_finiti_infiniti" class="internal">Insiemi finiti e infiniti</a></li>
+<li><a href="sec-operazioni_naturali.html" data-scroll="sec-operazioni_naturali" class="internal">Operazioni tra numeri naturali</a></li>
+<li><a href="sec-interi.html" data-scroll="sec-interi" class="internal">Costruzione degli interi</a></li>
+</ul>
+</li>
+<li class="link"><a href="appendix-2.html" data-scroll="appendix-2" class="internal"><span class="codenumber">B</span> <span class="title">Notazioni</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1" class="internal"><span class="codenumber">C</span> <span class="title">Soluzioni e suggerimenti</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl" class="internal"><span class="codenumber">D</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="indice.html" data-scroll="indice" class="internal"><span class="title">Indice analitico</span></a></li>
+<li class="link"><a href="back-colophon.html" data-scroll="back-colophon" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Redatto in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-congruenze"><h2 class="heading hide-type">
+<span class="type">Paragrafo</span> <span class="codenumber">14.1</span> <span class="title">Congruenze in gruppi e monoidi</span>
+</h2>
+<p id="p-2031">Supponiamo che in un insieme <span class="process-math">\(S\)</span> sia definita un'operazione <span class="process-math">\(\cdot\)</span> e una relazione di equivalenza <span class="process-math">\(\sim\text{.}\)</span> Preso l'insieme quoziente <span class="process-math">\(S/\sim\text{,}\)</span> cioè l'insieme delle classi di equivalenza (si veda la <a href="" class="xref" data-knowl="./knowl/def-classe.html" title="Definizione 2.2.6">Definizione 2.2.6</a>), vogliamo definire in <span class="process-math">\(S/\sim\)</span> un'operazione ponendo</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-classe.html">
+\begin{equation*}
+\class[\sim]{x}\class[\sim]{y}\coloneqq\class[\sim]{xy}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Prima ancora di verificarne le eventuali proprietà, dovremmo controllare se la definizione è posta in maniera corretta. L'elemento <span class="process-math">\(x\)</span> e l'elemento <span class="process-math">\(y\)</span> sono dei rappresentanti delle rispettive classi, ma non sono (in generale) gli unici elementi di queste classi: se scelgo altri rappresentanti <span class="process-math">\(x'\)</span> e <span class="process-math">\(y'\)</span> rispettivamente, non è detto che <span class="process-math">\(x'y'\)</span> stia nella stessa classe di <span class="process-math">\(xy\text{.}\)</span> L'operazione è ben definita se e solo se soddisfa la proprietà data dalla definizione seguente.</p>
+<article class="definition definition-like" id="def-congruenza"><h3 class="heading">
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">14.1.1</span><span class="period">.</span>
+</h3>
+<p id="p-2032">Una relazione di equivalenza <span class="process-math">\(\sim\)</span> definita in un insieme <span class="process-math">\(S\)</span> dotato di un'operazione <span class="process-math">\(\cdot\text{,}\)</span> è detta <dfn class="terminology">congruenza</dfn> se, per ogni scelta di <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(x'\text{,}\)</span> <span class="process-math">\(y\)</span> e <span class="process-math">\(y'\)</span> in <span class="process-math">\(S\)</span> tali che <span class="process-math">\(x\sim x'\)</span> e <span class="process-math">\(y\sim y'\text{,}\)</span> risulta <span class="process-math">\(xy\sim x'y'\text{.}\)</span> In tal caso diremo anche che l'operazione e la relazione di equivalenza sono <dfn class="terminology">compatibili</dfn>.</p></article><article class="example example-like" id="ex-congruenza_e_no_nel_simmetrico"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">14.1.2</span><span class="period">.</span>
+</h3>
+<p id="p-2033">In <span class="process-math">\(\Sym_{4}\)</span> consideriamo la relazione di equivalenza <span class="process-math">\(\sim\)</span> le cui classi sono formate dagli elementi dello stesso tipo. Le verifiche da fare sarebbero molte. Notiamo che <span class="process-math">\((1\;2)\sim (2\;3)\text{,}\)</span> che <span class="process-math">\((1\;2\;3)\sim (1\;3\;4)\)</span> ma <span class="process-math">\((1\;2)(1\;2\;3)=(1\;3)\)</span> e <span class="process-math">\((2\;3)(1\;3\;4)=(1\;3\;2\;4)\)</span> e <span class="process-math">\((1\;3)\nsim (1\;3\;2\;4)\text{.}\)</span> Pertanto, questa relazione non è una congruenza.</p> <p id="p-2034">Se invece consideriamo la relazione le cui classi sono formate dalle permutazioni aventi la stessa parità, allora possiamo verificare facilmente che questa è una congruenza.</p></article><p id="p-2035">Possiamo ora definire un'operazione nell'insieme quoziente rispetto a una congruenza e chiederci quali proprietà dell'operazione si trasmettano a proprietà dell'operazione nell'insieme quoziente.</p>
+<article class="proposition theorem-like" id="prop-quoziente-eredita"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">14.1.3</span><span class="period">.</span>
+</h3>
+<p id="p-2036">Se <span class="process-math">\(\sim\)</span> è una congruenza in un insieme <span class="process-math">\(S\)</span> dotato di un'operazione, allora nell'insieme quoziente <span class="process-math">\(S/\sim\)</span> è possibile definire un'operazione ponendo</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\class[\sim]{x}\class[\sim]{y}\coloneqq\class[\sim]{xy}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Inoltre</p>
+<ol class="decimal">
+<li id="li-162"><p id="p-2037">se l'operazione in <span class="process-math">\(S\)</span> è associativa, allora l'operazione in <span class="process-math">\(S/\sim\)</span> è associativa;</p></li>
+<li id="li-163"><p id="p-2038">se l'operazione in <span class="process-math">\(S\)</span> è commutativa, allora l'operazione in <span class="process-math">\(S/\sim\)</span> è commutativa;</p></li>
+<li id="li-164"><p id="p-2039">se l'operazione in <span class="process-math">\(S\)</span> è dotata di elemento neutro <span class="process-math">\(1_{S}\text{,}\)</span> allora <span class="process-math">\(\class[\sim]{1_{S}}\)</span> è elemento neutro in <span class="process-math">\(S/\sim\text{;}\)</span></p></li>
+<li id="li-165"><p id="p-2040">se <span class="process-math">\(S\)</span> è un monoide e <span class="process-math">\(x\)</span> è un elemento invertibile in <span class="process-math">\(S\text{,}\)</span> di inverso <span class="process-math">\(x^{-1}\text{,}\)</span> allora <span class="process-math">\(\class[\sim]{x}\)</span> è un elemento invertibile di inverso <span class="process-math">\(\class[\sim]{x^{-1}}\text{.}\)</span></p></li>
+</ol></article><article class="hiddenproof" id="proof-149"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-149"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-149"><article class="hiddenproof"><p id="p-2041">Per definizione di congruenza, l'operazione è ben definita: infatti, scegliendo un qualunque elemento <span class="process-math">\(x'\in\class[\sim]{x}\)</span> e un qualunque elemento <span class="process-math">\(y'\in\class[\sim]{y}\text{,}\)</span> si ha <span class="process-math">\(x'y'\sim xy\text{,}\)</span> cioè <span class="process-math">\(\class[\sim]{xy}=\class[\sim]{x'y'}\text{.}\)</span></p> <p id="p-2042">Le verifiche delle altre affermazioni sono immediate. Ad esempio, supponendo che l'operazione in <span class="process-math">\(S\)</span> sia associativa, vediamo che, dati tre elementi <span class="process-math">\(\class[\sim]{x}\text{,}\)</span> <span class="process-math">\(\class[\sim]{y}\)</span> e <span class="process-math">\(\class[\sim]{z}\)</span> in <span class="process-math">\(S/\sim\text{,}\)</span> si ha</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(\class[\sim]{x}\class[\sim]{y})\class[\sim]{z} = \class[\sim]{xy}\class[\sim]{z} = \class[\sim]{(xy)z} = \class[\sim]{x(yz)} = \class[\sim]{x}\class[\sim]{yz}= \class[\sim]{x}(\class[\sim]{y}\class[\sim]{z})\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Le altre verifiche sono simili.</p></article></div>
+<article class="corollary theorem-like" id="cor-monoide_quoziente"><h3 class="heading">
+<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">14.1.4</span><span class="period">.</span>
+</h3>
+<p id="p-2043">Se <span class="process-math">\(\sim\)</span> è una congruenza in un monoide <span class="process-math">\(M\text{,}\)</span> allora nell'insieme quoziente <span class="process-math">\(M/\sim\)</span> è possibile definire un'operazione ponendo</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\class[\sim]{x}\class[\sim]{y}\coloneqq\class[\sim]{xy}
+\end{equation*}
+</div>
+<p class="continuation">e, rispetto a tale operazione, <span class="process-math">\(M/\sim\)</span> è un monoide, detto <dfn class="terminology">monoide quoziente</dfn>. Se <span class="process-math">\(M\)</span> è commutativo, allora <span class="process-math">\(M/\sim\)</span> è commutativo.</p></article><article class="corollary theorem-like" id="cor-gruppo_quoziente"><h3 class="heading">
+<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">14.1.5</span><span class="period">.</span>
+</h3>
+<p id="p-2044">Se <span class="process-math">\(\sim\)</span> è una congruenza in un gruppo <span class="process-math">\(G\text{,}\)</span> allora nell'insieme quoziente <span class="process-math">\(G/\sim\)</span> è possibile definire un'operazione ponendo</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\class[\sim]{x}\class[\sim]{y}\coloneqq\class[\sim]{xy}
+\end{equation*}
+</div>
+<p class="continuation">e, rispetto a tale operazione, <span class="process-math">\(G/\sim\)</span> è un gruppo, detto <dfn class="terminology">gruppo quoziente</dfn>. Se <span class="process-math">\(G\)</span> è abeliano, allora <span class="process-math">\(G/\sim\)</span> è abeliano.</p></article><p id="p-2045">Le congruenze in un gruppo possono essere meglio descritte in termini di sottogruppi normali. Ricordiamo innanzitutto che i laterali destri e sinistri di un sottogruppo normale coincidono (<a href="" class="xref" data-knowl="./knowl/thm-caratterizzazione_sottogruppi_normali.html" title="Teorema 13.3.7">Teorema 13.3.7</a>): quindi, possiamo riferirci ai laterali di un sottogruppo normale senza specificare se stiamo parlando di laterali destri o sinistri.</p>
+<article class="theorem theorem-like" id="thm-quozienti_su_normali"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">14.1.6</span><span class="period">.</span>
+</h3>
+<p id="p-2046">Se <span class="process-math">\(G\)</span> è un gruppo e <span class="process-math">\(\sim\)</span> è una congruenza in <span class="process-math">\(G\text{,}\)</span> allora <span class="process-math">\(\class[\sim]{1}\)</span> è un sottogruppo normale di <span class="process-math">\(G\)</span> e le classi di equivalenza rispetto a <span class="process-math">\(\sim\)</span> sono i laterali di <span class="process-math">\(\class[\sim]{1}\text{.}\)</span></p> <p id="p-2047"> Viceversa, se <span class="process-math">\(N\)</span> è un sottogruppo normale di un gruppo <span class="process-math">\(G\text{,}\)</span> la relazione di equivalenza le cui classi sono i laterali di <span class="process-math">\(N\)</span> in <span class="process-math">\(G\)</span> è una congruenza. Indicheremo, pertanto, con <span class="process-math">\(G/N\)</span> il gruppo quoziente rispetto a tale congruenza.</p></article><article class="hiddenproof" id="proof-150"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-150"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-150"><article class="hiddenproof"><p id="p-2048">Denotiamo con <span class="process-math">\(H\)</span> la classe <span class="process-math">\(\class[\sim]{1}\text{.}\)</span> Chiaramente <span class="process-math">\(H\)</span> è non vuoto. Presi <span class="process-math">\(h_{1}\)</span> e <span class="process-math">\(h_{2}\)</span> in <span class="process-math">\(H\text{,}\)</span> cioè <span class="process-math">\(h_{1}\sim 1\)</span> e <span class="process-math">\(h_{2}\sim 1\text{,}\)</span> abbiamo</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+h_{1}h_{2}^{-1}\sim 1\cdot h_{2}^{-1}\sim h_{2}h_{2}^{-1}=1
+\end{equation*}
+</div>
+<p class="continuation">cioè <span class="process-math">\(h_{1}h_{2}^{-1}\)</span> appartiene ad <span class="process-math">\(H\text{:}\)</span> pertanto, <span class="process-math">\(H\)</span> è un sottogruppo di <span class="process-math">\(G\text{.}\)</span></p> <p id="p-2049">Siano ora <span class="process-math">\(h\in H\)</span> e <span class="process-math">\(g\in G\text{.}\)</span> Abbiamo</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+g^{-1}hg\sim g^{-1}\cdot 1\cdot g=1
+\end{equation*}
+</div>
+<p class="continuation">cioè <span class="process-math">\(g^{-1}hg\)</span> appartiene ad <span class="process-math">\(H\text{,}\)</span> che è, quindi, normale in <span class="process-math">\(G\text{.}\)</span></p> <p id="p-2050">Mostriamo ora che le classi di equivalenza sono i laterali di <span class="process-math">\(H\text{,}\)</span> cioè che per ogni <span class="process-math">\(g\in G\)</span> si ha <span class="process-math">\(\class[\sim]{g}=gH\text{.}\)</span> Gli elementi di <span class="process-math">\(gH\)</span> sono del tipo <span class="process-math">\(gh\)</span> con <span class="process-math">\(h\sim 1\text{:}\)</span> dunque, <span class="process-math">\(gh\sim g\cdot 1=g\text{,}\)</span> cioè <span class="process-math">\(gH\subseteq\class[\sim]{g}\text{.}\)</span> Viceversa, se <span class="process-math">\(g'\sim g\text{,}\)</span> allora <span class="process-math">\(g^{-1}g'\sim g^{-1}g=1\text{,}\)</span> cioè <span class="process-math">\(g^{-1}g'\in H\)</span> e <span class="process-math">\(g'=g(g^{-1}g')\in gH\text{,}\)</span> cioè <span class="process-math">\(\class[\sim]{g}\subseteq gH\text{.}\)</span></p> <p id="p-2051">Sia ora <span class="process-math">\(N\)</span> un sottogruppo normale di un gruppo <span class="process-math">\(G\)</span> e consideriamo la relazione di equivalenza <span class="process-math">\(\approx\)</span> le cui classi sono i laterali di <span class="process-math">\(N\)</span> in <span class="process-math">\(G\text{:}\)</span> in altri termini, <span class="process-math">\(g\approx g'\)</span> se e solo se <span class="process-math">\(g'\in gN\text{.}\)</span> Siano allora <span class="process-math">\(g\text{,}\)</span> <span class="process-math">\(g'\text{,}\)</span> <span class="process-math">\(h\)</span> e <span class="process-math">\(h'\)</span> in <span class="process-math">\(G\)</span> tali che <span class="process-math">\(g\approx g'\)</span> e <span class="process-math">\(h\approx h'\text{:}\)</span> dunque, esistono <span class="process-math">\(n_{1}\)</span> e <span class="process-math">\(n_{2}\)</span> in <span class="process-math">\(N\text{,}\)</span> tali che <span class="process-math">\(g'=gn_{1}\)</span> e <span class="process-math">\(h'=hn_{2}\text{.}\)</span> Ma allora <span class="process-math">\(g'h'=gn_{1}hn_{2}\text{:}\)</span> ora <span class="process-math">\(n_{1}h\in Nh=hN\text{,}\)</span> dal momento che <span class="process-math">\(N\)</span> è normale in <span class="process-math">\(G\text{:}\)</span> dunque, <span class="process-math">\(n_{1}h=hn_{3}\)</span> per qualche <span class="process-math">\(n_{3}\in N\text{.}\)</span> Di conseguenza <span class="process-math">\(g'h'=ghn_{3}n_{2}\in ghN\text{,}\)</span> vale a dire <span class="process-math">\(g'h'\approx gh\text{.}\)</span></p></article></div>
+<p id="p-2052">Il teorema precedente ci dice che tutte e sole le congruenze di un gruppo <span class="process-math">\(G\)</span> provengono da sottogruppi normali. Dato un sottogruppo normale <span class="process-math">\(N\)</span> di <span class="process-math">\(G\text{,}\)</span> l'operazione in <span class="process-math">\(G/N\)</span> è, dunque, definita da <span class="process-math">\(gN\cdot hN\coloneqq ghN\text{:}\)</span> se provassimo a usare questa definizione con un sottogruppo non normale, non avremmo un prodotto ben definito, cioè al variare dei rappresentanti dei laterali coinvolti non otterremmo sempre come risultato lo stesso laterale.</p>
+<article class="example example-like" id="ex-quoziente_su_non_normale"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">14.1.7</span><span class="period">.</span>
+</h3>
+<p id="p-2053">Nell'<a href="" class="xref" data-knowl="./knowl/ex-sottogruppo_non_normale.html" title="Esempio 13.3.6">Esempio 13.3.6</a> abbiamo mostrato che <span class="process-math">\(H\coloneqq\grgen{(1\;2)}\)</span> non è un sottogruppo normale di <span class="process-math">\(\Sym_{3}\text{.}\)</span> I laterali sinistri di <span class="process-math">\(H\)</span> in <span class="process-math">\(G\)</span> sono <span class="process-math">\(H=\{\Id,(1\;2)\}\text{,}\)</span> <span class="process-math">\((1\;3)H=\{(1\;3),(1\;3\;2)\}\)</span> e <span class="process-math">\((2\;3)H=\{(2\;3),(1\;2\;3)\}\text{.}\)</span> Ora <span class="process-math">\(\Id(1\;3)=(1\;3)\)</span> e <span class="process-math">\((1\;2)(1\;3\;2)=(2\;3)\text{:}\)</span> in entrambi i prodotti il primo fattore sta nel laterale <span class="process-math">\(H\)</span> e il secondo fattore sta nel laterale <span class="process-math">\((1\;3)H\)</span> ma i prodotti ottenuti stanno in laterali diversi.</p></article><article class="example example-like" id="example-136"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">14.1.8</span><span class="period">.</span>
+</h3>
+<p id="p-2054">Un gruppo <span class="process-math">\(G\)</span> ha almeno due sottogruppi normali (eventualmente coincidenti, se <span class="process-math">\(G=1\)</span>): <span class="process-math">\(G\)</span> stesso e <span class="process-math">\(1\text{.}\)</span> Il gruppo <span class="process-math">\(G\)</span> ha un unico laterale in sé stesso e, quindi, il gruppo quoziente <span class="process-math">\(G/G\)</span> è un gruppo con un unico elemento, cioè è un gruppo banale. I laterali del sottogruppo <span class="process-math">\(1\)</span> contengono ciascuno un elemento: dunque, il gruppo quoziente <span class="process-math">\(G/1\)</span> è il gruppo i cui elementi sono i sottoinsiemi di <span class="process-math">\(G\)</span> con un unico elemento. Vedremo nell'<a href="" class="xref" data-knowl="./knowl/rem-quoziente_su_1.html" title="Osservazione 14.2.2">Osservazione 14.2.2</a> che questo gruppo è isomorfo a <span class="process-math">\(G\)</span> stesso.</p></article><section class="exercises" id="exercises-congruenze"><h3 class="heading hide-type">
+<span class="type">Esercizi</span> <span class="codenumber"></span> <span class="title">Esercizi</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-294"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-74"><p id="p-2055">Abbiamo visto che una congruenza in un gruppo è determinata completamente dalla classe di <span class="process-math">\(1\)</span> e questa classe è un sottogruppo normale. Vediamo che una classificazione simile per i monoidi non è possibile.</p></div>
+<article class="task exercise-like" id="task-83"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-2056">Mostrare che se <span class="process-math">\(\sim\)</span> è una congruenza in un monoide <span class="process-math">\(M\text{,}\)</span> allora <span class="process-math">\(\class[\sim]{1_{M}}\)</span> è un sottomonoide di <span class="process-math">\(M\)</span></p></article><article class="task exercise-like" id="task-84"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-2057">Nel monoide <span class="process-math">\(\Naturali\)</span> dei naturali rispetto all'addizione, sia fissato un naturale <span class="process-math">\(n\text{.}\)</span> Definiamo in <span class="process-math">\(\Naturali\)</span> una relazione <span class="process-math">\(\sim_{n}\)</span> ponendo <span class="process-math">\(a\sim_{n}b\)</span> se <span class="process-math">\(a=b\)</span> o se sia <span class="process-math">\(a\)</span> che <span class="process-math">\(b\)</span> sono maggiori di <span class="process-math">\(n\text{.}\)</span> Mostrare che <span class="process-math">\(\sim_{n}\)</span> è una congruenza avente <span class="process-math">\(n+2\)</span> classi e che <span class="process-math">\(\class[\sim_{n}]{0}=\{0\}\text{,}\)</span> qualunque sia <span class="process-math">\(n\text{.}\)</span></p></article><div class="conclusion" id="conclusion-2"><p id="p-2058">Abbiamo mostrato che in <span class="process-math">\(\Naturali\)</span> ci sono infinite congruenze rispetto a cui la classe di <span class="process-math">\(0\)</span> è sempre la medesima: dunque, la conoscenza della classe dell'elemento neutro non è sufficiente a ricostruire la congruenza.</p></div></article><article class="exercise exercise-like" id="exercise-295"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-2059">Sia <span class="process-math">\(H\)</span> un sottogruppo di un gruppo <span class="process-math">\(G\text{.}\)</span> Mostrare che le seguenti proprietà sono equivalenti:</p>
+<ol class="lower-alpha">
+<li id="li-166"><p id="p-2060"><span class="process-math">\(H\)</span> è normale in <span class="process-math">\(G\)</span> e il quoziente <span class="process-math">\(G/H\)</span> è abeliano;</p></li>
+<li id="li-167"><p id="p-2061"><span class="process-math">\(x^{-1}y^{-1}xy\)</span> appartiene a <span class="process-math">\(H\)</span> per ogni <span class="process-math">\(x\)</span> e <span class="process-math">\(y\)</span> appartenenti a <span class="process-math">\(G\text{.}\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-123" id="solution-123"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-123"><div class="solution solution-like">
+<p id="p-2062">Supponiamo che <span class="process-math">\(H\)</span> sia normale in <span class="process-math">\(G\)</span> e che <span class="process-math">\(G/H\)</span> sia abeliano. Siano <span class="process-math">\(x\)</span> e <span class="process-math">\(y\)</span> due elementi di <span class="process-math">\(G\text{:}\)</span> poiché <span class="process-math">\(G/H\)</span> è abeliano, abbiamo che <span class="process-math">\((xH)(yH)=(yH)(xH)\text{.}\)</span> Ma ciò significa che <span class="process-math">\(xyH=yxH\text{:}\)</span> moltiplicando a sinistra per <span class="process-math">\(x^{-1}y^{-1}H\)</span> otteniamo allora <span class="process-math">\(x^{-1}y^{-1}xyH=H\text{.}\)</span> Ma questo implica che <span class="process-math">\(x^{-1}y^{-1}xy\)</span> appartiene a <span class="process-math">\(H\text{.}\)</span></p> <p id="p-2063">Viceversa, sia <span class="process-math">\(x^{-1}y^{-1}xy\)</span> in <span class="process-math">\(H\)</span> per ogni <span class="process-math">\(x\)</span> e <span class="process-math">\(y\)</span> in <span class="process-math">\(G\text{.}\)</span> Scegliamo in particolare <span class="process-math">\(x\)</span> in <span class="process-math">\(H\text{:}\)</span> allora <span class="process-math">\(x^{y}=y^{-1}xy=x(x^{-1}y^{-1}xy)\)</span> è un elemento di <span class="process-math">\(H\)</span> perché prodotto di due elementi di <span class="process-math">\(H\text{.}\)</span> Per l'arbitrarietà della scelta di <span class="process-math">\(x\)</span> in <span class="process-math">\(H\)</span> e di <span class="process-math">\(y\)</span> in <span class="process-math">\(G\)</span> abbiamo che <span class="process-math">\(H\)</span> è normale in <span class="process-math">\(G\text{.}\)</span> Mostriamo ora che <span class="process-math">\(G/H\)</span> è abeliano: siano <span class="process-math">\(xH\)</span> e <span class="process-math">\(yH\)</span> due elementi di <span class="process-math">\(G/H\text{.}\)</span> Poiché <span class="process-math">\(x^{-1}y^{-1}xy\)</span> appartiene a <span class="process-math">\(H\)</span> si ha <span class="process-math">\(x^{-1}y^{-1}xyH=H\)</span> e moltiplicando a sinistra per <span class="process-math">\(yxH\text{,}\)</span> otteniamo <span class="process-math">\(xyH=yxH\text{,}\)</span> cioè <span class="process-math">\((xH)(yH)=(yH)(xH)\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-296"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-75"><p id="p-2064">Si consideri il gruppo <span class="process-math">\(G\coloneqq\frac{\Razionali}{\Interi}\)</span> rispetto all'addizione.</p></div>
+<article class="task exercise-like" id="task-85"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-2065">Dato un numero razionale <span class="process-math">\(\frac{m}{n}\)</span> di <span class="process-math">\(\Razionali\)</span> con <span class="process-math">\(n&gt;0\)</span> determinare il periodo di <span class="process-math">\(\frac{m}{n}+\Interi\)</span> in <span class="process-math">\(G\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-31" id="hint-31"><span class="type">Suggerimento</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-31"><div class="hint solution-like"><p id="p-2066">Ridurre <span class="process-math">\(\frac{m}{n}\)</span> ai minimi termini.</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-124" id="solution-124"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-124"><div class="solution solution-like"><p id="p-2067">Sia <span class="process-math">\(d=(m,n)\)</span> il massimo comun divisore di <span class="process-math">\(m\)</span> e <span class="process-math">\(n\text{.}\)</span> Abbiamo allora <span class="process-math">\(\frac{m}{n}=\frac{m'}{n'}\)</span> con <span class="process-math">\(m=dm'\)</span> e <span class="process-math">\(n=dn'\text{.}\)</span> Per ogni intero <span class="process-math">\(r\)</span> si ha <span class="process-math">\(r(\frac{m'}{n'}+\Interi)=\frac{rm'}{n'}+\Interi\text{:}\)</span> dunque, <span class="process-math">\(r(\frac{m'}{n'}+\Interi)\)</span> è l'elemento neutro di <span class="process-math">\(G\)</span> se e solo se <span class="process-math">\(\frac{rm'}{n'}\)</span>  è un intero, cioè se e solo se <span class="process-math">\(rm'\)</span> è multiplo di <span class="process-math">\(n'\text{.}\)</span> Poiché <span class="process-math">\(n'\)</span> e <span class="process-math">\(m'\)</span> sono coprimi ciò avviene se e solo se <span class="process-math">\(r\)</span> è multiplo di <span class="process-math">\(n'\text{:}\)</span> dunque, il periodo di <span class="process-math">\(\frac{m'}{n'}+\Interi\)</span> è esattamente <span class="process-math">\(n'\text{.}\)</span> Riassumendo, il periodo di <span class="process-math">\(\frac{m}{n}+\Interi\)</span> è uguale a <span class="process-math">\(\frac{n}{(n,m)}\text{.}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-86"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-2068">Mostrare che per ogni intero positivo <span class="process-math">\(n\)</span> esiste almeno un elemento di <span class="process-math">\(G\)</span> avente periodo <span class="process-math">\(n\text{.}\)</span> Determinare poi il numero esatto di elementi di periodo <span class="process-math">\(n\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-125" id="solution-125"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-125"><div class="solution solution-like">
+<p id="p-2069">Dal punto precedente sappiamo che se <span class="process-math">\(m\)</span> è un intero coprimo con <span class="process-math">\(n\)</span> allora <span class="process-math">\(\frac{m}{n}+\Interi\)</span> ha periodo <span class="process-math">\(n\text{:}\)</span> basta prendere ad esempio <span class="process-math">\(m=1\text{.}\)</span></p> <p id="p-2070">Per determinare esplicitamente il numero di elementi di periodo <span class="process-math">\(n\)</span> consideriamo due elementi <span class="process-math">\(\frac{m_{1}}{n}+\Interi\)</span> e <span class="process-math">\(\frac{m_{2}}{n}+\Interi\)</span> di periodo <span class="process-math">\(n\)</span> (quindi, con <span class="process-math">\(m_{1}\)</span> e <span class="process-math">\(m_{2}\)</span> coprimi con <span class="process-math">\(n\)</span>). Questi due elementi di <span class="process-math">\(G\)</span> coincidono se e solo se <span class="process-math">\(\frac{m_{1}}{n}-\frac{m_{2}}{n}\)</span> è un intero, cioè se e solo se <span class="process-math">\(m_{1}-m_{2}\)</span> è multiplo di <span class="process-math">\(n\text{:}\)</span> in altri termini, se e solo se <span class="process-math">\(m_{1}\)</span> e <span class="process-math">\(m_{2}\)</span> sono congrui modulo <span class="process-math">\(n\text{.}\)</span> Dunque possiamo limitarci a considerare elementi del tipo <span class="process-math">\(\frac{m}{n}+\Interi\)</span> con <span class="process-math">\(0\le m \lt n\text{:}\)</span> tra questi, esattamente <span class="process-math">\(\euler{n}\)</span> sono coprimi con <span class="process-math">\(n\)</span> e, quindi, questo è il numero di elementi di periodo <span class="process-math">\(n\text{.}\)</span></p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-87"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-2071">Mostrare che per ogni intero positivo <span class="process-math">\(n\)</span> esiste un unico sottogruppo ciclico di <span class="process-math">\(G\)</span> di ordine <span class="process-math">\(n\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-126" id="solution-126"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-126"><div class="solution solution-like"><p id="p-2072">Dal punto precedente sappiamo che esistono elementi di periodo <span class="process-math">\(n\)</span> e, quindi, c'è almeno un sottogruppo ciclico <span class="process-math">\(C_{n}\)</span> di ordine <span class="process-math">\(n\text{.}\)</span> Un gruppo ciclico di ordine <span class="process-math">\(n\)</span> contiene esattamente <span class="process-math">\(\euler{n}\)</span> elementi di ordine <span class="process-math">\(n\text{.}\)</span> Dal punto precedente sappiamo che <span class="process-math">\(G\)</span> contiene esattamente <span class="process-math">\(\euler{n}\)</span> elementi di ordine <span class="process-math">\(n\text{:}\)</span> dunque <span class="process-math">\(C_{n}\)</span> contiene tutti gli elementi di ordine <span class="process-math">\(n\)</span> di <span class="process-math">\(G\)</span> ed è allora l'unico sottogruppo ciclico di ordine <span class="process-math">\(n\text{.}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-88"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-2073">Dimostrare che ogni sottogruppo finito di <span class="process-math">\(G\)</span> è ciclico.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-127" id="solution-127"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-127"><div class="solution solution-like"><p id="p-2074">Sia <span class="process-math">\(H\)</span> un sottogruppo finito di <span class="process-math">\(G\)</span> di ordine <span class="process-math">\(n\)</span> e sia <span class="process-math">\(C_{n}\)</span> l'unico sottogruppo ciclico di ordine <span class="process-math">\(n\)</span> di <span class="process-math">\(G\text{.}\)</span> Mostriamo che ogni elemento di <span class="process-math">\(H\)</span> è contenuto in <span class="process-math">\(C_{n}\)</span> e, quindi, <span class="process-math">\(H=C_{n}\text{.}\)</span> Sia <span class="process-math">\(x\)</span> un elemento di <span class="process-math">\(H\text{:}\)</span> il periodo di <span class="process-math">\(x\)</span> è un divisore <span class="process-math">\(d\)</span> di <span class="process-math">\(n\text{.}\)</span> Poiché <span class="process-math">\(C_{n}\)</span> è un gruppo ciclico finito, esso contiene  un sottogruppo ciclico <span class="process-math">\(C_{d}\)</span> di ordine <span class="process-math">\(d\text{.}\)</span> Ma in <span class="process-math">\(G\)</span> esiste un unico sottogruppo ciclico di ordine <span class="process-math">\(d\)</span> e, pertanto, il sottogruppo generato da <span class="process-math">\(x\)</span> coincide con <span class="process-math">\(C_{d}\text{,}\)</span> e allora <span class="process-math">\(x\in C_{d}\le C_{n}\text{.}\)</span></p></div></div>
+</div></article></article></section></section></div></main>
+</div>
+</body>
+</html>

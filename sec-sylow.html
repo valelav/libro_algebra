@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="it-IT">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Il teorema di Sylow</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Algebra">
+<meta property="book:author" content="Valerio Monti">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Vai all'indice generale</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{mathtools}\require{cancel}\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\cont}{c}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\Inv}{Inv}
+\DeclareMathOperator{\MCD}{MCD}
+\DeclareMathOperator{\mcm}{mcm}
+\DeclareMathOperator{\centro}{Z}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Soc}{Soc}
+\DeclareMathOperator{\Rad}{Rad}
+\DeclareMathOperator{\car}{char}
+
+
+\newcommand{\Sym}{\mathrm{Sym}}
+\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\Idmatrix}{\mathrm{I}}
+\newcommand{\dist}{\mathrm{d}}
+
+\newcommand{\Reali}{\mathbf{R}}
+\newcommand{\Naturali}{\mathbf{N}}
+\newcommand{\Interi}{\mathbf{Z}}
+ \newcommand{\Razionali}{\mathbf{Q}}
+ \newcommand{\Complessi}{\mathbf{C}}
+
+ \newcommand{\grgen}[1]{\langle#1\rangle}
+ \newcommand{\ideal}[1]{\left(#1\right)}
+ \newcommand{\alg}[1]{\left\lbrack#1\right\rvert}
+ \newcommand{\seg}[1]{\left\lvert#1\right)}
+ \newcommand{\ann}[1]{\operatorname{Ann}\left(#1\right)}
+ \newcommand{\len}[1]{\operatorname{l}\left(#1\right)}
+ \newcommand{\class}[2][\sim]{\lbrack #2\rbrack_{#1}}
+ \newcommand{\cent}[2]{\operatorname{C}_{#1}\left(#2\right)}
+ \newcommand{\nrm}[2]{\operatorname{N}_{#1}\left(#2\right)}
+ \newcommand{\stab}[2]{\operatorname{Stab}_{#1}\left(#2\right)}
+ \newcommand{\Supp}[1]{\operatorname{Supp}\left(#1\right)}
+ \newcommand{\Gal}[1]{\operatorname{Gal}\left(#1\right)}
+ \newcommand{\tr}[1]{#1^{\intercal}}
+ \newcommand{\vuoto}{\varnothing}
+ \newcommand{\parti}[1]{\mathcal{P}(#1)}
+ \newcommand{\euler}[1]{\varphi(#1)}
+ \newcommand{\euclidean}{\delta}
+
+ \newcommand{\vect}[1]{\boldsymbol{#1}}
+ 
+ \newcommand{\mat}[2]{\operatorname{M}_{#1}(#2)}
+ \newcommand{\matt}[3]{\operatorname{M}_{#1,#2}(#3)}
+ \newcommand{\Sim}[2]{\operatorname{S}(#1,#2)}
+ \newcommand{\AntiSim}[2]{\operatorname{A}(#1,#2)}
+ \newcommand{\Diag}[2]{\operatorname{D}(#1,#2)}
+ \newcommand{\TS}[2]{\operatorname{T}^{#1}(#2)}
+ \newcommand{\TI}[2]{\operatorname{T}_{#1}(#2)}
+ \newcommand{\GL}[2]{\operatorname{GL}(#1,#2)}
+ \newcommand{\SL}[2]{\operatorname{SL}(#1,#2)}
+ \newcommand{\Ort}[2]{\operatorname{O}(#1,#2)}
+
+ \newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+ \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+ \newcommand{\ind}[2]{\left\lvert#1:#2\right\rvert}
+ \newcommand{\degext}[2]{\left\lbrack#1:#2\right\rbrack}
+
+ \newcommand{\invprov}[1]{\widehat{#1}}
+
+ \newcommand\YoungTableau[1]{
+ \begin{tikzpicture}[scale=0.4,keepsize]
+ \foreach \y [count=\yi] in {#1}
+ \foreach \x in {1,...,\y}
+ {
+ \draw (\x,\yi) rectangle +(1,1);
+ }
+ \end{tikzpicture}
+ }
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-algebra.html"><span class="title">Algebra</span></a></h1>
+<p class="byline">Valerio Monti</p>
+</div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Risultati: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>Nessun risultato.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Indice</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="indice.html" title="Indice analitico">Indice analitico</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-inversione_lagrange.html" title="Precedente">Prec</a><a id="upbutton" class="up-button button toolbar-item" href="ch-sylow.html" title="Su">Su</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-applicazioni_sylow.html" title="Successivo">Succ</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Indice</button><a class="previous-button toolbar-item button" href="sec-inversione_lagrange.html" title="Precedente">Prec</a><a class="up-button button toolbar-item" href="ch-sylow.html" title="Su">Su</a><a class="next-button button toolbar-item" href="sec-applicazioni_sylow.html" title="Successivo">Succ</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Materiale iniziale</span></a><ul>
+<li><a href="front-colophon.html" data-scroll="front-colophon" class="internal">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Prefazione</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-preliminari.html" data-scroll="part-preliminari" class="internal"><span class="codenumber">I</span> <span class="title">Preliminari</span></a></li>
+<li class="link">
+<a href="ch-insiemi.html" data-scroll="ch-insiemi" class="internal"><span class="codenumber">1</span> <span class="title">Insiemi</span></a><ul>
+<li><a href="sec-insiemi.html" data-scroll="sec-insiemi" class="internal">Concetti di base</a></li>
+<li><a href="sec-operazioni_insiemi.html" data-scroll="sec-operazioni_insiemi" class="internal">Operazioni tra insiemi</a></li>
+<li><a href="sec-prodotto-cartesiano.html" data-scroll="sec-prodotto-cartesiano" class="internal">Prodotto cartesiano</a></li>
+<li><a href="sec-Russell.html" data-scroll="sec-Russell" class="internal">Il paradosso di Russell</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-corrispondenze.html" data-scroll="ch-corrispondenze" class="internal"><span class="codenumber">2</span> <span class="title">Corrispondenze e relazioni</span></a><ul>
+<li><a href="sec-corrispondenze_definizione.html" data-scroll="sec-corrispondenze_definizione" class="internal">Corrispondenze tra insiemi</a></li>
+<li><a href="sec-relazioni_equivalenza.html" data-scroll="sec-relazioni_equivalenza" class="internal">Relazioni di equivalenza</a></li>
+<li><a href="sec-relazioni_ordine.html" data-scroll="sec-relazioni_ordine" class="internal">Relazioni d'ordine</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-funzioni.html" data-scroll="ch-funzioni" class="internal"><span class="codenumber">3</span> <span class="title">Funzioni</span></a><ul>
+<li><a href="sec-funzioni_definizione.html" data-scroll="sec-funzioni_definizione" class="internal">Definizioni di base</a></li>
+<li><a href="sec-funzioni_iniettive_suriettive.html" data-scroll="sec-funzioni_iniettive_suriettive" class="internal">Funzioni iniettive, suriettive e biiettive</a></li>
+<li><a href="sec-cardinalita.html" data-scroll="sec-cardinalita" class="internal">Cenni sulla cardinalità</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-aritmetica.html" data-scroll="part-aritmetica" class="internal"><span class="codenumber">II</span> <span class="title">Aritmetica</span></a></li>
+<li class="link">
+<a href="ch-interi.html" data-scroll="ch-interi" class="internal"><span class="codenumber">4</span> <span class="title">I numeri interi</span></a><ul>
+<li><a href="sec-naturali_base.html" data-scroll="sec-naturali_base" class="internal">I numeri naturali e i numeri interi</a></li>
+<li><a href="sec-induzione_ricorrenza.html" data-scroll="sec-induzione_ricorrenza" class="internal">Dimostrazioni per induzione e definizioni per ricorrenza</a></li>
+<li><a href="sec-divisibilita_interi.html" data-scroll="sec-divisibilita_interi" class="internal">Divisibilità negli interi</a></li>
+<li><a href="sec-fattorizzazione_interi.html" data-scroll="sec-fattorizzazione_interi" class="internal">Il teorema fondamentale dell'aritmetica</a></li>
+<li><a href="sec-equazioni_lineari_diofantine.html" data-scroll="sec-equazioni_lineari_diofantine" class="internal">Equazioni lineari diofantine</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-classidiresto.html" data-scroll="ch-classidiresto" class="internal"><span class="codenumber">5</span> <span class="title">Classi di resto</span></a><ul>
+<li><a href="sec-congruenzemodulon.html" data-scroll="sec-congruenzemodulon" class="internal">Congruenze modulo un intero</a></li>
+<li><a href="sec-operazioniclassiresto.html" data-scroll="sec-operazioniclassiresto" class="internal">Operazioni tra classi di resto</a></li>
+<li><a href="sec-eulero.html" data-scroll="sec-eulero" class="internal">Il teorema di Eulero</a></li>
+<li><a href="sec-congruenze_con_incognite.html" data-scroll="sec-congruenze_con_incognite" class="internal">Congruenze con incognite</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-gruppi.html" data-scroll="part-gruppi" class="internal"><span class="codenumber">III</span> <span class="title">Gruppi</span></a></li>
+<li class="link">
+<a href="ch-operazioni.html" data-scroll="ch-operazioni" class="internal"><span class="codenumber">6</span> <span class="title">Operazioni</span></a><ul>
+<li><a href="sec-operazioni_definizioni.html" data-scroll="sec-operazioni_definizioni" class="internal">Definizioni ed esempi</a></li>
+<li><a href="sec-proprieta_operazioni.html" data-scroll="sec-proprieta_operazioni" class="internal">Proprietà delle operazioni</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppi.html" data-scroll="ch-gruppi" class="internal"><span class="codenumber">7</span> <span class="title">Monoidi e gruppi</span></a><ul>
+<li><a href="sec-monoidi.html" data-scroll="sec-monoidi" class="internal">Monoidi</a></li>
+<li><a href="sec-gruppi.html" data-scroll="sec-gruppi" class="internal">Gruppi</a></li>
+<li><a href="sec-gruppi_piccoli.html" data-scroll="sec-gruppi_piccoli" class="internal">Alcuni esempi di gruppi piccoli</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-sottogruppi.html" data-scroll="ch-sottogruppi" class="internal"><span class="codenumber">8</span> <span class="title">Sottogruppi</span></a><ul>
+<li><a href="sec-sottomonoidi_sottogruppi.html" data-scroll="sec-sottomonoidi_sottogruppi" class="internal">Sottomonoidi e sottogruppi</a></li>
+<li><a href="sec-prime_proprieta_sottogruppi.html" data-scroll="sec-prime_proprieta_sottogruppi" class="internal">Prime proprietà dei sottogruppi</a></li>
+<li><a href="sec-gruppi_del_piano.html" data-scroll="sec-gruppi_del_piano" class="internal">Gruppi di trasformazioni del piano</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppi_ciclici.html" data-scroll="ch-gruppi_ciclici" class="internal"><span class="codenumber">9</span> <span class="title">Gruppi ciclici</span></a><ul>
+<li><a href="sec-definizione_gruppi_ciclici.html" data-scroll="sec-definizione_gruppi_ciclici" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-sottogruppi_di_ciclici.html" data-scroll="sec-sottogruppi_di_ciclici" class="internal">Sottogruppi di gruppi ciclici</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppi_permutazioni.html" data-scroll="ch-gruppi_permutazioni" class="internal"><span class="codenumber">10</span> <span class="title">Gruppi di permutazioni</span></a><ul>
+<li><a href="sec-definizioni_gruppi_permutazioni.html" data-scroll="sec-definizioni_gruppi_permutazioni" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-cicli.html" data-scroll="sec-cicli" class="internal">Cicli</a></li>
+<li><a href="sec-scambi.html" data-scroll="sec-scambi" class="internal">Scambi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-laterali.html" data-scroll="ch-laterali" class="internal"><span class="codenumber">11</span> <span class="title">Laterali e teorema di Lagrange</span></a><ul>
+<li><a href="sec-prodotto_sottoinsiemi.html" data-scroll="sec-prodotto_sottoinsiemi" class="internal">Prodotto di sottoinsiemi</a></li>
+<li><a href="sec-teorema_di_lagrange.html" data-scroll="sec-teorema_di_lagrange" class="internal">Teorema di Lagrange</a></li>
+<li><a href="sec-prodotto_sottogruppi.html" data-scroll="sec-prodotto_sottogruppi" class="internal">Prodotto di sottogruppi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-omomorfismi.html" data-scroll="ch-omomorfismi" class="internal"><span class="codenumber">12</span> <span class="title">Omomorfismi</span></a><ul>
+<li><a href="sec-definizione_omomorfismo.html" data-scroll="sec-definizione_omomorfismo" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-nucleo_immagine.html" data-scroll="sec-nucleo_immagine" class="internal">Immagine e nucleo di un omomorfismo</a></li>
+<li><a href="sec-omomorfismi_da_gruppi_ciclici.html" data-scroll="sec-omomorfismi_da_gruppi_ciclici" class="internal">Omomorfismi da gruppi ciclici</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-azioni.html" data-scroll="ch-azioni" class="internal"><span class="codenumber">13</span> <span class="title">Azioni di gruppi su insiemi</span></a><ul>
+<li><a href="sec-azioni_definizioni.html" data-scroll="sec-azioni_definizioni" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-orbite_stabilizzatori.html" data-scroll="sec-orbite_stabilizzatori" class="internal">Orbite e stabilizzatori</a></li>
+<li><a href="sec-sottogruppi_normali.html" data-scroll="sec-sottogruppi_normali" class="internal">Sottogruppi normali</a></li>
+<li><a href="sec-coniugati_simmetrico_alterno.html" data-scroll="sec-coniugati_simmetrico_alterno" class="internal">Classi di coniugio nel gruppo simmetrico e nel gruppo alterno</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-quozienti.html" data-scroll="ch-quozienti" class="internal"><span class="codenumber">14</span> <span class="title">Gruppi quoziente</span></a><ul>
+<li><a href="sec-congruenze.html" data-scroll="sec-congruenze" class="internal">Congruenze in gruppi e monoidi</a></li>
+<li><a href="sec-proprieta_quozienti.html" data-scroll="sec-proprieta_quozienti" class="internal">Proprietà dei gruppi quoziente</a></li>
+<li><a href="sec-teoremi_di_isomorfismo.html" data-scroll="sec-teoremi_di_isomorfismo" class="internal">I teoremi di isomorfismo</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-direttosemidiretto.html" data-scroll="ch-direttosemidiretto" class="internal"><span class="codenumber">15</span> <span class="title">Prodotto diretto e semidiretto</span></a><ul>
+<li><a href="sec-prodotto_diretto_esterno.html" data-scroll="sec-prodotto_diretto_esterno" class="internal">Prodotto diretto esterno</a></li>
+<li><a href="sec-prodotto_diretto_interno.html" data-scroll="sec-prodotto_diretto_interno" class="internal">Prodotto diretto interno</a></li>
+<li><a href="sec-prodotto_semidiretto.html" data-scroll="sec-prodotto_semidiretto" class="internal">Prodotto semidiretto</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-sylow.html" data-scroll="ch-sylow" class="internal"><span class="codenumber">16</span> <span class="title">Il teorema di Sylow</span></a><ul>
+<li><a href="sec-inversione_lagrange.html" data-scroll="sec-inversione_lagrange" class="internal">Inversione del teorema di Lagrange</a></li>
+<li><a href="sec-sylow.html" data-scroll="sec-sylow" class="active">Il teorema di Sylow</a></li>
+<li><a href="sec-applicazioni_sylow.html" data-scroll="sec-applicazioni_sylow" class="internal">Applicazioni del teorema di Sylow</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-anelli.html" data-scroll="part-anelli" class="internal"><span class="codenumber">IV</span> <span class="title">Anelli</span></a></li>
+<li class="link">
+<a href="ch-anelli.html" data-scroll="ch-anelli" class="internal"><span class="codenumber">17</span> <span class="title">Anelli</span></a><ul>
+<li><a href="sec-prime_proprieta_anelli.html" data-scroll="sec-prime_proprieta_anelli" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-multipli_potenze.html" data-scroll="sec-multipli_potenze" class="internal">Multipli e potenze in un anello</a></li>
+<li><a href="sec-sottoanelli.html" data-scroll="sec-sottoanelli" class="internal">Sottoanelli</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-omomorfismiideali.html" data-scroll="ch-omomorfismiideali" class="internal"><span class="codenumber">18</span> <span class="title">Omomorfismi e ideali</span></a><ul>
+<li><a href="sec-omomorfismi_anelli.html" data-scroll="sec-omomorfismi_anelli" class="internal">Omomorfismi di anelli</a></li>
+<li><a href="sec-anelli_quoziente.html" data-scroll="sec-anelli_quoziente" class="internal">Anelli quoziente e ideali</a></li>
+<li><a href="sec-campo_dei_quozienti.html" data-scroll="sec-campo_dei_quozienti" class="internal">Campo dei quozienti di un dominio</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-polinomi.html" data-scroll="ch-polinomi" class="internal"><span class="codenumber">19</span> <span class="title">Polinomi</span></a><ul>
+<li><a href="sec-anello_polinomi.html" data-scroll="sec-anello_polinomi" class="internal">Anello dei polinomi</a></li>
+<li><a href="sec-valutazione_polinomi.html" data-scroll="sec-valutazione_polinomi" class="internal">Valutazione di polinomi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-divisibilita.html" data-scroll="ch-divisibilita" class="internal"><span class="codenumber">20</span> <span class="title">Divisibilità nei domini</span></a><ul>
+<li><a href="sec-divisibilita.html" data-scroll="sec-divisibilita" class="internal">Relazione di divisibilità</a></li>
+<li><a href="sec-fattorizzazione.html" data-scroll="sec-fattorizzazione" class="internal">Fattorizzazione</a></li>
+<li><a href="sec-PID_euclidei.html" data-scroll="sec-PID_euclidei" class="internal">Domini a ideali principali e domini euclidei</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-fattorizzazione_polinomi.html" data-scroll="ch-fattorizzazione_polinomi" class="internal"><span class="codenumber">21</span> <span class="title">Fattorizzazione dei polinomi</span></a><ul>
+<li><a href="sec-trasporto_UFD.html" data-scroll="sec-trasporto_UFD" class="internal">Il teorema del trasporto per domini a fattorizzazione unica</a></li>
+<li><a href="sec-esempi_fattorizzazione_polinomi.html" data-scroll="sec-esempi_fattorizzazione_polinomi" class="internal">Tecniche di fattorizzazione</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-estensione_campi.html" data-scroll="ch-estensione_campi" class="internal"><span class="codenumber">22</span> <span class="title">Estensioni di campi</span></a><ul>
+<li><a href="sec-elementi_algebrici_e_trascendenti.html" data-scroll="sec-elementi_algebrici_e_trascendenti" class="internal">Elementi algebrici e trascendenti</a></li>
+<li><a href="sec-campo_di_spezzamento.html" data-scroll="sec-campo_di_spezzamento" class="internal">Campi di spezzamento</a></li>
+<li><a href="sec-chiusure_algebriche.html" data-scroll="sec-chiusure_algebriche" class="internal">Cenni su campi algebricamente chiusi</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-moduli.html" data-scroll="part-moduli" class="internal"><span class="codenumber">V</span> <span class="title">Moduli</span></a></li>
+<li class="link">
+<a href="ch-moduli.html" data-scroll="ch-moduli" class="internal"><span class="codenumber">23</span> <span class="title">Moduli</span></a><ul>
+<li><a href="sec-definizione_di_moduli.html" data-scroll="sec-definizione_di_moduli" class="internal">Definizione di modulo</a></li>
+<li><a href="sec-sottomoduli.html" data-scroll="sec-sottomoduli" class="internal">Sottomoduli</a></li>
+<li><a href="sec-omomorfismi_moduli.html" data-scroll="sec-omomorfismi_moduli" class="internal">Omomorfismi di moduli</a></li>
+<li><a href="sec-moduli_quoziente.html" data-scroll="sec-moduli_quoziente" class="internal">Moduli quoziente</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-moduli_liberi.html" data-scroll="ch-moduli_liberi" class="internal"><span class="codenumber">24</span> <span class="title">Moduli liberi</span></a><ul>
+<li><a href="sec-somma_diretta_moduli.html" data-scroll="sec-somma_diretta_moduli" class="internal">Somma diretta di moduli</a></li>
+<li><a href="sec-dipendenza_lineare.html" data-scroll="sec-dipendenza_lineare" class="internal">Dipendenza e indipendenza lineare</a></li>
+<li><a href="sec-elementi_di_torsione.html" data-scroll="sec-elementi_di_torsione" class="internal">Elementi di torsione</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-modulisupid.html" data-scroll="ch-modulisupid" class="internal"><span class="codenumber">25</span> <span class="title">Moduli finitamente generati su PID</span></a><ul>
+<li><a href="sec-moduli_ciclici.html" data-scroll="sec-moduli_ciclici" class="internal">Moduli ciclici</a></li>
+<li><a href="sec-moduli_primari.html" data-scroll="sec-moduli_primari" class="internal">Moduli primari</a></li>
+<li><a href="sec-moduli_liberi.html" data-scroll="sec-moduli_liberi" class="internal">Moduli liberi</a></li>
+<li><a href="sec-classificazione_moduli_pid.html" data-scroll="sec-classificazione_moduli_pid" class="internal">La classificazione dei moduli finitamente generati su un dominio a ideali principali</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppiabeliani.html" data-scroll="ch-gruppiabeliani" class="internal"><span class="codenumber">26</span> <span class="title">Gruppi abeliani finitamente generati</span></a><ul><li><a href="sec-gruppiabeliani.html" data-scroll="sec-gruppiabeliani" class="internal">Classificazione dei gruppi abeliani finitamente generati</a></li></ul>
+</li>
+<li class="link">
+<a href="ch-formecanoniche.html" data-scroll="ch-formecanoniche" class="internal"><span class="codenumber">27</span> <span class="title">Forme canoniche di matrici</span></a><ul>
+<li><a href="sec-kx_moduli.html" data-scroll="sec-kx_moduli" class="internal">Spazi vettoriali con endomorfismi visti come moduli</a></li>
+<li><a href="sec-matrici_rappresentative.html" data-scroll="sec-matrici_rappresentative" class="internal">Matrici rappresentative</a></li>
+<li><a href="sec-matrici_compagne.html" data-scroll="sec-matrici_compagne" class="internal">Matrici compagne</a></li>
+<li><a href="sec-jordan.html" data-scroll="sec-jordan" class="internal">Forma canonica di Jordan</a></li>
+<li><a href="sec-polinomio_minimo_matrici.html" data-scroll="sec-polinomio_minimo_matrici" class="internal">Polinomio minimo di matrici</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Appendici</span></a></li>
+<li class="link">
+<a href="appendix-peano.html" data-scroll="appendix-peano" class="internal"><span class="codenumber">A</span> <span class="title">Numeri naturali e interi</span></a><ul>
+<li><a href="sec-algebre_induttive.html" data-scroll="sec-algebre_induttive" class="internal">Algebre induttive</a></li>
+<li><a href="sec-assiomi_peano.html" data-scroll="sec-assiomi_peano" class="internal">Gli assiomi di Peano</a></li>
+<li><a href="sec-insiemi_finiti_infiniti.html" data-scroll="sec-insiemi_finiti_infiniti" class="internal">Insiemi finiti e infiniti</a></li>
+<li><a href="sec-operazioni_naturali.html" data-scroll="sec-operazioni_naturali" class="internal">Operazioni tra numeri naturali</a></li>
+<li><a href="sec-interi.html" data-scroll="sec-interi" class="internal">Costruzione degli interi</a></li>
+</ul>
+</li>
+<li class="link"><a href="appendix-2.html" data-scroll="appendix-2" class="internal"><span class="codenumber">B</span> <span class="title">Notazioni</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1" class="internal"><span class="codenumber">C</span> <span class="title">Soluzioni e suggerimenti</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl" class="internal"><span class="codenumber">D</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="indice.html" data-scroll="indice" class="internal"><span class="title">Indice analitico</span></a></li>
+<li class="link"><a href="back-colophon.html" data-scroll="back-colophon" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Redatto in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-sylow"><h2 class="heading hide-type">
+<span class="type">Paragrafo</span> <span class="codenumber">16.2</span> <span class="title">Il teorema di Sylow</span>
+</h2>
+<article class="definition definition-like" id="def-sottogruppo_di_sylow"><h3 class="heading">
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">16.2.1</span><span class="period">.</span>
+</h3>
+<p id="p-2249">Preso un gruppo finito <span class="process-math">\(G\)</span> di ordine <span class="process-math">\(p^{\alpha}r\)</span> con <span class="process-math">\(p\)</span> primo e <span class="process-math">\(r\)</span> intero coprimo con <span class="process-math">\(p\text{,}\)</span> un <dfn class="terminology"><span class="process-math">\(p\)</span>-sottogruppo di Sylow</dfn> di <span class="process-math">\(G\)</span> è un sottogruppo di <span class="process-math">\(G\)</span> di ordine <span class="process-math">\(p^{\alpha}\text{.}\)</span></p></article><p id="p-2250">Il teorema di Sylow (che storicamente viene suddiviso in tre teoremi distinti) garantisce l'esistenza di sottogruppi di Sylow per ogni primo <span class="process-math">\(p\text{:}\)</span> oltre a ciò, dà altre informazioni su tali sottogruppi.</p>
+<p id="p-2251">Prima di enunciare precisamente e dimostrare tale teorema, facciamo qualche considerazione generale. Sia allora <span class="process-math">\(G\)</span> un gruppo finito di ordine <span class="process-math">\(n\)</span> e sia <span class="process-math">\(A\)</span> un suo sottoinsieme non vuoto. Dato un elemento <span class="process-math">\(g\)</span> di <span class="process-math">\(G\text{,}\)</span> consideriamo il sottoinsieme <span class="process-math">\(Ag\coloneqq\{ag\mid a\in A\}\text{.}\)</span> Si vede facilmente che <span class="process-math">\(A1=A\)</span> e che <span class="process-math">\(A(gh)=(Ag)h\)</span> per ogni <span class="process-math">\(g\)</span> e <span class="process-math">\(h\)</span> in <span class="process-math">\(G\text{.}\)</span> Risulta così definita un'azione di <span class="process-math">\(G\)</span> sull'insieme dei suo sottoinsiemi non vuoti. Notiamo poi che <span class="process-math">\(\abs{Ag}\le\abs{A}\text{:}\)</span> analogamente, <span class="process-math">\(\abs{(Ag)g^{-1}}\le\abs{Ag}\)</span> e, poiché <span class="process-math">\((Ag)g^{-1}=A\text{,}\)</span> otteniamo che <span class="process-math">\(\abs{Ag}=\abs{A}\text{.}\)</span> Pertanto, fissato un intero <span class="process-math">\(d\)</span> con <span class="process-math">\(1\le d\le n\text{,}\)</span> possiamo restringere l'azione di <span class="process-math">\(G\)</span> appena data a un'azione di <span class="process-math">\(G\)</span> sull'insieme <span class="process-math">\(X\)</span> dei sottoinsiemi di <span class="process-math">\(G\)</span> aventi cardinalità fissata <span class="process-math">\(d\text{.}\)</span></p>
+<p id="p-2252">Studiamo ora le orbite di quest'azione: distinguiamo quelle che tra i propri elementi hanno un sottogruppo di <span class="process-math">\(G\)</span> da quelle che non hanno sottogruppi di <span class="process-math">\(G\text{.}\)</span> Nel primo caso, se <span class="process-math">\(H\)</span> è un tale sottogruppo, allora gli elementi dell'orbita non sono altro che i laterali destri <span class="process-math">\(Hg\)</span> di <span class="process-math">\(H\text{:}\)</span> per il <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Teorema 11.2.6: Teorema di Lagrange">Teorema di Lagrange</a>, l'orbita contiene esattamente <span class="process-math">\(n/d\)</span> elementi e tra essi uno e uno solo è un sottogruppo. Presa invece un'orbita tra i cui elementi non ci sono sottogruppi, sia <span class="process-math">\(A\)</span> un elemento di una tale orbita e sia <span class="process-math">\(g\)</span> un elemento di <span class="process-math">\(A\text{:}\)</span> allora <span class="process-math">\(B\coloneqq Ag^{-1}\)</span> è un elemento della stessa orbita contenente <span class="process-math">\(1\text{.}\)</span> Sia <span class="process-math">\(S\)</span> lo stabilizzatore di <span class="process-math">\(B\text{:}\)</span> dunque <span class="process-math">\(S=\{g\in G\mid Bg=B\}\text{.}\)</span> Poiché <span class="process-math">\(1\in B\text{,}\)</span> abbiamo allora, per ogni <span class="process-math">\(g\)</span> in <span class="process-math">\(S\text{,}\)</span> risulta <span class="process-math">\(g=1g\in Bg=B\text{:}\)</span> dunque <span class="process-math">\(S\subseteq B\text{.}\)</span> Ma stiamo considerando orbite che non contengono sottogruppi: in particolare, <span class="process-math">\(B\)</span> non è un sottogruppo e, quindi, <span class="process-math">\(B\ne S\text{.}\)</span> Pertanto, <span class="process-math">\(\abs{S} \lt d\text{.}\)</span> Per il <a href="" class="xref" data-knowl="./knowl/thm-stabilizzatore_orbita.html" title="Teorema 13.2.7">Teorema 13.2.7</a>, la cardinalità dell'orbita di <span class="process-math">\(B\)</span> è uguale all'indice in <span class="process-math">\(G\)</span> del suo stabilizzatore: pertanto, la cardinalità dell'orbita è strettamente maggiore di <span class="process-math">\(n/d\text{.}\)</span></p>
+<p id="p-2253">La discussione precedente è riassunta dal</p>
+<article class="lemma theorem-like" id="lem-azione_su_sottoinsiemi"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">16.2.2</span><span class="period">.</span>
+</h3>
+<p id="p-2254">Sia <span class="process-math">\(G\)</span> un gruppo finito di ordine <span class="process-math">\(n\)</span> e sia <span class="process-math">\(X\)</span> l'insieme dei sottoinsiemi di <span class="process-math">\(G\)</span> di una certa cardinalità fissata <span class="process-math">\(d\text{,}\)</span> con <span class="process-math">\(1\le d\le n\text{.}\)</span> Considerata l'azione di <span class="process-math">\(G\)</span> su <span class="process-math">\(X\)</span> che associa a un elemento <span class="process-math">\(A\)</span> di <span class="process-math">\(X\)</span> e un elemento <span class="process-math">\(g\)</span> di <span class="process-math">\(G\)</span> l'elemento <span class="process-math">\(Ag\text{,}\)</span> il numero di elementi di ciascuna orbita è almeno <span class="process-math">\(n/d\)</span> ed è esattamente <span class="process-math">\(n/d\)</span> se e solo se l'orbita contiene un sottogruppo, nel qual caso ne contiene esattamente uno.</p></article><article class="theorem theorem-like" id="thm-sylow"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">16.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Teorema di Sylow.</span>
+</h3>
+<p id="p-2255">Sia <span class="process-math">\(G\)</span> un gruppo finito di ordine <span class="process-math">\(p^{\alpha}r\)</span> con <span class="process-math">\(p\)</span> primo e <span class="process-math">\(r\)</span> intero coprimo con <span class="process-math">\(p\text{.}\)</span> Sia <span class="process-math">\(n_{p}\)</span> il numero dei <span class="process-math">\(p\)</span>-sottogruppi di Sylow di <span class="process-math">\(G\text{.}\)</span> Allora</p>
+<ol class="decimal">
+<li id="item-esistenza_sylow"><p id="p-2256">in <span class="process-math">\(G\)</span> esistono <span class="process-math">\(p\)</span>-sottogruppi di Sylow;</p></li>
+<li id="item-psottogruppi_in_sylow"><p id="p-2257">ogni <span class="process-math">\(p\)</span>-sottogruppo di <span class="process-math">\(G\)</span> è contenuto in almeno un <span class="process-math">\(p\)</span>-sottogruppo di Sylow;</p></li>
+<li id="item-sylow_coniugati"><p id="p-2258">i <span class="process-math">\(p\)</span>-sottogruppi di Sylow sono tra loro coniugati;</p></li>
+<li id="item-numero_sylow"><p id="p-2259"><span class="process-math">\(n_{p}\)</span> è un divisore di <span class="process-math">\(r\)</span> e <span class="process-math">\(n_{p}\equiv 1\pmod{p}\text{.}\)</span></p></li>
+</ol></article><article class="hiddenproof" id="proof-174"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-174"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-174"><article class="hiddenproof"><p id="p-2260">Consideriamo l'insieme <span class="process-math">\(X\)</span> dei sottoinsiemi di <span class="process-math">\(G\)</span> di cardinalità <span class="process-math">\(p^{\alpha}\text{:}\)</span> facciamo agire <span class="process-math">\(G\)</span> su <span class="process-math">\(X\)</span> come nel <a href="" class="xref" data-knowl="./knowl/lem-azione_su_sottoinsiemi.html" title="Lemma 16.2.2">Lemma 16.2.2</a>. Dunque, le orbite che contengono <span class="process-math">\(p\)</span>-sottogruppi di Sylow sono in numero di <span class="process-math">\(n_{p}\)</span> e ciascuna di esse contiene <span class="process-math">\(p^{\alpha}r/p^{\alpha}=r\)</span> elementi di <span class="process-math">\(X\text{.}\)</span> Complessivamente queste orbite contengono <span class="process-math">\(rn_{p}\)</span> elementi. Ciascuna altra orbita contiene più di <span class="process-math">\(r\)</span> elementi: ma il numero di elementi di un'orbita divide l'ordine del gruppo che agisce (<a href="" class="xref" data-knowl="./knowl/cor-ordine_orbita_divide_ordine-gruppo.html" title="Corollario 13.2.8">Corollario 13.2.8</a>). I divisori di <span class="process-math">\(p^{\alpha}r\)</span> coprimi con <span class="process-math">\(p\)</span> dividono <span class="process-math">\(r\text{:}\)</span> dunque i divisori maggiori di <span class="process-math">\(r\)</span> sono necessariamente multipli di <span class="process-math">\(p\text{.}\)</span> Pertanto, tutte le orbite che non contengono <span class="process-math">\(p\)</span>-sottogruppi di Sylow contengono un numero di elementi multiplo di <span class="process-math">\(p\text{.}\)</span> Dal momento che <span class="process-math">\(\abs{X}\)</span> è la somma del numero di elementi di tutte le orbite otteniamo <span class="process-math">\(\abs{X}\equiv rn_{p}\pmod{p}\text{.}\)</span></p> <p id="p-2261">Prendiamo ora un altro gruppo <span class="process-math">\(G'\)</span> di ordine <span class="process-math">\(p^{\alpha}r\)</span> e sia <span class="process-math">\(X'\)</span> l'insieme dei suoi sottoinsiemi di cardinalità <span class="process-math">\(p^{\alpha}\text{.}\)</span> Se indichiamo con <span class="process-math">\(n'_{p}\)</span> il numero dei <span class="process-math">\(p\)</span>-sottogruppi di Sylow di <span class="process-math">\(G'\text{,}\)</span> otteniamo <span class="process-math">\(\abs{X'}\equiv rn'_{p}\pmod{p}\text{.}\)</span> D'altra parte <span class="process-math">\(\abs{X}=\abs{X'}\text{:}\)</span> è il numero di sottoinsiemi di cardinalità <span class="process-math">\(p^{\alpha}\)</span> di un insieme di cardinalità <span class="process-math">\(p^{\alpha}r\text{.}\)</span> Di conseguenza <span class="process-math">\(rn_{p}\equiv rn'_{p}\pmod{p}\text{:}\)</span> poiché <span class="process-math">\(r\)</span> è coprimo con <span class="process-math">\(p\text{,}\)</span> è invertibile modulo <span class="process-math">\(p\text{,}\)</span> per la <a href="" class="xref" data-knowl="./knowl/prop-caratterizzazione_classe_invertibile.html" title="Proposizione 5.2.13">Proposizione 5.2.13</a>. Pertanto, <span class="process-math">\(n_{p}\equiv n'_{p}\pmod{p}\text{.}\)</span> Prendiamo ora un gruppo di cui conosciamo il numero di <span class="process-math">\(p\)</span>-sottogruppi di Sylow: per il <a href="" class="xref" data-knowl="./knowl/thm-sottogruppi_di_gruppo_ciclico_finito.html" title="Teorema 9.2.8">Teorema 9.2.8</a>, un gruppo ciclico <span class="process-math">\(G'\)</span> di ordine <span class="process-math">\(p^{\alpha}r\)</span> ha esattamente un sottogruppo di ciascun ordine divisore dell'ordine del gruppo e, quindi, <span class="process-math">\(n'_{p}=1\text{.}\)</span> Otteniamo quindi <span class="process-math">\(n_{p}\equiv 1\pmod{p}\text{:}\)</span> questo prova parte del <a href="" class="xref" data-knowl="./knowl/item-numero_sylow.html" title="Punto 4">Punto 4</a> e il <a href="" class="xref" data-knowl="./knowl/item-esistenza_sylow.html" title="Punto 1">Punto 1</a> (infatti <span class="process-math">\(n_{p}\ne 0\text{,}\)</span> cioè esistono <span class="process-math">\(p\)</span>-sottogruppi di Sylow).</p> <p id="p-2262">Sia ora <span class="process-math">\(P\)</span> un <span class="process-math">\(p\)</span>-sottogruppo di Sylow di <span class="process-math">\(G\)</span> e sia <span class="process-math">\(Y\)</span> l'insieme dei suoi coniugati. Per il <a href="" class="xref" data-knowl="./knowl/cor-coniugati_indice_finito.html" title="Corollario 13.3.14">Corollario 13.3.14</a>, la cardinalità di <span class="process-math">\(Y\)</span> divide <span class="process-math">\(r\text{:}\)</span> in particolare, <span class="process-math">\(\abs{Y}\)</span> non è multiplo di <span class="process-math">\(p\text{.}\)</span> Prendiamo ora un qualsiasi <span class="process-math">\(p\)</span>-sottogruppo <span class="process-math">\(H\)</span> di <span class="process-math">\(G\)</span> e facciamolo agire su <span class="process-math">\(Y\)</span> per coniugio. Le orbite di quest'azione hanno cardinalità che dividono l'ordine di <span class="process-math">\(H\text{:}\)</span> dunque, <span class="process-math">\(1\)</span> oppure multiple di <span class="process-math">\(p\text{.}\)</span> Poiché <span class="process-math">\(\abs{Y}\)</span> non è multiplo di <span class="process-math">\(p\)</span> ci deve essere almeno un'orbita di cardinalità <span class="process-math">\(1\text{,}\)</span> cioè un coniugato <span class="process-math">\(Q\)</span> di <span class="process-math">\(P\)</span> tale che <span class="process-math">\(Q^{h}=Q\)</span> per ogni <span class="process-math">\(h\in H\text{:}\)</span> in altri termini, <span class="process-math">\(H\le\nrm{G}{Q}\text{.}\)</span> Pertanto, <span class="process-math">\(H\)</span> e <span class="process-math">\(Q\)</span> sono due sottogruppi di <span class="process-math">\(\nrm{G}{Q}\)</span> di cui uno normale: per la <a href="" class="xref" data-knowl="./knowl/prop-prodotto_di_normale.html" title="Proposizione 13.3.18">Proposizione 13.3.18</a>, il prodotto <span class="process-math">\(QH\)</span> è un sottogruppo di <span class="process-math">\(\nrm{G}{Q}\)</span> e, di conseguenza, di <span class="process-math">\(G\text{.}\)</span> Per la <a href="" class="xref" data-knowl="./knowl/prop-diverse_espressioni-prodotto.html" title="Proposizione 11.3.4">Proposizione 11.3.4</a>, l'ordine di <span class="process-math">\(QH\)</span> è <span class="process-math">\(\abs{Q}\abs{H}/\abs{H\cap Q}\text{:}\)</span> dunque <span class="process-math">\(QH\)</span> è un <span class="process-math">\(p\)</span>-sottogruppo contenente <span class="process-math">\(Q\text{.}\)</span> Ma <span class="process-math">\(Q\)</span> è un <span class="process-math">\(p\)</span>-sottogruppo di Sylow di <span class="process-math">\(G\)</span> e, quindi, ha ordine massimo tra i <span class="process-math">\(p\)</span>-sottogruppi di <span class="process-math">\(G\text{:}\)</span> pertanto, <span class="process-math">\(QH=Q\text{,}\)</span> cioè <span class="process-math">\(H\le Q\text{.}\)</span> Questo dimostra il <a href="" class="xref" data-knowl="./knowl/item-psottogruppi_in_sylow.html" title="Punto 2">Punto 2</a>.</p> <p id="p-2263">Nel caso particolare in cui <span class="process-math">\(H\)</span> stesso sia un <span class="process-math">\(p\)</span>-sottogruppo di Sylow di <span class="process-math">\(G\text{,}\)</span> l'inclusione <span class="process-math">\(H\le Q\)</span> implica che <span class="process-math">\(H\)</span> e <span class="process-math">\(Q\text{,}\)</span> avendo lo stesso ordine, sono uguali. Pertanto ogni <span class="process-math">\(p\)</span>-sottogruppo di Sylow è coniugato a <span class="process-math">\(P\text{:}\)</span> questo prova il <a href="" class="xref" data-knowl="./knowl/item-sylow_coniugati.html" title="Punto 3">Punto 3</a> e la restante parte del <a href="" class="xref" data-knowl="./knowl/item-numero_sylow.html" title="Punto 4">Punto 4</a> (avevamo già osservato che <span class="process-math">\(\abs{Y}\)</span> divide <span class="process-math">\(r\)</span>).</p></article></div>
+<article class="remark remark-like" id="rem-sylow_coniugati"><h3 class="heading">
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">16.2.4</span><span class="period">.</span>
+</h3>
+<p id="p-2264">Poiché i <span class="process-math">\(p\)</span>-sottogruppi di Sylow sono fra loro coniugati, si vede immediatamente che un <span class="process-math">\(p\)</span>-sottogruppo di Sylow di un gruppo <span class="process-math">\(G\)</span> è normale in <span class="process-math">\(G\)</span> se e solo se è l'unico <span class="process-math">\(p\)</span>-sottogruppo di Sylow.</p></article><article class="corollary theorem-like" id="cor-esistenza_psottogruppi"><h3 class="heading">
+<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">16.2.5</span><span class="period">.</span>
+</h3>
+<p id="p-2265">Se <span class="process-math">\(G\)</span> è un gruppo finito e <span class="process-math">\(p^{k}\)</span> è una potenza di un primo <span class="process-math">\(p\)</span> tale che <span class="process-math">\(p^{k}\)</span> divide <span class="process-math">\(\abs{G}\text{,}\)</span> allora <span class="process-math">\(G\)</span> ha un sottogruppo di ordine <span class="process-math">\(p^{k}\text{.}\)</span></p></article><article class="hiddenproof" id="proof-175"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-175"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-175"><article class="hiddenproof"><p id="p-2266">Segue immediatamente applicando prima il <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Teorema 16.2.3: Teorema di Sylow">Teorema di Sylow</a> al gruppo <span class="process-math">\(G\)</span> e poi la <a href="" class="xref" data-knowl="./knowl/prop-inversione_lagrange_pgruppi.html" title="Proposizione 16.1.3">Proposizione 16.1.3</a> a un <span class="process-math">\(p\)</span>-sottogruppo di Sylow di <span class="process-math">\(G\text{.}\)</span></p></article></div>
+<article class="remark remark-like" id="rem-lemma_cauchy"><h3 class="heading">
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">16.2.6</span><span class="period">.</span>
+</h3>
+<p id="p-2267">Il lemma di Cauchy può quindi essere visto come caso particolare di quest'ultimo corollario.</p></article><p id="p-2268">Usando l'argomento dato dall'<a href="" class="xref" data-knowl="./knowl/exercise-prodotto_sottogruppi_ordine_coprimo.html" title="Esercizio 15.2.5">Esercizio 15.2.5</a> otteniamo immediatamente il</p>
+<article class="corollary theorem-like" id="cor-prodotto_diretto_sylow"><h3 class="heading">
+<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">16.2.7</span><span class="period">.</span>
+</h3>
+<p id="p-2269">Se i sottogruppi di Sylow di un gruppo finito <span class="process-math">\(G\)</span> sono tutti normali, allora <span class="process-math">\(G\)</span> è prodotto diretto dei suoi sottogruppi di Sylow. In particolare, un gruppo abeliano finito è prodotto diretto dei suoi sottogruppi di Sylow.</p></article><article class="remark remark-like" id="rem-sylow_banale"><h3 class="heading">
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">16.2.8</span><span class="period">.</span>
+</h3>
+<p id="p-2270">Se <span class="process-math">\(G\)</span> è un gruppo finito e <span class="process-math">\(p\)</span> è un primo che non divide l'ordine di <span class="process-math">\(G\text{,}\)</span> possiamo comunque applicare il teorema di Sylow al primo <span class="process-math">\(p\text{,}\)</span> anche se in tal caso non è molto interessante: la massima potenza di <span class="process-math">\(p\)</span> che divide <span class="process-math">\(\abs{G}\)</span> è <span class="process-math">\(p^{0}=1\)</span> e l'ovviamente unico <span class="process-math">\(p\)</span>-sottogruppo di Sylow di <span class="process-math">\(G\)</span> è il sottogruppo banale.</p></article><section class="exercises" id="exercises-sylow"><h3 class="heading hide-type">
+<span class="type">Esercizi</span> <span class="codenumber"></span> <span class="title">Esercizi</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-315"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<p id="p-2271">Sia <span class="process-math">\(G\)</span> un gruppo di ordine <span class="process-math">\(n\)</span> con <span class="process-math">\(n \lt 12\text{:}\)</span> mostrare che per ogni divisore <span class="process-math">\(d\)</span> di <span class="process-math">\(n\text{,}\)</span> esiste un sottogruppo <span class="process-math">\(H\)</span> di <span class="process-math">\(G\)</span> di ordine <span class="process-math">\(d\text{.}\)</span> Dunque, il gruppo di ordine <span class="process-math">\(12\)</span> dato nell'<a href="" class="xref" data-knowl="./knowl/ex-inversione_lagrange_non_vale.html" title="Esempio 16.1.1">Esempio 16.1.1</a> ha l'ordine minimo possibile.</p></article><article class="exercise exercise-like" id="exercise-316"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-83"><p id="p-2272">Sia <span class="process-math">\(G\)</span> un gruppo e sia <span class="process-math">\(H\)</span> un sottogruppo finito di <span class="process-math">\(G\)</span> di ordine <span class="process-math">\(d\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-103"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-2273">Mostrare che se <span class="process-math">\(H\)</span> è l'unico sottogruppo di <span class="process-math">\(G\)</span> di ordine <span class="process-math">\(d\)</span> allora <span class="process-math">\(H\)</span> è normale in <span class="process-math">\(G\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-148" id="solution-148"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-148"><div class="solution solution-like"><p id="p-2274">I coniugati di <span class="process-math">\(H\)</span> sono isomorfi a <span class="process-math">\(H\)</span> e, in particolare hanno tutti ordine <span class="process-math">\(d\text{:}\)</span> se c'è un solo sottogruppo di ordine <span class="process-math">\(d\text{,}\)</span> significa che tutti i coniugati di <span class="process-math">\(H\)</span> coincidono con <span class="process-math">\(H\text{,}\)</span> cioè <span class="process-math">\(H\)</span> è normale in <span class="process-math">\(G\text{.}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-104"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-2275">Mostrare con un controesempio che non vale il viceversa del punto precedente, cioè che esistono sottogruppi normali che non sono unici del loro ordine.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-138" id="answer-138"><span class="type">Risposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-138"><div class="answer solution-like"><p id="p-2276">Il gruppo di Klein ha <span class="process-math">\(3\)</span> sottogruppi di ordine <span class="process-math">\(2\text{,}\)</span> tutti normali, dal momento che il gruppo di Klein è abeliano.</p></div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-317"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-2277">Sia <span class="process-math">\(G\)</span> un gruppo finito e sia <span class="process-math">\(p\)</span> un primo. Dimostrare che l'intersezione <span class="process-math">\(O_{p}(G)\)</span> dei <span class="process-math">\(p\)</span>-sottogruppi di Sylow è un <span class="process-math">\(p\)</span>-sottogruppo normale di <span class="process-math">\(G\)</span> e che ogni <span class="process-math">\(p\)</span>-sottogruppo normale di <span class="process-math">\(G\)</span> è contenuto in <span class="process-math">\(O_{p}(G)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-149" id="solution-149"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-149"><div class="solution solution-like">
+<p id="p-2278">Per il <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Teorema 11.2.6: Teorema di Lagrange">Teorema di Lagrange</a>, <span class="process-math">\(O_{p}(G)\)</span> è un <span class="process-math">\(p\)</span>-sottogruppo di <span class="process-math">\(G\text{.}\)</span> Sia <span class="process-math">\(x\)</span> un qualunque elemento di <span class="process-math">\(O_{p}(G)\)</span> e sia <span class="process-math">\(g\)</span> un qualunque elemento di <span class="process-math">\(G\text{:}\)</span> dobbiamo mostrare che <span class="process-math">\(x^{g}\)</span> appartiene a <span class="process-math">\(O_{p}(G)\text{,}\)</span> cioè a tutti i <span class="process-math">\(p\)</span>-sottogruppi di Sylow. Se <span class="process-math">\(P\)</span> è un qualsiasi <span class="process-math">\(p\)</span>-sottogruppo di Sylow, allora <span class="process-math">\(P^{g^{-1}}\)</span> è pure un <span class="process-math">\(p\)</span>-sottogruppo di Sylow e, quindi, contiene <span class="process-math">\(x\text{:}\)</span> ma allora <span class="process-math">\(x^{g}\)</span> appartiene a <span class="process-math">\((P^{g^{-1}})^{g}=P\text{,}\)</span> come richiesto.</p> <p id="p-2279">Sia ora <span class="process-math">\(N\)</span> un qualsiasi <span class="process-math">\(p\)</span>-sottogruppo normale di <span class="process-math">\(G\text{:}\)</span> per il <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Teorema 16.2.3: Teorema di Sylow">Teorema di Sylow</a>, <span class="process-math">\(N\)</span> è contenuto in un <span class="process-math">\(p\)</span>-sottogruppo di Sylow, sia <span class="process-math">\(P\text{.}\)</span> Se ora <span class="process-math">\(Q\)</span> è un altro <span class="process-math">\(p\)</span>-sottogruppo di Sylow di <span class="process-math">\(G\text{,}\)</span> un'ulteriore applicazione del <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Teorema 16.2.3: Teorema di Sylow">Teorema di Sylow</a> ci garantisce che <span class="process-math">\(Q=P^{g}\)</span> per qualche <span class="process-math">\(g\)</span> in <span class="process-math">\(G\text{.}\)</span> Ma allora, <span class="process-math">\(N=N^{g}\le P^{g}=Q\text{,}\)</span> cioè <span class="process-math">\(N\)</span> è contenuto in ogni <span class="process-math">\(p\)</span>-sottogruppo di Sylow di <span class="process-math">\(G\)</span> e, quindi, <span class="process-math">\(N\le O_{p}(G)\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-318"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<p id="p-2280">Sia <span class="process-math">\(G\)</span> un gruppo finito e <span class="process-math">\(N\)</span> un sottogruppo normale di <span class="process-math">\(G\text{.}\)</span> Dato un primo <span class="process-math">\(p\text{,}\)</span> mostrare che i <span class="process-math">\(p\)</span>-sottogruppi di Sylow di <span class="process-math">\(H\)</span> sono tutti e soli quelli del tipo <span class="process-math">\(P\cap N\)</span> al variare di <span class="process-math">\(P\)</span> tra i <span class="process-math">\(p\)</span>-sottogruppi di Sylow di <span class="process-math">\(G\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-150" id="solution-150"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-150"><div class="solution solution-like">
+<p id="p-2281">Se <span class="process-math">\(S\)</span> è un <span class="process-math">\(p\)</span>-sottogruppo di Sylow di <span class="process-math">\(N\text{,}\)</span> in particolare è un <span class="process-math">\(p\)</span>-sottogruppo di <span class="process-math">\(G\text{:}\)</span> per il <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Teorema 16.2.3: Teorema di Sylow">Teorema di Sylow</a>, <span class="process-math">\(S\)</span> è contenuto in un <span class="process-math">\(p\)</span>-sottogruppo di Sylow <span class="process-math">\(P\)</span> di <span class="process-math">\(G\text{.}\)</span> Dunque, <span class="process-math">\(S\le P\cap N\text{.}\)</span> D'altra parte, <span class="process-math">\(P\cap N\)</span> è un <span class="process-math">\(p\)</span>-sottogruppo di <span class="process-math">\(N\)</span> per il <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Teorema 11.2.6: Teorema di Lagrange">Teorema di Lagrange</a>. Poiché <span class="process-math">\(S\)</span> ha ordine massimo possibile tra i <span class="process-math">\(p\)</span>-sottogruppi di <span class="process-math">\(N\text{,}\)</span> segue che <span class="process-math">\(S=P\cap N\text{.}\)</span></p> <p id="p-2282">Viceversa, sia <span class="process-math">\(P\)</span> un qualsiasi <span class="process-math">\(p\)</span>-sottogruppo di Sylow di <span class="process-math">\(G\text{.}\)</span> Ora <span class="process-math">\(P\cap N\)</span> è un <span class="process-math">\(p\)</span>-sottogruppo di <span class="process-math">\(N\)</span> per il <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Teorema 11.2.6: Teorema di Lagrange">Teorema di Lagrange</a> e, per il <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Teorema 16.2.3: Teorema di Sylow">Teorema di Sylow</a>, è contenuto in un <span class="process-math">\(p\)</span>-sottogruppo di Sylow <span class="process-math">\(T\)</span> di <span class="process-math">\(N\text{.}\)</span> Dobbiamo mostrare che <span class="process-math">\(T=P\cap N\text{.}\)</span> Per quanto visto in precedenza, <span class="process-math">\(T=Q\cap N\)</span> per qualche <span class="process-math">\(p\)</span>-sottogruppo di Sylow di <span class="process-math">\(G\text{.}\)</span> Un'ulteriore applicazione del <a href="" class="xref" data-knowl="./knowl/thm-sylow.html" title="Teorema 16.2.3: Teorema di Sylow">Teorema di Sylow</a> garantisce che esiste <span class="process-math">\(g\)</span> in <span class="process-math">\(G\)</span> tale che <span class="process-math">\(Q=P^{g}\text{:}\)</span> poiché <span class="process-math">\(N\)</span> è normale in <span class="process-math">\(G\)</span> e, quindi, <span class="process-math">\(N=N^{g}\)</span> abbiamo allora che</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-lagrange.html ./knowl/thm-sylow.html ./knowl/thm-sylow.html">
+\begin{equation*}
+T=Q\cap N=P^{g}\cap N=P^{g}\cap N^{g}=(P\cap N)^{g}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Poiché <span class="process-math">\(P\cap N\)</span> e <span class="process-math">\((P\cap N)^{g}\)</span> hanno lo stesso ordine, segue che <span class="process-math">\(P\cap N=T\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-319"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<p id="p-2283">Sia <span class="process-math">\(P\)</span> un <span class="process-math">\(p\)</span>-sottogruppo di Sylow di un gruppo finito <span class="process-math">\(G\text{.}\)</span> Siano <span class="process-math">\(H\)</span> e <span class="process-math">\(K\)</span> sottogruppi di <span class="process-math">\(G\)</span> tali che <span class="process-math">\(P\trianglelefteq H\)</span> e <span class="process-math">\(H\trianglelefteq K\text{.}\)</span> Mostrare che <span class="process-math">\(P\trianglelefteq K\text{.}\)</span> Dedurre che <span class="process-math">\(\nrm{G}{\nrm{G}{P}}=\nrm{G}{P}\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-151" id="solution-151"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-151"><div class="solution solution-like"><p id="p-2284">Sia <span class="process-math">\(k\)</span> un elemento di <span class="process-math">\(K\text{.}\)</span> Dobbiamo mostrare che <span class="process-math">\(P^{k}=P\text{.}\)</span> Sappiamo che <span class="process-math">\(P^{k}\le H^{k}=H\text{,}\)</span> dal momento che <span class="process-math">\(H\trianglelefteq K\text{.}\)</span> Dunque <span class="process-math">\(P^{k}\)</span> è un <span class="process-math">\(p\)</span>-sottogruppo di Sylow di <span class="process-math">\(H\text{:}\)</span> poiché <span class="process-math">\(P\trianglelefteq H\text{,}\)</span> abbiamo allora che <span class="process-math">\(P\)</span> è l'unico <span class="process-math">\(p\)</span>-sottogruppo di Sylow di <span class="process-math">\(H\)</span> e, quindi, <span class="process-math">\(P=P^{k}\text{.}\)</span></p></div></div>
+</div></article></section></section></div></main>
+</div>
+</body>
+</html>

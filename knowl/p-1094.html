@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h6 class="heading"><span class="type">Capoverso</span></h6>
+<p>Chiaramente <span class="process-math">\(H\)</span> è non vuoto perché contiene la matrice identica. Siano <span class="process-math">\(A\coloneqq
+\begin{psmallmatrix}
+a_{1} \amp b_{1} \\
+c_{1} \amp d_{1}
+\end{psmallmatrix}\)</span> e <span class="process-math">\(B\coloneqq
+\begin{psmallmatrix}
+a_{2} \amp b_{2} \\
+c_{2} \amp d_{2}
+\end{psmallmatrix}\)</span> due matrici di <span class="process-math">\(H\text{.}\)</span> Facendone il prodotto, troviamo la matrice <span class="process-math">\(AB=
+\begin{psmallmatrix}
+a_{1}a_{2}+b_{1}c_{2} \amp a_{1}b_{2}+b_{1}d_{2} \\
+c_{1}a_{2}+d_{1}c_{2} \amp c_{1}b_{2}+d_{1}d_{2}
+\end{psmallmatrix}\text{.}\)</span> Per verificare se appartiene ad <span class="process-math">\(H\)</span> sommiamo gli elementi di ciascuna colonna. Otteniamo</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+(a_{1}a_{2}+b_{1}c_{2})+(c_{1}a_{2}+d_{1}c_{2}) \amp =(a_{1}+c_{1})a_{2}+(b_{1}+d_{1})c_{2}\\
+\amp =1\cdot a_{2}+1\cdot c_{2}=a_{2}+c_{2}=1
+\end{align*}
+</div>
+<p class="continuation">e</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+(a_{1}b_{2}+b_{1}d_{2})+(c_{1}b_{2}+d_{1}d_{2}) \amp =(a_{1}+c_{1})b_{2}+(b_{1}+d_{1})d_{2}\\
+\amp =1\cdot b_{2}+1\cdot d_{2}=b_{2}+d_{2}=1\text{.}
+\end{align*}
+</div>
+<p class="continuation">Quindi <span class="process-math">\(AB\)</span> appartiene ad <span class="process-math">\(H\text{.}\)</span> L'inversa di <span class="process-math">\(A\)</span> è la matrice</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{pmatrix}
+\frac{d_{1}}{\Delta} \amp -\frac{b_{1}}{\Delta} \\
+-\frac{c_{1}}{\Delta} \amp \frac{a_{1}}{\Delta}
+\end{pmatrix}
+\end{equation*}
+</div>
+<p class="continuation">dove <span class="process-math">\(\Delta=a_{1}d_{1}-b_{1}c_{1}\text{.}\)</span> Abbiamo allora</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+\frac{d_{1}}{\Delta}-\frac{c_{1}}{\Delta} \amp =\frac{d_{1}-c_{1}}{\Delta}=\frac{d_{1}-c_{1}}{a_{1}d_{1}-b_{1}c_{1}}=\frac{d_{1}-c_{1}}{(1-c_{1})d_{1}-b_{1}c_{1}}\\
+\amp =\frac{d_{1}-c_{1}}{d_{1}-c_{1}d_{1}-b_{1}c_{1}}=\frac{d_{1}-c_{1}}{d_{1}-c_{1}(d_{1}+b_{1})}=\frac{d_{1}-c_{1}}{d_{1}-c_{1}\cdot1}=1
+\end{align*}
+</div>
+<p class="continuation">e</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+-\frac{b_{1}}{\Delta}+\frac{a_{1}}{\Delta}\amp =\frac{-b_{1}+a_{1}}{\Delta}=\frac{-b_{1}+a_{1}}{a_{1}d_{1}-b_{1}c_{1}}=\frac{-b_{1}+a_{1}}{a_{1}(1-b_{1})-b_{1}c_{1}}\\
+\amp =\frac{-b_{1}+a_{1}}{a_{1}-a_{1}b_{1}-b_{1}c_{1}}=\frac{-b_{1}+a_{1}}{a_{1}-b_{1}(a_{1}+c_{1})}=\frac{-b_{1}+a_{1}}{a_{1}-b_{1}\cdot1}=1
+\end{align*}
+</div>
+<p class="continuation">Dunque, <span class="process-math">\(A^{-1}\)</span> appartiene a <span class="process-math">\(H\)</span> che è, quindi, un sottogruppo.</p>
+<span class="incontext"><a href="sec-prime_proprieta_sottogruppi.html#p-1094" class="internal">Contesto</a></span>
+</body>
+</html>

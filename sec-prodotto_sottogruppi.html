@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="it-IT">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Prodotto di sottogruppi</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Algebra">
+<meta property="book:author" content="Valerio Monti">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Vai all'indice generale</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{mathtools}\require{cancel}\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\cont}{c}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\Inv}{Inv}
+\DeclareMathOperator{\MCD}{MCD}
+\DeclareMathOperator{\mcm}{mcm}
+\DeclareMathOperator{\centro}{Z}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Soc}{Soc}
+\DeclareMathOperator{\Rad}{Rad}
+\DeclareMathOperator{\car}{char}
+
+
+\newcommand{\Sym}{\mathrm{Sym}}
+\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\Idmatrix}{\mathrm{I}}
+\newcommand{\dist}{\mathrm{d}}
+
+\newcommand{\Reali}{\mathbf{R}}
+\newcommand{\Naturali}{\mathbf{N}}
+\newcommand{\Interi}{\mathbf{Z}}
+ \newcommand{\Razionali}{\mathbf{Q}}
+ \newcommand{\Complessi}{\mathbf{C}}
+
+ \newcommand{\grgen}[1]{\langle#1\rangle}
+ \newcommand{\ideal}[1]{\left(#1\right)}
+ \newcommand{\alg}[1]{\left\lbrack#1\right\rvert}
+ \newcommand{\seg}[1]{\left\lvert#1\right)}
+ \newcommand{\ann}[1]{\operatorname{Ann}\left(#1\right)}
+ \newcommand{\len}[1]{\operatorname{l}\left(#1\right)}
+ \newcommand{\class}[2][\sim]{\lbrack #2\rbrack_{#1}}
+ \newcommand{\cent}[2]{\operatorname{C}_{#1}\left(#2\right)}
+ \newcommand{\nrm}[2]{\operatorname{N}_{#1}\left(#2\right)}
+ \newcommand{\stab}[2]{\operatorname{Stab}_{#1}\left(#2\right)}
+ \newcommand{\Supp}[1]{\operatorname{Supp}\left(#1\right)}
+ \newcommand{\Gal}[1]{\operatorname{Gal}\left(#1\right)}
+ \newcommand{\tr}[1]{#1^{\intercal}}
+ \newcommand{\vuoto}{\varnothing}
+ \newcommand{\parti}[1]{\mathcal{P}(#1)}
+ \newcommand{\euler}[1]{\varphi(#1)}
+ \newcommand{\euclidean}{\delta}
+
+ \newcommand{\vect}[1]{\boldsymbol{#1}}
+ 
+ \newcommand{\mat}[2]{\operatorname{M}_{#1}(#2)}
+ \newcommand{\matt}[3]{\operatorname{M}_{#1,#2}(#3)}
+ \newcommand{\Sim}[2]{\operatorname{S}(#1,#2)}
+ \newcommand{\AntiSim}[2]{\operatorname{A}(#1,#2)}
+ \newcommand{\Diag}[2]{\operatorname{D}(#1,#2)}
+ \newcommand{\TS}[2]{\operatorname{T}^{#1}(#2)}
+ \newcommand{\TI}[2]{\operatorname{T}_{#1}(#2)}
+ \newcommand{\GL}[2]{\operatorname{GL}(#1,#2)}
+ \newcommand{\SL}[2]{\operatorname{SL}(#1,#2)}
+ \newcommand{\Ort}[2]{\operatorname{O}(#1,#2)}
+
+ \newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+ \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+ \newcommand{\ind}[2]{\left\lvert#1:#2\right\rvert}
+ \newcommand{\degext}[2]{\left\lbrack#1:#2\right\rbrack}
+
+ \newcommand{\invprov}[1]{\widehat{#1}}
+
+ \newcommand\YoungTableau[1]{
+ \begin{tikzpicture}[scale=0.4,keepsize]
+ \foreach \y [count=\yi] in {#1}
+ \foreach \x in {1,...,\y}
+ {
+ \draw (\x,\yi) rectangle +(1,1);
+ }
+ \end{tikzpicture}
+ }
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-algebra.html"><span class="title">Algebra</span></a></h1>
+<p class="byline">Valerio Monti</p>
+</div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Risultati: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>Nessun risultato.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Indice</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="indice.html" title="Indice analitico">Indice analitico</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-teorema_di_lagrange.html" title="Precedente">Prec</a><a id="upbutton" class="up-button button toolbar-item" href="ch-laterali.html" title="Su">Su</a><a id="nextbutton" class="next-button button toolbar-item" href="ch-omomorfismi.html" title="Successivo">Succ</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Indice</button><a class="previous-button toolbar-item button" href="sec-teorema_di_lagrange.html" title="Precedente">Prec</a><a class="up-button button toolbar-item" href="ch-laterali.html" title="Su">Su</a><a class="next-button button toolbar-item" href="ch-omomorfismi.html" title="Successivo">Succ</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Materiale iniziale</span></a><ul>
+<li><a href="front-colophon.html" data-scroll="front-colophon" class="internal">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Prefazione</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-preliminari.html" data-scroll="part-preliminari" class="internal"><span class="codenumber">I</span> <span class="title">Preliminari</span></a></li>
+<li class="link">
+<a href="ch-insiemi.html" data-scroll="ch-insiemi" class="internal"><span class="codenumber">1</span> <span class="title">Insiemi</span></a><ul>
+<li><a href="sec-insiemi.html" data-scroll="sec-insiemi" class="internal">Concetti di base</a></li>
+<li><a href="sec-operazioni_insiemi.html" data-scroll="sec-operazioni_insiemi" class="internal">Operazioni tra insiemi</a></li>
+<li><a href="sec-prodotto-cartesiano.html" data-scroll="sec-prodotto-cartesiano" class="internal">Prodotto cartesiano</a></li>
+<li><a href="sec-Russell.html" data-scroll="sec-Russell" class="internal">Il paradosso di Russell</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-corrispondenze.html" data-scroll="ch-corrispondenze" class="internal"><span class="codenumber">2</span> <span class="title">Corrispondenze e relazioni</span></a><ul>
+<li><a href="sec-corrispondenze_definizione.html" data-scroll="sec-corrispondenze_definizione" class="internal">Corrispondenze tra insiemi</a></li>
+<li><a href="sec-relazioni_equivalenza.html" data-scroll="sec-relazioni_equivalenza" class="internal">Relazioni di equivalenza</a></li>
+<li><a href="sec-relazioni_ordine.html" data-scroll="sec-relazioni_ordine" class="internal">Relazioni d'ordine</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-funzioni.html" data-scroll="ch-funzioni" class="internal"><span class="codenumber">3</span> <span class="title">Funzioni</span></a><ul>
+<li><a href="sec-funzioni_definizione.html" data-scroll="sec-funzioni_definizione" class="internal">Definizioni di base</a></li>
+<li><a href="sec-funzioni_iniettive_suriettive.html" data-scroll="sec-funzioni_iniettive_suriettive" class="internal">Funzioni iniettive, suriettive e biiettive</a></li>
+<li><a href="sec-cardinalita.html" data-scroll="sec-cardinalita" class="internal">Cenni sulla cardinalità</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-aritmetica.html" data-scroll="part-aritmetica" class="internal"><span class="codenumber">II</span> <span class="title">Aritmetica</span></a></li>
+<li class="link">
+<a href="ch-interi.html" data-scroll="ch-interi" class="internal"><span class="codenumber">4</span> <span class="title">I numeri interi</span></a><ul>
+<li><a href="sec-naturali_base.html" data-scroll="sec-naturali_base" class="internal">I numeri naturali e i numeri interi</a></li>
+<li><a href="sec-induzione_ricorrenza.html" data-scroll="sec-induzione_ricorrenza" class="internal">Dimostrazioni per induzione e definizioni per ricorrenza</a></li>
+<li><a href="sec-divisibilita_interi.html" data-scroll="sec-divisibilita_interi" class="internal">Divisibilità negli interi</a></li>
+<li><a href="sec-fattorizzazione_interi.html" data-scroll="sec-fattorizzazione_interi" class="internal">Il teorema fondamentale dell'aritmetica</a></li>
+<li><a href="sec-equazioni_lineari_diofantine.html" data-scroll="sec-equazioni_lineari_diofantine" class="internal">Equazioni lineari diofantine</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-classidiresto.html" data-scroll="ch-classidiresto" class="internal"><span class="codenumber">5</span> <span class="title">Classi di resto</span></a><ul>
+<li><a href="sec-congruenzemodulon.html" data-scroll="sec-congruenzemodulon" class="internal">Congruenze modulo un intero</a></li>
+<li><a href="sec-operazioniclassiresto.html" data-scroll="sec-operazioniclassiresto" class="internal">Operazioni tra classi di resto</a></li>
+<li><a href="sec-eulero.html" data-scroll="sec-eulero" class="internal">Il teorema di Eulero</a></li>
+<li><a href="sec-congruenze_con_incognite.html" data-scroll="sec-congruenze_con_incognite" class="internal">Congruenze con incognite</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-gruppi.html" data-scroll="part-gruppi" class="internal"><span class="codenumber">III</span> <span class="title">Gruppi</span></a></li>
+<li class="link">
+<a href="ch-operazioni.html" data-scroll="ch-operazioni" class="internal"><span class="codenumber">6</span> <span class="title">Operazioni</span></a><ul>
+<li><a href="sec-operazioni_definizioni.html" data-scroll="sec-operazioni_definizioni" class="internal">Definizioni ed esempi</a></li>
+<li><a href="sec-proprieta_operazioni.html" data-scroll="sec-proprieta_operazioni" class="internal">Proprietà delle operazioni</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppi.html" data-scroll="ch-gruppi" class="internal"><span class="codenumber">7</span> <span class="title">Monoidi e gruppi</span></a><ul>
+<li><a href="sec-monoidi.html" data-scroll="sec-monoidi" class="internal">Monoidi</a></li>
+<li><a href="sec-gruppi.html" data-scroll="sec-gruppi" class="internal">Gruppi</a></li>
+<li><a href="sec-gruppi_piccoli.html" data-scroll="sec-gruppi_piccoli" class="internal">Alcuni esempi di gruppi piccoli</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-sottogruppi.html" data-scroll="ch-sottogruppi" class="internal"><span class="codenumber">8</span> <span class="title">Sottogruppi</span></a><ul>
+<li><a href="sec-sottomonoidi_sottogruppi.html" data-scroll="sec-sottomonoidi_sottogruppi" class="internal">Sottomonoidi e sottogruppi</a></li>
+<li><a href="sec-prime_proprieta_sottogruppi.html" data-scroll="sec-prime_proprieta_sottogruppi" class="internal">Prime proprietà dei sottogruppi</a></li>
+<li><a href="sec-gruppi_del_piano.html" data-scroll="sec-gruppi_del_piano" class="internal">Gruppi di trasformazioni del piano</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppi_ciclici.html" data-scroll="ch-gruppi_ciclici" class="internal"><span class="codenumber">9</span> <span class="title">Gruppi ciclici</span></a><ul>
+<li><a href="sec-definizione_gruppi_ciclici.html" data-scroll="sec-definizione_gruppi_ciclici" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-sottogruppi_di_ciclici.html" data-scroll="sec-sottogruppi_di_ciclici" class="internal">Sottogruppi di gruppi ciclici</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppi_permutazioni.html" data-scroll="ch-gruppi_permutazioni" class="internal"><span class="codenumber">10</span> <span class="title">Gruppi di permutazioni</span></a><ul>
+<li><a href="sec-definizioni_gruppi_permutazioni.html" data-scroll="sec-definizioni_gruppi_permutazioni" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-cicli.html" data-scroll="sec-cicli" class="internal">Cicli</a></li>
+<li><a href="sec-scambi.html" data-scroll="sec-scambi" class="internal">Scambi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-laterali.html" data-scroll="ch-laterali" class="internal"><span class="codenumber">11</span> <span class="title">Laterali e teorema di Lagrange</span></a><ul>
+<li><a href="sec-prodotto_sottoinsiemi.html" data-scroll="sec-prodotto_sottoinsiemi" class="internal">Prodotto di sottoinsiemi</a></li>
+<li><a href="sec-teorema_di_lagrange.html" data-scroll="sec-teorema_di_lagrange" class="internal">Teorema di Lagrange</a></li>
+<li><a href="sec-prodotto_sottogruppi.html" data-scroll="sec-prodotto_sottogruppi" class="active">Prodotto di sottogruppi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-omomorfismi.html" data-scroll="ch-omomorfismi" class="internal"><span class="codenumber">12</span> <span class="title">Omomorfismi</span></a><ul>
+<li><a href="sec-definizione_omomorfismo.html" data-scroll="sec-definizione_omomorfismo" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-nucleo_immagine.html" data-scroll="sec-nucleo_immagine" class="internal">Immagine e nucleo di un omomorfismo</a></li>
+<li><a href="sec-omomorfismi_da_gruppi_ciclici.html" data-scroll="sec-omomorfismi_da_gruppi_ciclici" class="internal">Omomorfismi da gruppi ciclici</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-azioni.html" data-scroll="ch-azioni" class="internal"><span class="codenumber">13</span> <span class="title">Azioni di gruppi su insiemi</span></a><ul>
+<li><a href="sec-azioni_definizioni.html" data-scroll="sec-azioni_definizioni" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-orbite_stabilizzatori.html" data-scroll="sec-orbite_stabilizzatori" class="internal">Orbite e stabilizzatori</a></li>
+<li><a href="sec-sottogruppi_normali.html" data-scroll="sec-sottogruppi_normali" class="internal">Sottogruppi normali</a></li>
+<li><a href="sec-coniugati_simmetrico_alterno.html" data-scroll="sec-coniugati_simmetrico_alterno" class="internal">Classi di coniugio nel gruppo simmetrico e nel gruppo alterno</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-quozienti.html" data-scroll="ch-quozienti" class="internal"><span class="codenumber">14</span> <span class="title">Gruppi quoziente</span></a><ul>
+<li><a href="sec-congruenze.html" data-scroll="sec-congruenze" class="internal">Congruenze in gruppi e monoidi</a></li>
+<li><a href="sec-proprieta_quozienti.html" data-scroll="sec-proprieta_quozienti" class="internal">Proprietà dei gruppi quoziente</a></li>
+<li><a href="sec-teoremi_di_isomorfismo.html" data-scroll="sec-teoremi_di_isomorfismo" class="internal">I teoremi di isomorfismo</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-direttosemidiretto.html" data-scroll="ch-direttosemidiretto" class="internal"><span class="codenumber">15</span> <span class="title">Prodotto diretto e semidiretto</span></a><ul>
+<li><a href="sec-prodotto_diretto_esterno.html" data-scroll="sec-prodotto_diretto_esterno" class="internal">Prodotto diretto esterno</a></li>
+<li><a href="sec-prodotto_diretto_interno.html" data-scroll="sec-prodotto_diretto_interno" class="internal">Prodotto diretto interno</a></li>
+<li><a href="sec-prodotto_semidiretto.html" data-scroll="sec-prodotto_semidiretto" class="internal">Prodotto semidiretto</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-sylow.html" data-scroll="ch-sylow" class="internal"><span class="codenumber">16</span> <span class="title">Il teorema di Sylow</span></a><ul>
+<li><a href="sec-inversione_lagrange.html" data-scroll="sec-inversione_lagrange" class="internal">Inversione del teorema di Lagrange</a></li>
+<li><a href="sec-sylow.html" data-scroll="sec-sylow" class="internal">Il teorema di Sylow</a></li>
+<li><a href="sec-applicazioni_sylow.html" data-scroll="sec-applicazioni_sylow" class="internal">Applicazioni del teorema di Sylow</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-anelli.html" data-scroll="part-anelli" class="internal"><span class="codenumber">IV</span> <span class="title">Anelli</span></a></li>
+<li class="link">
+<a href="ch-anelli.html" data-scroll="ch-anelli" class="internal"><span class="codenumber">17</span> <span class="title">Anelli</span></a><ul>
+<li><a href="sec-prime_proprieta_anelli.html" data-scroll="sec-prime_proprieta_anelli" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-multipli_potenze.html" data-scroll="sec-multipli_potenze" class="internal">Multipli e potenze in un anello</a></li>
+<li><a href="sec-sottoanelli.html" data-scroll="sec-sottoanelli" class="internal">Sottoanelli</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-omomorfismiideali.html" data-scroll="ch-omomorfismiideali" class="internal"><span class="codenumber">18</span> <span class="title">Omomorfismi e ideali</span></a><ul>
+<li><a href="sec-omomorfismi_anelli.html" data-scroll="sec-omomorfismi_anelli" class="internal">Omomorfismi di anelli</a></li>
+<li><a href="sec-anelli_quoziente.html" data-scroll="sec-anelli_quoziente" class="internal">Anelli quoziente e ideali</a></li>
+<li><a href="sec-campo_dei_quozienti.html" data-scroll="sec-campo_dei_quozienti" class="internal">Campo dei quozienti di un dominio</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-polinomi.html" data-scroll="ch-polinomi" class="internal"><span class="codenumber">19</span> <span class="title">Polinomi</span></a><ul>
+<li><a href="sec-anello_polinomi.html" data-scroll="sec-anello_polinomi" class="internal">Anello dei polinomi</a></li>
+<li><a href="sec-valutazione_polinomi.html" data-scroll="sec-valutazione_polinomi" class="internal">Valutazione di polinomi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-divisibilita.html" data-scroll="ch-divisibilita" class="internal"><span class="codenumber">20</span> <span class="title">Divisibilità nei domini</span></a><ul>
+<li><a href="sec-divisibilita.html" data-scroll="sec-divisibilita" class="internal">Relazione di divisibilità</a></li>
+<li><a href="sec-fattorizzazione.html" data-scroll="sec-fattorizzazione" class="internal">Fattorizzazione</a></li>
+<li><a href="sec-PID_euclidei.html" data-scroll="sec-PID_euclidei" class="internal">Domini a ideali principali e domini euclidei</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-fattorizzazione_polinomi.html" data-scroll="ch-fattorizzazione_polinomi" class="internal"><span class="codenumber">21</span> <span class="title">Fattorizzazione dei polinomi</span></a><ul>
+<li><a href="sec-trasporto_UFD.html" data-scroll="sec-trasporto_UFD" class="internal">Il teorema del trasporto per domini a fattorizzazione unica</a></li>
+<li><a href="sec-esempi_fattorizzazione_polinomi.html" data-scroll="sec-esempi_fattorizzazione_polinomi" class="internal">Tecniche di fattorizzazione</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-estensione_campi.html" data-scroll="ch-estensione_campi" class="internal"><span class="codenumber">22</span> <span class="title">Estensioni di campi</span></a><ul>
+<li><a href="sec-elementi_algebrici_e_trascendenti.html" data-scroll="sec-elementi_algebrici_e_trascendenti" class="internal">Elementi algebrici e trascendenti</a></li>
+<li><a href="sec-campo_di_spezzamento.html" data-scroll="sec-campo_di_spezzamento" class="internal">Campi di spezzamento</a></li>
+<li><a href="sec-chiusure_algebriche.html" data-scroll="sec-chiusure_algebriche" class="internal">Cenni su campi algebricamente chiusi</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-moduli.html" data-scroll="part-moduli" class="internal"><span class="codenumber">V</span> <span class="title">Moduli</span></a></li>
+<li class="link">
+<a href="ch-moduli.html" data-scroll="ch-moduli" class="internal"><span class="codenumber">23</span> <span class="title">Moduli</span></a><ul>
+<li><a href="sec-definizione_di_moduli.html" data-scroll="sec-definizione_di_moduli" class="internal">Definizione di modulo</a></li>
+<li><a href="sec-sottomoduli.html" data-scroll="sec-sottomoduli" class="internal">Sottomoduli</a></li>
+<li><a href="sec-omomorfismi_moduli.html" data-scroll="sec-omomorfismi_moduli" class="internal">Omomorfismi di moduli</a></li>
+<li><a href="sec-moduli_quoziente.html" data-scroll="sec-moduli_quoziente" class="internal">Moduli quoziente</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-moduli_liberi.html" data-scroll="ch-moduli_liberi" class="internal"><span class="codenumber">24</span> <span class="title">Moduli liberi</span></a><ul>
+<li><a href="sec-somma_diretta_moduli.html" data-scroll="sec-somma_diretta_moduli" class="internal">Somma diretta di moduli</a></li>
+<li><a href="sec-dipendenza_lineare.html" data-scroll="sec-dipendenza_lineare" class="internal">Dipendenza e indipendenza lineare</a></li>
+<li><a href="sec-elementi_di_torsione.html" data-scroll="sec-elementi_di_torsione" class="internal">Elementi di torsione</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-modulisupid.html" data-scroll="ch-modulisupid" class="internal"><span class="codenumber">25</span> <span class="title">Moduli finitamente generati su PID</span></a><ul>
+<li><a href="sec-moduli_ciclici.html" data-scroll="sec-moduli_ciclici" class="internal">Moduli ciclici</a></li>
+<li><a href="sec-moduli_primari.html" data-scroll="sec-moduli_primari" class="internal">Moduli primari</a></li>
+<li><a href="sec-moduli_liberi.html" data-scroll="sec-moduli_liberi" class="internal">Moduli liberi</a></li>
+<li><a href="sec-classificazione_moduli_pid.html" data-scroll="sec-classificazione_moduli_pid" class="internal">La classificazione dei moduli finitamente generati su un dominio a ideali principali</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppiabeliani.html" data-scroll="ch-gruppiabeliani" class="internal"><span class="codenumber">26</span> <span class="title">Gruppi abeliani finitamente generati</span></a><ul><li><a href="sec-gruppiabeliani.html" data-scroll="sec-gruppiabeliani" class="internal">Classificazione dei gruppi abeliani finitamente generati</a></li></ul>
+</li>
+<li class="link">
+<a href="ch-formecanoniche.html" data-scroll="ch-formecanoniche" class="internal"><span class="codenumber">27</span> <span class="title">Forme canoniche di matrici</span></a><ul>
+<li><a href="sec-kx_moduli.html" data-scroll="sec-kx_moduli" class="internal">Spazi vettoriali con endomorfismi visti come moduli</a></li>
+<li><a href="sec-matrici_rappresentative.html" data-scroll="sec-matrici_rappresentative" class="internal">Matrici rappresentative</a></li>
+<li><a href="sec-matrici_compagne.html" data-scroll="sec-matrici_compagne" class="internal">Matrici compagne</a></li>
+<li><a href="sec-jordan.html" data-scroll="sec-jordan" class="internal">Forma canonica di Jordan</a></li>
+<li><a href="sec-polinomio_minimo_matrici.html" data-scroll="sec-polinomio_minimo_matrici" class="internal">Polinomio minimo di matrici</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Appendici</span></a></li>
+<li class="link">
+<a href="appendix-peano.html" data-scroll="appendix-peano" class="internal"><span class="codenumber">A</span> <span class="title">Numeri naturali e interi</span></a><ul>
+<li><a href="sec-algebre_induttive.html" data-scroll="sec-algebre_induttive" class="internal">Algebre induttive</a></li>
+<li><a href="sec-assiomi_peano.html" data-scroll="sec-assiomi_peano" class="internal">Gli assiomi di Peano</a></li>
+<li><a href="sec-insiemi_finiti_infiniti.html" data-scroll="sec-insiemi_finiti_infiniti" class="internal">Insiemi finiti e infiniti</a></li>
+<li><a href="sec-operazioni_naturali.html" data-scroll="sec-operazioni_naturali" class="internal">Operazioni tra numeri naturali</a></li>
+<li><a href="sec-interi.html" data-scroll="sec-interi" class="internal">Costruzione degli interi</a></li>
+</ul>
+</li>
+<li class="link"><a href="appendix-2.html" data-scroll="appendix-2" class="internal"><span class="codenumber">B</span> <span class="title">Notazioni</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1" class="internal"><span class="codenumber">C</span> <span class="title">Soluzioni e suggerimenti</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl" class="internal"><span class="codenumber">D</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="indice.html" data-scroll="indice" class="internal"><span class="title">Indice analitico</span></a></li>
+<li class="link"><a href="back-colophon.html" data-scroll="back-colophon" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Redatto in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-prodotto_sottogruppi"><h2 class="heading hide-type">
+<span class="type">Paragrafo</span> <span class="codenumber">11.3</span> <span class="title">Prodotto di sottogruppi</span>
+</h2>
+<p id="p-1520">Un altro caso di prodotto di sottoinsiemi che vogliamo studiare è il caso in cui i sottoinsiemi coinvolti siano sottogruppi. In generale, non è detto che il prodotto di sottogruppi sia un sottogruppo.</p>
+<article class="example example-like" id="ex-prodotto_sottogruppi_non_sottogruppo"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">11.3.1</span><span class="period">.</span>
+</h3>
+<p id="p-1521">Consideriamo i sottogruppo <span class="process-math">\(H\coloneqq\grgen{(1\;2)}\)</span> e <span class="process-math">\(K\coloneqq\grgen{(1\;3)}\)</span> di <span class="process-math">\(\Sym_{3}\)</span> e calcoliamo il prodotto <span class="process-math">\(HK\text{.}\)</span> Ora <span class="process-math">\(H=\{\Id,(1\;2)\}\)</span> e <span class="process-math">\(K=\{\Id,(1\;3)\}\text{.}\)</span> Quindi</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-lagrange.html">
+\begin{equation*}
+HK=\{\Id\Id,\Id (1\;3),(1\;2)\Id,(1\;2)(1\;3)\}=\{\Id, (1\;3),(1\;2),(1\;2\;3)\}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Possiamo concludere subito, senza fare troppe verifiche, che <span class="process-math">\(HK\)</span> non è un sottogruppo. Infatti <span class="process-math">\(HK\)</span> ha ordine <span class="process-math">\(4\)</span> e, se fosse un sottogruppo di <span class="process-math">\(\Sym_{3}\text{,}\)</span> per il <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Teorema 11.2.6: Teorema di Lagrange">Teorema di Lagrange</a>, il suo ordine dovrebbe dividere l'ordine di <span class="process-math">\(\Sym_{3}\)</span> che è <span class="process-math">\(6\text{.}\)</span></p></article><p id="p-1522">Vediamo alcune proprietà del prodotto di sottogruppi, prima di caratterizzare il caso in cui il prodotto di due sottogruppi sia un sottogruppo.</p>
+<article class="proposition theorem-like" id="prop-prodotto_contiene_sottogruppi"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">11.3.2</span><span class="period">.</span>
+</h3>
+<p id="p-1523">Se <span class="process-math">\(H\)</span> e <span class="process-math">\(K\)</span> sono sottogruppi di un gruppo <span class="process-math">\(G\text{,}\)</span> allora</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+H\cup K\subseteq HK \subseteq\grgen{H\cup K}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Più in generale, se <span class="process-math">\(H_{1}\text{,}\)</span> <span class="process-math">\(H_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(H_{r}\)</span> sono sottogruppi di <span class="process-math">\(G\text{,}\)</span> allora</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+H_{1}\cup \cdots\cup H_{r}\subseteq H_{1}\cdots H_{r}\subseteq\grgen{H_{1}\cup \cdots\cup H_{r}}\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-105"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-105"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-105"><article class="hiddenproof"><p id="p-1524">Proviamo il caso di due sottogruppi <span class="process-math">\(H\)</span> e <span class="process-math">\(K\text{,}\)</span> lasciando il caso generale per esercizio.</p> <p id="p-1525">Sia <span class="process-math">\(h\in H\text{.}\)</span> Allora <span class="process-math">\(h=h\cdot 1\in HK\text{,}\)</span> dal momento che <span class="process-math">\(1\in K\text{;}\)</span> dunque, <span class="process-math">\(H\subseteq HK\text{.}\)</span> Analogamente, <span class="process-math">\(K\subseteq HK\text{.}\)</span> Pertanto, <span class="process-math">\(H\cup K\subseteq HK\text{.}\)</span></p> <p id="p-1526">Il sottogruppo <span class="process-math">\(\grgen{H\cup K}\)</span> contiene ogni elemento <span class="process-math">\(h\in H\)</span> e ogni elemento <span class="process-math">\(k\in K\)</span> e, quindi, contiene il loro prodotto <span class="process-math">\(hk\text{:}\)</span> dunque, <span class="process-math">\(HK \subseteq\grgen{H\cup K}\text{.}\)</span></p></article></div>
+<p id="p-1527">Nell'<a href="" class="xref" data-knowl="./knowl/ex-prodotto_sottogruppi_non_sottogruppo.html" title="Esempio 11.3.1">Esempio 11.3.1</a>, abbiamo calcolato <span class="process-math">\(4\)</span> prodotti, ottenendo <span class="process-math">\(4\)</span> risultati diversi. In generale però non è detto che tutti i prodotti siano diversi tra loro.</p>
+<article class="example example-like" id="example-105"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">11.3.3</span><span class="period">.</span>
+</h3>
+<p id="p-1528">Consideriamo in <span class="process-math">\(\Sym_{4}\)</span> i sottogruppi <span class="process-math">\(H\coloneqq\grgen{(1\;2),(1\;2\;3)}\)</span> e <span class="process-math">\(K\coloneqq\grgen{(1\;3),(1\;3\;4)}\text{.}\)</span> Ora, anche senza determinare tutti gli elementi di <span class="process-math">\(H\)</span> e <span class="process-math">\(K\text{,}\)</span> notiamo che l'elemento <span class="process-math">\((1\;2\;3)\)</span> si può ottenere come prodotto di un elemento di <span class="process-math">\(H\)</span> per un elemento di <span class="process-math">\(K\)</span> in (almeno) due modi diversi:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(1\;2\;3)=(1\;2)(1\;3)=(1\;2\;3)\Id\text{.}
+\end{equation*}
+</div></article><p id="p-1529">Vediamo ora come determinare i modi diversi in cui un elemento del prodotto <span class="process-math">\(HK\)</span> si può scrivere come prodotto di un elemento di <span class="process-math">\(H\)</span> per un elemento di <span class="process-math">\(K\text{.}\)</span></p>
+<article class="proposition theorem-like" id="prop-diverse_espressioni-prodotto"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">11.3.4</span><span class="period">.</span>
+</h3>
+<p id="p-1530">Sia <span class="process-math">\(G\)</span> un gruppo e siano <span class="process-math">\(H\)</span> e <span class="process-math">\(K\)</span> due sottogruppi di <span class="process-math">\(G\text{.}\)</span> Siano dati <span class="process-math">\(h\)</span> in <span class="process-math">\(H\)</span> e <span class="process-math">\(k\)</span> in <span class="process-math">\(K\text{.}\)</span> Le differenti scritture di <span class="process-math">\(hk\)</span> come prodotto di un elemento di <span class="process-math">\(H\)</span> e di un elemento di <span class="process-math">\(K\)</span> sono tutte e sole quelle del tipo <span class="process-math">\(h'k'\)</span> con <span class="process-math">\(h'=hx\)</span> e <span class="process-math">\(k'=x^{-1}k\)</span> al variare di <span class="process-math">\(x\in H\cap K\text{.}\)</span> In particolare, se <span class="process-math">\(H\)</span> e <span class="process-math">\(K\)</span> sono finiti, si ha <span class="process-math">\(\abs{HK}=\frac{\abs{H}\abs{K}}{\abs{H\cap K}}\text{.}\)</span></p></article><article class="hiddenproof" id="proof-106"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-106"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-106"><article class="hiddenproof"><p id="p-1531">Sia <span class="process-math">\(x\)</span> un elemento di <span class="process-math">\(H\cap K\text{.}\)</span> Allora <span class="process-math">\(hx\in H\)</span> e <span class="process-math">\(x^{-1}k\in K\text{.}\)</span> Inoltre <span class="process-math">\((hx)(x^{-1}k)=hk\text{.}\)</span></p> <p id="p-1532">Viceversa, siano <span class="process-math">\(h'\in H\)</span> e <span class="process-math">\(k'\in K\text{,}\)</span> tali che <span class="process-math">\(hk=h'k'\text{.}\)</span> Moltiplicando a sinistra per <span class="process-math">\(h^{-1}\)</span> e a destra per <span class="process-math">\((k')^{-1}\text{,}\)</span> otteniamo <span class="process-math">\(k(k')^{-1}=h^{-1}h'\text{:}\)</span> detto <span class="process-math">\(x\)</span> questo elemento, si ha immediatamente che <span class="process-math">\(x\in H\cap K\)</span> e che <span class="process-math">\(h'=hx\)</span> e <span class="process-math">\(k'=x^{-1}k\text{.}\)</span></p> <p id="p-1533">Nel caso i cui <span class="process-math">\(H\)</span> e <span class="process-math">\(K\)</span> siano finiti, ovviamente anche <span class="process-math">\(H\cap K\)</span> è finito: siano allora <span class="process-math">\(x_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(x_{r}\)</span> gli elementi di <span class="process-math">\(H\cap K\text{.}\)</span> Per elencare gli elementi di <span class="process-math">\(HK\)</span> dobbiamo effettuare <span class="process-math">\(\abs{H}\abs{K}\)</span> moltiplicazioni di un elemento di <span class="process-math">\(H\)</span> per un elemento di <span class="process-math">\(K\text{:}\)</span> uno per ciascuna coppia <span class="process-math">\((h,k)\)</span> con <span class="process-math">\(h\in H\)</span> e <span class="process-math">\(k\in K\text{.}\)</span> Lo stesso prodotto <span class="process-math">\(hk\)</span> si ottiene con le <span class="process-math">\(r\)</span> coppie <span class="process-math">\((hx_{1},x_{1}^{-1}k)\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\((hx_{r},x_{r}^{-1}k)\text{.}\)</span> Per le <a href="" class="xref" data-knowl="./knowl/prop-cancellazione_gruppo.html" title="Proposizione 7.2.10: Leggi di cancellazione">Leggi di cancellazione</a>, queste coppie sono tutte diverse e, quindi, ciascun prodotto appare esattamente <span class="process-math">\(r\)</span> volte: dunque, <span class="process-math">\(\abs{HK}=\frac{\abs{H}\abs{K}}{\abs{H\cap K}}\text{.}\)</span></p></article></div>
+<article class="theorem theorem-like" id="thm-prodotto_sottogruppo"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">11.3.5</span><span class="period">.</span>
+</h3>
+<p id="p-1534">Dati due sottogruppi <span class="process-math">\(H\)</span> e <span class="process-math">\(K\)</span> di un gruppo <span class="process-math">\(G\text{,}\)</span> sono equivalenti le condizioni:</p>
+<ol class="decimal">
+<li id="item-HKsottogruppo"><p id="p-1535"><span class="process-math">\(HK\)</span> è un sottogruppo;</p></li>
+<li id="item-HKcontieneKH"><p id="p-1536"><span class="process-math">\(HK\supseteq KH\text{;}\)</span></p></li>
+<li id="item-HKugualeKH"><p id="p-1537"><span class="process-math">\(HK=KH\text{.}\)</span></p></li>
+</ol></article><article class="hiddenproof" id="proof-107"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-107"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-107"><article class="hiddenproof"><p id="p-1538">Supponiamo valga il <a href="" class="xref" data-knowl="./knowl/item-HKsottogruppo.html" title="Punto 1">Punto 1</a> e mostriamo che vale il <a href="" class="xref" data-knowl="./knowl/item-HKcontieneKH.html" title="Punto 2">Punto 2</a>. Presi due elementi <span class="process-math">\(h\in H\)</span> e <span class="process-math">\(k\in K\text{,}\)</span> questi appartengono a <span class="process-math">\(H\cup K\)</span> e, per la <a href="" class="xref" data-knowl="./knowl/prop-prodotto_contiene_sottogruppi.html" title="Proposizione 11.3.2">Proposizione 11.3.2</a>, a <span class="process-math">\(HK\text{.}\)</span> Poiché <span class="process-math">\(HK\)</span> è un sottogruppo, esso contiene i prodotti dei propri elementi: in particolare, contiene <span class="process-math">\(kh\text{,}\)</span> come richiesto.</p> <p id="p-1539">Supponiamo valga il <a href="" class="xref" data-knowl="./knowl/item-HKcontieneKH.html" title="Punto 2">Punto 2</a> e mostriamo che vale il <a href="" class="xref" data-knowl="./knowl/item-HKugualeKH.html" title="Punto 3">Punto 3</a>: basta provare che, presi <span class="process-math">\(h\in H\)</span> e <span class="process-math">\(k\in K\text{,}\)</span> si ha <span class="process-math">\(hk\in KH\text{.}\)</span> Ora <span class="process-math">\(hk=(k^{-1}h^{-1})^{-1}\text{:}\)</span> per ipotesi <span class="process-math">\(k^{-1}h^{-1}\in KH\subseteq HK\text{.}\)</span> Dunque, <span class="process-math">\(k^{-1}h^{-1}=\bar{h}\bar{k}\)</span> per opportuni <span class="process-math">\(\bar{h}\in H\)</span> e <span class="process-math">\(\bar{k}\in K\text{.}\)</span> Pertanto, <span class="process-math">\(hk=(\bar{h}\bar{k})^{-1}=\bar{k}^{-1}\bar{h}^{-1}\in KH\text{.}\)</span></p> <p id="p-1540">Supponiamo valga il <a href="" class="xref" data-knowl="./knowl/item-HKugualeKH.html" title="Punto 3">Punto 3</a> e mostriamo che vale il <a href="" class="xref" data-knowl="./knowl/item-HKsottogruppo.html" title="Punto 1">Punto 1</a>. Ovviamente, <span class="process-math">\(HK\)</span> è non vuoto. Presi due elementi in <span class="process-math">\(HK\text{,}\)</span> questi sono del tipo <span class="process-math">\(h_{1}k_{1}\)</span> e <span class="process-math">\(h_{2}k_{2}\)</span> con <span class="process-math">\(h_{1}\)</span> e <span class="process-math">\(h_{2}\)</span> in <span class="process-math">\(H\)</span> e <span class="process-math">\(k_{1}\)</span> e <span class="process-math">\(k_{2}\)</span> in <span class="process-math">\(K\text{.}\)</span> Allora</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/item-HKugualeKH.html ./knowl/item-HKsottogruppo.html">
+\begin{equation*}
+h_{1}k_{1}(h_{2}k_{2})^{-1}=h_{1}k_{1}k_{2}^{-1}h_{2}^{-1}\text{:}
+\end{equation*}
+</div>
+<p class="continuation">ora <span class="process-math">\(k_{1}k_{2}^{-1}\in K\)</span> e, quindi, <span class="process-math">\(k_{1}k_{2}^{-1}h_{2}^{-1}\in KH=HK\text{.}\)</span> Pertanto, esistono <span class="process-math">\(\bar{h}\in H\)</span> e <span class="process-math">\(\bar{k}\in K\)</span> tali che <span class="process-math">\(k_{1}k_{2}^{-1}h_{2}^{-1}=\bar{h}\bar{k}\text{.}\)</span> Quindi,</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/item-HKugualeKH.html ./knowl/item-HKsottogruppo.html">
+\begin{equation*}
+h_{1}k_{1}(h_{2}k_{2})^{-1}=h_{1}\bar{h}\bar{k}\in HK\text{,}
+\end{equation*}
+</div>
+<p class="continuation">come richiesto.</p></article></div>
+<article class="remark remark-like" id="rem-prodotto_sottogruppi_abeliano"><h3 class="heading">
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">11.3.6</span><span class="period">.</span>
+</h3>
+<p id="p-1541">Le condizioni del teorema precedente sono ovviamente soddisfatte se il gruppo <span class="process-math">\(G\)</span> è abeliano o se uno dei due sottogruppi è contenuto nel centro di <span class="process-math">\(G\text{.}\)</span></p></article><article class="example example-like" id="ex-sottogruppi_commutano_non_elemento_per_elemento"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">11.3.7</span><span class="period">.</span>
+</h3>
+<p id="p-1542">Dati due sottogruppi <span class="process-math">\(H\)</span> e <span class="process-math">\(K\)</span> di un gruppo <span class="process-math">\(G\text{,}\)</span> dire che <span class="process-math">\(HK=KH\)</span> non significa che <span class="process-math">\(hk=kh\)</span> per ogni <span class="process-math">\(h\)</span> in <span class="process-math">\(H\)</span> e <span class="process-math">\(k\)</span> in <span class="process-math">\(K\text{.}\)</span> Ad esempio, se prendiamo i sottogruppi <span class="process-math">\(H\coloneqq\grgen{(1\;2)}\)</span> e <span class="process-math">\(A_{3}\)</span> di <span class="process-math">\(\Sym_{3}\text{,}\)</span> vediamo che <span class="process-math">\(H\cap A_{3}\)</span> è il sottogruppo banale e, per la <a href="" class="xref" data-knowl="./knowl/prop-diverse_espressioni-prodotto.html" title="Proposizione 11.3.4">Proposizione 11.3.4</a>, <span class="process-math">\(HA_{3}\)</span> ha ordine <span class="process-math">\(2\cdot 3=6\)</span> e coincide, pertanto, con <span class="process-math">\(\Sym_{3}\text{.}\)</span> Analogamente, <span class="process-math">\(A_{3}H=\Sym_{3}\text{.}\)</span> Se ora prendiamo <span class="process-math">\((1\;2)\)</span> in <span class="process-math">\(H\)</span> e <span class="process-math">\((1\;2\;3)\)</span> in <span class="process-math">\(A_{3}\text{,}\)</span> vediamo che <span class="process-math">\((1\;2)(1\;2\;3)\ne(1\;2\;3)(1\;2)\text{.}\)</span></p></article><section class="exercises" id="exercises-prodotto_sottogruppi"><h3 class="heading hide-type">
+<span class="type">Esercizi</span> <span class="codenumber"></span> <span class="title">Esercizi</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-prodotto_sottogruppi_inclusi"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<p id="p-1543">Dati due sottogruppi <span class="process-math">\(H\)</span> e <span class="process-math">\(K\)</span> di un gruppo, mostrare che <span class="process-math">\(HK=H\)</span> se e solo se <span class="process-math">\(H\ge K\text{.}\)</span> In particolare, <span class="process-math">\(HH=H\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-78" id="solution-78"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-78"><div class="solution solution-like">
+<p id="p-1544">Dalla <a href="" class="xref" data-knowl="./knowl/prop-prodotto_contiene_sottogruppi.html" title="Proposizione 11.3.2">Proposizione 11.3.2</a> sappiamo che <span class="process-math">\(HK\)</span> contiene sia <span class="process-math">\(H\)</span> che <span class="process-math">\(K\text{:}\)</span> dunque, se <span class="process-math">\(HK=H\text{,}\)</span> allora <span class="process-math">\(K\le H\text{.}\)</span></p> <p id="p-1545">Viceversa, poiché <span class="process-math">\(HK\)</span> è formato dai prodotti del tipo <span class="process-math">\(hk\)</span> con <span class="process-math">\(h\in H\)</span> e <span class="process-math">\(k\in K\text{,}\)</span> se <span class="process-math">\(K\le H\text{,}\)</span> allora questi prodotti sono prodotti di elementi di <span class="process-math">\(H\)</span> e, quindi, appartengono a <span class="process-math">\(H\text{.}\)</span> Pertanto, <span class="process-math">\(HK\subseteq H\text{;}\)</span> ma <span class="process-math">\(H\subseteq HK\)</span> per la <a href="" class="xref" data-knowl="./knowl/prop-prodotto_contiene_sottogruppi.html" title="Proposizione 11.3.2">Proposizione 11.3.2</a>.</p>
+</div></div>
+</div></article><div class="exercisegroup" id="exercisegroup-24">
+<h4 class="heading"><span class="title">Gruppo di esercizi.</span></h4>
+<div class="introduction" id="introduction-51"><p id="p-1546">In ciascuno degli esercizi seguenti, sono dati due sottogruppi di un gruppo finito. Calcolare la cardinalità del loro prodotto e stabilire se è un sottogruppo del gruppo.</p></div>
+<div class="exercisegroup-exercises cols2">
+<article class="exercise exercise-like" id="exercise-227"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<p id="p-1547"><span class="process-math">\(H\coloneqq\grgen{(1\;2\;3)}\)</span> e <span class="process-math">\(K\coloneqq\{\sigma\in\Sym_{4}\mid 3\sigma=3\}\)</span> in <span class="process-math">\(\Sym_{4}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-107" id="answer-107"><span class="type">Risposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-107"><div class="answer solution-like"><p id="p-1548"><span class="process-math">\(HK\)</span> ha cardinalità <span class="process-math">\(18\)</span> e non è un sottogruppo.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-228"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<p id="p-1549"><span class="process-math">\(H\coloneqq\grgen{(1\;2\;3)(4\;5)}\)</span> e <span class="process-math">\(K\coloneqq\{\sigma\in\Sym_{5}\mid 3\sigma=3\}\)</span> in <span class="process-math">\(\Sym_{5}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-108" id="answer-108"><span class="type">Risposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-108"><div class="answer solution-like"><p id="p-1550"><span class="process-math">\(HK\)</span> ha cardinalità <span class="process-math">\(72\)</span> e non è un sottogruppo.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-229"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<p id="p-1551"><span class="process-math">\(H\coloneqq\grgen{(1\;2\;3)(4\;5)}\)</span> e <span class="process-math">\(K\coloneqq\{\sigma\in\Sym_{5}\mid 4\sigma=4,5\sigma=5\}\)</span> in <span class="process-math">\(\Sym_{5}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-109" id="answer-109"><span class="type">Risposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-109"><div class="answer solution-like"><p id="p-1552"><span class="process-math">\(HK\)</span> ha cardinalità <span class="process-math">\(12\)</span> ed è un sottogruppo.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-230"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<p id="p-1553"><span class="process-math">\(H\coloneqq\grgen{(1\;2\;3)(4\;5)}\)</span> e <span class="process-math">\(K\coloneqq\grgen{(1\;2\;3)(5\;6)}\)</span> in <span class="process-math">\(\Sym_{6}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-110" id="answer-110"><span class="type">Risposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-110"><div class="answer solution-like"><p id="p-1554"><span class="process-math">\(HK\)</span> ha cardinalità <span class="process-math">\(12\)</span> e non è un sottogruppo.</p></div></div>
+</div></article>
+</div>
+<div class="conclusion" id="conclusion-1"><p id="p-1555">Notiamo che se <span class="process-math">\(\abs{HK}\)</span> non divide l'ordine del gruppo, allora sicuramente <span class="process-math">\(HK\)</span> non è un sottogruppo, ma se <span class="process-math">\(\abs{HK}\)</span> divide l'ordine del gruppo, allora bisogna vedere caso per caso se <span class="process-math">\(HK\)</span> è un sottogruppo o meno.</p></div>
+</div>
+<article class="exercise exercise-like" id="exercise-231"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<p id="p-1556">Sia <span class="process-math">\(G\)</span> un gruppo finito di ordine <span class="process-math">\(p^{n}q\)</span> dove <span class="process-math">\(p\)</span> e <span class="process-math">\(q\)</span> sono primi con <span class="process-math">\(p \gt q\)</span> e <span class="process-math">\(n\)</span> è un intero positivo. Allora <span class="process-math">\(G\)</span> ha al massimo un sottogruppo di ordine <span class="process-math">\(p^{n}\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-79" id="solution-79"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-79"><div class="solution solution-like"><p id="p-1557">Siano <span class="process-math">\(H\)</span> e <span class="process-math">\(K\)</span> due sottogruppi di <span class="process-math">\(G\)</span> di ordine <span class="process-math">\(p^{n}\text{.}\)</span> Per il <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Teorema 11.2.6: Teorema di Lagrange">Teorema di Lagrange</a>, <span class="process-math">\(H\cap K\)</span> ha ordine <span class="process-math">\(p^{r}\)</span> con <span class="process-math">\(0 \le r\le n\text{.}\)</span> Per la <a href="" class="xref" data-knowl="./knowl/prop-diverse_espressioni-prodotto.html" title="Proposizione 11.3.4">Proposizione 11.3.4</a>, <span class="process-math">\(HK\)</span> ha cardinalità <span class="process-math">\(p^{2n-r}\text{:}\)</span> poiché <span class="process-math">\(HK\)</span> è un sottoinsieme di <span class="process-math">\(G\text{,}\)</span> abbiamo allora <span class="process-math">\(p^{2n-r}\le p^{n}q\text{,}\)</span> cioè <span class="process-math">\(p^{n-r}\le q\text{.}\)</span> Poiché <span class="process-math">\(q \lt p\text{,}\)</span> ciò può avvenire solo se <span class="process-math">\(n=r\text{.}\)</span> Ma allora <span class="process-math">\(H\cap K\)</span> ha ordine uguale a <span class="process-math">\(H\)</span> e a <span class="process-math">\(K\text{,}\)</span> cioè <span class="process-math">\(H=K\text{.}\)</span></p></div></div>
+</div></article></section></section></div></main>
+</div>
+</body>
+</html>

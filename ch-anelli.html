@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="it-IT">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Anelli</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Algebra">
+<meta property="book:author" content="Valerio Monti">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Vai all'indice generale</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{mathtools}\require{cancel}\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\cont}{c}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\Inv}{Inv}
+\DeclareMathOperator{\MCD}{MCD}
+\DeclareMathOperator{\mcm}{mcm}
+\DeclareMathOperator{\centro}{Z}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Soc}{Soc}
+\DeclareMathOperator{\Rad}{Rad}
+\DeclareMathOperator{\car}{char}
+
+
+\newcommand{\Sym}{\mathrm{Sym}}
+\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\Idmatrix}{\mathrm{I}}
+\newcommand{\dist}{\mathrm{d}}
+
+\newcommand{\Reali}{\mathbf{R}}
+\newcommand{\Naturali}{\mathbf{N}}
+\newcommand{\Interi}{\mathbf{Z}}
+ \newcommand{\Razionali}{\mathbf{Q}}
+ \newcommand{\Complessi}{\mathbf{C}}
+
+ \newcommand{\grgen}[1]{\langle#1\rangle}
+ \newcommand{\ideal}[1]{\left(#1\right)}
+ \newcommand{\alg}[1]{\left\lbrack#1\right\rvert}
+ \newcommand{\seg}[1]{\left\lvert#1\right)}
+ \newcommand{\ann}[1]{\operatorname{Ann}\left(#1\right)}
+ \newcommand{\len}[1]{\operatorname{l}\left(#1\right)}
+ \newcommand{\class}[2][\sim]{\lbrack #2\rbrack_{#1}}
+ \newcommand{\cent}[2]{\operatorname{C}_{#1}\left(#2\right)}
+ \newcommand{\nrm}[2]{\operatorname{N}_{#1}\left(#2\right)}
+ \newcommand{\stab}[2]{\operatorname{Stab}_{#1}\left(#2\right)}
+ \newcommand{\Supp}[1]{\operatorname{Supp}\left(#1\right)}
+ \newcommand{\Gal}[1]{\operatorname{Gal}\left(#1\right)}
+ \newcommand{\tr}[1]{#1^{\intercal}}
+ \newcommand{\vuoto}{\varnothing}
+ \newcommand{\parti}[1]{\mathcal{P}(#1)}
+ \newcommand{\euler}[1]{\varphi(#1)}
+ \newcommand{\euclidean}{\delta}
+
+ \newcommand{\vect}[1]{\boldsymbol{#1}}
+ 
+ \newcommand{\mat}[2]{\operatorname{M}_{#1}(#2)}
+ \newcommand{\matt}[3]{\operatorname{M}_{#1,#2}(#3)}
+ \newcommand{\Sim}[2]{\operatorname{S}(#1,#2)}
+ \newcommand{\AntiSim}[2]{\operatorname{A}(#1,#2)}
+ \newcommand{\Diag}[2]{\operatorname{D}(#1,#2)}
+ \newcommand{\TS}[2]{\operatorname{T}^{#1}(#2)}
+ \newcommand{\TI}[2]{\operatorname{T}_{#1}(#2)}
+ \newcommand{\GL}[2]{\operatorname{GL}(#1,#2)}
+ \newcommand{\SL}[2]{\operatorname{SL}(#1,#2)}
+ \newcommand{\Ort}[2]{\operatorname{O}(#1,#2)}
+
+ \newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+ \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+ \newcommand{\ind}[2]{\left\lvert#1:#2\right\rvert}
+ \newcommand{\degext}[2]{\left\lbrack#1:#2\right\rbrack}
+
+ \newcommand{\invprov}[1]{\widehat{#1}}
+
+ \newcommand\YoungTableau[1]{
+ \begin{tikzpicture}[scale=0.4,keepsize]
+ \foreach \y [count=\yi] in {#1}
+ \foreach \x in {1,...,\y}
+ {
+ \draw (\x,\yi) rectangle +(1,1);
+ }
+ \end{tikzpicture}
+ }
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-algebra.html"><span class="title">Algebra</span></a></h1>
+<p class="byline">Valerio Monti</p>
+</div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Risultati: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>Nessun risultato.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Indice</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="indice.html" title="Indice analitico">Indice analitico</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="part-anelli.html" title="Precedente">Prec</a><a id="upbutton" class="up-button button toolbar-item" href="part-anelli.html" title="Su">Su</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-prime_proprieta_anelli.html" title="Successivo">Succ</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Indice</button><a class="previous-button toolbar-item button" href="part-anelli.html" title="Precedente">Prec</a><a class="up-button button toolbar-item" href="part-anelli.html" title="Su">Su</a><a class="next-button button toolbar-item" href="sec-prime_proprieta_anelli.html" title="Successivo">Succ</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Materiale iniziale</span></a><ul>
+<li><a href="front-colophon.html" data-scroll="front-colophon" class="internal">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Prefazione</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-preliminari.html" data-scroll="part-preliminari" class="internal"><span class="codenumber">I</span> <span class="title">Preliminari</span></a></li>
+<li class="link">
+<a href="ch-insiemi.html" data-scroll="ch-insiemi" class="internal"><span class="codenumber">1</span> <span class="title">Insiemi</span></a><ul>
+<li><a href="sec-insiemi.html" data-scroll="sec-insiemi" class="internal">Concetti di base</a></li>
+<li><a href="sec-operazioni_insiemi.html" data-scroll="sec-operazioni_insiemi" class="internal">Operazioni tra insiemi</a></li>
+<li><a href="sec-prodotto-cartesiano.html" data-scroll="sec-prodotto-cartesiano" class="internal">Prodotto cartesiano</a></li>
+<li><a href="sec-Russell.html" data-scroll="sec-Russell" class="internal">Il paradosso di Russell</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-corrispondenze.html" data-scroll="ch-corrispondenze" class="internal"><span class="codenumber">2</span> <span class="title">Corrispondenze e relazioni</span></a><ul>
+<li><a href="sec-corrispondenze_definizione.html" data-scroll="sec-corrispondenze_definizione" class="internal">Corrispondenze tra insiemi</a></li>
+<li><a href="sec-relazioni_equivalenza.html" data-scroll="sec-relazioni_equivalenza" class="internal">Relazioni di equivalenza</a></li>
+<li><a href="sec-relazioni_ordine.html" data-scroll="sec-relazioni_ordine" class="internal">Relazioni d'ordine</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-funzioni.html" data-scroll="ch-funzioni" class="internal"><span class="codenumber">3</span> <span class="title">Funzioni</span></a><ul>
+<li><a href="sec-funzioni_definizione.html" data-scroll="sec-funzioni_definizione" class="internal">Definizioni di base</a></li>
+<li><a href="sec-funzioni_iniettive_suriettive.html" data-scroll="sec-funzioni_iniettive_suriettive" class="internal">Funzioni iniettive, suriettive e biiettive</a></li>
+<li><a href="sec-cardinalita.html" data-scroll="sec-cardinalita" class="internal">Cenni sulla cardinalità</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-aritmetica.html" data-scroll="part-aritmetica" class="internal"><span class="codenumber">II</span> <span class="title">Aritmetica</span></a></li>
+<li class="link">
+<a href="ch-interi.html" data-scroll="ch-interi" class="internal"><span class="codenumber">4</span> <span class="title">I numeri interi</span></a><ul>
+<li><a href="sec-naturali_base.html" data-scroll="sec-naturali_base" class="internal">I numeri naturali e i numeri interi</a></li>
+<li><a href="sec-induzione_ricorrenza.html" data-scroll="sec-induzione_ricorrenza" class="internal">Dimostrazioni per induzione e definizioni per ricorrenza</a></li>
+<li><a href="sec-divisibilita_interi.html" data-scroll="sec-divisibilita_interi" class="internal">Divisibilità negli interi</a></li>
+<li><a href="sec-fattorizzazione_interi.html" data-scroll="sec-fattorizzazione_interi" class="internal">Il teorema fondamentale dell'aritmetica</a></li>
+<li><a href="sec-equazioni_lineari_diofantine.html" data-scroll="sec-equazioni_lineari_diofantine" class="internal">Equazioni lineari diofantine</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-classidiresto.html" data-scroll="ch-classidiresto" class="internal"><span class="codenumber">5</span> <span class="title">Classi di resto</span></a><ul>
+<li><a href="sec-congruenzemodulon.html" data-scroll="sec-congruenzemodulon" class="internal">Congruenze modulo un intero</a></li>
+<li><a href="sec-operazioniclassiresto.html" data-scroll="sec-operazioniclassiresto" class="internal">Operazioni tra classi di resto</a></li>
+<li><a href="sec-eulero.html" data-scroll="sec-eulero" class="internal">Il teorema di Eulero</a></li>
+<li><a href="sec-congruenze_con_incognite.html" data-scroll="sec-congruenze_con_incognite" class="internal">Congruenze con incognite</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-gruppi.html" data-scroll="part-gruppi" class="internal"><span class="codenumber">III</span> <span class="title">Gruppi</span></a></li>
+<li class="link">
+<a href="ch-operazioni.html" data-scroll="ch-operazioni" class="internal"><span class="codenumber">6</span> <span class="title">Operazioni</span></a><ul>
+<li><a href="sec-operazioni_definizioni.html" data-scroll="sec-operazioni_definizioni" class="internal">Definizioni ed esempi</a></li>
+<li><a href="sec-proprieta_operazioni.html" data-scroll="sec-proprieta_operazioni" class="internal">Proprietà delle operazioni</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppi.html" data-scroll="ch-gruppi" class="internal"><span class="codenumber">7</span> <span class="title">Monoidi e gruppi</span></a><ul>
+<li><a href="sec-monoidi.html" data-scroll="sec-monoidi" class="internal">Monoidi</a></li>
+<li><a href="sec-gruppi.html" data-scroll="sec-gruppi" class="internal">Gruppi</a></li>
+<li><a href="sec-gruppi_piccoli.html" data-scroll="sec-gruppi_piccoli" class="internal">Alcuni esempi di gruppi piccoli</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-sottogruppi.html" data-scroll="ch-sottogruppi" class="internal"><span class="codenumber">8</span> <span class="title">Sottogruppi</span></a><ul>
+<li><a href="sec-sottomonoidi_sottogruppi.html" data-scroll="sec-sottomonoidi_sottogruppi" class="internal">Sottomonoidi e sottogruppi</a></li>
+<li><a href="sec-prime_proprieta_sottogruppi.html" data-scroll="sec-prime_proprieta_sottogruppi" class="internal">Prime proprietà dei sottogruppi</a></li>
+<li><a href="sec-gruppi_del_piano.html" data-scroll="sec-gruppi_del_piano" class="internal">Gruppi di trasformazioni del piano</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppi_ciclici.html" data-scroll="ch-gruppi_ciclici" class="internal"><span class="codenumber">9</span> <span class="title">Gruppi ciclici</span></a><ul>
+<li><a href="sec-definizione_gruppi_ciclici.html" data-scroll="sec-definizione_gruppi_ciclici" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-sottogruppi_di_ciclici.html" data-scroll="sec-sottogruppi_di_ciclici" class="internal">Sottogruppi di gruppi ciclici</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppi_permutazioni.html" data-scroll="ch-gruppi_permutazioni" class="internal"><span class="codenumber">10</span> <span class="title">Gruppi di permutazioni</span></a><ul>
+<li><a href="sec-definizioni_gruppi_permutazioni.html" data-scroll="sec-definizioni_gruppi_permutazioni" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-cicli.html" data-scroll="sec-cicli" class="internal">Cicli</a></li>
+<li><a href="sec-scambi.html" data-scroll="sec-scambi" class="internal">Scambi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-laterali.html" data-scroll="ch-laterali" class="internal"><span class="codenumber">11</span> <span class="title">Laterali e teorema di Lagrange</span></a><ul>
+<li><a href="sec-prodotto_sottoinsiemi.html" data-scroll="sec-prodotto_sottoinsiemi" class="internal">Prodotto di sottoinsiemi</a></li>
+<li><a href="sec-teorema_di_lagrange.html" data-scroll="sec-teorema_di_lagrange" class="internal">Teorema di Lagrange</a></li>
+<li><a href="sec-prodotto_sottogruppi.html" data-scroll="sec-prodotto_sottogruppi" class="internal">Prodotto di sottogruppi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-omomorfismi.html" data-scroll="ch-omomorfismi" class="internal"><span class="codenumber">12</span> <span class="title">Omomorfismi</span></a><ul>
+<li><a href="sec-definizione_omomorfismo.html" data-scroll="sec-definizione_omomorfismo" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-nucleo_immagine.html" data-scroll="sec-nucleo_immagine" class="internal">Immagine e nucleo di un omomorfismo</a></li>
+<li><a href="sec-omomorfismi_da_gruppi_ciclici.html" data-scroll="sec-omomorfismi_da_gruppi_ciclici" class="internal">Omomorfismi da gruppi ciclici</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-azioni.html" data-scroll="ch-azioni" class="internal"><span class="codenumber">13</span> <span class="title">Azioni di gruppi su insiemi</span></a><ul>
+<li><a href="sec-azioni_definizioni.html" data-scroll="sec-azioni_definizioni" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-orbite_stabilizzatori.html" data-scroll="sec-orbite_stabilizzatori" class="internal">Orbite e stabilizzatori</a></li>
+<li><a href="sec-sottogruppi_normali.html" data-scroll="sec-sottogruppi_normali" class="internal">Sottogruppi normali</a></li>
+<li><a href="sec-coniugati_simmetrico_alterno.html" data-scroll="sec-coniugati_simmetrico_alterno" class="internal">Classi di coniugio nel gruppo simmetrico e nel gruppo alterno</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-quozienti.html" data-scroll="ch-quozienti" class="internal"><span class="codenumber">14</span> <span class="title">Gruppi quoziente</span></a><ul>
+<li><a href="sec-congruenze.html" data-scroll="sec-congruenze" class="internal">Congruenze in gruppi e monoidi</a></li>
+<li><a href="sec-proprieta_quozienti.html" data-scroll="sec-proprieta_quozienti" class="internal">Proprietà dei gruppi quoziente</a></li>
+<li><a href="sec-teoremi_di_isomorfismo.html" data-scroll="sec-teoremi_di_isomorfismo" class="internal">I teoremi di isomorfismo</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-direttosemidiretto.html" data-scroll="ch-direttosemidiretto" class="internal"><span class="codenumber">15</span> <span class="title">Prodotto diretto e semidiretto</span></a><ul>
+<li><a href="sec-prodotto_diretto_esterno.html" data-scroll="sec-prodotto_diretto_esterno" class="internal">Prodotto diretto esterno</a></li>
+<li><a href="sec-prodotto_diretto_interno.html" data-scroll="sec-prodotto_diretto_interno" class="internal">Prodotto diretto interno</a></li>
+<li><a href="sec-prodotto_semidiretto.html" data-scroll="sec-prodotto_semidiretto" class="internal">Prodotto semidiretto</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-sylow.html" data-scroll="ch-sylow" class="internal"><span class="codenumber">16</span> <span class="title">Il teorema di Sylow</span></a><ul>
+<li><a href="sec-inversione_lagrange.html" data-scroll="sec-inversione_lagrange" class="internal">Inversione del teorema di Lagrange</a></li>
+<li><a href="sec-sylow.html" data-scroll="sec-sylow" class="internal">Il teorema di Sylow</a></li>
+<li><a href="sec-applicazioni_sylow.html" data-scroll="sec-applicazioni_sylow" class="internal">Applicazioni del teorema di Sylow</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-anelli.html" data-scroll="part-anelli" class="internal"><span class="codenumber">IV</span> <span class="title">Anelli</span></a></li>
+<li class="link active">
+<a href="ch-anelli.html" data-scroll="ch-anelli" class="internal"><span class="codenumber">17</span> <span class="title">Anelli</span></a><ul>
+<li><a href="sec-prime_proprieta_anelli.html" data-scroll="sec-prime_proprieta_anelli" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-multipli_potenze.html" data-scroll="sec-multipli_potenze" class="internal">Multipli e potenze in un anello</a></li>
+<li><a href="sec-sottoanelli.html" data-scroll="sec-sottoanelli" class="internal">Sottoanelli</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-omomorfismiideali.html" data-scroll="ch-omomorfismiideali" class="internal"><span class="codenumber">18</span> <span class="title">Omomorfismi e ideali</span></a><ul>
+<li><a href="sec-omomorfismi_anelli.html" data-scroll="sec-omomorfismi_anelli" class="internal">Omomorfismi di anelli</a></li>
+<li><a href="sec-anelli_quoziente.html" data-scroll="sec-anelli_quoziente" class="internal">Anelli quoziente e ideali</a></li>
+<li><a href="sec-campo_dei_quozienti.html" data-scroll="sec-campo_dei_quozienti" class="internal">Campo dei quozienti di un dominio</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-polinomi.html" data-scroll="ch-polinomi" class="internal"><span class="codenumber">19</span> <span class="title">Polinomi</span></a><ul>
+<li><a href="sec-anello_polinomi.html" data-scroll="sec-anello_polinomi" class="internal">Anello dei polinomi</a></li>
+<li><a href="sec-valutazione_polinomi.html" data-scroll="sec-valutazione_polinomi" class="internal">Valutazione di polinomi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-divisibilita.html" data-scroll="ch-divisibilita" class="internal"><span class="codenumber">20</span> <span class="title">Divisibilità nei domini</span></a><ul>
+<li><a href="sec-divisibilita.html" data-scroll="sec-divisibilita" class="internal">Relazione di divisibilità</a></li>
+<li><a href="sec-fattorizzazione.html" data-scroll="sec-fattorizzazione" class="internal">Fattorizzazione</a></li>
+<li><a href="sec-PID_euclidei.html" data-scroll="sec-PID_euclidei" class="internal">Domini a ideali principali e domini euclidei</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-fattorizzazione_polinomi.html" data-scroll="ch-fattorizzazione_polinomi" class="internal"><span class="codenumber">21</span> <span class="title">Fattorizzazione dei polinomi</span></a><ul>
+<li><a href="sec-trasporto_UFD.html" data-scroll="sec-trasporto_UFD" class="internal">Il teorema del trasporto per domini a fattorizzazione unica</a></li>
+<li><a href="sec-esempi_fattorizzazione_polinomi.html" data-scroll="sec-esempi_fattorizzazione_polinomi" class="internal">Tecniche di fattorizzazione</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-estensione_campi.html" data-scroll="ch-estensione_campi" class="internal"><span class="codenumber">22</span> <span class="title">Estensioni di campi</span></a><ul>
+<li><a href="sec-elementi_algebrici_e_trascendenti.html" data-scroll="sec-elementi_algebrici_e_trascendenti" class="internal">Elementi algebrici e trascendenti</a></li>
+<li><a href="sec-campo_di_spezzamento.html" data-scroll="sec-campo_di_spezzamento" class="internal">Campi di spezzamento</a></li>
+<li><a href="sec-chiusure_algebriche.html" data-scroll="sec-chiusure_algebriche" class="internal">Cenni su campi algebricamente chiusi</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-moduli.html" data-scroll="part-moduli" class="internal"><span class="codenumber">V</span> <span class="title">Moduli</span></a></li>
+<li class="link">
+<a href="ch-moduli.html" data-scroll="ch-moduli" class="internal"><span class="codenumber">23</span> <span class="title">Moduli</span></a><ul>
+<li><a href="sec-definizione_di_moduli.html" data-scroll="sec-definizione_di_moduli" class="internal">Definizione di modulo</a></li>
+<li><a href="sec-sottomoduli.html" data-scroll="sec-sottomoduli" class="internal">Sottomoduli</a></li>
+<li><a href="sec-omomorfismi_moduli.html" data-scroll="sec-omomorfismi_moduli" class="internal">Omomorfismi di moduli</a></li>
+<li><a href="sec-moduli_quoziente.html" data-scroll="sec-moduli_quoziente" class="internal">Moduli quoziente</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-moduli_liberi.html" data-scroll="ch-moduli_liberi" class="internal"><span class="codenumber">24</span> <span class="title">Moduli liberi</span></a><ul>
+<li><a href="sec-somma_diretta_moduli.html" data-scroll="sec-somma_diretta_moduli" class="internal">Somma diretta di moduli</a></li>
+<li><a href="sec-dipendenza_lineare.html" data-scroll="sec-dipendenza_lineare" class="internal">Dipendenza e indipendenza lineare</a></li>
+<li><a href="sec-elementi_di_torsione.html" data-scroll="sec-elementi_di_torsione" class="internal">Elementi di torsione</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-modulisupid.html" data-scroll="ch-modulisupid" class="internal"><span class="codenumber">25</span> <span class="title">Moduli finitamente generati su PID</span></a><ul>
+<li><a href="sec-moduli_ciclici.html" data-scroll="sec-moduli_ciclici" class="internal">Moduli ciclici</a></li>
+<li><a href="sec-moduli_primari.html" data-scroll="sec-moduli_primari" class="internal">Moduli primari</a></li>
+<li><a href="sec-moduli_liberi.html" data-scroll="sec-moduli_liberi" class="internal">Moduli liberi</a></li>
+<li><a href="sec-classificazione_moduli_pid.html" data-scroll="sec-classificazione_moduli_pid" class="internal">La classificazione dei moduli finitamente generati su un dominio a ideali principali</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppiabeliani.html" data-scroll="ch-gruppiabeliani" class="internal"><span class="codenumber">26</span> <span class="title">Gruppi abeliani finitamente generati</span></a><ul><li><a href="sec-gruppiabeliani.html" data-scroll="sec-gruppiabeliani" class="internal">Classificazione dei gruppi abeliani finitamente generati</a></li></ul>
+</li>
+<li class="link">
+<a href="ch-formecanoniche.html" data-scroll="ch-formecanoniche" class="internal"><span class="codenumber">27</span> <span class="title">Forme canoniche di matrici</span></a><ul>
+<li><a href="sec-kx_moduli.html" data-scroll="sec-kx_moduli" class="internal">Spazi vettoriali con endomorfismi visti come moduli</a></li>
+<li><a href="sec-matrici_rappresentative.html" data-scroll="sec-matrici_rappresentative" class="internal">Matrici rappresentative</a></li>
+<li><a href="sec-matrici_compagne.html" data-scroll="sec-matrici_compagne" class="internal">Matrici compagne</a></li>
+<li><a href="sec-jordan.html" data-scroll="sec-jordan" class="internal">Forma canonica di Jordan</a></li>
+<li><a href="sec-polinomio_minimo_matrici.html" data-scroll="sec-polinomio_minimo_matrici" class="internal">Polinomio minimo di matrici</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Appendici</span></a></li>
+<li class="link">
+<a href="appendix-peano.html" data-scroll="appendix-peano" class="internal"><span class="codenumber">A</span> <span class="title">Numeri naturali e interi</span></a><ul>
+<li><a href="sec-algebre_induttive.html" data-scroll="sec-algebre_induttive" class="internal">Algebre induttive</a></li>
+<li><a href="sec-assiomi_peano.html" data-scroll="sec-assiomi_peano" class="internal">Gli assiomi di Peano</a></li>
+<li><a href="sec-insiemi_finiti_infiniti.html" data-scroll="sec-insiemi_finiti_infiniti" class="internal">Insiemi finiti e infiniti</a></li>
+<li><a href="sec-operazioni_naturali.html" data-scroll="sec-operazioni_naturali" class="internal">Operazioni tra numeri naturali</a></li>
+<li><a href="sec-interi.html" data-scroll="sec-interi" class="internal">Costruzione degli interi</a></li>
+</ul>
+</li>
+<li class="link"><a href="appendix-2.html" data-scroll="appendix-2" class="internal"><span class="codenumber">B</span> <span class="title">Notazioni</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1" class="internal"><span class="codenumber">C</span> <span class="title">Soluzioni e suggerimenti</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl" class="internal"><span class="codenumber">D</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="indice.html" data-scroll="indice" class="internal"><span class="title">Indice analitico</span></a></li>
+<li class="link"><a href="back-colophon.html" data-scroll="back-colophon" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Redatto in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="chapter" id="ch-anelli"><h2 class="heading">
+<span class="type">Capitolo</span> <span class="codenumber">17</span> <span class="title">Anelli</span>
+</h2>
+<section class="introduction" id="introduction-87"><p id="p-2337">Finora abbiamo approfondito lo studio di strutture algebriche dotate di una singola operazione, anche se abbiamo già incontrato esempi di insiemi dotati di due operazioni legate da proprietà distributive: gli interi, i razionali, i reali, le classi di resto, le matrici, etc. e abbiamo già usato, sia pure informalmente, il termine di anello. Vogliamo ora introdurre questa nozione in maniera più precisa. Come vedremo, alcuni dei risultati e concetti validi per i gruppi avranno un'immediata traduzione nell'ambito degli anelli.</p></section><nav class="summary-links"><ul>
+<li><a href="sec-prime_proprieta_anelli.html" class="internal"><span class="codenumber">17.1</span> <span class="title">Definizioni e prime proprietà</span></a></li>
+<li><a href="sec-multipli_potenze.html" class="internal"><span class="codenumber">17.2</span> <span class="title">Multipli e potenze in un anello</span></a></li>
+<li><a href="sec-sottoanelli.html" class="internal"><span class="codenumber">17.3</span> <span class="title">Sottoanelli</span></a></li>
+</ul></nav></section></div></main>
+</div>
+</body>
+</html>

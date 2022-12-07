@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">21.2.3</span><span class="period">.</span>
+</h3>
+<p>Vogliamo determinare le radici razionali del polinomio</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-del_resto.html">
+\begin{equation*}
+\frac{3}{2}x^{6}+\frac{3}{4}x^{5}-\frac{15}{4}x^{4}-\frac{21}{4}x^{3}-\frac{9}{2}x^{2}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Innanzitutto, riconduciamoci a un polinomio a coefficienti interi moltiplicando per <span class="process-math">\(4\text{:}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-del_resto.html">
+\begin{equation*}
+6x^{6}+3x^{5}-15x^{4}-21x^{3}-18x^{2}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Ora dividiamo per il suo contenuto <span class="process-math">\(3\)</span> per ottenere un polinomio primitivo</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-del_resto.html">
+\begin{equation*}
+2x^{6}+x^{5}-5x^{4}-7x^{3}-6x^{2}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Il termine noto è <span class="process-math">\(0\text{:}\)</span> dunque, <span class="process-math">\(0\)</span> è una radice di questo polinomio e possiamo raccogliere <span class="process-math">\(x^{2}\)</span> per ottenere</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-del_resto.html">
+\begin{equation*}
+x^{2}(2x^{4}+x^{3}-5x^{2}-7x-6)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Consideriamo ora il polinomio</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-del_resto.html">
+\begin{equation*}
+f\coloneqq 2x^{4}+x^{3}-5x^{2}-7x-6\text{:}
+\end{equation*}
+</div>
+<p class="continuation">i divisori del termine noto sono <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(-1\text{,}\)</span> <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(-2\text{,}\)</span> <span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(-3\text{,}\)</span> <span class="process-math">\(6\)</span> e <span class="process-math">\(-6\text{,}\)</span> mentre i divisori del coefficiente direttivo sono <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(-1\text{,}\)</span> <span class="process-math">\(2\)</span> e <span class="process-math">\(-2\text{.}\)</span> Apparentemente dovremmo considerare <span class="process-math">\(32\)</span> possibilità: tuttavia, possiamo assumere che il denominatore sia positivo (e, quindi, considerare solo i due valori <span class="process-math">\(1\)</span> e <span class="process-math">\(2\)</span>) e che denominatore e numeratore siano coprimi. Cominciamo a verificare le possibili radici intere. Vediamo che <span class="process-math">\(f(1)=2+1-5-7-6\ne0\text{,}\)</span> <span class="process-math">\(f(-1)=2-1-5+7-6\ne0\)</span> e <span class="process-math">\(f(2)=32+8-20-14-6=0\text{.}\)</span> Potremmo proseguire e fare le altre verifiche, ma conviene notare che, per il <a href="" class="xref" data-knowl="./knowl/thm-del_resto.html" title="Teorema 19.2.6: Teorema del resto">Teorema del resto</a>, <span class="process-math">\(x-2\)</span> è un divisore del polinomio che stiamo considerando. Abbiamo allora</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-del_resto.html">
+\begin{equation*}
+2x^{4}+x^{3}-5x^{2}-7x-6=(x-2)(2x^{3}+5x^{2}+5x+3)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Consideriamo ora il polinomio</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-del_resto.html">
+\begin{equation*}
+g\coloneqq 2x^{3}+5x^{2}+5x+3\text{:}
+\end{equation*}
+</div>
+<p class="continuation">i divisori del termine noto sono <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(-1\text{,}\)</span> <span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(-3\text{,}\)</span> mentre i divisori del coefficiente direttivo sono <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(-1\text{,}\)</span> <span class="process-math">\(2\)</span> e <span class="process-math">\(-2\text{.}\)</span> Anche qui, possiamo supporre che i denominatori siano positivi e che numeratore e denominatore siano coprimi. Le possibili radici razionali sono allora <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(-1\text{,}\)</span> <span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(-3\text{,}\)</span> <span class="process-math">\(\frac{1}{2}\)</span>  <span class="process-math">\(-\frac{1}{2}\text{,}\)</span> <span class="process-math">\(\frac{3}{2}\text{,}\)</span> <span class="process-math">\(-\frac{3}{2}\text{.}\)</span></p> <p>Possiamo fare a meno di considerare <span class="process-math">\(1\)</span> e <span class="process-math">\(-1\text{:}\)</span> non sono radici di <span class="process-math">\(f\)</span> e, quindi, non sono radici di <span class="process-math">\(g\text{.}\)</span> Facendo le varie verifiche si vede che solo <span class="process-math">\(-\frac{3}{2}\)</span> è radice. Allora possiamo dire che <span class="process-math">\(x+\frac{3}{2}\)</span> divide <span class="process-math">\(g\)</span> in <span class="process-math">\(\Razionali[x]\)</span> e, per la <a href="" class="xref" data-knowl="./knowl/prop-divisore_primitivo.html" title="Proposizione 21.1.7">Proposizione 21.1.7</a>, <span class="process-math">\(2x+3\)</span> divide <span class="process-math">\(g\)</span> in <span class="process-math">\(\Interi[x]\text{.}\)</span> Abbiamo allora</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-divisore_primitivo.html">
+\begin{equation*}
+g=(2x+3)(x^{2}+x+1)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Consideriamo ora il polinomio</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-divisore_primitivo.html">
+\begin{equation*}
+h\coloneqq x^{2}+x+1\text{:}
+\end{equation*}
+</div>
+<p class="continuation">i divisori del termine noto sono <span class="process-math">\(1\)</span> e <span class="process-math">\(-1\text{,}\)</span> mentre i divisori del coefficiente direttivo sono <span class="process-math">\(1\)</span> e <span class="process-math">\(-1\text{.}\)</span> Anche qui, possiamo supporre che i denominatori siano positivi e che numeratore e denominatore siano coprimi. Le possibili radici razionali sono allora <span class="process-math">\(1\)</span> e <span class="process-math">\(-1\text{:}\)</span> ma nessuna di queste è radice di <span class="process-math">\(g\)</span> e, a maggior ragione, non è radice di <span class="process-math">\(h\text{.}\)</span> Dunque, non abbiamo fattori di grado <span class="process-math">\(1\text{:}\)</span> poiché <span class="process-math">\(h\)</span> ha grado <span class="process-math">\(2\text{,}\)</span> possiamo concludere che è irriducibile. Pertanto, abbiamo la fattorizzazione in irriducibili</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-divisore_primitivo.html">
+\begin{equation*}
+2x^{6}+x^{5}-5x^{4}-7x^{3}-6x^{2}=x^{2}(x-2)(2x+3)(x^{2}+x+1)
+\end{equation*}
+</div>
+<p class="continuation">(notiamo che <span class="process-math">\(x^2\)</span> è il prodotto dell'irriducibile <span class="process-math">\(x\)</span> con sé stesso).</p></article><span class="incontext"><a href="sec-esempi_fattorizzazione_polinomi.html#example-173" class="internal">Contesto</a></span>
+</body>
+</html>

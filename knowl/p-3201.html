@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Capoverso</span></h4>
+<p>Consideriamo allora la matrice <span class="process-math">\(A\)</span> a <span class="process-math">\(m\)</span> righe e <span class="process-math">\(n\)</span> colonne il cui elemento di posto <span class="process-math">\((h,j)\)</span> è <span class="process-math">\(a_{hj}\)</span> e la matrice <span class="process-math">\(B\)</span> a <span class="process-math">\(n\)</span> righe e <span class="process-math">\(m\)</span> colonne il cui elemento di posto <span class="process-math">\((j,i)\)</span> è <span class="process-math">\(b_{ji}\text{,}\)</span> vediamo che il prodotto <span class="process-math">\(AB\)</span> coincide con la matrice identica di ordine <span class="process-math">\(m\text{.}\)</span> Consideriamo ora la matrice quadrata <span class="process-math">\(A^{*}\)</span> di ordine <span class="process-math">\(m\)</span> che si ottiene “attaccando” ad <span class="process-math">\(A\)</span> delle colonne nulle e la matrice quadrata <span class="process-math">\(B^{*}\)</span> di ordine <span class="process-math">\(m\)</span> che si ottiene “attaccando” a <span class="process-math">\(B\)</span> delle righe nulle. Formalmente,  poniamo <span class="process-math">\(a_{hj}\coloneqq 0\)</span> per <span class="process-math">\(n+1\le j\le m\)</span> e <span class="process-math">\(b_{ji}\coloneqq 0\)</span> per <span class="process-math">\(n+1\le i\le m\text{.}\)</span> Facendo il prodotto <span class="process-math">\(A^{*}B^{*}\)</span> vediamo che il suo elemento di posto <span class="process-math">\((h,i)\)</span> è</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sum_{j=1}^{m}a_{hj}b_{ji}=\sum_{j=1}^{n}a_{hj}b_{ji}+\sum_{j=n+1}^{m}a_{hj}b_{ji}=\sum_{j=1}^{n}a_{hj}b_{ji}+0=\sum_{j=1}^{n}a_{hj}b_{ji}
+\end{equation*}
+</div>
+<p class="continuation">e, quindi, <span class="process-math">\(A^{*}B^{*}=\Id\text{.}\)</span> Per il teorema di Binet (che vale nell'ipotesi che l'anello dei coefficienti sia commutativo), otteniamo allora <span class="process-math">\(\det A^{*}\det B^{*}=\det\Id=1\text{,}\)</span> il che è assurdo, perché <span class="process-math">\(A^{*}\text{,}\)</span> avendo delle colonne nulle, ha determinante nullo.</p>
+<span class="incontext"><a href="sec-dipendenza_lineare.html#p-3201" class="internal">Contesto</a></span>
+</body>
+</html>

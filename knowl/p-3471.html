@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Capoverso</span></h4>
+<p>Per mostrare che il polinomio caratteristico di <span class="process-math">\(C(p)\)</span> è <span class="process-math">\(p\text{,}\)</span> procediamo per induzione su <span class="process-math">\(n\text{.}\)</span> Se <span class="process-math">\(n=1\)</span> (e, quindi, <span class="process-math">\(p=a_{0}+x\)</span>), la matrice compagna di <span class="process-math">\(p\)</span> è <span class="process-math">\(\begin{psmallmatrix} -a_{0} \end{psmallmatrix}\)</span> e il polinomio caratteristico di questa matrice è, ovviamente, <span class="process-math">\(a_{0}+x\text{.}\)</span> Se <span class="process-math">\(n&gt;1\text{,}\)</span> il polinomio caratteristico di <span class="process-math">\(C(p)\)</span> è</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\det(x\Idmatrix-C(p))=
+\begin{vmatrix}
+x      \amp -1     \amp 0      \amp \dots  \amp 0\\
+0      \amp x      \amp -1     \amp \dots  \amp 0\\
+\vdots \amp \vdots \amp \vdots \amp \ddots \amp \vdots\\
+0      \amp 0      \amp 0      \amp \dots  \amp -1\\
+a_{0}  \amp a_{1}  \amp a_{2}  \amp \dots  \amp x+a_{n-1}
+\end{vmatrix}
+\end{equation*}
+</div>
+<p class="continuation">Se ora utilizziamo lo sviluppo di Laplace<a href="" class="fn-knowl original" data-knowl="./knowl/fn-33-hidden.html" title="Nota a piè di pagina 27.3.1"><sup> 1 </sup></a> rispetto alla prima colonna otteniamo:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\det(x\Idmatrix-C(p))=x
+\begin{vmatrix}
+x      \amp -1     \amp \dots  \amp 0\\
+\vdots \amp \vdots \amp \ddots \amp \vdots\\
+0      \amp 0      \amp \dots  \amp -1\\
+a_{1}  \amp a_{2}  \amp \dots  \amp x+a_{n-1}
+\end{vmatrix}+(-1)^{n+1}a_{0}
+\begin{vmatrix}
+-1     \amp 0      \amp \dots  \amp 0\\
+x      \amp -1     \amp \dots  \amp 0\\
+\vdots \amp \vdots \amp \ddots \amp \vdots\\
+0      \amp 0      \amp \dots  \amp -1
+\end{vmatrix}
+\end{equation*}
+</div>
+<p class="continuation">Il primo determinante che appare in questo sviluppo non è altri che il polinomio caratteristico della matrice compagna del polinomio <span class="process-math">\(a_{1}+a_{2}x+\dots+x^{n-1}\)</span> e, per ipotesi induttiva, coincide con questo polinomio. Il secondo determinante è il determinante di una matrice triangolare inferiore ed è dunque il prodotto degli elementi sulla diagonale principale, vale a dire <span class="process-math">\((-1)^{n-1}\text{.}\)</span> Dunque</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\det(x\Idmatrix-C(p))=x(a_{1}+a_{2}x+\dots+x^{n-1})+(-1)^{n+1}a_{0}(-1)^{n-1}=p\text{.}
+\end{equation*}
+</div>
+<span class="incontext"><a href="sec-matrici_compagne.html#p-3471" class="internal">Contesto</a></span>
+</body>
+</html>

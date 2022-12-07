@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="it-IT">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Congruenze con incognite</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Algebra">
+<meta property="book:author" content="Valerio Monti">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Vai all'indice generale</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{mathtools}\require{cancel}\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\cont}{c}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\Inv}{Inv}
+\DeclareMathOperator{\MCD}{MCD}
+\DeclareMathOperator{\mcm}{mcm}
+\DeclareMathOperator{\centro}{Z}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Soc}{Soc}
+\DeclareMathOperator{\Rad}{Rad}
+\DeclareMathOperator{\car}{char}
+
+
+\newcommand{\Sym}{\mathrm{Sym}}
+\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\Idmatrix}{\mathrm{I}}
+\newcommand{\dist}{\mathrm{d}}
+
+\newcommand{\Reali}{\mathbf{R}}
+\newcommand{\Naturali}{\mathbf{N}}
+\newcommand{\Interi}{\mathbf{Z}}
+ \newcommand{\Razionali}{\mathbf{Q}}
+ \newcommand{\Complessi}{\mathbf{C}}
+
+ \newcommand{\grgen}[1]{\langle#1\rangle}
+ \newcommand{\ideal}[1]{\left(#1\right)}
+ \newcommand{\alg}[1]{\left\lbrack#1\right\rvert}
+ \newcommand{\seg}[1]{\left\lvert#1\right)}
+ \newcommand{\ann}[1]{\operatorname{Ann}\left(#1\right)}
+ \newcommand{\len}[1]{\operatorname{l}\left(#1\right)}
+ \newcommand{\class}[2][\sim]{\lbrack #2\rbrack_{#1}}
+ \newcommand{\cent}[2]{\operatorname{C}_{#1}\left(#2\right)}
+ \newcommand{\nrm}[2]{\operatorname{N}_{#1}\left(#2\right)}
+ \newcommand{\stab}[2]{\operatorname{Stab}_{#1}\left(#2\right)}
+ \newcommand{\Supp}[1]{\operatorname{Supp}\left(#1\right)}
+ \newcommand{\Gal}[1]{\operatorname{Gal}\left(#1\right)}
+ \newcommand{\tr}[1]{#1^{\intercal}}
+ \newcommand{\vuoto}{\varnothing}
+ \newcommand{\parti}[1]{\mathcal{P}(#1)}
+ \newcommand{\euler}[1]{\varphi(#1)}
+ \newcommand{\euclidean}{\delta}
+
+ \newcommand{\vect}[1]{\boldsymbol{#1}}
+ 
+ \newcommand{\mat}[2]{\operatorname{M}_{#1}(#2)}
+ \newcommand{\matt}[3]{\operatorname{M}_{#1,#2}(#3)}
+ \newcommand{\Sim}[2]{\operatorname{S}(#1,#2)}
+ \newcommand{\AntiSim}[2]{\operatorname{A}(#1,#2)}
+ \newcommand{\Diag}[2]{\operatorname{D}(#1,#2)}
+ \newcommand{\TS}[2]{\operatorname{T}^{#1}(#2)}
+ \newcommand{\TI}[2]{\operatorname{T}_{#1}(#2)}
+ \newcommand{\GL}[2]{\operatorname{GL}(#1,#2)}
+ \newcommand{\SL}[2]{\operatorname{SL}(#1,#2)}
+ \newcommand{\Ort}[2]{\operatorname{O}(#1,#2)}
+
+ \newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+ \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+ \newcommand{\ind}[2]{\left\lvert#1:#2\right\rvert}
+ \newcommand{\degext}[2]{\left\lbrack#1:#2\right\rbrack}
+
+ \newcommand{\invprov}[1]{\widehat{#1}}
+
+ \newcommand\YoungTableau[1]{
+ \begin{tikzpicture}[scale=0.4,keepsize]
+ \foreach \y [count=\yi] in {#1}
+ \foreach \x in {1,...,\y}
+ {
+ \draw (\x,\yi) rectangle +(1,1);
+ }
+ \end{tikzpicture}
+ }
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-algebra.html"><span class="title">Algebra</span></a></h1>
+<p class="byline">Valerio Monti</p>
+</div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Risultati: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>Nessun risultato.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Indice</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="indice.html" title="Indice analitico">Indice analitico</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-eulero.html" title="Precedente">Prec</a><a id="upbutton" class="up-button button toolbar-item" href="ch-classidiresto.html" title="Su">Su</a><a id="nextbutton" class="next-button button toolbar-item" href="part-gruppi.html" title="Successivo">Succ</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Indice</button><a class="previous-button toolbar-item button" href="sec-eulero.html" title="Precedente">Prec</a><a class="up-button button toolbar-item" href="ch-classidiresto.html" title="Su">Su</a><a class="next-button button toolbar-item" href="part-gruppi.html" title="Successivo">Succ</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Materiale iniziale</span></a><ul>
+<li><a href="front-colophon.html" data-scroll="front-colophon" class="internal">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Prefazione</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-preliminari.html" data-scroll="part-preliminari" class="internal"><span class="codenumber">I</span> <span class="title">Preliminari</span></a></li>
+<li class="link">
+<a href="ch-insiemi.html" data-scroll="ch-insiemi" class="internal"><span class="codenumber">1</span> <span class="title">Insiemi</span></a><ul>
+<li><a href="sec-insiemi.html" data-scroll="sec-insiemi" class="internal">Concetti di base</a></li>
+<li><a href="sec-operazioni_insiemi.html" data-scroll="sec-operazioni_insiemi" class="internal">Operazioni tra insiemi</a></li>
+<li><a href="sec-prodotto-cartesiano.html" data-scroll="sec-prodotto-cartesiano" class="internal">Prodotto cartesiano</a></li>
+<li><a href="sec-Russell.html" data-scroll="sec-Russell" class="internal">Il paradosso di Russell</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-corrispondenze.html" data-scroll="ch-corrispondenze" class="internal"><span class="codenumber">2</span> <span class="title">Corrispondenze e relazioni</span></a><ul>
+<li><a href="sec-corrispondenze_definizione.html" data-scroll="sec-corrispondenze_definizione" class="internal">Corrispondenze tra insiemi</a></li>
+<li><a href="sec-relazioni_equivalenza.html" data-scroll="sec-relazioni_equivalenza" class="internal">Relazioni di equivalenza</a></li>
+<li><a href="sec-relazioni_ordine.html" data-scroll="sec-relazioni_ordine" class="internal">Relazioni d'ordine</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-funzioni.html" data-scroll="ch-funzioni" class="internal"><span class="codenumber">3</span> <span class="title">Funzioni</span></a><ul>
+<li><a href="sec-funzioni_definizione.html" data-scroll="sec-funzioni_definizione" class="internal">Definizioni di base</a></li>
+<li><a href="sec-funzioni_iniettive_suriettive.html" data-scroll="sec-funzioni_iniettive_suriettive" class="internal">Funzioni iniettive, suriettive e biiettive</a></li>
+<li><a href="sec-cardinalita.html" data-scroll="sec-cardinalita" class="internal">Cenni sulla cardinalità</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-aritmetica.html" data-scroll="part-aritmetica" class="internal"><span class="codenumber">II</span> <span class="title">Aritmetica</span></a></li>
+<li class="link">
+<a href="ch-interi.html" data-scroll="ch-interi" class="internal"><span class="codenumber">4</span> <span class="title">I numeri interi</span></a><ul>
+<li><a href="sec-naturali_base.html" data-scroll="sec-naturali_base" class="internal">I numeri naturali e i numeri interi</a></li>
+<li><a href="sec-induzione_ricorrenza.html" data-scroll="sec-induzione_ricorrenza" class="internal">Dimostrazioni per induzione e definizioni per ricorrenza</a></li>
+<li><a href="sec-divisibilita_interi.html" data-scroll="sec-divisibilita_interi" class="internal">Divisibilità negli interi</a></li>
+<li><a href="sec-fattorizzazione_interi.html" data-scroll="sec-fattorizzazione_interi" class="internal">Il teorema fondamentale dell'aritmetica</a></li>
+<li><a href="sec-equazioni_lineari_diofantine.html" data-scroll="sec-equazioni_lineari_diofantine" class="internal">Equazioni lineari diofantine</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-classidiresto.html" data-scroll="ch-classidiresto" class="internal"><span class="codenumber">5</span> <span class="title">Classi di resto</span></a><ul>
+<li><a href="sec-congruenzemodulon.html" data-scroll="sec-congruenzemodulon" class="internal">Congruenze modulo un intero</a></li>
+<li><a href="sec-operazioniclassiresto.html" data-scroll="sec-operazioniclassiresto" class="internal">Operazioni tra classi di resto</a></li>
+<li><a href="sec-eulero.html" data-scroll="sec-eulero" class="internal">Il teorema di Eulero</a></li>
+<li><a href="sec-congruenze_con_incognite.html" data-scroll="sec-congruenze_con_incognite" class="active">Congruenze con incognite</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-gruppi.html" data-scroll="part-gruppi" class="internal"><span class="codenumber">III</span> <span class="title">Gruppi</span></a></li>
+<li class="link">
+<a href="ch-operazioni.html" data-scroll="ch-operazioni" class="internal"><span class="codenumber">6</span> <span class="title">Operazioni</span></a><ul>
+<li><a href="sec-operazioni_definizioni.html" data-scroll="sec-operazioni_definizioni" class="internal">Definizioni ed esempi</a></li>
+<li><a href="sec-proprieta_operazioni.html" data-scroll="sec-proprieta_operazioni" class="internal">Proprietà delle operazioni</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppi.html" data-scroll="ch-gruppi" class="internal"><span class="codenumber">7</span> <span class="title">Monoidi e gruppi</span></a><ul>
+<li><a href="sec-monoidi.html" data-scroll="sec-monoidi" class="internal">Monoidi</a></li>
+<li><a href="sec-gruppi.html" data-scroll="sec-gruppi" class="internal">Gruppi</a></li>
+<li><a href="sec-gruppi_piccoli.html" data-scroll="sec-gruppi_piccoli" class="internal">Alcuni esempi di gruppi piccoli</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-sottogruppi.html" data-scroll="ch-sottogruppi" class="internal"><span class="codenumber">8</span> <span class="title">Sottogruppi</span></a><ul>
+<li><a href="sec-sottomonoidi_sottogruppi.html" data-scroll="sec-sottomonoidi_sottogruppi" class="internal">Sottomonoidi e sottogruppi</a></li>
+<li><a href="sec-prime_proprieta_sottogruppi.html" data-scroll="sec-prime_proprieta_sottogruppi" class="internal">Prime proprietà dei sottogruppi</a></li>
+<li><a href="sec-gruppi_del_piano.html" data-scroll="sec-gruppi_del_piano" class="internal">Gruppi di trasformazioni del piano</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppi_ciclici.html" data-scroll="ch-gruppi_ciclici" class="internal"><span class="codenumber">9</span> <span class="title">Gruppi ciclici</span></a><ul>
+<li><a href="sec-definizione_gruppi_ciclici.html" data-scroll="sec-definizione_gruppi_ciclici" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-sottogruppi_di_ciclici.html" data-scroll="sec-sottogruppi_di_ciclici" class="internal">Sottogruppi di gruppi ciclici</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppi_permutazioni.html" data-scroll="ch-gruppi_permutazioni" class="internal"><span class="codenumber">10</span> <span class="title">Gruppi di permutazioni</span></a><ul>
+<li><a href="sec-definizioni_gruppi_permutazioni.html" data-scroll="sec-definizioni_gruppi_permutazioni" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-cicli.html" data-scroll="sec-cicli" class="internal">Cicli</a></li>
+<li><a href="sec-scambi.html" data-scroll="sec-scambi" class="internal">Scambi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-laterali.html" data-scroll="ch-laterali" class="internal"><span class="codenumber">11</span> <span class="title">Laterali e teorema di Lagrange</span></a><ul>
+<li><a href="sec-prodotto_sottoinsiemi.html" data-scroll="sec-prodotto_sottoinsiemi" class="internal">Prodotto di sottoinsiemi</a></li>
+<li><a href="sec-teorema_di_lagrange.html" data-scroll="sec-teorema_di_lagrange" class="internal">Teorema di Lagrange</a></li>
+<li><a href="sec-prodotto_sottogruppi.html" data-scroll="sec-prodotto_sottogruppi" class="internal">Prodotto di sottogruppi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-omomorfismi.html" data-scroll="ch-omomorfismi" class="internal"><span class="codenumber">12</span> <span class="title">Omomorfismi</span></a><ul>
+<li><a href="sec-definizione_omomorfismo.html" data-scroll="sec-definizione_omomorfismo" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-nucleo_immagine.html" data-scroll="sec-nucleo_immagine" class="internal">Immagine e nucleo di un omomorfismo</a></li>
+<li><a href="sec-omomorfismi_da_gruppi_ciclici.html" data-scroll="sec-omomorfismi_da_gruppi_ciclici" class="internal">Omomorfismi da gruppi ciclici</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-azioni.html" data-scroll="ch-azioni" class="internal"><span class="codenumber">13</span> <span class="title">Azioni di gruppi su insiemi</span></a><ul>
+<li><a href="sec-azioni_definizioni.html" data-scroll="sec-azioni_definizioni" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-orbite_stabilizzatori.html" data-scroll="sec-orbite_stabilizzatori" class="internal">Orbite e stabilizzatori</a></li>
+<li><a href="sec-sottogruppi_normali.html" data-scroll="sec-sottogruppi_normali" class="internal">Sottogruppi normali</a></li>
+<li><a href="sec-coniugati_simmetrico_alterno.html" data-scroll="sec-coniugati_simmetrico_alterno" class="internal">Classi di coniugio nel gruppo simmetrico e nel gruppo alterno</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-quozienti.html" data-scroll="ch-quozienti" class="internal"><span class="codenumber">14</span> <span class="title">Gruppi quoziente</span></a><ul>
+<li><a href="sec-congruenze.html" data-scroll="sec-congruenze" class="internal">Congruenze in gruppi e monoidi</a></li>
+<li><a href="sec-proprieta_quozienti.html" data-scroll="sec-proprieta_quozienti" class="internal">Proprietà dei gruppi quoziente</a></li>
+<li><a href="sec-teoremi_di_isomorfismo.html" data-scroll="sec-teoremi_di_isomorfismo" class="internal">I teoremi di isomorfismo</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-direttosemidiretto.html" data-scroll="ch-direttosemidiretto" class="internal"><span class="codenumber">15</span> <span class="title">Prodotto diretto e semidiretto</span></a><ul>
+<li><a href="sec-prodotto_diretto_esterno.html" data-scroll="sec-prodotto_diretto_esterno" class="internal">Prodotto diretto esterno</a></li>
+<li><a href="sec-prodotto_diretto_interno.html" data-scroll="sec-prodotto_diretto_interno" class="internal">Prodotto diretto interno</a></li>
+<li><a href="sec-prodotto_semidiretto.html" data-scroll="sec-prodotto_semidiretto" class="internal">Prodotto semidiretto</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-sylow.html" data-scroll="ch-sylow" class="internal"><span class="codenumber">16</span> <span class="title">Il teorema di Sylow</span></a><ul>
+<li><a href="sec-inversione_lagrange.html" data-scroll="sec-inversione_lagrange" class="internal">Inversione del teorema di Lagrange</a></li>
+<li><a href="sec-sylow.html" data-scroll="sec-sylow" class="internal">Il teorema di Sylow</a></li>
+<li><a href="sec-applicazioni_sylow.html" data-scroll="sec-applicazioni_sylow" class="internal">Applicazioni del teorema di Sylow</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-anelli.html" data-scroll="part-anelli" class="internal"><span class="codenumber">IV</span> <span class="title">Anelli</span></a></li>
+<li class="link">
+<a href="ch-anelli.html" data-scroll="ch-anelli" class="internal"><span class="codenumber">17</span> <span class="title">Anelli</span></a><ul>
+<li><a href="sec-prime_proprieta_anelli.html" data-scroll="sec-prime_proprieta_anelli" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-multipli_potenze.html" data-scroll="sec-multipli_potenze" class="internal">Multipli e potenze in un anello</a></li>
+<li><a href="sec-sottoanelli.html" data-scroll="sec-sottoanelli" class="internal">Sottoanelli</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-omomorfismiideali.html" data-scroll="ch-omomorfismiideali" class="internal"><span class="codenumber">18</span> <span class="title">Omomorfismi e ideali</span></a><ul>
+<li><a href="sec-omomorfismi_anelli.html" data-scroll="sec-omomorfismi_anelli" class="internal">Omomorfismi di anelli</a></li>
+<li><a href="sec-anelli_quoziente.html" data-scroll="sec-anelli_quoziente" class="internal">Anelli quoziente e ideali</a></li>
+<li><a href="sec-campo_dei_quozienti.html" data-scroll="sec-campo_dei_quozienti" class="internal">Campo dei quozienti di un dominio</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-polinomi.html" data-scroll="ch-polinomi" class="internal"><span class="codenumber">19</span> <span class="title">Polinomi</span></a><ul>
+<li><a href="sec-anello_polinomi.html" data-scroll="sec-anello_polinomi" class="internal">Anello dei polinomi</a></li>
+<li><a href="sec-valutazione_polinomi.html" data-scroll="sec-valutazione_polinomi" class="internal">Valutazione di polinomi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-divisibilita.html" data-scroll="ch-divisibilita" class="internal"><span class="codenumber">20</span> <span class="title">Divisibilità nei domini</span></a><ul>
+<li><a href="sec-divisibilita.html" data-scroll="sec-divisibilita" class="internal">Relazione di divisibilità</a></li>
+<li><a href="sec-fattorizzazione.html" data-scroll="sec-fattorizzazione" class="internal">Fattorizzazione</a></li>
+<li><a href="sec-PID_euclidei.html" data-scroll="sec-PID_euclidei" class="internal">Domini a ideali principali e domini euclidei</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-fattorizzazione_polinomi.html" data-scroll="ch-fattorizzazione_polinomi" class="internal"><span class="codenumber">21</span> <span class="title">Fattorizzazione dei polinomi</span></a><ul>
+<li><a href="sec-trasporto_UFD.html" data-scroll="sec-trasporto_UFD" class="internal">Il teorema del trasporto per domini a fattorizzazione unica</a></li>
+<li><a href="sec-esempi_fattorizzazione_polinomi.html" data-scroll="sec-esempi_fattorizzazione_polinomi" class="internal">Tecniche di fattorizzazione</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-estensione_campi.html" data-scroll="ch-estensione_campi" class="internal"><span class="codenumber">22</span> <span class="title">Estensioni di campi</span></a><ul>
+<li><a href="sec-elementi_algebrici_e_trascendenti.html" data-scroll="sec-elementi_algebrici_e_trascendenti" class="internal">Elementi algebrici e trascendenti</a></li>
+<li><a href="sec-campo_di_spezzamento.html" data-scroll="sec-campo_di_spezzamento" class="internal">Campi di spezzamento</a></li>
+<li><a href="sec-chiusure_algebriche.html" data-scroll="sec-chiusure_algebriche" class="internal">Cenni su campi algebricamente chiusi</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-moduli.html" data-scroll="part-moduli" class="internal"><span class="codenumber">V</span> <span class="title">Moduli</span></a></li>
+<li class="link">
+<a href="ch-moduli.html" data-scroll="ch-moduli" class="internal"><span class="codenumber">23</span> <span class="title">Moduli</span></a><ul>
+<li><a href="sec-definizione_di_moduli.html" data-scroll="sec-definizione_di_moduli" class="internal">Definizione di modulo</a></li>
+<li><a href="sec-sottomoduli.html" data-scroll="sec-sottomoduli" class="internal">Sottomoduli</a></li>
+<li><a href="sec-omomorfismi_moduli.html" data-scroll="sec-omomorfismi_moduli" class="internal">Omomorfismi di moduli</a></li>
+<li><a href="sec-moduli_quoziente.html" data-scroll="sec-moduli_quoziente" class="internal">Moduli quoziente</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-moduli_liberi.html" data-scroll="ch-moduli_liberi" class="internal"><span class="codenumber">24</span> <span class="title">Moduli liberi</span></a><ul>
+<li><a href="sec-somma_diretta_moduli.html" data-scroll="sec-somma_diretta_moduli" class="internal">Somma diretta di moduli</a></li>
+<li><a href="sec-dipendenza_lineare.html" data-scroll="sec-dipendenza_lineare" class="internal">Dipendenza e indipendenza lineare</a></li>
+<li><a href="sec-elementi_di_torsione.html" data-scroll="sec-elementi_di_torsione" class="internal">Elementi di torsione</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-modulisupid.html" data-scroll="ch-modulisupid" class="internal"><span class="codenumber">25</span> <span class="title">Moduli finitamente generati su PID</span></a><ul>
+<li><a href="sec-moduli_ciclici.html" data-scroll="sec-moduli_ciclici" class="internal">Moduli ciclici</a></li>
+<li><a href="sec-moduli_primari.html" data-scroll="sec-moduli_primari" class="internal">Moduli primari</a></li>
+<li><a href="sec-moduli_liberi.html" data-scroll="sec-moduli_liberi" class="internal">Moduli liberi</a></li>
+<li><a href="sec-classificazione_moduli_pid.html" data-scroll="sec-classificazione_moduli_pid" class="internal">La classificazione dei moduli finitamente generati su un dominio a ideali principali</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppiabeliani.html" data-scroll="ch-gruppiabeliani" class="internal"><span class="codenumber">26</span> <span class="title">Gruppi abeliani finitamente generati</span></a><ul><li><a href="sec-gruppiabeliani.html" data-scroll="sec-gruppiabeliani" class="internal">Classificazione dei gruppi abeliani finitamente generati</a></li></ul>
+</li>
+<li class="link">
+<a href="ch-formecanoniche.html" data-scroll="ch-formecanoniche" class="internal"><span class="codenumber">27</span> <span class="title">Forme canoniche di matrici</span></a><ul>
+<li><a href="sec-kx_moduli.html" data-scroll="sec-kx_moduli" class="internal">Spazi vettoriali con endomorfismi visti come moduli</a></li>
+<li><a href="sec-matrici_rappresentative.html" data-scroll="sec-matrici_rappresentative" class="internal">Matrici rappresentative</a></li>
+<li><a href="sec-matrici_compagne.html" data-scroll="sec-matrici_compagne" class="internal">Matrici compagne</a></li>
+<li><a href="sec-jordan.html" data-scroll="sec-jordan" class="internal">Forma canonica di Jordan</a></li>
+<li><a href="sec-polinomio_minimo_matrici.html" data-scroll="sec-polinomio_minimo_matrici" class="internal">Polinomio minimo di matrici</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Appendici</span></a></li>
+<li class="link">
+<a href="appendix-peano.html" data-scroll="appendix-peano" class="internal"><span class="codenumber">A</span> <span class="title">Numeri naturali e interi</span></a><ul>
+<li><a href="sec-algebre_induttive.html" data-scroll="sec-algebre_induttive" class="internal">Algebre induttive</a></li>
+<li><a href="sec-assiomi_peano.html" data-scroll="sec-assiomi_peano" class="internal">Gli assiomi di Peano</a></li>
+<li><a href="sec-insiemi_finiti_infiniti.html" data-scroll="sec-insiemi_finiti_infiniti" class="internal">Insiemi finiti e infiniti</a></li>
+<li><a href="sec-operazioni_naturali.html" data-scroll="sec-operazioni_naturali" class="internal">Operazioni tra numeri naturali</a></li>
+<li><a href="sec-interi.html" data-scroll="sec-interi" class="internal">Costruzione degli interi</a></li>
+</ul>
+</li>
+<li class="link"><a href="appendix-2.html" data-scroll="appendix-2" class="internal"><span class="codenumber">B</span> <span class="title">Notazioni</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1" class="internal"><span class="codenumber">C</span> <span class="title">Soluzioni e suggerimenti</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl" class="internal"><span class="codenumber">D</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="indice.html" data-scroll="indice" class="internal"><span class="title">Indice analitico</span></a></li>
+<li class="link"><a href="back-colophon.html" data-scroll="back-colophon" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Redatto in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-congruenze_con_incognite"><h2 class="heading hide-type">
+<span class="type">Paragrafo</span> <span class="codenumber">5.4</span> <span class="title">Congruenze con incognite</span>
+</h2>
+<p id="p-701">Supponiamo di voler determinare tutti gli interi <span class="process-math">\(x\)</span> tali che <span class="process-math">\(ax\equiv b\pmod{n}\text{,}\)</span> dove <span class="process-math">\(n\)</span> è un intero positivo e <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> sono interi fissati. In termini di classi di resto, questo può essere espresso scrivendo <span class="process-math">\(\class[n]{a}\class[n]{x}=\class[n]{b}\text{.}\)</span> Se <span class="process-math">\(\class[n]{a}\)</span> è invertibile, il che avviene se e solo se <span class="process-math">\(a\)</span> è coprimo con <span class="process-math">\(n\)</span> (<a href="" class="xref" data-knowl="./knowl/prop-caratterizzazione_classe_invertibile.html" title="Proposizione 5.2.13">Proposizione 5.2.13</a>), allora, supponendo che una soluzione esista, moltiplicando ambo i membri dell'equazione per l'inverso di <span class="process-math">\(\class[n]{a}\text{,}\)</span> otteniamo che <span class="process-math">\(\class[n]{x}=\class[n]{a}^{-1}\class[n]{b}\text{.}\)</span> Viceversa, sostituendo la classe <span class="process-math">\(\class[n]{a}^{-1}\class[n]{b}\)</span> nell'equazione, otteniamo un'identità. Abbiamo così provato la</p>
+<article class="proposition theorem-like" id="prop-equazione_lineare_classe_di_resto"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">5.4.1</span><span class="period">.</span>
+</h3>
+<p id="p-702">Sia <span class="process-math">\(n\)</span> un intero positivo e siano <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> due interi tali che <span class="process-math">\(\class[n]{a}\)</span> è invertibile. L'equazione <span class="process-math">\(\class[n]{a}\class[n]{x}=\class[n]{b}\)</span> ammette allora un'unica soluzione e cioè <span class="process-math">\(\class[n]{x}=\class[n]{a}^{-1}\class[n]{b}\text{.}\)</span></p></article><p id="p-703">La proposizione precedente può essere riespressa in termini di congruenze.</p>
+<article class="proposition theorem-like" id="prop-equazione_lineare_congruenza_invertibile"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">5.4.2</span><span class="period">.</span>
+</h3>
+<p id="p-704">Sia <span class="process-math">\(n\)</span> un intero positivo e siano <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> due interi tali che <span class="process-math">\(a\)</span> è coprimo con <span class="process-math">\(n\text{.}\)</span> Allora, gli interi <span class="process-math">\(x\)</span> tali che <span class="process-math">\(ax\equiv b\pmod{n}\)</span> sono tutti e soli quelli tali che <span class="process-math">\(x\equiv ub\pmod{n}\text{,}\)</span> dove <span class="process-math">\(u\)</span> può essere ottenuto da un'identità di Bezout <span class="process-math">\(au+nv=1\text{.}\)</span></p></article><article class="example example-like" id="example-48"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">5.4.3</span><span class="period">.</span>
+</h3>
+<p id="p-705">Risolviamo la congruenza con incognita <span class="process-math">\(8x\equiv 9\pmod{15}\text{.}\)</span> Poiché <span class="process-math">\(8\)</span> è coprimo con <span class="process-math">\(15\)</span> possiamo usare la proposizione precedente. Un'identità di Bezout tra <span class="process-math">\(8\)</span> e <span class="process-math">\(15\)</span> è, ad esempio, <span class="process-math">\(8\cdot 2+15\cdot(-1)=1\text{:}\)</span> dunque, otteniamo <span class="process-math">\(x\equiv 9\cdot2\pmod{15}\)</span> o, equivalentemente, <span class="process-math">\(x\equiv 3\pmod{15}\text{.}\)</span></p></article><p id="p-706">Supponiamo ora più in generale di voler affrontare una congruenza con incognite del tipo <span class="process-math">\(ax\equiv b\pmod n\text{,}\)</span> con <span class="process-math">\(n\)</span> intero positivo e <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> interi qualunque. Dobbiamo, quindi, trovare tutti i numeri interi <span class="process-math">\(x\)</span> tali che <span class="process-math">\(ax-b\)</span> è multiplo di <span class="process-math">\(n\text{,}\)</span> cioè per cui esiste un intero <span class="process-math">\(h\)</span> tale che <span class="process-math">\(ax-b=hn\text{.}\)</span> Ma allora questa può essere considerata come l'equazione diofantina lineare <span class="process-math">\(ax-nh=b\)</span> nelle incognite <span class="process-math">\(x\)</span> e <span class="process-math">\(h\)</span> (in cui in realtà non siamo interessati all'incognita <span class="process-math">\(h\)</span>). Per la <a href="" class="xref" data-knowl="./knowl/prop-equazione_lineare_diofantina_due_incognite.html" title="Proposizione 4.5.3">Proposizione 4.5.3</a>, questa è risolubile se e solo se <span class="process-math">\((a,n)\)</span> divide <span class="process-math">\(b\text{.}\)</span> Supponendo che questo sia il caso e, posto <span class="process-math">\(a=(a,n)a'\text{,}\)</span> <span class="process-math">\(n=(a,n)n'\)</span> e <span class="process-math">\(b=(a,n)b'\)</span> con <span class="process-math">\(a'\text{,}\)</span> <span class="process-math">\(n'\)</span> e <span class="process-math">\(b'\)</span> interi opportuni, l'equazione diofantina può riscriversi come <span class="process-math">\((a,n)a'x-(a,n)b'=h(a,n)n'\)</span> che, semplificando <span class="process-math">\((a,n)\text{,}\)</span> diviene <span class="process-math">\(a'x-b'=hn'\text{,}\)</span> cioè <span class="process-math">\(a'x\equiv b'\pmod{n'}\text{.}\)</span> Per il <a href="" class="xref" data-knowl="./knowl/cor-diviso_MCD_da_coprimi.html" title="Corollario 4.3.23">Corollario 4.3.23</a>, <span class="process-math">\(a'\)</span> e <span class="process-math">\(n'\)</span> sono coprimi e, quindi, ci siamo ricondotti al caso precedente. Riassumendo, abbiamo la</p>
+<article class="proposition theorem-like" id="prop-equazione_lineare_congruenza_generale"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">5.4.4</span><span class="period">.</span>
+</h3>
+<p id="p-707">Sia <span class="process-math">\(n\)</span> un intero positivo e siano <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> due interi. La congruenza con incognite</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+ax\equiv b\pmod{n}
+\end{equation*}
+</div>
+<p class="continuation">ha soluzioni se e solo se <span class="process-math">\((a,n)\)</span> divide <span class="process-math">\(b\text{:}\)</span> in tal caso, se <span class="process-math">\(n=(a,n)n'\)</span> la congruenza è equivalente a una congruenza del tipo</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+x\equiv c\pmod{n'}
+\end{equation*}
+</div>
+<p class="continuation">per un opportuno intero <span class="process-math">\(c\text{.}\)</span></p></article><article class="example example-like" id="example-49"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">5.4.5</span><span class="period">.</span>
+</h3>
+<p id="p-708">Vogliamo risolvere le congruenze con incognite</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+6x\equiv 10\pmod{15}
+\end{equation*}
+</div>
+<p class="continuation">e</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+6x\equiv 9\pmod{15}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Nel primo caso abbiamo che <span class="process-math">\((6,15)=3\)</span> non divide <span class="process-math">\(10\text{:}\)</span> dunque, la congruenza non ha soluzioni.</p> <p id="p-709">Nel secondo caso <span class="process-math">\((6,15)=3\)</span> divide <span class="process-math">\(9\text{:}\)</span> dunque, la congruenza ha soluzioni e, dividendo per <span class="process-math">\(3\text{,}\)</span> essa è equivalente alla congruenza</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+2x\equiv 3\pmod{5}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">L'inverso di <span class="process-math">\(2\)</span> modulo <span class="process-math">\(5\)</span> è <span class="process-math">\(3\)</span> (determinato con un'opportuna identità di Bezout). Abbiamo, dunque:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+3\cdot 2x\equiv 3\cdot3\pmod{5}
+\end{equation*}
+</div>
+<p class="continuation">cioè</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+x\equiv 9\pmod{5}
+\end{equation*}
+</div>
+<p class="continuation">o, se si preferisce,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+x\equiv 4\pmod{5}\text{.}
+\end{equation*}
+</div></article><article class="theorem theorem-like" id="thm-cinese_del_resto"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">5.4.6</span><span class="period">.</span><span class="space"> </span><span class="title">Teorema cinese del resto.</span>
+</h3>
+<p id="p-710">Sia dato un sistema di congruenze del tipo</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left\{
+\begin{alignedat}{2}
+x \amp \equiv a_{1} \amp \amp \pmod{n_{1}}\\
+x \amp \equiv a_{2} \amp \amp \pmod{n_{2}}\\
+\amp \vdotswithin{\equiv} \amp           \\
+x \amp \equiv a_{r} \amp \amp \pmod{n_{r}}
+\end{alignedat}
+\right.
+\end{equation*}
+</div>
+<p class="continuation">dove <span class="process-math">\(a_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(a_{r}\)</span> sono interi e <span class="process-math">\(n_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(n_{r}\)</span> sono interi positivi a due a due coprimi. Allora il sistema è risolubile ed è equivalente a una congruenza del tipo</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+x\equiv a\pmod{n}
+\end{equation*}
+</div>
+<p class="continuation">dove <span class="process-math">\(n=n_{1}\cdot n_{2}\cdots n_{r}\)</span> e <span class="process-math">\(a\)</span> è un opportuno intero.</p></article><article class="hiddenproof" id="proof-49"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-49"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-49"><article class="hiddenproof"><p id="p-711">Procediamo per induzione su <span class="process-math">\(r\text{,}\)</span> il caso <span class="process-math">\(r=1\)</span> essendo banale.</p> <p id="p-712">Il caso chiave è <span class="process-math">\(r=2\text{.}\)</span> Un intero <span class="process-math">\(x\)</span> soddisfa entrambe le congruenze se e solo se <span class="process-math">\(x-a_{1}\)</span> è multiplo di <span class="process-math">\(n_{1}\)</span> e <span class="process-math">\(x-a_{2}\)</span> è multiplo di <span class="process-math">\(n_{2}\text{,}\)</span> cioè se e solo se esistono interi <span class="process-math">\(y\)</span> e <span class="process-math">\(z\)</span> tali che <span class="process-math">\(x=a_{1}+n_{1}y\)</span> e <span class="process-math">\(x=a_{2}+n_{2}z\text{.}\)</span> Uguagliando le due espressioni ci riduciamo all'equazione</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-equazione_lineare_diofantina_risolubile.html">
+\begin{equation*}
+n_{1}y-n_{2}z=a_{2}-a_{1}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Questa può essere considerata come un'equazione lineare diofantina nelle incognite <span class="process-math">\(y\)</span> e <span class="process-math">\(z\text{.}\)</span> Poiché <span class="process-math">\(n_{1}\)</span> e <span class="process-math">\(n_{2}\)</span> sono coprimi, per la <a href="" class="xref" data-knowl="./knowl/prop-equazione_lineare_diofantina_risolubile.html" title="Proposizione 4.5.6">Proposizione 4.5.6</a> l'equazione è risolubile e, data una soluzione particolare <span class="process-math">\(y=\bar{y}\text{,}\)</span> <span class="process-math">\(z=\bar{z}\text{,}\)</span> le soluzioni sono del tipo</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-equazione_lineare_diofantina_risolubile.html" id="md-29">
+\begin{align*}
+y \amp = \bar{y} + n_{2}h\\
+z \amp = \bar{z} + n_{1}h
+\end{align*}
+</div>
+<p class="continuation">al variare di <span class="process-math">\(h\)</span> in <span class="process-math">\(\Interi\text{.}\)</span> Prendendo una delle due espressioni e sostituendola nella corrispondente espressione di <span class="process-math">\(x\)</span> troviamo</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-equazione_lineare_diofantina_risolubile.html">
+\begin{equation*}
+x=a_{1}+n_{1}y=a_{1}+n_{1}(\bar{y}+n_{2}h)=a_{1}+n_{1}\bar{y}+n_{1}n_{2}h
+\end{equation*}
+</div>
+<p class="continuation">che può essere riscritta come <span class="process-math">\(x=a+nh\text{,}\)</span> cioè <span class="process-math">\(x\equiv a \pmod{n}\)</span> con <span class="process-math">\(a=a_{1}+n_{1}\bar{y}\)</span> e <span class="process-math">\(n=n_{1}n_{2}\text{.}\)</span></p> <p id="p-713">Consideriamo ora il caso in cui <span class="process-math">\(n\ge 3\text{:}\)</span> per ipotesi induttiva le prime <span class="process-math">\(n-1\)</span> congruenze sono equivalenti a una congruenza del tipo <span class="process-math">\(x\equiv a' \pmod{n'}\)</span> per un opportuno intero <span class="process-math">\(a'\)</span> e <span class="process-math">\(n'=n_{1}\cdot n_{2}\cdots n_{r-1}\text{.}\)</span> Il sistema diventa, dunque:</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-coprimo_con_prodotto.html">
+\begin{equation*}
+\left\{
+\begin{alignedat}{2}
+x \amp \equiv a'    \amp\amp\pmod{n'}\\
+x \amp \equiv a_{r} \amp\amp\pmod{n_{r}}
+\end{alignedat}
+\right.
+\end{equation*}
+</div>
+<p class="continuation">Poiché <span class="process-math">\(n'\)</span> e <span class="process-math">\(n_{r}\)</span> sono coprimi per la <a href="" class="xref" data-knowl="./knowl/prop-coprimo_con_prodotto.html" title="Proposizione 4.4.8">Proposizione 4.4.8</a>, ci siamo ridotti al caso <span class="process-math">\(r=2\)</span> e la tesi segue immediatamente.</p></article></div>
+<article class="remark remark-like" id="rem-tcr"><h3 class="heading">
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">5.4.7</span><span class="period">.</span>
+</h3>
+<p id="p-714">Il <a href="" class="xref" data-knowl="./knowl/thm-cinese_del_resto.html" title="Teorema 5.4.6: Teorema cinese del resto">Teorema 5.4.6</a> può essere enunciato dicendo che esiste un unico intero <span class="process-math">\(a\)</span> con <span class="process-math">\(0\le a \le n-1\)</span> che soddisfa tutte le congruenze e che gli interi che soddisfano tutte le congruenze sono tutti e soli quelli del tipo <span class="process-math">\(a+nh\)</span> al variare di <span class="process-math">\(h\)</span> in <span class="process-math">\(\Interi\text{.}\)</span></p></article><article class="example example-like" id="example-50"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">5.4.8</span><span class="period">.</span>
+</h3>
+<p id="p-715">Supponiamo di voler risolvere il sistema di congruenze</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-cinese_del_resto.html ./knowl/alg-euclide.html">
+\begin{equation*}
+\left\{
+\begin{alignedat}{2}
+x \amp \equiv  2 \amp \amp \pmod{4}\\
+x \amp \equiv  7 \amp \amp \pmod{15}\\
+x \amp \equiv  3 \amp \amp \pmod{7}
+\end{alignedat}
+\right.
+\end{equation*}
+</div>
+<p class="continuation">Poiché <span class="process-math">\(4\text{,}\)</span> <span class="process-math">\(15\)</span> e <span class="process-math">\(7\)</span> sono a due a due coprimi siamo nelle condizioni di applicare il <a href="" class="xref" data-knowl="./knowl/thm-cinese_del_resto.html" title="Teorema 5.4.6: Teorema cinese del resto">Teorema cinese del resto</a>. Iniziamo a considerare le prime due equazioni: gli interi <span class="process-math">\(x\)</span> cercati devono soddisfare <span class="process-math">\(x=2+4y\)</span> e <span class="process-math">\(x=7+15z\)</span> per opportuni interi <span class="process-math">\(y\)</span> e <span class="process-math">\(z\text{.}\)</span> Uguagliando, con semplici passaggi otteniamo: <span class="process-math">\(4y-15z=5\text{.}\)</span> Un'identità di Bezout tra <span class="process-math">\(4\)</span> e <span class="process-math">\(-15\)</span> è, ad esempio, <span class="process-math">\(4\cdot4+(-15)\cdot1=1\)</span> e moltiplicando tutto per <span class="process-math">\(5\)</span> troviamo: <span class="process-math">\(4\cdot 20-15\cdot 5=5\text{,}\)</span> cioè una soluzione particolare è <span class="process-math">\(y=20\text{,}\)</span> <span class="process-math">\(z=5\text{.}\)</span> Sostituendo uno di questi valori nella corrispondente espressione di <span class="process-math">\(x\)</span> troviamo <span class="process-math">\(x=2+4\cdot20=82\)</span> che è una soluzione particolare per le prime due congruenze (si può verificarlo per sicurezza) che sono, dunque, equivalenti a <span class="process-math">\(x\equiv 82\pmod{4\cdot 15}\text{,}\)</span> cioè <span class="process-math">\(x\equiv 82\pmod{60}\)</span> o, se si preferisce, <span class="process-math">\(x\equiv 22\pmod{60}\text{.}\)</span> Il sistema si riduce, quindi, a</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-cinese_del_resto.html ./knowl/alg-euclide.html">
+\begin{equation*}
+\left\{
+\begin{alignedat}{2}
+x \amp \equiv 22\amp\amp\pmod{60}\\
+x \amp \equiv 3\amp\amp\pmod{7}
+\end{alignedat}
+\right.
+\end{equation*}
+</div>
+<p class="continuation">Ripetiamo ora il ragionamento. Gli interi <span class="process-math">\(x\)</span> cercati devono soddisfare <span class="process-math">\(x=22+60y\)</span> e <span class="process-math">\(x=3+7z\)</span> per opportuni interi <span class="process-math">\(y\)</span> e <span class="process-math">\(z\)</span> (per semplificare la notazione, usiamo ancora le lettere <span class="process-math">\(y\)</span> e <span class="process-math">\(z\)</span> per le incognite ausiliarie, anche se sono diverse da quelle precedenti). Uguagliando, con semplici passaggi otteniamo: <span class="process-math">\(60y-7z=-19\text{.}\)</span> Un'identità di Bezout tra <span class="process-math">\(60\)</span> e <span class="process-math">\(-7\)</span> è, ad esempio, <span class="process-math">\(60\cdot2+(-7)\cdot17=1\)</span> (per trovarla si può usare l'<a href="" class="xref" data-knowl="./knowl/alg-euclide.html" title="Algoritmo 4.3.15: Algoritmo di Euclide">Algoritmo di Euclide</a>) e moltiplicando tutto per <span class="process-math">\(-19\)</span> troviamo: <span class="process-math">\(60\cdot2(-19)-7\cdot17\cdot(-19)=-19\text{,}\)</span> cioè una soluzione particolare è <span class="process-math">\(y=2(-19)\text{,}\)</span> <span class="process-math">\(z=17(-19)\text{.}\)</span> Sostituendo uno di questi valori nella corrispondente espressione di <span class="process-math">\(x\)</span> troviamo <span class="process-math">\(x=22+60\cdot(-38)=-2258\)</span> che è una soluzione particolare per il sistema (si può verificarlo per sicurezza) che è, dunque, equivalente a <span class="process-math">\(x\equiv -2258\pmod{60\cdot7}\text{,}\)</span> cioè <span class="process-math">\(x\equiv -2258\pmod{420}\)</span> o, se si preferisce, <span class="process-math">\(x\equiv 262\pmod{420}\text{.}\)</span></p></article><p id="p-716">Vediamo ora come affrontare casi in cui i moduli non sono a due a due coprimi.</p>
+<article class="example example-like" id="example-51"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">5.4.9</span><span class="period">.</span>
+</h3>
+<p id="p-717">Consideriamo i sistemi di congruenze</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-cinese_del_resto.html">
+\begin{equation*}
+\left\{
+\begin{alignedat}{2}
+x \amp \equiv 2\amp \amp \pmod{12}\\
+x \amp \equiv 8\amp \amp \pmod{15}\\
+x \amp \equiv 3\amp \amp \pmod{10}
+\end{alignedat}
+\right.
+\end{equation*}
+</div>
+<p class="continuation">e</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-cinese_del_resto.html">
+\begin{equation*}
+\left\{
+\begin{alignedat}{2}
+x \amp \equiv 9\amp \amp \pmod{12}\\
+x \amp \equiv 6\amp \amp \pmod{15}\\
+x \amp \equiv 1\amp \amp \pmod{10}
+\end{alignedat}
+\right.
+\end{equation*}
+</div>
+<p class="continuation">Consideriamo il primo sistema. Non possiamo applicare il <a href="" class="xref" data-knowl="./knowl/thm-cinese_del_resto.html" title="Teorema 5.4.6: Teorema cinese del resto">Teorema cinese del resto</a> direttamente. Possiamo però applicarlo “al contrario”. Usando la fattorizzazione <span class="process-math">\(12=2^{2}\cdot3\)</span> come prodotto di potenze di primi, vediamo che la prima congruenza <span class="process-math">\(x\equiv 2\pmod{12}\)</span> è equivalente al sistema</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-cinese_del_resto.html">
+\begin{equation*}
+\left\{
+\begin{alignedat}{2}
+x \amp \equiv 2\amp \amp \pmod{2^{2}}\\
+x \amp \equiv 2\amp \amp \pmod{3}
+\end{alignedat}
+\right.
+\end{equation*}
+</div>
+<p class="continuation">Facendo lo stesso con le altre congruenze, il sistema diventa equivalente a</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-cinese_del_resto.html">
+\begin{equation*}
+\left\{
+\begin{alignedat}{2}
+x \amp \equiv 2\amp\amp\pmod{2^{2}}\\
+x \amp \equiv 2\amp\amp\pmod{3}\\
+x \amp \equiv 8\amp\amp\pmod{3}\\
+x \amp \equiv 8\amp\amp\pmod{5}\\
+x \amp \equiv 3\amp\amp\pmod{2}\\
+x \amp \equiv 3\amp\amp\pmod{5}\\
+\end{alignedat}
+\right.
+\end{equation*}
+</div>
+<p class="continuation">Ora confrontiamo le congruenze relative alle potenze dello stesso primo. Rispetto a <span class="process-math">\(3\text{,}\)</span> notiamo che <span class="process-math">\(x\equiv 8\pmod{3}\)</span> e <span class="process-math">\(x\equiv 2\pmod{3}\)</span> sono equivalenti (quindi, possiamo scartarne una delle due). Allo stesso modo <span class="process-math">\(x\equiv 8\pmod{5}\)</span> e <span class="process-math">\(x\equiv 3\pmod{5}\text{.}\)</span> E per quanto riguarda <span class="process-math">\(x\equiv 2\pmod{2^{2}}\)</span> e <span class="process-math">\(x\equiv 3\pmod{2}\text{?}\)</span> Se <span class="process-math">\(x\)</span> è un numero tale che <span class="process-math">\(x\equiv 2\pmod{2^{2}}\text{,}\)</span> cioè <span class="process-math">\(x-2\)</span> è multiplo di <span class="process-math">\(2^{2}\text{,}\)</span> a maggior ragione, <span class="process-math">\(x-2\)</span> è multiplo di <span class="process-math">\(2\text{,}\)</span> cioè <span class="process-math">\(x\equiv 2\pmod{2}\text{:}\)</span> ma questa congruenza non è compatibile con la congruenza  <span class="process-math">\(x\equiv 3\pmod{2}\)</span> e, quindi, il sistema non ha soluzione.</p> <p id="p-718">Consideriamo ora il secondo sistema. Con ragionamenti simili al precedente, lo riscriviamo come</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-cinese_del_resto.html">
+\begin{equation*}
+\left\{
+\begin{alignedat}{2}
+x \amp \equiv 9\amp \amp \pmod{2^{2}}\\
+x \amp \equiv 9\amp \amp \pmod{3}\\
+x \amp \equiv 6\amp \amp \pmod{3}\\
+x \amp \equiv 6\amp \amp \pmod{5}\\
+x \amp \equiv 1\amp \amp \pmod{2}\\
+x \amp \equiv 1\amp \amp \pmod{5}\\
+\end{alignedat}
+\right.
+\end{equation*}
+</div>
+<p class="continuation">Ora confrontiamo le congruenze relative alle potenze dello stesso primo. Rispetto a <span class="process-math">\(3\)</span> notiamo che <span class="process-math">\(x\equiv 9\pmod{3}\)</span> e <span class="process-math">\(x\equiv 6\pmod{3}\)</span> sono equivalenti (quindi, possiamo scartarne una delle due). Allo stesso modo <span class="process-math">\(x\equiv 6\pmod{5}\)</span> e <span class="process-math">\(x\equiv 1\pmod{5}\text{.}\)</span> Infine, <span class="process-math">\(x\equiv 9\pmod{2^{2}}\)</span> implica <span class="process-math">\(x\equiv 9\pmod{2}\)</span> che è equivalente a <span class="process-math">\(x\equiv 1\pmod{2}\text{:}\)</span> possiamo, dunque, scartare quest'ultima. Il sistema è allora equivalente a</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-cinese_del_resto.html">
+\begin{equation*}
+\left\{
+\begin{alignedat}{2}
+x \amp \equiv 9\amp \amp \pmod{2^{2}}\\
+x \amp \equiv 9\amp \amp \pmod{3}\\
+x \amp \equiv 6\amp \amp \pmod{5}
+\end{alignedat}
+\right.
+\end{equation*}
+</div>
+<p class="continuation">che ora può essere risolto con il <a href="" class="xref" data-knowl="./knowl/thm-cinese_del_resto.html" title="Teorema 5.4.6: Teorema cinese del resto">Teorema cinese del resto</a>. Facendo i calcoli otteniamo la congruenza equivalente <span class="process-math">\(x\equiv 21\pmod{60}\text{.}\)</span></p></article><article class="remark remark-like" id="rem-tcr_da_grande_a_piccolo"><h3 class="heading">
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">5.4.10</span><span class="period">.</span>
+</h3>
+<p id="p-719">Nel confrontare le congruenze rispetto alle potenze dello stesso primo si deve sempre partire dalla potenza più grande e considerare le sue conseguenze rispetto alle potenze più piccole. Se non sono compatibili il sistema non è risolubile; se sono compatibili, si scartano quelle rispetto alle potenze più piccole e si tiene quella rispetto alla potenza maggiore.</p></article><article class="example example-like" id="ex-resto_con_tcr"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">5.4.11</span><span class="period">.</span>
+</h3>
+<p id="p-720">Supponiamo di voler calcolare il resto della divisione di <span class="process-math">\(31^{3215}+14^{2345}\)</span> per <span class="process-math">\(12\text{.}\)</span> Nell'<a href="" class="xref" data-knowl="./knowl/ex-resto_con_eulero.html" title="Esempio 5.3.7">Esempio 5.3.7</a> abbiamo visto che <span class="process-math">\(31^{3215}\equiv 7\pmod{12}\text{.}\)</span></p> <p id="p-721">Consideriamo ora <span class="process-math">\(14^{2345}\text{:}\)</span> notiamo innanzitutto che <span class="process-math">\(14\equiv 2\pmod{12}\text{.}\)</span> Ora <span class="process-math">\(2\)</span> e <span class="process-math">\(12\)</span> non sono coprimi e, quindi, non possiamo usare il <a href="" class="xref" data-knowl="./knowl/thm-eulero.html" title="Teorema 5.3.5: Teorema di Eulero">Teorema di Eulero</a>. Vogliamo trovare un numero <span class="process-math">\(x\)</span> relativamente “piccolo” tale che <span class="process-math">\(x\equiv 2^{2345}\pmod{12}\text{.}\)</span> Per il <a href="" class="xref" data-knowl="./knowl/thm-cinese_del_resto.html" title="Teorema 5.4.6: Teorema cinese del resto">Teorema cinese del resto</a>, questo è equivalente a</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-eulero.html ./knowl/thm-cinese_del_resto.html ./knowl/thm-eulero.html ./knowl/thm-cinese_del_resto.html">
+\begin{equation*}
+\left\{
+\begin{alignedat}{2}
+x \amp \equiv 2^{2345}\amp \amp \pmod{2^{2}}\\
+x \amp \equiv 2^{2345}\amp \amp \pmod{3}
+\end{alignedat}
+\right.
+\end{equation*}
+</div>
+<p class="continuation">Ora <span class="process-math">\(2^{2345}\)</span> è multiplo di <span class="process-math">\(2^{2}\)</span> e, quindi, <span class="process-math">\(2^{2345}\equiv 0\pmod{2^{2}}\text{.}\)</span> Invece <span class="process-math">\(2\)</span> è coprimo con <span class="process-math">\(3\)</span> e, quindi, possiamo applicare il <a href="" class="xref" data-knowl="./knowl/thm-eulero.html" title="Teorema 5.3.5: Teorema di Eulero">Teorema di Eulero</a> alla seconda congruenza. Più semplicemente, però, possiamo notare che <span class="process-math">\(2\equiv -1\pmod{3}\)</span> e, quindi, <span class="process-math">\(2^{2345}\equiv (-1)^{2345}\pmod{3}\equiv -1\pmod{3}\text{.}\)</span> Dunque, il sistema si riduce a:</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-eulero.html ./knowl/thm-cinese_del_resto.html ./knowl/thm-eulero.html ./knowl/thm-cinese_del_resto.html">
+\begin{equation*}
+\left\{
+\begin{alignedat}{2}
+x \amp \equiv 0\amp \amp \pmod{2^{2}}\\
+x \amp \equiv -1\amp \amp \pmod{3}
+\end{alignedat}
+\right.
+\end{equation*}
+</div>
+<p class="continuation">Risolvendo con il <a href="" class="xref" data-knowl="./knowl/thm-cinese_del_resto.html" title="Teorema 5.4.6: Teorema cinese del resto">Teorema cinese del resto</a>, troviamo <span class="process-math">\(x\equiv 8\pmod{12}\text{.}\)</span></p> <p id="p-722">Riassumendo, <span class="process-math">\(31^{3215}+14^{2345}\equiv 7+8\pmod{12}\equiv 3\pmod{12}\text{.}\)</span> Poiché <span class="process-math">\(0\le 3 \lt 12\text{,}\)</span> il resto della divisione cercata è proprio <span class="process-math">\(3\text{.}\)</span></p></article><article class="example example-like" id="example-53"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">5.4.12</span><span class="period">.</span>
+</h3>
+<p id="p-723">Supponiamo di voler calcolare le ultime <span class="process-math">\(2\)</span> cifre (in base <span class="process-math">\(10\)</span>) di <span class="process-math">\(6^{2023}\text{.}\)</span> Dobbiamo cioè trovare il resto della divisione di <span class="process-math">\(6^{2023}\)</span> per <span class="process-math">\(100\text{.}\)</span> Poiché <span class="process-math">\(6\)</span> e <span class="process-math">\(100\)</span> non sono coprimi, non possiamo applicare il <a href="" class="xref" data-knowl="./knowl/thm-eulero.html" title="Teorema 5.3.5: Teorema di Eulero">Teorema di Eulero</a>. Tuttavia <span class="process-math">\(100=2^{2}\cdot 5^{2}\)</span> e, dunque, la congruenza con incognita <span class="process-math">\(x\equiv 6^{2023}\pmod{100}\)</span> è equivalente a</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-eulero.html ./knowl/thm-eulero.html ./knowl/thm-cinese_del_resto.html">
+\begin{equation*}
+\left\{
+\begin{alignedat}{2}
+x \amp \equiv 6^{2023}\amp \amp \pmod{2^{2}}\\
+x \amp \equiv 6^{2023}\amp \amp \pmod{5^{2}}
+\end{alignedat}
+\right.
+\end{equation*}
+</div>
+<p class="continuation">Ora <span class="process-math">\(6\)</span> è multiplo di <span class="process-math">\(2\)</span> e, quindi, tutte le sue potenze con esponente almeno <span class="process-math">\(2\)</span> sono multiple di <span class="process-math">\(2^{2}\text{.}\)</span> Pertanto, la prima congruenza è equivalente a <span class="process-math">\(x\equiv 0\pmod{2^{2}}\text{.}\)</span> Per quanto riguarda la seconda congruenza, <span class="process-math">\(6\)</span> è coprimo con <span class="process-math">\(5^{2}\text{.}\)</span> Dunque, per il <a href="" class="xref" data-knowl="./knowl/thm-eulero.html" title="Teorema 5.3.5: Teorema di Eulero">Teorema di Eulero</a>, si ha <span class="process-math">\(6^{\euler{5^{2}}}\equiv 1\pmod{5^{2}}\text{.}\)</span> Ora <span class="process-math">\(\euler{5^{2}}=5^{2}-5=20\text{.}\)</span> Poiché <span class="process-math">\(2023\equiv 3\pmod{20}\text{,}\)</span> abbiamo che <span class="process-math">\(6^{2023}\equiv 6^{3}\text{.}\)</span> Facendo le potenze successive troviamo <span class="process-math">\(6^{2}=36\equiv 11\pmod{25}\)</span> e <span class="process-math">\(6^{3}\equiv 11\cdot 6\pmod{25}=16\pmod{25}\text{.}\)</span> Dunque, il sistema è equivalente a</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-eulero.html ./knowl/thm-eulero.html ./knowl/thm-cinese_del_resto.html">
+\begin{equation*}
+\left\{
+\begin{alignedat}{2}
+x \amp \equiv 0\amp \amp \pmod{2^{2}}\\
+x \amp \equiv 16\amp \amp \pmod{5^{2}}
+\end{alignedat}
+\right.
+\end{equation*}
+</div>
+<p class="continuation">Questo può essere risolto con il <a href="" class="xref" data-knowl="./knowl/thm-cinese_del_resto.html" title="Teorema 5.4.6: Teorema cinese del resto">Teorema cinese del resto</a>, ottenendo <span class="process-math">\(x\equiv 16\pmod{100}\text{:}\)</span> le ultime due cifre di <span class="process-math">\(6^{2023}\)</span> sono allora <span class="process-math">\(16\text{.}\)</span></p></article><p id="p-724">Vediamo ora come può essere usato il <a href="" class="xref" data-knowl="./knowl/thm-cinese_del_resto.html" title="Teorema 5.4.6: Teorema cinese del resto">Teorema cinese del resto</a> per calcolare la funzione di Eulero di un numero qualsiasi di cui conosciamo la fattorizzazione in primi.</p>
+<article class="lemma theorem-like" id="lem-moltiplicativita_eulero"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">5.4.13</span><span class="period">.</span>
+</h3>
+<p id="p-725">Siano <span class="process-math">\(m\)</span> e <span class="process-math">\(n\)</span> due interi positivi coprimi. Allora <span class="process-math">\(\euler{mn}=\euler{m}\euler{n}\text{.}\)</span></p></article><article class="hiddenproof" id="proof-50"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-50"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-50"><article class="hiddenproof"><p id="p-726">Consideriamo la funzione <span class="process-math">\(\tau\colon \Interi/mn\to\Interi/m\times\Interi/n\)</span> definita da <span class="process-math">\(\class[mn]{a}\tau\coloneqq(\class[m]{a},\class[n]{a})\text{.}\)</span> Notiamo innanzitutto che <span class="process-math">\(\tau\)</span> è ben definita: se <span class="process-math">\(\class[mn]{a}=\class[mn]{b}\text{,}\)</span> cioè <span class="process-math">\(b-a\)</span> è multiplo di <span class="process-math">\(mn\text{,}\)</span> allora <span class="process-math">\(b-a\)</span> è multiplo sia di <span class="process-math">\(m\)</span> che di <span class="process-math">\(n\text{,}\)</span> cioè <span class="process-math">\(\class[m]{a}=\class[m]{b}\)</span> e <span class="process-math">\(\class[n]{a}=\class[n]{b}\text{.}\)</span></p> <p id="p-727">Per il <a href="" class="xref" data-knowl="./knowl/thm-cinese_del_resto.html" title="Teorema 5.4.6: Teorema cinese del resto">Teorema cinese del resto</a>, la funzione <span class="process-math">\(\tau\)</span> è suriettiva. Infatti, data una coppia <span class="process-math">\((\class[m]{c},\class[n]{d})\text{,}\)</span> sappiamo che esiste un intero <span class="process-math">\(a\)</span> tale che <span class="process-math">\(a\equiv c\pmod{m}\)</span> e <span class="process-math">\(a\equiv d\pmod{n}\text{,}\)</span> cioè <span class="process-math">\(\class[m]{a}=\class[m]{c}\)</span> e <span class="process-math">\(\class[n]{a}=\class[n]{d}\text{.}\)</span> Pertanto</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-cinese_del_resto.html">
+\begin{equation*}
+\class[mn]{a}\tau=(\class[m]{a},\class[n]{a})=(\class[m]{c},\class[n]{d}).
+\end{equation*}
+</div>
+<p class="continuation">Dal momento che <span class="process-math">\(\abs{\Interi/mn}=mn=\abs{\Interi/m\times\Interi/n}\text{,}\)</span> la funzione <span class="process-math">\(\tau\)</span> è, quindi, biiettiva.</p> <p id="p-728">Consideriamo ora i sottoinsiemi <span class="process-math">\(S\text{,}\)</span> <span class="process-math">\(M\)</span> e <span class="process-math">\(N\)</span> rispettivamente di <span class="process-math">\(\Interi/mn\text{,}\)</span> <span class="process-math">\(\Interi/m\)</span> e <span class="process-math">\(\Interi/n\)</span> formati dalle classi invertibili. Per la <a href="" class="xref" data-knowl="./knowl/prop-coprimo_con_prodotto.html" title="Proposizione 4.4.8">Proposizione 4.4.8</a>, un intero <span class="process-math">\(a\)</span> è coprimo con <span class="process-math">\(mn\)</span> se e solo se è coprimo con <span class="process-math">\(m\)</span> e <span class="process-math">\(n\text{.}\)</span> In particolare, <span class="process-math">\(\class[mn]{a}\)</span> è invertibile se e solo se <span class="process-math">\(\class[m]{a}\)</span> e <span class="process-math">\(\class[n]{a}\)</span> sono invertibili. Pertanto, <span class="process-math">\(\tau\)</span> induce una biiezione tra <span class="process-math">\(S\)</span> e <span class="process-math">\(M\times N\text{:}\)</span> poiché <span class="process-math">\(\abs{M}=\euler{m}\text{,}\)</span> <span class="process-math">\(\abs{N}=\euler{n}\)</span> e <span class="process-math">\(\abs{S}=\euler{mn}\text{,}\)</span> il risultato segue.</p></article></div>
+<article class="proposition theorem-like" id="prop-calcolo_funzione_eulero"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">5.4.14</span><span class="period">.</span>
+</h3>
+<p id="p-729">Sia <span class="process-math">\(n\)</span> un intero maggiore di <span class="process-math">\(1\text{,}\)</span> scritto come</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+n=p_{1}^{\alpha_{1}}p_{2}^{\alpha_{2}}\cdots p_{t}^{\alpha_{t}}
+\end{equation*}
+</div>
+<p class="continuation">con <span class="process-math">\(p_{1}\text{,}\)</span> <span class="process-math">\(p_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(p_{t}\)</span> primi distinti e <span class="process-math">\(\alpha_{1}\text{,}\)</span> <span class="process-math">\(\alpha_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(\alpha_{t}\)</span> interi positivi. Risulta allora</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-30">
+\begin{align*}
+\euler{n} \amp = (p_{1}^{\alpha_{1}}-p_{1}^{\alpha_{1}-1})(p_{2}^{\alpha_{2}}-p_{2}^{\alpha_{2}-1})\cdots (p_{t}^{\alpha_{t}}-p_{t}^{\alpha_{t}-1})\\
+\amp =n\left(1-\frac{1}{p_{1}}\right)\left(1-\frac{1}{p_{2}}\right)\cdots\left(1-\frac{1}{p_{r}}\right)\text{.}
+\end{align*}
+</div></article><article class="hiddenproof" id="proof-51"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-51"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-51"><article class="hiddenproof"><p id="p-730">Per la <a href="" class="xref" data-knowl="./knowl/prop-funzione_di_eulero_di_potenza_di_primo.html" title="Proposizione 5.3.4">Proposizione 5.3.4</a>, sappiamo che <span class="process-math">\(\euler{p_{i}^{\alpha_{i}}}=p_{i}^{\alpha_{i}}-p_{t}^{\alpha_{i}-1}\)</span> per ogni <span class="process-math">\(i\text{.}\)</span> Le formule seguono allora dal <a href="" class="xref" data-knowl="./knowl/lem-moltiplicativita_eulero.html" title="Lemma 5.4.13">Lemma 5.4.13</a> e da semplici calcoli.</p></article></div>
+<section class="exercises" id="exercises-congruenze_con_incognite"><h3 class="heading hide-type">
+<span class="type">Esercizi</span> <span class="codenumber"></span> <span class="title">Esercizi</span>
+</h3>
+<div class="exercisegroup" id="exercisegroup-6">
+<h4 class="heading"><span class="title">Gruppo di esercizi.</span></h4>
+<div class="introduction" id="introduction-17"><p id="p-731">Stabilire quali delle seguenti congruenze sono risolubili e in caso affermativo trovarne le soluzioni.</p></div>
+<div class="exercisegroup-exercises cols2">
+<article class="exercise exercise-like" id="exercise-90"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<p id="p-732"><span class="process-math">\(21x\equiv 14\pmod{35}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-31" id="answer-31"><span class="type">Risposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-31"><div class="answer solution-like"><p id="p-733"><span class="process-math">\(x\equiv 4\pmod 5\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-91"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<p id="p-734"><span class="process-math">\(172x\equiv 15\pmod{24}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-32" id="answer-32"><span class="type">Risposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-32"><div class="answer solution-like"><p id="p-735">Non ha soluzione.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-92"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<p id="p-736"><span class="process-math">\(3x\equiv 8\pmod{37}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-33" id="answer-33"><span class="type">Risposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-33"><div class="answer solution-like"><p id="p-737"><span class="process-math">\(x\equiv 15\pmod{37}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-93"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<p id="p-738"><span class="process-math">\(22x\equiv 5\pmod{35}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-34" id="answer-34"><span class="type">Risposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-34"><div class="answer solution-like"><p id="p-739"><span class="process-math">\(x\equiv 5\pmod{35}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-94"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<p id="p-740"><span class="process-math">\(15x\equiv 9\pmod{18}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-35" id="answer-35"><span class="type">Risposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-35"><div class="answer solution-like"><p id="p-741"><span class="process-math">\(x\equiv 3\pmod{6}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-95"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<p id="p-742"><span class="process-math">\(165x\equiv 13\pmod{22}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-36" id="answer-36"><span class="type">Risposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-36"><div class="answer solution-like"><p id="p-743">Non ha soluzione.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-96"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<p id="p-744"><span class="process-math">\(25x\equiv 10\pmod{65}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-37" id="answer-37"><span class="type">Risposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-37"><div class="answer solution-like"><p id="p-745"><span class="process-math">\(x\equiv 3\pmod{13}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-97"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<p id="p-746"><span class="process-math">\(18x\equiv 5\pmod{35}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-38" id="answer-38"><span class="type">Risposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-38"><div class="answer solution-like"><p id="p-747"><span class="process-math">\(x\equiv 10\pmod{35}\)</span></p></div></div>
+</div></article>
+</div>
+</div>
+<article class="exercise exercise-like" id="exercise-98"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<p id="p-748">Risolvere, se possibile, il sistema:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left\{
+\begin{alignedat}{2}
+x \amp \equiv 3\amp \amp \pmod{4}\\
+x \amp \equiv 3\amp \amp \pmod{15}\\
+x \amp \equiv 2\amp \amp \pmod{7}
+\end{alignedat}
+\right.
+\end{equation*}
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-35" id="solution-35"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-35"><div class="solution solution-like">
+<p id="p-749">I moduli <span class="process-math">\(4\text{,}\)</span> <span class="process-math">\(15\)</span> e <span class="process-math">\(7\)</span> sono a due a due coprimi, e, quindi, per il <a href="" class="xref" data-knowl="./knowl/thm-cinese_del_resto.html" title="Teorema 5.4.6: Teorema cinese del resto">Teorema cinese del resto</a>, il sistema è risolubile e le soluzioni formano una classe di resto modulo <span class="process-math">\(4\cdot15\cdot7\text{.}\)</span> Determiniamo prima le soluzioni comuni alle prime due congruenze. Si nota immediatamente che <span class="process-math">\(3\)</span> è soluzione comune alle prime due congruenze: dunque, le prime due congruenze sono equivalenti, sempre per il <a href="" class="xref" data-knowl="./knowl/thm-cinese_del_resto.html" title="Teorema 5.4.6: Teorema cinese del resto">Teorema cinese del resto</a>, a <span class="process-math">\(x\equiv 3\pmod{60}\text{.}\)</span> Il sistema si riduce allora a</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-cinese_del_resto.html ./knowl/thm-cinese_del_resto.html ./knowl/alg-euclide.html">
+\begin{equation*}
+\left\{
+\begin{alignedat}{2}
+x \amp \equiv 3\amp \amp \pmod{60}\\
+x \amp \equiv 2\amp \amp \pmod{7}
+\end{alignedat}
+\right.
+\end{equation*}
+</div>
+<p class="continuation">Ora deve essere <span class="process-math">\(x=3+60h\)</span> per qualche <span class="process-math">\(h\)</span> e <span class="process-math">\(x=2+7k\)</span> per qualche <span class="process-math">\(k\text{:}\)</span> uguagliando otteniamo <span class="process-math">\(3+60h=2+7k\)</span> da cui segue <span class="process-math">\(7k-60h=1\text{.}\)</span> Un'identità di Bezout tra <span class="process-math">\(7\)</span> e <span class="process-math">\(60\)</span> (che può essere determinata tramite l'<a href="" class="xref" data-knowl="./knowl/alg-euclide.html" title="Algoritmo 4.3.15: Algoritmo di Euclide">Algoritmo di Euclide</a>) è, ad esempio, <span class="process-math">\(1=60\cdot2-7\cdot17\text{.}\)</span> Possiamo allora scegliere <span class="process-math">\(k=-17\)</span> e <span class="process-math">\(h=-2\)</span> e trovare una soluzione particolare del sistema <span class="process-math">\(x=3+60(-2)=-117\text{.}\)</span> Il sistema ha allora soluzioni <span class="process-math">\(x\equiv -117\pmod{420}\text{.}\)</span></p>
+</div></div>
+</div></article><div class="exercisegroup" id="exercisegroup-7">
+<h4 class="heading"><span class="title">Gruppo di esercizi.</span></h4>
+<div class="introduction" id="introduction-18"><p id="p-750">Risolvere, se possibile, i seguenti sistemi di congruenze.</p></div>
+<div class="exercisegroup-exercises cols2">
+<article class="exercise exercise-like" id="exercise-99"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
+<p id="p-751"><span class="process-math">\(\left\{
+\begin{alignedat}{2}
+x \amp \equiv 3\amp \amp \pmod{12}\\
+x \amp \equiv 10\amp \amp \pmod{11}\\
+x \amp \equiv 4\amp \amp \pmod{5}
+\end{alignedat}
+\right.\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-39" id="answer-39"><span class="type">Risposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-39"><div class="answer solution-like"><p id="p-752"><span class="process-math">\(x\equiv 219\pmod{660}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-100"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
+<p id="p-753"><span class="process-math">\(\left\{
+\begin{alignedat}{2}
+x \amp \equiv 3\amp \amp \pmod{12}\\
+x \amp \equiv 6\amp \amp \pmod{15}\\
+x \amp \equiv 11\amp \amp \pmod{40}
+\end{alignedat}
+\right.\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-40" id="answer-40"><span class="type">Risposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-40"><div class="answer solution-like"><p id="p-754"><span class="process-math">\(x\equiv 51\pmod{120}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-101"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
+<p id="p-755"><span class="process-math">\(\left\{
+\begin{alignedat}{2}
+2x \amp \equiv 3\amp \amp \pmod{5}\\
+2x \amp \equiv 4\amp \amp \pmod{3}\\
+x \amp \equiv 3\amp \amp \pmod{7}
+\end{alignedat}
+\right.\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-41" id="answer-41"><span class="type">Risposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-41"><div class="answer solution-like"><p id="p-756"><span class="process-math">\(x\equiv 59\pmod{105}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-102"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>
+<p id="p-757"><span class="process-math">\(\left\{
+\begin{alignedat}{2}
+x \amp \equiv 5\amp \amp \pmod{12}\\
+x \amp \equiv 4\amp \amp \pmod{10}\\
+x \amp \equiv 2\amp \amp \pmod{15}
+\end{alignedat}
+\right.\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-42" id="answer-42"><span class="type">Risposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-42"><div class="answer solution-like"><p id="p-758">Non ha soluzioni.</p></div></div>
+</div></article>
+</div>
+</div>
+<article class="exercise exercise-like" id="exercise-103"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
+<p id="p-759">Trovare il resto di <span class="process-math">\(23^{31}+31^{23}\)</span> diviso <span class="process-math">\(713\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-11" id="hint-11"><span class="type">Suggerimento</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-11"><div class="hint solution-like"><p id="p-760">Si noti che <span class="process-math">\(713=23\cdot31\text{.}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-36" id="solution-36"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-36"><div class="solution solution-like">
+<p id="p-761">Calcoliamo <span class="process-math">\(23^{31}+31^{23}\)</span> modulo <span class="process-math">\(23\)</span> e modulo <span class="process-math">\(31\text{.}\)</span></p> <p id="p-762">Chiaramente <span class="process-math">\(23\equiv 0\pmod{23}\)</span> e, di conseguenza, <span class="process-math">\(23^{31}\equiv 0\pmod{23}\text{.}\)</span> Poiché <span class="process-math">\(23\)</span> è primo, per il <a href="" class="xref" data-knowl="./knowl/cor-piccolo_fermat.html" title="Corollario 5.3.6: Piccolo teorema di Fermat">Piccolo teorema di Fermat</a> abbiamo che <span class="process-math">\(31^{23}\equiv 31\pmod {23}\text{.}\)</span> Pertanto, <span class="process-math">\(23^{31}+31^{23}\equiv 0+31\pmod{23}\text{.}\)</span></p> <p id="p-763">Abbiamo poi che <span class="process-math">\(31\equiv 0\pmod{31}\)</span> e, di conseguenza, <span class="process-math">\(31^{23}\equiv 0\pmod{31}\text{.}\)</span> Poiché <span class="process-math">\(31\)</span> è primo, per il <a href="" class="xref" data-knowl="./knowl/cor-piccolo_fermat.html" title="Corollario 5.3.6: Piccolo teorema di Fermat">Piccolo teorema di Fermat</a> abbiamo che <span class="process-math">\(23^{31}\equiv 23\pmod {31}\text{.}\)</span> Pertanto, <span class="process-math">\(23^{31}+31^{23}\equiv 23+0\pmod{31}\text{.}\)</span></p> <p id="p-764">Potremmo ora determinare <span class="process-math">\(23^{31}+31^{23}\)</span> modulo <span class="process-math">\(713\)</span> usando il <a href="" class="xref" data-knowl="./knowl/thm-cinese_del_resto.html" title="Teorema 5.4.6: Teorema cinese del resto">Teorema cinese del resto</a>, oppure notare che <span class="process-math">\(23+31\equiv 31\pmod{23}\)</span> e <span class="process-math">\(23+31\equiv 23\pmod{31}\text{:}\)</span> dunque, <span class="process-math">\(23^{31}+31^{23}\equiv 23+31\pmod{23\cdot 31}\equiv 54\pmod{23\cdot 31}\text{.}\)</span> Poiché <span class="process-math">\(0\le 54 \lt 23\cdot 31\text{,}\)</span> il resto cercato è <span class="process-math">\(54\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-104"><h4 class="heading"><span class="codenumber">15<span class="period">.</span></span></h4>
+<p id="p-765">Trovare il resto di <span class="process-math">\(23^{8!}+4^{711}\)</span> diviso <span class="process-math">\(33\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-37" id="solution-37"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-37"><div class="solution solution-like">
+<p id="p-766">Dobbiamo determinare l'elemento compreso tra <span class="process-math">\(0\)</span> e <span class="process-math">\(32\)</span> nella classe di resto di <span class="process-math">\(23^{8!}+4^{711}\)</span> modulo <span class="process-math">\(33\text{.}\)</span></p> <p id="p-767">Poiché <span class="process-math">\(23\)</span> è coprimo con <span class="process-math">\(33\text{,}\)</span> il <a href="" class="xref" data-knowl="./knowl/thm-eulero.html" title="Teorema 5.3.5: Teorema di Eulero">Teorema di Eulero</a> ci dice che <span class="process-math">\(23^{\euler{33}}\equiv 1\pmod{33}\text{.}\)</span> Ora <span class="process-math">\(33=3\cdot 11\)</span> e, quindi, <span class="process-math">\(\euler{33}=\euler{3}\euler{11}=(3-1)(11-1)=20\text{.}\)</span> D'altra parte, <span class="process-math">\(8!\)</span> è multiplo di <span class="process-math">\(20\text{:}\)</span> di conseguenza <span class="process-math">\(23^{8!}=(23^{20})^{k}\)</span> per qualche <span class="process-math">\(k\)</span> intero e, quindi, <span class="process-math">\(23^{8!}\equiv 1^{k}\pmod{33}\equiv 1 \pmod{33}\text{.}\)</span></p> <p id="p-768">Per quanto riguarda <span class="process-math">\(4^{711}\)</span> osserviamo innanzitutto che è uguale a <span class="process-math">\(2^{1422}\text{.}\)</span> Anche <span class="process-math">\(2\)</span> è coprimo con <span class="process-math">\(33\text{:}\)</span> quindi, come prima, <span class="process-math">\(2^{20}\equiv 1\pmod{33}\text{.}\)</span> D'altra parte, <span class="process-math">\(1422\equiv 2\pmod{20}\)</span> e, quindi, analogamente a prima, <span class="process-math">\(2^{1422}\equiv 2^{2}\pmod{33}\text{.}\)</span></p> <p id="p-769">Riassumendo, <span class="process-math">\(23^{8!}+4^{711}\equiv 1 + 4\pmod{33}\equiv 5\pmod{33}\text{:}\)</span> dunque, il resto cercato è <span class="process-math">\(5\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-105"><h4 class="heading"><span class="codenumber">16<span class="period">.</span></span></h4>
+<p id="p-770">Trovare le ultime due cifre (in base <span class="process-math">\(10\)</span>) di <span class="process-math">\(6^{6666}\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-38" id="solution-38"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-38"><div class="solution solution-like">
+<p id="p-771">Le ultime due cifre in base <span class="process-math">\(10\)</span> corrispondono al resto della divisione di <span class="process-math">\(6^{6666}\)</span> per <span class="process-math">\(100\text{.}\)</span> Espresso <span class="process-math">\(100=4\cdot 25\)</span> come prodotto di numeri coprimi, calcoliamo separatamente <span class="process-math">\(6^{6666}\)</span> modulo <span class="process-math">\(4\)</span> e modulo <span class="process-math">\(25\)</span> e poi applichiamo il <a href="" class="xref" data-knowl="./knowl/thm-cinese_del_resto.html" title="Teorema 5.4.6: Teorema cinese del resto">Teorema cinese del resto</a>.</p> <p id="p-772">Poiché <span class="process-math">\(6\)</span> è multiplo di <span class="process-math">\(2\text{,}\)</span> tutte le sue potenze di esponente almeno <span class="process-math">\(2\)</span> sono multiple di <span class="process-math">\(4\text{.}\)</span> Per calcolare <span class="process-math">\(6^{6666}\)</span> modulo <span class="process-math">\(25\text{,}\)</span> notiamo che <span class="process-math">\(6\)</span> è coprimo con <span class="process-math">\(25\)</span> e, quindi, per il <a href="" class="xref" data-knowl="./knowl/thm-eulero.html" title="Teorema 5.3.5: Teorema di Eulero">Teorema di Eulero</a>, si ha <span class="process-math">\(6^{\euler{25}}\equiv 1\pmod{25}\text{.}\)</span> Poiché <span class="process-math">\(\euler{25}=5^{2}-5=20\)</span> e <span class="process-math">\(6666\equiv 6\pmod{20}\text{,}\)</span> possiamo concludere che <span class="process-math">\(6^{6666}\equiv 6^{6}\pmod{25}\text{.}\)</span> Ora <span class="process-math">\(6^{2}=36\equiv{11}\pmod{25}\text{,}\)</span>  e <span class="process-math">\(6^{4}\equiv{11\cdot11}\pmod{25}\equiv{21}\pmod{25}\)</span> e quindi, <span class="process-math">\(6^{6}\equiv 11\cdot 21\pmod{25}\equiv 6\pmod{25}\text{.}\)</span> Riassumendo, <span class="process-math">\(6^{6666}\equiv 0\pmod{4}\)</span> e <span class="process-math">\(6^{6666}\equiv 6\pmod{25}\text{.}\)</span> Dobbiamo allora trovare il numero compreso tra <span class="process-math">\(0\)</span> e <span class="process-math">\(99\)</span> che soddisfa il sistema di congruenze</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-eulero.html">
+\begin{equation*}
+\left\{
+\begin{alignedat}{2}
+x \amp \equiv 0 \amp \amp \pmod{4}\\
+x \amp \equiv 6 \amp \amp \pmod{25}
+\end{alignedat}
+\right.
+\end{equation*}
+</div>
+<p class="continuation">Ora <span class="process-math">\(x=4h=6+25k\)</span> per opportuni <span class="process-math">\(h\)</span> e <span class="process-math">\(k\)</span> interi da cui, data l'identità di Bezout <span class="process-math">\(4\cdot(-6)+25\cdot1=1\)</span> tra <span class="process-math">\(4\)</span> e <span class="process-math">\(25\text{,}\)</span> otteniamo una soluzione particolare <span class="process-math">\(4\cdot(-36)=6 -25\cdot 6\)</span> che ci dà la congruenza <span class="process-math">\(x\equiv -144\pmod{100}\)</span> che può essere riscritta come <span class="process-math">\(x\equiv 56\pmod{100}\text{.}\)</span> Le ultime due cifre sono per l'appunto <span class="process-math">\(56\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-106"><h4 class="heading"><span class="codenumber">17<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-19"><p id="p-773">Obiettivo di questo esercizio è dare una dimostrazione alternativa, non costruttiva, del <a href="" class="xref" data-knowl="./knowl/thm-cinese_del_resto.html" title="Teorema 5.4.6: Teorema cinese del resto">Teorema cinese del resto</a>. Siano <span class="process-math">\(a_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(a_{r}\)</span>  interi e <span class="process-math">\(n_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(n_{r}\)</span> interi positivi a due a due coprimi e sia <span class="process-math">\(n=n_{1}\cdots n_{r}\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-16"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-774">Dimostrare che la funzione <span class="process-math">\(\tau\colon\Interi/n\to\Interi/n_{1}\times\cdots\times\Interi/n_{r}\)</span> definita da <span class="process-math">\(\class[n]{a}\tau\coloneqq(\class[n_{1}]{a},\ldots,\class[n_{r}]{a})\)</span> è ben definita.</p></article><article class="task exercise-like" id="task-17"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-775">Dimostrare che la funzione <span class="process-math">\(\tau\)</span> definita al punto precedente è iniettiva.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-39" id="solution-39"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-39"><div class="solution solution-like"><p id="p-776">Se <span class="process-math">\(\class[n]{a}\tau=\class[n]{b}\tau\text{,}\)</span> allora <span class="process-math">\(\class[n_{i}]{a}=\class[n_{i}]{b}\)</span> per ogni <span class="process-math">\(i\text{,}\)</span> cioè <span class="process-math">\(b-a\)</span> è multiplo di ogni <span class="process-math">\(n_{i}\)</span> e, quindi, per l'<a href="" class="xref" data-knowl="./knowl/exer-multiplo_di_coprimi.html" title="Esercizio 4.4.3">Esercizio 4.4.3</a> è multiplo di <span class="process-math">\(n\text{,}\)</span> cioè <span class="process-math">\(\class[n]{a}=\class[n]{b}\text{.}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-18"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-777">Dimostrare che <span class="process-math">\(\tau\)</span> è biiettiva.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-12" id="hint-12"><span class="type">Suggerimento</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-12"><div class="hint solution-like"><p id="p-778">Contare gli elementi dell'insieme di partenza e di arrivo.</p></div></div>
+</div></article><article class="task exercise-like" id="task-19"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-779">Dedurre il <a href="" class="xref" data-knowl="./knowl/thm-cinese_del_resto.html" title="Teorema 5.4.6: Teorema cinese del resto">Teorema cinese del resto</a>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-40" id="solution-40"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-40"><div class="solution solution-like">
+<p id="p-780">Dato il sistema</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left\{
+\begin{alignedat}{2}
+x \amp \equiv a_{1}\amp \amp \pmod{n_{1}}\\
+x \amp \equiv a_{2}\amp \amp \pmod{n_{2}}\\
+\amp \vdotswithin{\equiv} \amp           \\
+x \amp \equiv a_{r}\amp \amp  \pmod{n_{r}}
+\end{alignedat}
+\right.
+\end{equation*}
+</div>
+<p class="continuation">dove <span class="process-math">\(a_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(a_{r}\)</span> sono interi e <span class="process-math">\(n_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(n_{r}\)</span> sono interi positivi a due a due coprimi, consideriamo l'elemento <span class="process-math">\((\class[n_{1}]{a_{1}},\ldots,\class[n_{r}]{a_{r}})\)</span> in <span class="process-math">\(\Interi/n_{1}\times\cdots\times\Interi/n_{r}\text{.}\)</span> Esiste allora un'unica classe <span class="process-math">\(\class[n]{a}\)</span> in <span class="process-math">\(\Interi/n\)</span> tale che <span class="process-math">\(\class[n]{a}\tau=(\class[n_{1}]{a_{1}},\ldots,\class[n_{r}]{a_{r}})\text{,}\)</span> Per definizione di <span class="process-math">\(\tau\text{,}\)</span> ciò significa che <span class="process-math">\(a\equiv a_{i}\pmod{n_{i}}\)</span> per ogni <span class="process-math">\(i\)</span> e che gli interi che soddisfano il sistema sono tutti e soli quelli che appartengono alla classe <span class="process-math">\(\class[n]{a}\text{.}\)</span></p>
+</div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-107"><h4 class="heading"><span class="codenumber">18<span class="period">.</span></span></h4>
+<p id="p-781">Dimostrare che <span class="process-math">\(\euler{n}=\frac{n}{2}\)</span> se e solo se <span class="process-math">\(n\)</span> è una potenza di <span class="process-math">\(2\)</span> con esponente positivo.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-41" id="solution-41"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-41"><div class="solution solution-like"><p id="p-782">Poiché <span class="process-math">\(\euler{n}\)</span> è un intero, condizione necessaria affinché sia <span class="process-math">\(\euler{n}=\frac{n}{2}\)</span> è che <span class="process-math">\(n\)</span> sia pari. Sia allora <span class="process-math">\(n=2^{k}t\)</span> con <span class="process-math">\(k\)</span> intero positivo e <span class="process-math">\(t\)</span> dispari. Poiché <span class="process-math">\(2^{k}\)</span> e <span class="process-math">\(t\)</span> sono coprimi, per il <a href="" class="xref" data-knowl="./knowl/lem-moltiplicativita_eulero.html" title="Lemma 5.4.13">Lemma 5.4.13</a> abbiamo che <span class="process-math">\(\euler{n}=\euler{2^{k}}\euler{t}\text{.}\)</span> Ora <span class="process-math">\(\euler{2^{k}}=2^{k}-2^{k-1}=2^{k-1}\text{,}\)</span> cioè <span class="process-math">\(\euler{n}=2^{k-1}\euler{t}\text{.}\)</span> Si ha, dunque, <span class="process-math">\(\euler{n}=\frac{n}{2}\)</span> se e solo se <span class="process-math">\(\euler{t}=t\text{:}\)</span> l'unico intero <span class="process-math">\(t\)</span> per cui ciò avviene è <span class="process-math">\(1\)</span> e, di conseguenza, <span class="process-math">\(\euler{n}=\frac{n}{2}\)</span> se e solo se <span class="process-math">\(n=2^{k}\text{.}\)</span></p></div></div>
+</div></article></section></section></div></main>
+</div>
+</body>
+</html>

@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="it-IT">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Prodotto diretto esterno</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Algebra">
+<meta property="book:author" content="Valerio Monti">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Vai all'indice generale</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{mathtools}\require{cancel}\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\cont}{c}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\Inv}{Inv}
+\DeclareMathOperator{\MCD}{MCD}
+\DeclareMathOperator{\mcm}{mcm}
+\DeclareMathOperator{\centro}{Z}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Soc}{Soc}
+\DeclareMathOperator{\Rad}{Rad}
+\DeclareMathOperator{\car}{char}
+
+
+\newcommand{\Sym}{\mathrm{Sym}}
+\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\Idmatrix}{\mathrm{I}}
+\newcommand{\dist}{\mathrm{d}}
+
+\newcommand{\Reali}{\mathbf{R}}
+\newcommand{\Naturali}{\mathbf{N}}
+\newcommand{\Interi}{\mathbf{Z}}
+ \newcommand{\Razionali}{\mathbf{Q}}
+ \newcommand{\Complessi}{\mathbf{C}}
+
+ \newcommand{\grgen}[1]{\langle#1\rangle}
+ \newcommand{\ideal}[1]{\left(#1\right)}
+ \newcommand{\alg}[1]{\left\lbrack#1\right\rvert}
+ \newcommand{\seg}[1]{\left\lvert#1\right)}
+ \newcommand{\ann}[1]{\operatorname{Ann}\left(#1\right)}
+ \newcommand{\len}[1]{\operatorname{l}\left(#1\right)}
+ \newcommand{\class}[2][\sim]{\lbrack #2\rbrack_{#1}}
+ \newcommand{\cent}[2]{\operatorname{C}_{#1}\left(#2\right)}
+ \newcommand{\nrm}[2]{\operatorname{N}_{#1}\left(#2\right)}
+ \newcommand{\stab}[2]{\operatorname{Stab}_{#1}\left(#2\right)}
+ \newcommand{\Supp}[1]{\operatorname{Supp}\left(#1\right)}
+ \newcommand{\Gal}[1]{\operatorname{Gal}\left(#1\right)}
+ \newcommand{\tr}[1]{#1^{\intercal}}
+ \newcommand{\vuoto}{\varnothing}
+ \newcommand{\parti}[1]{\mathcal{P}(#1)}
+ \newcommand{\euler}[1]{\varphi(#1)}
+ \newcommand{\euclidean}{\delta}
+
+ \newcommand{\vect}[1]{\boldsymbol{#1}}
+ 
+ \newcommand{\mat}[2]{\operatorname{M}_{#1}(#2)}
+ \newcommand{\matt}[3]{\operatorname{M}_{#1,#2}(#3)}
+ \newcommand{\Sim}[2]{\operatorname{S}(#1,#2)}
+ \newcommand{\AntiSim}[2]{\operatorname{A}(#1,#2)}
+ \newcommand{\Diag}[2]{\operatorname{D}(#1,#2)}
+ \newcommand{\TS}[2]{\operatorname{T}^{#1}(#2)}
+ \newcommand{\TI}[2]{\operatorname{T}_{#1}(#2)}
+ \newcommand{\GL}[2]{\operatorname{GL}(#1,#2)}
+ \newcommand{\SL}[2]{\operatorname{SL}(#1,#2)}
+ \newcommand{\Ort}[2]{\operatorname{O}(#1,#2)}
+
+ \newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+ \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+ \newcommand{\ind}[2]{\left\lvert#1:#2\right\rvert}
+ \newcommand{\degext}[2]{\left\lbrack#1:#2\right\rbrack}
+
+ \newcommand{\invprov}[1]{\widehat{#1}}
+
+ \newcommand\YoungTableau[1]{
+ \begin{tikzpicture}[scale=0.4,keepsize]
+ \foreach \y [count=\yi] in {#1}
+ \foreach \x in {1,...,\y}
+ {
+ \draw (\x,\yi) rectangle +(1,1);
+ }
+ \end{tikzpicture}
+ }
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-algebra.html"><span class="title">Algebra</span></a></h1>
+<p class="byline">Valerio Monti</p>
+</div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Risultati: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>Nessun risultato.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Indice</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="indice.html" title="Indice analitico">Indice analitico</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ch-direttosemidiretto.html" title="Precedente">Prec</a><a id="upbutton" class="up-button button toolbar-item" href="ch-direttosemidiretto.html" title="Su">Su</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-prodotto_diretto_interno.html" title="Successivo">Succ</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Indice</button><a class="previous-button toolbar-item button" href="ch-direttosemidiretto.html" title="Precedente">Prec</a><a class="up-button button toolbar-item" href="ch-direttosemidiretto.html" title="Su">Su</a><a class="next-button button toolbar-item" href="sec-prodotto_diretto_interno.html" title="Successivo">Succ</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Materiale iniziale</span></a><ul>
+<li><a href="front-colophon.html" data-scroll="front-colophon" class="internal">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Prefazione</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-preliminari.html" data-scroll="part-preliminari" class="internal"><span class="codenumber">I</span> <span class="title">Preliminari</span></a></li>
+<li class="link">
+<a href="ch-insiemi.html" data-scroll="ch-insiemi" class="internal"><span class="codenumber">1</span> <span class="title">Insiemi</span></a><ul>
+<li><a href="sec-insiemi.html" data-scroll="sec-insiemi" class="internal">Concetti di base</a></li>
+<li><a href="sec-operazioni_insiemi.html" data-scroll="sec-operazioni_insiemi" class="internal">Operazioni tra insiemi</a></li>
+<li><a href="sec-prodotto-cartesiano.html" data-scroll="sec-prodotto-cartesiano" class="internal">Prodotto cartesiano</a></li>
+<li><a href="sec-Russell.html" data-scroll="sec-Russell" class="internal">Il paradosso di Russell</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-corrispondenze.html" data-scroll="ch-corrispondenze" class="internal"><span class="codenumber">2</span> <span class="title">Corrispondenze e relazioni</span></a><ul>
+<li><a href="sec-corrispondenze_definizione.html" data-scroll="sec-corrispondenze_definizione" class="internal">Corrispondenze tra insiemi</a></li>
+<li><a href="sec-relazioni_equivalenza.html" data-scroll="sec-relazioni_equivalenza" class="internal">Relazioni di equivalenza</a></li>
+<li><a href="sec-relazioni_ordine.html" data-scroll="sec-relazioni_ordine" class="internal">Relazioni d'ordine</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-funzioni.html" data-scroll="ch-funzioni" class="internal"><span class="codenumber">3</span> <span class="title">Funzioni</span></a><ul>
+<li><a href="sec-funzioni_definizione.html" data-scroll="sec-funzioni_definizione" class="internal">Definizioni di base</a></li>
+<li><a href="sec-funzioni_iniettive_suriettive.html" data-scroll="sec-funzioni_iniettive_suriettive" class="internal">Funzioni iniettive, suriettive e biiettive</a></li>
+<li><a href="sec-cardinalita.html" data-scroll="sec-cardinalita" class="internal">Cenni sulla cardinalità</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-aritmetica.html" data-scroll="part-aritmetica" class="internal"><span class="codenumber">II</span> <span class="title">Aritmetica</span></a></li>
+<li class="link">
+<a href="ch-interi.html" data-scroll="ch-interi" class="internal"><span class="codenumber">4</span> <span class="title">I numeri interi</span></a><ul>
+<li><a href="sec-naturali_base.html" data-scroll="sec-naturali_base" class="internal">I numeri naturali e i numeri interi</a></li>
+<li><a href="sec-induzione_ricorrenza.html" data-scroll="sec-induzione_ricorrenza" class="internal">Dimostrazioni per induzione e definizioni per ricorrenza</a></li>
+<li><a href="sec-divisibilita_interi.html" data-scroll="sec-divisibilita_interi" class="internal">Divisibilità negli interi</a></li>
+<li><a href="sec-fattorizzazione_interi.html" data-scroll="sec-fattorizzazione_interi" class="internal">Il teorema fondamentale dell'aritmetica</a></li>
+<li><a href="sec-equazioni_lineari_diofantine.html" data-scroll="sec-equazioni_lineari_diofantine" class="internal">Equazioni lineari diofantine</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-classidiresto.html" data-scroll="ch-classidiresto" class="internal"><span class="codenumber">5</span> <span class="title">Classi di resto</span></a><ul>
+<li><a href="sec-congruenzemodulon.html" data-scroll="sec-congruenzemodulon" class="internal">Congruenze modulo un intero</a></li>
+<li><a href="sec-operazioniclassiresto.html" data-scroll="sec-operazioniclassiresto" class="internal">Operazioni tra classi di resto</a></li>
+<li><a href="sec-eulero.html" data-scroll="sec-eulero" class="internal">Il teorema di Eulero</a></li>
+<li><a href="sec-congruenze_con_incognite.html" data-scroll="sec-congruenze_con_incognite" class="internal">Congruenze con incognite</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-gruppi.html" data-scroll="part-gruppi" class="internal"><span class="codenumber">III</span> <span class="title">Gruppi</span></a></li>
+<li class="link">
+<a href="ch-operazioni.html" data-scroll="ch-operazioni" class="internal"><span class="codenumber">6</span> <span class="title">Operazioni</span></a><ul>
+<li><a href="sec-operazioni_definizioni.html" data-scroll="sec-operazioni_definizioni" class="internal">Definizioni ed esempi</a></li>
+<li><a href="sec-proprieta_operazioni.html" data-scroll="sec-proprieta_operazioni" class="internal">Proprietà delle operazioni</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppi.html" data-scroll="ch-gruppi" class="internal"><span class="codenumber">7</span> <span class="title">Monoidi e gruppi</span></a><ul>
+<li><a href="sec-monoidi.html" data-scroll="sec-monoidi" class="internal">Monoidi</a></li>
+<li><a href="sec-gruppi.html" data-scroll="sec-gruppi" class="internal">Gruppi</a></li>
+<li><a href="sec-gruppi_piccoli.html" data-scroll="sec-gruppi_piccoli" class="internal">Alcuni esempi di gruppi piccoli</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-sottogruppi.html" data-scroll="ch-sottogruppi" class="internal"><span class="codenumber">8</span> <span class="title">Sottogruppi</span></a><ul>
+<li><a href="sec-sottomonoidi_sottogruppi.html" data-scroll="sec-sottomonoidi_sottogruppi" class="internal">Sottomonoidi e sottogruppi</a></li>
+<li><a href="sec-prime_proprieta_sottogruppi.html" data-scroll="sec-prime_proprieta_sottogruppi" class="internal">Prime proprietà dei sottogruppi</a></li>
+<li><a href="sec-gruppi_del_piano.html" data-scroll="sec-gruppi_del_piano" class="internal">Gruppi di trasformazioni del piano</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppi_ciclici.html" data-scroll="ch-gruppi_ciclici" class="internal"><span class="codenumber">9</span> <span class="title">Gruppi ciclici</span></a><ul>
+<li><a href="sec-definizione_gruppi_ciclici.html" data-scroll="sec-definizione_gruppi_ciclici" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-sottogruppi_di_ciclici.html" data-scroll="sec-sottogruppi_di_ciclici" class="internal">Sottogruppi di gruppi ciclici</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppi_permutazioni.html" data-scroll="ch-gruppi_permutazioni" class="internal"><span class="codenumber">10</span> <span class="title">Gruppi di permutazioni</span></a><ul>
+<li><a href="sec-definizioni_gruppi_permutazioni.html" data-scroll="sec-definizioni_gruppi_permutazioni" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-cicli.html" data-scroll="sec-cicli" class="internal">Cicli</a></li>
+<li><a href="sec-scambi.html" data-scroll="sec-scambi" class="internal">Scambi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-laterali.html" data-scroll="ch-laterali" class="internal"><span class="codenumber">11</span> <span class="title">Laterali e teorema di Lagrange</span></a><ul>
+<li><a href="sec-prodotto_sottoinsiemi.html" data-scroll="sec-prodotto_sottoinsiemi" class="internal">Prodotto di sottoinsiemi</a></li>
+<li><a href="sec-teorema_di_lagrange.html" data-scroll="sec-teorema_di_lagrange" class="internal">Teorema di Lagrange</a></li>
+<li><a href="sec-prodotto_sottogruppi.html" data-scroll="sec-prodotto_sottogruppi" class="internal">Prodotto di sottogruppi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-omomorfismi.html" data-scroll="ch-omomorfismi" class="internal"><span class="codenumber">12</span> <span class="title">Omomorfismi</span></a><ul>
+<li><a href="sec-definizione_omomorfismo.html" data-scroll="sec-definizione_omomorfismo" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-nucleo_immagine.html" data-scroll="sec-nucleo_immagine" class="internal">Immagine e nucleo di un omomorfismo</a></li>
+<li><a href="sec-omomorfismi_da_gruppi_ciclici.html" data-scroll="sec-omomorfismi_da_gruppi_ciclici" class="internal">Omomorfismi da gruppi ciclici</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-azioni.html" data-scroll="ch-azioni" class="internal"><span class="codenumber">13</span> <span class="title">Azioni di gruppi su insiemi</span></a><ul>
+<li><a href="sec-azioni_definizioni.html" data-scroll="sec-azioni_definizioni" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-orbite_stabilizzatori.html" data-scroll="sec-orbite_stabilizzatori" class="internal">Orbite e stabilizzatori</a></li>
+<li><a href="sec-sottogruppi_normali.html" data-scroll="sec-sottogruppi_normali" class="internal">Sottogruppi normali</a></li>
+<li><a href="sec-coniugati_simmetrico_alterno.html" data-scroll="sec-coniugati_simmetrico_alterno" class="internal">Classi di coniugio nel gruppo simmetrico e nel gruppo alterno</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-quozienti.html" data-scroll="ch-quozienti" class="internal"><span class="codenumber">14</span> <span class="title">Gruppi quoziente</span></a><ul>
+<li><a href="sec-congruenze.html" data-scroll="sec-congruenze" class="internal">Congruenze in gruppi e monoidi</a></li>
+<li><a href="sec-proprieta_quozienti.html" data-scroll="sec-proprieta_quozienti" class="internal">Proprietà dei gruppi quoziente</a></li>
+<li><a href="sec-teoremi_di_isomorfismo.html" data-scroll="sec-teoremi_di_isomorfismo" class="internal">I teoremi di isomorfismo</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-direttosemidiretto.html" data-scroll="ch-direttosemidiretto" class="internal"><span class="codenumber">15</span> <span class="title">Prodotto diretto e semidiretto</span></a><ul>
+<li><a href="sec-prodotto_diretto_esterno.html" data-scroll="sec-prodotto_diretto_esterno" class="active">Prodotto diretto esterno</a></li>
+<li><a href="sec-prodotto_diretto_interno.html" data-scroll="sec-prodotto_diretto_interno" class="internal">Prodotto diretto interno</a></li>
+<li><a href="sec-prodotto_semidiretto.html" data-scroll="sec-prodotto_semidiretto" class="internal">Prodotto semidiretto</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-sylow.html" data-scroll="ch-sylow" class="internal"><span class="codenumber">16</span> <span class="title">Il teorema di Sylow</span></a><ul>
+<li><a href="sec-inversione_lagrange.html" data-scroll="sec-inversione_lagrange" class="internal">Inversione del teorema di Lagrange</a></li>
+<li><a href="sec-sylow.html" data-scroll="sec-sylow" class="internal">Il teorema di Sylow</a></li>
+<li><a href="sec-applicazioni_sylow.html" data-scroll="sec-applicazioni_sylow" class="internal">Applicazioni del teorema di Sylow</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-anelli.html" data-scroll="part-anelli" class="internal"><span class="codenumber">IV</span> <span class="title">Anelli</span></a></li>
+<li class="link">
+<a href="ch-anelli.html" data-scroll="ch-anelli" class="internal"><span class="codenumber">17</span> <span class="title">Anelli</span></a><ul>
+<li><a href="sec-prime_proprieta_anelli.html" data-scroll="sec-prime_proprieta_anelli" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-multipli_potenze.html" data-scroll="sec-multipli_potenze" class="internal">Multipli e potenze in un anello</a></li>
+<li><a href="sec-sottoanelli.html" data-scroll="sec-sottoanelli" class="internal">Sottoanelli</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-omomorfismiideali.html" data-scroll="ch-omomorfismiideali" class="internal"><span class="codenumber">18</span> <span class="title">Omomorfismi e ideali</span></a><ul>
+<li><a href="sec-omomorfismi_anelli.html" data-scroll="sec-omomorfismi_anelli" class="internal">Omomorfismi di anelli</a></li>
+<li><a href="sec-anelli_quoziente.html" data-scroll="sec-anelli_quoziente" class="internal">Anelli quoziente e ideali</a></li>
+<li><a href="sec-campo_dei_quozienti.html" data-scroll="sec-campo_dei_quozienti" class="internal">Campo dei quozienti di un dominio</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-polinomi.html" data-scroll="ch-polinomi" class="internal"><span class="codenumber">19</span> <span class="title">Polinomi</span></a><ul>
+<li><a href="sec-anello_polinomi.html" data-scroll="sec-anello_polinomi" class="internal">Anello dei polinomi</a></li>
+<li><a href="sec-valutazione_polinomi.html" data-scroll="sec-valutazione_polinomi" class="internal">Valutazione di polinomi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-divisibilita.html" data-scroll="ch-divisibilita" class="internal"><span class="codenumber">20</span> <span class="title">Divisibilità nei domini</span></a><ul>
+<li><a href="sec-divisibilita.html" data-scroll="sec-divisibilita" class="internal">Relazione di divisibilità</a></li>
+<li><a href="sec-fattorizzazione.html" data-scroll="sec-fattorizzazione" class="internal">Fattorizzazione</a></li>
+<li><a href="sec-PID_euclidei.html" data-scroll="sec-PID_euclidei" class="internal">Domini a ideali principali e domini euclidei</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-fattorizzazione_polinomi.html" data-scroll="ch-fattorizzazione_polinomi" class="internal"><span class="codenumber">21</span> <span class="title">Fattorizzazione dei polinomi</span></a><ul>
+<li><a href="sec-trasporto_UFD.html" data-scroll="sec-trasporto_UFD" class="internal">Il teorema del trasporto per domini a fattorizzazione unica</a></li>
+<li><a href="sec-esempi_fattorizzazione_polinomi.html" data-scroll="sec-esempi_fattorizzazione_polinomi" class="internal">Tecniche di fattorizzazione</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-estensione_campi.html" data-scroll="ch-estensione_campi" class="internal"><span class="codenumber">22</span> <span class="title">Estensioni di campi</span></a><ul>
+<li><a href="sec-elementi_algebrici_e_trascendenti.html" data-scroll="sec-elementi_algebrici_e_trascendenti" class="internal">Elementi algebrici e trascendenti</a></li>
+<li><a href="sec-campo_di_spezzamento.html" data-scroll="sec-campo_di_spezzamento" class="internal">Campi di spezzamento</a></li>
+<li><a href="sec-chiusure_algebriche.html" data-scroll="sec-chiusure_algebriche" class="internal">Cenni su campi algebricamente chiusi</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-moduli.html" data-scroll="part-moduli" class="internal"><span class="codenumber">V</span> <span class="title">Moduli</span></a></li>
+<li class="link">
+<a href="ch-moduli.html" data-scroll="ch-moduli" class="internal"><span class="codenumber">23</span> <span class="title">Moduli</span></a><ul>
+<li><a href="sec-definizione_di_moduli.html" data-scroll="sec-definizione_di_moduli" class="internal">Definizione di modulo</a></li>
+<li><a href="sec-sottomoduli.html" data-scroll="sec-sottomoduli" class="internal">Sottomoduli</a></li>
+<li><a href="sec-omomorfismi_moduli.html" data-scroll="sec-omomorfismi_moduli" class="internal">Omomorfismi di moduli</a></li>
+<li><a href="sec-moduli_quoziente.html" data-scroll="sec-moduli_quoziente" class="internal">Moduli quoziente</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-moduli_liberi.html" data-scroll="ch-moduli_liberi" class="internal"><span class="codenumber">24</span> <span class="title">Moduli liberi</span></a><ul>
+<li><a href="sec-somma_diretta_moduli.html" data-scroll="sec-somma_diretta_moduli" class="internal">Somma diretta di moduli</a></li>
+<li><a href="sec-dipendenza_lineare.html" data-scroll="sec-dipendenza_lineare" class="internal">Dipendenza e indipendenza lineare</a></li>
+<li><a href="sec-elementi_di_torsione.html" data-scroll="sec-elementi_di_torsione" class="internal">Elementi di torsione</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-modulisupid.html" data-scroll="ch-modulisupid" class="internal"><span class="codenumber">25</span> <span class="title">Moduli finitamente generati su PID</span></a><ul>
+<li><a href="sec-moduli_ciclici.html" data-scroll="sec-moduli_ciclici" class="internal">Moduli ciclici</a></li>
+<li><a href="sec-moduli_primari.html" data-scroll="sec-moduli_primari" class="internal">Moduli primari</a></li>
+<li><a href="sec-moduli_liberi.html" data-scroll="sec-moduli_liberi" class="internal">Moduli liberi</a></li>
+<li><a href="sec-classificazione_moduli_pid.html" data-scroll="sec-classificazione_moduli_pid" class="internal">La classificazione dei moduli finitamente generati su un dominio a ideali principali</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppiabeliani.html" data-scroll="ch-gruppiabeliani" class="internal"><span class="codenumber">26</span> <span class="title">Gruppi abeliani finitamente generati</span></a><ul><li><a href="sec-gruppiabeliani.html" data-scroll="sec-gruppiabeliani" class="internal">Classificazione dei gruppi abeliani finitamente generati</a></li></ul>
+</li>
+<li class="link">
+<a href="ch-formecanoniche.html" data-scroll="ch-formecanoniche" class="internal"><span class="codenumber">27</span> <span class="title">Forme canoniche di matrici</span></a><ul>
+<li><a href="sec-kx_moduli.html" data-scroll="sec-kx_moduli" class="internal">Spazi vettoriali con endomorfismi visti come moduli</a></li>
+<li><a href="sec-matrici_rappresentative.html" data-scroll="sec-matrici_rappresentative" class="internal">Matrici rappresentative</a></li>
+<li><a href="sec-matrici_compagne.html" data-scroll="sec-matrici_compagne" class="internal">Matrici compagne</a></li>
+<li><a href="sec-jordan.html" data-scroll="sec-jordan" class="internal">Forma canonica di Jordan</a></li>
+<li><a href="sec-polinomio_minimo_matrici.html" data-scroll="sec-polinomio_minimo_matrici" class="internal">Polinomio minimo di matrici</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Appendici</span></a></li>
+<li class="link">
+<a href="appendix-peano.html" data-scroll="appendix-peano" class="internal"><span class="codenumber">A</span> <span class="title">Numeri naturali e interi</span></a><ul>
+<li><a href="sec-algebre_induttive.html" data-scroll="sec-algebre_induttive" class="internal">Algebre induttive</a></li>
+<li><a href="sec-assiomi_peano.html" data-scroll="sec-assiomi_peano" class="internal">Gli assiomi di Peano</a></li>
+<li><a href="sec-insiemi_finiti_infiniti.html" data-scroll="sec-insiemi_finiti_infiniti" class="internal">Insiemi finiti e infiniti</a></li>
+<li><a href="sec-operazioni_naturali.html" data-scroll="sec-operazioni_naturali" class="internal">Operazioni tra numeri naturali</a></li>
+<li><a href="sec-interi.html" data-scroll="sec-interi" class="internal">Costruzione degli interi</a></li>
+</ul>
+</li>
+<li class="link"><a href="appendix-2.html" data-scroll="appendix-2" class="internal"><span class="codenumber">B</span> <span class="title">Notazioni</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1" class="internal"><span class="codenumber">C</span> <span class="title">Soluzioni e suggerimenti</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl" class="internal"><span class="codenumber">D</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="indice.html" data-scroll="indice" class="internal"><span class="title">Indice analitico</span></a></li>
+<li class="link"><a href="back-colophon.html" data-scroll="back-colophon" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Redatto in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-prodotto_diretto_esterno"><h2 class="heading hide-type">
+<span class="type">Paragrafo</span> <span class="codenumber">15.1</span> <span class="title">Prodotto diretto esterno</span>
+</h2>
+<article class="definition definition-like" id="def-prodotto_diretto_esterno"><h3 class="heading">
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">15.1.1</span><span class="period">.</span>
+</h3> <p id="p-2119">Siano <span class="process-math">\(G_{1}\text{,}\)</span> <span class="process-math">\(G_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(G_{r}\)</span> gruppi. Il loro prodotto cartesiano <span class="process-math">\(G_{1}\times G_{2}\times \cdots \times G_{r}\)</span> dotato dell'operazione così definita</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(g_{1},g_{2},\ldots,g_{r})(h_{1},h_{2},\ldots,h_{r})\coloneqq (g_{1}h_{1},g_{2}h_{2},\ldots,g_{r}h_{r})
+\end{equation*}
+</div>
+<p class="continuation">è detto <dfn class="terminology">prodotto diretto (esterno)</dfn> dei gruppi <span class="process-math">\(G_{1}\text{,}\)</span> <span class="process-math">\(G_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(G_{r}\text{.}\)</span></p></article><p id="p-2120">La dimostrazione della proposizione seguente consiste di semplici verifiche, che lasciamo per esercizio.</p>
+<article class="proposition theorem-like" id="prop-prodotto_diretto_esterno_sottogruppo"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">15.1.2</span><span class="period">.</span>
+</h3>
+<p id="p-2121">Il prodotto diretto esterno dei gruppi <span class="process-math">\(G_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(G_{r}\)</span> è un gruppo. L'elemento neutro è <span class="process-math">\((1_{G_{1}},\ldots,1_{G_{r}})\text{.}\)</span> L'inverso di un elemento <span class="process-math">\((g_{1},\ldots,g_{r})\)</span> è <span class="process-math">\((g_{1}^{-1},\ldots,g_{r}^{-1})\text{.}\)</span></p></article><p id="p-2122">Dal momento che il prodotto di due elementi del prodotto diretto si ottiene facendo indipendentemente il prodotto componente per componente, si verificano, altrettanto facilmente, le due prossime proposizioni.</p>
+<article class="proposition theorem-like" id="prop-prodotto_diretto_di_abeliani"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">15.1.3</span><span class="period">.</span>
+</h3>
+<p id="p-2123">Il prodotto diretto esterno <span class="process-math">\(G\coloneqq G_{1}\times\cdots\times G_{r}\)</span> è abeliano se e solo se ogni <span class="process-math">\(G_{i}\)</span> è abeliano.</p></article><article class="proposition theorem-like" id="prop-potenze_coniugati_prodotto_diretto"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">15.1.4</span><span class="period">.</span>
+</h3>
+<p id="p-2124">Dato un elemento <span class="process-math">\((g_{1},\ldots,g_{r})\)</span> nel prodotto diretto esterno <span class="process-math">\(G_{1}\times G_{2}\times \cdots \times G_{r}\)</span> e un numero intero <span class="process-math">\(n\text{,}\)</span> si ha</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(g_{1},\ldots,g_{r})^{n}=(g_{1}^{n},\ldots,g_{r}^{n})\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Dato un altro elemento <span class="process-math">\((h_{1},\ldots,h_{r})\)</span> si ha</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(g_{1},\ldots,g_{r})^{(h_{1},\ldots,h_{r})}=(g_{1}^{h_{1}},\ldots,g_{r}^{h_{r}})\text{.}
+\end{equation*}
+</div></article><article class="corollary theorem-like" id="cor-periodo_nel_prodotto_diretto"><h3 class="heading">
+<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">15.1.5</span><span class="period">.</span>
+</h3>
+<p id="p-2125">Un elemento <span class="process-math">\(g\coloneqq(g_{1},\ldots,g_{r})\)</span> nel prodotto diretto esterno <span class="process-math">\(G\coloneqq G_{1}\times\cdots\times G_{r}\)</span> ha periodo finito se e solo se ogni <span class="process-math">\(g_{i}\)</span> ha periodo finito: quando ciò avviene, il periodo di <span class="process-math">\(g\)</span> è il minimo comune multiplo dei periodi degli elementi <span class="process-math">\(g_{i}\text{.}\)</span></p></article><article class="hiddenproof" id="proof-159"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-159"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-159"><article class="hiddenproof"><p id="p-2126">Se <span class="process-math">\(g\)</span> ha periodo finito <span class="process-math">\(n\text{,}\)</span> allora <span class="process-math">\(g^{n}=1_{G}=(1_{G_{1}},\ldots,1_{G_{r}})\text{.}\)</span> D'altra parte, <span class="process-math">\(g^{n}=(g_{1}^{n},\ldots,g_{r}^{n})\)</span> e, dunque, <span class="process-math">\(g_{1}^{n}=1_{G_{1}}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(g_{r}^{n}=1_{G_{r}}\text{:}\)</span> pertanto, ogni <span class="process-math">\(g_{i}\)</span> ha periodo finito che divide <span class="process-math">\(n\)</span> e, di conseguenza, <span class="process-math">\(n\)</span> è multiplo del minimo comune multiplo dei periodi dei <span class="process-math">\(g_{i}\text{.}\)</span></p> <p id="p-2127">Viceversa, supponiamo che ciascun <span class="process-math">\(g_{i}\)</span> abbia periodo finito e sia <span class="process-math">\(m\)</span> il minimo comune multiplo dei loro periodi. Allora</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+g^{m}=(g_{1}^{m},\ldots,g_{r}^{m})=(1_{G_{1}},\ldots,1_{G_{r}})=1_{G}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Dunque, <span class="process-math">\(g\)</span> ha periodo finito e il suo periodo è un divisore di <span class="process-math">\(m\text{:}\)</span> d'altra parte abbiamo già mostrato che se <span class="process-math">\(g\)</span> ha periodo finito, il suo periodo è un multiplo del minimo comune multiplo dei periodi dei <span class="process-math">\(g_{i}\)</span> e, quindi, il periodo di <span class="process-math">\(g\)</span> è esattamente <span class="process-math">\(m\text{.}\)</span></p></article></div>
+<p id="p-2128">Mostriamo ora che il prodotto diretto esterno di gruppi non dipende dall'ordinamento in cui prendiamo i gruppi stessi. Più precisamente</p>
+<article class="proposition theorem-like" id="prop-riordinamento_fattori_prodotto_diretto"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">15.1.6</span><span class="period">.</span>
+</h3>
+<p id="p-2129">Siano <span class="process-math">\(G_{1}\text{,}\)</span> <span class="process-math">\(G_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(G_{r}\)</span> gruppi e sia <span class="process-math">\(\sigma\)</span> un elemento di <span class="process-math">\(\Sym_{r}\text{.}\)</span> Allora <span class="process-math">\(G_{1}\times G_{2}\times \cdots \times G_{r}\)</span> e <span class="process-math">\(G_{1\sigma}\times G_{2\sigma}\times \cdots \times G_{r\sigma}\)</span> sono isomorfi.</p></article><article class="hiddenproof" id="proof-160"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-160"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-160"><article class="hiddenproof"><p id="p-2130">La dimostrazione è immediata: la funzione che manda l'elemento <span class="process-math">\((g_{1},g_{2},\ldots,g_{r})\)</span> nell'elemento <span class="process-math">\((g_{1\sigma},g_{2\sigma},\ldots,g_{r\sigma})\)</span> realizza l'isomorfismo cercato.</p></article></div>
+<p id="p-2131">Possiamo dire che il prodotto diretto esterno è “associativo”.</p>
+<article class="proposition theorem-like" id="prop-prodotto_diretto_associativo"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">15.1.7</span><span class="period">.</span>
+</h3>
+<p id="p-2132">Siano <span class="process-math">\(G_{1}\text{,}\)</span> <span class="process-math">\(G_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(G_{r}\)</span> gruppi e sia <span class="process-math">\(i\)</span> con <span class="process-math">\(1\le i\le r-1\text{.}\)</span> Allora</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(G_{1}\times \cdots \times G_{i})\times(G_{i+1}\times \cdots \times G_{r})
+\end{equation*}
+</div>
+<p class="continuation">è isomorfo a <span class="process-math">\(G_{1}\times \cdots \times G_{r}\text{.}\)</span></p></article><article class="hiddenproof" id="proof-161"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-161"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-161"><article class="hiddenproof"><p id="p-2133">Un generico elemento di</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(G_{1}\times \cdots \times G_{i})\times(G_{i+1}\times \cdots \times G_{r})
+\end{equation*}
+</div>
+<p class="continuation">è una coppia del tipo</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+((g_{1},\ldots,g_{i}),(g_{i+1},\ldots,g_{r}))
+\end{equation*}
+</div>
+<p class="continuation">con <span class="process-math">\(g_{j}\)</span> in <span class="process-math">\(G_{j}\)</span> per ogni <span class="process-math">\(j\text{.}\)</span> La funzione che manda l'elemento generico di cui sopra nella <span class="process-math">\(r\)</span>-upla <span class="process-math">\((g_{1},\ldots, g_{r})\)</span> realizza un isomorfismo, come è facile verificare.</p></article></div>
+<p id="p-2134">In un certo senso, il prodotto diretto esterno “contiene” i gruppi utilizzati per costruirlo. Più precisamente abbiamo la</p>
+<article class="proposition theorem-like" id="prop-sottogruppi_prodotto_diretto_isomorfi_fattori"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">15.1.8</span><span class="period">.</span>
+</h3>
+<p id="p-2135">Sia dato il prodotto diretto esterno <span class="process-math">\(G_{1}\times G_{2}\times \cdots \times G_{r}\text{.}\)</span> Fissato <span class="process-math">\(i\)</span> con <span class="process-math">\(1\le i\le n\text{,}\)</span> il sottoinsieme</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+H_{i}\coloneqq\{(1_{G_{1}},\ldots,1_{G_{i-1}},x_{i},1_{G_{i+1}},\ldots,1_{G_{r}})\mid x_{i}\in G_{i}\}
+\end{equation*}
+</div>
+<p class="continuation">è un sottogruppo normale di <span class="process-math">\(G_{1}\times G_{2}\times \cdots \times G_{r}\)</span> isomorfo a <span class="process-math">\(G_{i}\text{.}\)</span></p></article><article class="hiddenproof" id="proof-162"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-162"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-162"><article class="hiddenproof"><p id="p-2136">Consideriamo la funzione <span class="process-math">\(\phi\colon G_{i}\to G_{1}\times \cdots \times G_{r}\)</span> definita da <span class="process-math">\(x_{i}\phi\coloneqq (1_{G_{1}},\ldots,1_{G_{i-1}},x_{i},1_{G_{i+1}},\ldots,1_{G_{r}})\text{.}\)</span> Si verifica immediatamente che è un omomorfismo iniettivo la cui immagine è esattamente <span class="process-math">\(H_{i}\)</span> e, pertanto, <span class="process-math">\(H_{i}\)</span> è un sottogruppo isomorfo a <span class="process-math">\(G_{i}\text{.}\)</span> Per quanto riguarda la normalità, questa segue dalla <a href="" class="xref" data-knowl="./knowl/prop-potenze_coniugati_prodotto_diretto.html" title="Proposizione 15.1.4">Proposizione 15.1.4</a>.</p></article></div>
+<article class="remark remark-like" id="rem-prodotto_diretto_con_fattore_non_ciclico"><h3 class="heading">
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">15.1.9</span><span class="period">.</span>
+</h3>
+<p id="p-2137">Sia <span class="process-math">\(G\coloneqq G_{1}\times \cdots\times G_{r}\)</span> prodotto diretto esterno di gruppi. Se almeno uno dei fattori <span class="process-math">\(G_{i}\)</span> non è ciclico, allora <span class="process-math">\(G\text{,}\)</span> per la <a href="" class="xref" data-knowl="./knowl/prop-sottogruppi_prodotto_diretto_isomorfi_fattori.html" title="Proposizione 15.1.8">Proposizione 15.1.8</a>, contiene un sottogruppo non ciclico e, di conseguenza, per il <a href="" class="xref" data-knowl="./knowl/thm-sottogruppo_di_ciclico_ciclico.html" title="Teorema 9.1.6">Teorema 9.1.6</a>, <span class="process-math">\(G\)</span> non è ciclico.</p></article><p id="p-2138">Ci chiediamo allora quando il prodotto diretto esterno di gruppi ciclici è ciclico. Abbiamo la</p>
+<article class="proposition theorem-like" id="prop-prodotto_diretto_di_ciclici"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">15.1.10</span><span class="period">.</span>
+</h3>
+<p id="p-2139">Sia <span class="process-math">\(G\coloneqq G_{1}\times\cdots\times G_{r}\)</span> prodotto diretto esterno di gruppi ciclici non banali con <span class="process-math">\(r\ge 2\text{.}\)</span> Allora <span class="process-math">\(G\)</span> è ciclico se e solo se <span class="process-math">\(G_{1}\text{,}\)</span> <span class="process-math">\(G_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(G_{r}\)</span> sono ciclici finiti aventi a due a due ordine coprimo.</p></article><article class="hiddenproof" id="proof-163"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-163"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-163"><article class="hiddenproof"><p id="p-2140">Se almeno uno dei fattori è infinito, allora <span class="process-math">\(G\)</span> è infinito e, se fosse ciclico, per il <a href="" class="xref" data-knowl="./knowl/cor-intersezione_sottogruppi_ciclico_infinito.html" title="Corollario 9.2.3">Corollario 9.2.3</a>, l'intersezione di due suoi sottogruppi non banali dovrebbe essere non banale: ma <span class="process-math">\(H_{1}\)</span> e <span class="process-math">\(H_{2}\text{,}\)</span> definiti come nella <a href="" class="xref" data-knowl="./knowl/prop-sottogruppi_prodotto_diretto_isomorfi_fattori.html" title="Proposizione 15.1.8">Proposizione 15.1.8</a>, sono due sottogruppi non banali con intersezione banale e, quindi, <span class="process-math">\(G\)</span> non è ciclico.</p> <p id="p-2141">Se i fattori sono tutti finiti, ma due di essi, siano <span class="process-math">\(G_{i}\)</span> e <span class="process-math">\(G_{j}\text{,}\)</span> hanno ordine non coprimo, allora, per la <a href="" class="xref" data-knowl="./knowl/prop-sottogruppi_prodotto_diretto_isomorfi_fattori.html" title="Proposizione 15.1.8">Proposizione 15.1.8</a>, <span class="process-math">\(G\)</span> contiene due sottogruppi ciclici <span class="process-math">\(H_{i}\)</span> e <span class="process-math">\(H_{j}\)</span> con intersezione banale e ordine non coprimo. Detto <span class="process-math">\(d\)</span> il massimo comun divisore di <span class="process-math">\(\abs{H_{i}}\)</span> e <span class="process-math">\(\abs{H_{j}}\text{,}\)</span> il <a href="" class="xref" data-knowl="./knowl/thm-sottogruppi_di_gruppo_ciclico_finito.html" title="Teorema 9.2.8">Teorema 9.2.8</a> implica che essi contengono ciascuno un sottogruppo di ordine <span class="process-math">\(d\text{:}\)</span> questi due sottogruppi di ordine <span class="process-math">\(d\)</span> sono diversi perché contenuti in sottogruppi aventi intersezione banale e, <span class="process-math">\(G\text{,}\)</span> avendo due sottogruppi dello stesso ordine non è ciclico, sempre per il <a href="" class="xref" data-knowl="./knowl/thm-sottogruppi_di_gruppo_ciclico_finito.html" title="Teorema 9.2.8">Teorema 9.2.8</a>.</p> <p id="p-2142">Infine, supponiamo che i fattori siano finiti di ordini a due a due coprimi. Preso un generatore <span class="process-math">\(g_{i}\)</span> per ciascun <span class="process-math">\(G_{i}\text{,}\)</span> grazie al <a href="" class="xref" data-knowl="./knowl/cor-periodo_nel_prodotto_diretto.html" title="Corollario 15.1.5">Corollario 15.1.5</a> l'elemento <span class="process-math">\(g\coloneqq(g_{1},\ldots,g_{r})\)</span> ha periodo uguale al prodotto degli ordini dei <span class="process-math">\(G_{i}\text{.}\)</span> Poiché l'ordine di <span class="process-math">\(G\)</span> è uguale al prodotto degli ordini dei <span class="process-math">\(G_{i}\text{,}\)</span> ne segue che <span class="process-math">\(g\)</span> genera <span class="process-math">\(G\)</span> che è, dunque, ciclico.</p></article></div>
+<section class="exercises" id="exercises-prodotto_diretto_esterno"><h3 class="heading hide-type">
+<span class="type">Esercizi</span> <span class="codenumber"></span> <span class="title">Esercizi</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-302"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<p id="p-2143">Dimostrare la <a href="" class="xref" data-knowl="./knowl/prop-prodotto_diretto_esterno_sottogruppo.html" title="Proposizione 15.1.2">Proposizione 15.1.2</a>.</p></article><article class="exercise exercise-like" id="exercise-303"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-2144">Dimostrare la <a href="" class="xref" data-knowl="./knowl/prop-prodotto_diretto_di_abeliani.html" title="Proposizione 15.1.3">Proposizione 15.1.3</a>.</p></article><article class="exercise exercise-like" id="exercise-304"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-2145">Dimostrare la <a href="" class="xref" data-knowl="./knowl/prop-potenze_coniugati_prodotto_diretto.html" title="Proposizione 15.1.4">Proposizione 15.1.4</a>.</p></article><article class="exercise exercise-like" id="exercise-305"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-78"><p id="p-2146">Si consideri il gruppo <span class="process-math">\(G\coloneqq C_{16}\times C_{4}\times C_{3}\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-92"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-2147">Il gruppo <span class="process-math">\(G\)</span> è ciclico?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-133" id="solution-133"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-133"><div class="solution solution-like"><p id="p-2148">No: è prodotto diretto di ciclici di ordini non coprimi.</p></div></div>
+</div></article><article class="task exercise-like" id="task-93"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-2149">Dimostrare che <span class="process-math">\(G\simeq C_{48}\times C_{4}\simeq C_{16}\times C_{12}\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-134" id="solution-134"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-134"><div class="solution solution-like">
+<p id="p-2150">Sappiamo che in un prodotto diretto se cambiamo l'ordine dei fattori o se associamo tra loro alcuni fattori otteniamo un gruppo isomorfo all'originale. Dunque</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+C_{16}\times C_{4}\times C_{3}\simeq C_{16}\times C_{3}\times C_{4}\simeq(C_{16}\times C_{3})\times C_{4}\simeq C_{48}\times C_{4}
+\end{equation*}
+</div>
+<p class="continuation">poiché <span class="process-math">\(16\)</span> e <span class="process-math">\(3\)</span> sono coprimi.</p> <p id="p-2151">Analogamente</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+C_{16}\times C_{4}\times C_{3}\simeq C_{16}\times(C_{4}\times C_{3})\simeq C_{16}\times C_{12}
+\end{equation*}
+</div>
+<p class="continuation">poiché <span class="process-math">\(4\)</span> e <span class="process-math">\(3\)</span> sono coprimi.</p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-94"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-2152">Determinare quanti elementi ci sono in <span class="process-math">\(G\)</span> di ordine <span class="process-math">\(96\)</span> e quanti di ordine <span class="process-math">\(24\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-135" id="solution-135"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-135"><div class="solution solution-like"><p id="p-2153">Possiamo utilizzare una qualsiasi delle diverse espressioni di <span class="process-math">\(G\text{:}\)</span> quella originale o quelle che abbiamo trovato al punto precedente. Se scriviamo <span class="process-math">\(G\)</span> come <span class="process-math">\(C_{48}\times C_{4}\text{,}\)</span> possiamo rappresentare i suoi elementi come coppie del tipo <span class="process-math">\((a,b)\)</span> con <span class="process-math">\(a\in C_{48}\)</span> e <span class="process-math">\(b\in C_{4}\text{.}\)</span> Il periodo di <span class="process-math">\((a,b)\)</span> è il minimo comune multiplo dei periodi di <span class="process-math">\(a\)</span> e di <span class="process-math">\(b\text{.}\)</span> Sappiamo che <span class="process-math">\(\abs{a}\)</span> divide <span class="process-math">\(48=2^{4}3\)</span> e <span class="process-math">\(\abs{b}\)</span> divide <span class="process-math">\(4=2^{2}\text{.}\)</span> Dunque <span class="process-math">\(\abs{a}=2^{h}3^{k}\)</span> e <span class="process-math">\(\abs{b}=2^{l}\)</span> con <span class="process-math">\(0\le h\le 4\text{,}\)</span> <span class="process-math">\(0\le k\le 1\)</span> e <span class="process-math">\(0\le l\le 2\text{.}\)</span> Il minimo comune multiplo di <span class="process-math">\(\abs{a}\)</span> e <span class="process-math">\(\abs{b}\)</span> è allora <span class="process-math">\(2^{m}3^{k}\)</span> con <span class="process-math">\(m\coloneqq\max(h,l)\text{:}\)</span> non possiamo dunque ottenere <span class="process-math">\(96=2^{5}3\text{,}\)</span> mentre otteniamo <span class="process-math">\(24=2^{3}3\)</span> se e solo se <span class="process-math">\(h=3\text{,}\)</span> <span class="process-math">\(k=1\)</span> e <span class="process-math">\(l\)</span> qualunque. Pertanto, non ci sono elementi di ordine <span class="process-math">\(96\)</span> e otteniamo un elemento di ordine <span class="process-math">\(24\)</span> se e solo se <span class="process-math">\(a\)</span> ha ordine <span class="process-math">\(24\)</span> e <span class="process-math">\(b\)</span> ha ordine qualunque. Abbiamo allora <span class="process-math">\(\phi(24)\)</span> scelte per <span class="process-math">\(a\)</span> e <span class="process-math">\(4\)</span> scelte per <span class="process-math">\(b\)</span> (sappiamo che in un gruppo ciclico di ordine <span class="process-math">\(n\text{,}\)</span> se <span class="process-math">\(d\)</span> è un divisore di <span class="process-math">\(n\text{,}\)</span> allora ci sono <span class="process-math">\(\phi(d)\)</span> elementi di ordine <span class="process-math">\(d\)</span>). Dunque ci sono <span class="process-math">\(\phi(24)\cdot4\)</span> elementi di  periodo <span class="process-math">\(24\text{.}\)</span> Poiché <span class="process-math">\(24=2^{3}3\)</span> si ha <span class="process-math">\(\phi(24)=\phi(2^{3})\phi(3)=(2^{3}-2^{2})(3^{1}-3^{0})=8\text{.}\)</span> Abbiamo quindi <span class="process-math">\(8\cdot4=32\)</span> elementi di periodo <span class="process-math">\(24\text{.}\)</span></p></div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-306"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<p id="p-2154">Dimostrare che se <span class="process-math">\(G\coloneqq G_{1}\times G_{2}\times \cdots \times G_{r}\text{,}\)</span> allora <span class="process-math">\(\centro(G)=\centro(G_{1})\times \centro(G_{2})\times \cdots \times\centro(G_{r})\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-307"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<p id="p-2155">Sia <span class="process-math">\(G\coloneqq G_{1}\times G_{2}\times \cdots \times G_{r}\text{.}\)</span> Per ogni <span class="process-math">\(i\)</span> con <span class="process-math">\(1\le i\le r\text{,}\)</span> sia <span class="process-math">\(N_{i}\)</span> un sottogruppo normale di <span class="process-math">\(G_{i}\)</span> e sia <span class="process-math">\(N\coloneqq N_{1}\times N_{2}\times \cdots \times N_{r}\text{.}\)</span> Dimostrare che <span class="process-math">\(N\)</span> è un sottogruppo normale di <span class="process-math">\(G\)</span> e che <span class="process-math">\(\frac{G}{N}\)</span> è isomorfo a <span class="process-math">\(\frac{G_{1}}{N_{1}}\times\frac{G_{2}}{N_{2}}\times \cdots \times \frac{G_{r}}{N_{r}}\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-136" id="solution-136"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-136"><div class="solution solution-like"><p id="p-2156">Basta mostrare che la funzione da <span class="process-math">\(G\)</span> in <span class="process-math">\(\frac{G_{1}}{N_{1}}\times\frac{G_{2}}{N_{2}}\times \cdots \times \frac{G_{r}}{N_{r}}\)</span> che manda <span class="process-math">\((g_{1},g_{2},\ldots,g_{r})\)</span> in <span class="process-math">\((N_{1}g_{1},N_{2}g_{2},\ldots,N_{r}g_{r})\)</span> è un omomorfismo suriettivo il cui nucleo è esattamente <span class="process-math">\(N\text{.}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-308"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-79"><p id="p-2157">Dato un gruppo <span class="process-math">\(G\text{,}\)</span> si consideri il prodotto diretto <span class="process-math">\(G\times G\)</span> di <span class="process-math">\(G\)</span> con sé stesso. Sia <span class="process-math">\(D\)</span> il sottoinsieme di <span class="process-math">\(G\times G\)</span> così definito <span class="process-math">\(D\coloneqq\{(g,g)\mid g\in G\}\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-95"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-2158">Dimostrare che <span class="process-math">\(D\)</span> è un sottogruppo di <span class="process-math">\(G\times G\)</span> isomorfo a <span class="process-math">\(G\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-137" id="solution-137"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-137"><div class="solution solution-like"><p id="p-2159">Consideriamo la mappa <span class="process-math">\(\phi\colon G\to G\times G\)</span> definita da <span class="process-math">\(g\phi\coloneqq(g,g)\text{.}\)</span> È facile vedere che <span class="process-math">\(\phi\)</span> è un omomorfismo di gruppi: infatti, se <span class="process-math">\(g\)</span> e <span class="process-math">\(h\)</span> sono elementi di <span class="process-math">\(G\text{,}\)</span> si ha <span class="process-math">\(g\phi=(g,g)\text{,}\)</span> <span class="process-math">\(h\phi=(h,h)\)</span> e <span class="process-math">\((gh)\phi=(gh,gh)\text{.}\)</span> Ora <span class="process-math">\(g\phi\cdot h\phi=(g,g)(h,h)=(gh,gh)=(gh)\phi\text{.}\)</span> Ovviamente, l'immagine di <span class="process-math">\(\phi\)</span> coincide con <span class="process-math">\(D\)</span> che risulta quindi essere un sottogruppo di <span class="process-math">\(G\times G\text{.}\)</span> Inoltre <span class="process-math">\(g\in\ker\phi\)</span> se e solo se <span class="process-math">\((g,g)\)</span> coincide con l'identità di <span class="process-math">\(G\times G\)</span> che è <span class="process-math">\((1,1)\text{:}\)</span> ciò avviene se e solo se <span class="process-math">\(g=1\text{.}\)</span> Dunque <span class="process-math">\(\ker\phi=1\text{,}\)</span> cioè <span class="process-math">\(\phi\)</span> è iniettivo: ma allora <span class="process-math">\(G\simeq\im\phi=D\text{,}\)</span> come richiesto.</p></div></div>
+</div></article><article class="task exercise-like" id="task-96"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-2160">Mostrare che <span class="process-math">\(D\)</span> è normale in <span class="process-math">\(G\times G\)</span> se e solo se <span class="process-math">\(G\)</span> è abeliano.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-138" id="solution-138"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-138"><div class="solution solution-like">
+<p id="p-2161">Se <span class="process-math">\(G\)</span> è abeliano, allora <span class="process-math">\(G\times G\text{,}\)</span> essendo prodotto diretto di due gruppi abeliani, è abeliano. Ogni sottogruppo di un gruppo abeliano è normale in esso: in particolare <span class="process-math">\(D\)</span> è normale in <span class="process-math">\(G\times G\text{.}\)</span></p> <p id="p-2162">Viceversa, supponiamo che <span class="process-math">\(D\)</span> sia normale in <span class="process-math">\(G\times G\text{.}\)</span> Presi <span class="process-math">\(g\)</span> e <span class="process-math">\(h\)</span> in <span class="process-math">\(G\text{,}\)</span> consideriamo l'elemento <span class="process-math">\((g,g)\)</span> di <span class="process-math">\(D\)</span> e l'elemento <span class="process-math">\((1,h)\)</span> di <span class="process-math">\(G\times G\text{.}\)</span> Abbiamo allora <span class="process-math">\((g,g)^{(1,h)}=(g^{1},g^{h})=(g,g^{h})\in D\text{,}\)</span> cioè <span class="process-math">\(g=g^{h}\text{:}\)</span> pertanto, <span class="process-math">\(g\)</span> e <span class="process-math">\(h\)</span> commutano.</p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-97"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-2163">Mostrare che se <span class="process-math">\(G\)</span> è abeliano allora <span class="process-math">\(\frac{G\times G}{D}\simeq G\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-139" id="solution-139"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-139"><div class="solution solution-like">
+<p id="p-2164">Consideriamo la mappa <span class="process-math">\(\psi\colon G\times G\to G\)</span> definita da <span class="process-math">\((g,h)\psi=gh^{-1}\text{.}\)</span> Questa mappa è un omomorfismo di gruppi: infatti, se <span class="process-math">\((g_{1},h_{1})\)</span> e <span class="process-math">\((g_{2},h_{2})\)</span> sono elementi di <span class="process-math">\(G\times G\)</span> abbiamo <span class="process-math">\((g_{1},h_{1})\psi= g_{1}h_{1}^{-1}\)</span> e <span class="process-math">\((g_{2},h_{2})\psi=g_{2}h_{2}^{-1}\)</span> e</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-isomorfismo_quoziente_sul_nucleo.html" id="md-48">
+\begin{align*}
+((g_{1},h_{1})(g_{2},h_{2}))\psi \amp =(g_{1}g_{2},h_{1}h_{2})\psi=g_{1}g_{2}(h_{1}h_{2})^{-1}=
+g_{1}g_{2}h_{2}^{-1}h_{1}^{-1}\\
+\amp =g_{1}h_{1}^{-1}g_{2}h_{2}^{-1}=
+(g_{1},h_{1})\psi\cdot(g_{2},h_{2})\psi
+\end{align*}
+</div>
+<p class="continuation">dove abbiamo usato il fatto che <span class="process-math">\(G\)</span> è abeliano. Ora <span class="process-math">\(\psi\)</span> è suriettivo: infatti, dato <span class="process-math">\(g\)</span> in <span class="process-math">\(G\text{,}\)</span> si ha <span class="process-math">\(g=(g,1)\psi\text{.}\)</span> Il nucleo di <span class="process-math">\(\psi\)</span> coincide invece con <span class="process-math">\(D\text{:}\)</span> infatti, <span class="process-math">\((g,h)\)</span> appartiene al nucleo di <span class="process-math">\(\psi\)</span> se e solo se <span class="process-math">\(gh^{-1}=1\text{,}\)</span> il che avviene se e solo se <span class="process-math">\(g=h\text{,}\)</span> in altri termini se e solo se <span class="process-math">\((g,h)\)</span> appartiene a <span class="process-math">\(D\text{.}\)</span> Per il <a href="" class="xref" data-knowl="./knowl/thm-isomorfismo_quoziente_sul_nucleo.html" title="Teorema 14.3.1">Teorema 14.3.1</a> abbiamo allora <span class="process-math">\(G=\im\psi\simeq\frac{G\times G}{\ker\psi}=\frac{G\times G}{D}\text{.}\)</span></p>
+</div></div>
+</div></article></article></section></section></div></main>
+</div>
+</body>
+</html>

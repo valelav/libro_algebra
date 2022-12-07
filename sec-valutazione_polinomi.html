@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="it-IT">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Valutazione di polinomi</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Algebra">
+<meta property="book:author" content="Valerio Monti">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Vai all'indice generale</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{mathtools}\require{cancel}\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\cont}{c}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\Inv}{Inv}
+\DeclareMathOperator{\MCD}{MCD}
+\DeclareMathOperator{\mcm}{mcm}
+\DeclareMathOperator{\centro}{Z}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Soc}{Soc}
+\DeclareMathOperator{\Rad}{Rad}
+\DeclareMathOperator{\car}{char}
+
+
+\newcommand{\Sym}{\mathrm{Sym}}
+\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\Idmatrix}{\mathrm{I}}
+\newcommand{\dist}{\mathrm{d}}
+
+\newcommand{\Reali}{\mathbf{R}}
+\newcommand{\Naturali}{\mathbf{N}}
+\newcommand{\Interi}{\mathbf{Z}}
+ \newcommand{\Razionali}{\mathbf{Q}}
+ \newcommand{\Complessi}{\mathbf{C}}
+
+ \newcommand{\grgen}[1]{\langle#1\rangle}
+ \newcommand{\ideal}[1]{\left(#1\right)}
+ \newcommand{\alg}[1]{\left\lbrack#1\right\rvert}
+ \newcommand{\seg}[1]{\left\lvert#1\right)}
+ \newcommand{\ann}[1]{\operatorname{Ann}\left(#1\right)}
+ \newcommand{\len}[1]{\operatorname{l}\left(#1\right)}
+ \newcommand{\class}[2][\sim]{\lbrack #2\rbrack_{#1}}
+ \newcommand{\cent}[2]{\operatorname{C}_{#1}\left(#2\right)}
+ \newcommand{\nrm}[2]{\operatorname{N}_{#1}\left(#2\right)}
+ \newcommand{\stab}[2]{\operatorname{Stab}_{#1}\left(#2\right)}
+ \newcommand{\Supp}[1]{\operatorname{Supp}\left(#1\right)}
+ \newcommand{\Gal}[1]{\operatorname{Gal}\left(#1\right)}
+ \newcommand{\tr}[1]{#1^{\intercal}}
+ \newcommand{\vuoto}{\varnothing}
+ \newcommand{\parti}[1]{\mathcal{P}(#1)}
+ \newcommand{\euler}[1]{\varphi(#1)}
+ \newcommand{\euclidean}{\delta}
+
+ \newcommand{\vect}[1]{\boldsymbol{#1}}
+ 
+ \newcommand{\mat}[2]{\operatorname{M}_{#1}(#2)}
+ \newcommand{\matt}[3]{\operatorname{M}_{#1,#2}(#3)}
+ \newcommand{\Sim}[2]{\operatorname{S}(#1,#2)}
+ \newcommand{\AntiSim}[2]{\operatorname{A}(#1,#2)}
+ \newcommand{\Diag}[2]{\operatorname{D}(#1,#2)}
+ \newcommand{\TS}[2]{\operatorname{T}^{#1}(#2)}
+ \newcommand{\TI}[2]{\operatorname{T}_{#1}(#2)}
+ \newcommand{\GL}[2]{\operatorname{GL}(#1,#2)}
+ \newcommand{\SL}[2]{\operatorname{SL}(#1,#2)}
+ \newcommand{\Ort}[2]{\operatorname{O}(#1,#2)}
+
+ \newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+ \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+ \newcommand{\ind}[2]{\left\lvert#1:#2\right\rvert}
+ \newcommand{\degext}[2]{\left\lbrack#1:#2\right\rbrack}
+
+ \newcommand{\invprov}[1]{\widehat{#1}}
+
+ \newcommand\YoungTableau[1]{
+ \begin{tikzpicture}[scale=0.4,keepsize]
+ \foreach \y [count=\yi] in {#1}
+ \foreach \x in {1,...,\y}
+ {
+ \draw (\x,\yi) rectangle +(1,1);
+ }
+ \end{tikzpicture}
+ }
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-algebra.html"><span class="title">Algebra</span></a></h1>
+<p class="byline">Valerio Monti</p>
+</div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Risultati: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>Nessun risultato.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Indice</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="indice.html" title="Indice analitico">Indice analitico</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-anello_polinomi.html" title="Precedente">Prec</a><a id="upbutton" class="up-button button toolbar-item" href="ch-polinomi.html" title="Su">Su</a><a id="nextbutton" class="next-button button toolbar-item" href="ch-divisibilita.html" title="Successivo">Succ</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Indice</button><a class="previous-button toolbar-item button" href="sec-anello_polinomi.html" title="Precedente">Prec</a><a class="up-button button toolbar-item" href="ch-polinomi.html" title="Su">Su</a><a class="next-button button toolbar-item" href="ch-divisibilita.html" title="Successivo">Succ</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Materiale iniziale</span></a><ul>
+<li><a href="front-colophon.html" data-scroll="front-colophon" class="internal">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Prefazione</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-preliminari.html" data-scroll="part-preliminari" class="internal"><span class="codenumber">I</span> <span class="title">Preliminari</span></a></li>
+<li class="link">
+<a href="ch-insiemi.html" data-scroll="ch-insiemi" class="internal"><span class="codenumber">1</span> <span class="title">Insiemi</span></a><ul>
+<li><a href="sec-insiemi.html" data-scroll="sec-insiemi" class="internal">Concetti di base</a></li>
+<li><a href="sec-operazioni_insiemi.html" data-scroll="sec-operazioni_insiemi" class="internal">Operazioni tra insiemi</a></li>
+<li><a href="sec-prodotto-cartesiano.html" data-scroll="sec-prodotto-cartesiano" class="internal">Prodotto cartesiano</a></li>
+<li><a href="sec-Russell.html" data-scroll="sec-Russell" class="internal">Il paradosso di Russell</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-corrispondenze.html" data-scroll="ch-corrispondenze" class="internal"><span class="codenumber">2</span> <span class="title">Corrispondenze e relazioni</span></a><ul>
+<li><a href="sec-corrispondenze_definizione.html" data-scroll="sec-corrispondenze_definizione" class="internal">Corrispondenze tra insiemi</a></li>
+<li><a href="sec-relazioni_equivalenza.html" data-scroll="sec-relazioni_equivalenza" class="internal">Relazioni di equivalenza</a></li>
+<li><a href="sec-relazioni_ordine.html" data-scroll="sec-relazioni_ordine" class="internal">Relazioni d'ordine</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-funzioni.html" data-scroll="ch-funzioni" class="internal"><span class="codenumber">3</span> <span class="title">Funzioni</span></a><ul>
+<li><a href="sec-funzioni_definizione.html" data-scroll="sec-funzioni_definizione" class="internal">Definizioni di base</a></li>
+<li><a href="sec-funzioni_iniettive_suriettive.html" data-scroll="sec-funzioni_iniettive_suriettive" class="internal">Funzioni iniettive, suriettive e biiettive</a></li>
+<li><a href="sec-cardinalita.html" data-scroll="sec-cardinalita" class="internal">Cenni sulla cardinalità</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-aritmetica.html" data-scroll="part-aritmetica" class="internal"><span class="codenumber">II</span> <span class="title">Aritmetica</span></a></li>
+<li class="link">
+<a href="ch-interi.html" data-scroll="ch-interi" class="internal"><span class="codenumber">4</span> <span class="title">I numeri interi</span></a><ul>
+<li><a href="sec-naturali_base.html" data-scroll="sec-naturali_base" class="internal">I numeri naturali e i numeri interi</a></li>
+<li><a href="sec-induzione_ricorrenza.html" data-scroll="sec-induzione_ricorrenza" class="internal">Dimostrazioni per induzione e definizioni per ricorrenza</a></li>
+<li><a href="sec-divisibilita_interi.html" data-scroll="sec-divisibilita_interi" class="internal">Divisibilità negli interi</a></li>
+<li><a href="sec-fattorizzazione_interi.html" data-scroll="sec-fattorizzazione_interi" class="internal">Il teorema fondamentale dell'aritmetica</a></li>
+<li><a href="sec-equazioni_lineari_diofantine.html" data-scroll="sec-equazioni_lineari_diofantine" class="internal">Equazioni lineari diofantine</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-classidiresto.html" data-scroll="ch-classidiresto" class="internal"><span class="codenumber">5</span> <span class="title">Classi di resto</span></a><ul>
+<li><a href="sec-congruenzemodulon.html" data-scroll="sec-congruenzemodulon" class="internal">Congruenze modulo un intero</a></li>
+<li><a href="sec-operazioniclassiresto.html" data-scroll="sec-operazioniclassiresto" class="internal">Operazioni tra classi di resto</a></li>
+<li><a href="sec-eulero.html" data-scroll="sec-eulero" class="internal">Il teorema di Eulero</a></li>
+<li><a href="sec-congruenze_con_incognite.html" data-scroll="sec-congruenze_con_incognite" class="internal">Congruenze con incognite</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-gruppi.html" data-scroll="part-gruppi" class="internal"><span class="codenumber">III</span> <span class="title">Gruppi</span></a></li>
+<li class="link">
+<a href="ch-operazioni.html" data-scroll="ch-operazioni" class="internal"><span class="codenumber">6</span> <span class="title">Operazioni</span></a><ul>
+<li><a href="sec-operazioni_definizioni.html" data-scroll="sec-operazioni_definizioni" class="internal">Definizioni ed esempi</a></li>
+<li><a href="sec-proprieta_operazioni.html" data-scroll="sec-proprieta_operazioni" class="internal">Proprietà delle operazioni</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppi.html" data-scroll="ch-gruppi" class="internal"><span class="codenumber">7</span> <span class="title">Monoidi e gruppi</span></a><ul>
+<li><a href="sec-monoidi.html" data-scroll="sec-monoidi" class="internal">Monoidi</a></li>
+<li><a href="sec-gruppi.html" data-scroll="sec-gruppi" class="internal">Gruppi</a></li>
+<li><a href="sec-gruppi_piccoli.html" data-scroll="sec-gruppi_piccoli" class="internal">Alcuni esempi di gruppi piccoli</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-sottogruppi.html" data-scroll="ch-sottogruppi" class="internal"><span class="codenumber">8</span> <span class="title">Sottogruppi</span></a><ul>
+<li><a href="sec-sottomonoidi_sottogruppi.html" data-scroll="sec-sottomonoidi_sottogruppi" class="internal">Sottomonoidi e sottogruppi</a></li>
+<li><a href="sec-prime_proprieta_sottogruppi.html" data-scroll="sec-prime_proprieta_sottogruppi" class="internal">Prime proprietà dei sottogruppi</a></li>
+<li><a href="sec-gruppi_del_piano.html" data-scroll="sec-gruppi_del_piano" class="internal">Gruppi di trasformazioni del piano</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppi_ciclici.html" data-scroll="ch-gruppi_ciclici" class="internal"><span class="codenumber">9</span> <span class="title">Gruppi ciclici</span></a><ul>
+<li><a href="sec-definizione_gruppi_ciclici.html" data-scroll="sec-definizione_gruppi_ciclici" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-sottogruppi_di_ciclici.html" data-scroll="sec-sottogruppi_di_ciclici" class="internal">Sottogruppi di gruppi ciclici</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppi_permutazioni.html" data-scroll="ch-gruppi_permutazioni" class="internal"><span class="codenumber">10</span> <span class="title">Gruppi di permutazioni</span></a><ul>
+<li><a href="sec-definizioni_gruppi_permutazioni.html" data-scroll="sec-definizioni_gruppi_permutazioni" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-cicli.html" data-scroll="sec-cicli" class="internal">Cicli</a></li>
+<li><a href="sec-scambi.html" data-scroll="sec-scambi" class="internal">Scambi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-laterali.html" data-scroll="ch-laterali" class="internal"><span class="codenumber">11</span> <span class="title">Laterali e teorema di Lagrange</span></a><ul>
+<li><a href="sec-prodotto_sottoinsiemi.html" data-scroll="sec-prodotto_sottoinsiemi" class="internal">Prodotto di sottoinsiemi</a></li>
+<li><a href="sec-teorema_di_lagrange.html" data-scroll="sec-teorema_di_lagrange" class="internal">Teorema di Lagrange</a></li>
+<li><a href="sec-prodotto_sottogruppi.html" data-scroll="sec-prodotto_sottogruppi" class="internal">Prodotto di sottogruppi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-omomorfismi.html" data-scroll="ch-omomorfismi" class="internal"><span class="codenumber">12</span> <span class="title">Omomorfismi</span></a><ul>
+<li><a href="sec-definizione_omomorfismo.html" data-scroll="sec-definizione_omomorfismo" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-nucleo_immagine.html" data-scroll="sec-nucleo_immagine" class="internal">Immagine e nucleo di un omomorfismo</a></li>
+<li><a href="sec-omomorfismi_da_gruppi_ciclici.html" data-scroll="sec-omomorfismi_da_gruppi_ciclici" class="internal">Omomorfismi da gruppi ciclici</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-azioni.html" data-scroll="ch-azioni" class="internal"><span class="codenumber">13</span> <span class="title">Azioni di gruppi su insiemi</span></a><ul>
+<li><a href="sec-azioni_definizioni.html" data-scroll="sec-azioni_definizioni" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-orbite_stabilizzatori.html" data-scroll="sec-orbite_stabilizzatori" class="internal">Orbite e stabilizzatori</a></li>
+<li><a href="sec-sottogruppi_normali.html" data-scroll="sec-sottogruppi_normali" class="internal">Sottogruppi normali</a></li>
+<li><a href="sec-coniugati_simmetrico_alterno.html" data-scroll="sec-coniugati_simmetrico_alterno" class="internal">Classi di coniugio nel gruppo simmetrico e nel gruppo alterno</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-quozienti.html" data-scroll="ch-quozienti" class="internal"><span class="codenumber">14</span> <span class="title">Gruppi quoziente</span></a><ul>
+<li><a href="sec-congruenze.html" data-scroll="sec-congruenze" class="internal">Congruenze in gruppi e monoidi</a></li>
+<li><a href="sec-proprieta_quozienti.html" data-scroll="sec-proprieta_quozienti" class="internal">Proprietà dei gruppi quoziente</a></li>
+<li><a href="sec-teoremi_di_isomorfismo.html" data-scroll="sec-teoremi_di_isomorfismo" class="internal">I teoremi di isomorfismo</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-direttosemidiretto.html" data-scroll="ch-direttosemidiretto" class="internal"><span class="codenumber">15</span> <span class="title">Prodotto diretto e semidiretto</span></a><ul>
+<li><a href="sec-prodotto_diretto_esterno.html" data-scroll="sec-prodotto_diretto_esterno" class="internal">Prodotto diretto esterno</a></li>
+<li><a href="sec-prodotto_diretto_interno.html" data-scroll="sec-prodotto_diretto_interno" class="internal">Prodotto diretto interno</a></li>
+<li><a href="sec-prodotto_semidiretto.html" data-scroll="sec-prodotto_semidiretto" class="internal">Prodotto semidiretto</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-sylow.html" data-scroll="ch-sylow" class="internal"><span class="codenumber">16</span> <span class="title">Il teorema di Sylow</span></a><ul>
+<li><a href="sec-inversione_lagrange.html" data-scroll="sec-inversione_lagrange" class="internal">Inversione del teorema di Lagrange</a></li>
+<li><a href="sec-sylow.html" data-scroll="sec-sylow" class="internal">Il teorema di Sylow</a></li>
+<li><a href="sec-applicazioni_sylow.html" data-scroll="sec-applicazioni_sylow" class="internal">Applicazioni del teorema di Sylow</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-anelli.html" data-scroll="part-anelli" class="internal"><span class="codenumber">IV</span> <span class="title">Anelli</span></a></li>
+<li class="link">
+<a href="ch-anelli.html" data-scroll="ch-anelli" class="internal"><span class="codenumber">17</span> <span class="title">Anelli</span></a><ul>
+<li><a href="sec-prime_proprieta_anelli.html" data-scroll="sec-prime_proprieta_anelli" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-multipli_potenze.html" data-scroll="sec-multipli_potenze" class="internal">Multipli e potenze in un anello</a></li>
+<li><a href="sec-sottoanelli.html" data-scroll="sec-sottoanelli" class="internal">Sottoanelli</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-omomorfismiideali.html" data-scroll="ch-omomorfismiideali" class="internal"><span class="codenumber">18</span> <span class="title">Omomorfismi e ideali</span></a><ul>
+<li><a href="sec-omomorfismi_anelli.html" data-scroll="sec-omomorfismi_anelli" class="internal">Omomorfismi di anelli</a></li>
+<li><a href="sec-anelli_quoziente.html" data-scroll="sec-anelli_quoziente" class="internal">Anelli quoziente e ideali</a></li>
+<li><a href="sec-campo_dei_quozienti.html" data-scroll="sec-campo_dei_quozienti" class="internal">Campo dei quozienti di un dominio</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-polinomi.html" data-scroll="ch-polinomi" class="internal"><span class="codenumber">19</span> <span class="title">Polinomi</span></a><ul>
+<li><a href="sec-anello_polinomi.html" data-scroll="sec-anello_polinomi" class="internal">Anello dei polinomi</a></li>
+<li><a href="sec-valutazione_polinomi.html" data-scroll="sec-valutazione_polinomi" class="active">Valutazione di polinomi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-divisibilita.html" data-scroll="ch-divisibilita" class="internal"><span class="codenumber">20</span> <span class="title">Divisibilità nei domini</span></a><ul>
+<li><a href="sec-divisibilita.html" data-scroll="sec-divisibilita" class="internal">Relazione di divisibilità</a></li>
+<li><a href="sec-fattorizzazione.html" data-scroll="sec-fattorizzazione" class="internal">Fattorizzazione</a></li>
+<li><a href="sec-PID_euclidei.html" data-scroll="sec-PID_euclidei" class="internal">Domini a ideali principali e domini euclidei</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-fattorizzazione_polinomi.html" data-scroll="ch-fattorizzazione_polinomi" class="internal"><span class="codenumber">21</span> <span class="title">Fattorizzazione dei polinomi</span></a><ul>
+<li><a href="sec-trasporto_UFD.html" data-scroll="sec-trasporto_UFD" class="internal">Il teorema del trasporto per domini a fattorizzazione unica</a></li>
+<li><a href="sec-esempi_fattorizzazione_polinomi.html" data-scroll="sec-esempi_fattorizzazione_polinomi" class="internal">Tecniche di fattorizzazione</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-estensione_campi.html" data-scroll="ch-estensione_campi" class="internal"><span class="codenumber">22</span> <span class="title">Estensioni di campi</span></a><ul>
+<li><a href="sec-elementi_algebrici_e_trascendenti.html" data-scroll="sec-elementi_algebrici_e_trascendenti" class="internal">Elementi algebrici e trascendenti</a></li>
+<li><a href="sec-campo_di_spezzamento.html" data-scroll="sec-campo_di_spezzamento" class="internal">Campi di spezzamento</a></li>
+<li><a href="sec-chiusure_algebriche.html" data-scroll="sec-chiusure_algebriche" class="internal">Cenni su campi algebricamente chiusi</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-moduli.html" data-scroll="part-moduli" class="internal"><span class="codenumber">V</span> <span class="title">Moduli</span></a></li>
+<li class="link">
+<a href="ch-moduli.html" data-scroll="ch-moduli" class="internal"><span class="codenumber">23</span> <span class="title">Moduli</span></a><ul>
+<li><a href="sec-definizione_di_moduli.html" data-scroll="sec-definizione_di_moduli" class="internal">Definizione di modulo</a></li>
+<li><a href="sec-sottomoduli.html" data-scroll="sec-sottomoduli" class="internal">Sottomoduli</a></li>
+<li><a href="sec-omomorfismi_moduli.html" data-scroll="sec-omomorfismi_moduli" class="internal">Omomorfismi di moduli</a></li>
+<li><a href="sec-moduli_quoziente.html" data-scroll="sec-moduli_quoziente" class="internal">Moduli quoziente</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-moduli_liberi.html" data-scroll="ch-moduli_liberi" class="internal"><span class="codenumber">24</span> <span class="title">Moduli liberi</span></a><ul>
+<li><a href="sec-somma_diretta_moduli.html" data-scroll="sec-somma_diretta_moduli" class="internal">Somma diretta di moduli</a></li>
+<li><a href="sec-dipendenza_lineare.html" data-scroll="sec-dipendenza_lineare" class="internal">Dipendenza e indipendenza lineare</a></li>
+<li><a href="sec-elementi_di_torsione.html" data-scroll="sec-elementi_di_torsione" class="internal">Elementi di torsione</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-modulisupid.html" data-scroll="ch-modulisupid" class="internal"><span class="codenumber">25</span> <span class="title">Moduli finitamente generati su PID</span></a><ul>
+<li><a href="sec-moduli_ciclici.html" data-scroll="sec-moduli_ciclici" class="internal">Moduli ciclici</a></li>
+<li><a href="sec-moduli_primari.html" data-scroll="sec-moduli_primari" class="internal">Moduli primari</a></li>
+<li><a href="sec-moduli_liberi.html" data-scroll="sec-moduli_liberi" class="internal">Moduli liberi</a></li>
+<li><a href="sec-classificazione_moduli_pid.html" data-scroll="sec-classificazione_moduli_pid" class="internal">La classificazione dei moduli finitamente generati su un dominio a ideali principali</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppiabeliani.html" data-scroll="ch-gruppiabeliani" class="internal"><span class="codenumber">26</span> <span class="title">Gruppi abeliani finitamente generati</span></a><ul><li><a href="sec-gruppiabeliani.html" data-scroll="sec-gruppiabeliani" class="internal">Classificazione dei gruppi abeliani finitamente generati</a></li></ul>
+</li>
+<li class="link">
+<a href="ch-formecanoniche.html" data-scroll="ch-formecanoniche" class="internal"><span class="codenumber">27</span> <span class="title">Forme canoniche di matrici</span></a><ul>
+<li><a href="sec-kx_moduli.html" data-scroll="sec-kx_moduli" class="internal">Spazi vettoriali con endomorfismi visti come moduli</a></li>
+<li><a href="sec-matrici_rappresentative.html" data-scroll="sec-matrici_rappresentative" class="internal">Matrici rappresentative</a></li>
+<li><a href="sec-matrici_compagne.html" data-scroll="sec-matrici_compagne" class="internal">Matrici compagne</a></li>
+<li><a href="sec-jordan.html" data-scroll="sec-jordan" class="internal">Forma canonica di Jordan</a></li>
+<li><a href="sec-polinomio_minimo_matrici.html" data-scroll="sec-polinomio_minimo_matrici" class="internal">Polinomio minimo di matrici</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Appendici</span></a></li>
+<li class="link">
+<a href="appendix-peano.html" data-scroll="appendix-peano" class="internal"><span class="codenumber">A</span> <span class="title">Numeri naturali e interi</span></a><ul>
+<li><a href="sec-algebre_induttive.html" data-scroll="sec-algebre_induttive" class="internal">Algebre induttive</a></li>
+<li><a href="sec-assiomi_peano.html" data-scroll="sec-assiomi_peano" class="internal">Gli assiomi di Peano</a></li>
+<li><a href="sec-insiemi_finiti_infiniti.html" data-scroll="sec-insiemi_finiti_infiniti" class="internal">Insiemi finiti e infiniti</a></li>
+<li><a href="sec-operazioni_naturali.html" data-scroll="sec-operazioni_naturali" class="internal">Operazioni tra numeri naturali</a></li>
+<li><a href="sec-interi.html" data-scroll="sec-interi" class="internal">Costruzione degli interi</a></li>
+</ul>
+</li>
+<li class="link"><a href="appendix-2.html" data-scroll="appendix-2" class="internal"><span class="codenumber">B</span> <span class="title">Notazioni</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1" class="internal"><span class="codenumber">C</span> <span class="title">Soluzioni e suggerimenti</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl" class="internal"><span class="codenumber">D</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="indice.html" data-scroll="indice" class="internal"><span class="title">Indice analitico</span></a></li>
+<li class="link"><a href="back-colophon.html" data-scroll="back-colophon" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Redatto in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-valutazione_polinomi"><h2 class="heading hide-type">
+<span class="type">Paragrafo</span> <span class="codenumber">19.2</span> <span class="title">Valutazione di polinomi</span>
+</h2>
+<p id="p-2674">I polinomi sono spesso pensati come particolari funzioni. Ciò è giustificato dal</p>
+<article class="theorem theorem-like" id="thm-proprieta_universale_polinomi"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">19.2.1</span><span class="period">.</span>
+</h3>
+<p id="p-2675">Sia <span class="process-math">\(R\)</span> un anello commutativo, identificato con un sottoanello di <span class="process-math">\(R[x]\)</span> come nella <a href="" class="xref" data-knowl="./knowl/prop-anello_incluso_polinomi.html" title="Proposizione 19.1.5">Proposizione 19.1.5</a>. Allora, per ogni omomorfismo <span class="process-math">\(\psi\colon R\to S\)</span> con <span class="process-math">\(S\)</span> anello commutativo e ogni <span class="process-math">\(c\)</span> appartenente a <span class="process-math">\(S\text{,}\)</span> esiste un unico omomorfismo <span class="process-math">\(\theta\colon R[x]\to S\)</span> che estende <span class="process-math">\(\psi\)</span> e tale che <span class="process-math">\(x\theta=c\text{.}\)</span></p> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image-universale_anello_polinomi.svg" role="img" class="contained" alt="Diagramma commutativo che rappresenta la proprietà universale dell'anello dei polinomi"></div></article><article class="hiddenproof" id="proof-205"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-205"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-205"><article class="hiddenproof"><p id="p-2676">Dato un polinomio <span class="process-math">\(f\coloneqq a_{0}+a_{1}x+\cdots+a_{n}x^{n}\)</span> poniamo</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f\theta\coloneqq a_{0}\psi+a_{1}\psi\cdot c+\cdots+a_{n}\psi\cdot c^{n}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Notiamo che <span class="process-math">\(\theta\)</span> è ben definita perché inserendo o eliminando termini del tipo <span class="process-math">\(0_{R}x^{i}\)</span> nella scrittura di <span class="process-math">\(f\text{,}\)</span> il contributo del corrispondente termine <span class="process-math">\(0_{R}\psi\cdot c^{i}\)</span> è nullo.</p> <p id="p-2677">Per definizione di <span class="process-math">\(\theta\text{,}\)</span> si ha <span class="process-math">\(a\theta=a\psi\text{,}\)</span> cioè <span class="process-math">\(\theta\)</span> è un'estensione di <span class="process-math">\(\psi\text{.}\)</span> Inoltre <span class="process-math">\(x\theta=1_{R}\psi\cdot c=1_{S}\cdot c=c\text{.}\)</span></p> <p id="p-2678">Mostriamo che <span class="process-math">\(\theta\)</span> è un omomorfismo. Per definizione, <span class="process-math">\(1_{R}\theta=1_{S}\text{.}\)</span> Se <span class="process-math">\(g\coloneqq b_{0}+b_{1}x+\cdots+b_{m}x^{m}\)</span> è un polinomio in <span class="process-math">\(R[x]\)</span> e <span class="process-math">\(f\)</span> è come sopra, abbiamo</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-66">
+\begin{align*}
+f+g \amp = (a_{0}+b_{0})+(a_{1}+b_{1})x+\cdots \\
+fg \amp = c_{0}+c_{1}x+\cdots
+\end{align*}
+</div>
+<p class="continuation">con <span class="process-math">\(c_{i}=\sum_{h+k=i}a_{h}b_{k}\text{.}\)</span></p> <p id="p-2679">Poiché <span class="process-math">\(g\theta=b_{0}\psi+b_{1}\psi\cdot c+\cdots+b_{m}\psi\cdot c^{m}\)</span> abbiamo</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-67">
+\begin{align*}
+(f+g)\theta \amp =(a_{0}+b_{0})\psi+(a_{1}+b_{1})\psi\cdot c+\cdots\\
+\amp =a_{0}\psi+b_{0}\psi+(a_{1}\psi+b_{1}\psi)\cdot c+\cdots\\
+\amp = a_{0}\psi+a_{1}\psi\cdot c+\cdots+b_{0}\psi+b_{1}\psi\cdot c+\cdots \\
+\amp = f\theta+g\theta 
+\end{align*}
+</div>
+<p class="continuation">e</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-68">
+\begin{align*}
+(fg)\theta \amp =c_{0}\psi + c_{1}\psi c+\cdots\\
+\amp = (a_{0}b_{0})\psi+(a_{0}b_{1}+a_{1}b_{0})\psi \cdot c+\cdots \\
+\amp = a_{0}\psi\cdot b_{0}\psi +(a_{0}\psi \cdot b_{1}\psi+a_{1}\psi \cdot b_{0}\psi) \cdot c+\cdots\\
+\amp =(a_{0}\psi+a_{1}\psi\cdot c+\cdots)(b_{0}\psi+b_{1}\psi\cdot c+\cdots) \\
+\amp =f\theta\cdot g\theta\text{.}
+\end{align*}
+</div>
+<p class="continuation">Notiamo che abbiamo usato la commutatività di <span class="process-math">\(S\)</span> nel penultimo passaggio.</p></article></div>
+<p id="p-2680">Useremo principalmente questo teorema in un caso particolare.</p>
+<article class="corollary theorem-like" id="cor-valutazione_polinomio"><h3 class="heading">
+<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">19.2.2</span><span class="period">.</span>
+</h3>
+<p id="p-2681">Sia <span class="process-math">\(R\)</span> un anello commutativo e sia <span class="process-math">\(c\)</span> un elemento di <span class="process-math">\(R\text{.}\)</span> Allora per ogni polinomio</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f\coloneqq a_{0}+a_{1}x+\cdots+a_{n}x^{n}
+\end{equation*}
+</div>
+<p class="continuation">a coefficienti in <span class="process-math">\(R\)</span> è definita la sua <dfn class="terminology">valutazione</dfn> in <span class="process-math">\(c\text{,}\)</span> denotata con <span class="process-math">\(f(c)\)</span> nel modo seguente</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(c)\coloneqq a_{0}+a_{1}c+\cdots+a_{n}c^{n}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Per ogni <span class="process-math">\(f\)</span> e <span class="process-math">\(g\)</span> in <span class="process-math">\(R[x]\)</span> si ha, allora, <span class="process-math">\((f+g)(c)=f(c)+g(c)\)</span> e <span class="process-math">\((fg)(c)=f(c)g(c)\text{.}\)</span></p></article><article class="hiddenproof" id="proof-206"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-206"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-206"><article class="hiddenproof"><p id="p-2682">Basta prendere <span class="process-math">\(S=R\)</span> e <span class="process-math">\(\phi=\Id\)</span> nel <a href="" class="xref" data-knowl="./knowl/thm-proprieta_universale_polinomi.html" title="Teorema 19.2.1">Teorema 19.2.1</a>.</p></article></div>
+<p id="p-2683">Il corollario precedente definisce l'usuale valutazione di un polinomio. In particolare, ci garantisce che, data un'espressione polinomiale e manipolandola per ottenere un espressione equivalente, effettuare la valutazione della espressione di partenza o dell'espressione di arrivo fornisce lo stesso risultato.</p>
+<article class="theorem theorem-like" id="thm-divisione_tra_polinomi"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">19.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Divisione tra polinomi.</span>
+</h3>
+<p id="p-2684">Sia <span class="process-math">\(R\)</span> un anello commutativo e siano <span class="process-math">\(f\)</span> e <span class="process-math">\(g\)</span> due polinomi in <span class="process-math">\(R[x]\)</span> con <span class="process-math">\(g\)</span> diverso da <span class="process-math">\(0\)</span> e coefficiente direttivo invertibile. Allora esistono e sono univocamente determinati <span class="process-math">\(q\)</span> e <span class="process-math">\(r\)</span> in <span class="process-math">\(R[x]\)</span> tali che</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f=gq+r
+\end{equation*}
+</div>
+<p class="continuation">con <span class="process-math">\(\deg r \lt \deg g\)</span> o <span class="process-math">\(r=0\text{.}\)</span> I polinomi <span class="process-math">\(q\)</span> e <span class="process-math">\(r\)</span> sono detti, rispettivamente, <dfn class="terminology">quoziente</dfn> e <dfn class="terminology">resto</dfn> della divisione di <span class="process-math">\(f\)</span> per <span class="process-math">\(g\text{.}\)</span></p></article><article class="hiddenproof" id="proof-207"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-207"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-207"><article class="hiddenproof"><p id="p-2685">Sia <span class="process-math">\(f\coloneqq a_{0}+a_{1}x+\cdots+a_{n}x^{n}\)</span> e <span class="process-math">\(g\coloneqq b_{0}+b_{1}x+\cdots+b_{m}x^{m}\)</span> con <span class="process-math">\(b_{m}\)</span> invertibile.</p> <p id="p-2686">Mostriamo innanzitutto l'esistenza di <span class="process-math">\(q\)</span> e <span class="process-math">\(r\)</span> per induzione su <span class="process-math">\(n\text{.}\)</span> Se <span class="process-math">\(n \lt m\text{,}\)</span> basta prendere <span class="process-math">\(q=0\)</span> e <span class="process-math">\(r=f\text{.}\)</span> Se <span class="process-math">\(n\ge m\text{,}\)</span> allora sottraiamo da <span class="process-math">\(f\)</span> un multiplo opportuno di <span class="process-math">\(g\text{,}\)</span> in modo che il coefficiente di <span class="process-math">\(x^{n}\)</span> nel polinomio così ottenuto sia <span class="process-math">\(0\text{:}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-69">
+\begin{align*}
+h \amp\coloneqq f-ga_{n}b_{m}^{-1}x^{n-m} \\
+\amp = a_{0}+a_{1}x+\cdots+a_{n}x^{n} \\
+\amp -(b_{0}a_{n}b_{m}^{-1}x^{n-m}+b_{1}a_{n}b_{m}^{-1}x^{n-m+1}+\cdots+b_{m}a_{n}b_{m}^{-1}x^{n}) \\
+\amp = c_{0}+c_{1}x+\cdots+c_{n-1}x^{n-1}
+\end{align*}
+</div>
+<p class="continuation">per certi <span class="process-math">\(c_{i}\)</span> in <span class="process-math">\(R\text{.}\)</span> Per ipotesi induttiva, esistono allora <span class="process-math">\(\bar{q}\)</span> e <span class="process-math">\(r\)</span> tali che <span class="process-math">\(h=g\bar{q}+r\)</span> con <span class="process-math">\(\deg r \lt \deg g\)</span> o <span class="process-math">\(r=0\text{.}\)</span> Ma allora</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f=h+ga_{n}b_{m}^{-1}x^{n-m}=g\bar{q}+r+ga_{n}b_{m}^{-1}x^{n-m}=g(\bar{q}+a_{n}b_{m}^{-1}x^{n-m})+r=gq+r
+\end{equation*}
+</div>
+<p class="continuation">avendo posto <span class="process-math">\(q\coloneqq \bar{q}+a_{n}b_{m}^{-1}x^{n-m}\text{.}\)</span></p> <p id="p-2687">Per quanto riguarda l'unicità, supponiamo che <span class="process-math">\(f=gq+r=gq'+r'\)</span> con <span class="process-math">\(\deg r' \lt\deg g\)</span> o <span class="process-math">\(r'=0\text{.}\)</span> Allora <span class="process-math">\(r-r'=g(q'-q)\text{.}\)</span> Se fosse <span class="process-math">\(q'\ne q\text{,}\)</span> cioè <span class="process-math">\(q'-q\ne 0\text{,}\)</span> per la <a href="" class="xref" data-knowl="./knowl/prop-grado_e_operazioni.html" title="Proposizione 19.1.11">Proposizione 19.1.11</a> avremmo allora che <span class="process-math">\(\deg(r-r')=\deg (g(q-q'))\ge \deg g\)</span> (il coefficiente direttivo di <span class="process-math">\(g\text{,}\)</span> essendo invertibile non è un divisore dello zero). Ma ciò non può essere per le condizioni su <span class="process-math">\(r\)</span> e <span class="process-math">\(r'\text{.}\)</span> Dunque <span class="process-math">\(q'=q\)</span> e <span class="process-math">\(r-r'=g(q'-q)=g0=0\text{,}\)</span> cioè <span class="process-math">\(r=r'\text{.}\)</span></p></article></div>
+<p id="p-2688">La dimostrazione del teorema precedente descrive l'usuale metodo per fare la divisione tra polinomi.</p>
+<article class="example example-like" id="example-160"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">19.2.4</span><span class="period">.</span>
+</h3>
+<p id="p-2689">Siano dati i polinomi <span class="process-math">\(f\coloneqq 3x^{4}+2x^{3}-1\)</span> e <span class="process-math">\(g\coloneqq 2x^{2}+1\)</span> a coefficienti in <span class="process-math">\(\Razionali\text{.}\)</span> Dividiamo allora i termini di grado massimo: <span class="process-math">\(3x^{4}=\frac{3}{2}x^{2}\cdot 2x^{2}\text{.}\)</span> Otteniamo così</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+3x^{4}+2x^{3}-1-\frac{3}{2}x^{2}(2x^{2}+1)=2x^{3}-\frac{3}{2}x^{2}-1\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Dividiamo ora il termine di grado massimo del polinomio così ottenuto per il termine di grado massimo di <span class="process-math">\(g\text{,}\)</span> ottenendo così  <span class="process-math">\(2x^{3}=x\cdot 2x^{2}\text{.}\)</span> Pertanto</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+2x^{3}-\frac{3}{2}x^{2}-1-x(2x^{2}+1)=-\frac{3}{2}x^{2}-x-1\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Dividiamo ora il termine di grado massimo del polinomio così ottenuto per il termine di grado massimo di <span class="process-math">\(g\text{,}\)</span> ottenendo così <span class="process-math">\(-\frac{3}{2}x^{2}=-\frac{3}{4}\cdot 2x^{2}\text{.}\)</span> Pertanto</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+-\frac{3}{2}x^{2}-x-1-\left(-\frac{3}{4}\right)(2x^{2}+1)=-x-\frac{1}{4}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Possiamo fermarci. Abbiamo allora</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+3x^{4}+2x^{3}-1=\left(\frac{3}{2}x^{2}+x-\frac{3}{4}\right)(2x^{2}+1)+\left(-x-\frac{1}{4}\right)\text{,}
+\end{equation*}
+</div>
+<p class="continuation">cioè <span class="process-math">\(q=\frac{3}{2}x^{2}+x-\frac{3}{4}\)</span> e <span class="process-math">\(r=-x-\frac{1}{4}\text{.}\)</span></p></article><article class="definition definition-like" id="def-radice_polinomio"><h3 class="heading">
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">19.2.5</span><span class="period">.</span>
+</h3>
+<p id="p-2690">Dato un polinomio <span class="process-math">\(f\)</span> a coefficienti in un anello commutativo <span class="process-math">\(R\text{,}\)</span> un elemento <span class="process-math">\(c\)</span> di <span class="process-math">\(R\)</span> è detto <dfn class="terminology">radice</dfn> del polinomio <span class="process-math">\(f\)</span> se <span class="process-math">\(f(c)=0\text{.}\)</span></p></article><article class="theorem theorem-like" id="thm-del_resto"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">19.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Teorema del resto.</span>
+</h3>
+<p id="p-2691">Dato un polinomio <span class="process-math">\(f\)</span> a coefficienti in un anello commutativo e un elemento <span class="process-math">\(c\)</span> di <span class="process-math">\(R\text{,}\)</span> il resto della divisione di <span class="process-math">\(f\)</span> per <span class="process-math">\(x-c\)</span> è esattamente <span class="process-math">\(f(c)\text{.}\)</span> In particolare, <span class="process-math">\(c\)</span> è radice di <span class="process-math">\(f\)</span> se e solo se <span class="process-math">\(x-c\)</span> è un divisore di <span class="process-math">\(f\text{.}\)</span></p></article><article class="hiddenproof" id="proof-208"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-208"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-208"><article class="hiddenproof"><p id="p-2692">Poiché il coefficiente direttivo di <span class="process-math">\(x-c\)</span> è <span class="process-math">\(1\)</span> ed è, quindi, invertibile, possiamo applicare la <a href="" class="xref" data-knowl="./knowl/thm-divisione_tra_polinomi.html" title="Teorema 19.2.3: Divisione tra polinomi">Divisione tra polinomi</a> e ottenere</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-divisione_tra_polinomi.html">
+\begin{equation*}
+f=q(x-c)+r
+\end{equation*}
+</div>
+<p class="continuation">con <span class="process-math">\(\deg r \lt \deg(x-c)=1\)</span> o <span class="process-math">\(r=0\text{:}\)</span> in altri termini, <span class="process-math">\(r\)</span> è un elemento di <span class="process-math">\(R\text{.}\)</span> In particolare, la sua valutazione in un qualunque elemento di <span class="process-math">\(R\)</span> dà sempre valore <span class="process-math">\(r\text{.}\)</span> Abbiamo allora</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-divisione_tra_polinomi.html">
+\begin{equation*}
+f(c)=q(c)(c-c)+r
+\end{equation*}
+</div>
+<p class="continuation">cioè <span class="process-math">\(f(c)=r\text{,}\)</span> come richiesto.</p></article></div>
+<article class="corollary theorem-like" id="cor-radici_dominio"><h3 class="heading">
+<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">19.2.7</span><span class="period">.</span>
+</h3>
+<p id="p-2693">Sia <span class="process-math">\(f\)</span> un polinomio non nullo a coefficienti in un dominio <span class="process-math">\(D\text{.}\)</span> Se <span class="process-math">\(c_{1}\text{,}\)</span> <span class="process-math">\(c_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(c_{t}\)</span> sono radici distinte di <span class="process-math">\(f\text{,}\)</span> allora</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f=q(x-c_{1})(x-c_{2})\cdots(x-c_{t})
+\end{equation*}
+</div>
+<p class="continuation">per qualche <span class="process-math">\(q\)</span> in <span class="process-math">\(D[x]\text{.}\)</span> In particolare, <span class="process-math">\(t\le\deg f\text{.}\)</span></p></article><article class="hiddenproof" id="proof-209"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-209"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-209"><article class="hiddenproof"><p id="p-2694">Procediamo per induzione su <span class="process-math">\(t\text{.}\)</span> Se <span class="process-math">\(t=0\text{,}\)</span> non c'è nulla da dimostrare. Se <span class="process-math">\(t \gt 0\text{,}\)</span> per il <a href="" class="xref" data-knowl="./knowl/thm-del_resto.html" title="Teorema 19.2.6: Teorema del resto">Teorema del resto</a> sappiamo che <span class="process-math">\(f=q'(x-c_{t})\)</span> per qualche <span class="process-math">\(q'\)</span> in <span class="process-math">\(D[x]\text{.}\)</span> Per ogni <span class="process-math">\(i\)</span> con <span class="process-math">\(1\le i\le t-1\text{,}\)</span> abbiamo <span class="process-math">\(0=f(c-{i})=q'(c_{i})(c_{i}-c_{t})\text{:}\)</span> poiché <span class="process-math">\(D\)</span> è un dominio e <span class="process-math">\(c_{i}\ne c_{t}\text{,}\)</span> questo implica che <span class="process-math">\(q'(c_{i})=0\text{.}\)</span> Per ipotesi induttiva abbiamo allora che</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-del_resto.html">
+\begin{equation*}
+q'=q(x-c_{1})(x-c_{2})\cdots(x-c_{t-1})\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Sostituendo, otteniamo la tesi.</p></article></div>
+<p id="p-2695">Il fatto che il numero di radici di un polinomio non possa superare il suo grado non è detto valga se l'anello dei coefficienti non è un dominio.</p>
+<article class="example example-like" id="example-161"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">19.2.8</span><span class="period">.</span>
+</h3>
+<p id="p-2696">Consideriamo in <span class="process-math">\(\Interi/8[x]\)</span> il polinomio <span class="process-math">\(x^{2}-\class[8]{1}\text{.}\)</span> Si verifica facilmente che <span class="process-math">\(\class[8]{1}\text{,}\)</span> <span class="process-math">\(\class[8]{3}\text{,}\)</span> <span class="process-math">\(\class[8]{5}\)</span> e <span class="process-math">\(\class[8]{7}\)</span> sono radici. Notiamo che se fattorizziamo <span class="process-math">\(x^{2}-\class[8]{1}=(x+\class[8]{1})(x-\class[8]{1})\)</span> le radici <span class="process-math">\(\class[8]{3}\)</span> e <span class="process-math">\(\class[8]{5}\)</span> non annullano nessuno dei fattori.</p></article><p id="p-2697">Ricordiamo che nel <a href="" class="xref" data-knowl="./knowl/thm-classificazione_gruppi_prodotto_pq.html" title="Teorema 16.3.1">Teorema 16.3.1</a> abbiamo usato, senza dimostrazione, il fatto che il gruppo degli automorfismi di un gruppo ciclico di ordine primo è, a sua volta, ciclico. Siamo ora in grado di dimostrarlo.</p>
+<article class="lemma theorem-like" id="lem-periodo_prodotto_elementi_commutabili_ordine_coprimo"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">19.2.9</span><span class="period">.</span>
+</h3>
+<p id="p-2698">Se <span class="process-math">\(g\)</span> e <span class="process-math">\(h\)</span> sono due elementi commutabili e di periodi finiti e coprimi <span class="process-math">\(m\)</span> e <span class="process-math">\(n\)</span> di un gruppo <span class="process-math">\(G\text{,}\)</span> allora <span class="process-math">\(gh\)</span> ha periodo <span class="process-math">\(mn\text{.}\)</span></p></article><article class="hiddenproof" id="proof-210"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-210"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-210"><article class="hiddenproof"><p id="p-2699">Poiché <span class="process-math">\(g\)</span> e <span class="process-math">\(h\)</span> commutano, abbiamo</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(gh)^{mn}=g^{mn}h^{mn}=(g^{m})^{n}(h^{n})^{m}=1^{n}1^{m}=1\text{:}
+\end{equation*}
+</div>
+<p class="continuation">dunque, <span class="process-math">\(gh\)</span> ha periodo finito <span class="process-math">\(d\)</span> che divide <span class="process-math">\(mn\text{.}\)</span> Ora <span class="process-math">\(1=(gh)^{d}=g^{d}h^{d}\text{,}\)</span> da cui segue che <span class="process-math">\(g^{d}=h^{-d}\text{.}\)</span> L'elemento <span class="process-math">\(g^{d}\)</span> ha periodo che divide <span class="process-math">\(n\)</span> e l'elemento <span class="process-math">\(h^{-d}\)</span> ha periodo che divide <span class="process-math">\(m\text{:}\)</span> ma, essendo lo stesso elemento, il suo periodo divide il massimo comun divisore tra <span class="process-math">\(m\)</span> e <span class="process-math">\(n\text{,}\)</span> cioè <span class="process-math">\(1\text{.}\)</span> Pertanto <span class="process-math">\(g^{d}=h^{-d}=1\text{:}\)</span> ma allora, <span class="process-math">\(d\)</span> è un multiplo del periodo di <span class="process-math">\(g\text{,}\)</span> cioè <span class="process-math">\(m\text{,}\)</span> ed è anche un multiplo del periodo di <span class="process-math">\(h\text{,}\)</span> cioè <span class="process-math">\(n\text{:}\)</span> usando ancora una volta il fatto che <span class="process-math">\(m\)</span> e <span class="process-math">\(n\)</span> sono coprimi, otteniamo che <span class="process-math">\(d\)</span> è multiplo di <span class="process-math">\(mn\text{.}\)</span> Avendo già notato che <span class="process-math">\(d\)</span> divide <span class="process-math">\(mn\text{,}\)</span> segue che <span class="process-math">\(d=mn\text{.}\)</span></p></article></div>
+<article class="lemma theorem-like" id="lem-massimo_periodo_abeliano_finito"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">19.2.10</span><span class="period">.</span>
+</h3>
+<p id="p-2700">Sia <span class="process-math">\(G\)</span> un gruppo abeliano finito e sia <span class="process-math">\(m\)</span> il massimo dei periodi degli elementi di <span class="process-math">\(G\text{.}\)</span> Allora <span class="process-math">\(g^{m}=1\)</span> per ogni <span class="process-math">\(g\)</span> in <span class="process-math">\(G\text{.}\)</span></p></article><article class="hiddenproof" id="proof-211"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-211"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-211"><article class="hiddenproof"><p id="p-2701">Sia <span class="process-math">\(h\)</span> un elemento di <span class="process-math">\(G\)</span> di periodo esattamente <span class="process-math">\(m\text{.}\)</span> Sia <span class="process-math">\(g\)</span> un elemento qualunque, di periodo <span class="process-math">\(n\text{.}\)</span> Dobbiamo mostrare che <span class="process-math">\(m\)</span> è multiplo di <span class="process-math">\(n\text{.}\)</span> Per far ciò, basta provare che, per ogni primo <span class="process-math">\(p\)</span> che divide <span class="process-math">\(n\text{,}\)</span> detto <span class="process-math">\(\alpha\)</span> il massimo esponente tale che <span class="process-math">\(p^{\alpha}\)</span> divide <span class="process-math">\(n\text{,}\)</span> si ha che <span class="process-math">\(p^{\alpha}\)</span> divide <span class="process-math">\(m\text{.}\)</span> Sia allora</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-periodo_prodotto_elementi_commutabili_ordine_coprimo.html" id="md-70">
+\begin{align*}
+n \amp =p^{\alpha} n'\\
+m \amp =p^{\beta} m'
+\end{align*}
+</div>
+<p class="continuation">con <span class="process-math">\(n'\)</span> e <span class="process-math">\(m'\)</span> coprimi con <span class="process-math">\(p\text{.}\)</span> Ora <span class="process-math">\(g'\coloneqq g^{n'}\)</span> ha periodo <span class="process-math">\(p^{\alpha}\text{,}\)</span> mentre <span class="process-math">\(h'\coloneqq h^{p^{\beta}}\)</span> ha periodo <span class="process-math">\(m'\text{:}\)</span> per il <a href="" class="xref" data-knowl="./knowl/lem-periodo_prodotto_elementi_commutabili_ordine_coprimo.html" title="Lemma 19.2.9">Lemma 19.2.9</a>, <span class="process-math">\(g'h'\)</span> ha periodo <span class="process-math">\(p^{\alpha}m'\text{.}\)</span> Per la massimalità di <span class="process-math">\(m\text{,}\)</span> abbiamo allora <span class="process-math">\(p^{\alpha}m'\le p^{\beta}m'\text{,}\)</span> cioè <span class="process-math">\(\alpha\le\beta\)</span> come richiesto.</p></article></div>
+<article class="theorem theorem-like" id="thm-sottogruppi_finiti_campo"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">19.2.11</span><span class="period">.</span>
+</h3>
+<p id="p-2702">Sia <span class="process-math">\(K\)</span> un campo e sia <span class="process-math">\(G\)</span> un sottogruppo finito del gruppo moltiplicativo di <span class="process-math">\(K\text{.}\)</span> Allora <span class="process-math">\(G\)</span> è ciclico. In particolare, se <span class="process-math">\(K\)</span> è un campo finito, il suo gruppo moltiplicativo è ciclico.</p></article><article class="hiddenproof" id="proof-212"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-212"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-212"><article class="hiddenproof"><p id="p-2703">Sia <span class="process-math">\(\abs{G}=n\)</span> e sia <span class="process-math">\(m\)</span> il massimo dei periodi degli elementi di <span class="process-math">\(G\text{.}\)</span> Per il <a href="" class="xref" data-knowl="./knowl/lem-massimo_periodo_abeliano_finito.html" title="Lemma 19.2.10">Lemma 19.2.10</a>, si ha <span class="process-math">\(g^{m}=1\)</span> per ogni elemento di <span class="process-math">\(G\text{.}\)</span> Dunque, ogni elemento di <span class="process-math">\(G\)</span> è radice del polinomio <span class="process-math">\(x^{m}-1\)</span> a coefficienti in <span class="process-math">\(K\)</span> che ha, dunque, almeno <span class="process-math">\(n\)</span> radici distinte. Per il <a href="" class="xref" data-knowl="./knowl/cor-radici_dominio.html" title="Corollario 19.2.7">Corollario 19.2.7</a>, ciò implica che <span class="process-math">\(n\le m\text{.}\)</span> D'altra parte, <span class="process-math">\(m\)</span> è un divisore di <span class="process-math">\(n\)</span> e, quindi, <span class="process-math">\(m=n\text{,}\)</span> cioè in <span class="process-math">\(G\)</span> c'è un elemento il cui periodo è esattamente <span class="process-math">\(n\)</span> e, quindi, genera <span class="process-math">\(G\text{.}\)</span></p></article></div>
+<article class="corollary theorem-like" id="cor-automorfismi_ciclico_ordine_primo"><h3 class="heading">
+<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">19.2.12</span><span class="period">.</span>
+</h3>
+<p id="p-2704">Se <span class="process-math">\(C\)</span> è un gruppo ciclico di ordine primo <span class="process-math">\(p\text{,}\)</span> il suo gruppo degli automorfismi è un gruppo ciclico di ordine <span class="process-math">\(p-1\text{.}\)</span></p></article><article class="hiddenproof" id="proof-213"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-213"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-213"><article class="hiddenproof"><p id="p-2705">Dal <a href="" class="xref" data-knowl="./knowl/thm-endomorfismi_automorfismi_di_ciclici.html" title="Teorema 12.3.6">Teorema 12.3.6</a>, sappiamo che <span class="process-math">\(\Aut C\)</span> è isomorfo al gruppo degli invertibili del monoide moltiplicativo di <span class="process-math">\(\Interi/p\text{:}\)</span> ma <span class="process-math">\(\Interi/p\)</span> è un campo finito e, quindi possiamo applicare il <a href="" class="xref" data-knowl="./knowl/thm-sottogruppi_finiti_campo.html" title="Teorema 19.2.11">Teorema 19.2.11</a>.</p></article></div>
+<article class="example example-like" id="example-162"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">19.2.13</span><span class="period">.</span>
+</h3>
+<p id="p-2706">Sia <span class="process-math">\(C\)</span> un gruppo ciclico di ordine <span class="process-math">\(8\)</span> generato da un suo certo elemento <span class="process-math">\(g\text{.}\)</span> Gli automorfismi di <span class="process-math">\(C\)</span> sono determinati dall'immagine di <span class="process-math">\(g\)</span> che deve essere un elemento di ordine <span class="process-math">\(8\text{:}\)</span> abbiamo <span class="process-math">\(4\)</span> automorfismi e cioè quelli che mandano <span class="process-math">\(g\)</span> rispettivamente in <span class="process-math">\(g\text{,}\)</span> <span class="process-math">\(g^{3}\text{,}\)</span> <span class="process-math">\(g^{5}\)</span> e <span class="process-math">\(g^{7}\text{.}\)</span> Ciascuno di questi automorfismi composto con sé stesso dà l'identità e, dunque, non ci sono automorfismi di ordine <span class="process-math">\(4\text{:}\)</span> il gruppo <span class="process-math">\(\Aut C\)</span> non è ciclico.</p></article><section class="exercises" id="exercises-valutazione_polinomi"><h3 class="heading hide-type">
+<span class="type">Esercizi</span> <span class="codenumber"></span> <span class="title">Esercizi</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-364"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<p id="p-2707">Mostrare che se <span class="process-math">\(R\)</span> è un anello non commutativo, si può comunque costruire l'anello dei polinomi, ma il <a href="" class="xref" data-knowl="./knowl/thm-proprieta_universale_polinomi.html" title="Teorema 19.2.1">Teorema 19.2.1</a> va adattato richiedendo che <span class="process-math">\(c\)</span> appartenga al centro di <span class="process-math">\(S\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-365"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-2708">Verificare che il <a href="" class="xref" data-knowl="./knowl/lem-massimo_periodo_abeliano_finito.html" title="Lemma 19.2.10">Lemma 19.2.10</a> non si può estendere ai gruppi non abeliani, calcolando, ad esempio il periodo di tutti gli elementi di <span class="process-math">\(\Sym_{3}\text{.}\)</span></p></article></section></section></div></main>
+</div>
+</body>
+</html>

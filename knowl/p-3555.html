@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Capoverso</span></h4>
+<p>Consideriamo la matrice <span class="process-math">\(x\Idmatrix-A\)</span> e indichiamo con <span class="process-math">\(B\)</span> la sua matrice aggiunta: sappiamo che <span class="process-math">\((x\Idmatrix-A)B=\det(x\Idmatrix-A)\Idmatrix\text{.}\)</span> Poiché i coefficienti di <span class="process-math">\(x\Idmatrix-A\)</span> sono polinomi in <span class="process-math">\(x\)</span> di grado minore o uguale a <span class="process-math">\(1\text{,}\)</span> i coefficienti di <span class="process-math">\(B\)</span> sono polinomi in <span class="process-math">\(x\)</span> di grado al più <span class="process-math">\(n-1\)</span> (infatti i coefficienti della matrice aggiunta sono, a meno del segno, determinanti di matrici di ordine <span class="process-math">\(n-1\)</span> estratti dalla matrice). Raccogliendo le varie potenze di <span class="process-math">\(x\)</span> possiamo allora scrivere</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+B=x^{n-1}B_{n-1}+x^{n-2}B_{n-2}+\dots+B_{0}
+\end{equation*}
+</div>
+<p class="continuation">per opportune matrici <span class="process-math">\(B_{i}\text{.}\)</span> Abbiamo allora</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(x\Idmatrix-A)(x^{n-1}B_{n-1}+x^{n-2}B_{n-2}+\dots+B_{0})=\det(x\Idmatrix-A)\Idmatrix
+\end{equation*}
+</div>
+<p class="continuation">ovvero</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(x\Idmatrix-A)(x^{n-1}B_{n-1}+x^{n-2}B_{n-2}+\dots+B_{0})=x^{n}\Idmatrix+a_{n-1}x^{n-1}\Idmatrix+\dots+a_{0}\Idmatrix\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Sviluppiamo ora il membro a sinistra e uguagliando le matrici coefficienti delle rispettive potenze di <span class="process-math">\(x\)</span> troviamo allora:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+B_{n-1}\amp=\Idmatrix\\
+B_{n-2}-AB_{n-1}\amp=a_{n-1}\Idmatrix\\
+B_{n-3}-AB_{n-2}\amp=a_{n-2}\Idmatrix\\
+\amp\vdotswithin{=}\\
+B_{0}-AB_{1}\amp=a_{1}\Idmatrix\\
+-AB_{0}\amp=a_{0}\Idmatrix
+\end{aligned}
+\end{equation*}
+</div>
+<p class="continuation">Moltiplichiamo ora a sinistra la prima di queste uguaglianze per <span class="process-math">\(A^{n}\text{,}\)</span> la seconda per <span class="process-math">\(A^{n-1}\)</span> e così via:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{aligned}
+A^{n}B_{n-1}\amp=A^{n}\\
+A^{n-1}B_{n-2}-A^{n}B_{n-1}\amp=a_{n-1}A^{n-1}\\
+A^{n-2}B_{n-3}-A^{n-1}B_{n-2}\amp=a_{n-2}A^{n-1}\\
+\amp\vdotswithin{=}\\
+AB_{0}-A^{2}B_{1}\amp=a_{1}A\\
+-AB_{0}\amp=a_{0}\Idmatrix
+\end{aligned}
+\end{equation*}
+</div>
+<p class="continuation">Se ora sommiamo membro a membro tutte queste uguaglianze, troviamo:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+0=A^{n}+a_{n-1}A^{n-1}+\dots+a_{0}\Idmatrix\text{.}
+\end{equation*}
+</div>
+<span class="incontext"><a href="sec-polinomio_minimo_matrici.html#p-3555" class="internal">Contesto</a></span>
+</body>
+</html>

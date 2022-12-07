@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">5.4.8</span><span class="period">.</span>
+</h3>
+<p>Supponiamo di voler risolvere il sistema di congruenze</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-cinese_del_resto.html ./knowl/alg-euclide.html">
+\begin{equation*}
+\left\{
+\begin{alignedat}{2}
+x \amp \equiv  2 \amp \amp \pmod{4}\\
+x \amp \equiv  7 \amp \amp \pmod{15}\\
+x \amp \equiv  3 \amp \amp \pmod{7}
+\end{alignedat}
+\right.
+\end{equation*}
+</div>
+<p class="continuation">Poiché <span class="process-math">\(4\text{,}\)</span> <span class="process-math">\(15\)</span> e <span class="process-math">\(7\)</span> sono a due a due coprimi siamo nelle condizioni di applicare il <a href="" class="xref" data-knowl="./knowl/thm-cinese_del_resto.html" title="Teorema 5.4.6: Teorema cinese del resto">Teorema cinese del resto</a>. Iniziamo a considerare le prime due equazioni: gli interi <span class="process-math">\(x\)</span> cercati devono soddisfare <span class="process-math">\(x=2+4y\)</span> e <span class="process-math">\(x=7+15z\)</span> per opportuni interi <span class="process-math">\(y\)</span> e <span class="process-math">\(z\text{.}\)</span> Uguagliando, con semplici passaggi otteniamo: <span class="process-math">\(4y-15z=5\text{.}\)</span> Un'identità di Bezout tra <span class="process-math">\(4\)</span> e <span class="process-math">\(-15\)</span> è, ad esempio, <span class="process-math">\(4\cdot4+(-15)\cdot1=1\)</span> e moltiplicando tutto per <span class="process-math">\(5\)</span> troviamo: <span class="process-math">\(4\cdot 20-15\cdot 5=5\text{,}\)</span> cioè una soluzione particolare è <span class="process-math">\(y=20\text{,}\)</span> <span class="process-math">\(z=5\text{.}\)</span> Sostituendo uno di questi valori nella corrispondente espressione di <span class="process-math">\(x\)</span> troviamo <span class="process-math">\(x=2+4\cdot20=82\)</span> che è una soluzione particolare per le prime due congruenze (si può verificarlo per sicurezza) che sono, dunque, equivalenti a <span class="process-math">\(x\equiv 82\pmod{4\cdot 15}\text{,}\)</span> cioè <span class="process-math">\(x\equiv 82\pmod{60}\)</span> o, se si preferisce, <span class="process-math">\(x\equiv 22\pmod{60}\text{.}\)</span> Il sistema si riduce, quindi, a</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-cinese_del_resto.html ./knowl/alg-euclide.html">
+\begin{equation*}
+\left\{
+\begin{alignedat}{2}
+x \amp \equiv 22\amp\amp\pmod{60}\\
+x \amp \equiv 3\amp\amp\pmod{7}
+\end{alignedat}
+\right.
+\end{equation*}
+</div>
+<p class="continuation">Ripetiamo ora il ragionamento. Gli interi <span class="process-math">\(x\)</span> cercati devono soddisfare <span class="process-math">\(x=22+60y\)</span> e <span class="process-math">\(x=3+7z\)</span> per opportuni interi <span class="process-math">\(y\)</span> e <span class="process-math">\(z\)</span> (per semplificare la notazione, usiamo ancora le lettere <span class="process-math">\(y\)</span> e <span class="process-math">\(z\)</span> per le incognite ausiliarie, anche se sono diverse da quelle precedenti). Uguagliando, con semplici passaggi otteniamo: <span class="process-math">\(60y-7z=-19\text{.}\)</span> Un'identità di Bezout tra <span class="process-math">\(60\)</span> e <span class="process-math">\(-7\)</span> è, ad esempio, <span class="process-math">\(60\cdot2+(-7)\cdot17=1\)</span> (per trovarla si può usare l'<a href="" class="xref" data-knowl="./knowl/alg-euclide.html" title="Algoritmo 4.3.15: Algoritmo di Euclide">Algoritmo di Euclide</a>) e moltiplicando tutto per <span class="process-math">\(-19\)</span> troviamo: <span class="process-math">\(60\cdot2(-19)-7\cdot17\cdot(-19)=-19\text{,}\)</span> cioè una soluzione particolare è <span class="process-math">\(y=2(-19)\text{,}\)</span> <span class="process-math">\(z=17(-19)\text{.}\)</span> Sostituendo uno di questi valori nella corrispondente espressione di <span class="process-math">\(x\)</span> troviamo <span class="process-math">\(x=22+60\cdot(-38)=-2258\)</span> che è una soluzione particolare per il sistema (si può verificarlo per sicurezza) che è, dunque, equivalente a <span class="process-math">\(x\equiv -2258\pmod{60\cdot7}\text{,}\)</span> cioè <span class="process-math">\(x\equiv -2258\pmod{420}\)</span> o, se si preferisce, <span class="process-math">\(x\equiv 262\pmod{420}\text{.}\)</span></p></article><span class="incontext"><a href="sec-congruenze_con_incognite.html#example-50" class="internal">Contesto</a></span>
+</body>
+</html>

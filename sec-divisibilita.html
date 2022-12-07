@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="it-IT">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Relazione di divisibilità</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Algebra">
+<meta property="book:author" content="Valerio Monti">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Vai all'indice generale</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{mathtools}\require{cancel}\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\cont}{c}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\Inv}{Inv}
+\DeclareMathOperator{\MCD}{MCD}
+\DeclareMathOperator{\mcm}{mcm}
+\DeclareMathOperator{\centro}{Z}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Soc}{Soc}
+\DeclareMathOperator{\Rad}{Rad}
+\DeclareMathOperator{\car}{char}
+
+
+\newcommand{\Sym}{\mathrm{Sym}}
+\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\Idmatrix}{\mathrm{I}}
+\newcommand{\dist}{\mathrm{d}}
+
+\newcommand{\Reali}{\mathbf{R}}
+\newcommand{\Naturali}{\mathbf{N}}
+\newcommand{\Interi}{\mathbf{Z}}
+ \newcommand{\Razionali}{\mathbf{Q}}
+ \newcommand{\Complessi}{\mathbf{C}}
+
+ \newcommand{\grgen}[1]{\langle#1\rangle}
+ \newcommand{\ideal}[1]{\left(#1\right)}
+ \newcommand{\alg}[1]{\left\lbrack#1\right\rvert}
+ \newcommand{\seg}[1]{\left\lvert#1\right)}
+ \newcommand{\ann}[1]{\operatorname{Ann}\left(#1\right)}
+ \newcommand{\len}[1]{\operatorname{l}\left(#1\right)}
+ \newcommand{\class}[2][\sim]{\lbrack #2\rbrack_{#1}}
+ \newcommand{\cent}[2]{\operatorname{C}_{#1}\left(#2\right)}
+ \newcommand{\nrm}[2]{\operatorname{N}_{#1}\left(#2\right)}
+ \newcommand{\stab}[2]{\operatorname{Stab}_{#1}\left(#2\right)}
+ \newcommand{\Supp}[1]{\operatorname{Supp}\left(#1\right)}
+ \newcommand{\Gal}[1]{\operatorname{Gal}\left(#1\right)}
+ \newcommand{\tr}[1]{#1^{\intercal}}
+ \newcommand{\vuoto}{\varnothing}
+ \newcommand{\parti}[1]{\mathcal{P}(#1)}
+ \newcommand{\euler}[1]{\varphi(#1)}
+ \newcommand{\euclidean}{\delta}
+
+ \newcommand{\vect}[1]{\boldsymbol{#1}}
+ 
+ \newcommand{\mat}[2]{\operatorname{M}_{#1}(#2)}
+ \newcommand{\matt}[3]{\operatorname{M}_{#1,#2}(#3)}
+ \newcommand{\Sim}[2]{\operatorname{S}(#1,#2)}
+ \newcommand{\AntiSim}[2]{\operatorname{A}(#1,#2)}
+ \newcommand{\Diag}[2]{\operatorname{D}(#1,#2)}
+ \newcommand{\TS}[2]{\operatorname{T}^{#1}(#2)}
+ \newcommand{\TI}[2]{\operatorname{T}_{#1}(#2)}
+ \newcommand{\GL}[2]{\operatorname{GL}(#1,#2)}
+ \newcommand{\SL}[2]{\operatorname{SL}(#1,#2)}
+ \newcommand{\Ort}[2]{\operatorname{O}(#1,#2)}
+
+ \newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+ \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+ \newcommand{\ind}[2]{\left\lvert#1:#2\right\rvert}
+ \newcommand{\degext}[2]{\left\lbrack#1:#2\right\rbrack}
+
+ \newcommand{\invprov}[1]{\widehat{#1}}
+
+ \newcommand\YoungTableau[1]{
+ \begin{tikzpicture}[scale=0.4,keepsize]
+ \foreach \y [count=\yi] in {#1}
+ \foreach \x in {1,...,\y}
+ {
+ \draw (\x,\yi) rectangle +(1,1);
+ }
+ \end{tikzpicture}
+ }
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-algebra.html"><span class="title">Algebra</span></a></h1>
+<p class="byline">Valerio Monti</p>
+</div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Risultati: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>Nessun risultato.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Indice</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="indice.html" title="Indice analitico">Indice analitico</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ch-divisibilita.html" title="Precedente">Prec</a><a id="upbutton" class="up-button button toolbar-item" href="ch-divisibilita.html" title="Su">Su</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-fattorizzazione.html" title="Successivo">Succ</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Indice</button><a class="previous-button toolbar-item button" href="ch-divisibilita.html" title="Precedente">Prec</a><a class="up-button button toolbar-item" href="ch-divisibilita.html" title="Su">Su</a><a class="next-button button toolbar-item" href="sec-fattorizzazione.html" title="Successivo">Succ</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Materiale iniziale</span></a><ul>
+<li><a href="front-colophon.html" data-scroll="front-colophon" class="internal">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Prefazione</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-preliminari.html" data-scroll="part-preliminari" class="internal"><span class="codenumber">I</span> <span class="title">Preliminari</span></a></li>
+<li class="link">
+<a href="ch-insiemi.html" data-scroll="ch-insiemi" class="internal"><span class="codenumber">1</span> <span class="title">Insiemi</span></a><ul>
+<li><a href="sec-insiemi.html" data-scroll="sec-insiemi" class="internal">Concetti di base</a></li>
+<li><a href="sec-operazioni_insiemi.html" data-scroll="sec-operazioni_insiemi" class="internal">Operazioni tra insiemi</a></li>
+<li><a href="sec-prodotto-cartesiano.html" data-scroll="sec-prodotto-cartesiano" class="internal">Prodotto cartesiano</a></li>
+<li><a href="sec-Russell.html" data-scroll="sec-Russell" class="internal">Il paradosso di Russell</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-corrispondenze.html" data-scroll="ch-corrispondenze" class="internal"><span class="codenumber">2</span> <span class="title">Corrispondenze e relazioni</span></a><ul>
+<li><a href="sec-corrispondenze_definizione.html" data-scroll="sec-corrispondenze_definizione" class="internal">Corrispondenze tra insiemi</a></li>
+<li><a href="sec-relazioni_equivalenza.html" data-scroll="sec-relazioni_equivalenza" class="internal">Relazioni di equivalenza</a></li>
+<li><a href="sec-relazioni_ordine.html" data-scroll="sec-relazioni_ordine" class="internal">Relazioni d'ordine</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-funzioni.html" data-scroll="ch-funzioni" class="internal"><span class="codenumber">3</span> <span class="title">Funzioni</span></a><ul>
+<li><a href="sec-funzioni_definizione.html" data-scroll="sec-funzioni_definizione" class="internal">Definizioni di base</a></li>
+<li><a href="sec-funzioni_iniettive_suriettive.html" data-scroll="sec-funzioni_iniettive_suriettive" class="internal">Funzioni iniettive, suriettive e biiettive</a></li>
+<li><a href="sec-cardinalita.html" data-scroll="sec-cardinalita" class="internal">Cenni sulla cardinalità</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-aritmetica.html" data-scroll="part-aritmetica" class="internal"><span class="codenumber">II</span> <span class="title">Aritmetica</span></a></li>
+<li class="link">
+<a href="ch-interi.html" data-scroll="ch-interi" class="internal"><span class="codenumber">4</span> <span class="title">I numeri interi</span></a><ul>
+<li><a href="sec-naturali_base.html" data-scroll="sec-naturali_base" class="internal">I numeri naturali e i numeri interi</a></li>
+<li><a href="sec-induzione_ricorrenza.html" data-scroll="sec-induzione_ricorrenza" class="internal">Dimostrazioni per induzione e definizioni per ricorrenza</a></li>
+<li><a href="sec-divisibilita_interi.html" data-scroll="sec-divisibilita_interi" class="internal">Divisibilità negli interi</a></li>
+<li><a href="sec-fattorizzazione_interi.html" data-scroll="sec-fattorizzazione_interi" class="internal">Il teorema fondamentale dell'aritmetica</a></li>
+<li><a href="sec-equazioni_lineari_diofantine.html" data-scroll="sec-equazioni_lineari_diofantine" class="internal">Equazioni lineari diofantine</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-classidiresto.html" data-scroll="ch-classidiresto" class="internal"><span class="codenumber">5</span> <span class="title">Classi di resto</span></a><ul>
+<li><a href="sec-congruenzemodulon.html" data-scroll="sec-congruenzemodulon" class="internal">Congruenze modulo un intero</a></li>
+<li><a href="sec-operazioniclassiresto.html" data-scroll="sec-operazioniclassiresto" class="internal">Operazioni tra classi di resto</a></li>
+<li><a href="sec-eulero.html" data-scroll="sec-eulero" class="internal">Il teorema di Eulero</a></li>
+<li><a href="sec-congruenze_con_incognite.html" data-scroll="sec-congruenze_con_incognite" class="internal">Congruenze con incognite</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-gruppi.html" data-scroll="part-gruppi" class="internal"><span class="codenumber">III</span> <span class="title">Gruppi</span></a></li>
+<li class="link">
+<a href="ch-operazioni.html" data-scroll="ch-operazioni" class="internal"><span class="codenumber">6</span> <span class="title">Operazioni</span></a><ul>
+<li><a href="sec-operazioni_definizioni.html" data-scroll="sec-operazioni_definizioni" class="internal">Definizioni ed esempi</a></li>
+<li><a href="sec-proprieta_operazioni.html" data-scroll="sec-proprieta_operazioni" class="internal">Proprietà delle operazioni</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppi.html" data-scroll="ch-gruppi" class="internal"><span class="codenumber">7</span> <span class="title">Monoidi e gruppi</span></a><ul>
+<li><a href="sec-monoidi.html" data-scroll="sec-monoidi" class="internal">Monoidi</a></li>
+<li><a href="sec-gruppi.html" data-scroll="sec-gruppi" class="internal">Gruppi</a></li>
+<li><a href="sec-gruppi_piccoli.html" data-scroll="sec-gruppi_piccoli" class="internal">Alcuni esempi di gruppi piccoli</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-sottogruppi.html" data-scroll="ch-sottogruppi" class="internal"><span class="codenumber">8</span> <span class="title">Sottogruppi</span></a><ul>
+<li><a href="sec-sottomonoidi_sottogruppi.html" data-scroll="sec-sottomonoidi_sottogruppi" class="internal">Sottomonoidi e sottogruppi</a></li>
+<li><a href="sec-prime_proprieta_sottogruppi.html" data-scroll="sec-prime_proprieta_sottogruppi" class="internal">Prime proprietà dei sottogruppi</a></li>
+<li><a href="sec-gruppi_del_piano.html" data-scroll="sec-gruppi_del_piano" class="internal">Gruppi di trasformazioni del piano</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppi_ciclici.html" data-scroll="ch-gruppi_ciclici" class="internal"><span class="codenumber">9</span> <span class="title">Gruppi ciclici</span></a><ul>
+<li><a href="sec-definizione_gruppi_ciclici.html" data-scroll="sec-definizione_gruppi_ciclici" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-sottogruppi_di_ciclici.html" data-scroll="sec-sottogruppi_di_ciclici" class="internal">Sottogruppi di gruppi ciclici</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppi_permutazioni.html" data-scroll="ch-gruppi_permutazioni" class="internal"><span class="codenumber">10</span> <span class="title">Gruppi di permutazioni</span></a><ul>
+<li><a href="sec-definizioni_gruppi_permutazioni.html" data-scroll="sec-definizioni_gruppi_permutazioni" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-cicli.html" data-scroll="sec-cicli" class="internal">Cicli</a></li>
+<li><a href="sec-scambi.html" data-scroll="sec-scambi" class="internal">Scambi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-laterali.html" data-scroll="ch-laterali" class="internal"><span class="codenumber">11</span> <span class="title">Laterali e teorema di Lagrange</span></a><ul>
+<li><a href="sec-prodotto_sottoinsiemi.html" data-scroll="sec-prodotto_sottoinsiemi" class="internal">Prodotto di sottoinsiemi</a></li>
+<li><a href="sec-teorema_di_lagrange.html" data-scroll="sec-teorema_di_lagrange" class="internal">Teorema di Lagrange</a></li>
+<li><a href="sec-prodotto_sottogruppi.html" data-scroll="sec-prodotto_sottogruppi" class="internal">Prodotto di sottogruppi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-omomorfismi.html" data-scroll="ch-omomorfismi" class="internal"><span class="codenumber">12</span> <span class="title">Omomorfismi</span></a><ul>
+<li><a href="sec-definizione_omomorfismo.html" data-scroll="sec-definizione_omomorfismo" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-nucleo_immagine.html" data-scroll="sec-nucleo_immagine" class="internal">Immagine e nucleo di un omomorfismo</a></li>
+<li><a href="sec-omomorfismi_da_gruppi_ciclici.html" data-scroll="sec-omomorfismi_da_gruppi_ciclici" class="internal">Omomorfismi da gruppi ciclici</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-azioni.html" data-scroll="ch-azioni" class="internal"><span class="codenumber">13</span> <span class="title">Azioni di gruppi su insiemi</span></a><ul>
+<li><a href="sec-azioni_definizioni.html" data-scroll="sec-azioni_definizioni" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-orbite_stabilizzatori.html" data-scroll="sec-orbite_stabilizzatori" class="internal">Orbite e stabilizzatori</a></li>
+<li><a href="sec-sottogruppi_normali.html" data-scroll="sec-sottogruppi_normali" class="internal">Sottogruppi normali</a></li>
+<li><a href="sec-coniugati_simmetrico_alterno.html" data-scroll="sec-coniugati_simmetrico_alterno" class="internal">Classi di coniugio nel gruppo simmetrico e nel gruppo alterno</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-quozienti.html" data-scroll="ch-quozienti" class="internal"><span class="codenumber">14</span> <span class="title">Gruppi quoziente</span></a><ul>
+<li><a href="sec-congruenze.html" data-scroll="sec-congruenze" class="internal">Congruenze in gruppi e monoidi</a></li>
+<li><a href="sec-proprieta_quozienti.html" data-scroll="sec-proprieta_quozienti" class="internal">Proprietà dei gruppi quoziente</a></li>
+<li><a href="sec-teoremi_di_isomorfismo.html" data-scroll="sec-teoremi_di_isomorfismo" class="internal">I teoremi di isomorfismo</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-direttosemidiretto.html" data-scroll="ch-direttosemidiretto" class="internal"><span class="codenumber">15</span> <span class="title">Prodotto diretto e semidiretto</span></a><ul>
+<li><a href="sec-prodotto_diretto_esterno.html" data-scroll="sec-prodotto_diretto_esterno" class="internal">Prodotto diretto esterno</a></li>
+<li><a href="sec-prodotto_diretto_interno.html" data-scroll="sec-prodotto_diretto_interno" class="internal">Prodotto diretto interno</a></li>
+<li><a href="sec-prodotto_semidiretto.html" data-scroll="sec-prodotto_semidiretto" class="internal">Prodotto semidiretto</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-sylow.html" data-scroll="ch-sylow" class="internal"><span class="codenumber">16</span> <span class="title">Il teorema di Sylow</span></a><ul>
+<li><a href="sec-inversione_lagrange.html" data-scroll="sec-inversione_lagrange" class="internal">Inversione del teorema di Lagrange</a></li>
+<li><a href="sec-sylow.html" data-scroll="sec-sylow" class="internal">Il teorema di Sylow</a></li>
+<li><a href="sec-applicazioni_sylow.html" data-scroll="sec-applicazioni_sylow" class="internal">Applicazioni del teorema di Sylow</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-anelli.html" data-scroll="part-anelli" class="internal"><span class="codenumber">IV</span> <span class="title">Anelli</span></a></li>
+<li class="link">
+<a href="ch-anelli.html" data-scroll="ch-anelli" class="internal"><span class="codenumber">17</span> <span class="title">Anelli</span></a><ul>
+<li><a href="sec-prime_proprieta_anelli.html" data-scroll="sec-prime_proprieta_anelli" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-multipli_potenze.html" data-scroll="sec-multipli_potenze" class="internal">Multipli e potenze in un anello</a></li>
+<li><a href="sec-sottoanelli.html" data-scroll="sec-sottoanelli" class="internal">Sottoanelli</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-omomorfismiideali.html" data-scroll="ch-omomorfismiideali" class="internal"><span class="codenumber">18</span> <span class="title">Omomorfismi e ideali</span></a><ul>
+<li><a href="sec-omomorfismi_anelli.html" data-scroll="sec-omomorfismi_anelli" class="internal">Omomorfismi di anelli</a></li>
+<li><a href="sec-anelli_quoziente.html" data-scroll="sec-anelli_quoziente" class="internal">Anelli quoziente e ideali</a></li>
+<li><a href="sec-campo_dei_quozienti.html" data-scroll="sec-campo_dei_quozienti" class="internal">Campo dei quozienti di un dominio</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-polinomi.html" data-scroll="ch-polinomi" class="internal"><span class="codenumber">19</span> <span class="title">Polinomi</span></a><ul>
+<li><a href="sec-anello_polinomi.html" data-scroll="sec-anello_polinomi" class="internal">Anello dei polinomi</a></li>
+<li><a href="sec-valutazione_polinomi.html" data-scroll="sec-valutazione_polinomi" class="internal">Valutazione di polinomi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-divisibilita.html" data-scroll="ch-divisibilita" class="internal"><span class="codenumber">20</span> <span class="title">Divisibilità nei domini</span></a><ul>
+<li><a href="sec-divisibilita.html" data-scroll="sec-divisibilita" class="active">Relazione di divisibilità</a></li>
+<li><a href="sec-fattorizzazione.html" data-scroll="sec-fattorizzazione" class="internal">Fattorizzazione</a></li>
+<li><a href="sec-PID_euclidei.html" data-scroll="sec-PID_euclidei" class="internal">Domini a ideali principali e domini euclidei</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-fattorizzazione_polinomi.html" data-scroll="ch-fattorizzazione_polinomi" class="internal"><span class="codenumber">21</span> <span class="title">Fattorizzazione dei polinomi</span></a><ul>
+<li><a href="sec-trasporto_UFD.html" data-scroll="sec-trasporto_UFD" class="internal">Il teorema del trasporto per domini a fattorizzazione unica</a></li>
+<li><a href="sec-esempi_fattorizzazione_polinomi.html" data-scroll="sec-esempi_fattorizzazione_polinomi" class="internal">Tecniche di fattorizzazione</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-estensione_campi.html" data-scroll="ch-estensione_campi" class="internal"><span class="codenumber">22</span> <span class="title">Estensioni di campi</span></a><ul>
+<li><a href="sec-elementi_algebrici_e_trascendenti.html" data-scroll="sec-elementi_algebrici_e_trascendenti" class="internal">Elementi algebrici e trascendenti</a></li>
+<li><a href="sec-campo_di_spezzamento.html" data-scroll="sec-campo_di_spezzamento" class="internal">Campi di spezzamento</a></li>
+<li><a href="sec-chiusure_algebriche.html" data-scroll="sec-chiusure_algebriche" class="internal">Cenni su campi algebricamente chiusi</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-moduli.html" data-scroll="part-moduli" class="internal"><span class="codenumber">V</span> <span class="title">Moduli</span></a></li>
+<li class="link">
+<a href="ch-moduli.html" data-scroll="ch-moduli" class="internal"><span class="codenumber">23</span> <span class="title">Moduli</span></a><ul>
+<li><a href="sec-definizione_di_moduli.html" data-scroll="sec-definizione_di_moduli" class="internal">Definizione di modulo</a></li>
+<li><a href="sec-sottomoduli.html" data-scroll="sec-sottomoduli" class="internal">Sottomoduli</a></li>
+<li><a href="sec-omomorfismi_moduli.html" data-scroll="sec-omomorfismi_moduli" class="internal">Omomorfismi di moduli</a></li>
+<li><a href="sec-moduli_quoziente.html" data-scroll="sec-moduli_quoziente" class="internal">Moduli quoziente</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-moduli_liberi.html" data-scroll="ch-moduli_liberi" class="internal"><span class="codenumber">24</span> <span class="title">Moduli liberi</span></a><ul>
+<li><a href="sec-somma_diretta_moduli.html" data-scroll="sec-somma_diretta_moduli" class="internal">Somma diretta di moduli</a></li>
+<li><a href="sec-dipendenza_lineare.html" data-scroll="sec-dipendenza_lineare" class="internal">Dipendenza e indipendenza lineare</a></li>
+<li><a href="sec-elementi_di_torsione.html" data-scroll="sec-elementi_di_torsione" class="internal">Elementi di torsione</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-modulisupid.html" data-scroll="ch-modulisupid" class="internal"><span class="codenumber">25</span> <span class="title">Moduli finitamente generati su PID</span></a><ul>
+<li><a href="sec-moduli_ciclici.html" data-scroll="sec-moduli_ciclici" class="internal">Moduli ciclici</a></li>
+<li><a href="sec-moduli_primari.html" data-scroll="sec-moduli_primari" class="internal">Moduli primari</a></li>
+<li><a href="sec-moduli_liberi.html" data-scroll="sec-moduli_liberi" class="internal">Moduli liberi</a></li>
+<li><a href="sec-classificazione_moduli_pid.html" data-scroll="sec-classificazione_moduli_pid" class="internal">La classificazione dei moduli finitamente generati su un dominio a ideali principali</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppiabeliani.html" data-scroll="ch-gruppiabeliani" class="internal"><span class="codenumber">26</span> <span class="title">Gruppi abeliani finitamente generati</span></a><ul><li><a href="sec-gruppiabeliani.html" data-scroll="sec-gruppiabeliani" class="internal">Classificazione dei gruppi abeliani finitamente generati</a></li></ul>
+</li>
+<li class="link">
+<a href="ch-formecanoniche.html" data-scroll="ch-formecanoniche" class="internal"><span class="codenumber">27</span> <span class="title">Forme canoniche di matrici</span></a><ul>
+<li><a href="sec-kx_moduli.html" data-scroll="sec-kx_moduli" class="internal">Spazi vettoriali con endomorfismi visti come moduli</a></li>
+<li><a href="sec-matrici_rappresentative.html" data-scroll="sec-matrici_rappresentative" class="internal">Matrici rappresentative</a></li>
+<li><a href="sec-matrici_compagne.html" data-scroll="sec-matrici_compagne" class="internal">Matrici compagne</a></li>
+<li><a href="sec-jordan.html" data-scroll="sec-jordan" class="internal">Forma canonica di Jordan</a></li>
+<li><a href="sec-polinomio_minimo_matrici.html" data-scroll="sec-polinomio_minimo_matrici" class="internal">Polinomio minimo di matrici</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Appendici</span></a></li>
+<li class="link">
+<a href="appendix-peano.html" data-scroll="appendix-peano" class="internal"><span class="codenumber">A</span> <span class="title">Numeri naturali e interi</span></a><ul>
+<li><a href="sec-algebre_induttive.html" data-scroll="sec-algebre_induttive" class="internal">Algebre induttive</a></li>
+<li><a href="sec-assiomi_peano.html" data-scroll="sec-assiomi_peano" class="internal">Gli assiomi di Peano</a></li>
+<li><a href="sec-insiemi_finiti_infiniti.html" data-scroll="sec-insiemi_finiti_infiniti" class="internal">Insiemi finiti e infiniti</a></li>
+<li><a href="sec-operazioni_naturali.html" data-scroll="sec-operazioni_naturali" class="internal">Operazioni tra numeri naturali</a></li>
+<li><a href="sec-interi.html" data-scroll="sec-interi" class="internal">Costruzione degli interi</a></li>
+</ul>
+</li>
+<li class="link"><a href="appendix-2.html" data-scroll="appendix-2" class="internal"><span class="codenumber">B</span> <span class="title">Notazioni</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1" class="internal"><span class="codenumber">C</span> <span class="title">Soluzioni e suggerimenti</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl" class="internal"><span class="codenumber">D</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="indice.html" data-scroll="indice" class="internal"><span class="title">Indice analitico</span></a></li>
+<li class="link"><a href="back-colophon.html" data-scroll="back-colophon" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Redatto in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="sec-divisibilita"><h2 class="heading hide-type">
+<span class="type">Paragrafo</span> <span class="codenumber">20.1</span> <span class="title">Relazione di divisibilità</span>
+</h2>
+<article class="definition definition-like" id="def-divisibilita"><h3 class="heading">
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">20.1.1</span><span class="period">.</span>
+</h3>
+<p id="p-2710">Dati due elementi <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> in un dominio <span class="process-math">\(D\text{,}\)</span> diciamo che <span class="process-math">\(a\)</span> <dfn class="terminology">divide</dfn> <span class="process-math">\(b\)</span> e scriviamo <span class="process-math">\(a\mid b\)</span> se esiste un elemento <span class="process-math">\(c\)</span> di <span class="process-math">\(D\)</span> tale che <span class="process-math">\(b=ac\text{.}\)</span> Diremo anche che <span class="process-math">\(a\)</span> è un <dfn class="terminology">divisore</dfn> di <span class="process-math">\(b\)</span> o che <span class="process-math">\(b\)</span> è un <dfn class="terminology">multiplo</dfn> di <span class="process-math">\(a\text{.}\)</span> Useremo il simbolo <span class="process-math">\(a\nmid b\)</span> per dire che <span class="process-math">\(a\)</span> non divide <span class="process-math">\(b\text{.}\)</span></p></article><article class="remark remark-like" id="rem-divisibilita_ideale"><h3 class="heading">
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">20.1.2</span><span class="period">.</span>
+</h3>
+<p id="p-2711">Dato un elemento <span class="process-math">\(a\)</span> di un dominio, dalla <a href="" class="xref" data-knowl="./knowl/prop-elementi_ideale_generato_anello_commutativo.html" title="Proposizione 18.2.17">Proposizione 18.2.17</a> sappiamo che gli elementi dell'ideale principale <span class="process-math">\(\ideal{a}\)</span> sono gli elementi del tipo <span class="process-math">\(ac\)</span> al variare di <span class="process-math">\(c\)</span> in <span class="process-math">\(D\text{,}\)</span> e cioè esattamente i multipli di <span class="process-math">\(a\text{:}\)</span> pertanto, possiamo dire che <span class="process-math">\(a\mid b\)</span> se e solo se <span class="process-math">\(b\in\ideal{a}\)</span> o, equivalentemente, <span class="process-math">\(\ideal{b}\subseteq\ideal{a}\text{.}\)</span></p></article><p id="p-2712">Usando questa interpretazione della relazione di divisibilità e notando che l'ideale principale generato da un elemento è <span class="process-math">\(D\)</span> se e solo se l'elemento è invertibile, abbiamo immediatamente la</p>
+<article class="proposition theorem-like" id="prop-proprieta_divisibilita"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">20.1.3</span><span class="period">.</span>
+</h3>
+<p id="p-2713">Siano <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\)</span> e <span class="process-math">\(c\)</span> elementi di un dominio <span class="process-math">\(D\text{.}\)</span> Sia <span class="process-math">\(u\)</span> un elemento invertibile di <span class="process-math">\(D\text{.}\)</span> Allora</p>
+<ol class="decimal">
+<li id="li-215"><p id="p-2714"><span class="process-math">\(a\mid a\text{;}\)</span></p></li>
+<li id="li-216"><p id="p-2715">se <span class="process-math">\(a\mid b\)</span> e <span class="process-math">\(b\mid c\)</span> allora <span class="process-math">\(a\mid c\text{;}\)</span></p></li>
+<li id="li-217"><p id="p-2716"><span class="process-math">\(a\mid 0\text{;}\)</span></p></li>
+<li id="li-218"><p id="p-2717"><span class="process-math">\(0\mid a\)</span> se e solo se <span class="process-math">\(a=0\text{;}\)</span></p></li>
+<li id="li-219"><p id="p-2718"><span class="process-math">\(u\mid a\text{;}\)</span></p></li>
+<li id="li-220"><p id="p-2719"><span class="process-math">\(a\mid u\)</span> se e solo se <span class="process-math">\(a\)</span> è invertibile.</p></li>
+</ol></article><p id="p-2720">In particolare, questa proposizione ci dice che la relazione di divisibilità soddisfa sia la proprietà riflessiva che la proprietà transitiva. La proprietà simmetrica non è però soddisfatta (infatti <span class="process-math">\(1\mid 0\)</span> ma <span class="process-math">\(0\nmid 1\)</span>) quindi la divisibilità non è una relazione di equivalenza. Salvo casi particolari (<a href="" class="xref" data-knowl="./knowl/exercise-unico_invertibile.html" title="Esercizio 20.1.1">Esercizio 20.1.1</a>), nemmeno la proprietà antisimmetrica è soddisfatta (si pensi agli interi relativi in cui ciascun numero e il proprio opposto si dividono reciprocamente senza essere uguali): quindi, la divisibilità non è una relazione d'ordine.<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-26" id="fn-26"><sup> 1 </sup></a></p>
+<p id="p-2721">Una semplice proprietà che utilizzeremo spesso senza ulteriore avviso è data dal</p>
+<article class="lemma theorem-like" id="lem-semplificazione_divisibilita"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">20.1.4</span><span class="period">.</span>
+</h3>
+<p id="p-2722">Siano <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\)</span> e <span class="process-math">\(c\)</span> elementi di un dominio con <span class="process-math">\(c\ne0\text{.}\)</span> Allora <span class="process-math">\(a\)</span> divide <span class="process-math">\(b\)</span> se e solo se <span class="process-math">\(ca\)</span> divide <span class="process-math">\(cb\text{.}\)</span></p></article><article class="hiddenproof" id="proof-214"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-214"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-214"><article class="hiddenproof"><p id="p-2723">Se <span class="process-math">\(a\mid b\text{,}\)</span> cioè esiste <span class="process-math">\(d\)</span> tale che <span class="process-math">\(ad=b\text{,}\)</span> allora <span class="process-math">\(cad=cb\text{,}\)</span> e, dunque, <span class="process-math">\(ca\mid cb\text{.}\)</span> Viceversa, se <span class="process-math">\(ca\mid cb\text{,}\)</span> cioè esiste <span class="process-math">\(d\)</span> tale che <span class="process-math">\(cad=cb\text{,}\)</span> allora, per l'<a href="" class="xref" data-knowl="./knowl/rem-anello_intero_cancellazione.html" title="Osservazione 17.1.22">Osservazione 17.1.22</a>, si ha <span class="process-math">\(ad=b\)</span> e, dunque, <span class="process-math">\(a\mid b\text{.}\)</span></p></article></div>
+<p id="p-2724">Il lemma precedente ci dice, in pratica, che se <span class="process-math">\(ca\mid cb\)</span> e <span class="process-math">\(c\ne 0\text{,}\)</span> possiamo semplificare per <span class="process-math">\(c\)</span> e ottenere <span class="process-math">\(a\mid b\text{.}\)</span></p>
+<p id="p-2725">È possibile introdurre una relazione di equivalenza a partire dalla relazione di divisibilità, così come fatto nell'<a href="" class="xref" data-knowl="./knowl/exercise-preordine.html" title="Esercizio 2.3.3">Esercizio 2.3.3</a>.</p>
+<article class="definition definition-like" id="def-elementi_associati"><h3 class="heading">
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">20.1.5</span><span class="period">.</span>
+</h3>
+<p id="p-2726">Due elementi <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> di un dominio si dicono <dfn class="terminology">associati</dfn> e scriviamo <span class="process-math">\(a\sim b\)</span> se <span class="process-math">\(a\mid b\)</span> e <span class="process-math">\(b\mid a\text{.}\)</span></p></article><p id="p-2727">Il fatto che questa sia una relazione di equivalenza segue immediatamente dal fatto che due elementi sono associati se e solo se gli ideali che essi generano si contengono reciprocamente, cioè sono uguali: non è comunque difficile dimostrarlo direttamente.</p>
+<p id="p-2728">Grazie alla <a href="" class="xref" data-knowl="./knowl/prop-proprieta_divisibilita.html" title="Proposizione 20.1.3">Proposizione 20.1.3</a> otteniamo immediatamente</p>
+<article class="remark remark-like" id="rem-associati_0_1"><h3 class="heading">
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">20.1.6</span><span class="period">.</span>
+</h3>
+<p id="p-2729">L'elemento <span class="process-math">\(0\)</span> è associato solo a sé stesso e forma quindi una classe di equivalenza. L'elemento <span class="process-math">\(1\)</span> è associato a tutti e soli gli elementi invertibili, che formano quindi una classe di equivalenza.</p></article><article class="proposition theorem-like" id="prop-divisibilita_assocaiti"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">20.1.7</span><span class="period">.</span>
+</h3>
+<p id="p-2730">Siano <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(a'\)</span> e <span class="process-math">\(b'\)</span> elementi di un dominio tali che <span class="process-math">\(a\sim a'\)</span> e <span class="process-math">\(b\sim b'\text{.}\)</span> Allora <span class="process-math">\(a\mid b\)</span> se e solo se <span class="process-math">\(a'\mid b'\text{.}\)</span></p></article><article class="hiddenproof" id="proof-215"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-215"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-215"><article class="hiddenproof"><p id="p-2731">La proprietà è immediata se ragioniamo in termini di ideali principali: infatti <span class="process-math">\(\ideal{a}=\ideal{a'}\)</span> e <span class="process-math">\(\ideal{b}=\ideal{b'}\)</span> e, pertanto, <span class="process-math">\(\ideal{a}\supseteq\ideal{b}\)</span> se e solo se <span class="process-math">\(\ideal{a'}\supseteq\ideal{b'}\text{.}\)</span></p></article></div>
+<p id="p-2732">La proposizione precedente ci dice che, nel considerare definizioni e risultati concernenti la divisibilità, possiamo sostituire agli elementi coinvolti elementi ad essi associati.</p>
+<article class="definition definition-like" id="def-divisibilita_stretta"><h3 class="heading">
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">20.1.8</span><span class="period">.</span>
+</h3>
+<p id="p-2733">Dati due elementi <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> diciamo che <span class="process-math">\(a\)</span> divide <span class="process-math">\(b\)</span> <dfn class="terminology">strettamente</dfn> se <span class="process-math">\(a\)</span> divide <span class="process-math">\(b\)</span> ma <span class="process-math">\(b\)</span> non divide <span class="process-math">\(a\text{:}\)</span> in altri termini, <span class="process-math">\(\ideal{a}\supsetneq\ideal{b}\text{.}\)</span></p></article><article class="proposition theorem-like" id="prop-associati_differiscono_invertibile"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">20.1.9</span><span class="period">.</span>
+</h3>
+<p id="p-2734">Due elementi <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> sono associati se e solo se esiste <span class="process-math">\(u\)</span> invertibile tale che <span class="process-math">\(a=ub\text{.}\)</span></p></article><article class="hiddenproof" id="proof-216"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-216"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-216"><article class="hiddenproof"><p id="p-2735">Se <span class="process-math">\(a=ub\)</span> con <span class="process-math">\(u\)</span> invertibile allora <span class="process-math">\(b\mid a\text{;}\)</span> inoltre <span class="process-math">\(b=u^{-1}a\)</span> e pertanto <span class="process-math">\(a\mid b\text{:}\)</span> dunque, <span class="process-math">\(a\sim b\text{.}\)</span></p> <p id="p-2736">Viceversa sia <span class="process-math">\(a\sim b\text{.}\)</span> Se <span class="process-math">\(a=0\)</span> allora <span class="process-math">\(b=0\text{:}\)</span> di conseguenza <span class="process-math">\(a=1b\)</span> con <span class="process-math">\(1\)</span> invertibile. Se invece <span class="process-math">\(a\ne0\text{,}\)</span> sappiamo che esistono <span class="process-math">\(u\)</span> e <span class="process-math">\(v\)</span> tali che <span class="process-math">\(a=ub\)</span> e <span class="process-math">\(b=va\text{:}\)</span> ma allora <span class="process-math">\(a=uva\)</span> e, per l'<a href="" class="xref" data-knowl="./knowl/rem-anello_intero_cancellazione.html" title="Osservazione 17.1.22">Osservazione 17.1.22</a>, abbiamo <span class="process-math">\(uv=1\)</span> da cui otteniamo che <span class="process-math">\(u\)</span> è invertibile.</p></article></div>
+<p id="p-2737">Ogni elemento <span class="process-math">\(a\)</span> ha come suoi divisori per lo meno gli elementi invertibili e gli elementi associati ad <span class="process-math">\(a\text{.}\)</span> Ciò suggerisce la</p>
+<article class="definition definition-like" id="def-irriducibile"><h3 class="heading">
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">20.1.10</span><span class="period">.</span>
+</h3>
+<p id="p-2738">Un elemento <span class="process-math">\(p\)</span> di un dominio è detto <dfn class="terminology">irriducibile</dfn> o <dfn class="terminology">atomo</dfn> se <span class="process-math">\(p\ne0\text{,}\)</span> <span class="process-math">\(p\)</span> non è invertibile e i suoi unici divisori sono gli elementi invertibili e gli elementi associati a <span class="process-math">\(p\text{.}\)</span></p></article><p id="p-2739">Chiaramente ogni elemento associato a un elemento irriducibile è a sua volta irriducibile. La condizione di irriducibilità può essere espressa in modi equivalenti: lasciamo per esercizio la dimostrazione di questo fatto (<a href="" class="xref" data-knowl="./knowl/exercise-irriducibile.html" title="Esercizio 20.1.2">Esercizio 20.1.2</a>).</p>
+<article class="proposition theorem-like" id="prop-irriducibile"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">20.1.11</span><span class="period">.</span>
+</h3>
+<p id="p-2740">Sia <span class="process-math">\(p\)</span> un elemento non nullo e non invertibile di un dominio <span class="process-math">\(D\text{.}\)</span> Le seguenti proprietà sono equivalenti:</p>
+<ol class="decimal">
+<li id="item-p_irriducibile"><p id="p-2741"><span class="process-math">\(p\)</span> è irriducibile;</p></li>
+<li id="item-divisore_irriducibile_associato"><p id="p-2742">ogni volta che si ha <span class="process-math">\(p=ab\)</span> per qualche <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> in <span class="process-math">\(D\)</span> allora o <span class="process-math">\(a\)</span> o <span class="process-math">\(b\)</span> è associato a <span class="process-math">\(p\text{;}\)</span></p></li>
+<li id="item-divisore_irriducibile_invertibile"><p id="p-2743">ogni volta che si ha <span class="process-math">\(p=ab\)</span> per qualche <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> in <span class="process-math">\(D\)</span> allora o <span class="process-math">\(a\)</span> o <span class="process-math">\(b\)</span> è invertibile.</p></li>
+</ol></article><article class="definition definition-like" id="def-primo"><h3 class="heading">
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">20.1.12</span><span class="period">.</span>
+</h3>
+<p id="p-2744">Un elemento <span class="process-math">\(p\)</span> di un dominio <span class="process-math">\(D\)</span> è detto <dfn class="terminology">primo</dfn> se <span class="process-math">\(p\ne0\text{,}\)</span> <span class="process-math">\(p\)</span> non è invertibile e, ogni volta che <span class="process-math">\(p\mid ab\)</span> per qualche <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> in <span class="process-math">\(D\text{,}\)</span> allora <span class="process-math">\(p\mid a\)</span> o <span class="process-math">\(p\mid b\text{.}\)</span></p></article><p id="p-2745">Chiaramente ogni elemento associato a un elemento primo è a sua volta primo.</p>
+<article class="remark remark-like" id="rem-primi_naturali"><h3 class="heading">
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">20.1.13</span><span class="period">.</span>
+</h3>
+<p id="p-2746">Quando si studia l'aritmetica elementare dei naturali si definisce come numero primo un numero naturale diverso da <span class="process-math">\(1\)</span> i cui unici divisori sono <span class="process-math">\(1\)</span> e sé stesso (<a href="" class="xref" data-knowl="./knowl/def-numeri_primi.html" title="Definizione 4.4.2">Definizione 4.4.2</a>). I naturali non sono però un dominio: se consideriamo il dominio degli interi relativi, dal momento che gli elementi invertibili di questo dominio sono <span class="process-math">\(1\)</span> e <span class="process-math">\(-1\text{,}\)</span> abbiamo che ogni numero è associato solo al proprio opposto (oltre che a sé stesso). Di conseguenza, se <span class="process-math">\(p\)</span> è un numero primo nel senso elementare del termine, allora i suoi divisori sono <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(-1\text{,}\)</span> <span class="process-math">\(p\)</span> e <span class="process-math">\(-p\text{,}\)</span> cioè sono invertibili o associati a <span class="process-math">\(p\text{:}\)</span> dunque, <span class="process-math">\(p\)</span> (e, analogamente, <span class="process-math">\(-p\)</span>) è, nella terminologia appena introdotta, un elemento irriducibile. Come vedremo però, nel caso degli interi (e anche in altri casi significativi) la nozione di primo e di irriducibile sono equivalenti. In generale ciò non è vero, come mostra l'<a href="" class="xref" data-knowl="./knowl/ex-irriducibile_non_primo.html" title="Esempio 20.1.15">Esempio 20.1.15</a>.</p></article><article class="proposition theorem-like" id="prop-primo_e_irriducibile"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">20.1.14</span><span class="period">.</span>
+</h3>
+<p id="p-2747">Ogni elemento primo è irriducibile.</p></article><article class="hiddenproof" id="proof-217"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-217"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-217"><article class="hiddenproof"><p id="p-2748">Sia <span class="process-math">\(p\)</span> primo (in particolare, <span class="process-math">\(p\ne0\)</span> e <span class="process-math">\(p\)</span> non è invertibile). Grazie alla <a href="" class="xref" data-knowl="./knowl/prop-irriducibile.html" title="Proposizione 20.1.11">Proposizione 20.1.11</a>, per mostrare che <span class="process-math">\(p\)</span> è irriducibile dobbiamo provare che, ogni volta che si ha <span class="process-math">\(p=ab\text{,}\)</span> uno tra <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> è associato a <span class="process-math">\(p\text{.}\)</span> Poiché <span class="process-math">\(p=ab\text{,}\)</span> a maggior ragione <span class="process-math">\(p\mid ab\text{:}\)</span> dalla definizione di primo segue che <span class="process-math">\(p\)</span> divide almeno uno fra <span class="process-math">\(a\)</span> e <span class="process-math">\(b\text{,}\)</span> ad esempio <span class="process-math">\(a\text{.}\)</span> D'altra parte <span class="process-math">\(a\)</span> divide <span class="process-math">\(p\)</span> e, quindi <span class="process-math">\(a\)</span> e <span class="process-math">\(p\)</span> sono associati.</p></article></div>
+<article class="example example-like" id="ex-irriducibile_non_primo"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">20.1.15</span><span class="period">.</span>
+</h3>
+<p id="p-2749">Consideriamo il sottoinsieme <span class="process-math">\(\Interi[\sqrt{5}i]\)</span> dei numeri complessi formato dagli elementi del tipo <span class="process-math">\(a+b\sqrt{5}i\)</span> con <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> interi. Non è difficile mostrare che <span class="process-math">\(\Interi[\sqrt{5}i]\)</span> è un sottoanello di <span class="process-math">\(\Complessi\)</span> ed è, quindi, un dominio. Definiamo una mappa <span class="process-math">\(N\)</span> da <span class="process-math">\(\Interi[\sqrt{5}i]\)</span> in <span class="process-math">\(\Naturali\)</span> nel modo seguente <span class="process-math">\(N(a+b\sqrt{5}i)\coloneqq a^{2}+5b^{2}\text{:}\)</span> in altri termini, <span class="process-math">\(N\)</span> è il quadrato dell'usuale norma complessa. Di conseguenza, se <span class="process-math">\(z_{1}\)</span> e <span class="process-math">\(z_{2}\)</span> sono elementi di <span class="process-math">\(\Interi[\sqrt{5}i]\)</span> si ha <span class="process-math">\(N(z_{1}z_{2})=N(z_{1})N(z_{2})\text{.}\)</span> Ciò implica che, se <span class="process-math">\(z\)</span> divide <span class="process-math">\(w\)</span> in <span class="process-math">\(\Interi[\sqrt{5}i]\text{,}\)</span> allora <span class="process-math">\(N(z)\)</span> divide <span class="process-math">\(N(w)\)</span> in <span class="process-math">\(\Naturali\text{.}\)</span> In particolare, se <span class="process-math">\(z\)</span> è un elemento invertibile in <span class="process-math">\(\Interi[\sqrt{5}i]\text{,}\)</span> cioè un divisore di <span class="process-math">\(1\text{,}\)</span> allora <span class="process-math">\(N(z)=1\text{.}\)</span> Viceversa, posto <span class="process-math">\(a^{2}+5b^{2}=1\text{,}\)</span> si vede facilmente che gli unici elementi <span class="process-math">\(z\)</span> per cui si ha <span class="process-math">\(N(z)=1\)</span> sono <span class="process-math">\(1\)</span> e <span class="process-math">\(-1\text{,}\)</span> che sono effettivamente invertibili e sono, dunque, gli unici elementi invertibili di <span class="process-math">\(\Interi[\sqrt{5}i]\text{.}\)</span></p> <p id="p-2750">Mostriamo ora che se <span class="process-math">\(z\)</span> è un elemento di <span class="process-math">\(\Interi[\sqrt{5}i]\)</span> tale per cui <span class="process-math">\(N(z)=9\text{,}\)</span> allora <span class="process-math">\(z\)</span> è irriducibile. Ovviamente, <span class="process-math">\(z\ne 0\)</span> e <span class="process-math">\(z\)</span> non è invertibile. Se <span class="process-math">\(w\)</span> è un divisore di <span class="process-math">\(z\)</span> allora <span class="process-math">\(N(w)\)</span> divide <span class="process-math">\(N(z)\)</span> e, quindi, <span class="process-math">\(N(w)\)</span> può assumere i valori <span class="process-math">\(9\text{,}\)</span> <span class="process-math">\(3\)</span> e <span class="process-math">\(1\text{.}\)</span> Se <span class="process-math">\(N(w)=9\)</span> allora <span class="process-math">\(z=wd\)</span> con <span class="process-math">\(N(d)=1\)</span> , cioè <span class="process-math">\(d\)</span> è invertibile e <span class="process-math">\(w\)</span> è associato a <span class="process-math">\(z\text{;}\)</span> se <span class="process-math">\(N(w)=1\)</span> allora <span class="process-math">\(w\)</span> è invertibile; infine, l'equazione <span class="process-math">\(a^{2}+5b^{2}=3\)</span> non ha soluzioni intere e, quindi, non può essere <span class="process-math">\(N(w)=3\text{:}\)</span> abbiamo così mostrato che un divisore di <span class="process-math">\(z\)</span> è associato a <span class="process-math">\(z\)</span> o invertibile.</p> <p id="p-2751">Consideriamo ora l'uguaglianza <span class="process-math">\(3\cdot 3=(2+\sqrt{5}i)(2-\sqrt{5}i)\text{.}\)</span> Notiamo che <span class="process-math">\(N(3)=N(2+\sqrt{5}i)=N(2-\sqrt{5}i)=9\)</span> e, pertanto, <span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(2+\sqrt{5}i\)</span> e <span class="process-math">\(2-\sqrt{5}i\)</span> sono irriducibili: ora <span class="process-math">\(3\)</span> divide <span class="process-math">\((2+\sqrt{5}i)(2-\sqrt{5}i)\)</span> ma non divide nessuno dei due fattori e non è quindi primo. Abbiamo così mostrato che esistono elementi irriducibili che non sono primi.</p></article><section class="exercises" id="exercises-divisibilita"><h3 class="heading hide-type">
+<span class="type">Esercizi</span> <span class="codenumber"></span> <span class="title">Esercizi</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-unico_invertibile"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<p id="p-2752">Dimostrare che la relazione di divisibilità in un dominio <span class="process-math">\(D\)</span> è una relazione d'ordine se e solo se <span class="process-math">\(1\)</span> è l'unico elemento invertibile di <span class="process-math">\(D\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-168" id="solution-168"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-168"><div class="solution solution-like">
+<p id="p-2753">Supponiamo che <span class="process-math">\(1\)</span> sia l'unico invertibile di <span class="process-math">\(D\)</span> e siano <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> due elementi di <span class="process-math">\(D\)</span> tali che <span class="process-math">\(a\mid b\)</span> e <span class="process-math">\(b\mid a\text{:}\)</span> ma allora <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> sono associati ed esiste un invertibile <span class="process-math">\(u\)</span> tale che <span class="process-math">\(a=ub\text{.}\)</span> Poiché l'unico invertibile è <span class="process-math">\(1\text{,}\)</span> si ha <span class="process-math">\(u=1\)</span> e <span class="process-math">\(a=1b=b\text{.}\)</span> Vale dunque la proprietà antisimmetrica.</p> <p id="p-2754">Viceversa supponiamo che valga la proprietà antisimmetrica e sia <span class="process-math">\(u\)</span> un elemento invertibile di <span class="process-math">\(D\text{.}\)</span> Poiché gli elementi invertibili si dividono reciprocamente, abbiamo che <span class="process-math">\(u\mid 1\)</span> e <span class="process-math">\(1\mid u\text{:}\)</span> per la proprietà antisimmetrica abbiamo che <span class="process-math">\(u=1\text{,}\)</span> cioè <span class="process-math">\(1\)</span> è l'unico invertibile.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-irriducibile"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-2755">Dimostrare la <a href="" class="xref" data-knowl="./knowl/prop-irriducibile.html" title="Proposizione 20.1.11">Proposizione 20.1.11</a>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-169" id="solution-169"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-169"><div class="solution solution-like">
+<p id="p-2756">Dimostriamo che la <a href="" class="xref" data-knowl="./knowl/item-p_irriducibile.html" title="Punto 1">condizione 1</a> implica la <a href="" class="xref" data-knowl="./knowl/item-divisore_irriducibile_associato.html" title="Punto 2">condizione 2</a>. Sia allora <span class="process-math">\(p=ab\text{,}\)</span> e, dunque, <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> sono divisori di <span class="process-math">\(p\text{:}\)</span> per la <a href="" class="xref" data-knowl="./knowl/item-p_irriducibile.html" title="Punto 1">condizione 1</a> sono invertibili o associati a <span class="process-math">\(p\text{.}\)</span> Gli elementi <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> non possono essere entrambi invertibili perché altrimenti anche il loro prodotto <span class="process-math">\(ab\)</span> lo sarebbe. Dunque almeno uno tra essi è associato a <span class="process-math">\(p\text{.}\)</span></p> <p id="p-2757">Dimostriamo che la <a href="" class="xref" data-knowl="./knowl/item-divisore_irriducibile_associato.html" title="Punto 2">condizione 2</a> implica la <a href="" class="xref" data-knowl="./knowl/item-divisore_irriducibile_invertibile.html" title="Punto 3">condizione 3</a>. Sia allora <span class="process-math">\(p=ab\text{:}\)</span> sappiamo che almeno uno tra <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> è associato a <span class="process-math">\(p\text{,}\)</span> ad esempio sia <span class="process-math">\(a\)</span> associato a <span class="process-math">\(p\text{.}\)</span> Per la <a href="" class="xref" data-knowl="./knowl/prop-associati_differiscono_invertibile.html" title="Proposizione 20.1.9">Proposizione 20.1.9</a>, abbiamo che <span class="process-math">\(p=au\)</span> per qualche invertibile <span class="process-math">\(u\text{:}\)</span> ma allora <span class="process-math">\(au=ab\)</span> e, essendo <span class="process-math">\(a\ne0\)</span> (altrimenti <span class="process-math">\(p=au=0\)</span>), per l'<a href="" class="xref" data-knowl="./knowl/rem-anello_intero_cancellazione.html" title="Osservazione 17.1.22">Osservazione 17.1.22</a> abbiamo <span class="process-math">\(u=b\text{,}\)</span> cioè <span class="process-math">\(b\)</span> è invertibile.</p> <p id="p-2758">Dimostriamo che la <a href="" class="xref" data-knowl="./knowl/item-divisore_irriducibile_invertibile.html" title="Punto 3">condizione 3</a> implica la <a href="" class="xref" data-knowl="./knowl/item-p_irriducibile.html" title="Punto 1">condizione 1</a>. Sia allora <span class="process-math">\(a\)</span> un divisore di <span class="process-math">\(p\text{:}\)</span> dobbiamo mostrare che <span class="process-math">\(a\)</span> è invertibile o associato a <span class="process-math">\(p\text{.}\)</span> Sappiamo che esiste <span class="process-math">\(b\)</span> tale che <span class="process-math">\(p=ab\text{.}\)</span> Poiché vale la <a href="" class="xref" data-knowl="./knowl/item-divisore_irriducibile_invertibile.html" title="Punto 3">condizione 3</a> almeno uno tra <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> è invertibile: nel primo caso <span class="process-math">\(a\)</span> è, per l'appunto, invertibile, nel secondo caso è associato a <span class="process-math">\(p\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-368"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-2759">Verificare che <span class="process-math">\(\Interi[\sqrt{5}i]\)</span> come nell'<a href="" class="xref" data-knowl="./knowl/ex-irriducibile_non_primo.html" title="Esempio 20.1.15">Esempio 20.1.15</a> è un sottoanello di <span class="process-math">\(\Complessi\text{.}\)</span></p></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-26"><div class="fn">Una relazione che soddisfa la proprietà riflessiva e la proprietà transitiva è detta <dfn class="terminology">preordine</dfn>.</div></div>
+</div></main>
+</div>
+</body>
+</html>

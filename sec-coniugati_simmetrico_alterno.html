@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="it-IT">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Classi di coniugio nel gruppo simmetrico e nel gruppo alterno</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Algebra">
+<meta property="book:author" content="Valerio Monti">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Vai all'indice generale</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{mathtools}\require{cancel}\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\cont}{c}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\Inv}{Inv}
+\DeclareMathOperator{\MCD}{MCD}
+\DeclareMathOperator{\mcm}{mcm}
+\DeclareMathOperator{\centro}{Z}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Soc}{Soc}
+\DeclareMathOperator{\Rad}{Rad}
+\DeclareMathOperator{\car}{char}
+
+
+\newcommand{\Sym}{\mathrm{Sym}}
+\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\Idmatrix}{\mathrm{I}}
+\newcommand{\dist}{\mathrm{d}}
+
+\newcommand{\Reali}{\mathbf{R}}
+\newcommand{\Naturali}{\mathbf{N}}
+\newcommand{\Interi}{\mathbf{Z}}
+ \newcommand{\Razionali}{\mathbf{Q}}
+ \newcommand{\Complessi}{\mathbf{C}}
+
+ \newcommand{\grgen}[1]{\langle#1\rangle}
+ \newcommand{\ideal}[1]{\left(#1\right)}
+ \newcommand{\alg}[1]{\left\lbrack#1\right\rvert}
+ \newcommand{\seg}[1]{\left\lvert#1\right)}
+ \newcommand{\ann}[1]{\operatorname{Ann}\left(#1\right)}
+ \newcommand{\len}[1]{\operatorname{l}\left(#1\right)}
+ \newcommand{\class}[2][\sim]{\lbrack #2\rbrack_{#1}}
+ \newcommand{\cent}[2]{\operatorname{C}_{#1}\left(#2\right)}
+ \newcommand{\nrm}[2]{\operatorname{N}_{#1}\left(#2\right)}
+ \newcommand{\stab}[2]{\operatorname{Stab}_{#1}\left(#2\right)}
+ \newcommand{\Supp}[1]{\operatorname{Supp}\left(#1\right)}
+ \newcommand{\Gal}[1]{\operatorname{Gal}\left(#1\right)}
+ \newcommand{\tr}[1]{#1^{\intercal}}
+ \newcommand{\vuoto}{\varnothing}
+ \newcommand{\parti}[1]{\mathcal{P}(#1)}
+ \newcommand{\euler}[1]{\varphi(#1)}
+ \newcommand{\euclidean}{\delta}
+
+ \newcommand{\vect}[1]{\boldsymbol{#1}}
+ 
+ \newcommand{\mat}[2]{\operatorname{M}_{#1}(#2)}
+ \newcommand{\matt}[3]{\operatorname{M}_{#1,#2}(#3)}
+ \newcommand{\Sim}[2]{\operatorname{S}(#1,#2)}
+ \newcommand{\AntiSim}[2]{\operatorname{A}(#1,#2)}
+ \newcommand{\Diag}[2]{\operatorname{D}(#1,#2)}
+ \newcommand{\TS}[2]{\operatorname{T}^{#1}(#2)}
+ \newcommand{\TI}[2]{\operatorname{T}_{#1}(#2)}
+ \newcommand{\GL}[2]{\operatorname{GL}(#1,#2)}
+ \newcommand{\SL}[2]{\operatorname{SL}(#1,#2)}
+ \newcommand{\Ort}[2]{\operatorname{O}(#1,#2)}
+
+ \newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+ \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+ \newcommand{\ind}[2]{\left\lvert#1:#2\right\rvert}
+ \newcommand{\degext}[2]{\left\lbrack#1:#2\right\rbrack}
+
+ \newcommand{\invprov}[1]{\widehat{#1}}
+
+ \newcommand\YoungTableau[1]{
+ \begin{tikzpicture}[scale=0.4,keepsize]
+ \foreach \y [count=\yi] in {#1}
+ \foreach \x in {1,...,\y}
+ {
+ \draw (\x,\yi) rectangle +(1,1);
+ }
+ \end{tikzpicture}
+ }
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-algebra.html"><span class="title">Algebra</span></a></h1>
+<p class="byline">Valerio Monti</p>
+</div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Risultati: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>Nessun risultato.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Indice</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="indice.html" title="Indice analitico">Indice analitico</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-sottogruppi_normali.html" title="Precedente">Prec</a><a id="upbutton" class="up-button button toolbar-item" href="ch-azioni.html" title="Su">Su</a><a id="nextbutton" class="next-button button toolbar-item" href="ch-quozienti.html" title="Successivo">Succ</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Indice</button><a class="previous-button toolbar-item button" href="sec-sottogruppi_normali.html" title="Precedente">Prec</a><a class="up-button button toolbar-item" href="ch-azioni.html" title="Su">Su</a><a class="next-button button toolbar-item" href="ch-quozienti.html" title="Successivo">Succ</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Materiale iniziale</span></a><ul>
+<li><a href="front-colophon.html" data-scroll="front-colophon" class="internal">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Prefazione</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-preliminari.html" data-scroll="part-preliminari" class="internal"><span class="codenumber">I</span> <span class="title">Preliminari</span></a></li>
+<li class="link">
+<a href="ch-insiemi.html" data-scroll="ch-insiemi" class="internal"><span class="codenumber">1</span> <span class="title">Insiemi</span></a><ul>
+<li><a href="sec-insiemi.html" data-scroll="sec-insiemi" class="internal">Concetti di base</a></li>
+<li><a href="sec-operazioni_insiemi.html" data-scroll="sec-operazioni_insiemi" class="internal">Operazioni tra insiemi</a></li>
+<li><a href="sec-prodotto-cartesiano.html" data-scroll="sec-prodotto-cartesiano" class="internal">Prodotto cartesiano</a></li>
+<li><a href="sec-Russell.html" data-scroll="sec-Russell" class="internal">Il paradosso di Russell</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-corrispondenze.html" data-scroll="ch-corrispondenze" class="internal"><span class="codenumber">2</span> <span class="title">Corrispondenze e relazioni</span></a><ul>
+<li><a href="sec-corrispondenze_definizione.html" data-scroll="sec-corrispondenze_definizione" class="internal">Corrispondenze tra insiemi</a></li>
+<li><a href="sec-relazioni_equivalenza.html" data-scroll="sec-relazioni_equivalenza" class="internal">Relazioni di equivalenza</a></li>
+<li><a href="sec-relazioni_ordine.html" data-scroll="sec-relazioni_ordine" class="internal">Relazioni d'ordine</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-funzioni.html" data-scroll="ch-funzioni" class="internal"><span class="codenumber">3</span> <span class="title">Funzioni</span></a><ul>
+<li><a href="sec-funzioni_definizione.html" data-scroll="sec-funzioni_definizione" class="internal">Definizioni di base</a></li>
+<li><a href="sec-funzioni_iniettive_suriettive.html" data-scroll="sec-funzioni_iniettive_suriettive" class="internal">Funzioni iniettive, suriettive e biiettive</a></li>
+<li><a href="sec-cardinalita.html" data-scroll="sec-cardinalita" class="internal">Cenni sulla cardinalità</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-aritmetica.html" data-scroll="part-aritmetica" class="internal"><span class="codenumber">II</span> <span class="title">Aritmetica</span></a></li>
+<li class="link">
+<a href="ch-interi.html" data-scroll="ch-interi" class="internal"><span class="codenumber">4</span> <span class="title">I numeri interi</span></a><ul>
+<li><a href="sec-naturali_base.html" data-scroll="sec-naturali_base" class="internal">I numeri naturali e i numeri interi</a></li>
+<li><a href="sec-induzione_ricorrenza.html" data-scroll="sec-induzione_ricorrenza" class="internal">Dimostrazioni per induzione e definizioni per ricorrenza</a></li>
+<li><a href="sec-divisibilita_interi.html" data-scroll="sec-divisibilita_interi" class="internal">Divisibilità negli interi</a></li>
+<li><a href="sec-fattorizzazione_interi.html" data-scroll="sec-fattorizzazione_interi" class="internal">Il teorema fondamentale dell'aritmetica</a></li>
+<li><a href="sec-equazioni_lineari_diofantine.html" data-scroll="sec-equazioni_lineari_diofantine" class="internal">Equazioni lineari diofantine</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-classidiresto.html" data-scroll="ch-classidiresto" class="internal"><span class="codenumber">5</span> <span class="title">Classi di resto</span></a><ul>
+<li><a href="sec-congruenzemodulon.html" data-scroll="sec-congruenzemodulon" class="internal">Congruenze modulo un intero</a></li>
+<li><a href="sec-operazioniclassiresto.html" data-scroll="sec-operazioniclassiresto" class="internal">Operazioni tra classi di resto</a></li>
+<li><a href="sec-eulero.html" data-scroll="sec-eulero" class="internal">Il teorema di Eulero</a></li>
+<li><a href="sec-congruenze_con_incognite.html" data-scroll="sec-congruenze_con_incognite" class="internal">Congruenze con incognite</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-gruppi.html" data-scroll="part-gruppi" class="internal"><span class="codenumber">III</span> <span class="title">Gruppi</span></a></li>
+<li class="link">
+<a href="ch-operazioni.html" data-scroll="ch-operazioni" class="internal"><span class="codenumber">6</span> <span class="title">Operazioni</span></a><ul>
+<li><a href="sec-operazioni_definizioni.html" data-scroll="sec-operazioni_definizioni" class="internal">Definizioni ed esempi</a></li>
+<li><a href="sec-proprieta_operazioni.html" data-scroll="sec-proprieta_operazioni" class="internal">Proprietà delle operazioni</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppi.html" data-scroll="ch-gruppi" class="internal"><span class="codenumber">7</span> <span class="title">Monoidi e gruppi</span></a><ul>
+<li><a href="sec-monoidi.html" data-scroll="sec-monoidi" class="internal">Monoidi</a></li>
+<li><a href="sec-gruppi.html" data-scroll="sec-gruppi" class="internal">Gruppi</a></li>
+<li><a href="sec-gruppi_piccoli.html" data-scroll="sec-gruppi_piccoli" class="internal">Alcuni esempi di gruppi piccoli</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-sottogruppi.html" data-scroll="ch-sottogruppi" class="internal"><span class="codenumber">8</span> <span class="title">Sottogruppi</span></a><ul>
+<li><a href="sec-sottomonoidi_sottogruppi.html" data-scroll="sec-sottomonoidi_sottogruppi" class="internal">Sottomonoidi e sottogruppi</a></li>
+<li><a href="sec-prime_proprieta_sottogruppi.html" data-scroll="sec-prime_proprieta_sottogruppi" class="internal">Prime proprietà dei sottogruppi</a></li>
+<li><a href="sec-gruppi_del_piano.html" data-scroll="sec-gruppi_del_piano" class="internal">Gruppi di trasformazioni del piano</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppi_ciclici.html" data-scroll="ch-gruppi_ciclici" class="internal"><span class="codenumber">9</span> <span class="title">Gruppi ciclici</span></a><ul>
+<li><a href="sec-definizione_gruppi_ciclici.html" data-scroll="sec-definizione_gruppi_ciclici" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-sottogruppi_di_ciclici.html" data-scroll="sec-sottogruppi_di_ciclici" class="internal">Sottogruppi di gruppi ciclici</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppi_permutazioni.html" data-scroll="ch-gruppi_permutazioni" class="internal"><span class="codenumber">10</span> <span class="title">Gruppi di permutazioni</span></a><ul>
+<li><a href="sec-definizioni_gruppi_permutazioni.html" data-scroll="sec-definizioni_gruppi_permutazioni" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-cicli.html" data-scroll="sec-cicli" class="internal">Cicli</a></li>
+<li><a href="sec-scambi.html" data-scroll="sec-scambi" class="internal">Scambi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-laterali.html" data-scroll="ch-laterali" class="internal"><span class="codenumber">11</span> <span class="title">Laterali e teorema di Lagrange</span></a><ul>
+<li><a href="sec-prodotto_sottoinsiemi.html" data-scroll="sec-prodotto_sottoinsiemi" class="internal">Prodotto di sottoinsiemi</a></li>
+<li><a href="sec-teorema_di_lagrange.html" data-scroll="sec-teorema_di_lagrange" class="internal">Teorema di Lagrange</a></li>
+<li><a href="sec-prodotto_sottogruppi.html" data-scroll="sec-prodotto_sottogruppi" class="internal">Prodotto di sottogruppi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-omomorfismi.html" data-scroll="ch-omomorfismi" class="internal"><span class="codenumber">12</span> <span class="title">Omomorfismi</span></a><ul>
+<li><a href="sec-definizione_omomorfismo.html" data-scroll="sec-definizione_omomorfismo" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-nucleo_immagine.html" data-scroll="sec-nucleo_immagine" class="internal">Immagine e nucleo di un omomorfismo</a></li>
+<li><a href="sec-omomorfismi_da_gruppi_ciclici.html" data-scroll="sec-omomorfismi_da_gruppi_ciclici" class="internal">Omomorfismi da gruppi ciclici</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-azioni.html" data-scroll="ch-azioni" class="internal"><span class="codenumber">13</span> <span class="title">Azioni di gruppi su insiemi</span></a><ul>
+<li><a href="sec-azioni_definizioni.html" data-scroll="sec-azioni_definizioni" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-orbite_stabilizzatori.html" data-scroll="sec-orbite_stabilizzatori" class="internal">Orbite e stabilizzatori</a></li>
+<li><a href="sec-sottogruppi_normali.html" data-scroll="sec-sottogruppi_normali" class="internal">Sottogruppi normali</a></li>
+<li><a href="sec-coniugati_simmetrico_alterno.html" data-scroll="sec-coniugati_simmetrico_alterno" class="active">Classi di coniugio nel gruppo simmetrico e nel gruppo alterno</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-quozienti.html" data-scroll="ch-quozienti" class="internal"><span class="codenumber">14</span> <span class="title">Gruppi quoziente</span></a><ul>
+<li><a href="sec-congruenze.html" data-scroll="sec-congruenze" class="internal">Congruenze in gruppi e monoidi</a></li>
+<li><a href="sec-proprieta_quozienti.html" data-scroll="sec-proprieta_quozienti" class="internal">Proprietà dei gruppi quoziente</a></li>
+<li><a href="sec-teoremi_di_isomorfismo.html" data-scroll="sec-teoremi_di_isomorfismo" class="internal">I teoremi di isomorfismo</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-direttosemidiretto.html" data-scroll="ch-direttosemidiretto" class="internal"><span class="codenumber">15</span> <span class="title">Prodotto diretto e semidiretto</span></a><ul>
+<li><a href="sec-prodotto_diretto_esterno.html" data-scroll="sec-prodotto_diretto_esterno" class="internal">Prodotto diretto esterno</a></li>
+<li><a href="sec-prodotto_diretto_interno.html" data-scroll="sec-prodotto_diretto_interno" class="internal">Prodotto diretto interno</a></li>
+<li><a href="sec-prodotto_semidiretto.html" data-scroll="sec-prodotto_semidiretto" class="internal">Prodotto semidiretto</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-sylow.html" data-scroll="ch-sylow" class="internal"><span class="codenumber">16</span> <span class="title">Il teorema di Sylow</span></a><ul>
+<li><a href="sec-inversione_lagrange.html" data-scroll="sec-inversione_lagrange" class="internal">Inversione del teorema di Lagrange</a></li>
+<li><a href="sec-sylow.html" data-scroll="sec-sylow" class="internal">Il teorema di Sylow</a></li>
+<li><a href="sec-applicazioni_sylow.html" data-scroll="sec-applicazioni_sylow" class="internal">Applicazioni del teorema di Sylow</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-anelli.html" data-scroll="part-anelli" class="internal"><span class="codenumber">IV</span> <span class="title">Anelli</span></a></li>
+<li class="link">
+<a href="ch-anelli.html" data-scroll="ch-anelli" class="internal"><span class="codenumber">17</span> <span class="title">Anelli</span></a><ul>
+<li><a href="sec-prime_proprieta_anelli.html" data-scroll="sec-prime_proprieta_anelli" class="internal">Definizioni e prime proprietà</a></li>
+<li><a href="sec-multipli_potenze.html" data-scroll="sec-multipli_potenze" class="internal">Multipli e potenze in un anello</a></li>
+<li><a href="sec-sottoanelli.html" data-scroll="sec-sottoanelli" class="internal">Sottoanelli</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-omomorfismiideali.html" data-scroll="ch-omomorfismiideali" class="internal"><span class="codenumber">18</span> <span class="title">Omomorfismi e ideali</span></a><ul>
+<li><a href="sec-omomorfismi_anelli.html" data-scroll="sec-omomorfismi_anelli" class="internal">Omomorfismi di anelli</a></li>
+<li><a href="sec-anelli_quoziente.html" data-scroll="sec-anelli_quoziente" class="internal">Anelli quoziente e ideali</a></li>
+<li><a href="sec-campo_dei_quozienti.html" data-scroll="sec-campo_dei_quozienti" class="internal">Campo dei quozienti di un dominio</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-polinomi.html" data-scroll="ch-polinomi" class="internal"><span class="codenumber">19</span> <span class="title">Polinomi</span></a><ul>
+<li><a href="sec-anello_polinomi.html" data-scroll="sec-anello_polinomi" class="internal">Anello dei polinomi</a></li>
+<li><a href="sec-valutazione_polinomi.html" data-scroll="sec-valutazione_polinomi" class="internal">Valutazione di polinomi</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-divisibilita.html" data-scroll="ch-divisibilita" class="internal"><span class="codenumber">20</span> <span class="title">Divisibilità nei domini</span></a><ul>
+<li><a href="sec-divisibilita.html" data-scroll="sec-divisibilita" class="internal">Relazione di divisibilità</a></li>
+<li><a href="sec-fattorizzazione.html" data-scroll="sec-fattorizzazione" class="internal">Fattorizzazione</a></li>
+<li><a href="sec-PID_euclidei.html" data-scroll="sec-PID_euclidei" class="internal">Domini a ideali principali e domini euclidei</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-fattorizzazione_polinomi.html" data-scroll="ch-fattorizzazione_polinomi" class="internal"><span class="codenumber">21</span> <span class="title">Fattorizzazione dei polinomi</span></a><ul>
+<li><a href="sec-trasporto_UFD.html" data-scroll="sec-trasporto_UFD" class="internal">Il teorema del trasporto per domini a fattorizzazione unica</a></li>
+<li><a href="sec-esempi_fattorizzazione_polinomi.html" data-scroll="sec-esempi_fattorizzazione_polinomi" class="internal">Tecniche di fattorizzazione</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-estensione_campi.html" data-scroll="ch-estensione_campi" class="internal"><span class="codenumber">22</span> <span class="title">Estensioni di campi</span></a><ul>
+<li><a href="sec-elementi_algebrici_e_trascendenti.html" data-scroll="sec-elementi_algebrici_e_trascendenti" class="internal">Elementi algebrici e trascendenti</a></li>
+<li><a href="sec-campo_di_spezzamento.html" data-scroll="sec-campo_di_spezzamento" class="internal">Campi di spezzamento</a></li>
+<li><a href="sec-chiusure_algebriche.html" data-scroll="sec-chiusure_algebriche" class="internal">Cenni su campi algebricamente chiusi</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-moduli.html" data-scroll="part-moduli" class="internal"><span class="codenumber">V</span> <span class="title">Moduli</span></a></li>
+<li class="link">
+<a href="ch-moduli.html" data-scroll="ch-moduli" class="internal"><span class="codenumber">23</span> <span class="title">Moduli</span></a><ul>
+<li><a href="sec-definizione_di_moduli.html" data-scroll="sec-definizione_di_moduli" class="internal">Definizione di modulo</a></li>
+<li><a href="sec-sottomoduli.html" data-scroll="sec-sottomoduli" class="internal">Sottomoduli</a></li>
+<li><a href="sec-omomorfismi_moduli.html" data-scroll="sec-omomorfismi_moduli" class="internal">Omomorfismi di moduli</a></li>
+<li><a href="sec-moduli_quoziente.html" data-scroll="sec-moduli_quoziente" class="internal">Moduli quoziente</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-moduli_liberi.html" data-scroll="ch-moduli_liberi" class="internal"><span class="codenumber">24</span> <span class="title">Moduli liberi</span></a><ul>
+<li><a href="sec-somma_diretta_moduli.html" data-scroll="sec-somma_diretta_moduli" class="internal">Somma diretta di moduli</a></li>
+<li><a href="sec-dipendenza_lineare.html" data-scroll="sec-dipendenza_lineare" class="internal">Dipendenza e indipendenza lineare</a></li>
+<li><a href="sec-elementi_di_torsione.html" data-scroll="sec-elementi_di_torsione" class="internal">Elementi di torsione</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-modulisupid.html" data-scroll="ch-modulisupid" class="internal"><span class="codenumber">25</span> <span class="title">Moduli finitamente generati su PID</span></a><ul>
+<li><a href="sec-moduli_ciclici.html" data-scroll="sec-moduli_ciclici" class="internal">Moduli ciclici</a></li>
+<li><a href="sec-moduli_primari.html" data-scroll="sec-moduli_primari" class="internal">Moduli primari</a></li>
+<li><a href="sec-moduli_liberi.html" data-scroll="sec-moduli_liberi" class="internal">Moduli liberi</a></li>
+<li><a href="sec-classificazione_moduli_pid.html" data-scroll="sec-classificazione_moduli_pid" class="internal">La classificazione dei moduli finitamente generati su un dominio a ideali principali</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="ch-gruppiabeliani.html" data-scroll="ch-gruppiabeliani" class="internal"><span class="codenumber">26</span> <span class="title">Gruppi abeliani finitamente generati</span></a><ul><li><a href="sec-gruppiabeliani.html" data-scroll="sec-gruppiabeliani" class="internal">Classificazione dei gruppi abeliani finitamente generati</a></li></ul>
+</li>
+<li class="link">
+<a href="ch-formecanoniche.html" data-scroll="ch-formecanoniche" class="internal"><span class="codenumber">27</span> <span class="title">Forme canoniche di matrici</span></a><ul>
+<li><a href="sec-kx_moduli.html" data-scroll="sec-kx_moduli" class="internal">Spazi vettoriali con endomorfismi visti come moduli</a></li>
+<li><a href="sec-matrici_rappresentative.html" data-scroll="sec-matrici_rappresentative" class="internal">Matrici rappresentative</a></li>
+<li><a href="sec-matrici_compagne.html" data-scroll="sec-matrici_compagne" class="internal">Matrici compagne</a></li>
+<li><a href="sec-jordan.html" data-scroll="sec-jordan" class="internal">Forma canonica di Jordan</a></li>
+<li><a href="sec-polinomio_minimo_matrici.html" data-scroll="sec-polinomio_minimo_matrici" class="internal">Polinomio minimo di matrici</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Appendici</span></a></li>
+<li class="link">
+<a href="appendix-peano.html" data-scroll="appendix-peano" class="internal"><span class="codenumber">A</span> <span class="title">Numeri naturali e interi</span></a><ul>
+<li><a href="sec-algebre_induttive.html" data-scroll="sec-algebre_induttive" class="internal">Algebre induttive</a></li>
+<li><a href="sec-assiomi_peano.html" data-scroll="sec-assiomi_peano" class="internal">Gli assiomi di Peano</a></li>
+<li><a href="sec-insiemi_finiti_infiniti.html" data-scroll="sec-insiemi_finiti_infiniti" class="internal">Insiemi finiti e infiniti</a></li>
+<li><a href="sec-operazioni_naturali.html" data-scroll="sec-operazioni_naturali" class="internal">Operazioni tra numeri naturali</a></li>
+<li><a href="sec-interi.html" data-scroll="sec-interi" class="internal">Costruzione degli interi</a></li>
+</ul>
+</li>
+<li class="link"><a href="appendix-2.html" data-scroll="appendix-2" class="internal"><span class="codenumber">B</span> <span class="title">Notazioni</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1" class="internal"><span class="codenumber">C</span> <span class="title">Soluzioni e suggerimenti</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="appendix-gfdl" class="internal"><span class="codenumber">D</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="indice.html" data-scroll="indice" class="internal"><span class="title">Indice analitico</span></a></li>
+<li class="link"><a href="back-colophon.html" data-scroll="back-colophon" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Redatto in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-coniugati_simmetrico_alterno"><h2 class="heading hide-type">
+<span class="type">Paragrafo</span> <span class="codenumber">13.4</span> <span class="title">Classi di coniugio nel gruppo simmetrico e nel gruppo alterno</span>
+</h2>
+<p id="p-1933">Data una permutazione <span class="process-math">\(\sigma\)</span> di <span class="process-math">\(\Sym_{n}\text{,}\)</span> scritta come prodotto di cicli disgiunti <span class="process-math">\(\sigma=\gamma_{1}\gamma_{2}\cdots\gamma_{t}\text{,}\)</span> vogliamo calcolare il coniugato di <span class="process-math">\(\sigma\)</span> tramite una permutazione <span class="process-math">\(\tau\text{.}\)</span> Poiché <span class="process-math">\(\sigma^{\tau}=\gamma_{1}^{\tau}\gamma_{2}^{\tau}\cdots\gamma_{t}^{\tau}\text{,}\)</span> cominciamo a considerare i coniugati di cicli.</p>
+<article class="example example-like" id="example-127"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">13.4.1</span><span class="period">.</span>
+</h3>
+<p id="p-1934">Supponiamo di voler fare il coniugato del ciclo <span class="process-math">\(\sigma\coloneqq(1\;3\;5)\)</span> tramite la permutazione <span class="process-math">\(\tau\coloneqq(1\;2)(3\;4\;6)\)</span> (siamo in <span class="process-math">\(\Sym_{n}\)</span> con <span class="process-math">\(n\ge 6\)</span>). Abbiamo allora</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\sigma^{\tau}=\tau^{-1}\sigma\tau=(6\;4\;3)(1\;2)(1\;3\;5)(1\;2)(3\;4\;6)=(2\;4\;5)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Notiamo che il coniugato del <span class="process-math">\(3\)</span>-ciclo <span class="process-math">\(\sigma\)</span> è ancora un <span class="process-math">\(3\)</span>-ciclo. Non solo: <span class="process-math">\(1\tau=2\text{,}\)</span> <span class="process-math">\(3\tau=4\)</span> e <span class="process-math">\(5\tau=5\text{,}\)</span> e, dunque, abbiamo che <span class="process-math">\((1\;3\;5)^{\tau}=(1\tau\;3\tau\;5\tau)\text{.}\)</span></p></article><p id="p-1935">Quanto visto nell'esempio precedente ha validità generale. Abbiamo infatti il</p>
+<article class="lemma theorem-like" id="lem-coniugato_ciclo"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">13.4.2</span><span class="period">.</span>
+</h3>
+<p id="p-1936">Dato un <span class="process-math">\(r\)</span>-ciclo <span class="process-math">\(\gamma\coloneqq(a_{1}\;a_{2}\;\ldots\;a_{r})\)</span> e una permutazione <span class="process-math">\(\tau\)</span> in <span class="process-math">\(\Sym_{n}\text{,}\)</span> risulta <span class="process-math">\(\gamma^{\tau}=(a_{1}\tau\;a_{2}\tau\;\ldots\;a_{r}\tau)\text{.}\)</span> In particolare, il coniugato di un <span class="process-math">\(r\)</span>-ciclo è un <span class="process-math">\(r\)</span>-ciclo. Inoltre, tutti gli <span class="process-math">\(r\)</span>-cicli sono coniugati fra loro e formano, dunque, una classe di coniugio.</p></article><article class="hiddenproof" id="proof-145"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-145"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-145"><article class="hiddenproof"><p id="p-1937">Sia <span class="process-math">\(\gamma'\coloneqq (a_{1}\tau\;a_{2}\tau\;\ldots\;a_{r}\tau)\text{.}\)</span> Mostrare che <span class="process-math">\(\gamma^{\tau}=\gamma'\text{,}\)</span> cioè che <span class="process-math">\(\tau^{-1}\gamma\tau=\gamma'\text{,}\)</span> è lo stesso che provare che <span class="process-math">\(\gamma\tau=\tau\gamma'\text{.}\)</span> Per far ciò, mostriamo che, per ogni <span class="process-math">\(i\in\{1,2,\ldots,n\}\text{,}\)</span> si ha <span class="process-math">\(i\gamma\tau=i\gamma'\tau\text{.}\)</span></p> <p id="p-1938">Consideriamo prima il caso in cui <span class="process-math">\(i=a_{j}\)</span> per qualche <span class="process-math">\(j=1\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(r\text{:}\)</span> senza perdere in generalità possiamo supporre che <span class="process-math">\(i=a_{r}\text{.}\)</span> Ma allora <span class="process-math">\(a_{r}\tau\gamma'=a_{1}\tau\)</span> e <span class="process-math">\(a_{r}\gamma\tau=a_{1}\tau\text{.}\)</span></p> <p id="p-1939">Consideriamo ora il caso in cui <span class="process-math">\(i\ne a_{j}\)</span> per ogni <span class="process-math">\(j=1\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(r\text{:}\)</span> dunque, <span class="process-math">\(i\gamma=i\)</span> e <span class="process-math">\(i\gamma\tau=i\tau\text{.}\)</span> Inoltre, per l'iniettività di <span class="process-math">\(\tau\text{,}\)</span> abbiamo che <span class="process-math">\(i\tau\ne a_{j}\tau\)</span> per ogni <span class="process-math">\(j=1\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(r\)</span> e, quindi, <span class="process-math">\(i\tau\gamma'=i\tau\text{.}\)</span></p> <p id="p-1940">Sia ora <span class="process-math">\((b_{1}\;b_{2}\;\ldots\;b_{r})\)</span> un <span class="process-math">\(r\)</span>-ciclo qualsiasi. Definiamo una permutazione <span class="process-math">\(\rho\)</span> tale che <span class="process-math">\((a_{1}\;a_{2}\;\ldots\;a_{r})^{\rho}=(b_{1}\;b_{2}\;\ldots\;b_{r})\text{,}\)</span> ponendo <span class="process-math">\(a_{j}\rho\coloneqq b_{j}\)</span> per <span class="process-math">\(j=1\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(r\)</span> e estendendola arbitrariamente agli elementi diversi dagli <span class="process-math">\(a_{j}\text{.}\)</span></p></article></div>
+<article class="theorem theorem-like" id="thm-classi_coniugio_simmetrico"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">13.4.3</span><span class="period">.</span>
+</h3>
+<p id="p-1941">Due permutazioni di <span class="process-math">\(\Sym_{n}\)</span> sono coniugate se e solo se hanno lo stesso tipo.</p></article><article class="hiddenproof" id="proof-146"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-146"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-146"><article class="hiddenproof"><p id="p-1942">Sia <span class="process-math">\(\sigma\)</span> una permutazione di tipo <span class="process-math">\((r_{1},r_{2},\ldots,r_{t})\)</span> con <span class="process-math">\(r_{1}\ge r_{2}\ge\cdots\ge r_{t}\gt 1\text{.}\)</span> Dunque,</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-coniugato_ciclo.html">
+\begin{equation*}
+\sigma=(a_{1,1}\;\ldots\;a_{1r_{1}})\cdots(a_{t1}\;\ldots\;a_{tr_{t}})
+\end{equation*}
+</div>
+<p class="continuation">con gli <span class="process-math">\(a_{ij}\)</span> tutti distinti. Se <span class="process-math">\(\tau\)</span> è un elemento qualunque di <span class="process-math">\(\Sym_{n}\text{,}\)</span> per il <a href="" class="xref" data-knowl="./knowl/lem-coniugato_ciclo.html" title="Lemma 13.4.2">Lemma 13.4.2</a> abbiamo allora</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-coniugato_ciclo.html">
+\begin{equation*}
+\sigma^{\tau}=(a_{1,1}\;\ldots\;a_{1r_{1}})^{\tau}\cdots(a_{t1}\;\ldots\;a_{tr_{t}})^{\tau}=  (a_{1,1}\tau\;\ldots\;a_{1r_{1}}\tau)\cdots(a_{t1}\tau\;\ldots\;a_{tr_{t}}\tau)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Per l'iniettività di <span class="process-math">\(\tau\text{,}\)</span> gli <span class="process-math">\(a_{ij}\tau\)</span> sono tutti distinti e, quindi, i cicli che appaiono in questa espressione di <span class="process-math">\(\sigma^{\tau}\)</span> sono disgiunti: pertanto, <span class="process-math">\(\sigma^{\tau}\)</span> ha lo stesso tipo di <span class="process-math">\(\sigma\text{.}\)</span></p> <p id="p-1943">Viceversa, sia</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-coniugato_ciclo.html">
+\begin{equation*}
+\sigma'=(b_{1,1}\;\ldots\;b_{1r_{1}})\cdots(b_{t1}\;\ldots\;b_{tr_{t}})
+\end{equation*}
+</div>
+<p class="continuation">con i <span class="process-math">\(b_{ij}\)</span> tutti distinti: definita una permutazione <span class="process-math">\(\rho\)</span> ponendo <span class="process-math">\(a_{ij}\rho\coloneqq b_{ij}\)</span> per ogni <span class="process-math">\(i\)</span> e <span class="process-math">\(j\)</span> e estendendola arbitrariamente agli elementi diversi dagli <span class="process-math">\(a_{j}\text{,}\)</span> un'ulteriore applicazione del <a href="" class="xref" data-knowl="./knowl/lem-coniugato_ciclo.html" title="Lemma 13.4.2">Lemma 13.4.2</a> mostra che <span class="process-math">\(\sigma^{\rho}=\sigma'\text{,}\)</span> come richiesto</p></article></div>
+<article class="example example-like" id="example-128"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">13.4.4</span><span class="period">.</span>
+</h3>
+<p id="p-1944">Date due permutazioni <span class="process-math">\(\sigma\)</span> e <span class="process-math">\(\sigma'\)</span> dello stesso tipo, non c'è un'unica permutazione <span class="process-math">\(\rho\)</span> tale che <span class="process-math">\(\sigma^{\rho}=\sigma'\text{.}\)</span> Ad esempio in <span class="process-math">\(\Sym_{5}\)</span> abbiamo <span class="process-math">\((1\;2\;3)^{(1\;3)}=(3\;2\;1)\)</span> e <span class="process-math">\((1\;2\;3)^{(2\;3)(4\;5)}=(1\;3\;2)\)</span> (notiamo che <span class="process-math">\((3\;2\;1)=(1\;3\;2)\)</span>).</p></article><article class="example example-like" id="ex-classi_coniugio_simmetrico"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">13.4.5</span><span class="period">.</span>
+</h3>
+<p id="p-1945">Nell'<a href="" class="xref" data-knowl="./knowl/ex-permutazioni_per_tipo.html" title="Esempio 10.2.14">Esempio 10.2.14</a> abbiamo contato quante permutazioni per tipo ci sono in <span class="process-math">\(\Sym_{n}\)</span> con <span class="process-math">\(n\le 5\text{:}\)</span> ora sappiamo che ogni tipo corrisponde a una classe di coniugio. Possiamo allora reinterpretare quelle tabelle e, inoltre, poiché dal <a href="" class="xref" data-knowl="./knowl/cor-ordine_classe_coniugio.html" title="Corollario 13.2.10">Corollario 13.2.10</a> sappiamo che la cardinalità di una classe di coniugio è uguale all'indice del centralizzante di un qualunque elemento della classe, possiamo calcolare l'ordine del centralizzante di ciascun elemento di ogni classe e aggiungere altre informazioni alle tabelle date.</p> <p id="p-1946">In <span class="process-math">\(\Sym_{3}\text{:}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{array}{cccc}
+\sigma    \amp \abs{\sigma^{S}} \amp \abs{\sigma} \amp\abs{\cent{S}{\sigma}}\\
+\hline
+\Id       \amp 1                \amp 1            \amp 6\\
+(1\;2)    \amp 3                \amp 2            \amp 2\\
+(1\;2\;3) \amp 2                \amp 3            \amp 3\\
+\end{array}
+\end{equation*}
+</div> <p id="p-1947">In <span class="process-math">\(\Sym_{4}\text{:}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{array}{cccc}
+\sigma       \amp \abs{\sigma^{S}} \amp \abs{\sigma} \amp\abs{\cent{S}{\sigma}}\\
+\hline
+\Id          \amp 1                \amp 1            \amp 24\\
+(1\;2)       \amp 6                \amp 2            \amp  4\\
+(1\;2\;3)    \amp 8                \amp 3            \amp  3\\
+(1\;2\;3\;4) \amp 6                \amp 4            \amp  4\\
+(1\;2)(3\;4) \amp 3                \amp 2            \amp  8\\
+\end{array}
+\end{equation*}
+</div> <p id="p-1948">In <span class="process-math">\(\Sym_{5}\text{:}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{array}{cccc}
+\sigma          \amp \abs{\sigma^{S}} \amp \abs{\sigma} \amp\abs{\cent{S}{\sigma}}\\
+\hline
+\Id             \amp 1                \amp 1            \amp 120\\
+(1\;2)          \amp 10               \amp 2            \amp 12\\
+(1\;2\;3)       \amp 20               \amp 3            \amp 6\\
+(1\;2\;3\;4)    \amp 30               \amp 4            \amp 4\\
+(1\;2\;3\;4\;5) \amp 24               \amp 5            \amp 5\\
+(1\;2)(3\;4)    \amp 15               \amp 2            \amp 8\\
+(1\;2\;3)(4\;5) \amp 20               \amp 6            \amp 6\\
+\end{array}
+\end{equation*}
+</div> <p id="p-1949">Ricordiamo ora che il centralizzante di un elemento <span class="process-math">\(g\)</span> di un gruppo <span class="process-math">\(G\)</span> contiene il sottogruppo ciclico <span class="process-math">\(\grgen{g}\text{.}\)</span> In alcuni casi, questa inclusione può essere un'uguaglianza. Nelle tabelle suesposte, possiamo confrontare il periodo di un elemento (cioè l'ordine del gruppo ciclico da esso generato) con l'ordine del suo centralizzante, per notare, ad esempio, che in <span class="process-math">\(\Sym_{5}\)</span> si ha <span class="process-math">\(\cent{\Sym_{5}}{(1\;2\;3)}\ne\grgen{(1\;2\;3)}\text{,}\)</span> mentre  <span class="process-math">\(\cent{\Sym_{5}}{(1\;2\;3\;4)}=\grgen{(1\;2\;3\;4)}\text{.}\)</span></p></article><p id="p-1950">Dalle tabelle precedenti possiamo ricavare tutti i sottogruppi normali dei gruppi simmetrici studiati. Un sottogruppo normale, infatti è unione di classi di coniugio.</p>
+<article class="example example-like" id="ex-sottogruppi_normali_simmetrico"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">13.4.6</span><span class="period">.</span>
+</h3>
+<p id="p-1951">Determiniamo i sottogruppi normali di <span class="process-math">\(\Sym_{n}\)</span> per <span class="process-math">\(3\le n\le 5\text{.}\)</span> Sappiamo già che il sottogruppo alterno è normale in <span class="process-math">\(\Sym_{n}\)</span> (<a href="" class="xref" data-knowl="./knowl/cor-alterno_normale.html" title="Corollario 13.3.10">Corollario 13.3.10</a>).</p> <p id="p-1952">Iniziamo a considerare il caso <span class="process-math">\(n=3\text{.}\)</span> Come detto, un sottogruppo normale deve essere unione di classi di coniugio e tra esse ci deve essere la classe di <span class="process-math">\(\Id\text{.}\)</span> Combiniamo le classi di <span class="process-math">\(\Sym_{3}\)</span> in tutti i modi possibili (sempre includendo la classe di <span class="process-math">\(\Id\)</span>): Se prendiamo la sola classe di <span class="process-math">\(\Id\)</span> otteniamo il sottogruppo banale, se prendiamo tutte le classi otteniamo tutto il gruppo simmetrico, se prendiamo la classe di <span class="process-math">\(\Id\)</span> e la classe di <span class="process-math">\((1\;2\;3)\)</span> otteniamo il sottogruppo alterno. L'unica possibilità che rimane da analizzare è il sottoinsieme unione della classe di <span class="process-math">\(\Id\)</span> e di <span class="process-math">\((1\;2)\text{:}\)</span> ma questo sottoinsieme contiene <span class="process-math">\(4\)</span> elementi e, per il <a href="" class="xref" data-knowl="./knowl/thm-lagrange.html" title="Teorema 11.2.6: Teorema di Lagrange">Teorema di Lagrange</a>, non può essere un sottogruppo di <span class="process-math">\(\Sym_{3}\text{.}\)</span> Pertanto, <span class="process-math">\(\Sym_{3}\)</span> ha <span class="process-math">\(3\)</span> sottogruppi normali: <span class="process-math">\(\Id\text{,}\)</span> <span class="process-math">\(A_{3}\)</span> e <span class="process-math">\(\Sym_{3}\text{.}\)</span></p> <p id="p-1953">Consideriamo ora il caso <span class="process-math">\(n=4\text{.}\)</span> Consideriamo tutte le possibili unioni di classi di coniugio (includendo <span class="process-math">\(\Id\)</span>) e contiamo quanti elementi contiene ciascuna di queste unioni: se il numero che otteniamo non è un divisore dell'ordine del gruppo, allora sicuramente il sottoinsieme considerato non è un sottogruppo e possiamo scartarlo, altrimenti dobbiamo verificare se è un sottogruppo. Facendo tutti i calcoli, vediamo che, oltre a <span class="process-math">\(\Id\text{,}\)</span> <span class="process-math">\(A_{4}\)</span> e <span class="process-math">\(\Sym_{4}\text{,}\)</span> l'unica possibilità da considerare è il sottoinsieme <span class="process-math">\(T\)</span> unione della classe di <span class="process-math">\(\Id\)</span> e della classe di <span class="process-math">\((1\;2)(3\;4)\text{:}\)</span> il sottoinsieme <span class="process-math">\(T\)</span> ha <span class="process-math">\(4\)</span> elementi e, quindi, potrebbe essere un sottogruppo di <span class="process-math">\(\Sym_{4}\text{.}\)</span> Facendo le verifiche, vediamo che è effettivamente così e, quindi, è un sottogruppo (necessariamente normale) di <span class="process-math">\(\Sym_{4}\text{.}\)</span></p> <p id="p-1954">Il caso <span class="process-math">\(n=5\)</span> si tratta in maniera analoga. Qui le combinazioni da considerare sono ancora di più, ma con un po' di pazienza, si può veder che le uniche che danno un divisore dell'ordine di <span class="process-math">\(\Sym_{5}\)</span> (cioè di <span class="process-math">\(5!=120\)</span>) sono quelle corrispondenti al gruppo <span class="process-math">\(\Id\text{,}\)</span> ad <span class="process-math">\(A_{5}\)</span> e a <span class="process-math">\(\Sym_{5}\)</span> che sono, quindi, gli unici sottogruppi normali di <span class="process-math">\(\Sym_{5}\text{.}\)</span></p></article><article class="remark remark-like" id="rem-conteggio_elementi_classi_coniugio"><h3 class="heading">
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">13.4.7</span><span class="period">.</span>
+</h3>
+<p id="p-1955">Ovviamente, il metodo di cercare i sottogruppi normali del gruppo simmetrico contando il numero di elementi nell'unione di classi di coniugio non è molto efficiente in generale. Già per <span class="process-math">\(n=5\)</span> i casi da considerare sono parecchi e a mano a mano che <span class="process-math">\(n\)</span> cresce questo metodo diventa improponibile. Si potrebbe però dimostrare (con altri metodi, sempre relativamente elementari) che gli unici sottogruppi normali di <span class="process-math">\(\Sym_{n}\)</span> per <span class="process-math">\(n\ne 4\text{,}\)</span> sono <span class="process-math">\(\Id\text{,}\)</span> <span class="process-math">\(A_{n}\)</span> e <span class="process-math">\(\Sym_{n}\)</span> stesso.</p></article><article class="example example-like" id="ex-normalita_non_transitiva"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">13.4.8</span><span class="period">.</span>
+</h3>
+<p id="p-1956">Nell'<a href="" class="xref" data-knowl="./knowl/ex-sottogruppi_normali_simmetrico.html" title="Esempio 13.4.6">Esempio 13.4.6</a> abbiamo determinato i sottogruppi normali di <span class="process-math">\(\Sym_{4}\text{.}\)</span> In particolare abbiamo trovato un sottogruppo normale <span class="process-math">\(T\)</span> di ordine <span class="process-math">\(4\text{:}\)</span> per l'<a href="" class="xref" data-knowl="./knowl/rem-gruppi_di_ordine_4_abeliani.html" title="Osservazione 8.3.12">Osservazione 8.3.12</a>, <span class="process-math">\(T\)</span> è abeliano e i suoi sottogruppi sono normali in esso. In particolare, posto <span class="process-math">\(C\coloneqq\grgen{(1\;2)(3\;4)}\text{,}\)</span> abbiamo che <span class="process-math">\(C\trianglelefteq T\trianglelefteq \Sym_{4}\)</span> ma <span class="process-math">\(C\)</span> non è normale in <span class="process-math">\(\Sym_{4}\text{.}\)</span> Questo mostra che la relazione di normalità non è transitiva.</p></article><p id="p-1957">Ci chiediamo ora cosa possiamo dire delle classi di coniugio dell'alterno. Avendo indice <span class="process-math">\(2\)</span> nel simmetrico, il sottogruppo alterno è normale nel simmetrico (<a href="" class="xref" data-knowl="./knowl/cor-indice_2_normale.html" title="Corollario 13.3.9">Corollario 13.3.9</a>). Dunque, se <span class="process-math">\(\sigma\)</span> è una permutazione contenuta nell'alterno, la sua classe di coniugio è contenuta nell'alterno: tuttavia, ciò non significa che questa sia anche la sua classe di coniugio nell'alterno.</p>
+<article class="example example-like" id="example-132"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">13.4.9</span><span class="period">.</span>
+</h3>
+<p id="p-1958">In <span class="process-math">\(\Sym_{3}\text{,}\)</span> l'elemento <span class="process-math">\(\sigma\coloneqq(1\;2\;3)\)</span> ha classe di coniugio contenente <span class="process-math">\(2\)</span> elementi e cioè <span class="process-math">\((1\;2\;3)\)</span> e <span class="process-math">\((1\;3\;2)\text{.}\)</span> Poiché <span class="process-math">\(\sigma\)</span> è una permutazione pari, questa classe di coniugio è contenuta interamente nell'alterno. Tuttavia, <span class="process-math">\(A_{3}\text{,}\)</span> avendo ordine <span class="process-math">\(3\text{,}\)</span> è ciclico (quindi, abeliano) e, di conseguenza, le sue classi di coniugio hanno cardinalità <span class="process-math">\(1\text{.}\)</span> Dunque, <span class="process-math">\((1\;2\;3)\)</span> non è coniugato a <span class="process-math">\((1\;3\;2)\)</span> nell'alterno.</p></article><p id="p-1959">Per descrivere le classi dell'alterno ci servono alcuni risultati.</p>
+<article class="lemma theorem-like" id="lem-indice_intersezione"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">13.4.10</span><span class="period">.</span>
+</h3>
+<p id="p-1960">Se <span class="process-math">\(H\)</span> è un sottogruppo di indice finito di un gruppo <span class="process-math">\(G\)</span> e <span class="process-math">\(K\)</span> è un sottogruppo di <span class="process-math">\(G\text{,}\)</span> allora <span class="process-math">\(H\cap K\)</span> ha indice finito in <span class="process-math">\(K\)</span> e <span class="process-math">\(\ind{K}{H\cap K}\le\ind{G}{H}\text{.}\)</span></p></article><article class="hiddenproof" id="proof-147"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-147"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-147"><article class="hiddenproof"><p id="p-1961">Siano <span class="process-math">\((H\cap K)k_{1}\)</span> e <span class="process-math">\((H\cap K)k_{2}\)</span> due laterali destri di <span class="process-math">\(H\cap K\)</span> in <span class="process-math">\(K\text{.}\)</span> Se i laterali destri <span class="process-math">\(Hk_{1}\)</span> e <span class="process-math">\(Hk_{2}\)</span> coincidono, allora esiste un elemento <span class="process-math">\(h\)</span> in <span class="process-math">\(H\)</span> tale che <span class="process-math">\(k_{1}=hk_{2}\text{.}\)</span> Ma <span class="process-math">\(h=k_{1}k_{2}^{-1}\)</span> è un elemento di <span class="process-math">\(K\)</span> e, quindi, di <span class="process-math">\(H\cap K\text{:}\)</span> dunque, <span class="process-math">\(k_{1}=hk_{2}\in (H\cap K)k_{2}\text{,}\)</span> cioè <span class="process-math">\((H\cap K)k_{1}=(H\cap K)k_{2}\text{.}\)</span> Di conseguenza, se <span class="process-math">\(r \gt \ind{G}{H}\text{,}\)</span> allora <span class="process-math">\((H\cap K)k_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\((H\cap K)k_{r}\)</span> non possono essere laterali destri tutti distinti di <span class="process-math">\(H\cap K\)</span> in <span class="process-math">\(K\)</span> poiché, altrimenti, i laterali <span class="process-math">\(Hk_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(Hk_{r}\)</span> sarebbero laterali tutti distinti di <span class="process-math">\(H\)</span> in <span class="process-math">\(G\text{.}\)</span> Pertanto, <span class="process-math">\(H\cap K\)</span> ha al più <span class="process-math">\(\ind{G}{H}\)</span> laterali distinti in <span class="process-math">\(K\text{.}\)</span></p></article></div>
+<p id="p-1962">Consideriamo ora il caso delle classi di coniugio di un sottogruppo di indice <span class="process-math">\(2\text{.}\)</span></p>
+<article class="proposition theorem-like" id="prop-classi_coniugio_indice_2"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">13.4.11</span><span class="period">.</span>
+</h3>
+<p id="p-1963">Sia <span class="process-math">\(G\)</span> un gruppo finito e sia <span class="process-math">\(H\)</span> un suo sottogruppo di indice <span class="process-math">\(2\text{.}\)</span> Preso un elemento <span class="process-math">\(h\in H\)</span> si verifica uno e uno solo dei seguenti casi</p>
+<ul class="disc">
+<li id="li-151"><p id="p-1964"><span class="process-math">\(h^{H}=h^{G}\)</span> e <span class="process-math">\(\abs{\cent{H}{h}}=\frac{1}{2}\abs{\cent{G}{h}}\text{;}\)</span></p></li>
+<li id="li-152"><p id="p-1965">preso un qualunque <span class="process-math">\(g\in G\setminus H\)</span> e posto <span class="process-math">\(h'\coloneqq h^{g}\text{,}\)</span> la classe <span class="process-math">\(h^{G}\)</span> è unione disgiunta di <span class="process-math">\(h^{H}\)</span> e <span class="process-math">\(h'^{H}\)</span> con <span class="process-math">\(\abs{h^{H}}=\abs{h'^{H}}=\frac{1}{2}\abs{h^{G}}\)</span> e <span class="process-math">\(\cent{G}{h}=\cent{H}{h}\text{.}\)</span></p></li>
+</ul></article><article class="hiddenproof" id="proof-148"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-148"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-148"><article class="hiddenproof"><p id="p-1966">Sappiamo che <span class="process-math">\(H\)</span> è normale in <span class="process-math">\(G\)</span> per il <a href="" class="xref" data-knowl="./knowl/cor-indice_2_normale.html" title="Corollario 13.3.9">Corollario 13.3.9</a>: dunque, <span class="process-math">\(h^{G}\)</span> è contenuta in <span class="process-math">\(H\text{.}\)</span></p> <p id="p-1967">Dalla <a href="" class="xref" data-knowl="./knowl/prop-moltiplicativita_indice.html" title="Proposizione 11.2.9">Proposizione 11.2.9</a>  e dal <a href="" class="xref" data-knowl="./knowl/cor-ordine_classe_coniugio.html" title="Corollario 13.2.10">Corollario 13.2.10</a> segue che</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prop-moltiplicativita_indice.html ./knowl/cor-ordine_classe_coniugio.html ./knowl/lem-indice_intersezione.html" id="md-47">
+\begin{align*}
+2\abs{h^{H}} \amp =2\ind{H}{\cent{H}{h}}=\ind{G}{H}\ind{H}{\cent{H}{h}}= \ind{G}{\cent{H}{h}}\\
+\amp   =\ind{G}{\cent{G}{h}}\ind{\cent{G}{h}}{\cent{H}{h}}= \abs{h^{G}}\ind{\cent{G}{h}}{\cent{H}{h}}
+\end{align*}
+</div>
+<p class="continuation">Poiché <span class="process-math">\(\cent{G}{h}\cap H=\cent{H}{h}\text{,}\)</span> dal <a href="" class="xref" data-knowl="./knowl/lem-indice_intersezione.html" title="Lemma 13.4.10">Lemma 13.4.10</a> segue che <span class="process-math">\(\ind{\cent{G}{h}}{\cent{H}{h}}\le\ind{G}{H}=2\text{.}\)</span> Abbiamo, quindi, due casi da considerare.</p> <p id="p-1968">Se <span class="process-math">\(\ind{\cent{G}{h}}{\cent{H}{h}}=2\text{,}\)</span> cioè <span class="process-math">\(\abs{\cent{H}{h}}=\frac{1}{2}\abs{\cent{G}{h}}\text{,}\)</span> allora <span class="process-math">\(\abs{h^{H}}=\abs{h^{G}}\text{,}\)</span> da cui segue <span class="process-math">\(h^{H}=h^{G}\text{.}\)</span></p> <p id="p-1969">Se <span class="process-math">\(\ind{\cent{G}{h}}{\cent{H}{h}}=1\text{,}\)</span> cioè <span class="process-math">\(\cent{H}{h}=\cent{G}{h}\text{,}\)</span> allora <span class="process-math">\(2\abs{h^{H}}=\abs{h^{G}}\text{.}\)</span> Siano ora <span class="process-math">\(g\in G\setminus H\)</span> e <span class="process-math">\(h'\coloneqq h^{g}\)</span> come in enunciato: applicando il <a href="" class="xref" data-knowl="./knowl/thm-stabilizzatore_orbita.html" title="Teorema 13.2.7">Teorema 13.2.7</a> all'azione per coniugio, abbiamo che gli elementi <span class="process-math">\(k\)</span> di <span class="process-math">\(G\)</span> tali che <span class="process-math">\(h^{k}=h^{g}\)</span> sono tutti e soli quelli del tipo <span class="process-math">\(cg\)</span> per qualche <span class="process-math">\(c\in\cent{G}{h}\text{.}\)</span> Poiché <span class="process-math">\(\cent{G}{h}\le H\text{,}\)</span> nessuno di questi elementi appartiene a <span class="process-math">\(H\text{,}\)</span> altrimenti <span class="process-math">\(g=c^{-1}(cg)\)</span> apparterrebbe a <span class="process-math">\(H\text{.}\)</span> Pertanto, <span class="process-math">\(h\)</span> e <span class="process-math">\(h'\)</span> non sono coniugati in <span class="process-math">\(H\text{.}\)</span> Dunque, <span class="process-math">\(h^{G}\)</span> è unione disgiunta delle classi <span class="process-math">\(h^{H}\)</span> e <span class="process-math">\(h'^{H}\)</span> entrambe di cardinalità <span class="process-math">\(\frac{\abs{h^{G}}}{2}\text{.}\)</span></p></article></div>
+<article class="remark remark-like" id="rem-classe_o_centralizzante_pari"><h3 class="heading">
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">13.4.12</span><span class="period">.</span>
+</h3>
+<p id="p-1970">Nelle stesse ipotesi della <a href="" class="xref" data-knowl="./knowl/prop-classi_coniugio_indice_2.html" title="Proposizione 13.4.11">Proposizione 13.4.11</a>, se <span class="process-math">\(\abs{h^{G}}\)</span> è dispari siamo sicuramente nel primo caso e se <span class="process-math">\(\abs{\cent{G}{h}}\)</span> è dispari siamo sicuramente nel secondo caso. Se né <span class="process-math">\(\abs{h^{G}}\)</span> né <span class="process-math">\(\abs{\cent{G}{h}}\)</span> sono dispari, occorre un'analisi più dettagliata per capire se siamo nel primo o nel secondo caso.</p></article><p id="p-1971">Applichiamo ora tutto ciò alle classi di coniugio del gruppo alterno <span class="process-math">\(A_{n}\)</span> per valori piccoli di <span class="process-math">\(n\text{.}\)</span></p>
+<article class="example example-like" id="ex-classi_coniugio_alterno"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">13.4.13</span><span class="period">.</span>
+</h3>
+<p id="p-1972">Riprendiamo le tabelle date nell'<a href="" class="xref" data-knowl="./knowl/ex-classi_coniugio_simmetrico.html" title="Esempio 13.4.5">Esempio 13.4.5</a> e consideriamo le classi in <span class="process-math">\(\Sym_{n}\)</span> di permutazioni pari: quelle di cardinalità dispari, sono anche classi di coniugio nell'alterno; quelle che sono formate da elementi il cui centralizzante ha ordine dispari, si “spezzano” in due classi nell'alterno di cardinalità uguale e per le altre vediamo caso per caso.</p> <p id="p-1973">In <span class="process-math">\(\Sym_{3}\)</span> abbiamo</p>
+<ul class="disc">
+<li id="li-153"><p id="p-1974">la classe di <span class="process-math">\(\Id\)</span> che ha un solo elemento ed è, quindi, una classe anche in <span class="process-math">\(A_{3}\text{;}\)</span></p></li>
+<li id="li-154"><p id="p-1975">la classe di <span class="process-math">\((1\;2\;3)\)</span> che ha cardinalità <span class="process-math">\(2\)</span> e i cui elementi hanno centralizzante di ordine <span class="process-math">\(1\)</span> e, dunque, si spezza in due classi di cardinalità <span class="process-math">\(1\text{.}\)</span></p></li>
+</ul> <p id="p-1976">In <span class="process-math">\(\Sym_{4}\)</span> abbiamo</p>
+<ul class="disc">
+<li id="li-155"><p id="p-1977">la classe di <span class="process-math">\(\Id\)</span> che ha un solo elemento ed è, quindi, una classe anche in <span class="process-math">\(A_{4}\text{;}\)</span></p></li>
+<li id="li-156"><p id="p-1978">la classe di <span class="process-math">\((1\;2\;3)\)</span> che ha cardinalità <span class="process-math">\(8\)</span> e i cui elementi hanno centralizzante di ordine <span class="process-math">\(3\)</span> e, dunque, si spezza in due classi di cardinalità <span class="process-math">\(4\text{;}\)</span></p></li>
+<li id="li-157"><p id="p-1979">la classe di <span class="process-math">\((1\;2)(3\;4)\)</span> che ha cardinalità <span class="process-math">\(3\)</span> ed è, quindi, una classe anche in <span class="process-math">\(A_{4}\text{.}\)</span></p></li>
+</ul> <p id="p-1980">In <span class="process-math">\(\Sym_{5}\)</span> abbiamo</p>
+<ul class="disc">
+<li id="li-158"><p id="p-1981">la classe di <span class="process-math">\(\Id\)</span> che ha un solo elemento ed è, quindi, una classe anche in <span class="process-math">\(A_{5}\text{;}\)</span></p></li>
+<li id="li-159"><p id="p-1982">la classe di <span class="process-math">\((1\;2\;3)\)</span> che ha cardinalità <span class="process-math">\(20\)</span> e i cui elementi hanno centralizzante di ordine <span class="process-math">\(6\)</span> e, dunque, non possiamo analizzarla semplicemente guardando alle parità. Notiamo però che <span class="process-math">\((4\;5)\)</span> appartiene al centralizzante di <span class="process-math">\((1\;2\;3)\)</span> ma non sta nel sottogruppo alterno. Di conseguenza, il centralizzante nel simmetrico e nell'alterno di <span class="process-math">\((1\;2\;3)\)</span> non coincidono. Dunque, la classe di <span class="process-math">\((1\;2\;3)\)</span> nel simmetrico è una classe anche nell'alterno;</p></li>
+<li id="li-160"><p id="p-1983">la classe di <span class="process-math">\((1\;2\;3\;4\;5)\)</span> che ha cardinalità <span class="process-math">\(24\)</span> e i cui elementi hanno centralizzante di ordine <span class="process-math">\(5\)</span> e, dunque, si spezza in due classi di cardinalità <span class="process-math">\(12\text{;}\)</span></p></li>
+<li id="li-161"><p id="p-1984">la classe di <span class="process-math">\((1\;2)(3\;4)\)</span> che ha cardinalità <span class="process-math">\(15\)</span> ed è, quindi, una classe anche in <span class="process-math">\(A_{5}\text{.}\)</span></p></li>
+</ul></article><section class="exercises" id="exercises-coniugati_simmetrico_alterno"><h3 class="heading hide-type">
+<span class="type">Esercizi</span> <span class="codenumber"></span> <span class="title">Esercizi</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-288"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-67"><p id="p-1985">Sia <span class="process-math">\(S\coloneqq\Sym_{n}\)</span> il gruppo simmetrico su <span class="process-math">\(n\)</span> lettere e sia <span class="process-math">\(\sigma\)</span> un <span class="process-math">\(r\)</span>-ciclo (dove, ovviamente, <span class="process-math">\(r\le n\)</span>).</p></div>
+<article class="task exercise-like" id="task-67"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1986">Determinare la cardinalità della classe di coniugio di <span class="process-math">\(\sigma\)</span> in <span class="process-math">\(S\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-108" id="solution-108"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-108"><div class="solution solution-like"><p id="p-1987">Gli elementi coniugati di <span class="process-math">\(\sigma\)</span> sono gli <span class="process-math">\(r\)</span>-cicli. Per determinare un <span class="process-math">\(r\)</span>-ciclo <span class="process-math">\((a_{1}\;a_{2}\;\ldots\;a_{r})\)</span> possiamo scegliere <span class="process-math">\(a_{1}\)</span> in <span class="process-math">\(n\)</span> modi diversi, poi <span class="process-math">\(a_{2}\)</span> in <span class="process-math">\(n-1\)</span> modi diversi e così via fino a <span class="process-math">\(a_{r}\)</span> che può essere scelto in <span class="process-math">\(n-r+1\)</span> modi diversi. In questo modo lo stesso ciclo appare però <span class="process-math">\(r\)</span> volte, quindi la classe di coniugio di <span class="process-math">\(\sigma\)</span> è formata da <span class="process-math">\(\frac{n\cdot(n-1)\cdots(n-r+1)}{r}\)</span> elementi.</p></div></div>
+</div></article><article class="task exercise-like" id="task-68"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1988">Determinare i valori di <span class="process-math">\(r\)</span> per cui <span class="process-math">\(\cent{S}{\sigma}=\grgen{\sigma}\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-109" id="solution-109"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-109"><div class="solution solution-like"><p id="p-1989">Sappiamo che <span class="process-math">\(\abs{\sigma^{S}}\abs{\cent{S}{\sigma}}=\abs{S}\text{.}\)</span> Poiché <span class="process-math">\(\abs{S}=n!\)</span> e <span class="process-math">\(\abs{\sigma^{S}}=\frac{n\cdot(n-1)\cdots(n-r+1)}{r}\)</span> dal punto precedente, ne consegue che <span class="process-math">\(\abs{\cent{S}{\sigma}}=r(n-r)!\text{.}\)</span> Il centralizzante di <span class="process-math">\(\sigma\)</span> contiene tutte le potenze di <span class="process-math">\(\sigma\)</span> e, dunque, contiene <span class="process-math">\(\grgen{\sigma}\text{.}\)</span> Poiché <span class="process-math">\(\sigma\)</span> ha periodo <span class="process-math">\(r\text{,}\)</span> possiamo dunque affermare che <span class="process-math">\(\cent{S}{\sigma}=\grgen{\sigma}\)</span> se e solo se <span class="process-math">\(r(n-r)!=r\)</span> il che avviene se e solo se <span class="process-math">\((n-r)!=1\text{:}\)</span> questo si verifica se e solo se <span class="process-math">\(n-r=0\)</span> oppure <span class="process-math">\(n-r=1\text{,}\)</span> cioè <span class="process-math">\(r=n\)</span> o <span class="process-math">\(r=n-1\text{.}\)</span></p></div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-289"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-68"><p id="p-1990">Sia <span class="process-math">\(S\coloneqq\Sym_{8}\)</span> il gruppo simmetrico su <span class="process-math">\(8\)</span> lettere.</p></div>
+<article class="task exercise-like" id="task-69"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1991">Determinare la cardinalità di tutte le classi di coniugio di <span class="process-math">\(S\)</span> formate da elementi di periodo <span class="process-math">\(4\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-110" id="solution-110"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-110"><div class="solution solution-like">
+<p id="p-1992">Due permutazioni sono coniugate se e solo se si scrivono come prodotti di cicli disgiunti aventi le stesse lunghezze. Una permutazione <span class="process-math">\(\sigma\)</span> scritta come prodotto di cicli disgiunti ha periodo che è il minimo comune multiplo delle lunghezze dei cicli. Affinché il periodo di <span class="process-math">\(\sigma\)</span> sia <span class="process-math">\(4\)</span> i cicli coinvolti devono avere quindi lunghezza che divide <span class="process-math">\(4\)</span> (cioè <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(2\)</span> o <span class="process-math">\(4\)</span>) e ci deve essere almeno un ciclo di lunghezza <span class="process-math">\(4\text{.}\)</span></p> <p id="p-1993">Consideriamo le varie possibilità per la scrittura di <span class="process-math">\(\sigma\)</span> come prodotto di cicli disgiunti. Poiché siamo in <span class="process-math">\(\Sym_{8}\)</span> ci possono essere al più <span class="process-math">\(2\)</span> cicli di lunghezza <span class="process-math">\(4\)</span> e in tal caso non ci possono essere altri cicli. Si ottiene così la classe di coniugio delle permutazioni del tipo <span class="process-math">\((a_{1}\;a_{2}\;a_{3}\;a_{4})(a_{5}\;a_{6}\;a_{7}\;a_{8})\text{,}\)</span> con tutti gli <span class="process-math">\(a_{i}\)</span> distinti. Per determinare il numero di elementi di questa classe di coniugio, notiamo che <span class="process-math">\(a_{1}\text{,}\)</span> <span class="process-math">\(a_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(a_{8}\)</span> possono essere scelti in <span class="process-math">\(8!\)</span> modi. Tuttavia non tutte queste scelte portano a permutazioni diverse: ciascuno dei due cicli coinvolti può essere scritto in <span class="process-math">\(4\)</span> modi diversi (a seconda della lettera iniziale). Inoltre i due cicli possono essere scambiati fra loro. Dunque, abbiamo <span class="process-math">\(\frac{8!}{4\cdot4\cdot2}\)</span> elementi nella classe.</p> <p id="p-1994">Consideriamo ora i casi in cui c'è esattamente un ciclo di lunghezza <span class="process-math">\(4\text{:}\)</span> possono essere allora esserci nessuno, uno o due cicli di lunghezza <span class="process-math">\(2\text{.}\)</span> Abbiamo, dunque, la classe di coniugio degli elementi del tipo <span class="process-math">\((a_{1}\;a_{2}\;a_{3}\;a_{4})\text{:}\)</span> possiamo scegliere le lettere <span class="process-math">\(a_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(a_{4}\)</span> in <span class="process-math">\(8\cdot7\cdot6\cdot5\)</span> modi diversi. Come prima però, ciascun ciclo può essere scritto in <span class="process-math">\(4\)</span> modi diversi. Ci sono così <span class="process-math">\(\frac{8\cdot7\cdot6\cdot5}{4}\)</span> elementi in questa classe.</p> <p id="p-1995">Abbiamo poi la classe di coniugio degli elementi del tipo</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(a_{1}\;a_{2}\;a_{3}\;a_{4})(a_{5}\;a_{6})\text{:}
+\end{equation*}
+</div>
+<p class="continuation">possiamo scegliere le lettere <span class="process-math">\(a_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(a_{6}\)</span> in <span class="process-math">\(8\cdot7\cdot6\cdot5\cdot4\cdot3\)</span> modi diversi. Il ciclo di lunghezza <span class="process-math">\(4\)</span> può essere scritto in <span class="process-math">\(4\)</span> modi diversi, mentre il ciclo di lunghezza <span class="process-math">\(2\)</span> può essere scritto in <span class="process-math">\(2\)</span> modi diversi. Ci sono così <span class="process-math">\(\frac{8\cdot7\cdot6\cdot5\cdot4\cdot3}{4\cdot2}\)</span> elementi in questa classe.</p> <p id="p-1996">Infine abbiamo la classe di coniugio degli elementi del tipo</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(a_{1}\;a_{2}\;a_{3}\;a_{4})(a_{5}\;a_{6})(a_{7}\;a_{8})\text{:}
+\end{equation*}
+</div>
+<p class="continuation">possiamo scegliere le lettere <span class="process-math">\(a_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(a_{8}\)</span> in <span class="process-math">\(8!\)</span> modi diversi. Il ciclo di lunghezza <span class="process-math">\(4\)</span> può essere scritto in <span class="process-math">\(4\)</span> modi diversi, mentre ciascun ciclo di lunghezza <span class="process-math">\(2\)</span> può essere scritto in <span class="process-math">\(2\)</span> modi diversi. Inoltre, possiamo scambiare tra loro i cicli di lunghezza <span class="process-math">\(2\text{.}\)</span> Ci sono così <span class="process-math">\(\frac{8!}{4\cdot2\cdot2\cdot2}\)</span> elementi in questa classe.</p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-70"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1997">Stabilire se esiste un elemento <span class="process-math">\(\sigma\)</span> di periodo <span class="process-math">\(4\)</span> in <span class="process-math">\(S\)</span> tale che <span class="process-math">\(\cent{S}{\sigma}=\grgen{\sigma}\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-111" id="solution-111"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-111"><div class="solution solution-like"><p id="p-1998">Sappiamo che <span class="process-math">\(\abs{\sigma^{S}}\abs{\cent{S}{\sigma}}=\abs{S}\text{.}\)</span> Poiché <span class="process-math">\(\abs{S}=8!\)</span> e <span class="process-math">\(\abs{\grgen{\sigma}}=4\text{,}\)</span> affinché si abbia <span class="process-math">\(\cent{S}{\sigma}=\grgen{\sigma}\)</span> dovrebbe essere <span class="process-math">\(\abs{\sigma^{S}}=\frac{8!}{4}\text{.}\)</span> Nessuna delle classi di coniugio degli elementi di periodo <span class="process-math">\(4\)</span> determinate al punto precedente ha tale cardinalità e, dunque, non esiste alcun elemento di periodo <span class="process-math">\(4\)</span> per cui si abbia <span class="process-math">\(\cent{S}{\sigma}=\grgen{\sigma}\text{.}\)</span></p></div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-290"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-69"><p id="p-1999">Si consideri il gruppo simmetrico <span class="process-math">\(S\coloneqq\Sym_{5}\)</span> su <span class="process-math">\(5\)</span> lettere e gli elementi <span class="process-math">\(\sigma\coloneqq(1\;2)(3\;4)\)</span> e <span class="process-math">\(\tau\coloneqq(1\;2\;3)\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-71"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-2000">Quanti elementi di <span class="process-math">\(S\)</span> commutano con <span class="process-math">\(\sigma\text{?}\)</span> Quanti di questi sono permutazioni pari?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-112" id="solution-112"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-112"><div class="solution solution-like">
+<p id="p-2001">L'indice del centralizzante di <span class="process-math">\(\sigma\)</span> in <span class="process-math">\(S\)</span> è uguale alla cardinalità della classe di <span class="process-math">\(\sigma\text{.}\)</span> Gli elementi coniugati di <span class="process-math">\(\sigma\)</span> sono tutti e soli quelli del tipo <span class="process-math">\((a\;b)(c\;d)\)</span> con <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\)</span> e <span class="process-math">\(d\)</span> numeri distinti compresi tra <span class="process-math">\(1\)</span> e <span class="process-math">\(5\text{.}\)</span> Abbiamo <span class="process-math">\(5\)</span> scelte per <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(4\)</span> scelte per <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(3\)</span> scelte per <span class="process-math">\(c\)</span> e <span class="process-math">\(2\)</span> scelte per <span class="process-math">\(d\text{:}\)</span> in tutto <span class="process-math">\(5\cdot4\cdot3\cdot2=120\)</span> scelte. Tutte queste scelte non corrispondono però a elementi distinti. Infatti possiamo scambiare tra loro <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> (e dobbiamo, dunque, dividere il numero delle scelte per <span class="process-math">\(2\)</span>), scambiare fra loro <span class="process-math">\(c\)</span> e <span class="process-math">\(d\)</span> (e dobbiamo, dunque, dividere ancora per <span class="process-math">\(2\)</span>), e scambiare tra loro i cicli <span class="process-math">\((a\;b)\)</span> e <span class="process-math">\((c\;d)\)</span> (e dividere ulteriormente per <span class="process-math">\(2\)</span>). Pertanto, la classe di coniugio di <span class="process-math">\(\sigma\)</span> contiene <span class="process-math">\(\frac{120}{2\cdot2\cdot2}=15\)</span> elementi. Poiché <span class="process-math">\(S\)</span> ha ordine <span class="process-math">\(5!=120\text{,}\)</span> il centralizzante di <span class="process-math">\(\sigma\)</span> contiene <span class="process-math">\(\frac{120}{15}=8\)</span> elementi.</p> <p id="p-2002">Dobbiamo ora trovare l'ordine di <span class="process-math">\(\cent{S}{\sigma}\cap A_{5}\text{.}\)</span> Per il <a href="" class="xref" data-knowl="./knowl/lem-indice_intersezione.html" title="Lemma 13.4.10">Lemma 13.4.10</a>, <span class="process-math">\(\ind{\cent{S}{\sigma}}{\cent{S}{\sigma}\cap A_{5}}\le\ind{S}{A_{5}}=2\text{,}\)</span> cioè <span class="process-math">\(\cent{S}{\sigma}\cap A_{5}\)</span> ha ordine <span class="process-math">\(8\)</span> o <span class="process-math">\(4\text{.}\)</span> Notiamo che <span class="process-math">\(\cent{S}{\sigma}\)</span> contiene <span class="process-math">\((1\;2)\)</span> che non appartiene ad <span class="process-math">\(A_{5}\text{:}\)</span> pertanto, <span class="process-math">\(\cent{S}{\sigma}\cap A_{5}\ne\cent{S}{\sigma}\)</span> e, quindi, <span class="process-math">\(\cent{S}{\sigma}\cap A_{5}\)</span> ha ordine <span class="process-math">\(4\text{.}\)</span></p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-72"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-2003">Quanti elementi di <span class="process-math">\(S\)</span> commutano con <span class="process-math">\(\tau\text{?}\)</span> Quanti di questi sono permutazioni pari?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-113" id="solution-113"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-113"><div class="solution solution-like">
+<p id="p-2004">Come prima calcoliamo la cardinalità della classe di coniugio di <span class="process-math">\(\tau\text{:}\)</span> questa è formata dagli elementi del tipo <span class="process-math">\((a\;b\;c)\)</span> con <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\)</span> e <span class="process-math">\(c\)</span> diversi. Abbiamo <span class="process-math">\(5\)</span> scelte per <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(4\)</span> scelte per <span class="process-math">\(b\)</span> e <span class="process-math">\(3\)</span> scelte per <span class="process-math">\(c\text{:}\)</span> a <span class="process-math">\(3\)</span> a <span class="process-math">\(3\)</span> queste scelte danno però lo stesso elemento. Dunque, la classe di coniugio di <span class="process-math">\(\tau\)</span> contiene <span class="process-math">\(\frac{5\cdot4\cdot3}{3}=20\)</span> elementi e il suo centralizzante ne contiene <span class="process-math">\(\frac{120}{20}=6\text{.}\)</span></p> <p id="p-2005">Analogamente al caso precedente possiamo dire che <span class="process-math">\(\cent{S}{\tau}\cap A_{5}\)</span> può avere ordine <span class="process-math">\(3\)</span> o <span class="process-math">\(6\text{.}\)</span> Poiché <span class="process-math">\((45)\)</span> appartiene a <span class="process-math">\(\cent{S}{\tau}\)</span> ma non a <span class="process-math">\(A_{5}\text{,}\)</span> possiamo concludere che <span class="process-math">\(\cent{S}{\tau}\cap A_{5}\ne\cent{S}{\tau}\)</span> e, quindi, <span class="process-math">\(\cent{S}{\tau}\cap A_{5}\)</span> ha ordine <span class="process-math">\(3\text{.}\)</span></p>
+</div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-291"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-70"><p id="p-2006">Si consideri in <span class="process-math">\(\Sym_{7}\)</span> la permutazione <span class="process-math">\(\sigma\coloneqq(1\;2\;3\;4)(5\;6)\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-73"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-2007">Determinare l'ordine della classe di coniugio e l'ordine del centralizzante di <span class="process-math">\(\sigma\)</span> in <span class="process-math">\(\Sym_{7}\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-114" id="solution-114"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-114"><div class="solution solution-like"><p id="p-2008">la classe di coniugio di <span class="process-math">\(\sigma\)</span> è formata dalle permutazioni del tipo <span class="process-math">\((a\;b\;c\;d)(e\;f)\)</span> con <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\text{,}\)</span> <span class="process-math">\(d\text{,}\)</span> <span class="process-math">\(e\)</span> ed <span class="process-math">\(f\)</span> interi distinti compresi tra <span class="process-math">\(1\)</span> e <span class="process-math">\(7\text{.}\)</span> Possiamo scegliere <span class="process-math">\(a\)</span> in <span class="process-math">\(7\)</span> modi, poi <span class="process-math">\(b\)</span> in <span class="process-math">\(6\)</span> modi, <span class="process-math">\(c\)</span> in <span class="process-math">\(5\)</span> modi e così via fino a <span class="process-math">\(2\)</span> scelte per <span class="process-math">\(f\text{.}\)</span> Tuttavia queste <span class="process-math">\(7\cdot6\cdot5\cdot4\cdot3\cdot2=7!\)</span> scelte non danno origine a permutazioni distinte. Infatti scambiando fra loro <span class="process-math">\(e\)</span> e <span class="process-math">\(f\)</span> otteniamo la stessa permutazione, e, allo stesso modo, <span class="process-math">\((a\;b\;c\;d)\)</span> può essere scritto in <span class="process-math">\(4\)</span> modi distinti. Dunque, il numero di elementi nella classe di <span class="process-math">\(\sigma\)</span> è uguale a <span class="process-math">\(\frac{7!}{4\cdot2}\text{:}\)</span> questo numero è uguale all'indice in <span class="process-math">\(\Sym_{7}\)</span> di <span class="process-math">\(\cent{\Sym_{7}}{\sigma}\text{.}\)</span> Poiché <span class="process-math">\(\abs{\Sym_{7}}=7!\text{,}\)</span> il centralizzante di <span class="process-math">\(\sigma\)</span> contiene <span class="process-math">\(8\)</span> elementi.</p></div></div>
+</div></article><article class="task exercise-like" id="task-74"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-2009">Determinare l'ordine della classe di coniugio di <span class="process-math">\(\sigma\)</span> in <span class="process-math">\(A_{7}\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-115" id="solution-115"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-115"><div class="solution solution-like"><p id="p-2010">Notiamo che <span class="process-math">\(\sigma\)</span> commuta con <span class="process-math">\((5\;6)\)</span> e, di conseguenza, il centralizzante di <span class="process-math">\(\sigma\)</span> non è contenuto nell'alterno. Per la <a href="" class="xref" data-knowl="./knowl/prop-classi_coniugio_indice_2.html" title="Proposizione 13.4.11">Proposizione 13.4.11</a>, la classe di coniugio di <span class="process-math">\(\sigma\)</span> nell'alterno coincide con la sua classe nel simmetrico e ha quindi ordine <span class="process-math">\(\frac{7!}{4\cdot2}\text{.}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-75"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-2011">Dimostrare che il centralizzante di <span class="process-math">\(\sigma\)</span> nell'alterno è ciclico.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-116" id="solution-116"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-116"><div class="solution solution-like"><p id="p-2012">Per la <a href="" class="xref" data-knowl="./knowl/prop-classi_coniugio_indice_2.html" title="Proposizione 13.4.11">Proposizione 13.4.11</a>, il centralizzante di <span class="process-math">\(\sigma\)</span> nell'alterno ha ordine <span class="process-math">\(\frac{8}{2}=4\text{.}\)</span> Il centralizzante contiene perlomeno il sottogruppo ciclico generato da <span class="process-math">\(\sigma\text{:}\)</span> poiché il periodo di <span class="process-math">\(\sigma\)</span> è il minimo comune multiplo delle lunghezze dei cicli disgiunti che lo compongono, cioè <span class="process-math">\(4\text{,}\)</span> il sottogruppo ciclico generato da <span class="process-math">\(\sigma\)</span> coincide con il centralizzante di <span class="process-math">\(\sigma\)</span> nell'alterno.</p></div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-292"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-71"><p id="p-2013">Si consideri il gruppo <span class="process-math">\(\Sym_{n}\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-76"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-2014">Dimostrare che se <span class="process-math">\(n\le 11\)</span> in <span class="process-math">\(\Sym_{n}\)</span> non ci sono elementi di periodo <span class="process-math">\(35\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-117" id="solution-117"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-117"><div class="solution solution-like"><p id="p-2015">Una permutazione scritta come prodotto di cicli disgiunti ha periodo che è uguale al minimo comune multiplo delle lunghezze dei cicli. Affinché questo minimo comune multiplo sia <span class="process-math">\(35\)</span> ci dovrebbe essere almeno un ciclo di lunghezza <span class="process-math">\(35\)</span> (il che è impossibile perché <span class="process-math">\(n\le11\)</span>) oppure almeno un ciclo di lunghezza <span class="process-math">\(7\)</span> e uno di lunghezza <span class="process-math">\(5\)</span> (il che è pure impossibile perché <span class="process-math">\(7+5=12&gt;11\)</span>).</p></div></div>
+</div></article><article class="task exercise-like" id="task-77"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-2016">Dimostrare che in <span class="process-math">\(\Sym_{12}\)</span> ci sono elementi di periodo <span class="process-math">\(35\)</span> e contare il loro numero.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-118" id="solution-118"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-118"><div class="solution solution-like"><p id="p-2017">Ripetendo lo stesso ragionamento fatto in precedenza vediamo che in <span class="process-math">\(\Sym_{12}\)</span> non ci sono cicli di ordine <span class="process-math">\(35\text{,}\)</span> ma possiamo determinare un ciclo di ordine <span class="process-math">\(7\)</span> e un ciclo di ordine <span class="process-math">\(5\)</span> disgiunti: preso il prodotto di due cicli siffatti, dal momento che <span class="process-math">\(7+5=12\text{,}\)</span> nello sviluppo della permutazione come prodotto di cicli disgiunti non possiamo aggiungere altri cicli. Le permutazioni di <span class="process-math">\(\Sym_{12}\)</span> di periodo <span class="process-math">\(12\)</span> sono allora tutte del tipo <span class="process-math">\((a_{1}\;\ldots \;a_{7})(a_{8}\;\ldots\;a_{12})\text{.}\)</span> Possiamo allora scegliere <span class="process-math">\(a_{1}\)</span> in <span class="process-math">\(12\)</span> modi, <span class="process-math">\(a_{2}\)</span> in <span class="process-math">\(11\)</span> modi e così via fino ad <span class="process-math">\(a_{12}\)</span> in un modo, per un totale di <span class="process-math">\(12!\)</span> scelte, che però non corrispondono a differenti permutazioni: il <span class="process-math">\(7\)</span>-ciclo può essere riscritto in <span class="process-math">\(7\)</span> modi diversi e il <span class="process-math">\(5\)</span>-ciclo può essere riscritto in <span class="process-math">\(5\)</span> modi diversi. Dunque, abbiamo <span class="process-math">\(\frac{12!}{35}\)</span> permutazioni di periodo <span class="process-math">\(35\text{.}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-78"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-2018">Dato un elemento <span class="process-math">\(\sigma\)</span> di periodo <span class="process-math">\(35\)</span> in <span class="process-math">\(\Sym_{12}\)</span> determinare quanti elementi di <span class="process-math">\(\Sym_{12}\)</span> commutano con <span class="process-math">\(\sigma\)</span> e quanti elementi di <span class="process-math">\(A_{12}\)</span> commutano con <span class="process-math">\(\sigma\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-119" id="solution-119"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-119"><div class="solution solution-like">
+<p id="p-2019">Al punto precedente abbiamo mostrato che le permutazioni di periodo <span class="process-math">\(35\)</span> sono tutte dello stesso tipo e sono, dunque, coniugate tra loro in <span class="process-math">\(\Sym_{12}\text{:}\)</span> la cardinalità della classe di coniugio è uguale all'indice in <span class="process-math">\(\Sym_{12}\)</span> del centralizzante di una qualsiasi di esse. Poiché <span class="process-math">\(\Sym_{12}\)</span> ha ordine <span class="process-math">\(12!\)</span> e la classe di coniugio ha cardinalità <span class="process-math">\(\frac{12!}{35}\)</span> ne consegue che il centralizzante in <span class="process-math">\(\Sym_{12}\)</span> ha ordine <span class="process-math">\(35\text{.}\)</span></p> <p id="p-2020">Il centralizzante <span class="process-math">\(\cent{\Sym_{12}}{\sigma}\)</span> contiene perlomeno il sottogruppo ciclico generato da <span class="process-math">\(\sigma\text{:}\)</span> poiché <span class="process-math">\(\sigma\)</span> ha periodo <span class="process-math">\(35\)</span> e il centralizzante ha pure ordine <span class="process-math">\(35\text{,}\)</span> ne consegue che <span class="process-math">\(\cent{\Sym_{12}}{\sigma}=\grgen{\sigma}\text{.}\)</span> Notiamo ora che la permutazione <span class="process-math">\(\sigma\)</span> è pari e appartiene quindi ad <span class="process-math">\(A_{12}\text{:}\)</span> pertanto, tutto il gruppo ciclico generato da <span class="process-math">\(\sigma\)</span> è contenuto in <span class="process-math">\(A_{12}\)</span> e, quindi,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\cent{A_{12}}{\sigma}=\cent{\Sym_{12}}{\sigma}\cap A_{12}=\grgen{\sigma}\text{:}
+\end{equation*}
+</div>
+<p class="continuation">dunque, <span class="process-math">\(\cent{A_{12}}{\sigma}\)</span> contiene <span class="process-math">\(35\)</span> elementi.</p>
+</div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-293"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-72"><p id="p-2021">Si consideri in <span class="process-math">\(\Sym_{8}\)</span> la permutazione <span class="process-math">\(\sigma\coloneqq(1\;2\;3\;4)(5\;6)\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-79"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-2022">Determinare il numero di elementi di <span class="process-math">\(\Sym_{8}\)</span> che commutano con <span class="process-math">\(\sigma\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-137" id="answer-137"><span class="type">Risposta</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-137"><div class="answer solution-like"><p id="p-2023"><span class="process-math">\(16\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-80"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-2024">Determinare il numero di elementi di <span class="process-math">\(A_{8}\)</span> che commutano con <span class="process-math">\(\sigma\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-120" id="solution-120"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-120"><div class="solution solution-like">
+<p id="p-2025">Dal <a href="" class="xref" data-knowl="./knowl/lem-indice_intersezione.html" title="Lemma 13.4.10">Lemma 13.4.10</a> segue che</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/lem-indice_intersezione.html">
+\begin{equation*}
+\ind{\cent{\Sym_{8}}{\sigma}}{\cent{A_{8}}{\sigma}}\le\ind{\Sym_{8}}{A_{8}}=2\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Notiamo che <span class="process-math">\((7\;8)\in\cent{\Sym_{8}}{\sigma}\setminus A_{8}\)</span> e, dunque, <span class="process-math">\(\cent{\Sym_{8}}{\sigma}\nleq
+A_{8}\text{.}\)</span> Quindi, <span class="process-math">\(\ind{\cent{\Sym_{8}}{\sigma}}{\cent{A_{8}}{\sigma}} \gt 1\text{.}\)</span> Di conseguenza, <span class="process-math">\(\ind{\cent{\Sym_{8}}{\sigma}}{\cent{A_{8}}{\sigma}}=2\)</span> e <span class="process-math">\(\abs{\cent{A_{8}}{\sigma}}=\abs{\cent{\Sym_{8}}{\sigma}}/2=8\text{.}\)</span></p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-81"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-2026">Stabilire se esiste in <span class="process-math">\(\Sym_{8}\)</span> una permutazione <span class="process-math">\(\tau\)</span> tale che <span class="process-math">\(\tau^{2}=\sigma\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-121" id="solution-121"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-121"><div class="solution solution-like"><p id="p-2027">La permutazione <span class="process-math">\(\sigma\)</span> è scritta come prodotto di cicli disgiunti: il periodo di <span class="process-math">\(\sigma\)</span> è il minimo comune multiplo della lunghezza di tali cicli, cioè <span class="process-math">\(\abs{\sigma}=4\text{.}\)</span> Se esistesse <span class="process-math">\(\tau\)</span> tale che <span class="process-math">\(\tau^{2}=\sigma\text{,}\)</span> allora avremmo che <span class="process-math">\(\tau^{8}=(\tau^{2})^{4}=\sigma^{4}=\Id\text{,}\)</span> cioè il periodo di <span class="process-math">\(\tau\)</span> dovrebbe essere un divisore di <span class="process-math">\(2^{3}\text{,}\)</span> cioè essere del tipo <span class="process-math">\(2^{k}\)</span> per qualche <span class="process-math">\(k\le3\text{.}\)</span> Ma il periodo di <span class="process-math">\(\sigma=\tau^{2}\)</span> è uguale a <span class="process-math">\(\frac{2^{k}}{(2^{k},2)}=2^{k-1}\text{:}\)</span> poiché <span class="process-math">\(\sigma\)</span> ha periodo <span class="process-math">\(4\)</span> ciò significa che <span class="process-math">\(k=3\text{,}\)</span> cioè <span class="process-math">\(\tau\)</span> ha periodo esattamente <span class="process-math">\(8\text{.}\)</span> Scritta allora <span class="process-math">\(\sigma\)</span> come prodotto di cicli disgiunti ci dovrebbe allora essere almeno un ciclo di lunghezza <span class="process-math">\(8\text{.}\)</span> Poiché siamo in <span class="process-math">\(\Sym_{8}\)</span> l'unica possibilità è che <span class="process-math">\(\tau\)</span> sia esattamente un ciclo di lunghezza <span class="process-math">\(8\text{,}\)</span> cioè del tipo <span class="process-math">\((a_{1}\;a_{2}\;a_{3}\;a_{4}\;a_{5}\;a_{6}\;a_{7}\;a_{8})\text{,}\)</span> il cui quadrato è però <span class="process-math">\((a_{1}\;a_{3}\;a_{5}\;a_{7})(a_{2}\;a_{4}\;a_{6}\;a_{8})\)</span> e, quindi non può coincidere con <span class="process-math">\(\sigma\text{.}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-82"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-2028">Stabilire se esiste in <span class="process-math">\(\Sym_{8}\)</span> una permutazione <span class="process-math">\(\nu\)</span> tale che <span class="process-math">\(\nu^{3}=\sigma\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-122" id="solution-122"><span class="type">Soluzione</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-122"><div class="solution solution-like"><p id="p-2029">Abbiamo già notato che <span class="process-math">\(\sigma\)</span> ha periodo <span class="process-math">\(4\text{.}\)</span> Ma allora, posto <span class="process-math">\(\nu\coloneqq\sigma^{3}\)</span> abbiamo <span class="process-math">\(\nu^{3}=\sigma^{9}=\sigma\text{,}\)</span> come richiesto.</p></div></div>
+</div></article></article></section></section></div></main>
+</div>
+</body>
+</html>
