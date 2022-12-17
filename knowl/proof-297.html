@@ -12,26 +12,27 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h3 class="heading"><span class="type">Dimostrazione</span></h3>
-<p>Consideriamo la matrice <span class="process-math">\(x\Idmatrix-A\)</span> e indichiamo con <span class="process-math">\(B\)</span> la sua matrice aggiunta: sappiamo che <span class="process-math">\((x\Idmatrix-A)B=\det(x\Idmatrix-A)\Idmatrix\text{.}\)</span> Poiché i coefficienti di <span class="process-math">\(x\Idmatrix-A\)</span> sono polinomi in <span class="process-math">\(x\)</span> di grado minore o uguale a <span class="process-math">\(1\text{,}\)</span> i coefficienti di <span class="process-math">\(B\)</span> sono polinomi in <span class="process-math">\(x\)</span> di grado al più <span class="process-math">\(n-1\)</span> (infatti i coefficienti della matrice aggiunta sono, a meno del segno, determinanti di matrici di ordine <span class="process-math">\(n-1\)</span> estratti dalla matrice). Raccogliendo le varie potenze di <span class="process-math">\(x\)</span> possiamo allora scrivere</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para logical">
+<div class="para">Consideriamo la matrice <span class="process-math">\(x\Idmatrix-A\)</span> e indichiamo con <span class="process-math">\(B\)</span> la sua matrice aggiunta: sappiamo che <span class="process-math">\((x\Idmatrix-A)B=\det(x\Idmatrix-A)\Idmatrix\text{.}\)</span> Poiché i coefficienti di <span class="process-math">\(x\Idmatrix-A\)</span> sono polinomi in <span class="process-math">\(x\)</span> di grado minore o uguale a <span class="process-math">\(1\text{,}\)</span> i coefficienti di <span class="process-math">\(B\)</span> sono polinomi in <span class="process-math">\(x\)</span> di grado al più <span class="process-math">\(n-1\)</span> (infatti i coefficienti della matrice aggiunta sono, a meno del segno, determinanti di matrici di ordine <span class="process-math">\(n-1\)</span> estratti dalla matrice). Raccogliendo le varie potenze di <span class="process-math">\(x\)</span> possiamo allora scrivere</div>
+<div class="displaymath process-math">
 \begin{equation*}
 B=x^{n-1}B_{n-1}+x^{n-2}B_{n-2}+\dots+B_{0}
 \end{equation*}
 </div>
-<p class="continuation">per opportune matrici <span class="process-math">\(B_{i}\text{.}\)</span> Abbiamo allora</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">per opportune matrici <span class="process-math">\(B_{i}\text{.}\)</span> Abbiamo allora</div>
+<div class="displaymath process-math">
 \begin{equation*}
 (x\Idmatrix-A)(x^{n-1}B_{n-1}+x^{n-2}B_{n-2}+\dots+B_{0})=\det(x\Idmatrix-A)\Idmatrix
 \end{equation*}
 </div>
-<p class="continuation">ovvero</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">ovvero</div>
+<div class="displaymath process-math">
 \begin{equation*}
 (x\Idmatrix-A)(x^{n-1}B_{n-1}+x^{n-2}B_{n-2}+\dots+B_{0})=x^{n}\Idmatrix+a_{n-1}x^{n-1}\Idmatrix+\dots+a_{0}\Idmatrix\text{.}
 \end{equation*}
 </div>
-<p class="continuation">Sviluppiamo ora il membro a sinistra e uguagliando le matrici coefficienti delle rispettive potenze di <span class="process-math">\(x\)</span> troviamo allora:</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">Sviluppiamo ora il membro a sinistra e uguagliando le matrici coefficienti delle rispettive potenze di <span class="process-math">\(x\)</span> troviamo allora:</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \begin{aligned}
 B_{n-1}\amp=\Idmatrix\\
@@ -43,8 +44,8 @@ B_{0}-AB_{1}\amp=a_{1}\Idmatrix\\
 \end{aligned}
 \end{equation*}
 </div>
-<p class="continuation">Moltiplichiamo ora a sinistra la prima di queste uguaglianze per <span class="process-math">\(A^{n}\text{,}\)</span> la seconda per <span class="process-math">\(A^{n-1}\)</span> e così via:</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">Moltiplichiamo ora a sinistra la prima di queste uguaglianze per <span class="process-math">\(A^{n}\text{,}\)</span> la seconda per <span class="process-math">\(A^{n-1}\)</span> e così via:</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \begin{aligned}
 A^{n}B_{n-1}\amp=A^{n}\\
@@ -56,11 +57,12 @@ AB_{0}-A^{2}B_{1}\amp=a_{1}A\\
 \end{aligned}
 \end{equation*}
 </div>
-<p class="continuation">Se ora sommiamo membro a membro tutte queste uguaglianze, troviamo:</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para">Se ora sommiamo membro a membro tutte queste uguaglianze, troviamo:</div>
+<div class="displaymath process-math">
 \begin{equation*}
 0=A^{n}+a_{n-1}A^{n-1}+\dots+a_{0}\Idmatrix\text{.}
 \end{equation*}
+</div>
 </div></article><span class="incontext"><a href="sec-polinomio_minimo_matrici.html#proof-297" class="internal">Contesto</a></span>
 </body>
 </html>

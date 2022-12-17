@@ -12,13 +12,16 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Capoverso</span></h4>
-<p>Supponiamo di voler determinare il resto della divisione di <span class="process-math">\(31^{3215}+23^{2347}\)</span> per <span class="process-math">\(12\text{.}\)</span> In altri termini, dobbiamo cercare un intero compreso tra <span class="process-math">\(0\)</span> e <span class="process-math">\(11\)</span> congruo a <span class="process-math">\(31^{3215}+23^{2347}\)</span> modulo <span class="process-math">\(12\text{.}\)</span> Consideriamo prima <span class="process-math">\(31^{3215}\text{:}\)</span> notiamo innanzitutto che <span class="process-math">\(31\equiv 7\pmod{12}\)</span> e, quindi, <span class="process-math">\(31^{3215}\equiv 7^{3215}\pmod{12}\text{.}\)</span> Poiché <span class="process-math">\(7\)</span> è coprimo con <span class="process-math">\(12\text{,}\)</span> il <a href="" class="xref" data-knowl="./knowl/thm-eulero.html" title="Teorema 5.3.5: Teorema di Eulero">Teorema di Eulero</a> ci dice che <span class="process-math">\(7^{\euler{12}}\equiv 1\pmod{12}\text{:}\)</span> si vede facilmente che <span class="process-math">\(\euler{12}=4\text{.}\)</span> Ora <span class="process-math">\(3215\equiv 3\pmod{4}\text{,}\)</span> cioè <span class="process-math">\(3125=4h+3\)</span> per qualche naturale <span class="process-math">\(h\text{:}\)</span> dunque</p>
+<div class="para logical">
+<div class="para">Supponiamo di voler determinare il resto della divisione di <span class="process-math">\(31^{3215}+23^{2347}\)</span> per <span class="process-math">\(12\text{.}\)</span> In altri termini, dobbiamo cercare un intero compreso tra <span class="process-math">\(0\)</span> e <span class="process-math">\(11\)</span> congruo a <span class="process-math">\(31^{3215}+23^{2347}\)</span> modulo <span class="process-math">\(12\text{.}\)</span> Consideriamo prima <span class="process-math">\(31^{3215}\text{:}\)</span> notiamo innanzitutto che <span class="process-math">\(31\equiv 7\pmod{12}\)</span> e, quindi, <span class="process-math">\(31^{3215}\equiv 7^{3215}\pmod{12}\text{.}\)</span> Poiché <span class="process-math">\(7\)</span> è coprimo con <span class="process-math">\(12\text{,}\)</span> il <a href="" class="xref" data-knowl="./knowl/thm-eulero.html" title="Teorema 5.3.5: Teorema di Eulero">Teorema di Eulero</a> ci dice che <span class="process-math">\(7^{\euler{12}}\equiv 1\pmod{12}\text{:}\)</span> si vede facilmente che <span class="process-math">\(\euler{12}=4\text{.}\)</span> Ora <span class="process-math">\(3215\equiv 3\pmod{4}\text{,}\)</span> cioè <span class="process-math">\(3125=4h+3\)</span> per qualche naturale <span class="process-math">\(h\text{:}\)</span> dunque</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-eulero.html">
 \begin{equation*}
 7^{3215}=7^{4h+3}=(7^{4})^{h}7^{3}\equiv 1^{h}7^{3}\pmod{12}\equiv 7^{3}\pmod{12}
 \end{equation*}
 </div>
-<p class="continuation">Calcoliamo allora <span class="process-math">\(7^{3}\)</span> modulo <span class="process-math">\(12\text{:}\)</span> notiamo che <span class="process-math">\(7^{2}=49\equiv 1\pmod{12}\)</span> e, quindi, <span class="process-math">\(7^{3}\equiv 7\pmod{12}\text{.}\)</span></p>
+<div class="para">Calcoliamo allora <span class="process-math">\(7^{3}\)</span> modulo <span class="process-math">\(12\text{:}\)</span> notiamo che <span class="process-math">\(7^{2}=49\equiv 1\pmod{12}\)</span> e, quindi, <span class="process-math">\(7^{3}\equiv 7\pmod{12}\text{.}\)</span>
+</div>
+</div>
 <span class="incontext"><a href="sec-eulero.html#p-685" class="internal">Contesto</a></span>
 </body>
 </html>

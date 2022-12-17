@@ -12,25 +12,27 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Capoverso</span></h4>
-<p>Applichiamo l'<a href="" class="xref" data-knowl="./knowl/alg-euclide_domini.html" title="Algoritmo 20.3.12: Algoritmo di Euclide per i domini euclidei">Algoritmo 20.3.12</a> per trovare il massimo comun divisore tra i polinomi <span class="process-math">\(a\coloneqq 4x^{5}-8x^{4}+x^{3}-5x^{2}+7x-2\)</span> e <span class="process-math">\(b\coloneqq 2x^{4}-3x^{3}-2x^{2}-4x+1\)</span> a coefficienti in <span class="process-math">\(\Razionali\text{.}\)</span> Dividendo <span class="process-math">\(a\)</span> per <span class="process-math">\(b\)</span> troviamo</p>
+<div class="para logical">
+<div class="para">Applichiamo l'<a href="" class="xref" data-knowl="./knowl/alg-euclide_domini.html" title="Algoritmo 20.3.12: Algoritmo di Euclide per i domini euclidei">Algoritmo 20.3.12</a> per trovare il massimo comun divisore tra i polinomi <span class="process-math">\(a\coloneqq 4x^{5}-8x^{4}+x^{3}-5x^{2}+7x-2\)</span> e <span class="process-math">\(b\coloneqq 2x^{4}-3x^{3}-2x^{2}-4x+1\)</span> a coefficienti in <span class="process-math">\(\Razionali\text{.}\)</span> Dividendo <span class="process-math">\(a\)</span> per <span class="process-math">\(b\)</span> troviamo</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/alg-euclide_domini.html">
 \begin{equation*}
 a=b(2x-1)+2x^{3}+x^{2}+x-1\text{.}
 \end{equation*}
 </div>
-<p class="continuation">Procediamo con le altre divisioni:</p>
+<div class="para">Procediamo con le altre divisioni:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/alg-euclide_domini.html">
 \begin{align*}
 b \amp =(2x^{3}+x^{2}+x-1)(x-2)-x^{2}-x-1\\
 2x^{3}+x^{2}+x-1 \amp =(-x^{2}-x-1)(-2x+1)+0
 \end{align*}
 </div>
-<p class="continuation">L'ultimo resto non nullo è <span class="process-math">\(-x^{2}-x-1\)</span> che è dunque il massimo comun divisore di <span class="process-math">\(a\)</span> e <span class="process-math">\(b\text{.}\)</span> Per ottenere un'identità di Bezout procediamo così:</p>
+<div class="para">L'ultimo resto non nullo è <span class="process-math">\(-x^{2}-x-1\)</span> che è dunque il massimo comun divisore di <span class="process-math">\(a\)</span> e <span class="process-math">\(b\text{.}\)</span> Per ottenere un'identità di Bezout procediamo così:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/alg-euclide_domini.html">
 \begin{align*}
 -x^{2}-x-1 \amp =b-(2x^{3}+x^{2}+x-1)(x-2)\\
 \amp =b-(a-b(2x-1))(x-2)=a(2-x)+b(2x^{2}-5x+3) 
 \end{align*}
+</div>
 </div>
 <span class="incontext"><a href="sec-PID_euclidei.html#p-2869" class="internal">Contesto</a></span>
 </body>
