@@ -14,53 +14,47 @@
 <article class="example example-like"><h3 class="heading">
 <span class="type">Esempio</span><span class="space"> </span><span class="codenumber">10.2.8</span><span class="period">.</span>
 </h3>
-<div class="para">Siano date le due permutazioni <span class="process-math">\(\sigma\coloneqq(1\;3\;2)(4\;6)\)</span> e <span class="process-math">\(\tau\coloneqq(1\;2)(3\;5)\)</span> di <span class="process-math">\(\Sym_{7}\text{.}\)</span> Vogliamo esprimere il prodotto <span class="process-math">\(\sigma\tau\)</span> come prodotto di cicli disgiunti. Ovviamente, <span class="process-math">\(\sigma\tau=(1\;3\;2)(4\;6)(1\;2)(3\;5)\text{,}\)</span> ma questi cicli non sono disgiunti.</div> <div class="para logical">
-<div class="para">Consideriamo allora una lettera che appare in almeno uno dei cicli, ad esempio, <span class="process-math">\(1\text{.}\)</span> Abbiamo allora:</div>
-<div class="displaymath process-math">
+<p>Siano date le due permutazioni <span class="process-math">\(\sigma\coloneqq(1\;3\;2)(4\;6)\)</span> e <span class="process-math">\(\tau\coloneqq(1\;2)(3\;5)\)</span> di <span class="process-math">\(\Sym_{7}\text{.}\)</span> Vogliamo esprimere il prodotto <span class="process-math">\(\sigma\tau\)</span> come prodotto di cicli disgiunti. Ovviamente, <span class="process-math">\(\sigma\tau=(1\;3\;2)(4\;6)(1\;2)(3\;5)\text{,}\)</span> ma questi cicli non sono disgiunti.</p> <p>Consideriamo allora una lettera che appare in almeno uno dei cicli, ad esempio, <span class="process-math">\(1\text{.}\)</span> Abbiamo allora:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 1\xmapsto{(1\;3\;2)}3\xmapsto{(4\;6)}3\xmapsto{(1\;2)}3\xmapsto{(3\;5)}5\text{.}
 \end{equation*}
 </div>
-<div class="para">Dunque, <span class="process-math">\(1\)</span> viene mandato in <span class="process-math">\(5\)</span> da <span class="process-math">\(\sigma\tau\text{.}\)</span> Procediamo adesso a calcolare l'immagine di <span class="process-math">\(5\text{:}\)</span>
-</div>
-<div class="displaymath process-math">
+<p class="continuation">Dunque, <span class="process-math">\(1\)</span> viene mandato in <span class="process-math">\(5\)</span> da <span class="process-math">\(\sigma\tau\text{.}\)</span> Procediamo adesso a calcolare l'immagine di <span class="process-math">\(5\text{:}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 5\xmapsto{(1\;3\;2)}5\xmapsto{(4\;6)}5\xmapsto{(1\;2)}5\xmapsto{(3\;5)}3\text{.}
 \end{equation*}
 </div>
-<div class="para">Dunque, <span class="process-math">\(5\)</span> viene mandato in <span class="process-math">\(3\text{.}\)</span> L'immagine di <span class="process-math">\(3\)</span> si ottiene così:</div>
-<div class="displaymath process-math">
+<p class="continuation">Dunque, <span class="process-math">\(5\)</span> viene mandato in <span class="process-math">\(3\text{.}\)</span> L'immagine di <span class="process-math">\(3\)</span> si ottiene così:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 3\xmapsto{(1\;3\;2)}2\xmapsto{(4\;6)}2\xmapsto{(1\;2)}1\xmapsto{(3\;5)}1\text{.}
 \end{equation*}
 </div>
-<div class="para">Dunque, <span class="process-math">\(3\)</span> viene mandato in <span class="process-math">\(1\)</span> e abbiamo così ottenuto il primo ciclo: <span class="process-math">\((1\;5\;3)\text{.}\)</span> Consideriamo ora una lettera diversa da <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(5\)</span> e <span class="process-math">\(3\text{,}\)</span> ad esempio, <span class="process-math">\(2\text{.}\)</span> Abbiamo allora</div>
-<div class="displaymath process-math">
+<p class="continuation">Dunque, <span class="process-math">\(3\)</span> viene mandato in <span class="process-math">\(1\)</span> e abbiamo così ottenuto il primo ciclo: <span class="process-math">\((1\;5\;3)\text{.}\)</span> Consideriamo ora una lettera diversa da <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(5\)</span> e <span class="process-math">\(3\text{,}\)</span> ad esempio, <span class="process-math">\(2\text{.}\)</span> Abbiamo allora</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 2\xmapsto{(1\;3\;2)}1\xmapsto{(4\;6)}1\xmapsto{(1\;2)}2\xmapsto{(3\;5)}2\text{.}
 \end{equation*}
 </div>
-<div class="para">Dunque, <span class="process-math">\(2\)</span> viene mandato in sé: abbiamo, pertanto, un ciclo di lunghezza <span class="process-math">\(1\text{,}\)</span> cioè l'identità e possiamo fare a meno di scriverlo esplicitamente. Consideriamo ora <span class="process-math">\(4\text{.}\)</span> Abbiamo allora</div>
-<div class="displaymath process-math">
+<p class="continuation">Dunque, <span class="process-math">\(2\)</span> viene mandato in sé: abbiamo, pertanto, un ciclo di lunghezza <span class="process-math">\(1\text{,}\)</span> cioè l'identità e possiamo fare a meno di scriverlo esplicitamente. Consideriamo ora <span class="process-math">\(4\text{.}\)</span> Abbiamo allora</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 4\xmapsto{(1\;3\;2)}4\xmapsto{(4\;6)}6\xmapsto{(1\;2)}6\xmapsto{(3\;5)}6\text{.}
 \end{equation*}
 </div>
-<div class="para">Dunque, <span class="process-math">\(4\)</span> viene mandato in <span class="process-math">\(6\text{,}\)</span> la cui immagine calcoliamo così</div>
-<div class="displaymath process-math">
+<p class="continuation">Dunque, <span class="process-math">\(4\)</span> viene mandato in <span class="process-math">\(6\text{,}\)</span> la cui immagine calcoliamo così</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 6\xmapsto{(1\;3\;2)}6\xmapsto{(4\;6)}4\xmapsto{(1\;2)}4\xmapsto{(3\;5)}4\text{.}
 \end{equation*}
 </div>
-<div class="para">Siamo tornati a <span class="process-math">\(4\text{:}\)</span> il ciclo si è chiuso ed è <span class="process-math">\((4\;6)\)</span>
-</div>
-</div> <div class="para logical">
-<div class="para">Non dobbiamo proseguire oltre: anche se siamo in <span class="process-math">\(\Sym_{7}\text{,}\)</span> la lettera <span class="process-math">\(7\)</span> non appare esplicitamente e viene, quindi, fissata da questa permutazione. Notiamo che i calcoli che abbiamo fatto sarebbero stati gli stessi anche se fossimo stati in <span class="process-math">\(\Sym_{n}\)</span> con <span class="process-math">\(n \ge 6\)</span> qualunque. Riassumendo, abbiamo</div>
-<div class="displaymath process-math">
+<p class="continuation">Siamo tornati a <span class="process-math">\(4\text{:}\)</span> il ciclo si è chiuso ed è <span class="process-math">\((4\;6)\)</span></p> <p>Non dobbiamo proseguire oltre: anche se siamo in <span class="process-math">\(\Sym_{7}\text{,}\)</span> la lettera <span class="process-math">\(7\)</span> non appare esplicitamente e viene, quindi, fissata da questa permutazione. Notiamo che i calcoli che abbiamo fatto sarebbero stati gli stessi anche se fossimo stati in <span class="process-math">\(\Sym_{n}\)</span> con <span class="process-math">\(n \ge 6\)</span> qualunque. Riassumendo, abbiamo</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 \sigma\tau=(1\;5\;3)(4\;6)\text{.}
 \end{equation*}
-</div>
 </div></article><span class="incontext"><a href="sec-cicli.html#example-90" class="internal">Contesto</a></span>
 </body>
 </html>

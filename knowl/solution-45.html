@@ -15,9 +15,8 @@
 <h5 class="heading">
 <span class="type">Soluzione</span><span class="space"> </span><span class="codenumber">7.2.4.a.1</span><span class="period">.</span>
 </h5>
-<div class="para logical">
-<div class="para">Mostriamo che l'operazione è associativa. Siano <span class="process-math">\((a_{1},b_{1},c_{1})\text{,}\)</span> <span class="process-math">\((a_{2},b_{2},c_{2})\)</span> e <span class="process-math">\((a_{3},b_{3},c_{3})\)</span> elementi di <span class="process-math">\(G\text{.}\)</span> Abbiamo allora:</div>
-<div class="displaymath process-math">
+<p>Mostriamo che l'operazione è associativa. Siano <span class="process-math">\((a_{1},b_{1},c_{1})\text{,}\)</span> <span class="process-math">\((a_{2},b_{2},c_{2})\)</span> e <span class="process-math">\((a_{3},b_{3},c_{3})\)</span> elementi di <span class="process-math">\(G\text{.}\)</span> Abbiamo allora:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{gather*}
 ((a_{1},b_{1},c_{1})\diamond(a_{2},b_{2},c_{2}))\diamond (a_{3},b_{3},c_{3})\\
 = (a_{1}+a_{2},b_{1}+b_{2},c_{1}+c_{2}+a_{1}b_{2})\diamond (a_{3},b_{3},c_{3})\\
@@ -25,8 +24,8 @@
 = (a_{1}+a_{2}+a_{3},b_{1}+b_{2}+b_{3},c_{1}+c_{2}+c_{3}+a_{1}b_{2}+a_{1}b_{3}+a_{2}b_{3})
 \end{gather*}
 </div>
-<div class="para">e</div>
-<div class="displaymath process-math">
+<p class="continuation">e</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{gather*}
 (a_{1},b_{1},c_{1})\diamond((a_{2},b_{2},c_{2})\diamond (a_{3},b_{3},c_{3}))\\
 =(a_{1},b_{1},c_{1})\diamond(a_{2}+a_{3},b_{2}+b_{3},c_{2}+c_{3}+a_{2}b_{3})\\
@@ -34,36 +33,31 @@
 =(a_{1}+a_{2}+a_{3},b_{1}+b_{2}+b_{3},c_{1}+c_{2}+c_{3}+a_{2}b_{3}+a_{1}b_{2}+a_{1}b_{3})
 \end{gather*}
 </div>
-<div class="para">Poiché i risultati coincidono, l'operazione è associativa.</div>
-</div> <div class="para logical">
-<div class="para">Verifichiamo che esiste un elemento neutro: questo deve essere una terna <span class="process-math">\((x,y,z)\)</span> tale che per ogni <span class="process-math">\((a,b,c)\)</span> in <span class="process-math">\(G\)</span> si abbia</div>
-<div class="displaymath process-math">
+<p class="continuation">Poiché i risultati coincidono, l'operazione è associativa.</p> <p>Verifichiamo che esiste un elemento neutro: questo deve essere una terna <span class="process-math">\((x,y,z)\)</span> tale che per ogni <span class="process-math">\((a,b,c)\)</span> in <span class="process-math">\(G\)</span> si abbia</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 (a,b,c)\diamond(x,y,z)=(a,b,c)
 \end{equation*}
 </div>
-<div class="para">e</div>
-<div class="displaymath process-math">
+<p class="continuation">e</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 (x,y,z)\diamond(a,b,c)=(a,b,c)\text{,}
 \end{equation*}
 </div>
-<div class="para">vale a dire <span class="process-math">\((a+x,b+y,c+z+ay)=(a,b,c)\)</span> e <span class="process-math">\((x+a,y+b,z+c+xb)=(a,b,c)\text{.}\)</span> Si vede immediatamente che la terna <span class="process-math">\((0,0,0)\)</span> soddisfa questa condizione.</div>
-</div> <div class="para logical">
-<div class="para">Verifichiamo se ogni elemento <span class="process-math">\((a,b,c)\)</span> in <span class="process-math">\(G\)</span> ammette inverso: questo deve essere una terna <span class="process-math">\((x,y,z)\)</span> tale che</div>
-<div class="displaymath process-math">
+<p class="continuation">vale a dire <span class="process-math">\((a+x,b+y,c+z+ay)=(a,b,c)\)</span> e <span class="process-math">\((x+a,y+b,z+c+xb)=(a,b,c)\text{.}\)</span> Si vede immediatamente che la terna <span class="process-math">\((0,0,0)\)</span> soddisfa questa condizione.</p> <p>Verifichiamo se ogni elemento <span class="process-math">\((a,b,c)\)</span> in <span class="process-math">\(G\)</span> ammette inverso: questo deve essere una terna <span class="process-math">\((x,y,z)\)</span> tale che</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 (a,b,c)\diamond(x,y,z)=(0,0,0)
 \end{equation*}
 </div>
-<div class="para">e</div>
-<div class="displaymath process-math">
+<p class="continuation">e</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 (x,y,z)\diamond(a,b,c)=(0,0,0)\text{,}
 \end{equation*}
 </div>
-<div class="para">vale a dire <span class="process-math">\((a+x,b+x,c+z+ay)=(0,0,0)\)</span> e <span class="process-math">\((x+a,y+b,z+c+xb)=(0,0,0)\text{.}\)</span> Si vede immediatamente che la terna <span class="process-math">\((-a,-b,-c+ab)\)</span> soddisfa questa condizione.</div>
-</div>
+<p class="continuation">vale a dire <span class="process-math">\((a+x,b+x,c+z+ay)=(0,0,0)\)</span> e <span class="process-math">\((x+a,y+b,z+c+xb)=(0,0,0)\text{.}\)</span> Si vede immediatamente che la terna <span class="process-math">\((-a,-b,-c+ab)\)</span> soddisfa questa condizione.</p>
 </div>
 <span class="incontext"><a href="sec-gruppi.html#solution-45" class="internal">Contesto</a></span>
 </body>

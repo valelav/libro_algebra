@@ -12,8 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Capoverso</span></h4>
-<div class="para logical">
-<div class="para">Supponiamo di voler calcolare le ultime <span class="process-math">\(2\)</span> cifre (in base <span class="process-math">\(10\)</span>) di <span class="process-math">\(6^{2023}\text{.}\)</span> Dobbiamo cioè trovare il resto della divisione di <span class="process-math">\(6^{2023}\)</span> per <span class="process-math">\(100\text{.}\)</span> Poiché <span class="process-math">\(6\)</span> e <span class="process-math">\(100\)</span> non sono coprimi, non possiamo applicare il <a href="" class="xref" data-knowl="./knowl/thm-eulero.html" title="Teorema 5.3.5: Teorema di Eulero">Teorema di Eulero</a>. Tuttavia <span class="process-math">\(100=2^{2}\cdot 5^{2}\)</span> e, dunque, la congruenza con incognita <span class="process-math">\(x\equiv 6^{2023}\pmod{100}\)</span> è equivalente a</div>
+<p>Supponiamo di voler calcolare le ultime <span class="process-math">\(2\)</span> cifre (in base <span class="process-math">\(10\)</span>) di <span class="process-math">\(6^{2023}\text{.}\)</span> Dobbiamo cioè trovare il resto della divisione di <span class="process-math">\(6^{2023}\)</span> per <span class="process-math">\(100\text{.}\)</span> Poiché <span class="process-math">\(6\)</span> e <span class="process-math">\(100\)</span> non sono coprimi, non possiamo applicare il <a href="" class="xref" data-knowl="./knowl/thm-eulero.html" title="Teorema 5.3.5: Teorema di Eulero">Teorema di Eulero</a>. Tuttavia <span class="process-math">\(100=2^{2}\cdot 5^{2}\)</span> e, dunque, la congruenza con incognita <span class="process-math">\(x\equiv 6^{2023}\pmod{100}\)</span> è equivalente a</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-eulero.html ./knowl/thm-eulero.html ./knowl/thm-cinese_del_resto.html">
 \begin{equation*}
 \left\{
@@ -24,7 +23,7 @@ x \amp \equiv 6^{2023}\amp \amp \pmod{5^{2}}
 \right.
 \end{equation*}
 </div>
-<div class="para">Ora <span class="process-math">\(6\)</span> è multiplo di <span class="process-math">\(2\)</span> e, quindi, tutte le sue potenze con esponente almeno <span class="process-math">\(2\)</span> sono multiple di <span class="process-math">\(2^{2}\text{.}\)</span> Pertanto, la prima congruenza è equivalente a <span class="process-math">\(x\equiv 0\pmod{2^{2}}\text{.}\)</span> Per quanto riguarda la seconda congruenza, <span class="process-math">\(6\)</span> è coprimo con <span class="process-math">\(5^{2}\text{.}\)</span> Dunque, per il <a href="" class="xref" data-knowl="./knowl/thm-eulero.html" title="Teorema 5.3.5: Teorema di Eulero">Teorema di Eulero</a>, si ha <span class="process-math">\(6^{\euler{5^{2}}}\equiv 1\pmod{5^{2}}\text{.}\)</span> Ora <span class="process-math">\(\euler{5^{2}}=5^{2}-5=20\text{.}\)</span> Poiché <span class="process-math">\(2023\equiv 3\pmod{20}\text{,}\)</span> abbiamo che <span class="process-math">\(6^{2023}\equiv 6^{3}\text{.}\)</span> Facendo le potenze successive troviamo <span class="process-math">\(6^{2}=36\equiv 11\pmod{25}\)</span> e <span class="process-math">\(6^{3}\equiv 11\cdot 6\pmod{25}=16\pmod{25}\text{.}\)</span> Dunque, il sistema è equivalente a</div>
+<p class="continuation">Ora <span class="process-math">\(6\)</span> è multiplo di <span class="process-math">\(2\)</span> e, quindi, tutte le sue potenze con esponente almeno <span class="process-math">\(2\)</span> sono multiple di <span class="process-math">\(2^{2}\text{.}\)</span> Pertanto, la prima congruenza è equivalente a <span class="process-math">\(x\equiv 0\pmod{2^{2}}\text{.}\)</span> Per quanto riguarda la seconda congruenza, <span class="process-math">\(6\)</span> è coprimo con <span class="process-math">\(5^{2}\text{.}\)</span> Dunque, per il <a href="" class="xref" data-knowl="./knowl/thm-eulero.html" title="Teorema 5.3.5: Teorema di Eulero">Teorema di Eulero</a>, si ha <span class="process-math">\(6^{\euler{5^{2}}}\equiv 1\pmod{5^{2}}\text{.}\)</span> Ora <span class="process-math">\(\euler{5^{2}}=5^{2}-5=20\text{.}\)</span> Poiché <span class="process-math">\(2023\equiv 3\pmod{20}\text{,}\)</span> abbiamo che <span class="process-math">\(6^{2023}\equiv 6^{3}\text{.}\)</span> Facendo le potenze successive troviamo <span class="process-math">\(6^{2}=36\equiv 11\pmod{25}\)</span> e <span class="process-math">\(6^{3}\equiv 11\cdot 6\pmod{25}=16\pmod{25}\text{.}\)</span> Dunque, il sistema è equivalente a</p>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/thm-eulero.html ./knowl/thm-eulero.html ./knowl/thm-cinese_del_resto.html">
 \begin{equation*}
 \left\{
@@ -35,9 +34,7 @@ x \amp \equiv 16\amp \amp \pmod{5^{2}}
 \right.
 \end{equation*}
 </div>
-<div class="para">Questo può essere risolto con il <a href="" class="xref" data-knowl="./knowl/thm-cinese_del_resto.html" title="Teorema 5.4.6: Teorema cinese del resto">Teorema cinese del resto</a>, ottenendo <span class="process-math">\(x\equiv 16\pmod{100}\text{:}\)</span> le ultime due cifre di <span class="process-math">\(6^{2023}\)</span> sono allora <span class="process-math">\(16\text{.}\)</span>
-</div>
-</div>
+<p class="continuation">Questo può essere risolto con il <a href="" class="xref" data-knowl="./knowl/thm-cinese_del_resto.html" title="Teorema 5.4.6: Teorema cinese del resto">Teorema cinese del resto</a>, ottenendo <span class="process-math">\(x\equiv 16\pmod{100}\text{:}\)</span> le ultime due cifre di <span class="process-math">\(6^{2023}\)</span> sono allora <span class="process-math">\(16\text{.}\)</span></p>
 <span class="incontext"><a href="sec-congruenze_con_incognite.html#p-723" class="internal">Contesto</a></span>
 </body>
 </html>

@@ -15,32 +15,25 @@
 <h4 class="heading">
 <span class="type">Soluzione</span><span class="space"> </span><span class="codenumber">7.2.3.1</span><span class="period">.</span>
 </h4>
-<div class="para">Dobbiamo innanzitutto verificare che il prodotto sia ben definito, cioè che se <span class="process-math">\(x\)</span> e <span class="process-math">\(y\)</span> sono in <span class="process-math">\(G\text{,}\)</span> allora <span class="process-math">\(x\ast y\)</span> è in <span class="process-math">\(G\text{.}\)</span> Supponiamo infatti per assurdo che <span class="process-math">\(x\ast y\)</span> non sia in <span class="process-math">\(G\text{,}\)</span> cioè che <span class="process-math">\(x\ast y=-1\text{,}\)</span> vale a dire <span class="process-math">\(x+y+xy=-1\text{.}\)</span> Con semplici calcoli, ciò implicherebbe che <span class="process-math">\((x+1)(y+1)=0\text{,}\)</span> da cui seguirebbe che <span class="process-math">\(x+1=0\)</span> o <span class="process-math">\(y+1=0\text{,}\)</span> il che non avviene se <span class="process-math">\(x\)</span> e <span class="process-math">\(y\)</span> appartengono a <span class="process-math">\(G\text{.}\)</span> Dunque, l'operazione è ben definita.</div> <div class="para logical">
-<div class="para">La verifica che l'operazione sia associativa richiede solo un po' di attenzione. Per ogni <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\)</span> e <span class="process-math">\(z\)</span> in <span class="process-math">\(G\)</span> si ha</div>
-<div class="displaymath process-math">
+<p>Dobbiamo innanzitutto verificare che il prodotto sia ben definito, cioè che se <span class="process-math">\(x\)</span> e <span class="process-math">\(y\)</span> sono in <span class="process-math">\(G\text{,}\)</span> allora <span class="process-math">\(x\ast y\)</span> è in <span class="process-math">\(G\text{.}\)</span> Supponiamo infatti per assurdo che <span class="process-math">\(x\ast y\)</span> non sia in <span class="process-math">\(G\text{,}\)</span> cioè che <span class="process-math">\(x\ast y=-1\text{,}\)</span> vale a dire <span class="process-math">\(x+y+xy=-1\text{.}\)</span> Con semplici calcoli, ciò implicherebbe che <span class="process-math">\((x+1)(y+1)=0\text{,}\)</span> da cui seguirebbe che <span class="process-math">\(x+1=0\)</span> o <span class="process-math">\(y+1=0\text{,}\)</span> il che non avviene se <span class="process-math">\(x\)</span> e <span class="process-math">\(y\)</span> appartengono a <span class="process-math">\(G\text{.}\)</span> Dunque, l'operazione è ben definita.</p> <p>La verifica che l'operazione sia associativa richiede solo un po' di attenzione. Per ogni <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\)</span> e <span class="process-math">\(z\)</span> in <span class="process-math">\(G\)</span> si ha</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{align*}
 (x\ast y)\ast z \amp =(x+y+xy)\ast z =x+y+xy+z+(x+y+xy)z \\
 \amp =x+y+xy+z+xz+yz+xyz \\
 \amp =x+y+z+yz+x(y+z+yz)\\
 \amp =x \ast(y+z+yz)=x\ast(y\ast z)\text{.}
 \end{align*}
-</div>
-</div> <div class="para logical">
-<div class="para">L'operazione è commutativa. Infatti per ogni <span class="process-math">\(x\)</span> e <span class="process-math">\(y\)</span> in <span class="process-math">\(G\)</span> si ha</div>
-<div class="displaymath process-math">
+</div> <p>L'operazione è commutativa. Infatti per ogni <span class="process-math">\(x\)</span> e <span class="process-math">\(y\)</span> in <span class="process-math">\(G\)</span> si ha</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 x\ast y=x+y+xy=y+x+yx=y\ast x\text{.}
 \end{equation*}
-</div>
-</div> <div class="para logical">
-<div class="para">L'operazione ammette elemento neutro <span class="process-math">\(0\text{:}\)</span> infatti per ogni <span class="process-math">\(x\in G\)</span> si ha</div>
-<div class="displaymath process-math">
+</div> <p>L'operazione ammette elemento neutro <span class="process-math">\(0\text{:}\)</span> infatti per ogni <span class="process-math">\(x\in G\)</span> si ha</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 x\ast 0 =x+0+x\cdot 0=x\text{.}
 \end{equation*}
-</div>
-</div> <div class="para">Infine, verifichiamo che ogni elemento <span class="process-math">\(x\)</span> in <span class="process-math">\(G\)</span> ha inverso. Questo deve essere un elemento <span class="process-math">\(y\)</span> tale che <span class="process-math">\(x\ast y=0\text{,}\)</span> cioè <span class="process-math">\(x+y+xy=0\text{,}\)</span> cioè <span class="process-math">\((x+1)y=-x\text{.}\)</span> Poiché <span class="process-math">\(x+1\ne 0\text{,}\)</span> otteniamo allora <span class="process-math">\(y=-\frac{x}{x+1}\)</span> e questo è effettivamente un elemento di <span class="process-math">\(G\text{,}\)</span> dato che, se fosse <span class="process-math">\(y=-1\text{,}\)</span> otterremmo <span class="process-math">\(x=x+1\text{.}\)</span>
-</div>
+</div> <p>Infine, verifichiamo che ogni elemento <span class="process-math">\(x\)</span> in <span class="process-math">\(G\)</span> ha inverso. Questo deve essere un elemento <span class="process-math">\(y\)</span> tale che <span class="process-math">\(x\ast y=0\text{,}\)</span> cioè <span class="process-math">\(x+y+xy=0\text{,}\)</span> cioè <span class="process-math">\((x+1)y=-x\text{.}\)</span> Poiché <span class="process-math">\(x+1\ne 0\text{,}\)</span> otteniamo allora <span class="process-math">\(y=-\frac{x}{x+1}\)</span> e questo è effettivamente un elemento di <span class="process-math">\(G\text{,}\)</span> dato che, se fosse <span class="process-math">\(y=-1\text{,}\)</span> otterremmo <span class="process-math">\(x=x+1\text{.}\)</span></p>
 </div>
 <span class="incontext"><a href="sec-gruppi.html#solution-44" class="internal">Contesto</a></span>
 </body>
