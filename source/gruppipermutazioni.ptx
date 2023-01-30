@@ -4,7 +4,7 @@
   <title>Gruppi di permutazioni</title>
 
   <introduction>
-    <p>
+    <p> 
       Nel <xref ref="ex-gruppo_simmetrico"/> abbiamo introdotto il gruppo simmetrico su un insieme <m>X</m>, cioè il gruppo delle funzioni biiettive dall'insieme in sé (o, come si dice solitamente, il gruppo delle <term>permutazioni</term> di <m>X</m>). Ci interessa in particolare, studiare il caso in cui l'insieme <m>X</m> sia l'insieme finito formato dai numeri naturali da <m>1</m> a <m>n</m> (detti, in questo caso, <term>lettere</term>, perché li consideriamo come simboli o etichette apposte a degli oggetti). Abbiamo in realtà già studiato alcuni gruppi che possono essere considerati sottogruppi del gruppo <m>\Sym_{n}</m>. Ad esempio, il gruppo diedrale <m>D_{2n}</m> (si veda <xref ref="def-gruppo_diedrale"/>) può essere pensato come un sottogruppo del gruppo delle permutazioni dei vertici di un poligono regolare con <m>n</m> lati, cioè come un sottogruppo di <m>\Sym_{n}</m>. Analogamente, il gruppo trirettangolo (si veda <xref ref="def-gruppo_di_Klein"/>) può essere pensato come un sottogruppo del gruppo delle permutazioni dei vertici di un rettangolo, cioè come un sottogruppo di <m>\Sym_{4}</m>.
     </p>
   </introduction>
@@ -1386,7 +1386,7 @@
 
         <solution>
           <p>
-            Poiché <m>\Sym_{n}</m> è generato dagli scambi, basta provare che ogni scambio appartiene al sottogruppo <m>H</m> generato dagli scambi dati. Sia allora <m>(i\;j)</m> un o scambio qualunque: poiché <m>(i\;j)=(j\;i)</m> possiamo assumere che <m>i \lt j</m>. Procediamo per induzione su <m>j-i</m>: se <m>j-i=1</m>, lo scambio è uno di quelli dati che appartiene ovviamente a <m>H</m>. Se <m>i-j \gt1</m> abbiamo che <m>(i\;j)=(i\;i+1)(i+1\;j)(i\;i+1)</m>: per ipotesi induttiva <m>(i+1\;j)</m> appartiene a <m>H</m> e la tesi segue immediatamente.
+            Poiché <m>\Sym_{n}</m> è generato dagli scambi, basta provare che ogni scambio appartiene al sottogruppo <m>H</m> generato dagli scambi dati. Sia allora <m>(i\;j)</m> uno scambio qualunque: poiché <m>(i\;j)=(j\;i)</m> possiamo assumere che <m>i \lt j</m>. Procediamo per induzione su <m>j-i</m>: se <m>j-i=1</m>, lo scambio è uno di quelli dati che appartiene ovviamente a <m>H</m>. Se <m>i-j \gt1</m> abbiamo che <m>(i\;j)=(i\;i+1)(i+1\;j)(i\;i+1)</m>: per ipotesi induttiva <m>(i+1\;j)</m> appartiene a <m>H</m> e la tesi segue immediatamente.
           </p>
         </solution>
       </exercise>
