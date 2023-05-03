@@ -833,13 +833,13 @@
       <exercise>
         <statement>
           <p>
-            Sia <m>G</m> un gruppo finito di ordine <m>p^{n}q</m> dove <m>p</m> e <m>q</m> sono primi con <m>p \gt q</m> e <m>n</m> è un intero positivo. Allora <m>G</m> ha al massimo un sottogruppo di ordine <m>p^{n}</m>.
+            Sia <m>G</m> un gruppo finito di ordine <m>p^{n}r</m> dove <m>p</m> è un primo,  <m>n</m> è un intero positivo e <m>r</m> è un intero positivo tale che <m>r \lt p</m>. Allora <m>G</m> ha al massimo un sottogruppo di ordine <m>p^{n}</m>.
           </p>
         </statement>
 
         <solution>
           <p>
-            Siano <m>H</m> e <m>K</m> due sottogruppi di <m>G</m> di ordine <m>p^{n}</m>. Per il <xref ref="thm-lagrange" text="title"/>, <m>H\cap K</m> ha ordine <m>p^{r}</m> con <m>0 \le r\le n</m>. Per la <xref ref="prop-diverse_espressioni-prodotto"/>, <m>HK</m> ha cardinalità <m>p^{2n-r}</m>: poiché <m>HK</m> è un sottoinsieme di <m>G</m>, abbiamo allora <m>p^{2n-r}\le p^{n}q</m>, cioè <m>p^{n-r}\le q</m>. Poiché <m>q \lt p</m>, ciò può avvenire solo se <m>n=r</m>. Ma allora <m>H\cap K</m> ha ordine uguale a <m>H</m> e a <m>K</m>, cioè <m>H=K</m>.
+            Siano <m>H</m> e <m>K</m> due sottogruppi di <m>G</m> di ordine <m>p^{n}</m>: dobbiamo mostrare che <m>H=K</m>. Per il <xref ref="thm-lagrange" text="title"/>, <m>H\cap K</m> ha ordine <m>p^{m}</m> con <m>0 \le m\le n</m>. Per la <xref ref="prop-diverse_espressioni-prodotto"/>, <m>HK</m> ha cardinalità <m>p^{2n-m}</m>: poiché <m>HK</m> è un sottoinsieme di <m>G</m>, abbiamo allora <m>p^{2n-m}\le p^{n}r</m>, cioè <m>p^{n-m}\le r</m>. Poiché <m>r \lt p</m>, ciò può avvenire solo se <m>n=m</m>. Ma allora <m>H\cap K</m> ha ordine uguale a <m>H</m> e a <m>K</m>, cioè <m>H=K</m>.
           </p>
         </solution>
       </exercise>
