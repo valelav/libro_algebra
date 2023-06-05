@@ -31,7 +31,7 @@
      \newcommand{\grgen}[1]{\langle#1\rangle}% Gruppo generato
      \newcommand{\ideal}[1]{\left(#1\right)}% Ideale generato
      \newcommand{\alg}[1]{\left\lbrack#1\right\rvert}% Algebra generata
-     \newcommand{\seg}[1]{\left\lvert#1\right)}% Segmento inziale
+     \newcommand{\seg}[1]{\left\lvert#1\right)}% Segmento iniziale
      \newcommand{\ann}[1]{\operatorname{Ann}\left(#1\right)}% Annullatore
      \newcommand{\len}[1]{\operatorname{l}\left(#1\right)}% Lunghezza
      \newcommand{\class}[2][\sim]{\lbrack #2\rbrack_{#1}}% Classe di equivalenza
@@ -45,19 +45,20 @@
      \newcommand{\parti}[1]{\mathcal{P}(#1)}%Insieme delle parti
      \newcommand{\euler}[1]{\varphi(#1)}
      \newcommand{\euclidean}{\delta}
+     \newcommand{\posto}[3]{\lbrack #1\rbrack_{#2#3}}
 
      \newcommand{\vect}[1]{\boldsymbol{#1}}% Vettore
      %\newcommand{\vect}[1]{\bm{#1}}% Vettore
-     \newcommand{\mat}[2]{\operatorname{M}_{#1}(#2)}%Anello delle matrici
-     \newcommand{\matt}[3]{\operatorname{M}_{#1,#2}(#3)}%Gruppo additivo matrici
-     \newcommand{\Sim}[2]{\operatorname{S}(#1,#2)}%Spazio vettoriale delle matrici simmetriche
-     \newcommand{\AntiSim}[2]{\operatorname{A}(#1,#2)}%Spazio vettoriale delle matrici antisimmetriche
-     \newcommand{\Diag}[2]{\operatorname{D}(#1,#2)}%Spazio vettoriale delle matrici diagonali
-     \newcommand{\TS}[2]{\operatorname{T}^{#1}(#2)}%Spazio vettoriale delle matrici triangolari superiori
-     \newcommand{\TI}[2]{\operatorname{T}_{#1}(#2)}%Spazio vettoriale delle matrici triangolari inferiori
-     \newcommand{\GL}[2]{\operatorname{GL}(#1,#2)}%Gruppo lineare
-     \newcommand{\SL}[2]{\operatorname{SL}(#1,#2)}%Gruppo speciale lineare
-     \newcommand{\Ort}[2]{\operatorname{O}(#1,#2)}%Gruppo ortogonale
+     \newcommand{\mat}[2]{\operatorname{M}_{#1}(#2)} % Insieme matrici quadrate di ordine #1 a coefficienti in #2
+     \newcommand{\matt}[3]{\operatorname{M}_{#1,#2}(#3)} % Insieme matrici a #1 righe e #2 colonne a coefficienti in #3
+     \newcommand{\Sim}[2]{\operatorname{S}_{#1}(#2)} % Insieme delle matrici simmetriche ordine #1 a coefficienti in #2
+     \newcommand{\AntiSim}[2]{\operatorname{A}_{#1}(#2)} %Insieme delle matrici antisimmetriche di ordine #1 a coefficienti in #2
+     \newcommand{\Diag}[2]{\operatorname{D}_{#1}(#2)} %Insieme delle matrici diagonali di ordine #1 a coefficienti in #2
+     \newcommand{\TS}[2]{\operatorname{TS}_{#1}(#2)} %Insieme delle matrici triangolari superiori di ordine #1 a coefficienti in #2
+     \newcommand{\TI}[2]{\operatorname{TI}_{#1}(#2)} %Insieme delle matrici triangolari inferiori di ordine #1 a coefficienti in #2
+     \newcommand{\GL}[2]{\operatorname{GL}(#1,#2)} %Gruppo generale lineare di ordine #1 a coefficienti in #2
+     \newcommand{\SL}[2]{\operatorname{SL}(#1,#2)} %Gruppo speciale lineare di ordine #1 a coefficienti in #2
+     \newcommand{\Ort}[2]{\operatorname{O}(#1,#2)} %Gruppo ortogonale di ordine #1 a coefficienti in #2
 
      \newcommand{\abs}[1]{\left\lvert#1\right\rvert}%Modulo
      \newcommand{\norm}[1]{\left\lVert#1\right\rVert}%Norma
