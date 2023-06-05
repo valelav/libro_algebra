@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <chapter xml:id="ch-matrici">
+        <title>Matrici</title>
+
+        <introduction>
+            <p>
+                Le matrici sono un utile strumento nello studio dell'algebra lineare. Qui useremo le matrici per fornire esempi non banali di operazioni.
+            </p>
+        </introduction>
+
+        <section xml:id="sec-definizioni_matrici">
+            <title>Definizioni di matrici</title>
+            <p>
+                Una matrice a coefficienti in un anello commutativo<fn>Daremo più avanti (<xref ref="def-anello"/>) la definizione di anello commutativo: per il momento possiamo pensare a <m>\Interi</m>, <m>\Razionali</m>, <m>\Reali</m>, <m>\Complessi</m> o <m>\Interi/n</m> con le operazioni di addizione e moltiplicazione in essi definite.</fn> <m>R</m> è, informalmente, una tabella a <m>m</m> righe e <m>n</m> colonne di elementi di <m>R</m>, indicizzati da una coppia di indici <m>i</m> e <m>j</m> con <m>1\le i\le m</m>  e <m>1\le j\le n</m> e rappresentata nel modo seguente:
+                <me>
+                    A\coloneqq
+                     \begin{pmatrix}
+                        a_{11} \amp a_{12} \amp \dots \amp a_{1n} \\
+                        a_{21} \amp a_{22} \amp \dots \amp a_{2n} \\
+                        \vdots \amp \vdots \amp \ddots \amp \vdots \\
+                        a_{m1} \amp a_{m2} \amp \dots \amp a_{mn} \\
+                     \end{pmatrix}
+                </me>
+                I numeri <m>m</m> e <m>n</m> sono detti <term>dimensioni</term> della matrice. L'indice <m>i</m> è detto <term>indice di riga</term>, mentre l'indice <m>j</m> è detto <term>indice di colonna</term>. L'elemento <m>a_{ij}</m> è detto elemento di <term>posto</term> <m>(i,j)</m>. Data la matrice <m>A</m>, per indicare il suo elemento di posto <m>(i,j)</m> si usa la scrittura <m>\posto{A}{i}{j}</m>
+                <notation>
+                  <usage><m>\posto{A}{i}{j}</m></usage>
+                  <description>elemento di posto <m>(i,j)</m> della matrice <m>A</m></description>
+                </notation>.
+            </p>
+            <p>
+                Ad esempio la matrice seguente
+                <me>
+                    A\coloneqq
+                    \begin{pmatrix}
+                        1 \amp 0 \amp 2 \amp -1 \\
+                        0 \amp 1 \amp 3 \amp 0  \\
+                        -2 \amp 2 \amp 5 \amp 0
+                    \end{pmatrix}
+                </me>
+                ha dimensioni <m>3</m> e <m>4</m>. L'elemento di posto <m>(2,3)</m> è <m>3</m>, mentre l'elemento di posto <m>(3,4)</m> è <m>0</m>: possiamo anche scrivere <m>\posto{A}{2}{3}=3</m> e <m>\posto{A}{3}{4}=0</m>.
+            </p>
+            
+            
+        </section>
+        
+    </chapter>
