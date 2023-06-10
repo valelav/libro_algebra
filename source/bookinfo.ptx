@@ -20,6 +20,7 @@
     \newcommand{\Sym}{\mathrm{Sym}}% gruppo simmetrico
     \newcommand{\Id}{\mathrm{Id}}% identità funzione
     \newcommand{\Idmatrix}{\mathrm{I}}% matrice identica
+    \newcommand{\Nullmatrix}{{\large 0}}% matrice nulla
     \newcommand{\dist}{\mathrm{d}}% distanza
 
     \newcommand{\Reali}{\mathbf{R}}
@@ -40,12 +41,12 @@
      \newcommand{\stab}[2]{\operatorname{Stab}_{#1}\left(#2\right)}% Stabilizzatore
      \newcommand{\Supp}[1]{\operatorname{Supp}\left(#1\right)}%Supporto
      \newcommand{\Gal}[1]{\operatorname{Gal}\left(#1\right)}%Gruppo di Galois
-     \newcommand{\tr}[1]{#1^{\intercal}}%matrice trasposta
+     \newcommand{\tr}[1]{#1^{\top}}%matrice trasposta
      \newcommand{\vuoto}{\varnothing}%Insieme vuoto
      \newcommand{\parti}[1]{\mathcal{P}(#1)}%Insieme delle parti
      \newcommand{\euler}[1]{\varphi(#1)}
      \newcommand{\euclidean}{\delta}
-     \newcommand{\posto}[3]{\lbrack #1\rbrack_{#2#3}}
+     \newcommand{\posto}[3]{#1_{#2#3}}
 
      \newcommand{\vect}[1]{\boldsymbol{#1}}% Vettore
      %\newcommand{\vect}[1]{\bm{#1}}% Vettore
