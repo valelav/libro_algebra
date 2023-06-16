@@ -557,7 +557,7 @@
         <definition xml:id="def-matrici_commutabili">
             <statement>
                 <p>
-                    Date ue matrici quadrate dello stesso ordine <m>A</m> e <m>B</m> si dice che <term>commutano</term> o che sono <term>commutabili</term> se <m>AB=BA</m>.
+                    Date due matrici quadrate dello stesso ordine <m>A</m> e <m>B</m> si dice che <term>commutano</term> o che sono <term>commutabili</term> se <m>AB=BA</m>.
                 </p>
             </statement>
         </definition>
@@ -578,14 +578,14 @@
 
         <remark xml:id="rem-matrice_identica_invertibile_nulla_no">
             <p>
-                La matrice identica <m>\Idmatrix</m> è ovviamente invertibile: infatti <m>\Idmatrix\Idmatrix=\Idmatrix\Idmatrix=\Idmatrix</m>.
+                La matrice identica <m>\Idmatrix</m> è ovviamente invertibile: infatti moltiplicata per sé stessa dà la matrice identica.
             </p>
             <p>
                 La matrice nulla <m>\Nullmatrix</m> non è invece invertibile perché moltiplicata per qualsiasi altra matrice dà la matrice nulla.
             </p>
         </remark>
 
-        <example>
+        <example xml:id="ex-matrice_invertibile">
             <statement>
                 <p>
                     La matrice <m>A\coloneqq\begin{psmallmatrix}
@@ -642,7 +642,7 @@
 
             <proof>
                 <p>
-                    Per mostrare che <m>A^{-1}</m> è invertibile basta mostrare che esiste una matrice <m>B</m> tale che <m>A^{-1}B=BA^{-1}=\Idmatirx</m>: prendendo <m>B=A</m>, tali uguaglianze sono soddisfatte.
+                    Per mostrare che <m>A^{-1}</m> è invertibile basta mostrare che esiste una matrice <m>B</m> tale che <m>A^{-1}B=BA^{-1}=\Idmatrix</m>: prendendo <m>B=A</m>, tali uguaglianze sono soddisfatte.
                 </p>
             </proof>
 
@@ -664,14 +664,50 @@
                     e, analogamente, <m>(B^{-1}A^{-1})(AB)=\Idmatrix</m>.
                 </p>
             </proof>  
-        </proposition>    
+        </proposition>
+
+        <example>
+            <statement>
+                <p>
+                    Nella <xref ref="prop-inversa_prodotto_matrici"/>, abbiamo mostrato che l'inversa del prodotto di matrici invertibili è il prodotto delle inverse in ordine scambiato. Salvo casi particolari, non vale, dunque, l'uguaglianza <m>(AB)^{-1}=A^{-1}B^{-1}</m>. Ad esempio, la matrice <m>A\coloneqq\begin{psmallmatrix}
+                    1 \amp 2 \\
+                    1 \amp 3 \\
+                    \end{psmallmatrix}
+                    </m>  a coefficienti interi ha come inversa <m>A^{-1}\coloneqq\begin{psmallmatrix}
+                    3 \amp -2 \\
+                    -1 \amp 1 \\
+                    \end{psmallmatrix}
+                    </m> (si veda <xref ref="ex-matrice_invertibile"/>). Si verifica facilmente che la matrice <m>B\coloneqq\begin{psmallmatrix}
+                    1 \amp 1 \\
+                    2 \amp 3 \\
+                    \end{psmallmatrix}
+                    </m> ha come inversa <m>B^{-1}\coloneqq\begin{psmallmatrix}
+                    3 \amp -1 \\
+                    -2 \amp 1 \\
+                    \end{psmallmatrix}
+                    </m>. Ora <m>AB=\begin{psmallmatrix}
+                    5 \amp 7 \\
+                    7 \amp 10 \\
+                    \end{psmallmatrix}
+                    </m>, <m>(AB)^{-1}=B^{-1}A^{-1}=\begin{psmallmatrix}
+                    10 \amp -7 \\
+                    -7 \amp 5 
+                    \end{psmallmatrix}
+                    </m> e <m>A^{-1}B^{-1}=\begin{psmallmatrix}
+                    13 \amp -5 \\
+                    -5 \amp 2
+                    \end{psmallmatrix}
+                    </m>.
+                </p>
+            </statement>
+        </example>  
 
         <p>
-            Non entriamo nel dettaglio dei metodi che si possono usare per stabilire se una matrice è invertibile e, in caso affermativo, per determinarne l'inversa: questi argomenti sono proprio di un corso di algebra lineare.
+            Non entriamo nel dettaglio dei metodi che si possono usare per stabilire se una matrice è invertibile e, in caso affermativo, per determinarne l'inversa: questi argomenti sono propri di un corso di algebra lineare.
         </p>  
 
         <p>
-            Concludiamo questo capitolo chiedendoci come si comporta il prodotto di matrici rispetto alla trasposizione.
+            Come si comporta il prodotto di matrici rispetto alla trasposizione?
         </p>
 
         <p>
@@ -701,6 +737,55 @@
                 </p>
             </proof>
         </proposition>
+
+        <p>
+            Per i lettori che non hanno ancora affrontato lo studio dell'algebra lineare, probabilmente non sarà del tutto chiaro perché il prodotto di matrici venga definito in questo modo. Diamone una sia pur parziale giustificazione.
+        </p>
+
+        <example>
+            <statement>
+                <p>
+                    Consideriamo il sistema lineare
+                    <me>
+                    \left\{
+                        \begin{aligned}
+                            6x + 9y - 2z \amp = 3 \\
+                            3x - 5y + 4z \amp = 7  \\
+    	                \end{aligned}
+                    \right.
+                    </me>
+                    e consideriamo le matrici 
+                    <me>
+                    A\coloneqq
+                    \begin{pmatrix}
+                        6 \amp 9 \amp -2 \\
+                        3 \amp -5 \amp 4 \\
+                    \end{pmatrix}
+                    \qquad
+                    X\coloneqq
+                    \begin{pmatrix}
+                    x \\
+                    y \\ 
+                    z \\
+                    \end{pmatrix}
+                    </me>.
+                    Notiamo che
+                    <me>
+                        AX=\begin{pmatrix}
+                        6x + 9y - 2z \\
+                        3x - 5y + 4z \\
+                        \end{pmatrix}
+                    </me>. Dunque, se, indichiamo con <m>B</m> la matrice
+                    <me>
+                       \begin{pmatrix}
+                        3 \\
+                        7 \\
+                        \end{pmatrix} 
+                    </me>,
+                    il sistema lineare si può riscrivere come <m>AX=B</m>, dove <m>X</m> è una matrice incognita.
+                </p>
+            </statement>
+        </example>
 
         <exercises xml:id="exercises-operazioni_matrici">
             <exercise>
@@ -818,6 +903,14 @@
                         Per la <xref ref="prop-trasposta_del_prodotto"/>, abbiamo che <m>\tr{A}\tr{(A^{-1})}=\tr{(A^{-1}A)}=\tr{\Idmatrix}=\Idmatrix</m>. Analogamente <m>\tr{(A^{-1})}\tr{A}=\Idmatrix.</m>
                     </p>
                 </solution>
+            </exercise>
+            
+            <exercise>
+                <statement>
+                    <p>
+                        Sia <m>A</m> una matrice quadrata. Dimostrare che <m>A\tr{A}</m> è simmetrica.
+                    </p>
+                </statement>
             </exercise>
 
         </exercises>
