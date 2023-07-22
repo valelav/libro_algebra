@@ -87,15 +87,7 @@
       <example>
         <statement>
           <p>
-          <notation>
-            <usage><m>\matt{m}{n}{R}</m></usage>
-            <description>matrici a <m>m</m> righe e <m>n</m> colonne a coefficienti in un anello <m>R</m></description>
-          </notation>
-          <notation>
-            <usage><m>\mat{n}{R}</m></usage>
-            <description>matrici quadrate a <m>n</m> righe e <m>n</m> colonne a coefficienti in un anello <m>R</m></description>
-          </notation>
-             L'usuale addizione costituisce un'operazione nell'insieme delle matrici <m>\matt{m}{n}{R}</m> a <m>m</m> righe e <m>n</m> colonne a coefficienti in un anello<fn>Daremo più avanti (<xref ref="def-anello"/>) la definizione di anello: per il momento possiamo pensare a <m>\Interi</m>, <m>\Razionali</m>, <m>\Reali</m>, <m>\Complessi</m> o <m>\Interi/n</m> con le operazioni di addizione e moltiplicazione in essi definite.</fn> <m>R</m>. La moltiplicazione righe per colonne costituisce invece un'operazione nell'insieme <m>\mat{n}{R}</m> delle matrici quadrate di ordine <m>n</m> a coefficienti in <m>R</m>.
+             L'usuale addizione costituisce un'operazione nell'insieme delle matrici <m>\matt{m}{n}{R}</m> a <m>m</m> righe e <m>n</m> colonne a coefficienti in un anello commutativo <m>R</m>. La moltiplicazione righe per colonne costituisce invece un'operazione nell'insieme <m>\mat{n}{R}</m> delle matrici quadrate di ordine <m>n</m> a coefficienti in <m>R</m>.
           </p>
         </statement>
       </example>
@@ -182,41 +174,9 @@
         </statement>
       </example>
 
-      <example xml:id="ex-matrici_non_commutabili">
-        <statement>
-          <p>
-            Consideriamo l'operazione di moltiplicazione in <m>\mat{2}{R}</m> a coefficienti in un anello <m>R</m>. Prendiamo le matrici
-            <me>
-              A\coloneqq
-              \begin{pmatrix}
-                0 \amp 1 \\
-                0 \amp 0
-              \end{pmatrix}
-              \qquad
-              B\coloneqq
-              \begin{pmatrix}
-                0 \amp 0 \\
-                0 \amp 1
-              \end{pmatrix}
-            </me>
-            e calcoliamo i prodotti <m>AB</m> e <m>BA</m>:
-            <me>
-              AB=
-              \begin{pmatrix}
-                0 \amp 1 \\
-                0 \amp 0
-              \end{pmatrix}
-              \qquad
-              BA=
-              \begin{pmatrix}
-                0 \amp 0 \\
-                0 \amp 0
-              \end{pmatrix}
-            </me>
-            Poiché <m>AB\ne BA</m>, l'operazione di moltiplicazione riga per colonna non è commutativa.
-          </p>
-        </statement>
-      </example>
+      <p>
+        Nell <xref ref="ex-matrici_non_commutabili"/>, abbiamo mostrato che la moltiplicazione riga per colonna di matrici non è commutativa.
+      </p>
 
       <remark xml:id="rem-associativa_commutativa_verifica">
         <p>

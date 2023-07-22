@@ -344,6 +344,27 @@
         </statement>
       </exercise>
 
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare che se <m>p_{1}</m>, <m>p_{2}</m>, <m>\ldots</m>, <m>p_{n}</m> sono numeri primi distinti, allora <m>\Razionali(\sqrt{p_{1}},\ldots,\sqrt{p_{n}})</m> ha grado <m>2^{n}</m> su <m>\Razionali</m>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Procediamo per induzione su <m>n</m>. Se <m>n=1</m>, allora <m>\sqrt{p_{1}}</m> è radice di <m>x^{2}-p_{1}</m> che è irriducibile su <m>\Razionali</m> (infatti ha grado <m>2</m> e non ha radici razionali): dunque, <m>x^{2}-p_{1}</m> è il polinomio minimo di <m>\sqrt{p_{1}}</m> e , pertanto, <m>\Razionali(\sqrt{p_{1}})</m> ha grado <m>2</m> su <m>\Razionali</m>.
+          </p>
+            
+          <p>
+            Sia allora <m>n \gt 1</m>. Sia <m>E\coloneqq\Razionali(\sqrt{p_{1}},\ldots,\sqrt{p_{n-2}})</m>. Per ipotesi induttiva <m>\degext{E}{\Razionali}=2^{n-2}</m>, <m>\degext{E(\sqrt{p_{n-1}})}{\Razionali}=\degext{E(\sqrt{p_{n}})}{\Razionali}=2^{n-1}</m>, da cui, per la <xref ref="prop-moltiplicativita_grado"/>, segue che <m>\degext{E(\sqrt{p_{n-1}})}{E}=\degext{E(\sqrt{p_{n}})}{E}=2</m>: in particolare, <m>\sqrt{p_{n-1}}\notin E</m> e <m>\sqrt{p_{n}}\notin E</m>. Notiamo che <m>\sqrt{p_{n}}</m> ha grado al più <m>2</m> su <m>E(\sqrt{p_{n-1}})</m>: se mostriamo allora che <m>\sqrt{p_{n}}\notin E(\sqrt{p_{n-1}})</m> avremo, dunque, che <m>\degext{E(\sqrt{p_{n-1}},\sqrt{p_{n}})}{E(\sqrt{p_{n-1}})}=2</m> e un'ulteriore applicazione della <xref ref="prop-moltiplicativita_grado"/> darà la tesi cercata.
+          </p>
+            
+          <p>
+            Supponiamo allora per assurdo che <m>\sqrt{p_{n}}\in E(\sqrt{p_{n-1}})</m>: poiché <m>\sqrt{p_{n-1}}</m> ha grado <m>2</m> su <m>E</m>, esistono <m>a</m> e <m>b</m> in <m>E</m> tali che <m>a+b\sqrt{p_{n-1}}=\sqrt{p_{n}}</m>. Ma <m>\sqrt{p_{n}}\notin E</m>, e, quindi, <m>b\ne 0</m>. Ora <m>a^{2}+b^{2}p_{n-1}+2ab\sqrt{p_{n-1}}=p_{n}</m>: se fosse <m>a\ne0</m>, avremmo che <m>\sqrt{p_{n-1}}\in E</m>. Dunque <m>a=0</m> e <m>b\ne 0</m>: pertanto <m>b^{2}p_{n-1}=p_{n}</m>, cioè <m>p_{n-1}</m> divide <m>p_{n}</m> in <m>|interi</m>, contro l'ipotesi che <m>p_{n-1}</m> e <m>p_{n}</m> siano primi distinti. Abbiamo così trovato l'assurdo.
+          </p>
+        </solution>
+      </exercise>
+
 
     </exercises>
   </section>
@@ -384,7 +405,7 @@
     </definition>
 
     <p>
-      La definizione ci dice cosa sia un campo di spezzamento, ma al momento non sappiamo se un campo di spezzamento esiste. Nel <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>, abbiamo visto che, se <m>\alpha</m> è un elemento algebrico su un campo <m>F</m>, l'estensione <m>F(\alpha)</m> può essere descritta a partire dall'anello <m>F[x]</m> e dal polinomio minimo di <m>\alpha</m> su <m>F</m>. Questo suggerisce un metodo per <q>aggiungere</q> a un campo le radici di un polinomio.
+      La definizione ci dice cosa sia un campo di spezzamento, ma al momento non sappiamo se un campo di spezzamento esiste. Nel <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>, abbiamo visto che l'estensione <m>F(\alpha)</m> con un elemento algebrico <m>\alpha</m> di polinomio minimo <m>p</m>, è isomorfa al quoziente <m>F[x]/I</m> dove , <m>I</m> è l'ideale generato da <m>p</m>. Questo suggerisce un metodo per <q>aggiungere</q> a un campo le radici di un polinomio irriducibile.
     </p>
 
     <lemma xml:id="lem-estensione_semplice">
@@ -396,12 +417,16 @@
 
       <proof>
         <p>
-          Dal <xref ref="lem-quoziente_anello_polinomi"/>, sappiamo che <m>F[x]/\ideal{p}</m> è un campo. La composizione dell'omomorfismo di inclusione di <m>F</m> in <m>F[x]</m> con l'omomorfismo canonico di <m>F[x]</m> su <m>F[x]/\ideal{p}</m>, definisce un omomorfismo da <m>F</m> in <m>F[x]/\ideal{p}</m>: poiché <m>F</m> è un campo, questo omomorfismo è iniettivo e possiamo, dunque, identificare <m>F</m> con un sottocampo di <m>F[x]/\ideal{p}</m>: più precisamente, un elemento <m>a</m> di <m>F</m> viene identificato con il laterale <m>a+\ideal{p}</m>. Sia ora <m>\alpha</m> l'elemento <m>x+\ideal{p}</m> di <m>F[x]/\ideal{p}</m> e sia <m>p\coloneqq a_{0}+a_{1}x+\cdots+a_{n}x^{n}</m>: abbiamo allora
+          Detto <m>I</m> l'ideale dell'anello <m>F[x]</m> generato da <m>p\coloneqq a_{0}+a_{1}x+\cdots+a_{n}x^{n}</m>, consideriamo il quoziente <m>F[x]/I</m>: questo è un campo per il <xref ref="lem-quoziente_anello_polinomi"/>. La composizione dell'omomorfismo di inclusione di <m>F</m> in <m>F[x]</m> con l'omomorfismo canonico di <m>F[x]</m> su <m>F[x]/I</m>, definisce un omomorfismo da <m>F</m> in <m>F[x]/I</m>: poiché <m>F</m> è un campo, questo omomorfismo è iniettivo e possiamo, dunque, identificare <m>F</m> con un sottocampo di <m>F[x]/I</m>: più precisamente, un elemento <m>a</m> di <m>F</m> viene identificato con il laterale <m>a+I</m>. Con questa identificazione, il polinomio <m>p</m> può dunque essere scritto come
+          <me>
+            a_{0}+I+(a_{1}+I)x+\cdots+(a_{n}+I)x^{n}.
+          </me>
+          Sia ora <m>\alpha</m> l'elemento <m>x+I</m> di <m>F[x]/I</m>: valutando <m>p</m> in <m>\alpha</m> abbiamo allora
           <md>
-            <mrow> p(\alpha)\amp =(a_{0}+\ideal{p})+(a_{1}+\ideal{p})(x+\ideal{p})+\cdots+(a_{n}+\ideal{p})(x^{n}+\ideal{p})</mrow>
-            <mrow>  \amp =a_{0}+a_{1}x+\cdots+a_{n}x^{n}+\ideal{p}=p+\ideal{p}=0</mrow>
+            <mrow> p(\alpha)\amp =(a_{0}+I)+(a_{1}+I)(x+I)+\cdots+(a_{n}+I)(x+I)^{n}</mrow>
+            <mrow>  \amp =a_{0}+a_{1}x+\cdots+a_{n}x^{n}+I=p+I=I</mrow>
           </md>
-          Dunque <m>\alpha</m> è radice di <m>p</m>. Sappiamo che <m>F[x]</m> è generato da <m>F</m> e da <m>x</m> e, quindi, <m>F[x]/\ideal{p}</m>, in quanto quoziente di <m>F[x]</m>, è generato dalle immagini di questi generatori tramite l'omomorfismo canonico, e cioè da <m>F</m> stesso e da <m>x+\ideal{p}</m>, cioè da <m>\alpha</m>: quindi <m>F[x]/\ideal{p}=F(\alpha)</m>. Poiché <m>\alpha</m> annulla il polinomio <m>p</m> a coefficienti in <m>F</m>, il polinomio minimo di <m>\alpha</m> su <m>F</m> è un divisore irriducibile di <m>p</m>, ma, essendo <m>p</m> a sua volta irriducibile, il polinomio minimo di <m>\alpha</m> su <m>F</m> è associato a <m>p</m>: dunque, il polinomio minimo non è altri che il polinomio monico che si ottiene dividendo <m>p</m> per il proprio coefficiente direttivo. Per il <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>, <m>\degext{F(\alpha)}{F}=n</m> e una <m>F</m>-base per <m>F(\alpha)</m> è quella data in enunciato.
+          Ma <m>I</m> è lo zero del quoziente <m>F[x]/I</m> e, dunque, <m>\alpha</m> è radice di <m>p</m>. Sappiamo che <m>F[x]</m> è generato da <m>F</m> e da <m>x</m> e, quindi, <m>F[x]/I</m>, in quanto quoziente di <m>F[x]</m>, è generato dalle immagini di questi generatori tramite l'omomorfismo canonico, vale a dire <m>F</m> stesso e <m>x+I</m>, cioè <m>\alpha</m>: quindi <m>F[x]/I=F(\alpha)</m>. Poiché <m>\alpha</m> annulla il polinomio <m>p</m> a coefficienti in <m>F</m>, il polinomio minimo di <m>\alpha</m> su <m>F</m> è un divisore irriducibile di <m>p</m>, ma, essendo <m>p</m> a sua volta irriducibile, il polinomio minimo di <m>\alpha</m> su <m>F</m> è associato a <m>p</m>: dunque, il polinomio minimo non è altri che il polinomio monico che si ottiene dividendo <m>p</m> per il proprio coefficiente direttivo. Per il <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>, <m>\degext{F(\alpha)}{F}=n</m> e una <m>F</m>-base per <m>F(\alpha)</m> è quella data in enunciato.
         </p>
       </proof>
 

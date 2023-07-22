@@ -1527,7 +1527,20 @@
           Consideriamo ora il caso <m>n=4</m>. Consideriamo tutte le possibili unioni di classi di coniugio (includendo <m>\Id</m>) e contiamo quanti elementi contiene ciascuna di queste unioni: se il numero che otteniamo non è un divisore dell'ordine del gruppo, allora sicuramente il sottoinsieme considerato non è un sottogruppo e possiamo scartarlo, altrimenti dobbiamo verificare se è un sottogruppo. Facendo tutti i calcoli, vediamo che, oltre a <m>\Id</m>, <m>A_{4}</m> e <m>\Sym_{4}</m>, l'unica possibilità da considerare è il sottoinsieme <m>T</m> unione della classe di <m>\Id</m> e della classe di <m>(1\;2)(3\;4)</m>: il sottoinsieme <m>T</m> ha <m>4</m> elementi e, quindi, potrebbe essere un sottogruppo di <m>\Sym_{4}</m>. Facendo le verifiche, vediamo che è effettivamente così e, quindi, è un sottogruppo (necessariamente normale) di <m>\Sym_{4}</m>.
         </p>
         <p>
-          Il caso <m>n=5</m> si tratta in maniera analoga. Qui le combinazioni da considerare sono ancora di più, ma con un po' di pazienza, si può veder che le uniche che danno un divisore dell'ordine di <m>\Sym_{5}</m> (cioè di <m>5!=120</m>) sono quelle corrispondenti al gruppo <m>\Id</m>, ad <m>A_{5}</m> e a <m>\Sym_{5}</m> che sono, quindi, gli unici sottogruppi normali di <m>\Sym_{5}</m>.
+          Il caso <m>n=5</m> si tratta in maniera analoga. Consideriamo tutte le possibili unioni di classi di coniugio (includendo <m>\Id</m>) e cerchiamo quelle formate da un numero di elementi che sia un divisore dell'ordine di <m>\Sym_{5}</m> (cioè di <m>5!=120</m>). Oltre a quelle che danno il sottogruppo banale, il sottogruppo alterno e il gruppo simmetrico stesso, abbiamo due casi da considerare:
+          <ul>
+            <li>
+              <p>
+                l'unione delle classi di <m>\Id</m>, di <m>(1\;2\;3\;4\;5)</m> e di <m>(1\;2)(3\;4)</m> che contiene <m>40</m> elementi
+              </p>
+            </li>
+            <li>
+              <p>
+                l'unione delle classi di <m>\Id</m>, di <m>(1\;2\;3\;4\;5)</m>, di <m>(1\;2)(3\;4)</m> e di <m>(1\;2\;3)(4\;5)</m> che contiene <m>60</m> elementi
+              </p>
+            </li>
+          </ul>
+          Né l'una ne l'altra sono sottogruppi del simmetrico: infatti entrambe contengono gli elementi <m>(1\;2)(3\;4)</m> e <m>(1\;2)(3\;5)</m> ma non il loro prodotto e cioè <m>(3\;4\;5)</m>. Dunque, gli unici sottogruppi normali di <m>\Sym_{5}</m> sono <m>\Id</m>, <m>A_{5}</m> e <m>\Sym_{5}</m>.
         </p>
       </statement>
     </example>

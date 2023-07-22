@@ -477,7 +477,7 @@
     </definition>
 
     <p>
-      La definizione appena data non ci garantisce né l'esistenza né l'unicità di un massimo comun divisore di due o più elementi. Abbiamo però la seguente proposizione, la cui dimostrazione lasciamo per esercizio.
+      La definizione appena data non ci garantisce né l'esistenza né l'unicità di un massimo comun divisore. Abbiamo però la seguente proposizione, la cui dimostrazione lasciamo per esercizio.
     </p>
 
     <proposition xml:id="prop-essenziale_unicita_MCD">
@@ -491,7 +491,7 @@
             <usage><m>(a,b)</m></usage>
             <description>massimo comun divisore di <m>a</m> e <m>b</m></description>
           </notation>
-          Nel caso in cui due elementi <m>a</m> e <m>b</m> abbiano un massimo comun divisore <m>d</m>, useremo il simbolo <m>(a,b)</m> per indicare un tale elemento. Useremo la notazione <m>d\sim(a,b)</m> per enfatizzare il fatto che il massimo comun divisore è determinato a meno di associati.
+          Nel caso in cui due elementi <m>a</m> e <m>b</m> abbiano un massimo comun divisore <m>d</m>, useremo il simbolo <m>(a,b)</m> per indicare un tale elemento. Useremo la notazione <m>d\sim(a,b)</m> per enfatizzare il fatto che un massimo comun divisore è determinato a meno di associati: con abuso di linguaggio diremo che <m>d</m> è <q>il</q> massimo comun divisore.
         </p>
       </statement>
     </proposition>
@@ -520,6 +520,23 @@
         </p>
       </statement>
     </definition>
+
+    <proposition xml:id="prop-MCD_molti_elementi">
+      <statement>
+        <p>
+          Sia <m>D</m> un dominio in cui ogni coppia di elementi sia dotata di massimo comun divisore. Dati <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n}</m> in <m>D</m>, esiste il loro massimo comun divisore.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Procediamo per induzione su <m>n</m>. Ovviamente, la proprietà è vera per <m>n=1</m> e <m>n=2</m>.
+        </p>
+          
+        <p>
+          Sia allora <m>n \gt 2</m>. Per ipotesi induttiva <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n-1}</m> hanno un massimo comun divisore, sia <m>e</m>. Consideriamo allora il massimo comun divisore <m>d</m> di <m>e</m> e <m>a_{n}</m> e dimostriamo che  è massimo comun divisore di <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n}</m>. Poiché <m>d</m> divide <m>e</m> abbiamo che <m>d</m> divide <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n-1}</m>. D'altra parte <m>d</m> divide <m>a_{n}</m> e, quindi, <m>d</m> divide ciascun <m>a_{i}</m>. Se ora <m>c</m> è un elemento che divide tutti gli <m>a_{i}</m>, in particolare, divide <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n-1}</m> e, quindi, divide il loro massimo comun divisore <m>e</m>: dunque, <m>c</m> divide <m>e</m> e <m>a_{n}</m> e, quindi, il loro massimo comun divisore <m>d</m>.
+        </p>
+      </proof>
+    </proposition>
 
 
     <definition xml:id="def-coprimi_in_dominio">
@@ -594,25 +611,6 @@
       <proof>
         <p>
           Le prime due sono immediate. Proviamo allora la terza, notando che il caso in cui <m>c=0</m> segue facilmente dall'<xref ref="rem-MCD_divisore"/>. Supponiamo allora che <m>c\ne0</m> e sia <m>d\sim(a,b)</m>. Ora <m>dc\mid ac</m> e <m>dc\mid bc</m>, cosicché, posto <m>e\sim(ac,bc)</m>, si ha <m>dc\mid e</m>. Sia allora <m>e=fdc</m> per qualche <m>f</m> in <m>D</m>. Dunque <m>fdc</m> divide <m>ac</m> e poiché <m>c\ne0</m> ciò significa che <m>fd</m> divide <m>a</m>; analogamente, <m>fd</m> divide <m>b</m>. Pertanto <m>fd</m> divide <m>d</m> e, quindi, <m>e=fdc</m> divide <m>dc</m>: sapevamo già che <m>dc</m> divide <m>e</m> e, quindi <m>e\sim dc</m> come richiesto.
-        </p>
-      </proof>
-
-    </proposition>
-
-    <proposition xml:id="prop-MCD_molti_elementi">
-      <statement>
-        <p>
-          Sia <m>D</m> un dominio in cui ogni coppia di elementi sia dotata di massimo comun divisore. Dati <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n}</m> in <m>D</m>, esiste il loro massimo comun divisore.
-        </p>
-      </statement>
-
-      <proof>
-        <p>
-          Procediamo per induzione su <m>n</m>. Ovviamente, la proprietà è vera per <m>n=1</m> e <m>n=2</m>.
-        </p>
-
-        <p>
-          Sia allora <m>n \gt2</m>. Per ipotesi induttiva <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n-1}</m> hanno un massimo comun divisore, sia <m>e</m>. Consideriamo allora il massimo comun divisore <m>d</m> di <m>e</m> e <m>a_{n}</m> e dimostriamo che <m>d</m> è massimo comun divisore di <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n}</m>. Poiché <m>d</m> divide <m>e</m> abbiamo che <m>d</m> divide <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n-1}</m>. D'altra parte <m>d</m> divide <m>a_{n}</m> e, quindi, <m>d</m> divide ciascun <m>a_{i}</m>. Se ora <m>c</m> divide tutti gli <m>a_{i}</m>, in particolare, divide <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n-1}</m> e, quindi, divide il loro massimo comun divisore <m>e</m>: dunque, <m>c</m> divide <m>e</m> e <m>a_{n}</m> e, quindi, il loro massimo comun divisore <m>d</m>.
         </p>
       </proof>
 

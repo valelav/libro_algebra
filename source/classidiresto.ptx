@@ -345,6 +345,10 @@
 
       </proposition>
 
+      <p>
+        La proposizione precedente ci dice, in pratica, che l'insieme delle classi di resto modulo <m>n</m> con le operazioni che abbiamo definito è un anello commutativo (vedi <xref ref="def-anello" />). Come fatto nel <xref ref="ch-matrici"/>, possiamo quindi considerare le matrici a coefficienti in <m>\Interi/n</m>.
+      </p>
+
       <note>
         <p>
           Il fatto che le operazioni siano associative ci permette di usare scritture del tipo <m>\class[n]{a}+\class[n]{b}+\class[n]{c}</m> e <m>\class[n]{a}\class[n]{b}\class[n]{c}</m> senza ambiguità. Nelle prossime dimostrazioni useremo spesso le proprietà associative senza dichiararlo in maniera esplicita. È però importante sapere quando effettivamente vengono usate.
@@ -581,9 +585,11 @@
 
       </proposition>
 
-      <p>
-        Nella proposizione precedente abbiamo dimostrato alcune proprietà delle classi di resto invertibili a partire dalle proprietà formali della moltiplicazione tra classi di resto. Vedremo più avanti (<xref ref="prop-unicita_inverso"/> e <xref ref="prop-proprieta_inverso_rivisto"/>) che queste dimostrazioni possono essere valide più in generale.
-      </p>
+      <note>
+        <p>
+          Nella proposizione precedente abbiamo dimostrato alcune proprietà delle classi di resto invertibili a partire dalle proprietà formali della moltiplicazione tra classi di resto. La dimostrazione data è essenzialmente la stessa data per le matrici (<xref ref="prop-matrice_invertibile"/>, <xref ref="prop-inversa_matrice_inversa"/> e <xref ref="prop-inversa_prodotto_matrici"/>) e  che useremo nuovamente in un contesto più generale (<xref ref="prop-unicita_inverso"/>, <xref ref="prop-inverso_inverso"/> e <xref ref="prop-inverso_prodotto"/>). Per questo motivo, abbiamo scritto che l'inversa di <m>\class[n]{a}\class[n]{b}</m> è <m>\class[n]{b}^{-1}\class[n]{a}^{-1}</m>, anche se, dato che il prodotto in <m>\Interi/n</m> è commutativo, avremmo potuto scrivere <m>\class[n]{a}^{-1}\class[n]{b}^{-1}</m>.
+        </p>
+      </note>
 
       <lemma xml:id="lem-mcd_classi_di_resto">
         <statement>

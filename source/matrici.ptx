@@ -1,0 +1,920 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-matrici">
+    <title>Matrici</title>
+
+    <introduction>
+        <p>
+            Le matrici sono un utile strumento nello studio dell'algebra lineare. Qui useremo le
+            matrici per fornire esempi non banali di operazioni.
+        </p>
+    </introduction>
+
+    <section xml:id="sec-definizioni_matrici">
+        <title>Definizioni di base</title>
+        <p> Una matrice a coefficienti in un anello commutativo<fn>Daremo più avanti (<xref
+            ref="def-anello" />) la definizione di anello commutativo: per il momento
+            possiamo pensare a <m>\Interi</m>, <m>\Razionali</m>, <m>\Reali</m> o <m>\Complessi</m>
+            con le operazioni di addizione e moltiplicazione in essi definite.</fn> <m>R</m> è,
+            informalmente, una tabella a <m>m</m> righe e <m>n</m> colonne di elementi di <m>R</m>,
+            indicizzati da una coppia di indici <m>i</m> e <m>j</m> con <m>1\le i\le m</m> e <m>1\le
+            j\le n</m> e rappresentata nel modo seguente: 
+            <me>
+                A\coloneqq
+                \begin{pmatrix}
+                a_{11} \amp a_{12} \amp \dots \amp a_{1n} \\
+                a_{21} \amp a_{22} \amp \dots \amp a_{2n} \\
+                \vdots \amp \vdots \amp \ddots \amp \vdots \\
+                a_{m1} \amp a_{m2} \amp \dots \amp a_{mn} \\
+                \end{pmatrix}
+            </me>
+            I numeri <m>m</m> e <m>n</m> sono detti <term>dimensioni</term> della matrice. Diremo
+            anche che <m>A</m> è una matrice <m>m</m> per <m>n</m>. L'indice <m>i</m> è detto <term>indice di riga</term>, mentre l'indice <m>j</m> è detto <term>indice di colonna</term>. L'elemento <m>a_{ij}</m> è detto elemento di <term>posto</term> <m>(i,j)</m>. Data la matrice <m>A</m>, per indicare il suo elemento di posto <m>(i,j)</m> si usa la scrittura <m>\posto{A}{i}{j}</m>
+                <notation>
+                <usage>
+                    <m>\posto{A}{i}{j}</m>
+                </usage>
+                <description>elemento di posto <m>(i,j)</m> della matrice <m>A</m></description>
+            </notation>.
+            </p>
+            <p> 
+                Ad esempio la matrice seguente 
+                <me>
+                    A\coloneqq
+                    \begin{pmatrix}
+                    1 \amp 0 \amp 2 \amp -1 \\
+                    0 \amp 1 \amp 3 \amp 0 \\
+                    -2 \amp 2 \amp 5 \amp 0
+                    \end{pmatrix}
+                </me>
+                ha dimensioni <m>3</m> e <m>4</m>, cioè è una matrice <m>3</m> per <m>4</m>. L'elemento di posto <m>(2,3)</m> è <m>3</m>, mentre l'elemento di posto <m>(3,4)</m> è <m>0</m>: possiamo anche scrivere <m>\posto{A}{2}{3}=3</m> e <m>\posto{A}{3}{4}=0</m>. 
+            </p>
+
+        <definition xml:id="def-matrice_quadrata">
+            <statement>
+                <p>
+                    Una matrice è detta <term>quadrata</term> se il numero delle righe è uguale al
+                    numero delle colonne. Tale numero è detto <term>ordine</term> della matrice. 
+                </p>
+            </statement>
+        </definition>
+
+        <p>
+            <notation>
+                <usage>
+                    <m>\matt{m}{n}{R}</m>
+                </usage>
+                <description>insieme delle matrici a <m>m</m> righe e <m>n</m> colonne a
+            coefficienti in <m>R</m></description>
+            </notation>
+            <notation>
+                <usage>
+                    <m>\mat{n}{R}</m>
+                </usage>
+                <description>insieme delle matrici quadrate di ordine <m>n</m> a coefficienti in <m>
+            R</m></description>
+            </notation> Useremo il simbolo <m>\matt{m}{n}{R}</m> per
+            indicare l'insieme delle matrici a <m>m</m> righe e <m>n</m> colonne a coefficienti
+            nell'anello commutativo <m>R</m>. Nel caso in <m>m=n</m>, useremo semplicemente il
+            simbolo <m>\mat{n}{R}</m>. </p>
+
+        <definition xml:id="def-diagonale_principale">
+            <statement>
+                <p> 
+                    Data una matrice quadrata <m>A</m> di ordine <m>n</m>, gli elementi di posto <m>
+                    (i,i)</m> con <m>1\le i\le n</m> sono detti elementi della <term>diagonale principale</term>. 
+                </p>
+            </statement>
+        </definition>
+
+        <definition xml:id="def-matrice_diagonale_triangolare">
+            <notation>
+                <usage>
+                    <m>\Diag{n}{R}</m>
+                </usage>
+                <description>
+                    insieme delle matrici diagonali di ordine <m>n</m> a coefficienti in <m>R</m>
+                </description>
+            </notation>
+            <notation>
+                <usage>
+                    <m>\TS{n}{R}</m>
+                </usage>
+                <description>
+                    insieme delle matrici triangolari superiori di ordine <m>n</m> a coefficienti in <m>R</m>
+                </description>
+            </notation>
+            <notation>
+                <usage>
+                    <m>\TI{n}{R}</m>
+                </usage>
+                <description>
+                    insieme delle matrici triangolari inferiori di ordine <m>n</m> a coefficienti in <m>R</m>
+                </description>
+            </notation>
+            <statement>
+                <p>
+                    Una matrice quadrata <m>A</m> di ordine <m>n</m> è detta <term>diagonale</term> se <m>\posto{A}{i}{j}=0</m> per ogni <m>i\ne j</m>, cioè se tutti i suoi elementi al di fuori della diagonale principale sono nulli. La matrice <m>A</m> è detta <term>triangolare superiore</term> se <m>\posto{A}{i}{j}=0</m> per ogni <m>i\gt
+                    j</m>, cioè se tutti i suoi elementi al di sotto della diagonale principale sono
+                    nulli. La matrice <m>A</m> è detta <term>triangolare inferiore</term> se <m>
+                    \posto{A}{i}{j}=0</m> per ogni <m>i\lt j</m>, cioè se tutti i suoi elementi al
+                    di sopra della diagonale principale sono nulli. Indicheremo l'insieme delle
+                    matrici diagonali, triangolari superiori e triangolari inferiori di ordine <m>n</m> a coefficienti in <m>R</m> rispettivamente con <m>\Diag{n}{R}</m>, <m>\TS{n}{R}</m> e <m>\TI{n}{R}</m>. </p>
+            </statement>
+
+        </definition>
+
+        <example xml:id="ex-matrici_diagonali_triangolari">
+            <statement>
+                <p> 
+                    Le matrici 
+                        <me>
+                            \begin{pmatrix}
+                            3 \amp 0 \amp 0 \\
+                            0 \amp 0 \amp 0 \\
+                            0 \amp 0 \amp -2
+                            \end{pmatrix}
+                            \qquad
+                            \begin{pmatrix}
+                            2 \amp 1 \amp 1 \\
+                            0 \amp 0 \amp 0 \\
+                            0 \amp 0 \amp -2
+                            \end{pmatrix}
+                            \qquad
+                            \begin{pmatrix}
+                            0 \amp 0 \amp 0 \\
+                            2 \amp 1 \amp 0 \\
+                            1 \amp 0 \amp 1
+                            \end{pmatrix}
+                    </me>
+                    sono, rispettivamente, diagonale, triangolare superiore e triangolare inferiore.
+                </p>
+            </statement>
+        </example>
+
+        <note>
+            <p> 
+                Dicendo che la matrice è diagonale, non diciamo che gli elementi sulla diagonale
+                principale siano diversi da <m>0</m>, ma che tutti gli altri elementi siano nulli:
+                alcuni degli elementi della diagonale potrebbero essere nulli a loro volta (anche
+                tutti). Analogamente gli elementi sulla diagonale principale e al di sopra di essa
+                di una matrice triangolare superiore non è detto siano diversi da <m>0</m>. 
+            </p>
+        </note>
+
+        <definition xml:id="def-matrice_trasposta">
+            <statement>
+                <p> 
+                    Data una matrice <m>A</m> ha <m>m</m> righe e <m>n</m> colonne, la sua <term>
+                    trasposta</term>, denotata con il simbolo <m>\tr{A}</m> è la matrice a <m>n</m>
+                    righe e <m>m</m> colonne, il cui elemento di posto <m>(i,j)</m> è <m>
+                    \posto{A}{j}{i}</m>. 
+                </p>
+            </statement>
+        </definition>
+
+        <example>
+            <statement>
+                <p> 
+                    La trasposta della matrice 
+                    <me>
+                        A\coloneqq
+                        \begin{pmatrix}
+                        3 \amp 2 \amp 0 \amp -2 \\
+                        1 \amp 0 \amp -1 \amp 4 \\
+                        -1 \amp 1 \amp 3 \amp 2 \\
+                        \end{pmatrix}
+                    </me>
+                    è la matrice 
+                    <me>
+                        \tr{A}=
+                        \begin{pmatrix}
+                        3 \amp 1 \amp -1 \\
+                        2 \amp 0 \amp 1 \\
+                        0 \amp -1 \amp 3 \\
+                        -2 \amp 4 \amp 2 \\
+                        \end{pmatrix}
+                    </me>.
+                </p>
+            </statement>
+
+        </example>
+
+        <p>
+            Ovviamente abbiamo:
+        </p>
+
+        <remark xml:id="rem-trasposta_di_trasposta">
+            <p> 
+                Per ogni matrice <m>A</m> risulta <m>\tr{(\tr{A})}=A</m>. 
+            </p>
+        </remark>
+
+        <definition xml:id="def-matrice_simmetrica">
+            <statement>
+                <p> 
+                    Una matrice quadrata <m>A</m> è detta <term>simmetrica</term> se <m>\tr{A}=A</m>. 
+                </p>
+            </statement>
+        </definition>
+
+        <exercises xml:id="exercises-definizioni_matrici">
+            <exercise>
+                <statement>
+                    <p> Dimostrare che <m>\Diag{n}{R}=\TS{n}{R}\cap\TI{n}{R}</m>. </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p> 
+                        Dimostrare l'<xref ref="rem-trasposta_di_trasposta" />. 
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Dimostrare che la trasposta di una matrice triangolare superiore è una
+                        matrice triangolare inferiore e viceversa.
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Dimostrare che una matrice diagonale è simmetrica.
+                    </p>
+                </statement>
+            </exercise>
+        </exercises>
+
+    </section>
+
+    <section xml:id="sec-operazioni_matrici">
+        <title>Operazioni tra matrici</title>
+
+        <definition xml:id="def-addizione_di_matrici">
+            <statement>
+                <p> 
+                    Date due matrici <m>A</m> e <m>B</m> aventi le stesse dimensioni <m>m</m> e <m>n</m>,
+                    la <term>somma</term> di <m>A</m> e <m>B</m> è la matrice <m>A+B</m> con le
+                    stesse dimensioni <m>m</m> e <m>n</m> il cui elemento di posto <m>(i,j)</m> è <m>
+                    \posto{A}{i}{j}+\posto{B}{i}{j}</m>. 
+                </p>
+            </statement>
+        </definition>
+
+        <example>
+            <statement>
+                <p> La somma delle matrici <me>
+                        A\coloneqq
+                        \begin{pmatrix}
+                        2 \amp 0 \amp 1 \amp -1\\
+                        3 \amp 1 \amp 2 \amp 1\\
+                        2 \amp 2 \amp 0 \amp 0\\
+                        \end{pmatrix}
+                    </me>
+                    e <me>
+                        B\coloneqq
+                        \begin{pmatrix}
+                        -1 \amp 0 \amp 0 \amp 1\\
+                        1 \amp 3 \amp 3 \amp 0\\
+                        1 \amp 1 \amp 1 \amp 1\\
+                        \end{pmatrix}
+                    </me>
+                    è la matrice <me>
+                        A+B=
+                        \begin{pmatrix}
+                        2+(-1) \amp 0+0 \amp 1+0 \amp -1+1\\
+                        3+1 \amp 1+3 \amp 2+3 \amp 1+0\\
+                        2+1 \amp 2+1 \amp 0+1 \amp 0+1\\
+                        \end{pmatrix}=
+                        \begin{pmatrix}
+                        1 \amp 0 \amp 1 \amp 0\\
+                        4 \amp 4 \amp 5 \amp 1\\
+                        3 \amp 3 \amp 1 \amp 1\\
+                        \end{pmatrix}
+                    </me>. 
+                </p>
+            </statement>
+        </example>
+
+        <definition xml:id="def-matrice_nulla">
+            <statement>
+                <p> 
+                    La matrice <term>nulla</term> <m>m</m> per <m>n</m>, denotata con <m>
+                    \Nullmatrix_{mn}</m> o semplicemente <m>\Nullmatrix</m> se le dimensioni sono
+                    chiare dal contesto, è la matrice i cui elementi sono tutti uguali a <m>0</m>. 
+                </p>
+            </statement>
+        </definition>
+
+        <proposition xml:id="prop-addizione_matrici">
+            <statement>
+                <p> 
+                    L'operazione di addizione definita nell'insieme di matrici <m>\matt{m}{n}{R}</m>
+                    soddisfa le seguenti proprietà: 
+                </p>
+                <p>
+                    <ol>
+                        <li xml:id="addizione_matrici_associativa">
+                            <p>
+                                <m>A+(B+C)=(A+B)+C</m> per ogni <m>A</m>, <m>B</m> e <m>C</m> in <m>\matt{m}{n}{R}</m> (l'addizione è associativa); 
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>A+B=B+A</m> per ogni <m>A</m> e <m>B</m> in <m>\matt{m}{n}{R}</m> (l'addizione è commutativa); 
+                            </p>
+                        </li>                        
+                        <li>
+                            <p>
+                                <m>A+\Nullmatrix=\Nullmatrix+A=A</m> per ogni <m>A</m> in <m>
+                                \matt{m}{n}{R}</m> (<m>\Nullmatrix</m> è elemento neutro per
+                                l'addizione); 
+                            </p>
+                        </li>
+                        <li>
+                            <p> 
+                                per ogni matrice <m>A</m> in <m>\matt{m}{n}{R}</m> esiste una
+                                matrice in <m>\matt{m}{n}{R}</m>, denotata con <m>-A</m> tale che <m>
+                                A+(-A)=-A+A=\Nullmatrix</m> (esistenza opposto); 
+                            </p>
+                        </li>
+
+                    </ol>
+                </p>
+            </statement>
+
+            <proof>
+                <p> 
+                    Lasciamo per esercizio le dimostrazioni, notando solo che discendono dalle
+                    analoghe proprietà dell'addizione in <m>R</m>. 
+                </p>
+            </proof>
+
+        </proposition>
+
+        <note>
+            <p> 
+                Il fatto che l'addizione sia associativa ci permette di usare scritture del tipo <m>
+                A+B+C</m> senza ambiguità. 
+            </p>
+        </note>
+
+        <p>
+            La dimostrazione della proprietà seguente è immediata.
+        </p>
+
+        <proposition xml:id="prop-addizione_trasposta">
+            <statement>
+                <p>
+                    Date due matrici <m>A</m> e <m>B</m> in <m>\matt{m}{n}{R}</m>, si ha <m>\tr{(A+B)}=\tr{A}+\tr{B}</m>.
+                </p>
+            </statement>
+        </proposition>
+
+        <p>
+            La moltiplicazione di matrici è definita in una maniera che, a prima vista, appare un po' elaborata. Innanzitutto, non si considerano matrici delle stesse dimensioni, ma una matrice a <m>m</m> righe e <m>n</m> colonne e una matrice a <m>n</m> righe e <m>p</m> colonne e il risultato è una matrice a <m>m</m> righe e <m>p</m> colonne.
+        </p>
+
+        <definition xml:id="def-prodotto_riga_per_colonna">
+            <statement>
+                <p>
+                    Data una matrice <m>A</m> in <m>\matt{m}{n}{R}</m> e una matrice <m>B</m> in <m>\matt{n}{p}{R}</m>, la matrice <m>AB</m> è una matrice di <m>\matt{m}{p}{R}</m> il cui elemento di posto <m>(i,h)</m> è uguale a <m>\sum_{j=1}^{n}\posto{A}{i}{j}\posto{B}{j}{h}</m>. Questo prodotto è detto <term>riga per colonna</term>.
+                </p>
+            </statement>
+        </definition>
+
+        <p>
+            Esplicitamente, l'elemento di posto <m>(i,h)</m> di <m>AB</m> si ottiene considerando la riga <m>i</m>-esima di <m>A</m> e la colonna <m>h</m>-esima di <m>B</m>: entrambe contengono <m>n</m> elementi. Si fa poi il prodotto del primo elemento della riga considerata per il primo elemento della colonna considerata, il prodotto del secondo con il secondo e così via e poi si sommano i prodotti così ottenuti.
+        </p>
+
+        <example xml:id="ex-prodotto_di_matrici">
+            <statement>
+                <p>
+                    Consideriamo le matrici
+                    <me>
+                        A\coloneqq
+                        \begin{pmatrix}
+                        3 \amp 2 \amp -1 \\
+                        0 \amp 1 \amp 2 \\
+                        2 \amp 0 \amp 1 \\
+                        4 \amp 1 \amp 0 \\
+                        \end{pmatrix}
+                    </me>
+                    e
+                    <me>
+                        B\coloneqq
+                        \begin{pmatrix}
+                        1 \amp 0 \\
+                        2 \amp 1 \\
+                        -2 \amp 2 \\
+                        \end{pmatrix}
+                    </me>
+                    La matrice <m>A</m> è <m>4</m> per <m>3</m>, mentre la matrice <m>B</m> è <m>3</m> per <m>2</m>, quindi il prodotto <m>AB</m> esiste ed è <m>4</m> per <m>2</m> (mentre il prodotto <m>BA</m> non esiste). Esplicitamente
+                    <me>
+                        AB=
+                        \begin{pmatrix}
+                        3\cdot 1+2\cdot 2+(-1)\cdot(-2) \amp 3\cdot 0+2\cdot 1+(-1)\cdot 2\\
+                        0\cdot 1+1\cdot 2+2\cdot(-2) \amp 0\cdot 0+1\cdot 1+2\cdot 2\\
+                        2\cdot 1+0\cdot 2+1\cdot(-2) \amp 2\cdot 0+0\cdot 1+1\cdot 2\\
+                        4\cdot 1+1\cdot 2+0\cdot(-2) \amp 4\cdot 0+1\cdot 1+0\cdot 2\\
+                        \end{pmatrix}=
+                        \begin{pmatrix}
+                        9 \amp 0 \\
+                        -2 \amp 5 \\
+                        0 \amp 2 \\
+                        6 \amp 1 \\
+                        \end{pmatrix}
+                    </me>       
+                </p>
+            </statement>
+        </example>
+
+        <definition xml:id="def-matrice_identica">
+            <notation>
+                <usage><m>\Idmatrix_{n}\text{, }\Idmatrix</m></usage>
+                <description>matrice identica di ordine <m>n</m></description>
+            </notation>
+            <statement>
+                <p>
+                    La matrice <term>identica</term> di ordine <m>n</m> è la matrice diagonale di ordine <m>n</m> i cui elementi lungo la diagonale principale sono tutti uguali a <m>1</m>. È denotata con <m>\Idmatrix_{n}</m> o semplicemente con <m>\Idmatrix</m> se l'ordine è chiaro dal contesto.
+                </p>
+            </statement>
+        </definition>
+
+        <proposition xml:id="prop-moltiplicazione_matrici">
+            <statement>
+                <p>
+                    L'operazione di moltiplicazione di matrici soddisfa le seguenti proprietà:
+                </p>
+                <p>
+                    <ol>
+                        <li xml:id="item-associativa_maatrici">
+                            <p>
+                                <m>(AB)C=A(BC)</m> per ogni <m>A</m> in <m>\matt{m}{n}{R}</m>, <m>B</m> in <m>\matt{n}{p}{R}</m> e <m>C</m> in <m>\matt{p}{q}{R}</m> (la moltiplicazione è associativa);
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>\Idmatrix_{m}A=A</m> e <m>A\Idmatrix_{n}=A</m> per ogni <m>A</m> in <m>\matt{m}{n}{R}</m> (la matrice identica è elemento neutro);
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>A(B+C)=AB+AC</m> per ogni <m>A</m> in <m>\matt{m}{n}{R}</m> e ogni <m>B</m> e <m>C</m> in <m>\matt{n}{p}{R}</m> (distributiva sinistra);
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>(A+B)C=AC+BC</m> per ogni <m>A</m> e <m>B</m> in <m>\matt{m}{n}{R}</m> e ogni  <m>C</m> in <m>\matt{n}{p}{R}</m> (distributiva destra).
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+            <proof>
+                <p>
+                    Dimostriamo solo il <xref ref="item-associativa_maatrici" text="local">Punto</xref> e lasciamo il resto per esercizio. Indichiamo con <m>D</m> la matrice <m>AB</m> e con <m>E</m> la matrice <m>BC</m>: dunque <m>D\in\matt{m}{p}{R}</m> e <m>E\in\matt{n}{q}{R}</m>. L'elemento di posto <m>(i,k)</m> in <m>(AB)C=DC</m> è allora
+                    <me>
+                        \sum_{h=1}^{p}\posto{D}{i}{h}\posto{C}{h}{k}
+                    </me>.
+                    Ma l'elemento di posto <m>(i,h)</m> di <m>D=AB</m> è
+                    <me>
+                        \sum_{j=1}^{n}\posto{A}{i}{j}\posto{B}{j}{h}
+                    </me>.
+                    Dunque, l'elemento di posto <m>(i,k)</m> in <m>(AB)C</m> è
+                    <me>
+                        \sum_{h=1}^{p}\sum_{j=1}^{n}\posto{A}{i}{j}\posto{B}{j}{h}\posto{C}{h}{k}
+                    </me>.
+                    Analogamente, l'elemento di posto <m>(i,k)</m> in <m>A(BC)=AE</m> è allora
+                    <me>
+                        \sum_{j=1}^{n}\posto{A}{i}{j}\posto{E}{j}{k}
+                    </me>.
+                    Ma l'elemento di posto <m>(j,k)</m> di <m>E=BC</m> è
+                    <me>
+                        \sum_{h=1}^{p}\posto{B}{j}{h}\posto{C}{h}{k}
+                    </me>.
+                    Dunque, l'elemento di posto <m>(i,k)</m> in <m>A(BC)</m> è
+                    <me>
+                        \sum_{j=1}^{n}\posto{A}{i}{j}\sum_{h=1}^{p}\posto{B}{j}{h}\posto{C}{h}{k}
+                    </me>:
+                    gli elementi di posto <m>(i,k)</m> in <m>(AB)C</m> e <m>A(BC)</m> coincidono e, quindi, <m>(AB)C=A(BC)</m>.
+                </p>
+            </proof>
+        </proposition>
+
+        <p>
+            Cosa possiamo dire circa la commutatività del prodotto? Nell'<xref ref="ex-prodotto_di_matrici"/> il prodotto delle matrici <m>AB</m> è definito, mentre quello delle matrici <m>BA</m> no (il numero di colonne di <m>B</m> è diverso dal numero di righe di <m>A</m>): in questo caso non ha senso chiedersi se il prodotto sia commutativo. I due prodotti <m>AB</m> e <m>BA</m> sono entrambi definiti se e solo se <m>A\in\matt{m}{n}{R}</m> e <m>B\in\matt{n}{m}{R}</m>: in tal caso <m>AB\in\mat{m}{R}</m> e <m>BA\in\mat{n}{R}</m> e, se <m>m\ne n</m>, le due matrici <m>AB</m> e <m>BA</m> sono quadrate di ordini diversi e, anche in questo caso, non ha senso confrontarle. L'unico caso in cui <m>AB</m> e <m>BA</m> siano entrambe definite e abbiano le stesse dimensioni è quando <m>A</m> e <m>B</m> sono matrici quadrate dello stesso ordine. Anche in tali ipotesi non è però detto che <m>AB=BA</m>. 
+        </p>
+
+        <example xml:id="ex-matrici_non_commutabili">
+            <statement>
+                <p> 
+                    Consideriamo le matrici 
+                    <me>
+                        A\coloneqq
+                        \begin{pmatrix}
+                        0 \amp 1 \\
+                        0 \amp 0
+                        \end{pmatrix}
+                        \qquad
+                        B\coloneqq
+                        \begin{pmatrix}
+                        0 \amp 0 \\
+                        0 \amp 1
+                        \end{pmatrix}
+                    </me>
+                e calcoliamo i prodotti <m>AB</m> e <m>BA</m>: 
+                    <me>
+                        AB=
+                        \begin{pmatrix}
+                        0 \amp 1 \\
+                        0 \amp 0
+                        \end{pmatrix}
+                        \qquad
+                        BA=
+                        \begin{pmatrix}
+                        0 \amp 0 \\
+                        0 \amp 0
+                        \end{pmatrix}
+                    </me>
+                    Poiché <m>AB\ne BA</m>, l'operazione di moltiplicazione riga per colonna non è commutativa. 
+                </p>
+            </statement>
+        </example>
+
+        <remark>
+            <p>
+                Il prodotto di una matrice nulla per una qualsiasi altra matrice (di dimensioni compatibili) è, ovviamente, la matrice nulla. Il prodotto <m>BA</m> nell'<xref ref="ex-matrici_non_commutabili"/> mostra che il prodotto di due matrici può essere la matrice nulla anche se nessuna delle due è la matrice nulla.
+            </p>
+        </remark>
+
+        <definition xml:id="def-matrici_commutabili">
+            <statement>
+                <p>
+                    Date due matrici quadrate dello stesso ordine <m>A</m> e <m>B</m> si dice che <term>commutano</term> o che sono <term>commutabili</term> se <m>AB=BA</m>.
+                </p>
+            </statement>
+        </definition>
+
+        <remark>
+            <p>
+                La matrice identica <m>\Idmatrix_{n}</m> e la matrice nulla <m>\Nullmatrix_{n}</m> commutano con ogni altra matrice quadrata di ordine <m>n</m>.
+            </p>
+        </remark>
+
+        <definition xml:id="def-matrice_invertibile">
+            <statement>
+                <p>
+                    Una matrice quadrata <m>A</m> di ordine <m>n</m> si dice <term>invertibile</term> se esiste una matrice quadrata <m>B</m> dello stesso ordine <m>n</m> tale che <m>AB=BA=\Idmatrix</m>.
+                </p>
+            </statement>
+        </definition>
+
+        <remark xml:id="rem-matrice_identica_invertibile_nulla_no">
+            <p>
+                La matrice identica <m>\Idmatrix</m> è ovviamente invertibile: infatti moltiplicata per sé stessa dà la matrice identica.
+            </p>
+            <p>
+                La matrice nulla <m>\Nullmatrix</m> non è invece invertibile perché moltiplicata per qualsiasi altra matrice dà la matrice nulla.
+            </p>
+        </remark>
+
+        <example xml:id="ex-matrice_invertibile">
+            <statement>
+                <p>
+                    La matrice <m>A\coloneqq\begin{psmallmatrix}
+                    1 \amp 2 \\
+                    1 \amp 3 \\
+                    \end{psmallmatrix}
+                    </m> è invertibile. Si verifica infatti facilmente che la matrice <m>B\coloneqq\begin{psmallmatrix}
+                    3 \amp -2 \\
+                    -1 \amp 1 \\
+                    \end{psmallmatrix}
+                    </m> soddisfa le uguaglianze <m>AB=\Idmatrix</m> e <m>BA=\Idmatrix</m>.
+                </p>
+                <p>
+                    La matrice <m>C\coloneqq\begin{psmallmatrix}
+                    1 \amp 2 \\
+                    2 \amp 4 \\
+                    \end{psmallmatrix}
+                    </m> a coefficienti interi non è invece invertibile. Infatti, se consideriamo una qualsiasi matrice quadrata <m>D\coloneqq\begin{psmallmatrix}
+                    x \amp y \\
+                    z \amp w \\                    
+                    \end{psmallmatrix}
+                    </m> di ordine <m>2</m>, il prodotto <m>CD</m> è uguale a <m>\begin{psmallmatrix}
+                    x+2y \amp y+2w \\
+                    2x +4y \amp 2y+4w \\
+                    \end{psmallmatrix}
+                    </m>: se si scelgono <m>x</m> e <m>y</m> in modo che l'elemento in posizione <m>(1,1)</m> sia <m>1</m>, allora l'elemento in posizione <m>(1,2)</m> risulta <m>2</m>, quindi non otteniamo mai la matrice identica.
+                </p>
+            </statement>
+        </example>
+
+        <proposition xml:id="prop-matrice_invertibile">
+            <statement>
+                <p>
+                <notation>
+                    <usage><m>A^{-1}</m></usage>
+                    <description>inversa della matrice <m>A</m></description>
+                </notation>
+                    Se <m>A</m> è una matrice invertibile, allora la matrice <m>B</m> tale che <m>AB=BA=\Idmatrix</m> è univocamente determinata e viene, quindi, detta matrice <term>inversa</term> di <m>A</m> e denotata con <m>A^{-1}</m>.
+                </p>
+            </statement>
+            <proof>
+                <p>
+                    Siano <m>B</m> e <m>C</m> matrici tali che <m>AB=BA=\Idmatrix</m> e <m>AC=BC=\Idmatrix</m>. Si ha allora <m>B=B\Idmatrix=B(AC)=(BA)C=\Idmatrix C=C</m>.
+                </p>
+            </proof>
+        </proposition>
+
+        <proposition xml:id="prop-inversa_matrice_inversa">
+            <statement>
+                <p>
+                    Se <m>A</m> è una matrice invertibile, allora <m>A^{-1}</m> è invertibile e la sua inversa è proprio <m>A</m>.
+                </p>
+            </statement>
+
+            <proof>
+                <p>
+                    Per mostrare che <m>A^{-1}</m> è invertibile basta mostrare che esiste una matrice <m>B</m> tale che <m>A^{-1}B=BA^{-1}=\Idmatrix</m>: prendendo <m>B=A</m>, tali uguaglianze sono soddisfatte.
+                </p>
+            </proof>
+
+        </proposition>
+
+        <proposition xml:id="prop-inversa_prodotto_matrici">
+            <statement>
+                <p>
+                    Se <m>A</m> e <m>B</m> sono matrici invertibili dello stesso ordine, allora <m>AB</m> è invertibile e <m>(AB)^{-1}=B^{-1}A^{-1}</m>.
+                </p>
+            </statement>
+
+            <proof>
+                <p>
+                    Basta osservare che, usando ripetutamente la proprietà associativa, si ha
+                    <me>
+                    (AB)(B^{-1}A^{-1})= ((AB)B^{-1})A^{-1}=(A(BB^{-1}))A^{-1}= (A\Idmatrix)A^{-1}=AA^{-1}=\Idmatrix
+                    </me>
+                    e, analogamente, <m>(B^{-1}A^{-1})(AB)=\Idmatrix</m>.
+                </p>
+            </proof>  
+        </proposition>
+
+        <example>
+            <statement>
+                <p>
+                    Nella <xref ref="prop-inversa_prodotto_matrici"/>, abbiamo mostrato che l'inversa del prodotto di matrici invertibili è il prodotto delle inverse in ordine scambiato. Salvo casi particolari, non vale, dunque, l'uguaglianza <m>(AB)^{-1}=A^{-1}B^{-1}</m>. Ad esempio, la matrice <m>A\coloneqq\begin{psmallmatrix}
+                    1 \amp 2 \\
+                    1 \amp 3 \\
+                    \end{psmallmatrix}
+                    </m>  a coefficienti interi ha come inversa <m>A^{-1}\coloneqq\begin{psmallmatrix}
+                    3 \amp -2 \\
+                    -1 \amp 1 \\
+                    \end{psmallmatrix}
+                    </m> (si veda <xref ref="ex-matrice_invertibile"/>). Si verifica facilmente che la matrice <m>B\coloneqq\begin{psmallmatrix}
+                    1 \amp 1 \\
+                    2 \amp 3 \\
+                    \end{psmallmatrix}
+                    </m> ha come inversa <m>B^{-1}\coloneqq\begin{psmallmatrix}
+                    3 \amp -1 \\
+                    -2 \amp 1 \\
+                    \end{psmallmatrix}
+                    </m>. Ora <m>AB=\begin{psmallmatrix}
+                    5 \amp 7 \\
+                    7 \amp 10 \\
+                    \end{psmallmatrix}
+                    </m>, <m>(AB)^{-1}=B^{-1}A^{-1}=\begin{psmallmatrix}
+                    10 \amp -7 \\
+                    -7 \amp 5 
+                    \end{psmallmatrix}
+                    </m> e <m>A^{-1}B^{-1}=\begin{psmallmatrix}
+                    13 \amp -5 \\
+                    -5 \amp 2
+                    \end{psmallmatrix}
+                    </m>.
+                </p>
+            </statement>
+        </example>  
+
+        <p>
+            Non entriamo nel dettaglio dei metodi che si possono usare per stabilire se una matrice è invertibile e, in caso affermativo, per determinarne l'inversa: questi argomenti sono propri di un corso di algebra lineare.
+        </p>  
+
+        <p>
+            Come si comporta il prodotto di matrici rispetto alla trasposizione?
+        </p>
+
+        <p>
+            Se <m>A</m> è una matrice in <m>\matt{m}{n}{R}</m> e <m>B</m> è una matrice in <m>\matt{n}{p}{R}</m>, allora <m>AB</m> è una matrice in <m>\matt{m}{p}{R}</m>. Le matrici <m>\tr{A}</m> e <m>\tr{B}</m> sono rispettivamente in <m>\matt{n}{m}{R}</m> e <m>\matt{p}{n}{R}</m> e, dunque, in generale il prodotto <m>\tr{A}\tr{B}</m> non è definito. Tuttavia il prodotto <m>\tr{B}\tr{A}</m> è definito e ha dimensioni <m>p</m> per <m>m</m>, cioè esattamente le dimensioni di <m>\tr{(AB)}</m>. In effetti  queste due matrici sono uguali: l'idea, che preciseremo meglio, è che fare il prodotto di una riga di <m>A</m> per una colonna di <m>B</m> è lo stesso che fare il prodotto di una riga di <m>\tr{B}</m> per una colonna di <m>\tr{A}</m>.
+        </p>
+
+        <proposition xml:id="prop-trasposta_del_prodotto">
+            <statement>
+                <p>
+                    Sia <m>A</m> una matrice in <m>\matt{m}{n}{R}</m> e <m>B</m> una matrice in <m>\matt{n}{p}{R}</m>. Risulta allora
+                    <me>
+                        \tr{(AB)}=\tr{B}\tr{A}
+                    </me>.
+                </p>
+            </statement>
+            <proof>
+                <p>
+                    Indichiamo con <m>C</m> la matrice <m>\tr{A}</m> e con <m>D</m> la matrice <m>\tr{B}</m>: dunque, <m>A_{ij}=C_{ji}</m> e <m>B_{jh}=D_{hj}</m>. L'elemento di posto <m>(i,h)</m> di <m>AB</m> è
+                    <me>
+                        \sum_{j=1}^{n}A_{ij}B_{jh}
+                    </me>. 
+                    Questo elemento può essere riscritto come
+                    <me>
+                        \sum_{j=1}^{n}C_{ji}D_{hj}=\sum_{j=1}^{n}D_{hj}C_{ji}
+                    </me>,
+                    cioè coincide con l'elemento di posto <m>(h,i)</m> di <m>DC</m>, vale a dire di <m>\tr{B}\tr{A}</m>. In conclusione, l'elemento di posto <m>(i,h)</m> di <m>AB</m> coincide con l'elemento di posto <m>(h,i)</m> di <m>\tr{B}\tr{A}</m>, cioè <m>AB</m> e <m>\tr{B}\tr{A}</m> sono una la trasposta dell'altra.
+                </p>
+            </proof>
+        </proposition>
+
+        <p>
+            Per i lettori che non hanno ancora affrontato lo studio dell'algebra lineare, probabilmente non sarà del tutto chiaro perché il prodotto di matrici venga definito in questo modo. Diamone una sia pur parziale giustificazione.
+        </p>
+
+        <example>
+            <statement>
+                <p>
+                    Consideriamo il sistema lineare
+                    <me>
+                    \left\{
+                        \begin{aligned}
+                            6x + 9y - 2z \amp = 3 \\
+                            3x - 5y + 4z \amp = 7  \\
+    	                \end{aligned}
+                    \right.
+                    </me>
+                    e consideriamo le matrici 
+                    <me>
+                    A\coloneqq
+                    \begin{pmatrix}
+                        6 \amp 9 \amp -2 \\
+                        3 \amp -5 \amp 4 \\
+                    \end{pmatrix}
+                    \qquad
+                    X\coloneqq
+                    \begin{pmatrix}
+                    x \\
+                    y \\ 
+                    z \\
+                    \end{pmatrix}
+                    </me>.
+                    Notiamo che
+                    <me>
+                        AX=\begin{pmatrix}
+                        6x + 9y - 2z \\
+                        3x - 5y + 4z \\
+                        \end{pmatrix}
+                    </me>. Dunque, se, indichiamo con <m>B</m> la matrice
+                    <me>
+                       \begin{pmatrix}
+                        3 \\
+                        7 \\
+                        \end{pmatrix} 
+                    </me>,
+                    il sistema lineare si può riscrivere come <m>AX=B</m>, dove <m>X</m> è una matrice incognita.
+                </p>
+            </statement>
+        </example>
+
+        <exercises xml:id="exercises-operazioni_matrici">
+            <exercise>
+                <statement>
+                    <p> 
+                        Dimostrare la <xref ref="prop-addizione_matrici"/>.
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Dimostrare la <xref ref="prop-addizione_trasposta"/>.
+                    </p>
+                </statement>
+            </exercise>
+
+           <exercise>
+                <statement>
+                    <p> 
+                        Dimostrare la <xref ref="prop-moltiplicazione_matrici"/>.
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Dimostrare che la somma e il prodotto di due matrici triangolari superiori dello stesso ordine sono matrici triangolari superiori (e analogamente per le matrici triangolari inferiori).
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Dimostrare che la somma e il prodotto di due matrici diagonali dello stesso ordine sono matrici diagonali.
+                    </p>
+                </statement>
+            </exercise>            
+
+            <exercise>
+                <statement>
+                    <p>
+                        Dato un intero <m>n</m> con <m>n\ge 2</m>, mostrare due matrici quadrate di ordine <m>n</m> che non commutano.
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Basarsi sull'<xref ref="ex-matrici_non_commutabili"/>.
+                    </p>
+                </hint>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Dimostrare che due matrici diagonali dello stesso ordine commutano.
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        La somma di matrici simmetriche è una matrice simmetrica? Se la risposta è sì, dimostrarlo, altrimenti mostrare un esempio in cui ciò non accade.
+                    </p>
+                </statement>
+
+                <solution>
+                    <p>
+                        LA risposta è sì. Infatti siano <m>A</m> e <m>B</m> simmetriche, cioè <m>A=\tr{A}</m> e <m>B=\tr{B}</m>. Per la <xref ref="prop-addizione_trasposta"/> abbiamo allora che <m>\tr{(A+B)}=\tr{A}+\tr{B}=A+B</m>. 
+                    </p>
+                </solution>
+            </exercise>            
+
+            <exercise>
+                <statement>
+                    <p>
+                        Il prodotto di matrici simmetriche è una matrice simmetrica? Se la risposta è sì, dimostrarlo, altrimenti mostrare un esempio in cui ciò non accade.
+                    </p>
+                </statement>
+
+                <solution>
+                    <p>
+                        In generale no. Ad esempio, il prodotto delle matrici simmetriche <m>A\coloneqq
+                        \begin{pmatrix}
+                        0 \amp 1 \\ 
+                        1 \amp 0 \\
+                        \end{pmatrix}
+                        </m> e <m>B\coloneqq
+                        \begin{pmatrix}
+                        0 \amp 0 \\
+                        0 \amp 1 \\
+                        \end{pmatrix}
+                        </m> è <m>AB=\begin{pmatrix}
+                        0 \amp 1 \\
+                        0 \amp 0 \\
+                        \end{pmatrix}                        
+                        </m> che non è simmetrica.
+                    </p>
+                </solution>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Dimostrare che la matrice trasposta di una matrice invertibile <m>A</m> è invertibile e che <m>(\tr{A})^{-1}=\tr{(A^{-1})}</m>.
+                    </p>
+                </statement>
+
+                <solution>
+                    <p>
+                        Per la <xref ref="prop-trasposta_del_prodotto"/>, abbiamo che <m>\tr{A}\tr{(A^{-1})}=\tr{(A^{-1}A)}=\tr{\Idmatrix}=\Idmatrix</m>. Analogamente <m>\tr{(A^{-1})}\tr{A}=\Idmatrix.</m>
+                    </p>
+                </solution>
+            </exercise>
+            
+            <exercise>
+                <statement>
+                    <p>
+                        Sia <m>A</m> una matrice quadrata. Dimostrare che <m>A\tr{A}</m> è simmetrica.
+                    </p>
+                </statement>
+            </exercise>
+
+        </exercises>
+    </section>
+
+
+</chapter>

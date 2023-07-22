@@ -180,20 +180,33 @@
 
     </proposition>
 
+    <lemma xml:id="lem-sottomodulo_stesso_ordine">
+      <statement>
+        <p>
+          Sia <m>M</m> un modulo ciclico di ordine <m>d</m> con <m>d\ne0</m>. Se <m>N</m> è un sottomodulo di <m>M</m> di ordine <m>d</m>, allora <m>M=N</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Sia <m>x</m> un generatore di <m>M</m> e sia <m>y</m> un generatore di <m>N</m>. Dunque <m>y=xt</m> per qualche <m>t</m> in <m>D</m> e dobbiamo mostrare che <m>x</m> è multiplo di <m>y</m>. Se <m>e</m> è il massimo comune divisore tra <m>d</m> e <m>t</m>, abbiamo che <m>d=ed'</m> e <m>t=et'</m> per qualche <m>d'</m> e <m>t'</m> in <m>D</m>. Inoltre, per la <xref ref="prop-MCD_in_PID"/>, esistono <m>u</m> e <m>v</m> in <m>D</m> tali che <m>e=du+tv</m>. Abbiamo allora <m>yd'=xtd'=xet'd'=xed't'=xdt'=0t'=0</m>: dunque <m>d'</m> è multiplo dell'ordine di <m>y</m>, cioè <m>d</m> e, d'altra parte, essendo <m>d=ed'</m>, ne segue che <m>d</m> e <m>d'</m> sono associati. Poiché <m>d\ne0</m>, ciò significa che <m>e</m> è invertibile. Ma allora <m>x\sim xe=x(du+tv)=xdu+xtv=0+yv=yv</m>, cioè <m>x</m> è multiplo di <m>y</m>.
+        </p>
+      </proof>
+    </lemma>
+
     <p>
-      Usando le ipotesi e la notazione della proposizione precedente notiamo che se <m>f</m> è un divisore di <m>d</m>, cioè se esiste <m>e</m> tale che <m>d=ef</m>, allora <m>xe</m> ha ordine <m>f</m> e, dunque, per ogni divisore <m>f</m> di <m>d</m> esiste almeno un sottomodulo di <m>M</m> di ordine <m>f</m>. Mostriamo ora, in analogia a quanto avviene per i gruppi ciclici finiti (<xref ref="thm-sottogruppi_di_gruppo_ciclico_finito"/>), che tale sottomodulo è unico.
+      In analogia a quanto avviene per i gruppi ciclici finiti (<xref ref="thm-sottogruppi_di_gruppo_ciclico_finito"/>), abbiamo una descrizione dei sottomoduli di un modulo ciclico di ordine non nullo.
     </p>
 
     <proposition xml:id="prop-unico_sottomodulo">
       <statement>
         <p>
-          Sia <m>M</m> un modulo ciclico di ordine <m>d</m> con <m>d\ne0</m>. Due elementi di <m>M</m> hanno lo stesso ordine se e solo se generano lo stesso sottomodulo. In particolare, per ogni
+          Sia <m>M</m> un modulo ciclico di ordine <m>d</m> con <m>d\ne0</m>. Per ogni
           divisore <m>f</m> di <m>d</m> esiste esattamente un sottomodulo <m>N</m> di <m>M</m> di ordine <m>f</m> e il quoziente <m>M/N</m> è ciclico di ordine <m>e</m> dove <m>e</m> è tale che <m>ef=d</m>.
         </p>
       </statement>
       <proof>
         <p>
-          Sappiamo già che due elementi che generano lo stesso sottomodulo hanno lo stesso ordine. Sia allora <m>f</m> un divisore di <m>d</m> e sia <m>e</m> tale che <m>d=ef</m>. Detto <m>x</m> un generatore di <m>M</m>, per la <xref ref="prop-ordine_sottomodulo_modulo_ciclico"/> gli elementi di <m>M</m> di ordine <m>f</m> sono quelli del tipo <m>xr</m> con <m>r</m> elemento di <m>D</m> tale che <m>(d,r)\sim e</m>. Dunque, almeno un elemento di ordine <m>f</m> esiste, ad esempio, <m>w\coloneqq xe</m> e, preso un altro elemento <m>y\coloneqq xr</m> di ordine <m>f</m>, abbiamo che <m>r</m> è multiplo di <m>e</m>, e, di conseguenza <m>y</m> è multiplo di <m>w</m>. Poiché <m>D</m> è un dominio a ideali principali, per la <xref ref="prop-MCD_in_PID"/>, esistono <m>u</m> e <m>v</m> in <m>D</m> tali che <m>du+rv=e</m>: dunque, <m>w=xe=x(du+rv)=xdu+xrv=0u+yv=yv</m>. Pertanto, <m>w</m> è multiplo di <m>y</m>. Riassumendo, <m>y</m> e <m>w</m> sono l'uno multiplo dell'altro e dunque generano lo stesso sottomodulo <m>N</m>.
+          Sia <m>e</m> tale che <m>d=ef</m>. Detto <m>x</m> un generatore di <m>M</m>, per la <xref ref="prop-ordine_sottomodulo_modulo_ciclico"/> gli elementi di <m>M</m> di ordine <m>f</m> sono quelli del tipo <m>xr</m> con <m>r</m> elemento di <m>D</m> tale che <m>(d,r)\sim e</m>. Dunque, <m>w\coloneqq xe</m> genera un sottomodulo <m>N</m> di ordine <m>f</m>. Preso un altro sottomodulo <m>L</m> di ordine <m>f</m>, generato da un certo <m>y\coloneqq xr</m>, abbiamo che <m>r</m> è multiplo di <m>e</m>, e, di conseguenza <m>y</m> è multiplo di <m>w</m>. Dunque, <m>L</m> è contenuto in <m>N</m>, ed entrambi hanno ordine <m>f</m>: per il <xref ref="lem-sottomodulo_stesso_ordine"/> coincidono.
         </p>
         <p>
           Consideriamo ora il quoziente <m>M/N</m>: esso è generato dal laterale <m>x+N</m>. Dato <m>a\in D</m>, si ha che <m>(x+N)a=0</m> se e solo se <m>xa\in N</m>: poiché <m>N</m> è generato da <m>xe</m>, per mostrare che <m>x+N</m> ha ordine <m>e</m> dobbiamo provare che <m>xa\in N</m> se e solo se <m>a</m> è multiplo di <m>e</m>. Se <m>a</m> è multiplo di <m>e</m>, allora <m>xa</m> è multiplo di <m>xe</m> e, quindi, appartiene a <m>N</m>. Viceversa, se <m>xa</m> appartiene a <m>N</m>, allora esiste <m>t\in D</m> tale che <m>xa=(xe)t</m>, cioè <m>x(a-et)=0</m>. Poiché <m>x</m> ha ordine <m>d=ef</m>, abbiamo che <m>a-et</m> è multiplo di <m>d</m> e, quindi, di <m>e</m> e, di conseguenza, anche <m>a=(a-et)+et</m> è multiplo di <m>e</m>.
