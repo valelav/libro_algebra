@@ -1,57 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- (delete the above line to manage this file manually) -->
 <!--
-    This file provides the overall configuration for your PreTeXt
-    project. To edit the content of your document, open `source/main.ptx`
-    (default location).
+    This file, the project manifest, provides the overall configuration for
+    your PreTeXt project. To edit the content of your document, open
+    `source/main.ptx`. See
+    https://pretextbook.org/doc/guide/html/processing-CLI.html#cli-project-manifest.
 -->
-<project>
+<project ptx-version="2">
   <targets>
-    <target name="web">
-      <format>html</format>
-      <source>source/main.ptx</source>
-      <publication>publication/publication-html.ptx</publication>
-      <output-dir>output/html</output-dir>
-    </target>
-    <target name="print">  
-      <format>pdf</format>
-      <source>source/main.ptx</source>
-      <publication>publication/publication-latex.ptx</publication>
-      <output-dir>output/print</output-dir>
-    </target>
-    <target name="print-latex">
-      <format>latex</format>
-      <source>source/main.ptx</source>
-      <publication>publication/publication-latex.ptx</publication>
-      <output-dir>output/print-latex</output-dir>
-      <xsl>xsl/custom-latex.xsl</xsl>
-    </target>
-    <target name="subset">
-      <format>html</format>
-      <source>source/main.ptx</source>
-      <publication>publication/publication-html.ptx</publication>
-      <output-dir>output/subset</output-dir>
-      <stringparam key="debug.skip-knowls" value="yes"/>
-      <!-- edit this to change the section/chapter/etc. to include
-           in your subset build-->
-      <xmlid-root>ch-matrici</xmlid-root>
-    </target>
-    <target name="ebook">
-      <format>epub</format>
-      <source>source/main.ptx</source>
-      <publication>publication/publication-html.ptx</publication>
-      <output-dir>output/epub</output-dir>
+    <target 
+      name="web" 
+      format="html"
+      publication="publication-html.ptx"/>
+    <target 
+      name="print" 
+      format="pdf"
+      publication="publication-latex.ptx"/>
+    <target 
+      name="print-latex" 
+      format="latex"
+      publication="publication-latex.ptx"
+      output-filename="algebra.tex"
+      xsl="custom-latex.xsl"/>
+    <target 
+      name="subset" 
+      format="html"
+      xmlid-root="ch-matrici"
+      publication="publication-html.ptx">
+      <stringparams debug.skip-knowls="yes" />
     </target>
   </targets>
-  <executables>
-      <latex>latex</latex>
-      <pdflatex>pdflatex</pdflatex>
-      <xelatex>xelatex</xelatex>
-      <pdfsvg>pdf2svg</pdfsvg>
-      <asy>asy</asy>
-      <sage>sage</sage>
-      <pdfpng>convert</pdfpng>
-      <pdfeps>pdftops</pdfeps>
-      <node>node</node>
-      <liblouis>file2brl</liblouis>
-    </executables>
 </project>
