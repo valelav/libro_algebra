@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it-IT" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="proposition theorem-like"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">8.1.17</span><span class="period">.</span>
+</h3>
+<div class="para logical">
+<div class="para">Sia <span class="process-math">\(a\)</span> un elemento di un monoide <span class="process-math">\(M\)</span> e siano <span class="process-math">\(m\)</span> e <span class="process-math">\(n\)</span> due numeri naturali. Abbiamo allora:</div>
+<ol class="decimal">
+<li><div class="para"><span class="process-math">\(a^{m}\cdot a^{n}=a^{m+n}\text{;}\)</span></div></li>
+<li><div class="para"><span class="process-math">\((a^{m})^{n}=a^{mn}\text{.}\)</span></div></li>
+</ol>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para">Mostriamo il <a href="" class="xref" data-knowl="./knowl/xref/item-somma_esponenti.html" title="Punto 1">Punto 1</a> per induzione su <span class="process-math">\(n\text{.}\)</span> Se <span class="process-math">\(n=0\text{,}\)</span> abbiamo <span class="process-math">\(a^{m}\cdot a^{0}=a^{m}\cdot 1=a^{m}\)</span> e <span class="process-math">\(a^{m+0}=a^{m}\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Sia allora <span class="process-math">\(k\)</span> un naturale per cui vale la proprietà e mostriamo che vale per <span class="process-math">\(k+1\text{.}\)</span> Dunque</div>
+<div class="displaymath process-math">
+\begin{align*}
+a^{m}\cdot a^{k+1} \amp = a^{m}\cdot (a^{k}\cdot a)          \amp\text{definizione di potenza} \\
+\amp = (a^{m}\cdot a^{k})\cdot a) \amp\text{proprietà associativa}  \\
+\amp = a^{m+k}\cdot a \amp\text{ipotesi induttiva}      \\
+\amp = a^{m+k+1}  \amp\text{definizione di potenza} 
+\end{align*}
+</div>
+</div> <div class="para">Mostriamo ora il <a href="" class="xref" data-knowl="./knowl/xref/item-prodotto_esponenti.html" title="Punto 2">Punto 2</a>, sempre per induzione su <span class="process-math">\(n\text{.}\)</span> Se <span class="process-math">\(n=0\text{,}\)</span> abbiamo <span class="process-math">\((a^{m})^{0}=1\)</span> e <span class="process-math">\(a^{m\cdot 0}=a^{0}=1\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Sia allora <span class="process-math">\(k\)</span> un naturale per cui vale la proprietà e mostriamo che vale per <span class="process-math">\(k+1\text{.}\)</span> Dunque</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-somma_esponenti.html">
+\begin{align*}
+(a^{m})^{k+1} \amp = (a^{m})^{k}\cdot a^{m}                 \amp\text{definizione di potenza} \\
+\amp = a^{mk}\cdot a^{m}      \amp \text{ipotesi induttiva}\\
+\amp = a^{mk+m} \amp \knowl{./knowl/xref/item-somma_esponenti.html}{\text{Punto 1}}\\
+\amp = a^{m(k+1)}          \amp\text{proprietà operazioni dei naturali}
+\end{align*}
+</div>
+</div></article></details><span class="incontext"><a class="internal" href="sec-monoidi.html#prop-proprieta_potenze_monoide">Nel contesto</a></span>
+</body>
+</html>

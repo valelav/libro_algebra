@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it-IT" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="lemma theorem-like"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">11.3.6</span><span class="period">.</span>
+</h3>
+<div class="para">Se <span class="process-math">\(\Id=\tau_{1}\tau_{2}\cdots\tau_{k}\)</span> con i <span class="process-math">\(\tau_{i}\)</span> scambi, allora <span class="process-math">\(k\)</span> è un numero pari.</div></article><details class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para">Procediamo per induzione su <span class="process-math">\(k\text{:}\)</span> poiché <span class="process-math">\(0\)</span> è pari, la base induttiva <span class="process-math">\(k=0\)</span> è subito stabilita.</div> <div class="para logical">
+<div class="para">Sia allora <span class="process-math">\(k \gt 0\text{.}\)</span> Presa una lettera <span class="process-math">\(a\)</span> che compare in almeno uno scambio della fattorizzazione, consideriamone la prima occorrenza: sia <span class="process-math">\(\tau_{l}=(a\;b)\text{.}\)</span> Se <span class="process-math">\(\tau_{l}\)</span> fosse in ultima posizione, avremmo</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Id=\tau_{1}\cdots\tau_{k-1}(a\;b)
+\end{equation*}
+</div>
+<div class="para">con <span class="process-math">\(a\tau_{1}=\cdots=a\tau_{k-1}=a\text{,}\)</span> da cui</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a=a\Id=a\tau_{1}\cdots\tau_{k-1}(a\;b)=a(a\;b)=b\text{.}
+\end{equation*}
+</div>
+<div class="para">Poiché <span class="process-math">\(a\ne b\text{,}\)</span> <span class="process-math">\(\tau_{l}\)</span> non è in ultima posizione ed è seguita dallo scambio <span class="process-math">\(\tau_{l+1}\text{.}\)</span> Studiamo prima il caso in cui <span class="process-math">\(\tau_{l+1}\ne\tau_{l}\text{,}\)</span> distinguendo varie possibilità</div>
+<ul class="disc">
+<li><div class="para">
+<span class="process-math">\(\tau_{l+1}=(c\;d)\)</span> disgiunto da <span class="process-math">\((a\;b)\text{:}\)</span> allora <span class="process-math">\(\tau_{l}\tau_{l+1}=(a\;b)(c\;d)=(c\;d)(a\;b)\text{;}\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(\tau_{l+1}=(a\;c)\)</span> con <span class="process-math">\(c\ne b\text{:}\)</span> allora <span class="process-math">\(\tau_{l}\tau_{l+1}=(a\;b)(a\;c)=(b\;c)(a\;b)\text{;}\)</span>
+</div></li>
+<li><div class="para">
+<span class="process-math">\(\tau_{l+1}=(b\;c)\)</span> con <span class="process-math">\(c\ne a\text{:}\)</span> allora <span class="process-math">\(\tau_{l}\tau_{l+1}=(a\;b)(b\;c)=(b\;c)(a\;c)\text{.}\)</span>
+</div></li>
+</ul>
+<div class="para">Dunque, se il primo scambio in cui appare <span class="process-math">\(a\)</span> è diverso dal successivo, possiamo sostituire l’espressione per <span class="process-math">\(\tau_{l}\tau_{l+1}\)</span> trovata nella fattorizzazione di <span class="process-math">\(\Id\)</span> per ottenere una nuova fattorizzazione con lo stesso numero <span class="process-math">\(k\)</span> di fattori e con la prima occorrenza di <span class="process-math">\(a\)</span> che si è spostata verso il fondo di una posizione. Possiamo ripetere il ragionamento e continuare a spostare verso il fondo la prima occorrenza di <span class="process-math">\(a\text{:}\)</span> come già notato, questa occorrenza non può essere nell’ultimo scambio e, quindi, a un certo punto troveremo una fattorizzazione in cui il primo scambio che contiene <span class="process-math">\(a\)</span> e il successivo sono uguali. Semplificando tra loro questi scambi (uno scambio coincide con il proprio inverso), troviamo una fattorizzazione con <span class="process-math">\(k-2\)</span> scambi. Per ipotesi induttiva, <span class="process-math">\(k-2\)</span> è pari e, di conseguenza, anche <span class="process-math">\(k\)</span> è pari, come volevamo.</div>
+</div></article></details><span class="incontext"><a class="internal" href="sec-scambi.html#lem-identita_scambi_pari">Nel contesto</a></span>
+</body>
+</html>

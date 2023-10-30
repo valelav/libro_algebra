@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it-IT" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="proposition theorem-like"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">4.2.10</span><span class="period">.</span>
+</h3>
+<div class="para">L’operazione di moltiplicazione di matrici soddisfa le seguenti proprietà:</div> <div class="para logical"><ol class="decimal">
+<li><div class="para">
+<span class="process-math">\((AB)C=A(BC)\)</span> per ogni <span class="process-math">\(A\)</span> in <span class="process-math">\(\matt{m}{n}{R}\text{,}\)</span> <span class="process-math">\(B\)</span> in <span class="process-math">\(\matt{n}{p}{R}\)</span> e <span class="process-math">\(C\)</span> in <span class="process-math">\(\matt{p}{q}{R}\)</span> (la moltiplicazione è associativa);</div></li>
+<li><div class="para">
+<span class="process-math">\(\Idmatrix_{m}A=A\)</span> e <span class="process-math">\(A\Idmatrix_{n}=A\)</span> per ogni <span class="process-math">\(A\)</span> in <span class="process-math">\(\matt{m}{n}{R}\)</span> (la matrice identica è elemento neutro);</div></li>
+<li><div class="para">
+<span class="process-math">\(A(B+C)=AB+AC\)</span> per ogni <span class="process-math">\(A\)</span> in <span class="process-math">\(\matt{m}{n}{R}\)</span> e ogni <span class="process-math">\(B\)</span> e <span class="process-math">\(C\)</span> in <span class="process-math">\(\matt{n}{p}{R}\)</span> (distributiva sinistra);</div></li>
+<li><div class="para">
+<span class="process-math">\((A+B)C=AC+BC\)</span> per ogni <span class="process-math">\(A\)</span> e <span class="process-math">\(B\)</span> in <span class="process-math">\(\matt{m}{n}{R}\)</span> e ogni  <span class="process-math">\(C\)</span> in <span class="process-math">\(\matt{n}{p}{R}\)</span> (distributiva destra).</div></li>
+</ol></div></article><details class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para logical">
+<div class="para">Dimostriamo solo il <a href="" class="xref" data-knowl="./knowl/xref/item-associativa_maatrici.html" title="Punto 1">Punto 1</a> e lasciamo il resto per esercizio. Indichiamo con <span class="process-math">\(D\)</span> la matrice <span class="process-math">\(AB\)</span> e con <span class="process-math">\(E\)</span> la matrice <span class="process-math">\(BC\text{:}\)</span> dunque <span class="process-math">\(D\in\matt{m}{p}{R}\)</span> e <span class="process-math">\(E\in\matt{n}{q}{R}\text{.}\)</span> L’elemento di posto <span class="process-math">\((i,k)\)</span> in <span class="process-math">\((AB)C=DC\)</span> è allora</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_maatrici.html">
+\begin{equation*}
+\sum_{h=1}^{p}\posto{D}{i}{h}\posto{C}{h}{k}\text{.}
+\end{equation*}
+</div>
+<div class="para">Ma l’elemento di posto <span class="process-math">\((i,h)\)</span> di <span class="process-math">\(D=AB\)</span> è</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_maatrici.html">
+\begin{equation*}
+\sum_{j=1}^{n}\posto{A}{i}{j}\posto{B}{j}{h}\text{.}
+\end{equation*}
+</div>
+<div class="para">Dunque, l’elemento di posto <span class="process-math">\((i,k)\)</span> in <span class="process-math">\((AB)C\)</span> è</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_maatrici.html">
+\begin{equation*}
+\sum_{h=1}^{p}\sum_{j=1}^{n}\posto{A}{i}{j}\posto{B}{j}{h}\posto{C}{h}{k}\text{.}
+\end{equation*}
+</div>
+<div class="para">Analogamente, l’elemento di posto <span class="process-math">\((i,k)\)</span> in <span class="process-math">\(A(BC)=AE\)</span> è allora</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_maatrici.html">
+\begin{equation*}
+\sum_{j=1}^{n}\posto{A}{i}{j}\posto{E}{j}{k}\text{.}
+\end{equation*}
+</div>
+<div class="para">Ma l’elemento di posto <span class="process-math">\((j,k)\)</span> di <span class="process-math">\(E=BC\)</span> è</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_maatrici.html">
+\begin{equation*}
+\sum_{h=1}^{p}\posto{B}{j}{h}\posto{C}{h}{k}\text{.}
+\end{equation*}
+</div>
+<div class="para">Dunque, l’elemento di posto <span class="process-math">\((i,k)\)</span> in <span class="process-math">\(A(BC)\)</span> è</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_maatrici.html">
+\begin{equation*}
+\sum_{j=1}^{n}\posto{A}{i}{j}\sum_{h=1}^{p}\posto{B}{j}{h}\posto{C}{h}{k}\text{:}
+\end{equation*}
+</div>
+<div class="para">gli elementi di posto <span class="process-math">\((i,k)\)</span> in <span class="process-math">\((AB)C\)</span> e <span class="process-math">\(A(BC)\)</span> coincidono e, quindi, <span class="process-math">\((AB)C=A(BC)\text{.}\)</span>
+</div>
+</div></article></details><span class="incontext"><a class="internal" href="sec-operazioni_matrici.html#prop-moltiplicazione_matrici">Nel contesto</a></span>
+</body>
+</html>

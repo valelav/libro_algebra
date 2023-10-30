@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it-IT" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">20.2.1</span><span class="period">.</span>
+</h3>
+<div class="para">Sia <span class="process-math">\(R\)</span> un anello commutativo, identificato con un sottoanello di <span class="process-math">\(R[x]\)</span> come nella <a href="" class="xref" data-knowl="./knowl/xref/prop-anello_incluso_polinomi.html" title="Proposizione 20.1.5">Proposizione 20.1.5</a>. Allora, per ogni omomorfismo <span class="process-math">\(\psi\colon R\to S\)</span> con <span class="process-math">\(S\)</span> anello commutativo e ogni <span class="process-math">\(c\)</span> appartenente a <span class="process-math">\(S\text{,}\)</span> esiste un unico omomorfismo <span class="process-math">\(\theta\colon R[x]\to S\)</span> che estende <span class="process-math">\(\psi\)</span> e tale che <span class="process-math">\(x\theta=c\text{.}\)</span>
+</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image-universale_anello_polinomi.svg" role="img" class="contained" alt="Diagramma commutativo che rappresenta la proprietà universale dell’anello dei polinomi"></div></article><details class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para logical">
+<div class="para">Dato un polinomio <span class="process-math">\(f\coloneqq a_{0}+a_{1}x+\cdots+a_{n}x^{n}\)</span> poniamo</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f\theta\coloneqq a_{0}\psi+a_{1}\psi\cdot c+\cdots+a_{n}\psi\cdot c^{n}\text{.}
+\end{equation*}
+</div>
+<div class="para">Notiamo che <span class="process-math">\(\theta\)</span> è ben definita perché inserendo o eliminando termini del tipo <span class="process-math">\(0_{R}x^{i}\)</span> nella scrittura di <span class="process-math">\(f\text{,}\)</span> il contributo del corrispondente termine <span class="process-math">\(0_{R}\psi\cdot c^{i}\)</span> è nullo.</div>
+</div> <div class="para">Per definizione di <span class="process-math">\(\theta\text{,}\)</span> si ha <span class="process-math">\(a\theta=a\psi\text{,}\)</span> cioè <span class="process-math">\(\theta\)</span> è un’estensione di <span class="process-math">\(\psi\text{.}\)</span> Inoltre <span class="process-math">\(x\theta=1_{R}\psi\cdot c=1_{S}\cdot c=c\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Mostriamo che <span class="process-math">\(\theta\)</span> è un omomorfismo. Per definizione, <span class="process-math">\(1_{R}\theta=1_{S}\text{.}\)</span> Se <span class="process-math">\(g\coloneqq b_{0}+b_{1}x+\cdots+b_{m}x^{m}\)</span> è un polinomio in <span class="process-math">\(R[x]\)</span> e <span class="process-math">\(f\)</span> è come sopra, abbiamo</div>
+<div class="displaymath process-math">
+\begin{align*}
+f+g \amp = (a_{0}+b_{0})+(a_{1}+b_{1})x+\cdots \\
+fg \amp = c_{0}+c_{1}x+\cdots
+\end{align*}
+</div>
+<div class="para">con <span class="process-math">\(c_{i}=\sum_{h+k=i}a_{h}b_{k}\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Poiché <span class="process-math">\(g\theta=b_{0}\psi+b_{1}\psi\cdot c+\cdots+b_{m}\psi\cdot c^{m}\)</span> abbiamo</div>
+<div class="displaymath process-math">
+\begin{align*}
+(f+g)\theta \amp =(a_{0}+b_{0})\psi+(a_{1}+b_{1})\psi\cdot c+\cdots\\
+\amp =a_{0}\psi+b_{0}\psi+(a_{1}\psi+b_{1}\psi)\cdot c+\cdots\\
+\amp = a_{0}\psi+a_{1}\psi\cdot c+\cdots+b_{0}\psi+b_{1}\psi\cdot c+\cdots \\
+\amp = f\theta+g\theta 
+\end{align*}
+</div>
+<div class="para">e</div>
+<div class="displaymath process-math">
+\begin{align*}
+(fg)\theta \amp =c_{0}\psi + c_{1}\psi c+\cdots\\
+\amp = (a_{0}b_{0})\psi+(a_{0}b_{1}+a_{1}b_{0})\psi \cdot c+\cdots \\
+\amp = a_{0}\psi\cdot b_{0}\psi +(a_{0}\psi \cdot b_{1}\psi+a_{1}\psi \cdot b_{0}\psi) \cdot c+\cdots\\
+\amp =(a_{0}\psi+a_{1}\psi\cdot c+\cdots)(b_{0}\psi+b_{1}\psi\cdot c+\cdots) \\
+\amp =f\theta\cdot g\theta\text{.}
+\end{align*}
+</div>
+<div class="para">Notiamo che abbiamo usato la commutatività di <span class="process-math">\(S\)</span> nel penultimo passaggio.</div>
+</div></article></details><span class="incontext"><a class="internal" href="sec-valutazione_polinomi.html#thm-proprieta_universale_polinomi">Nel contesto</a></span>
+</body>
+</html>

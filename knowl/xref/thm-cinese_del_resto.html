@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it-IT" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">6.4.6</span><span class="period">.</span><span class="space"> </span><span class="title">Teorema cinese del resto.</span>
+</h3>
+<div class="para logical">
+<div class="para">Sia dato un sistema di congruenze del tipo</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\left\{
+\begin{alignedat}{2}
+x \amp \equiv a_{1} \amp \amp \pmod{n_{1}}\\
+x \amp \equiv a_{2} \amp \amp \pmod{n_{2}}\\
+\amp \vdotswithin{\equiv} \amp           \\
+x \amp \equiv a_{r} \amp \amp \pmod{n_{r}}
+\end{alignedat}
+\right.
+\end{equation*}
+</div>
+<div class="para">dove <span class="process-math">\(a_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(a_{r}\)</span> sono interi e <span class="process-math">\(n_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(n_{r}\)</span> sono interi positivi a due a due coprimi. Allora il sistema è risolubile ed è equivalente a una congruenza del tipo</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x\equiv a\pmod{n}
+\end{equation*}
+</div>
+<div class="para">dove <span class="process-math">\(n=n_{1}\cdot n_{2}\cdots n_{r}\)</span> e <span class="process-math">\(a\)</span> è un opportuno intero.</div>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para">Procediamo per induzione su <span class="process-math">\(r\text{,}\)</span> il caso <span class="process-math">\(r=1\)</span> essendo banale.</div> <div class="para logical">
+<div class="para">Il caso chiave è <span class="process-math">\(r=2\text{.}\)</span> Un intero <span class="process-math">\(x\)</span> soddisfa entrambe le congruenze se e solo se <span class="process-math">\(x-a_{1}\)</span> è multiplo di <span class="process-math">\(n_{1}\)</span> e <span class="process-math">\(x-a_{2}\)</span> è multiplo di <span class="process-math">\(n_{2}\text{,}\)</span> cioè se e solo se esistono interi <span class="process-math">\(y\)</span> e <span class="process-math">\(z\)</span> tali che <span class="process-math">\(x=a_{1}+n_{1}y\)</span> e <span class="process-math">\(x=a_{2}+n_{2}z\text{.}\)</span> Uguagliando le due espressioni ci riduciamo all’equazione</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-equazione_lineare_diofantina_risolubile.html">
+\begin{equation*}
+n_{1}y-n_{2}z=a_{2}-a_{1}\text{.}
+\end{equation*}
+</div>
+<div class="para">Questa può essere considerata come un’equazione lineare diofantina nelle incognite <span class="process-math">\(y\)</span> e <span class="process-math">\(z\text{.}\)</span> Poiché <span class="process-math">\(n_{1}\)</span> e <span class="process-math">\(n_{2}\)</span> sono coprimi, per la <a href="" class="xref" data-knowl="./knowl/xref/prop-equazione_lineare_diofantina_risolubile.html" title="Proposizione 5.5.6">Proposizione 5.5.6</a> l’equazione è risolubile e, data una soluzione particolare <span class="process-math">\(y=\bar{y}\text{,}\)</span> <span class="process-math">\(z=\bar{z}\text{,}\)</span> le soluzioni sono del tipo</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-equazione_lineare_diofantina_risolubile.html">
+\begin{align*}
+y \amp = \bar{y} + n_{2}h\\
+z \amp = \bar{z} + n_{1}h
+\end{align*}
+</div>
+<div class="para">al variare di <span class="process-math">\(h\)</span> in <span class="process-math">\(\Interi\text{.}\)</span> Prendendo una delle due espressioni e sostituendola nella corrispondente espressione di <span class="process-math">\(x\)</span> troviamo</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-equazione_lineare_diofantina_risolubile.html">
+\begin{equation*}
+x=a_{1}+n_{1}y=a_{1}+n_{1}(\bar{y}+n_{2}h)=a_{1}+n_{1}\bar{y}+n_{1}n_{2}h
+\end{equation*}
+</div>
+<div class="para">che può essere riscritta come <span class="process-math">\(x=a+nh\text{,}\)</span> cioè <span class="process-math">\(x\equiv a \pmod{n}\)</span> con <span class="process-math">\(a=a_{1}+n_{1}\bar{y}\)</span> e <span class="process-math">\(n=n_{1}n_{2}\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Consideriamo ora il caso in cui <span class="process-math">\(n\ge 3\text{:}\)</span> per ipotesi induttiva le prime <span class="process-math">\(n-1\)</span> congruenze sono equivalenti a una congruenza del tipo <span class="process-math">\(x\equiv a' \pmod{n'}\)</span> per un opportuno intero <span class="process-math">\(a'\)</span> e <span class="process-math">\(n'=n_{1}\cdot n_{2}\cdots n_{r-1}\text{.}\)</span> Il sistema diventa, dunque:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-coprimo_con_prodotto.html">
+\begin{equation*}
+\left\{
+\begin{alignedat}{2}
+x \amp \equiv a'    \amp\amp\pmod{n'}\\
+x \amp \equiv a_{r} \amp\amp\pmod{n_{r}}
+\end{alignedat}
+\right.
+\end{equation*}
+</div>
+<div class="para">Poiché <span class="process-math">\(n'\)</span> e <span class="process-math">\(n_{r}\)</span> sono coprimi per la <a href="" class="xref" data-knowl="./knowl/xref/prop-coprimo_con_prodotto.html" title="Proposizione 5.4.8">Proposizione 5.4.8</a>, ci siamo ridotti al caso <span class="process-math">\(r=2\)</span> e la tesi segue immediatamente.</div>
+</div></article></details><span class="incontext"><a class="internal" href="sec-congruenze_con_incognite.html#thm-cinese_del_resto">Nel contesto</a></span>
+</body>
+</html>

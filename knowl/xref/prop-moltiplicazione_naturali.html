@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it-IT" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="proposition theorem-like"><h2 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">A.4.11</span><span class="period">.</span>
+</h2>
+<div class="para">L’operazione di moltiplicazione nei naturali soddisfa le seguenti proprietà:</div> <div class="para logical"><ol class="decimal">
+<li><div class="para">
+<span class="process-math">\(n\cdot 0=0\cdot n=0\)</span> per ogni <span class="process-math">\(n\)</span> in <span class="process-math">\(\Naturali\)</span> (<span class="process-math">\(0\)</span> è elemento assorbente per la moltiplicazione);</div></li>
+<li><div class="para">
+<span class="process-math">\(n\cdot 1=1\cdot n=n\)</span> per ogni <span class="process-math">\(n\)</span> in <span class="process-math">\(\Naturali\)</span> (<span class="process-math">\(1\)</span> è elemento neutro per la moltiplicazione);</div></li>
+<li><div class="para">
+<span class="process-math">\(m\cdot n=n\cdot m\)</span> per ogni <span class="process-math">\(m\)</span> e <span class="process-math">\(n\)</span> in <span class="process-math">\(\Naturali\)</span> (la moltiplicazione è commutativa).</div></li>
+<li><div class="para">
+<span class="process-math">\(l\cdot(m\cdot n)=(l\cdot m)\cdot n\)</span> per ogni <span class="process-math">\(l\text{,}\)</span> <span class="process-math">\(m\)</span> e <span class="process-math">\(n\)</span> in <span class="process-math">\(\Naturali\)</span> (la moltiplicazione è associativa);</div></li>
+</ol></div></article><details class="hiddenproof born-hidden-knowl"><summary><h2 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h2></summary><article class="hiddenproof"><div class="para">Dal <a href="" class="xref" data-knowl="./knowl/xref/lem-moltiplicazione_naturali.html" title="Lemma A.4.3">Lemma A.4.3</a> segue che <span class="process-math">\(n\cdot 0=ng_{0}=0\)</span> per ogni <span class="process-math">\(n\in\Naturali\text{.}\)</span> Abbiamo già notato che <span class="process-math">\(0\cdot n=0\)</span> (<a href="" class="xref" data-knowl="./knowl/xref/rem-definizione_moltiplicazione.html" title="Osservazione A.4.7">Osservazione A.4.7</a>). Questo dimostra il <a href="" class="xref" data-knowl="./knowl/xref/item-peano_assorbente_moltiplicazione.html" title="Punto 1">Punto 1</a>.</div> <div class="para">Dal <a href="" class="xref" data-knowl="./knowl/xref/lem-moltiplicazione_naturali.html" title="Lemma A.4.3">Lemma A.4.3</a> segue che <span class="process-math">\(n\cdot 1=ng_{1}=n\Id_{\Naturali}=n\)</span> per ogni <span class="process-math">\(n\)</span> in <span class="process-math">\(\Naturali\text{.}\)</span> Per definizione di moltiplicazione si ha poi <span class="process-math">\(1\cdot n=1g_{n}=0sg_{n}=0g_{n}f_{n}=0f_{n}=n\)</span> per ogni <span class="process-math">\(n\)</span> in <span class="process-math">\(\Naturali\text{.}\)</span> Questo dimostra il <a href="" class="xref" data-knowl="./knowl/xref/item-peano_neutro_moltiplicazione.html" title="Punto 2">Punto 2</a>.</div> <div class="para logical">
+<div class="para">Dimostriamo il <a href="" class="xref" data-knowl="./knowl/xref/item-peano_commutativa_moltiplicazione.html" title="Punto 3">Punto 3</a> per induzione su <span class="process-math">\(n\text{.}\)</span>
+</div>
+<ul class="disc">
+<li><div class="para">Sia <span class="process-math">\(n=0\text{.}\)</span> Dal <a href="" class="xref" data-knowl="./knowl/xref/item-peano_assorbente_moltiplicazione.html" title="Punto 1">Punto 1</a> sappiamo che <span class="process-math">\(0\cdot m=m\cdot 0=0\)</span> per ogni <span class="process-math">\(m\)</span> in <span class="process-math">\(\Naturali\text{.}\)</span>
+</div></li>
+<li><div class="para logical">
+<div class="para">Sia <span class="process-math">\(n\)</span> un naturale per cui vale la proprietà e proviamo che vale per <span class="process-math">\(ns\text{.}\)</span> Allora</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rem-definizione_moltiplicazione.html ./knowl/xref/item-peano_neutro_moltiplicazione.html ./knowl/xref/prop-distributiva_sinistra.html ./knowl/xref/rem-successorepiu1.html">
+\begin{align*}
+ns\cdot m \amp =n\cdot m +m\amp \knowl{./knowl/xref/rem-definizione_moltiplicazione.html}{\text{Osservazione A.4.7}} \\
+\amp = m\cdot n + m \amp \text{ipotesi induttiva}\\
+\amp = m\cdot n + m\cdot 1 \amp \knowl{./knowl/xref/item-peano_neutro_moltiplicazione.html}{\text{Punto 2}}\\
+\amp = m\cdot(n+1) \amp \knowl{./knowl/xref/prop-distributiva_sinistra.html}{\text{Proposizione A.4.10}}\\
+\amp = m\cdot ns \amp \knowl{./knowl/xref/rem-successorepiu1.html}{\text{Osservazione A.4.6}} 
+\end{align*}
+</div>
+</div></li>
+</ul>
+</div> <div class="para logical">
+<div class="para">Dimostriamo il <a href="" class="xref" data-knowl="./knowl/xref/item-peano_associativa_moltiplicazione.html" title="Punto 4">Punto 4</a> per induzione su <span class="process-math">\(l\text{.}\)</span>
+</div>
+<ul class="disc">
+<li><div class="para">Sia <span class="process-math">\(l=0\text{.}\)</span> Per il <a href="" class="xref" data-knowl="./knowl/xref/item-peano_assorbente_moltiplicazione.html" title="Punto 1">Punto 1</a> abbiamo <span class="process-math">\(0\cdot(m\cdot n)=0\)</span> e <span class="process-math">\((0\cdot m)\cdot n=0\cdot n=0\text{.}\)</span>
+</div></li>
+<li><div class="para logical">
+<div class="para">Sia <span class="process-math">\(l\)</span> un naturale per cui vale la proprietà e proviamo che vale per <span class="process-math">\(ls\text{.}\)</span> Allora</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rem-definizione_moltiplicazione.html ./knowl/xref/item-peano_commutativa_moltiplicazione.html ./knowl/xref/prop-distributiva_sinistra.html ./knowl/xref/item-peano_commutativa_moltiplicazione.html ./knowl/xref/rem-definizione_moltiplicazione.html">
+\begin{align*}
+ls\cdot(m\cdot n) \amp =l\cdot(m\cdot n)+m\cdot n \amp \knowl{./knowl/xref/rem-definizione_moltiplicazione.html}{\text{Osservazione A.4.7}} \\
+\amp = (l\cdot m)\cdot n+m\cdot n \amp \text{ipotesi induttiva}\\
+\amp = n\cdot(l\cdot m)+n\cdot m \amp \knowl{./knowl/xref/item-peano_commutativa_moltiplicazione.html}{\text{Punto 3}}\\
+\amp = n\cdot(l\cdot m+m) \amp \knowl{./knowl/xref/prop-distributiva_sinistra.html}{\text{Proposizione A.4.10}}\\
+\amp = (l\cdot m+m)\cdot n \amp \knowl{./knowl/xref/item-peano_commutativa_moltiplicazione.html}{\text{Punto 3}}\\
+\amp = (ls\cdot m)\cdot n \amp \knowl{./knowl/xref/rem-definizione_moltiplicazione.html}{\text{Osservazione A.4.7}} 
+\end{align*}
+</div>
+</div></li>
+</ul>
+</div></article></details><span class="incontext"><a class="internal" href="sec-operazioni_naturali.html#prop-moltiplicazione_naturali">Nel contesto</a></span>
+</body>
+</html>

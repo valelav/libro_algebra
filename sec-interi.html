@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="it-IT" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Costruzione degli interi</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Algebra">
+<meta property="book:author" content="Valerio Monti">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.32/pretext_search.js"></script><link href="https://pretextbook.org/css/0.82/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.32</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.32/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.32/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.32/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.82/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Vai all'indice generale</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-algebra.html"><span class="title">Algebra</span></a></h1>
+<p class="byline">Valerio Monti</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Indice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Indice</span></button><a class="index-button button" href="indice.html" title="Indice analitico"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Indice analitico</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Risultati: </h2>
+<div id="searchempty" class="searchempty"><span>Nessun risultato.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-operazioni_naturali.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="up-button button" href="appendix-peano.html" title="Su"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Su</span></a><a class="next-button button" href="appendix-2.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\require{mathtools}\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\cont}{c}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\Inv}{Inv}
+\DeclareMathOperator{\MCD}{MCD}
+\DeclareMathOperator{\mcm}{mcm}
+\DeclareMathOperator{\centro}{Z}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Soc}{Soc}
+\DeclareMathOperator{\Rad}{Rad}
+\DeclareMathOperator{\car}{char}
+
+
+\newcommand{\Sym}{\mathrm{Sym}}
+\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\Idmatrix}{\mathrm{I}}
+\newcommand{\Nullmatrix}{{\large 0}}
+\newcommand{\dist}{\mathrm{d}}
+
+\newcommand{\Reali}{\mathbf{R}}
+\newcommand{\Naturali}{\mathbf{N}}
+\newcommand{\Interi}{\mathbf{Z}}
+ \newcommand{\Razionali}{\mathbf{Q}}
+ \newcommand{\Complessi}{\mathbf{C}}
+
+ \newcommand{\grgen}[1]{\langle#1\rangle}
+ \newcommand{\ideal}[1]{\left(#1\right)}
+ \newcommand{\alg}[1]{\left\lbrack#1\right\rvert}
+ \newcommand{\seg}[1]{\left\lvert#1\right)}
+ \newcommand{\ann}[1]{\operatorname{Ann}\left(#1\right)}
+ \newcommand{\len}[1]{\operatorname{l}\left(#1\right)}
+ \newcommand{\class}[2][\sim]{\lbrack #2\rbrack_{#1}}
+ \newcommand{\cent}[2]{\operatorname{C}_{#1}\left(#2\right)}
+ \newcommand{\nrm}[2]{\operatorname{N}_{#1}\left(#2\right)}
+ \newcommand{\stab}[2]{\operatorname{Stab}_{#1}\left(#2\right)}
+ \newcommand{\Supp}[1]{\operatorname{Supp}\left(#1\right)}
+ \newcommand{\Gal}[1]{\operatorname{Gal}\left(#1\right)}
+ \newcommand{\tr}[1]{#1^{\top}}
+ \newcommand{\vuoto}{\varnothing}
+ \newcommand{\parti}[1]{\mathcal{P}(#1)}
+ \newcommand{\euler}[1]{\varphi(#1)}
+ \newcommand{\euclidean}{\delta}
+ \newcommand{\posto}[3]{#1_{#2#3}}
+
+ \newcommand{\vect}[1]{\boldsymbol{#1}}
+ 
+ \newcommand{\mat}[2]{\operatorname{M}_{#1}(#2)} 
+ \newcommand{\matt}[3]{\operatorname{M}_{#1,#2}(#3)} 
+ \newcommand{\Sim}[2]{\operatorname{S}_{#1}(#2)} 
+ \newcommand{\AntiSim}[2]{\operatorname{A}_{#1}(#2)} 
+ \newcommand{\Diag}[2]{\operatorname{D}_{#1}(#2)} 
+ \newcommand{\TS}[2]{\operatorname{TS}_{#1}(#2)} 
+ \newcommand{\TI}[2]{\operatorname{TI}_{#1}(#2)} 
+ \newcommand{\GL}[2]{\operatorname{GL}(#1,#2)} 
+ \newcommand{\SL}[2]{\operatorname{SL}(#1,#2)} 
+ \newcommand{\Ort}[2]{\operatorname{O}(#1,#2)} 
+
+ \newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+ \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+ \newcommand{\ind}[2]{\left\lvert#1:#2\right\rvert}
+ \newcommand{\degext}[2]{\left\lbrack#1:#2\right\rbrack}
+
+ \newcommand{\invprov}[1]{\widehat{#1}}
+
+ \newcommand\YoungTableau[1]{
+ \begin{tikzpicture}[scale=0.4,keepsize]
+ \foreach \y [count=\yi] in {#1}
+ \foreach \x in {1,...,\y}
+ {
+ \draw (\x,\yi) rectangle +(1,1);
+ }
+ \end{tikzpicture}
+ }
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts focused" data-preexpanded-levels="0" data-max-levels="3"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Materiale iniziale</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface-1.html" class="internal"><span class="title">Prefazione</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-preliminari.html" class="internal"><span class="codenumber">I</span> <span class="title">Preliminari</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-insiemi.html" class="internal"><span class="codenumber">1</span> <span class="title">Insiemi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-insiemi.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Concetti di base</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-insiemi.html#exercises-insiemi" class="internal"><span class="codenumber">1.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-operazioni_insiemi.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Operazioni tra insiemi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-operazioni_insiemi.html#exercises-operazioni_insiemi" class="internal"><span class="codenumber">1.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prodotto-cartesiano.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Prodotto cartesiano</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prodotto-cartesiano.html#exercises-prodotto_cartesiano" class="internal"><span class="codenumber">1.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Russell.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Il paradosso di Russell</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-corrispondenze.html" class="internal"><span class="codenumber">2</span> <span class="title">Corrispondenze e relazioni</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-corrispondenze_definizione.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Corrispondenze tra insiemi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-corrispondenze_definizione.html#exercises-corrispondenze_definizione" class="internal"><span class="codenumber">2.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-relazioni_equivalenza.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Relazioni di equivalenza</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-relazioni_equivalenza.html#exercises-relazioni_equivalenza" class="internal"><span class="codenumber">2.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-relazioni_ordine.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Relazioni d’ordine</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-relazioni_ordine.html#exercises-relazioni_ordine" class="internal"><span class="codenumber">2.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-funzioni.html" class="internal"><span class="codenumber">3</span> <span class="title">Funzioni</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-funzioni_definizione.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Definizioni di base</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-funzioni_definizione.html#exercises-funzioni_definizione" class="internal"><span class="codenumber">3.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-funzioni_iniettive_suriettive.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Funzioni iniettive, suriettive e biiettive</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-funzioni_iniettive_suriettive.html#exercises-funzioni_iniettive_suriettive" class="internal"><span class="codenumber">3.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cardinalita.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Cenni sulla cardinalità</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-matrici.html" class="internal"><span class="codenumber">4</span> <span class="title">Matrici</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-definizioni_matrici.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Definizioni di base</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizioni_matrici.html#exercises-definizioni_matrici" class="internal"><span class="codenumber">4.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-operazioni_matrici.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Operazioni tra matrici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-operazioni_matrici.html#exercises-operazioni_matrici" class="internal"><span class="codenumber">4.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-aritmetica.html" class="internal"><span class="codenumber">II</span> <span class="title">Aritmetica</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-interi.html" class="internal"><span class="codenumber">5</span> <span class="title">I numeri interi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-naturali_base.html" class="internal"><span class="codenumber">5.1</span> <span class="title">I numeri naturali e i numeri interi</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-induzione_ricorrenza.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Dimostrazioni per induzione e definizioni per ricorrenza</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-induzione_ricorrenza.html#exercises-induzione" class="internal"><span class="codenumber">5.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-divisibilita_interi.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Divisibilità negli interi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-divisibilita_interi.html#exercises-divisibilita_interi" class="internal"><span class="codenumber">5.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-fattorizzazione_interi.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Il teorema fondamentale dell’aritmetica</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-fattorizzazione_interi.html#exercises-fattorizzazione_interi" class="internal"><span class="codenumber">5.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-equazioni_lineari_diofantine.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Equazioni lineari diofantine</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-equazioni_lineari_diofantine.html#exercises-equazioni_lineari_diofantine" class="internal"><span class="codenumber">5.5</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-classidiresto.html" class="internal"><span class="codenumber">6</span> <span class="title">Classi di resto</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-congruenzemodulon.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Congruenze modulo un intero</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-congruenzemodulon.html#exercises-congruenzemodulon" class="internal"><span class="codenumber">6.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-operazioniclassiresto.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Operazioni tra classi di resto</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-operazioniclassiresto.html#exercises-operazioniclassiresto" class="internal"><span class="codenumber">6.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-eulero.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Il teorema di Eulero</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-eulero.html#exercises-eulero" class="internal"><span class="codenumber">6.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-congruenze_con_incognite.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Congruenze con incognite</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-congruenze_con_incognite.html#exercises-congruenze_con_incognite" class="internal"><span class="codenumber">6.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-gruppi.html" class="internal"><span class="codenumber">III</span> <span class="title">Gruppi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-operazioni.html" class="internal"><span class="codenumber">7</span> <span class="title">Operazioni</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-operazioni_definizioni.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Definizioni ed esempi</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-proprieta_operazioni.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Proprietà delle operazioni</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-proprieta_operazioni.html#exercises-proprieta_operazioni" class="internal"><span class="codenumber">7.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-gruppi.html" class="internal"><span class="codenumber">8</span> <span class="title">Monoidi e gruppi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-monoidi.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Monoidi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-monoidi.html#exercises-monoidi" class="internal"><span class="codenumber">8.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-gruppi.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Gruppi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppi.html#exercises-gruppi" class="internal"><span class="codenumber">8.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-gruppi_piccoli.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Alcuni esempi di gruppi piccoli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppi_piccoli.html#exercises-gruppi_piccoli" class="internal"><span class="codenumber">8.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-sottogruppi.html" class="internal"><span class="codenumber">9</span> <span class="title">Sottogruppi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-sottomonoidi_sottogruppi.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Sottomonoidi e sottogruppi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottomonoidi_sottogruppi.html#exercises-sottomonoidi_sottogruppi" class="internal"><span class="codenumber">9.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prime_proprieta_sottogruppi.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Prime proprietà dei sottogruppi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prime_proprieta_sottogruppi.html#exercises-prime_proprieta_sottogruppi" class="internal"><span class="codenumber">9.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-gruppi_del_piano.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Gruppi di trasformazioni del piano</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppi_del_piano.html#exercises-gruppi_del_piano" class="internal"><span class="codenumber">9.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-gruppi_ciclici.html" class="internal"><span class="codenumber">10</span> <span class="title">Gruppi ciclici</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-definizione_gruppi_ciclici.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Definizioni e prime proprietà</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizione_gruppi_ciclici.html#exercises-definizione_gruppi_ciclici" class="internal"><span class="codenumber">10.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-sottogruppi_di_ciclici.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Sottogruppi di gruppi ciclici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottogruppi_di_ciclici.html#exercises-sottogruppi_di_ciclici" class="internal"><span class="codenumber">10.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-gruppi_permutazioni.html" class="internal"><span class="codenumber">11</span> <span class="title">Gruppi di permutazioni</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-definizioni_gruppi_permutazioni.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Definizioni e prime proprietà</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizioni_gruppi_permutazioni.html#exercises-definizioni_gruppi_permutazioni" class="internal"><span class="codenumber">11.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-cicli.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Cicli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-cicli.html#exercises-cicli" class="internal"><span class="codenumber">11.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-scambi.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Scambi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-scambi.html#exercises-scambi" class="internal"><span class="codenumber">11.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-laterali.html" class="internal"><span class="codenumber">12</span> <span class="title">Laterali e teorema di Lagrange</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prodotto_sottoinsiemi.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Prodotto di sottoinsiemi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prodotto_sottoinsiemi.html#exercises-prodotto_sottoinsiemi" class="internal"><span class="codenumber">12.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-teorema_di_lagrange.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Teorema di Lagrange</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-teorema_di_lagrange.html#exercises-teorema_di_lagrange" class="internal"><span class="codenumber">12.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prodotto_sottogruppi.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Prodotto di sottogruppi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prodotto_sottogruppi.html#exercises-prodotto_sottogruppi" class="internal"><span class="codenumber">12.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-omomorfismi.html" class="internal"><span class="codenumber">13</span> <span class="title">Omomorfismi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-definizione_omomorfismo.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Definizioni e prime proprietà</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizione_omomorfismo.html#exercises-definizione_omomorfismo" class="internal"><span class="codenumber">13.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-nucleo_immagine.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Immagine e nucleo di un omomorfismo</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-nucleo_immagine.html#exercises-nucleo_immagine" class="internal"><span class="codenumber">13.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-omomorfismi_da_gruppi_ciclici.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Omomorfismi da gruppi ciclici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-omomorfismi_da_gruppi_ciclici.html#exercises-omomorfismi_da_gruppi_ciclici" class="internal"><span class="codenumber">13.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-azioni.html" class="internal"><span class="codenumber">14</span> <span class="title">Azioni di gruppi su insiemi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-azioni_definizioni.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Definizioni e prime proprietà</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-azioni_definizioni.html#exercises-azioni_definizioni" class="internal"><span class="codenumber">14.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-orbite_stabilizzatori.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Orbite e stabilizzatori</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-orbite_stabilizzatori.html#exercises-orbite_stabilizzatori" class="internal"><span class="codenumber">14.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-sottogruppi_normali.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Sottogruppi normali</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottogruppi_normali.html#exercises-sottogruppi_normali" class="internal"><span class="codenumber">14.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-coniugati_simmetrico_alterno.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Classi di coniugio nel gruppo simmetrico e nel gruppo alterno</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-coniugati_simmetrico_alterno.html#exercises-coniugati_simmetrico_alterno" class="internal"><span class="codenumber">14.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-quozienti.html" class="internal"><span class="codenumber">15</span> <span class="title">Gruppi quoziente</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-congruenze.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Congruenze in gruppi e monoidi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-congruenze.html#exercises-congruenze" class="internal"><span class="codenumber">15.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-proprieta_quozienti.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Proprietà dei gruppi quoziente</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-proprieta_quozienti.html#exercises-proprieta_quozienti" class="internal"><span class="codenumber">15.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-teoremi_di_isomorfismo.html" class="internal"><span class="codenumber">15.3</span> <span class="title">I teoremi di isomorfismo</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-teoremi_di_isomorfismo.html#exercises-teoremi_di_isomorfismo" class="internal"><span class="codenumber">15.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-direttosemidiretto.html" class="internal"><span class="codenumber">16</span> <span class="title">Prodotto diretto e semidiretto</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prodotto_diretto_esterno.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Prodotto diretto esterno</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prodotto_diretto_esterno.html#exercises-prodotto_diretto_esterno" class="internal"><span class="codenumber">16.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prodotto_diretto_interno.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Prodotto diretto interno</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prodotto_diretto_interno.html#exercises-prodotto_diretto_interno" class="internal"><span class="codenumber">16.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prodotto_semidiretto.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Prodotto semidiretto</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prodotto_semidiretto.html#exercises--prodotto_semidiretto" class="internal"><span class="codenumber">16.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-sylow.html" class="internal"><span class="codenumber">17</span> <span class="title">Il teorema di Sylow</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-inversione_lagrange.html" class="internal"><span class="codenumber">17.1</span> <span class="title">Inversione del teorema di Lagrange</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-sylow.html" class="internal"><span class="codenumber">17.2</span> <span class="title">Il teorema di Sylow</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sylow.html#exercises-sylow" class="internal"><span class="codenumber">17.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-applicazioni_sylow.html" class="internal"><span class="codenumber">17.3</span> <span class="title">Applicazioni del teorema di Sylow</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-applicazioni_sylow.html#exercises-applicazioni_sylow" class="internal"><span class="codenumber">17.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-anelli.html" class="internal"><span class="codenumber">IV</span> <span class="title">Anelli</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-anelli.html" class="internal"><span class="codenumber">18</span> <span class="title">Anelli</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prime_proprieta_anelli.html" class="internal"><span class="codenumber">18.1</span> <span class="title">Definizioni e prime proprietà</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prime_proprieta_anelli.html#exercises-prime_proprieta_anelli" class="internal"><span class="codenumber">18.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-multipli_potenze.html" class="internal"><span class="codenumber">18.2</span> <span class="title">Multipli e potenze in un anello</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-multipli_potenze.html#exercises-multipli_potenze" class="internal"><span class="codenumber">18.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-sottoanelli.html" class="internal"><span class="codenumber">18.3</span> <span class="title">Sottoanelli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottoanelli.html#exercises-sottoanelli" class="internal"><span class="codenumber">18.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-omomorfismiideali.html" class="internal"><span class="codenumber">19</span> <span class="title">Omomorfismi e ideali</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-omomorfismi_anelli.html" class="internal"><span class="codenumber">19.1</span> <span class="title">Omomorfismi di anelli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-omomorfismi_anelli.html#exercises-omomorfismi_anelli" class="internal"><span class="codenumber">19.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-anelli_quoziente.html" class="internal"><span class="codenumber">19.2</span> <span class="title">Anelli quoziente e ideali</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-anelli_quoziente.html#exercises-anelli_quoziente" class="internal"><span class="codenumber">19.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-campo_dei_quozienti.html" class="internal"><span class="codenumber">19.3</span> <span class="title">Campo dei quozienti di un dominio</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-campo_dei_quozienti.html#exercises-campo_dei_quozienti" class="internal"><span class="codenumber">19.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-polinomi.html" class="internal"><span class="codenumber">20</span> <span class="title">Polinomi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-anello_polinomi.html" class="internal"><span class="codenumber">20.1</span> <span class="title">Anello dei polinomi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-anello_polinomi.html#exercises-anello_polinomi" class="internal"><span class="codenumber">20.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-valutazione_polinomi.html" class="internal"><span class="codenumber">20.2</span> <span class="title">Valutazione di polinomi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-valutazione_polinomi.html#exercises-valutazione_polinomi" class="internal"><span class="codenumber">20.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-divisibilita.html" class="internal"><span class="codenumber">21</span> <span class="title">Divisibilità nei domini</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-divisibilita.html" class="internal"><span class="codenumber">21.1</span> <span class="title">Relazione di divisibilità</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-divisibilita.html#exercises-divisibilita" class="internal"><span class="codenumber">21.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-fattorizzazione.html" class="internal"><span class="codenumber">21.2</span> <span class="title">Fattorizzazione</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-fattorizzazione.html#exercises-fattorizzazione" class="internal"><span class="codenumber">21.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-PID_euclidei.html" class="internal"><span class="codenumber">21.3</span> <span class="title">Domini a ideali principali e domini euclidei</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-PID_euclidei.html#exercises-PID_euclidei" class="internal"><span class="codenumber">21.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-fattorizzazione_polinomi.html" class="internal"><span class="codenumber">22</span> <span class="title">Fattorizzazione dei polinomi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-trasporto_UFD.html" class="internal"><span class="codenumber">22.1</span> <span class="title">Il teorema del trasporto per domini a fattorizzazione unica</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-trasporto_UFD.html#exercises-trasporto_UFD" class="internal"><span class="codenumber">22.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-esempi_fattorizzazione_polinomi.html" class="internal"><span class="codenumber">22.2</span> <span class="title">Tecniche di fattorizzazione</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-esempi_fattorizzazione_polinomi.html#exercises-esempi_fattorizzazione_polinomi" class="internal"><span class="codenumber">22.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-estensione_campi.html" class="internal"><span class="codenumber">23</span> <span class="title">Estensioni di campi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-elementi_algebrici_e_trascendenti.html" class="internal"><span class="codenumber">23.1</span> <span class="title">Elementi algebrici e trascendenti</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_algebrici_e_trascendenti.html#exercises-elementi_algebrici_e_trascendenti" class="internal"><span class="codenumber">23.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-campo_di_spezzamento.html" class="internal"><span class="codenumber">23.2</span> <span class="title">Campi di spezzamento</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-campo_di_spezzamento.html#exercises-campo_di_spezzamento" class="internal"><span class="codenumber">23.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-chiusure_algebriche.html" class="internal"><span class="codenumber">23.3</span> <span class="title">Cenni su campi algebricamente chiusi</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-moduli.html" class="internal"><span class="codenumber">V</span> <span class="title">Moduli</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-moduli.html" class="internal"><span class="codenumber">24</span> <span class="title">Moduli</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-definizione_di_moduli.html" class="internal"><span class="codenumber">24.1</span> <span class="title">Definizione di modulo</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizione_di_moduli.html#exercises-definizione_modulo" class="internal"><span class="codenumber">24.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-sottomoduli.html" class="internal"><span class="codenumber">24.2</span> <span class="title">Sottomoduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottomoduli.html#exercises-sottomoduli" class="internal"><span class="codenumber">24.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-omomorfismi_moduli.html" class="internal"><span class="codenumber">24.3</span> <span class="title">Omomorfismi di moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-omomorfismi_moduli.html#exercises-omomorfismi_moduli" class="internal"><span class="codenumber">24.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-moduli_quoziente.html" class="internal"><span class="codenumber">24.4</span> <span class="title">Moduli quoziente</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_quoziente.html#exercises-moduli_quoziente" class="internal"><span class="codenumber">24.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-moduli_liberi.html" class="internal"><span class="codenumber">25</span> <span class="title">Moduli liberi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-somma_diretta_moduli.html" class="internal"><span class="codenumber">25.1</span> <span class="title">Somma diretta di moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-somma_diretta_moduli.html#exercises-somma_diretta_moduli" class="internal"><span class="codenumber">25.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-dipendenza_lineare.html" class="internal"><span class="codenumber">25.2</span> <span class="title">Dipendenza e indipendenza lineare</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-dipendenza_lineare.html#exercises-dipendenza_lineare" class="internal"><span class="codenumber">25.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-elementi_di_torsione.html" class="internal"><span class="codenumber">25.3</span> <span class="title">Elementi di torsione</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_di_torsione.html#exercises-elementi_di_torsione" class="internal"><span class="codenumber">25.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-modulisupid.html" class="internal"><span class="codenumber">26</span> <span class="title">Moduli finitamente generati su PID</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-moduli_ciclici.html" class="internal"><span class="codenumber">26.1</span> <span class="title">Moduli ciclici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_ciclici.html#exercises-moduli_ciclici" class="internal"><span class="codenumber">26.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-moduli_primari.html" class="internal"><span class="codenumber">26.2</span> <span class="title">Moduli primari</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_primari.html#exercises-moduli_primari" class="internal"><span class="codenumber">26.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-moduli_liberi.html" class="internal"><span class="codenumber">26.3</span> <span class="title">Moduli liberi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_liberi.html#exercises-moduli_liberi" class="internal"><span class="codenumber">26.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-classificazione_moduli_pid.html" class="internal"><span class="codenumber">26.4</span> <span class="title">La classificazione dei moduli finitamente generati su un dominio a ideali principali</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-gruppiabeliani.html" class="internal"><span class="codenumber">27</span> <span class="title">Gruppi abeliani finitamente generati</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-gruppiabeliani.html" class="internal"><span class="codenumber">27.1</span> <span class="title">Classificazione dei gruppi abeliani finitamente generati</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppiabeliani.html#exercises-gruppiabeliani" class="internal"><span class="codenumber">27.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-formecanoniche.html" class="internal"><span class="codenumber">28</span> <span class="title">Forme canoniche di matrici</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-kx_moduli.html" class="internal"><span class="codenumber">28.1</span> <span class="title">Spazi vettoriali con endomorfismi visti come moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-kx_moduli.html#exercises-kx_moduli" class="internal"><span class="codenumber">28.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-matrici_rappresentative.html" class="internal"><span class="codenumber">28.2</span> <span class="title">Matrici rappresentative</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-matrici_rappresentative.html#exercises-matrici_rappresentative" class="internal"><span class="codenumber">28.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-matrici_compagne.html" class="internal"><span class="codenumber">28.3</span> <span class="title">Matrici compagne</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-jordan.html" class="internal"><span class="codenumber">28.4</span> <span class="title">Forma canonica di Jordan</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-jordan.html#exercises-jordan" class="internal"><span class="codenumber">28.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html" class="internal"><span class="codenumber">28.5</span> <span class="title">Polinomio minimo di matrici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html#exercises-polinomio_minimo_matrici" class="internal"><span class="codenumber">28.5</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter contains-active">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Appendici</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-appendix contains-active">
+<div class="toc-title-box"><a href="appendix-peano.html" class="internal"><span class="codenumber">A</span> <span class="title">Numeri naturali e interi</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-algebre_induttive.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Algebre induttive</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-assiomi_peano.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Gli assiomi di Peano</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-insiemi_finiti_infiniti.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Insiemi finiti e infiniti</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-operazioni_naturali.html" class="internal"><span class="codenumber">A.4</span> <span class="title">Operazioni tra numeri naturali</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-interi.html" class="internal"><span class="codenumber">A.5</span> <span class="title">Costruzione degli interi</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-2.html" class="internal"><span class="codenumber">B</span> <span class="title">Notazioni</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="solutions-1.html" class="internal"><span class="codenumber">C</span> <span class="title">Soluzioni e suggerimenti</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-gfdl.html" class="internal"><span class="codenumber">D</span> <span class="title">GNU Free Documentation License</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="indice.html" class="internal"><span class="title">Indice analitico</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="back-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-interi"><h2 class="heading hide-type">
+<span class="type">Paragrafo</span><span class="space"> </span><span class="codenumber">A.5</span><span class="space"> </span><span class="title">Costruzione degli interi</span>
+</h2>
+<div class="para" id="p-3819">I naturali hanno una struttura di monoide commutativo sia rispetto all’addizione che alla moltiplicazione. Inoltre, le operazioni sono legate dalla proprietà distributiva e dal fatto che l’elemento neutro rispetto all’addizione è assorbente rispetto alla moltiplicazione. Questo tipo di struttura, che non soddisfa tutte le proprietà richieste dalla definizione di anello (<a href="" class="xref" data-knowl="./knowl/xref/def-anello.html" title="Definizione 18.1.1">Definizione 18.1.1</a>), viene talvolta chiamate <dfn class="terminology">semianello commutativo</dfn>, ma la nomenclatura non è univoca.</div>
+<div class="para logical" id="p-3820">
+<div class="para">Vogliamo ora costruire l’anello dei numeri interi a partire dai naturali. Consideriamo allora l’insieme <span class="process-math">\(S\coloneqq \Naturali\times\Naturali\)</span> e definiamo in <span class="process-math">\(S\)</span> due operazioni di addizione e moltiplicazione nel modo seguente:</div>
+<div class="displaymath process-math" id="md-92">
+\begin{align*}
+(a,b)+(c,d) \amp =(a+c,b+d)\\
+(a,b)\cdot(c,d)\amp =(a\cdot c+b\cdot d,a\cdot d+b\cdot c)
+\end{align*}
+</div>
+<div class="para">Non è difficile mostrare che rispetto a entrambe queste operazioni <span class="process-math">\(S\)</span> è un monoide commutativo (l’elemento neutro rispetto a <span class="process-math">\(+\)</span> è <span class="process-math">\((0,0)\)</span> e rispetto a <span class="process-math">\(\cdot\)</span> è <span class="process-math">\((1,0)\)</span>) e che vale la proprietà distributiva.</div>
+</div>
+<div class="para" id="p-3821">Definiamo ora in <span class="process-math">\(S\)</span> la relazione <span class="process-math">\(\sim\)</span> tramite <span class="process-math">\((a,b)\sim(c,d)\)</span> se <span class="process-math">\(a+d=b+c\text{.}\)</span> Nell’<a href="" class="xref" data-knowl="./knowl/xref/ex-costruzione_interi.html" title="Esempio 2.2.5">Esempio 2.2.5</a> abbiamo mostrato che questa è una relazione di equivalenza.</div>
+<article class="remark remark-like" id="rem-0_intero"><h2 class="heading">
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">A.5.1</span><span class="period">.</span>
+</h2>
+<div class="para" id="p-3822">Dalla definizione segue immediatamente che <span class="process-math">\((a,b)\sim(0,0)\)</span> se e solo se <span class="process-math">\(a+0=0+b\text{,}\)</span> cioè <span class="process-math">\(a=b\text{.}\)</span>
+</div></article><div class="para" id="p-3823">Si verifica immediatamente che questa relazione è compatibile con entrambe le operazioni (<a href="" class="xref" data-knowl="./knowl/xref/def-congruenza.html" title="Definizione 15.1.1">Definizione 15.1.1</a>). Dimostriamo allora la</div>
+<article class="proposition theorem-like" id="prop-interi"><h2 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">A.5.2</span><span class="period">.</span>
+</h2>
+<div class="para logical" id="p-3824">
+<div class="para">Nell’insieme quoziente <span class="process-math">\(\Interi\coloneqq S/\sim\)</span> sono definite due operazioni di addizione <span class="process-math">\(+\)</span> e di moltiplicazione <span class="process-math">\(\cdot\)</span> nel modo seguente:</div>
+<div class="displaymath process-math" id="md-93">
+\begin{align*}
+\class[\sim]{(a,b)}+ \class[\sim]{(c,d)}\amp \coloneqq  \class[\sim]{(a+c,b+d)}\\
+\class[\sim]{(a,b)}\cdot\class[\sim]{(c,d)}\amp \coloneqq  \class[\sim]{(a\cdot c+b\cdot d,a\cdot d+b\cdot c)}
+\end{align*}
+</div>
+<div class="para">Rispetto a tali operazioni <span class="process-math">\(\Interi\)</span> è un dominio di integrità.</div>
+</div></article><details id="proof-337" class="hiddenproof born-hidden-knowl"><summary><h2 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h2></summary><article class="hiddenproof"><div class="para" id="p-3825">Le operazioni sono ben definite perché la relazione di equivalenza <span class="process-math">\(\sim\)</span> è compatibile con le operazioni <span class="process-math">\(+\)</span> e <span class="process-math">\(\cdot\)</span> definite in <span class="process-math">\(S\text{.}\)</span> Rispetto a entrambe queste operazioni <span class="process-math">\(\Interi\)</span> è, dunque, un monoide commutativo e vale la proprietà distributiva. Rimane da mostrare che ogni elemento ha opposto rispetto all’addizione e che vale il principio di annullamento del prodotto.</div> <div class="para" id="p-3826">Dato un qualunque elemento <span class="process-math">\(\class[\sim]{(a,b)}\)</span> di <span class="process-math">\(\Interi\text{,}\)</span> il suo opposto è <span class="process-math">\(\class[\sim]{(b,a)}\text{:}\)</span> infatti <span class="process-math">\(\class[\sim]{(a,b)}+\class[\sim]{(b,a)}=\class[\sim]{(a+b,b+a)}=\class[\sim]{(0,0)}\)</span> per l’<a href="" class="xref" data-knowl="./knowl/xref/rem-0_intero.html" title="Osservazione A.5.1">Osservazione A.5.1</a>.</div> <div class="para" id="p-3827">Siano ora <span class="process-math">\(\class[\sim]{(a,b)}\)</span> e <span class="process-math">\(\class[\sim]{(c,d)}\)</span> due elementi tali che <span class="process-math">\(\class[\sim]{(a,b)}\cdot\class[\sim]{(c,d)}=\class[\sim]{(0,0)}\text{:}\)</span> dobbiamo mostrare che <span class="process-math">\(\class[\sim]{(a,b)}=\class[\sim]{(0,0)}\)</span> o <span class="process-math">\(\class[\sim]{(c,d)}=\class[\sim]{(0,0)}\text{.}\)</span> Supponiamo che <span class="process-math">\(\class[\sim]{(a,b)}\ne\class[\sim]{(0,0)}\text{,}\)</span> cioè <span class="process-math">\(a\ne b\text{:}\)</span> per la <a href="" class="xref" data-knowl="./knowl/xref/prop-ordine_differenza.html" title="Proposizione A.4.17">Proposizione A.4.17</a> esiste un naturale <span class="process-math">\(l\ne 0\)</span> tale che <span class="process-math">\(a=b+l\)</span> o <span class="process-math">\(b=a+l\text{.}\)</span> Nel primo caso <span class="process-math">\(\class[\sim]{(a,b)}=\class[\sim]{(l,0)}\)</span> e, quindi, da <span class="process-math">\(\class[\sim]{(l,0)}\cdot\class[\sim]{(c,d)}=\class[\sim]{(0,0)}\)</span> ricaviamo <span class="process-math">\(lc=ld\)</span> da cui, grazie alla <a href="" class="xref" data-knowl="./knowl/xref/prop-cancellazione_moltiplicazione.html" title="Proposizione A.4.16: Legge di cancellazione per la moltiplicazione">Proposizione A.4.16</a> otteniamo <span class="process-math">\(c=d\text{,}\)</span> cioè <span class="process-math">\(\class[\sim]{(c,d)}=\class[\sim]{(0,0)}\text{.}\)</span> Il secondo caso è analogo.</div></article></details><div class="para" id="p-3828">Come conseguenza della <a href="" class="xref" data-knowl="./knowl/xref/prop-interi.html" title="Proposizione A.5.2">Proposizione A.5.2</a> abbiamo le leggi di cancellazione (<a href="" class="xref" data-knowl="./knowl/xref/prop-cancellazione_gruppo.html" title="Proposizione 8.2.10: Leggi di cancellazione">Proposizione 8.2.10</a> e <a href="" class="xref" data-knowl="./knowl/xref/rem-anello_intero_cancellazione.html" title="Osservazione 18.1.22">Osservazione 18.1.22</a>):</div>
+<article class="proposition theorem-like" id="prop-cancellazione_addizione_interi"><h2 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">A.5.3</span><span class="period">.</span><span class="space"> </span><span class="title">Legge di cancellazione per l’addizione.</span>
+</h2>
+<div class="para" id="p-3829">Se <span class="process-math">\(m\text{,}\)</span> <span class="process-math">\(n\)</span> e <span class="process-math">\(l\)</span> sono tre interi tali che <span class="process-math">\(m+l=n+l\)</span> allora <span class="process-math">\(m=n\text{.}\)</span>
+</div></article><article class="proposition theorem-like" id="prop-cancellazione_moltiplicazione_interi"><h2 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">A.5.4</span><span class="period">.</span><span class="space"> </span><span class="title">Legge di cancellazione per la moltiplicazione.</span>
+</h2>
+<div class="para" id="p-3830">Se <span class="process-math">\(m\text{,}\)</span> <span class="process-math">\(n\)</span> e <span class="process-math">\(l\)</span> sono tre interi tali che <span class="process-math">\(m\cdot l=n\cdot l\)</span> e <span class="process-math">\(l\ne 0\)</span> allora <span class="process-math">\(m=n\text{.}\)</span>
+</div></article><article class="proposition theorem-like" id="prop-immersione_naturali_interi"><h2 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">A.5.5</span><span class="period">.</span>
+</h2>
+<div class="para" id="p-3831">La funzione <span class="process-math">\(\phi\colon\Naturali\to\Interi\)</span> definita da <span class="process-math">\(n\phi\coloneqq \class[\sim]{(n,0)}\)</span> è iniettiva ed è un omomorfismo di monoidi sia rispetto all’addizione che alla moltiplicazione (cioè è un omomorfismo di semianelli).</div></article><details id="proof-338" class="hiddenproof born-hidden-knowl"><summary><h2 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h2></summary><article class="hiddenproof"><div class="para" id="p-3832">Siano <span class="process-math">\(m\)</span> e <span class="process-math">\(n\)</span> due naturali tali che <span class="process-math">\(m\phi=n\phi\text{,}\)</span> cioè <span class="process-math">\(\class[\sim]{(m,0)}=\class[\sim]{(n,0)}\text{.}\)</span> Ciò significa che <span class="process-math">\((m,0)\sim(n,0)\)</span> e, quindi, <span class="process-math">\(m+0=0+n\text{,}\)</span> vale a dire <span class="process-math">\(m=n\text{.}\)</span> Dunque, <span class="process-math">\(\phi\)</span> è iniettiva.</div> <div class="para logical" id="p-3833">
+<div class="para">Ora <span class="process-math">\(0\phi=\class[\sim]{(0,0)}\text{,}\)</span> cioè <span class="process-math">\(\phi\)</span> manda l’elemento neutro di <span class="process-math">\(+\)</span> in <span class="process-math">\(\Naturali\)</span> nell’elemento neutro di <span class="process-math">\(+\)</span> in <span class="process-math">\(\Interi\text{.}\)</span> Inoltre</div>
+<div class="displaymath process-math">
+\begin{equation*}
+m\phi+n\phi=\class[\sim]{(m,0)}+\class[\sim]{(n,0)}=\class[\sim]{(m+n,0)}=(m+n)\phi\text{.}
+\end{equation*}
+</div>
+<div class="para">Dunque, <span class="process-math">\(\phi\)</span> è un omomorfismo di monoidi additivi.</div>
+</div> <div class="para logical" id="p-3834">
+<div class="para">Ora <span class="process-math">\(1\phi=\class[\sim]{(1,0)}\text{,}\)</span> cioè <span class="process-math">\(\phi\)</span> manda l’elemento neutro di <span class="process-math">\(\cdot\)</span> in <span class="process-math">\(\Naturali\)</span> nell’elemento neutro di <span class="process-math">\(\cdot\)</span> in <span class="process-math">\(\Interi\text{.}\)</span> Inoltre</div>
+<div class="displaymath process-math">
+\begin{equation*}
+m\phi\cdot n\phi=\class[\sim]{(m,0)}\cdot \class[\sim]{(n,0)}=\class[\sim]{(m\cdot 0+0\cdot n,0)}=\class[\sim]{(m\cdot n,0)}=(m\cdot n)\phi\text{.}
+\end{equation*}
+</div>
+<div class="para">Dunque, <span class="process-math">\(\phi\)</span> è un omomorfismo di monoidi moltiplicativi.</div>
+</div></article></details><div class="para" id="p-3835">Grazie alla proposizione precedente, d’ora in poi identificheremo i naturali con un sottoinsieme degli interi.</div>
+<article class="definition definition-like" id="def-interi_positivi_negativi"><h2 class="heading">
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">A.5.6</span><span class="period">.</span>
+</h2>
+<div class="para" id="p-3836">Avendo identificato i naturali con un sottoinsieme degli interi, diremo che un intero <span class="process-math">\(n\)</span> è <dfn class="terminology">positivo</dfn> se è un naturale non nullo e che è <dfn class="terminology">negativo</dfn> se non è un naturale.</div></article><article class="remark remark-like" id="remark-162"><h2 class="heading">
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">A.5.7</span><span class="period">.</span>
+</h2>
+<div class="para" id="p-3837">Per definizione segue che <span class="process-math">\(0\)</span> è l’unico intero che non è né positivo, né negativo.</div></article><article class="lemma theorem-like" id="lem-positivo_come_coppia"><h2 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">A.5.8</span><span class="period">.</span>
+</h2>
+<div class="para" id="p-3838">Un intero <span class="process-math">\(\class[\sim]{(a,b)}\)</span> è positivo se e solo se <span class="process-math">\(a \gt b\)</span> ed è negativo se e solo se <span class="process-math">\(a \lt b\text{.}\)</span>
+</div></article><details id="proof-339" class="hiddenproof born-hidden-knowl"><summary><h2 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h2></summary><article class="hiddenproof"><div class="para" id="p-3839">L’intero <span class="process-math">\(\class[\sim]{(a,b)}\)</span> è positivo se e solo se esiste un naturale non nullo <span class="process-math">\(l\)</span> tale che <span class="process-math">\((a,b)\sim(l,0)\text{,}\)</span> vale a dire <span class="process-math">\(a+0=b+l\text{,}\)</span> cioè <span class="process-math">\(a=b+l\text{:}\)</span> per la <a href="" class="xref" data-knowl="./knowl/xref/prop-ordine_differenza.html" title="Proposizione A.4.17">Proposizione A.4.17</a>, ciò avviene se e solo se <span class="process-math">\(a \gt b\text{.}\)</span> Per l’<a href="" class="xref" data-knowl="./knowl/xref/rem-0_intero.html" title="Osservazione A.5.1">Osservazione A.5.1</a>, l’intero è nullo se e solo se <span class="process-math">\(a=b\)</span> e, quindi, è negativo se e solo se <span class="process-math">\(a \lt b\text{.}\)</span>
+</div></article></details><article class="definition definition-like" id="def-interi_concordi_discordi"><h2 class="heading">
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">A.5.9</span><span class="period">.</span>
+</h2>
+<div class="para" id="p-3840">Dati due interi non nulli, diremo che sono <dfn class="terminology">concordi</dfn> se sono entrambi positivi o entrambi negativi e che sono <dfn class="terminology">discordi</dfn> altrimenti.</div></article><article class="proposition theorem-like" id="prop-intero_o_opposto_positivo"><h2 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">A.5.10</span><span class="period">.</span>
+</h2>
+<div class="para" id="p-3841">Dato un intero non nullo <span class="process-math">\(n\text{,}\)</span> si ha che <span class="process-math">\(n\)</span> e <span class="process-math">\(-n\)</span> sono discordi.</div></article><details id="proof-340" class="hiddenproof born-hidden-knowl"><summary><h2 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h2></summary><article class="hiddenproof"><div class="para" id="p-3842">Se <span class="process-math">\(n=\class[\sim]{(a,b)}\)</span> allora <span class="process-math">\(-n=\class[\sim]{(b,a)}\text{.}\)</span> Ora, <span class="process-math">\(a\ne b\)</span> per l’<a href="" class="xref" data-knowl="./knowl/xref/rem-0_intero.html" title="Osservazione A.5.1">Osservazione A.5.1</a>: quindi, <span class="process-math">\(a \gt b\)</span> o <span class="process-math">\(a \lt b\text{.}\)</span> Il <a href="" class="xref" data-knowl="./knowl/xref/lem-positivo_come_coppia.html" title="Lemma A.5.8">Lemma A.5.8</a> implica allora che nel primo caso <span class="process-math">\(n\)</span> è positivo e <span class="process-math">\(-n\)</span> è negativo e che nel secondo caso <span class="process-math">\(n\)</span> è negativo e <span class="process-math">\(-n\)</span> è positivo.</div></article></details><article class="corollary theorem-like" id="cor-somma_prodotto_positivi_negativi"><h2 class="heading">
+<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">A.5.11</span><span class="period">.</span>
+</h2>
+<div class="para" id="p-3843">Siano dati due interi non nulli <span class="process-math">\(m\)</span> e <span class="process-math">\(n\text{.}\)</span>
+</div> <div class="para logical" id="p-3844"><ol class="decimal">
+<li id="item-somma_prodotto_positivi"><div class="para" id="p-3845">Se <span class="process-math">\(m\)</span> e <span class="process-math">\(n\)</span> sono positivi allora <span class="process-math">\(m+n\)</span> e <span class="process-math">\(m\cdot n\)</span> sono positivi.</div></li>
+<li id="item-somma_prodotto_negativi"><div class="para" id="p-3846">Se <span class="process-math">\(m\)</span> e <span class="process-math">\(n\)</span> sono negativi allora <span class="process-math">\(m+n\)</span> è negativo e <span class="process-math">\(m\cdot n\)</span> è positivo.</div></li>
+<li id="item-prodotto_discordi"><div class="para" id="p-3847">Se <span class="process-math">\(m\)</span> e <span class="process-math">\(n\)</span> sono discordi allora <span class="process-math">\(m\cdot n\)</span> è negativo.</div></li>
+</ol></div></article><details id="proof-341" class="hiddenproof born-hidden-knowl"><summary><h2 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h2></summary><article class="hiddenproof"><div class="para" id="p-3848">Il <a href="" class="xref" data-knowl="./knowl/xref/item-somma_prodotto_positivi.html" title="Punto 1">Punto 1</a> segue dal <a href="" class="xref" data-knowl="./knowl/xref/lem-zeropiuzero.html" title="Lemma A.4.13">Lemma A.4.13</a> e dalla <a href="" class="xref" data-knowl="./knowl/xref/prop-annullamento_prodotto.html" title="Proposizione A.4.15: Principio di annullamento del prodotto">Proposizione A.4.15</a> tenuto conto che gli interi positivi sono i naturali non nulli.</div> <div class="para" id="p-3849">Se <span class="process-math">\(m\)</span> e <span class="process-math">\(n\)</span> sono negativi, allora <span class="process-math">\(-m\)</span> e <span class="process-math">\(-n\)</span> sono positivi per la <a href="" class="xref" data-knowl="./knowl/xref/prop-intero_o_opposto_positivo.html" title="Proposizione A.5.10">Proposizione A.5.10</a>. Per il <a href="" class="xref" data-knowl="./knowl/xref/item-somma_prodotto_positivi.html" title="Punto 1">Punto 1</a>, <span class="process-math">\(-m+(-n)\)</span> e <span class="process-math">\((-m)\cdot(-n)\)</span> sono positivi. Ora, <span class="process-math">\(-m+(-n)\)</span> è l’opposto di <span class="process-math">\(m+n\)</span> per la <a href="" class="xref" data-knowl="./knowl/xref/prop-inverso_prodotto.html" title="Proposizione 8.1.11">Proposizione 8.1.11</a> e, usando di nuovo la <a href="" class="xref" data-knowl="./knowl/xref/prop-intero_o_opposto_positivo.html" title="Proposizione A.5.10">Proposizione A.5.10</a>, otteniamo che <span class="process-math">\(m+n\)</span> è negativo, mentre <span class="process-math">\((-m)\cdot(-n)=m\cdot n\)</span> per la <a href="" class="xref" data-knowl="./knowl/xref/prop-moltiplicazione_opposti.html" title="Proposizione 18.1.13">Proposizione 18.1.13</a> e, quindi, <span class="process-math">\(m\cdot n\)</span> è positivo.</div> <div class="para" id="p-3850">Infine, se <span class="process-math">\(m\)</span> e <span class="process-math">\(n\)</span> sono uno positivo e l’altro negativo (ad esempio, <span class="process-math">\(m\)</span> positivo e <span class="process-math">\(n\)</span> negativo), allora <span class="process-math">\(-n\)</span> è positivo per la <a href="" class="xref" data-knowl="./knowl/xref/prop-intero_o_opposto_positivo.html" title="Proposizione A.5.10">Proposizione A.5.10</a>e, quindi, per il <a href="" class="xref" data-knowl="./knowl/xref/item-somma_prodotto_positivi.html" title="Punto 1">Punto 1</a> abbiamo che <span class="process-math">\(m\cdot(-n)\)</span> è positivo. Per la <a href="" class="xref" data-knowl="./knowl/xref/prop-moltiplicazione_opposti.html" title="Proposizione 18.1.13">Proposizione 18.1.13</a> <span class="process-math">\(m\cdot(-n)\)</span> è l’opposto di <span class="process-math">\(m\cdot n\)</span> che, grazie ancora alla <a href="" class="xref" data-knowl="./knowl/xref/prop-intero_o_opposto_positivo.html" title="Proposizione A.5.10">Proposizione A.5.10</a>, è negativo.</div></article></details><article class="remark remark-like" id="remark-163"><h2 class="heading">
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">A.5.12</span><span class="period">.</span>
+</h2>
+<div class="para" id="p-3851">In vista del <a href="" class="xref" data-knowl="./knowl/xref/cor-somma_prodotto_positivi_negativi.html" title="Corollario A.5.11">Corollario A.5.11</a> due interi sono concordi se e solo se il loro prodotto è positivo e sono discordi se e solo se il loro prodotto è negativo.</div></article><article class="proposition theorem-like" id="prop-interi_invertibili"><h2 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">A.5.13</span><span class="period">.</span>
+</h2>
+<div class="para" id="p-3852">Gli unici interi invertibili sono <span class="process-math">\(1\)</span> e <span class="process-math">\(-1\)</span> e ciascuno di essi coincide con il proprio opposto.</div></article><details id="proof-342" class="hiddenproof born-hidden-knowl"><summary><h2 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h2></summary><article class="hiddenproof"><div class="para" id="p-3853">Chiaramente <span class="process-math">\(0\)</span> non è invertibile. Per il <a href="" class="xref" data-knowl="./knowl/xref/cor-somma_prodotto_positivi_negativi.html" title="Corollario A.5.11">Corollario A.5.11</a>, un numero e il proprio inverso sono concordi. In particolare, l’inverso di un naturale deve essere anch’esso un naturale e sappiamo che l’unico naturale che ha un inverso tra i naturali è <span class="process-math">\(1\)</span> (<a href="" class="xref" data-knowl="./knowl/xref/lem-unoperuno.html" title="Lemma A.4.14">Lemma A.4.14</a>). Se <span class="process-math">\(m\)</span> è un invertibile negativo, con inverso <span class="process-math">\(n\)</span> allora <span class="process-math">\((-m)\cdot(-n)=m\cdot n=1\)</span> e, quindi, <span class="process-math">\(-m\)</span> è un positivo invertibile: pertanto, <span class="process-math">\(-m=1\)</span> e <span class="process-math">\(n=-1\text{.}\)</span>
+</div></article></details><div class="para" id="p-3854">Dal momento che gli interi formano un anello e, in particolare, rispetto all’addizione sono un gruppo additivo, possiamo usare la scrittura <span class="process-math">\(n-m\)</span> per indicare la somma <span class="process-math">\(n+(-m)\text{.}\)</span>
+</div>
+<article class="proposition theorem-like" id="prop-ordinamento_interi"><h2 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">A.5.14</span><span class="period">.</span>
+</h2>
+<div class="para" id="p-3855">La relazione <span class="process-math">\(\le\)</span> definita in <span class="process-math">\(\Interi\)</span> da <span class="process-math">\(m\le n\)</span> se <span class="process-math">\(n-m\in\Naturali\)</span> è una relazione d’ordine totale che estende la relazione d’ordine nei naturali.</div></article><details id="proof-343" class="hiddenproof born-hidden-knowl"><summary><h2 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h2></summary><article class="hiddenproof"><div class="para" id="p-3856">La relazione è ovviamente riflessiva: infatti per ogni <span class="process-math">\(n\in\Interi\text{,}\)</span> si ha che <span class="process-math">\(n-n=0\in\Naturali.\)</span>
+</div> <div class="para" id="p-3857">Mostriamo che è antisimmetrica. Siano <span class="process-math">\(m\)</span> e <span class="process-math">\(n\)</span> interi tali che <span class="process-math">\(m\le n\)</span> e <span class="process-math">\(n\le m\text{,}\)</span> cioè, <span class="process-math">\(n-m\)</span> e <span class="process-math">\(m-n\)</span> sono naturali. Ora, <span class="process-math">\((n-m)+(m-n)=0\)</span> e, quindi, per il <a href="" class="xref" data-knowl="./knowl/xref/lem-zeropiuzero.html" title="Lemma A.4.13">Lemma A.4.13</a>, si ha che <span class="process-math">\(n-m=0\text{,}\)</span> cioè <span class="process-math">\(m=n\text{.}\)</span>
+</div> <div class="para" id="p-3858">Mostriamo che è transitiva. Siano <span class="process-math">\(m\text{,}\)</span> <span class="process-math">\(n\)</span> e <span class="process-math">\(l\)</span> interi tali che <span class="process-math">\(m\le n\)</span> e <span class="process-math">\(n\le l\text{,}\)</span> cioè <span class="process-math">\(n-m\)</span> e <span class="process-math">\(l-n\)</span> sono naturali. Dunque, <span class="process-math">\(l-m=(l-n)+(n-m)\)</span> è naturale, cioè <span class="process-math">\(m\le l\text{.}\)</span>
+</div> <div class="para" id="p-3859">Mostriamo che è totale. Siano <span class="process-math">\(m\)</span> e <span class="process-math">\(n\)</span> due interi qualunque: per il <a href="" class="xref" data-knowl="./knowl/xref/cor-somma_prodotto_positivi_negativi.html" title="Corollario A.5.11">Corollario A.5.11</a>, <span class="process-math">\(m-n\)</span> e <span class="process-math">\(n-m\)</span> non possono essere entrambi negativi altrimenti <span class="process-math">\(0=(m-n)+(n-m)\)</span> sarebbe negativo. Dunque, almeno uno tra <span class="process-math">\(m-n\)</span> e <span class="process-math">\(n-m\)</span> è naturale e, quindi, <span class="process-math">\(m\)</span> e <span class="process-math">\(n\)</span> sono confrontabili.</div> <div class="para" id="p-3860">Mostriamo infine che dati due naturali <span class="process-math">\(m\)</span> e <span class="process-math">\(n\)</span> si ha <span class="process-math">\(m\le n\)</span> come naturali se e solo se <span class="process-math">\(m\le n\)</span> come interi. L’intero <span class="process-math">\(l\coloneqq n-m\)</span> è l’unico intero tale che <span class="process-math">\(n=m+l\text{:}\)</span> la tesi segue allora dalla <a href="" class="xref" data-knowl="./knowl/xref/prop-ordine_differenza.html" title="Proposizione A.4.17">Proposizione A.4.17</a>.</div></article></details><article class="remark remark-like" id="remark-164"><h2 class="heading">
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">A.5.15</span><span class="period">.</span>
+</h2>
+<div class="para" id="p-3861">Una volta definita questa relazione d’ordine segue immediatamente che un numero <span class="process-math">\(n\)</span> è positivo se e solo se <span class="process-math">\(n \gt 0\)</span> ed è negativo se e solo se <span class="process-math">\(n \lt 0\text{.}\)</span>
+</div></article><div class="para" id="p-3862">Possiamo ora estendere il <a href="" class="xref" data-knowl="./knowl/xref/lem-minore_successore.html" title="Lemma A.2.8">Lemma A.2.8</a>, il <a href="" class="xref" data-knowl="./knowl/xref/cor-cancellazione_disuguaglianza_addizione.html" title="Corollario A.4.18">Corollario A.4.18</a> e il <a href="" class="xref" data-knowl="./knowl/xref/cor-cancellazione_disuguaglianza_moltiplicazione.html" title="Corollario A.4.19">Corollario A.4.19</a>
+</div>
+<article class="lemma theorem-like" id="lem-minore_successore_interi"><h2 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">A.5.16</span><span class="period">.</span>
+</h2>
+<div class="para" id="p-3863">Dati due interi <span class="process-math">\(m\)</span> e <span class="process-math">\(n\)</span> si ha <span class="process-math">\(n \lt m\)</span> se e solo se <span class="process-math">\(n+1\le m\text{.}\)</span> In particolare, se <span class="process-math">\(n\le m\le n+1\)</span> allora <span class="process-math">\(m=n\)</span> o <span class="process-math">\(m=n+1\text{.}\)</span>
+</div></article><details id="proof-344" class="hiddenproof born-hidden-knowl"><summary><h2 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h2></summary><article class="hiddenproof"><div class="para" id="p-3864">Per definizione, <span class="process-math">\(n \lt m\)</span> se e solo se <span class="process-math">\(m-n\)</span> è un naturale diverso da <span class="process-math">\(0\text{.}\)</span> I naturali diversi da <span class="process-math">\(0\)</span> sono tutti e soli i successori di altri naturali, cioè i numeri del tipo <span class="process-math">\(a+1\)</span> per qualche naturale <span class="process-math">\(a\text{.}\)</span> Pertanto, <span class="process-math">\(n \lt m\)</span> se e solo se esiste un naturale <span class="process-math">\(a\)</span> tale che <span class="process-math">\(m-n=a+1\text{,}\)</span> cioè <span class="process-math">\(m-(n+1)=a\text{,}\)</span> vale a dire, se e solo se <span class="process-math">\(n+1\le m\text{.}\)</span>
+</div></article></details><article class="corollary theorem-like" id="cor-cancellazione_disuguaglianza_addizione_interi"><h2 class="heading">
+<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">A.5.17</span><span class="period">.</span>
+</h2>
+<div class="para" id="p-3865">Dati gli interi <span class="process-math">\(m\text{,}\)</span> <span class="process-math">\(n\)</span> e <span class="process-math">\(l\)</span> si ha <span class="process-math">\(m\le n\)</span> se e solo se <span class="process-math">\(m+l\le n+l\text{.}\)</span>
+</div></article><details id="proof-345" class="hiddenproof born-hidden-knowl"><summary><h2 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h2></summary><article class="hiddenproof"><div class="para" id="p-3866">Notiamo che <span class="process-math">\((n+l)-(m+l)=n-m\)</span> e, dunque, <span class="process-math">\((n+l)-(m+l)\)</span> è un naturale  se e solo se <span class="process-math">\(n-m\)</span> è un naturale: la tesi segue dalla definizione dell’ordine.</div></article></details><article class="corollary theorem-like" id="cor-azione_disuguaglianza_moltiplicazione_interi"><h2 class="heading">
+<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">A.5.18</span><span class="period">.</span>
+</h2>
+<div class="para" id="p-3867">Dati gli interi <span class="process-math">\(m\text{,}\)</span> <span class="process-math">\(n\)</span> e <span class="process-math">\(l\)</span> con <span class="process-math">\(l \gt 0\)</span> si ha <span class="process-math">\(m\le n\)</span> se e solo se <span class="process-math">\(m\cdot l\le n\cdot l\text{.}\)</span>
+</div></article><details id="proof-346" class="hiddenproof born-hidden-knowl"><summary><h2 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h2></summary><article class="hiddenproof"><div class="para" id="p-3868">Se <span class="process-math">\(m\le n\text{,}\)</span> cioè <span class="process-math">\(n-m\)</span> è un naturale, allora <span class="process-math">\(n\cdot l-m\cdot l=(n-m)\cdot l\)</span> è un naturale, cioè <span class="process-math">\(m\cdot l\le n\cdot l\text{.}\)</span> Viceversa, se <span class="process-math">\(m\cdot l\le n\cdot l\)</span> è un naturale, allora <span class="process-math">\(n-m\)</span> non può essere negativo perché altrimenti, per il <a href="" class="xref" data-knowl="./knowl/xref/cor-somma_prodotto_positivi_negativi.html" title="Corollario A.5.11">Corollario A.5.11</a>, <span class="process-math">\(n\cdot l-m\cdot l=(n-m)\cdot l\)</span> dovrebbe essere negativo.</div></article></details><div class="para" id="p-3869">Sappiamo che ogni sottoinsieme non vuoto dell’insieme dei naturali ha un minimo (<a href="" class="xref" data-knowl="./knowl/xref/thm-buon_ordinamento.html" title="Teorema A.2.9">Teorema A.2.9</a>). Ciò non è vero per i sottoinsiemi dell’insieme degli interi (ad esempio, gli interi stessi non hanno minimo). Abbiamo tuttavia la</div>
+<article class="proposition theorem-like" id="prop-minimo_massimo_interi"><h2 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">A.5.19</span><span class="period">.</span>
+</h2>
+<div class="para" id="p-3870">Un sottoinsieme non vuoto di <span class="process-math">\(\Interi\)</span> che possiede un minorante ha un minimo. Un sottoinsieme non vuoto di <span class="process-math">\(\Interi\)</span> che possiede un maggiorante ha un massimo.</div></article><details id="proof-347" class="hiddenproof born-hidden-knowl"><summary><h2 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h2></summary><article class="hiddenproof"><div class="para" id="p-3871">Sia <span class="process-math">\(A\)</span> un sottoinsieme non vuoto di <span class="process-math">\(\Interi\)</span> e sia <span class="process-math">\(b\)</span> un minorante di <span class="process-math">\(A\text{:}\)</span> dunque, <span class="process-math">\(\{n-b\mid n\in A\}\)</span> è un sottoinsieme non vuoto di <span class="process-math">\(\Naturali\)</span> e, come tale, ha un minimo. Pertanto, esiste un elemento <span class="process-math">\(m\)</span> in <span class="process-math">\(A\)</span> tale che <span class="process-math">\(m-b\le n-b\)</span> per ogni <span class="process-math">\(n\in A\text{,}\)</span> cioè (<a href="" class="xref" data-knowl="./knowl/xref/cor-cancellazione_disuguaglianza_addizione_interi.html" title="Corollario A.5.17">Corollario A.5.17</a>) <span class="process-math">\(m\le n\)</span> per ogni <span class="process-math">\(n\in A\text{,}\)</span> vale a dire <span class="process-math">\(m\)</span> è minimo di <span class="process-math">\(A\text{.}\)</span> La seconda affermazione è analoga.</div></article></details><article class="definition definition-like" id="def-valore_assoluto"><h2 class="heading">
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">A.5.20</span><span class="period">.</span>
+</h2> <div class="para" id="p-3872">Dato un intero <span class="process-math">\(n\text{,}\)</span> il <dfn class="terminology">valore assoluto</dfn> di <span class="process-math">\(n\text{,}\)</span> denotato con <span class="process-math">\(\abs{n}\text{,}\)</span> è <span class="process-math">\(n\)</span> se <span class="process-math">\(n\ge 0\)</span> ed è <span class="process-math">\(-n\)</span> se <span class="process-math">\(n \lt 0\text{.}\)</span>
+</div></article><article class="remark remark-like" id="rem-assoluto_massimo"><h2 class="heading">
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">A.5.21</span><span class="period">.</span>
+</h2>
+<div class="para" id="p-3873">Possiamo notare che <span class="process-math">\(\abs{n}=\max\{n,-n\}\text{.}\)</span> Ciò è infatti banalmente vero se <span class="process-math">\(n=0\text{,}\)</span> perché in tal caso <span class="process-math">\(n=-n=\abs{n}=0\text{.}\)</span> Se, invece, <span class="process-math">\(n\ne 0\text{,}\)</span> dalla <a href="" class="xref" data-knowl="./knowl/xref/prop-intero_o_opposto_positivo.html" title="Proposizione A.5.10">Proposizione A.5.10</a> sappiamo che <span class="process-math">\(n\)</span> e <span class="process-math">\(-n\)</span> sono uno positivo e uno negativo: in particolare, <span class="process-math">\(\abs{n}\)</span> è quello positivo dei due, dunque, <span class="process-math">\(\abs{n}=\max\{n,-n\}\text{.}\)</span>
+</div></article><article class="remark remark-like" id="remark-166"><h2 class="heading">
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">A.5.22</span><span class="period">.</span>
+</h2>
+<div class="para" id="p-3874">Dalla definizione segue immediatamente che <span class="process-math">\(\abs{n}=\abs{m}\)</span> se e solo se <span class="process-math">\(n=m\)</span> o <span class="process-math">\(n=-m\text{.}\)</span>
+</div></article><article class="proposition theorem-like" id="prop-disuguaglianza_valore_assoluto"><h2 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">A.5.23</span><span class="period">.</span>
+</h2>
+<div class="para" id="p-3875">Per ogni intero <span class="process-math">\(n\)</span> si ha <span class="process-math">\(-\abs{n}\le n\le\abs{n}\text{.}\)</span>
+</div></article><details id="proof-348" class="hiddenproof born-hidden-knowl"><summary><h2 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h2></summary><article class="hiddenproof"><div class="para" id="p-3876">Dall’<a href="" class="xref" data-knowl="./knowl/xref/rem-assoluto_massimo.html" title="Osservazione A.5.21">Osservazione A.5.21</a> otteniamo che <span class="process-math">\(n\le\abs{n}\)</span> e <span class="process-math">\(-n\le\abs{n}\text{:}\)</span> sommando ad ambo i membri della seconda <span class="process-math">\(n-\abs{n}\)</span> dal <a href="" class="xref" data-knowl="./knowl/xref/cor-cancellazione_disuguaglianza_addizione_interi.html" title="Corollario A.5.17">Corollario A.5.17</a> otteniamo poi <span class="process-math">\(-\abs{n}\le n\text{.}\)</span>
+</div></article></details><article class="proposition theorem-like" id="proposition-267"><h2 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">A.5.24</span><span class="period">.</span>
+</h2>
+<div class="para" id="p-3877">Dati due interi <span class="process-math">\(m\)</span> e <span class="process-math">\(n\)</span> si ha <span class="process-math">\(\abs{m+n}\le\abs{m}+\abs{n}\)</span> e <span class="process-math">\(\abs{mn}=\abs{m}\abs{n}\text{.}\)</span>
+</div></article><details id="proof-349" class="hiddenproof born-hidden-knowl"><summary><h2 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h2></summary><article class="hiddenproof"><div class="para" id="p-3878">Dall’<a href="" class="xref" data-knowl="./knowl/xref/rem-assoluto_massimo.html" title="Osservazione A.5.21">Osservazione A.5.21</a> sappiamo che <span class="process-math">\(m\le\abs{m}\)</span> e <span class="process-math">\(n\le\abs{n}\text{:}\)</span> dunque, <span class="process-math">\(m+n\le\abs{n}+\abs{m}\text{.}\)</span> Analogamente, <span class="process-math">\(-m-n\le\abs{n}+\abs{m}\text{.}\)</span> Applicando ancora l’<a href="" class="xref" data-knowl="./knowl/xref/rem-assoluto_massimo.html" title="Osservazione A.5.21">Osservazione A.5.21</a> otteniamo, dunque, <span class="process-math">\(\abs{m+n}\le\abs{m}+\abs{n}\text{.}\)</span>
+</div> <div class="para" id="p-3879">L’uguaglianza <span class="process-math">\(\abs{mn}=\abs{m}\abs{n}\)</span> si ottiene facilmente considerando i vari casi possibili.</div></article></details></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec-operazioni_naturali.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="appendix-2.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

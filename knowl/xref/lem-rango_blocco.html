@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it-IT" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="lemma theorem-like"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">28.4.9</span><span class="period">.</span>
+</h3>
+<div class="para">Dato un blocco di Jordan <span class="process-math">\(J_{n}(\lambda)\)</span> si ha <span class="process-math">\(\rk(J_{n}(\lambda)-\lambda\Idmatrix)^{t}=n-t\)</span> per <span class="process-math">\(t\le n\)</span> e <span class="process-math">\(\rk(J_{n}(\lambda)-\lambda\Idmatrix)^{t}=0\)</span> per <span class="process-math">\(t&gt;n\text{.}\)</span>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para logical">
+<div class="para">La matrice <span class="process-math">\(J_{n}(\lambda)-\lambda\Idmatrix\)</span> è la matrice</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+0       \amp 1       \amp 0      \amp \dots   \amp \dots  \amp 0\\
+0       \amp 0       \amp 1      \amp \dots   \amp \dots  \amp 0\\
+\vdots  \amp \vdots  \amp \ddots \amp \ddots  \amp \dots  \amp \vdots\\
+0       \amp \dots   \amp \dots  \amp 0       \amp 1      \amp 0      \\
+0       \amp \dots   \amp \dots  \amp 0       \amp 0      \amp 1\\
+0       \amp \dots   \amp \dots  \amp 0       \amp 0      \amp 0
+\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">il cui rango è <span class="process-math">\(n-1\text{.}\)</span> Calcolando le potenze successive di <span class="process-math">\(J_{n}(\lambda)-\lambda\Idmatrix\)</span> si trovano le matrici</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+0       \amp  0       \amp 1       \amp 0      \amp \dots   \amp \dots  \amp 0\\
+0       \amp  0       \amp 0       \amp 1      \amp \dots   \amp \dots  \amp 0\\
+\vdots  \amp  \vdots  \amp \vdots  \amp \ddots \amp \ddots  \amp \dots  \amp \vdots\\
+0       \amp  0       \amp \dots   \amp \dots  \amp 0       \amp 1      \amp 0      \\
+0       \amp  0       \amp \dots   \amp \dots  \amp 0       \amp 0      \amp 1\\
+0       \amp  0       \amp \dots   \amp \dots  \amp 0       \amp 0      \amp 0\\
+0       \amp  0       \amp \dots   \amp \dots  \amp 0       \amp 0      \amp 0
+\end{pmatrix}\qquad
+\begin{pmatrix}
+0       \amp0       \amp  0       \amp 1       \amp 0      \amp \dots   \amp \dots  \amp 0\\
+0       \amp0       \amp  0       \amp 0       \amp 1      \amp \dots   \amp \dots  \amp 0\\
+\vdots  \amp\vdots  \amp  \vdots  \amp \vdots  \amp \ddots \amp \ddots  \amp \dots  \amp \vdots\\
+0       \amp0       \amp  0       \amp \dots   \amp \dots  \amp 0       \amp 1      \amp 0      \\
+0       \amp0       \amp  0       \amp \dots   \amp \dots  \amp 0       \amp 0      \amp 1\\
+0       \amp0       \amp  0       \amp \dots   \amp \dots  \amp 0       \amp 0      \amp 0\\
+0       \amp0       \amp  0       \amp \dots   \amp \dots  \amp 0       \amp 0      \amp 0\\
+0       \amp0       \amp  0       \amp \dots   \amp \dots  \amp 0       \amp 0      \amp 0
+\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">e così via. A ogni passo il rango decresce di <span class="process-math">\(1\)</span> fino ad azzerarsi.</div>
+</div></article></details><span class="incontext"><a class="internal" href="sec-jordan.html#lem-rango_blocco">Nel contesto</a></span>
+</body>
+</html>

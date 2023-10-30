@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it-IT" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="proposition theorem-like"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">16.2.5</span><span class="period">.</span>
+</h3>
+<div class="para logical">
+<div class="para">Sia <span class="process-math">\(G\)</span> un gruppo che sia prodotto diretto interno dei sottogruppi <span class="process-math">\(H_{1}\text{,}\)</span> <span class="process-math">\(H_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(H_{r}\text{.}\)</span> Allora <span class="process-math">\(G\)</span> è isomorfo al prodotto diretto esterno dei gruppi <span class="process-math">\(H_{1}\text{,}\)</span> <span class="process-math">\(H_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(H_{r}\)</span> (pensati come gruppi indipendenti). Inoltre, per <span class="process-math">\(i\ne j\text{,}\)</span> ogni elemento di <span class="process-math">\(H_{i}\)</span> commuta con ogni elemento di <span class="process-math">\(H_{j}\text{.}\)</span> Si ha poi che ogni elemento <span class="process-math">\(g\)</span> di <span class="process-math">\(G\)</span> si scrive in un unico modo nella forma</div>
+<div class="displaymath process-math">
+\begin{equation}
+g=g_{1}g_{2}\cdots g_{r}\tag{16.2.1}
+\end{equation}
+</div>
+<div class="para">con <span class="process-math">\(g_{i}\in H_{i}\)</span> e, scritto un altro elemento <span class="process-math">\(h\)</span> di <span class="process-math">\(G\)</span> nella forma</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h=h_{1}h_{2}\cdots h_{r}
+\end{equation*}
+</div>
+<div class="para">con <span class="process-math">\(h_{i}\in H_{i}\text{,}\)</span> risulta</div>
+<div class="displaymath process-math">
+\begin{equation*}
+gh=g_{1}h_{1}g_{2}h_{2}\cdots g_{r}h_{r}\text{.}
+\end{equation*}
+</div>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para logical">
+<div class="para">Sia <span class="process-math">\(H\coloneqq H_{1}\times H_{2}\times\cdots\times H_{r}\)</span> e sia <span class="process-math">\(\phi\colon H\to G\)</span> definita da</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(g_{1},g_{2},\ldots,g_{r})\coloneqq g_{1}g_{2}\cdots g_{r}\text{.}
+\end{equation*}
+</div>
+<div class="para">Poiché <span class="process-math">\(G=H_{1}H_{2}\cdots H_{r}\text{,}\)</span> la funzione <span class="process-math">\(\phi\)</span> è suriettiva.</div>
+</div> <div class="para logical">
+<div class="para">Dati due elementi <span class="process-math">\(g\coloneqq g_{1}\cdots g_{r}\)</span> e <span class="process-math">\(h\coloneqq h_{1}\cdots h_{r}\)</span> con <span class="process-math">\(g_{i}\in H_{i}\)</span> e <span class="process-math">\(h_{i}\in H_{i}\text{,}\)</span> per il <a href="" class="xref" data-knowl="./knowl/xref/lem-elementi_in_normali_intersezione_banale_commutano.html" title="Lemma 16.2.4">Lemma 16.2.4</a> sappiamo che elementi in <span class="process-math">\(H_{i}\)</span> commutano con elementi in <span class="process-math">\(H_{j}\)</span> se <span class="process-math">\(i\ne j\)</span> (infatti, <span class="process-math">\(H_{i}\)</span> ha intersezione banale con il prodotto dei rimanenti e, a maggior ragione, con <span class="process-math">\(H_{j}\)</span> per <span class="process-math">\(i\ne j\)</span>). Pertanto,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lem-elementi_in_normali_intersezione_banale_commutano.html">
+\begin{equation*}
+gh=(g_{1}\cdots g_{r})(h_{1}\cdots h_{r})=g_{1}h_{1}g_{2}h_{2}\cdots g_{r}h_{r}\text{:}
+\end{equation*}
+</div>
+<div class="para">questo prova che <span class="process-math">\(\phi\)</span> è un omomorfismo e l’ultima affermazione in enunciato.</div>
+</div> <div class="para logical">
+<div class="para">Per completare la dimostrazione, basta mostrare che <span class="process-math">\(\phi\)</span> è iniettiva (questo implicherà l’unicità della decomposizione <a href="" class="xref" data-knowl="./knowl/xref/eq-decomposizione_prodotto_diretto.html" title="Equazione 16.2.1">(16.2.1)</a>). Sia allora <span class="process-math">\((g_{1},g_{2},\cdots ,g_{r})\)</span> un elemento di <span class="process-math">\(\ker\phi\text{,}\)</span> cioè <span class="process-math">\(g_{1}g_{2}\cdots g_{r}=1\text{.}\)</span> Mostriamo che <span class="process-math">\(g_{i}=1\)</span> per ogni <span class="process-math">\(i\text{:}\)</span> poiché <span class="process-math">\(g_{i}\)</span> commuta con <span class="process-math">\(g_{j}\)</span> per <span class="process-math">\(i\ne j\text{,}\)</span> si ha allora</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq-decomposizione_prodotto_diretto.html">
+\begin{equation*}
+g_{i}^{-1}=g_{1}\cdots g_{i-1}g_{i+1}\cdots g_{r}\text{.}
+\end{equation*}
+</div>
+<div class="para">Ma allora, <span class="process-math">\(g_{i}^{-1}\)</span> appartiene a <span class="process-math">\(G_{i}\)</span> e al prodotto dei rimanenti ed è, dunque, uguale a <span class="process-math">\(1\)</span> e, quindi, <span class="process-math">\(g_{i}=1\text{,}\)</span> come richiesto.</div>
+</div></article></details><span class="incontext"><a class="internal" href="sec-prodotto_diretto_interno.html#prop-prodotto_diretto_interno">Nel contesto</a></span>
+</body>
+</html>

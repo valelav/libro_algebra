@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it-IT" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">20.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Divisione tra polinomi.</span>
+</h3>
+<div class="para logical">
+<div class="para">Sia <span class="process-math">\(R\)</span> un anello commutativo e siano <span class="process-math">\(f\)</span> e <span class="process-math">\(g\)</span> due polinomi in <span class="process-math">\(R[x]\)</span> con <span class="process-math">\(g\)</span> diverso da <span class="process-math">\(0\)</span> e coefficiente direttivo invertibile. Allora esistono e sono univocamente determinati <span class="process-math">\(q\)</span> e <span class="process-math">\(r\)</span> in <span class="process-math">\(R[x]\)</span> tali che</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f=gq+r
+\end{equation*}
+</div>
+<div class="para">con <span class="process-math">\(\deg r \lt \deg g\)</span> o <span class="process-math">\(r=0\text{.}\)</span> I polinomi <span class="process-math">\(q\)</span> e <span class="process-math">\(r\)</span> sono detti, rispettivamente, <dfn class="terminology">quoziente</dfn> e <dfn class="terminology">resto</dfn> della divisione di <span class="process-math">\(f\)</span> per <span class="process-math">\(g\text{.}\)</span>
+</div>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para">Sia <span class="process-math">\(f\coloneqq a_{0}+a_{1}x+\cdots+a_{n}x^{n}\)</span> e <span class="process-math">\(g\coloneqq b_{0}+b_{1}x+\cdots+b_{m}x^{m}\)</span> con <span class="process-math">\(b_{m}\)</span> invertibile.</div> <div class="para logical">
+<div class="para">Mostriamo innanzitutto l’esistenza di <span class="process-math">\(q\)</span> e <span class="process-math">\(r\)</span> per induzione su <span class="process-math">\(n\text{.}\)</span> Se <span class="process-math">\(n \lt m\text{,}\)</span> basta prendere <span class="process-math">\(q=0\)</span> e <span class="process-math">\(r=f\text{.}\)</span> Se <span class="process-math">\(n\ge m\text{,}\)</span> allora sottraiamo da <span class="process-math">\(f\)</span> un multiplo opportuno di <span class="process-math">\(g\text{,}\)</span> in modo che il coefficiente di <span class="process-math">\(x^{n}\)</span> nel polinomio così ottenuto sia <span class="process-math">\(0\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{align*}
+h \amp\coloneqq f-ga_{n}b_{m}^{-1}x^{n-m} \\
+\amp = a_{0}+a_{1}x+\cdots+a_{n}x^{n} \\
+\amp -(b_{0}a_{n}b_{m}^{-1}x^{n-m}+b_{1}a_{n}b_{m}^{-1}x^{n-m+1}+\cdots+b_{m}a_{n}b_{m}^{-1}x^{n}) \\
+\amp = c_{0}+c_{1}x+\cdots+c_{n-1}x^{n-1}
+\end{align*}
+</div>
+<div class="para">per certi <span class="process-math">\(c_{i}\)</span> in <span class="process-math">\(R\text{.}\)</span> Per ipotesi induttiva, esistono allora <span class="process-math">\(\bar{q}\)</span> e <span class="process-math">\(r\)</span> tali che <span class="process-math">\(h=g\bar{q}+r\)</span> con <span class="process-math">\(\deg r \lt \deg g\)</span> o <span class="process-math">\(r=0\text{.}\)</span> Ma allora</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f=h+ga_{n}b_{m}^{-1}x^{n-m}=g\bar{q}+r+ga_{n}b_{m}^{-1}x^{n-m}=g(\bar{q}+a_{n}b_{m}^{-1}x^{n-m})+r=gq+r
+\end{equation*}
+</div>
+<div class="para">avendo posto <span class="process-math">\(q\coloneqq \bar{q}+a_{n}b_{m}^{-1}x^{n-m}\text{.}\)</span>
+</div>
+</div> <div class="para">Per quanto riguarda l’unicità, supponiamo che <span class="process-math">\(f=gq+r=gq'+r'\)</span> con <span class="process-math">\(\deg r' \lt\deg g\)</span> o <span class="process-math">\(r'=0\text{.}\)</span> Allora <span class="process-math">\(r-r'=g(q'-q)\text{.}\)</span> Se fosse <span class="process-math">\(q'\ne q\text{,}\)</span> cioè <span class="process-math">\(q'-q\ne 0\text{,}\)</span> per la <a href="" class="xref" data-knowl="./knowl/xref/prop-grado_e_operazioni.html" title="Proposizione 20.1.11">Proposizione 20.1.11</a> avremmo allora che <span class="process-math">\(\deg(r-r')=\deg (g(q-q'))\ge \deg g\)</span> (il coefficiente direttivo di <span class="process-math">\(g\text{,}\)</span> essendo invertibile non è un divisore dello zero). Ma ciò non può essere per le condizioni su <span class="process-math">\(r\)</span> e <span class="process-math">\(r'\text{.}\)</span> Dunque <span class="process-math">\(q'=q\)</span> e <span class="process-math">\(r-r'=g(q'-q)=g0=0\text{,}\)</span> cioè <span class="process-math">\(r=r'\text{.}\)</span>
+</div></article></details><span class="incontext"><a class="internal" href="sec-valutazione_polinomi.html#thm-divisione_tra_polinomi">Nel contesto</a></span>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it-IT" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="proposition theorem-like"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">5.5.6</span><span class="period">.</span>
+</h3>
+<div class="para logical">
+<div class="para">Sia data un’equazione lineare diofantina</div>
+<div class="displaymath process-math">
+\begin{equation*}
+ax+by=c
+\end{equation*}
+</div>
+<div class="para">nelle incognite <span class="process-math">\(x\)</span> e <span class="process-math">\(y\)</span> con <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\)</span> e <span class="process-math">\(c\)</span> interi tale che <span class="process-math">\(d\coloneqq (a,b)\)</span> divide <span class="process-math">\(c\)</span> (dunque, l’equazione è risolubile).</div>
+</div> <div class="para">Se <span class="process-math">\(d=0\text{,}\)</span> l’equazione è un’identità.</div> <div class="para logical">
+<div class="para">Se <span class="process-math">\(d\ne 0\text{,}\)</span>  posto <span class="process-math">\(a=da'\text{,}\)</span> <span class="process-math">\(b=db'\)</span> e <span class="process-math">\(c=dc'\text{,}\)</span> l’equazione è equivalente a</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-equazione_lineare_diofantina_due_incognite.html">
+\begin{equation*}
+a'x+b'y=c'\text{:}
+\end{equation*}
+</div>
+<div class="para">in tal caso, detta <span class="process-math">\(x=\bar{x}\)</span> e <span class="process-math">\(y=\bar{y}\)</span> una soluzione particolare dell’equazione (determinata ad esempio, con un’identità di Bezout come nella <a href="" class="xref" data-knowl="./knowl/xref/prop-equazione_lineare_diofantina_due_incognite.html" title="Proposizione 5.5.3">Proposizione 5.5.3</a>), l’equazione ha infinite soluzioni date da</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-equazione_lineare_diofantina_due_incognite.html">
+\begin{align*}
+x \amp =\bar{x}+b'h\\
+y \amp =\bar{y}-a'h
+\end{align*}
+</div>
+<div class="para">al variare di <span class="process-math">\(h\)</span> in <span class="process-math">\(\Interi\text{.}\)</span>
+</div>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para">Sappiamo che <span class="process-math">\(d=(a,b)=0\)</span> se e solo se <span class="process-math">\(a=b=0\text{:}\)</span> poiché <span class="process-math">\(d\mid c\text{,}\)</span> ciò significa che <span class="process-math">\(c=0\)</span> e l’equazione è un’identità.</div> <div class="para">Supponiamo ora <span class="process-math">\(d\ne 0\text{:}\)</span> l’equazione è allora equivalente a <span class="process-math">\(a'x+b'y=c'\)</span> e, sostituendo in essa le espressioni date nell’enunciato, si vede immediatamente che sono effettivamente soluzioni.</div> <div class="para logical">
+<div class="para">Viceversa, se <span class="process-math">\(x=\hat{x}\)</span> e <span class="process-math">\(y=\hat{y}\)</span> è una soluzione dell’equazione diofantina, allora <span class="process-math">\(a'\hat{x}+b'\hat{y}=c'\)</span> e, poiché <span class="process-math">\(a'\bar{x}+b'\bar{y}=c'\text{,}\)</span> uguagliando, otteniamo <span class="process-math">\(a'(\hat{x}-\bar{x})=b'(\bar{y}-\hat{y})\text{.}\)</span> Per il <a href="" class="xref" data-knowl="./knowl/xref/cor-diviso_MCD_da_coprimi.html" title="Corollario 5.3.23">Corollario 5.3.23</a>, abbiamo che <span class="process-math">\(a'\)</span> e <span class="process-math">\(b'\)</span> sono coprimi. Per il <a href="" class="xref" data-knowl="./knowl/xref/lem-divisore_coprimo_con_fattore.html" title="Lemma 5.4.1">Lemma 5.4.1</a>, abbiamo che <span class="process-math">\(b' \mid \hat{x}-\bar{x}\)</span> e <span class="process-math">\(a'\mid \bar{y}-\hat{y}\text{,}\)</span> cioè esistono interi <span class="process-math">\(h\)</span> e <span class="process-math">\(k\)</span> tali che <span class="process-math">\(\bar{y}-\hat{y}=a'k\)</span> e <span class="process-math">\(\hat{x}-\bar{x}=b'h\text{,}\)</span> cioè</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-diviso_MCD_da_coprimi.html ./knowl/xref/lem-divisore_coprimo_con_fattore.html">
+\begin{align*}
+\hat{x} \amp =\bar{x}+b'h\\
+\hat{y} \amp =\bar{y}-a'k
+\end{align*}
+</div>
+<div class="para">Abbiamo, dunque, <span class="process-math">\(a'b'h=a'b'k\text{.}\)</span> Distinguiamo ora due casi: <span class="process-math">\(a'b'\ne 0\)</span> e <span class="process-math">\(a'b'=0\text{.}\)</span> Nel primo caso, otteniamo immediatamente che <span class="process-math">\(h=k\text{;}\)</span> nel secondo caso <span class="process-math">\(a'=0\)</span> o <span class="process-math">\(b'=0\text{:}\)</span> se, ad esempio, <span class="process-math">\(a'=0\text{,}\)</span> abbiamo <span class="process-math">\(\hat{y}=\bar{y}-0\cdot k=\bar{y}-0\cdot h\text{,}\)</span> cioè possiamo comunque rimpiazzare <span class="process-math">\(k\)</span> con <span class="process-math">\(h\text{.}\)</span>
+</div>
+</div></article></details><span class="incontext"><a class="internal" href="sec-equazioni_lineari_diofantine.html#prop-equazione_lineare_diofantina_risolubile">Nel contesto</a></span>
+</body>
+</html>

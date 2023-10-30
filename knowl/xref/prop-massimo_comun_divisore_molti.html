@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it-IT" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="proposition theorem-like"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">5.3.20</span><span class="period">.</span>
+</h3>
+<div class="para logical">
+<div class="para">Dati gli interi <span class="process-math">\(a_{1}\text{,}\)</span> <span class="process-math">\(a_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(a_{n}\)</span> il loro massimo comun divisore esiste ed è unico. Inoltre, esistono interi <span class="process-math">\(u_{1}\text{,}\)</span> <span class="process-math">\(u_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(u_{n}\)</span> tali che</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a_{1}u_{1}+\cdots+a_{n}u_{n}=(a_{1},\ldots,a_{n})\text{.}
+\end{equation*}
+</div>
+<div class="para">Infine, per <span class="process-math">\(n\ge 2\text{,}\)</span> si ha <span class="process-math">\(((a_{1},\ldots,a_{n-1}),a_{n})=(a_{1},\ldots,a_{n})\text{.}\)</span>
+</div>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para">Due naturali con le proprietà cercate devono dividersi reciprocamente e devono essere, quindi, uguali. Una volta mostrata l’esistenza di un naturale siffatto, l’unicità seguirà immediatamente.</div> <div class="para">Procediamo ora per induzione su <span class="process-math">\(n\text{:}\)</span> il caso <span class="process-math">\(n=1\)</span> è banale.</div> <div class="para logical">
+<div class="para">Sia allora <span class="process-math">\(n \gt 1\text{.}\)</span> Per ipotesi induttiva il massimo comun divisore <span class="process-math">\(c\)</span> tra <span class="process-math">\(a_{1}\text{,}\)</span> <span class="process-math">\(a_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(a_{n-1}\)</span> esiste e, per opportuni interi <span class="process-math">\(v_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(v_{n_{1}}\)</span> si ha</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/alg-euclide.html">
+\begin{equation*}
+a_{1}v_{1}+\cdots+a_{n-1}v_{n-1}=c\text{.}
+\end{equation*}
+</div>
+<div class="para">Per l’<a href="" class="xref" data-knowl="./knowl/xref/alg-euclide.html" title="Algoritmo 5.3.15: Algoritmo di Euclide">Algoritmo di Euclide</a> esiste <span class="process-math">\(d\coloneqq (c,a_{n})\)</span> e <span class="process-math">\(d=cu+a_{n}u_{n}\)</span> per opportuni interi <span class="process-math">\(v\)</span> e <span class="process-math">\(u_{n}\text{.}\)</span> Dunque, abbiamo</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/alg-euclide.html">
+\begin{equation*}
+d=cu+a_{n}u_{n}=(a_{1}v_{1}+\cdots+a_{n-1}v_{n-1})u+a_{n}u_{n}=a_{1}u_{1}+\cdots+a_{n}u_{n}
+\end{equation*}
+</div>
+<div class="para">dove abbiamo posto <span class="process-math">\(u_{i}\coloneqq v_{i}u\)</span> per <span class="process-math">\(1\le i\le n-1\text{.}\)</span> Per completare la dimostrazione dobbiamo provare che <span class="process-math">\(d\)</span> è massimo comun divisore di <span class="process-math">\(a_{1}\text{,}\)</span> <span class="process-math">\(a_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(a_{n}\text{.}\)</span>
+</div>
+</div> <div class="para">Per definizione, <span class="process-math">\(d\)</span> divide <span class="process-math">\(c\)</span> e, quindi, divide <span class="process-math">\(a_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(a_{n-1}\text{;}\)</span> d’altra parte, <span class="process-math">\(d\)</span> divide <span class="process-math">\(a_{n}\)</span> e, quindi, <span class="process-math">\(d\)</span> divide <span class="process-math">\(a_{1}\text{,}\)</span> <span class="process-math">\(a_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(a_{n}\text{.}\)</span>
+</div> <div class="para">Sia ora <span class="process-math">\(f\)</span> un intero che divide ogni <span class="process-math">\(a_{i}\text{:}\)</span> in particolare divide quelli per <span class="process-math">\(i\)</span> compreso tra <span class="process-math">\(1\)</span> e <span class="process-math">\(n-1\)</span> e, quindi, per definizione, divide il loro massimo comun divisore <span class="process-math">\(c\text{.}\)</span> Poiché <span class="process-math">\(f\)</span> divide <span class="process-math">\(a_{n}\text{,}\)</span> divide il massimo comun divisore <span class="process-math">\(d\)</span> tra <span class="process-math">\(c\)</span> e <span class="process-math">\(a_{n}\text{.}\)</span>
+</div></article></details><span class="incontext"><a class="internal" href="sec-divisibilita_interi.html#prop-massimo_comun_divisore_molti">Nel contesto</a></span>
+</body>
+</html>

@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="it-IT" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Sottogruppi normali</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Algebra">
+<meta property="book:author" content="Valerio Monti">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.32/pretext_search.js"></script><link href="https://pretextbook.org/css/0.82/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.32</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.32/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.32/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.32/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.82/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Vai all'indice generale</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-algebra.html"><span class="title">Algebra</span></a></h1>
+<p class="byline">Valerio Monti</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Indice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Indice</span></button><a class="index-button button" href="indice.html" title="Indice analitico"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Indice analitico</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Risultati: </h2>
+<div id="searchempty" class="searchempty"><span>Nessun risultato.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-orbite_stabilizzatori.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="up-button button" href="ch-azioni.html" title="Su"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Su</span></a><a class="next-button button" href="sec-coniugati_simmetrico_alterno.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\require{mathtools}\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\cont}{c}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\Inv}{Inv}
+\DeclareMathOperator{\MCD}{MCD}
+\DeclareMathOperator{\mcm}{mcm}
+\DeclareMathOperator{\centro}{Z}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Soc}{Soc}
+\DeclareMathOperator{\Rad}{Rad}
+\DeclareMathOperator{\car}{char}
+
+
+\newcommand{\Sym}{\mathrm{Sym}}
+\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\Idmatrix}{\mathrm{I}}
+\newcommand{\Nullmatrix}{{\large 0}}
+\newcommand{\dist}{\mathrm{d}}
+
+\newcommand{\Reali}{\mathbf{R}}
+\newcommand{\Naturali}{\mathbf{N}}
+\newcommand{\Interi}{\mathbf{Z}}
+ \newcommand{\Razionali}{\mathbf{Q}}
+ \newcommand{\Complessi}{\mathbf{C}}
+
+ \newcommand{\grgen}[1]{\langle#1\rangle}
+ \newcommand{\ideal}[1]{\left(#1\right)}
+ \newcommand{\alg}[1]{\left\lbrack#1\right\rvert}
+ \newcommand{\seg}[1]{\left\lvert#1\right)}
+ \newcommand{\ann}[1]{\operatorname{Ann}\left(#1\right)}
+ \newcommand{\len}[1]{\operatorname{l}\left(#1\right)}
+ \newcommand{\class}[2][\sim]{\lbrack #2\rbrack_{#1}}
+ \newcommand{\cent}[2]{\operatorname{C}_{#1}\left(#2\right)}
+ \newcommand{\nrm}[2]{\operatorname{N}_{#1}\left(#2\right)}
+ \newcommand{\stab}[2]{\operatorname{Stab}_{#1}\left(#2\right)}
+ \newcommand{\Supp}[1]{\operatorname{Supp}\left(#1\right)}
+ \newcommand{\Gal}[1]{\operatorname{Gal}\left(#1\right)}
+ \newcommand{\tr}[1]{#1^{\top}}
+ \newcommand{\vuoto}{\varnothing}
+ \newcommand{\parti}[1]{\mathcal{P}(#1)}
+ \newcommand{\euler}[1]{\varphi(#1)}
+ \newcommand{\euclidean}{\delta}
+ \newcommand{\posto}[3]{#1_{#2#3}}
+
+ \newcommand{\vect}[1]{\boldsymbol{#1}}
+ 
+ \newcommand{\mat}[2]{\operatorname{M}_{#1}(#2)} 
+ \newcommand{\matt}[3]{\operatorname{M}_{#1,#2}(#3)} 
+ \newcommand{\Sim}[2]{\operatorname{S}_{#1}(#2)} 
+ \newcommand{\AntiSim}[2]{\operatorname{A}_{#1}(#2)} 
+ \newcommand{\Diag}[2]{\operatorname{D}_{#1}(#2)} 
+ \newcommand{\TS}[2]{\operatorname{TS}_{#1}(#2)} 
+ \newcommand{\TI}[2]{\operatorname{TI}_{#1}(#2)} 
+ \newcommand{\GL}[2]{\operatorname{GL}(#1,#2)} 
+ \newcommand{\SL}[2]{\operatorname{SL}(#1,#2)} 
+ \newcommand{\Ort}[2]{\operatorname{O}(#1,#2)} 
+
+ \newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+ \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+ \newcommand{\ind}[2]{\left\lvert#1:#2\right\rvert}
+ \newcommand{\degext}[2]{\left\lbrack#1:#2\right\rbrack}
+
+ \newcommand{\invprov}[1]{\widehat{#1}}
+
+ \newcommand\YoungTableau[1]{
+ \begin{tikzpicture}[scale=0.4,keepsize]
+ \foreach \y [count=\yi] in {#1}
+ \foreach \x in {1,...,\y}
+ {
+ \draw (\x,\yi) rectangle +(1,1);
+ }
+ \end{tikzpicture}
+ }
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts focused" data-preexpanded-levels="0" data-max-levels="3"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Materiale iniziale</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface-1.html" class="internal"><span class="title">Prefazione</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-preliminari.html" class="internal"><span class="codenumber">I</span> <span class="title">Preliminari</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-insiemi.html" class="internal"><span class="codenumber">1</span> <span class="title">Insiemi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-insiemi.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Concetti di base</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-insiemi.html#exercises-insiemi" class="internal"><span class="codenumber">1.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-operazioni_insiemi.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Operazioni tra insiemi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-operazioni_insiemi.html#exercises-operazioni_insiemi" class="internal"><span class="codenumber">1.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prodotto-cartesiano.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Prodotto cartesiano</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prodotto-cartesiano.html#exercises-prodotto_cartesiano" class="internal"><span class="codenumber">1.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Russell.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Il paradosso di Russell</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-corrispondenze.html" class="internal"><span class="codenumber">2</span> <span class="title">Corrispondenze e relazioni</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-corrispondenze_definizione.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Corrispondenze tra insiemi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-corrispondenze_definizione.html#exercises-corrispondenze_definizione" class="internal"><span class="codenumber">2.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-relazioni_equivalenza.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Relazioni di equivalenza</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-relazioni_equivalenza.html#exercises-relazioni_equivalenza" class="internal"><span class="codenumber">2.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-relazioni_ordine.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Relazioni d’ordine</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-relazioni_ordine.html#exercises-relazioni_ordine" class="internal"><span class="codenumber">2.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-funzioni.html" class="internal"><span class="codenumber">3</span> <span class="title">Funzioni</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-funzioni_definizione.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Definizioni di base</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-funzioni_definizione.html#exercises-funzioni_definizione" class="internal"><span class="codenumber">3.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-funzioni_iniettive_suriettive.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Funzioni iniettive, suriettive e biiettive</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-funzioni_iniettive_suriettive.html#exercises-funzioni_iniettive_suriettive" class="internal"><span class="codenumber">3.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cardinalita.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Cenni sulla cardinalità</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-matrici.html" class="internal"><span class="codenumber">4</span> <span class="title">Matrici</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-definizioni_matrici.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Definizioni di base</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizioni_matrici.html#exercises-definizioni_matrici" class="internal"><span class="codenumber">4.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-operazioni_matrici.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Operazioni tra matrici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-operazioni_matrici.html#exercises-operazioni_matrici" class="internal"><span class="codenumber">4.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-aritmetica.html" class="internal"><span class="codenumber">II</span> <span class="title">Aritmetica</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-interi.html" class="internal"><span class="codenumber">5</span> <span class="title">I numeri interi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-naturali_base.html" class="internal"><span class="codenumber">5.1</span> <span class="title">I numeri naturali e i numeri interi</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-induzione_ricorrenza.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Dimostrazioni per induzione e definizioni per ricorrenza</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-induzione_ricorrenza.html#exercises-induzione" class="internal"><span class="codenumber">5.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-divisibilita_interi.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Divisibilità negli interi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-divisibilita_interi.html#exercises-divisibilita_interi" class="internal"><span class="codenumber">5.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-fattorizzazione_interi.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Il teorema fondamentale dell’aritmetica</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-fattorizzazione_interi.html#exercises-fattorizzazione_interi" class="internal"><span class="codenumber">5.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-equazioni_lineari_diofantine.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Equazioni lineari diofantine</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-equazioni_lineari_diofantine.html#exercises-equazioni_lineari_diofantine" class="internal"><span class="codenumber">5.5</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-classidiresto.html" class="internal"><span class="codenumber">6</span> <span class="title">Classi di resto</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-congruenzemodulon.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Congruenze modulo un intero</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-congruenzemodulon.html#exercises-congruenzemodulon" class="internal"><span class="codenumber">6.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-operazioniclassiresto.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Operazioni tra classi di resto</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-operazioniclassiresto.html#exercises-operazioniclassiresto" class="internal"><span class="codenumber">6.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-eulero.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Il teorema di Eulero</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-eulero.html#exercises-eulero" class="internal"><span class="codenumber">6.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-congruenze_con_incognite.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Congruenze con incognite</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-congruenze_con_incognite.html#exercises-congruenze_con_incognite" class="internal"><span class="codenumber">6.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part contains-active">
+<div class="toc-title-box"><a href="part-gruppi.html" class="internal"><span class="codenumber">III</span> <span class="title">Gruppi</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-operazioni.html" class="internal"><span class="codenumber">7</span> <span class="title">Operazioni</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-operazioni_definizioni.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Definizioni ed esempi</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-proprieta_operazioni.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Proprietà delle operazioni</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-proprieta_operazioni.html#exercises-proprieta_operazioni" class="internal"><span class="codenumber">7.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-gruppi.html" class="internal"><span class="codenumber">8</span> <span class="title">Monoidi e gruppi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-monoidi.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Monoidi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-monoidi.html#exercises-monoidi" class="internal"><span class="codenumber">8.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-gruppi.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Gruppi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppi.html#exercises-gruppi" class="internal"><span class="codenumber">8.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-gruppi_piccoli.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Alcuni esempi di gruppi piccoli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppi_piccoli.html#exercises-gruppi_piccoli" class="internal"><span class="codenumber">8.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-sottogruppi.html" class="internal"><span class="codenumber">9</span> <span class="title">Sottogruppi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-sottomonoidi_sottogruppi.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Sottomonoidi e sottogruppi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottomonoidi_sottogruppi.html#exercises-sottomonoidi_sottogruppi" class="internal"><span class="codenumber">9.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prime_proprieta_sottogruppi.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Prime proprietà dei sottogruppi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prime_proprieta_sottogruppi.html#exercises-prime_proprieta_sottogruppi" class="internal"><span class="codenumber">9.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-gruppi_del_piano.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Gruppi di trasformazioni del piano</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppi_del_piano.html#exercises-gruppi_del_piano" class="internal"><span class="codenumber">9.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-gruppi_ciclici.html" class="internal"><span class="codenumber">10</span> <span class="title">Gruppi ciclici</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-definizione_gruppi_ciclici.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Definizioni e prime proprietà</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizione_gruppi_ciclici.html#exercises-definizione_gruppi_ciclici" class="internal"><span class="codenumber">10.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-sottogruppi_di_ciclici.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Sottogruppi di gruppi ciclici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottogruppi_di_ciclici.html#exercises-sottogruppi_di_ciclici" class="internal"><span class="codenumber">10.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-gruppi_permutazioni.html" class="internal"><span class="codenumber">11</span> <span class="title">Gruppi di permutazioni</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-definizioni_gruppi_permutazioni.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Definizioni e prime proprietà</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizioni_gruppi_permutazioni.html#exercises-definizioni_gruppi_permutazioni" class="internal"><span class="codenumber">11.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-cicli.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Cicli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-cicli.html#exercises-cicli" class="internal"><span class="codenumber">11.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-scambi.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Scambi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-scambi.html#exercises-scambi" class="internal"><span class="codenumber">11.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-laterali.html" class="internal"><span class="codenumber">12</span> <span class="title">Laterali e teorema di Lagrange</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prodotto_sottoinsiemi.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Prodotto di sottoinsiemi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prodotto_sottoinsiemi.html#exercises-prodotto_sottoinsiemi" class="internal"><span class="codenumber">12.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-teorema_di_lagrange.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Teorema di Lagrange</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-teorema_di_lagrange.html#exercises-teorema_di_lagrange" class="internal"><span class="codenumber">12.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prodotto_sottogruppi.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Prodotto di sottogruppi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prodotto_sottogruppi.html#exercises-prodotto_sottogruppi" class="internal"><span class="codenumber">12.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-omomorfismi.html" class="internal"><span class="codenumber">13</span> <span class="title">Omomorfismi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-definizione_omomorfismo.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Definizioni e prime proprietà</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizione_omomorfismo.html#exercises-definizione_omomorfismo" class="internal"><span class="codenumber">13.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-nucleo_immagine.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Immagine e nucleo di un omomorfismo</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-nucleo_immagine.html#exercises-nucleo_immagine" class="internal"><span class="codenumber">13.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-omomorfismi_da_gruppi_ciclici.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Omomorfismi da gruppi ciclici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-omomorfismi_da_gruppi_ciclici.html#exercises-omomorfismi_da_gruppi_ciclici" class="internal"><span class="codenumber">13.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-azioni.html" class="internal"><span class="codenumber">14</span> <span class="title">Azioni di gruppi su insiemi</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-azioni_definizioni.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Definizioni e prime proprietà</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-azioni_definizioni.html#exercises-azioni_definizioni" class="internal"><span class="codenumber">14.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-orbite_stabilizzatori.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Orbite e stabilizzatori</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-orbite_stabilizzatori.html#exercises-orbite_stabilizzatori" class="internal"><span class="codenumber">14.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="sec-sottogruppi_normali.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Sottogruppi normali</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottogruppi_normali.html#exercises-sottogruppi_normali" class="internal"><span class="codenumber">14.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-coniugati_simmetrico_alterno.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Classi di coniugio nel gruppo simmetrico e nel gruppo alterno</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-coniugati_simmetrico_alterno.html#exercises-coniugati_simmetrico_alterno" class="internal"><span class="codenumber">14.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-quozienti.html" class="internal"><span class="codenumber">15</span> <span class="title">Gruppi quoziente</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-congruenze.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Congruenze in gruppi e monoidi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-congruenze.html#exercises-congruenze" class="internal"><span class="codenumber">15.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-proprieta_quozienti.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Proprietà dei gruppi quoziente</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-proprieta_quozienti.html#exercises-proprieta_quozienti" class="internal"><span class="codenumber">15.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-teoremi_di_isomorfismo.html" class="internal"><span class="codenumber">15.3</span> <span class="title">I teoremi di isomorfismo</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-teoremi_di_isomorfismo.html#exercises-teoremi_di_isomorfismo" class="internal"><span class="codenumber">15.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-direttosemidiretto.html" class="internal"><span class="codenumber">16</span> <span class="title">Prodotto diretto e semidiretto</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prodotto_diretto_esterno.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Prodotto diretto esterno</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prodotto_diretto_esterno.html#exercises-prodotto_diretto_esterno" class="internal"><span class="codenumber">16.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prodotto_diretto_interno.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Prodotto diretto interno</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prodotto_diretto_interno.html#exercises-prodotto_diretto_interno" class="internal"><span class="codenumber">16.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prodotto_semidiretto.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Prodotto semidiretto</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prodotto_semidiretto.html#exercises--prodotto_semidiretto" class="internal"><span class="codenumber">16.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-sylow.html" class="internal"><span class="codenumber">17</span> <span class="title">Il teorema di Sylow</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-inversione_lagrange.html" class="internal"><span class="codenumber">17.1</span> <span class="title">Inversione del teorema di Lagrange</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-sylow.html" class="internal"><span class="codenumber">17.2</span> <span class="title">Il teorema di Sylow</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sylow.html#exercises-sylow" class="internal"><span class="codenumber">17.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-applicazioni_sylow.html" class="internal"><span class="codenumber">17.3</span> <span class="title">Applicazioni del teorema di Sylow</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-applicazioni_sylow.html#exercises-applicazioni_sylow" class="internal"><span class="codenumber">17.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-anelli.html" class="internal"><span class="codenumber">IV</span> <span class="title">Anelli</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-anelli.html" class="internal"><span class="codenumber">18</span> <span class="title">Anelli</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prime_proprieta_anelli.html" class="internal"><span class="codenumber">18.1</span> <span class="title">Definizioni e prime proprietà</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prime_proprieta_anelli.html#exercises-prime_proprieta_anelli" class="internal"><span class="codenumber">18.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-multipli_potenze.html" class="internal"><span class="codenumber">18.2</span> <span class="title">Multipli e potenze in un anello</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-multipli_potenze.html#exercises-multipli_potenze" class="internal"><span class="codenumber">18.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-sottoanelli.html" class="internal"><span class="codenumber">18.3</span> <span class="title">Sottoanelli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottoanelli.html#exercises-sottoanelli" class="internal"><span class="codenumber">18.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-omomorfismiideali.html" class="internal"><span class="codenumber">19</span> <span class="title">Omomorfismi e ideali</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-omomorfismi_anelli.html" class="internal"><span class="codenumber">19.1</span> <span class="title">Omomorfismi di anelli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-omomorfismi_anelli.html#exercises-omomorfismi_anelli" class="internal"><span class="codenumber">19.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-anelli_quoziente.html" class="internal"><span class="codenumber">19.2</span> <span class="title">Anelli quoziente e ideali</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-anelli_quoziente.html#exercises-anelli_quoziente" class="internal"><span class="codenumber">19.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-campo_dei_quozienti.html" class="internal"><span class="codenumber">19.3</span> <span class="title">Campo dei quozienti di un dominio</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-campo_dei_quozienti.html#exercises-campo_dei_quozienti" class="internal"><span class="codenumber">19.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-polinomi.html" class="internal"><span class="codenumber">20</span> <span class="title">Polinomi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-anello_polinomi.html" class="internal"><span class="codenumber">20.1</span> <span class="title">Anello dei polinomi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-anello_polinomi.html#exercises-anello_polinomi" class="internal"><span class="codenumber">20.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-valutazione_polinomi.html" class="internal"><span class="codenumber">20.2</span> <span class="title">Valutazione di polinomi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-valutazione_polinomi.html#exercises-valutazione_polinomi" class="internal"><span class="codenumber">20.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-divisibilita.html" class="internal"><span class="codenumber">21</span> <span class="title">Divisibilità nei domini</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-divisibilita.html" class="internal"><span class="codenumber">21.1</span> <span class="title">Relazione di divisibilità</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-divisibilita.html#exercises-divisibilita" class="internal"><span class="codenumber">21.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-fattorizzazione.html" class="internal"><span class="codenumber">21.2</span> <span class="title">Fattorizzazione</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-fattorizzazione.html#exercises-fattorizzazione" class="internal"><span class="codenumber">21.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-PID_euclidei.html" class="internal"><span class="codenumber">21.3</span> <span class="title">Domini a ideali principali e domini euclidei</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-PID_euclidei.html#exercises-PID_euclidei" class="internal"><span class="codenumber">21.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-fattorizzazione_polinomi.html" class="internal"><span class="codenumber">22</span> <span class="title">Fattorizzazione dei polinomi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-trasporto_UFD.html" class="internal"><span class="codenumber">22.1</span> <span class="title">Il teorema del trasporto per domini a fattorizzazione unica</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-trasporto_UFD.html#exercises-trasporto_UFD" class="internal"><span class="codenumber">22.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-esempi_fattorizzazione_polinomi.html" class="internal"><span class="codenumber">22.2</span> <span class="title">Tecniche di fattorizzazione</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-esempi_fattorizzazione_polinomi.html#exercises-esempi_fattorizzazione_polinomi" class="internal"><span class="codenumber">22.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-estensione_campi.html" class="internal"><span class="codenumber">23</span> <span class="title">Estensioni di campi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-elementi_algebrici_e_trascendenti.html" class="internal"><span class="codenumber">23.1</span> <span class="title">Elementi algebrici e trascendenti</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_algebrici_e_trascendenti.html#exercises-elementi_algebrici_e_trascendenti" class="internal"><span class="codenumber">23.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-campo_di_spezzamento.html" class="internal"><span class="codenumber">23.2</span> <span class="title">Campi di spezzamento</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-campo_di_spezzamento.html#exercises-campo_di_spezzamento" class="internal"><span class="codenumber">23.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-chiusure_algebriche.html" class="internal"><span class="codenumber">23.3</span> <span class="title">Cenni su campi algebricamente chiusi</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-moduli.html" class="internal"><span class="codenumber">V</span> <span class="title">Moduli</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-moduli.html" class="internal"><span class="codenumber">24</span> <span class="title">Moduli</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-definizione_di_moduli.html" class="internal"><span class="codenumber">24.1</span> <span class="title">Definizione di modulo</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizione_di_moduli.html#exercises-definizione_modulo" class="internal"><span class="codenumber">24.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-sottomoduli.html" class="internal"><span class="codenumber">24.2</span> <span class="title">Sottomoduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottomoduli.html#exercises-sottomoduli" class="internal"><span class="codenumber">24.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-omomorfismi_moduli.html" class="internal"><span class="codenumber">24.3</span> <span class="title">Omomorfismi di moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-omomorfismi_moduli.html#exercises-omomorfismi_moduli" class="internal"><span class="codenumber">24.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-moduli_quoziente.html" class="internal"><span class="codenumber">24.4</span> <span class="title">Moduli quoziente</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_quoziente.html#exercises-moduli_quoziente" class="internal"><span class="codenumber">24.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-moduli_liberi.html" class="internal"><span class="codenumber">25</span> <span class="title">Moduli liberi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-somma_diretta_moduli.html" class="internal"><span class="codenumber">25.1</span> <span class="title">Somma diretta di moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-somma_diretta_moduli.html#exercises-somma_diretta_moduli" class="internal"><span class="codenumber">25.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-dipendenza_lineare.html" class="internal"><span class="codenumber">25.2</span> <span class="title">Dipendenza e indipendenza lineare</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-dipendenza_lineare.html#exercises-dipendenza_lineare" class="internal"><span class="codenumber">25.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-elementi_di_torsione.html" class="internal"><span class="codenumber">25.3</span> <span class="title">Elementi di torsione</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_di_torsione.html#exercises-elementi_di_torsione" class="internal"><span class="codenumber">25.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-modulisupid.html" class="internal"><span class="codenumber">26</span> <span class="title">Moduli finitamente generati su PID</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-moduli_ciclici.html" class="internal"><span class="codenumber">26.1</span> <span class="title">Moduli ciclici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_ciclici.html#exercises-moduli_ciclici" class="internal"><span class="codenumber">26.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-moduli_primari.html" class="internal"><span class="codenumber">26.2</span> <span class="title">Moduli primari</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_primari.html#exercises-moduli_primari" class="internal"><span class="codenumber">26.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-moduli_liberi.html" class="internal"><span class="codenumber">26.3</span> <span class="title">Moduli liberi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_liberi.html#exercises-moduli_liberi" class="internal"><span class="codenumber">26.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-classificazione_moduli_pid.html" class="internal"><span class="codenumber">26.4</span> <span class="title">La classificazione dei moduli finitamente generati su un dominio a ideali principali</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-gruppiabeliani.html" class="internal"><span class="codenumber">27</span> <span class="title">Gruppi abeliani finitamente generati</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-gruppiabeliani.html" class="internal"><span class="codenumber">27.1</span> <span class="title">Classificazione dei gruppi abeliani finitamente generati</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppiabeliani.html#exercises-gruppiabeliani" class="internal"><span class="codenumber">27.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-formecanoniche.html" class="internal"><span class="codenumber">28</span> <span class="title">Forme canoniche di matrici</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-kx_moduli.html" class="internal"><span class="codenumber">28.1</span> <span class="title">Spazi vettoriali con endomorfismi visti come moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-kx_moduli.html#exercises-kx_moduli" class="internal"><span class="codenumber">28.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-matrici_rappresentative.html" class="internal"><span class="codenumber">28.2</span> <span class="title">Matrici rappresentative</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-matrici_rappresentative.html#exercises-matrici_rappresentative" class="internal"><span class="codenumber">28.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-matrici_compagne.html" class="internal"><span class="codenumber">28.3</span> <span class="title">Matrici compagne</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-jordan.html" class="internal"><span class="codenumber">28.4</span> <span class="title">Forma canonica di Jordan</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-jordan.html#exercises-jordan" class="internal"><span class="codenumber">28.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html" class="internal"><span class="codenumber">28.5</span> <span class="title">Polinomio minimo di matrici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html#exercises-polinomio_minimo_matrici" class="internal"><span class="codenumber">28.5</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Appendici</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="appendix-peano.html" class="internal"><span class="codenumber">A</span> <span class="title">Numeri naturali e interi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-algebre_induttive.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Algebre induttive</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-assiomi_peano.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Gli assiomi di Peano</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-insiemi_finiti_infiniti.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Insiemi finiti e infiniti</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-operazioni_naturali.html" class="internal"><span class="codenumber">A.4</span> <span class="title">Operazioni tra numeri naturali</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-interi.html" class="internal"><span class="codenumber">A.5</span> <span class="title">Costruzione degli interi</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-2.html" class="internal"><span class="codenumber">B</span> <span class="title">Notazioni</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="solutions-1.html" class="internal"><span class="codenumber">C</span> <span class="title">Soluzioni e suggerimenti</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-gfdl.html" class="internal"><span class="codenumber">D</span> <span class="title">GNU Free Documentation License</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="indice.html" class="internal"><span class="title">Indice analitico</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="back-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-sottogruppi_normali"><h2 class="heading hide-type">
+<span class="type">Paragrafo</span><span class="space"> </span><span class="codenumber">14.3</span><span class="space"> </span><span class="title">Sottogruppi normali</span>
+</h2>
+<div class="para" id="p-1896">Abbiamo visto nell’<a href="" class="xref" data-knowl="./knowl/xref/ex-azioni_su_di_se_omomorfismi.html" title="Esempio 14.1.10">Esempio 14.1.10</a> che, se <span class="process-math">\(g\)</span> è un elemento di un gruppo <span class="process-math">\(G\text{,}\)</span> la funzione da <span class="process-math">\(G\)</span> in sé che manda un elemento <span class="process-math">\(h\)</span> in <span class="process-math">\(h^{g}\)</span> è un automorfismo di <span class="process-math">\(G\text{.}\)</span> Abbiamo, pertanto, la</div>
+<article class="proposition theorem-like" id="prop-coniugato_isomorfo"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">14.3.1</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-1897">
+<div class="para"> Dato un gruppo <span class="process-math">\(G\text{,}\)</span> un suo sottogruppo <span class="process-math">\(H\)</span> e un elemento <span class="process-math">\(g\)</span> di <span class="process-math">\(G\text{,}\)</span> il sottoinsieme</div>
+<div class="displaymath process-math">
+\begin{equation*}
+H^{g}\coloneqq\{h^{g}\mid h\in H\}
+\end{equation*}
+</div>
+<div class="para">è un sottogruppo di <span class="process-math">\(G\)</span> isomorfo a <span class="process-math">\(H\text{.}\)</span> Tale sottogruppo è detto <dfn class="terminology">coniugato</dfn> di <span class="process-math">\(H\)</span> tramite <span class="process-math">\(G\text{.}\)</span>
+</div>
+</div></article><article class="definition definition-like" id="def-sottogruppo_normale"><h3 class="heading">
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">14.3.2</span><span class="period">.</span>
+</h3> <div class="para" id="p-1898">Un sottogruppo <span class="process-math">\(H\)</span> di un gruppo <span class="process-math">\(G\)</span> è detto <dfn class="terminology">normale</dfn> in <span class="process-math">\(G\text{,}\)</span> indicato con il simbolo <span class="process-math">\(H\trianglelefteq G\text{,}\)</span> se per ogni <span class="process-math">\(h\in H\)</span> e ogni <span class="process-math">\(g\in G\text{,}\)</span> si ha <span class="process-math">\(h^{g}\in H\)</span> (cioè <span class="process-math">\(H\)</span> contiene le classi di coniugio in <span class="process-math">\(G\)</span> di tutti i propri elementi).</div></article><article class="remark remark-like" id="rem-1_e_G_normali"><h3 class="heading">
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">14.3.3</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1899">Dalla definizione segue immediatamente che ogni gruppo contiene come sottogruppi normali per lo meno sé stesso e il sottogruppo banale.</div></article><article class="example example-like" id="ex-speciale_lineare"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">14.3.4</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-1900">
+<div class="para">Consideriamo il gruppo lineare generale <span class="process-math">\(\GL{n}{\Razionali}\)</span> delle matrici invertibili di ordine <span class="process-math">\(n\)</span> a coefficienti in <span class="process-math">\(\Razionali\text{.}\)</span> Consideriamo il sottoinsieme <span class="process-math">\(\SL{n}{\Razionali}\)</span> delle matrici aventi determinante <span class="process-math">\(1\text{.}\)</span> Si verifica facilmente, usando il teorema di Binet, che <span class="process-math">\(\SL{n}{\Razionali}\)</span> è un sottogruppo di <span class="process-math">\(\GL{n}{\Razionali}\text{,}\)</span> detto <dfn class="terminology">gruppo speciale lineare</dfn>. Inoltre se <span class="process-math">\(A\in\SL{n}{\Razionali}\)</span> e <span class="process-math">\(B\in\GL{n}{\Razionali}\text{,}\)</span> abbiamo</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det(A^{B})=(\det B)^{-1}\det A\det B=(\det B)^{-1}\cdot 1\cdot \det B=(\det B)^{-1}\det B=1
+\end{equation*}
+</div>
+<div class="para">cioè <span class="process-math">\(A^{B}\in\SL{n}{\Razionali}\text{.}\)</span> Dunque, <span class="process-math">\(\SL{n}{\Razionali}\trianglelefteq\GL{n}{\Razionali}\text{.}\)</span>
+</div>
+</div></article><article class="proposition theorem-like" id="prop-sottogruppi_centro_normali"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">14.3.5</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1901">Se <span class="process-math">\(H\)</span> è un sottogruppo di <span class="process-math">\(G\)</span> e <span class="process-math">\(H\le\centro(G)\)</span> allora <span class="process-math">\(H\trianglelefteq G\text{.}\)</span> In particolare, <span class="process-math">\(\centro(G)\trianglelefteq G\text{.}\)</span>
+</div> <div class="para" id="p-1902">Se <span class="process-math">\(G\)</span> è abeliano, ogni sottogruppo di <span class="process-math">\(G\)</span> è normale in <span class="process-math">\(G\text{.}\)</span>
+</div></article><details id="proof-141" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="p-1903">Ogni <span class="process-math">\(h\)</span> in <span class="process-math">\(H\)</span> è contenuto nel centro di <span class="process-math">\(G\)</span> e, quindi, commuta con ogni elemento <span class="process-math">\(g\)</span> di <span class="process-math">\(G\text{:}\)</span> dunque, <span class="process-math">\(h^{g}=h\in H\)</span> per ogni <span class="process-math">\(h\in H\)</span> e ogni <span class="process-math">\(g\in G\text{.}\)</span>
+</div> <div class="para" id="p-1904">Se <span class="process-math">\(G\)</span> è abeliano, allora coincide con il proprio centro e, quindi, ogni suo sottogruppo è normale.</div></article></details><div class="para" id="p-1905">Nell’<a href="" class="xref" data-knowl="./knowl/xref/ex-speciale_lineare.html" title="Esempio 14.3.4">Esempio 14.3.4</a>, abbiamo mostrato un sottogruppo normale che non è contenuto nel centro del gruppo.</div>
+<article class="example example-like" id="ex-sottogruppo_non_normale"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">14.3.6</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1906">Consideriamo il  gruppo <span class="process-math">\(\Sym_{3}\)</span> e il sottogruppo <span class="process-math">\(H\coloneqq\grgen{(1\;2)}\text{.}\)</span> Notiamo che <span class="process-math">\((1\;2)^{(1\;3)}=(1\;3)(1\;2)(1\;3)=(2\;3)\notin H\text{.}\)</span> Non abbiamo bisogno di fare altre verifiche: abbiamo trovato un elemento in <span class="process-math">\(H\)</span> che ha almeno un coniugato che non sta in <span class="process-math">\(H\text{.}\)</span> Dunque, <span class="process-math">\(H\)</span> non è normale in <span class="process-math">\(\Sym_{3}\text{.}\)</span>
+</div></article><article class="theorem theorem-like" id="thm-caratterizzazione_sottogruppi_normali"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">14.3.7</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-1907">
+<div class="para">Dato un sottogruppo <span class="process-math">\(H\)</span> di un gruppo <span class="process-math">\(G\text{,}\)</span> sono equivalenti le condizioni:</div>
+<ol class="decimal">
+<li id="item-H_normale"><div class="para" id="p-1908"><span class="process-math">\(\displaystyle H\trianglelefteq G\)</span></div></li>
+<li id="item-coniugati-contenuto"><div class="para" id="p-1909">
+<span class="process-math">\(H^{g}\le H\)</span> per ogni <span class="process-math">\(g\in G\)</span>
+</div></li>
+<li id="item-coniugati_uguali"><div class="para" id="p-1910">
+<span class="process-math">\(H^{g}=H\)</span> per ogni <span class="process-math">\(g\in G\)</span>
+</div></li>
+<li id="item-laterali_contenuti"><div class="para" id="p-1911">
+<span class="process-math">\(Hg\subseteq gH\)</span> per ogni <span class="process-math">\(g\in G\)</span>
+</div></li>
+<li id="item-laterali_uguali"><div class="para" id="p-1912">
+<span class="process-math">\(Hg=gH\)</span> per ogni <span class="process-math">\(g\in G\)</span>
+</div></li>
+</ol>
+</div></article><details id="proof-142" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="p-1913">Se vale il <a href="" class="xref" data-knowl="./knowl/xref/item-H_normale.html" title="Punto 1">Punto 1</a>, banalmente vale il <a href="" class="xref" data-knowl="./knowl/xref/item-coniugati-contenuto.html" title="Punto 2">Punto 2</a>: infatti <span class="process-math">\(H^{g}\)</span> è l’insieme degli elementi del tipo <span class="process-math">\(h^{g}\)</span> con <span class="process-math">\(h\in H\)</span> e questi appartengono tutti a <span class="process-math">\(H\)</span> per ipotesi.</div> <div class="para" id="p-1914">Supponiamo ora che valga il <a href="" class="xref" data-knowl="./knowl/xref/item-coniugati-contenuto.html" title="Punto 2">Punto 2</a> e proviamo che vale il <a href="" class="xref" data-knowl="./knowl/xref/item-coniugati_uguali.html" title="Punto 3">Punto 3</a>. Basta evidentemente mostrare che <span class="process-math">\(H\le H^{g}\)</span> per ogni <span class="process-math">\(g\in G\text{.}\)</span> Per ipotesi, sappiamo che <span class="process-math">\(H^{g^{-1}}\le H\text{:}\)</span> coniugando per <span class="process-math">\(g\)</span> ambo i membri di questa inclusione, otteniamo la tesi.</div> <div class="para" id="p-1915">Supponiamo ora che valga il <a href="" class="xref" data-knowl="./knowl/xref/item-coniugati_uguali.html" title="Punto 3">Punto 3</a> e mostriamo che vale il <a href="" class="xref" data-knowl="./knowl/xref/item-laterali_uguali.html" title="Punto 5">Punto 5</a>: per questo, basta moltiplicare a sinistra per <span class="process-math">\(g\)</span> l’uguaglianza <span class="process-math">\(g^{-1}Hg=H\text{.}\)</span>
+</div> <div class="para" id="p-1916">Ovviamente, se vale il <a href="" class="xref" data-knowl="./knowl/xref/item-laterali_uguali.html" title="Punto 5">Punto 5</a>, allora vale il <a href="" class="xref" data-knowl="./knowl/xref/item-laterali_contenuti.html" title="Punto 4">Punto 4</a>.</div> <div class="para" id="p-1917">Infine, supponiamo che valga il <a href="" class="xref" data-knowl="./knowl/xref/item-laterali_contenuti.html" title="Punto 4">Punto 4</a> e mostriamo che vale il <a href="" class="xref" data-knowl="./knowl/xref/item-H_normale.html" title="Punto 1">Punto 1</a>. Sia allora, <span class="process-math">\(h\in H\)</span> e <span class="process-math">\(g\in G\text{.}\)</span> Ora <span class="process-math">\(hg\in Hg\subseteq gH\)</span> e, pertanto, <span class="process-math">\(hg=gh'\)</span> per qualche <span class="process-math">\(h'\in H\text{:}\)</span> ma allora <span class="process-math">\(h^{g}=g^{-1}hg=g^{-1}gh'=h'\in H\text{,}\)</span> come richiesto.</div></article></details><div class="para" id="p-1918">Il teorema precedente ci dice tra l’altro che un sottogruppo è normale se e solo se i suoi laterali destri coincidono con i laterali sinistri.</div>
+<article class="remark remark-like" id="rem-normalita_non_transitiva"><h3 class="heading">
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">14.3.8</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1919">Se <span class="process-math">\(K\trianglelefteq H\trianglelefteq G\text{,}\)</span> non è detto che <span class="process-math">\(K\trianglelefteq G\text{,}\)</span> come vedremo nell’<a href="" class="xref" data-knowl="./knowl/xref/ex-normalita_non_transitiva.html" title="Esempio 14.4.8">Esempio 14.4.8</a>.</div></article><article class="corollary theorem-like" id="cor-indice_2_normale"><h3 class="heading">
+<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">14.3.9</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1920">Se <span class="process-math">\(H\)</span> è un sottogruppo di indice <span class="process-math">\(2\)</span> di un gruppo <span class="process-math">\(G\text{,}\)</span> allora <span class="process-math">\(H\trianglelefteq G\text{.}\)</span>
+</div></article><details id="proof-143" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="p-1921">Il sottogruppo <span class="process-math">\(H\)</span> è sia laterale destro che sinistro di <span class="process-math">\(H\)</span> in <span class="process-math">\(G\text{.}\)</span> Poiché <span class="process-math">\(H\)</span> ha due laterali destri in <span class="process-math">\(G\text{,}\)</span> l’altro laterale destro è <span class="process-math">\(G\setminus H\text{.}\)</span> Analogamente, l’altro laterale sinistro è <span class="process-math">\(G\setminus H\text{.}\)</span> Dunque, <span class="process-math">\(H\)</span> e <span class="process-math">\(G\setminus H\)</span> sono i laterali sia destri che sinistri.</div></article></details><div class="para" id="p-1922">Come caso particolare abbiamo</div>
+<article class="corollary theorem-like" id="cor-alterno_normale"><h3 class="heading">
+<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">14.3.10</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1923">Il sottogruppo alterno <span class="process-math">\(A_{n}\)</span> è normale in <span class="process-math">\(\Sym_{n}\text{.}\)</span>
+</div></article><details id="proof-144" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="p-1924">Per <span class="process-math">\(n=1\text{,}\)</span> l’alterno coincide con il simmetrico ed è, dunque, normale. Per <span class="process-math">\(n\ge 2\text{,}\)</span> l’alterno ha indice <span class="process-math">\(2\)</span> nel simmetrico (<a href="" class="xref" data-knowl="./knowl/xref/thm-sottogruppo_alterno.html" title="Teorema 11.3.11">Teorema 11.3.11</a>).</div></article></details><article class="corollary theorem-like" id="cor-nucleo_normale"><h3 class="heading">
+<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">14.3.11</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1925">Il nucleo <span class="process-math">\(\ker\phi\)</span> di un omomorfismo di gruppi <span class="process-math">\(\phi\colon G\to H\)</span> è un sottogruppo normale di <span class="process-math">\(G\text{.}\)</span>
+</div></article><details id="proof-145" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="p-1926">Segue immediatamente dalla <a href="" class="xref" data-knowl="./knowl/xref/prop-controimmagini_omomorfismo.html" title="Proposizione 13.2.9">Proposizione 13.2.9</a>, in cui è mostrato che i laterali destri e sinistri del nucleo di un omomorfismo coincidono.</div></article></details><div class="para" id="p-1927">Dato un gruppo <span class="process-math">\(G\text{,}\)</span> indichiamo con <span class="process-math">\(X\)</span> l’insieme dei suoi sottogruppi. Se <span class="process-math">\(H\)</span> è un elemento di <span class="process-math">\(X\text{,}\)</span> cioè un sottogruppo di <span class="process-math">\(G\text{,}\)</span> allora, la <a href="" class="xref" data-knowl="./knowl/xref/prop-coniugato_isomorfo.html" title="Proposizione 14.3.1">Proposizione 14.3.1</a> implica che <span class="process-math">\(H^{g}\in X\)</span> per ogni <span class="process-math">\(g\in G\text{.}\)</span> Non è difficile verificare che <span class="process-math">\(H^{1}=H\)</span> e <span class="process-math">\(H^{g_{1}g_{2}}=(H^{g_{1}})^{g_{2}}\)</span> per ogni <span class="process-math">\(g_{1}\)</span> e <span class="process-math">\(g_{2}\)</span> in <span class="process-math">\(G\text{.}\)</span> Pertanto, è così definita un’azione di <span class="process-math">\(G\)</span> su <span class="process-math">\(X\text{.}\)</span> Dato <span class="process-math">\(H\)</span> in <span class="process-math">\(X\text{,}\)</span> l’orbita di <span class="process-math">\(H\)</span> è l’insieme dei suoi coniugati, mentre lo stabilizzatore di <span class="process-math">\(H\)</span> è formato dagli elementi di <span class="process-math">\(G\)</span> tali che <span class="process-math">\(H^{g}=H\text{.}\)</span> Introduciamo allora la</div>
+<article class="definition definition-like" id="def-normalizzante"><h3 class="heading">
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">14.3.12</span><span class="period">.</span>
+</h3> <div class="para logical" id="p-1928">
+<div class="para">Se <span class="process-math">\(H\)</span> è un sottogruppo di un gruppo <span class="process-math">\(G\text{,}\)</span> allora il sottoinsieme di <span class="process-math">\(G\)</span> così definito</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\nrm{G}{H}\coloneqq\{g\in G\mid H^{g}=H\}
+\end{equation*}
+</div>
+<div class="para">è detto <dfn class="terminology">normalizzante</dfn> di <span class="process-math">\(H\)</span> in <span class="process-math">\(G\text{.}\)</span>
+</div>
+</div></article><div class="para" id="p-1929">Raccogliamo le principali proprietà del normalizzante di un sottogruppo.</div>
+<article class="theorem theorem-like" id="thm-normalizzante"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">14.3.13</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-1930">
+<div class="para">Sia <span class="process-math">\(H\)</span> un sottogruppo di un gruppo <span class="process-math">\(G\text{.}\)</span> Allora</div>
+<ol class="decimal">
+<li id="item-normalizzante_sottogruppo"><div class="para" id="p-1931">
+<span class="process-math">\(\nrm{G}{H}\)</span> è un sottogruppo di <span class="process-math">\(G\)</span> contenente <span class="process-math">\(H\text{;}\)</span>
+</div></li>
+<li id="item-centralizzante_in_normalizzante"><div class="para" id="p-1932"><span class="process-math">\(\cent{G}{H}\le\nrm{G}{H}\text{;}\)</span></div></li>
+<li id="item-normale_in_normalizzante"><div class="para" id="p-1933">dato un sottogruppo <span class="process-math">\(K\)</span> di <span class="process-math">\(G\)</span> contenente <span class="process-math">\(H\text{,}\)</span> si ha che <span class="process-math">\(H\trianglelefteq K\)</span> se e solo se <span class="process-math">\(K\le\nrm{G}{H}\)</span> (in particolare, <span class="process-math">\(H\trianglelefteq\nrm{G}{H}\)</span>);</div></li>
+<li id="item-normale_se_normalizzante_G"><div class="para" id="p-1934">
+<span class="process-math">\(H\trianglelefteq G\)</span> se e solo se <span class="process-math">\(\nrm{G}{H}=G\text{;}\)</span>
+</div></li>
+<li id="item-coniugati_indice"><div class="para" id="p-1935">la cardinalità dell’insieme dei coniugati di <span class="process-math">\(H\)</span> è uguale a <span class="process-math">\(\ind{G}{\nrm{G}{H}}\text{.}\)</span>
+</div></li>
+</ol>
+</div></article><details id="proof-146" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="p-1936">Chiaramente <span class="process-math">\(H\)</span> è contenuto in <span class="process-math">\(\nrm{G}{H}\text{.}\)</span> Poiché <span class="process-math">\(\nrm{G}{H}\)</span> è uno stabilizzatore per una particolare azione, la <a href="" class="xref" data-knowl="./knowl/xref/prop-stabilizzatore_sottogruppo.html" title="Proposizione 14.2.6">Proposizione 14.2.6</a> implica il <a href="" class="xref" data-knowl="./knowl/xref/item-normalizzante_sottogruppo.html" title="Punto 1">Punto 1</a>.</div> <div class="para" id="p-1937">Se <span class="process-math">\(g\in\cent{G}{H}\text{,}\)</span> allora <span class="process-math">\(h^{g}=h\)</span> per ogni <span class="process-math">\(h\in H\text{:}\)</span> si ha, dunque, <span class="process-math">\(H^{g}=H\)</span> e questo prova il <a href="" class="xref" data-knowl="./knowl/xref/item-centralizzante_in_normalizzante.html" title="Punto 2">Punto 2</a>.</div> <div class="para" id="p-1938">Il <a href="" class="xref" data-knowl="./knowl/xref/item-normale_in_normalizzante.html" title="Punto 3">Punto 3</a> segue immediatamente dalle definizioni di normalizzante e di sottogruppo normale. Il <a href="" class="xref" data-knowl="./knowl/xref/item-normale_se_normalizzante_G.html" title="Punto 4">Punto 4</a> è un caso particolare di questo.</div> <div class="para" id="p-1939">Il <a href="" class="xref" data-knowl="./knowl/xref/item-coniugati_indice.html" title="Punto 5">Punto 5</a> non è altro che l’applicazione del <a href="" class="xref" data-knowl="./knowl/xref/thm-stabilizzatore_orbita.html" title="Teorema 14.2.7">Teorema 14.2.7</a> all’azione di <span class="process-math">\(G\)</span> per coniugio sull’insieme dei sottogruppi di <span class="process-math">\(G\text{.}\)</span>
+</div></article></details><article class="corollary theorem-like" id="cor-coniugati_indice_finito"><h3 class="heading">
+<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">14.3.14</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1940">Se <span class="process-math">\(H\)</span> è un sottogruppo di indice finito di un gruppo <span class="process-math">\(G\text{.}\)</span> allora <span class="process-math">\(H\)</span> ha un numero finito di coniugati e il loro numero è un divisore di <span class="process-math">\(\ind{G}{H}\text{.}\)</span>
+</div></article><details id="proof-147" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="p-1941">Dalla <a href="" class="xref" data-knowl="./knowl/xref/prop-moltiplicativita_indice.html" title="Proposizione 12.2.9">Proposizione 12.2.9</a>, sappiamo che <span class="process-math">\(\ind{G}{\nrm{G}{H}}\)</span> è finito e divide <span class="process-math">\(\ind{G}{H}\text{.}\)</span> Per il <a href="" class="xref" data-knowl="./knowl/xref/thm-normalizzante.html" title="Teorema 14.3.13">Teorema 14.3.13</a>, il numero dei coniugati di <span class="process-math">\(H\)</span> è uguale a <span class="process-math">\(\ind{G}{\nrm{G}{H}}\text{.}\)</span>
+</div></article></details><div class="para" id="p-1942">Sappiamo che immagini dirette e inverse di sottogruppi tramite un omomorfismo sono sottogruppi (<a href="" class="xref" data-knowl="./knowl/xref/prop-immagine_diretta_inversa_di_sottogruppi.html" title="Proposizione 13.2.1">Proposizione 13.2.1</a>). Cosa possiamo dire dei sottogruppi normali? Vediamo innanzitutto come si comporta il coniugio rispetto agli omomorfismi.</div>
+<article class="proposition theorem-like" id="prop-coniugio_omomorfismo"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">14.3.15</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1943">Sia <span class="process-math">\(\phi\colon G\to H\)</span> un omomorfismo tra gruppi. Allora per ogni <span class="process-math">\(l\)</span> e <span class="process-math">\(g\)</span> in <span class="process-math">\(G\)</span> si ha <span class="process-math">\((l^{g})\phi=(l\phi)^{g\phi}\text{.}\)</span>
+</div></article><details id="proof-148" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para logical" id="p-1944">
+<div class="para">Abbiamo</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(l^{g})\phi=(g^{-1}lg)\phi=(g\phi)^{-1}\cdot l\phi\cdot g\phi=(l\phi)^{g\phi}\text{.}
+\end{equation*}
+</div>
+</div></article></details><article class="proposition theorem-like" id="prop-immagine_diretta_inversa_di_sottogruppi_normali"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">14.3.16</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-1945">
+<div class="para">Sia <span class="process-math">\(\phi\colon G\to H\)</span> un omomorfismo di gruppi. Allora</div>
+<ol class="decimal">
+<li id="item-immagine_diretta_di_sottogruppo_normale"><div class="para" id="p-1946">se <span class="process-math">\(L\trianglelefteq G\text{,}\)</span> allora <span class="process-math">\(L\phi\trianglelefteq \im\phi\text{;}\)</span>
+</div></li>
+<li id="item-immagine_inversa_di_sottogruppo_normale"><div class="para" id="p-1947">se <span class="process-math">\(K\trianglelefteq H\text{,}\)</span> allora <span class="process-math">\(K\phi^{-1}\trianglelefteq G\text{.}\)</span>
+</div></li>
+</ol>
+</div></article><details id="proof-149" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="p-1948">Sia <span class="process-math">\(l'\)</span> un elemento di di <span class="process-math">\(L\phi\)</span> e <span class="process-math">\(g'\)</span> un elemento di <span class="process-math">\(\im\phi\text{:}\)</span> dunque, esistono <span class="process-math">\(l\)</span> in <span class="process-math">\(L\)</span> e <span class="process-math">\(g\)</span> in <span class="process-math">\(G\)</span> tali che <span class="process-math">\(l'=l\phi\)</span> e <span class="process-math">\(g'=g\phi\text{.}\)</span> Poiché <span class="process-math">\(L\)</span> è normale in <span class="process-math">\(G\text{,}\)</span> abbiamo che <span class="process-math">\(l^{g}\)</span> appartiene a <span class="process-math">\(L\)</span> e, quindi, <span class="process-math">\((l^{g})\phi\)</span> appartiene a <span class="process-math">\(L\phi\text{:}\)</span> ma, grazie alla <a href="" class="xref" data-knowl="./knowl/xref/prop-coniugio_omomorfismo.html" title="Proposizione 14.3.15">Proposizione 14.3.15</a>, <span class="process-math">\((l^{g})\phi=(l^{\phi})^{g\phi}=(l')^{g'}\)</span> e questo prova il <a href="" class="xref" data-knowl="./knowl/xref/item-immagine_diretta_di_sottogruppo_normale.html" title="Punto 1">Punto 1</a>.</div> <div class="para" id="p-1949">Sia ora <span class="process-math">\(x\)</span> un elemento di <span class="process-math">\(K\phi^{-1}\text{,}\)</span> cioè <span class="process-math">\(x\phi\in K\text{,}\)</span> e sia <span class="process-math">\(g\)</span> un elemento di <span class="process-math">\(G\text{:}\)</span> poiché <span class="process-math">\(K\)</span> è normale in <span class="process-math">\(H\text{,}\)</span> abbiamo che <span class="process-math">\((x\phi)^{g\phi}\)</span> appartiene a <span class="process-math">\(K\text{.}\)</span> Ma <span class="process-math">\((x\phi)^{g\phi}=(x^{g})\phi\)</span> per la <a href="" class="xref" data-knowl="./knowl/xref/prop-coniugio_omomorfismo.html" title="Proposizione 14.3.15">Proposizione 14.3.15</a> e, quindi, <span class="process-math">\((x^{g})\phi\)</span> appartiene a <span class="process-math">\(K\text{,}\)</span> cioè <span class="process-math">\(x^{g}\)</span> appartiene a <span class="process-math">\(K\phi^{-1}\text{,}\)</span> il che prova il <a href="" class="xref" data-knowl="./knowl/xref/item-immagine_inversa_di_sottogruppo_normale.html" title="Punto 2">Punto 2</a>.</div></article></details><div class="para" id="p-1950">La <a href="" class="xref" data-knowl="./knowl/xref/prop-immagine_diretta_inversa_di_sottogruppi_normali.html" title="Proposizione 14.3.16">Proposizione 14.3.16</a> ci dice che l’immagine di un sottogruppo normale è normale nell’immagine. In generale non possiamo dire che l’immagine di un sottogruppo normale sia normale nel gruppo di arrivo.</div>
+<article class="example example-like" id="ex-immagine_di_normale_non_normale"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">14.3.17</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1951">Una permutazione di <span class="process-math">\(\Sym_{3}\)</span> può essere pensata come una permutazione di <span class="process-math">\(\Sym_{4}\)</span> che fissa il punto <span class="process-math">\(4\text{.}\)</span> Questo definisce un omomorfismo <span class="process-math">\(\phi\colon\Sym_{3}\to\Sym_{4}\text{.}\)</span> Il sottogruppo alterno <span class="process-math">\(A_{3}\)</span> è normale in <span class="process-math">\(\Sym_{3}\text{,}\)</span> ma la sua immagine tramite <span class="process-math">\(\phi\)</span> non è normale in <span class="process-math">\(\Sym_{4}\text{.}\)</span> Infatti <span class="process-math">\((1\;2\;3)\)</span> appartiene all’immagine di <span class="process-math">\(A_{3}\text{,}\)</span> mentre <span class="process-math">\((1\;2\;3)^{(3\;4)}=(1\;2\;4)\)</span> no.</div></article><div class="para" id="p-1952">Ricordiamo che il prodotto di due sottogruppi non è necessariamente un sottogruppo. Abbiamo però la</div>
+<article class="proposition theorem-like" id="prop-prodotto_di_normale"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">14.3.18</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1953">Siano <span class="process-math">\(H\)</span> e <span class="process-math">\(K\)</span> sottogruppi di un gruppo <span class="process-math">\(G\text{.}\)</span> Se uno dei due sottogruppi è normale allora <span class="process-math">\(HK\)</span> è un sottogruppo di <span class="process-math">\(G\)</span> e se <span class="process-math">\(H\)</span> e <span class="process-math">\(K\)</span> sono entrambi normali, allora <span class="process-math">\(HK\)</span> è un sottogruppo normale di <span class="process-math">\(G\text{.}\)</span>
+</div></article><details id="proof-150" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="p-1954">Supponiamo che <span class="process-math">\(H\)</span> sia normale in <span class="process-math">\(G\text{.}\)</span> Per definizione di prodotto, abbiamo che <span class="process-math">\(HK=\{hk\mid h\in H,k\in K\}\text{.}\)</span> Possiamo allora riesprimere questo prodotto così <span class="process-math">\(HK=\cup_{k\in K}Hk\)</span> e, analogamente, <span class="process-math">\(KH=\cup_{k\in K}kH\text{.}\)</span> Per il <a href="" class="xref" data-knowl="./knowl/xref/thm-caratterizzazione_sottogruppi_normali.html" title="Teorema 14.3.7">Teorema 14.3.7</a>, <span class="process-math">\(Hk=kH\)</span> per ogni <span class="process-math">\(k\in G\text{:}\)</span> in particolare, ciò vale se <span class="process-math">\(k\in K\)</span> e, quindi, <span class="process-math">\(HK=KH\text{.}\)</span> Per il <a href="" class="xref" data-knowl="./knowl/xref/thm-prodotto_sottogruppo.html" title="Teorema 12.3.5">Teorema 12.3.5</a>, <span class="process-math">\(HK\)</span> è un sottogruppo di <span class="process-math">\(G\text{.}\)</span>
+</div> <div class="para" id="p-1955">Supponiamo ora che sia <span class="process-math">\(H\)</span> che <span class="process-math">\(K\)</span> siano normali in <span class="process-math">\(G\text{:}\)</span> l’elemento generico di <span class="process-math">\(HK\)</span> è del tipo <span class="process-math">\(hk\)</span> con <span class="process-math">\(h\in H\)</span> e <span class="process-math">\(k\in K\text{.}\)</span> Dato <span class="process-math">\(g\in G\text{,}\)</span> si ha <span class="process-math">\((hk)^{g}=h^{g}k^{g}\in HK\)</span> poiché <span class="process-math">\(h^{g}\in H\)</span> e <span class="process-math">\(k^{g}\in K\text{.}\)</span> Pertanto, <span class="process-math">\(HK\)</span> è normale in <span class="process-math">\(G\text{.}\)</span>
+</div></article></details><div class="para" id="p-1956">Procedendo per induzione, si dimostra immediatamente il seguente corollario.</div>
+<article class="corollary theorem-like" id="cor-prodotto_di_piu_normali"><h3 class="heading">
+<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">14.3.19</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1957">Se <span class="process-math">\(N_{1}\text{,}\)</span> <span class="process-math">\(N_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(N_{r}\)</span> sono sottogruppi normali di un gruppo <span class="process-math">\(G\text{,}\)</span> allora <span class="process-math">\(N_{1}N_{2}\cdots N_{r}\)</span> è un sottogruppo normale di <span class="process-math">\(G\text{.}\)</span>
+</div></article><div class="para logical" id="p-1958">
+<div class="para">Abbiamo visto nell’<a href="" class="xref" data-knowl="./knowl/xref/ex-azioni_su_di_se_omomorfismi.html" title="Esempio 14.1.10">Esempio 14.1.10</a> che, dato un elemento <span class="process-math">\(g\)</span> di un gruppo <span class="process-math">\(G\text{,}\)</span> il coniugio tramite <span class="process-math">\(g\)</span> è un automorfismo di <span class="process-math">\(G\text{.}\)</span> Possiamo però dire qualcosa di più. Se <span class="process-math">\(N\)</span> è un sottogruppo normale di <span class="process-math">\(G\text{,}\)</span> allora, per il <a href="" class="xref" data-knowl="./knowl/xref/thm-caratterizzazione_sottogruppi_normali.html" title="Teorema 14.3.7">Teorema 14.3.7</a>, sappiamo che <span class="process-math">\(N^{g}=N\)</span> e, quindi, il coniugio tramite <span class="process-math">\(g\)</span> definisce un automorfismo di <span class="process-math">\(N\text{.}\)</span> Se denotiamo con <span class="process-math">\(\phi_{g}\)</span> questo automorfismo di <span class="process-math">\(N\)</span> e componiamo due di questi automorfismi <span class="process-math">\(\phi_{g}\)</span> e <span class="process-math">\(\phi_{h}\)</span> otteniamo</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-azioni_su_di_se_omomorfismi.html ./knowl/xref/thm-caratterizzazione_sottogruppi_normali.html">
+\begin{equation*}
+n\phi_{g}\phi_{h}=(g^{-1}ng)\phi_{h}=h^{-1}g^{-1}ngh=(gh)^{-1}ngh=n\phi_{gh}
+\end{equation*}
+</div>
+<div class="para">cioè <span class="process-math">\(\phi{g}\phi_{h}=\phi_{gh}\text{.}\)</span> possiamo riassumere tutto ciò nella</div>
+</div>
+<article class="proposition theorem-like" id="prop-automorfismi_interni"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">14.3.20</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1959">Sia <span class="process-math">\(G\)</span> un gruppo e sia <span class="process-math">\(N\)</span> un sottogruppo normale di <span class="process-math">\(G\text{.}\)</span> Dato <span class="process-math">\(g\)</span> in <span class="process-math">\(G\text{,}\)</span> la funzione da <span class="process-math">\(N\)</span> in sé che manda <span class="process-math">\(n\in N\)</span> in <span class="process-math">\(n^{g}\)</span> è un automorfismo <span class="process-math">\(\phi_{g}\)</span> di <span class="process-math">\(N\text{.}\)</span> La funzione <span class="process-math">\(\phi\colon G\to\Aut(N)\)</span> che manda <span class="process-math">\(g\)</span> in <span class="process-math">\(\phi_{g}\)</span> è un omomorfismo di gruppi.</div></article><section class="exercises" id="exercises-sottogruppi_normali"><h3 class="heading hide-type">
+<span class="type">Esercizi</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Esercizi</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-290"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-1960">Mostrare che, se <span class="process-math">\(N\)</span> è un sottogruppo normale non banale di un <span class="process-math">\(p\)</span>-gruppo finito <span class="process-math">\(G\text{,}\)</span> allora <span class="process-math">\(\centro(G)\cap N\)</span> è non banale.</div>
+<div class="solutions"><details id="hint-27" class="hint solution-like born-hidden-knowl"><summary><span class="type">Suggerimento</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-1961">Adattare la dimostrazione della <a href="" class="xref" data-knowl="./knowl/xref/prop-centro_p_gruppo.html" title="Proposizione 14.2.15">Proposizione 14.2.15</a>.</div></div></details></div></article><article class="exercise exercise-like" id="exercise-291"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-1962">Sia <span class="process-math">\(H\)</span> un sottogruppo proprio di un gruppo finito <span class="process-math">\(G\text{.}\)</span> Mostrare che <span class="process-math">\(G\ne\bigcup_{g\in G}H^{g}\text{.}\)</span>
+</div>
+<div class="solutions">
+<details id="hint-28" class="hint solution-like born-hidden-knowl"><summary><span class="type">Suggerimento</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-1963">Contare gli elementi diversi da <span class="process-math">\(1\)</span> nei coniugati di <span class="process-math">\(H\text{.}\)</span>
+</div></div></details><details id="solution-97" class="solution solution-like born-hidden-knowl"><summary><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-1964">Sia <span class="process-math">\(n\coloneqq\abs{G}\)</span> e <span class="process-math">\(m\coloneqq\abs{H}\text{.}\)</span> Ciascun coniugato di <span class="process-math">\(H\)</span> contiene allora <span class="process-math">\(m-1\)</span> elementi diversi da <span class="process-math">\(1\text{.}\)</span> I coniugati di <span class="process-math">\(H\)</span> sono <span class="process-math">\(\ind{G}{\nrm{G}{H}}\)</span> che è un divisore di <span class="process-math">\(\ind{G}{H}\text{.}\)</span> Gli elementi diversi da <span class="process-math">\(1\)</span> nei coniugati di <span class="process-math">\(H\)</span> sono allora al più <span class="process-math">\((m-1)\frac{n}{m}\text{:}\)</span> se contiamo anche <span class="process-math">\(1\)</span> vediamo che nell’unione dei coniugati di <span class="process-math">\(H\)</span> ci sono al più <span class="process-math">\((m-1)\frac{n}{m}+1\)</span> elementi e, poiché <span class="process-math">\(m \lt n\text{,}\)</span> questo numero è minore di <span class="process-math">\(n\text{.}\)</span>
+</div></div></details>
+</div></article><article class="exercise exercise-like" id="exercise-292"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-63"><div class="para" id="p-1965">Un sottogruppo <span class="process-math">\(H\)</span> di un gruppo <span class="process-math">\(G\)</span> è detto <dfn class="terminology">caratteristico</dfn> se, per ogni automorfismo <span class="process-math">\(\phi\)</span> di <span class="process-math">\(G\text{,}\)</span> si ha <span class="process-math">\(H\phi\le H\text{.}\)</span>
+</div></div>
+<article class="task exercise-like" id="task-53"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-1966">Mostrare che un sottogruppo caratteristico di <span class="process-math">\(G\)</span> è normale in <span class="process-math">\(G\text{.}\)</span>
+</div>
+<div class="solutions"><details id="hint-29" class="hint solution-like born-hidden-knowl"><summary><span class="type">Suggerimento</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-1967">Usare l’<a href="" class="xref" data-knowl="./knowl/xref/ex-azioni_su_di_se_omomorfismi.html" title="Esempio 14.1.10">Esempio 14.1.10</a>
+</div></div></details></div></article><article class="task exercise-like" id="task-54"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-1968">Mostrare che, se <span class="process-math">\(H\)</span> è caratteristico in <span class="process-math">\(G\text{,}\)</span> allora <span class="process-math">\(H\phi=H\)</span> per ogni automorfismo <span class="process-math">\(\phi\)</span> di <span class="process-math">\(G\text{.}\)</span> Dedurre che un automorfismo <span class="process-math">\(\phi\)</span> di <span class="process-math">\(G\)</span> induce un automorfismo <span class="process-math">\(\phi_{H}\)</span> in <span class="process-math">\(H\text{.}\)</span>
+</div>
+<div class="solutions"><details id="hint-30" class="hint solution-like born-hidden-knowl"><summary><span class="type">Suggerimento</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-1969">L’inverso di un automorfismo è un automorfismo.</div></div></details></div></article><article class="task exercise-like" id="task-55"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="p-1970">Mostrare che se <span class="process-math">\(K\)</span> è un sottogruppo caratteristico in <span class="process-math">\(H\)</span> e <span class="process-math">\(H\)</span> è un sottogruppo caratteristico di <span class="process-math">\(G\)</span> allora <span class="process-math">\(K\)</span> è caratteristico in <span class="process-math">\(G\text{.}\)</span>
+</div></article><article class="task exercise-like" id="task-56"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="p-1971">Mostrare che se <span class="process-math">\(K\)</span> è un sottogruppo caratteristico in <span class="process-math">\(H\)</span> e <span class="process-math">\(H\)</span> è un sottogruppo normale di <span class="process-math">\(G\)</span> allora <span class="process-math">\(K\)</span> è normale in <span class="process-math">\(G\text{.}\)</span>
+</div></article></article><article class="exercise exercise-like" id="exercise-293"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-1972">Sia <span class="process-math">\(X\)</span> un sottoinsieme di un gruppo <span class="process-math">\(G\)</span> e sia <span class="process-math">\(H\)</span> il sottogruppo di <span class="process-math">\(G\)</span> generato da <span class="process-math">\(X\text{.}\)</span> Dato un elemento <span class="process-math">\(g\)</span> di <span class="process-math">\(G\text{,}\)</span> dimostrare che <span class="process-math">\(g\in\nrm{G}{H}\)</span> se e solo se <span class="process-math">\(x^{g}\in H\)</span> per ogni <span class="process-math">\(x\in X\text{.}\)</span>
+</div>
+<div class="solutions"><details id="solution-98" class="solution solution-like born-hidden-knowl"><summary><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="p-1973">Se <span class="process-math">\(g\in\nrm{G}{H}\text{,}\)</span> ovviamente <span class="process-math">\(x^{g}\in H\)</span> per ogni <span class="process-math">\(x\in X\text{.}\)</span>
+</div> <div class="para" id="p-1974">Per il viceversa, consideriamo l’automorfismo <span class="process-math">\(\phi\)</span> di <span class="process-math">\(G\)</span> dato dal coniugio tramite <span class="process-math">\(g\text{.}\)</span> L’immagine di <span class="process-math">\(H\)</span> tramite <span class="process-math">\(\phi\)</span> (cioè <span class="process-math">\(H^{g}\)</span>) è generata da <span class="process-math">\(X\phi\text{,}\)</span> per la <a href="" class="xref" data-knowl="./knowl/xref/prop-immagine_sottogruppo_generato.html" title="Proposizione 13.2.5">Proposizione 13.2.5</a>. Ma <span class="process-math">\(X\phi\subseteq H\)</span> per ipotesi e, dunque, <span class="process-math">\(H^{g}\le H\text{,}\)</span> cioè <span class="process-math">\(g\in\nrm{G}{H}\text{.}\)</span>
+</div>
+</div></details></div></article><article class="exercise exercise-like" id="exercise-stabilizzatori_coniugati"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="p-1975">Sia data un’azione di un gruppo <span class="process-math">\(G\)</span> su un insieme <span class="process-math">\(X\text{.}\)</span> Dato <span class="process-math">\(x\)</span> in <span class="process-math">\(X\)</span> e <span class="process-math">\(g\)</span> in <span class="process-math">\(G\text{,}\)</span> si ponga <span class="process-math">\(y\coloneqq xg\text{.}\)</span> Mostrare che <span class="process-math">\(\stab{G}{y}=\stab{G}{x}^{g}\text{.}\)</span>
+</div>
+<div class="solutions"><details id="solution-99" class="solution solution-like born-hidden-knowl"><summary><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="p-1976">
+<div class="para">Sia <span class="process-math">\(h\)</span> un elemento di <span class="process-math">\(\stab{G}{x}\text{.}\)</span> Abbiamo allora</div>
+<div class="displaymath process-math">
+\begin{equation*}
+yh^{g}=(xg)(g^{-1}hg)=xhg=xg=y\text{:}
+\end{equation*}
+</div>
+<div class="para">dunque,  <span class="process-math">\(\stab{G}{y}\ge\stab{G}{x}^{g}\text{.}\)</span> Poiché <span class="process-math">\(x=yg^{-1}\text{,}\)</span> abbiamo, analogamente, <span class="process-math">\(\stab{G}{x}\ge\stab{G}{y}^{g^{-1}}\)</span> e, coniugando per <span class="process-math">\(g\text{,}\)</span> otteniamo <span class="process-math">\(\stab{G}{x}^{g}\ge\stab{G}{y}\text{.}\)</span>
+</div>
+</div></div></details></div></article><article class="exercise exercise-like" id="exercise-295"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="p-1977">Un’azione di un gruppo <span class="process-math">\(G\)</span> su un insieme <span class="process-math">\(X\)</span> è detta <dfn class="terminology">transitiva</dfn> se, per ogni <span class="process-math">\(x\)</span> e <span class="process-math">\(y\)</span> in <span class="process-math">\(X\text{,}\)</span> esiste un <span class="process-math">\(g\)</span> in <span class="process-math">\(G\)</span> tale che <span class="process-math">\(y=xg\text{,}\)</span> vale a dire l’azione ha un’unica orbita.</div> <div class="para" id="p-1978">Siano dati un’azione transitiva di un gruppo <span class="process-math">\(G\)</span> su un insieme <span class="process-math">\(X\text{,}\)</span> un elemento <span class="process-math">\(x\)</span> di <span class="process-math">\(X\)</span> e un sottogruppo normale <span class="process-math">\(H\)</span> di <span class="process-math">\(G\)</span> contenuto in <span class="process-math">\(\stab{G}{x}\text{.}\)</span> Dimostrare che <span class="process-math">\(yh=y\)</span> per ogni <span class="process-math">\(y\)</span> in <span class="process-math">\(X\)</span> e ogni <span class="process-math">\(h\)</span> in <span class="process-math">\(H\text{.}\)</span>
+</div>
+<div class="solutions"><details id="solution-100" class="solution solution-like born-hidden-knowl"><summary><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-1979">Dato <span class="process-math">\(y\)</span> in <span class="process-math">\(X\text{,}\)</span> esiste <span class="process-math">\(g\)</span> in <span class="process-math">\(G\)</span> tale che <span class="process-math">\(y=xg\text{.}\)</span> Per ipotesi <span class="process-math">\(H\le\stab{G}{x}\)</span> e, quindi, <span class="process-math">\(H^{g}\le\stab{G}{x}^{g}=\stab{G}{y}\text{,}\)</span> grazie all’<a href="" class="xref" data-knowl="./knowl/xref/exercise-stabilizzatori_coniugati.html" title="Esercizio 14.3.5">Esercizio 14.3.5</a>. Poiché <span class="process-math">\(H\)</span> è normale, <span class="process-math">\(H^{g}=H\)</span> e la tesi segue.</div></div></details></div></article><article class="exercise exercise-like" id="exercise-296"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-64"><div class="para" id="p-1980">Sia <span class="process-math">\(G\)</span> un gruppo finito e siano <span class="process-math">\(H\)</span> e <span class="process-math">\(K\)</span> due sottogruppi di <span class="process-math">\(G\)</span> tali che <span class="process-math">\(\abs{H}\)</span> e <span class="process-math">\(\ind{G}{K}\)</span> siano coprimi.</div></div>
+<article class="task exercise-like" id="task-57"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-1981">Mostrare che, se almeno uno tra <span class="process-math">\(H\)</span> e <span class="process-math">\(K\)</span> è normale in <span class="process-math">\(G\text{,}\)</span> allora <span class="process-math">\(H\le K\text{.}\)</span>
+</div>
+<div class="solutions">
+<details id="hint-31" class="hint solution-like born-hidden-knowl"><summary><span class="type">Suggerimento</span><span class="period">.</span></summary><div class="hint solution-like"><div class="para" id="p-1982">Considerare il prodotto <span class="process-math">\(HK\)</span> e ragionare su <span class="process-math">\(\frac{\abs{HK}}{\abs{K}}\text{.}\)</span>
+</div></div></details><details id="solution-101" class="solution solution-like born-hidden-knowl"><summary><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-1983">L’ordine del prodotto di <span class="process-math">\(H\)</span> e <span class="process-math">\(K\)</span> soddisfa la relazione <span class="process-math">\(\abs{HK}=\frac{\abs{H}\abs{K}}{\abs{H\cap K}}\text{.}\)</span> Poniamo allora <span class="process-math">\(d\coloneqq\frac{\abs{HK}}{\abs{K}}=\frac{\abs{H}}{\abs{H\cap K}}\text{:}\)</span> poiché <span class="process-math">\(H\cap K\)</span> è un sottogruppo di <span class="process-math">\(H\text{,}\)</span> per il <a href="" class="xref" data-knowl="./knowl/xref/thm-lagrange.html" title="Teorema 12.2.6: Teorema di Lagrange">Teorema di Lagrange</a>, <span class="process-math">\(d\)</span> è un intero. Se almeno uno tra <span class="process-math">\(H\)</span> e <span class="process-math">\(K\)</span> è normale in <span class="process-math">\(G\text{,}\)</span> allora il prodotto <span class="process-math">\(HK\)</span> è un sottogruppo di <span class="process-math">\(G\text{.}\)</span> Ora <span class="process-math">\(\ind{G}{K}=\ind{G}{HK}\ind{HK}{K}\)</span> e, quindi, <span class="process-math">\(d=\ind{HK}{K}\)</span> divide <span class="process-math">\(\ind{G}{K}\text{.}\)</span> D’altra parte, <span class="process-math">\(d=\frac{\abs{H}}{\abs{H\cap K}}\)</span> divide <span class="process-math">\(\abs{H}\text{.}\)</span> Poiché <span class="process-math">\(\abs{H}\)</span> e <span class="process-math">\(\ind{G}{K}\)</span> sono coprimi, otteniamo che <span class="process-math">\(d=1\text{:}\)</span> ciò significa che <span class="process-math">\(HK=K\)</span> e, poiché <span class="process-math">\(H\le HK\text{,}\)</span> abbiamo la tesi.</div></div></details>
+</div></article><article class="task exercise-like" id="task-58"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-1984">Mostrare con un esempio che senza l’ipotesi che <span class="process-math">\(H\)</span> o <span class="process-math">\(K\)</span> sono normali in <span class="process-math">\(G\)</span> non è detto che <span class="process-math">\(H\le K\text{.}\)</span>
+</div>
+<div class="solutions"><details id="solution-102" class="solution solution-like born-hidden-knowl"><summary><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-1985">Siano <span class="process-math">\(G\coloneqq\Sym_{3}\text{,}\)</span> <span class="process-math">\(H\coloneqq\grgen{(1\;2)}\)</span> e <span class="process-math">\(K\coloneqq\grgen{(1\;3)}\text{.}\)</span> Ora <span class="process-math">\(\abs{H}=2\)</span> e <span class="process-math">\(\ind{G}{K}=3\)</span> sono coprimi, ma <span class="process-math">\(H\)</span> non è contenuto in <span class="process-math">\(K\text{.}\)</span>
+</div></div></details></div></article></article><article class="exercise exercise-like" id="exercise-297"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-65"><div class="para" id="p-1986">Sia <span class="process-math">\(H\)</span> un sottogruppo di un gruppo <span class="process-math">\(H\text{.}\)</span> Dato un elemento <span class="process-math">\(g\)</span> di <span class="process-math">\(G\)</span> si ponga <span class="process-math">\(F(g)\coloneqq\{x\in G\mid g^{x}\in H\}\text{.}\)</span>
+</div></div>
+<article class="task exercise-like" id="item-F_unione_laterali_sinistri"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-1987">Mostrare che <span class="process-math">\(F(g)\)</span> è unione di laterali sinistri di <span class="process-math">\(H\text{.}\)</span>
+</div>
+<div class="solutions"><details id="solution-103" class="solution solution-like born-hidden-knowl"><summary><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-1988">Dobbiamo mostrare che, per ogni <span class="process-math">\(x\)</span> appartenente a <span class="process-math">\(F(g)\text{,}\)</span> l’intero laterale sinistro <span class="process-math">\(xH\)</span> è contenuto in <span class="process-math">\(F(g)\text{.}\)</span> Gli elementi di <span class="process-math">\(xH\)</span> sono del tipo <span class="process-math">\(xh\)</span> con <span class="process-math">\(h\in H\text{.}\)</span> Abbiamo allora <span class="process-math">\(g^{xh}=(g^{x})^{h}\text{:}\)</span> ora <span class="process-math">\(g^{x}\)</span> appartiene a <span class="process-math">\(H\)</span> poiché <span class="process-math">\(x\)</span> appartiene a <span class="process-math">\(F(g)\)</span> e, pertanto, <span class="process-math">\((g^{x})^{h}\)</span> appartiene ad <span class="process-math">\(H\text{.}\)</span> Dunque, <span class="process-math">\(g^{xh}\)</span> appartiene a <span class="process-math">\(H\text{,}\)</span> cioè <span class="process-math">\(xh\)</span> appartiene a <span class="process-math">\(F(g)\text{.}\)</span>
+</div></div></details></div></article><article class="task exercise-like" id="item-F_unione_laterali_destri"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-1989">Mostrare che <span class="process-math">\(F(g)\)</span> è unione di laterali destri di <span class="process-math">\(\cent{G}{g}\text{.}\)</span>
+</div>
+<div class="solutions"><details id="solution-104" class="solution solution-like born-hidden-knowl"><summary><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-1990">Dobbiamo mostrare che, per ogni <span class="process-math">\(x\)</span> appartenente a <span class="process-math">\(F(g)\text{,}\)</span> l’intero laterale destro <span class="process-math">\(\cent{G}{g}x\)</span> è contenuto in <span class="process-math">\(F(g)\text{.}\)</span> Gli elementi di <span class="process-math">\(\cent{G}{g}x\)</span> sono del tipo <span class="process-math">\(cx\)</span> con <span class="process-math">\(c\in\cent{G}{g}\text{.}\)</span> Abbiamo allora <span class="process-math">\(g^{cx}=(g^{c})^{x}=g^{x}\in H\text{,}\)</span> dove abbiamo usato il fatto che <span class="process-math">\(g^{c}=g\)</span> e che <span class="process-math">\(g^{x}\)</span> appartiene ad <span class="process-math">\(H\text{.}\)</span> Dunque, <span class="process-math">\(cx\)</span> appartiene a <span class="process-math">\(F(g)\text{.}\)</span>
+</div></div></details></div></article><article class="task exercise-like" id="task-61"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="p-1991">Mostrare che <span class="process-math">\(H\)</span> è normale in <span class="process-math">\(G\)</span> se e solo se per ogni <span class="process-math">\(g\notin H\)</span> si ha <span class="process-math">\(F(g)=\vuoto\text{.}\)</span>
+</div>
+<div class="solutions"><details id="solution-105" class="solution solution-like born-hidden-knowl"><summary><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="p-1992">Supponiamo che <span class="process-math">\(H\)</span> sia normale in <span class="process-math">\(G\)</span> e <span class="process-math">\(g\notin H\text{.}\)</span> I coniugati di elementi di <span class="process-math">\(H\)</span> appartengono ad <span class="process-math">\(H\)</span> e, dunque, un elemento in <span class="process-math">\(H\)</span> e uno non in <span class="process-math">\(H\)</span> non possono essere coniugati: in particolare, <span class="process-math">\(g^{x}\notin H\)</span> per ogni <span class="process-math">\(x\)</span> in <span class="process-math">\(G\text{,}\)</span> cioè <span class="process-math">\(F(g)\)</span> è vuoto.</div> <div class="para" id="p-1993">Viceversa, supponiamo che <span class="process-math">\(F(g)=\vuoto\)</span> per ogni <span class="process-math">\(g\notin H\text{.}\)</span> Sia <span class="process-math">\(h\)</span> un elemento di <span class="process-math">\(H\)</span> e sia <span class="process-math">\(x\)</span> un elemento di <span class="process-math">\(G\text{.}\)</span> Ora, <span class="process-math">\((h^{x})^{x^{-1}}=h^{xx^{-1}}=h^{1}=h\in H\text{,}\)</span> e, dunque, <span class="process-math">\(x^{-1}\in F(h^{x})\text{.}\)</span> In particolare, <span class="process-math">\(F(h^{x})\ne\vuoto\)</span> e, quindi, <span class="process-math">\(h^{x}\in H\text{,}\)</span> cioè <span class="process-math">\(H\)</span> è normale in <span class="process-math">\(G\text{.}\)</span>
+</div>
+</div></details></div></article><article class="task exercise-like" id="task-62"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="p-1994">Se <span class="process-math">\(G\)</span> è finito, mostrare che <span class="process-math">\(\abs{F(g)}=\abs{\cent{G}{g}}\abs{g^{G}\cap H}\text{.}\)</span> Dedurre che <span class="process-math">\(\frac{\abs{\cent{G}{g}}\abs{g^{G}\cap H}}{\abs{H}}\)</span> è un intero.</div>
+<div class="solutions"><details id="solution-106" class="solution solution-like born-hidden-knowl"><summary><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-1995">Dal <a href="" class="xref" data-knowl="./knowl/xref/item-F_unione_laterali_destri.html" title="Compito 14.3.8.b">Punto b</a> sappiamo che <span class="process-math">\(F(g)\)</span> è unione di laterali destri di <span class="process-math">\(\cent{G}{g}\text{:}\)</span> dunque, <span class="process-math">\(\abs{F(g)}=r\abs{\cent{G}{g}}\)</span> dove <span class="process-math">\(r\)</span> è il numero di laterali destri di <span class="process-math">\(\cent{G}{g}\)</span> contenuti in <span class="process-math">\(F(g)\text{.}\)</span> Dati due elementi <span class="process-math">\(x_{1}\)</span> e <span class="process-math">\(x_{2}\)</span> di <span class="process-math">\(G\)</span> si ha <span class="process-math">\(g^{x_{1}}=g^{x_{2}}\)</span> se e solo se <span class="process-math">\(x_{1}\)</span> e <span class="process-math">\(x_{2}\)</span> appartengono allo stesso laterale destro di <span class="process-math">\(\cent{G}{g}\text{.}\)</span> C’è, dunque, una corrispondenza biunivoca tra laterali destri di <span class="process-math">\(\cent{G}{g}\)</span> e coniugati di <span class="process-math">\(g\text{:}\)</span> dato un coniugato di <span class="process-math">\(g\text{,}\)</span> il corrispondente laterale destro di <span class="process-math">\(\cent{G}{g}\)</span> è contenuto in <span class="process-math">\(F(g)\)</span> se e solo se il coniugato appartiene a <span class="process-math">\(H\text{.}\)</span> Pertanto, il numero di laterali di <span class="process-math">\(\cent{G}{g}\)</span> contenuti in <span class="process-math">\(F(g)\)</span> è uguale al numero di coniugati di <span class="process-math">\(g\)</span> appartenenti a <span class="process-math">\(H\text{,}\)</span> cioè <span class="process-math">\(r=\abs{g^{G}\cap H}\)</span> e, quindi, <span class="process-math">\(\abs{F(g)}=\abs{\cent{G}{g}}\abs{g^{G}\cap H}\text{.}\)</span> Per il <a href="" class="xref" data-knowl="./knowl/xref/item-F_unione_laterali_sinistri.html" title="Compito 14.3.8.a">Punto a</a>, <span class="process-math">\(F(g)\)</span> è anche unione di laterali sinistri di <span class="process-math">\(H\text{:}\)</span> dunque, il suo ordine è multiplo di <span class="process-math">\(\abs{H}\)</span> e, pertanto, <span class="process-math">\(\frac{\abs{\cent{G}{g}}\abs{g^{G}\cap H}}{\abs{H}}\)</span> è un intero.</div></div></details></div></article></article><div class="exercisegroup" id="exercisegroup-31">
+<h4 class="heading"><span class="title">Gruppo di esercizi.</span></h4>
+<div class="introduction" id="introduction-66"><div class="para logical" id="p-1996">
+<div class="para">Dato il gruppo <span class="process-math">\(G\)</span> formato dagli elementi del tipo <span class="process-math">\((a,b,c)\)</span> con <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\)</span> e <span class="process-math">\(c\)</span> in <span class="process-math">\(\Interi\)</span> dotato dell’operazione <span class="process-math">\(\diamond\)</span> definita da</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/exercise-triangolari_nascoste.html">
+\begin{equation*}
+(a_{1},b_{1},c_{1})\diamond(a_{2},b_{2},c_{2})\coloneqq
+(a_{1}+a_{2},b_{1}+b_{2},c_{1}+c_{2}+a_{1}b_{2})
+\end{equation*}
+</div>
+<div class="para">come nell’<a href="" class="xref" data-knowl="./knowl/xref/exercise-triangolari_nascoste.html" title="Esercizio 8.2.4">Esercizio 8.2.4</a> per ciascuno dei sottoinsiemi definiti dalle condizioni sulle terne <span class="process-math">\((a,b,c)\)</span> stabilire se sono sottogruppi e, in caso affermativo, se sono normali in <span class="process-math">\(G\text{.}\)</span>
+</div>
+</div></div>
+<div class="exercisegroup-exercises cols2">
+<article class="exercise exercise-like" id="exercise-298"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
+<div class="para" id="p-1997">
+<span class="process-math">\((a,b,c)\)</span> con <span class="process-math">\(a\)</span> multiplo di <span class="process-math">\(2\text{.}\)</span>
+</div>
+<div class="solutions"><details id="answer-133" class="answer solution-like born-hidden-knowl"><summary><span class="type">Risposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-1998">È sottogruppo normale di <span class="process-math">\(G\text{.}\)</span>
+</div></div></details></div></article><article class="exercise exercise-like" id="exercise-299"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
+<div class="para" id="p-1999">
+<span class="process-math">\((a,b,c)\)</span> con <span class="process-math">\(b\)</span> multiplo di <span class="process-math">\(2\text{.}\)</span>
+</div>
+<div class="solutions"><details id="answer-134" class="answer solution-like born-hidden-knowl"><summary><span class="type">Risposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-2000">È sottogruppo normale di <span class="process-math">\(G\text{.}\)</span>
+</div></div></details></div></article><article class="exercise exercise-like" id="exercise-300"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
+<div class="para" id="p-2001">
+<span class="process-math">\((a,b,c)\)</span> con <span class="process-math">\(c\)</span> multiplo di <span class="process-math">\(2\text{.}\)</span>
+</div>
+<div class="solutions"><details id="answer-135" class="answer solution-like born-hidden-knowl"><summary><span class="type">Risposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-2002">Non è sottogruppo di <span class="process-math">\(G\text{.}\)</span>
+</div></div></details></div></article><article class="exercise exercise-like" id="exercise-301"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
+<div class="para" id="p-2003">
+<span class="process-math">\((a,b,c)\)</span> con <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> multipli di <span class="process-math">\(2\)</span> e <span class="process-math">\(c\)</span> multiplo di <span class="process-math">\(4\text{.}\)</span>
+</div>
+<div class="solutions"><details id="answer-136" class="answer solution-like born-hidden-knowl"><summary><span class="type">Risposta</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="p-2004">È sottogruppo non normale di <span class="process-math">\(G\text{.}\)</span>
+</div></div></details></div></article>
+</div>
+</div>
+<article class="exercise exercise-like" id="exercise-302"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-67"><div class="para" id="p-2005">Sia <span class="process-math">\(G\)</span> un gruppo e sia <span class="process-math">\(H\)</span> un sottogruppo di <span class="process-math">\(G\text{.}\)</span>
+</div></div>
+<article class="task exercise-like" id="task-63"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-2006">Dimostrare che <span class="process-math">\(H_{G}\coloneqq \bigcap_{g\in G}H^{g}\)</span> è un sottogruppo normale di <span class="process-math">\(G\)</span> contenuto in <span class="process-math">\(H\text{.}\)</span>
+</div>
+<div class="solutions"><details id="solution-107" class="solution solution-like born-hidden-knowl"><summary><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="p-2007">Per ogni elemento <span class="process-math">\(g\)</span> in <span class="process-math">\(G\)</span> il coniugato <span class="process-math">\(H^{g}\)</span> è un sottogruppo di <span class="process-math">\(G\text{.}\)</span> Dunque, <span class="process-math">\(H_{G}\text{,}\)</span> essendo intersezione di sottogruppi, è sottogruppo di <span class="process-math">\(G\text{.}\)</span> In particolare <span class="process-math">\(H^{1}=H\)</span> e, dunque, <span class="process-math">\(\bigcap_{g\in G}H^{g}\le H^{1}=H\text{.}\)</span>
+</div> <div class="para" id="p-2008">Per mostrare che <span class="process-math">\(H_{G}\)</span> è normale in <span class="process-math">\(G\text{,}\)</span> dobbiamo mostrare che per ogni <span class="process-math">\(g'\in G\)</span> si ha <span class="process-math">\(H_{G}^{g'}=H_{G}\text{.}\)</span> Ora <span class="process-math">\(H_{G}^{g'}=(\bigcap_{g\in G}H^{g})^{g'}=\bigcap_{g\in G}(H^{g})^{g'}=\bigcap_{g\in G}H^{gg'}\text{.}\)</span> Al variare di <span class="process-math">\(g\)</span> in <span class="process-math">\(G\text{,}\)</span> gli elementi <span class="process-math">\(gg'\)</span> sono tutti e soli gli elementi di <span class="process-math">\(G\text{.}\)</span> Dunque, <span class="process-math">\(\bigcap_{g\in G}H^{gg'}=H_{G}\text{,}\)</span> cioè <span class="process-math">\((H_{G})^{g'}=H_{G}\text{,}\)</span> come richiesto.</div>
+</div></details></div></article><article class="task exercise-like" id="task-64"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-2009">Dimostrare che se <span class="process-math">\(N\)</span> è un sottogruppo normale di <span class="process-math">\(G\)</span> contenuto in <span class="process-math">\(H\)</span> allora <span class="process-math">\(N\le H_{G}\text{.}\)</span>
+</div>
+<div class="solutions"><details id="solution-108" class="solution solution-like born-hidden-knowl"><summary><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-2010">Sappiamo che <span class="process-math">\(N=N^{g}\)</span> per ogni <span class="process-math">\(g\)</span> in <span class="process-math">\(G\text{.}\)</span> Poiché <span class="process-math">\(N\le H\text{,}\)</span> abbiamo che <span class="process-math">\(N^{g}\le H^{g}\)</span> per ogni <span class="process-math">\(g\)</span> in <span class="process-math">\(G\text{,}\)</span> cioè <span class="process-math">\(N\le H^{g}\)</span> per ogni <span class="process-math">\(g\)</span> in <span class="process-math">\(G\text{.}\)</span> Di conseguenza <span class="process-math">\(N\le\bigcap_{g\in G}H^{g}=H_{G}\text{,}\)</span> come richiesto.</div></div></details></div></article><article class="task exercise-like" id="task-65"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="p-2011">Dimostrare che <span class="process-math">\(H^{G}\coloneqq \grgen{H^{g}}_{g\in G}\)</span> è un sottogruppo normale di <span class="process-math">\(G\)</span> contenente <span class="process-math">\(H\text{.}\)</span>
+</div>
+<div class="solutions"><details id="solution-109" class="solution solution-like born-hidden-knowl"><summary><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="p-2012">Poiché <span class="process-math">\(H^{1}=H\text{,}\)</span> ovviamente <span class="process-math">\(H^{G}\)</span> contiene <span class="process-math">\(H\text{.}\)</span>
+</div> <div class="para" id="p-2013">Per mostrare che <span class="process-math">\(H^{G}\)</span> è normale in <span class="process-math">\(G\text{,}\)</span> dobbiamo mostrare che per ogni <span class="process-math">\(g'\in G\)</span> si ha <span class="process-math">\((H^{G})^{g'}\le H_{G}\text{.}\)</span> Il coniugio tramite <span class="process-math">\(g'\)</span> è un omomorfismo di gruppi (anzi, è un automorfismo di <span class="process-math">\(G\)</span>). Dunque, per la <a href="" class="xref" data-knowl="./knowl/xref/prop-immagine_sottogruppo_generato.html" title="Proposizione 13.2.5">Proposizione 13.2.5</a>, <span class="process-math">\((H^{G})^{g'}\)</span> è generato da <span class="process-math">\((H^{g})^{g'}=H^{gg'}\)</span> al variare di <span class="process-math">\(g\)</span> in <span class="process-math">\(G\text{.}\)</span> Ma ciascun <span class="process-math">\(H^{gg'}\)</span> è un coniugato di <span class="process-math">\(H\)</span> e, per definizione di <span class="process-math">\(H^{G}\text{,}\)</span> è contenuto in <span class="process-math">\(H^{G}\text{.}\)</span> Di conseguenza, <span class="process-math">\((H^{G})^{g'}\le H^{G}\text{,}\)</span> come richiesto.</div>
+</div></details></div></article><article class="task exercise-like" id="task-66"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="p-2014">Dimostrare che se <span class="process-math">\(N\)</span> è un sottogruppo normale di <span class="process-math">\(G\)</span> contenente <span class="process-math">\(H\)</span> allora <span class="process-math">\(N\ge H^{G}\text{.}\)</span>
+</div>
+<div class="solutions"><details id="solution-110" class="solution solution-like born-hidden-knowl"><summary><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="p-2015">Sappiamo che <span class="process-math">\(N=N^{g}\)</span> per ogni <span class="process-math">\(g\)</span> in <span class="process-math">\(G\text{.}\)</span> Poiché <span class="process-math">\(N\ge H\)</span> abbiamo che <span class="process-math">\(N^{g}\ge H^{g}\)</span> per ogni <span class="process-math">\(g\)</span> in <span class="process-math">\(G\text{.}\)</span> Di conseguenza <span class="process-math">\(N\ge H^{G}\text{,}\)</span> come richiesto.</div></div></details></div></article></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec-orbite_stabilizzatori.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-coniugati_simmetrico_alterno.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

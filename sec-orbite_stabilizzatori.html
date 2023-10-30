@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="it-IT" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Orbite e stabilizzatori</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Algebra">
+<meta property="book:author" content="Valerio Monti">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.32/pretext_search.js"></script><link href="https://pretextbook.org/css/0.82/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.32</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.32/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.32/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.32/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.82/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.82/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Vai all'indice generale</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-algebra.html"><span class="title">Algebra</span></a></h1>
+<p class="byline">Valerio Monti</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Indice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Indice</span></button><a class="index-button button" href="indice.html" title="Indice analitico"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Indice analitico</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Risultati: </h2>
+<div id="searchempty" class="searchempty"><span>Nessun risultato.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-azioni_definizioni.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="up-button button" href="ch-azioni.html" title="Su"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Su</span></a><a class="next-button button" href="sec-sottogruppi_normali.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\require{mathtools}\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\cont}{c}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\Inv}{Inv}
+\DeclareMathOperator{\MCD}{MCD}
+\DeclareMathOperator{\mcm}{mcm}
+\DeclareMathOperator{\centro}{Z}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Soc}{Soc}
+\DeclareMathOperator{\Rad}{Rad}
+\DeclareMathOperator{\car}{char}
+
+
+\newcommand{\Sym}{\mathrm{Sym}}
+\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\Idmatrix}{\mathrm{I}}
+\newcommand{\Nullmatrix}{{\large 0}}
+\newcommand{\dist}{\mathrm{d}}
+
+\newcommand{\Reali}{\mathbf{R}}
+\newcommand{\Naturali}{\mathbf{N}}
+\newcommand{\Interi}{\mathbf{Z}}
+ \newcommand{\Razionali}{\mathbf{Q}}
+ \newcommand{\Complessi}{\mathbf{C}}
+
+ \newcommand{\grgen}[1]{\langle#1\rangle}
+ \newcommand{\ideal}[1]{\left(#1\right)}
+ \newcommand{\alg}[1]{\left\lbrack#1\right\rvert}
+ \newcommand{\seg}[1]{\left\lvert#1\right)}
+ \newcommand{\ann}[1]{\operatorname{Ann}\left(#1\right)}
+ \newcommand{\len}[1]{\operatorname{l}\left(#1\right)}
+ \newcommand{\class}[2][\sim]{\lbrack #2\rbrack_{#1}}
+ \newcommand{\cent}[2]{\operatorname{C}_{#1}\left(#2\right)}
+ \newcommand{\nrm}[2]{\operatorname{N}_{#1}\left(#2\right)}
+ \newcommand{\stab}[2]{\operatorname{Stab}_{#1}\left(#2\right)}
+ \newcommand{\Supp}[1]{\operatorname{Supp}\left(#1\right)}
+ \newcommand{\Gal}[1]{\operatorname{Gal}\left(#1\right)}
+ \newcommand{\tr}[1]{#1^{\top}}
+ \newcommand{\vuoto}{\varnothing}
+ \newcommand{\parti}[1]{\mathcal{P}(#1)}
+ \newcommand{\euler}[1]{\varphi(#1)}
+ \newcommand{\euclidean}{\delta}
+ \newcommand{\posto}[3]{#1_{#2#3}}
+
+ \newcommand{\vect}[1]{\boldsymbol{#1}}
+ 
+ \newcommand{\mat}[2]{\operatorname{M}_{#1}(#2)} 
+ \newcommand{\matt}[3]{\operatorname{M}_{#1,#2}(#3)} 
+ \newcommand{\Sim}[2]{\operatorname{S}_{#1}(#2)} 
+ \newcommand{\AntiSim}[2]{\operatorname{A}_{#1}(#2)} 
+ \newcommand{\Diag}[2]{\operatorname{D}_{#1}(#2)} 
+ \newcommand{\TS}[2]{\operatorname{TS}_{#1}(#2)} 
+ \newcommand{\TI}[2]{\operatorname{TI}_{#1}(#2)} 
+ \newcommand{\GL}[2]{\operatorname{GL}(#1,#2)} 
+ \newcommand{\SL}[2]{\operatorname{SL}(#1,#2)} 
+ \newcommand{\Ort}[2]{\operatorname{O}(#1,#2)} 
+
+ \newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+ \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+ \newcommand{\ind}[2]{\left\lvert#1:#2\right\rvert}
+ \newcommand{\degext}[2]{\left\lbrack#1:#2\right\rbrack}
+
+ \newcommand{\invprov}[1]{\widehat{#1}}
+
+ \newcommand\YoungTableau[1]{
+ \begin{tikzpicture}[scale=0.4,keepsize]
+ \foreach \y [count=\yi] in {#1}
+ \foreach \x in {1,...,\y}
+ {
+ \draw (\x,\yi) rectangle +(1,1);
+ }
+ \end{tikzpicture}
+ }
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts focused" data-preexpanded-levels="0" data-max-levels="3"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Materiale iniziale</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface-1.html" class="internal"><span class="title">Prefazione</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-preliminari.html" class="internal"><span class="codenumber">I</span> <span class="title">Preliminari</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-insiemi.html" class="internal"><span class="codenumber">1</span> <span class="title">Insiemi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-insiemi.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Concetti di base</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-insiemi.html#exercises-insiemi" class="internal"><span class="codenumber">1.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-operazioni_insiemi.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Operazioni tra insiemi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-operazioni_insiemi.html#exercises-operazioni_insiemi" class="internal"><span class="codenumber">1.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prodotto-cartesiano.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Prodotto cartesiano</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prodotto-cartesiano.html#exercises-prodotto_cartesiano" class="internal"><span class="codenumber">1.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Russell.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Il paradosso di Russell</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-corrispondenze.html" class="internal"><span class="codenumber">2</span> <span class="title">Corrispondenze e relazioni</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-corrispondenze_definizione.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Corrispondenze tra insiemi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-corrispondenze_definizione.html#exercises-corrispondenze_definizione" class="internal"><span class="codenumber">2.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-relazioni_equivalenza.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Relazioni di equivalenza</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-relazioni_equivalenza.html#exercises-relazioni_equivalenza" class="internal"><span class="codenumber">2.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-relazioni_ordine.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Relazioni d’ordine</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-relazioni_ordine.html#exercises-relazioni_ordine" class="internal"><span class="codenumber">2.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-funzioni.html" class="internal"><span class="codenumber">3</span> <span class="title">Funzioni</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-funzioni_definizione.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Definizioni di base</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-funzioni_definizione.html#exercises-funzioni_definizione" class="internal"><span class="codenumber">3.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-funzioni_iniettive_suriettive.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Funzioni iniettive, suriettive e biiettive</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-funzioni_iniettive_suriettive.html#exercises-funzioni_iniettive_suriettive" class="internal"><span class="codenumber">3.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cardinalita.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Cenni sulla cardinalità</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-matrici.html" class="internal"><span class="codenumber">4</span> <span class="title">Matrici</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-definizioni_matrici.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Definizioni di base</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizioni_matrici.html#exercises-definizioni_matrici" class="internal"><span class="codenumber">4.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-operazioni_matrici.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Operazioni tra matrici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-operazioni_matrici.html#exercises-operazioni_matrici" class="internal"><span class="codenumber">4.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-aritmetica.html" class="internal"><span class="codenumber">II</span> <span class="title">Aritmetica</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-interi.html" class="internal"><span class="codenumber">5</span> <span class="title">I numeri interi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-naturali_base.html" class="internal"><span class="codenumber">5.1</span> <span class="title">I numeri naturali e i numeri interi</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-induzione_ricorrenza.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Dimostrazioni per induzione e definizioni per ricorrenza</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-induzione_ricorrenza.html#exercises-induzione" class="internal"><span class="codenumber">5.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-divisibilita_interi.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Divisibilità negli interi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-divisibilita_interi.html#exercises-divisibilita_interi" class="internal"><span class="codenumber">5.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-fattorizzazione_interi.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Il teorema fondamentale dell’aritmetica</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-fattorizzazione_interi.html#exercises-fattorizzazione_interi" class="internal"><span class="codenumber">5.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-equazioni_lineari_diofantine.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Equazioni lineari diofantine</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-equazioni_lineari_diofantine.html#exercises-equazioni_lineari_diofantine" class="internal"><span class="codenumber">5.5</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-classidiresto.html" class="internal"><span class="codenumber">6</span> <span class="title">Classi di resto</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-congruenzemodulon.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Congruenze modulo un intero</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-congruenzemodulon.html#exercises-congruenzemodulon" class="internal"><span class="codenumber">6.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-operazioniclassiresto.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Operazioni tra classi di resto</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-operazioniclassiresto.html#exercises-operazioniclassiresto" class="internal"><span class="codenumber">6.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-eulero.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Il teorema di Eulero</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-eulero.html#exercises-eulero" class="internal"><span class="codenumber">6.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-congruenze_con_incognite.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Congruenze con incognite</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-congruenze_con_incognite.html#exercises-congruenze_con_incognite" class="internal"><span class="codenumber">6.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part contains-active">
+<div class="toc-title-box"><a href="part-gruppi.html" class="internal"><span class="codenumber">III</span> <span class="title">Gruppi</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-operazioni.html" class="internal"><span class="codenumber">7</span> <span class="title">Operazioni</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-operazioni_definizioni.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Definizioni ed esempi</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-proprieta_operazioni.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Proprietà delle operazioni</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-proprieta_operazioni.html#exercises-proprieta_operazioni" class="internal"><span class="codenumber">7.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-gruppi.html" class="internal"><span class="codenumber">8</span> <span class="title">Monoidi e gruppi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-monoidi.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Monoidi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-monoidi.html#exercises-monoidi" class="internal"><span class="codenumber">8.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-gruppi.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Gruppi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppi.html#exercises-gruppi" class="internal"><span class="codenumber">8.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-gruppi_piccoli.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Alcuni esempi di gruppi piccoli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppi_piccoli.html#exercises-gruppi_piccoli" class="internal"><span class="codenumber">8.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-sottogruppi.html" class="internal"><span class="codenumber">9</span> <span class="title">Sottogruppi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-sottomonoidi_sottogruppi.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Sottomonoidi e sottogruppi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottomonoidi_sottogruppi.html#exercises-sottomonoidi_sottogruppi" class="internal"><span class="codenumber">9.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prime_proprieta_sottogruppi.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Prime proprietà dei sottogruppi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prime_proprieta_sottogruppi.html#exercises-prime_proprieta_sottogruppi" class="internal"><span class="codenumber">9.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-gruppi_del_piano.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Gruppi di trasformazioni del piano</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppi_del_piano.html#exercises-gruppi_del_piano" class="internal"><span class="codenumber">9.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-gruppi_ciclici.html" class="internal"><span class="codenumber">10</span> <span class="title">Gruppi ciclici</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-definizione_gruppi_ciclici.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Definizioni e prime proprietà</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizione_gruppi_ciclici.html#exercises-definizione_gruppi_ciclici" class="internal"><span class="codenumber">10.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-sottogruppi_di_ciclici.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Sottogruppi di gruppi ciclici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottogruppi_di_ciclici.html#exercises-sottogruppi_di_ciclici" class="internal"><span class="codenumber">10.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-gruppi_permutazioni.html" class="internal"><span class="codenumber">11</span> <span class="title">Gruppi di permutazioni</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-definizioni_gruppi_permutazioni.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Definizioni e prime proprietà</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizioni_gruppi_permutazioni.html#exercises-definizioni_gruppi_permutazioni" class="internal"><span class="codenumber">11.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-cicli.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Cicli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-cicli.html#exercises-cicli" class="internal"><span class="codenumber">11.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-scambi.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Scambi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-scambi.html#exercises-scambi" class="internal"><span class="codenumber">11.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-laterali.html" class="internal"><span class="codenumber">12</span> <span class="title">Laterali e teorema di Lagrange</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prodotto_sottoinsiemi.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Prodotto di sottoinsiemi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prodotto_sottoinsiemi.html#exercises-prodotto_sottoinsiemi" class="internal"><span class="codenumber">12.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-teorema_di_lagrange.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Teorema di Lagrange</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-teorema_di_lagrange.html#exercises-teorema_di_lagrange" class="internal"><span class="codenumber">12.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prodotto_sottogruppi.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Prodotto di sottogruppi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prodotto_sottogruppi.html#exercises-prodotto_sottogruppi" class="internal"><span class="codenumber">12.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-omomorfismi.html" class="internal"><span class="codenumber">13</span> <span class="title">Omomorfismi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-definizione_omomorfismo.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Definizioni e prime proprietà</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizione_omomorfismo.html#exercises-definizione_omomorfismo" class="internal"><span class="codenumber">13.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-nucleo_immagine.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Immagine e nucleo di un omomorfismo</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-nucleo_immagine.html#exercises-nucleo_immagine" class="internal"><span class="codenumber">13.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-omomorfismi_da_gruppi_ciclici.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Omomorfismi da gruppi ciclici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-omomorfismi_da_gruppi_ciclici.html#exercises-omomorfismi_da_gruppi_ciclici" class="internal"><span class="codenumber">13.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-azioni.html" class="internal"><span class="codenumber">14</span> <span class="title">Azioni di gruppi su insiemi</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-azioni_definizioni.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Definizioni e prime proprietà</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-azioni_definizioni.html#exercises-azioni_definizioni" class="internal"><span class="codenumber">14.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="sec-orbite_stabilizzatori.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Orbite e stabilizzatori</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-orbite_stabilizzatori.html#exercises-orbite_stabilizzatori" class="internal"><span class="codenumber">14.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-sottogruppi_normali.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Sottogruppi normali</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottogruppi_normali.html#exercises-sottogruppi_normali" class="internal"><span class="codenumber">14.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-coniugati_simmetrico_alterno.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Classi di coniugio nel gruppo simmetrico e nel gruppo alterno</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-coniugati_simmetrico_alterno.html#exercises-coniugati_simmetrico_alterno" class="internal"><span class="codenumber">14.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-quozienti.html" class="internal"><span class="codenumber">15</span> <span class="title">Gruppi quoziente</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-congruenze.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Congruenze in gruppi e monoidi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-congruenze.html#exercises-congruenze" class="internal"><span class="codenumber">15.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-proprieta_quozienti.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Proprietà dei gruppi quoziente</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-proprieta_quozienti.html#exercises-proprieta_quozienti" class="internal"><span class="codenumber">15.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-teoremi_di_isomorfismo.html" class="internal"><span class="codenumber">15.3</span> <span class="title">I teoremi di isomorfismo</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-teoremi_di_isomorfismo.html#exercises-teoremi_di_isomorfismo" class="internal"><span class="codenumber">15.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-direttosemidiretto.html" class="internal"><span class="codenumber">16</span> <span class="title">Prodotto diretto e semidiretto</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prodotto_diretto_esterno.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Prodotto diretto esterno</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prodotto_diretto_esterno.html#exercises-prodotto_diretto_esterno" class="internal"><span class="codenumber">16.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prodotto_diretto_interno.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Prodotto diretto interno</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prodotto_diretto_interno.html#exercises-prodotto_diretto_interno" class="internal"><span class="codenumber">16.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prodotto_semidiretto.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Prodotto semidiretto</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prodotto_semidiretto.html#exercises--prodotto_semidiretto" class="internal"><span class="codenumber">16.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-sylow.html" class="internal"><span class="codenumber">17</span> <span class="title">Il teorema di Sylow</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-inversione_lagrange.html" class="internal"><span class="codenumber">17.1</span> <span class="title">Inversione del teorema di Lagrange</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-sylow.html" class="internal"><span class="codenumber">17.2</span> <span class="title">Il teorema di Sylow</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sylow.html#exercises-sylow" class="internal"><span class="codenumber">17.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-applicazioni_sylow.html" class="internal"><span class="codenumber">17.3</span> <span class="title">Applicazioni del teorema di Sylow</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-applicazioni_sylow.html#exercises-applicazioni_sylow" class="internal"><span class="codenumber">17.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-anelli.html" class="internal"><span class="codenumber">IV</span> <span class="title">Anelli</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-anelli.html" class="internal"><span class="codenumber">18</span> <span class="title">Anelli</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prime_proprieta_anelli.html" class="internal"><span class="codenumber">18.1</span> <span class="title">Definizioni e prime proprietà</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prime_proprieta_anelli.html#exercises-prime_proprieta_anelli" class="internal"><span class="codenumber">18.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-multipli_potenze.html" class="internal"><span class="codenumber">18.2</span> <span class="title">Multipli e potenze in un anello</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-multipli_potenze.html#exercises-multipli_potenze" class="internal"><span class="codenumber">18.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-sottoanelli.html" class="internal"><span class="codenumber">18.3</span> <span class="title">Sottoanelli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottoanelli.html#exercises-sottoanelli" class="internal"><span class="codenumber">18.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-omomorfismiideali.html" class="internal"><span class="codenumber">19</span> <span class="title">Omomorfismi e ideali</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-omomorfismi_anelli.html" class="internal"><span class="codenumber">19.1</span> <span class="title">Omomorfismi di anelli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-omomorfismi_anelli.html#exercises-omomorfismi_anelli" class="internal"><span class="codenumber">19.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-anelli_quoziente.html" class="internal"><span class="codenumber">19.2</span> <span class="title">Anelli quoziente e ideali</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-anelli_quoziente.html#exercises-anelli_quoziente" class="internal"><span class="codenumber">19.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-campo_dei_quozienti.html" class="internal"><span class="codenumber">19.3</span> <span class="title">Campo dei quozienti di un dominio</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-campo_dei_quozienti.html#exercises-campo_dei_quozienti" class="internal"><span class="codenumber">19.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-polinomi.html" class="internal"><span class="codenumber">20</span> <span class="title">Polinomi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-anello_polinomi.html" class="internal"><span class="codenumber">20.1</span> <span class="title">Anello dei polinomi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-anello_polinomi.html#exercises-anello_polinomi" class="internal"><span class="codenumber">20.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-valutazione_polinomi.html" class="internal"><span class="codenumber">20.2</span> <span class="title">Valutazione di polinomi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-valutazione_polinomi.html#exercises-valutazione_polinomi" class="internal"><span class="codenumber">20.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-divisibilita.html" class="internal"><span class="codenumber">21</span> <span class="title">Divisibilità nei domini</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-divisibilita.html" class="internal"><span class="codenumber">21.1</span> <span class="title">Relazione di divisibilità</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-divisibilita.html#exercises-divisibilita" class="internal"><span class="codenumber">21.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-fattorizzazione.html" class="internal"><span class="codenumber">21.2</span> <span class="title">Fattorizzazione</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-fattorizzazione.html#exercises-fattorizzazione" class="internal"><span class="codenumber">21.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-PID_euclidei.html" class="internal"><span class="codenumber">21.3</span> <span class="title">Domini a ideali principali e domini euclidei</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-PID_euclidei.html#exercises-PID_euclidei" class="internal"><span class="codenumber">21.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-fattorizzazione_polinomi.html" class="internal"><span class="codenumber">22</span> <span class="title">Fattorizzazione dei polinomi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-trasporto_UFD.html" class="internal"><span class="codenumber">22.1</span> <span class="title">Il teorema del trasporto per domini a fattorizzazione unica</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-trasporto_UFD.html#exercises-trasporto_UFD" class="internal"><span class="codenumber">22.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-esempi_fattorizzazione_polinomi.html" class="internal"><span class="codenumber">22.2</span> <span class="title">Tecniche di fattorizzazione</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-esempi_fattorizzazione_polinomi.html#exercises-esempi_fattorizzazione_polinomi" class="internal"><span class="codenumber">22.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-estensione_campi.html" class="internal"><span class="codenumber">23</span> <span class="title">Estensioni di campi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-elementi_algebrici_e_trascendenti.html" class="internal"><span class="codenumber">23.1</span> <span class="title">Elementi algebrici e trascendenti</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_algebrici_e_trascendenti.html#exercises-elementi_algebrici_e_trascendenti" class="internal"><span class="codenumber">23.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-campo_di_spezzamento.html" class="internal"><span class="codenumber">23.2</span> <span class="title">Campi di spezzamento</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-campo_di_spezzamento.html#exercises-campo_di_spezzamento" class="internal"><span class="codenumber">23.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-chiusure_algebriche.html" class="internal"><span class="codenumber">23.3</span> <span class="title">Cenni su campi algebricamente chiusi</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-moduli.html" class="internal"><span class="codenumber">V</span> <span class="title">Moduli</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-moduli.html" class="internal"><span class="codenumber">24</span> <span class="title">Moduli</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-definizione_di_moduli.html" class="internal"><span class="codenumber">24.1</span> <span class="title">Definizione di modulo</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizione_di_moduli.html#exercises-definizione_modulo" class="internal"><span class="codenumber">24.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-sottomoduli.html" class="internal"><span class="codenumber">24.2</span> <span class="title">Sottomoduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottomoduli.html#exercises-sottomoduli" class="internal"><span class="codenumber">24.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-omomorfismi_moduli.html" class="internal"><span class="codenumber">24.3</span> <span class="title">Omomorfismi di moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-omomorfismi_moduli.html#exercises-omomorfismi_moduli" class="internal"><span class="codenumber">24.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-moduli_quoziente.html" class="internal"><span class="codenumber">24.4</span> <span class="title">Moduli quoziente</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_quoziente.html#exercises-moduli_quoziente" class="internal"><span class="codenumber">24.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-moduli_liberi.html" class="internal"><span class="codenumber">25</span> <span class="title">Moduli liberi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-somma_diretta_moduli.html" class="internal"><span class="codenumber">25.1</span> <span class="title">Somma diretta di moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-somma_diretta_moduli.html#exercises-somma_diretta_moduli" class="internal"><span class="codenumber">25.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-dipendenza_lineare.html" class="internal"><span class="codenumber">25.2</span> <span class="title">Dipendenza e indipendenza lineare</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-dipendenza_lineare.html#exercises-dipendenza_lineare" class="internal"><span class="codenumber">25.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-elementi_di_torsione.html" class="internal"><span class="codenumber">25.3</span> <span class="title">Elementi di torsione</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_di_torsione.html#exercises-elementi_di_torsione" class="internal"><span class="codenumber">25.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-modulisupid.html" class="internal"><span class="codenumber">26</span> <span class="title">Moduli finitamente generati su PID</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-moduli_ciclici.html" class="internal"><span class="codenumber">26.1</span> <span class="title">Moduli ciclici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_ciclici.html#exercises-moduli_ciclici" class="internal"><span class="codenumber">26.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-moduli_primari.html" class="internal"><span class="codenumber">26.2</span> <span class="title">Moduli primari</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_primari.html#exercises-moduli_primari" class="internal"><span class="codenumber">26.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-moduli_liberi.html" class="internal"><span class="codenumber">26.3</span> <span class="title">Moduli liberi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_liberi.html#exercises-moduli_liberi" class="internal"><span class="codenumber">26.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-classificazione_moduli_pid.html" class="internal"><span class="codenumber">26.4</span> <span class="title">La classificazione dei moduli finitamente generati su un dominio a ideali principali</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-gruppiabeliani.html" class="internal"><span class="codenumber">27</span> <span class="title">Gruppi abeliani finitamente generati</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-gruppiabeliani.html" class="internal"><span class="codenumber">27.1</span> <span class="title">Classificazione dei gruppi abeliani finitamente generati</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppiabeliani.html#exercises-gruppiabeliani" class="internal"><span class="codenumber">27.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-formecanoniche.html" class="internal"><span class="codenumber">28</span> <span class="title">Forme canoniche di matrici</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-kx_moduli.html" class="internal"><span class="codenumber">28.1</span> <span class="title">Spazi vettoriali con endomorfismi visti come moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-kx_moduli.html#exercises-kx_moduli" class="internal"><span class="codenumber">28.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-matrici_rappresentative.html" class="internal"><span class="codenumber">28.2</span> <span class="title">Matrici rappresentative</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-matrici_rappresentative.html#exercises-matrici_rappresentative" class="internal"><span class="codenumber">28.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-matrici_compagne.html" class="internal"><span class="codenumber">28.3</span> <span class="title">Matrici compagne</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-jordan.html" class="internal"><span class="codenumber">28.4</span> <span class="title">Forma canonica di Jordan</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-jordan.html#exercises-jordan" class="internal"><span class="codenumber">28.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html" class="internal"><span class="codenumber">28.5</span> <span class="title">Polinomio minimo di matrici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html#exercises-polinomio_minimo_matrici" class="internal"><span class="codenumber">28.5</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Appendici</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="appendix-peano.html" class="internal"><span class="codenumber">A</span> <span class="title">Numeri naturali e interi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-algebre_induttive.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Algebre induttive</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-assiomi_peano.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Gli assiomi di Peano</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-insiemi_finiti_infiniti.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Insiemi finiti e infiniti</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-operazioni_naturali.html" class="internal"><span class="codenumber">A.4</span> <span class="title">Operazioni tra numeri naturali</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-interi.html" class="internal"><span class="codenumber">A.5</span> <span class="title">Costruzione degli interi</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-2.html" class="internal"><span class="codenumber">B</span> <span class="title">Notazioni</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="solutions-1.html" class="internal"><span class="codenumber">C</span> <span class="title">Soluzioni e suggerimenti</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-gfdl.html" class="internal"><span class="codenumber">D</span> <span class="title">GNU Free Documentation License</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="indice.html" class="internal"><span class="title">Indice analitico</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="back-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-orbite_stabilizzatori"><h2 class="heading hide-type">
+<span class="type">Paragrafo</span><span class="space"> </span><span class="codenumber">14.2</span><span class="space"> </span><span class="title">Orbite e stabilizzatori</span>
+</h2>
+<article class="example example-like" id="orbite_rotazioni"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">14.2.1</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1849">Consideriamo il gruppo <span class="process-math">\(G\)</span> delle rotazioni del piano <span class="process-math">\(\Pi\)</span> aventi centro fissato in un punto <span class="process-math">\(C\text{.}\)</span> Dato un punto <span class="process-math">\(P\)</span> del piano e una rotazione <span class="process-math">\(\rho\)</span> di <span class="process-math">\(G\text{,}\)</span> il punto <span class="process-math">\(P\rho\)</span> appartiene alla circonferenza di centro <span class="process-math">\(C\)</span> e passante per <span class="process-math">\(P\)</span> (circonferenza degenere di raggio <span class="process-math">\(0\text{,}\)</span> nel caso in cui <span class="process-math">\(P\)</span> sia proprio il punto <span class="process-math">\(C\)</span>). Viceversa, dato un punto <span class="process-math">\(Q\)</span> su tale circonferenza, c’è una rotazione che applicata a <span class="process-math">\(P\)</span> dà come risultato il punto <span class="process-math">\(Q\text{.}\)</span> Possiamo interpretare ciò dicendo che il gruppo <span class="process-math">\(G\)</span> suddivide il piano in circonferenze centrate in <span class="process-math">\(C\text{.}\)</span>
+</div></article><div class="para" id="p-1850">L’esempio precedente si può generalizzare nel caso di un’azione qualunque.</div>
+<article class="proposition theorem-like" id="prop-azione_partizione"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">14.2.2</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1851">Sia <span class="process-math">\(G\)</span> un gruppo che agisce su un insieme <span class="process-math">\(X\text{.}\)</span> La relazione <span class="process-math">\(\sim_{G}\)</span> in <span class="process-math">\(X\)</span> definita da <span class="process-math">\(x\sim_{G}y\)</span> se esiste <span class="process-math">\(g\in G\)</span> tale che <span class="process-math">\(y=xg\)</span> è una relazione di equivalenza.</div></article><details id="proof-134" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="p-1852">Preso <span class="process-math">\(x\in X\text{,}\)</span> si ha che <span class="process-math">\(x1_{G}=x\text{:}\)</span> dunque, <span class="process-math">\(\sim_{G}\)</span> soddisfa la proprietà riflessiva.</div> <div class="para logical" id="p-1853">
+<div class="para">Se <span class="process-math">\(x\sim_{G}y\text{,}\)</span> allora esiste <span class="process-math">\(g\in G\)</span> tale che <span class="process-math">\(y=xg\text{:}\)</span> applicando <span class="process-math">\(g^{-1}\)</span> a entrambi i membri di questa uguaglianza e usando le proprietà che definiscono un’azione otteniamo</div>
+<div class="displaymath process-math">
+\begin{equation*}
+yg^{-1}=(xg)g^{-1}=x(gg^{-1})=x1_{G}=x\text{.}
+\end{equation*}
+</div>
+<div class="para">Dunque, <span class="process-math">\(\sim_{G}\)</span> soddisfa la proprietà simmetrica.</div>
+</div> <div class="para logical" id="p-1854">
+<div class="para">Infine, se <span class="process-math">\(x\sim_{G}y\)</span> e <span class="process-math">\(y\sim_{G}z\text{,}\)</span> allora esistono <span class="process-math">\(g\)</span> e <span class="process-math">\(h\)</span> in <span class="process-math">\(G\)</span> tali che <span class="process-math">\(y=xg\)</span> e <span class="process-math">\(z=yh\text{.}\)</span> Applicando le proprietà che definiscono un’azione otteniamo</div>
+<div class="displaymath process-math">
+\begin{equation*}
+z=yh=(xg)h=x(gh)\text{.}
+\end{equation*}
+</div>
+<div class="para">Dunque, l’elemento <span class="process-math">\(gh\)</span> di <span class="process-math">\(G\)</span> manda <span class="process-math">\(x\)</span> in <span class="process-math">\(z\)</span> e, pertanto, <span class="process-math">\(\sim_{G}\)</span> soddisfa la proprietà transitiva.</div>
+</div></article></details><article class="definition definition-like" id="def-orbita"><h3 class="heading">
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">14.2.3</span><span class="period">.</span>
+</h3> <div class="para logical" id="p-1855">
+<div class="para">Dato un gruppo <span class="process-math">\(G\)</span> che agisce su un insieme <span class="process-math">\(X\text{,}\)</span> le classi di equivalenza della relazione <span class="process-math">\(\sim_{G}\)</span> definita nella <a href="" class="xref" data-knowl="./knowl/xref/prop-azione_partizione.html" title="Proposizione 14.2.2">Proposizione 14.2.2</a> sono dette <dfn class="terminology">orbite</dfn>. Dato un elemento <span class="process-math">\(x\)</span> in <span class="process-math">\(X\text{,}\)</span> l’orbita contenente <span class="process-math">\(x\)</span> è denotata con <span class="process-math">\(xG\)</span> ed è precisamente</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-azione_partizione.html">
+\begin{equation*}
+xG\coloneqq\{xg\mid g\in G\}\text{.}
+\end{equation*}
+</div>
+</div></article><article class="definition definition-like" id="def-classe_coniugio"><h3 class="heading">
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">14.2.4</span><span class="period">.</span>
+</h3> <div class="para logical" id="p-1856">
+<div class="para">Nel caso particolare in cui consideriamo l’azione di un gruppo <span class="process-math">\(G\)</span> su sé stesso per coniugio, l’orbita contenente un certo elemento <span class="process-math">\(h\)</span> è detta <dfn class="terminology">classe di coniugio</dfn> e denotata con il simbolo <span class="process-math">\(h^{G}\text{.}\)</span> Esplicitamente</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h^{G}\coloneqq\{h^{g}\mid g\in G\}\text{.}
+\end{equation*}
+</div>
+</div></article><div class="para" id="p-1857">Che informazioni possiamo ottenere sulle varie orbite (e, viceversa, quali informazioni potremo ottenere dalla conoscenza delle orbite)? Iniziamo con la</div>
+<article class="definition definition-like" id="def-stabilizzatore"><h3 class="heading">
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">14.2.5</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-1858">
+<div class="para">Dato un gruppo <span class="process-math">\(G\)</span> che agisce su un insieme <span class="process-math">\(X\)</span> e un elemento <span class="process-math">\(x\in X\text{,}\)</span> lo <dfn class="terminology">stabilizzatore</dfn> di <span class="process-math">\(x\)</span> in <span class="process-math">\(G\)</span> è il sottoinsieme <span class="process-math">\(\stab{G}{x}\)</span> di <span class="process-math">\(G\)</span> così definito</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\stab{G}{x}\coloneqq\{g\in G\mid xg=x\}\text{.}
+\end{equation*}
+</div>
+</div></article><article class="proposition theorem-like" id="prop-stabilizzatore_sottogruppo"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">14.2.6</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1859">Sia <span class="process-math">\(G\)</span> un gruppo che agisce su un insieme <span class="process-math">\(X\)</span> e sia <span class="process-math">\(x\)</span> un elemento di <span class="process-math">\(X\text{.}\)</span> Allora lo stabilizzatore <span class="process-math">\(\stab{G}{x}\)</span> è un sottogruppo di <span class="process-math">\(G\text{.}\)</span>
+</div></article><details id="proof-135" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="p-1860">Poiché <span class="process-math">\(x1_{G}=x\text{,}\)</span> il sottoinsieme <span class="process-math">\(\stab{G}{x}\)</span> è non vuoto.</div> <div class="para logical" id="p-1861">
+<div class="para">Siano ora <span class="process-math">\(g\)</span> e <span class="process-math">\(h\)</span> elementi di <span class="process-math">\(\stab{G}{x}\text{:}\)</span> dunque, <span class="process-math">\(xg=x\)</span> e <span class="process-math">\(xh=x\text{.}\)</span> Pertanto, <span class="process-math">\(x(gh)=(xg)h=xh=\text{,}\)</span> cioè <span class="process-math">\(gh\in \stab{G}{x}\text{.}\)</span> Inoltre, applicando <span class="process-math">\(g^{-1}\)</span> ad ambo i membri di <span class="process-math">\(x=xg\text{,}\)</span> otteniamo</div>
+<div class="displaymath process-math">
+\begin{equation*}
+xg^{-1}=(xg)g^{-1}=x(gg^{-1})=x1_{G}=x\text{.}
+\end{equation*}
+</div>
+<div class="para">Dunque, <span class="process-math">\(g^{-1}\in\stab{G}{x}\text{.}\)</span>
+</div>
+</div></article></details><div class="para" id="p-1862">Il legame tra stabilizzatore e orbite è dato dal</div>
+<article class="theorem theorem-like" id="thm-stabilizzatore_orbita"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">14.2.7</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1863">Sia <span class="process-math">\(G\)</span> un gruppo che agisce su un insieme <span class="process-math">\(X\)</span> e sia <span class="process-math">\(x\)</span> un elemento di <span class="process-math">\(X\text{.}\)</span> Presi due elementi <span class="process-math">\(g\)</span> e <span class="process-math">\(h\)</span> di <span class="process-math">\(G\text{,}\)</span> si ha che <span class="process-math">\(xg=xh\)</span> se e solo se <span class="process-math">\(\stab{G}{x}g=\stab{G}{x}h\text{.}\)</span> In particolare, <span class="process-math">\(\abs{xG}=\ind{G}{\stab{G}{x}}\text{.}\)</span>
+</div></article><details id="proof-136" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para logical" id="p-1864">
+<div class="para">Supponiamo prima che <span class="process-math">\(\stab{G}{x}g=\stab{G}{x}h\text{:}\)</span> dunque, esiste <span class="process-math">\(s\in\stab{G}{x}\)</span> tale che <span class="process-math">\(g=sh\text{.}\)</span> Ma allora</div>
+<div class="displaymath process-math">
+\begin{equation*}
+xg=x(sh)=(xs)h=xh\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical" id="p-1865">
+<div class="para">Viceversa, sia <span class="process-math">\(xg=xh\text{:}\)</span> applicando <span class="process-math">\(h^{-1}\)</span> a entrambi i membri, troviamo</div>
+<div class="displaymath process-math">
+\begin{equation*}
+xgh^{-1}=xhh^{-1}=x1_{G}=x\text{.}
+\end{equation*}
+</div>
+<div class="para">Dunque, <span class="process-math">\(gh^{-1}\)</span> è un elemento di <span class="process-math">\(\stab{G}{x}\text{:}\)</span> ma allora <span class="process-math">\(g=(gh^{-1})h\in\stab{G}{x}h\text{.}\)</span>
+</div>
+</div></article></details><article class="corollary theorem-like" id="cor-ordine_orbita_divide_ordine-gruppo"><h3 class="heading">
+<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">14.2.8</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1866">Se <span class="process-math">\(G\)</span> è un gruppo finito che agisce su un insieme <span class="process-math">\(X\text{,}\)</span> allora ogni orbita ha cardinalità che è un divisore dell’ordine di <span class="process-math">\(G\text{.}\)</span>
+</div></article><details id="proof-137" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="p-1867">Dal <a href="" class="xref" data-knowl="./knowl/xref/thm-stabilizzatore_orbita.html" title="Teorema 14.2.7">Teorema 14.2.7</a>, sappiamo che la cardinalità dell’orbita di un elemento <span class="process-math">\(x\)</span> di <span class="process-math">\(X\)</span> è uguale all’indice in <span class="process-math">\(G\)</span> dello stabilizzatore di <span class="process-math">\(x\text{:}\)</span> in un gruppo finito, i sottogruppi hanno indice che divide l’ordine del gruppo, grazie al <a href="" class="xref" data-knowl="./knowl/xref/thm-lagrange.html" title="Teorema 12.2.6: Teorema di Lagrange">Teorema di Lagrange</a>.</div></article></details><div class="para" id="p-1868">Vediamo ora in dettaglio come applicare questi risultati all’azione di coniugio di un gruppo su di sé.</div>
+<article class="proposition theorem-like" id="prop-coniugato_fisso_commuta"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">14.2.9</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1869">Dati due elementi <span class="process-math">\(g\)</span> e <span class="process-math">\(h\)</span> di un gruppo, si ha <span class="process-math">\(h^{g}=h\)</span> se e solo se <span class="process-math">\(g\)</span> e <span class="process-math">\(h\)</span> commutano. In particolare, lo stabilizzatore di <span class="process-math">\(h\)</span> in <span class="process-math">\(G\)</span> rispetto all’azione di coniugio coincide con il centralizzante di <span class="process-math">\(h\)</span> in <span class="process-math">\(G\text{.}\)</span>
+</div></article><details id="proof-138" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="p-1870">Se <span class="process-math">\(g\)</span> e <span class="process-math">\(h\)</span> commutano, allora <span class="process-math">\(h^{g}=g^{-1}hg=g^{-1}gh=1h=h\text{.}\)</span>
+</div> <div class="para logical" id="p-1871">
+<div class="para">Viceversa, se <span class="process-math">\(h=h^{g}\text{,}\)</span> cioè <span class="process-math">\(h=g^{-1}hg\text{,}\)</span> allora, moltiplicando a sinistra ambo i membri per <span class="process-math">\(g\text{,}\)</span> otteniamo</div>
+<div class="displaymath process-math">
+\begin{equation*}
+gh=gg^{-1}hg=hg\text{.}
+\end{equation*}
+</div>
+</div></article></details><article class="corollary theorem-like" id="cor-ordine_classe_coniugio"><h3 class="heading">
+<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">14.2.10</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-1872">
+<div class="para">Dato un elemento <span class="process-math">\(h\)</span> di un gruppo <span class="process-math">\(G\text{,}\)</span> la cardinalità della classe di coniugio <span class="process-math">\(h^{G}\)</span> è uguale all’indice in <span class="process-math">\(G\)</span> del centralizzante di <span class="process-math">\(h\)</span> in <span class="process-math">\(G\text{.}\)</span> In formule</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{h^{G}}=\ind{G}{\cent{G}{h}}\text{.}
+\end{equation*}
+</div>
+<div class="para">In particolare, se <span class="process-math">\(G\)</span> è finito, allora <span class="process-math">\(\abs{h^{G}}\)</span> divide <span class="process-math">\(\abs{G}\text{.}\)</span>
+</div>
+</div></article><article class="remark remark-like" id="rem-centro_classe_di_coniugio"><h3 class="heading">
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">14.2.11</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1873">Dalla <a href="" class="xref" data-knowl="./knowl/xref/prop-coniugato_fisso_commuta.html" title="Proposizione 14.2.9">Proposizione 14.2.9</a> segue immediatamente che la classe di coniugio di un elemento <span class="process-math">\(g\)</span> di un gruppo è formata dal solo elemento <span class="process-math">\(g\)</span> se e solo se <span class="process-math">\(g\)</span> appartiene al centro <span class="process-math">\(\centro(G)\)</span> di <span class="process-math">\(G\text{.}\)</span>
+</div></article><article class="proposition theorem-like" id="prop-equazione_delle_classi"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">14.2.12</span><span class="period">.</span><span class="space"> </span><span class="title">Equazione delle classi.</span>
+</h3>
+<div class="para logical" id="p-1874">
+<div class="para">Dato un gruppo finito <span class="process-math">\(G\text{,}\)</span> possiamo scrivere</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{G}=\abs{\centro(G)}+c_{1}+c_{2}+\cdots+c_{r}
+\end{equation*}
+</div>
+<div class="para">dove <span class="process-math">\(c_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(c_{r}\)</span> sono divisori di <span class="process-math">\(\abs{G}\)</span> e, precisamente, sono le cardinalità delle classi di coniugio di <span class="process-math">\(G\)</span> che contengono più di un elemento. L’equazione è detta <dfn class="terminology">equazione delle classi</dfn>.</div>
+</div></article><details id="proof-139" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para" id="p-1875">La dimostrazione segue immediatamente dal fatto che le classi di coniugio formano una partizione (<a href="" class="xref" data-knowl="./knowl/xref/prop-azione_partizione.html" title="Proposizione 14.2.2">Proposizione 14.2.2</a>), che ciascuna di esse ha cardinalità che divide l’ordine del gruppo (<a href="" class="xref" data-knowl="./knowl/xref/cor-ordine_classe_coniugio.html" title="Corollario 14.2.10">Corollario 14.2.10</a>) e che ci sono tante classi di cardinalità <span class="process-math">\(1\)</span> quanto l’ordine del centro di <span class="process-math">\(G\)</span> (<a href="" class="xref" data-knowl="./knowl/xref/rem-centro_classe_di_coniugio.html" title="Osservazione 14.2.11">Osservazione 14.2.11</a>).</div></article></details><article class="remark remark-like" id="rem-equazioni_classi_gruppo_abeliano"><h3 class="heading">
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">14.2.13</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1876">Se <span class="process-math">\(G\)</span> è un gruppo finito abeliano, l’<a href="" class="xref" data-knowl="./knowl/xref/prop-equazione_delle_classi.html" title="Proposizione 14.2.12: Equazione delle classi">Equazione delle classi</a> si riduce semplicemente a <span class="process-math">\(\abs{G}=\abs{Z(G)}\)</span> e non è, quindi, molto significativa.</div></article><div class="para" id="p-1877">Per dare un’applicazione dell’<a href="" class="xref" data-knowl="./knowl/xref/prop-equazione_delle_classi.html" title="Proposizione 14.2.12: Equazione delle classi">Equazione delle classi</a> ci serve la</div>
+<article class="definition definition-like" id="def-p_gruppo"><h3 class="heading">
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">14.2.14</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1878">Dato un primo <span class="process-math">\(p\text{,}\)</span> un <dfn class="terminology"><span class="process-math">\(p\)</span>-gruppo finito</dfn> è un gruppo di ordine una potenza di <span class="process-math">\(p\text{.}\)</span>
+</div></article><article class="proposition theorem-like" id="prop-centro_p_gruppo"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">14.2.15</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1879">Se <span class="process-math">\(G\)</span> è un <span class="process-math">\(p\)</span>-gruppo finito non banale, allora <span class="process-math">\(\centro(G)\)</span> è non banale.</div></article><details id="proof-140" class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para logical" id="p-1880">
+<div class="para">Sia <span class="process-math">\(\abs{G}=p^{n}\)</span> con <span class="process-math">\(n \gt 0\text{.}\)</span> L’equazione delle classi di <span class="process-math">\(G\)</span> è allora</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p^{n}=\abs{\centro(G)}+c_{1}+c_{2}+\cdots+c_{r}
+\end{equation*}
+</div>
+<div class="para">dove i <span class="process-math">\(c_{i}\)</span> sono divisori di <span class="process-math">\(p^{n}\)</span> maggiori di <span class="process-math">\(1\text{.}\)</span> Poiché <span class="process-math">\(p\)</span> è primo, i divisori di <span class="process-math">\(p^{n}\)</span> sono i numeri del tipo <span class="process-math">\(p^{t}\)</span> con <span class="process-math">\(0\le t\le n\text{:}\)</span> in particolare, i divisori di <span class="process-math">\(p^{n}\)</span> maggiori di <span class="process-math">\(1\)</span> sono multipli di <span class="process-math">\(p\text{.}\)</span> Ma allora</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{\centro(G)}=p^{n}-c_{1}-c_{2}-\cdots-c_{r}
+\end{equation*}
+</div>
+<div class="para">è somma di multipli di <span class="process-math">\(p\)</span> ed è, quindi, a sua volta un multiplo di <span class="process-math">\(p\text{.}\)</span> In particolare, <span class="process-math">\(\centro(G)\ne 1\text{.}\)</span>
+</div>
+</div></article></details><section class="exercises" id="exercises-orbite_stabilizzatori"><h3 class="heading hide-type">
+<span class="type">Esercizi</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Esercizi</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-285"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-1881">Sia data un’azione di un gruppo <span class="process-math">\(G\)</span> su un insieme <span class="process-math">\(X\text{.}\)</span> Sia <span class="process-math">\(\phi\colon G\to\Sym(X)\)</span> l’omomorfismo associato all’azione come nell’<a href="" class="xref" data-knowl="./knowl/xref/exercise-azione_omomorfismo_simmetrico.html" title="Esercizio 14.1.1">Esercizio 14.1.1</a>. Dimostrare che <span class="process-math">\(\ker\phi=\bigcap_{x\in X}\stab{G}{x}\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-286"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-1882">Sia <span class="process-math">\(H\)</span> un sottogruppo di un gruppo <span class="process-math">\(G\)</span> e si consideri l’azione di <span class="process-math">\(H\)</span> su <span class="process-math">\(G\)</span> indotta dall’azione regolare destra di <span class="process-math">\(G\)</span> su sé stesso. Dimostrare che le orbite dell’azione indotta sono i laterali sinistri di <span class="process-math">\(H\)</span> in <span class="process-math">\(G\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-287"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-62"><div class="para logical" id="p-1883">
+<div class="para">Sia data l’azione di <span class="process-math">\(S\coloneqq\Sym_{3}\)</span> su</div>
+<div class="displaymath process-math">
+\begin{equation*}
+X\coloneqq\{(i,j)\in\Interi\times\Interi\mid 1\le i\le 3,1\le j\le 3\}
+\end{equation*}
+</div>
+<div class="para">definita da <span class="process-math">\((i,j)\sigma\coloneqq(i\sigma,j\sigma)\text{.}\)</span>
+</div>
+</div></div>
+<article class="task exercise-like" id="task-51"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-1884">Determinare lo stabilizzatore di <span class="process-math">\((1,1)\)</span> e lo stabilizzatore di <span class="process-math">\((1,2)\text{.}\)</span>
+</div>
+<div class="solutions"><details id="solution-94" class="solution solution-like born-hidden-knowl"><summary><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="p-1885">Una permutazione <span class="process-math">\(\sigma\)</span> appartiene a <span class="process-math">\(\stab{S}{(1,1)}\)</span> se e solo se <span class="process-math">\((1,1)\sigma=(1,1)\text{,}\)</span> cioè <span class="process-math">\((1\sigma,1\sigma)=(1,1)\)</span> il che avviene se e solo se <span class="process-math">\(1\sigma=1\text{.}\)</span> Le permutazioni che fissano <span class="process-math">\(1\)</span> sono l’identità e lo scambio <span class="process-math">\((2\;3)\text{.}\)</span> Dunque, lo stabilizzatore <span class="process-math">\(\stab{S}{(1,1)}\)</span> è il gruppo ciclico <span class="process-math">\(\grgen{(2\;3)}\text{.}\)</span>
+</div> <div class="para" id="p-1886">Analogamente, una permutazione <span class="process-math">\(\sigma\)</span> appartiene a <span class="process-math">\(\stab{S}{(1,2)}\)</span> se e solo se <span class="process-math">\((1,2)\sigma=(1,2)\text{,}\)</span> cioè <span class="process-math">\((1\sigma,2\sigma)=(1,2)\)</span> il che avviene se e solo se <span class="process-math">\(1\sigma=1\)</span> e <span class="process-math">\(2\sigma=2\text{.}\)</span> Una permutazione che fissa <span class="process-math">\(1\)</span> e <span class="process-math">\(2\)</span> deve necessariamente fissare anche <span class="process-math">\(3\text{.}\)</span> Dunque, lo stabilizzatore <span class="process-math">\(\stab{S}{(1,2)}\)</span> è il sottogruppo banale <span class="process-math">\(\{\Id\}\text{.}\)</span>
+</div>
+</div></details></div></article><article class="task exercise-like" id="task-52"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-1887">Determinare tutte le orbite dell’azione.</div>
+<div class="solutions"><details id="solution-95" class="solution solution-like born-hidden-knowl"><summary><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="p-1888">Dal punto precedente sappiamo che <span class="process-math">\(\abs{\stab{S}{(1,1)}}=2\)</span> e, dunque, l’orbita di <span class="process-math">\((1,1)\)</span> contiene <span class="process-math">\(\ind{S}{\stab{S}{(1,1)}}=3\)</span> elementi. Se applichiamo una permutazione <span class="process-math">\(\sigma\)</span> a <span class="process-math">\((1,1)\text{,}\)</span> otteniamo una coppia i cui elementi sono uguali fra loro: poiché esistono esattamente <span class="process-math">\(3\)</span> elementi di questo tipo, e cioè <span class="process-math">\((1,1)\text{,}\)</span> <span class="process-math">\((2,2)\)</span> e <span class="process-math">\((3,3)\)</span> questi elementi formano un’orbita.</div> <div class="para" id="p-1889">Sappiamo poi che <span class="process-math">\(\abs{\stab{S}{(1,2)}}=1\)</span> e, dunque, l’orbita di <span class="process-math">\((1,2)\)</span> contiene <span class="process-math">\(\ind{S}{\stab{S}{(1,2)}}=6\)</span> elementi. Poiché <span class="process-math">\(X\)</span> contiene <span class="process-math">\(9\)</span> elementi e l’orbita di <span class="process-math">\((1,1)\)</span> è formata da <span class="process-math">\(3\)</span> elementi, l’orbita di <span class="process-math">\((1,2)\)</span> deve contenere i rimanenti <span class="process-math">\(6\)</span> elementi, cioè le coppie <span class="process-math">\((i,j)\)</span> con <span class="process-math">\(i\ne j\text{.}\)</span>
+</div>
+</div></details></div></article></article><article class="exercise exercise-like" id="exercise-288"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para logical" id="p-1890">
+<div class="para">Sia data l’azione di <span class="process-math">\(S\coloneqq\Sym_{3}\)</span> su</div>
+<div class="displaymath process-math">
+\begin{equation*}
+X\coloneqq\{(i,j,k)\in\Interi\times\Interi\times\Interi\mid 1\le i\le 3,1\le j\le 3,1\le k\}
+\end{equation*}
+</div>
+<div class="para">definita da <span class="process-math">\((i,j,k)\sigma\coloneqq(i\sigma,j\sigma,k\sigma)\text{,}\)</span> determinare tutte le orbite di quest’azione.</div>
+</div>
+<div class="solutions"><details id="solution-96" class="solution solution-like born-hidden-knowl"><summary><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like">
+<div class="para" id="p-1891">Consideriamo l’elemento <span class="process-math">\((1,1,1)\text{.}\)</span> Una permutazione <span class="process-math">\(\sigma\)</span> stabilizza <span class="process-math">\((1,1,1)\)</span> se e solo se <span class="process-math">\((1,1,1)\sigma=(1,1,1)\)</span> cioè <span class="process-math">\((1\sigma,1\sigma,1\sigma)=(1,1,1)\)</span> il che avviene se e solo se <span class="process-math">\(1\sigma=1\text{.}\)</span> Le permutazioni che fissano <span class="process-math">\(1\)</span> sono l’identità e lo scambio <span class="process-math">\((2\;3)\)</span> e, dunque, lo stabilizzatore <span class="process-math">\(\stab{S}{(1,1,1)}\)</span> è il gruppo ciclico <span class="process-math">\(\grgen{(2\;3)}\text{.}\)</span> L’orbita di <span class="process-math">\((1,1,1)\)</span> contiene <span class="process-math">\(\ind{S}{\stab{S}{(1,1,1)}}=3\)</span> elementi. Se applichiamo una permutazione <span class="process-math">\(\sigma\)</span> a <span class="process-math">\((1,1,1)\)</span> otteniamo una terna i cui elementi sono uguali fra loro: poiché esistono esattamente <span class="process-math">\(3\)</span> elementi di questo tipo (e cioè <span class="process-math">\((1,1,1)\text{,}\)</span> <span class="process-math">\((2,2,2)\)</span> e <span class="process-math">\((3,3,3)\)</span>) questi elementi formano un’orbita.</div> <div class="para" id="p-1892">Consideriamo ora l’elemento <span class="process-math">\((1,1,2)\text{.}\)</span> Una permutazione <span class="process-math">\(\sigma\)</span> appartiene a <span class="process-math">\(\stab{S}{(1,1,2)}\)</span> se e solo se <span class="process-math">\((1,1,2)\sigma=(1,1,2)\)</span> cioè <span class="process-math">\((1\sigma,1\sigma,2\sigma)=(1,1,2)\)</span> il che avviene se e solo se <span class="process-math">\(1\sigma=1\)</span> e <span class="process-math">\(2\sigma=2\text{.}\)</span> Una permutazione che fissa <span class="process-math">\(1\)</span> e <span class="process-math">\(2\)</span> deve necessariamente fissare anche <span class="process-math">\(3\text{.}\)</span> Dunque, lo stabilizzatore <span class="process-math">\(\stab{S}{(1,1,2)}\)</span> è il sottogruppo banale <span class="process-math">\(\{\Id\}\text{.}\)</span> L’orbita di <span class="process-math">\((1,1,2)\)</span> contiene <span class="process-math">\(\ind{S}{\stab{S}{(1,1,2)}}=6\)</span> elementi. Se applichiamo una permutazione <span class="process-math">\(\sigma\)</span> a <span class="process-math">\((1,1,2)\)</span> otteniamo una terna i cui primi due elementi sono uguali fra loro e il terzo è diverso dai primi <span class="process-math">\(2\text{:}\)</span> poiché esistono esattamente <span class="process-math">\(6\)</span> elementi di questo tipo(e cioè <span class="process-math">\((1,1,2)\text{,}\)</span> <span class="process-math">\((1,1,3)\text{,}\)</span> <span class="process-math">\((2,2,1)\text{,}\)</span> <span class="process-math">\((2,2,3)\text{,}\)</span> <span class="process-math">\((3,3,1)\)</span> e <span class="process-math">\((3,3,2)\)</span>) questi elementi formano un’orbita.</div> <div class="para" id="p-1893">In maniera analoga si dimostra che le <span class="process-math">\(6\)</span> terne il cui primo e terzo elemento sono uguali tra loro e il secondo elemento è diverso dagli altri <span class="process-math">\(2\)</span> formano un’orbita e le <span class="process-math">\(6\)</span> terne il cui secondo e terzo elemento sono uguali tra loro e il primo elemento è diverso dagli altri <span class="process-math">\(2\)</span> formano un’altra orbita.</div> <div class="para" id="p-1894">Consideriamo infine l’elemento <span class="process-math">\((1,2,3)\text{.}\)</span> Una permutazione <span class="process-math">\(\sigma\)</span> appartiene allo stabilizzatore <span class="process-math">\(\stab{S}{(1,2,3)}\)</span> se e solo se <span class="process-math">\((1,2,3)\sigma=(1,2,3)\)</span> cioè <span class="process-math">\((1\sigma,2\sigma,3\sigma)=(1,2,3)\)</span> il che avviene se e solo se <span class="process-math">\(1\sigma=1\text{,}\)</span> <span class="process-math">\(2\sigma=2\)</span> e <span class="process-math">\(3\sigma=3\text{.}\)</span> Dunque, lo stabilizzatore <span class="process-math">\(\stab{S}{(1,2,3)}\)</span> è il sottogruppo banale <span class="process-math">\(\{\Id\}\text{.}\)</span> L’orbita di <span class="process-math">\((1,2,3)\)</span> contiene <span class="process-math">\(\ind{S}{\stab{S}{(1,2,3)}}=6\)</span> elementi: questi sono le <span class="process-math">\(6\)</span> terne restanti, cioè quelle che hanno i <span class="process-math">\(3\)</span> elementi diversi fra loro.</div>
+</div></details></div></article><article class="exercise exercise-like" id="exercise-289"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="p-1895">Mostrare che l’unico gruppo finito (a meno di isomorfismi) ad avere esattamente due classi di coniugio è il gruppo ciclico di ordine <span class="process-math">\(2\text{.}\)</span>
+</div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec-azioni_definizioni.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-sottogruppi_normali.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="it-IT" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="lemma theorem-like"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">6.4.13</span><span class="period">.</span>
+</h3>
+<div class="para">Siano <span class="process-math">\(m\)</span> e <span class="process-math">\(n\)</span> due interi positivi coprimi. Allora <span class="process-math">\(\euler{mn}=\euler{m}\euler{n}\text{.}\)</span>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof"><div class="para">Consideriamo la funzione <span class="process-math">\(\tau\colon \Interi/mn\to\Interi/m\times\Interi/n\)</span> definita da <span class="process-math">\(\class[mn]{a}\tau\coloneqq(\class[m]{a},\class[n]{a})\text{.}\)</span> Notiamo innanzitutto che <span class="process-math">\(\tau\)</span> è ben definita: se <span class="process-math">\(\class[mn]{a}=\class[mn]{b}\text{,}\)</span> cioè <span class="process-math">\(b-a\)</span> è multiplo di <span class="process-math">\(mn\text{,}\)</span> allora <span class="process-math">\(b-a\)</span> è multiplo sia di <span class="process-math">\(m\)</span> che di <span class="process-math">\(n\text{,}\)</span> cioè <span class="process-math">\(\class[m]{a}=\class[m]{b}\)</span> e <span class="process-math">\(\class[n]{a}=\class[n]{b}\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Per il <a href="" class="xref" data-knowl="./knowl/xref/thm-cinese_del_resto.html" title="Teorema 6.4.6: Teorema cinese del resto">Teorema cinese del resto</a>, la funzione <span class="process-math">\(\tau\)</span> è suriettiva. Infatti, data una coppia <span class="process-math">\((\class[m]{c},\class[n]{d})\text{,}\)</span> sappiamo che esiste un intero <span class="process-math">\(a\)</span> tale che <span class="process-math">\(a\equiv c\pmod{m}\)</span> e <span class="process-math">\(a\equiv d\pmod{n}\text{,}\)</span> cioè <span class="process-math">\(\class[m]{a}=\class[m]{c}\)</span> e <span class="process-math">\(\class[n]{a}=\class[n]{d}\text{.}\)</span> Pertanto</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-cinese_del_resto.html">
+\begin{equation*}
+\class[mn]{a}\tau=(\class[m]{a},\class[n]{a})=(\class[m]{c},\class[n]{d}).
+\end{equation*}
+</div>
+<div class="para">Dal momento che <span class="process-math">\(\abs{\Interi/mn}=mn=\abs{\Interi/m\times\Interi/n}\text{,}\)</span> la funzione <span class="process-math">\(\tau\)</span> è, quindi, biiettiva.</div>
+</div> <div class="para">Consideriamo ora i sottoinsiemi <span class="process-math">\(S\text{,}\)</span> <span class="process-math">\(M\)</span> e <span class="process-math">\(N\)</span> rispettivamente di <span class="process-math">\(\Interi/mn\text{,}\)</span> <span class="process-math">\(\Interi/m\)</span> e <span class="process-math">\(\Interi/n\)</span> formati dalle classi invertibili. Per la <a href="" class="xref" data-knowl="./knowl/xref/prop-coprimo_con_prodotto.html" title="Proposizione 5.4.8">Proposizione 5.4.8</a>, un intero <span class="process-math">\(a\)</span> è coprimo con <span class="process-math">\(mn\)</span> se e solo se è coprimo con <span class="process-math">\(m\)</span> e <span class="process-math">\(n\text{.}\)</span> In particolare, <span class="process-math">\(\class[mn]{a}\)</span> è invertibile se e solo se <span class="process-math">\(\class[m]{a}\)</span> e <span class="process-math">\(\class[n]{a}\)</span> sono invertibili. Pertanto, <span class="process-math">\(\tau\)</span> induce una biiezione tra <span class="process-math">\(S\)</span> e <span class="process-math">\(M\times N\text{:}\)</span> poiché <span class="process-math">\(\abs{M}=\euler{m}\text{,}\)</span> <span class="process-math">\(\abs{N}=\euler{n}\)</span> e <span class="process-math">\(\abs{S}=\euler{mn}\text{,}\)</span> il risultato segue.</div></article></details><span class="incontext"><a class="internal" href="sec-congruenze_con_incognite.html#lem-moltiplicativita_eulero">Nel contesto</a></span>
+</body>
+</html>
