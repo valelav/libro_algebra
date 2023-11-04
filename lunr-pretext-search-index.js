@@ -10,9 +10,9 @@ var ptx_lunr_docs = [
   "body": " Settembre 2023   Algebra all'Insubria   copyright  "
 },
 {
-  "id": "preface-1",
+  "id": "frontmatter-3",
   "level": "1",
-  "url": "preface-1.html",
+  "url": "frontmatter-3.html",
   "type": "Prefazione",
   "number": "",
   "title": "Prefazione",
@@ -28,18 +28,18 @@ var ptx_lunr_docs = [
   "body": " Concetti di base  Un insieme insieme è una collezione ben determinata di oggetti, detti elementi : questa definizione non è del tutto soddisfacente, perché ci siamo limitati a sostituire una parola con un'altra, ma per il momento ci accontenteremo. Indicheremo solitamente (ma non sempre) gli insiemi con lettere maiuscole e gli elementi con lettere minuscole. Dato un elemento e un insieme , si deve poter dire con certezza (almeno in teoria) se l'elemento appartiene a (e in tal caso scriveremo ) o no (e in tal caso scriveremo ).   appartiene all'insieme     non appartiene all'insieme      Se indichiamo con l'insieme dei numeri primi (la cui definizione precisa ricorderemo più avanti: ), sappiamo che e . Consideriamo ora i cosiddetti numeri di Fermat, Pierre de Fermat , 1601 1665. Fermat, Pierre de cioè i numeri del tipo con intero non negativo: , , , e sono primi, cioè appartengono a , mentre Eulero Leonhard Euler , 1707 1783 Eulero (Leonhard Euler) ha mostrato nel 1737 che non è primo, cioè non appartiene a . Successivamente sono stati trovati altri valori per cui non è primo, ma attualmente non si sa se ci siano altri primi in questa successione. Ciò non significa che l'insieme non sia ben definito.     insieme uguaglianza   Diciamo che due insiemi e sono uguali e scriviamo quando ogni elemento di è un elemento di e viceversa. Se due insiemi non sono uguali, scriveremo .    Un insieme viene spesso descritto tramite l'elencazione dei propri elementi: . L'ordine in cui appaiono gli elementi o eventuali ripetizioni di qualche elemento nella lista non hanno importanza: l'insieme appena mostrato coincide con l'insieme e con l'insieme .  Se gli elementi da elencare sono troppi (o addirittura infiniti), in qualche caso potremo usare dei puntini di sospensione. Ad esempio, indicheremo con l'insieme dei naturali da a e con l'insieme dei numeri naturali dispari: occorre fare attenzione perché queste scritture sono potenzialmente ambigue.  Un insieme particolare è l'insieme vuoto  , cioè l'insieme che non possiede alcun elemento.   insieme vuoto   insieme vuoto   Alcuni simboli sono riservati per certi insiemi numerici. Indicheremo con l'insieme dei numeri naturali, cioè , , , Su alcuni testi il numero non è incluso tra i naturali. Useremo poi i simboli , , , per indicare, rispettivamente, gli insiemi dei numeri interi, razionali, reali e complessi.   insieme dei numeri naturali     insieme dei numeri interi     insieme dei numeri razionali     insieme dei numeri reali     insieme dei numeri complessi    La cardinalità cardinalità di un insieme finito insieme cardinalità di un insieme finito , denotata con , indica il numero dei suoi elementi. Ad esempio, , e . Se è un insieme infinito, scriveremo semplicemente : in realtà, esistono vari tipi di infinito, o, per meglio dire, diverse cardinalità infinite, ma per i nostri scopi non sarà necessario distinguere tra esse; ne daremo comunque qualche cenno nel .   cardinalità di    Un modo per descrivere un insieme è quello di scegliere, tra gli elementi di un insieme dato, quelli che soddisfano una proprietà. Ad esempio, possiamo indicare l'insieme dei naturali dispari in questo modo: . Il simbolo si legge tale che . Alle volte la scrittura precedente si abbrevia semplicemente in o addirittura in ma occorre fare attenzione perché gli elementi che soddisfano una certa proprietà vanno scelti tra quelli che appartengono a un insieme dato (almeno implicitamente).   sottoinsieme  insieme sottoinsieme  insieme inclusione  inclusione di insiemi    è contenuto in     non è contenuto in    Dati due insiemi e , diciamo che è sottoinsieme di o che è contenuto in se ogni elemento di appartiene a . Scriveremo allora o . Useremo invece i simboli o per dire che non è contenuto in : ciò è equivalente a dire che esiste almeno un elemento di che non appartiene a .      L'insieme è sottoinsieme dell'insieme ma non è sottoinsieme dell'insieme : infatti ogni elemento di appartiene anche a , ma c'è almeno un elemento di che non appartiene a (ad esempio, ).    La dimostrazione della prossima proposizione è ovvia.   inclusione transitività   Siano , e tre insiemi tali che e . Allora .     Ogni insieme è sottoinsieme di sé stesso Se vi state chiedendo se si può scrivere sé stesso con l'accento, la risposta è sì (e molti linguisti suggeriscono di usare questa forma). e l'insieme vuoto è un sottoinsieme di ogni insieme.    Due insiemi e sono uguali se e solo se e : per verificare l'uguaglianza tra due insiemi si dimostrano spesso separatamente queste due inclusioni.    insieme sottoinsieme proprio  sottoinsieme proprio  insieme inclusione stretta  inclusione stretta    è contenuto strettamente in    Se è un sottoinsieme di e , diremo che è un sottoinsieme proprio di o che è contenuto strettamente in e scriveremo o .      Nell' , l'insieme è contenuto strettamente in : sappiamo già che ogni elemento di è contenuto in ; notiamo poi che esiste almeno un elemento (ad esempio, ) che appartiene a ma non ad .     Abbiamo già osservato che se e solo se e . Dunque, se e solo se e .    insieme delle parti  insieme Booleano  Booleano    insieme delle parti di    Dato un insieme , l'insieme i cui elementi sono i sottoinsiemi di è detto insieme delle parti di o booleano George Boole , 1815 1864. Boole, George di , e indicato con il simbolo .      L'insieme vuoto ha come unico sottoinsieme sé stesso e, dunque, : l'insieme delle parti dell'insieme vuoto non è vuoto, ma contiene esattamente un elemento.  Se consideriamo gli insiemi e abbiamo e .     Se è un insieme finito avente elementi, si dimostra facilmente che il suo insieme delle parti ha elementi.     Dimostrare la .    Dimostrare che se , e almeno una delle due inclusioni è stretta, allora .    Mostrare che se e solo se .   Se , ovviamente si ha .  Viceversa, sia . Poiché , si ha che : d'altra parte, gli elementi di sono i sottoinsiemi di e, dunque, . Analogamente si prova che e, quindi, .    Dimostrare l'affermazione dell' , cioè che se è un insieme finito, allora .   Per ogni elemento di e ogni sottoinsieme di vale una e una sola delle due possibilità: o .    Mostrare che se è infinito, anche è infinito.   Basta considerare i sottoinsiemi formati da un unico elemento.    "
 },
 {
-  "id": "p-6",
+  "id": "sec-insiemi-2",
   "level": "2",
-  "url": "sec-insiemi.html#p-6",
+  "url": "sec-insiemi.html#sec-insiemi-2",
   "type": "Capoverso (with a defined term)",
   "number": "",
   "title": "",
   "body": "insieme elementi "
 },
 {
-  "id": "example-1",
+  "id": "sec-insiemi-3",
   "level": "2",
-  "url": "sec-insiemi.html#example-1",
+  "url": "sec-insiemi.html#sec-insiemi-3",
   "type": "Esempio",
   "number": "1.1.1",
   "title": "",
@@ -55,18 +55,18 @@ var ptx_lunr_docs = [
   "body": " insieme uguaglianza   Diciamo che due insiemi e sono uguali e scriviamo quando ogni elemento di è un elemento di e viceversa. Se due insiemi non sono uguali, scriveremo .   "
 },
 {
-  "id": "p-11",
+  "id": "sec-insiemi-7",
   "level": "2",
-  "url": "sec-insiemi.html#p-11",
+  "url": "sec-insiemi.html#sec-insiemi-7",
   "type": "Capoverso (with a defined term)",
   "number": "",
   "title": "",
   "body": "vuoto "
 },
 {
-  "id": "p-13",
+  "id": "sec-insiemi-9",
   "level": "2",
-  "url": "sec-insiemi.html#p-13",
+  "url": "sec-insiemi.html#sec-insiemi-9",
   "type": "Capoverso (with a defined term)",
   "number": "",
   "title": "",
@@ -100,18 +100,18 @@ var ptx_lunr_docs = [
   "body": " inclusione transitività   Siano , e tre insiemi tali che e . Allora .   "
 },
 {
-  "id": "remark-1",
+  "id": "sec-insiemi-15",
   "level": "2",
-  "url": "sec-insiemi.html#remark-1",
+  "url": "sec-insiemi.html#sec-insiemi-15",
   "type": "Osservazione",
   "number": "1.1.6",
   "title": "",
   "body": " Ogni insieme è sottoinsieme di sé stesso Se vi state chiedendo se si può scrivere sé stesso con l'accento, la risposta è sì (e molti linguisti suggeriscono di usare questa forma). e l'insieme vuoto è un sottoinsieme di ogni insieme.  "
 },
 {
-  "id": "remark-2",
+  "id": "sec-insiemi-16",
   "level": "2",
-  "url": "sec-insiemi.html#remark-2",
+  "url": "sec-insiemi.html#sec-insiemi-16",
   "type": "Osservazione",
   "number": "1.1.7",
   "title": "",
@@ -127,9 +127,9 @@ var ptx_lunr_docs = [
   "body": " insieme sottoinsieme proprio  sottoinsieme proprio  insieme inclusione stretta  inclusione stretta    è contenuto strettamente in    Se è un sottoinsieme di e , diremo che è un sottoinsieme proprio di o che è contenuto strettamente in e scriveremo o .   "
 },
 {
-  "id": "example-3",
+  "id": "sec-insiemi-18",
   "level": "2",
-  "url": "sec-insiemi.html#example-3",
+  "url": "sec-insiemi.html#sec-insiemi-18",
   "type": "Esempio",
   "number": "1.1.9",
   "title": "",
@@ -172,45 +172,45 @@ var ptx_lunr_docs = [
   "body": " Se è un insieme finito avente elementi, si dimostra facilmente che il suo insieme delle parti ha elementi.  "
 },
 {
-  "id": "exercise-1",
+  "id": "exercises-insiemi-1",
   "level": "2",
-  "url": "sec-insiemi.html#exercise-1",
+  "url": "sec-insiemi.html#exercises-insiemi-1",
   "type": "Esercizio",
   "number": "1.1.1",
   "title": "",
   "body": " Dimostrare la .  "
 },
 {
-  "id": "exercise-2",
+  "id": "exercises-insiemi-2",
   "level": "2",
-  "url": "sec-insiemi.html#exercise-2",
+  "url": "sec-insiemi.html#exercises-insiemi-2",
   "type": "Esercizio",
   "number": "1.1.2",
   "title": "",
   "body": " Dimostrare che se , e almeno una delle due inclusioni è stretta, allora .  "
 },
 {
-  "id": "exercise-3",
+  "id": "exercises-insiemi-3",
   "level": "2",
-  "url": "sec-insiemi.html#exercise-3",
+  "url": "sec-insiemi.html#exercises-insiemi-3",
   "type": "Esercizio",
   "number": "1.1.3",
   "title": "",
   "body": " Mostrare che se e solo se .   Se , ovviamente si ha .  Viceversa, sia . Poiché , si ha che : d'altra parte, gli elementi di sono i sottoinsiemi di e, dunque, . Analogamente si prova che e, quindi, .  "
 },
 {
-  "id": "exercise-4",
+  "id": "exercises-insiemi-4",
   "level": "2",
-  "url": "sec-insiemi.html#exercise-4",
+  "url": "sec-insiemi.html#exercises-insiemi-4",
   "type": "Esercizio",
   "number": "1.1.4",
   "title": "",
   "body": " Dimostrare l'affermazione dell' , cioè che se è un insieme finito, allora .   Per ogni elemento di e ogni sottoinsieme di vale una e una sola delle due possibilità: o .  "
 },
 {
-  "id": "exercise-5",
+  "id": "exercises-insiemi-5",
   "level": "2",
-  "url": "sec-insiemi.html#exercise-5",
+  "url": "sec-insiemi.html#exercises-insiemi-5",
   "type": "Esercizio",
   "number": "1.1.5",
   "title": "",
@@ -235,9 +235,9 @@ var ptx_lunr_docs = [
   "body": " insieme unione  insieme intersezione  insieme differenza  unione di insiemi  intersezione di insiemi  differenza di insiemi    unione di e     intersezione di e     differenza di e    L' unione  di due insiemi e è l'insieme degli elementi che appartengono ad almeno uno tra e .  L' intersezione  di due insiemi e è l'insieme degli elementi che appartengono ad almeno uno tra e .  La differenza  di due insiemi e è l'insieme degli elementi che appartengono a ma non a .   Diagrammi di Venn di unione, intersezione e differenza   Diagrammi di Venn di unione, intersezione e differenza      "
 },
 {
-  "id": "example-5",
+  "id": "sec-operazioni_insiemi-4",
   "level": "2",
-  "url": "sec-operazioni_insiemi.html#example-5",
+  "url": "sec-operazioni_insiemi.html#sec-operazioni_insiemi-4",
   "type": "Esempio",
   "number": "1.2.3",
   "title": "",
@@ -280,36 +280,36 @@ var ptx_lunr_docs = [
   "body": "  Se è una famiglia di insiemi indicizzata da un insieme (finito o infinito) di indici allora possiamo fare l'unione e l'intersezione degli . Più precisamente, l'unione degli , indicata con , è l'insieme degli elementi che appartengono ad almeno uno degli , mentre l'intersezione degli , indicata con , è l'insieme degli elementi che appartengono a tutti gli .   "
 },
 {
-  "id": "exercise-6",
+  "id": "exercises-operazioni_insiemi-1",
   "level": "2",
-  "url": "sec-operazioni_insiemi.html#exercise-6",
+  "url": "sec-operazioni_insiemi.html#exercises-operazioni_insiemi-1",
   "type": "Esercizio",
   "number": "1.2.1",
   "title": "",
   "body": " Dimostrare la .  "
 },
 {
-  "id": "exercise-7",
+  "id": "exercises-operazioni_insiemi-2",
   "level": "2",
-  "url": "sec-operazioni_insiemi.html#exercise-7",
+  "url": "sec-operazioni_insiemi.html#exercises-operazioni_insiemi-2",
   "type": "Esercizio",
   "number": "1.2.2",
   "title": "",
   "body": " Dimostrare la .  "
 },
 {
-  "id": "exercise-8",
+  "id": "exercises-operazioni_insiemi-3",
   "level": "2",
-  "url": "sec-operazioni_insiemi.html#exercise-8",
+  "url": "sec-operazioni_insiemi.html#exercises-operazioni_insiemi-3",
   "type": "Esercizio",
   "number": "1.2.3",
   "title": "",
   "body": " Dimostrare che se e solo se .   Osservare che, comunque scelti due insiemi e , non c'è alcun elemento che appartiene a e .  "
 },
 {
-  "id": "exercise-9",
+  "id": "exercises-operazioni_insiemi-4",
   "level": "2",
-  "url": "sec-operazioni_insiemi.html#exercise-9",
+  "url": "sec-operazioni_insiemi.html#exercises-operazioni_insiemi-4",
   "type": "Esercizio",
   "number": "1.2.4",
   "title": "",
@@ -352,9 +352,9 @@ var ptx_lunr_docs = [
   "body": " Dalla definizione segue immediatamente che il prodotto cartesiano è vuoto se e solo se almeno uno tra gli insiemi è vuoto.  "
 },
 {
-  "id": "exercise-10",
+  "id": "exercises-prodotto_cartesiano-1",
   "level": "2",
-  "url": "sec-prodotto-cartesiano.html#exercise-10",
+  "url": "sec-prodotto-cartesiano.html#exercises-prodotto_cartesiano-1",
   "type": "Esercizio",
   "number": "1.3.1",
   "title": "",
@@ -406,27 +406,27 @@ var ptx_lunr_docs = [
   "body": "  Riprendiamo gli insiemi e considerati nell' e diciamo che in è in corrispondenza con in se è un numero pari. Dunque, è in corrispondenza con e , mentre e sono in corrispondenza con . Come sottoinsieme del prodotto cartesiano questa corrispondenza è, dunque, .   Corrispondenza tra insiemi di interi data dalla parità   Rappresentazione della corrispondenza tra insiemi di interi data dalla parità      "
 },
 {
-  "id": "exercise-11",
+  "id": "exercises-corrispondenze_definizione-1",
   "level": "2",
-  "url": "sec-corrispondenze_definizione.html#exercise-11",
+  "url": "sec-corrispondenze_definizione.html#exercises-corrispondenze_definizione-1",
   "type": "Esercizio",
   "number": "2.1.1",
   "title": "",
   "body": "corrispondenza composizione composizione di corrispondenze  Dati tre insiemi , e e due corrispondenze tra e e tra e , la composizione di e è la corrispondenza tra e così definita: dati e si ha se esiste tale che e .  Dato un altro insieme e una corrispondenza tra e , mostrare che .  "
 },
 {
-  "id": "exercise-12",
+  "id": "exercises-corrispondenze_definizione-2",
   "level": "2",
-  "url": "sec-corrispondenze_definizione.html#exercise-12",
+  "url": "sec-corrispondenze_definizione.html#exercises-corrispondenze_definizione-2",
   "type": "Esercizio",
   "number": "2.1.2",
   "title": "",
   "body": " Siano dati gli insiemi e .   Descrivere come sottoinsieme di la corrispondenza da a così definita: se è un quadrato perfetto.   Descrivere come sottoinsieme di la corrispondenza da a così definita: se è multiplo di .   Confrontare le corrispondenze e : cosa possiamo dire?   Le corrispondenze e coincidono anche se sono descritte in maniera differente.  "
 },
 {
-  "id": "exercise-13",
+  "id": "exercises-corrispondenze_definizione-3",
   "level": "2",
-  "url": "sec-corrispondenze_definizione.html#exercise-13",
+  "url": "sec-corrispondenze_definizione.html#exercises-corrispondenze_definizione-3",
   "type": "Esercizio",
   "number": "2.1.3",
   "title": "",
@@ -532,81 +532,81 @@ var ptx_lunr_docs = [
   "body": "  Data una relazione di equivalenza in un insieme , l'insieme delle sue classi di equivalenza forma una partizione di . Viceversa, data una partizione di , esiste una relazione di equivalenza le cui classi sono esattamente gli elementi della partizione.    Dalla , la classe contiene l'elemento : in particolare, ogni classe è non vuota e ogni elemento di è contenuto in (almeno) una classe, da cui segue che l'unione delle classi è uguale ad . La afferma inoltre che classi distinte hanno intersezione vuota. Pertanto, le classi formano una partizione.  Viceversa, data la partizione , definiamo la relazione così: se esiste tale che e . La relazione è chiaramente simmetrica. Poiché , per ogni esiste un tale che : dunque, è riflessiva. Infine, se e , allora esistono e in tali che , , e . Dunque, contiene ed è, quindi, non vuoto: per definizione di partizione, ciò significa che e, di conseguenza, c'è un elemento della partizione che contiene sia che e, pertanto, , cioè è transitiva. Dato in , gli elementi a esso equivalenti sono tutti e soli quelli appartenenti all'unico contenente , cioè la classe di equivalenza di coincide con .   "
 },
 {
-  "id": "example-12",
+  "id": "sec-relazioni_equivalenza-14",
   "level": "2",
-  "url": "sec-relazioni_equivalenza.html#example-12",
+  "url": "sec-relazioni_equivalenza.html#sec-relazioni_equivalenza-14",
   "type": "Esempio",
   "number": "2.2.11",
   "title": "",
   "body": "  Riprendiamo l' . Rispetto alla relazione di uguaglianza le classi di equivalenza sono esattamente i sottoinsiemi di formati da singoli elementi. Rispetto alla relazione di equivalenza in cui ogni elemento è in relazione con ogni altro elemento c'è invece un'unica classe e cioè stesso.   "
 },
 {
-  "id": "example-13",
+  "id": "sec-relazioni_equivalenza-15",
   "level": "2",
-  "url": "sec-relazioni_equivalenza.html#example-13",
+  "url": "sec-relazioni_equivalenza.html#sec-relazioni_equivalenza-15",
   "type": "Esempio",
   "number": "2.2.12",
   "title": "",
   "body": "  Riprendiamo l' . Ricordando che ciascun numero è in relazione con sé stesso e il proprio opposto, possiamo affermare che c'è una classe di equivalenza formata da unico numero reale, e cioè , mentre tutte le altre classi contengono esattamente due elementi.   "
 },
 {
-  "id": "exercise-14",
+  "id": "exercises-relazioni_equivalenza-1",
   "level": "2",
-  "url": "sec-relazioni_equivalenza.html#exercise-14",
+  "url": "sec-relazioni_equivalenza.html#exercises-relazioni_equivalenza-1",
   "type": "Esercizio",
   "number": "2.2.1",
   "title": "",
   "body": " Sia una relazione in un insieme . Dimostrare che è una relazione di equivalenza se e solo se soddisfa la proprietà riflessiva e la proprietà seguente: se e allora .  "
 },
 {
-  "id": "exercise-15",
+  "id": "exercises-relazioni_equivalenza-2",
   "level": "2",
-  "url": "sec-relazioni_equivalenza.html#exercise-15",
+  "url": "sec-relazioni_equivalenza.html#exercises-relazioni_equivalenza-2",
   "type": "Esercizio",
   "number": "2.2.2",
   "title": "",
   "body": " In un insieme , siano date delle relazioni di equivalenza pensate come sottoinsiemi di . Dimostrare che è una relazione di equivalenza.  "
 },
 {
-  "id": "exercise-16",
+  "id": "exercises-relazioni_equivalenza-3",
   "level": "2",
-  "url": "sec-relazioni_equivalenza.html#exercise-16",
+  "url": "sec-relazioni_equivalenza.html#exercises-relazioni_equivalenza-3",
   "type": "Esercizio",
   "number": "2.2.3",
   "title": "",
   "body": " Nell'insieme degli interi sia definita la relazione nel modo seguente se è pari. Stabilire se è di equivalenza.   La relazione è di equivalenza.  "
 },
 {
-  "id": "exercise-17",
+  "id": "exercises-relazioni_equivalenza-4",
   "level": "2",
-  "url": "sec-relazioni_equivalenza.html#exercise-17",
+  "url": "sec-relazioni_equivalenza.html#exercises-relazioni_equivalenza-4",
   "type": "Esercizio",
   "number": "2.2.4",
   "title": "",
   "body": " Nell'insieme degli interi sia definita la relazione nel modo seguente se è dispari. Stabilire se è di equivalenza.   La relazione non è di equivalenza: soddisfa solo la relazione simmetrica.  "
 },
 {
-  "id": "exercise-18",
+  "id": "exercises-relazioni_equivalenza-5",
   "level": "2",
-  "url": "sec-relazioni_equivalenza.html#exercise-18",
+  "url": "sec-relazioni_equivalenza.html#exercises-relazioni_equivalenza-5",
   "type": "Esercizio",
   "number": "2.2.5",
   "title": "",
   "body": " Nell'insieme degli interi sia definita la relazione nel modo seguente se è multiplo di . Stabilire se è di equivalenza.   La relazione non è di equivalenza: soddisfa solo la relazione simmetrica.  "
 },
 {
-  "id": "exercise-19",
+  "id": "exercises-relazioni_equivalenza-6",
   "level": "2",
-  "url": "sec-relazioni_equivalenza.html#exercise-19",
+  "url": "sec-relazioni_equivalenza.html#exercises-relazioni_equivalenza-6",
   "type": "Esercizio",
   "number": "2.2.6",
   "title": "",
   "body": " Sia data una collezione di sottoinsiemi non vuoti di un insieme tali che e si definisca in la relazione così: se esiste tale che e . Quali proprietà soddisfa questa relazione? Possiamo garantire che la relazione data è di equivalenza?   La relazione è riflessiva e simmetrica ma non necessariamente transitiva.  "
 },
 {
-  "id": "exercise-20",
+  "id": "exercises-relazioni_equivalenza-7",
   "level": "2",
-  "url": "sec-relazioni_equivalenza.html#exercise-20",
+  "url": "sec-relazioni_equivalenza.html#exercises-relazioni_equivalenza-7",
   "type": "Esercizio",
   "number": "2.2.7",
   "title": "",
@@ -667,9 +667,9 @@ var ptx_lunr_docs = [
   "body": " maggiorante  minorante   Dato un sottoinsieme di un insieme parzialmente ordinato rispetto a una relazione , un maggiorante di è un elemento appartenente a tale che per ogni ; analogamente, un minorante di è un elemento appartenente a tale che per ogni .   "
 },
 {
-  "id": "example-17",
+  "id": "sec-relazioni_ordine-7",
   "level": "2",
-  "url": "sec-relazioni_ordine.html#example-17",
+  "url": "sec-relazioni_ordine.html#sec-relazioni_ordine-7",
   "type": "Esempio",
   "number": "2.3.6",
   "title": "",
@@ -685,18 +685,18 @@ var ptx_lunr_docs = [
   "body": " massimo  minimo   Dato un sottoinsieme di un insieme parzialmente ordinato , un elemento che sia maggiorante di e appartenga a è detto massimo di ; un elemento che sia minorante di e appartenga a è detto minimo di .   "
 },
 {
-  "id": "remark-6",
+  "id": "sec-relazioni_ordine-9",
   "level": "2",
-  "url": "sec-relazioni_ordine.html#remark-6",
+  "url": "sec-relazioni_ordine.html#sec-relazioni_ordine-9",
   "type": "Osservazione",
   "number": "2.3.8",
   "title": "",
   "body": " Se un sottoinsieme di un insieme parzialmente ordinato ha un massimo, la proprietà antisimmetrica implica immediatamente che questo è unico. Diremo, quindi, che un certo elemento è il massimo di . Analogamente, nel caso esista un minimo.  "
 },
 {
-  "id": "example-18",
+  "id": "sec-relazioni_ordine-10",
   "level": "2",
-  "url": "sec-relazioni_ordine.html#example-18",
+  "url": "sec-relazioni_ordine.html#sec-relazioni_ordine-10",
   "type": "Esempio",
   "number": "2.3.9",
   "title": "",
@@ -712,45 +712,45 @@ var ptx_lunr_docs = [
   "body": " relazione d'ordine totale   Una relazione d'ordine in un insieme è detta totale se vale l'ulteriore proprietà:   per ogni e in vale almeno una tra e ( confrontabilità ).      "
 },
 {
-  "id": "example-19",
+  "id": "sec-relazioni_ordine-12",
   "level": "2",
-  "url": "sec-relazioni_ordine.html#example-19",
+  "url": "sec-relazioni_ordine.html#sec-relazioni_ordine-12",
   "type": "Esempio",
   "number": "2.3.11",
   "title": "",
   "body": "  Riprendiamo l'esempio . La relazione di minore o uguale è una relazione d'ordine totale in ciascuno degli insiemi considerati.   "
 },
 {
-  "id": "example-20",
+  "id": "sec-relazioni_ordine-13",
   "level": "2",
-  "url": "sec-relazioni_ordine.html#example-20",
+  "url": "sec-relazioni_ordine.html#sec-relazioni_ordine-13",
   "type": "Esempio",
   "number": "2.3.12",
   "title": "",
   "body": "  Riprendiamo l'esempio . La relazione di divide nei naturali non è una relazione d'ordine totale. Esistono infatti coppie di numeri non confrontabili: ad esempio, presi e , nessuno dei due divide l'altro.   "
 },
 {
-  "id": "example-21",
+  "id": "sec-relazioni_ordine-14",
   "level": "2",
-  "url": "sec-relazioni_ordine.html#example-21",
+  "url": "sec-relazioni_ordine.html#sec-relazioni_ordine-14",
   "type": "Esempio",
   "number": "2.3.13",
   "title": "",
   "body": "  Riprendiamo l'esempio . Se l'insieme contiene almeno due elementi distinti e , la relazione di inclusione in non è una relazione d'ordine totale: i sottoinsiemi e non sono infatti confrontabili.   "
 },
 {
-  "id": "exercise-21",
+  "id": "exercises-relazioni_ordine-1",
   "level": "2",
-  "url": "sec-relazioni_ordine.html#exercise-21",
+  "url": "sec-relazioni_ordine.html#exercises-relazioni_ordine-1",
   "type": "Esercizio",
   "number": "2.3.1",
   "title": "",
   "body": " Dimostrare che in un insieme l'unica relazione che è al tempo stesso di equivalenza e di ordine è la relazione di uguaglianza.  "
 },
 {
-  "id": "exercise-22",
+  "id": "exercises-relazioni_ordine-2",
   "level": "2",
-  "url": "sec-relazioni_ordine.html#exercise-22",
+  "url": "sec-relazioni_ordine.html#exercises-relazioni_ordine-2",
   "type": "Esercizio",
   "number": "2.3.2",
   "title": "",
@@ -811,18 +811,18 @@ var ptx_lunr_docs = [
   "body": " composizione di funzioni  funzione composizione   Data una funzione e una funzione , la funzione composta  è così definita: .   "
 },
 {
-  "id": "figure-7",
+  "id": "sec-funzioni_definizione-6",
   "level": "2",
-  "url": "sec-funzioni_definizione.html#figure-7",
+  "url": "sec-funzioni_definizione.html#sec-funzioni_definizione-6",
   "type": "Figura",
   "number": "3.1.8",
   "title": "",
   "body": " Composizione di funzioni   Composizione di funzioni    "
 },
 {
-  "id": "note-1",
+  "id": "sec-funzioni_definizione-7",
   "level": "2",
-  "url": "sec-funzioni_definizione.html#note-1",
+  "url": "sec-funzioni_definizione.html#sec-funzioni_definizione-7",
   "type": "Nota",
   "number": "3.1.9",
   "title": "",
@@ -919,9 +919,9 @@ var ptx_lunr_docs = [
   "body": " Sia una funzione tale che per ogni insieme e ogni funzione . Dimostrare che .   Prendiamo come insieme proprio e come funzione da in sé proprio : per ipotesi abbiamo allora che . D'altra parte per la si ha , da cui segue il risultato.  "
 },
 {
-  "id": "exercise-25",
+  "id": "exercises-funzioni_definizione-2",
   "level": "2",
-  "url": "sec-funzioni_definizione.html#exercise-25",
+  "url": "sec-funzioni_definizione.html#exercises-funzioni_definizione-2",
   "type": "Esercizio",
   "number": "3.1.2",
   "title": "",
@@ -1000,9 +1000,9 @@ var ptx_lunr_docs = [
   "body": " Una funzione è iniettiva se e solo se per ogni si ha che contiene al più un elemento.  "
 },
 {
-  "id": "example-28",
+  "id": "sec-funzioni_iniettive_suriettive-8",
   "level": "2",
-  "url": "sec-funzioni_iniettive_suriettive.html#example-28",
+  "url": "sec-funzioni_iniettive_suriettive.html#sec-funzioni_iniettive_suriettive-8",
   "type": "Esempio",
   "number": "3.2.6",
   "title": "",
@@ -1045,9 +1045,9 @@ var ptx_lunr_docs = [
   "body": " Una funzione è suriettiva se e solo se per ogni si ha che .  "
 },
 {
-  "id": "example-31",
+  "id": "sec-funzioni_iniettive_suriettive-15",
   "level": "2",
-  "url": "sec-funzioni_iniettive_suriettive.html#example-31",
+  "url": "sec-funzioni_iniettive_suriettive.html#sec-funzioni_iniettive_suriettive-15",
   "type": "Esempio",
   "number": "3.2.13",
   "title": "",
@@ -1081,9 +1081,9 @@ var ptx_lunr_docs = [
   "body": "  Sia una funzione. Allora:    è iniettiva se e solo se per ogni si ha che contiene al più un elemento;     è suriettiva se e solo se per ogni si ha che contiene almeno un elemento;     è biiettiva se e solo se per ogni si ha che contiene esattamente un elemento.      "
 },
 {
-  "id": "remark-9",
+  "id": "sec-funzioni_iniettive_suriettive-21",
   "level": "2",
-  "url": "sec-funzioni_iniettive_suriettive.html#remark-9",
+  "url": "sec-funzioni_iniettive_suriettive.html#sec-funzioni_iniettive_suriettive-21",
   "type": "Osservazione",
   "number": "3.2.17",
   "title": "",
@@ -1099,9 +1099,9 @@ var ptx_lunr_docs = [
   "body": "  Siano e funzioni.   Se e sono iniettive, allora è iniettiva.    Se e sono suriettive, allora è suriettiva.    Se e sono biiettive, allora è biiettiva.       Siano e iniettive e siano e elementi di tali che : poiché è iniettiva, abbiamo che che, dato che è iniettiva, implica che . Questo prova il .  Siano ora e suriettive e sia un elemento di : poiché è suriettiva, esiste tale che e, poiché è suriettiva, esiste tale che . Dunque, . Questo prova il .  Il segue immediatamente dal e dal .   "
 },
 {
-  "id": "example-33",
+  "id": "sec-funzioni_iniettive_suriettive-24",
   "level": "2",
-  "url": "sec-funzioni_iniettive_suriettive.html#example-33",
+  "url": "sec-funzioni_iniettive_suriettive.html#sec-funzioni_iniettive_suriettive-24",
   "type": "Esempio",
   "number": "3.2.19",
   "title": "",
@@ -1162,9 +1162,9 @@ var ptx_lunr_docs = [
   "body": "  Una funzione è invertibile se e solo se è biiettiva.    Supponiamo che sia invertibile. In particolare, è biiettiva (e, a maggior ragione, iniettiva) e, per la , otteniamo che è iniettiva. D'altra parte, è biiettiva (e, a maggior ragione, suriettiva) e, per la , otteniamo che è suriettiva. Dunque, è biiettiva.  Viceversa, sia biiettiva. Per la , per ogni esiste allora un unico tale che . Poniamo allora : abbiamo così definito una funzione . Si verifica immediatamente che e , cioè è invertibile e è la sua inversa.   "
 },
 {
-  "id": "example-34",
+  "id": "sec-funzioni_iniettive_suriettive-31",
   "level": "2",
-  "url": "sec-funzioni_iniettive_suriettive.html#example-34",
+  "url": "sec-funzioni_iniettive_suriettive.html#sec-funzioni_iniettive_suriettive-31",
   "type": "Esempio",
   "number": "3.2.26",
   "title": "",
@@ -1189,27 +1189,27 @@ var ptx_lunr_docs = [
   "body": " Sia una funzione tra due insiemi non vuoti. Siano e . Mostrare che esiste una funzione biiettiva tale che .   Se , si prende , altrimenti si prende che scambia e come nell' .  "
 },
 {
-  "id": "exercise-32",
+  "id": "exercises-funzioni_iniettive_suriettive-3",
   "level": "2",
-  "url": "sec-funzioni_iniettive_suriettive.html#exercise-32",
+  "url": "sec-funzioni_iniettive_suriettive.html#exercises-funzioni_iniettive_suriettive-3",
   "type": "Esercizio",
   "number": "3.2.3",
   "title": "",
   "body": " Dimostrare che è iniettiva se e solo se per ogni sottoinsieme di si ha .   Si veda .  "
 },
 {
-  "id": "exercise-33",
+  "id": "exercises-funzioni_iniettive_suriettive-4",
   "level": "2",
-  "url": "sec-funzioni_iniettive_suriettive.html#exercise-33",
+  "url": "sec-funzioni_iniettive_suriettive.html#exercises-funzioni_iniettive_suriettive-4",
   "type": "Esercizio",
   "number": "3.2.4",
   "title": "",
   "body": " Dimostrare che è suriettiva se e solo se per ogni sottoinsieme di si ha .   Si veda .  "
 },
 {
-  "id": "exercise-34",
+  "id": "exercises-funzioni_iniettive_suriettive-5",
   "level": "2",
-  "url": "sec-funzioni_iniettive_suriettive.html#exercise-34",
+  "url": "sec-funzioni_iniettive_suriettive.html#exercises-funzioni_iniettive_suriettive-5",
   "type": "Esercizio",
   "number": "3.2.5",
   "title": "",
@@ -1252,9 +1252,9 @@ var ptx_lunr_docs = [
   "body": " Definizioni di base  Una matrice a coefficienti in un anello commutativo Daremo più avanti ( ) la definizione di anello commutativo: per il momento possiamo pensare a , , o con le operazioni di addizione e moltiplicazione in essi definite.  è, informalmente, una tabella a righe e colonne di elementi di , indicizzati da una coppia di indici e con e e rappresentata nel modo seguente: I numeri e sono detti dimensioni della matrice. Diremo anche che è una matrice per . L'indice è detto indice di riga , mentre l'indice è detto indice di colonna . L'elemento è detto elemento di posto  . Data la matrice , per indicare il suo elemento di posto si usa la scrittura      elemento di posto della matrice  .  Ad esempio la matrice seguente ha dimensioni e , cioè è una matrice per . L'elemento di posto è , mentre l'elemento di posto è : possiamo anche scrivere e .    Una matrice è detta quadrata se il numero delle righe è uguale al numero delle colonne. Tale numero è detto ordine della matrice.         insieme delle matrici a righe e colonne a coefficienti in       insieme delle matrici quadrate di ordine a coefficienti in  Useremo il simbolo per indicare l'insieme delle matrici a righe e colonne a coefficienti nell'anello commutativo . Nel caso in cui , useremo semplicemente il simbolo .    Data una matrice quadrata di ordine , gli elementi di posto con sono detti elementi della diagonale principale .         insieme delle matrici diagonali di ordine a coefficienti in        insieme delle matrici triangolari superiori di ordine a coefficienti in        insieme delle matrici triangolari inferiori di ordine a coefficienti in     Una matrice quadrata di ordine è detta diagonale se per ogni , cioè se tutti i suoi elementi al di fuori della diagonale principale sono nulli. La matrice è detta triangolare superiore se per ogni , cioè se tutti i suoi elementi al di sotto della diagonale principale sono nulli. La matrice è detta triangolare inferiore se per ogni , cioè se tutti i suoi elementi al di sopra della diagonale principale sono nulli. Indicheremo l'insieme delle matrici diagonali, triangolari superiori e triangolari inferiori di ordine a coefficienti in rispettivamente con , e .      Le matrici sono, rispettivamente, diagonale, triangolare superiore e triangolare inferiore.     Dicendo che la matrice è diagonale, non diciamo che gli elementi sulla diagonale principale siano diversi da , ma che tutti gli altri elementi siano nulli: alcuni degli elementi della diagonale potrebbero essere nulli a loro volta (anche tutti). Analogamente gli elementi sulla diagonale principale e al di sopra di essa di una matrice triangolare superiore non è detto siano diversi da .     Data una matrice ha righe e colonne, la sua trasposta , denotata con il simbolo è la matrice a righe e colonne, il cui elemento di posto è .      La trasposta della matrice è la matrice .    Ovviamente abbiamo:   Per ogni matrice risulta .     Una matrice quadrata è detta simmetrica se .      Dimostrare che .    Dimostrare l' .    Dimostrare che la trasposta di una matrice triangolare superiore è una matrice triangolare inferiore e viceversa.    Dimostrare che una matrice diagonale è simmetrica.    "
 },
 {
-  "id": "p-295",
+  "id": "sec-definizioni_matrici-2",
   "level": "2",
-  "url": "sec-definizioni_matrici.html#p-295",
+  "url": "sec-definizioni_matrici.html#sec-definizioni_matrici-2",
   "type": "Capoverso (with a defined term)",
   "number": "",
   "title": "",
@@ -1297,9 +1297,9 @@ var ptx_lunr_docs = [
   "body": "  Le matrici sono, rispettivamente, diagonale, triangolare superiore e triangolare inferiore.   "
 },
 {
-  "id": "note-2",
+  "id": "sec-definizioni_matrici-9",
   "level": "2",
-  "url": "sec-definizioni_matrici.html#note-2",
+  "url": "sec-definizioni_matrici.html#sec-definizioni_matrici-9",
   "type": "Nota",
   "number": "4.1.5",
   "title": "",
@@ -1315,9 +1315,9 @@ var ptx_lunr_docs = [
   "body": "  Data una matrice ha righe e colonne, la sua trasposta , denotata con il simbolo è la matrice a righe e colonne, il cui elemento di posto è .   "
 },
 {
-  "id": "example-36",
+  "id": "sec-definizioni_matrici-11",
   "level": "2",
-  "url": "sec-definizioni_matrici.html#example-36",
+  "url": "sec-definizioni_matrici.html#sec-definizioni_matrici-11",
   "type": "Esempio",
   "number": "4.1.7",
   "title": "",
@@ -1342,36 +1342,36 @@ var ptx_lunr_docs = [
   "body": "  Una matrice quadrata è detta simmetrica se .   "
 },
 {
-  "id": "exercise-35",
+  "id": "exercises-definizioni_matrici-1",
   "level": "2",
-  "url": "sec-definizioni_matrici.html#exercise-35",
+  "url": "sec-definizioni_matrici.html#exercises-definizioni_matrici-1",
   "type": "Esercizio",
   "number": "4.1.1",
   "title": "",
   "body": " Dimostrare che .  "
 },
 {
-  "id": "exercise-36",
+  "id": "exercises-definizioni_matrici-2",
   "level": "2",
-  "url": "sec-definizioni_matrici.html#exercise-36",
+  "url": "sec-definizioni_matrici.html#exercises-definizioni_matrici-2",
   "type": "Esercizio",
   "number": "4.1.2",
   "title": "",
   "body": " Dimostrare l' .  "
 },
 {
-  "id": "exercise-37",
+  "id": "exercises-definizioni_matrici-3",
   "level": "2",
-  "url": "sec-definizioni_matrici.html#exercise-37",
+  "url": "sec-definizioni_matrici.html#exercises-definizioni_matrici-3",
   "type": "Esercizio",
   "number": "4.1.3",
   "title": "",
   "body": " Dimostrare che la trasposta di una matrice triangolare superiore è una matrice triangolare inferiore e viceversa.  "
 },
 {
-  "id": "exercise-38",
+  "id": "exercises-definizioni_matrici-4",
   "level": "2",
-  "url": "sec-definizioni_matrici.html#exercise-38",
+  "url": "sec-definizioni_matrici.html#exercises-definizioni_matrici-4",
   "type": "Esercizio",
   "number": "4.1.4",
   "title": "",
@@ -1396,9 +1396,9 @@ var ptx_lunr_docs = [
   "body": "  Date due matrici e aventi le stesse dimensioni e , la somma di e è la matrice con le stesse dimensioni e il cui elemento di posto è .   "
 },
 {
-  "id": "example-37",
+  "id": "sec-operazioni_matrici-3",
   "level": "2",
-  "url": "sec-operazioni_matrici.html#example-37",
+  "url": "sec-operazioni_matrici.html#sec-operazioni_matrici-3",
   "type": "Esempio",
   "number": "4.2.2",
   "title": "",
@@ -1423,9 +1423,9 @@ var ptx_lunr_docs = [
   "body": "  L'operazione di addizione definita nell'insieme di matrici soddisfa le seguenti proprietà:      per ogni , e in (l'addizione è associativa);     per ogni e in (l'addizione è commutativa);     per ogni in ( è elemento neutro per l'addizione);    per ogni matrice in esiste una matrice in , denotata con tale che (esistenza opposto);       Lasciamo per esercizio le dimostrazioni, notando solo che discendono dalle analoghe proprietà dell'addizione in .   "
 },
 {
-  "id": "note-3",
+  "id": "sec-operazioni_matrici-6",
   "level": "2",
-  "url": "sec-operazioni_matrici.html#note-3",
+  "url": "sec-operazioni_matrici.html#sec-operazioni_matrici-6",
   "type": "Nota",
   "number": "4.2.5",
   "title": "",
@@ -1486,9 +1486,9 @@ var ptx_lunr_docs = [
   "body": "  Consideriamo le matrici e calcoliamo i prodotti e : Poiché , l'operazione di moltiplicazione riga per colonna non è commutativa.   "
 },
 {
-  "id": "remark-12",
+  "id": "sec-operazioni_matrici-17",
   "level": "2",
-  "url": "sec-operazioni_matrici.html#remark-12",
+  "url": "sec-operazioni_matrici.html#sec-operazioni_matrici-17",
   "type": "Osservazione",
   "number": "4.2.12",
   "title": "",
@@ -1504,9 +1504,9 @@ var ptx_lunr_docs = [
   "body": "  Date due matrici quadrate dello stesso ordine e si dice che commutano o che sono commutabili se .   "
 },
 {
-  "id": "remark-13",
+  "id": "sec-operazioni_matrici-19",
   "level": "2",
-  "url": "sec-operazioni_matrici.html#remark-13",
+  "url": "sec-operazioni_matrici.html#sec-operazioni_matrici-19",
   "type": "Osservazione",
   "number": "4.2.14",
   "title": "",
@@ -1567,9 +1567,9 @@ var ptx_lunr_docs = [
   "body": "  Se e sono matrici invertibili dello stesso ordine, allora è invertibile e .    Basta osservare che, usando ripetutamente la proprietà associativa, si ha e, analogamente, .   "
 },
 {
-  "id": "example-41",
+  "id": "sec-operazioni_matrici-26",
   "level": "2",
-  "url": "sec-operazioni_matrici.html#example-41",
+  "url": "sec-operazioni_matrici.html#sec-operazioni_matrici-26",
   "type": "Esempio",
   "number": "4.2.21",
   "title": "",
@@ -1585,108 +1585,108 @@ var ptx_lunr_docs = [
   "body": "  Sia una matrice in e una matrice in . Risulta allora .    Indichiamo con la matrice e con la matrice : dunque, e . L'elemento di posto di è . Questo elemento può essere riscritto come , cioè coincide con l'elemento di posto di , vale a dire di . In conclusione, l'elemento di posto di coincide con l'elemento di posto di , cioè e sono una la trasposta dell'altra.   "
 },
 {
-  "id": "example-42",
+  "id": "sec-operazioni_matrici-32",
   "level": "2",
-  "url": "sec-operazioni_matrici.html#example-42",
+  "url": "sec-operazioni_matrici.html#sec-operazioni_matrici-32",
   "type": "Esempio",
   "number": "4.2.23",
   "title": "",
   "body": "  Consideriamo il sistema lineare e consideriamo le matrici . Notiamo che . Dunque, se, indichiamo con la matrice , il sistema lineare si può riscrivere come , dove è una matrice incognita.   "
 },
 {
-  "id": "exercise-39",
+  "id": "exercises-operazioni_matrici-1",
   "level": "2",
-  "url": "sec-operazioni_matrici.html#exercise-39",
+  "url": "sec-operazioni_matrici.html#exercises-operazioni_matrici-1",
   "type": "Esercizio",
   "number": "4.2.1",
   "title": "",
   "body": " Dimostrare la .  "
 },
 {
-  "id": "exercise-40",
+  "id": "exercises-operazioni_matrici-2",
   "level": "2",
-  "url": "sec-operazioni_matrici.html#exercise-40",
+  "url": "sec-operazioni_matrici.html#exercises-operazioni_matrici-2",
   "type": "Esercizio",
   "number": "4.2.2",
   "title": "",
   "body": " Dimostrare la .  "
 },
 {
-  "id": "exercise-41",
+  "id": "exercises-operazioni_matrici-3",
   "level": "2",
-  "url": "sec-operazioni_matrici.html#exercise-41",
+  "url": "sec-operazioni_matrici.html#exercises-operazioni_matrici-3",
   "type": "Esercizio",
   "number": "4.2.3",
   "title": "",
   "body": " Dimostrare la .  "
 },
 {
-  "id": "exercise-42",
+  "id": "exercises-operazioni_matrici-4",
   "level": "2",
-  "url": "sec-operazioni_matrici.html#exercise-42",
+  "url": "sec-operazioni_matrici.html#exercises-operazioni_matrici-4",
   "type": "Esercizio",
   "number": "4.2.4",
   "title": "",
   "body": " Dimostrare che la somma e il prodotto di due matrici triangolari superiori dello stesso ordine sono matrici triangolari superiori (e analogamente per le matrici triangolari inferiori).  "
 },
 {
-  "id": "exercise-43",
+  "id": "exercises-operazioni_matrici-5",
   "level": "2",
-  "url": "sec-operazioni_matrici.html#exercise-43",
+  "url": "sec-operazioni_matrici.html#exercises-operazioni_matrici-5",
   "type": "Esercizio",
   "number": "4.2.5",
   "title": "",
   "body": " Dimostrare che la somma e il prodotto di due matrici diagonali dello stesso ordine sono matrici diagonali.  "
 },
 {
-  "id": "exercise-44",
+  "id": "exercises-operazioni_matrici-6",
   "level": "2",
-  "url": "sec-operazioni_matrici.html#exercise-44",
+  "url": "sec-operazioni_matrici.html#exercises-operazioni_matrici-6",
   "type": "Esercizio",
   "number": "4.2.6",
   "title": "",
   "body": " Dato un intero con , mostrare due matrici quadrate di ordine che non commutano.   Basarsi sull' .  "
 },
 {
-  "id": "exercise-45",
+  "id": "exercises-operazioni_matrici-7",
   "level": "2",
-  "url": "sec-operazioni_matrici.html#exercise-45",
+  "url": "sec-operazioni_matrici.html#exercises-operazioni_matrici-7",
   "type": "Esercizio",
   "number": "4.2.7",
   "title": "",
   "body": " Dimostrare che due matrici diagonali dello stesso ordine commutano.  "
 },
 {
-  "id": "exercise-46",
+  "id": "exercises-operazioni_matrici-8",
   "level": "2",
-  "url": "sec-operazioni_matrici.html#exercise-46",
+  "url": "sec-operazioni_matrici.html#exercises-operazioni_matrici-8",
   "type": "Esercizio",
   "number": "4.2.8",
   "title": "",
   "body": " La somma di matrici simmetriche è una matrice simmetrica? Se la risposta è sì, dimostrarlo, altrimenti mostrare un esempio in cui ciò non accade.   LA risposta è sì. Infatti siano e simmetriche, cioè e . Per la abbiamo allora che .  "
 },
 {
-  "id": "exercise-47",
+  "id": "exercises-operazioni_matrici-9",
   "level": "2",
-  "url": "sec-operazioni_matrici.html#exercise-47",
+  "url": "sec-operazioni_matrici.html#exercises-operazioni_matrici-9",
   "type": "Esercizio",
   "number": "4.2.9",
   "title": "",
   "body": " Il prodotto di matrici simmetriche è una matrice simmetrica? Se la risposta è sì, dimostrarlo, altrimenti mostrare un esempio in cui ciò non accade.   In generale no. Ad esempio, il prodotto delle matrici simmetriche e è che non è simmetrica.  "
 },
 {
-  "id": "exercise-48",
+  "id": "exercises-operazioni_matrici-10",
   "level": "2",
-  "url": "sec-operazioni_matrici.html#exercise-48",
+  "url": "sec-operazioni_matrici.html#exercises-operazioni_matrici-10",
   "type": "Esercizio",
   "number": "4.2.10",
   "title": "",
   "body": " Dimostrare che la matrice trasposta di una matrice invertibile è invertibile e che .   Per la , abbiamo che . Analogamente   "
 },
 {
-  "id": "exercise-49",
+  "id": "exercises-operazioni_matrici-11",
   "level": "2",
-  "url": "sec-operazioni_matrici.html#exercise-49",
+  "url": "sec-operazioni_matrici.html#exercises-operazioni_matrici-11",
   "type": "Esercizio",
   "number": "4.2.11",
   "title": "",
@@ -1720,9 +1720,9 @@ var ptx_lunr_docs = [
   "body": "  Le operazioni di addizione e moltiplicazione definite nell'insieme dei numeri interi soddisfano le seguenti proprietà:      per ogni , e in (l'addizione è associativa);     per ogni in ( è elemento neutro per l'addizione);    per ogni intero esiste un intero, denotato con , tale che (esistenza opposto);     per ogni e in (l'addizione è commutativa);     per ogni , e in (la moltiplicazione è associativa);     per ogni in ( è elemento neutro per la moltiplicazione);     per ogni e in (la moltiplicazione è commutativa);     per ogni , e in (proprietà distributiva).      "
 },
 {
-  "id": "p-395",
+  "id": "sec-naturali_base-8",
   "level": "2",
-  "url": "sec-naturali_base.html#p-395",
+  "url": "sec-naturali_base.html#sec-naturali_base-8",
   "type": "Capoverso (with a defined term)",
   "number": "",
   "title": "",
@@ -1738,9 +1738,9 @@ var ptx_lunr_docs = [
   "body": "  Per ogni intero , si ha e .   "
 },
 {
-  "id": "proposition-23",
+  "id": "sec-naturali_base-10",
   "level": "2",
-  "url": "sec-naturali_base.html#proposition-23",
+  "url": "sec-naturali_base.html#sec-naturali_base-10",
   "type": "Proposizione",
   "number": "5.1.4",
   "title": "Legge di cancellazione per l’addizione.",
@@ -1774,18 +1774,18 @@ var ptx_lunr_docs = [
   "body": "  Negli interi è definita una relazione d'ordine totale che soddisfa le seguenti proprietà:     Dati gli interi , e , si ha se e solo se .    Dati gli interi , e con , si ha se e solo se .      "
 },
 {
-  "id": "definition-40",
+  "id": "sec-naturali_base-16",
   "level": "2",
-  "url": "sec-naturali_base.html#definition-40",
+  "url": "sec-naturali_base.html#sec-naturali_base-16",
   "type": "Definizione",
   "number": "5.1.8",
   "title": "",
   "body": " interi valore assoluto  valore assoluto    valore assoluto di    Dato un intero , il valore assoluto di , denotato con , è se ed è se .   "
 },
 {
-  "id": "proposition-27",
+  "id": "sec-naturali_base-17",
   "level": "2",
-  "url": "sec-naturali_base.html#proposition-27",
+  "url": "sec-naturali_base.html#sec-naturali_base-17",
   "type": "Proposizione",
   "number": "5.1.9",
   "title": "",
@@ -1810,9 +1810,9 @@ var ptx_lunr_docs = [
   "body": " Dimostrazioni per induzione e definizioni per ricorrenza  Supponiamo di voler dimostrare una proprietà che dipenda dai numeri naturali: ad esempio, il fatto che per ogni naturale la somma dei numeri naturali da a è uguale a . Questa (e altre) proprietà possono essere dimostrate usando la tecnica per induzione che consiste nel dimostrare la proprietà per il valore iniziale (questa è la cosiddetta base induttiva ) e, supponendo che valga per un certo naturale generico , mostrare che vale per il naturale successivo (questo è il cosiddetto passo induttivo ). Più precisamente:   Principio di induzione  induzione   Per ciascun naturale sia data una proposizione . Si supponga che:    sia vera;    per ogni naturale tale che è vera si ha che anche è vera.   Allora è vera per ogni naturale .    Se è il sottoinsieme di formato dai numeri tali che è vera, per ipotesi sappiamo che e che per ogni si ha : dunque, per l' Assioma della .      Vogliamo mostrare che la somma dei naturali da a è uguale a . In simboli, .   Se , la somma dei numeri da a è, ovviamente, e . Dunque, la proprietà vale per .    Sia un intero tale per cui : allora .       Un altro modo di utilizzare la tecnica di dimostrazione per induzione discende dal cosiddetto buon ordinamento dei naturali. Più precisamente dal    Ogni sottoinsieme non vuoto di ha un minimo.    Questo può essere così reinterpretato:   Principio di induzione completa  induzione completa   Per ciascun naturale sia data una proposizione . Se, per ogni naturale , si può provare che è vera supposto che sia vera per ogni , allora è vera per ogni naturale .    Indichiamo con il sottoinsieme di formato dai numeri per cui è falsa. Per mostrare che è vera per ogni , basta allora provare che è vuoto. Se non fosse vuoto, dovrebbe avere un minimo , cioè dovrebbe essere falsa e dovrebbe essere vera per ogni , contro l'ipotesi. Dunque, è vuoto, cioè è vera per ogni .     Nella prima forma dell'induzione occorre provare che è vera assumendo che sia vera , cioè la proposizione immediatamente precedente. Nella seconda forma di induzione occorre provare che una certa è vera assumendo che sia vera per tutti i naturali precedenti e, quindi, con una assunzione più forte che in molti casi è di aiuto. Apparentemente nella seconda forma dell'induzione non c'è la base induttiva, ma, per l'appunto, è solo un'apparenza: quando , dobbiamo provare che è vera assumendo che sia vera per tutti i naturali minori di , cioè senza di fatto fare alcuna assunzione. Nella pratica, anche nell'induzione completa è spesso necessario provare la base induttiva separatamente.   Daremo più avanti un esempio di induzione completa, precisamente nella dimostrazione del .  Oltre a dimostrare proprietà per induzione, gli assiomi di Peano ci permettono di definire successioni di oggetti (numeri, funzioni, insiemi, qualunque cosa) indicizzate dai naturali. Un modo per far ciò è definire esplicitamente e poi definire il generico in termini di per e del numero stesso. Ad esempio, il fattoriale di un numero naturale è così definito: Una definizione di questo tipo è detta per ricorrenza : intuitivamente è chiaro perché sia accettabile, ma il fatto che la successione di oggetti introdotta in questo modo esista e sia ben definita va dimostrato a partire dalle proprietà dei numeri naturali (si veda la ).  Notiamo infine che sia la dimostrazione per induzione che la definizione per ricorrenza possono avere come base non solo il caso ma un qualsiasi numero naturale . Vediamo un esempio.    Proviamo che per ogni intero esistono naturali e tali che .  Possiamo allora procedere per induzione in questo modo:   Chiaramente : questa è la base induttiva.    Per il passo induttivo, sia vera la proprietà per un certo e proviamo che è vera per : sia allora per opportuni naturali e . Distinguiamo ora due casi:   se , allora ;    se , allora , altrimenti . Dunque, .             Provare la validità delle seguenti uguaglianze.     per ogni .      Per abbiamo e : questa è la base induttiva.    Sia un intero per cui la proprietà sia vera, cioè sia . Allora         per ogni .     per ogni .     per ogni .     per ogni .     Dimostrare che per ogni .   La base induttiva si stabilisce facilmente: e .  Sia ora un intero tale per cui : abbiamo allora .    "
 },
 {
-  "id": "p-409",
+  "id": "sec-induzione_ricorrenza-2",
   "level": "2",
-  "url": "sec-induzione_ricorrenza.html#p-409",
+  "url": "sec-induzione_ricorrenza.html#sec-induzione_ricorrenza-2",
   "type": "Capoverso (with a defined term)",
   "number": "",
   "title": "",
@@ -1837,9 +1837,9 @@ var ptx_lunr_docs = [
   "body": "  Vogliamo mostrare che la somma dei naturali da a è uguale a . In simboli, .   Se , la somma dei numeri da a è, ovviamente, e . Dunque, la proprietà vale per .    Sia un intero tale per cui : allora .      "
 },
 {
-  "id": "p-417",
+  "id": "sec-induzione_ricorrenza-5",
   "level": "2",
-  "url": "sec-induzione_ricorrenza.html#p-417",
+  "url": "sec-induzione_ricorrenza.html#sec-induzione_ricorrenza-5",
   "type": "Capoverso (with a defined term)",
   "number": "",
   "title": "",
@@ -1864,18 +1864,18 @@ var ptx_lunr_docs = [
   "body": " Principio di induzione completa  induzione completa   Per ciascun naturale sia data una proposizione . Se, per ogni naturale , si può provare che è vera supposto che sia vera per ogni , allora è vera per ogni naturale .    Indichiamo con il sottoinsieme di formato dai numeri per cui è falsa. Per mostrare che è vera per ogni , basta allora provare che è vuoto. Se non fosse vuoto, dovrebbe avere un minimo , cioè dovrebbe essere falsa e dovrebbe essere vera per ogni , contro l'ipotesi. Dunque, è vuoto, cioè è vera per ogni .   "
 },
 {
-  "id": "remark-15",
+  "id": "sec-induzione_ricorrenza-9",
   "level": "2",
-  "url": "sec-induzione_ricorrenza.html#remark-15",
+  "url": "sec-induzione_ricorrenza.html#sec-induzione_ricorrenza-9",
   "type": "Osservazione",
   "number": "5.2.5",
   "title": "",
   "body": " Nella prima forma dell'induzione occorre provare che è vera assumendo che sia vera , cioè la proposizione immediatamente precedente. Nella seconda forma di induzione occorre provare che una certa è vera assumendo che sia vera per tutti i naturali precedenti e, quindi, con una assunzione più forte che in molti casi è di aiuto. Apparentemente nella seconda forma dell'induzione non c'è la base induttiva, ma, per l'appunto, è solo un'apparenza: quando , dobbiamo provare che è vera assumendo che sia vera per tutti i naturali minori di , cioè senza di fatto fare alcuna assunzione. Nella pratica, anche nell'induzione completa è spesso necessario provare la base induttiva separatamente.  "
 },
 {
-  "id": "p-424",
+  "id": "sec-induzione_ricorrenza-11",
   "level": "2",
-  "url": "sec-induzione_ricorrenza.html#p-424",
+  "url": "sec-induzione_ricorrenza.html#sec-induzione_ricorrenza-11",
   "type": "Capoverso (with a defined term)",
   "number": "",
   "title": "",
@@ -1891,54 +1891,54 @@ var ptx_lunr_docs = [
   "body": "  Proviamo che per ogni intero esistono naturali e tali che .  Possiamo allora procedere per induzione in questo modo:   Chiaramente : questa è la base induttiva.    Per il passo induttivo, sia vera la proprietà per un certo e proviamo che è vera per : sia allora per opportuni naturali e . Distinguiamo ora due casi:   se , allora ;    se , allora , altrimenti . Dunque, .         "
 },
 {
-  "id": "exercise-50",
+  "id": "exercises-induzione-1-2",
   "level": "2",
-  "url": "sec-induzione_ricorrenza.html#exercise-50",
+  "url": "sec-induzione_ricorrenza.html#exercises-induzione-1-2",
   "type": "Esercizio",
   "number": "5.2.1",
   "title": "",
   "body": "  per ogni .      Per abbiamo e : questa è la base induttiva.    Sia un intero per cui la proprietà sia vera, cioè sia . Allora      "
 },
 {
-  "id": "exercise-51",
+  "id": "exercises-induzione-1-3",
   "level": "2",
-  "url": "sec-induzione_ricorrenza.html#exercise-51",
+  "url": "sec-induzione_ricorrenza.html#exercises-induzione-1-3",
   "type": "Esercizio",
   "number": "5.2.2",
   "title": "",
   "body": "  per ogni .  "
 },
 {
-  "id": "exercise-52",
+  "id": "exercises-induzione-1-4",
   "level": "2",
-  "url": "sec-induzione_ricorrenza.html#exercise-52",
+  "url": "sec-induzione_ricorrenza.html#exercises-induzione-1-4",
   "type": "Esercizio",
   "number": "5.2.3",
   "title": "",
   "body": "  per ogni .  "
 },
 {
-  "id": "exercise-53",
+  "id": "exercises-induzione-1-5",
   "level": "2",
-  "url": "sec-induzione_ricorrenza.html#exercise-53",
+  "url": "sec-induzione_ricorrenza.html#exercises-induzione-1-5",
   "type": "Esercizio",
   "number": "5.2.4",
   "title": "",
   "body": "  per ogni .  "
 },
 {
-  "id": "exercise-54",
+  "id": "exercises-induzione-1-6",
   "level": "2",
-  "url": "sec-induzione_ricorrenza.html#exercise-54",
+  "url": "sec-induzione_ricorrenza.html#exercises-induzione-1-6",
   "type": "Esercizio",
   "number": "5.2.5",
   "title": "",
   "body": "  per ogni .  "
 },
 {
-  "id": "exercise-55",
+  "id": "exercises-induzione-2",
   "level": "2",
-  "url": "sec-induzione_ricorrenza.html#exercise-55",
+  "url": "sec-induzione_ricorrenza.html#exercises-induzione-2",
   "type": "Esercizio",
   "number": "5.2.6",
   "title": "",
@@ -1981,9 +1981,9 @@ var ptx_lunr_docs = [
   "body": "  Se e , allora . In particolare, ogni numero intero diverso da ha un numero finito di divisori.    Sia . Poiché , anche e, dunque, . Pertanto, , dove l'ultima uguaglianza segue dalla .   "
 },
 {
-  "id": "remark-16",
+  "id": "sec-divisibilita_interi-5",
   "level": "2",
-  "url": "sec-divisibilita_interi.html#remark-16",
+  "url": "sec-divisibilita_interi.html#sec-divisibilita_interi-5",
   "type": "Osservazione",
   "number": "5.3.4",
   "title": "",
@@ -2026,18 +2026,18 @@ var ptx_lunr_docs = [
   "body": " Divisione con resto   Dati due interi e con , esistono e sono unici due interi e (detti rispettivamente quoziente e resto ) tali che e .    Consideriamo l'insieme . L'insieme è non vuoto: infatti, scelto , risulta . Pertanto, ha un minimo, sia : dunque, esiste un intero tale che . Se fosse , avremmo che e , cioè sarebbe un elemento di : d'altra parte, , contro la scelta di come elemento minimo di . Dunque, e : questo prova l'esistenza di e secondo le richieste.  Per quanto riguarda l'unicità, siano e interi tali che con . Dunque, , da cui segue . Se fosse , pur di eventualmente scambiare i ruoli, potremmo supporre che e, quindi, avremmo cioè : ma . Pertanto, e , cioè e .   "
 },
 {
-  "id": "example-45",
+  "id": "sec-divisibilita_interi-11",
   "level": "2",
-  "url": "sec-divisibilita_interi.html#example-45",
+  "url": "sec-divisibilita_interi.html#sec-divisibilita_interi-11",
   "type": "Esempio",
   "number": "5.3.9",
   "title": "",
   "body": "  Se facciamo la divisione con resto di per otteniamo , cioè quoziente e resto . Se facciamo la divisione con resto di per otteniamo , cioè quoziente e resto . Se facciamo la divisione con resto di per otteniamo , cioè quoziente e resto .   "
 },
 {
-  "id": "p-461",
+  "id": "sec-divisibilita_interi-12",
   "level": "2",
-  "url": "sec-divisibilita_interi.html#p-461",
+  "url": "sec-divisibilita_interi.html#sec-divisibilita_interi-12",
   "type": "Capoverso (with a defined term)",
   "number": "",
   "title": "",
@@ -2080,18 +2080,18 @@ var ptx_lunr_docs = [
   "body": "  Siano e due interi con . Siano e il quoziente e il resto della divisione di per , cioè sia con e interi e . Allora, i divisori comuni di e sono tutti e soli i divisori comuni di e .    Sia un divisore comune di e . Per il e il , abbiamo che e, dunque, è un divisore comune di e . Analogamente, se divide e allora .   "
 },
 {
-  "id": "remark-17",
+  "id": "sec-divisibilita_interi-18",
   "level": "2",
-  "url": "sec-divisibilita_interi.html#remark-17",
+  "url": "sec-divisibilita_interi.html#sec-divisibilita_interi-18",
   "type": "Osservazione",
   "number": "5.3.14",
   "title": "",
   "body": " Nella dimostrazione del lemma precedente non abbiamo usato il fatto che .  "
 },
 {
-  "id": "p-471",
+  "id": "sec-divisibilita_interi-21",
   "level": "2",
-  "url": "sec-divisibilita_interi.html#p-471",
+  "url": "sec-divisibilita_interi.html#sec-divisibilita_interi-21",
   "type": "Capoverso (with a defined term)",
   "number": "",
   "title": "",
@@ -2107,9 +2107,9 @@ var ptx_lunr_docs = [
   "body": " Algoritmo di Euclide  Euclide algoritmo di  algoritmo di Euclide per gli interi  Bezout identità di  Identità di Bezout per gli interi   Dati due interi e di cui almeno uno, sia , non nullo e supposto che (eventualmente rimpiazzando, se necessario, con ) si consideri la successione di divisioni con resto: I resti di queste divisioni formano una catena strettamente decrescente di numeri naturali che deve terminare con un resto nullo. L'ultimo resto non nullo è allora il massimo comun divisore di e e ha la proprietà di essere un multiplo di tutti gli altri divisori comuni di e . Inoltre, dalla successione di equazioni è possibile ottenere un'identità, cosiddetta di Bezout, del tipo per opportuni interi e .   "
 },
 {
-  "id": "example-47",
+  "id": "sec-divisibilita_interi-25",
   "level": "2",
-  "url": "sec-divisibilita_interi.html#example-47",
+  "url": "sec-divisibilita_interi.html#sec-divisibilita_interi-25",
   "type": "Esempio",
   "number": "5.3.16",
   "title": "",
@@ -2179,117 +2179,117 @@ var ptx_lunr_docs = [
   "body": "  Siano e interi tali che . Allora, gli interi e tali che e sono coprimi.    Per il , si ha che : poiché , la tesi segue immediatamente.   "
 },
 {
-  "id": "exercise-56",
+  "id": "exercises-divisibilita_interi-1-2",
   "level": "2",
-  "url": "sec-divisibilita_interi.html#exercise-56",
+  "url": "sec-divisibilita_interi.html#exercises-divisibilita_interi-1-2",
   "type": "Esercizio",
   "number": "5.3.1",
   "title": "",
   "body": "  e       "
 },
 {
-  "id": "exercise-57",
+  "id": "exercises-divisibilita_interi-1-3",
   "level": "2",
-  "url": "sec-divisibilita_interi.html#exercise-57",
+  "url": "sec-divisibilita_interi.html#exercises-divisibilita_interi-1-3",
   "type": "Esercizio",
   "number": "5.3.2",
   "title": "",
   "body": "  e       "
 },
 {
-  "id": "exercise-58",
+  "id": "exercises-divisibilita_interi-1-4",
   "level": "2",
-  "url": "sec-divisibilita_interi.html#exercise-58",
+  "url": "sec-divisibilita_interi.html#exercises-divisibilita_interi-1-4",
   "type": "Esercizio",
   "number": "5.3.3",
   "title": "",
   "body": "  e       "
 },
 {
-  "id": "exercise-59",
+  "id": "exercises-divisibilita_interi-1-5",
   "level": "2",
-  "url": "sec-divisibilita_interi.html#exercise-59",
+  "url": "sec-divisibilita_interi.html#exercises-divisibilita_interi-1-5",
   "type": "Esercizio",
   "number": "5.3.4",
   "title": "",
   "body": "  e       "
 },
 {
-  "id": "exercise-60",
+  "id": "exercises-divisibilita_interi-1-6",
   "level": "2",
-  "url": "sec-divisibilita_interi.html#exercise-60",
+  "url": "sec-divisibilita_interi.html#exercises-divisibilita_interi-1-6",
   "type": "Esercizio",
   "number": "5.3.5",
   "title": "",
   "body": "  e       "
 },
 {
-  "id": "exercise-61",
+  "id": "exercises-divisibilita_interi-1-7",
   "level": "2",
-  "url": "sec-divisibilita_interi.html#exercise-61",
+  "url": "sec-divisibilita_interi.html#exercises-divisibilita_interi-1-7",
   "type": "Esercizio",
   "number": "5.3.6",
   "title": "",
   "body": "  e       "
 },
 {
-  "id": "exercise-62",
+  "id": "exercises-divisibilita_interi-2-2",
   "level": "2",
-  "url": "sec-divisibilita_interi.html#exercise-62",
+  "url": "sec-divisibilita_interi.html#exercises-divisibilita_interi-2-2",
   "type": "Esercizio",
   "number": "5.3.7",
   "title": "",
   "body": "  , e       "
 },
 {
-  "id": "exercise-63",
+  "id": "exercises-divisibilita_interi-2-3",
   "level": "2",
-  "url": "sec-divisibilita_interi.html#exercise-63",
+  "url": "sec-divisibilita_interi.html#exercises-divisibilita_interi-2-3",
   "type": "Esercizio",
   "number": "5.3.8",
   "title": "",
   "body": "  , , e       "
 },
 {
-  "id": "exercise-64",
+  "id": "exercises-divisibilita_interi-2-4",
   "level": "2",
-  "url": "sec-divisibilita_interi.html#exercise-64",
+  "url": "sec-divisibilita_interi.html#exercises-divisibilita_interi-2-4",
   "type": "Esercizio",
   "number": "5.3.9",
   "title": "",
   "body": "  , ,       "
 },
 {
-  "id": "exercise-65",
+  "id": "exercises-divisibilita_interi-3",
   "level": "2",
-  "url": "sec-divisibilita_interi.html#exercise-65",
+  "url": "sec-divisibilita_interi.html#exercises-divisibilita_interi-3",
   "type": "Esercizio",
   "number": "5.3.10",
   "title": "",
   "body": " Dimostrare il .   Sappiamo che esiste un intero tale che . Allora .  "
 },
 {
-  "id": "exercise-66",
+  "id": "exercises-divisibilita_interi-4",
   "level": "2",
-  "url": "sec-divisibilita_interi.html#exercise-66",
+  "url": "sec-divisibilita_interi.html#exercises-divisibilita_interi-4",
   "type": "Esercizio",
   "number": "5.3.11",
   "title": "",
   "body": " Dimostrare il .   Sappiamo che esistono interi e tali che e . Allora . Il caso generale si prova per induzione.  "
 },
 {
-  "id": "exercise-67",
+  "id": "exercises-divisibilita_interi-5",
   "level": "2",
-  "url": "sec-divisibilita_interi.html#exercise-67",
+  "url": "sec-divisibilita_interi.html#exercises-divisibilita_interi-5",
   "type": "Esercizio",
   "number": "5.3.12",
   "title": "",
   "body": " Dati tre interi , e con , dimostrare che se e solo se .   Se , esiste un intero tale che : dunque, e, quindi, (l'ipotesi in questa direzione non serve),  Viceversa, sia e sia un intero tale che : poiché , possiamo semplificare e ottenere , da cui segue che   "
 },
 {
-  "id": "exercise-68",
+  "id": "exercises-divisibilita_interi-6",
   "level": "2",
-  "url": "sec-divisibilita_interi.html#exercise-68",
+  "url": "sec-divisibilita_interi.html#exercises-divisibilita_interi-6",
   "type": "Esercizio",
   "number": "5.3.13",
   "title": "",
@@ -2323,9 +2323,9 @@ var ptx_lunr_docs = [
   "body": "  Un numero naturale è detto primo se e i suoi unici divisori naturali sono e stesso.   "
 },
 {
-  "id": "note-4",
+  "id": "sec-fattorizzazione_interi-5",
   "level": "2",
-  "url": "sec-fattorizzazione_interi.html#note-4",
+  "url": "sec-fattorizzazione_interi.html#sec-fattorizzazione_interi-5",
   "type": "Nota",
   "number": "5.4.3",
   "title": "",
@@ -2413,18 +2413,18 @@ var ptx_lunr_docs = [
   "body": "  Dati due interi positivi e scritti nella forma con , , , primi diversi e gli e i naturali, si ha che dove .   "
 },
 {
-  "id": "exercise-69",
+  "id": "exercises-fattorizzazione_interi-1",
   "level": "2",
-  "url": "sec-fattorizzazione_interi.html#exercise-69",
+  "url": "sec-fattorizzazione_interi.html#exercises-fattorizzazione_interi-1",
   "type": "Esercizio",
   "number": "5.4.1",
   "title": "",
   "body": " Mostrare che ogni numero primo maggiore di si scrive nella forma o per qualche intero .   Ogni numero intero può scriversi nella forma con intero e . Se , o allora è divisibile per e, quindi, non è primo a meno che sia : dunque, non c'è alcun primo maggiore di che si scrive nella forma con , o . Se allora è divisibile per e, quindi, non è primo a meno che sia : dunque, non c'è alcun primo maggiore di che si scrive nella forma con . Concludendo, i primi maggiori di sono del tipo con o .  "
 },
 {
-  "id": "exercise-70",
+  "id": "exercises-fattorizzazione_interi-2",
   "level": "2",
-  "url": "sec-fattorizzazione_interi.html#exercise-70",
+  "url": "sec-fattorizzazione_interi.html#exercises-fattorizzazione_interi-2",
   "type": "Esercizio",
   "number": "5.4.2",
   "title": "",
@@ -2449,9 +2449,9 @@ var ptx_lunr_docs = [
   "body": " Equazioni lineari diofantine  Diofanto Diofanto di Alessandria , III o IV secolo d.C. fu un matematico greco, il cui nome è rimasto legato alla ricerca di soluzioni intere di equazioni che, per questo motivo, vengono dette diofantine o diofantee . Qui ne studieremo un particolare tipo, quelle lineari.  Prima di darne una definizione precisa, supponiamo di avere un'equazione del tipo dove , e sono interi assegnati e cerchiamo le coppie di interi e che soddisfano l'equazione assegnata.  Notiamo che, se cercassimo le coppie di numeri razionali che soddisfano l'equazione data, il problema sarebbe molto più semplice. Supponendo, ad esempio, che , potremmo assegnare a un valore arbitrario e ricavare il valore corrispondente di . Dunque, le soluzioni sono tutte e sole le coppie del tipo al variare di in . La ricerca delle coppie di interi richiede invece più attenzione: se assegniamo a un valore intero arbitrario, non è detto che il valore di corrispondente sia pure intero. Vediamo qualche esempio.    Cerchiamo le soluzioni formate da coppie di interi per ciascuna delle equazioni e .  Ci accorgiamo immediatamente che, sostituendo a e valori interi nella prima equazione, a primo membro otteniamo sempre un multiplo di e, poiché non è multiplo di , l'uguaglianza non può essere soddisfatta.  Per quanto riguarda la seconda equazione, il cui primo membro è uguale a quello della prima equazione, vediamo che il secondo membro è multiplo di e, quindi, potrebbero esserci soluzioni. In effetti ci sono soluzioni: ad esempio, e , ma anche e e altre. Non sappiamo però ancora come determinarle tutte.    L'esempio precedente è in qualche modo tipico. Il caso in cui l'equazione non ha soluzione si può facilmente generalizzare a una condizione necessaria per la risolubilità. Per quanto riguarda il caso in cui invece l'equazione ha soluzione, ci rendiamo conto che è necessario un'analisi più approfondita: non possiamo certo provare tutte le possibili coppie e sperare che qualcuna di esse sia soluzione della nostra equazione.    Un'equazione del tipo con , , e interi, , , incognite e di cui cerchiamo soluzioni con ciascun intero è detta equazione lineare diofantina .    Iniziamo a considerare il caso in cui ci siano due incognite.    Sia data un'equazione lineare diofantina nelle incognite e con , e interi. L'equazione ha soluzione se e solo se il massimo comun divisore divide .    Qualunque valore intero sostituiamo a e , otteniamo a primo membro un multiplo di : quindi, se non divide , non esistono valori interi che soddisfano l'equazione.  Supponiamo ora che divida , cioè per un opportuno intero . Sappiamo che esistono interi e per cui vale l'identità di Bezout . Allora , cioè una soluzione intera è data da e .     La proposizione precedente può essere reinterpretata dicendo che, dati due interi e , l'espressione assume, al variare di e in , esattamente i valori multipli del massimo comun divisore di e .     Riprendiamo ora l'equazione dell' e vediamo come possiamo determinarne delle soluzioni .  Il massimo comun divisore tra e è che divide : l'equazione è effettivamente risolubile. Un'identità di Bezout tra e e il loro massimo comun divisore si vede facilmente: (ovviamente non sempre si vede così facilmente, ma sappiamo che possiamo usare l'algoritmo di Euclide per trovarne una). Ora, : dunque, e e è una soluzione particolare. Vogliamo ora vedere se ci sono altre soluzioni. Possiamo innanzitutto semplificarci un po' la vita e dividere tutto per e ottenere così l'equazione equivalente . A dire il vero, avremmo potuto farlo subito, prima ancora di determinare la soluzione particolare. Notiamo ora che se sommiamo a e sommiamo a otteniamo un'altra soluzione dell'equazione data, infatti: . Possiamo ovviamente ripetere il procedimento quante volte vogliamo e ottenere, quindi, infinite soluzioni dell'equazione al variare di in . Dimostreremo che queste sono tutte le soluzioni dell'equazione data.      Sia data un'equazione lineare diofantina nelle incognite e con , e interi tale che divide (dunque, l'equazione è risolubile).  Se , l'equazione è un'identità.  Se , posto , e , l'equazione è equivalente a : in tal caso, detta e una soluzione particolare dell'equazione (determinata ad esempio, con un'identità di Bezout come nella ), l'equazione ha infinite soluzioni date da al variare di in .    Sappiamo che se e solo se : poiché , ciò significa che e l'equazione è un'identità.  Supponiamo ora : l'equazione è allora equivalente a e, sostituendo in essa le espressioni date nell'enunciato, si vede immediatamente che sono effettivamente soluzioni.  Viceversa, se e è una soluzione dell'equazione diofantina, allora e, poiché , uguagliando, otteniamo . Per il , abbiamo che e sono coprimi. Per il , abbiamo che e , cioè esistono interi e tali che e , cioè Abbiamo, dunque, . Distinguiamo ora due casi: e . Nel primo caso, otteniamo immediatamente che ; nel secondo caso o : se, ad esempio, , abbiamo , cioè possiamo comunque rimpiazzare con .    Possiamo ora rileggere l' : le soluzioni trovate sono, dunque, tutte e sole le soluzioni.  Descriviamo ora sommariamente il procedimento con cui affrontare equazioni lineari diofantine in più di due incognite. Cominciamo a considerare il caso di un'equazione in incognite , e  Assegnando valori arbitrari interi a e , dall' sappiamo che assume esattamente tutti e soli i valori multipli del massimo comun divisore di e . Possiamo allora introdurre un'incognita supplementare e riscrivere l'equazione come un sistema: La seconda equazione ha soluzione se e solo se il massimo comun divisore tra e divide . Ma è il massimo comun divisore tra e e, quindi, per la , abbiamo che . Dunque, la seconda equazione ha soluzione se e solo se divide . Data poi una qualunque soluzione per la seconda equazione, e sostituito il valore di nella prima equazione, il termine noto è multiplo di , per cui la prima equazione ha sicuramente soluzione. Riassumendo, il sistema (e, quindi, l'equazione originale) è risolubile se e solo se divide . Vediamo un esempio.    Consideriamo l'equazione lineare diofantina .  Il massimo comun divisore di , e è che divide : l'equazione è, quindi, risolubile. Possiamo innanzitutto dividere l'equazione per e ottenere l'equazione equivalente . Il massimo comun divisore tra e è . Introduciamo allora l'incognita ausiliaria e consideriamo il sistema: Possiamo anche dividere la prima equazione per e ottenere il sistema equivalente: Risolviamo allora la seconda equazione. Un'identità di Bezout tra e è, ad esempio, (lasciamo i calcoli necessari a determinare questa e altre identità per esercizio). Una soluzione particolare della seconda equazione è allora e , mentre la soluzione generale è data da al variare di in . La prima equazione allora diviene dove viene considerato come un parametro. Un'identità di Bezout tra e è, ad esempio, e, quindi, una soluzione particolare per l'equazione è mentre la soluzione generale è data da al variare di in (notare che abbiano usato un parametro diverso da ). Riassumendo, le soluzioni dell'equazione diofantina assegnata sono date da al variare di e in .    Quanto visto nel caso di tre incognite, si può generalizzare al caso di un numero qualunque di incognite. Lasciamo la dimostrazione per esercizio.    L'equazione diofantina è risolubile se e solo se divide . Se , l'equazione è un'identità. Se , le soluzioni dipendono da parametri interi.       Stabilire se le seguenti equazioni hanno soluzioni intere e, in caso affermativo,determinarle tutte.         , al variare di in .        Non ci sono soluzioni.         , , al variare di e in .        Non ci sono soluzioni.        Non ci sono soluzioni.         , , al variare di e in .     In uno stato ormai cancellato dalle carte geografiche esistevano due tipi di monete d'argento: quelle quadrate, del peso di grammi e quelle circolari del peso di grammi. Un contadino deve acquistare un cavallo al prezzo di grammi d'argento. Quante monete quadrate e quante monete circolari dovrà portare con sé?   Detto il numero delle monete quadrate e il numero delle monete circolari, sappiamo che e sono interi non negativi e che . Cerchiamo innanzitutto le soluzioni intere di questa equazione lineare diofantina. Poiché e sono coprimi è possibile determinare (ad esempio, tramite l' ) un'identità di Bezout che lega e a : troviamo così . Moltiplicando per troviamo . Una soluzione particolare è, quindi, , . La soluzione generale è allora , al variare di in . Imponiamo ora la condizione che e siano non negativi. Abbiamo allora , da cui otteniamo , che, essendo intero, si riduce a . Abbiamo poi , da cui otteniamo , che, essendo intero, si riduce a . Dunque, deve essere che, sostituito nell'espressione della soluzione generale, dà e .    "
 },
 {
-  "id": "p-571",
+  "id": "sec-equazioni_lineari_diofantine-2",
   "level": "2",
-  "url": "sec-equazioni_lineari_diofantine.html#p-571",
+  "url": "sec-equazioni_lineari_diofantine.html#sec-equazioni_lineari_diofantine-2",
   "type": "Capoverso (with a defined term)",
   "number": "",
   "title": "",
@@ -2512,9 +2512,9 @@ var ptx_lunr_docs = [
   "body": "  Sia data un'equazione lineare diofantina nelle incognite e con , e interi tale che divide (dunque, l'equazione è risolubile).  Se , l'equazione è un'identità.  Se , posto , e , l'equazione è equivalente a : in tal caso, detta e una soluzione particolare dell'equazione (determinata ad esempio, con un'identità di Bezout come nella ), l'equazione ha infinite soluzioni date da al variare di in .    Sappiamo che se e solo se : poiché , ciò significa che e l'equazione è un'identità.  Supponiamo ora : l'equazione è allora equivalente a e, sostituendo in essa le espressioni date nell'enunciato, si vede immediatamente che sono effettivamente soluzioni.  Viceversa, se e è una soluzione dell'equazione diofantina, allora e, poiché , uguagliando, otteniamo . Per il , abbiamo che e sono coprimi. Per il , abbiamo che e , cioè esistono interi e tali che e , cioè Abbiamo, dunque, . Distinguiamo ora due casi: e . Nel primo caso, otteniamo immediatamente che ; nel secondo caso o : se, ad esempio, , abbiamo , cioè possiamo comunque rimpiazzare con .   "
 },
 {
-  "id": "example-50",
+  "id": "sec-equazioni_lineari_diofantine-15",
   "level": "2",
-  "url": "sec-equazioni_lineari_diofantine.html#example-50",
+  "url": "sec-equazioni_lineari_diofantine.html#sec-equazioni_lineari_diofantine-15",
   "type": "Esempio",
   "number": "5.5.7",
   "title": "",
@@ -2530,63 +2530,63 @@ var ptx_lunr_docs = [
   "body": "  L'equazione diofantina è risolubile se e solo se divide . Se , l'equazione è un'identità. Se , le soluzioni dipendono da parametri interi.   "
 },
 {
-  "id": "exercise-72",
+  "id": "exercises-equazioni_lineari_diofantine-1-2",
   "level": "2",
-  "url": "sec-equazioni_lineari_diofantine.html#exercise-72",
+  "url": "sec-equazioni_lineari_diofantine.html#exercises-equazioni_lineari_diofantine-1-2",
   "type": "Esercizio",
   "number": "5.5.1",
   "title": "",
   "body": "      , al variare di in .  "
 },
 {
-  "id": "exercise-73",
+  "id": "exercises-equazioni_lineari_diofantine-1-3",
   "level": "2",
-  "url": "sec-equazioni_lineari_diofantine.html#exercise-73",
+  "url": "sec-equazioni_lineari_diofantine.html#exercises-equazioni_lineari_diofantine-1-3",
   "type": "Esercizio",
   "number": "5.5.2",
   "title": "",
   "body": "     Non ci sono soluzioni.  "
 },
 {
-  "id": "exercise-74",
+  "id": "exercises-equazioni_lineari_diofantine-1-4",
   "level": "2",
-  "url": "sec-equazioni_lineari_diofantine.html#exercise-74",
+  "url": "sec-equazioni_lineari_diofantine.html#exercises-equazioni_lineari_diofantine-1-4",
   "type": "Esercizio",
   "number": "5.5.3",
   "title": "",
   "body": "      , , al variare di e in .  "
 },
 {
-  "id": "exercise-75",
+  "id": "exercises-equazioni_lineari_diofantine-1-5",
   "level": "2",
-  "url": "sec-equazioni_lineari_diofantine.html#exercise-75",
+  "url": "sec-equazioni_lineari_diofantine.html#exercises-equazioni_lineari_diofantine-1-5",
   "type": "Esercizio",
   "number": "5.5.4",
   "title": "",
   "body": "     Non ci sono soluzioni.  "
 },
 {
-  "id": "exercise-76",
+  "id": "exercises-equazioni_lineari_diofantine-1-6",
   "level": "2",
-  "url": "sec-equazioni_lineari_diofantine.html#exercise-76",
+  "url": "sec-equazioni_lineari_diofantine.html#exercises-equazioni_lineari_diofantine-1-6",
   "type": "Esercizio",
   "number": "5.5.5",
   "title": "",
   "body": "     Non ci sono soluzioni.  "
 },
 {
-  "id": "exercise-77",
+  "id": "exercises-equazioni_lineari_diofantine-1-7",
   "level": "2",
-  "url": "sec-equazioni_lineari_diofantine.html#exercise-77",
+  "url": "sec-equazioni_lineari_diofantine.html#exercises-equazioni_lineari_diofantine-1-7",
   "type": "Esercizio",
   "number": "5.5.6",
   "title": "",
   "body": "      , , al variare di e in .  "
 },
 {
-  "id": "exercise-78",
+  "id": "exercises-equazioni_lineari_diofantine-2",
   "level": "2",
-  "url": "sec-equazioni_lineari_diofantine.html#exercise-78",
+  "url": "sec-equazioni_lineari_diofantine.html#exercises-equazioni_lineari_diofantine-2",
   "type": "Esercizio",
   "number": "5.5.7",
   "title": "",
@@ -2674,18 +2674,18 @@ var ptx_lunr_docs = [
   "body": " Consideriamo la partizione degli interi formata dall'insieme dei multipli di e dall'insieme degli interi che non sono multipli di . Mostrare che le operazioni di addizione e moltiplicazione in non inducono delle operazioni nell'insieme quoziente .   Notiamo che , e sono elementi di . Ora mentre : dunque, non è definita. Analogamente, , mentre : dunque, non è definito.  "
 },
 {
-  "id": "exercise-80",
+  "id": "exercises-congruenzemodulon-2",
   "level": "2",
-  "url": "sec-congruenzemodulon.html#exercise-80",
+  "url": "sec-congruenzemodulon.html#exercises-congruenzemodulon-2",
   "type": "Esercizio",
   "number": "6.1.2",
   "title": "",
   "body": " Siano e interi positivi con divisore di .   Dimostrare che se e sono due interi tali che , allora .   Dimostrare che una classe di resto modulo è unione di esattamente classi di resto modulo .  "
 },
 {
-  "id": "exercise-81",
+  "id": "exercises-congruenzemodulon-3",
   "level": "2",
-  "url": "sec-congruenzemodulon.html#exercise-81",
+  "url": "sec-congruenzemodulon.html#exercises-congruenzemodulon-3",
   "type": "Esercizio",
   "number": "6.1.3",
   "title": "",
@@ -2719,9 +2719,9 @@ var ptx_lunr_docs = [
   "body": "  Fissato un intero positivo , sono definite in due operazioni e nel modo seguente:    "
 },
 {
-  "id": "note-5",
+  "id": "sec-operazioniclassiresto-6",
   "level": "2",
-  "url": "sec-operazioniclassiresto.html#note-5",
+  "url": "sec-operazioniclassiresto.html#sec-operazioniclassiresto-6",
   "type": "Nota",
   "number": "6.2.3",
   "title": "",
@@ -2737,9 +2737,9 @@ var ptx_lunr_docs = [
   "body": "  Le operazioni di addizione e moltiplicazione definite nell'insieme delle classi di resto soddisfano le seguenti proprietà:      per ogni , e in (l'addizione è associativa);     per ogni in ( è elemento neutro per l'addizione);    per ogni classe esiste una classe, denotata con tale che (esistenza opposto);     per ogni e in (l'addizione è commutativa);     per ogni , e in (la moltiplicazione è associativa);     per ogni in ( è elemento neutro per la moltiplicazione);     per ogni e in (la moltiplicazione è commutativa);     per ogni , e in (proprietà distributiva).       Dimostriamo solo il e lasciamo il resto per esercizio. Abbiamo    "
 },
 {
-  "id": "note-6",
+  "id": "sec-operazioniclassiresto-11",
   "level": "2",
-  "url": "sec-operazioniclassiresto.html#note-6",
+  "url": "sec-operazioniclassiresto.html#sec-operazioniclassiresto-11",
   "type": "Nota",
   "number": "6.2.5",
   "title": "",
@@ -2782,9 +2782,9 @@ var ptx_lunr_docs = [
   "body": "  Sia un intero positivo. Una classe di resto è detta invertibile se esiste una classe di resto tale che .   "
 },
 {
-  "id": "example-51",
+  "id": "sec-operazioniclassiresto-21",
   "level": "2",
-  "url": "sec-operazioniclassiresto.html#example-51",
+  "url": "sec-operazioniclassiresto.html#sec-operazioniclassiresto-21",
   "type": "Esempio",
   "number": "6.2.10",
   "title": "",
@@ -2800,9 +2800,9 @@ var ptx_lunr_docs = [
   "body": "     inversa della classe  Sia un intero positivo.   Se è una classe invertibile, allora la classe tale che è univocamente determinata: viene detta inversa di e denotata con .    Se è invertibile, anche è invertibile e .    Se e sono invertibili, anche è invertibile e .       Se e , allora . Questo prova il .  Poiché , le classi e sono una l'inversa dell'altra. Questo prova il .  Abbiamo . Questo prova il .   "
 },
 {
-  "id": "note-7",
+  "id": "sec-operazioniclassiresto-24",
   "level": "2",
-  "url": "sec-operazioniclassiresto.html#note-7",
+  "url": "sec-operazioniclassiresto.html#sec-operazioniclassiresto-24",
   "type": "Nota",
   "number": "6.2.12",
   "title": "",
@@ -2908,144 +2908,144 @@ var ptx_lunr_docs = [
   "body": " Sia . Mostrare che esistono e non nulle tali che se e solo se non è primo.  "
 },
 {
-  "id": "exercise-83",
+  "id": "exercises-operazioniclassiresto-2",
   "level": "2",
-  "url": "sec-operazioniclassiresto.html#exercise-83",
+  "url": "sec-operazioniclassiresto.html#exercises-operazioniclassiresto-2",
   "type": "Esercizio",
   "number": "6.2.2",
   "title": "",
   "body": " Sia un intero positivo fissato. Data una classe di resto , sia il massimo comun divisore tra e (per il , non dipende dalla scelta del rappresentante della classe di resto). Mostrare che, per ogni , esistono esattamente classi tali che e dedurre che l'insieme contiene esattamente elementi. In termini della tabella dell'operazione questo equivale a dire che sulla riga (e sulla colonna) corrispondente a compaiono esattamente elementi, ciascuno volte.   Siano e con e opportuni interi: poiché , abbiamo che e, per il , che e sono coprimi. Ora se e solo se è multiplo di , vale a dire è multiplo di : ciò è equivalente a richiedere che è multiplo di che, per il , avviene se e solo se è multiplo di . Riassumendo, gli interi tali che sono tutti e soli quelli del tipo al variare di in . Dato un intero possiamo dividerlo per e ottenere con e interi tali che : dunque . Dunque, le classi tali che sono tutte e sole quelle del tipo con . Queste classi sono tutte diverse: infatti, se e sono due interi tali che , allora e .  "
 },
 {
-  "id": "exercise-84",
+  "id": "exercises-operazioniclassiresto-3-2",
   "level": "2",
-  "url": "sec-operazioniclassiresto.html#exercise-84",
+  "url": "sec-operazioniclassiresto.html#exercises-operazioniclassiresto-3-2",
   "type": "Esercizio",
   "number": "6.2.3",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-85",
+  "id": "exercises-operazioniclassiresto-3-3",
   "level": "2",
-  "url": "sec-operazioniclassiresto.html#exercise-85",
+  "url": "sec-operazioniclassiresto.html#exercises-operazioniclassiresto-3-3",
   "type": "Esercizio",
   "number": "6.2.4",
   "title": "",
   "body": "     Non è invertibile.  "
 },
 {
-  "id": "exercise-86",
+  "id": "exercises-operazioniclassiresto-3-4",
   "level": "2",
-  "url": "sec-operazioniclassiresto.html#exercise-86",
+  "url": "sec-operazioniclassiresto.html#exercises-operazioniclassiresto-3-4",
   "type": "Esercizio",
   "number": "6.2.5",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-87",
+  "id": "exercises-operazioniclassiresto-3-5",
   "level": "2",
-  "url": "sec-operazioniclassiresto.html#exercise-87",
+  "url": "sec-operazioniclassiresto.html#exercises-operazioniclassiresto-3-5",
   "type": "Esercizio",
   "number": "6.2.6",
   "title": "",
   "body": "     Non è invertibile.  "
 },
 {
-  "id": "exercise-88",
+  "id": "exercises-operazioniclassiresto-3-6",
   "level": "2",
-  "url": "sec-operazioniclassiresto.html#exercise-88",
+  "url": "sec-operazioniclassiresto.html#exercises-operazioniclassiresto-3-6",
   "type": "Esercizio",
   "number": "6.2.7",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-89",
+  "id": "exercises-operazioniclassiresto-3-7",
   "level": "2",
-  "url": "sec-operazioniclassiresto.html#exercise-89",
+  "url": "sec-operazioniclassiresto.html#exercises-operazioniclassiresto-3-7",
   "type": "Esercizio",
   "number": "6.2.8",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-90",
+  "id": "exercises-operazioniclassiresto-4",
   "level": "2",
-  "url": "sec-operazioniclassiresto.html#exercise-90",
+  "url": "sec-operazioniclassiresto.html#exercises-operazioniclassiresto-4",
   "type": "Esercizio",
   "number": "6.2.9",
   "title": "",
   "body": " Dimostrare che per ogni naturale si ha che è multiplo di .   Mostriamo per induzione su che . Per si ha e da cui segue che è, ovviamente, multiplo di . Supponiamo che la proprietà sia vera per un certo e mostriamo che vale per : dobbiamo cioè provare che . Ma . Poiché otteniamo immediatamente come richiesto.   Notiamo che e, quindi,   "
 },
 {
-  "id": "exercise-91",
+  "id": "exercises-operazioniclassiresto-5",
   "level": "2",
-  "url": "sec-operazioniclassiresto.html#exercise-91",
+  "url": "sec-operazioniclassiresto.html#exercises-operazioniclassiresto-5",
   "type": "Esercizio",
   "number": "6.2.10",
   "title": "",
   "body": " Trovare il resto di diviso .   Notiamo che : dunque, . Ora è potenza a esponente positivo di un numero pari ed è, quindi, pari: di conseguenza . Il resto cercato è, quindi, .  "
 },
 {
-  "id": "exercise-92",
+  "id": "exercises-operazioniclassiresto-6",
   "level": "2",
-  "url": "sec-operazioniclassiresto.html#exercise-92",
+  "url": "sec-operazioniclassiresto.html#exercises-operazioniclassiresto-6",
   "type": "Esercizio",
   "number": "6.2.11",
   "title": "",
   "body": " Mostrare che, dati tre interi consecutivi, la somma dei loro cubi è un multiplo di .   Tre interi consecutivi rappresentano le tre classi di resto modulo : ora .  "
 },
 {
-  "id": "exercise-93",
+  "id": "exercises-operazioniclassiresto-7",
   "level": "2",
-  "url": "sec-operazioniclassiresto.html#exercise-93",
+  "url": "sec-operazioniclassiresto.html#exercises-operazioniclassiresto-7",
   "type": "Esercizio",
   "number": "6.2.12",
   "title": "",
   "body": " Trovare l'ultima cifra (in base ) di .   Se allora è multiplo di : infatti e ciascun fattoriale è multiplo del precedente. Per calcolare l'ultima cifra di è allora sufficiente calcolare l'ultima cifra di , cioè . L'ultima cifra è, quindi, .  "
 },
 {
-  "id": "exercise-94",
+  "id": "exercises-operazioniclassiresto-8",
   "level": "2",
-  "url": "sec-operazioniclassiresto.html#exercise-94",
+  "url": "sec-operazioniclassiresto.html#exercises-operazioniclassiresto-8",
   "type": "Esercizio",
   "number": "6.2.13",
   "title": "",
   "body": " Dimostrare che non esiste nessun intero tale che sia un quadrato perfetto.   Usare le classi di resto modulo .   Supponiamo che esistano interi e tali che . Qualunque sia , il primo membro è congruo a modulo . Per quanto riguarda il secondo membro consideriamo vari casi: se , allora , se , allora , se allora . In nessun caso il secondo membro è congruo a modulo .  "
 },
 {
-  "id": "exercise-95",
+  "id": "exercises-operazioniclassiresto-9",
   "level": "2",
-  "url": "sec-operazioniclassiresto.html#exercise-95",
+  "url": "sec-operazioniclassiresto.html#exercises-operazioniclassiresto-9",
   "type": "Esercizio",
   "number": "6.2.14",
   "title": "",
   "body": " Siano , e tre interi tali che . Dimostrare che almeno uno degli interi , e è multiplo di .   Consideriamo i possibili quadrati modulo degli interi: se , allora , se allora , se allora , se allora , se allora .  Se almeno uno tra e è multiplo di , allora abbiamo finito, altrimenti ciò significa che e possono assumere valore o modulo . Se abbiamo allora che o : ma né né sono quadrati modulo . Pertanto, e assumono valori diversi modulo cioè uno dei due (non importa quale) assume valore modulo e l'altro assume valore modulo . Dunque, e, quindi, .  "
 },
 {
-  "id": "exercise-96",
+  "id": "exercises-operazioniclassiresto-10",
   "level": "2",
-  "url": "sec-operazioniclassiresto.html#exercise-96",
+  "url": "sec-operazioniclassiresto.html#exercises-operazioniclassiresto-10",
   "type": "Esercizio",
   "number": "6.2.15",
   "title": "",
   "body": " Sia un intero dispari. Mostrare che il resto della divisione di per è .   Dobbiamo mostrare che . Sappiamo che è congruo modulo a un intero compreso tra e inclusi. Tuttavia, poiché è dispari, ogni intero congruo ad modulo è sua volta dispari (la loro differenza è un multiplo di e, quindi, di ). In particolare, possiamo dire che è congruo modulo a uno tra i numeri , , e . Il quadrato di modulo è, quindi, congruo al quadrato di uno di questi numeri. Ma tutti questi numeri hanno quadrato congruo a modulo .  "
 },
 {
-  "id": "exercise-97",
+  "id": "exercises-operazioniclassiresto-11",
   "level": "2",
-  "url": "sec-operazioniclassiresto.html#exercise-97",
+  "url": "sec-operazioniclassiresto.html#exercises-operazioniclassiresto-11",
   "type": "Esercizio",
   "number": "6.2.16",
   "title": "",
   "body": " Sia un numero dispari e sia . Sapendo che non è multiplo di , provare che divide .   Poiché e e sono coprimi, per l' è sufficiente provare che è multiplo di e di .  Sia per qualche intero : allora . Di conseguenza ; in particolare, è multiplo di qualunque sia .  Lavoriamo ora modulo . Poiché non è multiplo di sappiamo che né né sono multipli di : in particolare, e , cioè . Pertanto, e : quindi, cioè è multiplo di .  "
 },
 {
-  "id": "exercise-98",
+  "id": "exercises-operazioniclassiresto-12",
   "level": "2",
-  "url": "sec-operazioniclassiresto.html#exercise-98",
+  "url": "sec-operazioniclassiresto.html#exercises-operazioniclassiresto-12",
   "type": "Esercizio",
   "number": "6.2.17",
   "title": "",
@@ -3070,9 +3070,9 @@ var ptx_lunr_docs = [
   "body": "   funzione di Eulero di    Dato un intero positivo , la funzione di Eulero di , denotata con , è il numero degli interi tali che e è coprimo con .   "
 },
 {
-  "id": "example-54",
+  "id": "sec-eulero-4",
   "level": "2",
-  "url": "sec-eulero.html#example-54",
+  "url": "sec-eulero.html#sec-eulero-4",
   "type": "Esempio",
   "number": "6.3.2",
   "title": "",
@@ -3115,54 +3115,54 @@ var ptx_lunr_docs = [
   "body": "  Supponiamo di voler determinare il resto della divisione di per . In altri termini, dobbiamo cercare un intero compreso tra e congruo a modulo . Consideriamo prima : notiamo innanzitutto che e, quindi, . Poiché è coprimo con , il ci dice che : si vede facilmente che . Ora , cioè per qualche naturale : dunque Calcoliamo allora modulo : notiamo che e, quindi, .  Consideriamo ora : notiamo innanzitutto che . Potremmo ora procedere come sopra, però notiamo che : questo permette di semplificare i calcoli. Infatti, senza bisogno di invocare il , abbiamo che . Poiché è dispari, e, dunque, .  Riassumendo, . Poiché , il resto della divisione cercata è proprio .   "
 },
 {
-  "id": "exercise-99",
+  "id": "exercises-eulero-1",
   "level": "2",
-  "url": "sec-eulero.html#exercise-99",
+  "url": "sec-eulero.html#exercises-eulero-1",
   "type": "Esercizio",
   "number": "6.3.1",
   "title": "",
   "body": " Dimostrare che è pari per ogni intero .   Notare che è coprimo con se e solo se è coprimo con e usare questo fatto per accoppiare fra loro i numeri coprimi con e compresi tra e , facendo attenzione al caso in cui .  "
 },
 {
-  "id": "exercise-100",
+  "id": "exercises-eulero-2",
   "level": "2",
-  "url": "sec-eulero.html#exercise-100",
+  "url": "sec-eulero.html#exercises-eulero-2",
   "type": "Esercizio",
   "number": "6.3.2",
   "title": "",
   "body": " Trovare il resto di diviso .   Poiché è coprimo con e è primo, per il abbiamo che . Pertanto, . Il resto cercato è, dunque, .  "
 },
 {
-  "id": "exercise-101",
+  "id": "exercises-eulero-3",
   "level": "2",
-  "url": "sec-eulero.html#exercise-101",
+  "url": "sec-eulero.html#exercises-eulero-3",
   "type": "Esercizio",
   "number": "6.3.3",
   "title": "",
   "body": " Trovare il resto di diviso .   Il resto cercato è congruo a modulo . Svolgiamo, dunque, i calcoli modulo . Notiamo anzitutto che e, quindi, . Inoltre e, quindi, . Poiché è coprimo con e , visto che è primo, il ci dice che . Ma e, quindi, . Per ridurre ulteriormente modulo , osserviamo che e, dunque, . Poiché , possiamo ora considerare il resto della divisione di per che è .  "
 },
 {
-  "id": "exercise-102",
+  "id": "exercises-eulero-4",
   "level": "2",
-  "url": "sec-eulero.html#exercise-102",
+  "url": "sec-eulero.html#exercises-eulero-4",
   "type": "Esercizio",
   "number": "6.3.4",
   "title": "",
   "body": " Trovare la cifra dell'unità (in base ) di .   Poiché , abbiamo . Poiché è coprimo con , per il abbiamo . Ora . Poiché , abbiamo , cioè . Abbiamo poi e, di conseguenza, , Infine . Riassumendo, . L'ultima cifra è, dunque, .  "
 },
 {
-  "id": "exercise-103",
+  "id": "exercises-eulero-5",
   "level": "2",
-  "url": "sec-eulero.html#exercise-103",
+  "url": "sec-eulero.html#exercises-eulero-5",
   "type": "Esercizio",
   "number": "6.3.5",
   "title": "",
   "body": " Dimostrare che è divisibile per qualunque sia l'intero .   Poiché e , e sono a due a due coprimi, grazie all' basta mostrare che è divisibile per questi numeri. Poiché , e sono primi, il ci dice che , e . Dalla prima congruenza ricaviamo per induzione che tutte le potenze di sono congrue tra loro modulo : in particolare, ; dalla seconda otteniamo che . Riassumendo, e sono congrui tra loro modulo , e , come richiesto.  "
 },
 {
-  "id": "exercise-104",
+  "id": "exercises-eulero-6",
   "level": "2",
-  "url": "sec-eulero.html#exercise-104",
+  "url": "sec-eulero.html#exercises-eulero-6",
   "type": "Esercizio",
   "number": "6.3.6",
   "title": "",
@@ -3196,9 +3196,9 @@ var ptx_lunr_docs = [
   "body": "  Sia un intero positivo e siano e due interi tali che è coprimo con . Allora, gli interi tali che sono tutti e soli quelli tali che , dove può essere ottenuto da un'identità di Bezout .   "
 },
 {
-  "id": "example-56",
+  "id": "sec-congruenze_con_incognite-6",
   "level": "2",
-  "url": "sec-congruenze_con_incognite.html#example-56",
+  "url": "sec-congruenze_con_incognite.html#sec-congruenze_con_incognite-6",
   "type": "Esempio",
   "number": "6.4.3",
   "title": "",
@@ -3214,9 +3214,9 @@ var ptx_lunr_docs = [
   "body": "  Sia un intero positivo e siano e due interi. La congruenza con incognite ha soluzioni se e solo se divide : in tal caso, se la congruenza è equivalente a una congruenza del tipo per un opportuno intero .   "
 },
 {
-  "id": "example-57",
+  "id": "sec-congruenze_con_incognite-9",
   "level": "2",
-  "url": "sec-congruenze_con_incognite.html#example-57",
+  "url": "sec-congruenze_con_incognite.html#sec-congruenze_con_incognite-9",
   "type": "Esempio",
   "number": "6.4.5",
   "title": "",
@@ -3241,18 +3241,18 @@ var ptx_lunr_docs = [
   "body": " Il può essere enunciato dicendo che esiste un unico intero con che soddisfa tutte le congruenze e che gli interi che soddisfano tutte le congruenze sono tutti e soli quelli del tipo al variare di in .  "
 },
 {
-  "id": "example-58",
+  "id": "sec-congruenze_con_incognite-12",
   "level": "2",
-  "url": "sec-congruenze_con_incognite.html#example-58",
+  "url": "sec-congruenze_con_incognite.html#sec-congruenze_con_incognite-12",
   "type": "Esempio",
   "number": "6.4.8",
   "title": "",
   "body": "  Supponiamo di voler risolvere il sistema di congruenze Poiché , e sono a due a due coprimi siamo nelle condizioni di applicare il . Iniziamo a considerare le prime due equazioni: gli interi cercati devono soddisfare e per opportuni interi e . Uguagliando, con semplici passaggi otteniamo: . Un'identità di Bezout tra e è, ad esempio, e moltiplicando tutto per troviamo: , cioè una soluzione particolare è , . Sostituendo uno di questi valori nella corrispondente espressione di troviamo che è una soluzione particolare per le prime due congruenze (si può verificarlo per sicurezza) che sono, dunque, equivalenti a , cioè o, se si preferisce, . Il sistema si riduce, quindi, a Ripetiamo ora il ragionamento. Gli interi cercati devono soddisfare e per opportuni interi e (per semplificare la notazione, usiamo ancora le lettere e per le incognite ausiliarie, anche se sono diverse da quelle precedenti). Uguagliando, con semplici passaggi otteniamo: . Un'identità di Bezout tra e è, ad esempio, (per trovarla si può usare l' ) e moltiplicando tutto per troviamo: , cioè una soluzione particolare è , . Sostituendo uno di questi valori nella corrispondente espressione di troviamo che è una soluzione particolare per il sistema (si può verificarlo per sicurezza) che è, dunque, equivalente a , cioè o, se si preferisce, .   "
 },
 {
-  "id": "example-59",
+  "id": "sec-congruenze_con_incognite-14",
   "level": "2",
-  "url": "sec-congruenze_con_incognite.html#example-59",
+  "url": "sec-congruenze_con_incognite.html#sec-congruenze_con_incognite-14",
   "type": "Esempio",
   "number": "6.4.9",
   "title": "",
@@ -3277,9 +3277,9 @@ var ptx_lunr_docs = [
   "body": "  Supponiamo di voler calcolare il resto della divisione di per . Nell' abbiamo visto che .  Consideriamo ora : notiamo innanzitutto che . Ora e non sono coprimi e, quindi, non possiamo usare il . Vogliamo trovare un numero relativamente piccolo tale che . Per il , questo è equivalente a Ora è multiplo di e, quindi, . Invece è coprimo con e, quindi, possiamo applicare il alla seconda congruenza. Più semplicemente, però, possiamo notare che e, quindi, . Dunque, il sistema si riduce a: Risolvendo con il , troviamo .  Riassumendo, . Poiché , il resto della divisione cercata è proprio .   "
 },
 {
-  "id": "example-61",
+  "id": "sec-congruenze_con_incognite-17",
   "level": "2",
-  "url": "sec-congruenze_con_incognite.html#example-61",
+  "url": "sec-congruenze_con_incognite.html#sec-congruenze_con_incognite-17",
   "type": "Esempio",
   "number": "6.4.12",
   "title": "",
@@ -3304,162 +3304,162 @@ var ptx_lunr_docs = [
   "body": "  Sia un intero maggiore di , scritto come con , , , primi distinti e , , , interi positivi. Risulta allora .    Per la , sappiamo che per ogni . Le formule seguono allora dal e da semplici calcoli.   "
 },
 {
-  "id": "exercise-105",
+  "id": "exercises-congruenze_con_incognite-1-2",
   "level": "2",
-  "url": "sec-congruenze_con_incognite.html#exercise-105",
+  "url": "sec-congruenze_con_incognite.html#exercises-congruenze_con_incognite-1-2",
   "type": "Esercizio",
   "number": "6.4.1",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-106",
+  "id": "exercises-congruenze_con_incognite-1-3",
   "level": "2",
-  "url": "sec-congruenze_con_incognite.html#exercise-106",
+  "url": "sec-congruenze_con_incognite.html#exercises-congruenze_con_incognite-1-3",
   "type": "Esercizio",
   "number": "6.4.2",
   "title": "",
   "body": "     Non ha soluzione.  "
 },
 {
-  "id": "exercise-107",
+  "id": "exercises-congruenze_con_incognite-1-4",
   "level": "2",
-  "url": "sec-congruenze_con_incognite.html#exercise-107",
+  "url": "sec-congruenze_con_incognite.html#exercises-congruenze_con_incognite-1-4",
   "type": "Esercizio",
   "number": "6.4.3",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-108",
+  "id": "exercises-congruenze_con_incognite-1-5",
   "level": "2",
-  "url": "sec-congruenze_con_incognite.html#exercise-108",
+  "url": "sec-congruenze_con_incognite.html#exercises-congruenze_con_incognite-1-5",
   "type": "Esercizio",
   "number": "6.4.4",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-109",
+  "id": "exercises-congruenze_con_incognite-1-6",
   "level": "2",
-  "url": "sec-congruenze_con_incognite.html#exercise-109",
+  "url": "sec-congruenze_con_incognite.html#exercises-congruenze_con_incognite-1-6",
   "type": "Esercizio",
   "number": "6.4.5",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-110",
+  "id": "exercises-congruenze_con_incognite-1-7",
   "level": "2",
-  "url": "sec-congruenze_con_incognite.html#exercise-110",
+  "url": "sec-congruenze_con_incognite.html#exercises-congruenze_con_incognite-1-7",
   "type": "Esercizio",
   "number": "6.4.6",
   "title": "",
   "body": "     Non ha soluzione.  "
 },
 {
-  "id": "exercise-111",
+  "id": "exercises-congruenze_con_incognite-1-8",
   "level": "2",
-  "url": "sec-congruenze_con_incognite.html#exercise-111",
+  "url": "sec-congruenze_con_incognite.html#exercises-congruenze_con_incognite-1-8",
   "type": "Esercizio",
   "number": "6.4.7",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-112",
+  "id": "exercises-congruenze_con_incognite-1-9",
   "level": "2",
-  "url": "sec-congruenze_con_incognite.html#exercise-112",
+  "url": "sec-congruenze_con_incognite.html#exercises-congruenze_con_incognite-1-9",
   "type": "Esercizio",
   "number": "6.4.8",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-113",
+  "id": "exercises-congruenze_con_incognite-2",
   "level": "2",
-  "url": "sec-congruenze_con_incognite.html#exercise-113",
+  "url": "sec-congruenze_con_incognite.html#exercises-congruenze_con_incognite-2",
   "type": "Esercizio",
   "number": "6.4.9",
   "title": "",
   "body": " Risolvere, se possibile, il sistema:    I moduli , e sono a due a due coprimi, e, quindi, per il , il sistema è risolubile e le soluzioni formano una classe di resto modulo . Determiniamo prima le soluzioni comuni alle prime due congruenze. Si nota immediatamente che è soluzione comune alle prime due congruenze: dunque, le prime due congruenze sono equivalenti, sempre per il , a . Il sistema si riduce allora a Ora deve essere per qualche e per qualche : uguagliando otteniamo da cui segue . Un'identità di Bezout tra e (che può essere determinata tramite l' ) è, ad esempio, . Possiamo allora scegliere e e trovare una soluzione particolare del sistema . Il sistema ha allora soluzioni .  "
 },
 {
-  "id": "exercise-114",
+  "id": "exercises-congruenze_con_incognite-3-2",
   "level": "2",
-  "url": "sec-congruenze_con_incognite.html#exercise-114",
+  "url": "sec-congruenze_con_incognite.html#exercises-congruenze_con_incognite-3-2",
   "type": "Esercizio",
   "number": "6.4.10",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-115",
+  "id": "exercises-congruenze_con_incognite-3-3",
   "level": "2",
-  "url": "sec-congruenze_con_incognite.html#exercise-115",
+  "url": "sec-congruenze_con_incognite.html#exercises-congruenze_con_incognite-3-3",
   "type": "Esercizio",
   "number": "6.4.11",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-116",
+  "id": "exercises-congruenze_con_incognite-3-4",
   "level": "2",
-  "url": "sec-congruenze_con_incognite.html#exercise-116",
+  "url": "sec-congruenze_con_incognite.html#exercises-congruenze_con_incognite-3-4",
   "type": "Esercizio",
   "number": "6.4.12",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-117",
+  "id": "exercises-congruenze_con_incognite-3-5",
   "level": "2",
-  "url": "sec-congruenze_con_incognite.html#exercise-117",
+  "url": "sec-congruenze_con_incognite.html#exercises-congruenze_con_incognite-3-5",
   "type": "Esercizio",
   "number": "6.4.13",
   "title": "",
   "body": "     Non ha soluzioni.  "
 },
 {
-  "id": "exercise-118",
+  "id": "exercises-congruenze_con_incognite-4",
   "level": "2",
-  "url": "sec-congruenze_con_incognite.html#exercise-118",
+  "url": "sec-congruenze_con_incognite.html#exercises-congruenze_con_incognite-4",
   "type": "Esercizio",
   "number": "6.4.14",
   "title": "",
   "body": " Trovare il resto di diviso .   Si noti che .   Calcoliamo modulo e modulo .  Chiaramente e, di conseguenza, . Poiché è primo, per il abbiamo che . Pertanto, .  Abbiamo poi che e, di conseguenza, . Poiché è primo, per il abbiamo che . Pertanto, .  Potremmo ora determinare modulo usando il , oppure notare che e : dunque, . Poiché , il resto cercato è .  "
 },
 {
-  "id": "exercise-119",
+  "id": "exercises-congruenze_con_incognite-5",
   "level": "2",
-  "url": "sec-congruenze_con_incognite.html#exercise-119",
+  "url": "sec-congruenze_con_incognite.html#exercises-congruenze_con_incognite-5",
   "type": "Esercizio",
   "number": "6.4.15",
   "title": "",
   "body": " Trovare il resto di diviso .   Dobbiamo determinare l'elemento compreso tra e nella classe di resto di modulo .  Poiché è coprimo con , il ci dice che . Ora e, quindi, . D'altra parte, è multiplo di : di conseguenza per qualche intero e, quindi, .  Per quanto riguarda osserviamo innanzitutto che è uguale a . Anche è coprimo con : quindi, come prima, . D'altra parte, e, quindi, analogamente a prima, .  Riassumendo, : dunque, il resto cercato è .  "
 },
 {
-  "id": "exercise-120",
+  "id": "exercises-congruenze_con_incognite-6",
   "level": "2",
-  "url": "sec-congruenze_con_incognite.html#exercise-120",
+  "url": "sec-congruenze_con_incognite.html#exercises-congruenze_con_incognite-6",
   "type": "Esercizio",
   "number": "6.4.16",
   "title": "",
   "body": " Trovare le ultime due cifre (in base ) di .   Le ultime due cifre in base corrispondono al resto della divisione di per . Espresso come prodotto di numeri coprimi, calcoliamo separatamente modulo e modulo e poi applichiamo il .  Poiché è multiplo di , tutte le sue potenze di esponente almeno sono multiple di . Per calcolare modulo , notiamo che è coprimo con e, quindi, per il , si ha . Poiché e , possiamo concludere che . Ora , e e quindi, . Riassumendo, e . Dobbiamo allora trovare il numero compreso tra e che soddisfa il sistema di congruenze Ora per opportuni e interi da cui, data l'identità di Bezout tra e , otteniamo una soluzione particolare che ci dà la congruenza che può essere riscritta come . Le ultime due cifre sono per l'appunto .  "
 },
 {
-  "id": "exercise-121",
+  "id": "exercises-congruenze_con_incognite-7",
   "level": "2",
-  "url": "sec-congruenze_con_incognite.html#exercise-121",
+  "url": "sec-congruenze_con_incognite.html#exercises-congruenze_con_incognite-7",
   "type": "Esercizio",
   "number": "6.4.17",
   "title": "",
   "body": " Obiettivo di questo esercizio è dare una dimostrazione alternativa, non costruttiva, del . Siano , , interi e , , interi positivi a due a due coprimi e sia .   Dimostrare che la funzione definita da è ben definita.   Dimostrare che la funzione definita al punto precedente è iniettiva.   Se , allora per ogni , cioè è multiplo di ogni e, quindi, per l' è multiplo di , cioè .   Dimostrare che è biiettiva.   Contare gli elementi dell'insieme di partenza e di arrivo.   Dedurre il .   Dato il sistema dove , , sono interi e , , sono interi positivi a due a due coprimi, consideriamo l'elemento in . Esiste allora un'unica classe in tale che , Per definizione di , ciò significa che per ogni e che gli interi che soddisfano il sistema sono tutti e soli quelli che appartengono alla classe .  "
 },
 {
-  "id": "exercise-122",
+  "id": "exercises-congruenze_con_incognite-8",
   "level": "2",
-  "url": "sec-congruenze_con_incognite.html#exercise-122",
+  "url": "sec-congruenze_con_incognite.html#exercises-congruenze_con_incognite-8",
   "type": "Esercizio",
   "number": "6.4.18",
   "title": "",
@@ -3493,72 +3493,72 @@ var ptx_lunr_docs = [
   "body": " Quando indichiamo con o il risultato di un'operazione tra due elementi e , diciamo che l'operazione è scritta in notazione moltiplicativa . In tal caso il risultato dell'operazione è detto prodotto .  Quando, invece, indichiamo con il risultato di un'operazione tra due elementi e , diciamo che l'operazione è scritta in notazione additiva . In tal caso il risultato dell'operazione è detto somma .  Questi termini si usano anche per operazioni che non hanno nulla a che fare con le usuali operazioni di moltiplicazione e di addizione tra numeri.  Se non specificato esplicitamente, intenderemo che stiamo usando la notazione moltiplicativa. Quando possibile, scriveremo semplicemente per indicare il prodotto di e .  "
 },
 {
-  "id": "example-62",
+  "id": "sec-operazioni_definizioni-4",
   "level": "2",
-  "url": "sec-operazioni_definizioni.html#example-62",
+  "url": "sec-operazioni_definizioni.html#sec-operazioni_definizioni-4",
   "type": "Esempio",
   "number": "7.1.3",
   "title": "",
   "body": "  L'usuale addizione è un'operazione in , , , , : più precisamente in ciascuno di questi insiemi è definita la corrispondente operazione, ciascuna estensione della precedente, e vanno, quindi, considerate operazioni diverse.   "
 },
 {
-  "id": "example-63",
+  "id": "sec-operazioni_definizioni-5",
   "level": "2",
-  "url": "sec-operazioni_definizioni.html#example-63",
+  "url": "sec-operazioni_definizioni.html#sec-operazioni_definizioni-5",
   "type": "Esempio",
   "number": "7.1.4",
   "title": "",
   "body": "  L'usuale moltiplicazione è un'operazione in , , , , : come per l'addizione, si tratta più precisamente di operazioni distinte.   "
 },
 {
-  "id": "example-64",
+  "id": "sec-operazioni_definizioni-6",
   "level": "2",
-  "url": "sec-operazioni_definizioni.html#example-64",
+  "url": "sec-operazioni_definizioni.html#sec-operazioni_definizioni-6",
   "type": "Esempio",
   "number": "7.1.5",
   "title": "",
   "body": "  L'usuale sottrazione non è invece un'operazione in , perché non è definito per ogni possibile scelta di e naturali. Una tale situazione viene descritta dicendo che la sottrazione in è un' operazione parziale , nozione che però non approfondiremo ulteriormente.  La sottrazione definisce invece un'operazione in , , , : come nel caso dell'addizione queste sono in realtà operazioni distinte.   "
 },
 {
-  "id": "example-65",
+  "id": "sec-operazioni_definizioni-7",
   "level": "2",
-  "url": "sec-operazioni_definizioni.html#example-65",
+  "url": "sec-operazioni_definizioni.html#sec-operazioni_definizioni-7",
   "type": "Esempio",
   "number": "7.1.6",
   "title": "",
   "body": "  Anche la divisione in , , , e è un'operazione parziale perché non è definita per ogni coppia di numeri in ciascuno di questi insiemi.  Se invece consideriamo i sottoinsiemi formati dagli elementi non nulli degli insiemi , e , allora la divisione definisce un'operazione in ciascuno di essi.  La divisione non definisce un'operazione nemmeno nel sottoinsieme degli interi non nulli: infatti, se e sono interi non nulli, non è detto che sia un intero. Analogamente per il sottoinsieme dei naturali non nulli.   "
 },
 {
-  "id": "example-66",
+  "id": "sec-operazioni_definizioni-8",
   "level": "2",
-  "url": "sec-operazioni_definizioni.html#example-66",
+  "url": "sec-operazioni_definizioni.html#sec-operazioni_definizioni-8",
   "type": "Esempio",
   "number": "7.1.7",
   "title": "",
   "body": "  L'addizione e la moltiplicazione in , introdotte nel costituiscono delle operazioni.   "
 },
 {
-  "id": "example-67",
+  "id": "sec-operazioni_definizioni-9",
   "level": "2",
-  "url": "sec-operazioni_definizioni.html#example-67",
+  "url": "sec-operazioni_definizioni.html#sec-operazioni_definizioni-9",
   "type": "Esempio",
   "number": "7.1.8",
   "title": "",
   "body": "  L'usuale addizione costituisce un'operazione nell'insieme delle matrici a righe e colonne a coefficienti in un anello commutativo . La moltiplicazione righe per colonne costituisce invece un'operazione nell'insieme delle matrici quadrate di ordine a coefficienti in .   "
 },
 {
-  "id": "example-68",
+  "id": "sec-operazioni_definizioni-10",
   "level": "2",
-  "url": "sec-operazioni_definizioni.html#example-68",
+  "url": "sec-operazioni_definizioni.html#sec-operazioni_definizioni-10",
   "type": "Esempio",
   "number": "7.1.9",
   "title": "",
   "body": "     insieme delle funzioni da in sé  Sia l'insieme delle funzioni da un insieme in sé. La composizione di due funzioni di è una funzione di : dunque, la composizione definisce un'operazione in (attenzione: è un'operazione di , non di ).   "
 },
 {
-  "id": "p-882",
+  "id": "sec-operazioni_definizioni-11",
   "level": "2",
-  "url": "sec-operazioni_definizioni.html#p-882",
+  "url": "sec-operazioni_definizioni.html#sec-operazioni_definizioni-11",
   "type": "Capoverso (with a defined term)",
   "number": "",
   "title": "",
@@ -3583,9 +3583,9 @@ var ptx_lunr_docs = [
   "body": "  Data un'operazione definita in un insieme , diciamo che soddisfa la proprietà associativa (o, più semplicemente, che l'operazione è associativa) se per ogni , e in .   "
 },
 {
-  "id": "note-8",
+  "id": "sec-proprieta_operazioni-4",
   "level": "2",
-  "url": "sec-proprieta_operazioni.html#note-8",
+  "url": "sec-proprieta_operazioni.html#sec-proprieta_operazioni-4",
   "type": "Nota",
   "number": "7.2.2",
   "title": "",
@@ -3664,81 +3664,81 @@ var ptx_lunr_docs = [
   "body": "  Se un'operazione definita in un insieme possiede un elemento neutro, questo è unico. In notazione moltiplicativa esso viene denotato con , mentre in notazione additiva esso viene denotato con .    Supponiamo che e siano elementi neutri. Calcoliamo allora : poiché è elemento neutro, si ha ; poiché è elemento neutro, si ha . Dunque, .   "
 },
 {
-  "id": "example-70",
+  "id": "sec-proprieta_operazioni-18",
   "level": "2",
-  "url": "sec-proprieta_operazioni.html#example-70",
+  "url": "sec-proprieta_operazioni.html#sec-proprieta_operazioni-18",
   "type": "Esempio",
   "number": "7.2.11",
   "title": "",
   "body": "  Il numero è elemento neutro per l'addizione in , , , e .  Il numero è elemento neutro per la moltiplicazione in , , , e .  La classe è elemento neutro per l'addizione in , mentre la classe è elemento neutro per la moltiplicazione in .  La matrice nulla è elemento neutro per l'addizione in , mentre la matrice identica è elemento neutro per la moltiplicazione in .  Dato un insieme , la funzione definita da per ogni , è elemento neutro per la composizione in .   "
 },
 {
-  "id": "exercise-123",
+  "id": "exercises-proprieta_operazioni-1-2",
   "level": "2",
-  "url": "sec-proprieta_operazioni.html#exercise-123",
+  "url": "sec-proprieta_operazioni.html#exercises-proprieta_operazioni-1-2",
   "type": "Esercizio",
   "number": "7.2.1",
   "title": "",
   "body": " Nell'insieme dei naturali , l'operazione che associa alla coppia il loro massimo .   È associativa, commutativa, e ha elemento neutro .  "
 },
 {
-  "id": "exercise-124",
+  "id": "exercises-proprieta_operazioni-1-3",
   "level": "2",
-  "url": "sec-proprieta_operazioni.html#exercise-124",
+  "url": "sec-proprieta_operazioni.html#exercises-proprieta_operazioni-1-3",
   "type": "Esercizio",
   "number": "7.2.2",
   "title": "",
   "body": " Nell'insieme degli interi , l'operazione che associa alla coppia il loro massimo .   È associativa, commutativa, ma non ha elemento neutro.  "
 },
 {
-  "id": "exercise-125",
+  "id": "exercises-proprieta_operazioni-1-4",
   "level": "2",
-  "url": "sec-proprieta_operazioni.html#exercise-125",
+  "url": "sec-proprieta_operazioni.html#exercises-proprieta_operazioni-1-4",
   "type": "Esercizio",
   "number": "7.2.3",
   "title": "",
   "body": " Nell'insieme dei naturali , l'operazione che associa alla coppia il loro massimo comun divisore .   È associativa, commutativa, e ha elemento neutro .  "
 },
 {
-  "id": "exercise-126",
+  "id": "exercises-proprieta_operazioni-1-5",
   "level": "2",
-  "url": "sec-proprieta_operazioni.html#exercise-126",
+  "url": "sec-proprieta_operazioni.html#exercises-proprieta_operazioni-1-5",
   "type": "Esercizio",
   "number": "7.2.4",
   "title": "",
   "body": " Nell'insieme dei naturali , l'operazione che associa alla coppia il numero .   È associativa, ma non è commutativa e non ha elemento neutro.  "
 },
 {
-  "id": "exercise-127",
+  "id": "exercises-proprieta_operazioni-1-6",
   "level": "2",
-  "url": "sec-proprieta_operazioni.html#exercise-127",
+  "url": "sec-proprieta_operazioni.html#exercises-proprieta_operazioni-1-6",
   "type": "Esercizio",
   "number": "7.2.5",
   "title": "",
   "body": " Nel booleano di un insieme , l'operazione che associa alla coppia la loro unione .   È associativa, commutativa e ha elemento neutro .  "
 },
 {
-  "id": "exercise-128",
+  "id": "exercises-proprieta_operazioni-1-7",
   "level": "2",
-  "url": "sec-proprieta_operazioni.html#exercise-128",
+  "url": "sec-proprieta_operazioni.html#exercises-proprieta_operazioni-1-7",
   "type": "Esercizio",
   "number": "7.2.6",
   "title": "",
   "body": " Nel booleano di un insieme , l'operazione che associa alla coppia la loro intersezione .   È associativa, commutativa e ha elemento neutro .  "
 },
 {
-  "id": "exercise-129",
+  "id": "exercises-proprieta_operazioni-1-8",
   "level": "2",
-  "url": "sec-proprieta_operazioni.html#exercise-129",
+  "url": "sec-proprieta_operazioni.html#exercises-proprieta_operazioni-1-8",
   "type": "Esercizio",
   "number": "7.2.7",
   "title": "",
   "body": " Nel booleano di un insieme , l'operazione che associa alla coppia la differenza .   Distinguere i casi in cui e .   Se , l'operazione è associativa, commutativa e ha elemento neutro .  Se , l'operazione non è associativa, non è commutativa e non ha elemento neutro.  "
 },
 {
-  "id": "exercise-130",
+  "id": "exercises-proprieta_operazioni-2",
   "level": "2",
-  "url": "sec-proprieta_operazioni.html#exercise-130",
+  "url": "sec-proprieta_operazioni.html#exercises-proprieta_operazioni-2",
   "type": "Esercizio",
   "number": "7.2.8",
   "title": "",
@@ -3763,27 +3763,27 @@ var ptx_lunr_docs = [
   "body": " monoide  monoide commutativo   Un insieme in cui è definita un'operazione associativa e dotata di elemento neutro è detto monoide . Nel caso in cui l'operazione sia commutativa diremo che il monoide è commutativo .   "
 },
 {
-  "id": "note-9",
+  "id": "sec-monoidi-3",
   "level": "2",
-  "url": "sec-monoidi.html#note-9",
+  "url": "sec-monoidi.html#sec-monoidi-3",
   "type": "Nota",
   "number": "8.1.2",
   "title": "",
   "body": " Più precisamente, bisognerebbe dire che un monoide è una coppia formata da un insieme e un'operazione associativa definita in che sia dotata di un elemento neutro rispetto a tale operazione. Per semplicità, useremo il termine monoide per riferirci al solo insieme , sottintendendo l'operazione, salvo dichiararla esplicitamente in caso di ambiguità.  "
 },
 {
-  "id": "example-71",
+  "id": "sec-monoidi-4",
   "level": "2",
-  "url": "sec-monoidi.html#example-71",
+  "url": "sec-monoidi.html#sec-monoidi-4",
   "type": "Esempio",
   "number": "8.1.3",
   "title": "",
   "body": "  Gli insiemi , , , e sono monoidi commutativi sia rispetto all'addizione (con elemento neutro ), sia rispetto alla moltiplicazione (con elemento neutro ).  L'insieme è un monoide commutativo sia rispetto all'addizione (con elemento neutro ), sia rispetto alla moltiplicazione (con elemento neutro ), definite nel .   "
 },
 {
-  "id": "example-72",
+  "id": "sec-monoidi-5",
   "level": "2",
-  "url": "sec-monoidi.html#example-72",
+  "url": "sec-monoidi.html#sec-monoidi-5",
   "type": "Esempio",
   "number": "8.1.4",
   "title": "",
@@ -3799,9 +3799,9 @@ var ptx_lunr_docs = [
   "body": "  Dato un insieme , l'insieme è un monoide rispetto alla composizione (con elemento neutro la funzione identica). Se contiene almeno due elementi, il monoide è non commutativo ( ).   "
 },
 {
-  "id": "example-74",
+  "id": "sec-monoidi-7",
   "level": "2",
-  "url": "sec-monoidi.html#example-74",
+  "url": "sec-monoidi.html#sec-monoidi-7",
   "type": "Esempio",
   "number": "8.1.6",
   "title": "",
@@ -3952,27 +3952,27 @@ var ptx_lunr_docs = [
   "body": "  Siano e due elementi commutabili di un monoide. Per ogni naturale si ha : se e sono invertibili, l'identità vale per intero qualunque.    Consideriamo prima il caso in cui sia naturale e procediamo per induzione su . Se , abbiamo e .  Sia allora un naturale per cui vale la proprietà e mostriamo che vale per . Dunque   Supponiamo ora che e siano invertibili e sia un intero negativo. Allora    "
 },
 {
-  "id": "note-10",
+  "id": "sec-monoidi-28",
   "level": "2",
-  "url": "sec-monoidi.html#note-10",
+  "url": "sec-monoidi.html#sec-monoidi-28",
   "type": "Nota",
   "number": "8.1.23",
   "title": "",
   "body": " In questo paragrafo siamo stati molto espliciti nelle dimostrazioni, motivando ciascun passaggio. Nel seguito utilizzeremo spesso in maniera implicita la proprietà associativa e le altre proprietà di base che abbiamo dimostrato.  "
 },
 {
-  "id": "exercise-131",
+  "id": "exercises-monoidi-1",
   "level": "2",
-  "url": "sec-monoidi.html#exercise-131",
+  "url": "sec-monoidi.html#exercises-monoidi-1",
   "type": "Esercizio",
   "number": "8.1.1",
   "title": "",
   "body": " Dimostrare il della .  "
 },
 {
-  "id": "exercise-132",
+  "id": "exercises-monoidi-2",
   "level": "2",
-  "url": "sec-monoidi.html#exercise-132",
+  "url": "sec-monoidi.html#exercises-monoidi-2",
   "type": "Esercizio",
   "number": "8.1.2",
   "title": "",
@@ -4006,18 +4006,18 @@ var ptx_lunr_docs = [
   "body": "   ordine del gruppo    Dato un gruppo , l' ordine di è la cardinalità dell'insieme . Un gruppo è detto finito o di ordine finito se è finito, è detto infinito o di ordine infinito , altrimenti.   "
 },
 {
-  "id": "example-75",
+  "id": "sec-gruppi-4",
   "level": "2",
-  "url": "sec-gruppi.html#example-75",
+  "url": "sec-gruppi.html#sec-gruppi-4",
   "type": "Esempio",
   "number": "8.2.3",
   "title": "",
   "body": "  Gli insiemi , , e sono gruppi abeliani infiniti rispetto all'addizione (con elemento neutro ).  L'insieme è un gruppo abeliano di ordine rispetto all'addizione (con elemento neutro ).   "
 },
 {
-  "id": "example-76",
+  "id": "sec-gruppi-5",
   "level": "2",
-  "url": "sec-gruppi.html#example-76",
+  "url": "sec-gruppi.html#sec-gruppi-5",
   "type": "Esempio",
   "number": "8.2.4",
   "title": "",
@@ -4042,9 +4042,9 @@ var ptx_lunr_docs = [
   "body": " Se è un gruppo, coincide con .  "
 },
 {
-  "id": "example-77",
+  "id": "sec-gruppi-8",
   "level": "2",
-  "url": "sec-gruppi.html#example-77",
+  "url": "sec-gruppi.html#sec-gruppi-8",
   "type": "Esempio",
   "number": "8.2.7",
   "title": "",
@@ -4105,18 +4105,18 @@ var ptx_lunr_docs = [
   "body": " Sia un insieme dotato di un'operazione associativa. Si supponga che esista un elemento tale che per ogni e che, per ogni , esista un elemento tale che . Mostrare che è un gruppo di elemento neutro .   Dato un elemento , sappiamo che esiste tale che . Applicando la stessa ipotesi a , sappiamo che esiste tale che . Ora . Inoltre, .  "
 },
 {
-  "id": "exercise-134",
+  "id": "exercises-gruppi-2",
   "level": "2",
-  "url": "sec-gruppi.html#exercise-134",
+  "url": "sec-gruppi.html#exercises-gruppi-2",
   "type": "Esercizio",
   "number": "8.2.2",
   "title": "",
   "body": " In un insieme , sia data un'operazione associativa la cui tabella di Cayley riporta su ciascuna riga e su ciascuna colonna ogni elemento di esattamente una volta. Dimostrare che è un gruppo.   Scegliamo arbitrariamente un elemento in . Sulla colonna di compare in particolare stesso, cioè esiste un elemento tale che . Preso un elemento qualunque, si ha allora : ora e compaiono sulla colonna di e, poiché ogni elemento compare solo una volta su ciascuna colonna, ciò significa che per ogni in .  Sulla riga di deve apparire l'elemento , cioè deve esistere in tale che . Possiamo ora applicare l' e concludere che è un gruppo.  "
 },
 {
-  "id": "exercise-135",
+  "id": "exercises-gruppi-3",
   "level": "2",
-  "url": "sec-gruppi.html#exercise-135",
+  "url": "sec-gruppi.html#exercises-gruppi-3",
   "type": "Esercizio",
   "number": "8.2.3",
   "title": "",
@@ -4132,54 +4132,54 @@ var ptx_lunr_docs = [
   "body": " Sia l'insieme formato dagli elementi del tipo con , e in dotato dell'operazione definita da .   Dimostrare che è un gruppo.   Mostriamo che l'operazione è associativa. Siano , e elementi di . Abbiamo allora: e Poiché i risultati coincidono, l'operazione è associativa.  Verifichiamo che esiste un elemento neutro: questo deve essere una terna tale che per ogni in si abbia e , vale a dire e . Si vede immediatamente che la terna soddisfa questa condizione.  Verifichiamo se ogni elemento in ammette inverso: questo deve essere una terna tale che e , vale a dire e . Si vede immediatamente che la terna soddisfa questa condizione.   Stabilire se è abeliano.   Per stabilire se è abeliano consideriamo i prodotti e . In generale questi prodotti non coincidono: ad esempio mentre e, dunque, il gruppo non è abeliano.  "
 },
 {
-  "id": "exercise-137",
+  "id": "exercises-gruppi-5",
   "level": "2",
-  "url": "sec-gruppi.html#exercise-137",
+  "url": "sec-gruppi.html#exercises-gruppi-5",
   "type": "Esercizio",
   "number": "8.2.5",
   "title": "",
   "body": " Sia un gruppo finito di ordine pari. Mostrare che in esiste tale che e .   Mostrare che c'è un elemento non banale che coincide con il proprio inverso.  "
 },
 {
-  "id": "exercise-138",
+  "id": "exercises-gruppi-6",
   "level": "2",
-  "url": "sec-gruppi.html#exercise-138",
+  "url": "sec-gruppi.html#exercises-gruppi-6",
   "type": "Esercizio",
   "number": "8.2.6",
   "title": "",
   "body": " Sia un gruppo e sia per ogni in . Mostrare che è abeliano.   Notare che per ogni in .  "
 },
 {
-  "id": "exercise-139",
+  "id": "exercises-gruppi-7-2",
   "level": "2",
-  "url": "sec-gruppi.html#exercise-139",
+  "url": "sec-gruppi.html#exercises-gruppi-7-2",
   "type": "Esercizio",
   "number": "8.2.7",
   "title": "",
   "body": "     È un gruppo.  "
 },
 {
-  "id": "exercise-140",
+  "id": "exercises-gruppi-7-3",
   "level": "2",
-  "url": "sec-gruppi.html#exercise-140",
+  "url": "sec-gruppi.html#exercises-gruppi-7-3",
   "type": "Esercizio",
   "number": "8.2.8",
   "title": "",
   "body": "     Non è un gruppo: non vale la proprietà associativa.  "
 },
 {
-  "id": "exercise-141",
+  "id": "exercises-gruppi-7-4",
   "level": "2",
-  "url": "sec-gruppi.html#exercise-141",
+  "url": "sec-gruppi.html#exercises-gruppi-7-4",
   "type": "Esercizio",
   "number": "8.2.9",
   "title": "",
   "body": "     È un gruppo.  "
 },
 {
-  "id": "exercise-142",
+  "id": "exercises-gruppi-8",
   "level": "2",
-  "url": "sec-gruppi.html#exercise-142",
+  "url": "sec-gruppi.html#exercises-gruppi-8",
   "type": "Esercizio",
   "number": "8.2.10",
   "title": "",
@@ -4195,9 +4195,9 @@ var ptx_lunr_docs = [
   "body": " Alcuni esempi di gruppi piccoli  Sappiamo che per ciascun intero esiste almeno un gruppo di ordine : il gruppo delle classi di resto modulo rispetto all'addizione. Per , abbiamo dato la tabella di Cayley di questi gruppi ( ).  Descriviamo adesso i gruppi di ordine piccolo, per mezzo delle loro tabelle di Cayley. Sappiamo che ci deve essere un elemento neutro e che su ogni riga e ogni colonna ciascun elemento deve apparire esattamente una volta. Cominciamo con . C'è ovviamente un'unica possibilità Questa tabella corrisponde in maniera ovvia alla tabella dell'addizione tra le classi di resto modulo : basta sostituire a il simbolo .  Passiamo ora a considerare il caso . Oltre all'elemento neutro, denotato con , abbiamo un altro elemento, che possiamo indicare con il simbolo . Abbiamo così una tabella incompleta Rimane da riempire una casella. Non dovendoci essere ripetizioni sulle righe e sulle colonne, l'unica possibilità è avere un simbolo nella casella vuota. Anche questa tabella corrisponde in maniera ovvia alla tabella dell'addizione tra le classi di resto modulo : basta sostituire a il simbolo e a il simbolo .  Consideriamo ora il caso . Oltre all'elemento neutro, denotato con , abbiamo altri due elementi, che possiamo indicare con i simboli e . Abbiamo così una tabella incompleta Rimangono da riempire alcune caselle. All'incrocio della riga con la riga non ci può essere , già presente nella riga, e non ci può essere , già presente nella colonna: dunque, non ci può che essere . Allo stesso modo all'incrocio della riga con la colonna . Procedendo poi a riempire le ulteriori caselle vuote, evitando ripetizioni sulle righe e sulle colonne otteniamo l'unica possibilità. Pure questa tabella corrisponde in maniera ovvia alla tabella dell'addizione tra le classi di resto modulo : basta sostituire a il simbolo , a il simbolo , e a il simbolo (ma possiamo anche scambiare il ruolo di e ).  Consideriamo ora il caso . Oltre all'elemento neutro, denotato con , abbiamo altri tre elementi, che possiamo indicare con i simboli , e . Abbiamo così una tabella incompleta Ora le caselle da riempire sono diverse e non possiamo andare per esclusione come in precedenza. Sappiamo che ogni elemento deve avere un inverso: oltre a , che sappiamo essere inverso di sé stesso, non conosciamo gli inversi degli altri elementi. Consideriamo prima il caso in cui ci sia almeno un elemento che non sia inverso di sé stesso: pur di rinominare gli elementi possiamo supporre che e siano uno l'inverso dell'altro. Possiamo ora completare la tabella per esclusione: ad esempio, all'incrocio della riga con la colonna non ci può essere né , né già presenti nella riga e non ci può essere , già presente nella colonna. Ci deve, quindi, essere . Proseguendo così possiamo completare la tabella: Consideriamo ora il caso in cui ogni elemento è inverso di sé stesso: Anche qui possiamo ora completare per esclusione: ad esempio, all'incrocio della riga con la colonna non ci può essere né , né già presenti nella riga e non ci può essere , già presente nella colonna. Ci deve, quindi, essere . Proseguendo così possiamo completare la tabella: Abbiamo, quindi, trovato due tabelle possibili          Ci chiediamo però se queste tabelle corrispondano effettivamente a dei gruppi. Le abbiamo determinate imponendo delle condizioni necessarie (l'esistenza di un elemento neutro e la non ripetizione di elementi su ciascuna riga e su ciascuna colonna), ma potrebbero non corrispondere ad alcun gruppo. Almeno una delle due deve corrispondere alla tabella dell'addizione in : vediamo facilmente che è la prima, basta sostituire a il simbolo , a il simbolo , a il simbolo e a il simbolo (ma possiamo anche scambiare il ruolo di e ).  E per quanto riguarda la seconda tabella? Dovremmo verificare che l'operazione definita da questa tabella soddisfa la proprietà associativa e avremmo, dunque, molte combinazioni da considerare. Evitiamo di farlo esplicitamente perché vedremo più avanti ( ) che c'è effettivamente un gruppo che ha una tabella equivalente a questa.  Ci rendiamo conto facilmente che se continuassimo a considerare tabelle di questo tipo per valori più alti di , otterremmo sempre più tabelle e, quindi, questo metodo diventa poco efficiente. Come già accennato, non tutte le tabelle che rispettano le condizioni imposte definiscono effettivamente un'operazione di gruppo. Ad esempio, per , la tabella non ha ripetizioni su righe e colonne e ha un elemento neutro, ma non definisce un'operazione associativa: ad esempio, e . Questa non è, quindi, la tabella di Cayley di un gruppo.    Verificare che la seconda tabella di Cayley di ordine è effettivamente quella di un gruppo.    "
 },
 {
-  "id": "exercise-143",
+  "id": "exercises-gruppi_piccoli-1",
   "level": "2",
-  "url": "sec-gruppi_piccoli.html#exercise-143",
+  "url": "sec-gruppi_piccoli.html#exercises-gruppi_piccoli-1",
   "type": "Esercizio",
   "number": "8.3.1",
   "title": "",
@@ -4222,9 +4222,9 @@ var ptx_lunr_docs = [
   "body": "  Dato un sottoinsieme di un insieme dotato di un'operazione, diciamo che è chiuso rispetto all'operazione se, per ogni e in , risulta . In tal caso, è definita in un'operazione detta operazione indotta dall'operazione di .   "
 },
 {
-  "id": "example-80",
+  "id": "sec-sottomonoidi_sottogruppi-3",
   "level": "2",
-  "url": "sec-sottomonoidi_sottogruppi.html#example-80",
+  "url": "sec-sottomonoidi_sottogruppi.html#sec-sottomonoidi_sottogruppi-3",
   "type": "Esempio",
   "number": "9.1.2",
   "title": "",
@@ -4249,9 +4249,9 @@ var ptx_lunr_docs = [
   "body": " Dato un monoide , il sottoinsieme e il sottoinsieme sono sottomonoidi di (ovviamente, questi due sottomonoidi coincidono se ).  "
 },
 {
-  "id": "example-81",
+  "id": "sec-sottomonoidi_sottogruppi-6",
   "level": "2",
-  "url": "sec-sottomonoidi_sottogruppi.html#example-81",
+  "url": "sec-sottomonoidi_sottogruppi.html#sec-sottomonoidi_sottogruppi-6",
   "type": "Esempio",
   "number": "9.1.5",
   "title": "",
@@ -4312,9 +4312,9 @@ var ptx_lunr_docs = [
   "body": "  Dato il gruppo rispetto all'addizione e un intero fissato , il sottoinsieme formato dai multipli di è un sottogruppo di . Infatti:   l'elemento neutro è multiplo di e appartiene, quindi, a ;    se e sono elementi di , allora e per opportuni interi e : pertanto, è multiplo di e appartiene, quindi, a ;    se è un elemento di , allora per un opportuno intero : pertanto, è multiplo di e appartiene e, quindi, a .      "
 },
 {
-  "id": "exercise-144",
+  "id": "exercises-sottomonoidi_sottogruppi-1",
   "level": "2",
-  "url": "sec-sottomonoidi_sottogruppi.html#exercise-144",
+  "url": "sec-sottomonoidi_sottogruppi.html#exercises-sottomonoidi_sottogruppi-1",
   "type": "Esercizio",
   "number": "9.1.1",
   "title": "",
@@ -4330,72 +4330,72 @@ var ptx_lunr_docs = [
   "body": "  .   È sottomonoide di ma non di (non contiene ).  "
 },
 {
-  "id": "exercise-146",
+  "id": "exercises-sottomonoidi_sottogruppi-2-3",
   "level": "2",
-  "url": "sec-sottomonoidi_sottogruppi.html#exercise-146",
+  "url": "sec-sottomonoidi_sottogruppi.html#exercises-sottomonoidi_sottogruppi-2-3",
   "type": "Esercizio",
   "number": "9.1.3",
   "title": "",
   "body": "  .   È sottomonoide di ma non di (contiene ma non ).  "
 },
 {
-  "id": "exercise-147",
+  "id": "exercises-sottomonoidi_sottogruppi-2-4",
   "level": "2",
-  "url": "sec-sottomonoidi_sottogruppi.html#exercise-147",
+  "url": "sec-sottomonoidi_sottogruppi.html#exercises-sottomonoidi_sottogruppi-2-4",
   "type": "Esercizio",
   "number": "9.1.4",
   "title": "",
   "body": "  .   Non è sottomonoide né di (non contiene ) né di (non contiene ).  "
 },
 {
-  "id": "exercise-148",
+  "id": "exercises-sottomonoidi_sottogruppi-2-5",
   "level": "2",
-  "url": "sec-sottomonoidi_sottogruppi.html#exercise-148",
+  "url": "sec-sottomonoidi_sottogruppi.html#exercises-sottomonoidi_sottogruppi-2-5",
   "type": "Esercizio",
   "number": "9.1.5",
   "title": "",
   "body": "  .   È sottomonoide di ma non di (non contiene ).  "
 },
 {
-  "id": "exercise-149",
+  "id": "exercises-sottomonoidi_sottogruppi-3",
   "level": "2",
-  "url": "sec-sottomonoidi_sottogruppi.html#exercise-149",
+  "url": "sec-sottomonoidi_sottogruppi.html#exercises-sottomonoidi_sottogruppi-3",
   "type": "Esercizio",
   "number": "9.1.6",
   "title": "",
   "body": " Mostrare che l'insieme formato dai numeri e è un monoide rispetto alla moltiplicazione, che i suoi sottoinsiemi e sono chiusi rispetto all'operazione e sono monoidi per l'operazione indotta, ma solo il secondo è un sottomonoide di .  "
 },
 {
-  "id": "exercise-150",
+  "id": "exercises-sottomonoidi_sottogruppi-4-2",
   "level": "2",
-  "url": "sec-sottomonoidi_sottogruppi.html#exercise-150",
+  "url": "sec-sottomonoidi_sottogruppi.html#exercises-sottomonoidi_sottogruppi-4-2",
   "type": "Esercizio",
   "number": "9.1.7",
   "title": "",
   "body": " Il sottoinsieme delle matrici triangolari superiori, cioè delle matrici del tipo con per ( N.B. questo non significa che se ).   È sottogruppo di e sottomonoide di .  "
 },
 {
-  "id": "exercise-151",
+  "id": "exercises-sottomonoidi_sottogruppi-4-3",
   "level": "2",
-  "url": "sec-sottomonoidi_sottogruppi.html#exercise-151",
+  "url": "sec-sottomonoidi_sottogruppi.html#exercises-sottomonoidi_sottogruppi-4-3",
   "type": "Esercizio",
   "number": "9.1.8",
   "title": "",
   "body": " Il sottoinsieme delle matrici diagonali, cioè delle matrici del tipo con per .   È sottogruppo di e sottomonoide di .  "
 },
 {
-  "id": "exercise-152",
+  "id": "exercises-sottomonoidi_sottogruppi-4-4",
   "level": "2",
-  "url": "sec-sottomonoidi_sottogruppi.html#exercise-152",
+  "url": "sec-sottomonoidi_sottogruppi.html#exercises-sottomonoidi_sottogruppi-4-4",
   "type": "Esercizio",
   "number": "9.1.9",
   "title": "",
   "body": " Il sottoinsieme delle matrici simmetriche, cioè delle matrici del tipo con per ogni e .   È sottogruppo di ma non è sottomonoide di (a parte il caso banale in cui ). Per ecco due matrici simmetriche il cui prodotto non è una matrice simmetrica: . Questo esempio si può facilmente estendere a .  "
 },
 {
-  "id": "exercise-153",
+  "id": "exercises-sottomonoidi_sottogruppi-4-5",
   "level": "2",
-  "url": "sec-sottomonoidi_sottogruppi.html#exercise-153",
+  "url": "sec-sottomonoidi_sottogruppi.html#exercises-sottomonoidi_sottogruppi-4-5",
   "type": "Esercizio",
   "number": "9.1.10",
   "title": "",
@@ -4465,18 +4465,18 @@ var ptx_lunr_docs = [
   "body": " Ovviamente, il criterio dato dalla proposizione precedente si può sempre usare se il gruppo è finito.  "
 },
 {
-  "id": "example-84",
+  "id": "sec-prime_proprieta_sottogruppi-12",
   "level": "2",
-  "url": "sec-prime_proprieta_sottogruppi.html#example-84",
+  "url": "sec-prime_proprieta_sottogruppi.html#sec-prime_proprieta_sottogruppi-12",
   "type": "Esempio",
   "number": "9.2.7",
   "title": "",
   "body": "  Consideriamo il gruppo delle matrici quadrate invertibili di ordine a coefficienti in . Sia il sottoinsieme formato dalle matrici diagonali tali che gli elementi sulla diagonale sono o . Questo sottoinsieme è chiaramente non vuoto e finito (abbiamo scelte per ogni elemento sulla diagonale, per un totale di scelte). Il prodotto di due matrici di è ancora una matrice di : dunque, è un sottogruppo di .   "
 },
 {
-  "id": "example-85",
+  "id": "sec-prime_proprieta_sottogruppi-14",
   "level": "2",
-  "url": "sec-prime_proprieta_sottogruppi.html#example-85",
+  "url": "sec-prime_proprieta_sottogruppi.html#sec-prime_proprieta_sottogruppi-14",
   "type": "Esempio",
   "number": "9.2.8",
   "title": "",
@@ -4627,27 +4627,27 @@ var ptx_lunr_docs = [
   "body": " Mostrare che, se è un sottogruppo di un gruppo e ma , allora .   Poiché , anche appartiene a . Se appartenesse ad , di conseguenza apparterrebbe a , contro l'ipotesi. Dunque, .   Mostrare con un esempio che una proprietà analoga non vale per monoidi e sottomonoidi.   Prendiamo ora il monoide e consideriamo il sottomonoide come nell' . Allora ma uno solo dei due addendi e appartiene a .  "
 },
 {
-  "id": "exercise-155",
+  "id": "exercises-prime_proprieta_sottogruppi-2",
   "level": "2",
-  "url": "sec-prime_proprieta_sottogruppi.html#exercise-155",
+  "url": "sec-prime_proprieta_sottogruppi.html#exercises-prime_proprieta_sottogruppi-2",
   "type": "Esercizio",
   "number": "9.2.2",
   "title": "",
   "body": " Sia un gruppo con più di due elementi e sia un elemento di . Mostrare che non è un sottogruppo di .   Poiché contiene più di due elementi, in esiste un elemento con . Ora per le e, dunque . Se fosse un sottogruppo, per l' , dovrebbe non appartenere a .  "
 },
 {
-  "id": "exercise-156",
+  "id": "exercises-prime_proprieta_sottogruppi-3",
   "level": "2",
-  "url": "sec-prime_proprieta_sottogruppi.html#exercise-156",
+  "url": "sec-prime_proprieta_sottogruppi.html#exercises-prime_proprieta_sottogruppi-3",
   "type": "Esercizio",
   "number": "9.2.3",
   "title": "",
   "body": " Mostrare che l'unione di due sottogruppi e di un gruppo è un sottogruppo se e solo se uno dei due contiene l'altro.   Se uno dei due è contenuto nell'altro, ovviamente l'unione è un sottogruppo.  Viceversa, supponiamo che né sia contenuto in (e, quindi, esista ), e che né sia contenuto in (e, quindi, esista ). Per l' , non appartiene né a , né a : ma allora, e sono due elementi di il cui prodotto non appartiene a che non è, quindi, un sottogruppo.  "
 },
 {
-  "id": "exercise-157",
+  "id": "exercises-prime_proprieta_sottogruppi-4",
   "level": "2",
-  "url": "sec-prime_proprieta_sottogruppi.html#exercise-157",
+  "url": "sec-prime_proprieta_sottogruppi.html#exercises-prime_proprieta_sottogruppi-4",
   "type": "Esercizio",
   "number": "9.2.4",
   "title": "",
@@ -4663,63 +4663,63 @@ var ptx_lunr_docs = [
   "body": " Sia dato l'insieme e sia il monoide dato dall'operazione di unione.  Dato un sottoinsieme di che sia chiuso rispetto all'unione, mostrare che è un monoide rispetto all'operazione indotta se e solo se uno degli elementi di è contenuto in tutti gli altri elementi di . Mostrare che e sono chiusi rispetto all'operazione di e sono monoidi rispetto all'operazione indotta. Mostrare che è chiuso rispetto all'operazione di ma non è un monoide rispetto all'operazione indotta. "
 },
 {
-  "id": "exercise-159",
+  "id": "exercises-prime_proprieta_sottogruppi-6",
   "level": "2",
-  "url": "sec-prime_proprieta_sottogruppi.html#exercise-159",
+  "url": "sec-prime_proprieta_sottogruppi.html#exercises-prime_proprieta_sottogruppi-6",
   "type": "Esercizio",
   "number": "9.2.6",
   "title": "",
   "body": " Dato il gruppo , stabilire se i seguenti sono sottogruppi di .       Chiaramente è non vuoto perché contiene la matrice identica. Siano e due matrici di . Facendone il prodotto, troviamo la matrice . Per verificare se appartiene ad sommiamo gli elementi di ciascuna colonna. Otteniamo e . Quindi appartiene ad . L'inversa di è la matrice dove . Abbiamo allora e Dunque, appartiene a che è, quindi, un sottogruppo.       Il sottoinsieme non è un sottogruppo: infatti non contiene la matrice identica.       Il sottoinsieme è un sottogruppo. Le verifiche sono simili a quelli fatte per .  "
 },
 {
-  "id": "exercise-160",
+  "id": "exercises-prime_proprieta_sottogruppi-7",
   "level": "2",
-  "url": "sec-prime_proprieta_sottogruppi.html#exercise-160",
+  "url": "sec-prime_proprieta_sottogruppi.html#exercises-prime_proprieta_sottogruppi-7",
   "type": "Esercizio",
   "number": "9.2.7",
   "title": "",
   "body": " Dimostrare che il sottoinsieme di formato dalle matrici del tipo e dalle matrici del tipo dove ciascun appartiene al gruppo moltiplicativo delle radici quarte dell'unità è un sottogruppo.   Abbiamo matrici del primo tipo e matrici del secondo tipo. In particolare, è finito e, per la , basta verificare che è chiuso rispetto al prodotto.  Consideriamo tutti i possibili prodotti di matrici di . I prodotti sono tutti elementi di (i coefficienti che appaiono sono prodotti di elementi di e sono quindi elementi di ).  "
 },
 {
-  "id": "exercise-161",
+  "id": "exercises-prime_proprieta_sottogruppi-8",
   "level": "2",
-  "url": "sec-prime_proprieta_sottogruppi.html#exercise-161",
+  "url": "sec-prime_proprieta_sottogruppi.html#exercises-prime_proprieta_sottogruppi-8",
   "type": "Esercizio",
   "number": "9.2.8",
   "title": "",
   "body": " Sia un gruppo. Sia un elemento fissato di . Siano definite in due nuove operazioni e nel modo seguente: e .   Dimostrare che è un gruppo.   Mostriamo che è associativa. Dati , e in abbiamo: . Per mostrare che ha elemento neutro, dobbiamo trovare un elemento tale che, per ogni , si abbia . Ora . Ponendo tale elemento uguale ad troviamo , da cui ricaviamo (dove l'inverso è inteso in ). Abbiamo dunque . Se ora calcoliamo troviamo . Dunque è unità sia destra che sinistra.  Per mostrare che ogni elemento di ammette inverso dobbiamo trovare in tale che . Ponendo troviamo , da cui ricaviamo (dove l'inverso è inteso in ). Abbiamo dunque . Se ora calcoliamo troviamo . Dunque è inverso sia destro che sinistro di .   Dimostrare che è un gruppo se e solo se appartiene al centro di .   Se appartiene al centro di le operazioni e coincidono e, quindi, è un gruppo.  Viceversa, se è un gruppo allora, per ogni , e in si ha ovvero . Rimuovendo le parentesi (in vale la legge associativa) e cancellando a sinistra e a destra troviamo : per l'arbitrarietà di in , ciò implica che appartiene al centro di .  "
 },
 {
-  "id": "exercise-162",
+  "id": "exercises-prime_proprieta_sottogruppi-9-2",
   "level": "2",
-  "url": "sec-prime_proprieta_sottogruppi.html#exercise-162",
+  "url": "sec-prime_proprieta_sottogruppi.html#exercises-prime_proprieta_sottogruppi-9-2",
   "type": "Esercizio",
   "number": "9.2.9",
   "title": "",
   "body": "      non è sottogruppo di e non è sottogruppo di .  "
 },
 {
-  "id": "exercise-163",
+  "id": "exercises-prime_proprieta_sottogruppi-9-3",
   "level": "2",
-  "url": "sec-prime_proprieta_sottogruppi.html#exercise-163",
+  "url": "sec-prime_proprieta_sottogruppi.html#exercises-prime_proprieta_sottogruppi-9-3",
   "type": "Esercizio",
   "number": "9.2.10",
   "title": "",
   "body": "      non è sottogruppo di e non è sottogruppo di .  "
 },
 {
-  "id": "exercise-164",
+  "id": "exercises-prime_proprieta_sottogruppi-9-4",
   "level": "2",
-  "url": "sec-prime_proprieta_sottogruppi.html#exercise-164",
+  "url": "sec-prime_proprieta_sottogruppi.html#exercises-prime_proprieta_sottogruppi-9-4",
   "type": "Esercizio",
   "number": "9.2.11",
   "title": "",
   "body": "      è sottogruppo di e non è sottogruppo di .  "
 },
 {
-  "id": "exercise-165",
+  "id": "exercises-prime_proprieta_sottogruppi-9-5",
   "level": "2",
-  "url": "sec-prime_proprieta_sottogruppi.html#exercise-165",
+  "url": "sec-prime_proprieta_sottogruppi.html#exercises-prime_proprieta_sottogruppi-9-5",
   "type": "Esercizio",
   "number": "9.2.12",
   "title": "",
@@ -4735,9 +4735,9 @@ var ptx_lunr_docs = [
   "body": " Gruppi di trasformazioni del piano     distanza tra i punti e  Se prendiamo l'usuale piano euclideo , possiamo considerare il gruppo simmetrico delle funzioni biiettive del piano in sé rispetto all'operazione di composizione. Di per sé questo gruppo non reca nessuna informazione geometrica del piano. Possiamo però considerare sottogruppi formati da trasformazioni che rispettano proprietà geometriche: potremmo così introdurre il gruppo delle affinità , il gruppo delle similitudini e altri. Qui ci limiteremo a studiare il gruppo delle cosiddette isometrie . Allo scopo ricordiamo che, dati due punti e nel piano, indichiamo con la distanza di da .    Una funzione dal piano in sé che rispetta le distanze, cioè tale che per ogni scelta dei punti e in è detta isometria .    Tra le isometrie c'è, ovviamente, l'identità. Altri esempi di isometrie sono le traslazioni, le rotazioni e le riflessioni rispetto a rette e punti (ma una riflessione rispetto a un punto può anche essere descritta come una rotazione di un angolo piatto). Diamo ora, senza dimostrazione:    Se è un'isometria del piano allora è biiettiva. In particolare, l'insieme delle isometrie è un sottoinsieme di . Inoltre, manda rette in rette. Se e sono due isometrie che coincidono su tre punti non allineati del piano, allora .    Possiamo ora dare la    La composizione di isometrie è un'isometria e l'inversa di un'isometria è un'isometria. In particolare, le isometrie formano un sottogruppo di .    Siano e due isometrie. Allora, presi due punti arbitrari e del piano si ha cioè è un'isometria.  Per il , sappiamo ora che esiste. Presi due punti arbitrari e del piano si ha cioè è un'isometria.    Come già detto, tra le isometrie abbiamo le traslazioni e si può mostrare che queste formano un sottogruppo. Le rotazioni, invece, non formano un sottogruppo: la composizione di due rotazioni di centri diversi non è in genere una rotazione. Se però fissiamo un punto del piano e prendiamo il sottoinsieme formato dalle rotazioni aventi centro , queste formano un sottogruppo.  I sottogruppi che però vogliamo studiare più in dettaglio sono i gruppi di simmetrie di figure del piano. Più precisamente:    Sia un sottoinsieme del piano . Il sottoinsieme delle isometrie del piano tali che è un sottogruppo del gruppo delle isometrie.    Ovviamente, e, dunque, è non vuoto. Se e appartengono a , allora e, dunque, appartiene a . Inoltre, applicando a entrambi i membri dell'uguaglianza , otteniamo e, dunque, appartiene a .    Nel caso in cui la figura sia poco simmetrica , il gruppo che manda in sé è piccolo, eventualmente ridotto all'identità. Ad esempio prendiamo un triangolo avente i lati tutti diversi come quello in figura   Simmetrie di un triangolo scaleno   Il gruppo delle simmetrie di un triangolo scaleno è banale     Poiché un'isometria manda rette in rette, un'isometria che manda il triangolo in sé manda le rette dei lati nelle rette dei lati e, di conseguenza, i vertici (che sono intersezioni di tali rette) nei vertici: in particolare, ciascun lato deve andare in un lato. Ma i lati hanno tutte lunghezze diverse: quindi, ciascun lato deve andare in sé e ciascun vertice deve essere fissato. Per il , ciò significa che l'unica isometria siffatta è l'identità.  Consideriamo ora un poligono regolare con lati, con . Etichettiamo i vertici con i numeri da a .   Simmetrie di un poligono regolare   Il gruppo diedrale come gruppo delle simmetrie di un poligono regolare     Anche in questo caso i vertici devono andare nei vertici e i lati nei lati. Vediamo quante possibilità ci sono. Per individuare un'isometria basta dare le immagini di punti non allineati, ad esempio, vertici consecutivi. Poiché però i vertici vanno in vertici, basta in realtà conoscere l'immagine di vertici consecutivi, ad esempio, quelli etichettati con e . Determinata l'immagine di (e ci sono possibilità) il vertice deve andare in uno dei due vertici adiacenti all'immagine di : ci sono possibilità (ad esempio, se il vertice va nel vertice , il vertice può andare nel vertice o nel vertice ). Dunque, in tutto ci sono al più elementi in questo gruppo. Mostriamo ora che ci sono almeno elementi: abbiamo infatti le rotazioni di angoli con e le riflessioni assiali. Pertanto, abbiamo esattamente elementi in questo gruppo. Diamo, quindi, la     gruppo diedrale con elementi    Il gruppo delle isometrie del piano che manda un poligono regolare di lati in sé è detto gruppo diedrale e denotato con il simbolo . Alcuni testi lo denotano con il simbolo .     La discussione precedente si riassume nella    L'ordine del gruppo diedrale è esattamente .    Utilizzeremo spesso il gruppo diedrale nei nostri esempi. Per il momento diamo la    Il gruppo diedrale non è abeliano.    Consideriamo la rotazione che manda il vertice in e la riflessione per l'asse passante per il vertice (quindi, la riflessione scambia tra loro i vertici e ). Ora e : poiché (stiamo supponendo che ) ne segue che .    Diamo ora un ulteriore esempio di gruppo di isometrie che manda una figura in sé.    Dato un rettangolo che non sia un quadrato, il gruppo delle isometrie del piano che mandano in sé è detto gruppo trirettangolo o gruppo di Klein . Felix Klein , 1849 1925. Klein, Felix     Vogliamo ora determinare l'ordine del gruppo trirettangolo e la sua tabella di Cayley. Etichettiamo allora i vertici del rettangolo con i numeri da a come in figura.   Simmetrie di un rettangolo   Il gruppo trirettangolo come gruppo delle simmetrie di un rettangolo     Ancora una volta un'isometria deve mandare i vertici nei vertici e i lati nei lati. Ora però, una volta individuata l'immagine di vediamo che l'immagine di non può essere uno qualunque dei due vertici adiacenti all'immagine di ma solo quello per cui le distanze sono rispettate (in altri termini: i lati corti devono andare nei lati corti e i lati lunghi nei lati lunghi). Dunque, abbiamo al più possibilità.  Ma esistono effettivamente isometrie siffatte: una è l'identità ; poi abbiamo la riflessione il cui asse di simmetria è la retta che passa per i punti medi dei lati e (dunque, scambia tra loro i vertici e e scambia tra loro i vertici e ); poi abbiamo la riflessione il cui asse di simmetria è la retta che passa per i punti medi dei lati e (dunque, scambia tra loro i vertici e e scambia tra loro i vertici e ); infine abbiamo la rotazione di un angolo piatto e di centro il centro del rettangolo (dunque, scambia tra loro i vertici e e scambia tra loro i vertici e ). Possiamo fermarci: sapevamo già che il numero delle isometrie cercate è al massimo e, dunque, il gruppo trirettangolo ha ordine .  Vogliamo ora determinare la tabella di Cayley del gruppo trirettangolo. Ovviamente, potremmo calcolare tutti i prodotti: non sono molti. Alternativamente, ricordiamo che nel abbiamo determinato le possibili tabelle di Cayley di gruppi di ordine . Una di esse è la tabella di rispetto all'addizione; per quanto riguarda l'altra tabella non avevamo verificato la proprietà associativa e non sapevamo, quindi, se fosse effettivamente la tabella di un gruppo. Notiamo ora che tutti gli elementi del gruppo trirettangolo coincidono con il proprio inverso e, dunque, sulla diagonale della tabella di Cayley deve sempre esserci l'elemento neutro. La tabella di non soddisfa questa proprietà e, quindi, la tabella di Cayley del gruppo trirettangolo è la seconda tabella che qui riportiamo Ora sappiamo che questa tabella è effettivamente la tabella di un gruppo, precisamente il gruppo trirettangolo, e che questo gruppo è abeliano.   I gruppi di ordine sono abeliani: le loro tabelle di Cayley, infatti, coincidono con quella di o quella del gruppo trirettangolo ed entrambi questi gruppi sono abeliani. Vedremo poi che ogni gruppo di ordine quadrato di un primo è abeliano ( ).     Determinare esplicitamente la tabella di Cayley del gruppo trirettangolo, facendo tutti i prodotti necessari.   Poiché un elemento del gruppo trirettangolo è determinato dall'immagine del vertice , basta calcolare le immagini di questo vertice tramite le varie composizioni.    "
 },
 {
-  "id": "p-1201",
+  "id": "sec-gruppi_del_piano-2",
   "level": "2",
-  "url": "sec-gruppi_del_piano.html#p-1201",
+  "url": "sec-gruppi_del_piano.html#sec-gruppi_del_piano-2",
   "type": "Capoverso (with a defined term)",
   "number": "",
   "title": "",
@@ -4780,9 +4780,9 @@ var ptx_lunr_docs = [
   "body": "  Sia un sottoinsieme del piano . Il sottoinsieme delle isometrie del piano tali che è un sottogruppo del gruppo delle isometrie.    Ovviamente, e, dunque, è non vuoto. Se e appartengono a , allora e, dunque, appartiene a . Inoltre, applicando a entrambi i membri dell'uguaglianza , otteniamo e, dunque, appartiene a .   "
 },
 {
-  "id": "figure-13",
+  "id": "sec-gruppi_del_piano-12",
   "level": "2",
-  "url": "sec-gruppi_del_piano.html#figure-13",
+  "url": "sec-gruppi_del_piano.html#sec-gruppi_del_piano-12",
   "type": "Figura",
   "number": "9.3.5",
   "title": "",
@@ -4852,9 +4852,9 @@ var ptx_lunr_docs = [
   "body": " I gruppi di ordine sono abeliani: le loro tabelle di Cayley, infatti, coincidono con quella di o quella del gruppo trirettangolo ed entrambi questi gruppi sono abeliani. Vedremo poi che ogni gruppo di ordine quadrato di un primo è abeliano ( ).  "
 },
 {
-  "id": "exercise-166",
+  "id": "exercises-gruppi_del_piano-1",
   "level": "2",
-  "url": "sec-gruppi_del_piano.html#exercise-166",
+  "url": "sec-gruppi_del_piano.html#exercises-gruppi_del_piano-1",
   "type": "Esercizio",
   "number": "9.3.1",
   "title": "",
@@ -4906,9 +4906,9 @@ var ptx_lunr_docs = [
   "body": " Abbiamo mostrato che ogni gruppo ciclico è abeliano, ma il viceversa in genere non vale. Esistono, cioè, gruppi abeliani che non sono ciclici. Un semplice esempio è dato dal gruppo trirettangolo: se prendiamo un qualsiasi suo elemento e ne consideriamo le potenze vediamo che queste non esauriscono il gruppo stesso.  "
 },
 {
-  "id": "example-87",
+  "id": "sec-definizione_gruppi_ciclici-8",
   "level": "2",
-  "url": "sec-definizione_gruppi_ciclici.html#example-87",
+  "url": "sec-definizione_gruppi_ciclici.html#sec-definizione_gruppi_ciclici-8",
   "type": "Esempio",
   "number": "10.1.5",
   "title": "",
@@ -4978,9 +4978,9 @@ var ptx_lunr_docs = [
   "body": "  Determiniamo il periodo di e di in . Poiché è finito, i suoi elementi hanno periodo finito. Calcoliamo allora i multipli successivi (siamo in notazione additiva) degli elementi dati finché eventualmente troviamo l'elemento neutro (cioè ). Abbiamo allora . Dunque, il periodo di è .  Se ora facciamo la stessa cosa per , vediamo che dobbiamo fare prodotti prima di ottenere e, quindi, il periodo di è (in particolare, il sottogruppo ciclico generato da coincide con ). Questo approccio però richiede parecchi calcoli e non è ottimale.   "
 },
 {
-  "id": "example-89",
+  "id": "sec-definizione_gruppi_ciclici-21",
   "level": "2",
-  "url": "sec-definizione_gruppi_ciclici.html#example-89",
+  "url": "sec-definizione_gruppi_ciclici.html#sec-definizione_gruppi_ciclici-21",
   "type": "Esempio",
   "number": "10.1.13",
   "title": "",
@@ -4996,45 +4996,45 @@ var ptx_lunr_docs = [
   "body": "  Riprendiamo il gruppo diedrale introdotto con la . Sappiamo che è formato da riflessioni e rotazioni. Le riflessioni hanno ovviamente periodo , mentre le rotazioni hanno periodi diversi tra loro. Si verifica facilmente che le rotazioni formano un sottogruppo ciclico di di ordine , generato dalla rotazione di angolo .   "
 },
 {
-  "id": "exercise-167",
+  "id": "exercises-definizione_gruppi_ciclici-1-2",
   "level": "2",
-  "url": "sec-definizione_gruppi_ciclici.html#exercise-167",
+  "url": "sec-definizione_gruppi_ciclici.html#exercises-definizione_gruppi_ciclici-1-2",
   "type": "Esercizio",
   "number": "10.1.1",
   "title": "",
   "body": "  in       "
 },
 {
-  "id": "exercise-168",
+  "id": "exercises-definizione_gruppi_ciclici-1-3",
   "level": "2",
-  "url": "sec-definizione_gruppi_ciclici.html#exercise-168",
+  "url": "sec-definizione_gruppi_ciclici.html#exercises-definizione_gruppi_ciclici-1-3",
   "type": "Esercizio",
   "number": "10.1.2",
   "title": "",
   "body": "  in       "
 },
 {
-  "id": "exercise-169",
+  "id": "exercises-definizione_gruppi_ciclici-1-4",
   "level": "2",
-  "url": "sec-definizione_gruppi_ciclici.html#exercise-169",
+  "url": "sec-definizione_gruppi_ciclici.html#exercises-definizione_gruppi_ciclici-1-4",
   "type": "Esercizio",
   "number": "10.1.3",
   "title": "",
   "body": "  in       "
 },
 {
-  "id": "exercise-170",
+  "id": "exercises-definizione_gruppi_ciclici-1-5",
   "level": "2",
-  "url": "sec-definizione_gruppi_ciclici.html#exercise-170",
+  "url": "sec-definizione_gruppi_ciclici.html#exercises-definizione_gruppi_ciclici-1-5",
   "type": "Esercizio",
   "number": "10.1.4",
   "title": "",
   "body": "  in       "
 },
 {
-  "id": "exercise-171",
+  "id": "exercises-definizione_gruppi_ciclici-2",
   "level": "2",
-  "url": "sec-definizione_gruppi_ciclici.html#exercise-171",
+  "url": "sec-definizione_gruppi_ciclici.html#exercises-definizione_gruppi_ciclici-2",
   "type": "Esercizio",
   "number": "10.1.5",
   "title": "",
@@ -5050,18 +5050,18 @@ var ptx_lunr_docs = [
   "body": " Nel gruppo moltiplicativo delle matrici invertibili di ordine a coefficienti complessi, si considerino le matrici e .   Determinare il periodo di e di .    e hanno entrambe periodo .   Dopo aver osservato che , mostrare che il sottoinsieme delle matrici del tipo con e è il sottogruppo generato da e .   L'uguaglianza si verifica direttamente.  Il sottogruppo generato da e contiene tutti gli elementi di : inoltre, contiene e , se proviamo che è un sottogruppo avremo allora .  Poiché è finito, per la basta mostrare che è chiuso rispetto al prodotto. Il prodotto di due elementi di è un prodotto di occorrenze di e di : usando l'uguaglianza possiamo portare in fondo tutte le occorrenze di e avere una matrice del tipo per opportuni naturali e . Ora : quindi, possiamo riscrivere come dove o e, poiché ha periodo , riducendo modulo otteniamo un elemento nella forma cercata.   Dimostrare che non è abeliano.   Basta mostrare che i generatori e non commutano.  "
 },
 {
-  "id": "exercise-173",
+  "id": "exercises-definizione_gruppi_ciclici-4",
   "level": "2",
-  "url": "sec-definizione_gruppi_ciclici.html#exercise-173",
+  "url": "sec-definizione_gruppi_ciclici.html#exercises-definizione_gruppi_ciclici-4",
   "type": "Esercizio",
   "number": "10.1.7",
   "title": "",
   "body": " Nell'insieme dei numeri interi sia definita l'operazione nel modo seguente . Dimostrare che è un gruppo ciclico rispetto a questa operazione, di generatore .   L'operazione è associativa. Infatti, dati , e in si ha: e .  Il numero è elemento neutro rispetto all'operazione: infatti, per ogni si ha e .  Dato un elemento in il numero costituisce inverso di rispetto all'operazione : infatti si ha e .  Indichiamo con la potenza -esima di un elemento rispetto all'operazione . Mostriamo che per ogni intero si ha . Infatti per la potenza è l'elemento neutro, cioè . Per procediamo ora per induzione: supponendo che otteniamo come richiesto. Infine per negativo, notiamo che è l'inverso di . Poiché è positivo sappiamo che è : per il punto precedente sappiamo che l'inverso di tale elemento è cioè , come richiesto.  L'insieme delle potenze di è dunque l'insieme dei numeri al variare di in . Ma tale insieme è l'insieme di tutti i numeri interi e, dunque, genera .  "
 },
 {
-  "id": "exercise-174",
+  "id": "exercises-definizione_gruppi_ciclici-5",
   "level": "2",
-  "url": "sec-definizione_gruppi_ciclici.html#exercise-174",
+  "url": "sec-definizione_gruppi_ciclici.html#exercises-definizione_gruppi_ciclici-5",
   "type": "Esercizio",
   "number": "10.1.8",
   "title": "",
@@ -5122,9 +5122,9 @@ var ptx_lunr_docs = [
   "body": "  Sia un elemento di periodo finito di un gruppo . Dato un intero , il periodo di è uguale a . In particolare, ha periodo se e solo se e sono coprimi.    Consideriamo le potenze di : dato un intero , si ha . Per il , si ha, dunque, se e solo se , cioè se e solo se esiste un intero tale che . Ora, posto e , ciò avviene se e solo se : poiché in quanto divisore di , ciò avviene se e solo se . Per il , e sono coprimi: quindi, per il , ciò avviene se e solo se .  Riassumendo, se e solo se . Dunque, il più piccolo tra gli interi positivi per cui è proprio .   "
 },
 {
-  "id": "example-92",
+  "id": "sec-sottogruppi_di_ciclici-11",
   "level": "2",
-  "url": "sec-sottogruppi_di_ciclici.html#example-92",
+  "url": "sec-sottogruppi_di_ciclici.html#sec-sottogruppi_di_ciclici-11",
   "type": "Esempio",
   "number": "10.2.7",
   "title": "",
@@ -5167,135 +5167,135 @@ var ptx_lunr_docs = [
   "body": "  Vogliamo descrivere i sottogruppi di un gruppo ciclico finito di ordine e le loro reciproche inclusioni. Per il , per ciascun divisore di c'è esattamente un sottogruppo avente quell'ordine. I sottogruppi cercati corrispondono allora agli interi , , , , , , e . Notiamo che il sottogruppo di ordine può essere generato da . Le reciproche inclusioni dei sottogruppi sono meglio descritte dal seguente diagramma:   Sottogruppi di un gruppo ciclico di ordine   Sottogruppi di un gruppo ciclico di ordine      "
 },
 {
-  "id": "exercise-175",
+  "id": "exercises-sottogruppi_di_ciclici-1-2",
   "level": "2",
-  "url": "sec-sottogruppi_di_ciclici.html#exercise-175",
+  "url": "sec-sottogruppi_di_ciclici.html#exercises-sottogruppi_di_ciclici-1-2",
   "type": "Esercizio",
   "number": "10.2.1",
   "title": "",
   "body": "  in       "
 },
 {
-  "id": "exercise-176",
+  "id": "exercises-sottogruppi_di_ciclici-1-3",
   "level": "2",
-  "url": "sec-sottogruppi_di_ciclici.html#exercise-176",
+  "url": "sec-sottogruppi_di_ciclici.html#exercises-sottogruppi_di_ciclici-1-3",
   "type": "Esercizio",
   "number": "10.2.2",
   "title": "",
   "body": "  in       "
 },
 {
-  "id": "exercise-177",
+  "id": "exercises-sottogruppi_di_ciclici-1-4",
   "level": "2",
-  "url": "sec-sottogruppi_di_ciclici.html#exercise-177",
+  "url": "sec-sottogruppi_di_ciclici.html#exercises-sottogruppi_di_ciclici-1-4",
   "type": "Esercizio",
   "number": "10.2.3",
   "title": "",
   "body": "  sapendo che       "
 },
 {
-  "id": "exercise-178",
+  "id": "exercises-sottogruppi_di_ciclici-1-5",
   "level": "2",
-  "url": "sec-sottogruppi_di_ciclici.html#exercise-178",
+  "url": "sec-sottogruppi_di_ciclici.html#exercises-sottogruppi_di_ciclici-1-5",
   "type": "Esercizio",
   "number": "10.2.4",
   "title": "",
   "body": "  sapendo che       "
 },
 {
-  "id": "exercise-179",
+  "id": "exercises-sottogruppi_di_ciclici-2-2",
   "level": "2",
-  "url": "sec-sottogruppi_di_ciclici.html#exercise-179",
+  "url": "sec-sottogruppi_di_ciclici.html#exercises-sottogruppi_di_ciclici-2-2",
   "type": "Esercizio",
   "number": "10.2.5",
   "title": "",
   "body": "  .    , .  "
 },
 {
-  "id": "exercise-180",
+  "id": "exercises-sottogruppi_di_ciclici-2-3",
   "level": "2",
-  "url": "sec-sottogruppi_di_ciclici.html#exercise-180",
+  "url": "sec-sottogruppi_di_ciclici.html#exercises-sottogruppi_di_ciclici-2-3",
   "type": "Esercizio",
   "number": "10.2.6",
   "title": "",
   "body": "  .    , , , .  "
 },
 {
-  "id": "exercise-181",
+  "id": "exercises-sottogruppi_di_ciclici-2-4",
   "level": "2",
-  "url": "sec-sottogruppi_di_ciclici.html#exercise-181",
+  "url": "sec-sottogruppi_di_ciclici.html#exercises-sottogruppi_di_ciclici-2-4",
   "type": "Esercizio",
   "number": "10.2.7",
   "title": "",
   "body": "  .    , , , , , , , .  "
 },
 {
-  "id": "exercise-182",
+  "id": "exercises-sottogruppi_di_ciclici-2-5",
   "level": "2",
-  "url": "sec-sottogruppi_di_ciclici.html#exercise-182",
+  "url": "sec-sottogruppi_di_ciclici.html#exercises-sottogruppi_di_ciclici-2-5",
   "type": "Esercizio",
   "number": "10.2.8",
   "title": "",
   "body": "  .    , , , , , , , .  "
 },
 {
-  "id": "exercise-183",
+  "id": "exercises-sottogruppi_di_ciclici-3-2",
   "level": "2",
-  "url": "sec-sottogruppi_di_ciclici.html#exercise-183",
+  "url": "sec-sottogruppi_di_ciclici.html#exercises-sottogruppi_di_ciclici-3-2",
   "type": "Esercizio",
   "number": "10.2.9",
   "title": "",
   "body": "  .    Sottogruppi di un gruppo ciclico di ordine   Sottogruppi di un gruppo ciclico di ordine     "
 },
 {
-  "id": "exercise-184",
+  "id": "exercises-sottogruppi_di_ciclici-3-3",
   "level": "2",
-  "url": "sec-sottogruppi_di_ciclici.html#exercise-184",
+  "url": "sec-sottogruppi_di_ciclici.html#exercises-sottogruppi_di_ciclici-3-3",
   "type": "Esercizio",
   "number": "10.2.10",
   "title": "",
   "body": "  .    Sottogruppi di un gruppo ciclico di ordine   Sottogruppi di un gruppo ciclico di ordine     "
 },
 {
-  "id": "exercise-185",
+  "id": "exercises-sottogruppi_di_ciclici-3-4",
   "level": "2",
-  "url": "sec-sottogruppi_di_ciclici.html#exercise-185",
+  "url": "sec-sottogruppi_di_ciclici.html#exercises-sottogruppi_di_ciclici-3-4",
   "type": "Esercizio",
   "number": "10.2.11",
   "title": "",
   "body": "  .    Sottogruppi di un gruppo ciclico di ordine   Sottogruppi di un gruppo ciclico di ordine     "
 },
 {
-  "id": "exercise-186",
+  "id": "exercises-sottogruppi_di_ciclici-3-5",
   "level": "2",
-  "url": "sec-sottogruppi_di_ciclici.html#exercise-186",
+  "url": "sec-sottogruppi_di_ciclici.html#exercises-sottogruppi_di_ciclici-3-5",
   "type": "Esercizio",
   "number": "10.2.12",
   "title": "",
   "body": "  con primo.    Sottogruppi di un gruppo ciclico di ordine   Sottogruppi di un gruppo ciclico di ordine     "
 },
 {
-  "id": "exercise-187",
+  "id": "exercises-sottogruppi_di_ciclici-3-6",
   "level": "2",
-  "url": "sec-sottogruppi_di_ciclici.html#exercise-187",
+  "url": "sec-sottogruppi_di_ciclici.html#exercises-sottogruppi_di_ciclici-3-6",
   "type": "Esercizio",
   "number": "10.2.13",
   "title": "",
   "body": "  con e primi distinti.    Sottogruppi di un gruppo ciclico di ordine   Sottogruppi di un gruppo ciclico di ordine     "
 },
 {
-  "id": "exercise-188",
+  "id": "exercises-sottogruppi_di_ciclici-4",
   "level": "2",
-  "url": "sec-sottogruppi_di_ciclici.html#exercise-188",
+  "url": "sec-sottogruppi_di_ciclici.html#exercises-sottogruppi_di_ciclici-4",
   "type": "Esercizio",
   "number": "10.2.14",
   "title": "",
   "body": " Sia un elemento di periodo finito di un gruppo (non necessariamente finito) e sia un sottogruppo di . Detto il minimo intero positivo tale che , dimostrare che divide .   Se dividiamo per otteniamo con . Dunque, dal momento che appartiene ad . Per la scelta di abbiamo, dunque, che , cioè divide come richiesto.  "
 },
 {
-  "id": "exercise-189",
+  "id": "exercises-sottogruppi_di_ciclici-5",
   "level": "2",
-  "url": "sec-sottogruppi_di_ciclici.html#exercise-189",
+  "url": "sec-sottogruppi_di_ciclici.html#exercises-sottogruppi_di_ciclici-5",
   "type": "Esercizio",
   "number": "10.2.15",
   "title": "",
@@ -5419,9 +5419,9 @@ var ptx_lunr_docs = [
   "body": "  Due permutazioni disgiunte e in commutano.    Basta provare che per ogni si ha . Distinguiamo vari casi.   Se e , allora e . Pertanto, e .    Se , allora perché e sono disgiunte: pertanto, e . Per il , sappiamo che e, quindi, , cioè .    Il caso in cui è analogo al precedente.      "
 },
 {
-  "id": "example-96",
+  "id": "sec-definizioni_gruppi_permutazioni-18",
   "level": "2",
-  "url": "sec-definizioni_gruppi_permutazioni.html#example-96",
+  "url": "sec-definizioni_gruppi_permutazioni.html#sec-definizioni_gruppi_permutazioni-18",
   "type": "Esempio",
   "number": "11.1.13",
   "title": "",
@@ -5437,9 +5437,9 @@ var ptx_lunr_docs = [
   "body": "  Se e sono permutazioni disgiunte di periodi rispettivi e , allora ha periodo uguale al minimo comune multiplo di e .    Per la , le permutazioni e commutano fra loro e, per la , abbiamo per ogni intero . Se è multiplo sia di che di (cioè di ), allora e, quindi, . Viceversa, sia un intero tale che . Di conseguenza . Per il , il supporto del primo membro è contenuto in , mentre il supporto del secondo membro è contenuto in . Ovviamente, però, primo e secondo membro hanno lo stesso supporto e, poiché e sono disgiunte, segue che . Pertanto, è multiplo sia di che di , cioè di . Dunque, se e solo se è multiplo di che è, di conseguenza, il periodo di .   "
 },
 {
-  "id": "exercise-190",
+  "id": "exercises-definizioni_gruppi_permutazioni-1",
   "level": "2",
-  "url": "sec-definizioni_gruppi_permutazioni.html#exercise-190",
+  "url": "sec-definizioni_gruppi_permutazioni.html#exercises-definizioni_gruppi_permutazioni-1",
   "type": "Esercizio",
   "number": "11.1.1",
   "title": "",
@@ -5455,27 +5455,27 @@ var ptx_lunr_docs = [
   "body": " Mostrare che se e sono permutazioni disgiunte, allora .   Dalla , sappiamo già che . Viceversa, sia : poiché e sono disgiunte, appartiene al supporto di una ma non al supporto dell'altra. Poiché e commutano per la , non perdiamo in generalità se supponiamo che e . Ma allora, , cioè .  "
 },
 {
-  "id": "exercise-192",
+  "id": "exercises-definizioni_gruppi_permutazioni-3",
   "level": "2",
-  "url": "sec-definizioni_gruppi_permutazioni.html#exercise-192",
+  "url": "sec-definizioni_gruppi_permutazioni.html#exercises-definizioni_gruppi_permutazioni-3",
   "type": "Esercizio",
   "number": "11.1.3",
   "title": "",
   "body": " Dimostrare che se è una permutazione di , allora ha cardinalità diversa da .  "
 },
 {
-  "id": "exercise-193",
+  "id": "exercises-definizioni_gruppi_permutazioni-4",
   "level": "2",
-  "url": "sec-definizioni_gruppi_permutazioni.html#exercise-193",
+  "url": "sec-definizioni_gruppi_permutazioni.html#exercises-definizioni_gruppi_permutazioni-4",
   "type": "Esercizio",
   "number": "11.1.4",
   "title": "",
   "body": " Dimostrare che se è una permutazione di di periodo , allora per ogni intero coprimo con .   Mostrare che è potenza di .  "
 },
 {
-  "id": "exercise-194",
+  "id": "exercises-definizioni_gruppi_permutazioni-5",
   "level": "2",
-  "url": "sec-definizioni_gruppi_permutazioni.html#exercise-194",
+  "url": "sec-definizioni_gruppi_permutazioni.html#exercises-definizioni_gruppi_permutazioni-5",
   "type": "Esercizio",
   "number": "11.1.5",
   "title": "",
@@ -5500,9 +5500,9 @@ var ptx_lunr_docs = [
   "body": "   -ciclo    Una permutazione è detta -ciclo o ciclo di lunghezza se esistono , , , lettere diverse in tali che , , , , e per ogni . Questo ciclo si denota con .   "
 },
 {
-  "id": "note-11",
+  "id": "sec-cicli-4",
   "level": "2",
-  "url": "sec-cicli.html#note-11",
+  "url": "sec-cicli.html#sec-cicli-4",
   "type": "Nota",
   "number": "11.2.2",
   "title": "",
@@ -5554,9 +5554,9 @@ var ptx_lunr_docs = [
   "body": "  Ogni permutazione può essere scritta come prodotto di cicli (a due a due) disgiunti. Questa scrittura è unica a meno dell'ordinamento dei cicli e dell'inserimento o cancellazione di cicli di lunghezza .    Prendiamo una lettera qualunque in e associamo a essa un ciclo come nel . Se abbiamo finito, altrimenti prendiamo una lettera che non compare nel ciclo e prendiamo il ciclo a essa associato. I cicli e sono disgiunti, perché se una lettera apparisse in entrambi, i cicli dovrebbero coincidere per il . Proseguiamo così fino a esaurire le lettere: sia l'ultimo ciclo ottenuto. Poniamo allora e mostriamo che : infatti, presa una qualsiasi lettera in sappiamo che essa appare esattamente in uno dei cicli trovati, sia . Si vede immediatamente che : per il , abbiamo che e, quindi, .  L'unicità della scrittura a meno di riordinamenti o di cancellazioni o inserimenti di cicli di lunghezza , segue anch'essa facilmente dal .   "
 },
 {
-  "id": "example-97",
+  "id": "sec-cicli-13",
   "level": "2",
-  "url": "sec-cicli.html#example-97",
+  "url": "sec-cicli.html#sec-cicli-13",
   "type": "Esempio",
   "number": "11.2.8",
   "title": "",
@@ -5572,9 +5572,9 @@ var ptx_lunr_docs = [
   "body": "  Sia con , , , cicli disgiunti di lunghezze rispettive , , , , Allora ha periodo uguale al minimo comune multiplo degli .    Si dimostra facilmente per induzione su , usando la e l' .   "
 },
 {
-  "id": "example-98",
+  "id": "sec-cicli-16",
   "level": "2",
-  "url": "sec-cicli.html#example-98",
+  "url": "sec-cicli.html#sec-cicli-16",
   "type": "Esempio",
   "number": "11.2.10",
   "title": "",
@@ -5599,9 +5599,9 @@ var ptx_lunr_docs = [
   "body": " Per definizione il tipo dell'identità è la -upla .  "
 },
 {
-  "id": "example-99",
+  "id": "sec-cicli-19",
   "level": "2",
-  "url": "sec-cicli.html#example-99",
+  "url": "sec-cicli.html#sec-cicli-19",
   "type": "Esempio",
   "number": "11.2.13",
   "title": "",
@@ -5635,189 +5635,189 @@ var ptx_lunr_docs = [
   "body": "  Vogliamo descrivere esplicitamente il gruppo trirettangolo come gruppo di permutazioni dei vertici di un rettangolo non quadrato, cioè come sottogruppo di . Indichiamo allora i vertici con le etichette , , e , come nella . Le simmetrie assiali scambiano tra loro a due a due vertici adiacenti e sono, dunque, e , mentre la rotazione di un angolo piatto scambia tra loro i vertici opposti ed è, dunque, . Ovviamente c'è poi l'identità.   "
 },
 {
-  "id": "exercise-195",
+  "id": "exercises-cicli-1-2",
   "level": "2",
-  "url": "sec-cicli.html#exercise-195",
+  "url": "sec-cicli.html#exercises-cicli-1-2",
   "type": "Esercizio",
   "number": "11.2.1",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-196",
+  "id": "exercises-cicli-1-3",
   "level": "2",
-  "url": "sec-cicli.html#exercise-196",
+  "url": "sec-cicli.html#exercises-cicli-1-3",
   "type": "Esercizio",
   "number": "11.2.2",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-197",
+  "id": "exercises-cicli-1-4",
   "level": "2",
-  "url": "sec-cicli.html#exercise-197",
+  "url": "sec-cicli.html#exercises-cicli-1-4",
   "type": "Esercizio",
   "number": "11.2.3",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-198",
+  "id": "exercises-cicli-1-5",
   "level": "2",
-  "url": "sec-cicli.html#exercise-198",
+  "url": "sec-cicli.html#exercises-cicli-1-5",
   "type": "Esercizio",
   "number": "11.2.4",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-199",
+  "id": "exercises-cicli-1-6",
   "level": "2",
-  "url": "sec-cicli.html#exercise-199",
+  "url": "sec-cicli.html#exercises-cicli-1-6",
   "type": "Esercizio",
   "number": "11.2.5",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-200",
+  "id": "exercises-cicli-1-7",
   "level": "2",
-  "url": "sec-cicli.html#exercise-200",
+  "url": "sec-cicli.html#exercises-cicli-1-7",
   "type": "Esercizio",
   "number": "11.2.6",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-201",
+  "id": "exercises-cicli-1-8",
   "level": "2",
-  "url": "sec-cicli.html#exercise-201",
+  "url": "sec-cicli.html#exercises-cicli-1-8",
   "type": "Esercizio",
   "number": "11.2.7",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-202",
+  "id": "exercises-cicli-1-9",
   "level": "2",
-  "url": "sec-cicli.html#exercise-202",
+  "url": "sec-cicli.html#exercises-cicli-1-9",
   "type": "Esercizio",
   "number": "11.2.8",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-203",
+  "id": "exercises-cicli-1-10",
   "level": "2",
-  "url": "sec-cicli.html#exercise-203",
+  "url": "sec-cicli.html#exercises-cicli-1-10",
   "type": "Esercizio",
   "number": "11.2.9",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-204",
+  "id": "exercises-cicli-2-2",
   "level": "2",
-  "url": "sec-cicli.html#exercise-204",
+  "url": "sec-cicli.html#exercises-cicli-2-2",
   "type": "Esercizio",
   "number": "11.2.10",
   "title": "",
   "body": " Tipo in .      "
 },
 {
-  "id": "exercise-205",
+  "id": "exercises-cicli-2-3",
   "level": "2",
-  "url": "sec-cicli.html#exercise-205",
+  "url": "sec-cicli.html#exercises-cicli-2-3",
   "type": "Esercizio",
   "number": "11.2.11",
   "title": "",
   "body": " Tipo in .      "
 },
 {
-  "id": "exercise-206",
+  "id": "exercises-cicli-2-4",
   "level": "2",
-  "url": "sec-cicli.html#exercise-206",
+  "url": "sec-cicli.html#exercises-cicli-2-4",
   "type": "Esercizio",
   "number": "11.2.12",
   "title": "",
   "body": " Tipo in .      "
 },
 {
-  "id": "exercise-207",
+  "id": "exercises-cicli-2-5",
   "level": "2",
-  "url": "sec-cicli.html#exercise-207",
+  "url": "sec-cicli.html#exercises-cicli-2-5",
   "type": "Esercizio",
   "number": "11.2.13",
   "title": "",
   "body": " Tipo in .      "
 },
 {
-  "id": "exercise-208",
+  "id": "exercises-cicli-3",
   "level": "2",
-  "url": "sec-cicli.html#exercise-208",
+  "url": "sec-cicli.html#exercises-cicli-3",
   "type": "Esercizio",
   "number": "11.2.14",
   "title": "",
   "body": " Dimostrare che se è un intero dispari con allora contiene un elemento di periodo .   Sia una permutazione prodotto di cicli disgiunti di lunghezza e rispettivamente (ad esempio, ). Per la , ha periodo uguale al minimo comune multiplo di e : poiché è dispari, anche è dispari e, quindi, il minimo comune multiplo di e è esattamente .   Stabilire se contiene un elemento di periodo per , , , , .   Usiamo ancora il fatto che una permutazione scritta come prodotto di cicli disgiunti ha periodo che è il minimo comune multiplo delle lunghezze dei cicli coinvolti. Dobbiamo, quindi, cercare degli interi il cui minimo comune multiplo sia .  Se si ha . Ogni ciclo di periodo è un elemento di periodo in .  Se si ha . Poiché , per ottenere come minimo comune multiplo di interi occorre che almeno uno di essi sia . Ma non contiene alcun ciclo di lunghezza .  Se si ha . Consideriamo allora una permutazione prodotto di cicli disgiunti di lunghezza e rispettivamente (ad esempio, ). Il minimo comune multiplo di e è esattamente . Pertanto, ha periodo .  Se si ha . Poiché , per ottenere come minimo comune multiplo di interi occorre che almeno uno di essi sia . Ma non contiene alcun ciclo di lunghezza .  Se si ha . Consideriamo allora una permutazione prodotto di cicli disgiunti di lunghezza e rispettivamente (ad esempio, ). Il minimo comune multiplo di e è esattamente . Pertanto, ha periodo .  "
 },
 {
-  "id": "exercise-209",
+  "id": "exercises-cicli-4-2",
   "level": "2",
-  "url": "sec-cicli.html#exercise-209",
+  "url": "sec-cicli.html#exercises-cicli-4-2",
   "type": "Esercizio",
   "number": "11.2.15",
   "title": "",
   "body": "  .      "
 },
 {
-  "id": "exercise-210",
+  "id": "exercises-cicli-4-3",
   "level": "2",
-  "url": "sec-cicli.html#exercise-210",
+  "url": "sec-cicli.html#exercises-cicli-4-3",
   "type": "Esercizio",
   "number": "11.2.16",
   "title": "",
   "body": "  .    e   "
 },
 {
-  "id": "exercise-211",
+  "id": "exercises-cicli-5",
   "level": "2",
-  "url": "sec-cicli.html#exercise-211",
+  "url": "sec-cicli.html#exercises-cicli-5",
   "type": "Esercizio",
   "number": "11.2.17",
   "title": "",
   "body": " Sia un -ciclo.   Dimostrare che, per ogni con e ogni intero , si ha dove è tale che .   Dato un intero , sia il massimo comun divisore di e . Mostrare che è prodotto di cicli disgiunti di lunghezza .  "
 },
 {
-  "id": "exercise-212",
+  "id": "exercises-cicli-6-2",
   "level": "2",
-  "url": "sec-cicli.html#exercise-212",
+  "url": "sec-cicli.html#exercises-cicli-6-2",
   "type": "Esercizio",
   "number": "11.2.18",
   "title": "",
   "body": "     Non è un sottogruppo perché non contiene l'identità.  "
 },
 {
-  "id": "exercise-213",
+  "id": "exercises-cicli-6-3",
   "level": "2",
-  "url": "sec-cicli.html#exercise-213",
+  "url": "sec-cicli.html#exercises-cicli-6-3",
   "type": "Esercizio",
   "number": "11.2.19",
   "title": "",
   "body": "     Non è un sottogruppo perché i cicli e appartengono a ma il loro prodotto non appartiene a .  "
 },
 {
-  "id": "exercise-214",
+  "id": "exercises-cicli-6-4",
   "level": "2",
-  "url": "sec-cicli.html#exercise-214",
+  "url": "sec-cicli.html#exercises-cicli-6-4",
   "type": "Esercizio",
   "number": "11.2.20",
   "title": "",
   "body": "     Non è un sottogruppo perché e appartengono a ma il loro prodotto non appartiene a .  "
 },
 {
-  "id": "exercise-215",
+  "id": "exercises-cicli-6-5",
   "level": "2",
-  "url": "sec-cicli.html#exercise-215",
+  "url": "sec-cicli.html#exercises-cicli-6-5",
   "type": "Esercizio",
   "number": "11.2.21",
   "title": "",
@@ -5869,9 +5869,9 @@ var ptx_lunr_docs = [
   "body": " La proposizione precedente si può interpretare dicendo che è generato dagli scambi.  "
 },
 {
-  "id": "example-103",
+  "id": "sec-scambi-8",
   "level": "2",
-  "url": "sec-scambi.html#example-103",
+  "url": "sec-scambi.html#sec-scambi-8",
   "type": "Esempio",
   "number": "11.3.5",
   "title": "",
@@ -5914,9 +5914,9 @@ var ptx_lunr_docs = [
   "body": "  Dato un -ciclo, questo è pari se è dispari e viceversa.    Basta verificare per induzione su che .   "
 },
 {
-  "id": "example-104",
+  "id": "sec-scambi-16",
   "level": "2",
-  "url": "sec-scambi.html#example-104",
+  "url": "sec-scambi.html#sec-scambi-16",
   "type": "Esempio",
   "number": "11.3.10",
   "title": "",
@@ -5932,81 +5932,81 @@ var ptx_lunr_docs = [
   "body": "     gruppo alterno su lettere  Dato il gruppo simmetrico , il sottoinsieme formato dalle permutazioni pari è un sottogruppo detto sottogruppo alterno e denotato con . L'ordine di è , mentre per è uguale a .    Il sottoinsieme è non vuoto: infatti è una permutazione pari. Se e sono permutazioni pari, cioè ciascuna di esse è prodotto di un numero pari di scambi, allora il prodotto è prodotto di un numero pari di scambi: poiché è finito (e, quindi, anche lo è), per la  è un sottogruppo.  Calcoliamo adesso l'ordine di . Se , sappiamo che ha ordine e, quindi, anche ha ordine . Sia allora . Per ogni permutazione pari , il prodotto è una permutazione dispari e, per le , se e sono permutazioni pari diverse: dunque, il numero di permutazioni dispari è maggiore o uguale del numero di permutazioni pari. Analogamente, per ogni permutazione dispari , il prodotto è una permutazione pari e, quindi, il numero di permutazioni pari è maggiore o uguale del numero di permutazioni dispari. In conclusione il numero di permutazioni dispari è uguale al numero di permutazioni pari: quindi, .   "
 },
 {
-  "id": "exercise-216",
+  "id": "exercises-scambi-1",
   "level": "2",
-  "url": "sec-scambi.html#exercise-216",
+  "url": "sec-scambi.html#exercises-scambi-1",
   "type": "Esercizio",
   "number": "11.3.1",
   "title": "",
   "body": " Completare i dettagli della dimostrazione della .  "
 },
 {
-  "id": "exercise-217",
+  "id": "exercises-scambi-2-2",
   "level": "2",
-  "url": "sec-scambi.html#exercise-217",
+  "url": "sec-scambi.html#exercises-scambi-2-2",
   "type": "Esercizio",
   "number": "11.3.2",
   "title": "",
   "body": "    "
 },
 {
-  "id": "exercise-218",
+  "id": "exercises-scambi-2-3",
   "level": "2",
-  "url": "sec-scambi.html#exercise-218",
+  "url": "sec-scambi.html#exercises-scambi-2-3",
   "type": "Esercizio",
   "number": "11.3.3",
   "title": "",
   "body": "    "
 },
 {
-  "id": "exercise-219",
+  "id": "exercises-scambi-2-4",
   "level": "2",
-  "url": "sec-scambi.html#exercise-219",
+  "url": "sec-scambi.html#exercises-scambi-2-4",
   "type": "Esercizio",
   "number": "11.3.4",
   "title": "",
   "body": "    "
 },
 {
-  "id": "exercise-220",
+  "id": "exercises-scambi-2-5",
   "level": "2",
-  "url": "sec-scambi.html#exercise-220",
+  "url": "sec-scambi.html#exercises-scambi-2-5",
   "type": "Esercizio",
   "number": "11.3.5",
   "title": "",
   "body": "    "
 },
 {
-  "id": "exercise-221",
+  "id": "exercises-scambi-3-2",
   "level": "2",
-  "url": "sec-scambi.html#exercise-221",
+  "url": "sec-scambi.html#exercises-scambi-3-2",
   "type": "Esercizio",
   "number": "11.3.6",
   "title": "",
   "body": "     dispari  "
 },
 {
-  "id": "exercise-222",
+  "id": "exercises-scambi-3-3",
   "level": "2",
-  "url": "sec-scambi.html#exercise-222",
+  "url": "sec-scambi.html#exercises-scambi-3-3",
   "type": "Esercizio",
   "number": "11.3.7",
   "title": "",
   "body": "     dispari  "
 },
 {
-  "id": "exercise-223",
+  "id": "exercises-scambi-3-4",
   "level": "2",
-  "url": "sec-scambi.html#exercise-223",
+  "url": "sec-scambi.html#exercises-scambi-3-4",
   "type": "Esercizio",
   "number": "11.3.8",
   "title": "",
   "body": "     pari  "
 },
 {
-  "id": "exercise-224",
+  "id": "exercises-scambi-3-5",
   "level": "2",
-  "url": "sec-scambi.html#exercise-224",
+  "url": "sec-scambi.html#exercises-scambi-3-5",
   "type": "Esercizio",
   "number": "11.3.9",
   "title": "",
@@ -6031,18 +6031,18 @@ var ptx_lunr_docs = [
   "body": " Dimostrare che è generato dagli scambi , , , .   Poiché è generato dagli scambi, basta provare che ogni scambio appartiene al sottogruppo generato dagli scambi dati. Sia allora uno scambio qualunque: poiché possiamo assumere che . Procediamo per induzione su : se , lo scambio è uno di quelli dati che appartiene ovviamente a . Se abbiamo che : per ipotesi induttiva appartiene a e la tesi segue immediatamente.  "
 },
 {
-  "id": "exercise-227",
+  "id": "exercises-scambi-6",
   "level": "2",
-  "url": "sec-scambi.html#exercise-227",
+  "url": "sec-scambi.html#exercises-scambi-6",
   "type": "Esercizio",
   "number": "11.3.12",
   "title": "",
   "body": " Dimostrare che è generato da e .   Calcolare . Poi usare l' .  "
 },
 {
-  "id": "exercise-228",
+  "id": "exercises-scambi-7",
   "level": "2",
-  "url": "sec-scambi.html#exercise-228",
+  "url": "sec-scambi.html#exercises-scambi-7",
   "type": "Esercizio",
   "number": "11.3.13",
   "title": "",
@@ -6067,9 +6067,9 @@ var ptx_lunr_docs = [
   "body": "   prodotto dei sottoinsiemi e di un gruppo    In un gruppo , scritto in notazione moltiplicativa, siano dati due sottoinsiemi non vuoti e . Il prodotto di e , indicato con è l'insieme dei prodotti al variare di in e in . In simboli . Più in generale, se , , , sono sottoinsiemi di , il loro prodotto è così definito .   "
 },
 {
-  "id": "example-105",
+  "id": "sec-prodotto_sottoinsiemi-3",
   "level": "2",
-  "url": "sec-prodotto_sottoinsiemi.html#example-105",
+  "url": "sec-prodotto_sottoinsiemi.html#sec-prodotto_sottoinsiemi-3",
   "type": "Esempio",
   "number": "12.1.2",
   "title": "",
@@ -6166,45 +6166,45 @@ var ptx_lunr_docs = [
   "body": "  Sia un gruppo e sia un suo sottogruppo. Dati due elementi e di , si ha se e solo se . Analogamente, se e solo se .    Proviamo solo la prima affermazione, lasciando per esercizio l'analoga dimostrazione della seconda.  Supponiamo allora che : dunque, , cioè esiste tale che . Ma allora .  Viceversa, se , allora , cioè .   "
 },
 {
-  "id": "exercise-229",
+  "id": "exercises-prodotto_sottoinsiemi-1-2",
   "level": "2",
-  "url": "sec-prodotto_sottoinsiemi.html#exercise-229",
+  "url": "sec-prodotto_sottoinsiemi.html#exercises-prodotto_sottoinsiemi-1-2",
   "type": "Esercizio",
   "number": "12.1.1",
   "title": "",
   "body": "  in .  "
 },
 {
-  "id": "exercise-230",
+  "id": "exercises-prodotto_sottoinsiemi-1-3",
   "level": "2",
-  "url": "sec-prodotto_sottoinsiemi.html#exercise-230",
+  "url": "sec-prodotto_sottoinsiemi.html#exercises-prodotto_sottoinsiemi-1-3",
   "type": "Esercizio",
   "number": "12.1.2",
   "title": "",
   "body": "  in .  "
 },
 {
-  "id": "exercise-231",
+  "id": "exercises-prodotto_sottoinsiemi-1-4",
   "level": "2",
-  "url": "sec-prodotto_sottoinsiemi.html#exercise-231",
+  "url": "sec-prodotto_sottoinsiemi.html#exercises-prodotto_sottoinsiemi-1-4",
   "type": "Esercizio",
   "number": "12.1.3",
   "title": "",
   "body": "  in (con l'identificazione data nell' ).  "
 },
 {
-  "id": "exercise-232",
+  "id": "exercises-prodotto_sottoinsiemi-1-5",
   "level": "2",
-  "url": "sec-prodotto_sottoinsiemi.html#exercise-232",
+  "url": "sec-prodotto_sottoinsiemi.html#exercises-prodotto_sottoinsiemi-1-5",
   "type": "Esercizio",
   "number": "12.1.4",
   "title": "",
   "body": " Il gruppo trirettangolo in (con l'identificazione data nell' ).  "
 },
 {
-  "id": "exercise-233",
+  "id": "exercises-prodotto_sottoinsiemi-2",
   "level": "2",
-  "url": "sec-prodotto_sottoinsiemi.html#exercise-233",
+  "url": "sec-prodotto_sottoinsiemi.html#exercises-prodotto_sottoinsiemi-2",
   "type": "Esercizio",
   "number": "12.1.5",
   "title": "",
@@ -6256,9 +6256,9 @@ var ptx_lunr_docs = [
   "body": "  Abbiamo già visto ( ) che i laterali (destri o sinistri), di in non sono altro che le classi di resto modulo . Sappiamo già che ci sono esattamente classi di resto modulo , e, dunque, .   "
 },
 {
-  "id": "example-110",
+  "id": "sec-teorema_di_lagrange-8",
   "level": "2",
-  "url": "sec-teorema_di_lagrange.html#example-110",
+  "url": "sec-teorema_di_lagrange.html#sec-teorema_di_lagrange-8",
   "type": "Esempio",
   "number": "12.2.5",
   "title": "",
@@ -6301,63 +6301,63 @@ var ptx_lunr_docs = [
   "body": "  Siano un gruppo, un sottogruppo di e un sottogruppo di . Allora è finito se e solo se e sono finiti: in tal caso .    Nel caso in cui sia finito l'uguaglianza è banale. Infatti per il , . Dimostriamo il risultato in generale.  Supponiamo che abbia in almeno laterali destri diversi , , , e che abbia in almeno laterali destri diversi , , , . Se mostriamo che i laterali destri di in del tipo con e sono diversi, allora avremo provato che in ha almeno laterali destri diversi: in particolare, questo prova che se è finito, allora e sono finiti.  Sia, allora, : dunque, per qualche . Poiché e è un sottogruppo, abbiamo che e ; d'altra parte, e, pertanto, , cioè . Per le , abbiamo allora : dunque, e, pertanto, , come affermato.  Supponiamo ora che e siano finiti e che, quindi, i laterali destri di in e i laterali destri di in elencati in precedenza siano tutti i laterali. Per concludere la dimostrazione, basta mostrare che ogni elemento di appartiene a un laterale del tipo : per ipotesi per qualche , cioè esiste tale che ; inoltre per qualche . Dunque, .   "
 },
 {
-  "id": "exercise-234",
+  "id": "exercises-teorema_di_lagrange-1",
   "level": "2",
-  "url": "sec-teorema_di_lagrange.html#exercise-234",
+  "url": "sec-teorema_di_lagrange.html#exercises-teorema_di_lagrange-1",
   "type": "Esercizio",
   "number": "12.2.1",
   "title": "",
   "body": " Dimostrare che ha indice infinito in .   Notiamo innanzitutto che, poiché è abeliano, i laterali destri e sinistri coincidono. Supponiamo allora di avere un numero finito di laterali , , di in e mostriamo che possiamo trovare un altro laterale non compreso tra questi. Sia allora un intero non nullo che non divide nessuno degli (basta prendere intero positivo maggiore di per ogni ), e consideriamo il laterale . Se fosse per qualche , allora dovrebbe esistere un intero tale che , cioè . Ma allora avremmo che e, quindi, dividerebbe .  "
 },
 {
-  "id": "exercise-235",
+  "id": "exercises-teorema_di_lagrange-2",
   "level": "2",
-  "url": "sec-teorema_di_lagrange.html#exercise-235",
+  "url": "sec-teorema_di_lagrange.html#exercises-teorema_di_lagrange-2",
   "type": "Esercizio",
   "number": "12.2.2",
   "title": "",
   "body": " Dimostrare che se e sono de sottogruppi finiti di un gruppo e gli ordini di e sono relativamente primi allora .  "
 },
 {
-  "id": "exercise-236",
+  "id": "exercises-teorema_di_lagrange-3",
   "level": "2",
-  "url": "sec-teorema_di_lagrange.html#exercise-236",
+  "url": "sec-teorema_di_lagrange.html#exercises-teorema_di_lagrange-3",
   "type": "Esercizio",
   "number": "12.2.3",
   "title": "",
   "body": " Dimostrare che se e sono sottogruppi di indice finito in un gruppo (non necessariamente finito) allora ha indice finito in e .   Mostrare che .   Sia : mostriamo che se prendiamo laterali destri , , di in , questi non sono tutti distinti e, dunque, . I laterali , , di in non sono tutti distinti: dunque, per qualche e distinti. Ma allora, : d'altra parte e, di conseguenza, , cioè , come richiesto.  Ora basta osservare che per la , .  "
 },
 {
-  "id": "exercise-237",
+  "id": "exercises-teorema_di_lagrange-4",
   "level": "2",
-  "url": "sec-teorema_di_lagrange.html#exercise-237",
+  "url": "sec-teorema_di_lagrange.html#exercises-teorema_di_lagrange-4",
   "type": "Esercizio",
   "number": "12.2.4",
   "title": "",
   "body": " Dimostrare che se è un sottogruppo avente indice primo in e allora o .  "
 },
 {
-  "id": "exercise-238",
+  "id": "exercises-teorema_di_lagrange-5",
   "level": "2",
-  "url": "sec-teorema_di_lagrange.html#exercise-238",
+  "url": "sec-teorema_di_lagrange.html#exercises-teorema_di_lagrange-5",
   "type": "Esercizio",
   "number": "12.2.5",
   "title": "",
   "body": " Sia un gruppo abeliano finito di ordine dispari. Dimostrare che il prodotto di tutti gli elementi di è uguale a .   Quanti elementi di coincidono con il proprio inverso?   Sia un elemento di che coincide con il proprio inverso: dunque , cioè . Pertanto divide . D'altra parte, per il , il periodo di divide ed è, quindi, dispari. Ma allora, ha periodo , cioè . Dunque, ogni elemento diverso da non coincide con il proprio inverso. Nel prodotto di tutti gli elementi di , ogni elemento diverso da si semplifica con il proprio inverso e rimane, quindi, il solo elemento .  "
 },
 {
-  "id": "exercise-239",
+  "id": "exercises-teorema_di_lagrange-6",
   "level": "2",
-  "url": "sec-teorema_di_lagrange.html#exercise-239",
+  "url": "sec-teorema_di_lagrange.html#exercises-teorema_di_lagrange-6",
   "type": "Esercizio",
   "number": "12.2.6",
   "title": "",
   "body": " Nel gruppo moltiplicativo delle matrici invertibili di ordine a coefficienti complessi, sia il sottogruppo generato dalle matrici e come nell' . Determinare l'ordine di .   Dall' , sappiamo che non è abeliano, che e hanno periodo e che ogni elemento di è del tipo con e : dunque ha al più elementi. D'altra parte, l'ordine di è un multiplo del periodo di , grazie al , e, dunque, può avere ordine o . Ma non è abeliano, e tutti i gruppi di ordine sono abeliani: pertanto ha ordine .  "
 },
 {
-  "id": "exercise-240",
+  "id": "exercises-teorema_di_lagrange-7",
   "level": "2",
-  "url": "sec-teorema_di_lagrange.html#exercise-240",
+  "url": "sec-teorema_di_lagrange.html#exercises-teorema_di_lagrange-7",
   "type": "Esercizio",
   "number": "12.2.7",
   "title": "",
@@ -6391,9 +6391,9 @@ var ptx_lunr_docs = [
   "body": "  Se e sono sottogruppi di un gruppo , allora . Più in generale, se , , , sono sottogruppi di , allora .    Proviamo il caso di due sottogruppi e , lasciando il caso generale per esercizio.  Sia . Allora , dal momento che ; dunque, . Analogamente, . Pertanto, .  Il sottogruppo contiene ogni elemento e ogni elemento e, quindi, contiene il loro prodotto : dunque, .   "
 },
 {
-  "id": "example-112",
+  "id": "sec-prodotto_sottogruppi-7",
   "level": "2",
-  "url": "sec-prodotto_sottogruppi.html#example-112",
+  "url": "sec-prodotto_sottogruppi.html#sec-prodotto_sottogruppi-7",
   "type": "Esempio",
   "number": "12.3.3",
   "title": "",
@@ -6445,45 +6445,45 @@ var ptx_lunr_docs = [
   "body": " Dati due sottogruppi e di un gruppo, mostrare che se e solo se . In particolare, .   Dalla sappiamo che contiene sia che : dunque, se , allora .  Viceversa, poiché è formato dai prodotti del tipo con e , se , allora questi prodotti sono prodotti di elementi di e, quindi, appartengono a . Pertanto, ; ma per la .  "
 },
 {
-  "id": "exercise-242",
+  "id": "exercises-prodotto_sottogruppi-2-2",
   "level": "2",
-  "url": "sec-prodotto_sottogruppi.html#exercise-242",
+  "url": "sec-prodotto_sottogruppi.html#exercises-prodotto_sottogruppi-2-2",
   "type": "Esercizio",
   "number": "12.3.2",
   "title": "",
   "body": "  e in     ha cardinalità e non è un sottogruppo.  "
 },
 {
-  "id": "exercise-243",
+  "id": "exercises-prodotto_sottogruppi-2-3",
   "level": "2",
-  "url": "sec-prodotto_sottogruppi.html#exercise-243",
+  "url": "sec-prodotto_sottogruppi.html#exercises-prodotto_sottogruppi-2-3",
   "type": "Esercizio",
   "number": "12.3.3",
   "title": "",
   "body": "  e in     ha cardinalità e non è un sottogruppo.  "
 },
 {
-  "id": "exercise-244",
+  "id": "exercises-prodotto_sottogruppi-2-4",
   "level": "2",
-  "url": "sec-prodotto_sottogruppi.html#exercise-244",
+  "url": "sec-prodotto_sottogruppi.html#exercises-prodotto_sottogruppi-2-4",
   "type": "Esercizio",
   "number": "12.3.4",
   "title": "",
   "body": "  e in     ha cardinalità ed è un sottogruppo.  "
 },
 {
-  "id": "exercise-245",
+  "id": "exercises-prodotto_sottogruppi-2-5",
   "level": "2",
-  "url": "sec-prodotto_sottogruppi.html#exercise-245",
+  "url": "sec-prodotto_sottogruppi.html#exercises-prodotto_sottogruppi-2-5",
   "type": "Esercizio",
   "number": "12.3.5",
   "title": "",
   "body": "  e in     ha cardinalità e non è un sottogruppo.  "
 },
 {
-  "id": "exercise-246",
+  "id": "exercises-prodotto_sottogruppi-3",
   "level": "2",
-  "url": "sec-prodotto_sottogruppi.html#exercise-246",
+  "url": "sec-prodotto_sottogruppi.html#exercises-prodotto_sottogruppi-3",
   "type": "Esercizio",
   "number": "12.3.6",
   "title": "",
@@ -6508,36 +6508,36 @@ var ptx_lunr_docs = [
   "body": "  Dati due monoidi e , i cui elementi neutri indichiamo rispettivamente con e , un omomorfismo di monoidi da in è una funzione tale che    ;     per ogni e in : ciò si esprime dicendo che  rispetta l'operazione.      "
 },
 {
-  "id": "example-114",
+  "id": "sec-definizione_omomorfismo-3",
   "level": "2",
-  "url": "sec-definizione_omomorfismo.html#example-114",
+  "url": "sec-definizione_omomorfismo.html#sec-definizione_omomorfismo-3",
   "type": "Esempio",
   "number": "13.1.2",
   "title": "",
   "body": "  Consideriamo i naturali rispetto alla somma e i naturali rispetto al prodotto. Fissiamo un naturale qualsiasi e consideriamo la funzione da in che manda un naturale in . Questa funzione manda l'elemento neutro di in , cioè l'elemento neutro di . Inoltre, per ogni naturale e si ha . Pertanto, questa funzione è un omomorfismo di monoidi.   "
 },
 {
-  "id": "example-115",
+  "id": "sec-definizione_omomorfismo-4",
   "level": "2",
-  "url": "sec-definizione_omomorfismo.html#example-115",
+  "url": "sec-definizione_omomorfismo.html#sec-definizione_omomorfismo-4",
   "type": "Esempio",
   "number": "13.1.3",
   "title": "",
   "body": "  Consideriamo la funzione dal monoide delle matrici quadrate di ordine a coefficienti in rispetto al prodotto al monoide dei razionali rispetto al prodotto. Poiché e per il teorema di Binet, Jacques Philippe Marie Binet , 1786 1856. Binet, Jacques Philippe Marie , ne consegue che è un omomorfismo di monoidi.   "
 },
 {
-  "id": "example-116",
+  "id": "sec-definizione_omomorfismo-5",
   "level": "2",
-  "url": "sec-definizione_omomorfismo.html#example-116",
+  "url": "sec-definizione_omomorfismo.html#sec-definizione_omomorfismo-5",
   "type": "Esempio",
   "number": "13.1.4",
   "title": "",
   "body": "  Consideriamo la funzione monoide dei razionali rispetto al prodotto al monoide delle matrici quadrate di ordine a coefficienti in rispetto al prodotto definita da . Anche se questa funzione rispetta il prodotto, non è un omomorfismo perché .   "
 },
 {
-  "id": "example-117",
+  "id": "sec-definizione_omomorfismo-6",
   "level": "2",
-  "url": "sec-definizione_omomorfismo.html#example-117",
+  "url": "sec-definizione_omomorfismo.html#sec-definizione_omomorfismo-6",
   "type": "Esempio",
   "number": "13.1.5",
   "title": "",
@@ -6562,18 +6562,18 @@ var ptx_lunr_docs = [
   "body": "  Sia un omomorfismo di gruppi. Allora .    Sappiamo che , e, dunque, . Ma e, quindi, : la tesi segue dalle .   "
 },
 {
-  "id": "example-118",
+  "id": "sec-definizione_omomorfismo-10",
   "level": "2",
-  "url": "sec-definizione_omomorfismo.html#example-118",
+  "url": "sec-definizione_omomorfismo.html#sec-definizione_omomorfismo-10",
   "type": "Esempio",
   "number": "13.1.8",
   "title": "",
   "body": "  Consideriamo il gruppo e il gruppo rispetto alla moltiplicazione. La funzione che manda ogni permutazione pari in e ogni permutazione dispari in è un omomorfismo di gruppi, come si può verificare facilmente.   "
 },
 {
-  "id": "example-119",
+  "id": "sec-definizione_omomorfismo-11",
   "level": "2",
-  "url": "sec-definizione_omomorfismo.html#example-119",
+  "url": "sec-definizione_omomorfismo.html#sec-definizione_omomorfismo-11",
   "type": "Esempio",
   "number": "13.1.9",
   "title": "",
@@ -6661,162 +6661,162 @@ var ptx_lunr_docs = [
   "body": "  Sia un omomorfismo di gruppi e sia un elemento di di periodo finito . Allora ha periodo finito che divide .    Basta notare che, grazie alla , si ha e applicare poi l' .   "
 },
 {
-  "id": "exercise-247",
+  "id": "exercises-definizione_omomorfismo-1",
   "level": "2",
-  "url": "sec-definizione_omomorfismo.html#exercise-247",
+  "url": "sec-definizione_omomorfismo.html#exercises-definizione_omomorfismo-1",
   "type": "Esercizio",
   "number": "13.1.1",
   "title": "",
   "body": " Dimostrare che se è una funzione suriettiva tra monoidi tale che per ogni e in , allora è un omomorfismo di monoidi.   Dobbiamo mostrare che . Poiché è suriettiva, sappiamo che esiste in tale che .  Allora .  "
 },
 {
-  "id": "exercise-248",
+  "id": "exercises-definizione_omomorfismo-2",
   "level": "2",
-  "url": "sec-definizione_omomorfismo.html#exercise-248",
+  "url": "sec-definizione_omomorfismo.html#exercises-definizione_omomorfismo-2",
   "type": "Esercizio",
   "number": "13.1.2",
   "title": "",
   "body": " Sia un omomorfismo di monoidi e sia un elemento di . Mostrare che per ogni naturale e che se è invertibile allora è invertibile e per ogni intero .  "
 },
 {
-  "id": "exercise-249",
+  "id": "exercises-definizione_omomorfismo-3-2",
   "level": "2",
-  "url": "sec-definizione_omomorfismo.html#exercise-249",
+  "url": "sec-definizione_omomorfismo.html#exercises-definizione_omomorfismo-3-2",
   "type": "Esercizio",
   "number": "13.1.3",
   "title": "",
   "body": "     Sì  "
 },
 {
-  "id": "exercise-250",
+  "id": "exercises-definizione_omomorfismo-3-3",
   "level": "2",
-  "url": "sec-definizione_omomorfismo.html#exercise-250",
+  "url": "sec-definizione_omomorfismo.html#exercises-definizione_omomorfismo-3-3",
   "type": "Esercizio",
   "number": "13.1.4",
   "title": "",
   "body": "     No  "
 },
 {
-  "id": "exercise-251",
+  "id": "exercises-definizione_omomorfismo-3-4",
   "level": "2",
-  "url": "sec-definizione_omomorfismo.html#exercise-251",
+  "url": "sec-definizione_omomorfismo.html#exercises-definizione_omomorfismo-3-4",
   "type": "Esercizio",
   "number": "13.1.5",
   "title": "",
   "body": "     Sì  "
 },
 {
-  "id": "exercise-252",
+  "id": "exercises-definizione_omomorfismo-3-5",
   "level": "2",
-  "url": "sec-definizione_omomorfismo.html#exercise-252",
+  "url": "sec-definizione_omomorfismo.html#exercises-definizione_omomorfismo-3-5",
   "type": "Esercizio",
   "number": "13.1.6",
   "title": "",
   "body": "     Sì  "
 },
 {
-  "id": "exercise-253",
+  "id": "exercises-definizione_omomorfismo-3-6",
   "level": "2",
-  "url": "sec-definizione_omomorfismo.html#exercise-253",
+  "url": "sec-definizione_omomorfismo.html#exercises-definizione_omomorfismo-3-6",
   "type": "Esercizio",
   "number": "13.1.7",
   "title": "",
   "body": "     No  "
 },
 {
-  "id": "exercise-254",
+  "id": "exercises-definizione_omomorfismo-3-7",
   "level": "2",
-  "url": "sec-definizione_omomorfismo.html#exercise-254",
+  "url": "sec-definizione_omomorfismo.html#exercises-definizione_omomorfismo-3-7",
   "type": "Esercizio",
   "number": "13.1.8",
   "title": "",
   "body": "     No  "
 },
 {
-  "id": "exercise-255",
+  "id": "exercises-definizione_omomorfismo-4-2",
   "level": "2",
-  "url": "sec-definizione_omomorfismo.html#exercise-255",
+  "url": "sec-definizione_omomorfismo.html#exercises-definizione_omomorfismo-4-2",
   "type": "Esercizio",
   "number": "13.1.9",
   "title": "",
   "body": "     È omomorfismo sia di gruppi additivi che di monoidi moltiplicativi.  "
 },
 {
-  "id": "exercise-256",
+  "id": "exercises-definizione_omomorfismo-4-3",
   "level": "2",
-  "url": "sec-definizione_omomorfismo.html#exercise-256",
+  "url": "sec-definizione_omomorfismo.html#exercises-definizione_omomorfismo-4-3",
   "type": "Esercizio",
   "number": "13.1.10",
   "title": "",
   "body": "     È omomorfismo di gruppi additivi ma non di monoidi moltiplicativi.  "
 },
 {
-  "id": "exercise-257",
+  "id": "exercises-definizione_omomorfismo-5",
   "level": "2",
-  "url": "sec-definizione_omomorfismo.html#exercise-257",
+  "url": "sec-definizione_omomorfismo.html#exercises-definizione_omomorfismo-5",
   "type": "Esercizio",
   "number": "13.1.11",
   "title": "",
   "body": " Dimostrare che la funzione da un gruppo in sé che manda ciascun elemento nel proprio quadrato è un endomorfismo se e solo se è abeliano.   Se è abeliano, allora, per ogni e in , abbiamo .  Viceversa, sia endomorfismo e siano e due elementi di . Allora , cioè . Per le , otteniamo che .  "
 },
 {
-  "id": "exercise-258",
+  "id": "exercises-definizione_omomorfismo-6-2",
   "level": "2",
-  "url": "sec-definizione_omomorfismo.html#exercise-258",
+  "url": "sec-definizione_omomorfismo.html#exercises-definizione_omomorfismo-6-2",
   "type": "Esercizio",
   "number": "13.1.12",
   "title": "",
   "body": "  che manda in così definita se e .   Sì.  "
 },
 {
-  "id": "exercise-259",
+  "id": "exercises-definizione_omomorfismo-6-3",
   "level": "2",
-  "url": "sec-definizione_omomorfismo.html#exercise-259",
+  "url": "sec-definizione_omomorfismo.html#exercises-definizione_omomorfismo-6-3",
   "type": "Esercizio",
   "number": "13.1.13",
   "title": "",
   "body": "  che manda in così definita .   Non è nemmeno una funzione.  "
 },
 {
-  "id": "exercise-260",
+  "id": "exercises-definizione_omomorfismo-6-4",
   "level": "2",
-  "url": "sec-definizione_omomorfismo.html#exercise-260",
+  "url": "sec-definizione_omomorfismo.html#exercises-definizione_omomorfismo-6-4",
   "type": "Esercizio",
   "number": "13.1.14",
   "title": "",
   "body": "  così definita dove intendiamo i gruppi additivi.   Sì  "
 },
 {
-  "id": "exercise-261",
+  "id": "exercises-definizione_omomorfismo-6-5",
   "level": "2",
-  "url": "sec-definizione_omomorfismo.html#exercise-261",
+  "url": "sec-definizione_omomorfismo.html#exercises-definizione_omomorfismo-6-5",
   "type": "Esercizio",
   "number": "13.1.15",
   "title": "",
   "body": "  così definita dove intendiamo i gruppi moltiplicativi.   La funzione non è ben definita: esistono matrici invertibili che vengono mandate in , ad esempio, la matrice identica.  "
 },
 {
-  "id": "exercise-262",
+  "id": "exercises-definizione_omomorfismo-6-6",
   "level": "2",
-  "url": "sec-definizione_omomorfismo.html#exercise-262",
+  "url": "sec-definizione_omomorfismo.html#exercises-definizione_omomorfismo-6-6",
   "type": "Esercizio",
   "number": "13.1.16",
   "title": "",
   "body": "  così definita dove intendiamo i gruppi moltiplicativi.   Sì.  "
 },
 {
-  "id": "exercise-263",
+  "id": "exercises-definizione_omomorfismo-6-7",
   "level": "2",
-  "url": "sec-definizione_omomorfismo.html#exercise-263",
+  "url": "sec-definizione_omomorfismo.html#exercises-definizione_omomorfismo-6-7",
   "type": "Esercizio",
   "number": "13.1.17",
   "title": "",
   "body": "  così definita dove intendiamo i gruppi moltiplicativi.   No.  "
 },
 {
-  "id": "exercise-264",
+  "id": "exercises-definizione_omomorfismo-7",
   "level": "2",
-  "url": "sec-definizione_omomorfismo.html#exercise-264",
+  "url": "sec-definizione_omomorfismo.html#exercises-definizione_omomorfismo-7",
   "type": "Esercizio",
   "number": "13.1.18",
   "title": "",
@@ -6886,9 +6886,9 @@ var ptx_lunr_docs = [
   "body": "  Se è un omomorfismo di gruppi e è un gruppo ciclico generato da , allora è ciclico generato da .   "
 },
 {
-  "id": "example-121",
+  "id": "sec-nucleo_immagine-13",
   "level": "2",
-  "url": "sec-nucleo_immagine.html#example-121",
+  "url": "sec-nucleo_immagine.html#sec-nucleo_immagine-13",
   "type": "Esempio",
   "number": "13.2.7",
   "title": "",
@@ -6913,9 +6913,9 @@ var ptx_lunr_docs = [
   "body": "  Sia un omomorfismo di gruppi e sia . Dati e in , sono equivalenti le condizioni                 In particolare, i laterali destri e sinistri di coincidono.    Supponiamo che valga il : dunque, esiste tale che . Pertanto, , cioè vale il . Viceversa, se allora , cioè . Dunque, esiste tale che , vale a dire e vale il .  L'equivalenza tra il e viene provata in maniera analoga.   "
 },
 {
-  "id": "example-122",
+  "id": "sec-nucleo_immagine-19",
   "level": "2",
-  "url": "sec-nucleo_immagine.html#example-122",
+  "url": "sec-nucleo_immagine.html#sec-nucleo_immagine-19",
   "type": "Esempio",
   "number": "13.2.10",
   "title": "",
@@ -6949,63 +6949,63 @@ var ptx_lunr_docs = [
   "body": "  Sia un omomorfismo di gruppi. Allora, le mappe e definiscono delle biiezioni, una inversa dell'altra, tra l'insieme dei sottogruppi di contenenti e l'insieme dei sottogruppi di contenuti in .    Preso un sottogruppo di , ovviamente è contenuto in . Preso un sottogruppo di , poiché contiene , ovviamente contiene . Le due mappe sono, dunque, ben definite. Grazie alla e sono una inversa dell'altra.   "
 },
 {
-  "id": "exercise-265",
+  "id": "exercises-nucleo_immagine-1",
   "level": "2",
-  "url": "sec-nucleo_immagine.html#exercise-265",
+  "url": "sec-nucleo_immagine.html#exercises-nucleo_immagine-1",
   "type": "Esercizio",
   "number": "13.2.1",
   "title": "",
   "body": " Enunciare e dimostrare l'equivalente della per i monoidi.  "
 },
 {
-  "id": "exercise-266",
+  "id": "exercises-nucleo_immagine-2",
   "level": "2",
-  "url": "sec-nucleo_immagine.html#exercise-266",
+  "url": "sec-nucleo_immagine.html#exercises-nucleo_immagine-2",
   "type": "Esercizio",
   "number": "13.2.2",
   "title": "",
   "body": " Dimostrare che se e sono omomorfismi di gruppi, allora e .  "
 },
 {
-  "id": "exercise-267",
+  "id": "exercises-nucleo_immagine-3-2",
   "level": "2",
-  "url": "sec-nucleo_immagine.html#exercise-267",
+  "url": "sec-nucleo_immagine.html#exercises-nucleo_immagine-3-2",
   "type": "Esercizio",
   "number": "13.2.3",
   "title": "",
   "body": "  data da .   Siano e due elementi di : abbiamo allora e Poiché le due matrici coincidono (ovviamente ) la mappa è un omomorfismo. Il nucleo di è dato dagli elementi tali che è la matrice identica: ciò avviene se e solo se e , il che avviene se e solo se . Il nucleo di è formato solo dall'elemento , cioè è iniettivo.  "
 },
 {
-  "id": "exercise-268",
+  "id": "exercises-nucleo_immagine-3-3",
   "level": "2",
-  "url": "sec-nucleo_immagine.html#exercise-268",
+  "url": "sec-nucleo_immagine.html#exercises-nucleo_immagine-3-3",
   "type": "Esercizio",
   "number": "13.2.4",
   "title": "",
   "body": "  data da .   Siano e due elementi di : abbiamo allora e Poiché le due matrici coincidono (ovviamente e ) la mappa è un omomorfismo. Il nucleo di è dato dagli elementi tali che è la matrice identica: ciò avviene se e solo se e , il che avviene se e solo se o . Il nucleo di è formato da e .  "
 },
 {
-  "id": "exercise-269",
+  "id": "exercises-nucleo_immagine-3-4",
   "level": "2",
-  "url": "sec-nucleo_immagine.html#exercise-269",
+  "url": "sec-nucleo_immagine.html#exercises-nucleo_immagine-3-4",
   "type": "Esercizio",
   "number": "13.2.5",
   "title": "",
   "body": "  data da , dove i gruppi sono quelli additivi.  "
 },
 {
-  "id": "exercise-270",
+  "id": "exercises-nucleo_immagine-4",
   "level": "2",
-  "url": "sec-nucleo_immagine.html#exercise-270",
+  "url": "sec-nucleo_immagine.html#exercises-nucleo_immagine-4",
   "type": "Esercizio",
   "number": "13.2.6",
   "title": "",
   "body": " Sia un gruppo, sia un intero positivo fissato e sia la mappa da in sé che manda in .   Dimostrare che se è abeliano, la mappa è un endomorfismo.   Dimostrare che se è abeliano e finito di ordine coprimo con , allora la mappa è un automorfismo.   Dal punto precedente sappiamo che è un endomorfismo. Se è un elemento del nucleo di abbiamo che e, quindi, il periodo di divide . D'altra parte, il periodo di deve dividere l'ordine del gruppo e, poiché, e sono coprimi ciò significa che ha periodo cioè è . Di conseguenza è iniettivo e, poiché, è finito è necessariamente anche suriettivo. Dunque è un automorfismo biiettivo, cioè un automorfismo.   Dimostrare che se è finito di ordine di ordine coprimo con allora la funzione è biiettiva.   Ragionare sui sottogruppi ciclici di    Poiché è finito, basta mostrare che è suriettivo, cioè che, per ogni elemento di , esiste un elemento in tale che . Si consideri il gruppo ciclico generato da : per il il suo ordine è un divisore dell'ordine di ed è, di conseguenza, coprimo con . Per quanto mostrato al punto precedente la mappa da in sé che manda un elemento nella propria -esima potenza è un automorfismo di : in particolare esiste un elemento in tale che , come richiesto.  "
 },
 {
-  "id": "exercise-271",
+  "id": "exercises-nucleo_immagine-5",
   "level": "2",
-  "url": "sec-nucleo_immagine.html#exercise-271",
+  "url": "sec-nucleo_immagine.html#exercises-nucleo_immagine-5",
   "type": "Esercizio",
   "number": "13.2.7",
   "title": "",
@@ -7039,9 +7039,9 @@ var ptx_lunr_docs = [
   "body": "  Sia un gruppo generato da un suo sottoinsieme e siano e omomorfismi di gruppi. Se per ogni , allora .    Dalla sappiamo che il sottoinsieme di su cui e coincidono è un sottogruppo di : per ipotesi, e, poiché genera , segue che , cioè .   "
 },
 {
-  "id": "example-123",
+  "id": "sec-omomorfismi_da_gruppi_ciclici-6",
   "level": "2",
-  "url": "sec-omomorfismi_da_gruppi_ciclici.html#example-123",
+  "url": "sec-omomorfismi_da_gruppi_ciclici.html#sec-omomorfismi_da_gruppi_ciclici-6",
   "type": "Esempio",
   "number": "13.3.3",
   "title": "",
@@ -7075,81 +7075,81 @@ var ptx_lunr_docs = [
   "body": "  Se è un gruppo ciclico, ci sono tanti endomorfismi di quanti sono gli elementi di stesso. Più precisamente, fissato un elemento qualunque di , esiste esattamente un endomorfismo di che manda in e, per ogni , si ha .  Se è infinito, gli endomorfismi sono tutti distinti, il monoide degli endomorfismi di è isomorfo al monoide moltiplicativo di e il gruppo degli automorfismi di è isomorfo al gruppo degli invertibili del monoide moltiplicativo di : in particolare, esistono esattamente due automorfismi di , l'identità e che manda ciascun elemento nel proprio inverso.  Se è finito di ordine , si ha se e solo se , il monoide degli endomorfismi di è isomorfo al monoide moltiplicativo di e il gruppo degli automorfismi di è isomorfo al gruppo degli invertibili del monoide moltiplicativo di : in particolare, esistono esattamente automorfismi e precisamente quelli che mandano in con coprimo con .    Dal , sappiamo che un endomorfismo di è determinato dall'immagine di . Per la , nel caso in cui abbia periodo infinito, l'immagine può essere un qualsiasi elemento di , mentre nel caso in cui abbia periodo finito, l'immagine deve essere un elemento il cui periodo divide : ma tutti gli elementi di hanno periodo che divide e, quindi, anche in questo caso, l'immagine può essere un qualsiasi elemento di .  Dato in , si ha per qualche intero e, per la , risulta . Consideriamo ora la composizione di due endomorfismi e : per quanto detto, . Pertanto, .  Consideriamo ora il caso in cui sia infinito: allora se e solo se . Dunque, gli endomorfismi sono tutti distinti e la funzione da (pensato come monoide moltiplicativo) in che manda in è un isomorfismo di monoidi: poiché gli unici elementi invertibili di sono e , è formato da e .  Se è finito di ordine , allora se e solo se . Dunque, la funzione da (pensato come monoide moltiplicativo) in che manda in è ben definita ed è biiettiva: pertanto, realizza un isomorfismo di monoidi. Gli elementi invertibili di corrispondono alle classi di resto invertibili, e, dunque, abbiamo esattamente automorfismi di .   "
 },
 {
-  "id": "exercise-272",
+  "id": "exercises-omomorfismi_da_gruppi_ciclici-1-2",
   "level": "2",
-  "url": "sec-omomorfismi_da_gruppi_ciclici.html#exercise-272",
+  "url": "sec-omomorfismi_da_gruppi_ciclici.html#exercises-omomorfismi_da_gruppi_ciclici-1-2",
   "type": "Esercizio",
   "number": "13.3.1",
   "title": "",
   "body": "  da a .   Definisce un unico omomorfismo. e   "
 },
 {
-  "id": "exercise-273",
+  "id": "exercises-omomorfismi_da_gruppi_ciclici-1-3",
   "level": "2",
-  "url": "sec-omomorfismi_da_gruppi_ciclici.html#exercise-273",
+  "url": "sec-omomorfismi_da_gruppi_ciclici.html#exercises-omomorfismi_da_gruppi_ciclici-1-3",
   "type": "Esercizio",
   "number": "13.3.2",
   "title": "",
   "body": "  da a .   Non definisce alcun omomorfismo: ha periodo mentre ha periodo .  "
 },
 {
-  "id": "exercise-274",
+  "id": "exercises-omomorfismi_da_gruppi_ciclici-1-4",
   "level": "2",
-  "url": "sec-omomorfismi_da_gruppi_ciclici.html#exercise-274",
+  "url": "sec-omomorfismi_da_gruppi_ciclici.html#exercises-omomorfismi_da_gruppi_ciclici-1-4",
   "type": "Esercizio",
   "number": "13.3.3",
   "title": "",
   "body": "  da a .   Non definisce alcun omomorfismo: ha periodo mentre ha periodo .  "
 },
 {
-  "id": "exercise-275",
+  "id": "exercises-omomorfismi_da_gruppi_ciclici-1-5",
   "level": "2",
-  "url": "sec-omomorfismi_da_gruppi_ciclici.html#exercise-275",
+  "url": "sec-omomorfismi_da_gruppi_ciclici.html#exercises-omomorfismi_da_gruppi_ciclici-1-5",
   "type": "Esercizio",
   "number": "13.3.4",
   "title": "",
   "body": "  da a .   Definisce un unico omomorfismo. e   "
 },
 {
-  "id": "exercise-276",
+  "id": "exercises-omomorfismi_da_gruppi_ciclici-2-2",
   "level": "2",
-  "url": "sec-omomorfismi_da_gruppi_ciclici.html#exercise-276",
+  "url": "sec-omomorfismi_da_gruppi_ciclici.html#exercises-omomorfismi_da_gruppi_ciclici-2-2",
   "type": "Esercizio",
   "number": "13.3.5",
   "title": "",
   "body": "  e    Esistono omomorfismi, di cui nessuno iniettivo e suriettivi.  "
 },
 {
-  "id": "exercise-277",
+  "id": "exercises-omomorfismi_da_gruppi_ciclici-2-3",
   "level": "2",
-  "url": "sec-omomorfismi_da_gruppi_ciclici.html#exercise-277",
+  "url": "sec-omomorfismi_da_gruppi_ciclici.html#exercises-omomorfismi_da_gruppi_ciclici-2-3",
   "type": "Esercizio",
   "number": "13.3.6",
   "title": "",
   "body": "  e    Esistono omomorfismi, di cui iniettivi e nessuno suriettivo.  "
 },
 {
-  "id": "exercise-278",
+  "id": "exercises-omomorfismi_da_gruppi_ciclici-2-4",
   "level": "2",
-  "url": "sec-omomorfismi_da_gruppi_ciclici.html#exercise-278",
+  "url": "sec-omomorfismi_da_gruppi_ciclici.html#exercises-omomorfismi_da_gruppi_ciclici-2-4",
   "type": "Esercizio",
   "number": "13.3.7",
   "title": "",
   "body": "  e    Esistono omomorfismi, di cui nessuno iniettivo e nessuno suriettivo.  "
 },
 {
-  "id": "exercise-279",
+  "id": "exercises-omomorfismi_da_gruppi_ciclici-2-5",
   "level": "2",
-  "url": "sec-omomorfismi_da_gruppi_ciclici.html#exercise-279",
+  "url": "sec-omomorfismi_da_gruppi_ciclici.html#exercises-omomorfismi_da_gruppi_ciclici-2-5",
   "type": "Esercizio",
   "number": "13.3.8",
   "title": "",
   "body": "  e    Esistono omomorfismi, di cui nessuno iniettivo e nessuno suriettivo.  "
 },
 {
-  "id": "exercise-280",
+  "id": "exercises-omomorfismi_da_gruppi_ciclici-3",
   "level": "2",
-  "url": "sec-omomorfismi_da_gruppi_ciclici.html#exercise-280",
+  "url": "sec-omomorfismi_da_gruppi_ciclici.html#exercises-omomorfismi_da_gruppi_ciclici-3",
   "type": "Esercizio",
   "number": "13.3.9",
   "title": "",
@@ -7174,18 +7174,18 @@ var ptx_lunr_docs = [
   "body": "  Dato un insieme (non vuoto) e un gruppo , un' azione destra di su è una funzione , denotata con , tale che    per ogni ;     per ogni , e ogni e .   Diremo allora che agisce sull'insieme .   "
 },
 {
-  "id": "note-12",
+  "id": "sec-azioni_definizioni-3",
   "level": "2",
-  "url": "sec-azioni_definizioni.html#note-12",
+  "url": "sec-azioni_definizioni.html#sec-azioni_definizioni-3",
   "type": "Nota",
   "number": "14.1.2",
   "title": "",
   "body": " La scrittura è solo una notazione, non è detto sia un prodotto all'interno di un insieme dotato di un'operazione. In particolare, la seconda proprietà non è la proprietà associativa: a primo membro abbiamo una moltiplicazione di un elemento dell'insieme per un elemento del gruppo e una moltiplicazione tra elementi del gruppo, mentre a secondo membro abbiamo due moltiplicazioni tra elementi dell'insieme e elementi del gruppo.  "
 },
 {
-  "id": "example-124",
+  "id": "sec-azioni_definizioni-5",
   "level": "2",
-  "url": "sec-azioni_definizioni.html#example-124",
+  "url": "sec-azioni_definizioni.html#sec-azioni_definizioni-5",
   "type": "Esempio",
   "number": "14.1.3",
   "title": "",
@@ -7201,18 +7201,18 @@ var ptx_lunr_docs = [
   "body": "  Dati un insieme e un gruppo qualsiasi, possiamo porre per ogni e ogni . Si verifica facilmente che gli assiomi sono soddisfatti: questa azione è detta banale .   "
 },
 {
-  "id": "example-126",
+  "id": "sec-azioni_definizioni-7",
   "level": "2",
-  "url": "sec-azioni_definizioni.html#example-126",
+  "url": "sec-azioni_definizioni.html#sec-azioni_definizioni-7",
   "type": "Esempio",
   "number": "14.1.5",
   "title": "",
   "body": "  Sia un insieme qualunque e sia il gruppo simmetrico di . Allora la funzione che manda la coppia nell'immagine di tramite è un'azione destra.   "
 },
 {
-  "id": "example-127",
+  "id": "sec-azioni_definizioni-8",
   "level": "2",
-  "url": "sec-azioni_definizioni.html#example-127",
+  "url": "sec-azioni_definizioni.html#sec-azioni_definizioni-8",
   "type": "Esempio",
   "number": "14.1.6",
   "title": "",
@@ -7273,18 +7273,18 @@ var ptx_lunr_docs = [
   "body": " Mostrare che elementi coniugati di un gruppo hanno lo stesso periodo.  "
 },
 {
-  "id": "exercise-283",
+  "id": "exercises-azioni_definizioni-3",
   "level": "2",
-  "url": "sec-azioni_definizioni.html#exercise-283",
+  "url": "sec-azioni_definizioni.html#exercises-azioni_definizioni-3",
   "type": "Esercizio",
   "number": "14.1.3",
   "title": "",
   "body": " Dati due elementi e di un gruppo mostrare che e hanno lo stesso periodo.   Basta notare che e poi usare l' .  "
 },
 {
-  "id": "exercise-284",
+  "id": "exercises-azioni_definizioni-4",
   "level": "2",
-  "url": "sec-azioni_definizioni.html#exercise-284",
+  "url": "sec-azioni_definizioni.html#exercises-azioni_definizioni-4",
   "type": "Esercizio",
   "number": "14.1.4",
   "title": "",
@@ -7435,45 +7435,45 @@ var ptx_lunr_docs = [
   "body": "  Se è un -gruppo finito non banale, allora è non banale.    Sia con . L'equazione delle classi di è allora dove i sono divisori di maggiori di . Poiché è primo, i divisori di sono i numeri del tipo con : in particolare, i divisori di maggiori di sono multipli di . Ma allora è somma di multipli di ed è, quindi, a sua volta un multiplo di . In particolare, .   "
 },
 {
-  "id": "exercise-285",
+  "id": "exercises-orbite_stabilizzatori-1",
   "level": "2",
-  "url": "sec-orbite_stabilizzatori.html#exercise-285",
+  "url": "sec-orbite_stabilizzatori.html#exercises-orbite_stabilizzatori-1",
   "type": "Esercizio",
   "number": "14.2.1",
   "title": "",
   "body": " Sia data un'azione di un gruppo su un insieme . Sia l'omomorfismo associato all'azione come nell' . Dimostrare che .  "
 },
 {
-  "id": "exercise-286",
+  "id": "exercises-orbite_stabilizzatori-2",
   "level": "2",
-  "url": "sec-orbite_stabilizzatori.html#exercise-286",
+  "url": "sec-orbite_stabilizzatori.html#exercises-orbite_stabilizzatori-2",
   "type": "Esercizio",
   "number": "14.2.2",
   "title": "",
   "body": " Sia un sottogruppo di un gruppo e si consideri l'azione di su indotta dall'azione regolare destra di su sé stesso. Dimostrare che le orbite dell'azione indotta sono i laterali sinistri di in .  "
 },
 {
-  "id": "exercise-287",
+  "id": "exercises-orbite_stabilizzatori-3",
   "level": "2",
-  "url": "sec-orbite_stabilizzatori.html#exercise-287",
+  "url": "sec-orbite_stabilizzatori.html#exercises-orbite_stabilizzatori-3",
   "type": "Esercizio",
   "number": "14.2.3",
   "title": "",
   "body": " Sia data l'azione di su definita da .   Determinare lo stabilizzatore di e lo stabilizzatore di .   Una permutazione appartiene a se e solo se , cioè il che avviene se e solo se . Le permutazioni che fissano sono l'identità e lo scambio . Dunque, lo stabilizzatore è il gruppo ciclico .  Analogamente, una permutazione appartiene a se e solo se , cioè il che avviene se e solo se e . Una permutazione che fissa e deve necessariamente fissare anche . Dunque, lo stabilizzatore è il sottogruppo banale .   Determinare tutte le orbite dell'azione.   Dal punto precedente sappiamo che e, dunque, l'orbita di contiene elementi. Se applichiamo una permutazione a , otteniamo una coppia i cui elementi sono uguali fra loro: poiché esistono esattamente elementi di questo tipo, e cioè , e questi elementi formano un'orbita.  Sappiamo poi che e, dunque, l'orbita di contiene elementi. Poiché contiene elementi e l'orbita di è formata da elementi, l'orbita di deve contenere i rimanenti elementi, cioè le coppie con .  "
 },
 {
-  "id": "exercise-288",
+  "id": "exercises-orbite_stabilizzatori-4",
   "level": "2",
-  "url": "sec-orbite_stabilizzatori.html#exercise-288",
+  "url": "sec-orbite_stabilizzatori.html#exercises-orbite_stabilizzatori-4",
   "type": "Esercizio",
   "number": "14.2.4",
   "title": "",
   "body": " Sia data l'azione di su definita da , determinare tutte le orbite di quest'azione.   Consideriamo l'elemento . Una permutazione stabilizza se e solo se cioè il che avviene se e solo se . Le permutazioni che fissano sono l'identità e lo scambio e, dunque, lo stabilizzatore è il gruppo ciclico . L'orbita di contiene elementi. Se applichiamo una permutazione a otteniamo una terna i cui elementi sono uguali fra loro: poiché esistono esattamente elementi di questo tipo (e cioè , e ) questi elementi formano un'orbita.  Consideriamo ora l'elemento . Una permutazione appartiene a se e solo se cioè il che avviene se e solo se e . Una permutazione che fissa e deve necessariamente fissare anche . Dunque, lo stabilizzatore è il sottogruppo banale . L'orbita di contiene elementi. Se applichiamo una permutazione a otteniamo una terna i cui primi due elementi sono uguali fra loro e il terzo è diverso dai primi : poiché esistono esattamente elementi di questo tipo(e cioè , , , , e ) questi elementi formano un'orbita.  In maniera analoga si dimostra che le terne il cui primo e terzo elemento sono uguali tra loro e il secondo elemento è diverso dagli altri formano un'orbita e le terne il cui secondo e terzo elemento sono uguali tra loro e il primo elemento è diverso dagli altri formano un'altra orbita.  Consideriamo infine l'elemento . Una permutazione appartiene allo stabilizzatore se e solo se cioè il che avviene se e solo se , e . Dunque, lo stabilizzatore è il sottogruppo banale . L'orbita di contiene elementi: questi sono le terne restanti, cioè quelle che hanno i elementi diversi fra loro.  "
 },
 {
-  "id": "exercise-289",
+  "id": "exercises-orbite_stabilizzatori-5",
   "level": "2",
-  "url": "sec-orbite_stabilizzatori.html#exercise-289",
+  "url": "sec-orbite_stabilizzatori.html#exercises-orbite_stabilizzatori-5",
   "type": "Esercizio",
   "number": "14.2.5",
   "title": "",
@@ -7669,36 +7669,36 @@ var ptx_lunr_docs = [
   "body": "  Sia un gruppo e sia un sottogruppo normale di . Dato in , la funzione da in sé che manda in è un automorfismo di . La funzione che manda in è un omomorfismo di gruppi.   "
 },
 {
-  "id": "exercise-290",
+  "id": "exercises-sottogruppi_normali-1",
   "level": "2",
-  "url": "sec-sottogruppi_normali.html#exercise-290",
+  "url": "sec-sottogruppi_normali.html#exercises-sottogruppi_normali-1",
   "type": "Esercizio",
   "number": "14.3.1",
   "title": "",
   "body": " Mostrare che, se è un sottogruppo normale non banale di un -gruppo finito , allora è non banale.   Adattare la dimostrazione della .  "
 },
 {
-  "id": "exercise-291",
+  "id": "exercises-sottogruppi_normali-2",
   "level": "2",
-  "url": "sec-sottogruppi_normali.html#exercise-291",
+  "url": "sec-sottogruppi_normali.html#exercises-sottogruppi_normali-2",
   "type": "Esercizio",
   "number": "14.3.2",
   "title": "",
   "body": " Sia un sottogruppo proprio di un gruppo finito . Mostrare che .   Contare gli elementi diversi da nei coniugati di .   Sia e . Ciascun coniugato di contiene allora elementi diversi da . I coniugati di sono che è un divisore di . Gli elementi diversi da nei coniugati di sono allora al più : se contiamo anche vediamo che nell'unione dei coniugati di ci sono al più elementi e, poiché , questo numero è minore di .  "
 },
 {
-  "id": "exercise-292",
+  "id": "exercises-sottogruppi_normali-3",
   "level": "2",
-  "url": "sec-sottogruppi_normali.html#exercise-292",
+  "url": "sec-sottogruppi_normali.html#exercises-sottogruppi_normali-3",
   "type": "Esercizio",
   "number": "14.3.3",
   "title": "",
   "body": " Un sottogruppo di un gruppo è detto caratteristico se, per ogni automorfismo di , si ha .   Mostrare che un sottogruppo caratteristico di è normale in .   Usare l'    Mostrare che, se è caratteristico in , allora per ogni automorfismo di . Dedurre che un automorfismo di induce un automorfismo in .   L'inverso di un automorfismo è un automorfismo.   Mostrare che se è un sottogruppo caratteristico in e è un sottogruppo caratteristico di allora è caratteristico in .   Mostrare che se è un sottogruppo caratteristico in e è un sottogruppo normale di allora è normale in .  "
 },
 {
-  "id": "exercise-293",
+  "id": "exercises-sottogruppi_normali-4",
   "level": "2",
-  "url": "sec-sottogruppi_normali.html#exercise-293",
+  "url": "sec-sottogruppi_normali.html#exercises-sottogruppi_normali-4",
   "type": "Esercizio",
   "number": "14.3.4",
   "title": "",
@@ -7714,72 +7714,72 @@ var ptx_lunr_docs = [
   "body": " Sia data un'azione di un gruppo su un insieme . Dato in e in , si ponga . Mostrare che .   Sia un elemento di . Abbiamo allora : dunque, . Poiché , abbiamo, analogamente, e, coniugando per , otteniamo .  "
 },
 {
-  "id": "exercise-295",
+  "id": "exercises-sottogruppi_normali-6",
   "level": "2",
-  "url": "sec-sottogruppi_normali.html#exercise-295",
+  "url": "sec-sottogruppi_normali.html#exercises-sottogruppi_normali-6",
   "type": "Esercizio",
   "number": "14.3.6",
   "title": "",
   "body": " Un'azione di un gruppo su un insieme è detta transitiva se, per ogni e in , esiste un in tale che , vale a dire l'azione ha un'unica orbita.  Siano dati un'azione transitiva di un gruppo su un insieme , un elemento di e un sottogruppo normale di contenuto in . Dimostrare che per ogni in e ogni in .   Dato in , esiste in tale che . Per ipotesi e, quindi, , grazie all' . Poiché è normale, e la tesi segue.  "
 },
 {
-  "id": "exercise-296",
+  "id": "exercises-sottogruppi_normali-7",
   "level": "2",
-  "url": "sec-sottogruppi_normali.html#exercise-296",
+  "url": "sec-sottogruppi_normali.html#exercises-sottogruppi_normali-7",
   "type": "Esercizio",
   "number": "14.3.7",
   "title": "",
   "body": " Sia un gruppo finito e siano e due sottogruppi di tali che e siano coprimi.   Mostrare che, se almeno uno tra e è normale in , allora .   Considerare il prodotto e ragionare su .   L'ordine del prodotto di e soddisfa la relazione . Poniamo allora : poiché è un sottogruppo di , per il , è un intero. Se almeno uno tra e è normale in , allora il prodotto è un sottogruppo di . Ora e, quindi, divide . D'altra parte, divide . Poiché e sono coprimi, otteniamo che : ciò significa che e, poiché , abbiamo la tesi.   Mostrare con un esempio che senza l'ipotesi che o sono normali in non è detto che .   Siano , e . Ora e sono coprimi, ma non è contenuto in .  "
 },
 {
-  "id": "exercise-297",
+  "id": "exercises-sottogruppi_normali-8",
   "level": "2",
-  "url": "sec-sottogruppi_normali.html#exercise-297",
+  "url": "sec-sottogruppi_normali.html#exercises-sottogruppi_normali-8",
   "type": "Esercizio",
   "number": "14.3.8",
   "title": "",
   "body": " Sia un sottogruppo di un gruppo . Dato un elemento di si ponga .   Mostrare che è unione di laterali sinistri di .   Dobbiamo mostrare che, per ogni appartenente a , l'intero laterale sinistro è contenuto in . Gli elementi di sono del tipo con . Abbiamo allora : ora appartiene a poiché appartiene a e, pertanto, appartiene ad . Dunque, appartiene a , cioè appartiene a .   Mostrare che è unione di laterali destri di .   Dobbiamo mostrare che, per ogni appartenente a , l'intero laterale destro è contenuto in . Gli elementi di sono del tipo con . Abbiamo allora , dove abbiamo usato il fatto che e che appartiene ad . Dunque, appartiene a .   Mostrare che è normale in se e solo se per ogni si ha .   Supponiamo che sia normale in e . I coniugati di elementi di appartengono ad e, dunque, un elemento in e uno non in non possono essere coniugati: in particolare, per ogni in , cioè è vuoto.  Viceversa, supponiamo che per ogni . Sia un elemento di e sia un elemento di . Ora, , e, dunque, . In particolare, e, quindi, , cioè è normale in .   Se è finito, mostrare che . Dedurre che è un intero.   Dal Punto sappiamo che è unione di laterali destri di : dunque, dove è il numero di laterali destri di contenuti in . Dati due elementi e di si ha se e solo se e appartengono allo stesso laterale destro di . C'è, dunque, una corrispondenza biunivoca tra laterali destri di e coniugati di : dato un coniugato di , il corrispondente laterale destro di è contenuto in se e solo se il coniugato appartiene a . Pertanto, il numero di laterali di contenuti in è uguale al numero di coniugati di appartenenti a , cioè e, quindi, . Per il Punto , è anche unione di laterali sinistri di : dunque, il suo ordine è multiplo di e, pertanto, è un intero.  "
 },
 {
-  "id": "exercise-298",
+  "id": "exercises-sottogruppi_normali-9-2",
   "level": "2",
-  "url": "sec-sottogruppi_normali.html#exercise-298",
+  "url": "sec-sottogruppi_normali.html#exercises-sottogruppi_normali-9-2",
   "type": "Esercizio",
   "number": "14.3.9",
   "title": "",
   "body": "  con multiplo di .   È sottogruppo normale di .  "
 },
 {
-  "id": "exercise-299",
+  "id": "exercises-sottogruppi_normali-9-3",
   "level": "2",
-  "url": "sec-sottogruppi_normali.html#exercise-299",
+  "url": "sec-sottogruppi_normali.html#exercises-sottogruppi_normali-9-3",
   "type": "Esercizio",
   "number": "14.3.10",
   "title": "",
   "body": "  con multiplo di .   È sottogruppo normale di .  "
 },
 {
-  "id": "exercise-300",
+  "id": "exercises-sottogruppi_normali-9-4",
   "level": "2",
-  "url": "sec-sottogruppi_normali.html#exercise-300",
+  "url": "sec-sottogruppi_normali.html#exercises-sottogruppi_normali-9-4",
   "type": "Esercizio",
   "number": "14.3.11",
   "title": "",
   "body": "  con multiplo di .   Non è sottogruppo di .  "
 },
 {
-  "id": "exercise-301",
+  "id": "exercises-sottogruppi_normali-9-5",
   "level": "2",
-  "url": "sec-sottogruppi_normali.html#exercise-301",
+  "url": "sec-sottogruppi_normali.html#exercises-sottogruppi_normali-9-5",
   "type": "Esercizio",
   "number": "14.3.12",
   "title": "",
   "body": "  con e multipli di e multiplo di .   È sottogruppo non normale di .  "
 },
 {
-  "id": "exercise-302",
+  "id": "exercises-sottogruppi_normali-10",
   "level": "2",
-  "url": "sec-sottogruppi_normali.html#exercise-302",
+  "url": "sec-sottogruppi_normali.html#exercises-sottogruppi_normali-10",
   "type": "Esercizio",
   "number": "14.3.13",
   "title": "",
@@ -7795,9 +7795,9 @@ var ptx_lunr_docs = [
   "body": " Classi di coniugio nel gruppo simmetrico e nel gruppo alterno  Data una permutazione di , scritta come prodotto di cicli disgiunti , vogliamo calcolare il coniugato di tramite una permutazione . Poiché , cominciamo a considerare i coniugati di cicli.    Supponiamo di voler fare il coniugato del ciclo tramite la permutazione (siamo in con ). Abbiamo allora . Notiamo che il coniugato del -ciclo è ancora un -ciclo. Non solo: , e , e, dunque, abbiamo che .    Quanto visto nell'esempio precedente ha validità generale. Abbiamo infatti il    Dato un -ciclo e una permutazione in , risulta . In particolare, il coniugato di un -ciclo è un -ciclo. Inoltre, tutti gli -cicli sono coniugati fra loro e formano, dunque, una classe di coniugio.    Sia . Mostrare che , cioè che , è lo stesso che provare che . Per far ciò, mostriamo che, per ogni , si ha .  Consideriamo prima il caso in cui per qualche , , : senza perdere in generalità possiamo supporre che . Ma allora e .  Consideriamo ora il caso in cui per ogni , , : dunque, e . Inoltre, per l'iniettività di , abbiamo che per ogni , , e, quindi, .  Sia ora un -ciclo qualsiasi. Definiamo una permutazione tale che , ponendo per , , e estendendola arbitrariamente agli elementi diversi dagli .      Due permutazioni di sono coniugate se e solo se hanno lo stesso tipo.    Sia una permutazione di tipo con . Dunque, con gli tutti distinti. Se è un elemento qualunque di , per il abbiamo allora . Per l'iniettività di , gli sono tutti distinti e, quindi, i cicli che appaiono in questa espressione di sono disgiunti: pertanto, ha lo stesso tipo di .  Viceversa, sia con i tutti distinti: definita una permutazione ponendo per ogni e e estendendola arbitrariamente agli elementi diversi dagli , un'ulteriore applicazione del mostra che , come richiesto      Date due permutazioni e dello stesso tipo, non c'è un'unica permutazione tale che . Ad esempio in abbiamo e (notiamo che ).      Nell' abbiamo contato quante permutazioni per tipo ci sono in con : ora sappiamo che ogni tipo corrisponde a una classe di coniugio. Possiamo allora reinterpretare quelle tabelle e, inoltre, poiché dal sappiamo che la cardinalità di una classe di coniugio è uguale all'indice del centralizzante di un qualunque elemento della classe, possiamo calcolare l'ordine del centralizzante di ciascun elemento di ogni classe e aggiungere altre informazioni alle tabelle date.  In :   In :   In :   Ricordiamo ora che il centralizzante di un elemento di un gruppo contiene il sottogruppo ciclico . In alcuni casi, questa inclusione può essere un'uguaglianza. Nelle tabelle suesposte, possiamo confrontare il periodo di un elemento (cioè l'ordine del gruppo ciclico da esso generato) con l'ordine del suo centralizzante, per notare, ad esempio, che in si ha , mentre .    Dalle tabelle precedenti possiamo ricavare tutti i sottogruppi normali dei gruppi simmetrici studiati. Un sottogruppo normale, infatti è unione di classi di coniugio.    Determiniamo i sottogruppi normali di per . Sappiamo già che il sottogruppo alterno è normale in ( ).  Iniziamo a considerare il caso . Come detto, un sottogruppo normale deve essere unione di classi di coniugio e tra esse ci deve essere la classe di . Combiniamo le classi di in tutti i modi possibili (sempre includendo la classe di ): Se prendiamo la sola classe di otteniamo il sottogruppo banale, se prendiamo tutte le classi otteniamo tutto il gruppo simmetrico, se prendiamo la classe di e la classe di otteniamo il sottogruppo alterno. L'unica possibilità che rimane da analizzare è il sottoinsieme unione della classe di e di : ma questo sottoinsieme contiene elementi e, per il , non può essere un sottogruppo di . Pertanto, ha sottogruppi normali: , e .  Consideriamo ora il caso . Consideriamo tutte le possibili unioni di classi di coniugio (includendo ) e contiamo quanti elementi contiene ciascuna di queste unioni: se il numero che otteniamo non è un divisore dell'ordine del gruppo, allora sicuramente il sottoinsieme considerato non è un sottogruppo e possiamo scartarlo, altrimenti dobbiamo verificare se è un sottogruppo. Facendo tutti i calcoli, vediamo che, oltre a , e , l'unica possibilità da considerare è il sottoinsieme unione della classe di e della classe di : il sottoinsieme ha elementi e, quindi, potrebbe essere un sottogruppo di . Facendo le verifiche, vediamo che è effettivamente così e, quindi, è un sottogruppo (necessariamente normale) di .  Il caso si tratta in maniera analoga. Consideriamo tutte le possibili unioni di classi di coniugio (includendo ) e cerchiamo quelle formate da un numero di elementi che sia un divisore dell'ordine di (cioè di ). Oltre a quelle che danno il sottogruppo banale, il sottogruppo alterno e il gruppo simmetrico stesso, abbiamo due casi da considerare:   l'unione delle classi di , di e di che contiene elementi    l'unione delle classi di , di , di e di che contiene elementi   Né l'una ne l'altra sono sottogruppi del simmetrico: infatti entrambe contengono gli elementi e ma non il loro prodotto e cioè . Dunque, gli unici sottogruppi normali di sono , e .     Ovviamente, il metodo di cercare i sottogruppi normali del gruppo simmetrico contando il numero di elementi nell'unione di classi di coniugio non è molto efficiente in generale. Già per i casi da considerare sono parecchi e a mano a mano che cresce questo metodo diventa improponibile. Si potrebbe però dimostrare (con altri metodi, sempre relativamente elementari) che gli unici sottogruppi normali di per , sono , e stesso.     Nell' abbiamo determinato i sottogruppi normali di . In particolare abbiamo trovato un sottogruppo normale di ordine : per l' , è abeliano e i suoi sottogruppi sono normali in esso. In particolare, posto , abbiamo che ma non è normale in . Questo mostra che la relazione di normalità non è transitiva.    Ci chiediamo ora cosa possiamo dire delle classi di coniugio dell'alterno. Avendo indice nel simmetrico, il sottogruppo alterno è normale nel simmetrico ( ). Dunque, se è una permutazione contenuta nell'alterno, la sua classe di coniugio è contenuta nell'alterno: tuttavia, ciò non significa che questa sia anche la sua classe di coniugio nell'alterno.    In , l'elemento ha classe di coniugio contenente elementi e cioè e . Poiché è una permutazione pari, questa classe di coniugio è contenuta interamente nell'alterno. Tuttavia, , avendo ordine , è ciclico (quindi, abeliano) e, di conseguenza, le sue classi di coniugio hanno cardinalità . Dunque, non è coniugato a nell'alterno.    Per descrivere le classi dell'alterno ci servono alcuni risultati.    Se è un sottogruppo di indice finito di un gruppo e è un sottogruppo di , allora ha indice finito in e .    Siano e due laterali destri di in . Se i laterali destri e coincidono, allora esiste un elemento in tale che . Ma è un elemento di e, quindi, di : dunque, , cioè . Di conseguenza, se , allora , , non possono essere laterali destri tutti distinti di in poiché, altrimenti, i laterali , , sarebbero laterali tutti distinti di in . Pertanto, ha al più laterali distinti in .    Consideriamo ora il caso delle classi di coniugio di un sottogruppo di indice .    Sia un gruppo finito e sia un suo sottogruppo di indice . Preso un elemento si verifica uno e uno solo dei seguenti casi    e ;    preso un qualunque e posto , la classe è unione disgiunta di e con e .       Sappiamo che è normale in per il : dunque, è contenuta in .  Dalla e dal segue che Poiché , dal segue che . Abbiamo, quindi, due casi da considerare.  Se , cioè , allora , da cui segue .  Se , cioè , allora . Siano ora e come in enunciato: applicando il all'azione per coniugio, abbiamo che gli elementi di tali che sono tutti e soli quelli del tipo per qualche . Poiché , nessuno di questi elementi appartiene a , altrimenti apparterrebbe a . Pertanto, e non sono coniugati in . Dunque, è unione disgiunta delle classi e entrambe di cardinalità .     Nelle stesse ipotesi della , se è dispari siamo sicuramente nel primo caso e se è dispari siamo sicuramente nel secondo caso. Se né né sono dispari, occorre un'analisi più dettagliata per capire se siamo nel primo o nel secondo caso.   Applichiamo ora tutto ciò alle classi di coniugio del gruppo alterno per valori piccoli di .    Riprendiamo le tabelle date nell' e consideriamo le classi in di permutazioni pari: quelle di cardinalità dispari, sono anche classi di coniugio nell'alterno; quelle che sono formate da elementi il cui centralizzante ha ordine dispari, si spezzano in due classi nell'alterno di cardinalità uguale e per le altre vediamo caso per caso.  In abbiamo   la classe di che ha un solo elemento ed è, quindi, una classe anche in ;    la classe di che ha cardinalità e i cui elementi hanno centralizzante di ordine e, dunque, si spezza in due classi di cardinalità .     In abbiamo   la classe di che ha un solo elemento ed è, quindi, una classe anche in ;    la classe di che ha cardinalità e i cui elementi hanno centralizzante di ordine e, dunque, si spezza in due classi di cardinalità ;    la classe di che ha cardinalità ed è, quindi, una classe anche in .     In abbiamo   la classe di che ha un solo elemento ed è, quindi, una classe anche in ;    la classe di che ha cardinalità e i cui elementi hanno centralizzante di ordine e, dunque, non possiamo analizzarla semplicemente guardando alle parità. Notiamo però che appartiene al centralizzante di ma non sta nel sottogruppo alterno. Di conseguenza, il centralizzante nel simmetrico e nell'alterno di non coincidono. Dunque, la classe di nel simmetrico è una classe anche nell'alterno;    la classe di che ha cardinalità e i cui elementi hanno centralizzante di ordine e, dunque, si spezza in due classi di cardinalità ;    la classe di che ha cardinalità ed è, quindi, una classe anche in .         Sia il gruppo simmetrico su lettere e sia un -ciclo (dove, ovviamente, ).   Determinare la cardinalità della classe di coniugio di in    Gli elementi coniugati di sono gli -cicli. Per determinare un -ciclo possiamo scegliere in modi diversi, poi in modi diversi e così via fino a che può essere scelto in modi diversi. In questo modo lo stesso ciclo appare però volte, quindi la classe di coniugio di è formata da elementi.   Determinare i valori di per cui .   Sappiamo che . Poiché e dal punto precedente, ne consegue che . Il centralizzante di contiene tutte le potenze di e, dunque, contiene . Poiché ha periodo , possiamo dunque affermare che se e solo se il che avviene se e solo se : questo si verifica se e solo se oppure , cioè o .    Sia il gruppo simmetrico su lettere.   Determinare la cardinalità di tutte le classi di coniugio di formate da elementi di periodo .   Due permutazioni sono coniugate se e solo se si scrivono come prodotti di cicli disgiunti aventi le stesse lunghezze. Una permutazione scritta come prodotto di cicli disgiunti ha periodo che è il minimo comune multiplo delle lunghezze dei cicli. Affinché il periodo di sia i cicli coinvolti devono avere quindi lunghezza che divide (cioè , o ) e ci deve essere almeno un ciclo di lunghezza .  Consideriamo le varie possibilità per la scrittura di come prodotto di cicli disgiunti. Poiché siamo in ci possono essere al più cicli di lunghezza e in tal caso non ci possono essere altri cicli. Si ottiene così la classe di coniugio delle permutazioni del tipo , con tutti gli distinti. Per determinare il numero di elementi di questa classe di coniugio, notiamo che , , , possono essere scelti in modi. Tuttavia non tutte queste scelte portano a permutazioni diverse: ciascuno dei due cicli coinvolti può essere scritto in modi diversi (a seconda della lettera iniziale). Inoltre i due cicli possono essere scambiati fra loro. Dunque, abbiamo elementi nella classe.  Consideriamo ora i casi in cui c'è esattamente un ciclo di lunghezza : possono essere allora esserci nessuno, uno o due cicli di lunghezza . Abbiamo, dunque, la classe di coniugio degli elementi del tipo : possiamo scegliere le lettere , , in modi diversi. Come prima però, ciascun ciclo può essere scritto in modi diversi. Ci sono così elementi in questa classe.  Abbiamo poi la classe di coniugio degli elementi del tipo : possiamo scegliere le lettere , , in modi diversi. Il ciclo di lunghezza può essere scritto in modi diversi, mentre il ciclo di lunghezza può essere scritto in modi diversi. Ci sono così elementi in questa classe.  Infine abbiamo la classe di coniugio degli elementi del tipo : possiamo scegliere le lettere , , in modi diversi. Il ciclo di lunghezza può essere scritto in modi diversi, mentre ciascun ciclo di lunghezza può essere scritto in modi diversi. Inoltre, possiamo scambiare tra loro i cicli di lunghezza . Ci sono così elementi in questa classe.   Stabilire se esiste un elemento di periodo in tale che .   Sappiamo che . Poiché e , affinché si abbia dovrebbe essere . Nessuna delle classi di coniugio degli elementi di periodo determinate al punto precedente ha tale cardinalità e, dunque, non esiste alcun elemento di periodo per cui si abbia .    Si consideri il gruppo simmetrico su lettere e gli elementi e .   Quanti elementi di commutano con ? Quanti di questi sono permutazioni pari?   L'indice del centralizzante di in è uguale alla cardinalità della classe di . Gli elementi coniugati di sono tutti e soli quelli del tipo con , , e numeri distinti compresi tra e . Abbiamo scelte per , scelte per , scelte per e scelte per : in tutto scelte. Tutte queste scelte non corrispondono però a elementi distinti. Infatti possiamo scambiare tra loro e (e dobbiamo, dunque, dividere il numero delle scelte per ), scambiare fra loro e (e dobbiamo, dunque, dividere ancora per ), e scambiare tra loro i cicli e (e dividere ulteriormente per ). Pertanto, la classe di coniugio di contiene elementi. Poiché ha ordine , il centralizzante di contiene elementi.  Dobbiamo ora trovare l'ordine di . Per il , , cioè ha ordine o . Notiamo che contiene che non appartiene ad : pertanto, e, quindi, ha ordine .   Quanti elementi di commutano con ? Quanti di questi sono permutazioni pari?   Come prima calcoliamo la cardinalità della classe di coniugio di : questa è formata dagli elementi del tipo con , e diversi. Abbiamo scelte per , scelte per e scelte per : a a queste scelte danno però lo stesso elemento. Dunque, la classe di coniugio di contiene elementi e il suo centralizzante ne contiene .  Analogamente al caso precedente possiamo dire che può avere ordine o . Poiché appartiene a ma non a , possiamo concludere che e, quindi, ha ordine .    Si consideri in la permutazione .   Determinare l'ordine della classe di coniugio e l'ordine del centralizzante di in .   la classe di coniugio di è formata dalle permutazioni del tipo con , , , , ed interi distinti compresi tra e . Possiamo scegliere in modi, poi in modi, in modi e così via fino a scelte per . Tuttavia queste scelte non danno origine a permutazioni distinte. Infatti scambiando fra loro e otteniamo la stessa permutazione, e, allo stesso modo, può essere scritto in modi distinti. Dunque, il numero di elementi nella classe di è uguale a : questo numero è uguale all'indice in di . Poiché , il centralizzante di contiene elementi.   Determinare l'ordine della classe di coniugio di in .   Notiamo che commuta con e, di conseguenza, il centralizzante di non è contenuto nell'alterno. Per la , la classe di coniugio di nell'alterno coincide con la sua classe nel simmetrico e ha quindi ordine .   Dimostrare che il centralizzante di nell'alterno è ciclico.   Per la , il centralizzante di nell'alterno ha ordine . Il centralizzante contiene perlomeno il sottogruppo ciclico generato da : poiché il periodo di è il minimo comune multiplo delle lunghezze dei cicli disgiunti che lo compongono, cioè , il sottogruppo ciclico generato da coincide con il centralizzante di nell'alterno.    Si consideri il gruppo .   Dimostrare che se in non ci sono elementi di periodo .   Una permutazione scritta come prodotto di cicli disgiunti ha periodo che è uguale al minimo comune multiplo delle lunghezze dei cicli. Affinché questo minimo comune multiplo sia ci dovrebbe essere almeno un ciclo di lunghezza (il che è impossibile perché ) oppure almeno un ciclo di lunghezza e uno di lunghezza (il che è pure impossibile perché ).   Dimostrare che in ci sono elementi di periodo e contare il loro numero.   Ripetendo lo stesso ragionamento fatto in precedenza vediamo che in non ci sono cicli di ordine , ma possiamo determinare un ciclo di ordine e un ciclo di ordine disgiunti: preso il prodotto di due cicli siffatti, dal momento che , nello sviluppo della permutazione come prodotto di cicli disgiunti non possiamo aggiungere altri cicli. Le permutazioni di di periodo sono allora tutte del tipo . Possiamo allora scegliere in modi, in modi e così via fino ad in un modo, per un totale di scelte, che però non corrispondono a differenti permutazioni: il -ciclo può essere riscritto in modi diversi e il -ciclo può essere riscritto in modi diversi. Dunque, abbiamo permutazioni di periodo .   Dato un elemento di periodo in determinare quanti elementi di commutano con e quanti elementi di commutano con .   Al punto precedente abbiamo mostrato che le permutazioni di periodo sono tutte dello stesso tipo e sono, dunque, coniugate tra loro in : la cardinalità della classe di coniugio è uguale all'indice in del centralizzante di una qualsiasi di esse. Poiché ha ordine e la classe di coniugio ha cardinalità ne consegue che il centralizzante in ha ordine .  Il centralizzante contiene perlomeno il sottogruppo ciclico generato da : poiché ha periodo e il centralizzante ha pure ordine , ne consegue che . Notiamo ora che la permutazione è pari e appartiene quindi ad : pertanto, tutto il gruppo ciclico generato da è contenuto in e, quindi, : dunque, contiene elementi.    Si consideri in la permutazione .   Determinare il numero di elementi di che commutano con .       Determinare il numero di elementi di che commutano con .   Dal segue che . Notiamo che e, dunque, . Quindi, . Di conseguenza, e .   Stabilire se esiste in una permutazione tale che .   La permutazione è scritta come prodotto di cicli disgiunti: il periodo di è il minimo comune multiplo della lunghezza di tali cicli, cioè . Se esistesse tale che , allora avremmo che , cioè il periodo di dovrebbe essere un divisore di , cioè essere del tipo per qualche . Ma il periodo di è uguale a : poiché ha periodo ciò significa che , cioè ha periodo esattamente . Scritta allora come prodotto di cicli disgiunti ci dovrebbe allora essere almeno un ciclo di lunghezza . Poiché siamo in l'unica possibilità è che sia esattamente un ciclo di lunghezza , cioè del tipo , il cui quadrato è però e, quindi non può coincidere con .   Stabilire se esiste in una permutazione tale che .   Abbiamo già notato che ha periodo . Ma allora, posto abbiamo , come richiesto.    "
 },
 {
-  "id": "example-134",
+  "id": "sec-coniugati_simmetrico_alterno-3",
   "level": "2",
-  "url": "sec-coniugati_simmetrico_alterno.html#example-134",
+  "url": "sec-coniugati_simmetrico_alterno.html#sec-coniugati_simmetrico_alterno-3",
   "type": "Esempio",
   "number": "14.4.1",
   "title": "",
@@ -7822,9 +7822,9 @@ var ptx_lunr_docs = [
   "body": "  Due permutazioni di sono coniugate se e solo se hanno lo stesso tipo.    Sia una permutazione di tipo con . Dunque, con gli tutti distinti. Se è un elemento qualunque di , per il abbiamo allora . Per l'iniettività di , gli sono tutti distinti e, quindi, i cicli che appaiono in questa espressione di sono disgiunti: pertanto, ha lo stesso tipo di .  Viceversa, sia con i tutti distinti: definita una permutazione ponendo per ogni e e estendendola arbitrariamente agli elementi diversi dagli , un'ulteriore applicazione del mostra che , come richiesto   "
 },
 {
-  "id": "example-135",
+  "id": "sec-coniugati_simmetrico_alterno-7",
   "level": "2",
-  "url": "sec-coniugati_simmetrico_alterno.html#example-135",
+  "url": "sec-coniugati_simmetrico_alterno.html#sec-coniugati_simmetrico_alterno-7",
   "type": "Esempio",
   "number": "14.4.4",
   "title": "",
@@ -7867,9 +7867,9 @@ var ptx_lunr_docs = [
   "body": "  Nell' abbiamo determinato i sottogruppi normali di . In particolare abbiamo trovato un sottogruppo normale di ordine : per l' , è abeliano e i suoi sottogruppi sono normali in esso. In particolare, posto , abbiamo che ma non è normale in . Questo mostra che la relazione di normalità non è transitiva.   "
 },
 {
-  "id": "example-139",
+  "id": "sec-coniugati_simmetrico_alterno-14",
   "level": "2",
-  "url": "sec-coniugati_simmetrico_alterno.html#example-139",
+  "url": "sec-coniugati_simmetrico_alterno.html#sec-coniugati_simmetrico_alterno-14",
   "type": "Esempio",
   "number": "14.4.9",
   "title": "",
@@ -7912,54 +7912,54 @@ var ptx_lunr_docs = [
   "body": "  Riprendiamo le tabelle date nell' e consideriamo le classi in di permutazioni pari: quelle di cardinalità dispari, sono anche classi di coniugio nell'alterno; quelle che sono formate da elementi il cui centralizzante ha ordine dispari, si spezzano in due classi nell'alterno di cardinalità uguale e per le altre vediamo caso per caso.  In abbiamo   la classe di che ha un solo elemento ed è, quindi, una classe anche in ;    la classe di che ha cardinalità e i cui elementi hanno centralizzante di ordine e, dunque, si spezza in due classi di cardinalità .     In abbiamo   la classe di che ha un solo elemento ed è, quindi, una classe anche in ;    la classe di che ha cardinalità e i cui elementi hanno centralizzante di ordine e, dunque, si spezza in due classi di cardinalità ;    la classe di che ha cardinalità ed è, quindi, una classe anche in .     In abbiamo   la classe di che ha un solo elemento ed è, quindi, una classe anche in ;    la classe di che ha cardinalità e i cui elementi hanno centralizzante di ordine e, dunque, non possiamo analizzarla semplicemente guardando alle parità. Notiamo però che appartiene al centralizzante di ma non sta nel sottogruppo alterno. Di conseguenza, il centralizzante nel simmetrico e nell'alterno di non coincidono. Dunque, la classe di nel simmetrico è una classe anche nell'alterno;    la classe di che ha cardinalità e i cui elementi hanno centralizzante di ordine e, dunque, si spezza in due classi di cardinalità ;    la classe di che ha cardinalità ed è, quindi, una classe anche in .      "
 },
 {
-  "id": "exercise-303",
+  "id": "exercises-coniugati_simmetrico_alterno-1",
   "level": "2",
-  "url": "sec-coniugati_simmetrico_alterno.html#exercise-303",
+  "url": "sec-coniugati_simmetrico_alterno.html#exercises-coniugati_simmetrico_alterno-1",
   "type": "Esercizio",
   "number": "14.4.1",
   "title": "",
   "body": " Sia il gruppo simmetrico su lettere e sia un -ciclo (dove, ovviamente, ).   Determinare la cardinalità della classe di coniugio di in    Gli elementi coniugati di sono gli -cicli. Per determinare un -ciclo possiamo scegliere in modi diversi, poi in modi diversi e così via fino a che può essere scelto in modi diversi. In questo modo lo stesso ciclo appare però volte, quindi la classe di coniugio di è formata da elementi.   Determinare i valori di per cui .   Sappiamo che . Poiché e dal punto precedente, ne consegue che . Il centralizzante di contiene tutte le potenze di e, dunque, contiene . Poiché ha periodo , possiamo dunque affermare che se e solo se il che avviene se e solo se : questo si verifica se e solo se oppure , cioè o .  "
 },
 {
-  "id": "exercise-304",
+  "id": "exercises-coniugati_simmetrico_alterno-2",
   "level": "2",
-  "url": "sec-coniugati_simmetrico_alterno.html#exercise-304",
+  "url": "sec-coniugati_simmetrico_alterno.html#exercises-coniugati_simmetrico_alterno-2",
   "type": "Esercizio",
   "number": "14.4.2",
   "title": "",
   "body": " Sia il gruppo simmetrico su lettere.   Determinare la cardinalità di tutte le classi di coniugio di formate da elementi di periodo .   Due permutazioni sono coniugate se e solo se si scrivono come prodotti di cicli disgiunti aventi le stesse lunghezze. Una permutazione scritta come prodotto di cicli disgiunti ha periodo che è il minimo comune multiplo delle lunghezze dei cicli. Affinché il periodo di sia i cicli coinvolti devono avere quindi lunghezza che divide (cioè , o ) e ci deve essere almeno un ciclo di lunghezza .  Consideriamo le varie possibilità per la scrittura di come prodotto di cicli disgiunti. Poiché siamo in ci possono essere al più cicli di lunghezza e in tal caso non ci possono essere altri cicli. Si ottiene così la classe di coniugio delle permutazioni del tipo , con tutti gli distinti. Per determinare il numero di elementi di questa classe di coniugio, notiamo che , , , possono essere scelti in modi. Tuttavia non tutte queste scelte portano a permutazioni diverse: ciascuno dei due cicli coinvolti può essere scritto in modi diversi (a seconda della lettera iniziale). Inoltre i due cicli possono essere scambiati fra loro. Dunque, abbiamo elementi nella classe.  Consideriamo ora i casi in cui c'è esattamente un ciclo di lunghezza : possono essere allora esserci nessuno, uno o due cicli di lunghezza . Abbiamo, dunque, la classe di coniugio degli elementi del tipo : possiamo scegliere le lettere , , in modi diversi. Come prima però, ciascun ciclo può essere scritto in modi diversi. Ci sono così elementi in questa classe.  Abbiamo poi la classe di coniugio degli elementi del tipo : possiamo scegliere le lettere , , in modi diversi. Il ciclo di lunghezza può essere scritto in modi diversi, mentre il ciclo di lunghezza può essere scritto in modi diversi. Ci sono così elementi in questa classe.  Infine abbiamo la classe di coniugio degli elementi del tipo : possiamo scegliere le lettere , , in modi diversi. Il ciclo di lunghezza può essere scritto in modi diversi, mentre ciascun ciclo di lunghezza può essere scritto in modi diversi. Inoltre, possiamo scambiare tra loro i cicli di lunghezza . Ci sono così elementi in questa classe.   Stabilire se esiste un elemento di periodo in tale che .   Sappiamo che . Poiché e , affinché si abbia dovrebbe essere . Nessuna delle classi di coniugio degli elementi di periodo determinate al punto precedente ha tale cardinalità e, dunque, non esiste alcun elemento di periodo per cui si abbia .  "
 },
 {
-  "id": "exercise-305",
+  "id": "exercises-coniugati_simmetrico_alterno-3",
   "level": "2",
-  "url": "sec-coniugati_simmetrico_alterno.html#exercise-305",
+  "url": "sec-coniugati_simmetrico_alterno.html#exercises-coniugati_simmetrico_alterno-3",
   "type": "Esercizio",
   "number": "14.4.3",
   "title": "",
   "body": " Si consideri il gruppo simmetrico su lettere e gli elementi e .   Quanti elementi di commutano con ? Quanti di questi sono permutazioni pari?   L'indice del centralizzante di in è uguale alla cardinalità della classe di . Gli elementi coniugati di sono tutti e soli quelli del tipo con , , e numeri distinti compresi tra e . Abbiamo scelte per , scelte per , scelte per e scelte per : in tutto scelte. Tutte queste scelte non corrispondono però a elementi distinti. Infatti possiamo scambiare tra loro e (e dobbiamo, dunque, dividere il numero delle scelte per ), scambiare fra loro e (e dobbiamo, dunque, dividere ancora per ), e scambiare tra loro i cicli e (e dividere ulteriormente per ). Pertanto, la classe di coniugio di contiene elementi. Poiché ha ordine , il centralizzante di contiene elementi.  Dobbiamo ora trovare l'ordine di . Per il , , cioè ha ordine o . Notiamo che contiene che non appartiene ad : pertanto, e, quindi, ha ordine .   Quanti elementi di commutano con ? Quanti di questi sono permutazioni pari?   Come prima calcoliamo la cardinalità della classe di coniugio di : questa è formata dagli elementi del tipo con , e diversi. Abbiamo scelte per , scelte per e scelte per : a a queste scelte danno però lo stesso elemento. Dunque, la classe di coniugio di contiene elementi e il suo centralizzante ne contiene .  Analogamente al caso precedente possiamo dire che può avere ordine o . Poiché appartiene a ma non a , possiamo concludere che e, quindi, ha ordine .  "
 },
 {
-  "id": "exercise-306",
+  "id": "exercises-coniugati_simmetrico_alterno-4",
   "level": "2",
-  "url": "sec-coniugati_simmetrico_alterno.html#exercise-306",
+  "url": "sec-coniugati_simmetrico_alterno.html#exercises-coniugati_simmetrico_alterno-4",
   "type": "Esercizio",
   "number": "14.4.4",
   "title": "",
   "body": " Si consideri in la permutazione .   Determinare l'ordine della classe di coniugio e l'ordine del centralizzante di in .   la classe di coniugio di è formata dalle permutazioni del tipo con , , , , ed interi distinti compresi tra e . Possiamo scegliere in modi, poi in modi, in modi e così via fino a scelte per . Tuttavia queste scelte non danno origine a permutazioni distinte. Infatti scambiando fra loro e otteniamo la stessa permutazione, e, allo stesso modo, può essere scritto in modi distinti. Dunque, il numero di elementi nella classe di è uguale a : questo numero è uguale all'indice in di . Poiché , il centralizzante di contiene elementi.   Determinare l'ordine della classe di coniugio di in .   Notiamo che commuta con e, di conseguenza, il centralizzante di non è contenuto nell'alterno. Per la , la classe di coniugio di nell'alterno coincide con la sua classe nel simmetrico e ha quindi ordine .   Dimostrare che il centralizzante di nell'alterno è ciclico.   Per la , il centralizzante di nell'alterno ha ordine . Il centralizzante contiene perlomeno il sottogruppo ciclico generato da : poiché il periodo di è il minimo comune multiplo delle lunghezze dei cicli disgiunti che lo compongono, cioè , il sottogruppo ciclico generato da coincide con il centralizzante di nell'alterno.  "
 },
 {
-  "id": "exercise-307",
+  "id": "exercises-coniugati_simmetrico_alterno-5",
   "level": "2",
-  "url": "sec-coniugati_simmetrico_alterno.html#exercise-307",
+  "url": "sec-coniugati_simmetrico_alterno.html#exercises-coniugati_simmetrico_alterno-5",
   "type": "Esercizio",
   "number": "14.4.5",
   "title": "",
   "body": " Si consideri il gruppo .   Dimostrare che se in non ci sono elementi di periodo .   Una permutazione scritta come prodotto di cicli disgiunti ha periodo che è uguale al minimo comune multiplo delle lunghezze dei cicli. Affinché questo minimo comune multiplo sia ci dovrebbe essere almeno un ciclo di lunghezza (il che è impossibile perché ) oppure almeno un ciclo di lunghezza e uno di lunghezza (il che è pure impossibile perché ).   Dimostrare che in ci sono elementi di periodo e contare il loro numero.   Ripetendo lo stesso ragionamento fatto in precedenza vediamo che in non ci sono cicli di ordine , ma possiamo determinare un ciclo di ordine e un ciclo di ordine disgiunti: preso il prodotto di due cicli siffatti, dal momento che , nello sviluppo della permutazione come prodotto di cicli disgiunti non possiamo aggiungere altri cicli. Le permutazioni di di periodo sono allora tutte del tipo . Possiamo allora scegliere in modi, in modi e così via fino ad in un modo, per un totale di scelte, che però non corrispondono a differenti permutazioni: il -ciclo può essere riscritto in modi diversi e il -ciclo può essere riscritto in modi diversi. Dunque, abbiamo permutazioni di periodo .   Dato un elemento di periodo in determinare quanti elementi di commutano con e quanti elementi di commutano con .   Al punto precedente abbiamo mostrato che le permutazioni di periodo sono tutte dello stesso tipo e sono, dunque, coniugate tra loro in : la cardinalità della classe di coniugio è uguale all'indice in del centralizzante di una qualsiasi di esse. Poiché ha ordine e la classe di coniugio ha cardinalità ne consegue che il centralizzante in ha ordine .  Il centralizzante contiene perlomeno il sottogruppo ciclico generato da : poiché ha periodo e il centralizzante ha pure ordine , ne consegue che . Notiamo ora che la permutazione è pari e appartiene quindi ad : pertanto, tutto il gruppo ciclico generato da è contenuto in e, quindi, : dunque, contiene elementi.  "
 },
 {
-  "id": "exercise-308",
+  "id": "exercises-coniugati_simmetrico_alterno-6",
   "level": "2",
-  "url": "sec-coniugati_simmetrico_alterno.html#exercise-308",
+  "url": "sec-coniugati_simmetrico_alterno.html#exercises-coniugati_simmetrico_alterno-6",
   "type": "Esercizio",
   "number": "14.4.6",
   "title": "",
@@ -8038,36 +8038,36 @@ var ptx_lunr_docs = [
   "body": "  Nell' abbiamo mostrato che non è un sottogruppo normale di . I laterali sinistri di in sono , e . Ora e : in entrambi i prodotti il primo fattore sta nel laterale e il secondo fattore sta nel laterale ma i prodotti ottenuti stanno in laterali diversi.   "
 },
 {
-  "id": "example-143",
+  "id": "sec-congruenze-13",
   "level": "2",
-  "url": "sec-congruenze.html#example-143",
+  "url": "sec-congruenze.html#sec-congruenze-13",
   "type": "Esempio",
   "number": "15.1.8",
   "title": "",
   "body": "  Un gruppo ha almeno due sottogruppi normali (eventualmente coincidenti, se ): stesso e . Il gruppo ha un unico laterale in sé stesso e, quindi, il gruppo quoziente è un gruppo con un unico elemento, cioè è un gruppo banale. I laterali del sottogruppo contengono ciascuno un elemento: dunque, il gruppo quoziente è il gruppo i cui elementi sono i sottoinsiemi di con un unico elemento. Vedremo nell' che questo gruppo è isomorfo a stesso.   "
 },
 {
-  "id": "exercise-309",
+  "id": "exercises-congruenze-1",
   "level": "2",
-  "url": "sec-congruenze.html#exercise-309",
+  "url": "sec-congruenze.html#exercises-congruenze-1",
   "type": "Esercizio",
   "number": "15.1.1",
   "title": "",
   "body": " Abbiamo visto che una congruenza in un gruppo è determinata completamente dalla classe di e questa classe è un sottogruppo normale. Vediamo che una classificazione simile per i monoidi non è possibile.   Mostrare che se è una congruenza in un monoide , allora è un sottomonoide di    Nel monoide dei naturali rispetto all'addizione, sia fissato un naturale . Definiamo in una relazione ponendo se o se sia che sono maggiori di . Mostrare che è una congruenza avente classi e che , qualunque sia .   Abbiamo mostrato che in ci sono infinite congruenze rispetto a cui la classe di è sempre la medesima: dunque, la conoscenza della classe dell'elemento neutro non è sufficiente a ricostruire la congruenza.  "
 },
 {
-  "id": "exercise-310",
+  "id": "exercises-congruenze-2",
   "level": "2",
-  "url": "sec-congruenze.html#exercise-310",
+  "url": "sec-congruenze.html#exercises-congruenze-2",
   "type": "Esercizio",
   "number": "15.1.2",
   "title": "",
   "body": " Sia un sottogruppo di un gruppo . Mostrare che le seguenti proprietà sono equivalenti:    è normale in e il quoziente è abeliano;     appartiene a per ogni e appartenenti a .      Supponiamo che sia normale in e che sia abeliano. Siano e due elementi di : poiché è abeliano, abbiamo che . Ma ciò significa che : moltiplicando a sinistra per otteniamo allora . Ma questo implica che appartiene a .  Viceversa, sia in per ogni e in . Scegliamo in particolare in : allora è un elemento di perché prodotto di due elementi di . Per l'arbitrarietà della scelta di in e di in abbiamo che è normale in . Mostriamo ora che è abeliano: siano e due elementi di . Poiché appartiene a si ha e moltiplicando a sinistra per , otteniamo , cioè .  "
 },
 {
-  "id": "exercise-311",
+  "id": "exercises-congruenze-3",
   "level": "2",
-  "url": "sec-congruenze.html#exercise-311",
+  "url": "sec-congruenze.html#exercises-congruenze-3",
   "type": "Esercizio",
   "number": "15.1.3",
   "title": "",
@@ -8110,9 +8110,9 @@ var ptx_lunr_docs = [
   "body": "  Sia un gruppo generato da un suo sottoinsieme e sia un sottogruppo normale di . Indicato con il sottoinsieme di formato dai laterali al variare di in , si ha che è generato da . In particolare, se è ciclico, anche è ciclico.    Il sottoinsieme è, evidentemente, l'immagine di tramite l'omomorfismo canonico di su . Per la , l'omomorfismo canonico è suriettivo: la tesi segue allora dalla .   "
 },
 {
-  "id": "example-144",
+  "id": "sec-proprieta_quozienti-6",
   "level": "2",
-  "url": "sec-proprieta_quozienti.html#example-144",
+  "url": "sec-proprieta_quozienti.html#sec-proprieta_quozienti-6",
   "type": "Esempio",
   "number": "15.2.4",
   "title": "",
@@ -8146,27 +8146,27 @@ var ptx_lunr_docs = [
   "body": "  Un gruppo di ordine il quadrato di un primo è abeliano.    Sia con primo. Per il , il centro di potrebbe avere ordine , o : per la , ; se fosse , allora , contro il . Dunque, , cioè .   "
 },
 {
-  "id": "exercise-312",
+  "id": "exercises-proprieta_quozienti-1",
   "level": "2",
-  "url": "sec-proprieta_quozienti.html#exercise-312",
+  "url": "sec-proprieta_quozienti.html#exercises-proprieta_quozienti-1",
   "type": "Esercizio",
   "number": "15.2.1",
   "title": "",
   "body": " Mostrare che se è un gruppo non abeliano, allora .  "
 },
 {
-  "id": "exercise-313",
+  "id": "exercises-proprieta_quozienti-2",
   "level": "2",
-  "url": "sec-proprieta_quozienti.html#exercise-313",
+  "url": "sec-proprieta_quozienti.html#exercises-proprieta_quozienti-2",
   "type": "Esercizio",
   "number": "15.2.2",
   "title": "",
   "body": " Sia un gruppo finito dotato di classi di coniugio. Sapendo che ha due classi di coniugio di cardinalità , determinare le cardinalità delle altre due classi.   La classe di coniugio dell'elemento neutro contiene, come sempre, un solo elemento. Dunque, l'equazione delle classi di è , dove è la cardinalità dell'ultima classe che dobbiamo determinare. Per il sappiamo che e sono divisori di . In particolare, è pari e, quindi, è dispari. Inoltre, , essendo un divisore di minore di è minore o uguale di : pertanto, , da cui segue , cioè . Abbiamo già notato che è dispari, quindi i valori possibili sono , e . Se fosse , avremmo esattamente due classi di ordine , il centro di avrebbe ordine e avrebbe ordine , il che non può essere per il . Se fosse , avremmo che non è un multiplo di . L'unica possibilità è allora che sia uguale a .  "
 },
 {
-  "id": "exercise-314",
+  "id": "exercises-proprieta_quozienti-3",
   "level": "2",
-  "url": "sec-proprieta_quozienti.html#exercise-314",
+  "url": "sec-proprieta_quozienti.html#exercises-proprieta_quozienti-3",
   "type": "Esercizio",
   "number": "15.2.3",
   "title": "",
@@ -8209,9 +8209,9 @@ var ptx_lunr_docs = [
   "body": "  Sia un gruppo e sia un suo sottogruppo normale. I sottogruppi di sono i quozienti del tipo con sottogruppo di contenente . Inoltre se e solo se (in particolare, se e solo se ). Un sottogruppo di è normale in se e solo se : in tal caso .    Consideriamo l'omomorfismo canonico da su . Per il c'è una una biiezione tra i sottogruppi di contenenti e i sottogruppi di contenuti in : in vista della , ciò significa che abbiamo una biiezione tra i sottogruppi di contenenti e i sottogruppi di e questa biiezione è precisamente quella che manda un sottogruppo di contenente nel quoziente .  Consideriamo un sottogruppo di : ora è normale in se e solo se per ogni e ogni risulta . Ma : dunque, se e solo se . Ma allora, se e solo se . In tal caso, definiamo una funzione ponendo . Mostriamo innanzitutto che è ben definita: infatti, se , allora per qualche . Ma , e, dunque, e , cioè , come richiesto.  La funzione è un omomorfismo. Infatti . La funzione è evidentemente suriettiva: infatti, se è un generico elemento di , per definizione di risulta . Il nucleo di è formato dagli elementi di , tali che è l'elemento neutro di , cioè l'elemento : dunque . Applicando il otteniamo allora che .   "
 },
 {
-  "id": "exercise-315",
+  "id": "exercises-teoremi_di_isomorfismo-1",
   "level": "2",
-  "url": "sec-teoremi_di_isomorfismo.html#exercise-315",
+  "url": "sec-teoremi_di_isomorfismo.html#exercises-teoremi_di_isomorfismo-1",
   "type": "Esercizio",
   "number": "15.3.1",
   "title": "",
@@ -8227,9 +8227,9 @@ var ptx_lunr_docs = [
   "body": " Determinare tutti gli omomorfismi da in .   Sappiamo che i possibili nuclei degli omomorfismi cercati sono i sottogruppi normali di . Dall' , sappiamo che i sottogruppi normali di sono , e .  Dato un omomorfismo , per il , abbiamo che .  Il quoziente è isomorfo a : poiché ha ordine e ha ordine non c'è alcun omomorfismo da in di nucleo .  Il quoziente è il gruppo banale . In corrispondenza abbiamo l'omomorfismo banale.  Il quoziente ha ordine ed è quindi ciclico: i suoi elementi sono e . Detto un generatore di , esso contiene un unico sottogruppo (necessariamente ciclico) di ordine : il sottogruppo generato da . Un omomorfismo da in di nucleo si fattorizza allora come la composizione dell'omomorfismo canonico da su , di un isomorfismo tra e e dell'inclusione di in . C'è un solo isomorfismo tra e : quello che manda il generatore nel generatore. Dunque, esiste un unico omomorfismo in di nucleo : quello che manda tutti gli elementi di in e tutti gli altri elementi in .  "
 },
 {
-  "id": "exercise-317",
+  "id": "exercises-teoremi_di_isomorfismo-3",
   "level": "2",
-  "url": "sec-teoremi_di_isomorfismo.html#exercise-317",
+  "url": "sec-teoremi_di_isomorfismo.html#exercises-teoremi_di_isomorfismo-3",
   "type": "Esercizio",
   "number": "15.3.3",
   "title": "",
@@ -8335,63 +8335,63 @@ var ptx_lunr_docs = [
   "body": "  Sia prodotto diretto esterno di gruppi ciclici non banali con . Allora è ciclico se e solo se , , , sono ciclici finiti aventi a due a due ordine coprimo.    Se almeno uno dei fattori è infinito, allora è infinito e, se fosse ciclico, per il , l'intersezione di due suoi sottogruppi non banali dovrebbe essere non banale: ma e , definiti come nella , sono due sottogruppi non banali con intersezione banale e, quindi, non è ciclico.  Se i fattori sono tutti finiti, ma due di essi, siano e , hanno ordine non coprimo, allora, per la , contiene due sottogruppi ciclici e con intersezione banale e ordine non coprimo. Detto il massimo comun divisore di e , il implica che essi contengono ciascuno un sottogruppo di ordine : questi due sottogruppi di ordine sono diversi perché contenuti in sottogruppi aventi intersezione banale e, , avendo due sottogruppi dello stesso ordine non è ciclico, sempre per il .  Infine, supponiamo che i fattori siano finiti di ordini a due a due coprimi. Preso un generatore per ciascun , grazie al l'elemento ha periodo uguale al prodotto degli ordini dei . Poiché l'ordine di è uguale al prodotto degli ordini dei , ne segue che genera che è, dunque, ciclico.   "
 },
 {
-  "id": "exercise-318",
+  "id": "exercises-prodotto_diretto_esterno-1",
   "level": "2",
-  "url": "sec-prodotto_diretto_esterno.html#exercise-318",
+  "url": "sec-prodotto_diretto_esterno.html#exercises-prodotto_diretto_esterno-1",
   "type": "Esercizio",
   "number": "16.1.1",
   "title": "",
   "body": " Dimostrare la .  "
 },
 {
-  "id": "exercise-319",
+  "id": "exercises-prodotto_diretto_esterno-2",
   "level": "2",
-  "url": "sec-prodotto_diretto_esterno.html#exercise-319",
+  "url": "sec-prodotto_diretto_esterno.html#exercises-prodotto_diretto_esterno-2",
   "type": "Esercizio",
   "number": "16.1.2",
   "title": "",
   "body": " Dimostrare la .  "
 },
 {
-  "id": "exercise-320",
+  "id": "exercises-prodotto_diretto_esterno-3",
   "level": "2",
-  "url": "sec-prodotto_diretto_esterno.html#exercise-320",
+  "url": "sec-prodotto_diretto_esterno.html#exercises-prodotto_diretto_esterno-3",
   "type": "Esercizio",
   "number": "16.1.3",
   "title": "",
   "body": " Dimostrare la .  "
 },
 {
-  "id": "exercise-321",
+  "id": "exercises-prodotto_diretto_esterno-4",
   "level": "2",
-  "url": "sec-prodotto_diretto_esterno.html#exercise-321",
+  "url": "sec-prodotto_diretto_esterno.html#exercises-prodotto_diretto_esterno-4",
   "type": "Esercizio",
   "number": "16.1.4",
   "title": "",
   "body": " Si consideri il gruppo .   Il gruppo è ciclico?   No: è prodotto diretto di ciclici di ordini non coprimi.   Dimostrare che .   Sappiamo che in un prodotto diretto se cambiamo l'ordine dei fattori o se associamo tra loro alcuni fattori otteniamo un gruppo isomorfo all'originale. Dunque poiché e sono coprimi.  Analogamente poiché e sono coprimi.   Determinare quanti elementi ci sono in di ordine e quanti di ordine .   Possiamo utilizzare una qualsiasi delle diverse espressioni di : quella originale o quelle che abbiamo trovato al punto precedente. Se scriviamo come , possiamo rappresentare i suoi elementi come coppie del tipo con e . Il periodo di è il minimo comune multiplo dei periodi di e di . Sappiamo che divide e divide . Dunque e con , e . Il minimo comune multiplo di e è allora con : non possiamo dunque ottenere , mentre otteniamo se e solo se , e qualunque. Pertanto, non ci sono elementi di ordine e otteniamo un elemento di ordine se e solo se ha ordine e ha ordine qualunque. Abbiamo allora scelte per e scelte per (sappiamo che in un gruppo ciclico di ordine , se è un divisore di , allora ci sono elementi di ordine ). Dunque ci sono elementi di periodo . Poiché si ha . Abbiamo quindi elementi di periodo .  "
 },
 {
-  "id": "exercise-322",
+  "id": "exercises-prodotto_diretto_esterno-5",
   "level": "2",
-  "url": "sec-prodotto_diretto_esterno.html#exercise-322",
+  "url": "sec-prodotto_diretto_esterno.html#exercises-prodotto_diretto_esterno-5",
   "type": "Esercizio",
   "number": "16.1.5",
   "title": "",
   "body": " Dimostrare che se , allora .  "
 },
 {
-  "id": "exercise-323",
+  "id": "exercises-prodotto_diretto_esterno-6",
   "level": "2",
-  "url": "sec-prodotto_diretto_esterno.html#exercise-323",
+  "url": "sec-prodotto_diretto_esterno.html#exercises-prodotto_diretto_esterno-6",
   "type": "Esercizio",
   "number": "16.1.6",
   "title": "",
   "body": " Sia . Per ogni con , sia un sottogruppo normale di e sia . Dimostrare che è un sottogruppo normale di e che è isomorfo a .   Basta mostrare che la funzione da in che manda in è un omomorfismo suriettivo il cui nucleo è esattamente .  "
 },
 {
-  "id": "exercise-324",
+  "id": "exercises-prodotto_diretto_esterno-7",
   "level": "2",
-  "url": "sec-prodotto_diretto_esterno.html#exercise-324",
+  "url": "sec-prodotto_diretto_esterno.html#exercises-prodotto_diretto_esterno-7",
   "type": "Esercizio",
   "number": "16.1.7",
   "title": "",
@@ -8470,36 +8470,36 @@ var ptx_lunr_docs = [
   "body": "  Sia un gruppo di ordine con primo. Allora è isomorfo a o a     Se contiene un elemento di periodo , allora è ciclico.  Se non contiene elementi di periodo , allora tutti i suoi elementi non banali hanno periodo , per il . Sia allora un elemento non banale di e sia un elemento di . Dunque, e hanno entrambi periodo ed entrambi generano un sottogruppo ciclico di ordine . Per il , l'intersezione di e ha ordine che divide , ma, essendo , ne segue che . Di conseguenza, per la , il prodotto ha ordine , cioè coincide con . Per il , è abeliano e, quindi, e sono normali in . Riassumendo, è il prodotto diretto dei gruppi ciclici e , entrambi di ordine , cioè .   "
 },
 {
-  "id": "exercise-325",
+  "id": "exercises-prodotto_diretto_interno-1",
   "level": "2",
-  "url": "sec-prodotto_diretto_interno.html#exercise-325",
+  "url": "sec-prodotto_diretto_interno.html#exercises-prodotto_diretto_interno-1",
   "type": "Esercizio",
   "number": "16.2.1",
   "title": "",
   "body": " Dimostrare che un gruppo non abeliano di ordine con primo non può essere espresso come prodotto diretto di due sottogruppi propri.  "
 },
 {
-  "id": "exercise-326",
+  "id": "exercises-prodotto_diretto_interno-2",
   "level": "2",
-  "url": "sec-prodotto_diretto_interno.html#exercise-326",
+  "url": "sec-prodotto_diretto_interno.html#exercises-prodotto_diretto_interno-2",
   "type": "Esercizio",
   "number": "16.2.2",
   "title": "",
   "body": " Sia un primo e sia il gruppo .   Stabilire quanti sottogruppi di ordine ha .   Un gruppo di ordine primo è necessariamente ciclico: dobbiamo allora trovare gli elementi di di ordine . Il periodo di di è il minimo comune multiplo dei periodi e : affinché tale periodo sia è dunque necessario che sia che abbiano periodo che divide e che almeno uno tra essi abbia periodo esattamente . Gli elementi di hanno tutti ordine che divide , mentre in c'è un unico sottogruppo di ordine che contiene tutti e soli gli elementi di di ordine che divide . Le coppie formate da elementi aventi periodo che divide sono allora : dobbiamo però scartare la coppia in cui entrambi gli elementi hanno periodo . In ci sono dunque elementi di periodo . Ciascuno di questi genera un sottogruppo di ordine . Tali sottogruppi non sono però tutti distinti: ogni gruppo di ordine può essere infatti generato uno dei suoi elementi diversi dall'identità. Dividendo per troviamo che ha sottogruppi di ordine .   Determinare se esiste un sottogruppo di avente ordine e tale che sia ciclico.   Il fattore del prodotto diretto ha ordine e, per la , il quoziente è isomorfo a ed è quindi ciclico.   Determinare se esiste un sottogruppo di avente ordine e tale che non sia ciclico.   Sia il sottogruppo di ordine contenuto nel primo fattore del prodotto diretto. Per ogni elemento di si ha , inoltre appartiene a . Dunque, gli elementi di hanno tutti ordine che divide : non essendoci nessun elemento di periodo il quoziente non è ciclico.  "
 },
 {
-  "id": "exercise-327",
+  "id": "exercises-prodotto_diretto_interno-3",
   "level": "2",
-  "url": "sec-prodotto_diretto_interno.html#exercise-327",
+  "url": "sec-prodotto_diretto_interno.html#exercises-prodotto_diretto_interno-3",
   "type": "Esercizio",
   "number": "16.2.3",
   "title": "",
   "body": " Siano e sottogruppi normali di un gruppo tali che . Dimostrare che il quoziente è isomorfo al prodotto diretto .   Per il , i sottogruppi e sono normali in . Sia un elemento generico di : per ipotesi sappiamo che esistono e tali che . Pertanto, : poiché e ne consegue che ogni elemento di può essere espresso come prodotto di un elemento di e di un elemento di , cioè . Se , allora e : cioè è l'elemento neutro di . Riassumendo, è il prodotto dei due suoi sottogruppi normali e la cui intersezione è banale. In altri termini, è il prodotto diretto (interno) di e . Ora è isomorfo, per il , a , cioè a , dato che per ipotesi . Analogamente, è isomorfo a .  Riassumendo come richiesto.  "
 },
 {
-  "id": "exercise-328",
+  "id": "exercises-prodotto_diretto_interno-4",
   "level": "2",
-  "url": "sec-prodotto_diretto_interno.html#exercise-328",
+  "url": "sec-prodotto_diretto_interno.html#exercises-prodotto_diretto_interno-4",
   "type": "Esercizio",
   "number": "16.2.4",
   "title": "",
@@ -8542,9 +8542,9 @@ var ptx_lunr_docs = [
   "body": "  Consideriamo il gruppo simmetrico con . Sappiamo che il sottogruppo alterno ha indice in ed è quindi normale in . Il sottogruppo generato da ha ordine e ha intersezione banale con . Dunque, il prodotto ha ordine uguale a , cioè uguale a . Pertanto coincide con , e, dunque, .   "
 },
 {
-  "id": "example-146",
+  "id": "sec-prodotto_semidiretto-6",
   "level": "2",
-  "url": "sec-prodotto_semidiretto.html#example-146",
+  "url": "sec-prodotto_semidiretto.html#sec-prodotto_semidiretto-6",
   "type": "Esempio",
   "number": "16.3.3",
   "title": "",
@@ -8605,9 +8605,9 @@ var ptx_lunr_docs = [
   "body": "  Siano dati due gruppi e e un omomorfismo . Sia un automorfismo di e sia definito da . Allora .    Definiamo una funzione ponendo . Questa funzione è chiaramente biiettiva. Mostriamo che è un omomorfismo: dal momento che come insiemi e coincidono, denotiamo con l'operazione in e con l'operazione in . Abbiamo allora    "
 },
 {
-  "id": "exercise-330",
+  "id": "exercises--prodotto_semidiretto-1",
   "level": "2",
-  "url": "sec-prodotto_semidiretto.html#exercise-330",
+  "url": "sec-prodotto_semidiretto.html#exercises--prodotto_semidiretto-1",
   "type": "Esercizio",
   "number": "16.3.1",
   "title": "",
@@ -8740,45 +8740,45 @@ var ptx_lunr_docs = [
   "body": " Se è un gruppo finito e è un primo che non divide l'ordine di , possiamo comunque applicare il teorema di Sylow al primo , anche se in tal caso non è molto interessante: la massima potenza di che divide è e l'ovviamente unico -sottogruppo di Sylow di è il sottogruppo banale.  "
 },
 {
-  "id": "exercise-331",
+  "id": "exercises-sylow-1",
   "level": "2",
-  "url": "sec-sylow.html#exercise-331",
+  "url": "sec-sylow.html#exercises-sylow-1",
   "type": "Esercizio",
   "number": "17.2.1",
   "title": "",
   "body": " Sia un gruppo di ordine con : mostrare che per ogni divisore di , esiste un sottogruppo di di ordine . Dunque, il gruppo di ordine dato nell' ha l'ordine minimo possibile.  "
 },
 {
-  "id": "exercise-332",
+  "id": "exercises-sylow-2",
   "level": "2",
-  "url": "sec-sylow.html#exercise-332",
+  "url": "sec-sylow.html#exercises-sylow-2",
   "type": "Esercizio",
   "number": "17.2.2",
   "title": "",
   "body": " Sia un gruppo e sia un sottogruppo finito di di ordine .   Mostrare che se è l'unico sottogruppo di di ordine allora è normale in .   I coniugati di sono isomorfi a e, in particolare hanno tutti ordine : se c'è un solo sottogruppo di ordine , significa che tutti i coniugati di coincidono con , cioè è normale in .   Mostrare con un controesempio che non vale il viceversa del punto precedente, cioè che esistono sottogruppi normali che non sono unici del loro ordine.   Il gruppo di Klein ha sottogruppi di ordine , tutti normali, dal momento che il gruppo di Klein è abeliano.  "
 },
 {
-  "id": "exercise-333",
+  "id": "exercises-sylow-3",
   "level": "2",
-  "url": "sec-sylow.html#exercise-333",
+  "url": "sec-sylow.html#exercises-sylow-3",
   "type": "Esercizio",
   "number": "17.2.3",
   "title": "",
   "body": " Sia un gruppo finito e sia un primo. Dimostrare che l'intersezione dei -sottogruppi di Sylow è un -sottogruppo normale di e che ogni -sottogruppo normale di è contenuto in .   Per il , è un -sottogruppo di . Sia un qualunque elemento di e sia un qualunque elemento di : dobbiamo mostrare che appartiene a , cioè a tutti i -sottogruppi di Sylow. Se è un qualsiasi -sottogruppo di Sylow, allora è pure un -sottogruppo di Sylow e, quindi, contiene : ma allora appartiene a , come richiesto.  Sia ora un qualsiasi -sottogruppo normale di : per il , è contenuto in un -sottogruppo di Sylow, sia . Se ora è un altro -sottogruppo di Sylow di , un'ulteriore applicazione del ci garantisce che per qualche in . Ma allora, , cioè è contenuto in ogni -sottogruppo di Sylow di e, quindi, .  "
 },
 {
-  "id": "exercise-334",
+  "id": "exercises-sylow-4",
   "level": "2",
-  "url": "sec-sylow.html#exercise-334",
+  "url": "sec-sylow.html#exercises-sylow-4",
   "type": "Esercizio",
   "number": "17.2.4",
   "title": "",
   "body": " Sia un gruppo finito e un sottogruppo normale di . Dato un primo , mostrare che i -sottogruppi di Sylow di sono tutti e soli quelli del tipo al variare di tra i -sottogruppi di Sylow di .   Se è un -sottogruppo di Sylow di , in particolare è un -sottogruppo di : per il , è contenuto in un -sottogruppo di Sylow di . Dunque, . D'altra parte, è un -sottogruppo di per il . Poiché ha ordine massimo possibile tra i -sottogruppi di , segue che .  Viceversa, sia un qualsiasi -sottogruppo di Sylow di . Ora è un -sottogruppo di per il e, per il , è contenuto in un -sottogruppo di Sylow di . Dobbiamo mostrare che . Per quanto visto in precedenza, per qualche -sottogruppo di Sylow di . Un'ulteriore applicazione del garantisce che esiste in tale che : poiché è normale in e, quindi, abbiamo allora che . Poiché e hanno lo stesso ordine, segue che .  "
 },
 {
-  "id": "exercise-335",
+  "id": "exercises-sylow-5",
   "level": "2",
-  "url": "sec-sylow.html#exercise-335",
+  "url": "sec-sylow.html#exercises-sylow-5",
   "type": "Esercizio",
   "number": "17.2.5",
   "title": "",
@@ -8803,9 +8803,9 @@ var ptx_lunr_docs = [
   "body": "  Siano dati due primi distinti e con . Allora:   se , esiste un unico gruppo di ordine a meno di isomorfismi: il gruppo ciclico;    se , esistono due gruppi di ordine a meno di isomorfismi: il gruppo ciclico e un gruppo non abeliano.      "
 },
 {
-  "id": "example-148",
+  "id": "sec-applicazioni_sylow-7",
   "level": "2",
-  "url": "sec-applicazioni_sylow.html#example-148",
+  "url": "sec-applicazioni_sylow.html#sec-applicazioni_sylow-7",
   "type": "Esempio",
   "number": "17.3.2",
   "title": "",
@@ -8857,9 +8857,9 @@ var ptx_lunr_docs = [
   "body": "  Consideriamo ancora un gruppo di ordine come nell' e mostriamo che non è semplice in modo differente. Supponendo come prima che , otteniamo che : detto un -sottogruppo di Sylow di e posto , per il sappiamo che ha coniugati e, per il , che ha indice in . Pertanto, ha ordine . Applichiamo ora il a per il primo : il numero dei -sottogruppi di Sylow di è un divisore di congruo a modulo e, dunque, è e, detto un -sottogruppo di Sylow di , questo è normale in . Ora ha ordine ed è, dunque, anche un -sottogruppo di Sylow di . Il suo normalizzante contiene allora e, sempre per il , il numero dei coniugati di in , cioè , è un divisore dell'indice di in , cioè : ma l'unico divisore di congruo a modulo è proprio e, dunque, e non è semplice.  Notiamo che rispetto alla tecnica utilizzata nell' , abbiamo ottenuto un'informazione più precisa: sappiamo cioè che ha un sottogruppo normale di ordine o .   "
 },
 {
-  "id": "exercise-336",
+  "id": "exercises-applicazioni_sylow-1-2",
   "level": "2",
-  "url": "sec-applicazioni_sylow.html#exercise-336",
+  "url": "sec-applicazioni_sylow.html#exercises-applicazioni_sylow-1-2",
   "type": "Esercizio",
   "number": "17.3.1",
   "title": "",
@@ -8884,36 +8884,36 @@ var ptx_lunr_docs = [
   "body": "     Poiché è un divisore di congruo a modulo , i valori possibili per sono e ; poiché è un divisore di congruo a modulo , i valori possibili per sono e . I -sottogruppi di Sylow e gli -sottogruppi di Sylow hanno ordine primo e, quindi, intersezione a due a due banale. Se fosse , ci sarebbero allora elementi di periodo ; se fosse ci sarebbero allora elementi di periodo . Riassumendo, se e fossero entrambi diversi da , allora dovrebbero esserci elementi di periodo o , cioè ci sarebbe un unico elemento di ordine diverso da questi, il che non può essere perché in ci deve essere un -sottogruppo di Sylow di ordine . Dunque, almeno uno tra e è uguale a , cioè esiste un -sottogruppo di Sylow normale o un -sottogruppo di Sylow normale.  "
 },
 {
-  "id": "exercise-339",
+  "id": "exercises-applicazioni_sylow-1-5",
   "level": "2",
-  "url": "sec-applicazioni_sylow.html#exercise-339",
+  "url": "sec-applicazioni_sylow.html#exercises-applicazioni_sylow-1-5",
   "type": "Esercizio",
   "number": "17.3.4",
   "title": "",
   "body": "     Poiché e , i valori possibili per sono e . Poiché e , i valori possibili per sono e . Poiché e , i valori possibili per sono e . Per , e i corrispondenti -sottogruppi di Sylow, avendo ordine primo, hanno intersezione a due a due banale. Dunque, se nessuno tra , e fosse uguale a , avremmo elementi di ordine , o , cioè ci sarebbe un unico elemento di ordine diverso da questi, il che non può essere perché in ci deve essere un -sottogruppo di Sylow di ordine . Dunque, almeno uno tra , e è uguale a , cioè esiste un -sottogruppo di Sylow normale per almeno uno di questi primi.  "
 },
 {
-  "id": "exercise-340",
+  "id": "exercises-applicazioni_sylow-2",
   "level": "2",
-  "url": "sec-applicazioni_sylow.html#exercise-340",
+  "url": "sec-applicazioni_sylow.html#exercises-applicazioni_sylow-2",
   "type": "Esercizio",
   "number": "17.3.5",
   "title": "",
   "body": " Mostrare che un gruppo di ordine è ciclico oppure ha centro di ordine .   Dall' , sappiamo che ha un sottogruppo normale di ordine . Sia un -sottogruppo di Sylow (quindi, ha ordine ). Poiché è normale in , è un sottogruppo di : per il , l'intersezione di e è banale e, quindi, per la , ha ordine . Per il , è, quindi, ciclico. In particolare, il centralizzante di contiene e ha, quindi, ordine multiplo di . Analogamente, se è un -sottogruppo di Sylow, si vede che è un sottogruppo ciclico di di ordine e, di conseguenza, il centralizzante di ha ordine multiplo di . In conclusione, il centralizzante di ha ordine , cioè coincide con , vale a dire che è contenuto nel centro di . Per il , il centro di ha, dunque, ordine multiplo di . Per il , non può avere indice o , cioè non può avere ordine o : le uniche possibilità sono che abbia ordine oppure . Nel secondo caso è abeliano ed è, quindi, il prodotto diretto dei suoi sottogruppi di Sylow, per il : poiché i sottogruppi di Sylow di hanno ordine primo e sono, dunque, ciclici, ciò implica che in queste ipotesi è ciclico, grazie alla .  "
 },
 {
-  "id": "exercise-341",
+  "id": "exercises-applicazioni_sylow-3",
   "level": "2",
-  "url": "sec-applicazioni_sylow.html#exercise-341",
+  "url": "sec-applicazioni_sylow.html#exercises-applicazioni_sylow-3",
   "type": "Esercizio",
   "number": "17.3.6",
   "title": "",
   "body": " Mostrare che un gruppo di ordine contiene un sottogruppo normale di ordine .   Per l' sappiamo che ha un sottogruppo normale di ordine o . Nel primo caso, il quoziente ha ordine . Applicando il al quoziente , vediamo che il numero dei suoi -sottogruppi di Sylow è un divisore di congruo a modulo : l'unico divisore di congruo a modulo è , pertanto ha un unico sottogruppo di ordine che è necessariamente normale. Per il , questo sottogruppo è del tipo con sottogruppo normale di di ordine . Il caso in cui è analogo.  "
 },
 {
-  "id": "exercise-342",
+  "id": "exercises-applicazioni_sylow-4",
   "level": "2",
-  "url": "sec-applicazioni_sylow.html#exercise-342",
+  "url": "sec-applicazioni_sylow.html#exercises-applicazioni_sylow-4",
   "type": "Esercizio",
   "number": "17.3.7",
   "title": "",
@@ -8929,9 +8929,9 @@ var ptx_lunr_docs = [
   "body": " Sia un gruppo di ordine con , e primi tali che .   Detti , e rispettivamente il numero dei -sottogruppi di Sylow, dei -sottogruppi di Sylow e degli -sottogruppi di Sylow di , mostrare che almeno uno di questi numeri è uguale a .   Per ciascuno dei primi considerati, i corrispondenti sottogruppi di Sylow hanno ordine primo e, quindi, a due a due hanno intersezione banale.  Per il , è un divisore di congruo a modulo : poiché e sono minori di , le uniche possibilità per sono e . Se , avremmo allora elementi non banali contenuti negli -sottogruppi di Sylow. Analogamente, è un divisore di congruo a modulo : poiché è minore di , le possibilità sono , e . Se , avremmo allora e, quindi, almeno elementi non banali contenuti nei -sottogruppi di Sylow. Infine, è un divisore di congruo a modulo : le possibilità sono , , e e non possiamo, a priori, scartarne nessuna. Se allora , avremmo e, quindi, almeno elementi non banali contenuti nei -sottogruppi di Sylow.  Riassumendo: se, per assurdo, nessuno tra , e fosse uguale a avremmo allora almeno elementi non banali in . Sviluppando tale espressione troviamo che è uguale a , ma questo numero è maggiore di , cioè il numero totale di elementi non banali di . Possiamo dunque affermare che almeno uno tra , e è uguale a .   Mostrare che , cioè che esiste un sottogruppo normale di di ordine .   Supponiamo, per assurdo, che : abbiamo già notato che, in tal caso, . Detto allora un -sottogruppo di Sylow di (quindi è un sottogruppo di ordine ), per il , il normalizzante in di è un sottogruppo avente indice in e contenente : pertanto .  Dal punto precedente, sappiamo ora che almeno uno tra , e è uguale a : poiché stiamo supponendo che , possiamo affermare che almeno uno tra e sia uguale a , cioè che esista in un sottogruppo normale di ordine o . Per la la , il prodotto è un sottogruppo di e il suo ordine è uguale a o a per la . In entrambi i casi, il numero degli -sottogruppi di Sylow di , dovendo essere un divisore di o di congruo a modulo , non può che essere . Pertanto, è normale in , cioè il normalizzante in di contiene , il che contraddice l'uguaglianza , trovata in precedenza.  "
 },
 {
-  "id": "exercise-344",
+  "id": "exercises-applicazioni_sylow-6",
   "level": "2",
-  "url": "sec-applicazioni_sylow.html#exercise-344",
+  "url": "sec-applicazioni_sylow.html#exercises-applicazioni_sylow-6",
   "type": "Esercizio",
   "number": "17.3.9",
   "title": "",
@@ -8956,18 +8956,18 @@ var ptx_lunr_docs = [
   "body": " anello  anello commutativo   Un anello è un insieme in cui sono definite un'operazione di addizione e un'operazione di moltiplicazione tali che    è un gruppo abeliano il cui elemento neutro denotiamo con ;     è un monoide il cui elemento neutro denotiamo con ;     per ogni , e in ;     per ogni , e in .   Nel caso in cui la moltiplicazione è commutativa, diremo che l'anello è commutativo .   "
 },
 {
-  "id": "note-13",
+  "id": "sec-prime_proprieta_anelli-3",
   "level": "2",
-  "url": "sec-prime_proprieta_anelli.html#note-13",
+  "url": "sec-prime_proprieta_anelli.html#sec-prime_proprieta_anelli-3",
   "type": "Nota",
   "number": "18.1.2",
   "title": "",
   "body": " Nelle ultime due richieste della definizione di anello, dette proprietà distributive , abbiamo usato delle regole di precedenza modellate su quelle delle operazioni tra numeri. Abbiamo così potuto scrivere invece di .  "
 },
 {
-  "id": "note-14",
+  "id": "sec-prime_proprieta_anelli-4",
   "level": "2",
-  "url": "sec-prime_proprieta_anelli.html#note-14",
+  "url": "sec-prime_proprieta_anelli.html#sec-prime_proprieta_anelli-4",
   "type": "Nota",
   "number": "18.1.3",
   "title": "",
@@ -8983,36 +8983,36 @@ var ptx_lunr_docs = [
   "body": " Le due proprietà distributive sono indipendenti: per verificare che un certo insieme con operazioni date è un anello, occorre dimostrarle entrambe. Nell' mostreremo una struttura che soddisfa tutte le proprietà che definiscono un anello tranne una delle due distributive. Ovviamente, quando la moltiplicazione è commutativa, se vale una delle due proprietà distributive, vale automaticamente anche l'altra.  "
 },
 {
-  "id": "example-151",
+  "id": "sec-prime_proprieta_anelli-6",
   "level": "2",
-  "url": "sec-prime_proprieta_anelli.html#example-151",
+  "url": "sec-prime_proprieta_anelli.html#sec-prime_proprieta_anelli-6",
   "type": "Esempio",
   "number": "18.1.5",
   "title": "",
   "body": "  Gli insiemi , , e sono anelli commutativi rispetto alle usuali operazioni di addizione e moltiplicazione.  L'insieme è un anello commutativo rispetto all'addizione e alla moltiplicazione definite nel .   "
 },
 {
-  "id": "example-152",
+  "id": "sec-prime_proprieta_anelli-7",
   "level": "2",
-  "url": "sec-prime_proprieta_anelli.html#example-152",
+  "url": "sec-prime_proprieta_anelli.html#sec-prime_proprieta_anelli-7",
   "type": "Esempio",
   "number": "18.1.6",
   "title": "",
   "body": "  L'insieme non è un anello rispetto alle usuali operazioni di addizione e moltiplicazione: infatti soddisfa tutte le proprietà tranne l'esistenza dell'opposto per ciascun elemento.   "
 },
 {
-  "id": "example-153",
+  "id": "sec-prime_proprieta_anelli-8",
   "level": "2",
-  "url": "sec-prime_proprieta_anelli.html#example-153",
+  "url": "sec-prime_proprieta_anelli.html#sec-prime_proprieta_anelli-8",
   "type": "Esempio",
   "number": "18.1.7",
   "title": "",
   "body": "  L'insieme delle matrici quadrate a righe e colonne a coefficienti in un anello è un anello rispetto all'addizione e alla moltiplicazione riga per colonna. A meno che e l'anello sia commutativo, questo anello è non commutativo.   "
 },
 {
-  "id": "example-154",
+  "id": "sec-prime_proprieta_anelli-9",
   "level": "2",
-  "url": "sec-prime_proprieta_anelli.html#example-154",
+  "url": "sec-prime_proprieta_anelli.html#sec-prime_proprieta_anelli-9",
   "type": "Esempio",
   "number": "18.1.8",
   "title": "",
@@ -9046,9 +9046,9 @@ var ptx_lunr_docs = [
   "body": "  Se è un anello con almeno due elementi, allora . Inoltre non è invertibile (in particolare, non è un gruppo rispetto alla moltiplicazione).    Poiché ha più di un elemento, esiste in con . Per la , abbiamo allora , mentre dalla definizione di anello segue che . Se fosse , dovrebbe essere . Il fatto che non sia invertibile segue poi dal fatto che dovrebbe esistere in tale che , ma per ogni in .   "
 },
 {
-  "id": "note-15",
+  "id": "sec-prime_proprieta_anelli-13",
   "level": "2",
-  "url": "sec-prime_proprieta_anelli.html#note-15",
+  "url": "sec-prime_proprieta_anelli.html#sec-prime_proprieta_anelli-13",
   "type": "Nota",
   "number": "18.1.12",
   "title": "",
@@ -9082,9 +9082,9 @@ var ptx_lunr_docs = [
   "body": " Per la , è un divisore dello zero sia destro che sinistro. In alcuni testi, si richiede che un divisore dello zero sia diverso da : in tal caso l'enunciazione delle proprietà correlate va adattata di conseguenza.  "
 },
 {
-  "id": "example-155",
+  "id": "sec-prime_proprieta_anelli-18",
   "level": "2",
-  "url": "sec-prime_proprieta_anelli.html#example-155",
+  "url": "sec-prime_proprieta_anelli.html#sec-prime_proprieta_anelli-18",
   "type": "Esempio",
   "number": "18.1.16",
   "title": "",
@@ -9100,9 +9100,9 @@ var ptx_lunr_docs = [
   "body": "  Sia un elemento invertibile di un anello . Allora non è divisore dello zero (né sinistro, né destro).    Sia tale che . Per la , abbiamo . D'altra parte, , da cui segue . Il caso in cui si tratta analogamente.   "
 },
 {
-  "id": "example-156",
+  "id": "sec-prime_proprieta_anelli-20",
   "level": "2",
-  "url": "sec-prime_proprieta_anelli.html#example-156",
+  "url": "sec-prime_proprieta_anelli.html#sec-prime_proprieta_anelli-20",
   "type": "Esempio",
   "number": "18.1.18",
   "title": "",
@@ -9118,9 +9118,9 @@ var ptx_lunr_docs = [
   "body": "  Un anello in cui non ci sono divisori dello zero non banali è detto intero . In altri termini, un anello è detto intero se, dati e non nulli in , si ha che . Un anello intero commutativo è detto dominio d'integrità o, più semplicemente, dominio .   "
 },
 {
-  "id": "example-157",
+  "id": "sec-prime_proprieta_anelli-22",
   "level": "2",
-  "url": "sec-prime_proprieta_anelli.html#example-157",
+  "url": "sec-prime_proprieta_anelli.html#sec-prime_proprieta_anelli-22",
   "type": "Esempio",
   "number": "18.1.20",
   "title": "",
@@ -9190,18 +9190,18 @@ var ptx_lunr_docs = [
   "body": " Sia un gruppo abeliano non banale, scritto in notazione additiva. Sia l'insieme delle funzioni da in sé. Si definisca un'addizione di due funzioni e di ponendo per ogni in . Mostrare che è un gruppo abeliano rispetto all'operazione così definita. Ricordando che è un monoide rispetto alla composizione ( ), mostrare che soddisfa solo una delle proprietà distributive e, quindi, non è un anello.   Si verifica facilmente che è un gruppo abeliano.  Per ogni in e ogni , e in si ha che cioè .  Tuttavia non vale in generale che . Prendiamo, ad esempio, come la funzione che manda ogni elemento di in un elemento non nullo di fissato: a primo membro abbiamo e a secondo membro abbiamo (e perché ).  "
 },
 {
-  "id": "exercise-346",
+  "id": "exercises-prime_proprieta_anelli-2",
   "level": "2",
-  "url": "sec-prime_proprieta_anelli.html#exercise-346",
+  "url": "sec-prime_proprieta_anelli.html#exercises-prime_proprieta_anelli-2",
   "type": "Esercizio",
   "number": "18.1.2",
   "title": "",
   "body": " Dato un gruppo abeliano scritto in notazione additiva, si definiscano in delle operazioni di addizione e moltiplicazione come nell' . Verificare che rispetto a queste operazioni, è un anello.  "
 },
 {
-  "id": "exercise-347",
+  "id": "exercises-prime_proprieta_anelli-3",
   "level": "2",
-  "url": "sec-prime_proprieta_anelli.html#exercise-347",
+  "url": "sec-prime_proprieta_anelli.html#exercises-prime_proprieta_anelli-3",
   "type": "Esercizio",
   "number": "18.1.3",
   "title": "",
@@ -9244,9 +9244,9 @@ var ptx_lunr_docs = [
   "body": "  Siano e elementi di un anello e sia un intero. Allora .    Dimostriamo l'uguaglianza , considerando prima il caso in cui è un naturale. Procediamo allora per induzione su . Se è il numero naturale , allora, per definizione si ha e . Ora per la . Sia allora un naturale per cui si ha . Per definizione di multiplo, si ha e . Abbiamo allora dove abbiamo usato l'ipotesi induttiva e una delle proprietà distributive.  Supponiamo ora che sia un intero negativo. Per definizione di multiplo si ha e . Abbiamo allora dove abbiamo usato la e il caso in cui l'intero sia positivo ( è positivo).  L'uguaglianza si dimostra in maniera analoga.   "
 },
 {
-  "id": "note-16",
+  "id": "sec-multipli_potenze-6",
   "level": "2",
-  "url": "sec-multipli_potenze.html#note-16",
+  "url": "sec-multipli_potenze.html#sec-multipli_potenze-6",
   "type": "Nota",
   "number": "18.2.3",
   "title": "",
@@ -9271,9 +9271,9 @@ var ptx_lunr_docs = [
   "body": "   caratteristica di un anello    Dato un anello la sua caratteristica , denotata con , è il periodo additivo di . Per convenzione, poniamo se il periodo additivo di è infinito.   "
 },
 {
-  "id": "example-159",
+  "id": "sec-multipli_potenze-10",
   "level": "2",
-  "url": "sec-multipli_potenze.html#example-159",
+  "url": "sec-multipli_potenze.html#sec-multipli_potenze-10",
   "type": "Esempio",
   "number": "18.2.6",
   "title": "",
@@ -9316,18 +9316,18 @@ var ptx_lunr_docs = [
   "body": " Se è un anello non intero possono esserci elementi non nulli aventi periodo additivo diverso. Ad esempio, il gruppo additivo di è un gruppo ciclico di ordine e, quindi, per il , contiene elementi di periodo additivo ciascun divisore di . Se non è primo, ci sono quindi elementi di periodo additivo diverso.  "
 },
 {
-  "id": "exercise-349",
+  "id": "exercises-multipli_potenze-1",
   "level": "2",
-  "url": "sec-multipli_potenze.html#exercise-349",
+  "url": "sec-multipli_potenze.html#exercises-multipli_potenze-1",
   "type": "Esercizio",
   "number": "18.2.1",
   "title": "",
   "body": " Sia un anello commutativo di caratteristica con primo. Mostrare che per ogni e in .  "
 },
 {
-  "id": "exercise-350",
+  "id": "exercises-multipli_potenze-2",
   "level": "2",
-  "url": "sec-multipli_potenze.html#exercise-350",
+  "url": "sec-multipli_potenze.html#exercises-multipli_potenze-2",
   "type": "Esercizio",
   "number": "18.2.2",
   "title": "",
@@ -9397,18 +9397,18 @@ var ptx_lunr_docs = [
   "body": "  Se è un sottoanello di un anello , allora è un anello rispetto alle operazioni indotte.   "
 },
 {
-  "id": "example-160",
+  "id": "sec-sottoanelli-10",
   "level": "2",
-  "url": "sec-sottoanelli.html#example-160",
+  "url": "sec-sottoanelli.html#sec-sottoanelli-10",
   "type": "Esempio",
   "number": "18.3.7",
   "title": "",
   "body": "  L'anello è sottoanello dell'anello che è sottoanello dell'anello che è sottoanello di .   "
 },
 {
-  "id": "example-161",
+  "id": "sec-sottoanelli-11",
   "level": "2",
-  "url": "sec-sottoanelli.html#example-161",
+  "url": "sec-sottoanelli.html#sec-sottoanelli-11",
   "type": "Esempio",
   "number": "18.3.8",
   "title": "",
@@ -9433,9 +9433,9 @@ var ptx_lunr_docs = [
   "body": " Un sottoanello di un anello commutativo è, ovviamente, commutativo.  Un sottoanello di un anello intero è, ovviamente, intero  Di conseguenza, un sottoanello di un dominio è un dominio.  Non è invece detto che un sottoanello di un campo sia un campo: ad esempio, , che non è un campo, è un sottoanello del campo .  "
 },
 {
-  "id": "example-162",
+  "id": "sec-sottoanelli-14",
   "level": "2",
-  "url": "sec-sottoanelli.html#example-162",
+  "url": "sec-sottoanelli.html#sec-sottoanelli-14",
   "type": "Esempio",
   "number": "18.3.11",
   "title": "",
@@ -9568,27 +9568,27 @@ var ptx_lunr_docs = [
   "body": "  Si consideri l'anello delle matrici di ordine a coefficienti in un anello . Prendiamo i sottoanelli delle matrici del tipo e il sottoanello delle matrici triangolari superiori (per la verifica che sia un sottoanello si veda l' ). La matrice appartiene a e, quindi, a , mentre la matrice appartiene a e, quindi, a . Il prodotto non appartiene a (infatti in posizione sia le matrici di che le matrici di hanno valore nullo e così pure, quindi, le loro somme). Di conseguenza non è un sottoanello di .   "
 },
 {
-  "id": "exercise-351",
+  "id": "exercises-sottoanelli-1",
   "level": "2",
-  "url": "sec-sottoanelli.html#exercise-351",
+  "url": "sec-sottoanelli.html#exercises-sottoanelli-1",
   "type": "Esercizio",
   "number": "18.3.1",
   "title": "",
   "body": " Dimostrare la .  "
 },
 {
-  "id": "exercise-352",
+  "id": "exercises-sottoanelli-2",
   "level": "2",
-  "url": "sec-sottoanelli.html#exercise-352",
+  "url": "sec-sottoanelli.html#exercises-sottoanelli-2",
   "type": "Esercizio",
   "number": "18.3.2",
   "title": "",
   "body": " Completare le verifiche nell' .  "
 },
 {
-  "id": "exercise-353",
+  "id": "exercises-sottoanelli-3",
   "level": "2",
-  "url": "sec-sottoanelli.html#exercise-353",
+  "url": "sec-sottoanelli.html#exercises-sottoanelli-3",
   "type": "Esercizio",
   "number": "18.3.3",
   "title": "",
@@ -9613,90 +9613,90 @@ var ptx_lunr_docs = [
   "body": " Sia dato l'anello delle matrici delle matrici quadrate di ordine a coefficienti in un anello e sia il sottoanello delle matrici triangolari inferiori. Dimostrare che il sottoinsieme di formato dalle matrici triangolari inferiori le cui entrate di posto sono nulle è un sottoanello.   Chiaramente è un sottogruppo del gruppo additivo di e contiene la matrice identica. Siano allora e due matrici di : poiché e sono triangolari inferiori abbiamo che se . Inoltre, la condizione che definisce mi dice che se . Consideriamo ora la matrice : sappiamo che è una matrice triangolare inferiore e dobbiamo, quindi, verificare che si annulla in ogni posizione . L'elemento di posto in si calcola così . Ora se abbiamo che , se abbiamo che , se abbiamo che e se abbiamo che . In ogni caso, almeno uno dei fattori nei prodotti della sommatoria si annulla e, quindi, appartiene a .  "
 },
 {
-  "id": "exercise-356",
+  "id": "exercises-sottoanelli-6-2",
   "level": "2",
-  "url": "sec-sottoanelli.html#exercise-356",
+  "url": "sec-sottoanelli.html#exercises-sottoanelli-6-2",
   "type": "Esercizio",
   "number": "18.3.6",
   "title": "",
   "body": " In , il sottoinsieme con intero fissato.   Sì.  "
 },
 {
-  "id": "exercise-357",
+  "id": "exercises-sottoanelli-6-3",
   "level": "2",
-  "url": "sec-sottoanelli.html#exercise-357",
+  "url": "sec-sottoanelli.html#exercises-sottoanelli-6-3",
   "type": "Esercizio",
   "number": "18.3.7",
   "title": "",
   "body": " In , il sottoinsieme .   Sì: il sottoinsieme coincide con .  "
 },
 {
-  "id": "exercise-358",
+  "id": "exercises-sottoanelli-6-4",
   "level": "2",
-  "url": "sec-sottoanelli.html#exercise-358",
+  "url": "sec-sottoanelli.html#exercises-sottoanelli-6-4",
   "type": "Esercizio",
   "number": "18.3.8",
   "title": "",
   "body": " In , il sottoinsieme .   No.  "
 },
 {
-  "id": "exercise-359",
+  "id": "exercises-sottoanelli-6-5",
   "level": "2",
-  "url": "sec-sottoanelli.html#exercise-359",
+  "url": "sec-sottoanelli.html#exercises-sottoanelli-6-5",
   "type": "Esercizio",
   "number": "18.3.9",
   "title": "",
   "body": " In , il sottoinsieme    Sì.  "
 },
 {
-  "id": "exercise-360",
+  "id": "exercises-sottoanelli-6-6",
   "level": "2",
-  "url": "sec-sottoanelli.html#exercise-360",
+  "url": "sec-sottoanelli.html#exercises-sottoanelli-6-6",
   "type": "Esercizio",
   "number": "18.3.10",
   "title": "",
   "body": " In , il sottoinsieme    No.  "
 },
 {
-  "id": "exercise-361",
+  "id": "exercises-sottoanelli-6-7",
   "level": "2",
-  "url": "sec-sottoanelli.html#exercise-361",
+  "url": "sec-sottoanelli.html#exercises-sottoanelli-6-7",
   "type": "Esercizio",
   "number": "18.3.11",
   "title": "",
   "body": " In , il sottoinsieme .   No.  "
 },
 {
-  "id": "exercise-362",
+  "id": "exercises-sottoanelli-6-8",
   "level": "2",
-  "url": "sec-sottoanelli.html#exercise-362",
+  "url": "sec-sottoanelli.html#exercises-sottoanelli-6-8",
   "type": "Esercizio",
   "number": "18.3.12",
   "title": "",
   "body": " In , il sottoinsieme con intero fissato.   Sì.  "
 },
 {
-  "id": "exercise-363",
+  "id": "exercises-sottoanelli-6-9",
   "level": "2",
-  "url": "sec-sottoanelli.html#exercise-363",
+  "url": "sec-sottoanelli.html#exercises-sottoanelli-6-9",
   "type": "Esercizio",
   "number": "18.3.13",
   "title": "",
   "body": " In , il sottoinsieme .   No.  "
 },
 {
-  "id": "exercise-364",
+  "id": "exercises-sottoanelli-6-10",
   "level": "2",
-  "url": "sec-sottoanelli.html#exercise-364",
+  "url": "sec-sottoanelli.html#exercises-sottoanelli-6-10",
   "type": "Esercizio",
   "number": "18.3.14",
   "title": "",
   "body": " In , il sottoinsieme .   No.  "
 },
 {
-  "id": "exercise-365",
+  "id": "exercises-sottoanelli-7",
   "level": "2",
-  "url": "sec-sottoanelli.html#exercise-365",
+  "url": "sec-sottoanelli.html#exercises-sottoanelli-7",
   "type": "Esercizio",
   "number": "18.3.15",
   "title": "",
@@ -9721,9 +9721,9 @@ var ptx_lunr_docs = [
   "body": "  Dati due anelli e , un omomorfismo di anelli da in è una funzione che è omomorfismo di gruppi da in e omomorfismo di monoidi da in . Esplicitamente, deve essere tale che    per ogni e in ;     ;     per ogni e in .      "
 },
 {
-  "id": "p-2592",
+  "id": "sec-omomorfismi_anelli-3",
   "level": "2",
-  "url": "sec-omomorfismi_anelli.html#p-2592",
+  "url": "sec-omomorfismi_anelli.html#sec-omomorfismi_anelli-3",
   "type": "Capoverso (with a defined term)",
   "number": "",
   "title": "",
@@ -9793,27 +9793,27 @@ var ptx_lunr_docs = [
   "body": " La implica che se e sono due anelli e la caratteristica di non divide la caratteristica di , allora non esiste nessun omomorfismo di anelli da a . Ricordiamo invece che, dati due gruppi e esiste sempre almeno un omomorfismo di gruppi da in : quello banale ( ).  "
 },
 {
-  "id": "exercise-366",
+  "id": "exercises-omomorfismi_anelli-1-2",
   "level": "2",
-  "url": "sec-omomorfismi_anelli.html#exercise-366",
+  "url": "sec-omomorfismi_anelli.html#exercises-omomorfismi_anelli-1-2",
   "type": "Esercizio",
   "number": "19.1.1",
   "title": "",
   "body": "  data da    No, non rispetta la moltiplicazione.  "
 },
 {
-  "id": "exercise-367",
+  "id": "exercises-omomorfismi_anelli-1-3",
   "level": "2",
-  "url": "sec-omomorfismi_anelli.html#exercise-367",
+  "url": "sec-omomorfismi_anelli.html#exercises-omomorfismi_anelli-1-3",
   "type": "Esercizio",
   "number": "19.1.2",
   "title": "",
   "body": "  data da    No, non rispetta la moltiplicazione.  "
 },
 {
-  "id": "exercise-368",
+  "id": "exercises-omomorfismi_anelli-1-4",
   "level": "2",
-  "url": "sec-omomorfismi_anelli.html#exercise-368",
+  "url": "sec-omomorfismi_anelli.html#exercises-omomorfismi_anelli-1-4",
   "type": "Esercizio",
   "number": "19.1.3",
   "title": "",
@@ -9919,9 +9919,9 @@ var ptx_lunr_docs = [
   "body": "  Dato un anello e un ideale , la funzione data da è un omomorfismo suriettivo con nucleo , detto omomorfismo canonico .   "
 },
 {
-  "id": "example-165",
+  "id": "sec-anelli_quoziente-15",
   "level": "2",
-  "url": "sec-anelli_quoziente.html#example-165",
+  "url": "sec-anelli_quoziente.html#sec-anelli_quoziente-15",
   "type": "Esempio",
   "number": "19.2.10",
   "title": "",
@@ -10045,18 +10045,18 @@ var ptx_lunr_docs = [
   "body": "  Sia un anello. Se , allora il sottoanello minimo di è isomorfo a . Se , allora il sottoanello minimo di è isomorfo a .   "
 },
 {
-  "id": "exercise-370",
+  "id": "exercises-anelli_quoziente-1",
   "level": "2",
-  "url": "sec-anelli_quoziente.html#exercise-370",
+  "url": "sec-anelli_quoziente.html#exercises-anelli_quoziente-1",
   "type": "Esercizio",
   "number": "19.2.1",
   "title": "",
   "body": " Completare la dimostrazione della , verificando le proprietà distributive.  "
 },
 {
-  "id": "exercise-371",
+  "id": "exercises-anelli_quoziente-2",
   "level": "2",
-  "url": "sec-anelli_quoziente.html#exercise-371",
+  "url": "sec-anelli_quoziente.html#exercises-anelli_quoziente-2",
   "type": "Esercizio",
   "number": "19.2.2",
   "title": "",
@@ -10090,9 +10090,9 @@ var ptx_lunr_docs = [
   "body": " Campo dei quozienti di un dominio  Supponiamo di avere un dominio e di voler costruire un campo che contenga e che sia il più piccolo possibile. Ad esempio sappiamo che il dominio può essere pensato come un sottoanello di ma anche di o anche di (e anche, a dire il vero, di qualche altro campo intermedio), ma, in un certo senso, e sono troppo grandi , mentre contiene esattamente quanto basta. Costruiremo ora un campo a partire da replicando la costruzione di a partire da . Gli elementi di sono frazioni del tipo con e interi e : sappiamo però che lo stesso numero razionale può essere rappresentato in modi diversi. Ad esempio è anche uguale a , a ,   Cominciamo allora considerando il sottoinsieme di , così definito . Definiamo ora in una relazione ponendo se . Mostriamo che è una relazione di equivalenza: è, ovviamente, riflessiva e simmetrica. Per quanto riguarda la transitività, supponiamo che , cioè e . Abbiamo allora , che, riordinando, dà e, essendo , dall' segue che , cioè . Indicheremo con l'insieme quoziente delle classi di equivalenza, che chiameremo frazioni , e indicheremo con la classe di equivalenza di . Notiamo allora che se e solo se , cioè i cosiddetti prodotti in croce coincidono.  Si verifica facilmente che gli elementi del tipo al variare di in formano una classe di equivalenza, cioè la frazione , e che gli elementi del tipo al variare di in formano una classe di equivalenza, cioè la frazione ( ).  Definiamo ora in due operazioni ponendo Mostriamo che queste operazioni sono compatibili con la relazione di equivalenza. Siano allora e , cioè e . Abbiamo allora cioè e cioè . Poiché queste operazioni sono compatibili con la relazione di equivalenza, le seguenti operazioni in sono ben definite Si verifica immediatamente che queste operazioni sono commutative. Verifichiamo che sono entrambe associative: e . L'addizione è, dunque, associativa. Per quanto riguarda la moltiplicazione abbiamo e anche questa risulta associativa.  L'addizione ha elemento neutro e la moltiplicazione ha elemento neutro . Infatti per ogni risulta e .  Ogni elemento ha opposto e, se , cioè, , allora ha inverso : e .  Per la proprietà distributiva abbiamo (possiamo limitarci a verificarne solo una perché abbiamo già osservato la commutatività della moltiplicazione) e .  Abbiamo così mostrato che è un campo. Definiamo ora una funzione ponendo . Questa funzione è ovviamente un omomorfismo dal momento che Inoltre è iniettivo: se , allora il che avviene se e solo se .  Abbiamo così costruito un campo e un omomorfismo iniettivo : possiamo quindi identificare con un sottoanello di , cioè considerare come un campo contenente . Mostriamo che è piccolo o più precisamente, che soddisfa la seguente proprietà universale.    Sia un dominio d'integrità. Allora esiste un campo e un omomorfismo iniettivo tale che, per ogni omomorfismo iniettivo con campo, esiste un unico omomorfismo tale che .   Diagramma commutativo che rappresenta la proprietà universale del campo dei quozienti      Abbiamo descritto la costruzione del campo dei quozienti e l'omomorfismo . Mostriamo l'esistenza e l'unicità dell'omomorfismo .  Dato un elemento di , sappiamo che e, poiché è iniettivo, è un elemento non nullo del campo ed è quindi invertibile. Poniamo allora . Dobbiamo innanzitutto verificare che sia ben definita: infatti è la classe di equivalenza della coppia ma la classe di equivalenza contiene altri elementi. Sia, allora, uno di tali elementi, cioè sia : poiché è un omomorfismo, abbiamo . Moltiplicando ambo i membri per otteniamo , e, dunque, è ben definita.  Verifichiamo che è un omomorfismo. Abbiamo infatti e e . Ora, preso in , abbiamo cioè .  Supponiamo ora che esista un omomorfismo tale che . Abbiamo allora     La proprietà universale descritta dal definisce il campo dei quozienti, nel senso che il campo dei quozienti è indipendente dalla costruzione che abbiamo dato: se lo avessimo costruito in modo diverso e avessimo ottenuto un campo soddisfacente la proprietà universale, avremmo ottenuto essenzialmente lo stesso campo, sia pure descritto in modo diverso. Più precisamente abbiamo il    Sia un dominio e siano e due campi e e due omomorfismi tali che entrambi soddisfano la proprietà universale data nel . Allora esiste un unico isomorfismo tale che .    Per ipotesi esiste un unico omomorfismo tale che : dobbiamo provare che è un isomorfismo. Sempre per ipotesi, esiste un unico omomorfismo tale che . Ma allora è un endomorfismo di tale che . D'altra parte è un endomorfismo di tale che : per l'unicità dell'omomorfismo dato dalla proprietà universale, abbiamo che . Analogamente, , cioè e sono uno inverso dell'altro e sono quindi isomorfismi.     Per il , l'omomorfismo definito dal è, a sua volta, iniettivo.     Dato un campo , un suo sottoinsieme è detto sottocampo di se è un sottoanello di e, per ogni elemento non nullo di si ha che appartiene a .    Analogamente a quanto fatto per sottomonoidi, sottogruppi, si può mostrare la    Se è un campo e è una famiglia di sottocampi di (indicizzata da un insieme di indici ), allora è un sottocampo di .     Interpretiamo in altro modo il : sia dato un dominio contenuto in un campo . Consideriamo l'intersezione di tutti i sottocampi di contenenti (almeno uno ce n'è: stesso). Otteniamo allora un sottocampo contenente . Consideriamo poi l'omomorfismo di inclusione : esiste allora un unico omomorfismo dal campo dei quozienti di in tale che . Dunque, se è un elemento di , abbiamo , cioè : dall' sappiamo che è iniettivo e, quindi, l'immagine di è isomorfa a . In particolare, l'immagine di è un sottocampo di contenente : per costruzione coincide con , cioè è anche suriettivo. In conclusione è isomorfo a e, possiamo, anzi, identificare con .  Riassumendo: se un campo contiene un dominio , allora contiene il campo dei quozienti di , e questo è il più piccolo sottocampo di contenente . In particolare, se è esso stesso un campo, allora coincide con il proprio campo dei quozienti.    sottocampo minimo   Dato un campo , l'intersezione di tutti i sottocampi di è un sottocampo , detto sottocampo minimo . Il sottocampo minimo contiene il sottoanello minimo ed è il campo dei quozienti di .  Se , allora contiene strettamente ed è isomorfo a , mentre se con primo, allora e è isomorfo a .    Sappiamo che l'intersezione di tutti i sottocampi di è un sottocampo : in particolare, è un sottoanello e, quindi, contiene l'intersezione di tutti i sottoanelli di . Per l' , è il campo dei quozienti di .  Per la , sappiamo che se , allora è isomorfo a e, quindi, è isomorfo a (in particolare, è contenuto strettamente in ); se, invece con primo, allora è isomorfo a , che, essendo un campo, coincide con il proprio campo dei quozienti.      Mostrare che gli elementi di del tipo al variare di in formano una classe di equivalenza e che gli elementi del tipo al variare di in formano una classe di equivalenza.    Dimostrare la .    "
 },
 {
-  "id": "p-2681",
+  "id": "sec-campo_dei_quozienti-3",
   "level": "2",
-  "url": "sec-campo_dei_quozienti.html#p-2681",
+  "url": "sec-campo_dei_quozienti.html#sec-campo_dei_quozienti-3",
   "type": "Capoverso (with a defined term)",
   "number": "",
   "title": "",
@@ -10171,9 +10171,9 @@ var ptx_lunr_docs = [
   "body": " Mostrare che gli elementi di del tipo al variare di in formano una classe di equivalenza e che gli elementi del tipo al variare di in formano una classe di equivalenza.  "
 },
 {
-  "id": "exercise-375",
+  "id": "exercises-campo_dei_quozienti-2",
   "level": "2",
-  "url": "sec-campo_dei_quozienti.html#exercise-375",
+  "url": "sec-campo_dei_quozienti.html#exercises-campo_dei_quozienti-2",
   "type": "Esercizio",
   "number": "19.3.2",
   "title": "",
@@ -10315,9 +10315,9 @@ var ptx_lunr_docs = [
   "body": "  Sia un dominio. Se è un polinomio di grado positivo in , allora non è invertibile.    Per il , ha grado positivo per ogni polinomio non nullo : in particolare, non esiste alcun tale che .   "
 },
 {
-  "id": "example-166",
+  "id": "sec-anello_polinomi-26",
   "level": "2",
-  "url": "sec-anello_polinomi.html#example-166",
+  "url": "sec-anello_polinomi.html#sec-anello_polinomi-26",
   "type": "Esempio",
   "number": "20.1.15",
   "title": "",
@@ -10333,36 +10333,36 @@ var ptx_lunr_docs = [
   "body": "  Dato un anello commutativo , l'anello dei polinomi non è un campo.    Se non è un dominio, allora, per il , non è un dominio e, a maggior ragione, non è un campo. Se è un dominio, per il i polinomi di grado positivo non sono invertibili.   "
 },
 {
-  "id": "exercise-376",
+  "id": "exercises-anello_polinomi-1",
   "level": "2",
-  "url": "sec-anello_polinomi.html#exercise-376",
+  "url": "sec-anello_polinomi.html#exercises-anello_polinomi-1",
   "type": "Esercizio",
   "number": "20.1.1",
   "title": "",
   "body": " Completare la dimostrazione del , verificando le proprietà distributive e che è commutativo.  "
 },
 {
-  "id": "exercise-377",
+  "id": "exercises-anello_polinomi-2",
   "level": "2",
-  "url": "sec-anello_polinomi.html#exercise-377",
+  "url": "sec-anello_polinomi.html#exercises-anello_polinomi-2",
   "type": "Esercizio",
   "number": "20.1.2",
   "title": "",
   "body": " Dimostrare il .  "
 },
 {
-  "id": "exercise-378",
+  "id": "exercises-anello_polinomi-3",
   "level": "2",
-  "url": "sec-anello_polinomi.html#exercise-378",
+  "url": "sec-anello_polinomi.html#exercises-anello_polinomi-3",
   "type": "Esercizio",
   "number": "20.1.3",
   "title": "",
   "body": " Dimostrare la .  "
 },
 {
-  "id": "exercise-379",
+  "id": "exercises-anello_polinomi-4",
   "level": "2",
-  "url": "sec-anello_polinomi.html#exercise-379",
+  "url": "sec-anello_polinomi.html#exercises-anello_polinomi-4",
   "type": "Esercizio",
   "number": "20.1.4",
   "title": "",
@@ -10405,9 +10405,9 @@ var ptx_lunr_docs = [
   "body": " Divisione tra polinomi   Sia un anello commutativo e siano e due polinomi in con diverso da e coefficiente direttivo invertibile. Allora esistono e sono univocamente determinati e in tali che con o . I polinomi e sono detti, rispettivamente, quoziente e resto della divisione di per .    Sia e con invertibile.  Mostriamo innanzitutto l'esistenza di e per induzione su . Se , basta prendere e . Se , allora sottraiamo da un multiplo opportuno di , in modo che il coefficiente di nel polinomio così ottenuto sia : per certi in . Per ipotesi induttiva, esistono allora e tali che con o . Ma allora avendo posto .  Per quanto riguarda l'unicità, supponiamo che con o . Allora . Se fosse , cioè , per la avremmo allora che (il coefficiente direttivo di , essendo invertibile non è un divisore dello zero). Ma ciò non può essere per le condizioni su e . Dunque e , cioè .   "
 },
 {
-  "id": "example-167",
+  "id": "sec-valutazione_polinomi-9",
   "level": "2",
-  "url": "sec-valutazione_polinomi.html#example-167",
+  "url": "sec-valutazione_polinomi.html#sec-valutazione_polinomi-9",
   "type": "Esempio",
   "number": "20.2.4",
   "title": "",
@@ -10441,9 +10441,9 @@ var ptx_lunr_docs = [
   "body": "  Sia un polinomio non nullo a coefficienti in un dominio . Se , , , sono radici distinte di , allora per qualche in . In particolare, .    Procediamo per induzione su . Se , non c'è nulla da dimostrare. Se , per il sappiamo che per qualche in . Per ogni con , abbiamo : poiché è un dominio e , questo implica che . Per ipotesi induttiva abbiamo allora che . Sostituendo, otteniamo la tesi.   "
 },
 {
-  "id": "example-168",
+  "id": "sec-valutazione_polinomi-14",
   "level": "2",
-  "url": "sec-valutazione_polinomi.html#example-168",
+  "url": "sec-valutazione_polinomi.html#sec-valutazione_polinomi-14",
   "type": "Esempio",
   "number": "20.2.8",
   "title": "",
@@ -10486,27 +10486,27 @@ var ptx_lunr_docs = [
   "body": "  Se è un gruppo ciclico di ordine primo , il suo gruppo degli automorfismi è un gruppo ciclico di ordine .    Dal , sappiamo che è isomorfo al gruppo degli invertibili del monoide moltiplicativo di : ma è un campo finito e, quindi possiamo applicare il .   "
 },
 {
-  "id": "example-169",
+  "id": "sec-valutazione_polinomi-20",
   "level": "2",
-  "url": "sec-valutazione_polinomi.html#example-169",
+  "url": "sec-valutazione_polinomi.html#sec-valutazione_polinomi-20",
   "type": "Esempio",
   "number": "20.2.13",
   "title": "",
   "body": "  Sia un gruppo ciclico di ordine generato da un suo certo elemento . Gli automorfismi di sono determinati dall'immagine di che deve essere un elemento di ordine : abbiamo automorfismi e cioè quelli che mandano rispettivamente in , , e . Ciascuno di questi automorfismi composto con sé stesso dà l'identità e, dunque, non ci sono automorfismi di ordine : il gruppo non è ciclico.   "
 },
 {
-  "id": "exercise-380",
+  "id": "exercises-valutazione_polinomi-1",
   "level": "2",
-  "url": "sec-valutazione_polinomi.html#exercise-380",
+  "url": "sec-valutazione_polinomi.html#exercises-valutazione_polinomi-1",
   "type": "Esercizio",
   "number": "20.2.1",
   "title": "",
   "body": " Mostrare che se è un anello non commutativo, si può comunque costruire l'anello dei polinomi, ma il va adattato richiedendo che appartenga al centro di .  "
 },
 {
-  "id": "exercise-381",
+  "id": "exercises-valutazione_polinomi-2",
   "level": "2",
-  "url": "sec-valutazione_polinomi.html#exercise-381",
+  "url": "sec-valutazione_polinomi.html#exercises-valutazione_polinomi-2",
   "type": "Esercizio",
   "number": "20.2.2",
   "title": "",
@@ -10549,9 +10549,9 @@ var ptx_lunr_docs = [
   "body": "  Siano , e elementi di un dominio . Sia un elemento invertibile di . Allora    ;    se e allora ;     ;     se e solo se ;     ;     se e solo se è invertibile.      "
 },
 {
-  "id": "p-2807",
+  "id": "sec-divisibilita-6",
   "level": "2",
-  "url": "sec-divisibilita.html#p-2807",
+  "url": "sec-divisibilita.html#sec-divisibilita-6",
   "type": "Capoverso (with a defined term)",
   "number": "",
   "title": "",
@@ -10684,9 +10684,9 @@ var ptx_lunr_docs = [
   "body": " Dimostrare la .   Dimostriamo che la condizione implica la condizione . Sia allora , e, dunque, e sono divisori di : per la condizione sono invertibili o associati a . Gli elementi e non possono essere entrambi invertibili perché altrimenti anche il loro prodotto lo sarebbe. Dunque almeno uno tra essi è associato a .  Dimostriamo che la condizione implica la condizione . Sia allora : sappiamo che almeno uno tra e è associato a , ad esempio sia associato a . Per la , abbiamo che per qualche invertibile : ma allora e, essendo (altrimenti ), per l' abbiamo , cioè è invertibile.  Dimostriamo che la condizione implica la condizione . Sia allora un divisore di : dobbiamo mostrare che è invertibile o associato a . Sappiamo che esiste tale che . Poiché vale la condizione almeno uno tra e è invertibile: nel primo caso è, per l'appunto, invertibile, nel secondo caso è associato a .  "
 },
 {
-  "id": "exercise-384",
+  "id": "exercises-divisibilita-3",
   "level": "2",
-  "url": "sec-divisibilita.html#exercise-384",
+  "url": "sec-divisibilita.html#exercises-divisibilita-3",
   "type": "Esercizio",
   "number": "21.1.3",
   "title": "",
@@ -10711,18 +10711,18 @@ var ptx_lunr_docs = [
   "body": "  Un dominio è detto a fattorizzazione unica (in breve, UFD Dall'inglese Unique Factorization Domain. ) se ogni elemento con e non invertibile si scrive come prodotto di irriducibili in maniera essenzialmente unica, vale a dire che se e sono due fattorizzazioni di in irriducibili allora e, pur di riordinare i , si ha , , .   "
 },
 {
-  "id": "example-171",
+  "id": "sec-fattorizzazione-4",
   "level": "2",
-  "url": "sec-fattorizzazione.html#example-171",
+  "url": "sec-fattorizzazione.html#sec-fattorizzazione-4",
   "type": "Esempio",
   "number": "21.2.2",
   "title": "",
   "body": "  Il primo esempio di dominio a fattorizzazione unica è dunque . Banalmente ogni campo può essere visto come un dominio a fattorizzazione unica: non ci sono infatti elementi diversi da e non invertibili da fattorizzare (in particolare, non ci sono elementi irriducibili).   "
 },
 {
-  "id": "example-172",
+  "id": "sec-fattorizzazione-6",
   "level": "2",
-  "url": "sec-fattorizzazione.html#example-172",
+  "url": "sec-fattorizzazione.html#sec-fattorizzazione-6",
   "type": "Esempio",
   "number": "21.2.3",
   "title": "",
@@ -10738,9 +10738,9 @@ var ptx_lunr_docs = [
   "body": "  Sia un elemento non nullo e non invertibile di un dominio a fattorizzazione unica , scritto come prodotto di irriducibili . Chiamiamo lunghezza di il numero . Per completezza poniamo poi per invertibile, mentre non è definita la lunghezza di .   "
 },
 {
-  "id": "example-173",
+  "id": "sec-fattorizzazione-9",
   "level": "2",
-  "url": "sec-fattorizzazione.html#example-173",
+  "url": "sec-fattorizzazione.html#sec-fattorizzazione-9",
   "type": "Esempio",
   "number": "21.2.5",
   "title": "",
@@ -11017,9 +11017,9 @@ var ptx_lunr_docs = [
   "body": "  Un dominio è detto euclideo se esiste una funzione tale che per ogni e in con esistono e in tali che e o .   "
 },
 {
-  "id": "example-175",
+  "id": "sec-PID_euclidei-9",
   "level": "2",
-  "url": "sec-PID_euclidei.html#example-175",
+  "url": "sec-PID_euclidei.html#sec-PID_euclidei-9",
   "type": "Esempio",
   "number": "21.3.7",
   "title": "",
@@ -11071,108 +11071,108 @@ var ptx_lunr_docs = [
   "body": " Algoritmo di Euclide per i domini euclidei  algoritmo di Euclide in un dominio Euclideo   Sia un dominio euclideo rispetto alla mappa e siano e due elementi di . Se allora e un'identità di Bezout è banalmente data da .  Se consideriamo la successione di divisioni I valori formano una catena strettamente decrescente di numeri naturali. Poiché questa successione deve avere termine, ciò significa che dobbiamo arrivare a un resto nullo. L'ultimo resto non nullo è allora il massimo comun divisore di e . Inoltre, dalla successione di equazioni è possibile ottenere un'identità, cosiddetta di Bezout, del tipo per opportuni elementi e di .   "
 },
 {
-  "id": "example-178",
+  "id": "sec-PID_euclidei-21",
   "level": "2",
-  "url": "sec-PID_euclidei.html#example-178",
+  "url": "sec-PID_euclidei.html#sec-PID_euclidei-21",
   "type": "Esempio",
   "number": "21.3.13",
   "title": "",
   "body": "  Applichiamo l' per trovare il massimo comun divisore tra i polinomi e a coefficienti in . Dividendo per troviamo . Procediamo con le altre divisioni: L'ultimo resto non nullo è che è dunque il massimo comun divisore di e . Per ottenere un'identità di Bezout procediamo così:    "
 },
 {
-  "id": "exercise-389",
+  "id": "exercises-PID_euclidei-1-2",
   "level": "2",
-  "url": "sec-PID_euclidei.html#exercise-389",
+  "url": "sec-PID_euclidei.html#exercises-PID_euclidei-1-2",
   "type": "Esercizio",
   "number": "21.3.1",
   "title": "",
   "body": "     Usiamo la funzione definita nell' , rispetto a cui è un dominio euclideo.  Sappiamo che è irriducibile in , ma non è detto che lo sia in . Ora e, dall' sappiamo che se per qualche e in , allora : le possibilità sono che uno tra e sia e l'altro (cioè che uno sia invertibile e l'altro associato a , caso che non ci interessa) o che . Sia allora con e interi e . Le uniche possibilità sono e o e . Ci sono allora numeri che soddisfano le condizioni: non sappiamo però se siano divisori di . Per evitare di verificarli tutti a uno a uno, notiamo però che se un numero è divisore di , allora tutti i numeri associati a sono pure divisori di . Poiché in ho elementi invertibili, e cioè , , e , ogni numero non nullo ha associati. In particolare è associato a , e , mentre gli altri quattro sono associati tra loro (uno di essi è ). Abbiamo ridotto i casi da verificare: o e sono uno associato a e l'altro a o sono associati tra loro e associati a uno di quei due valori. Si vede però che e questa è una fattorizzazione in irriducibili di : infatti abbiamo già elencato i valori possibili di per i divisori di .  "
 },
 {
-  "id": "exercise-390",
+  "id": "exercises-PID_euclidei-1-3",
   "level": "2",
-  "url": "sec-PID_euclidei.html#exercise-390",
+  "url": "sec-PID_euclidei.html#exercises-PID_euclidei-1-3",
   "type": "Esercizio",
   "number": "21.3.2",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-391",
+  "id": "exercises-PID_euclidei-1-4",
   "level": "2",
-  "url": "sec-PID_euclidei.html#exercise-391",
+  "url": "sec-PID_euclidei.html#exercises-PID_euclidei-1-4",
   "type": "Esercizio",
   "number": "21.3.3",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-392",
+  "id": "exercises-PID_euclidei-2-2",
   "level": "2",
-  "url": "sec-PID_euclidei.html#exercise-392",
+  "url": "sec-PID_euclidei.html#exercises-PID_euclidei-2-2",
   "type": "Esercizio",
   "number": "21.3.4",
   "title": "",
   "body": "  e    Applichiamo l' usando la funzione e la divisione data nell' .  Abbiamo e . Dividiamo, dunque, per in e approssimiamo poi il quoziente in . . Approssimiamo questo quoziente con . Troviamo allora - Svolgendo i calcoli troviamo che . Dividiamo ora per : . Abbiamo dunque . L'ultimo resto cercato è che è, dunque, il massimo comun divisore. Possiamo poi scrivere facilmente un'identità di Bezout .  "
 },
 {
-  "id": "exercise-393",
+  "id": "exercises-PID_euclidei-2-3",
   "level": "2",
-  "url": "sec-PID_euclidei.html#exercise-393",
+  "url": "sec-PID_euclidei.html#exercises-PID_euclidei-2-3",
   "type": "Esercizio",
   "number": "21.3.5",
   "title": "",
   "body": "  e       "
 },
 {
-  "id": "exercise-394",
+  "id": "exercises-PID_euclidei-2-4",
   "level": "2",
-  "url": "sec-PID_euclidei.html#exercise-394",
+  "url": "sec-PID_euclidei.html#exercises-PID_euclidei-2-4",
   "type": "Esercizio",
   "number": "21.3.6",
   "title": "",
   "body": "  e       "
 },
 {
-  "id": "exercise-395",
+  "id": "exercises-PID_euclidei-2-5",
   "level": "2",
-  "url": "sec-PID_euclidei.html#exercise-395",
+  "url": "sec-PID_euclidei.html#exercises-PID_euclidei-2-5",
   "type": "Esercizio",
   "number": "21.3.7",
   "title": "",
   "body": "  e       "
 },
 {
-  "id": "exercise-396",
+  "id": "exercises-PID_euclidei-3-2",
   "level": "2",
-  "url": "sec-PID_euclidei.html#exercise-396",
+  "url": "sec-PID_euclidei.html#exercises-PID_euclidei-3-2",
   "type": "Esercizio",
   "number": "21.3.8",
   "title": "",
   "body": "  e       "
 },
 {
-  "id": "exercise-397",
+  "id": "exercises-PID_euclidei-3-3",
   "level": "2",
-  "url": "sec-PID_euclidei.html#exercise-397",
+  "url": "sec-PID_euclidei.html#exercises-PID_euclidei-3-3",
   "type": "Esercizio",
   "number": "21.3.9",
   "title": "",
   "body": "  e       "
 },
 {
-  "id": "exercise-398",
+  "id": "exercises-PID_euclidei-3-4",
   "level": "2",
-  "url": "sec-PID_euclidei.html#exercise-398",
+  "url": "sec-PID_euclidei.html#exercises-PID_euclidei-3-4",
   "type": "Esercizio",
   "number": "21.3.10",
   "title": "",
   "body": "  e       "
 },
 {
-  "id": "exercise-399",
+  "id": "exercises-PID_euclidei-4",
   "level": "2",
-  "url": "sec-PID_euclidei.html#exercise-399",
+  "url": "sec-PID_euclidei.html#exercises-PID_euclidei-4",
   "type": "Esercizio",
   "number": "21.3.11",
   "title": "",
@@ -11251,9 +11251,9 @@ var ptx_lunr_docs = [
   "body": "  Sia un dominio a fattorizzazione unica e sia il suo campo dei quozienti. Sia un polinomio primitivo di e sia un polinomio di . Allora divide in se e solo se divide in .    Chiaramente se divide in allora divide in .  Viceversa, supponiamo che divida in e sia un polinomio di tale che . Sia un elemento non nullo di tale che (basta prendere un multiplo dei denominatori di tutti i coefficienti di ). Dunque : notiamo che in questa relazione appaiono solo polinomi a coefficienti in . Procediamo ora per induzione sulla lunghezza di . Se , cioè l'inverso di appartiene a , possiamo scrivere e, quindi, divide in . Se , sia con elemento irriducibile di e elemento di . Per le proprietà della lunghezza si ha . Ora e, quindi, divide . Essendo irriducibile in , per il è primo in , e, quindi, per il è primo in . Pertanto, divide oppure in : dal momento che è primitivo, divide in . Sia con in : abbiamo allora e, semplificando per , otteniamo da cui segue la tesi per ipotesi induttiva.   "
 },
 {
-  "id": "example-179",
+  "id": "sec-trasporto_UFD-13",
   "level": "2",
-  "url": "sec-trasporto_UFD.html#example-179",
+  "url": "sec-trasporto_UFD.html#sec-trasporto_UFD-13",
   "type": "Esempio",
   "number": "22.1.8",
   "title": "",
@@ -11287,9 +11287,9 @@ var ptx_lunr_docs = [
   "body": "  Se è un dominio a fattorizzazione unica, allora anche è un dominio a fattorizzazione unica. In particolare, se è un campo allora è un dominio a fattorizzazione unica.   "
 },
 {
-  "id": "exercise-400",
+  "id": "exercises-trasporto_UFD-1",
   "level": "2",
-  "url": "sec-trasporto_UFD.html#exercise-400",
+  "url": "sec-trasporto_UFD.html#exercises-trasporto_UFD-1",
   "type": "Esercizio",
   "number": "22.1.1",
   "title": "",
@@ -11305,9 +11305,9 @@ var ptx_lunr_docs = [
   "body": " Mostrare che se è un polinomio primitivo di grado a coefficienti in un dominio a fattorizzazione unica , allora è irriducibile. In particolare, è irriducibile.   Poiché ha grado , è diverso da e non è invertibile. Sia allora per e polinomi in . Allora : pertanto uno tra e , ad esempio , ha grado , cioè appartiene a . Ma allora divide tutti i coefficienti di , cioè il suo contenuto. Dunque, è invertibile: di conseguenza, è irriducibile.  "
 },
 {
-  "id": "exercise-402",
+  "id": "exercises-trasporto_UFD-3",
   "level": "2",
-  "url": "sec-trasporto_UFD.html#exercise-402",
+  "url": "sec-trasporto_UFD.html#exercises-trasporto_UFD-3",
   "type": "Esercizio",
   "number": "22.1.3",
   "title": "",
@@ -11341,9 +11341,9 @@ var ptx_lunr_docs = [
   "body": "  Sia un polinomio a coefficienti interi di grado (quindi ). Se è una radice razionale di , allora, scritto con e coprimi, risulta divisore di e divisore di . In particolare, se è un intero, allora divide il termine noto .    Per il , sappiamo che divide in . Poiché , anche divide in : ora è un polinomio in primitivo e, quindi, per la divide in . La tesi segue dal fatto che il termine noto del prodotto è il prodotto dei termini noti e il coefficiente direttivo del prodotto è il prodotto dei coefficienti direttivi.   "
 },
 {
-  "id": "example-180",
+  "id": "sec-esempi_fattorizzazione_polinomi-10",
   "level": "2",
-  "url": "sec-esempi_fattorizzazione_polinomi.html#example-180",
+  "url": "sec-esempi_fattorizzazione_polinomi.html#sec-esempi_fattorizzazione_polinomi-10",
   "type": "Esempio",
   "number": "22.2.3",
   "title": "",
@@ -11368,54 +11368,54 @@ var ptx_lunr_docs = [
   "body": " Nell' non abbiamo utilizzato un procedimento ben definito per determinare la fattorizzazione del polinomio a coefficienti interi dato: in realtà, esistono algoritmi piuttosto efficienti per queste fattorizzazioni.  "
 },
 {
-  "id": "example-182",
+  "id": "sec-esempi_fattorizzazione_polinomi-15",
   "level": "2",
-  "url": "sec-esempi_fattorizzazione_polinomi.html#example-182",
+  "url": "sec-esempi_fattorizzazione_polinomi.html#sec-esempi_fattorizzazione_polinomi-15",
   "type": "Esempio",
   "number": "22.2.6",
   "title": "",
   "body": "  Consideriamo il polinomio a coefficienti in . Cerchiamo innanzitutto se ha qualche radice. Poiché il campo è finito possiamo semplicemente sostituire gli elementi uno a uno. Notiamo che , (ricordiamo che stiamo lavorando modulo ). Dunque è radice e è un fattore di . Dividendo, troviamo . Ci chiediamo ora se è irriducibile o no. Per far ciò, basta verificare se ha radici o meno. È inutile verificare se è radice perché altrimenti sarebbe radice anche di . Abbiamo poi e : pertanto non ha radici e, avendo grado è irriducibile. Dunque la fattorizzazione in irriducibili di è .   "
 },
 {
-  "id": "example-183",
+  "id": "sec-esempi_fattorizzazione_polinomi-16",
   "level": "2",
-  "url": "sec-esempi_fattorizzazione_polinomi.html#example-183",
+  "url": "sec-esempi_fattorizzazione_polinomi.html#sec-esempi_fattorizzazione_polinomi-16",
   "type": "Esempio",
   "number": "22.2.7",
   "title": "",
   "body": "  Consideriamo il polinomio a coefficienti in un campo e troviamone la fattorizzazione in irriducibili in diversi casi.  Consideriamo prima il caso in cui . Poiché è un polinomio a coefficienti interi primitivo una sua fattorizzazione in irriducibili in è anche una fattorizzazione in irriducibili in , grazie al . Poiché è monico i suoi fattori sono (associati a) polinomi monici. Se non fosse irriducibile in dovrebbe avere un fattore di primo o di secondo grado. Se avesse un fattore di primo grado, dovrebbe avere una radice in . Le eventuali radici razionali sono del tipo con divisore del temine noto e divisore del coefficiente direttivo : i valori possibili sono , , e . Sostituendo nel polinomio questi valori vediamo che nessuno di essi è soluzione. Verifichiamo allora se è prodotto di due polinomi di secondo grado monici a coefficienti interi: cioè Uguagliando i coefficienti troviamo , , e . Dalla prima uguaglianza troviamo . Le altre uguaglianze diventano , e . Dalla seconda di queste uguaglianze troviamo o : se fosse , l'ultima uguaglianza diverrebbe che non può essere soddisfatta per nessun valore intero di ; se, invece , otteniamo e le altre uguaglianze diventano e : il prodotto di due numeri interi è se uno dei due è e l'altro oppure uno dei due è e l'altro e, in nessuno di questi casi, la somma di questi numeri è . Pertanto è irriducibile in .  Consideriamo ora il caso in cui . Valutando in ciascuno degli elementi di , vediamo che nessuno di essi è radice di che quindi non ha fattori di primo grado. Il polinomio potrebbe però essere prodotto di due polinomi di secondo grado, che possiamo assumere monici. Riprendendo i calcoli fatti al punto precedente e riducendoli modulo otteniamo le seguenti equazioni: , , e . Come prima, otteniamo e le altre uguaglianze diventano , e . Dalla seconda troviamo o . Nel primo caso, le altre equazioni si riducono a e : considerando i vari casi, queste sono soddisfatte se . Dunque si fattorizza come . Abbiamo già notato che non ha fattori di primo grado, quindi questa è la sua fattorizzazione in irriducibili.   "
 },
 {
-  "id": "exercise-403",
+  "id": "exercises-esempi_fattorizzazione_polinomi-1",
   "level": "2",
-  "url": "sec-esempi_fattorizzazione_polinomi.html#exercise-403",
+  "url": "sec-esempi_fattorizzazione_polinomi.html#exercises-esempi_fattorizzazione_polinomi-1",
   "type": "Esercizio",
   "number": "22.2.1",
   "title": "",
   "body": " Sia un intero. Determinare per quali valori di , il polinomio è irriducibile in .   Poiché il polinomio ha grado ed è primitivo qualunque sia , se non è irriducibile ha un fattore di grado e, di conseguenza una radice in . Un'eventuale radice razionale è del tipo con che divide il termine noto e che divide il coefficiente direttivo . Le possibilità. Dunque, può assumere i valori , , , . Abbiamo allora che si annulla se e solo se , che si annulla se e solo se , che si annulla se e solo se e che si annulla se e solo se . In conclusione, è irriducibile se e solo se è diverso da , e .  "
 },
 {
-  "id": "exercise-404",
+  "id": "exercises-esempi_fattorizzazione_polinomi-2-2",
   "level": "2",
-  "url": "sec-esempi_fattorizzazione_polinomi.html#exercise-404",
+  "url": "sec-esempi_fattorizzazione_polinomi.html#exercises-esempi_fattorizzazione_polinomi-2-2",
   "type": "Esercizio",
   "number": "22.2.2",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-405",
+  "id": "exercises-esempi_fattorizzazione_polinomi-2-3",
   "level": "2",
-  "url": "sec-esempi_fattorizzazione_polinomi.html#exercise-405",
+  "url": "sec-esempi_fattorizzazione_polinomi.html#exercises-esempi_fattorizzazione_polinomi-2-3",
   "type": "Esercizio",
   "number": "22.2.3",
   "title": "",
   "body": "        "
 },
 {
-  "id": "exercise-406",
+  "id": "exercises-esempi_fattorizzazione_polinomi-2-4",
   "level": "2",
-  "url": "sec-esempi_fattorizzazione_polinomi.html#exercise-406",
+  "url": "sec-esempi_fattorizzazione_polinomi.html#exercises-esempi_fattorizzazione_polinomi-2-4",
   "type": "Esercizio",
   "number": "22.2.4",
   "title": "",
@@ -11431,9 +11431,9 @@ var ptx_lunr_docs = [
   "body": " Elementi algebrici e trascendenti  Se è un anello contenente un campo , allora possiamo considerare come uno spazio vettoriale su in maniera ovvia, prendendo come addizione l'addizione in e come moltiplicazione di uno scalare (cioè un elemento di ) per un vettore (cioè un elemento di ) la moltiplicazione di questi elementi in . Le verifiche che così facendo si ottiene effettivamente un -spazio vettoriale sono molto semplici e le lasciamo per esercizio. Nel caso in cui anche l'anello che contiene sia esso stesso un campo , diciamo che è un' estensione di e diamo la     grado di un'estensione di    Se è un'estensione di , il grado di su , denotato con è la dimensione (eventualmente infinita) di come -spazio vettoriale. Nel caso in cui sia finito, diremo che è un'estensione finita di .      Il campo dei complessi ha grado su .      Un campo finito ha ordine potenza di un primo.    Un campo finito ha caratteristica un primo ( e ). Per la , il sottocampo minimo di ha allora ordine . Ora è, ovviamente, un'estensione finita di , di grado, diciamo, . Come -spazio vettoriale è allora isomorfo a , lo spazio delle -uple a coefficienti in , che contiene esattamente elementi.      Sia un'estensione di un campo e sia un anello contenente . Allora ha dimensione finita come -spazio vettoriale se e solo se ha dimensione finita come -spazio vettoriale e è finito: in tal caso (in particolare, se è anch'esso un campo, risulta ).    Supponiamo che sia finita. Allora , essendo contenuto in , può essere visto come un -sottospazio vettoriale di e, quindi, ha -dimensione finita. Inoltre, presi i vettori di una -base di , questi sono anche -generatori di e, quindi, ha -dimensione finita.  Viceversa, supponiamo che e siano finiti. Sia allora , , , una -base di e sia , , , una -base di . Se mostriamo che con e formano una -base di , otteniamo che è finita ed è esattamente uguale a .  Mostriamo che i vettori dati generano come -spazio vettoriale. Infatti, dato un elemento di , questo può essere espresso come una -combinazione lineare dei : . Ciascun , in quanto elemento di , può essere espresso come -combinazione lineare degli : . Combinando le sommatorie date troviamo come -combinazione lineare degli : .  Mostriamo, infine, che gli sono -linearmente indipendenti, ponendo uguale a una loro -combinazione lineare: . Riscrivendola così possiamo pensare il primo membro come una -combinazione lineare dei e, essendo questi ultimi -linearmente indipendenti, otteniamo che tutti gli -coefficienti si annullano, cioè per ogni . Poiché gli sono -linearmente indipendenti, ciò implica che per ogni e , come richiesto.      Sia un'estensione di un campo e sia un elemento di . Diciamo che è algebrico su se è radice di un polinomio non nullo a coefficienti in ; altrimenti, cioè se l'unico polinomio a coefficienti in di cui è radice è il polinomio nullo, diciamo che è trascendente su .     Se è un'estensione di un campo , allora ogni elemento di è, banalmente, algebrico su in quanto radice del polinomio a coefficienti in      Consideriamo il campo e la sua estensione . Allora è algebrico su in quanto radice di a coefficienti in . D'altra parte, Lindemann Ferdinand von Lindemann , 1852 1939. Lindemann, Ferdinand von nel 1882 ha dimostrato che è trascendente su .       sottocampo generato da e , ,     sottoanello generato da e , ,    Dati un'estensione di un campo ed elementi , , di , indichiamo con il sottocampo di generato da e , , e con il sottoanello di generato da e , , .      Sia un'estensione di un campo e siano , , elementi di : allora contiene e è il campo dei quozienti di .    Per definizione, è contenuto in tutti i sottoanelli di contenenti e , , : in particolare, è un sottoanello che soddisfa queste proprietà e, quindi, contiene . Il fatto che sia il campo dei quozienti di segue dall' .      Sia un campo e sia un polinomio di grado positivo a coefficienti in . Se è irriducibile, allora è un campo, altrimenti non è un dominio.    Supponiamo che non sia irriducibile, ed esistano allora e di grado minore di tali che : in particolare, e non appartengono a , cioè e sono elementi non nulli di . D'altra parte è lo zero di che, quindi, non è un dominio.  Sia ora irriducibile. Per il , gli ideali di sono del tipo con ideale di contenente : poiché è un dominio a ideali principali, con polinomio di che divide e, essendo irriducibile, ciò può avvenire se e solo se è invertibile, cioè , o se è associato a , cioè . Dunque, gli unici ideali di sono , cioè l'ideale nullo e stesso: pertanto, per la , è un campo.      Sia un'estensione di un campo e sia un elemento di . Sia l'omomorfismo di anelli da in dato dalla valutazione di polinomi in . Allora e si verifica uno e uno solo dei due casi    è trascendente su , , , e ;     è algebrico su , è generato da un polinomio monico irriducibile detto polinomio minimo di su , , e una -base di è data da , , , con .       Se è un polinomio a coefficienti in , allora, per definizione : poiché gli e appartengono a anche appartiene a . Dunque, . D'altra parte, è contenuto in (ogni elemento di è immagine tramite di sé stesso pensato come polinomio costante) e appartiene all'immagine di : quindi, .  Il nucleo di è, evidentemente, l'insieme dei polinomi di che si annullano in e, quindi, è trascendente se e solo se .  Consideriamo prima il caso in cui è trascendente su : è allora iniettivo e . Inoltre, per il , non è un campo e, quindi, è contenuto strettamente in . Infine, le potenze , , , sono -linearmente indipendenti, altrimenti esisterebbero , , , in non tutti nulli tali che , cioè esisterebbe un polinomio non banale a coefficienti in che si annulla in .  Consideriamo ora il caso in cui sia algebrico su : poiché è un dominio a ideali principali, è generato da un polinomio non nullo che, pur di eventualmente dividerlo per il suo coefficiente direttivo, possiamo assumere sia monico. Per il , sappiamo che : poiché è un dominio, il implica che sia irriducibile e che sia un campo e, per la , ne segue che .  Sia ora il grado di : sappiamo che un generico elemento di è del tipo per qualche polinomio in . Dividendo per otteniamo dove e sono polinomi con o : in altri termini, con gli in . Ma allora , cioè è -combinazione lineare di , , , . D'altra parte, questi elementi sono -linearmente indipendenti: infatti presi , , , in tali che si ha che è un polinomio che si annulla in , ed è, quindi, multiplo di , il che è possibile se e solo se i sono tutti nulli. In conclusione, , , , formano una base per e, quindi, .      Dato un elemento di un campo , algebrico su un sottocampo , il grado di su è il grado del polinomio minimo di su , cioè il grado .     Un elemento di un'estensione di un campo è algebrico di grado se e solo se appartiene a .     Consideriamo di nuovo il polinomio a coefficienti razionali e la sua radice . Poiché . Il grado di su è e, di conseguenza .      Un'estensione di un campo è detta algebrica su se ogni elemento di è algebrico su .      Se è un'estensione finita di , allora è un'estensione algebrica di .    Grazie alla , sappiamo che è finito per ogni in e, quindi, per il , abbiamo che è algebrico su .    Ci chiediamo se, dati due elementi algebrici su un campo , la loro somma e il loro prodotto siano, a loro volta, algebrici. Se applicassimo direttamente la definizione di elemento algebrico, la conoscenza di polinomi non banali che si annullano su tali elementi non ci permette di stabilire facilmente se esistano polinomi non banali che si annullano sulla somma o sul prodotto. Abbiamo però la    Sia un'estensione di un campo , Il sottoinsieme di formato dagli elementi algebrici su è un sottocampo contenente .    Sappiamo già che gli elementi di sono algebrici su ( ): in particolare, è non vuoto e contiene . Dobbiamo allora provare che, per ogni e in , si ha che , , e (quest'ultimo nel caso in cui ) appartengono tutti a .  Abbiamo, dunque, . Ora , essendo algebrico su , a maggior ragione è algebrico su . Per il abbiamo allora che e sono finiti e, per la , è un'estensione finita di . Per il , è un'estensione algebrica di , e, dunque, . Poiché è un campo, abbiamo che contiene , , e che sono, quindi, elementi di , come richiesto.      Sia un'estensione di un campo e siano , , elementi di algebrici su . Allora è un'estensione algebrica di .    Dalla , sappiamo che l'insieme degli elementi di algebrici su è un sottocampo di : poiché contiene e tutti gli , contiene anche il sottocampo generato da essi.      Consideriamo l'estensione di . Sappiamo che è un'estensione di grado di e, dall' , che non contiene . Dunque, ha grado maggiore di su : d'altra parte è un polinomio di grado a coefficienti in che ha come radice, quindi ha grado su . Dalla abbiamo allora . Dalla dimostrazione della , sappiamo inoltre che , , , formano una -base di .  Consideriamo ora l'estensione : chiaramente . Per la il grado di è un divisore di . Se fosse diverso da dovrebbe essere o : consideriamo allora un polinomio del tipo a coefficienti in che ha come radice. Risulta allora cioè : poiché , , , sono -linearmente indipendenti, ne segue che , , , cioè , e sono nulli. Dunque, il polinomio minimo su di ha grado maggiore di e, per quanto già osservato, è uguale a . Di conseguenza .      Verificare che se è un anello contenente un campo , allora è un -spazio vettoriale rispetto alle operazioni che abbiamo definito.    Mostrare che se è un'estensione algebrica di un campo e se è un'estensione algebrica di , allora è un'estensione algebrica di .    Dati i primi distinti , , , , dimostrare c ha grado su .   Procediamo per induzione su . Se , allora è radice di che è irriducibile su (infatti ha grado e non ha radici razionali): dunque, è il polinomio minimo di e , pertanto, ha grado su .  Sia allora . Sia . Per ipotesi induttiva , , da cui, per la , segue che : in particolare, e . Notiamo che ha grado al più su : se mostriamo allora che avremo, dunque, che e un'ulteriore applicazione della darà la tesi cercata.  Supponiamo allora per assurdo che : poiché ha grado su , esistono e in tali che . Ma , e, quindi, . Ora : se fosse , avremmo che . Dunque e : pertanto , cioè divide in , contro l'ipotesi che e siano primi distinti. Abbiamo così trovato l'assurdo.    "
 },
 {
-  "id": "p-3052",
+  "id": "sec-elementi_algebrici_e_trascendenti-2",
   "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#p-3052",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#sec-elementi_algebrici_e_trascendenti-2",
   "type": "Capoverso (with a defined term)",
   "number": "",
   "title": "",
@@ -11449,9 +11449,9 @@ var ptx_lunr_docs = [
   "body": "   grado di un'estensione di    Se è un'estensione di , il grado di su , denotato con è la dimensione (eventualmente infinita) di come -spazio vettoriale. Nel caso in cui sia finito, diremo che è un'estensione finita di .   "
 },
 {
-  "id": "example-184",
+  "id": "sec-elementi_algebrici_e_trascendenti-4",
   "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#example-184",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#sec-elementi_algebrici_e_trascendenti-4",
   "type": "Esempio",
   "number": "23.1.2",
   "title": "",
@@ -11494,9 +11494,9 @@ var ptx_lunr_docs = [
   "body": " Se è un'estensione di un campo , allora ogni elemento di è, banalmente, algebrico su in quanto radice del polinomio a coefficienti in   "
 },
 {
-  "id": "example-185",
+  "id": "sec-elementi_algebrici_e_trascendenti-9",
   "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#example-185",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#sec-elementi_algebrici_e_trascendenti-9",
   "type": "Esempio",
   "number": "23.1.7",
   "title": "",
@@ -11602,36 +11602,36 @@ var ptx_lunr_docs = [
   "body": "  Sia un'estensione di un campo e siano , , elementi di algebrici su . Allora è un'estensione algebrica di .    Dalla , sappiamo che l'insieme degli elementi di algebrici su è un sottocampo di : poiché contiene e tutti gli , contiene anche il sottocampo generato da essi.   "
 },
 {
-  "id": "example-187",
+  "id": "sec-elementi_algebrici_e_trascendenti-22",
   "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#example-187",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#sec-elementi_algebrici_e_trascendenti-22",
   "type": "Esempio",
   "number": "23.1.19",
   "title": "",
   "body": "  Consideriamo l'estensione di . Sappiamo che è un'estensione di grado di e, dall' , che non contiene . Dunque, ha grado maggiore di su : d'altra parte è un polinomio di grado a coefficienti in che ha come radice, quindi ha grado su . Dalla abbiamo allora . Dalla dimostrazione della , sappiamo inoltre che , , , formano una -base di .  Consideriamo ora l'estensione : chiaramente . Per la il grado di è un divisore di . Se fosse diverso da dovrebbe essere o : consideriamo allora un polinomio del tipo a coefficienti in che ha come radice. Risulta allora cioè : poiché , , , sono -linearmente indipendenti, ne segue che , , , cioè , e sono nulli. Dunque, il polinomio minimo su di ha grado maggiore di e, per quanto già osservato, è uguale a . Di conseguenza .   "
 },
 {
-  "id": "exercise-407",
+  "id": "exercises-elementi_algebrici_e_trascendenti-1",
   "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#exercise-407",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#exercises-elementi_algebrici_e_trascendenti-1",
   "type": "Esercizio",
   "number": "23.1.1",
   "title": "",
   "body": " Verificare che se è un anello contenente un campo , allora è un -spazio vettoriale rispetto alle operazioni che abbiamo definito.  "
 },
 {
-  "id": "exercise-408",
+  "id": "exercises-elementi_algebrici_e_trascendenti-2",
   "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#exercise-408",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#exercises-elementi_algebrici_e_trascendenti-2",
   "type": "Esercizio",
   "number": "23.1.2",
   "title": "",
   "body": " Mostrare che se è un'estensione algebrica di un campo e se è un'estensione algebrica di , allora è un'estensione algebrica di .  "
 },
 {
-  "id": "exercise-409",
+  "id": "exercises-elementi_algebrici_e_trascendenti-3",
   "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#exercise-409",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#exercises-elementi_algebrici_e_trascendenti-3",
   "type": "Esercizio",
   "number": "23.1.3",
   "title": "",
@@ -11656,9 +11656,9 @@ var ptx_lunr_docs = [
   "body": "  Un polinomio di grado positivo a coefficienti in un campo si dice totalmente riducibile se si può fattorizzare come prodotto di polinomi di primo grado, cioè è uguale a con , , , radici (non necessariamente distinte) di .   "
 },
 {
-  "id": "example-188",
+  "id": "sec-campo_di_spezzamento-3",
   "level": "2",
-  "url": "sec-campo_di_spezzamento.html#example-188",
+  "url": "sec-campo_di_spezzamento.html#sec-campo_di_spezzamento-3",
   "type": "Esempio",
   "number": "23.2.2",
   "title": "",
@@ -11683,18 +11683,18 @@ var ptx_lunr_docs = [
   "body": "  Sia un campo e sia un polinomio irriducibile di grado con . Allora esiste un'estensione di con radice di . Inoltre e una -base di è data da , , , .    Detto l'ideale dell'anello generato da , consideriamo il quoziente : questo è un campo per il . La composizione dell'omomorfismo di inclusione di in con l'omomorfismo canonico di su , definisce un omomorfismo da in : poiché è un campo, questo omomorfismo è iniettivo e possiamo, dunque, identificare con un sottocampo di : più precisamente, un elemento di viene identificato con il laterale . Con questa identificazione, il polinomio può dunque essere scritto come Sia ora l'elemento di : valutando in abbiamo allora Ma è lo zero del quoziente e, dunque, è radice di . Sappiamo che è generato da e da e, quindi, , in quanto quoziente di , è generato dalle immagini di questi generatori tramite l'omomorfismo canonico, vale a dire stesso e , cioè : quindi . Poiché annulla il polinomio a coefficienti in , il polinomio minimo di su è un divisore irriducibile di , ma, essendo a sua volta irriducibile, il polinomio minimo di su è associato a : dunque, il polinomio minimo non è altri che il polinomio monico che si ottiene dividendo per il proprio coefficiente direttivo. Per il , e una -base per è quella data in enunciato.   "
 },
 {
-  "id": "example-189",
+  "id": "sec-campo_di_spezzamento-7",
   "level": "2",
-  "url": "sec-campo_di_spezzamento.html#example-189",
+  "url": "sec-campo_di_spezzamento.html#sec-campo_di_spezzamento-7",
   "type": "Esempio",
   "number": "23.2.5",
   "title": "",
   "body": "  Consideriamo il polinomio a coefficienti in . Mostriamo che è irriducibile: per la , basta mostrare che non ha radici in . Per la un'eventuale radice razionale di è del tipo con che divide e che divide . Le possibili radici sono allora , , , , e : sostituendo in , vediamo che nessuna di esse è radice di , che è, pertanto irriducibile.  Consideriamo ora un'estensione dove è una radice di . Per il , ha grado su e una -base di è , , . Supponiamo di voler esprimere l'inverso di e l'inverso di come combinazione lineare degli elementi di questa base.  Per quanto riguarda , basta notare che da cui segue che . Pertanto, l'inverso di è .  Per quanto riguarda l'inverso di , esprimiamolo come con , e in . Deve allora essere che, sviluppato, dà . Poiché , l'equazione trovata si può riscrivere come : poiché , e sono -linearmente indipendenti, ciò avviene se e solo se . Risolvendo il sistema, si trova , e e, quindi .   "
 },
 {
-  "id": "example-190",
+  "id": "sec-campo_di_spezzamento-8",
   "level": "2",
-  "url": "sec-campo_di_spezzamento.html#example-190",
+  "url": "sec-campo_di_spezzamento.html#sec-campo_di_spezzamento-8",
   "type": "Esempio",
   "number": "23.2.6",
   "title": "Costruzione dei complessi.",
@@ -11710,9 +11710,9 @@ var ptx_lunr_docs = [
   "body": "  Dato un polinomio di grado positivo a coefficienti in un campo , esiste un campo di spezzamento di su .    Basta ragionare per induzione sul grado di . Se , allora è totalmente riducibile già in e, quindi, stesso è campo di spezzamento di su . Se , sia un divisore irriducibile di . Per il , esiste un'estensione di con una radice di : ora è radice anche di e, pertanto, per il , abbiamo che con polinomio di grado a coefficienti in . Per ipotesi induttiva, esiste un campo di spezzamento di su : ma allora questo è campo di spezzamento di su .   "
 },
 {
-  "id": "exercise-410",
+  "id": "exercises-campo_di_spezzamento-1",
   "level": "2",
-  "url": "sec-campo_di_spezzamento.html#exercise-410",
+  "url": "sec-campo_di_spezzamento.html#exercises-campo_di_spezzamento-1",
   "type": "Esercizio",
   "number": "23.2.1",
   "title": "",
@@ -11827,9 +11827,9 @@ var ptx_lunr_docs = [
   "body": " In maniera del tutto analoga si definisce la nozione di -modulo sinistro. Ogni risultato che dimostreremo per i moduli destri avrà un corrispondente per i moduli sinistri. Occorre fare attenzione che, dato un modulo destro, non lo si può in generale considerare come modulo sinistro. Infatti la proprietà viene sostituita da e, dunque, la moltiplicazione per in un caso corrisponde a moltiplicare prima per e poi il risultato per , mentre nell'altro caso è il contrario. Ovviamente, se l'anello è commutativo, la differenza è irrilevante.  "
 },
 {
-  "id": "note-17",
+  "id": "sec-definizione_di_moduli-4",
   "level": "2",
-  "url": "sec-definizione_di_moduli.html#note-17",
+  "url": "sec-definizione_di_moduli.html#sec-definizione_di_moduli-4",
   "type": "Nota",
   "number": "24.1.3",
   "title": "",
@@ -11890,18 +11890,18 @@ var ptx_lunr_docs = [
   "body": "  Sia un -modulo. Allora, per ogni in e in si ha . Potremo allora scrivere semplicemente senza ambiguità. In particolare, risulta .    Dimostriamo solo l'uguaglianza , lasciando per esercizio l'altra uguaglianza. Abbiamo allora , dove abbiamo usato la : dunque e sono opposti, cioè .   "
 },
 {
-  "id": "exercise-411",
+  "id": "exercises-definizione_modulo-1",
   "level": "2",
-  "url": "sec-definizione_di_moduli.html#exercise-411",
+  "url": "sec-definizione_di_moduli.html#exercises-definizione_modulo-1",
   "type": "Esercizio",
   "number": "24.1.1",
   "title": "",
   "body": " Mostrare che e come definiti nell' sono rispettivamente un -modulo destro e sinistro.  "
 },
 {
-  "id": "exercise-412",
+  "id": "exercises-definizione_modulo-2",
   "level": "2",
-  "url": "sec-definizione_di_moduli.html#exercise-412",
+  "url": "sec-definizione_di_moduli.html#exercises-definizione_modulo-2",
   "type": "Esercizio",
   "number": "24.1.2",
   "title": "",
@@ -12034,45 +12034,45 @@ var ptx_lunr_docs = [
   "body": "  Dati due sottomoduli e di un -modulo , la loro somma è un sottomodulo di . Più in generale, dati , , , sottomoduli di la loro somma è un sottomodulo di .    Consideriamo il caso di due sottomoduli, lasciando il caso generale per esercizio.  Grazie all' sappiamo che la somma è un sottogruppo del gruppo additivo di . Dato un elemento con in e in e un elemento di , abbiamo : ora appartiene a e appartiene a e, quindi, appartiene a .   "
 },
 {
-  "id": "exercise-413",
+  "id": "exercises-sottomoduli-1",
   "level": "2",
-  "url": "sec-sottomoduli.html#exercise-413",
+  "url": "sec-sottomoduli.html#exercises-sottomoduli-1",
   "type": "Esercizio",
   "number": "24.2.1",
   "title": "",
   "body": " Si consideri l'anello delle matrici a coefficienti in un anello con . Dato il sottoinsieme , formato dalle matrici la cui prima riga è nulla, stabilire se è un ideale destro e se è un ideale sinistro.   Il sottoinsieme è un ideale destro ma non sinistro.  "
 },
 {
-  "id": "exercise-414",
+  "id": "exercises-sottomoduli-2",
   "level": "2",
-  "url": "sec-sottomoduli.html#exercise-414",
+  "url": "sec-sottomoduli.html#exercises-sottomoduli-2",
   "type": "Esercizio",
   "number": "24.2.2",
   "title": "",
   "body": " Sia un -modulo e sia un elemento del centro di . Mostrare che il sottoinsieme è un sottomodulo di .  "
 },
 {
-  "id": "exercise-415",
+  "id": "exercises-sottomoduli-3",
   "level": "2",
-  "url": "sec-sottomoduli.html#exercise-415",
+  "url": "sec-sottomoduli.html#exercises-sottomoduli-3",
   "type": "Esercizio",
   "number": "24.2.3",
   "title": "",
   "body": " Dimostrare la .  "
 },
 {
-  "id": "exercise-416",
+  "id": "exercises-sottomoduli-4",
   "level": "2",
-  "url": "sec-sottomoduli.html#exercise-416",
+  "url": "sec-sottomoduli.html#exercises-sottomoduli-4",
   "type": "Esercizio",
   "number": "24.2.4",
   "title": "",
   "body": " Dimostrare la .  "
 },
 {
-  "id": "exercise-417",
+  "id": "exercises-sottomoduli-5",
   "level": "2",
-  "url": "sec-sottomoduli.html#exercise-417",
+  "url": "sec-sottomoduli.html#exercises-sottomoduli-5",
   "type": "Esercizio",
   "number": "24.2.5",
   "title": "",
@@ -12097,9 +12097,9 @@ var ptx_lunr_docs = [
   "body": "  Dati due -moduli e e , un omomorfismo di -moduli da in è una funzione tale che    per ogni e in ;     per ogni in e in .      "
 },
 {
-  "id": "p-3199",
+  "id": "sec-omomorfismi_moduli-3",
   "level": "2",
-  "url": "sec-omomorfismi_moduli.html#p-3199",
+  "url": "sec-omomorfismi_moduli.html#sec-omomorfismi_moduli-3",
   "type": "Capoverso (with a defined term)",
   "number": "",
   "title": "",
@@ -12169,18 +12169,18 @@ var ptx_lunr_docs = [
   "body": "  Sia un omomorfismo di -moduli. Allora, le mappe e definiscono delle biiezioni, una inversa dell'altra, tra l'insieme dei sottomoduli di contenenti e l'insieme dei sottomoduli di contenuti in .   "
 },
 {
-  "id": "exercise-418",
+  "id": "exercises-omomorfismi_moduli-1",
   "level": "2",
-  "url": "sec-omomorfismi_moduli.html#exercise-418",
+  "url": "sec-omomorfismi_moduli.html#exercises-omomorfismi_moduli-1",
   "type": "Esercizio",
   "number": "24.3.1",
   "title": "",
   "body": " Dimostrare la .  "
 },
 {
-  "id": "exercise-419",
+  "id": "exercises-omomorfismi_moduli-2",
   "level": "2",
-  "url": "sec-omomorfismi_moduli.html#exercise-419",
+  "url": "sec-omomorfismi_moduli.html#exercises-omomorfismi_moduli-2",
   "type": "Esercizio",
   "number": "24.3.2",
   "title": "",
@@ -12268,36 +12268,36 @@ var ptx_lunr_docs = [
   "body": "  Sia un -modulo e sia un suo sottomodulo. I sottomoduli di sono i quozienti del tipo con sottomodulo di contenente . Dato un sottomodulo di si ha .   "
 },
 {
-  "id": "exercise-420",
+  "id": "exercises-moduli_quoziente-1",
   "level": "2",
-  "url": "sec-moduli_quoziente.html#exercise-420",
+  "url": "sec-moduli_quoziente.html#exercises-moduli_quoziente-1",
   "type": "Esercizio",
   "number": "24.4.1",
   "title": "",
   "body": " Completare le verifiche della dimostrazione della .  "
 },
 {
-  "id": "exercise-421",
+  "id": "exercises-moduli_quoziente-2",
   "level": "2",
-  "url": "sec-moduli_quoziente.html#exercise-421",
+  "url": "sec-moduli_quoziente.html#exercises-moduli_quoziente-2",
   "type": "Esercizio",
   "number": "24.4.2",
   "title": "",
   "body": " Dimostrare il .  "
 },
 {
-  "id": "exercise-422",
+  "id": "exercises-moduli_quoziente-3",
   "level": "2",
-  "url": "sec-moduli_quoziente.html#exercise-422",
+  "url": "sec-moduli_quoziente.html#exercises-moduli_quoziente-3",
   "type": "Esercizio",
   "number": "24.4.3",
   "title": "",
   "body": " Dimostrare il .  "
 },
 {
-  "id": "exercise-423",
+  "id": "exercises-moduli_quoziente-4",
   "level": "2",
-  "url": "sec-moduli_quoziente.html#exercise-423",
+  "url": "sec-moduli_quoziente.html#exercises-moduli_quoziente-4",
   "type": "Esercizio",
   "number": "24.4.4",
   "title": "",
@@ -12331,9 +12331,9 @@ var ptx_lunr_docs = [
   "body": "  La somma diretta degli -moduli , , è un -modulo.   "
 },
 {
-  "id": "example-193",
+  "id": "sec-somma_diretta_moduli-6",
   "level": "2",
-  "url": "sec-somma_diretta_moduli.html#example-193",
+  "url": "sec-somma_diretta_moduli.html#sec-somma_diretta_moduli-6",
   "type": "Esempio",
   "number": "25.1.3",
   "title": "",
@@ -12403,18 +12403,18 @@ var ptx_lunr_docs = [
   "body": "  Sia un -modulo e siano , , sottomoduli di , , rispettivamente. Posto allora si ha .    Sia la mappa che manda l'elemento di nell'elemento di . È immediato verificare che è un omomorfismo suriettivo di moduli. Grazie al , basta allora mostrare che : un elemento appartiene a se e solo se per ogni , cioè per ogni , vale a dire se e solo se appartiene a come richiesto.   "
 },
 {
-  "id": "note-18",
+  "id": "sec-somma_diretta_moduli-16",
   "level": "2",
-  "url": "sec-somma_diretta_moduli.html#note-18",
+  "url": "sec-somma_diretta_moduli.html#sec-somma_diretta_moduli-16",
   "type": "Nota",
   "number": "25.1.11",
   "title": "",
   "body": " Quando abbiamo parlato di gruppi abbiamo usato il termine di prodotto diretto, mentre per i moduli abbiamo usato il termine di somma diretta. Si potrebbe pensare che ciò dipenda dal fatto che scriviamo preferibilmente i gruppi in notazione moltiplicativa mentre usiamo la notazione additiva per i moduli. In parte è così, soprattutto per ragioni storiche, tuttavia potremmo usare il termine somma diretta per i gruppi (anche se non li scriviamo additivamente) e il termine prodotto diretto per i moduli (anche se non li scriviamo moltiplicativamente). Non entriamo nel dettaglio della definizione generale di somma diretta e di prodotto diretto (che in generale non coincidono): ci basti solo sapere che nei casi che abbiamo considerato le due nozioni sono intercambiabili.  "
 },
 {
-  "id": "exercise-424",
+  "id": "exercises-somma_diretta_moduli-1",
   "level": "2",
-  "url": "sec-somma_diretta_moduli.html#exercise-424",
+  "url": "sec-somma_diretta_moduli.html#exercises-somma_diretta_moduli-1",
   "type": "Esercizio",
   "number": "25.1.1",
   "title": "",
@@ -12439,9 +12439,9 @@ var ptx_lunr_docs = [
   "body": "  Dato un -modulo e degli elementi , , , di , questi sono detti linearmente dipendenti se esistono , , , in non tutti nulli tali che . Sono detti linearmente indipendenti altrimenti, cioè se l'unica possibilità per ottenere come loro combinazione lineare è quella di scegliere tutti gli uguali a .   "
 },
 {
-  "id": "note-19",
+  "id": "sec-dipendenza_lineare-4",
   "level": "2",
-  "url": "sec-dipendenza_lineare.html#note-19",
+  "url": "sec-dipendenza_lineare.html#sec-dipendenza_lineare-4",
   "type": "Nota",
   "number": "25.2.2",
   "title": "",
@@ -12556,36 +12556,36 @@ var ptx_lunr_docs = [
   "body": "  Siano , , , degli -moduli liberi. Allora è libero di rango .    Dimostriamo il caso in cui , lasciando il caso generale per esercizio.  Sia allora . Sia , , , una base di e sia , , , una base di . Consideriamo allora in gli elementi , , , , , e mostriamo che formano una base.  Consideriamo una loro combinazione lineare uguale a : . Con semplici calcoli, otteniamo: da cui segue e e, essendo gli linearmente indipendenti, otteniamo che tutti gli sono nulli e, analogamente, per i . Dunque, gli elementi dati sono linearmente indipendenti.  Sia ora un generico elemento di . Allora è combinazione lineare degli e è combinazione lineare degli . Ma allora si vede immediatamente che è combinazione lineare degli elementi e è combinazione lineare degli elementi . Ma allora, è combinazione lineare degli elementi dati che sono, quindi, generatori di .   "
 },
 {
-  "id": "note-20",
+  "id": "sec-dipendenza_lineare-22",
   "level": "2",
-  "url": "sec-dipendenza_lineare.html#note-20",
+  "url": "sec-dipendenza_lineare.html#sec-dipendenza_lineare-22",
   "type": "Nota",
   "number": "25.2.15",
   "title": "",
   "body": " La nozione di elementi dipendenti, indipendenti e di base che abbiamo dato coinvolgono un numero finito di elementi. Si potrebbero però introdurre questi concetti per una cardinalità qualunque di elementi, anche infinita.  "
 },
 {
-  "id": "exercise-425",
+  "id": "exercises-dipendenza_lineare-1",
   "level": "2",
-  "url": "sec-dipendenza_lineare.html#exercise-425",
+  "url": "sec-dipendenza_lineare.html#exercises-dipendenza_lineare-1",
   "type": "Esercizio",
   "number": "25.2.1",
   "title": "",
   "body": " Completare la dimostrazione della .  "
 },
 {
-  "id": "exercise-426",
+  "id": "exercises-dipendenza_lineare-2",
   "level": "2",
-  "url": "sec-dipendenza_lineare.html#exercise-426",
+  "url": "sec-dipendenza_lineare.html#exercises-dipendenza_lineare-2",
   "type": "Esercizio",
   "number": "25.2.2",
   "title": "",
   "body": " Completare la dimostrazione della .  "
 },
 {
-  "id": "exercise-427",
+  "id": "exercises-dipendenza_lineare-3",
   "level": "2",
-  "url": "sec-dipendenza_lineare.html#exercise-427",
+  "url": "sec-dipendenza_lineare.html#exercises-dipendenza_lineare-3",
   "type": "Esercizio",
   "number": "25.2.3",
   "title": "",
@@ -12709,9 +12709,9 @@ var ptx_lunr_docs = [
   "body": "  Se è un elemento di un -modulo, chiamiamo ordine di un qualunque generatore di .   "
 },
 {
-  "id": "note-21",
+  "id": "sec-moduli_ciclici-5",
   "level": "2",
-  "url": "sec-moduli_ciclici.html#note-21",
+  "url": "sec-moduli_ciclici.html#sec-moduli_ciclici-5",
   "type": "Nota",
   "number": "26.1.2",
   "title": "",
@@ -12745,9 +12745,9 @@ var ptx_lunr_docs = [
   "body": "  Un -modulo è detto ciclico se è generato da un singolo elemento.   "
 },
 {
-  "id": "note-22",
+  "id": "sec-moduli_ciclici-9",
   "level": "2",
-  "url": "sec-moduli_ciclici.html#note-22",
+  "url": "sec-moduli_ciclici.html#sec-moduli_ciclici-9",
   "type": "Nota",
   "number": "26.1.6",
   "title": "",
@@ -12862,9 +12862,9 @@ var ptx_lunr_docs = [
   "body": "  Sia un elemento di con e non invertibile. Posto con , , irriducibili a due a due non associati e , , interi positivi, si ha    "
 },
 {
-  "id": "exercise-429",
+  "id": "exercises-moduli_ciclici-1",
   "level": "2",
-  "url": "sec-moduli_ciclici.html#exercise-429",
+  "url": "sec-moduli_ciclici.html#exercises-moduli_ciclici-1",
   "type": "Esercizio",
   "number": "26.1.1",
   "title": "",
@@ -12925,9 +12925,9 @@ var ptx_lunr_docs = [
   "body": "  Il sottoinsieme formato dai -elementi di un -modulo è un sottomodulo di contenuto in : esso è il più grande sottomodulo -primario di ed è detto componente -primaria di .    Poiché si ha . Siano e due elementi di di ordini e rispettivamente. Detto , abbiamo ; inoltre, per ogni in si ha ; dunque e appartengono a , cioè è un sottomodulo. Poiché è formato esattamente da tutti i -elementi di , è il più grande sottomodulo -primario di .   "
 },
 {
-  "id": "example-195",
+  "id": "sec-moduli_primari-7",
   "level": "2",
-  "url": "sec-moduli_primari.html#example-195",
+  "url": "sec-moduli_primari.html#sec-moduli_primari-7",
   "type": "Esempio",
   "number": "26.2.5",
   "title": "",
@@ -12988,27 +12988,27 @@ var ptx_lunr_docs = [
   "body": " La proposizione precedente ci dice che, data una decomposizione di un modulo -primario come somma diretta di un numero finito di moduli ciclici, è possibile ottenere gli ordini di questi addendi calcolando le dimensioni degli zoccoli dei quozienti successivi : a ogni passo scompaiono gli addendi di un dato ordine e sopravvivono quelli di ordine maggiore. Più precisamente, il numero di addendi di ordine è uguale a . In particolare, se lo stesso modulo può essere decomposto in più di un modo, gli ordini degli addendi nelle diverse decomposizioni coincidono.  "
 },
 {
-  "id": "example-196",
+  "id": "sec-moduli_primari-14",
   "level": "2",
-  "url": "sec-moduli_primari.html#example-196",
+  "url": "sec-moduli_primari.html#sec-moduli_primari-14",
   "type": "Esempio",
   "number": "26.2.12",
   "title": "",
   "body": "  Supponiamo di avere un modulo -primario somma diretta di due moduli ciclici di ordine , due di ordine e uno di ordine . Usiamo una rappresentazione grafica di questo tipo per aiutarci nella visualizzazione: a ogni colonna corrisponde uno degli addendi diretti.     Lo zoccolo è rappresentato dall'ultima riga e, quindi, ha dimensione . Quozientare su corrisponde a cancellare l'ultima riga. Lo zoccolo di ha così dimensione . Cancellando una riga a ogni passo troviamo così le dimensioni degli zoccoli: , , e .  Viceversa, supponiamo di conoscere questa successione di dimensioni. Possiamo allora ricostruire il disegno dato sopra: tracciamo prima una riga con blocchi, poi le disponiamo sopra una riga con , un'altra con blocchi, un'altra con blocchi, poi una con blocchi e un'ultima con blocchi. Dunque la decomposizione di che sarà formata da addendi: di ordine , di ordine , di ordine , di ordine , di ordine e di ordine . Ovviamente, il disegno non è necessario: è solo un aiuto alla comprensione.   "
 },
 {
-  "id": "exercise-431",
+  "id": "exercises-moduli_primari-1",
   "level": "2",
-  "url": "sec-moduli_primari.html#exercise-431",
+  "url": "sec-moduli_primari.html#exercises-moduli_primari-1",
   "type": "Esercizio",
   "number": "26.2.1",
   "title": "",
   "body": " Completare la dimostrazione della .  "
 },
 {
-  "id": "exercise-432",
+  "id": "exercises-moduli_primari-2",
   "level": "2",
-  "url": "sec-moduli_primari.html#exercise-432",
+  "url": "sec-moduli_primari.html#exercises-moduli_primari-2",
   "type": "Esercizio",
   "number": "26.2.2",
   "title": "",
@@ -13069,9 +13069,9 @@ var ptx_lunr_docs = [
   "body": " Non è difficile verificare che se scartiamo gli elementi nulli dalla lista degli dati dal otteniamo una base di .  "
 },
 {
-  "id": "exercise-433",
+  "id": "exercises-moduli_liberi-1",
   "level": "2",
-  "url": "sec-moduli_liberi.html#exercise-433",
+  "url": "sec-moduli_liberi.html#exercises-moduli_liberi-1",
   "type": "Esercizio",
   "number": "26.3.1",
   "title": "",
@@ -13132,9 +13132,9 @@ var ptx_lunr_docs = [
   "body": "  Sia un -modulo finitamente generato. Allora esistono elementi non nulli e non invertibili , , con e un naturale tali che . Questa decomposizione, detta a fattori invarianti , non è unica, ma gli ordini degli addendi sono univocamente determinati.    Consideriamo la decomposizione data dal . Per ciascun irriducibile che compare almeno una volta consideriamo un addendo che ha ordine associato a una potenza di quell'irriducibile con esponente massimo possibile. Per il , la somma diretta di questi moduli ciclici è a sua volta ciclico di ordine prodotto degli ordini degli addendi: otteniamo così l'ultimo degli addendi di ordine non nullo dato in enunciato. Ripetendo il procedimento con gli addendi rimasti otteniamo un modulo ciclico il cui ordine è un divisore del precedente. Iterando il procedimento otteniamo la decomposizione cercata.  L'unicità degli ordini segue dal fatto che possiamo invertire il procedimento e ritrovare la decomposizione primaria.   "
 },
 {
-  "id": "example-197",
+  "id": "sec-classificazione_moduli_pid-12",
   "level": "2",
-  "url": "sec-classificazione_moduli_pid.html#example-197",
+  "url": "sec-classificazione_moduli_pid.html#sec-classificazione_moduli_pid-12",
   "type": "Esempio",
   "number": "26.4.6",
   "title": "",
@@ -13177,108 +13177,108 @@ var ptx_lunr_docs = [
   "body": " Data una decomposizione di un gruppo abeliano finito come prodotto diretto di ciclici primari, l'ordine del gruppo è uguale al prodotto degli ordini dei fattori diretti: ciò permette di determinare tutti i gruppi abeliani di un dato ordine finito (a meno di isomorfismi).  "
 },
 {
-  "id": "example-198",
+  "id": "sec-gruppiabeliani-7",
   "level": "2",
-  "url": "sec-gruppiabeliani.html#example-198",
+  "url": "sec-gruppiabeliani.html#sec-gruppiabeliani-7",
   "type": "Esempio",
   "number": "27.1.4",
   "title": "",
   "body": "  Vogliamo determinare tutti i gruppi abeliani di ordine . Esprimiamo tale ordine come prodotto di primi: . Nella decomposizione di tali gruppi come prodotto diretto di ciclici primari avremo quindi -gruppi e -gruppi.  Poiché compare con esponente potremo avere un gruppo ciclico di ordine oppure gruppi ciclici di ordine . Poiché appare con esponente potremo avere un gruppo ciclico di ordine oppure uno di ordine e uno di ordine oppure gruppi ciclici di ordine oppure un gruppo ciclico di ordine e due di ordine o, infine, gruppi ciclici di ordine . Combinando le varie possibilità possiamo dunque elencare tutti i gruppi abeliani di ordine a meno di isomorfismi.                                                      Possiamo ora anche determinare in ciascuno di questi gruppi il numero di elementi di un dato ordine. Ad esempio, supponiamo di voler trovare il numero di elementi di ordine . Poiché l'ordine di un elemento di un prodotto diretto è il minimo comune multiplo degli ordini delle sue componenti ( ), affinché ci sia almeno un elemento di ordine è necessario che nella decomposizione appaia almeno un fattore di ordine con . Negli ultimi gruppi della lista non ci sono dunque elementi di ordine . Consideriamo i primi gruppi.  Ricordiamo che un gruppo ciclico finito di ordine contiene esattamente elementi di ordine per ogni divisore di ( ). In particolare, un gruppo ciclico di ordine con primo contiene elementi di ordine se .  Un elemento di si scrive nella forma con in e in . L'ordine di è se ha ordine e ha ordine . Poiché contiene elemento di ordine e contiene elementi di ordine abbiamo elementi di ordine .  Un elemento di si scrive nella forma con e in e in . L'ordine è se almeno uno tra e ha ordine e ha ordine . Poiché contiene un elemento di ordine e uno di ordine , abbiamo che almeno uno tra e ha ordine in casi. Abbiamo dunque elementi di ordine .  Un elemento di si scrive come con in , in e . Abbiamo ordine se e solo se ha ordine , ha ordine e ha ordine qualunque. Abbiamo dunque elementi di ordine .  Infine, un elemento di scritto come con in , in , in e ha ordine se e solo se almeno uno tra e ha ordine (e, come prima, abbiamo scelte per la coppia ), ha ordine e ha ordine qualunque. Dunque, abbiamo elementi di ordine .   "
 },
 {
-  "id": "exercise-434",
+  "id": "exercises-gruppiabeliani-1",
   "level": "2",
-  "url": "sec-gruppiabeliani.html#exercise-434",
+  "url": "sec-gruppiabeliani.html#exercises-gruppiabeliani-1",
   "type": "Esercizio",
   "number": "27.1.1",
   "title": "",
   "body": " Determinare tutti i gruppi abeliani di ordine (a meno di isomorfismi).                                                          Determinare quali dei gruppi trovati al punto precedente contengono elementi di ordine e, per ciascuno di essi, determinare quanti sono tali elementi.   L'ordine di un elemento appartenente al prodotto diretto di gruppi è uguale al minimo comune multiplo degli ordini delle sue componenti. Poiché nella decomposizione del gruppo come prodotto diretto di ciclici primari deve comparire un gruppo ciclico -primario di ordine almeno e un gruppo ciclico -primario di ordine almeno . Nella lista precedente i gruppi compatibili con questa condizione sono e . Se è un elemento del primo gruppo, con e , affinché l'ordine di sia , deve essere di ordine e di ordine . Il gruppo contiene elementi di ordine , mentre contiene elementi di ordine . In conclusione contiene elementi di ordine .  Per quanto riguarda , sia un suo generico elemento con , e . L'ordine di divide , l'ordine di divide e l'ordine di divide : affinché il minimo comune multiplo di questi ordini sia è necessario e sufficiente che l'ordine di sia esattamente e l'ordine di sia esattamente (l'ordine di può essere indifferentemente o ). Il gruppo contiene scelte per . L'elemento può essere scelto in modi e l'elemento può essere scelto in modi (abbiamo già calcolato in precedenza il numero di elementi di ordine di ). Dunque abbiamo elementi di ordine .  "
 },
 {
-  "id": "exercise-435",
+  "id": "exercises-gruppiabeliani-2",
   "level": "2",
-  "url": "sec-gruppiabeliani.html#exercise-435",
+  "url": "sec-gruppiabeliani.html#exercises-gruppiabeliani-2",
   "type": "Esercizio",
   "number": "27.1.2",
   "title": "",
   "body": " Dati i prodotti diretti                           stabilire quali sono isomorfi fra loro. Per ciascuno di essi calcolare poi il numero di elementi di ordine .   Riscriviamo i gruppi assegnati come prodotti diretti di ciclici primari, ricordando che un gruppo ciclico finito può essere espresso come prodotto diretto di ciclici i cui ordini sono i fattori primari del suo ordine. Abbiamo dunque i gruppi:                           Confrontando i fattori che appaiono in ciascuna decomposizione (trascurando l'ordinamento), vediamo che il primo e il terzo gruppo sono isomorfi tra loro, così come il secondo e il quinto.  Dato un elemento del gruppo affinché il suo ordine sia gli elementi , e devono avere ordine o e almeno uno di essi deve avere ordine . Poiché divide l'ordine di , questo gruppo contiene esattamente un sottogruppo ciclico di ordine , formato dagli elementi il cui periodo divide . Allo stesso modo anche in abbiamo elementi il cui periodo divide . Pertanto abbiamo esattamente terne tali che gli elementi , e abbiano ordine o . Dobbiamo però scartare la terna in cui tutti gli elementi hanno periodo (perché essa ha periodo a sua volta). Abbiamo dunque elementi di periodo .  Per quanto riguarda in maniera analoga abbiamo cinquine le cui componenti hanno periodo o . Scartando di nuovo la cinquina le cui componenti hanno tutte periodo rimangono elementi di periodo .  Infine possiede terne le cui componenti hanno periodo o . Scartando di nuovo la terna le cui componenti hanno tutte periodo rimangono elementi di periodo .  "
 },
 {
-  "id": "exercise-436",
+  "id": "exercises-gruppiabeliani-3",
   "level": "2",
-  "url": "sec-gruppiabeliani.html#exercise-436",
+  "url": "sec-gruppiabeliani.html#exercises-gruppiabeliani-3",
   "type": "Esercizio",
   "number": "27.1.3",
   "title": "",
   "body": " Siano e due gruppi abeliani di ordine . Dimostrare che e sono isomorfi se e solo se contengono lo stesso numero di elementi di periodo .   Ovviamente se e sono isomorfi hanno lo stesso numero di elementi di periodo .  Per mostrare il viceversa consideriamo i diversi tipi di isomorfismo dei gruppi abeliani di ordine . I possibili tipi di isomorfismo di un gruppo abeliano di ordine sono , e . Per ottenere la tesi basta mostrare che questi gruppi hanno un numero di elementi di periodo diverso tra loro.  Gli elementi di sono del tipo con , e in e in . Il periodo di è il minimo comune multiplo dei periodi di , , e . Poiché il periodo di , e divide mentre il periodo di divide , l'elemento ha periodo se e solo se almeno uno tra , e ha periodo e ha periodo . Deve dunque essere , mentre , e possono essere elementi qualunque di non tutti . Poiché possiamo scegliere ciascuno degli elementi , e in due modi diversi, mentre può essere scelto in unico modo abbiamo possibilità, da cui però dobbiamo scartare la scelta . Rimangono dunque elementi di periodo .  Gli elementi di sono del tipo con in , in e in . Con ragionamento analogo al precedente abbiamo che e devono avere periodo o (ma non contemporaneamente ) mentre deve avere periodo . In gli elementi che hanno periodo che divide sono quelli contenuti nell'unico sottogruppo di ordine e il loro numero è dunque : possiamo scegliere in modi diversi. Gli elementi di hanno tutti periodo che divide : possiamo scegliere in modi diversi. Possiamo poi scegliere in un unico modo. Di queste possibilità dobbiamo però scartare quella per cui e hanno entrambi periodo . Abbiamo dunque elementi di periodo .  Infine gli elementi di sono del tipo con in e in . Con ragionamento analogo al precedente abbiamo che deve avere periodo mentre deve avere periodo . In gli elementi che hanno periodo sono quelli contenuti nell'unico sottogruppo di ordine e il loro numero è dunque . Poiché anche può essere scelto in un unico modo abbiamo elemento di periodo .  "
 },
 {
-  "id": "exercise-437",
+  "id": "exercises-gruppiabeliani-4",
   "level": "2",
-  "url": "sec-gruppiabeliani.html#exercise-437",
+  "url": "sec-gruppiabeliani.html#exercises-gruppiabeliani-4",
   "type": "Esercizio",
   "number": "27.1.4",
   "title": "",
   "body": " Determinare (a meno di isomorfismi) tutti i gruppi abeliani di ordine che contengono almeno un elemento di ordine e nessun elemento di ordine .   Poiché potremo scrivere i gruppi cercati nella forma dove è il sottogruppo formato dagli elementi di periodo una potenza di e è il sottogruppo formato dagli elementi di periodo una potenza di . Il sottogruppo , avendo ordine , è isomorfo a o a , mentre , avendo ordine , è isomorfo a , a o a . Combinando queste possibilità otteniamo tutti i gruppi abeliani di ordine . Dobbiamo considerare quelli che soddisfano le ulteriori condizioni sui periodi degli elementi.  Se , non abbiamo elementi di periodo , mentre nei casi e abbiamo elementi di periodo . Si ottiene un elemento di periodo , prendendo un elemento di periodo in e un elemento di periodo in : un elemento di periodo in c'è sempre, mentre un elemento di periodo in c'è solo nel caso in cui . Dobbiamo quindi escludere questo caso. Dunque deve necessariamente essere mentre o . I gruppi cercati sono allora e .  "
 },
 {
-  "id": "exercise-438",
+  "id": "exercises-gruppiabeliani-5",
   "level": "2",
-  "url": "sec-gruppiabeliani.html#exercise-438",
+  "url": "sec-gruppiabeliani.html#exercises-gruppiabeliani-5",
   "type": "Esercizio",
   "number": "27.1.5",
   "title": "",
   "body": " Determinare (a meno di isomorfismi) tutti i gruppi abeliani tali che e che per ogni elemento si abbia .   Se per ogni elemento del gruppo significa che ogni elemento ha periodo che divide . Affinché ogni elemento abbia periodo che divide , è necessario e sufficiente che i fattori diretti nella decomposizione di come prodotto di ciclici primari abbiano ordine , , , e . L'ordine del gruppo è quindi un prodotto di una potenza di per una potenza di . Gli unici numeri compresi tra e che soddisfano questa condizione sono , , e .  Per l'ordine le possibilità sono , e , per l'ordine le possibilità sono , , e , per l'ordine le possibilità sono , e , mentre per l'ordine le possibilità sono , e .  "
 },
 {
-  "id": "exercise-439",
+  "id": "exercises-gruppiabeliani-6",
   "level": "2",
-  "url": "sec-gruppiabeliani.html#exercise-439",
+  "url": "sec-gruppiabeliani.html#exercises-gruppiabeliani-6",
   "type": "Esercizio",
   "number": "27.1.6",
   "title": "",
   "body": " Determinare tutti i gruppi abeliani di ordine che non hanno elementi di ordine .   Poiché potremo scrivere i gruppi cercati nella forma dove è il sottogruppo formato dagli elementi di periodo una potenza di e è il sottogruppo formato dagli elementi di periodo una potenza di . Il sottogruppo , avendo ordine , è isomorfo a o a mentre , avendo ordine , è isomorfo a , a o a . Combinando queste possibilità otteniamo tutti i gruppi abeliani di ordine (ne abbiamo ). Dobbiamo considerare quelli che non contengono elementi di ordine . Otteniamo elementi di quest'ordine se in ci sono elementi di ordine (il che avviene se è ) e in ci sono elementi di ordine (il che avviene se è o ). Dobbiamo quindi escludere i gruppi in cui queste condizioni sono entrambe soddisfatte. Rimangono dunque queste possibilità: , , e .  "
 },
 {
-  "id": "exercise-440",
+  "id": "exercises-gruppiabeliani-7",
   "level": "2",
-  "url": "sec-gruppiabeliani.html#exercise-440",
+  "url": "sec-gruppiabeliani.html#exercises-gruppiabeliani-7",
   "type": "Esercizio",
   "number": "27.1.7",
   "title": "",
   "body": " Si considerino i gruppi abeliani non ciclici di ordine .   Tra tutti i gruppi dati si trovino quelli (o quello) che contengono elementi di periodo massimo possibile.   Nella decomposizione dei gruppi dati, i fattori -primari possibili sono allora , e , mentre i fattori -primari possibili sono e . Combinando questi fattori in tutti i modi possibili otteniamo i gruppi abeliani di ordine non isomorfi tra loro:                                Tra questi, quello ciclico è il primo: infatti è prodotto diretto di ciclici di ordini coprimi. Escludendo il primo, possiamo cercare per ciascuno di essi l'elemento di periodo massimo. Tenuto conto che in un gruppo ciclico finito ogni elemento ha periodo che divide il periodo di un generatore e che il periodo di un elemento del prodotto diretto è il minimo comune multiplo dei periodi delle componenti otteniamo, come massimo periodo degli elementi nei gruppi dati, , , , e . Il gruppo in cui ci sono elementi di massimo periodo possibile è che ha elementi di ordine .   Per ciascuno dei gruppi trovati al punto precedente contare quanti elementi ci sono di periodo massimo.   Detto un elemento di affinché esso abbia periodo deve essere di periodo , di periodo qualunque e di periodo . In ci sono elementi di periodo , mentre in ci sono elementi di periodo . Infine ha elementi. Dunque abbiamo elementi di periodo massimo.  "
 },
 {
-  "id": "exercise-441",
+  "id": "exercises-gruppiabeliani-8",
   "level": "2",
-  "url": "sec-gruppiabeliani.html#exercise-441",
+  "url": "sec-gruppiabeliani.html#exercises-gruppiabeliani-8",
   "type": "Esercizio",
   "number": "27.1.8",
   "title": "",
   "body": " Determinare (a meno di isomorfismi) tutti i gruppi abeliani di ordine che hanno elementi di ordine con .   Detta la parte -primaria, poiché la massima potenza di che divide è , abbiamo queste possibilità per : , e . Detta la parte -primaria, poiché la massima potenza di che divide è , abbiamo queste possibilità per : e .  Se , abbiamo che il periodo di è il minimo comune multiplo dei periodi di e di : affinché abbia periodo deve allora essere di periodo e di periodo . In c'è un unico elemento di periodo , in ce ne sono e in ce ne sono ; in ci sono elementi di periodo , mentre in ce ne sono . Moltiplicando il numero di elementi di periodo per il numero di quelli di periodo troviamo il numero di elementi di periodo . Le possibilità affinché sono che corrisponde a e che corrisponde a .  "
 },
 {
-  "id": "exercise-442",
+  "id": "exercises-gruppiabeliani-9",
   "level": "2",
-  "url": "sec-gruppiabeliani.html#exercise-442",
+  "url": "sec-gruppiabeliani.html#exercises-gruppiabeliani-9",
   "type": "Esercizio",
   "number": "27.1.9",
   "title": "",
   "body": " Siano , , , primi distinti. Determinare quanti gruppi abeliani esistono (a meno di isomorfismi) di ordine .   Per ciascun primo coinvolto abbiamo fattori diretti il cui prodotto degli ordini è uguale a . Abbiamo dunque possibilità: , , , e . Combinando queste scelte per tutti gli primi coinvolti otteniamo quindi gruppi abeliani dell'ordine indicato.  "
 },
 {
-  "id": "exercise-443",
+  "id": "exercises-gruppiabeliani-10",
   "level": "2",
-  "url": "sec-gruppiabeliani.html#exercise-443",
+  "url": "sec-gruppiabeliani.html#exercises-gruppiabeliani-10",
   "type": "Esercizio",
   "number": "27.1.10",
   "title": "",
   "body": " Sia un gruppo abeliano di ordine . In esistano due elementi e di periodo tali che . Elencare tutti i possibili tipi di isomorfismo di .   Se ha periodo il suo quadrato ha periodo . Un gruppo ciclico di ordine contiene elemento di periodo e questo genera l'unico sottogruppo di ordine : poiché i sottogruppi di un gruppo ciclico di ordine sono il gruppo stesso, l'unico sottogruppo di ordine e l'identità, possiamo affermare che tutti i sottogruppi non banali di un gruppo ciclico di ordine contengono l'unico elemento di periodo . Pertanto se l'intersezione fosse non banale, essa dovrebbe contenere l'unico elemento di periodo di , cioè , e l'unico elemento di periodo di , cioè . In altri termini, dovremmo avere , contro la richiesta. Pertanto, e il prodotto ha ordine uguale al prodotto degli ordini, cioè , e coincide, quindi, con . Dunque, è prodotto di due gruppi ciclici di ordine , necessariamente normali perché è abeliano, e aventi intersezione banale: pertanto, .  "
 },
 {
-  "id": "exercise-444",
+  "id": "exercises-gruppiabeliani-11",
   "level": "2",
-  "url": "sec-gruppiabeliani.html#exercise-444",
+  "url": "sec-gruppiabeliani.html#exercises-gruppiabeliani-11",
   "type": "Esercizio",
   "number": "27.1.11",
   "title": "",
@@ -13357,9 +13357,9 @@ var ptx_lunr_docs = [
   "body": " Dato un -spazio vettoriale e un endomorfismo , verificare che, identificando la moltiplicazione per con , ottiene una struttura di -modulo.   Dato un polinomio , ricordiamo che . Se è un elemento di e è il polinomio costante uguale a , per definizione abbiamo (si noti che in questo caso e per ). Siano ora e due elementi di e sia un polinomio come sopra. Abbiamo allora dove abbiamo usato il fatto che è un endomorfismo. Sia dato ora un vettore e due polinomi e . Dal momento che la valutazione in è un omomorfismo di anelli da in abbiamo allora che e : di conseguenza, e .  "
 },
 {
-  "id": "exercise-447",
+  "id": "exercises-kx_moduli-3",
   "level": "2",
-  "url": "sec-kx_moduli.html#exercise-447",
+  "url": "sec-kx_moduli.html#exercises-kx_moduli-3",
   "type": "Esercizio",
   "number": "28.1.3",
   "title": "",
@@ -13384,9 +13384,9 @@ var ptx_lunr_docs = [
   "body": " Matrici rappresentative  Fissata una base , , di un -spazio vettoriale di dimensione finita, ricordiamo che la matrice rappresentativa di un endomorfismo rispetto alla base assegnata è la matrice a coefficienti in  definita da . In altri termini, la -esima riga di dà le componenti di rispetto alla base assegnata Si noti che alcuni testi usano una convenzione diversa, in cui la matrice rappresentativa è la trasposta della matrice da noi usata. . Viceversa, data una matrice , le formule soprastanti definiscono un endomorfismo detto endomorfismo associato ad rispetto alla base assegnata. Abbiamo così una corrispondenza biiettiva tra e e si vede facilmente che questa corrispondenza è un isomorfismo di anelli. Questo isomorfismo dipende dalla base scelta per : in particolare, dato un certo endomorfismo , le matrici che rappresentano al variare della base sono tutte e sole le matrici del tipo dove è una matrice invertibile, vale a dire sono le matrici simili ad .  Supponiamo ora che sia somma diretta di suoi sottospazi e . Unendo Il termine corretto sarebbe giustapponendo . una base , , di a una base , , di , otteniamo una base di . Possiamo allora rappresentare un endomorfismo di rispetto a questa base, evidenziando i blocchi dove e sono matrici quadrate di ordine, rispettivamente, e . Preso allora un vettore con , abbiamo con i primi addendi in e gli altri addendi in : i corrispondenti coefficienti stanno, rispettivamente, in e in . Vediamo allora che appartiene a se e solo se per . Pertanto, è la matrice nulla se e solo se appartiene a per ogni , con : poiché , , formano una base di , ciò è equivalente a dire che è un sottospazio -stabile. Analogamente, è la matrice nulla se e solo se è -stabile.  Dunque, se e sono sottospazi -stabili, la matrice rappresentativa rispetto alla base scelta come sopra (cioè unendo una base di a una base di ) è del tipo dove e sono le matrici quadrate che rappresentano l'endomorfismo indotto da in e, rispettivamente, in rispetto alle basi scelte. Più in generale abbiamo la    Sia un -spazio vettoriale di dimensione finita e dotato di un endomorfismo . Siano , , , sottospazi -stabili di tali che . Fissata una base per ciascuno dei , sia la matrice rappresentativa rispetto a tale base dell'endomorfismo di indotto da . Allora, la matrice rappresentativa di rispetto alla base di formata dall'unione delle basi scelte dei sottospazi è la matrice diagonale a blocchi : .    Il calcolo con le matrici diagonali a blocchi è particolarmente comodo. Richiamiamo alcuni risultati che possono essere agevolmente dimostrati:    Sia una matrice diagonale a blocchi. Allora    ;     ;     per ogni .         Dato un endomorfismo di uno spazio vettoriale di dimensione finita, dimostrare che è somma diretta di sottospazi -stabili di dimensione se e solo se è diagonalizzabile.    "
 },
 {
-  "id": "p-3545",
+  "id": "sec-matrici_rappresentative-2",
   "level": "2",
-  "url": "sec-matrici_rappresentative.html#p-3545",
+  "url": "sec-matrici_rappresentative.html#sec-matrici_rappresentative-2",
   "type": "Capoverso (with a defined term)",
   "number": "",
   "title": "",
@@ -13411,9 +13411,9 @@ var ptx_lunr_docs = [
   "body": "  Sia una matrice diagonale a blocchi. Allora    ;     ;     per ogni .      "
 },
 {
-  "id": "exercise-449",
+  "id": "exercises-matrici_rappresentative-1",
   "level": "2",
-  "url": "sec-matrici_rappresentative.html#exercise-449",
+  "url": "sec-matrici_rappresentative.html#exercises-matrici_rappresentative-1",
   "type": "Esercizio",
   "number": "28.2.1",
   "title": "",
@@ -13447,9 +13447,9 @@ var ptx_lunr_docs = [
   "body": "   matrice compagna di un polinomio    matrice compagna del polinomio monico  Sia uno spazio vettoriale di dimensione finita su un campo e sia un endomorfismo di . Supponiamo che , con la struttura di -modulo indotta da , sia ciclico di generatore . Se è il polinomio monico che genera l'annullatore di allora , rispetto alla base di formata dai vettori , , , , si rappresenta con la matrice detta matrice compagna del polinomio monico . Il polinomio caratteristico della matrice è esattamente .    Determiniamo la matrice rappresentativa di rispetto alla base prescelta. Osserviamo che, per , si ha . In particolare, : quindi, i coefficienti sulla prima riga della matrice rappresentativa di sono . In maniera analoga determiniamo le righe della matrice fino alla -esima. Per determinare l'ultima riga, osserviamo che , cioè vale a dire . Ma allora .  Per mostrare che il polinomio caratteristico di è , procediamo per induzione su . Se (e, quindi, ), la matrice compagna di è e il polinomio caratteristico di questa matrice è, ovviamente, . Se , il polinomio caratteristico di è Se ora utilizziamo lo sviluppo di Laplace Pierre Simon Laplace , 1749 1827. Laplace, Pierre Simon rispetto alla prima colonna otteniamo: Il primo determinante che appare in questo sviluppo non è altri che il polinomio caratteristico della matrice compagna del polinomio e, per ipotesi induttiva, coincide con questo polinomio. Il secondo determinante è il determinante di una matrice triangolare inferiore ed è dunque il prodotto degli elementi sulla diagonale principale, vale a dire . Dunque .   "
 },
 {
-  "id": "note-23",
+  "id": "sec-matrici_compagne-10",
   "level": "2",
-  "url": "sec-matrici_compagne.html#note-23",
+  "url": "sec-matrici_compagne.html#sec-matrici_compagne-10",
   "type": "Nota",
   "number": "28.3.3",
   "title": "",
@@ -13474,9 +13474,9 @@ var ptx_lunr_docs = [
   "body": "  Sia una matrice quadrata di ordine a coefficienti in un campo . Esistono allora polinomi irriducibili monici , , , (non necessariamente distinti) e interi positivi , , , tali che è simile alla matrice diagonale a blocchi dove ciascun è la matrice compagna di . Inoltre, il polinomio caratteristico di è . La matrice è univocamente determinata a meno dell'ordinamento dei blocchi ed è detta forma canonica primaria di .    Questo teorema è semplicemente la traduzione in termini matriciali del precedente. Notiamo solo che il determinante di una matrice diagonale a blocchi è il prodotto dei determinanti dei blocchi ( ) e, di conseguenza, il polinomio caratteristico di (e, quindi di ) è il prodotto dei polinomi caratteristici dei singoli blocchi, che, per la sono esattamente i .   "
 },
 {
-  "id": "note-24",
+  "id": "sec-matrici_compagne-15",
   "level": "2",
-  "url": "sec-matrici_compagne.html#note-24",
+  "url": "sec-matrici_compagne.html#sec-matrici_compagne-15",
   "type": "Nota",
   "number": "28.3.6",
   "title": "",
@@ -13501,9 +13501,9 @@ var ptx_lunr_docs = [
   "body": "  Sia una matrice quadrata di ordine a coefficienti in un campo . Allora esistono polinomi monici tali che è simile alla matrice diagonale a blocchi dove ciascun è la matrice compagna di . Inoltre il polinomio caratteristico di è . La matrice è univocamente determinata ed è detta forma canonica razionale di .    Questo teorema è semplicemente la traduzione in termini matriciali del precedente. Notiamo solo che il determinante di una matrice diagonale a blocchi è il prodotto dei determinanti dei blocchi ( ) e, di conseguenza, il polinomio caratteristico di (e, quindi di ) è il prodotto dei polinomi caratteristici dei singoli blocchi, che, per la sono esattamente i polinomi, che, per la sono esattamente gli .   "
 },
 {
-  "id": "note-25",
+  "id": "sec-matrici_compagne-19",
   "level": "2",
-  "url": "sec-matrici_compagne.html#note-25",
+  "url": "sec-matrici_compagne.html#sec-matrici_compagne-19",
   "type": "Nota",
   "number": "28.3.9",
   "title": "",
@@ -13528,9 +13528,9 @@ var ptx_lunr_docs = [
   "body": " Si può facilmente passare dalla forma canonica razionale a quella primaria e viceversa usando le tecniche che abbiamo descritto per passare dalla decomposizione a fattori invarianti a quella primaria di un modulo sopra un dominio a ideali principali.  "
 },
 {
-  "id": "example-199",
+  "id": "sec-matrici_compagne-24",
   "level": "2",
-  "url": "sec-matrici_compagne.html#example-199",
+  "url": "sec-matrici_compagne.html#sec-matrici_compagne-24",
   "type": "Esempio",
   "number": "28.3.12",
   "title": "",
@@ -13573,9 +13573,9 @@ var ptx_lunr_docs = [
   "body": "  Sia una matrice quadrata di ordine a coefficienti in un campo . Se il polinomio caratteristico di è totalmente riducibile (ciò avviene sempre se è algebricamente chiuso) allora è simile a una matrice diagonale a blocchi del tipo dove ciascun è un blocco di Jordan. Inoltre il polinomio caratteristico di è . La matrice è univocamente determinata a meno dell'ordinamento in cui sono riportati i blocchi e viene detta forma canonica di Jordan della matrice .   "
 },
 {
-  "id": "note-26",
+  "id": "sec-jordan-7",
   "level": "2",
-  "url": "sec-jordan.html#note-26",
+  "url": "sec-jordan.html#sec-jordan-7",
   "type": "Nota",
   "number": "28.4.4",
   "title": "",
@@ -13609,9 +13609,9 @@ var ptx_lunr_docs = [
   "body": " Nel caso in cui i blocchi di Jordan abbiano tutti ordine otteniamo una usuale matrice diagonale.  "
 },
 {
-  "id": "p-3599",
+  "id": "sec-jordan-11",
   "level": "2",
-  "url": "sec-jordan.html#p-3599",
+  "url": "sec-jordan.html#sec-jordan-11",
   "type": "Capoverso (with a defined term)",
   "number": "",
   "title": "",
@@ -13672,36 +13672,36 @@ var ptx_lunr_docs = [
   "body": " Sia data la matrice a coefficienti reali .   Determinare (se esiste) una matrice di Jordan simile ad .   Il polinomio caratteristico di può essere calcolato facilmente: si ha . Il polinomio caratteristico è totalmente riducibile e la matrice ha come unico autovalore di molteplicità algebrica . Dunque la matrice è simile a una matrice di Jordan in cui avremo blocchi di Jordan di ordine complessivo . Calcoliamo la successione dei ranghi associati all'autovalore partendo, come sempre, dall'ordine della matrice che in questo caso è . Consideriamo ora il rango della matrice , vale a dire la matrice . Si vede facilmente che il rango di questa matrice è . Pertanto abbiamo blocchi di Jordan relativi a .  Iniziamo a costruire il solito schema     Ovviamente dobbiamo proseguire: sappiamo che ci sono due blocchi ma non abbiamo ancora idea del loro ordine. Prendiamo allora la matrice , cioè la matrice . Il rango di questa matrice è : dunque nella successione dei ranghi siamo scesi di . Abbiamo pertanto blocchi di ordine almeno . Ecco il nostro schema aggiornato:     Purtroppo dobbiamo proseguire: dobbiamo piazzare ancora due simboli e non sappiamo come fare. Calcoliamo allora , cioè la matrice . Questa matrice ha rango : nella successione dei ranghi siamo scesi di . Abbiamo così un blocco di ordine almeno . Aggiorniamo ancora il nostro schema     Dobbiamo piazzare ancora un altro simbolo nel nostro grafico. È inutile calcolare il rango di : l'unica possibilità per il nostro grafico è che sia     Abbiamo una colonna di altezza e una di altezza . La nostra matrice è allora simile alla matrice di Jordan .   Determinare poi la forma canonica primaria e la forma canonica razionale di .   Per trovare la forma canonica primaria di basta sostituire il blocco di Jordan di ordine relativo a con la matrice compagna del polinomio e il blocco di Jordan di ordine relativo a con la matrice compagna del polinomio ottenendo così la matrice . Poiché divide per ottenere la forma canonica razionale basta ordinare in maniera opportuna questi blocchi .  "
 },
 {
-  "id": "exercise-451",
+  "id": "exercises-jordan-2",
   "level": "2",
-  "url": "sec-jordan.html#exercise-451",
+  "url": "sec-jordan.html#exercises-jordan-2",
   "type": "Esercizio",
   "number": "28.4.2",
   "title": "",
   "body": " Si consideri la matrice dove i coefficienti sono elementi di un campo .   Determinare una matrice di Jordan simile ad nel caso in cui .   La matrice è triangolare, quindi i suoi autovalori sono , e qualunque sia il campo e il polinomio caratteristico di è sempre totalmente riducibile. Poiché , gli autovalori sono distinti e hanno tutti molteplicità algebrica . Per ciascun autovalore esiste dunque un unico blocco di Jordan ad esso relativo e tale blocco ha ordine . In altri termini, è diagonalizzabile e simile alla matrice .   Determinare una matrice di Jordan simile ad nel caso in cui con numero primo.   Possiamo riprendere i calcoli del punto precedente. Poiché dobbiamo stabilire, in dipendenza da , se gli autovalori sono distinti o meno. Gli autovalori e coincidono se e solo se la loro differenza è multipla di , cioè se e solo se . Analogamente e coincidono se e solo se è multiplo di , il che avviene se e solo se . Infine e coincidono se e solo se è multiplo di il che avviene, ancora una volta, se e solo se . Riassumendo: se la matrice ha tre autovalori aventi molteplicità algebrica e, quindi, come nel caso la matrice è simile alla matrice diagonale . Se, invece , la matrice ha un unico autovalore di molteplicità algebrica . Consideriamo la solita successione dei ranghi partendo da , ordine di . Consideriamo ora la matrice (si noti che in questo campo ). La matrice ha rango : dall'intero siamo scesi di e, quindi ci sono due blocchi relativi a . Non abbiamo bisogno di proseguire oltre: ci deve necessariamente essere un blocco di ordine e un blocco di ordine e, dunque, è simile alla matrice .  "
 },
 {
-  "id": "exercise-452",
+  "id": "exercises-jordan-3-2",
   "level": "2",
-  "url": "sec-jordan.html#exercise-452",
+  "url": "sec-jordan.html#exercises-jordan-3-2",
   "type": "Esercizio",
   "number": "28.4.3",
   "title": "",
   "body": "  e .   La matrice è triangolare, quindi i suoi autovalori sono gli elementi lungo la diagonale. Dunque, ha come autovalori di molteplicità algebrica e di molteplicità algebrica . Il polinomio caratteristico di è .  Il polinomio caratteristico di è cioè . Espandendo il polinomio caratteristico di troviamo lo stesso polinomio: dunque, e hanno lo stesso polinomio caratteristico e questo è totalmente riducibile. Calcoliamo la forma canonica di Jordan per e . Poiché ha molteplicità algebrica , per entrambe le matrici c'è un unico blocco di Jordan di ordine relativo a . Consideriamo l'autovalore e calcoliamo la successione dei ranghi associati a , partendo, come sempre, dall'ordine della matrice, cioè . La matrice , cioè la matrice , ha rango . Il rango è sceso di : avremo, quindi, blocchi di Jordan relativi a . Consideriamo ora la successione dei ranghi per la matrice : La matrice , cioè la matrice , ha rango . Il rango è sceso di : avremo, quindi, un unico blocco di Jordan relativo a . Le due matrici non sono dunque simili.  "
 },
 {
-  "id": "exercise-453",
+  "id": "exercises-jordan-3-3",
   "level": "2",
-  "url": "sec-jordan.html#exercise-453",
+  "url": "sec-jordan.html#exercises-jordan-3-3",
   "type": "Esercizio",
   "number": "28.4.4",
   "title": "",
   "body": "  e .   La matrice ha polinomio caratteristico . La matrice ha polinomio caratteristico . Espandendo il polinomio caratteristico di troviamo il polinomio . Le matrici hanno polinomio caratteristico differente, quindi non sono simili. Non è necessario calcolare gli autovalori delle due matrici né, tantomeno, la loro (eventuale) forma canonica di Jordan.  "
 },
 {
-  "id": "exercise-454",
+  "id": "exercises-jordan-3-4",
   "level": "2",
-  "url": "sec-jordan.html#exercise-454",
+  "url": "sec-jordan.html#exercises-jordan-3-4",
   "type": "Esercizio",
   "number": "28.4.5",
   "title": "",
@@ -13807,9 +13807,9 @@ var ptx_lunr_docs = [
   "body": "  Sia una matrice quadrata di ordine a coefficienti in un campo , il cui polinomio caratteristico sia totalmente riducibile. Allora il polinomio minimo di è dove , , sono gli autovalori distinti di e, per ciascun , l'intero positivo è il massimo ordine tra i blocchi di Jordan relativi a presenti nella forma canonica di Jordan di .    Per la il polinomio minimo di e quello della sua forma canonica di Jordan coincidono. Per la , il polinomio minimo di è il minimo comune multiplo dei polinomi minimi dei suoi blocchi di Jordan. La tesi segue immediatamente allora dal .   "
 },
 {
-  "id": "example-201",
+  "id": "sec-polinomio_minimo_matrici-19",
   "level": "2",
-  "url": "sec-polinomio_minimo_matrici.html#example-201",
+  "url": "sec-polinomio_minimo_matrici.html#sec-polinomio_minimo_matrici-19",
   "type": "Esempio",
   "number": "28.5.11",
   "title": "",
@@ -13825,18 +13825,18 @@ var ptx_lunr_docs = [
   "body": "  Una matrice quadrata è diagonalizzabile se e solo se il polinomio minimo di è prodotto di fattori lineari distinti.   "
 },
 {
-  "id": "exercise-455",
+  "id": "exercises-polinomio_minimo_matrici-1",
   "level": "2",
-  "url": "sec-polinomio_minimo_matrici.html#exercise-455",
+  "url": "sec-polinomio_minimo_matrici.html#exercises-polinomio_minimo_matrici-1",
   "type": "Esercizio",
   "number": "28.5.1",
   "title": "",
   "body": " Determinare il polinomio minimo della matrice dell' .   Poiché l'unico autovalore è e il massimo ordine dei blocchi di Jordan relativi a è il polinomio minimo è .  "
 },
 {
-  "id": "exercise-456",
+  "id": "exercises-polinomio_minimo_matrici-2",
   "level": "2",
-  "url": "sec-polinomio_minimo_matrici.html#exercise-456",
+  "url": "sec-polinomio_minimo_matrici.html#exercises-polinomio_minimo_matrici-2",
   "type": "Esercizio",
   "number": "28.5.2",
   "title": "",
@@ -13942,9 +13942,9 @@ var ptx_lunr_docs = [
   "body": "  Sia un'algebra induttiva e sia . Allora .    La seconda uguaglianza segue immediatamente dalla tenuto conto che è un omomorfismo di algebre da in sé. Per quanto riguarda la prima uguaglianza, notiamo che, detta , si verifica immediatamente che è una sottoalgebra di contenente : quindi, ; d'altra parte, e poiché , anche e, di conseguenza, .   "
 },
 {
-  "id": "example-203",
+  "id": "sec-algebre_induttive-13",
   "level": "2",
-  "url": "sec-algebre_induttive.html#example-203",
+  "url": "sec-algebre_induttive.html#sec-algebre_induttive-13",
   "type": "Esempio",
   "number": "A.1.11",
   "title": "",
@@ -13987,9 +13987,9 @@ var ptx_lunr_docs = [
   "body": "  Per ogni si ha .    Sia : dobbiamo provare che . Prima di tutto, notiamo che, poiché , si ha , e, dunque, . Mostriamo ora che è una sottoalgebra di . Sia , cioè : poiché è iniettiva, si ha allora che , cioè . Riassumendo, è una sottoalgebra induttiva contenente : poiché genera , ne consegue che , come richiesto.   "
 },
 {
-  "id": "p-3696",
+  "id": "sec-assiomi_peano-7",
   "level": "2",
-  "url": "sec-assiomi_peano.html#p-3696",
+  "url": "sec-assiomi_peano.html#sec-assiomi_peano-7",
   "type": "Capoverso (with a defined term)",
   "number": "",
   "title": "",
@@ -14068,9 +14068,9 @@ var ptx_lunr_docs = [
   "body": "  Se e sono insiemi dei numeri naturali di generatori e rispettivamente, allora esiste un unico omomorfismo biiettivo (cioè un isomorfismo) tale che .    Per la esistono e sono unici omomorfismi di algebre e tali che e . Dunque, è un omomorfismo da in sé che manda in : anche l'identità è ovviamente un omomorfismo da in sé che manda in : per la proprietà di unicità della , abbiamo che . Analogamente, e, dunque, e sono l'una l'inversa dell'altra.   "
 },
 {
-  "id": "remark-156",
+  "id": "sec-assiomi_peano-16",
   "level": "2",
-  "url": "sec-assiomi_peano.html#remark-156",
+  "url": "sec-assiomi_peano.html#sec-assiomi_peano-16",
   "type": "Osservazione",
   "number": "A.2.12",
   "title": "",
@@ -14365,9 +14365,9 @@ var ptx_lunr_docs = [
   "body": " Costruzione degli interi  I naturali hanno una struttura di monoide commutativo sia rispetto all'addizione che alla moltiplicazione. Inoltre, le operazioni sono legate dalla proprietà distributiva e dal fatto che l'elemento neutro rispetto all'addizione è assorbente rispetto alla moltiplicazione. Questo tipo di struttura, che non soddisfa tutte le proprietà richieste dalla definizione di anello ( ), viene talvolta chiamate semianello commutativo , ma la nomenclatura non è univoca.  Vogliamo ora costruire l'anello dei numeri interi a partire dai naturali. Consideriamo allora l'insieme e definiamo in due operazioni di addizione e moltiplicazione nel modo seguente: Non è difficile mostrare che rispetto a entrambe queste operazioni è un monoide commutativo (l'elemento neutro rispetto a è e rispetto a è ) e che vale la proprietà distributiva.  Definiamo ora in la relazione tramite se . Nell' abbiamo mostrato che questa è una relazione di equivalenza.   Dalla definizione segue immediatamente che se e solo se , cioè .   Si verifica immediatamente che questa relazione è compatibile con entrambe le operazioni ( ). Dimostriamo allora la   addizione di interi  moltiplicazione di interi   Nell'insieme quoziente sono definite due operazioni di addizione e di moltiplicazione nel modo seguente: Rispetto a tali operazioni è un dominio di integrità.    Le operazioni sono ben definite perché la relazione di equivalenza è compatibile con le operazioni e definite in . Rispetto a entrambe queste operazioni è, dunque, un monoide commutativo e vale la proprietà distributiva. Rimane da mostrare che ogni elemento ha opposto rispetto all'addizione e che vale il principio di annullamento del prodotto.  Dato un qualunque elemento di , il suo opposto è : infatti per l' .  Siano ora e due elementi tali che : dobbiamo mostrare che o . Supponiamo che , cioè : per la esiste un naturale tale che o . Nel primo caso e, quindi, da ricaviamo da cui, grazie alla otteniamo , cioè . Il secondo caso è analogo.    Come conseguenza della abbiamo le leggi di cancellazione ( e ):   Legge di cancellazione per l'addizione   Se , e sono tre interi tali che allora .     Legge di cancellazione per la moltiplicazione   Se , e sono tre interi tali che e allora .      La funzione definita da è iniettiva ed è un omomorfismo di monoidi sia rispetto all'addizione che alla moltiplicazione (cioè è un omomorfismo di semianelli).    Siano e due naturali tali che , cioè . Ciò significa che e, quindi, , vale a dire . Dunque, è iniettiva.  Ora , cioè manda l'elemento neutro di in nell'elemento neutro di in . Inoltre . Dunque, è un omomorfismo di monoidi additivi.  Ora , cioè manda l'elemento neutro di in nell'elemento neutro di in . Inoltre . Dunque, è un omomorfismo di monoidi moltiplicativi.    Grazie alla proposizione precedente, d'ora in poi identificheremo i naturali con un sottoinsieme degli interi.    Avendo identificato i naturali con un sottoinsieme degli interi, diremo che un intero è positivo se è un naturale non nullo e che è negativo se non è un naturale.     Per definizione segue che è l'unico intero che non è né positivo, né negativo.     Un intero è positivo se e solo se ed è negativo se e solo se .    L'intero è positivo se e solo se esiste un naturale non nullo tale che , vale a dire , cioè : per la , ciò avviene se e solo se . Per l' , l'intero è nullo se e solo se e, quindi, è negativo se e solo se .      Dati due interi non nulli, diremo che sono concordi se sono entrambi positivi o entrambi negativi e che sono discordi altrimenti.      Dato un intero non nullo , si ha che e sono discordi.    Se allora . Ora, per l' : quindi, o . Il implica allora che nel primo caso è positivo e è negativo e che nel secondo caso è negativo e è positivo.      Siano dati due interi non nulli e .     Se e sono positivi allora e sono positivi.    Se e sono negativi allora è negativo e è positivo.    Se e sono discordi allora è negativo.       Il segue dal e dalla tenuto conto che gli interi positivi sono i naturali non nulli.  Se e sono negativi, allora e sono positivi per la . Per il , e sono positivi. Ora, è l'opposto di per la e, usando di nuovo la , otteniamo che è negativo, mentre per la e, quindi, è positivo.  Infine, se e sono uno positivo e l'altro negativo (ad esempio, positivo e negativo), allora è positivo per la e, quindi, per il abbiamo che è positivo. Per la  è l'opposto di che, grazie ancora alla , è negativo.     In vista del due interi sono concordi se e solo se il loro prodotto è positivo e sono discordi se e solo se il loro prodotto è negativo.     Gli unici interi invertibili sono e e ciascuno di essi coincide con il proprio opposto.    Chiaramente non è invertibile. Per il , un numero e il proprio inverso sono concordi. In particolare, l'inverso di un naturale deve essere anch'esso un naturale e sappiamo che l'unico naturale che ha un inverso tra i naturali è ( ). Se è un invertibile negativo, con inverso allora e, quindi, è un positivo invertibile: pertanto, e .    Dal momento che gli interi formano un anello e, in particolare, rispetto all'addizione sono un gruppo additivo, possiamo usare la scrittura per indicare la somma .    La relazione definita in da se è una relazione d'ordine totale che estende la relazione d'ordine nei naturali.    La relazione è ovviamente riflessiva: infatti per ogni , si ha che   Mostriamo che è antisimmetrica. Siano e interi tali che e , cioè, e sono naturali. Ora, e, quindi, per il , si ha che , cioè .  Mostriamo che è transitiva. Siano , e interi tali che e , cioè e sono naturali. Dunque, è naturale, cioè .  Mostriamo che è totale. Siano e due interi qualunque: per il , e non possono essere entrambi negativi altrimenti sarebbe negativo. Dunque, almeno uno tra e è naturale e, quindi, e sono confrontabili.  Mostriamo infine che dati due naturali e si ha come naturali se e solo se come interi. L'intero è l'unico intero tale che : la tesi segue allora dalla .     Una volta definita questa relazione d'ordine segue immediatamente che un numero è positivo se e solo se ed è negativo se e solo se .   Possiamo ora estendere il , il e il     Dati due interi e si ha se e solo se . In particolare, se allora o .    Per definizione, se e solo se è un naturale diverso da . I naturali diversi da sono tutti e soli i successori di altri naturali, cioè i numeri del tipo per qualche naturale . Pertanto, se e solo se esiste un naturale tale che , cioè , vale a dire, se e solo se .      Dati gli interi , e si ha se e solo se .    Notiamo che e, dunque, è un naturale se e solo se è un naturale: la tesi segue dalla definizione dell'ordine.      Dati gli interi , e con si ha se e solo se .    Se , cioè è un naturale, allora è un naturale, cioè . Viceversa, se è un naturale, allora non può essere negativo perché altrimenti, per il , dovrebbe essere negativo.    Sappiamo che ogni sottoinsieme non vuoto dell'insieme dei naturali ha un minimo ( ). Ciò non è vero per i sottoinsiemi dell'insieme degli interi (ad esempio, gli interi stessi non hanno minimo). Abbiamo tuttavia la    Un sottoinsieme non vuoto di che possiede un minorante ha un minimo. Un sottoinsieme non vuoto di che possiede un maggiorante ha un massimo.    Sia un sottoinsieme non vuoto di e sia un minorante di : dunque, è un sottoinsieme non vuoto di e, come tale, ha un minimo. Pertanto, esiste un elemento in tale che per ogni , cioè ( ) per ogni , vale a dire è minimo di . La seconda affermazione è analoga.       valore assoluto di    Dato un intero , il valore assoluto di , denotato con , è se ed è se .     Possiamo notare che . Ciò è infatti banalmente vero se , perché in tal caso . Se, invece, , dalla sappiamo che e sono uno positivo e uno negativo: in particolare, è quello positivo dei due, dunque, .    Dalla definizione segue immediatamente che se e solo se o .     Per ogni intero si ha .    Dall' otteniamo che e : sommando ad ambo i membri della seconda dal otteniamo poi .      Dati due interi e si ha e .    Dall' sappiamo che e : dunque, . Analogamente, . Applicando ancora l' otteniamo, dunque, .  L'uguaglianza si ottiene facilmente considerando i vari casi possibili.    "
 },
 {
-  "id": "p-3819",
+  "id": "sec-interi-2",
   "level": "2",
-  "url": "sec-interi.html#p-3819",
+  "url": "sec-interi.html#sec-interi-2",
   "type": "Capoverso (with a defined term)",
   "number": "",
   "title": "",
@@ -14428,9 +14428,9 @@ var ptx_lunr_docs = [
   "body": "  Avendo identificato i naturali con un sottoinsieme degli interi, diremo che un intero è positivo se è un naturale non nullo e che è negativo se non è un naturale.   "
 },
 {
-  "id": "remark-162",
+  "id": "sec-interi-14",
   "level": "2",
-  "url": "sec-interi.html#remark-162",
+  "url": "sec-interi.html#sec-interi-14",
   "type": "Osservazione",
   "number": "A.5.7",
   "title": "",
@@ -14473,9 +14473,9 @@ var ptx_lunr_docs = [
   "body": "  Siano dati due interi non nulli e .     Se e sono positivi allora e sono positivi.    Se e sono negativi allora è negativo e è positivo.    Se e sono discordi allora è negativo.       Il segue dal e dalla tenuto conto che gli interi positivi sono i naturali non nulli.  Se e sono negativi, allora e sono positivi per la . Per il , e sono positivi. Ora, è l'opposto di per la e, usando di nuovo la , otteniamo che è negativo, mentre per la e, quindi, è positivo.  Infine, se e sono uno positivo e l'altro negativo (ad esempio, positivo e negativo), allora è positivo per la e, quindi, per il abbiamo che è positivo. Per la  è l'opposto di che, grazie ancora alla , è negativo.   "
 },
 {
-  "id": "remark-163",
+  "id": "sec-interi-19",
   "level": "2",
-  "url": "sec-interi.html#remark-163",
+  "url": "sec-interi.html#sec-interi-19",
   "type": "Osservazione",
   "number": "A.5.12",
   "title": "",
@@ -14500,9 +14500,9 @@ var ptx_lunr_docs = [
   "body": "  La relazione definita in da se è una relazione d'ordine totale che estende la relazione d'ordine nei naturali.    La relazione è ovviamente riflessiva: infatti per ogni , si ha che   Mostriamo che è antisimmetrica. Siano e interi tali che e , cioè, e sono naturali. Ora, e, quindi, per il , si ha che , cioè .  Mostriamo che è transitiva. Siano , e interi tali che e , cioè e sono naturali. Dunque, è naturale, cioè .  Mostriamo che è totale. Siano e due interi qualunque: per il , e non possono essere entrambi negativi altrimenti sarebbe negativo. Dunque, almeno uno tra e è naturale e, quindi, e sono confrontabili.  Mostriamo infine che dati due naturali e si ha come naturali se e solo se come interi. L'intero è l'unico intero tale che : la tesi segue allora dalla .   "
 },
 {
-  "id": "remark-164",
+  "id": "sec-interi-23",
   "level": "2",
-  "url": "sec-interi.html#remark-164",
+  "url": "sec-interi.html#sec-interi-23",
   "type": "Osservazione",
   "number": "A.5.15",
   "title": "",
@@ -14563,9 +14563,9 @@ var ptx_lunr_docs = [
   "body": " Possiamo notare che . Ciò è infatti banalmente vero se , perché in tal caso . Se, invece, , dalla sappiamo che e sono uno positivo e uno negativo: in particolare, è quello positivo dei due, dunque, .  "
 },
 {
-  "id": "remark-166",
+  "id": "sec-interi-32",
   "level": "2",
-  "url": "sec-interi.html#remark-166",
+  "url": "sec-interi.html#sec-interi-32",
   "type": "Osservazione",
   "number": "A.5.22",
   "title": "",
@@ -14581,27 +14581,27 @@ var ptx_lunr_docs = [
   "body": "  Per ogni intero si ha .    Dall' otteniamo che e : sommando ad ambo i membri della seconda dal otteniamo poi .   "
 },
 {
-  "id": "proposition-267",
+  "id": "sec-interi-34",
   "level": "2",
-  "url": "sec-interi.html#proposition-267",
+  "url": "sec-interi.html#sec-interi-34",
   "type": "Proposizione",
   "number": "A.5.24",
   "title": "",
   "body": "  Dati due interi e si ha e .    Dall' sappiamo che e : dunque, . Analogamente, . Applicando ancora l' otteniamo, dunque, .  L'uguaglianza si ottiene facilmente considerando i vari casi possibili.   "
 },
 {
-  "id": "appendix-2",
+  "id": "backmatter-3",
   "level": "1",
-  "url": "appendix-2.html",
+  "url": "backmatter-3.html",
   "type": "Appendice",
   "number": "B",
   "title": "Notazioni",
   "body": " Notazioni   "
 },
 {
-  "id": "solutions-1",
+  "id": "backmatter-4",
   "level": "1",
-  "url": "solutions-1.html",
+  "url": "backmatter-4.html",
   "type": "Appendice",
   "number": "C",
   "title": "Soluzioni e suggerimenti per alcuni esercizi",
