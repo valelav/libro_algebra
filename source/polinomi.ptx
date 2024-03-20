@@ -600,7 +600,7 @@
 
       <proof>
         <p>
-          Procediamo per induzione su <m>t</m>. Se <m>t=0</m>, non c'è nulla da dimostrare. Se <m>t \gt 0</m>, per il <xref ref="thm-del_resto" text="title"/> sappiamo che <m>f=q'(x-c_{t})</m> per qualche <m>q'</m> in <m>D[x]</m>. Per ogni <m>i</m> con <m>1\le i\le t-1</m>, abbiamo <m>0=f(c-{i})=q'(c_{i})(c_{i}-c_{t})</m>: poiché <m>D</m> è un dominio e <m>c_{i}\ne c_{t}</m>, questo implica che <m>q'(c_{i})=0</m>. Per ipotesi induttiva abbiamo allora che
+          Procediamo per induzione su <m>t</m>. Se <m>t=0</m>, non c'è nulla da dimostrare. Se <m>t \gt 0</m>, per il <xref ref="thm-del_resto" text="title"/> sappiamo che <m>f=q'(x-c_{t})</m> per qualche <m>q'</m> in <m>D[x]</m>. Per ogni <m>i</m> con <m>1\le i\le t-1</m>, abbiamo <m>0=f(c_{i})=q'(c_{i})(c_{i}-c_{t})</m>: poiché <m>D</m> è un dominio e <m>c_{i}\ne c_{t}</m>, questo implica che <m>q'(c_{i})=0</m>. Per ipotesi induttiva abbiamo allora che
           <me>
             q'=q(x-c_{1})(x-c_{2})\cdots(x-c_{t-1})
           </me>.
