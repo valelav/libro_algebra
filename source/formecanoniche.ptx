@@ -905,14 +905,16 @@
       Per poter determinare più facilmente il numero di blocchi di Jordan di un dato ordine a partire dalla sequenza di interi <m>n</m>, <m>\rk(A-\lambda_{i}\Idmatrix)</m>, <m>\rk((A-\lambda_{i}\Idmatrix)^{2})</m>, <m>\dots</m> possiamo utilizzare un grafico di questo tipo. Innanzitutto consideriamo la differenza tra il primo e il secondo termine della sequenza <m>n-\rk(A-\lambda_{i}\Idmatrix)</m> e disegniamo una riga contenente dei simboli (ad esempio, dei quadrati) in tal numero:
     </p>
     <image xml:id="image-esempio_jordan_prima_riga">
+      <shortdescription>Riga con 8 quadrati.</shortdescription>
       <latex-image>
         \YoungTableau{8}
       </latex-image>
     </image>
     <p>
-      Ora consideriamo la differenza tra il secondo e il terzo termine della sequenza <m>\rk(A-\lambda_{i}\Idmatrix)-\rk((A-\lambda_{i}\Idmatrix)^{2})</m>: questo è il numero di blocchi di Jordan di ordine almeno <m>2</m>. Riportiamo questo numero di di simboli in riga sopra la precedente (a partire da sinistra):
+      Ora consideriamo la differenza tra il secondo e il terzo termine della sequenza <m>\rk(A-\lambda_{i}\Idmatrix)-\rk((A-\lambda_{i}\Idmatrix)^{2})</m>: questo è il numero di blocchi di Jordan di ordine almeno <m>2</m>. Riportiamo questo numero di simboli in riga sopra la precedente (a partire da sinistra):
     </p>
     <image xml:id="image-esempio_jordan_seconda_riga">
+      <shortdescription>Due righe di quadrati sovrapposte lunghe 8 e 6</shortdescription>
       <latex-image>
         \YoungTableau{8,6}
       </latex-image>
@@ -922,6 +924,7 @@
     </p>
 
     <image xml:id="image-esempio_jordan_completa">
+      <shortdescription>Righe di quadrati sovrapposte lunghe 8, 6, 6, 3, 3 e 1</shortdescription>
       <latex-image>
         \YoungTableau{8,6,6,3,3,1}
       </latex-image>
@@ -952,7 +955,8 @@
         <p>
           Consideriamo l'autovalore <m>1</m>: costruiamo la sequenza dei ranghi associata a <m>1</m>: il primo numero è <m>8</m>, il secondo è <m>\rk(A-\Idmatrix)=7</m>, il terzo è <m>\rk((A-\Idmatrix)^{2})=6</m>, il quarto è <m>\rk((A-\Idmatrix)^{3})=5</m> e qui ci fermiamo perché <m>5=8-3</m> (ovviamente qui non sono riportati, per brevità, i calcoli necessari). Ora disegniamo il grafico come in precedenza:
         </p>
-        <image xml:id="image-esempio_jordan_autovalore_1">
+        <image xml:id="image-esempio_jordan_autovalore_1">  
+        <shortdescription>Righe di quadrati sovrapposte lunghe 1, 1 e 1</shortdescription>
           <latex-image>
             \YoungTableau{1,1,1}
           </latex-image>
@@ -963,7 +967,8 @@
         <p>
           Passiamo ora all'autovalore <m>2</m>. Anche qui diamo, senza esplicitare i calcoli, la sequenza dei ranghi associati: otteniamo <m>8</m>, <m>5</m>, <m>4</m>, <m>3</m>, e qui ci fermiamo perché <m>3=8-5</m>. Il grafico in questo caso è il seguente:
         </p>
-        <image xml:id="image-esempio_jordan_autovalore_2">
+        <image xml:id="image-esempio_jordan_autovalore_2">       
+        <shortdescription>Righe di quadrati sovrapposte lunghe 3, 1 e 1</shortdescription>
           <latex-image>
             \YoungTableau{3,1,1}
           </latex-image>
@@ -1085,7 +1090,8 @@
             <p>
               Iniziamo a costruire il solito schema
             </p>
-            <image xml:id="image-esercizio_jordan_prima_riga">
+            <image xml:id="image-esercizio_jordan_prima_riga">  
+            <shortdescription>Riga con 2 quadrati.</shortdescription> 
               <latex-image>
                 \YoungTableau{2}
               </latex-image>
@@ -1105,6 +1111,7 @@
               Il rango di questa matrice è <m>2</m>: dunque nella successione dei ranghi siamo scesi di <m>4-2</m>. Abbiamo pertanto <m>2</m> blocchi di ordine almeno <m>2</m>. Ecco il nostro schema aggiornato:
             </p>
             <image xml:id="image-esercizio_jordan_seconda_riga">
+              <shortdescription>Due righe di quadrati sovrapposte lunghe 2 e 2</shortdescription>
               <latex-image>
                 \YoungTableau{2,2}
               </latex-image>
@@ -1132,6 +1139,7 @@
               Dobbiamo piazzare ancora un altro simbolo nel nostro grafico. È inutile calcolare il rango di <m>(A-2\Idmatrix)^{4}</m>: l'unica possibilità per il nostro grafico è che sia
             </p>
             <image xml:id="image-esercizio_jordan_quarta_riga">
+              <shortdescription>Righe di quadrati sovrapposte lunghe 2, 2, 1 e 1</shortdescription>
               <latex-image>
                 \YoungTableau{2,2,1,1}
               </latex-image>
