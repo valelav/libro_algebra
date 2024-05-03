@@ -61,7 +61,12 @@
         <figure>
           <caption>Non è funzione perché non è definita dappertutto</caption>
           <image xml:id="image-funzione_non_definita_dappertutto">
-            <shortdescription>Una funzione non definita dappertutto</shortdescription>
+            <shortdescription>Diagrammi di Venn di due insiemi con frecce dal primo al secondo insieme con un elemento del primo da cui non parte alcuna freccia.</shortdescription>
+            <description>
+              <p>
+                Sono rappresentati gli insiemi <m>A\:coloneqq\{1,2,3,4\}</m> e <m>B\coloneqq{a,b,c}</m> tramite diagrammi di Venn, con frecce che vanno da elementi del primo insieme a elementi del secondo. Da <m>1</m> parte una freccia verso <m>a</m>, da <m>2</m> parte una freccia verso <m>b</m>, da <m>3</m> parte una freccia verso <m>b</m> e da <m>4</m> non parte nessuna freccia: questa non è dunque una funzione perché a <m>4</m> non corrisponde alcun elemento.
+              </p>
+            </description>
             <latex-image>
               \begin{tikzpicture}[keepsize]
                 \node[label={left:$1$}] (1) at (1.5,1) {};
@@ -93,7 +98,12 @@
         <figure>
           <caption>Non è una funzione perché non è ben definita</caption>
           <image xml:id="image-funzione_non_ben_definita">
-            <shortdescription>Una funzione non ben definita</shortdescription>
+            <shortdescription>Diagrammi di Venn di due insiemi con frecce dal primo al secondo insieme con un elemento del primo da cui partono più frecce.</shortdescription>
+            <description>
+              <p>
+                Sono rappresentati gli insiemi <m>A\:coloneqq\{1,2,3,4\}</m> e <m>B\coloneqq{a,b,c}</m> tramite diagrammi di Venn, con frecce che vanno da elementi del primo insieme a elementi del secondo. Da <m>1</m> parte una freccia verso <m>a</m>, da <m>2</m> parte una freccia verso <m>b</m>, da <m>3</m> partono una freccia verso <m>b</m> e una verso <m>a</m> e da <m>4</m> parte una freccia verso <m>b</m>: questa non è dunque una funzione perché a <m>3</m> corrispondono più di un elemento.
+              </p>
+            </description>
             <latex-image>
               \begin{tikzpicture}[keepsize]
                 \node[label={left:$1$}] (1) at (1.5,1) {};
@@ -127,7 +137,12 @@
         <figure>
           <caption>Questa è una funzione</caption>
           <image xml:id="image-funzione_ben_definita">
-            <shortdescription>Una funzione ben definita</shortdescription>
+            <shortdescription>Diagrammi di Venn di due insiemi con frecce dal primo al secondo insieme: da ogni elemento del primo insieme parte esattamente una freccia.</shortdescription>
+            <description>
+              <p>
+                Sono rappresentati gli insiemi <m>A\:coloneqq\{1,2,3,4\}</m> e <m>B\coloneqq{a,b,c}</m> tramite diagrammi di Venn, con frecce che vanno da elementi del primo insieme a elementi del secondo. Da <m>1</m> parte una freccia verso <m>a</m>, da <m>2</m> parte una freccia verso <m>b</m>, da <m>3</m> parte una freccia verso <m>b</m> e da <m>4</m> parte una freccia verso <m>b</m>: questa è dunque una funzione perché a ogni elemento del primo insieme corrisponde esattamente un elemento del secondo insieme. L'elemento <m>b</m> di <m>B</m> è raggiunto da più frecce e l'elemento <m>c</m> di <m>B</m> non è raggiunto da alcuna freccia, ma questo non importa rispetto alla definizione di funzione.
+              </p>
+            </description>
             <latex-image>
               \begin{tikzpicture}[keepsize]
                 \node[label={left:$1$}] (1) at (1.5,1) {};
@@ -187,7 +202,12 @@
     <figure>
       <caption>Composizione di funzioni</caption>
       <image xml:id="image-composizione_funzioni">
-        <shortdescription>Composizione di funzioni</shortdescription>
+        <shortdescription>Diagrammi di Venn che descrivono la composizione di funzioni</shortdescription>
+        <description>
+          <p>
+            Tre diagrammi di Venn per  gli insiemi <m>A\coloneqq\{1,2,3,4\}</m>, <m>B\coloneqq\{a,b,c\}</m> e <m>C\coloneqq\{t,u,v\}</m> e frecce che descrivono una funzione <m>f</m> da <m>A</m> a <m>B</m> e una funzione <m>g</m> da <m>B</m> a <m>C</m>. Successivamente due diagrammi di Venn per gli insiemi <m>A</m> e <m>B</m> e frecce che descrivono la funzione composta <m>fg</m> da <m>A</m> a <m>C</m>.
+          </p>
+        </description>
         <latex-image>
           \begin{tikzpicture}[keepsize]
             \node[label={left:$1$}] (1) at (1.5,5) {};
@@ -566,7 +586,12 @@
         <figure>
           <caption>Una funzione non iniettiva</caption>
           <image xml:id="image-funzione_non_iniettiva">
-            <shortdescription>Una funzione non iniettiva</shortdescription>
+            <shortdescription>Diagrammi di Venn e frecce che descrivono una funzione non iniettiva.</shortdescription>
+            <description>
+              <p>
+                Diagrammi di Venn per gli insiemi <m>A\coloneqq\{1,2,3,4\}</m> e <m>B\coloneqq\{a,b,c\}</m> e frecce da <m>A</m> a <m>B</m> che mandano <m>1</m> in <m>a</m> e <m>2</m>, <m>3</m> e <m>4</m> in <m>b</m>.
+              </p>
+            </description>
             <latex-image>
               \begin{tikzpicture}[keepsize]
                 \node[label={left:$1$}] (1) at (1.5,1) {};
@@ -598,7 +623,12 @@
         <figure>
           <caption>Una funzione iniettiva</caption>
           <image xml:id="image-funzione_iniettiva">
-            <shortdescription>Una funzione iniettiva</shortdescription>
+            <shortdescription>Diagrammi di Venn e frecce che descrivono una funzione iniettiva.</shortdescription>
+            <description>
+              <p>
+                Diagrammi di Venn per gli insiemi <m>A\coloneqq\{1,2,3\}</m> e <m>B\coloneqq\{a,b,c,d\}</m> e frecce da <m>A</m> a <m>B</m> che mandano <m>1</m> in <m>a</m>, <m>2</m> in <m>d</m> e <m>3</m> e in <m>b</m>.
+              </p>
+            </description>
             <latex-image>
               \begin{tikzpicture}[keepsize]
                 \node[label={left:$1$}] (1) at (1.5,1) {};
@@ -693,7 +723,12 @@
         <figure>
           <caption>Una funzione non suriettiva</caption>
           <image xml:id="image-funzione_non_suriettiva">
-            <shortdescription>Una funzione non suriettiva</shortdescription>
+            <shortdescription>Diagrammi di Venn e frecce che descrivono una funzione non suriettiva.</shortdescription>
+            <description>
+              <p>
+                Diagrammi di Venn per gli insiemi <m>A\coloneqq\{1,2,3\}</m> e <m>B\coloneqq\{a,b,c,d\}</m> e frecce da <m>A</m> a <m>B</m> che mandano <m>1</m> e <m>2</m> in <m>a</m> e <m>3</m> in <m>c</m>.
+              </p>
+            </description>
             <latex-image>
               \begin{tikzpicture}[keepsize]
                 \node[label={left:$1$}] (1) at (1.5,1) {};
@@ -723,7 +758,12 @@
         <figure>
           <caption>Una funzione suriettiva</caption>
           <image xml:id="image-funzione_suriettiva">
-            <shortdescription>Una funzione suriettiva</shortdescription>
+            <shortdescription>Diagrammi di Venn e frecce che descrivono una funzione suriettiva.</shortdescription>
+            <description>
+              <p>
+                Diagrammi di Venn per gli insiemi <m>A\coloneqq\{1,2,3,4\}</m> e <m>B\coloneqq\{a,b.c\}</m> e frecce da <m>A</m> a <m>B</m> che mandano <m>1</m> in <m>a</m>, <m>2</m>e <m>3</m> in <m>b</m> e <m>4</m> in <m>c</m>.
+              </p>
+            </description>
             <latex-image>
               \begin{tikzpicture}[keepsize]
                 \node[label={left:$1$}] (1) at (1.5,1) {};
