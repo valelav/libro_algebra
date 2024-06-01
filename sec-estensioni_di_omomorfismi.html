@@ -8,7 +8,7 @@
 <html lang="it-IT" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Gruppi</title>
+<title>Estensioni di omomorfismi</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -106,7 +106,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-congruenze_con_incognite.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="up-button button" href="book-algebra.html" title="Su"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Su</span></a><a class="next-button button" href="ch-operazioni.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\require{mathtools}\DeclareMathOperator{\rk}{rk}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-elementi_algebrici_e_trascendenti.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="up-button button" href="ch-estensione_campi.html" title="Su"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Su</span></a><a class="next-button button" href="sec-campo_di_spezzamento.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\require{mathtools}\DeclareMathOperator{\rk}{rk}
 \DeclareMathOperator{\cont}{c}
 \DeclareMathOperator{\im}{Im}
 \DeclareMathOperator{\Inv}{Inv}
@@ -313,7 +313,7 @@ window.MathJax = {
 </li>
 </ul>
 </li>
-<li class="toc-item toc-part active">
+<li class="toc-item toc-part">
 <div class="toc-title-box"><a href="part-gruppi.html" class="internal"><span class="codenumber">III</span> <span class="title">Gruppi</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-chapter">
@@ -667,17 +667,17 @@ window.MathJax = {
 </li>
 </ul>
 </li>
-<li class="toc-item toc-part">
+<li class="toc-item toc-part contains-active">
 <div class="toc-title-box"><a href="part-campi_galois.html" class="internal"><span class="codenumber">VI</span> <span class="title">Campi e teoria di Galois</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-chapter">
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-estensione_campi.html" class="internal"><span class="codenumber">28</span> <span class="title">Estensioni di campi</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-elementi_algebrici_e_trascendenti.html" class="internal"><span class="codenumber">28.1</span> <span class="title">Elementi algebrici e trascendenti</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_algebrici_e_trascendenti.html#exercises-elementi_algebrici_e_trascendenti" class="internal"><span class="codenumber">28.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-estensioni_di_omomorfismi.html" class="internal"><span class="codenumber">28.2</span> <span class="title">Estensioni di omomorfismi</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-estensioni_di_omomorfismi.html" class="internal"><span class="codenumber">28.2</span> <span class="title">Estensioni di omomorfismi</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-campo_di_spezzamento.html" class="internal"><span class="codenumber">28.3</span> <span class="title">Campi di spezzamento</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-campo_di_spezzamento.html#exercises-campo_di_spezzamento" class="internal"><span class="codenumber">28.3</span> <span class="title">Esercizi</span></a></div></li></ul>
@@ -712,24 +712,16 @@ window.MathJax = {
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="part" id="part-gruppi"><h2 class="heading hide-type">
-<span class="type">Parte</span><span class="space"> </span><span class="codenumber">III</span><span class="space"> </span><span class="title">Gruppi</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-estensioni_di_omomorfismi"><h2 class="heading hide-type">
+<span class="type">Paragrafo</span><span class="space"> </span><span class="codenumber">28.2</span><span class="space"> </span><span class="title">Estensioni di omomorfismi</span>
 </h2>
-<nav class="summary-links"><ul>
-<li><a href="ch-operazioni.html" class="internal"><span class="codenumber">7</span> <span class="title">Operazioni</span></a></li>
-<li><a href="ch-gruppi.html" class="internal"><span class="codenumber">8</span> <span class="title">Monoidi e gruppi</span></a></li>
-<li><a href="ch-sottogruppi.html" class="internal"><span class="codenumber">9</span> <span class="title">Sottogruppi</span></a></li>
-<li><a href="ch-gruppi_ciclici.html" class="internal"><span class="codenumber">10</span> <span class="title">Gruppi ciclici</span></a></li>
-<li><a href="ch-gruppi_permutazioni.html" class="internal"><span class="codenumber">11</span> <span class="title">Gruppi di permutazioni</span></a></li>
-<li><a href="ch-laterali.html" class="internal"><span class="codenumber">12</span> <span class="title">Laterali e teorema di Lagrange</span></a></li>
-<li><a href="ch-omomorfismi.html" class="internal"><span class="codenumber">13</span> <span class="title">Omomorfismi</span></a></li>
-<li><a href="ch-azioni.html" class="internal"><span class="codenumber">14</span> <span class="title">Azioni di gruppi su insiemi</span></a></li>
-<li><a href="ch-quozienti.html" class="internal"><span class="codenumber">15</span> <span class="title">Gruppi quoziente</span></a></li>
-<li><a href="ch-direttosemidiretto.html" class="internal"><span class="codenumber">16</span> <span class="title">Prodotto diretto e semidiretto</span></a></li>
-<li><a href="ch-sylow.html" class="internal"><span class="codenumber">17</span> <span class="title">Il teorema di Sylow</span></a></li>
-</ul></nav></section></div>
+<div class="para" id="sec-estensioni_di_omomorfismi-2">Se <span class="process-math">\(\phi\colon F\to K\)</span> è un omomorfismo di campi ed <span class="process-math">\(E\)</span> è un’estensione di <span class="process-math">\(F\)</span> ci chiediamo se sia possibile estendere <span class="process-math">\(\phi\)</span> a \(E\), cioè determinare un omomorfismo <span class="process-math">\(\psi\colon E\to K\)</span> tale che <span class="process-math">\(\restrizione{\psi}{F}=\phi\text{.}\)</span> Confineremo la nostra attenzione al caso in <span class="process-math">\(\degext{E}{F}\)</span> sia finito, cominciando con il caso delle estensioni semplici.</div>
+<article class="definition definition-like" id="def-omomorfismo_indotto_polinomi"><h3 class="heading">
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">28.2.1</span><span class="period">.</span>
+</h3> <div class="para" id="def-omomorfismo_indotto_polinomi-2-1">Dato un omomorfismo di campi <span class="process-math">\(\phi\colon F\to K\)</span> denotiamo con <span class="process-math">\(\indotto{f}\)</span> l’omomorfismo da <span class="process-math">\(F[x]\)</span> in <span class="process-math">\(K[x]\)</span> che estende <span class="process-math">\(\phi\)</span> e manda <span class="process-math">\(x\)</span> in <span class="process-math">\(x\text{.}\)</span> Esplicitamente, il polinomio generico <span class="process-math">\(a_{0}+a_{1}x+\dots+a_{n}x^{n}\)</span> viene mandato nel polinomio <span class="process-math">\(a_{0}\phi+a_{1}\phi x+\dots+a_{n}\phi x^{n}\text{.}\)</span>
+</div></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-congruenze_con_incognite.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-operazioni.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-elementi_algebrici_e_trascendenti.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-campo_di_spezzamento.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

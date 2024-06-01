@@ -106,7 +106,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-campo_di_spezzamento.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="up-button button" href="ch-estensione_campi.html" title="Su"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Su</span></a><a class="next-button button" href="part-moduli.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\require{mathtools}\DeclareMathOperator{\rk}{rk}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-campo_di_spezzamento.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="up-button button" href="ch-estensione_campi.html" title="Su"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Su</span></a><a class="next-button button" href="ch-omomorfismi_campi.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\require{mathtools}\DeclareMathOperator{\rk}{rk}
 \DeclareMathOperator{\cont}{c}
 \DeclareMathOperator{\im}{Im}
 \DeclareMathOperator{\Inv}{Inv}
@@ -152,6 +152,7 @@ window.MathJax = {
  \newcommand{\euclidean}{\delta}
  \newcommand{\posto}[3]{#1_{#2#3}}
  \newcommand{\restrizione}[2]{\left. #1\right|_{#2}}
+ \newcommand[1]{\indotto}{\hat{#1}}
 
  \newcommand{\vect}[1]{\boldsymbol{#1}}
  
@@ -494,9 +495,9 @@ window.MathJax = {
 </li>
 </ul>
 </li>
-<li class="toc-item toc-part contains-active">
+<li class="toc-item toc-part">
 <div class="toc-title-box"><a href="part-anelli.html" class="internal"><span class="codenumber">IV</span> <span class="title">Anelli</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list">
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-anelli.html" class="internal"><span class="codenumber">18</span> <span class="title">Anelli</span></a></div>
 <ul class="structural toc-item-list">
@@ -574,109 +575,119 @@ window.MathJax = {
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter contains-active">
-<div class="toc-title-box"><a href="ch-estensione_campi.html" class="internal"><span class="codenumber">23</span> <span class="title">Estensioni di campi</span></a></div>
-<ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-elementi_algebrici_e_trascendenti.html" class="internal"><span class="codenumber">23.1</span> <span class="title">Elementi algebrici e trascendenti</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_algebrici_e_trascendenti.html#exercises-elementi_algebrici_e_trascendenti" class="internal"><span class="codenumber">23.1</span> <span class="title">Esercizi</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-campo_di_spezzamento.html" class="internal"><span class="codenumber">23.2</span> <span class="title">Campi di spezzamento</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-campo_di_spezzamento.html#exercises-campo_di_spezzamento" class="internal"><span class="codenumber">23.2</span> <span class="title">Esercizi</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-chiusure_algebriche.html" class="internal"><span class="codenumber">23.3</span> <span class="title">Cenni su campi algebricamente chiusi</span></a></div></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toc-item toc-part">
 <div class="toc-title-box"><a href="part-moduli.html" class="internal"><span class="codenumber">V</span> <span class="title">Moduli</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-moduli.html" class="internal"><span class="codenumber">24</span> <span class="title">Moduli</span></a></div>
+<div class="toc-title-box"><a href="ch-moduli.html" class="internal"><span class="codenumber">23</span> <span class="title">Moduli</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-definizione_di_moduli.html" class="internal"><span class="codenumber">24.1</span> <span class="title">Definizione di modulo</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizione_di_moduli.html#exercises-definizione_modulo" class="internal"><span class="codenumber">24.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-definizione_di_moduli.html" class="internal"><span class="codenumber">23.1</span> <span class="title">Definizione di modulo</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizione_di_moduli.html#exercises-definizione_modulo" class="internal"><span class="codenumber">23.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-sottomoduli.html" class="internal"><span class="codenumber">24.2</span> <span class="title">Sottomoduli</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottomoduli.html#exercises-sottomoduli" class="internal"><span class="codenumber">24.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-sottomoduli.html" class="internal"><span class="codenumber">23.2</span> <span class="title">Sottomoduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottomoduli.html#exercises-sottomoduli" class="internal"><span class="codenumber">23.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-omomorfismi_moduli.html" class="internal"><span class="codenumber">24.3</span> <span class="title">Omomorfismi di moduli</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-omomorfismi_moduli.html#exercises-omomorfismi_moduli" class="internal"><span class="codenumber">24.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-omomorfismi_moduli.html" class="internal"><span class="codenumber">23.3</span> <span class="title">Omomorfismi di moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-omomorfismi_moduli.html#exercises-omomorfismi_moduli" class="internal"><span class="codenumber">23.3</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-moduli_quoziente.html" class="internal"><span class="codenumber">24.4</span> <span class="title">Moduli quoziente</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_quoziente.html#exercises-moduli_quoziente" class="internal"><span class="codenumber">24.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-moduli_quoziente.html" class="internal"><span class="codenumber">23.4</span> <span class="title">Moduli quoziente</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_quoziente.html#exercises-moduli_quoziente" class="internal"><span class="codenumber">23.4</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-moduli_liberi.html" class="internal"><span class="codenumber">25</span> <span class="title">Moduli liberi</span></a></div>
+<div class="toc-title-box"><a href="ch-moduli_liberi.html" class="internal"><span class="codenumber">24</span> <span class="title">Moduli liberi</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-somma_diretta_moduli.html" class="internal"><span class="codenumber">25.1</span> <span class="title">Somma diretta di moduli</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-somma_diretta_moduli.html#exercises-somma_diretta_moduli" class="internal"><span class="codenumber">25.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-somma_diretta_moduli.html" class="internal"><span class="codenumber">24.1</span> <span class="title">Somma diretta di moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-somma_diretta_moduli.html#exercises-somma_diretta_moduli" class="internal"><span class="codenumber">24.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-dipendenza_lineare.html" class="internal"><span class="codenumber">25.2</span> <span class="title">Dipendenza e indipendenza lineare</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-dipendenza_lineare.html#exercises-dipendenza_lineare" class="internal"><span class="codenumber">25.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-dipendenza_lineare.html" class="internal"><span class="codenumber">24.2</span> <span class="title">Dipendenza e indipendenza lineare</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-dipendenza_lineare.html#exercises-dipendenza_lineare" class="internal"><span class="codenumber">24.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-elementi_di_torsione.html" class="internal"><span class="codenumber">25.3</span> <span class="title">Elementi di torsione</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_di_torsione.html#exercises-elementi_di_torsione" class="internal"><span class="codenumber">25.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-elementi_di_torsione.html" class="internal"><span class="codenumber">24.3</span> <span class="title">Elementi di torsione</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_di_torsione.html#exercises-elementi_di_torsione" class="internal"><span class="codenumber">24.3</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-modulisupid.html" class="internal"><span class="codenumber">26</span> <span class="title">Moduli finitamente generati su PID</span></a></div>
+<div class="toc-title-box"><a href="ch-modulisupid.html" class="internal"><span class="codenumber">25</span> <span class="title">Moduli finitamente generati su PID</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-moduli_ciclici.html" class="internal"><span class="codenumber">26.1</span> <span class="title">Moduli ciclici</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_ciclici.html#exercises-moduli_ciclici" class="internal"><span class="codenumber">26.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-moduli_ciclici.html" class="internal"><span class="codenumber">25.1</span> <span class="title">Moduli ciclici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_ciclici.html#exercises-moduli_ciclici" class="internal"><span class="codenumber">25.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-moduli_primari.html" class="internal"><span class="codenumber">26.2</span> <span class="title">Moduli primari</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_primari.html#exercises-moduli_primari" class="internal"><span class="codenumber">26.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-moduli_primari.html" class="internal"><span class="codenumber">25.2</span> <span class="title">Moduli primari</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_primari.html#exercises-moduli_primari" class="internal"><span class="codenumber">25.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-moduli_liberi.html" class="internal"><span class="codenumber">26.3</span> <span class="title">Moduli liberi</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_liberi.html#exercises-moduli_liberi" class="internal"><span class="codenumber">26.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-moduli_liberi.html" class="internal"><span class="codenumber">25.3</span> <span class="title">Moduli liberi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_liberi.html#exercises-moduli_liberi" class="internal"><span class="codenumber">25.3</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-classificazione_moduli_pid.html" class="internal"><span class="codenumber">26.4</span> <span class="title">La classificazione dei moduli finitamente generati su un dominio a ideali principali</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-classificazione_moduli_pid.html" class="internal"><span class="codenumber">25.4</span> <span class="title">La classificazione dei moduli finitamente generati su un dominio a ideali principali</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-gruppiabeliani.html" class="internal"><span class="codenumber">27</span> <span class="title">Gruppi abeliani finitamente generati</span></a></div>
+<div class="toc-title-box"><a href="ch-gruppiabeliani.html" class="internal"><span class="codenumber">26</span> <span class="title">Gruppi abeliani finitamente generati</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-gruppiabeliani.html" class="internal"><span class="codenumber">27.1</span> <span class="title">Classificazione dei gruppi abeliani finitamente generati</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppiabeliani.html#exercises-gruppiabeliani" class="internal"><span class="codenumber">27.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-gruppiabeliani.html" class="internal"><span class="codenumber">26.1</span> <span class="title">Classificazione dei gruppi abeliani finitamente generati</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppiabeliani.html#exercises-gruppiabeliani" class="internal"><span class="codenumber">26.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li></ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-formecanoniche.html" class="internal"><span class="codenumber">28</span> <span class="title">Forme canoniche di matrici</span></a></div>
+<div class="toc-title-box"><a href="ch-formecanoniche.html" class="internal"><span class="codenumber">27</span> <span class="title">Forme canoniche di matrici</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-kx_moduli.html" class="internal"><span class="codenumber">28.1</span> <span class="title">Spazi vettoriali con endomorfismi visti come moduli</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-kx_moduli.html#exercises-kx_moduli" class="internal"><span class="codenumber">28.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-kx_moduli.html" class="internal"><span class="codenumber">27.1</span> <span class="title">Spazi vettoriali con endomorfismi visti come moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-kx_moduli.html#exercises-kx_moduli" class="internal"><span class="codenumber">27.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-matrici_rappresentative.html" class="internal"><span class="codenumber">28.2</span> <span class="title">Matrici rappresentative</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-matrici_rappresentative.html#exercises-matrici_rappresentative" class="internal"><span class="codenumber">28.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-matrici_rappresentative.html" class="internal"><span class="codenumber">27.2</span> <span class="title">Matrici rappresentative</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-matrici_rappresentative.html#exercises-matrici_rappresentative" class="internal"><span class="codenumber">27.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-matrici_compagne.html" class="internal"><span class="codenumber">28.3</span> <span class="title">Matrici compagne</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-matrici_compagne.html" class="internal"><span class="codenumber">27.3</span> <span class="title">Matrici compagne</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-jordan.html" class="internal"><span class="codenumber">28.4</span> <span class="title">Forma canonica di Jordan</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-jordan.html#exercises-jordan" class="internal"><span class="codenumber">28.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-jordan.html" class="internal"><span class="codenumber">27.4</span> <span class="title">Forma canonica di Jordan</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-jordan.html#exercises-jordan" class="internal"><span class="codenumber">27.4</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html" class="internal"><span class="codenumber">28.5</span> <span class="title">Polinomio minimo di matrici</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html#exercises-polinomio_minimo_matrici" class="internal"><span class="codenumber">28.5</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html" class="internal"><span class="codenumber">27.5</span> <span class="title">Polinomio minimo di matrici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html#exercises-polinomio_minimo_matrici" class="internal"><span class="codenumber">27.5</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 </ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part contains-active">
+<div class="toc-title-box"><a href="part-campi_galois.html" class="internal"><span class="codenumber">VI</span> <span class="title">Campi e teoria di Galois</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-estensione_campi.html" class="internal"><span class="codenumber">28</span> <span class="title">Estensioni di campi</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-elementi_algebrici_e_trascendenti.html" class="internal"><span class="codenumber">28.1</span> <span class="title">Elementi algebrici e trascendenti</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_algebrici_e_trascendenti.html#exercises-elementi_algebrici_e_trascendenti" class="internal"><span class="codenumber">28.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-estensioni_di_omomorfismi.html" class="internal"><span class="codenumber">28.2</span> <span class="title">Estensioni di omomorfismi</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-campo_di_spezzamento.html" class="internal"><span class="codenumber">28.3</span> <span class="title">Campi di spezzamento</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-campo_di_spezzamento.html#exercises-campo_di_spezzamento" class="internal"><span class="codenumber">28.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-chiusure_algebriche.html" class="internal"><span class="codenumber">28.4</span> <span class="title">Cenni su campi algebricamente chiusi</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-omomorfismi_campi.html" class="internal"><span class="codenumber">29</span> <span class="title">Omomorfismi di campi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-estensioni_omomorfismi_campi.html" class="internal"><span class="codenumber">29.1</span> <span class="title">Estensioni di omomorfismi</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -702,10 +713,10 @@ window.MathJax = {
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-chiusure_algebriche"><h2 class="heading hide-type">
-<span class="type">Paragrafo</span><span class="space"> </span><span class="codenumber">23.3</span><span class="space"> </span><span class="title">Cenni su campi algebricamente chiusi</span>
+<span class="type">Paragrafo</span><span class="space"> </span><span class="codenumber">28.4</span><span class="space"> </span><span class="title">Cenni su campi algebricamente chiusi</span>
 </h2>
 <article class="theorem theorem-like" id="thm-caratterizzazione_algebricamente_chiuso"><h3 class="heading">
-<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">23.3.1</span><span class="period">.</span>
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">28.4.1</span><span class="period">.</span>
 </h3>
 <div class="para logical" id="thm-caratterizzazione_algebricamente_chiuso-1-1">
 <div class="para">Sia <span class="process-math">\(K\)</span> un campo. Sono equivalenti le condizioni:</div>
@@ -718,12 +729,12 @@ window.MathJax = {
 <li id="item-ogni_polinomio_ha_radice"><div class="para" id="item-ogni_polinomio_ha_radice-1">ogni polinomio <span class="process-math">\(f\)</span> in <span class="process-math">\(K[x]\)</span> di grado positivo ha almeno una radice in <span class="process-math">\(K\text{;}\)</span>
 </div></li>
 </ol>
-</div></article><details id="thm-caratterizzazione_algebricamente_chiuso-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-caratterizzazione_algebricamente_chiuso-2-1">Supponiamo che valga la <a href="sec-chiusure_algebriche.html#item-no_estensioni_algebriche_proprie" class="xref" data-knowl="./knowl/xref/item-no_estensioni_algebriche_proprie.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 1">condizione 1</a> e mostriamo che vale la <a href="sec-chiusure_algebriche.html#item-polinomi_irriducibili_grado_1" class="xref" data-knowl="./knowl/xref/item-polinomi_irriducibili_grado_1.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 2">condizione 2</a>. Sia allora <span class="process-math">\(p\)</span> un polinomio irriducibile (quindi <span class="process-math">\(p\)</span> ha grado positivo perché gli elementi di grado <span class="process-math">\(0\)</span> sono invertibili). Per il <a href="sec-campo_di_spezzamento.html#lem-estensione_semplice" class="xref" data-knowl="./knowl/xref/lem-estensione_semplice.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Lemma 23.2.4">Lemma 23.2.4</a>, esiste un’estensione di <span class="process-math">\(K\)</span> che contiene una radice <span class="process-math">\(\alpha\)</span> di <span class="process-math">\(p\text{:}\)</span> per la <a href="sec-chiusure_algebriche.html#item-no_estensioni_algebriche_proprie" class="xref" data-knowl="./knowl/xref/item-no_estensioni_algebriche_proprie.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 1">condizione 1</a>, <span class="process-math">\(\alpha\)</span> appartiene a <span class="process-math">\(K\)</span> e per il <a href="sec-valutazione_polinomi.html#thm-del_resto" class="xref" data-knowl="./knowl/xref/thm-del_resto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 20.2.6: Teorema del resto">Teorema del resto</a>, <span class="process-math">\(x-\alpha\)</span> divide <span class="process-math">\(p\)</span> in <span class="process-math">\(K[x]\text{:}\)</span> poiché <span class="process-math">\(p\)</span> è irriducibile, segue che <span class="process-math">\(x-\alpha\)</span> è associato a <span class="process-math">\(p\)</span> che ha, quindi, grado <span class="process-math">\(1\text{.}\)</span>
-</div> <div class="para" id="thm-caratterizzazione_algebricamente_chiuso-2-2">Se vale la <a href="sec-chiusure_algebriche.html#item-polinomi_irriducibili_grado_1" class="xref" data-knowl="./knowl/xref/item-polinomi_irriducibili_grado_1.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 2">condizione 2</a>, allora la fattorizzazione in irriducibili di un qualsiasi polinomio a coefficienti in <span class="process-math">\(K\)</span> è costituita da polinomi di primo grado e, dunque, vale la <a href="sec-chiusure_algebriche.html#item-ogni_polinomio_totalmente_riducibile" class="xref" data-knowl="./knowl/xref/item-ogni_polinomio_totalmente_riducibile.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 3">condizione 3</a>.</div> <div class="para" id="thm-caratterizzazione_algebricamente_chiuso-2-3">Se vale la <a href="sec-chiusure_algebriche.html#item-ogni_polinomio_totalmente_riducibile" class="xref" data-knowl="./knowl/xref/item-ogni_polinomio_totalmente_riducibile.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 3">condizione 3</a> allora, preso un polinomio <span class="process-math">\(f\)</span> di grado positivo a coefficienti in <span class="process-math">\(K\text{,}\)</span> questo si scrive come prodotto di polinomi di primo grado in <span class="process-math">\(K[x]\text{:}\)</span> ognuno di essi ha, quindi, una radice in <span class="process-math">\(K\)</span> e, di conseguenza, <span class="process-math">\(f\)</span> ha una radice in <span class="process-math">\(K\text{,}\)</span> cioè vale la <a href="sec-chiusure_algebriche.html#item-ogni_polinomio_ha_radice" class="xref" data-knowl="./knowl/xref/item-ogni_polinomio_ha_radice.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 4">condizione 4</a>.</div> <div class="para" id="thm-caratterizzazione_algebricamente_chiuso-2-4">Infine, supponiamo che valga la <a href="sec-chiusure_algebriche.html#item-ogni_polinomio_ha_radice" class="xref" data-knowl="./knowl/xref/item-ogni_polinomio_ha_radice.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 4">condizione 4</a> e mostriamo che vale la <a href="sec-chiusure_algebriche.html#item-no_estensioni_algebriche_proprie" class="xref" data-knowl="./knowl/xref/item-no_estensioni_algebriche_proprie.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 1">condizione 1</a>. Sia allora <span class="process-math">\(\alpha\)</span> un elemento di un’estensione di <span class="process-math">\(K\)</span> che sia algebrico su <span class="process-math">\(K\)</span> e sia <span class="process-math">\(p\)</span> il suo polinomio minimo su <span class="process-math">\(F\text{.}\)</span> Poiché vale la <a href="sec-chiusure_algebriche.html#item-ogni_polinomio_ha_radice" class="xref" data-knowl="./knowl/xref/item-ogni_polinomio_ha_radice.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 4">condizione 4</a>, <span class="process-math">\(p\)</span> ha una radice, sia <span class="process-math">\(\beta\text{,}\)</span> in <span class="process-math">\(K\text{:}\)</span> per il <a href="sec-valutazione_polinomi.html#thm-del_resto" class="xref" data-knowl="./knowl/xref/thm-del_resto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 20.2.6: Teorema del resto">Teorema del resto</a>, <span class="process-math">\(x-\beta\)</span> divide <span class="process-math">\(p\)</span> in <span class="process-math">\(K[x]\text{.}\)</span> Per il <a href="sec-elementi_algebrici_e_trascendenti.html#thm-caratterizzazione_algebrici_trascendenti" class="xref" data-knowl="./knowl/xref/thm-caratterizzazione_algebrici_trascendenti.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 23.1.11">Teorema 23.1.11</a> il polinomio <span class="process-math">\(p\)</span> è monico e irriducibile in <span class="process-math">\(K[x]\text{:}\)</span> dunque, <span class="process-math">\(p=x-\beta\)</span> e <span class="process-math">\(0=p(\alpha)=\alpha-\beta\text{,}\)</span> cioè <span class="process-math">\(\alpha=\beta\in K\text{.}\)</span> Pertanto, vale la <a href="sec-chiusure_algebriche.html#item-no_estensioni_algebriche_proprie" class="xref" data-knowl="./knowl/xref/item-no_estensioni_algebriche_proprie.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 1">condizione 1</a>.</div></article></details><article class="definition definition-like" id="def-algebricamente_chiuso"><h3 class="heading">
-<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">23.3.2</span><span class="period">.</span>
+</div></article><details id="thm-caratterizzazione_algebricamente_chiuso-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-caratterizzazione_algebricamente_chiuso-2-1">Supponiamo che valga la <a href="sec-chiusure_algebriche.html#item-no_estensioni_algebriche_proprie" class="xref" data-knowl="./knowl/xref/item-no_estensioni_algebriche_proprie.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 1">condizione 1</a> e mostriamo che vale la <a href="sec-chiusure_algebriche.html#item-polinomi_irriducibili_grado_1" class="xref" data-knowl="./knowl/xref/item-polinomi_irriducibili_grado_1.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 2">condizione 2</a>. Sia allora <span class="process-math">\(p\)</span> un polinomio irriducibile (quindi <span class="process-math">\(p\)</span> ha grado positivo perché gli elementi di grado <span class="process-math">\(0\)</span> sono invertibili). Per il <a href="sec-campo_di_spezzamento.html#lem-estensione_semplice" class="xref" data-knowl="./knowl/xref/lem-estensione_semplice.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Lemma 28.3.4">Lemma 28.3.4</a>, esiste un’estensione di <span class="process-math">\(K\)</span> che contiene una radice <span class="process-math">\(\alpha\)</span> di <span class="process-math">\(p\text{:}\)</span> per la <a href="sec-chiusure_algebriche.html#item-no_estensioni_algebriche_proprie" class="xref" data-knowl="./knowl/xref/item-no_estensioni_algebriche_proprie.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 1">condizione 1</a>, <span class="process-math">\(\alpha\)</span> appartiene a <span class="process-math">\(K\)</span> e per il <a href="sec-valutazione_polinomi.html#thm-del_resto" class="xref" data-knowl="./knowl/xref/thm-del_resto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 20.2.6: Teorema del resto">Teorema del resto</a>, <span class="process-math">\(x-\alpha\)</span> divide <span class="process-math">\(p\)</span> in <span class="process-math">\(K[x]\text{:}\)</span> poiché <span class="process-math">\(p\)</span> è irriducibile, segue che <span class="process-math">\(x-\alpha\)</span> è associato a <span class="process-math">\(p\)</span> che ha, quindi, grado <span class="process-math">\(1\text{.}\)</span>
+</div> <div class="para" id="thm-caratterizzazione_algebricamente_chiuso-2-2">Se vale la <a href="sec-chiusure_algebriche.html#item-polinomi_irriducibili_grado_1" class="xref" data-knowl="./knowl/xref/item-polinomi_irriducibili_grado_1.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 2">condizione 2</a>, allora la fattorizzazione in irriducibili di un qualsiasi polinomio a coefficienti in <span class="process-math">\(K\)</span> è costituita da polinomi di primo grado e, dunque, vale la <a href="sec-chiusure_algebriche.html#item-ogni_polinomio_totalmente_riducibile" class="xref" data-knowl="./knowl/xref/item-ogni_polinomio_totalmente_riducibile.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 3">condizione 3</a>.</div> <div class="para" id="thm-caratterizzazione_algebricamente_chiuso-2-3">Se vale la <a href="sec-chiusure_algebriche.html#item-ogni_polinomio_totalmente_riducibile" class="xref" data-knowl="./knowl/xref/item-ogni_polinomio_totalmente_riducibile.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 3">condizione 3</a> allora, preso un polinomio <span class="process-math">\(f\)</span> di grado positivo a coefficienti in <span class="process-math">\(K\text{,}\)</span> questo si scrive come prodotto di polinomi di primo grado in <span class="process-math">\(K[x]\text{:}\)</span> ognuno di essi ha, quindi, una radice in <span class="process-math">\(K\)</span> e, di conseguenza, <span class="process-math">\(f\)</span> ha una radice in <span class="process-math">\(K\text{,}\)</span> cioè vale la <a href="sec-chiusure_algebriche.html#item-ogni_polinomio_ha_radice" class="xref" data-knowl="./knowl/xref/item-ogni_polinomio_ha_radice.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 4">condizione 4</a>.</div> <div class="para" id="thm-caratterizzazione_algebricamente_chiuso-2-4">Infine, supponiamo che valga la <a href="sec-chiusure_algebriche.html#item-ogni_polinomio_ha_radice" class="xref" data-knowl="./knowl/xref/item-ogni_polinomio_ha_radice.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 4">condizione 4</a> e mostriamo che vale la <a href="sec-chiusure_algebriche.html#item-no_estensioni_algebriche_proprie" class="xref" data-knowl="./knowl/xref/item-no_estensioni_algebriche_proprie.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 1">condizione 1</a>. Sia allora <span class="process-math">\(\alpha\)</span> un elemento di un’estensione di <span class="process-math">\(K\)</span> che sia algebrico su <span class="process-math">\(K\)</span> e sia <span class="process-math">\(p\)</span> il suo polinomio minimo su <span class="process-math">\(F\text{.}\)</span> Poiché vale la <a href="sec-chiusure_algebriche.html#item-ogni_polinomio_ha_radice" class="xref" data-knowl="./knowl/xref/item-ogni_polinomio_ha_radice.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 4">condizione 4</a>, <span class="process-math">\(p\)</span> ha una radice, sia <span class="process-math">\(\beta\text{,}\)</span> in <span class="process-math">\(K\text{:}\)</span> per il <a href="sec-valutazione_polinomi.html#thm-del_resto" class="xref" data-knowl="./knowl/xref/thm-del_resto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 20.2.6: Teorema del resto">Teorema del resto</a>, <span class="process-math">\(x-\beta\)</span> divide <span class="process-math">\(p\)</span> in <span class="process-math">\(K[x]\text{.}\)</span> Per il <a href="sec-elementi_algebrici_e_trascendenti.html#thm-caratterizzazione_algebrici_trascendenti" class="xref" data-knowl="./knowl/xref/thm-caratterizzazione_algebrici_trascendenti.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 28.1.12">Teorema 28.1.12</a> il polinomio <span class="process-math">\(p\)</span> è monico e irriducibile in <span class="process-math">\(K[x]\text{:}\)</span> dunque, <span class="process-math">\(p=x-\beta\)</span> e <span class="process-math">\(0=p(\alpha)=\alpha-\beta\text{,}\)</span> cioè <span class="process-math">\(\alpha=\beta\in K\text{.}\)</span> Pertanto, vale la <a href="sec-chiusure_algebriche.html#item-no_estensioni_algebriche_proprie" class="xref" data-knowl="./knowl/xref/item-no_estensioni_algebriche_proprie.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 1">condizione 1</a>.</div></article></details><article class="definition definition-like" id="def-algebricamente_chiuso"><h3 class="heading">
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">28.4.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="def-algebricamente_chiuso-1-1">Un campo <span class="process-math">\(K\)</span> che soddisfa una (e, quindi, tutte) le condizioni del <a href="sec-chiusure_algebriche.html#thm-caratterizzazione_algebricamente_chiuso" class="xref" data-knowl="./knowl/xref/thm-caratterizzazione_algebricamente_chiuso.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 23.3.1">Teorema 23.3.1</a> è detto <dfn class="terminology">algebricamente chiuso</dfn>.</div></article><article class="proposition theorem-like" id="prop-campi_finiti_non_algebricamente_chiuso"><h3 class="heading">
-<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">23.3.3</span><span class="period">.</span>
+<div class="para" id="def-algebricamente_chiuso-1-1">Un campo <span class="process-math">\(K\)</span> che soddisfa una (e, quindi, tutte) le condizioni del <a href="sec-chiusure_algebriche.html#thm-caratterizzazione_algebricamente_chiuso" class="xref" data-knowl="./knowl/xref/thm-caratterizzazione_algebricamente_chiuso.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 28.4.1">Teorema 28.4.1</a> è detto <dfn class="terminology">algebricamente chiuso</dfn>.</div></article><article class="proposition theorem-like" id="prop-campi_finiti_non_algebricamente_chiuso"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">28.4.3</span><span class="period">.</span>
 </h3>
 <div class="para" id="prop-campi_finiti_non_algebricamente_chiuso-1-1">Sia <span class="process-math">\(K\)</span> un campo finito. Allora <span class="process-math">\(K\)</span> non è algebricamente chiuso.</div></article><details id="prop-campi_finiti_non_algebricamente_chiuso-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="prop-campi_finiti_non_algebricamente_chiuso-2-1">
 <div class="para">Siano <span class="process-math">\(\alpha_{1}\text{,}\)</span> <span class="process-math">\(\alpha_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(\alpha_{n}\)</span> gli elementi di <span class="process-math">\(K\text{.}\)</span> Consideriamo il polinomio</div>
@@ -734,7 +745,7 @@ f\coloneqq(x-\alpha_{1})(x-\alpha_{2})\cdots(x-\alpha_{n})+1\text{.}
 </div>
 <div class="para">Allora per ogni <span class="process-math">\(\alpha_{i}\)</span> in <span class="process-math">\(K\)</span> si ha <span class="process-math">\(f(\alpha_{i})=0+1\ne0\)</span> e, dunque, <span class="process-math">\(f\)</span> è un polinomio di grado positivo che non ha alcuna radice in <span class="process-math">\(K\text{:}\)</span> pertanto <span class="process-math">\(K\)</span> non è algebricamente chiuso.</div>
 </div></article></details><article class="definition definition-like" id="def-chiusura_algebrica"><h3 class="heading">
-<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">23.3.4</span><span class="period">.</span>
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">28.4.4</span><span class="period">.</span>
 </h3>
 <div class="para logical" id="def-chiusura_algebrica-1-1">
 <div class="para">Dato un campo <span class="process-math">\(F\)</span> una sua estensione <span class="process-math">\(K\)</span> è detta <dfn class="terminology">chiusura algebrica</dfn> di <span class="process-math">\(F\)</span> se</div>
@@ -746,22 +757,22 @@ f\coloneqq(x-\alpha_{1})(x-\alpha_{2})\cdots(x-\alpha_{n})+1\text{.}
 <span class="process-math">\(K\)</span> è algebricamente chiuso.</div></li>
 </ul>
 </div></article><article class="remark remark-like" id="rem-chiusura_di_algebricamente_chiuso"><h3 class="heading">
-<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">23.3.5</span><span class="period">.</span>
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">28.4.5</span><span class="period">.</span>
 </h3>
 <div class="para" id="rem-chiusura_di_algebricamente_chiuso-1">Ovviamente, se <span class="process-math">\(K\)</span> è algebricamente chiuso, allora <span class="process-math">\(K\)</span> è chiusura algebrica di sé stesso.</div></article><div class="para" id="sec-chiusure_algebriche-7">Diamo ora, senza dimostrazione, alcuni risultati sui campi algebricamente chiusi.</div>
 <article class="theorem theorem-like" id="thm-fondamentale_dell_algebra"><h3 class="heading">
-<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">23.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Teorema fondamentale dell’algebra.</span>
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">28.4.6</span><span class="period">.</span><span class="space"> </span><span class="title">Teorema fondamentale dell’algebra.</span>
 </h3>
 <div class="para" id="thm-fondamentale_dell_algebra-2-1">Il campo <span class="process-math">\(\Complessi\)</span> dei complessi è la chiusura algebrica del campo <span class="process-math">\(\Reali\)</span> dei reali.</div></article><div class="para" id="sec-chiusure_algebriche-9">A dispetto del nome, le varie dimostrazioni del teorema fondamentale dell’algebra richiedono considerazioni di tipo analitico o topologico. Inoltre, anche se mantiene storicamente questo nome, non è di così fondamentale importanza dal punto di vista algebrico. Più interessante da questo punto di vista è il</div>
 <article class="theorem theorem-like" id="thm-esistenza_chiusura_algebrica"><h3 class="heading">
-<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">23.3.7</span><span class="period">.</span>
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">28.4.7</span><span class="period">.</span>
 </h3>
 <div class="para" id="thm-esistenza_chiusura_algebrica-1-1">Dato un qualsiasi campo <span class="process-math">\(F\)</span> esiste una sua chiusura algebrica <span class="process-math">\(K\text{.}\)</span> Inoltre <span class="process-math">\(K\)</span> è univocamente determinato a meno di isomorfismi, vale a dire che se <span class="process-math">\(K'\)</span> è un’altra chiusura algebrica di <span class="process-math">\(F\)</span> allora esiste un isomorfismo <span class="process-math">\(\theta\colon K\to K'\)</span> la cui restrizione a <span class="process-math">\(F\)</span> è l’identità.</div></article><article class="remark remark-like" id="rem-non_unicita_chiusura_algebrica"><h3 class="heading">
-<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">23.3.8</span><span class="period">.</span>
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">28.4.8</span><span class="period">.</span>
 </h3>
-<div class="para" id="rem-non_unicita_chiusura_algebrica-1">L’isomorfismo <span class="process-math">\(\theta\)</span> dato dal teorema <a href="sec-chiusure_algebriche.html#thm-esistenza_chiusura_algebrica" class="xref" data-knowl="./knowl/xref/thm-esistenza_chiusura_algebrica.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 23.3.7">Teorema 23.3.7</a> non è unico e, quindi, non possiamo individuare gli elementi della chiusura algebrica di un campo <span class="process-math">\(F\)</span> “intrinsecamente” a partire dagli elementi di <span class="process-math">\(F\text{.}\)</span> Ad esempio, se prendiamo <span class="process-math">\(\Complessi\)</span> come chiusura algebrica di <span class="process-math">\(\Reali\text{,}\)</span> abbiamo due automorfismi di <span class="process-math">\(\Complessi\)</span> che ristretti a <span class="process-math">\(\Reali\)</span> sono l’identità: la funzione identica di <span class="process-math">\(\Complessi\)</span> e la funzione che manda un complesso nel suo complesso coniugato. Da questo punto di vista <span class="process-math">\(i\)</span> e <span class="process-math">\(-i\text{,}\)</span> le due radici di <span class="process-math">\(x^{2}+1\text{,}\)</span> sono indistinguibili.</div></article></section></div>
+<div class="para" id="rem-non_unicita_chiusura_algebrica-1">L’isomorfismo <span class="process-math">\(\theta\)</span> dato dal teorema <a href="sec-chiusure_algebriche.html#thm-esistenza_chiusura_algebrica" class="xref" data-knowl="./knowl/xref/thm-esistenza_chiusura_algebrica.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 28.4.7">Teorema 28.4.7</a> non è unico e, quindi, non possiamo individuare gli elementi della chiusura algebrica di un campo <span class="process-math">\(F\)</span> “intrinsecamente” a partire dagli elementi di <span class="process-math">\(F\text{.}\)</span> Ad esempio, se prendiamo <span class="process-math">\(\Complessi\)</span> come chiusura algebrica di <span class="process-math">\(\Reali\text{,}\)</span> abbiamo due automorfismi di <span class="process-math">\(\Complessi\)</span> che ristretti a <span class="process-math">\(\Reali\)</span> sono l’identità: la funzione identica di <span class="process-math">\(\Complessi\)</span> e la funzione che manda un complesso nel suo complesso coniugato. Da questo punto di vista <span class="process-math">\(i\)</span> e <span class="process-math">\(-i\text{,}\)</span> le due radici di <span class="process-math">\(x^{2}+1\text{,}\)</span> sono indistinguibili.</div></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-campo_di_spezzamento.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="part-moduli.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-campo_di_spezzamento.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-omomorfismi_campi.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
