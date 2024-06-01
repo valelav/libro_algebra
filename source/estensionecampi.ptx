@@ -133,6 +133,14 @@
       </statement>
     </definition>
 
+    <definition xml:id="def-estensione_semplice">
+      <statement>
+        <p>
+          Un'estensione <m>E</m> di un campo <m>F</m>, è detta <term>semplice</term> se esiste <m>\alpha</m> in <m>E</m> tale che <m>E=F(\alpha)</m>.
+        </p>
+      </statement>
+    </definition>
+
     <proposition xml:id="prop-sottocampo_generato_sottoanello_generato">
       <statement>
         <p>
@@ -203,9 +211,9 @@
           <me>
             h=pq+r
           </me>
-          dove <m>q</m> e <m>r</m> sono polinomi con <m>\deg r \lt n</m> o <m>r=0</m>: in altri termini, <m>r=r_{0}+r_{1}x+\cdots r_{n-1}x^{n-1}</m> con gli <m>r_{i}</m> in <m>F</m>. Ma allora
+          dove <m>q</m> e <m>r</m> sono polinomi con <m>\deg r \lt n</m> o <m>r=0</m>: in altri termini, <m>r=r_{0}+r_{1}x+\cdots+r_{n-1}x^{n-1}</m> con gli <m>r_{i}</m> in <m>F</m>. Ma allora
           <me>
-            h(\alpha)=p(\alpha)q(\alpha)+r(\alpha)=0q(\alpha)+r(\alpha)=r(\alpha)=r_{0}+r_{1}\alpha+\cdots r_{n-1}\alpha^{n-1}
+            h(\alpha)=p(\alpha)q(\alpha)+r(\alpha)=0q(\alpha)+r(\alpha)=r(\alpha)=r_{0}+r_{1}\alpha+\cdots+r_{n-1}\alpha^{n-1}
           </me>,
           cioè <m>h(\alpha)</m> è <m>F</m>-combinazione lineare di <m>1</m>, <m>\alpha</m>, <m>\ldots</m>, <m>\alpha^{n-1}</m>. D'altra parte, questi elementi sono <m>F</m>-linearmente indipendenti: infatti presi <m>c_{0}</m>, <m>c_{1}</m>, <m>\ldots</m>, <m>c_{n-1}</m> in <m>F</m> tali che
           <me>
@@ -305,7 +313,7 @@
     <example>
       <statement>
         <p>
-          Consideriamo l'estensione <m>\Razionali(\sqrt{2},\sqrt{3})</m> di <m>\Razionali</m>. Sappiamo che <m>\Razionali(\sqrt{2})</m> è un'estensione di grado <m>2</m> di <m>\Razionali</m> e, dall'<xref ref="exercise-radice_di_due_e_di_tre"/>, che <m>\Razionali(\sqrt{2})</m> non contiene <m>\sqrt{3}</m>. Dunque, <m>\sqrt{3}</m> ha grado maggiore di <m>1</m> su <m>\Razionali(\sqrt{2})</m>: d'altra parte <m>x^{2}-3</m> è un polinomio di grado <m>2</m> a coefficienti in <m>\Razionali(\sqrt{2})</m> che ha <m>\sqrt{3}</m> come radice, quindi <m>\sqrt{3}</m> ha grado <m>2</m> su <m>\Razionali(\sqrt{2})</m>. Dalla <xref ref="prop-moltiplicativita_grado"/> abbiamo allora
+          Consideriamo l'estensione <m>\Razionali(\sqrt{2},\sqrt{3})</m> di <m>\Razionali</m>. Sappiamo che <m>\Razionali(\sqrt{2})</m> è un'estensione di grado <m>2</m> di <m>\Razionali</m>. Con un argomento simile a quello dall'<xref ref="exercise-radice_di_due_e_di_tre"/>, si può verificare che <m>\Razionali(\sqrt{2})</m> non contiene <m>\sqrt{3}</m>. Dunque, <m>\sqrt{3}</m> ha grado maggiore di <m>1</m> su <m>\Razionali(\sqrt{2})</m>: d'altra parte <m>x^{2}-3</m> è un polinomio di grado <m>2</m> a coefficienti in <m>\Razionali(\sqrt{2})</m> che ha <m>\sqrt{3}</m> come radice, quindi <m>\sqrt{3}</m> ha grado <m>2</m> su <m>\Razionali(\sqrt{2})</m>. Dalla <xref ref="prop-moltiplicativita_grado"/> abbiamo allora
           <me>
            \degext{\Razionali(\sqrt{2},\sqrt{3})}{\Razionali}=\degext{\Razionali(\sqrt{2},\sqrt{3})}{\Razionali(\sqrt{2})}\degext{\Razionali(\sqrt{2})}{\Razionali}=2\cdot2=4
           </me>.
@@ -347,7 +355,7 @@
       <exercise>
         <statement>
           <p>
-            Dati i primi distinti <m>p_{1}</m>, <m>p_{2}</m>, <m>\ldots</m>, <m>p_{n}</m>, dimostrare c <m>\Razionali(\sqrt{p_{1}},\ldots,\sqrt{p_{n}})</m> ha grado <m>2^{n}</m> su <m>\Razionali</m>.
+            Dati i primi distinti <m>p_{1}</m>, <m>p_{2}</m>, <m>\ldots</m>, <m>p_{n}</m>, dimostrare che <m>\Razionali(\sqrt{p_{1}},\ldots,\sqrt{p_{n}})</m> ha grado <m>2^{n}</m> su <m>\Razionali</m>.
           </p>
         </statement>
         <solution>
@@ -360,13 +368,34 @@
           </p>
             
           <p>
-            Supponiamo allora per assurdo che <m>\sqrt{p_{n}}\in E(\sqrt{p_{n-1}})</m>: poiché <m>\sqrt{p_{n-1}}</m> ha grado <m>2</m> su <m>E</m>, esistono <m>a</m> e <m>b</m> in <m>E</m> tali che <m>a+b\sqrt{p_{n-1}}=\sqrt{p_{n}}</m>. Ma <m>\sqrt{p_{n}}\notin E</m>, e, quindi, <m>b\ne 0</m>. Ora <m>a^{2}+b^{2}p_{n-1}+2ab\sqrt{p_{n-1}}=p_{n}</m>: se fosse <m>a\ne0</m>, avremmo che <m>\sqrt{p_{n-1}}\in E</m>. Dunque <m>a=0</m> e <m>b\ne 0</m>: pertanto <m>b^{2}p_{n-1}=p_{n}</m>, cioè <m>p_{n-1}</m> divide <m>p_{n}</m> in <m>|interi</m>, contro l'ipotesi che <m>p_{n-1}</m> e <m>p_{n}</m> siano primi distinti. Abbiamo così trovato l'assurdo.
+            Supponiamo allora per assurdo che <m>\sqrt{p_{n}}\in E(\sqrt{p_{n-1}})</m>: poiché <m>\sqrt{p_{n-1}}</m> ha grado <m>2</m> su <m>E</m>, esistono <m>a</m> e <m>b</m> in <m>E</m> tali che <m>a+b\sqrt{p_{n-1}}=\sqrt{p_{n}}</m>. Ma <m>\sqrt{p_{n}}\notin E</m>, e, quindi, <m>b\ne 0</m>. Ora <m>a^{2}+b^{2}p_{n-1}+2ab\sqrt{p_{n-1}}=p_{n}</m>: se fosse <m>a\ne0</m>, avremmo che <m>\sqrt{p_{n-1}}\in E</m>. Dunque <m>a=0</m> e <m>b\ne 0</m>: pertanto <m>b^{2}p_{n-1}=p_{n}</m>, cioè <m>p_{n-1}</m> divide <m>p_{n}</m> in <m>\interi</m>, contro l'ipotesi che <m>p_{n-1}</m> e <m>p_{n}</m> siano primi distinti. Abbiamo così trovato l'assurdo.
           </p>
         </solution>
       </exercise>
 
 
     </exercises>
+  </section>
+
+  <section xml:id="sec-estensioni_di_omomorfismi">
+    <title>Estensioni di omomorfismi</title>
+
+    <p>
+      Se <m>\phi\colon F\to K</m> è un omomorfismo di campi ed <m>E</m> è un'estensione di <m>F</m> ci chiediamo se sia possibile estendere <m>\phi</m> a \(E\), cioè determinare un omomorfismo <m>\psi\colon E\to K</m> tale che <m>\restrizione{\psi}{F}=\phi</m>. Confineremo la nostra attenzione al caso in <m>\degext{E}{F}</m> sia finito, cominciando con il caso delle estensioni semplici.
+    </p>
+
+    <definition xml:id="def-omomorfismo_indotto_polinomi">
+      <notation>
+        <usage><m>\indotto{\phi</m></usage>
+        <description>omomorfismo che estende <m>\phi</m> e manda <m>x</m> in <m>x</m></description>
+      </notation>
+      <statement>
+        <p>
+          Dato un omomorfismo di campi <m>\phi\colon F\to K</m> denotiamo con <m>\indotto{f}</m> l'omomorfismo da <m>F[x]</m> in <m>K[x]</m> che estende <m>\phi</m> e manda <m>x</m> in <m>x</m>. Esplicitamente, il polinomio generico <m>a_{0}+a_{1}x+\dots+a_{n}x^{n}</m> viene mandato nel polinomio <m>a_{0}\phi+a_{1}\phi x+\dots+a_{n}\phi x^{n}</m>.
+        </p>
+      </statement>
+    </definition>
+    
   </section>
 
   <section xml:id="sec-campo_di_spezzamento">
