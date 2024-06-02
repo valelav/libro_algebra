@@ -11440,11 +11440,389 @@ var ptx_lunr_docs = [
   "body": "        "
 },
 {
+  "id": "sec-elementi_algebrici_e_trascendenti",
+  "level": "1",
+  "url": "sec-elementi_algebrici_e_trascendenti.html",
+  "type": "Paragrafo",
+  "number": "23.1",
+  "title": "Elementi algebrici e trascendenti",
+  "body": " Elementi algebrici e trascendenti  Se è un anello contenente un campo , allora possiamo considerare come uno spazio vettoriale su in maniera ovvia, prendendo come addizione l'addizione in e come moltiplicazione di uno scalare (cioè un elemento di ) per un vettore (cioè un elemento di ) la moltiplicazione di questi elementi in . Le verifiche che così facendo si ottiene effettivamente un -spazio vettoriale sono molto semplici e le lasciamo per esercizio. Nel caso in cui anche l'anello che contiene sia esso stesso un campo , diciamo che è un' estensione di e diamo la     grado di un'estensione di    Se è un'estensione di , il grado di su , denotato con è la dimensione (eventualmente infinita) di come -spazio vettoriale. Nel caso in cui sia finito, diremo che è un'estensione finita di .      Il campo dei complessi ha grado su .      Un campo finito ha ordine potenza di un primo.    Un campo finito ha caratteristica un primo ( e ). Per la , il sottocampo minimo di ha allora ordine . Ora è, ovviamente, un'estensione finita di , di grado, diciamo, . Come -spazio vettoriale è allora isomorfo a , lo spazio delle -uple a coefficienti in , che contiene esattamente elementi.      Sia un'estensione di un campo e sia un anello contenente . Allora ha dimensione finita come -spazio vettoriale se e solo se ha dimensione finita come -spazio vettoriale e è finito: in tal caso (in particolare, se è anch'esso un campo, risulta ).    Supponiamo che sia finita. Allora , essendo contenuto in , può essere visto come un -sottospazio vettoriale di e, quindi, ha -dimensione finita. Inoltre, presi i vettori di una -base di , questi sono anche -generatori di e, quindi, ha -dimensione finita.  Viceversa, supponiamo che e siano finiti. Sia allora , , , una -base di e sia , , , una -base di . Se mostriamo che con e formano una -base di , otteniamo che è finita ed è esattamente uguale a .  Mostriamo che i vettori dati generano come -spazio vettoriale. Infatti, dato un elemento di , questo può essere espresso come una -combinazione lineare dei : . Ciascun , in quanto elemento di , può essere espresso come -combinazione lineare degli : . Combinando le sommatorie date troviamo come -combinazione lineare degli : .  Mostriamo, infine, che gli sono -linearmente indipendenti, ponendo uguale a una loro -combinazione lineare: . Riscrivendola così possiamo pensare il primo membro come una -combinazione lineare dei e, essendo questi ultimi -linearmente indipendenti, otteniamo che tutti gli -coefficienti si annullano, cioè per ogni . Poiché gli sono -linearmente indipendenti, ciò implica che per ogni e , come richiesto.      Sia un'estensione di un campo e sia un elemento di . Diciamo che è algebrico su se è radice di un polinomio non nullo a coefficienti in ; altrimenti, cioè se l'unico polinomio a coefficienti in di cui è radice è il polinomio nullo, diciamo che è trascendente su .     Se è un'estensione di un campo , allora ogni elemento di è, banalmente, algebrico su in quanto radice del polinomio a coefficienti in      Consideriamo il campo e la sua estensione . Allora è algebrico su in quanto radice di a coefficienti in . D'altra parte, Lindemann Ferdinand von Lindemann , 1852 1939. Lindemann, Ferdinand von nel 1882 ha dimostrato che è trascendente su .       sottocampo generato da e , ,     sottoanello generato da e , ,    Dati un'estensione di un campo ed elementi , , di , indichiamo con il sottocampo di generato da e , , e con il sottoanello di generato da e , , .      Sia un'estensione di un campo e siano , , elementi di : allora contiene e è il campo dei quozienti di .    Per definizione, è contenuto in tutti i sottoanelli di contenenti e , , : in particolare, è un sottoanello che soddisfa queste proprietà e, quindi, contiene . Il fatto che sia il campo dei quozienti di segue dall' .      Sia un campo e sia un polinomio di grado positivo a coefficienti in . Se è irriducibile, allora è un campo, altrimenti non è un dominio.    Supponiamo che non sia irriducibile, ed esistano allora e di grado minore di tali che : in particolare, e non appartengono a , cioè e sono elementi non nulli di . D'altra parte è lo zero di che, quindi, non è un dominio.  Sia ora irriducibile. Per il , gli ideali di sono del tipo con ideale di contenente : poiché è un dominio a ideali principali, con polinomio di che divide e, essendo irriducibile, ciò può avvenire se e solo se è invertibile, cioè , o se è associato a , cioè . Dunque, gli unici ideali di sono , cioè l'ideale nullo e stesso: pertanto, per la , è un campo.      Sia un'estensione di un campo e sia un elemento di . Sia l'omomorfismo di anelli da in dato dalla valutazione di polinomi in . Allora e si verifica uno e uno solo dei due casi    è trascendente su , , , e ;     è algebrico su , è generato da un polinomio monico irriducibile detto polinomio minimo di su , , e una -base di è data da , , , con .       Se è un polinomio a coefficienti in , allora, per definizione : poiché gli e appartengono a anche appartiene a . Dunque, . D'altra parte, è contenuto in (ogni elemento di è immagine tramite di sé stesso pensato come polinomio costante) e appartiene all'immagine di : quindi, .  Il nucleo di è, evidentemente, l'insieme dei polinomi di che si annullano in e, quindi, è trascendente se e solo se .  Consideriamo prima il caso in cui è trascendente su : è allora iniettivo e . Inoltre, per il , non è un campo e, quindi, è contenuto strettamente in . Infine, le potenze , , , sono -linearmente indipendenti, altrimenti esisterebbero , , , in non tutti nulli tali che , cioè esisterebbe un polinomio non banale a coefficienti in che si annulla in .  Consideriamo ora il caso in cui sia algebrico su : poiché è un dominio a ideali principali, è generato da un polinomio non nullo che, pur di eventualmente dividerlo per il suo coefficiente direttivo, possiamo assumere sia monico. Per il , sappiamo che : poiché è un dominio, il implica che sia irriducibile e che sia un campo e, per la , ne segue che .  Sia ora il grado di : sappiamo che un generico elemento di è del tipo per qualche polinomio in . Dividendo per otteniamo dove e sono polinomi con o : in altri termini, con gli in . Ma allora , cioè è -combinazione lineare di , , , . D'altra parte, questi elementi sono -linearmente indipendenti: infatti presi , , , in tali che si ha che è un polinomio che si annulla in , ed è, quindi, multiplo di , il che è possibile se e solo se i sono tutti nulli. In conclusione, , , , formano una base per e, quindi, .      Dato un elemento di un campo , algebrico su un sottocampo , il grado di su è il grado del polinomio minimo di su , cioè il grado .     Un elemento di un'estensione di un campo è algebrico di grado se e solo se appartiene a .     Consideriamo di nuovo il polinomio a coefficienti razionali e la sua radice . Poiché . Il grado di su è e, di conseguenza .      Un'estensione di un campo è detta algebrica su se ogni elemento di è algebrico su .      Se è un'estensione finita di , allora è un'estensione algebrica di .    Grazie alla , sappiamo che è finito per ogni in e, quindi, per il , abbiamo che è algebrico su .    Ci chiediamo se, dati due elementi algebrici su un campo , la loro somma e il loro prodotto siano, a loro volta, algebrici. Se applicassimo direttamente la definizione di elemento algebrico, la conoscenza di polinomi non banali che si annullano su tali elementi non ci permette di stabilire facilmente se esistano polinomi non banali che si annullano sulla somma o sul prodotto. Abbiamo però la    Sia un'estensione di un campo , Il sottoinsieme di formato dagli elementi algebrici su è un sottocampo contenente .    Sappiamo già che gli elementi di sono algebrici su ( ): in particolare, è non vuoto e contiene . Dobbiamo allora provare che, per ogni e in , si ha che , , e (quest'ultimo nel caso in cui ) appartengono tutti a .  Abbiamo, dunque, . Ora , essendo algebrico su , a maggior ragione è algebrico su . Per il abbiamo allora che e sono finiti e, per la , è un'estensione finita di . Per il , è un'estensione algebrica di , e, dunque, . Poiché è un campo, abbiamo che contiene , , e che sono, quindi, elementi di , come richiesto.      Sia un'estensione di un campo e siano , , elementi di algebrici su . Allora è un'estensione algebrica di .    Dalla , sappiamo che l'insieme degli elementi di algebrici su è un sottocampo di : poiché contiene e tutti gli , contiene anche il sottocampo generato da essi.      Consideriamo l'estensione di . Sappiamo che è un'estensione di grado di e, dall' , che non contiene . Dunque, ha grado maggiore di su : d'altra parte è un polinomio di grado a coefficienti in che ha come radice, quindi ha grado su . Dalla abbiamo allora . Dalla dimostrazione della , sappiamo inoltre che , , , formano una -base di .  Consideriamo ora l'estensione : chiaramente . Per la il grado di è un divisore di . Se fosse diverso da dovrebbe essere o : consideriamo allora un polinomio del tipo a coefficienti in che ha come radice. Risulta allora cioè : poiché , , , sono -linearmente indipendenti, ne segue che , , , cioè , e sono nulli. Dunque, il polinomio minimo su di ha grado maggiore di e, per quanto già osservato, è uguale a . Di conseguenza .      Verificare che se è un anello contenente un campo , allora è un -spazio vettoriale rispetto alle operazioni che abbiamo definito.    Mostrare che se è un'estensione algebrica di un campo e se è un'estensione algebrica di , allora è un'estensione algebrica di .    Dati i primi distinti , , , , dimostrare c ha grado su .   Procediamo per induzione su . Se , allora è radice di che è irriducibile su (infatti ha grado e non ha radici razionali): dunque, è il polinomio minimo di e , pertanto, ha grado su .  Sia allora . Sia . Per ipotesi induttiva , , da cui, per la , segue che : in particolare, e . Notiamo che ha grado al più su : se mostriamo allora che avremo, dunque, che e un'ulteriore applicazione della darà la tesi cercata.  Supponiamo allora per assurdo che : poiché ha grado su , esistono e in tali che . Ma , e, quindi, . Ora : se fosse , avremmo che . Dunque e : pertanto , cioè divide in , contro l'ipotesi che e siano primi distinti. Abbiamo così trovato l'assurdo.    "
+},
+{
+  "id": "sec-elementi_algebrici_e_trascendenti-2",
+  "level": "2",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#sec-elementi_algebrici_e_trascendenti-2",
+  "type": "Capoverso (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "estensione "
+},
+{
+  "id": "def-grado_estensione",
+  "level": "2",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#def-grado_estensione",
+  "type": "Definizione",
+  "number": "23.1.1",
+  "title": "",
+  "body": "   grado di un'estensione di    Se è un'estensione di , il grado di su , denotato con è la dimensione (eventualmente infinita) di come -spazio vettoriale. Nel caso in cui sia finito, diremo che è un'estensione finita di .   "
+},
+{
+  "id": "sec-elementi_algebrici_e_trascendenti-4",
+  "level": "2",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#sec-elementi_algebrici_e_trascendenti-4",
+  "type": "Esempio",
+  "number": "23.1.2",
+  "title": "",
+  "body": "  Il campo dei complessi ha grado su .   "
+},
+{
+  "id": "prop-ordine_campo_finito",
+  "level": "2",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#prop-ordine_campo_finito",
+  "type": "Proposizione",
+  "number": "23.1.3",
+  "title": "",
+  "body": "  Un campo finito ha ordine potenza di un primo.    Un campo finito ha caratteristica un primo ( e ). Per la , il sottocampo minimo di ha allora ordine . Ora è, ovviamente, un'estensione finita di , di grado, diciamo, . Come -spazio vettoriale è allora isomorfo a , lo spazio delle -uple a coefficienti in , che contiene esattamente elementi.   "
+},
+{
+  "id": "prop-moltiplicativita_grado",
+  "level": "2",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#prop-moltiplicativita_grado",
+  "type": "Proposizione",
+  "number": "23.1.4",
+  "title": "",
+  "body": "  Sia un'estensione di un campo e sia un anello contenente . Allora ha dimensione finita come -spazio vettoriale se e solo se ha dimensione finita come -spazio vettoriale e è finito: in tal caso (in particolare, se è anch'esso un campo, risulta ).    Supponiamo che sia finita. Allora , essendo contenuto in , può essere visto come un -sottospazio vettoriale di e, quindi, ha -dimensione finita. Inoltre, presi i vettori di una -base di , questi sono anche -generatori di e, quindi, ha -dimensione finita.  Viceversa, supponiamo che e siano finiti. Sia allora , , , una -base di e sia , , , una -base di . Se mostriamo che con e formano una -base di , otteniamo che è finita ed è esattamente uguale a .  Mostriamo che i vettori dati generano come -spazio vettoriale. Infatti, dato un elemento di , questo può essere espresso come una -combinazione lineare dei : . Ciascun , in quanto elemento di , può essere espresso come -combinazione lineare degli : . Combinando le sommatorie date troviamo come -combinazione lineare degli : .  Mostriamo, infine, che gli sono -linearmente indipendenti, ponendo uguale a una loro -combinazione lineare: . Riscrivendola così possiamo pensare il primo membro come una -combinazione lineare dei e, essendo questi ultimi -linearmente indipendenti, otteniamo che tutti gli -coefficienti si annullano, cioè per ogni . Poiché gli sono -linearmente indipendenti, ciò implica che per ogni e , come richiesto.   "
+},
+{
+  "id": "def-algebrici_trascendenti",
+  "level": "2",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#def-algebrici_trascendenti",
+  "type": "Definizione",
+  "number": "23.1.5",
+  "title": "",
+  "body": "  Sia un'estensione di un campo e sia un elemento di . Diciamo che è algebrico su se è radice di un polinomio non nullo a coefficienti in ; altrimenti, cioè se l'unico polinomio a coefficienti in di cui è radice è il polinomio nullo, diciamo che è trascendente su .   "
+},
+{
+  "id": "rem-Falgebrico_su_F",
+  "level": "2",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#rem-Falgebrico_su_F",
+  "type": "Osservazione",
+  "number": "23.1.6",
+  "title": "",
+  "body": " Se è un'estensione di un campo , allora ogni elemento di è, banalmente, algebrico su in quanto radice del polinomio a coefficienti in   "
+},
+{
+  "id": "sec-elementi_algebrici_e_trascendenti-9",
+  "level": "2",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#sec-elementi_algebrici_e_trascendenti-9",
+  "type": "Esempio",
+  "number": "23.1.7",
+  "title": "",
+  "body": "  Consideriamo il campo e la sua estensione . Allora è algebrico su in quanto radice di a coefficienti in . D'altra parte, Lindemann Ferdinand von Lindemann , 1852 1939. Lindemann, Ferdinand von nel 1882 ha dimostrato che è trascendente su .   "
+},
+{
+  "id": "def-estensione_con_elementi",
+  "level": "2",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#def-estensione_con_elementi",
+  "type": "Definizione",
+  "number": "23.1.8",
+  "title": "",
+  "body": "   sottocampo generato da e , ,     sottoanello generato da e , ,    Dati un'estensione di un campo ed elementi , , di , indichiamo con il sottocampo di generato da e , , e con il sottoanello di generato da e , , .   "
+},
+{
+  "id": "prop-sottocampo_generato_sottoanello_generato",
+  "level": "2",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#prop-sottocampo_generato_sottoanello_generato",
+  "type": "Proposizione",
+  "number": "23.1.9",
+  "title": "",
+  "body": "  Sia un'estensione di un campo e siano , , elementi di : allora contiene e è il campo dei quozienti di .    Per definizione, è contenuto in tutti i sottoanelli di contenenti e , , : in particolare, è un sottoanello che soddisfa queste proprietà e, quindi, contiene . Il fatto che sia il campo dei quozienti di segue dall' .   "
+},
+{
+  "id": "lem-quoziente_anello_polinomi",
+  "level": "2",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#lem-quoziente_anello_polinomi",
+  "type": "Lemma",
+  "number": "23.1.10",
+  "title": "",
+  "body": "  Sia un campo e sia un polinomio di grado positivo a coefficienti in . Se è irriducibile, allora è un campo, altrimenti non è un dominio.    Supponiamo che non sia irriducibile, ed esistano allora e di grado minore di tali che : in particolare, e non appartengono a , cioè e sono elementi non nulli di . D'altra parte è lo zero di che, quindi, non è un dominio.  Sia ora irriducibile. Per il , gli ideali di sono del tipo con ideale di contenente : poiché è un dominio a ideali principali, con polinomio di che divide e, essendo irriducibile, ciò può avvenire se e solo se è invertibile, cioè , o se è associato a , cioè . Dunque, gli unici ideali di sono , cioè l'ideale nullo e stesso: pertanto, per la , è un campo.   "
+},
+{
+  "id": "thm-caratterizzazione_algebrici_trascendenti",
+  "level": "2",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#thm-caratterizzazione_algebrici_trascendenti",
+  "type": "Teorema",
+  "number": "23.1.11",
+  "title": "",
+  "body": "  Sia un'estensione di un campo e sia un elemento di . Sia l'omomorfismo di anelli da in dato dalla valutazione di polinomi in . Allora e si verifica uno e uno solo dei due casi    è trascendente su , , , e ;     è algebrico su , è generato da un polinomio monico irriducibile detto polinomio minimo di su , , e una -base di è data da , , , con .       Se è un polinomio a coefficienti in , allora, per definizione : poiché gli e appartengono a anche appartiene a . Dunque, . D'altra parte, è contenuto in (ogni elemento di è immagine tramite di sé stesso pensato come polinomio costante) e appartiene all'immagine di : quindi, .  Il nucleo di è, evidentemente, l'insieme dei polinomi di che si annullano in e, quindi, è trascendente se e solo se .  Consideriamo prima il caso in cui è trascendente su : è allora iniettivo e . Inoltre, per il , non è un campo e, quindi, è contenuto strettamente in . Infine, le potenze , , , sono -linearmente indipendenti, altrimenti esisterebbero , , , in non tutti nulli tali che , cioè esisterebbe un polinomio non banale a coefficienti in che si annulla in .  Consideriamo ora il caso in cui sia algebrico su : poiché è un dominio a ideali principali, è generato da un polinomio non nullo che, pur di eventualmente dividerlo per il suo coefficiente direttivo, possiamo assumere sia monico. Per il , sappiamo che : poiché è un dominio, il implica che sia irriducibile e che sia un campo e, per la , ne segue che .  Sia ora il grado di : sappiamo che un generico elemento di è del tipo per qualche polinomio in . Dividendo per otteniamo dove e sono polinomi con o : in altri termini, con gli in . Ma allora , cioè è -combinazione lineare di , , , . D'altra parte, questi elementi sono -linearmente indipendenti: infatti presi , , , in tali che si ha che è un polinomio che si annulla in , ed è, quindi, multiplo di , il che è possibile se e solo se i sono tutti nulli. In conclusione, , , , formano una base per e, quindi, .   "
+},
+{
+  "id": "def-grado_di_un_elemento",
+  "level": "2",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#def-grado_di_un_elemento",
+  "type": "Definizione",
+  "number": "23.1.12",
+  "title": "",
+  "body": "  Dato un elemento di un campo , algebrico su un sottocampo , il grado di su è il grado del polinomio minimo di su , cioè il grado .   "
+},
+{
+  "id": "rem-algebrici_grado_1",
+  "level": "2",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#rem-algebrici_grado_1",
+  "type": "Osservazione",
+  "number": "23.1.13",
+  "title": "",
+  "body": " Un elemento di un'estensione di un campo è algebrico di grado se e solo se appartiene a .  "
+},
+{
+  "id": "ex-radice_di_due",
+  "level": "2",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#ex-radice_di_due",
+  "type": "Esempio",
+  "number": "23.1.14",
+  "title": "",
+  "body": "  Consideriamo di nuovo il polinomio a coefficienti razionali e la sua radice . Poiché . Il grado di su è e, di conseguenza .   "
+},
+{
+  "id": "def-estensione_algebrica",
+  "level": "2",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#def-estensione_algebrica",
+  "type": "Definizione",
+  "number": "23.1.15",
+  "title": "",
+  "body": "  Un'estensione di un campo è detta algebrica su se ogni elemento di è algebrico su .   "
+},
+{
+  "id": "cor-estensione_finita_algebrica",
+  "level": "2",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#cor-estensione_finita_algebrica",
+  "type": "Corollario",
+  "number": "23.1.16",
+  "title": "",
+  "body": "  Se è un'estensione finita di , allora è un'estensione algebrica di .    Grazie alla , sappiamo che è finito per ogni in e, quindi, per il , abbiamo che è algebrico su .   "
+},
+{
+  "id": "prop-elementi_algebrici_sottocampo",
+  "level": "2",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#prop-elementi_algebrici_sottocampo",
+  "type": "Proposizione",
+  "number": "23.1.17",
+  "title": "",
+  "body": "  Sia un'estensione di un campo , Il sottoinsieme di formato dagli elementi algebrici su è un sottocampo contenente .    Sappiamo già che gli elementi di sono algebrici su ( ): in particolare, è non vuoto e contiene . Dobbiamo allora provare che, per ogni e in , si ha che , , e (quest'ultimo nel caso in cui ) appartengono tutti a .  Abbiamo, dunque, . Ora , essendo algebrico su , a maggior ragione è algebrico su . Per il abbiamo allora che e sono finiti e, per la , è un'estensione finita di . Per il , è un'estensione algebrica di , e, dunque, . Poiché è un campo, abbiamo che contiene , , e che sono, quindi, elementi di , come richiesto.   "
+},
+{
+  "id": "cor-estensione_con_algebrici",
+  "level": "2",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#cor-estensione_con_algebrici",
+  "type": "Corollario",
+  "number": "23.1.18",
+  "title": "",
+  "body": "  Sia un'estensione di un campo e siano , , elementi di algebrici su . Allora è un'estensione algebrica di .    Dalla , sappiamo che l'insieme degli elementi di algebrici su è un sottocampo di : poiché contiene e tutti gli , contiene anche il sottocampo generato da essi.   "
+},
+{
+  "id": "sec-elementi_algebrici_e_trascendenti-22",
+  "level": "2",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#sec-elementi_algebrici_e_trascendenti-22",
+  "type": "Esempio",
+  "number": "23.1.19",
+  "title": "",
+  "body": "  Consideriamo l'estensione di . Sappiamo che è un'estensione di grado di e, dall' , che non contiene . Dunque, ha grado maggiore di su : d'altra parte è un polinomio di grado a coefficienti in che ha come radice, quindi ha grado su . Dalla abbiamo allora . Dalla dimostrazione della , sappiamo inoltre che , , , formano una -base di .  Consideriamo ora l'estensione : chiaramente . Per la il grado di è un divisore di . Se fosse diverso da dovrebbe essere o : consideriamo allora un polinomio del tipo a coefficienti in che ha come radice. Risulta allora cioè : poiché , , , sono -linearmente indipendenti, ne segue che , , , cioè , e sono nulli. Dunque, il polinomio minimo su di ha grado maggiore di e, per quanto già osservato, è uguale a . Di conseguenza .   "
+},
+{
+  "id": "exercises-elementi_algebrici_e_trascendenti-1",
+  "level": "2",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#exercises-elementi_algebrici_e_trascendenti-1",
+  "type": "Esercizio",
+  "number": "23.1.1",
+  "title": "",
+  "body": " Verificare che se è un anello contenente un campo , allora è un -spazio vettoriale rispetto alle operazioni che abbiamo definito.  "
+},
+{
+  "id": "exercises-elementi_algebrici_e_trascendenti-2",
+  "level": "2",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#exercises-elementi_algebrici_e_trascendenti-2",
+  "type": "Esercizio",
+  "number": "23.1.2",
+  "title": "",
+  "body": " Mostrare che se è un'estensione algebrica di un campo e se è un'estensione algebrica di , allora è un'estensione algebrica di .  "
+},
+{
+  "id": "exercises-elementi_algebrici_e_trascendenti-3",
+  "level": "2",
+  "url": "sec-elementi_algebrici_e_trascendenti.html#exercises-elementi_algebrici_e_trascendenti-3",
+  "type": "Esercizio",
+  "number": "23.1.3",
+  "title": "",
+  "body": " Dati i primi distinti , , , , dimostrare c ha grado su .   Procediamo per induzione su . Se , allora è radice di che è irriducibile su (infatti ha grado e non ha radici razionali): dunque, è il polinomio minimo di e , pertanto, ha grado su .  Sia allora . Sia . Per ipotesi induttiva , , da cui, per la , segue che : in particolare, e . Notiamo che ha grado al più su : se mostriamo allora che avremo, dunque, che e un'ulteriore applicazione della darà la tesi cercata.  Supponiamo allora per assurdo che : poiché ha grado su , esistono e in tali che . Ma , e, quindi, . Ora : se fosse , avremmo che . Dunque e : pertanto , cioè divide in , contro l'ipotesi che e siano primi distinti. Abbiamo così trovato l'assurdo.  "
+},
+{
+  "id": "sec-campo_di_spezzamento",
+  "level": "1",
+  "url": "sec-campo_di_spezzamento.html",
+  "type": "Paragrafo",
+  "number": "23.2",
+  "title": "Campi di spezzamento",
+  "body": " Campi di spezzamento    Un polinomio di grado positivo a coefficienti in un campo si dice totalmente riducibile se si può fattorizzare come prodotto di polinomi di primo grado, cioè è uguale a con , , , radici (non necessariamente distinte) di .      Il polinomio a coefficienti in non è totalmente riducibile. Lo stesso polinomio, pensato come polinomio a coefficienti in si può esprimere come ed è, quindi, totalmente riducibile.      Dato un polinomio di grado positivo a coefficienti in un campo , un campo di spezzamento è un'estensione di tale che sia totalmente riducibile in  con , , , in e .    La definizione ci dice cosa sia un campo di spezzamento, ma al momento non sappiamo se un campo di spezzamento esiste. Nel , abbiamo visto che l'estensione con un elemento algebrico di polinomio minimo , è isomorfa al quoziente dove , è l'ideale generato da . Questo suggerisce un metodo per aggiungere a un campo le radici di un polinomio irriducibile.    Sia un campo e sia un polinomio irriducibile di grado con . Allora esiste un'estensione di con radice di . Inoltre e una -base di è data da , , , .    Detto l'ideale dell'anello generato da , consideriamo il quoziente : questo è un campo per il . La composizione dell'omomorfismo di inclusione di in con l'omomorfismo canonico di su , definisce un omomorfismo da in : poiché è un campo, questo omomorfismo è iniettivo e possiamo, dunque, identificare con un sottocampo di : più precisamente, un elemento di viene identificato con il laterale . Con questa identificazione, il polinomio può dunque essere scritto come Sia ora l'elemento di : valutando in abbiamo allora Ma è lo zero del quoziente e, dunque, è radice di . Sappiamo che è generato da e da e, quindi, , in quanto quoziente di , è generato dalle immagini di questi generatori tramite l'omomorfismo canonico, vale a dire stesso e , cioè : quindi . Poiché annulla il polinomio a coefficienti in , il polinomio minimo di su è un divisore irriducibile di , ma, essendo a sua volta irriducibile, il polinomio minimo di su è associato a : dunque, il polinomio minimo non è altri che il polinomio monico che si ottiene dividendo per il proprio coefficiente direttivo. Per il , e una -base per è quella data in enunciato.      Consideriamo il polinomio a coefficienti in . Mostriamo che è irriducibile: per la , basta mostrare che non ha radici in . Per la un'eventuale radice razionale di è del tipo con che divide e che divide . Le possibili radici sono allora , , , , e : sostituendo in , vediamo che nessuna di esse è radice di , che è, pertanto irriducibile.  Consideriamo ora un'estensione dove è una radice di . Per il , ha grado su e una -base di è , , . Supponiamo di voler esprimere l'inverso di e l'inverso di come combinazione lineare degli elementi di questa base.  Per quanto riguarda , basta notare che da cui segue che . Pertanto, l'inverso di è .  Per quanto riguarda l'inverso di , esprimiamolo come con , e in . Deve allora essere che, sviluppato, dà . Poiché , l'equazione trovata si può riscrivere come : poiché , e sono -linearmente indipendenti, ciò avviene se e solo se . Risolvendo il sistema, si trova , e e, quindi .     Costruzione dei complessi   Consideriamo il polinomio a coefficienti in : questo non ha radici in e, per la è irriducibile in . Per il , è un campo di grado su e una -base per è data da e dove denotiamo con l'elemento .  Ogni elemento di si può allora scrivere come per opportuni numeri reali e . Se è un altro elemento di , abbiamo allora e, dunque, abbiamo già una decomposizione di rispetto alla base scelta. Per quanto riguarda il prodotto abbiamo invece e questa non è una decomposizione rispetto alla base scelta. Il prodotto, pensato come elemento del quoziente , è il laterale di contenente il polinomio . Dividendo per , cioè per , otteniamo allora , e, quindi, il laterale coincide con . Il prodotto di per è, dunque cioè l'usuale prodotto tra numeri complessi. Si noti che non dobbiamo adesso verificare che con queste operazioni è effettivamente un campo, perché lo sappiamo dal .    Mostriamo ora l'esistenza di un campo di spezzamento per un qualsiasi polinomio.    Dato un polinomio di grado positivo a coefficienti in un campo , esiste un campo di spezzamento di su .    Basta ragionare per induzione sul grado di . Se , allora è totalmente riducibile già in e, quindi, stesso è campo di spezzamento di su . Se , sia un divisore irriducibile di . Per il , esiste un'estensione di con una radice di : ora è radice anche di e, pertanto, per il , abbiamo che con polinomio di grado a coefficienti in . Per ipotesi induttiva, esiste un campo di spezzamento di su : ma allora questo è campo di spezzamento di su .    Si potrebbe dimostrare che il campo di spezzamento di un polinomio è unico a meno di isomorfismi, cioè che se e sono campi di spezzamento di su un campo , allora esiste un isomorfismo da in la cui restrizione a è l'identità. Pertanto anche se possiamo aggiungere a radici di in modo diverso, alla fine il risultato che otteniamo è essenzialmente lo stesso.    Utilizzare la dimostrazione del per mostrare che se è un polinomio di grado a coefficienti in un campo , allora il campo di spezzamento di su è un'estensione finita di grado al più .    "
+},
+{
+  "id": "def-polinomio_totalmente_riducibile",
+  "level": "2",
+  "url": "sec-campo_di_spezzamento.html#def-polinomio_totalmente_riducibile",
+  "type": "Definizione",
+  "number": "23.2.1",
+  "title": "",
+  "body": "  Un polinomio di grado positivo a coefficienti in un campo si dice totalmente riducibile se si può fattorizzare come prodotto di polinomi di primo grado, cioè è uguale a con , , , radici (non necessariamente distinte) di .   "
+},
+{
+  "id": "sec-campo_di_spezzamento-3",
+  "level": "2",
+  "url": "sec-campo_di_spezzamento.html#sec-campo_di_spezzamento-3",
+  "type": "Esempio",
+  "number": "23.2.2",
+  "title": "",
+  "body": "  Il polinomio a coefficienti in non è totalmente riducibile. Lo stesso polinomio, pensato come polinomio a coefficienti in si può esprimere come ed è, quindi, totalmente riducibile.   "
+},
+{
+  "id": "def-campo_di_spezzamento",
+  "level": "2",
+  "url": "sec-campo_di_spezzamento.html#def-campo_di_spezzamento",
+  "type": "Definizione",
+  "number": "23.2.3",
+  "title": "",
+  "body": "  Dato un polinomio di grado positivo a coefficienti in un campo , un campo di spezzamento è un'estensione di tale che sia totalmente riducibile in  con , , , in e .   "
+},
+{
+  "id": "lem-estensione_semplice",
+  "level": "2",
+  "url": "sec-campo_di_spezzamento.html#lem-estensione_semplice",
+  "type": "Lemma",
+  "number": "23.2.4",
+  "title": "",
+  "body": "  Sia un campo e sia un polinomio irriducibile di grado con . Allora esiste un'estensione di con radice di . Inoltre e una -base di è data da , , , .    Detto l'ideale dell'anello generato da , consideriamo il quoziente : questo è un campo per il . La composizione dell'omomorfismo di inclusione di in con l'omomorfismo canonico di su , definisce un omomorfismo da in : poiché è un campo, questo omomorfismo è iniettivo e possiamo, dunque, identificare con un sottocampo di : più precisamente, un elemento di viene identificato con il laterale . Con questa identificazione, il polinomio può dunque essere scritto come Sia ora l'elemento di : valutando in abbiamo allora Ma è lo zero del quoziente e, dunque, è radice di . Sappiamo che è generato da e da e, quindi, , in quanto quoziente di , è generato dalle immagini di questi generatori tramite l'omomorfismo canonico, vale a dire stesso e , cioè : quindi . Poiché annulla il polinomio a coefficienti in , il polinomio minimo di su è un divisore irriducibile di , ma, essendo a sua volta irriducibile, il polinomio minimo di su è associato a : dunque, il polinomio minimo non è altri che il polinomio monico che si ottiene dividendo per il proprio coefficiente direttivo. Per il , e una -base per è quella data in enunciato.   "
+},
+{
+  "id": "sec-campo_di_spezzamento-7",
+  "level": "2",
+  "url": "sec-campo_di_spezzamento.html#sec-campo_di_spezzamento-7",
+  "type": "Esempio",
+  "number": "23.2.5",
+  "title": "",
+  "body": "  Consideriamo il polinomio a coefficienti in . Mostriamo che è irriducibile: per la , basta mostrare che non ha radici in . Per la un'eventuale radice razionale di è del tipo con che divide e che divide . Le possibili radici sono allora , , , , e : sostituendo in , vediamo che nessuna di esse è radice di , che è, pertanto irriducibile.  Consideriamo ora un'estensione dove è una radice di . Per il , ha grado su e una -base di è , , . Supponiamo di voler esprimere l'inverso di e l'inverso di come combinazione lineare degli elementi di questa base.  Per quanto riguarda , basta notare che da cui segue che . Pertanto, l'inverso di è .  Per quanto riguarda l'inverso di , esprimiamolo come con , e in . Deve allora essere che, sviluppato, dà . Poiché , l'equazione trovata si può riscrivere come : poiché , e sono -linearmente indipendenti, ciò avviene se e solo se . Risolvendo il sistema, si trova , e e, quindi .   "
+},
+{
+  "id": "sec-campo_di_spezzamento-8",
+  "level": "2",
+  "url": "sec-campo_di_spezzamento.html#sec-campo_di_spezzamento-8",
+  "type": "Esempio",
+  "number": "23.2.6",
+  "title": "Costruzione dei complessi.",
+  "body": " Costruzione dei complessi   Consideriamo il polinomio a coefficienti in : questo non ha radici in e, per la è irriducibile in . Per il , è un campo di grado su e una -base per è data da e dove denotiamo con l'elemento .  Ogni elemento di si può allora scrivere come per opportuni numeri reali e . Se è un altro elemento di , abbiamo allora e, dunque, abbiamo già una decomposizione di rispetto alla base scelta. Per quanto riguarda il prodotto abbiamo invece e questa non è una decomposizione rispetto alla base scelta. Il prodotto, pensato come elemento del quoziente , è il laterale di contenente il polinomio . Dividendo per , cioè per , otteniamo allora , e, quindi, il laterale coincide con . Il prodotto di per è, dunque cioè l'usuale prodotto tra numeri complessi. Si noti che non dobbiamo adesso verificare che con queste operazioni è effettivamente un campo, perché lo sappiamo dal .   "
+},
+{
+  "id": "thm-campo_spezzamento",
+  "level": "2",
+  "url": "sec-campo_di_spezzamento.html#thm-campo_spezzamento",
+  "type": "Teorema",
+  "number": "23.2.7",
+  "title": "",
+  "body": "  Dato un polinomio di grado positivo a coefficienti in un campo , esiste un campo di spezzamento di su .    Basta ragionare per induzione sul grado di . Se , allora è totalmente riducibile già in e, quindi, stesso è campo di spezzamento di su . Se , sia un divisore irriducibile di . Per il , esiste un'estensione di con una radice di : ora è radice anche di e, pertanto, per il , abbiamo che con polinomio di grado a coefficienti in . Per ipotesi induttiva, esiste un campo di spezzamento di su : ma allora questo è campo di spezzamento di su .   "
+},
+{
+  "id": "exercises-campo_di_spezzamento-1",
+  "level": "2",
+  "url": "sec-campo_di_spezzamento.html#exercises-campo_di_spezzamento-1",
+  "type": "Esercizio",
+  "number": "23.2.1",
+  "title": "",
+  "body": " Utilizzare la dimostrazione del per mostrare che se è un polinomio di grado a coefficienti in un campo , allora il campo di spezzamento di su è un'estensione finita di grado al più .  "
+},
+{
+  "id": "sec-chiusure_algebriche",
+  "level": "1",
+  "url": "sec-chiusure_algebriche.html",
+  "type": "Paragrafo",
+  "number": "23.3",
+  "title": "Cenni su campi algebricamente chiusi",
+  "body": " Cenni su campi algebricamente chiusi    Sia un campo. Sono equivalenti le condizioni:   ogni elemento che appartiene a un'estensione di ed è algebrico su appartiene a .    i polinomi irriducibili in hanno tutti grado ;    ogni polinomio in di grado positivo è totalmente riducibile;    ogni polinomio in di grado positivo ha almeno una radice in ;       Supponiamo che valga la condizione e mostriamo che vale la condizione . Sia allora un polinomio irriducibile (quindi ha grado positivo perché gli elementi di grado sono invertibili). Per il , esiste un'estensione di che contiene una radice di : per la condizione , appartiene a e per il , divide in : poiché è irriducibile, segue che è associato a che ha, quindi, grado .  Se vale la condizione , allora la fattorizzazione in irriducibili di un qualsiasi polinomio a coefficienti in è costituita da polinomi di primo grado e, dunque, vale la condizione .  Se vale la condizione allora, preso un polinomio di grado positivo a coefficienti in , questo si scrive come prodotto di polinomi di primo grado in : ognuno di essi ha, quindi, una radice in e, di conseguenza, ha una radice in , cioè vale la condizione .  Infine, supponiamo che valga la condizione e mostriamo che vale la condizione . Sia allora un elemento di un'estensione di che sia algebrico su e sia il suo polinomio minimo su . Poiché vale la condizione , ha una radice, sia , in : per il , divide in . Per il il polinomio è monico e irriducibile in : dunque, e , cioè . Pertanto, vale la condizione .      Un campo che soddisfa una (e, quindi, tutte) le condizioni del è detto algebricamente chiuso .      Sia un campo finito. Allora non è algebricamente chiuso.    Siano , , , gli elementi di . Consideriamo il polinomio . Allora per ogni in si ha e, dunque, è un polinomio di grado positivo che non ha alcuna radice in : pertanto non è algebricamente chiuso.      Dato un campo una sua estensione è detta chiusura algebrica di se    è un'estensione algebrica di ;     è algebricamente chiuso.        Ovviamente, se è algebricamente chiuso, allora è chiusura algebrica di sé stesso.   Diamo ora, senza dimostrazione, alcuni risultati sui campi algebricamente chiusi.   Teorema fondamentale dell'algebra   Il campo dei complessi è la chiusura algebrica del campo dei reali.    A dispetto del nome, le varie dimostrazioni del teorema fondamentale dell'algebra richiedono considerazioni di tipo analitico o topologico. Inoltre, anche se mantiene storicamente questo nome, non è di così fondamentale importanza dal punto di vista algebrico. Più interessante da questo punto di vista è il    Dato un qualsiasi campo esiste una sua chiusura algebrica . Inoltre è univocamente determinato a meno di isomorfismi, vale a dire che se è un'altra chiusura algebrica di allora esiste un isomorfismo la cui restrizione a è l'identità.     L'isomorfismo dato dal teorema non è unico e, quindi, non possiamo individuare gli elementi della chiusura algebrica di un campo  intrinsecamente a partire dagli elementi di . Ad esempio, se prendiamo come chiusura algebrica di , abbiamo due automorfismi di che ristretti a sono l'identità: la funzione identica di e la funzione che manda un complesso nel suo complesso coniugato. Da questo punto di vista e , le due radici di , sono indistinguibili.   "
+},
+{
+  "id": "thm-caratterizzazione_algebricamente_chiuso",
+  "level": "2",
+  "url": "sec-chiusure_algebriche.html#thm-caratterizzazione_algebricamente_chiuso",
+  "type": "Teorema",
+  "number": "23.3.1",
+  "title": "",
+  "body": "  Sia un campo. Sono equivalenti le condizioni:   ogni elemento che appartiene a un'estensione di ed è algebrico su appartiene a .    i polinomi irriducibili in hanno tutti grado ;    ogni polinomio in di grado positivo è totalmente riducibile;    ogni polinomio in di grado positivo ha almeno una radice in ;       Supponiamo che valga la condizione e mostriamo che vale la condizione . Sia allora un polinomio irriducibile (quindi ha grado positivo perché gli elementi di grado sono invertibili). Per il , esiste un'estensione di che contiene una radice di : per la condizione , appartiene a e per il , divide in : poiché è irriducibile, segue che è associato a che ha, quindi, grado .  Se vale la condizione , allora la fattorizzazione in irriducibili di un qualsiasi polinomio a coefficienti in è costituita da polinomi di primo grado e, dunque, vale la condizione .  Se vale la condizione allora, preso un polinomio di grado positivo a coefficienti in , questo si scrive come prodotto di polinomi di primo grado in : ognuno di essi ha, quindi, una radice in e, di conseguenza, ha una radice in , cioè vale la condizione .  Infine, supponiamo che valga la condizione e mostriamo che vale la condizione . Sia allora un elemento di un'estensione di che sia algebrico su e sia il suo polinomio minimo su . Poiché vale la condizione , ha una radice, sia , in : per il , divide in . Per il il polinomio è monico e irriducibile in : dunque, e , cioè . Pertanto, vale la condizione .   "
+},
+{
+  "id": "def-algebricamente_chiuso",
+  "level": "2",
+  "url": "sec-chiusure_algebriche.html#def-algebricamente_chiuso",
+  "type": "Definizione",
+  "number": "23.3.2",
+  "title": "",
+  "body": "  Un campo che soddisfa una (e, quindi, tutte) le condizioni del è detto algebricamente chiuso .   "
+},
+{
+  "id": "prop-campi_finiti_non_algebricamente_chiuso",
+  "level": "2",
+  "url": "sec-chiusure_algebriche.html#prop-campi_finiti_non_algebricamente_chiuso",
+  "type": "Proposizione",
+  "number": "23.3.3",
+  "title": "",
+  "body": "  Sia un campo finito. Allora non è algebricamente chiuso.    Siano , , , gli elementi di . Consideriamo il polinomio . Allora per ogni in si ha e, dunque, è un polinomio di grado positivo che non ha alcuna radice in : pertanto non è algebricamente chiuso.   "
+},
+{
+  "id": "def-chiusura_algebrica",
+  "level": "2",
+  "url": "sec-chiusure_algebriche.html#def-chiusura_algebrica",
+  "type": "Definizione",
+  "number": "23.3.4",
+  "title": "",
+  "body": "  Dato un campo una sua estensione è detta chiusura algebrica di se    è un'estensione algebrica di ;     è algebricamente chiuso.      "
+},
+{
+  "id": "rem-chiusura_di_algebricamente_chiuso",
+  "level": "2",
+  "url": "sec-chiusure_algebriche.html#rem-chiusura_di_algebricamente_chiuso",
+  "type": "Osservazione",
+  "number": "23.3.5",
+  "title": "",
+  "body": " Ovviamente, se è algebricamente chiuso, allora è chiusura algebrica di sé stesso.  "
+},
+{
+  "id": "thm-fondamentale_dell_algebra",
+  "level": "2",
+  "url": "sec-chiusure_algebriche.html#thm-fondamentale_dell_algebra",
+  "type": "Teorema",
+  "number": "23.3.6",
+  "title": "Teorema fondamentale dell’algebra.",
+  "body": " Teorema fondamentale dell'algebra   Il campo dei complessi è la chiusura algebrica del campo dei reali.   "
+},
+{
+  "id": "thm-esistenza_chiusura_algebrica",
+  "level": "2",
+  "url": "sec-chiusure_algebriche.html#thm-esistenza_chiusura_algebrica",
+  "type": "Teorema",
+  "number": "23.3.7",
+  "title": "",
+  "body": "  Dato un qualsiasi campo esiste una sua chiusura algebrica . Inoltre è univocamente determinato a meno di isomorfismi, vale a dire che se è un'altra chiusura algebrica di allora esiste un isomorfismo la cui restrizione a è l'identità.   "
+},
+{
+  "id": "rem-non_unicita_chiusura_algebrica",
+  "level": "2",
+  "url": "sec-chiusure_algebriche.html#rem-non_unicita_chiusura_algebrica",
+  "type": "Osservazione",
+  "number": "23.3.8",
+  "title": "",
+  "body": " L'isomorfismo dato dal teorema non è unico e, quindi, non possiamo individuare gli elementi della chiusura algebrica di un campo  intrinsecamente a partire dagli elementi di . Ad esempio, se prendiamo come chiusura algebrica di , abbiamo due automorfismi di che ristretti a sono l'identità: la funzione identica di e la funzione che manda un complesso nel suo complesso coniugato. Da questo punto di vista e , le due radici di , sono indistinguibili.  "
+},
+{
   "id": "sec-definizione_di_moduli",
   "level": "1",
   "url": "sec-definizione_di_moduli.html",
   "type": "Paragrafo",
-  "number": "23.1",
+  "number": "24.1",
   "title": "Definizione di modulo",
   "body": " Definizione di modulo    Sia un gruppo abeliano scritto in notazione additiva e sia un anello. Sia definita un'operazione esterna  che manda la coppia in un elemento denotato con tale che    per ogni in ;     per ogni in e e in ;     per ogni in e e in ;     per ogni e in e in .   Diciamo allora che è un -modulo (destro) o, anche, che è un modulo (destro) su o, semplicemente, che è un modulo se l'anello è chiaro dal contesto.     In maniera del tutto analoga si definisce la nozione di -modulo sinistro. Ogni risultato che dimostreremo per i moduli destri avrà un corrispondente per i moduli sinistri. Occorre fare attenzione che, dato un modulo destro, non lo si può in generale considerare come modulo sinistro. Infatti la proprietà viene sostituita da e, dunque, la moltiplicazione per in un caso corrisponde a moltiplicare prima per e poi il risultato per , mentre nell'altro caso è il contrario. Ovviamente, se l'anello è commutativo, la differenza è irrilevante.    Salvo diversa indicazione esplicita, quando scriveremo -modulo intenderemo un -modulo destro.    Quando l'anello considerato è un campo, abbiamo la usuale definizione di spazio vettoriale. Dal momento che un campo è un anello commutativo, in questo caso vederlo come modulo destro o sinistro è indifferente.        modulo destro di un anello su sé stesso     modulo sinistro di un anello su sé stesso  Un anello può essere visto come -modulo destro semplicemente prendendo la somma in e come prodotto di un elemento di (pensato come modulo) e di un elemento di (pensato come anello dei coefficienti) il prodotto in . La verifica che le proprietà sono soddisfatte è molto semplice. Denotiamo questo modulo con . Analogamente, può assumere la struttura di -modulo sinistro, denotato con .      Sia un gruppo abeliano, scritto in notazione additiva. Dato un elemento di e un intero , possiamo definire semplicemente come l'usuale multiplo (quello che scriviamo solitamente come ). Dalla e , tradotte in notazione additiva, segue facilmente che è uno -modulo.    Se in un -modulo consideriamo solo l'operazione di addizione, ovviamente abbiamo tutte le proprietà che abbiamo dimostrato per i gruppi abeliani e non c'è bisogno di dimostrarle nuovamente. Vediamo adesso alcune proprietà che coinvolgono la moltiplicazione.    Sia un -modulo. Allora    per ogni in ;     per ogni in .       Queste due proprietà si dimostrano in maniera molto simile (ma non sono una conseguenza dell'altra) e ricalcano la dimostrazione dell'analoga proprietà per gli anelli ( ). Dimostriamo la prima e lasciamo l'altra per esercizio.  Poiché è elemento neutro per l'addizione, sappiamo che : moltiplicando per ambo i membri otteniamo da cui segue . Usando il fatto che è elemento neutro per l'addizione in , otteniamo da cui segue la tesi, grazie alle .     Nella , abbiamo mostrato che, in un -modulo , il prodotto con in e in si annulla se o . Nel caso in cui sia un campo, cioè sia uno spazio vettoriale, ciò può avvenire solo in questi casi: questo semplice fatto, probabilmente una delle prime proprietà che si incontrano quando si studiano gli spazi vettoriali, è alla base di molti dei risultati più significativi della teoria degli spazi vettoriali, quali, ad esempio, l'esistenza di una base.  Per anelli qualunque, questo principio di annullamento non vale, anche se l'anello è un dominio. Si consideri, ad esempio, il gruppo additivo . Per quanto detto nell' , questo è uno -modulo. Abbiamo allora . Più in generale, se è un elemento non nullo di un gruppo abeliano avente periodo additivo finito , allora, pensato come -modulo, si ha con e .     Sia un -modulo. Allora, per ogni in e in si ha . Potremo allora scrivere semplicemente senza ambiguità. In particolare, risulta .    Dimostriamo solo l'uguaglianza , lasciando per esercizio l'altra uguaglianza. Abbiamo allora , dove abbiamo usato la : dunque e sono opposti, cioè .      Mostrare che e come definiti nell' sono rispettivamente un -modulo destro e sinistro.    Sia un -modulo e sia il gruppo degli elementi invertibili di . Dimostrare che la struttura di -modulo definisce un'azione di su .    "
 },
@@ -11453,7 +11831,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-definizione_di_moduli.html#def-modulo_destro",
   "type": "Definizione",
-  "number": "23.1.1",
+  "number": "24.1.1",
   "title": "",
   "body": "  Sia un gruppo abeliano scritto in notazione additiva e sia un anello. Sia definita un'operazione esterna  che manda la coppia in un elemento denotato con tale che    per ogni in ;     per ogni in e e in ;     per ogni in e e in ;     per ogni e in e in .   Diciamo allora che è un -modulo (destro) o, anche, che è un modulo (destro) su o, semplicemente, che è un modulo se l'anello è chiaro dal contesto.   "
 },
@@ -11462,7 +11840,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-definizione_di_moduli.html#rem-modulo_sinistro",
   "type": "Osservazione",
-  "number": "23.1.2",
+  "number": "24.1.2",
   "title": "",
   "body": " In maniera del tutto analoga si definisce la nozione di -modulo sinistro. Ogni risultato che dimostreremo per i moduli destri avrà un corrispondente per i moduli sinistri. Occorre fare attenzione che, dato un modulo destro, non lo si può in generale considerare come modulo sinistro. Infatti la proprietà viene sostituita da e, dunque, la moltiplicazione per in un caso corrisponde a moltiplicare prima per e poi il risultato per , mentre nell'altro caso è il contrario. Ovviamente, se l'anello è commutativo, la differenza è irrilevante.  "
 },
@@ -11471,7 +11849,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-definizione_di_moduli.html#sec-definizione_di_moduli-4",
   "type": "Nota",
-  "number": "23.1.3",
+  "number": "24.1.3",
   "title": "",
   "body": " Salvo diversa indicazione esplicita, quando scriveremo -modulo intenderemo un -modulo destro.  "
 },
@@ -11480,7 +11858,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-definizione_di_moduli.html#rem-spazi_vettoriali",
   "type": "Osservazione",
-  "number": "23.1.4",
+  "number": "24.1.4",
   "title": "",
   "body": " Quando l'anello considerato è un campo, abbiamo la usuale definizione di spazio vettoriale. Dal momento che un campo è un anello commutativo, in questo caso vederlo come modulo destro o sinistro è indifferente.  "
 },
@@ -11489,7 +11867,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-definizione_di_moduli.html#ex-modulo_su_di_se",
   "type": "Esempio",
-  "number": "23.1.5",
+  "number": "24.1.5",
   "title": "",
   "body": "     modulo destro di un anello su sé stesso     modulo sinistro di un anello su sé stesso  Un anello può essere visto come -modulo destro semplicemente prendendo la somma in e come prodotto di un elemento di (pensato come modulo) e di un elemento di (pensato come anello dei coefficienti) il prodotto in . La verifica che le proprietà sono soddisfatte è molto semplice. Denotiamo questo modulo con . Analogamente, può assumere la struttura di -modulo sinistro, denotato con .   "
 },
@@ -11498,7 +11876,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-definizione_di_moduli.html#ex-Z_modulo",
   "type": "Esempio",
-  "number": "23.1.6",
+  "number": "24.1.6",
   "title": "",
   "body": "  Sia un gruppo abeliano, scritto in notazione additiva. Dato un elemento di e un intero , possiamo definire semplicemente come l'usuale multiplo (quello che scriviamo solitamente come ). Dalla e , tradotte in notazione additiva, segue facilmente che è uno -modulo.   "
 },
@@ -11507,7 +11885,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-definizione_di_moduli.html#prop-moltiplicazione_per_0",
   "type": "Proposizione",
-  "number": "23.1.7",
+  "number": "24.1.7",
   "title": "",
   "body": "  Sia un -modulo. Allora    per ogni in ;     per ogni in .       Queste due proprietà si dimostrano in maniera molto simile (ma non sono una conseguenza dell'altra) e ricalcano la dimostrazione dell'analoga proprietà per gli anelli ( ). Dimostriamo la prima e lasciamo l'altra per esercizio.  Poiché è elemento neutro per l'addizione, sappiamo che : moltiplicando per ambo i membri otteniamo da cui segue . Usando il fatto che è elemento neutro per l'addizione in , otteniamo da cui segue la tesi, grazie alle .   "
 },
@@ -11516,7 +11894,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-definizione_di_moduli.html#rem-no_annulamento_in_modulo",
   "type": "Osservazione",
-  "number": "23.1.8",
+  "number": "24.1.8",
   "title": "",
   "body": " Nella , abbiamo mostrato che, in un -modulo , il prodotto con in e in si annulla se o . Nel caso in cui sia un campo, cioè sia uno spazio vettoriale, ciò può avvenire solo in questi casi: questo semplice fatto, probabilmente una delle prime proprietà che si incontrano quando si studiano gli spazi vettoriali, è alla base di molti dei risultati più significativi della teoria degli spazi vettoriali, quali, ad esempio, l'esistenza di una base.  Per anelli qualunque, questo principio di annullamento non vale, anche se l'anello è un dominio. Si consideri, ad esempio, il gruppo additivo . Per quanto detto nell' , questo è uno -modulo. Abbiamo allora . Più in generale, se è un elemento non nullo di un gruppo abeliano avente periodo additivo finito , allora, pensato come -modulo, si ha con e .  "
 },
@@ -11525,7 +11903,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-definizione_di_moduli.html#prop-multiplo_per_opposto",
   "type": "Proposizione",
-  "number": "23.1.9",
+  "number": "24.1.9",
   "title": "",
   "body": "  Sia un -modulo. Allora, per ogni in e in si ha . Potremo allora scrivere semplicemente senza ambiguità. In particolare, risulta .    Dimostriamo solo l'uguaglianza , lasciando per esercizio l'altra uguaglianza. Abbiamo allora , dove abbiamo usato la : dunque e sono opposti, cioè .   "
 },
@@ -11534,7 +11912,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-definizione_di_moduli.html#exercises-definizione_modulo-1",
   "type": "Esercizio",
-  "number": "23.1.1",
+  "number": "24.1.1",
   "title": "",
   "body": " Mostrare che e come definiti nell' sono rispettivamente un -modulo destro e sinistro.  "
 },
@@ -11543,7 +11921,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-definizione_di_moduli.html#exercises-definizione_modulo-2",
   "type": "Esercizio",
-  "number": "23.1.2",
+  "number": "24.1.2",
   "title": "",
   "body": " Sia un -modulo e sia il gruppo degli elementi invertibili di . Dimostrare che la struttura di -modulo definisce un'azione di su .  "
 },
@@ -11552,7 +11930,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-sottomoduli.html",
   "type": "Paragrafo",
-  "number": "23.2",
+  "number": "24.2",
   "title": "Sottomoduli",
   "body": " Sottomoduli  Cosi come abbiamo introdotto i concetti di sottomonoide, sottogruppo, sottoanello, possiamo introdurre la nozione di sottomodulo.    Dato un -modulo , un suo sottoinsieme non vuoto è detto sottomodulo di se    appartiene a per ogni e in ;     appartiene a per ogni in e ogni in .        Nel riportare le proprietà da verificare per stabilire che è un sottomodulo di un -modulo , non abbiamo posto esplicitamente la richiesta che contenga l'opposto di ciascun suo elemento e, quindi, sembra che potrebbe non essere sottogruppo del gruppo additivo di . Tuttavia, se appartiene a , allora, per la , appartiene a che, dunque, risulta essere un sottogruppo del gruppo additivo.    Nel caso in cui sia un gruppo abeliano, visto come -modulo, allora, grazie all' , sappiamo che i sottomoduli sono sottogruppi del gruppo . Viceversa, dato un sottogruppo di , questo contiene le somme di tutti i propri elementi e i multipli interi dei propri elementi. Pertanto è un sottomodulo.  Dunque, nel caso degli -moduli, che abbiamo già visto essere semplicemente i gruppi abeliani, il concetto di sottogruppo e di sottomodulo coincidono.    sottomodulo proprio  Ovviamente, un -modulo è un sottomodulo di sé stesso. I sottomoduli di diversi da sono detti sottomoduli propri . Il sottoinsieme formato solo da è pure un sottomodulo, detto banale .   Analogamente a quanto visto per sottomonoidi, sottogruppi e sottoanelli abbiamo immediatamente la    Se è un sottomodulo di un -modulo , allora è un -modulo rispetto alle operazioni indotte.      Se è un -modulo, è un sottomodulo di e è un sottomodulo di , allora è un sottomodulo di .    Abbiamo visto che un anello , ammette una struttura di -modulo destro e una struttura di -modulo sinistro. Chi sono in questo caso i sottomoduli? Un sottoinsieme non vuoto di un anello è un sottomodulo di se è chiuso rispetto all'addizione e se appartiene a per ogni in e ogni in . Confrontando queste proprietà con la vediamo che sono simili. Ciò conduce alla    Sia un anello. Un sottoinsieme non vuoto di è detto ideale destro se    per ogni e in ;     per ogni in e in .   È detto, invece, ideale sinistro se    per ogni e in ;     per ogni in e in .        Ovviamente, un sottoinsieme di un anello è un ideale bilatero se e solo se è sia ideale destro che sinistro.   Analogamente alla e abbiamo la    Se è un -modulo e è una famiglia di sottomoduli di (indicizzata da un insieme di indici ), allora è un sottomodulo di .     sottomodulo generato da un sottoinsieme    -sottomodulo generato da    Dato un sottoinsieme di un -modulo , il sottomodulo generato da è l'intersezione di tutti i sottomoduli di contenenti , denotata con .    Possiamo descrivere esplicitamente gli elementi del sottomodulo generato da .    Dato un sottoinsieme di un -modulo , il sottomodulo è uguale a se , altrimenti è l'insieme delle combinazioni lineari del tipo dove è un intero positivo, ciascun appartiene a e ciascun appartiene a .    Se , ovviamente .  Supponiamo, dunque, che non sia vuoto e sia l'insieme delle combinazioni lineari date in enunciato. Gli elementi di , i loro multipli per elementi di e le somme di questi elementi appartengono a e, quindi . Inoltre, ogni elemento di appartiene a , perché può essere espresso come .  Riassumendo, : basta allora provare che è un sottomodulo. Chiaramente , contenendo , è non vuoto. La somma di due elementi di è ancora un elemento di . Se è un elemento di e è un elemento di , allora che, quindi, appartiene a . Dunque, è un sottomodulo, come richiesto.     L'espressione per un elemento di data dalla non è in generale unica.     Dati due sottomoduli e di un -modulo , la loro somma è un sottomodulo di . Più in generale, dati , , , sottomoduli di la loro somma è un sottomodulo di .    Consideriamo il caso di due sottomoduli, lasciando il caso generale per esercizio.  Grazie all' sappiamo che la somma è un sottogruppo del gruppo additivo di . Dato un elemento con in e in e un elemento di , abbiamo : ora appartiene a e appartiene a e, quindi, appartiene a .      Si consideri l'anello delle matrici a coefficienti in un anello con . Dato il sottoinsieme , formato dalle matrici la cui prima riga è nulla, stabilire se è un ideale destro e se è un ideale sinistro.   Il sottoinsieme è un ideale destro ma non sinistro.    Sia un -modulo e sia un elemento del centro di . Mostrare che il sottoinsieme è un sottomodulo di .    Dimostrare la .    Dimostrare la .    Dimostrare il caso generale della     "
 },
@@ -11561,7 +11939,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sottomoduli.html#def-sottomodulo",
   "type": "Definizione",
-  "number": "23.2.1",
+  "number": "24.2.1",
   "title": "",
   "body": "  Dato un -modulo , un suo sottoinsieme non vuoto è detto sottomodulo di se    appartiene a per ogni e in ;     appartiene a per ogni in e ogni in .      "
 },
@@ -11570,7 +11948,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sottomoduli.html#rem-sottomodulo_sottogruppo",
   "type": "Osservazione",
-  "number": "23.2.2",
+  "number": "24.2.2",
   "title": "",
   "body": " Nel riportare le proprietà da verificare per stabilire che è un sottomodulo di un -modulo , non abbiamo posto esplicitamente la richiesta che contenga l'opposto di ciascun suo elemento e, quindi, sembra che potrebbe non essere sottogruppo del gruppo additivo di . Tuttavia, se appartiene a , allora, per la , appartiene a che, dunque, risulta essere un sottogruppo del gruppo additivo.  "
 },
@@ -11579,7 +11957,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sottomoduli.html#rem-sottomodulo_Z_modulo",
   "type": "Osservazione",
-  "number": "23.2.3",
+  "number": "24.2.3",
   "title": "",
   "body": " Nel caso in cui sia un gruppo abeliano, visto come -modulo, allora, grazie all' , sappiamo che i sottomoduli sono sottogruppi del gruppo . Viceversa, dato un sottogruppo di , questo contiene le somme di tutti i propri elementi e i multipli interi dei propri elementi. Pertanto è un sottomodulo.  Dunque, nel caso degli -moduli, che abbiamo già visto essere semplicemente i gruppi abeliani, il concetto di sottogruppo e di sottomodulo coincidono.  "
 },
@@ -11588,7 +11966,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sottomoduli.html#rem-sottomodulo_non_proprio",
   "type": "Osservazione",
-  "number": "23.2.4",
+  "number": "24.2.4",
   "title": "",
   "body": " sottomodulo proprio  Ovviamente, un -modulo è un sottomodulo di sé stesso. I sottomoduli di diversi da sono detti sottomoduli propri . Il sottoinsieme formato solo da è pure un sottomodulo, detto banale .  "
 },
@@ -11597,7 +11975,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sottomoduli.html#prop-sottomodulo_e_modulo",
   "type": "Proposizione",
-  "number": "23.2.5",
+  "number": "24.2.5",
   "title": "",
   "body": "  Se è un sottomodulo di un -modulo , allora è un -modulo rispetto alle operazioni indotte.   "
 },
@@ -11606,7 +11984,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sottomoduli.html#prop-transitivita_sottomoduli",
   "type": "Proposizione",
-  "number": "23.2.6",
+  "number": "24.2.6",
   "title": "",
   "body": "  Se è un -modulo, è un sottomodulo di e è un sottomodulo di , allora è un sottomodulo di .   "
 },
@@ -11615,7 +11993,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sottomoduli.html#def-ideale_destro_sinistro",
   "type": "Definizione",
-  "number": "23.2.7",
+  "number": "24.2.7",
   "title": "",
   "body": "  Sia un anello. Un sottoinsieme non vuoto di è detto ideale destro se    per ogni e in ;     per ogni in e in .   È detto, invece, ideale sinistro se    per ogni e in ;     per ogni in e in .      "
 },
@@ -11624,7 +12002,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sottomoduli.html#rem-destro_sinistro_bilatero",
   "type": "Osservazione",
-  "number": "23.2.8",
+  "number": "24.2.8",
   "title": "",
   "body": " Ovviamente, un sottoinsieme di un anello è un ideale bilatero se e solo se è sia ideale destro che sinistro.  "
 },
@@ -11633,7 +12011,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sottomoduli.html#prop-intersezione_di_sottomoduli",
   "type": "Proposizione",
-  "number": "23.2.9",
+  "number": "24.2.9",
   "title": "",
   "body": "  Se è un -modulo e è una famiglia di sottomoduli di (indicizzata da un insieme di indici ), allora è un sottomodulo di .   "
 },
@@ -11642,7 +12020,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sottomoduli.html#def-sottomodulo_generato",
   "type": "Definizione",
-  "number": "23.2.10",
+  "number": "24.2.10",
   "title": "",
   "body": " sottomodulo generato da un sottoinsieme    -sottomodulo generato da    Dato un sottoinsieme di un -modulo , il sottomodulo generato da è l'intersezione di tutti i sottomoduli di contenenti , denotata con .   "
 },
@@ -11651,7 +12029,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sottomoduli.html#prop-elementi_del_sottomodulo_generato",
   "type": "Proposizione",
-  "number": "23.2.11",
+  "number": "24.2.11",
   "title": "",
   "body": "  Dato un sottoinsieme di un -modulo , il sottomodulo è uguale a se , altrimenti è l'insieme delle combinazioni lineari del tipo dove è un intero positivo, ciascun appartiene a e ciascun appartiene a .    Se , ovviamente .  Supponiamo, dunque, che non sia vuoto e sia l'insieme delle combinazioni lineari date in enunciato. Gli elementi di , i loro multipli per elementi di e le somme di questi elementi appartengono a e, quindi . Inoltre, ogni elemento di appartiene a , perché può essere espresso come .  Riassumendo, : basta allora provare che è un sottomodulo. Chiaramente , contenendo , è non vuoto. La somma di due elementi di è ancora un elemento di . Se è un elemento di e è un elemento di , allora che, quindi, appartiene a . Dunque, è un sottomodulo, come richiesto.   "
 },
@@ -11660,7 +12038,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sottomoduli.html#rem-espressione_elemento_sottomodulo_generato_non_unica",
   "type": "Osservazione",
-  "number": "23.2.12",
+  "number": "24.2.12",
   "title": "",
   "body": " L'espressione per un elemento di data dalla non è in generale unica.  "
 },
@@ -11669,7 +12047,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sottomoduli.html#prop-somma_sottomoduli",
   "type": "Proposizione",
-  "number": "23.2.13",
+  "number": "24.2.13",
   "title": "",
   "body": "  Dati due sottomoduli e di un -modulo , la loro somma è un sottomodulo di . Più in generale, dati , , , sottomoduli di la loro somma è un sottomodulo di .    Consideriamo il caso di due sottomoduli, lasciando il caso generale per esercizio.  Grazie all' sappiamo che la somma è un sottogruppo del gruppo additivo di . Dato un elemento con in e in e un elemento di , abbiamo : ora appartiene a e appartiene a e, quindi, appartiene a .   "
 },
@@ -11678,7 +12056,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sottomoduli.html#exercises-sottomoduli-1",
   "type": "Esercizio",
-  "number": "23.2.1",
+  "number": "24.2.1",
   "title": "",
   "body": " Si consideri l'anello delle matrici a coefficienti in un anello con . Dato il sottoinsieme , formato dalle matrici la cui prima riga è nulla, stabilire se è un ideale destro e se è un ideale sinistro.   Il sottoinsieme è un ideale destro ma non sinistro.  "
 },
@@ -11687,7 +12065,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sottomoduli.html#exercises-sottomoduli-2",
   "type": "Esercizio",
-  "number": "23.2.2",
+  "number": "24.2.2",
   "title": "",
   "body": " Sia un -modulo e sia un elemento del centro di . Mostrare che il sottoinsieme è un sottomodulo di .  "
 },
@@ -11696,7 +12074,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sottomoduli.html#exercises-sottomoduli-3",
   "type": "Esercizio",
-  "number": "23.2.3",
+  "number": "24.2.3",
   "title": "",
   "body": " Dimostrare la .  "
 },
@@ -11705,7 +12083,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sottomoduli.html#exercises-sottomoduli-4",
   "type": "Esercizio",
-  "number": "23.2.4",
+  "number": "24.2.4",
   "title": "",
   "body": " Dimostrare la .  "
 },
@@ -11714,7 +12092,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-sottomoduli.html#exercises-sottomoduli-5",
   "type": "Esercizio",
-  "number": "23.2.5",
+  "number": "24.2.5",
   "title": "",
   "body": " Dimostrare il caso generale della   "
 },
@@ -11723,7 +12101,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-omomorfismi_moduli.html",
   "type": "Paragrafo",
-  "number": "23.3",
+  "number": "24.3",
   "title": "Omomorfismi di moduli",
   "body": " Omomorfismi di moduli    Dati due -moduli e e , un omomorfismo di -moduli da in è una funzione tale che    per ogni e in ;     per ogni in e in .       Le definizioni di isomorfismo , endomorfismo e automorfismo sono date in analogia alle corrispondenti nozioni per i gruppi ( e ).   Poiché un omomorfismo di -moduli è un omomorfismo di gruppi additivi, valgono tutte le proprietà che abbiamo visto in tale situazione e rimandiamo, pertanto, al .    Se e sono gruppi abeliani, visti come -moduli e è un omomorfismo tra -moduli, allora, per definizione, è un omomorfismo di gruppi.  Viceversa, se è un omomorfismo di gruppi, allora, per la riscritta in notazione additiva, vediamo che è un omomorfismo di -moduli.  Dunque, nel caso degli -moduli, il concetto di omomorfismo di gruppi e il concetto di omomorfismo di moduli coincidono.   Usando un approccio simile a quello della si dimostra facilmente la    Sia un omomorfismo di -moduli. Allora   se è un sottomodulo di , allora è un sottomodulo di ;    se è un sottomodulo di , allora è un sottomodulo di .       Come possiamo stabilire se un certo omomorfismo è iniettivo? Possiamo semplicemente riguardarlo come omomorfismo di gruppi additivi e dare la    Sia un omomorfismo di -moduli. Il nucleo di , denotato con , è così definito .    Come caso particolare della abbiamo immediatamente il    Sia un omomorfismo di -moduli. Il nucleo di è un sottomodulo di , mentre l'immagine di è un sottomodulo di .    Ovviamente, possiamo tradurre immediatamente il e il .    Sia un omomorfismo di -moduli. Allora è iniettivo se e solo se .      Sia un omomorfismo di -moduli. Allora, le mappe e definiscono delle biiezioni, una inversa dell'altra, tra l'insieme dei sottomoduli di contenenti e l'insieme dei sottomoduli di contenuti in .      Dimostrare la .    Sia un -modulo con commutativo e sia un elemento di fissato. Dimostrare che la funzione da in sé che manda un generico elemento in è un endomorfismo di -moduli.   Dai due elementi e in e un elemento di si ha     "
 },
@@ -11732,7 +12110,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-omomorfismi_moduli.html#def-omomorfismo_moduli",
   "type": "Definizione",
-  "number": "23.3.1",
+  "number": "24.3.1",
   "title": "",
   "body": "  Dati due -moduli e e , un omomorfismo di -moduli da in è una funzione tale che    per ogni e in ;     per ogni in e in .      "
 },
@@ -11750,7 +12128,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-omomorfismi_moduli.html#rem-proprieta_omomorfismi_moduli",
   "type": "Osservazione",
-  "number": "23.3.2",
+  "number": "24.3.2",
   "title": "",
   "body": " Poiché un omomorfismo di -moduli è un omomorfismo di gruppi additivi, valgono tutte le proprietà che abbiamo visto in tale situazione e rimandiamo, pertanto, al .  "
 },
@@ -11759,7 +12137,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-omomorfismi_moduli.html#rem-omomorfismo_Z_moduli",
   "type": "Osservazione",
-  "number": "23.3.3",
+  "number": "24.3.3",
   "title": "",
   "body": " Se e sono gruppi abeliani, visti come -moduli e è un omomorfismo tra -moduli, allora, per definizione, è un omomorfismo di gruppi.  Viceversa, se è un omomorfismo di gruppi, allora, per la riscritta in notazione additiva, vediamo che è un omomorfismo di -moduli.  Dunque, nel caso degli -moduli, il concetto di omomorfismo di gruppi e il concetto di omomorfismo di moduli coincidono.  "
 },
@@ -11768,7 +12146,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-omomorfismi_moduli.html#prop-immagine_diretta_inversa_di_sottomoduli",
   "type": "Proposizione",
-  "number": "23.3.4",
+  "number": "24.3.4",
   "title": "",
   "body": "  Sia un omomorfismo di -moduli. Allora   se è un sottomodulo di , allora è un sottomodulo di ;    se è un sottomodulo di , allora è un sottomodulo di .      "
 },
@@ -11777,7 +12155,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-omomorfismi_moduli.html#def-nucleo_omomorfismo_moduli",
   "type": "Definizione",
-  "number": "23.3.5",
+  "number": "24.3.5",
   "title": "",
   "body": "  Sia un omomorfismo di -moduli. Il nucleo di , denotato con , è così definito .   "
 },
@@ -11786,7 +12164,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-omomorfismi_moduli.html#cor-nucleo_e_immagine_omomorfismo_moduli",
   "type": "Corollario",
-  "number": "23.3.6",
+  "number": "24.3.6",
   "title": "",
   "body": "  Sia un omomorfismo di -moduli. Il nucleo di è un sottomodulo di , mentre l'immagine di è un sottomodulo di .   "
 },
@@ -11795,7 +12173,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-omomorfismi_moduli.html#thm-iniettivo_nucleo_banale_moduli",
   "type": "Teorema",
-  "number": "23.3.7",
+  "number": "24.3.7",
   "title": "",
   "body": "  Sia un omomorfismo di -moduli. Allora è iniettivo se e solo se .   "
 },
@@ -11804,7 +12182,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-omomorfismi_moduli.html#cor-corrispondenza_immagini_dirette_inverse_sottomoduli",
   "type": "Corollario",
-  "number": "23.3.8",
+  "number": "24.3.8",
   "title": "",
   "body": "  Sia un omomorfismo di -moduli. Allora, le mappe e definiscono delle biiezioni, una inversa dell'altra, tra l'insieme dei sottomoduli di contenenti e l'insieme dei sottomoduli di contenuti in .   "
 },
@@ -11813,7 +12191,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-omomorfismi_moduli.html#exercises-omomorfismi_moduli-1",
   "type": "Esercizio",
-  "number": "23.3.1",
+  "number": "24.3.1",
   "title": "",
   "body": " Dimostrare la .  "
 },
@@ -11822,7 +12200,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-omomorfismi_moduli.html#exercises-omomorfismi_moduli-2",
   "type": "Esercizio",
-  "number": "23.3.2",
+  "number": "24.3.2",
   "title": "",
   "body": " Sia un -modulo con commutativo e sia un elemento di fissato. Dimostrare che la funzione da in sé che manda un generico elemento in è un endomorfismo di -moduli.   Dai due elementi e in e un elemento di si ha   "
 },
@@ -11831,7 +12209,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-moduli_quoziente.html",
   "type": "Paragrafo",
-  "number": "23.4",
+  "number": "24.4",
   "title": "Moduli quoziente",
   "body": " Moduli quoziente  Nel , abbiamo introdotto il concetto di congruenza per le operazioni. Non possiamo applicarlo direttamente ai moduli perché in questo caso abbiamo un'operazione esterna. Basta però un semplice adattamento.    Una congruenza in un -modulo è una relazione di equivalenza che è una congruenza rispetto all'operazione di addizione e tale che se e sono due elementi di per cui si ha , allora risulta per ogni in .      Se è una congruenza in un -modulo , allora nell'insieme quoziente è possibile definire due operazioni ponendo e, rispetto a tali operazioni, è un -modulo, detto modulo quoziente .    Per il , è un gruppo abeliano rispetto all'addizione. Le verifiche che la moltiplicazione di un elemento di per un elemento di è ben definita e soddisfa le proprietà richieste sono immediate.    Vogliamo ora descrivere un modulo quoziente in altro modo, così come abbiamo fatto per i gruppi quoziente e gli anelli quoziente. Se consideriamo solo la struttura additiva di un -modulo dotato di una congruenza , applicando il vediamo che è un sottogruppo (normale) di (il fatto che sia normale è irrilevante, visto che, essendo abeliano, ogni suo sottogruppo è normale). Inoltre, le classi equivalenza sono i laterali di in . Vogliamo caratterizzare i sottogruppi di rispetto a cui i laterali di sono le classi di equivalenza di una congruenza. Sia allora e sia un elemento di : vogliamo che . Sappiamo che esiste in tale che . Pertanto . Abbiamo allora che se e solo se per ogni scelta di in e ogni scelta di in . Ma allora stiamo semplicemente richiedendo che sia un sottomodulo. Le cose sono, in un certo senso, più semplici rispetto al caso dei gruppi e degli anelli. Non dobbiamo, come nel caso dei gruppi, richiedere la proprietà addizionale della normalità o, come nel caso degli anelli, distinguere tra sottoanelli e ideali.    Se è un -modulo e una congruenza in , allora è un sottomodulo di e le classi di equivalenza rispetto a sono i laterali di .     modulo quoziente di su un sottomodulo  Viceversa, se è un sottomodulo di un -modulo , la relazione di equivalenza le cui classi sono i laterali di in è una congruenza. Indicheremo, pertanto, con l' -modulo quoziente rispetto a tale congruenza.     Abbiamo visto che se è un anello, per poter fare il suo quoziente abbiamo bisogno di un ideale bilatero ( ). Ora però vediamo che se è un ideale destro (non necessariamente sinistro), allora è un sottomodulo di e possiamo fare il quoziente su di esso. Questi dati non sono in contraddizione: se è un ideale destro, il quoziente assume la struttura di -modulo ma, a meno che sia anche ideale sinistro, non è un anello.     Dato un .modulo e un sottomodulo , la funzione data da è un omomorfismo suriettivo con nucleo , detto omomorfismo canonico .    Possiamo ora enunciare la versione per moduli dei teoremi di isomorfismo    Sia un omomorfismo di -moduli. Allora .      Sia un -modulo e siano e sottomoduli di . Allora .      Sia un -modulo e sia un suo sottomodulo. I sottomoduli di sono i quozienti del tipo con sottomodulo di contenente . Dato un sottomodulo di si ha .      Completare le verifiche della dimostrazione della .    Dimostrare il .    Dimostrare il .    Dimostrare il .    "
 },
@@ -11840,7 +12218,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_quoziente.html#def-congruenza_modulo",
   "type": "Definizione",
-  "number": "23.4.1",
+  "number": "24.4.1",
   "title": "",
   "body": "  Una congruenza in un -modulo è una relazione di equivalenza che è una congruenza rispetto all'operazione di addizione e tale che se e sono due elementi di per cui si ha , allora risulta per ogni in .   "
 },
@@ -11849,7 +12227,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_quoziente.html#prop-modulo_quoziente",
   "type": "Proposizione",
-  "number": "23.4.2",
+  "number": "24.4.2",
   "title": "",
   "body": "  Se è una congruenza in un -modulo , allora nell'insieme quoziente è possibile definire due operazioni ponendo e, rispetto a tali operazioni, è un -modulo, detto modulo quoziente .    Per il , è un gruppo abeliano rispetto all'addizione. Le verifiche che la moltiplicazione di un elemento di per un elemento di è ben definita e soddisfa le proprietà richieste sono immediate.   "
 },
@@ -11858,7 +12236,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_quoziente.html#thm-quozienti_su_sottomoduli",
   "type": "Teorema",
-  "number": "23.4.3",
+  "number": "24.4.3",
   "title": "",
   "body": "  Se è un -modulo e una congruenza in , allora è un sottomodulo di e le classi di equivalenza rispetto a sono i laterali di .     modulo quoziente di su un sottomodulo  Viceversa, se è un sottomodulo di un -modulo , la relazione di equivalenza le cui classi sono i laterali di in è una congruenza. Indicheremo, pertanto, con l' -modulo quoziente rispetto a tale congruenza.   "
 },
@@ -11867,7 +12245,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_quoziente.html#rem-quozienti_su_ideali_destri",
   "type": "Osservazione",
-  "number": "23.4.4",
+  "number": "24.4.4",
   "title": "",
   "body": " Abbiamo visto che se è un anello, per poter fare il suo quoziente abbiamo bisogno di un ideale bilatero ( ). Ora però vediamo che se è un ideale destro (non necessariamente sinistro), allora è un sottomodulo di e possiamo fare il quoziente su di esso. Questi dati non sono in contraddizione: se è un ideale destro, il quoziente assume la struttura di -modulo ma, a meno che sia anche ideale sinistro, non è un anello.  "
 },
@@ -11876,7 +12254,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_quoziente.html#prop-omomorfismo_canonico_moduli",
   "type": "Proposizione",
-  "number": "23.4.5",
+  "number": "24.4.5",
   "title": "",
   "body": "  Dato un .modulo e un sottomodulo , la funzione data da è un omomorfismo suriettivo con nucleo , detto omomorfismo canonico .   "
 },
@@ -11885,7 +12263,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_quoziente.html#thm-isomorfismo_quoziente_sul_nucleo_moduli",
   "type": "Teorema",
-  "number": "23.4.6",
+  "number": "24.4.6",
   "title": "",
   "body": "  Sia un omomorfismo di -moduli. Allora .   "
 },
@@ -11894,7 +12272,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_quoziente.html#thm-quoziente_su_intersezione_moduli",
   "type": "Teorema",
-  "number": "23.4.7",
+  "number": "24.4.7",
   "title": "",
   "body": "  Sia un -modulo e siano e sottomoduli di . Allora .   "
 },
@@ -11903,7 +12281,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_quoziente.html#thm-sottomoduli_quoziente",
   "type": "Teorema",
-  "number": "23.4.8",
+  "number": "24.4.8",
   "title": "",
   "body": "  Sia un -modulo e sia un suo sottomodulo. I sottomoduli di sono i quozienti del tipo con sottomodulo di contenente . Dato un sottomodulo di si ha .   "
 },
@@ -11912,7 +12290,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_quoziente.html#exercises-moduli_quoziente-1",
   "type": "Esercizio",
-  "number": "23.4.1",
+  "number": "24.4.1",
   "title": "",
   "body": " Completare le verifiche della dimostrazione della .  "
 },
@@ -11921,7 +12299,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_quoziente.html#exercises-moduli_quoziente-2",
   "type": "Esercizio",
-  "number": "23.4.2",
+  "number": "24.4.2",
   "title": "",
   "body": " Dimostrare il .  "
 },
@@ -11930,7 +12308,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_quoziente.html#exercises-moduli_quoziente-3",
   "type": "Esercizio",
-  "number": "23.4.3",
+  "number": "24.4.3",
   "title": "",
   "body": " Dimostrare il .  "
 },
@@ -11939,7 +12317,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_quoziente.html#exercises-moduli_quoziente-4",
   "type": "Esercizio",
-  "number": "23.4.4",
+  "number": "24.4.4",
   "title": "",
   "body": " Dimostrare il .  "
 },
@@ -11948,7 +12326,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-somma_diretta_moduli.html",
   "type": "Paragrafo",
-  "number": "24.1",
+  "number": "25.1",
   "title": "Somma diretta di moduli",
   "body": " Somma diretta di moduli  Nel abbiamo descritto il prodotto diretto esterno e interno di gruppi (mostrando come si possa passare da uno all'altro). Introduciamo ora, in maniera del tutto analoga, la somma diretta di -moduli.     somma diretta dei moduli , , ,    Siano , , , degli -moduli. Il loro prodotto cartesiano dotato delle operazioni così definite con in , è detto somma diretta (esterna) dei moduli , , , e denotata con .    La dimostrazione della proposizione seguente consiste di semplici verifiche, che lasciamo per esercizio.    La somma diretta degli -moduli , , è un -modulo.         somma diretta di copie di  Se è un anello, possiamo fare la somma diretta di copie del modulo , che indicheremo, quindi con o, più semplicemente, con .    Come nel caso dei gruppi, nella somma diretta di moduli possiamo trovare sottomoduli isomorfi ai moduli usati per costruirlo.    Sia data la somma diretta esterna . Fissato con , il sottoinsieme è un sottomodulo isomorfo a .    Consideriamo la funzione definita da . Si verifica immediatamente che è un omomorfismo iniettivo la cui immagine è esattamente e, pertanto, è un sottomodulo isomorfo a .      Sia una somma diretta esterna di -moduli e siano , , i sottomoduli isomorfi a , , rispettivamente, definiti come nella . Allora    ;    ciascun ha intersezione banale con la somma dei rimanenti (in particolare, se ).       Dato un elemento generico di abbiamo . Abbiamo, dunque, espresso come somma di elementi in , , , rispettivamente e il è dimostrato.  Fissato ora un indice , notiamo che ogni elemento di con è una -upla la cui componente di posto è e, di conseguenza, gli elementi della somma degli con sono -uple la cui componente di posto è . D'altra parte, è formato dalle -uple le cui componenti di posto diverso da sono uguali a . In conclusione, l'unico elemento che appartiene a e alla somma dei rimanenti è . Questo prova il .      Sia un -modulo e siano , , , suoi sottomoduli tali che:    ;    ciascun ha intersezione banale con la somma dei rimanenti.   Diciamo allora che è la somma diretta (interna) dei sottomoduli , , , .     Nel caso in cui sia somma diretta interna di due suoi sottomoduli e , la condizione che ciascuno di essi abbia intersezione banale con la somma dei rimanenti può essere semplicemente formulata dicendo che .     Sia un -modulo che sia somma diretta interna dei sottomoduli , , , . Allora è isomorfo alla somma diretta esterna dei moduli , , , (pensati come -moduli indipendenti). Inoltre, ogni elemento di si scrive in un unico modo nella forma con .    Sia e sia definita da . Poiché , la funzione è suriettiva.  La verifica che sia un omomorfismo è immediata.  Per completare la dimostrazione, basta mostrare che è iniettiva (questo implicherà l'unicità della decomposizione ). Sia allora un elemento di , cioè . Mostriamo che per ogni : . Ma allora, appartiene a e alla somma dei rimanenti ed è, dunque, uguale a .    Grazie alla e alla , sappiamo ora che somma diretta esterna e interna sono due modi diversi di presentare lo stesso concetto. Dunque, parleremo semplicemente di somma diretta, senza ulteriori specificazioni.    Sia somma diretta di due suoi sottomoduli e . Allora e .    Dalla , sappiamo che ogni elemento di si scrive in maniera unica come con in e in .  Pertanto, la funzione che manda con in e in nell'elemento è ben definita e si verifica facilmente che è un omomorfismo di moduli. Questo omomorfismo è suriettivo: infatti, se è un qualunque elemento di , allora è immagine degli elementi del tipo con in . Il nucleo di è invece : infatti con in e in appartiene a se e solo se , cioè è un elemento di . Per il , segue allora che . Analogamente, .      Sia un -modulo e siano , , sottomoduli di , , rispettivamente. Posto allora si ha .    Sia la mappa che manda l'elemento di nell'elemento di . È immediato verificare che è un omomorfismo suriettivo di moduli. Grazie al , basta allora mostrare che : un elemento appartiene a se e solo se per ogni , cioè per ogni , vale a dire se e solo se appartiene a come richiesto.     Quando abbiamo parlato di gruppi abbiamo usato il termine di prodotto diretto, mentre per i moduli abbiamo usato il termine di somma diretta. Si potrebbe pensare che ciò dipenda dal fatto che scriviamo preferibilmente i gruppi in notazione moltiplicativa mentre usiamo la notazione additiva per i moduli. In parte è così, soprattutto per ragioni storiche, tuttavia potremmo usare il termine somma diretta per i gruppi (anche se non li scriviamo additivamente) e il termine prodotto diretto per i moduli (anche se non li scriviamo moltiplicativamente). Non entriamo nel dettaglio della definizione generale di somma diretta e di prodotto diretto (che in generale non coincidono): ci basti solo sapere che nei casi che abbiamo considerato le due nozioni sono intercambiabili.     Dimostrare la .    "
 },
@@ -11957,7 +12335,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-somma_diretta_moduli.html#def-somma_diretta_esterna_moduli",
   "type": "Definizione",
-  "number": "24.1.1",
+  "number": "25.1.1",
   "title": "",
   "body": "   somma diretta dei moduli , , ,    Siano , , , degli -moduli. Il loro prodotto cartesiano dotato delle operazioni così definite con in , è detto somma diretta (esterna) dei moduli , , , e denotata con .   "
 },
@@ -11966,7 +12344,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-somma_diretta_moduli.html#prop-somma_diretta_esterna_moduli",
   "type": "Proposizione",
-  "number": "24.1.2",
+  "number": "25.1.2",
   "title": "",
   "body": "  La somma diretta degli -moduli , , è un -modulo.   "
 },
@@ -11975,7 +12353,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-somma_diretta_moduli.html#sec-somma_diretta_moduli-6",
   "type": "Esempio",
-  "number": "24.1.3",
+  "number": "25.1.3",
   "title": "",
   "body": "     somma diretta di copie di  Se è un anello, possiamo fare la somma diretta di copie del modulo , che indicheremo, quindi con o, più semplicemente, con .   "
 },
@@ -11984,7 +12362,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-somma_diretta_moduli.html#prop-sottomoduli_somma_diretta_isomorfi_addendi",
   "type": "Proposizione",
-  "number": "24.1.4",
+  "number": "25.1.4",
   "title": "",
   "body": "  Sia data la somma diretta esterna . Fissato con , il sottoinsieme è un sottomodulo isomorfo a .    Consideriamo la funzione definita da . Si verifica immediatamente che è un omomorfismo iniettivo la cui immagine è esattamente e, pertanto, è un sottomodulo isomorfo a .   "
 },
@@ -11993,7 +12371,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-somma_diretta_moduli.html#prop-proprieta_addendi_somma_diretta",
   "type": "Proposizione",
-  "number": "24.1.5",
+  "number": "25.1.5",
   "title": "",
   "body": "  Sia una somma diretta esterna di -moduli e siano , , i sottomoduli isomorfi a , , rispettivamente, definiti come nella . Allora    ;    ciascun ha intersezione banale con la somma dei rimanenti (in particolare, se ).       Dato un elemento generico di abbiamo . Abbiamo, dunque, espresso come somma di elementi in , , , rispettivamente e il è dimostrato.  Fissato ora un indice , notiamo che ogni elemento di con è una -upla la cui componente di posto è e, di conseguenza, gli elementi della somma degli con sono -uple la cui componente di posto è . D'altra parte, è formato dalle -uple le cui componenti di posto diverso da sono uguali a . In conclusione, l'unico elemento che appartiene a e alla somma dei rimanenti è . Questo prova il .   "
 },
@@ -12002,7 +12380,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-somma_diretta_moduli.html#def-somma_diretta_interna",
   "type": "Definizione",
-  "number": "24.1.6",
+  "number": "25.1.6",
   "title": "",
   "body": "  Sia un -modulo e siano , , , suoi sottomoduli tali che:    ;    ciascun ha intersezione banale con la somma dei rimanenti.   Diciamo allora che è la somma diretta (interna) dei sottomoduli , , , .   "
 },
@@ -12011,7 +12389,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-somma_diretta_moduli.html#rem-somma_diretta_interna_di_due_addendi",
   "type": "Osservazione",
-  "number": "24.1.7",
+  "number": "25.1.7",
   "title": "",
   "body": " Nel caso in cui sia somma diretta interna di due suoi sottomoduli e , la condizione che ciascuno di essi abbia intersezione banale con la somma dei rimanenti può essere semplicemente formulata dicendo che .  "
 },
@@ -12020,7 +12398,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-somma_diretta_moduli.html#prop-somma_diretta_interna",
   "type": "Proposizione",
-  "number": "24.1.8",
+  "number": "25.1.8",
   "title": "",
   "body": "  Sia un -modulo che sia somma diretta interna dei sottomoduli , , , . Allora è isomorfo alla somma diretta esterna dei moduli , , , (pensati come -moduli indipendenti). Inoltre, ogni elemento di si scrive in un unico modo nella forma con .    Sia e sia definita da . Poiché , la funzione è suriettiva.  La verifica che sia un omomorfismo è immediata.  Per completare la dimostrazione, basta mostrare che è iniettiva (questo implicherà l'unicità della decomposizione ). Sia allora un elemento di , cioè . Mostriamo che per ogni : . Ma allora, appartiene a e alla somma dei rimanenti ed è, dunque, uguale a .   "
 },
@@ -12029,7 +12407,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-somma_diretta_moduli.html#prop-quoziente_somma_diretta",
   "type": "Proposizione",
-  "number": "24.1.9",
+  "number": "25.1.9",
   "title": "",
   "body": "  Sia somma diretta di due suoi sottomoduli e . Allora e .    Dalla , sappiamo che ogni elemento di si scrive in maniera unica come con in e in .  Pertanto, la funzione che manda con in e in nell'elemento è ben definita e si verifica facilmente che è un omomorfismo di moduli. Questo omomorfismo è suriettivo: infatti, se è un qualunque elemento di , allora è immagine degli elementi del tipo con in . Il nucleo di è invece : infatti con in e in appartiene a se e solo se , cioè è un elemento di . Per il , segue allora che . Analogamente, .   "
 },
@@ -12038,7 +12416,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-somma_diretta_moduli.html#prop-somma_diretta_quozienti",
   "type": "Proposizione",
-  "number": "24.1.10",
+  "number": "25.1.10",
   "title": "",
   "body": "  Sia un -modulo e siano , , sottomoduli di , , rispettivamente. Posto allora si ha .    Sia la mappa che manda l'elemento di nell'elemento di . È immediato verificare che è un omomorfismo suriettivo di moduli. Grazie al , basta allora mostrare che : un elemento appartiene a se e solo se per ogni , cioè per ogni , vale a dire se e solo se appartiene a come richiesto.   "
 },
@@ -12047,7 +12425,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-somma_diretta_moduli.html#sec-somma_diretta_moduli-16",
   "type": "Nota",
-  "number": "24.1.11",
+  "number": "25.1.11",
   "title": "",
   "body": " Quando abbiamo parlato di gruppi abbiamo usato il termine di prodotto diretto, mentre per i moduli abbiamo usato il termine di somma diretta. Si potrebbe pensare che ciò dipenda dal fatto che scriviamo preferibilmente i gruppi in notazione moltiplicativa mentre usiamo la notazione additiva per i moduli. In parte è così, soprattutto per ragioni storiche, tuttavia potremmo usare il termine somma diretta per i gruppi (anche se non li scriviamo additivamente) e il termine prodotto diretto per i moduli (anche se non li scriviamo moltiplicativamente). Non entriamo nel dettaglio della definizione generale di somma diretta e di prodotto diretto (che in generale non coincidono): ci basti solo sapere che nei casi che abbiamo considerato le due nozioni sono intercambiabili.  "
 },
@@ -12056,7 +12434,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-somma_diretta_moduli.html#exercises-somma_diretta_moduli-1",
   "type": "Esercizio",
-  "number": "24.1.1",
+  "number": "25.1.1",
   "title": "",
   "body": " Dimostrare la .  "
 },
@@ -12065,7 +12443,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-dipendenza_lineare.html",
   "type": "Paragrafo",
-  "number": "24.2",
+  "number": "25.2",
   "title": "Dipendenza e indipendenza lineare",
   "body": " Dipendenza e indipendenza lineare    Dato un -modulo e degli elementi , , , di , questi sono detti linearmente dipendenti se esistono , , , in non tutti nulli tali che . Sono detti linearmente indipendenti altrimenti, cioè se l'unica possibilità per ottenere come loro combinazione lineare è quella di scegliere tutti gli uguali a .    Come nel caso degli spazi vettoriali, la proprietà di essere o meno linearmente indipendenti, non è una proprietà dei singoli elementi ma una proprietà della lista di elementi considerati.   In pratica, per stabilire se degli elementi , , , di un -modulo sono linearmente dipendenti o indipendenti si procede così: si pone e si risolve questa equazione in cui gli sono le incognite; se si mostra che l'unica soluzione è quella banale con tutti gli nulli, allora gli sono linearmente indipendenti mentre se si trova una soluzione non banale sono linearmente dipendenti.    Come avviene per gli spazi vettoriali, se , , , sono elementi linearmente dipendenti di un -modulo , allora , , , , sono linearmente dipendenti per ogni in . Infatti, se , , , in sono elementi non tutti nulli tali che allora, ponendo , si ha .   Vediamo subito una proprietà che vale per gli spazi vettoriali e che non si generalizza a -moduli qualunque. Sappiamo che quando la lista di vettori considerati è formata da un singolo vettore, essere linearmente indipendente è equivalente a essere diverso da . Ciò non è detto per gli -moduli qualunque.    Sia un gruppo abeliano, pensato come uno -modulo e sia un elemento non nullo di di periodo additivo , allora non è linearmente indipendente: esiste una combinazione lineare non banale di che dà come risultato , e cioè .    Come nel caso degli spazi vettoriali abbiamo la    Dato un -modulo e degli elementi , , , di , questi sono linearmente indipendenti se e solo se ogni elemento del sottomodulo generato da , , , si esprime in maniera unica come loro combinazione lineare.    Supponiamo che ogni elemento del sottomodulo generato da , , , si esprima in maniera unica come loro combinazione lineare: in particolare, ciò vale per l'elemento nullo che, quindi, si può esprimere come loro combinazione lineare solo nel modo banale e, dunque, gli elementi , , , sono linearmente indipendenti.  Viceversa, siano , , , linearmente indipendenti, e sia un elemento del sottomodulo generato da essi: dunque, per la , si può esprimere come con gli in . Se ora abbiamo un'altra espressione di questo tipo per  , sottraendo l'una dall'altra otteniamo . Poiché , , , sono linearmente indipendenti, i coefficienti devono essere tutti nulli, cioè per ogni .    Possiamo ora introdurre il concetto di base.    Gli elementi , , , di un -modulo formano una base se   generano ;    sono linearmente indipendenti.        Non tutti i moduli, anche se possono essere generati da un numero finito di elementi, ammettono una base. Ad esempio, in un gruppo abeliano finito , pensato come -modulo, abbiamo osservato nell' che nessun elemento singolarmente preso è linearmente indipendente. A maggior ragione, presi comunque dei generatori di , questi non formano una base.     Un -modulo che ammette una base è detto modulo libero .      Sia un -modulo libero con una base , , , . Sia un -modulo e siano , , , elementi di (non necessariamente diversi). Allora esiste un unico omomorfismo tale che per ogni .    Per la , ogni elemento di si esprime unicamente come . Poniamo allora . Le verifiche che questo sia un omomorfismo, che mandi ciascun nel corrispondente e che sia l'unico omomorfismo con queste proprietà sono di routine.      Un -modulo è libero se e solo se è isomorfo a per qualche naturale .    Dimostriamo innanzitutto che è libero esibendone esplicitamente una base. Basta prendere, come nel caso degli spazi vettoriali, , , , : si verifica facilmente che questi elementi generano e sono linearmente indipendenti.  Sia ora un modulo libero avente una base , , , . Per la , esiste un unico omomorfismo che manda ciascun in . Si verifica facilmente che questo omomorfismo è un isomorfismo.      Ogni -modulo finitamente generato è quoziente di un modulo libero.    Supponiamo che sia generato dagli elementi , , , . Prendiamo un modulo libero con una base formata da elementi (grazie alla , un modulo libero siffatto esiste, ad esempio ) e, consideriamo l'omomorfismo, dato dalla , che manda gli elementi della base scelta di negli . Tale omomorfismo è ovviamente suriettivo (l'immagine contiene i generatori di ) e, quindi, per il , è isomorfo a un quoziente di .    A differenza di quanto avviene per gli spazi vettoriali, non è detto che tutte le basi di un -modulo libero siano formate dallo stesso numero di elementi. Dare un esempio in cui ci siano basi con un numero differente di elementi non è però semplicissimo ed esula dagli scopi di questo libro. Abbiamo tuttavia il    Sia un anello commutativo e sia un -modulo libero. Allora, tutte le basi di sono formate dallo stesso numero di elementi.    Siano , , , e , , , basi di . Dobbiamo mostrare che . Supponiamo, per assurdo, che .  Ogni elemento di è combinazione lineare degli : ciò in particolare è vero per gli . Possiamo allora scrivere per opportuni in . Analogamente, abbiamo per opportuni in . Combinando le due espressioni troviamo allora . Per la , questa decomposizione di deve coincidere con quella ovvia e, quindi con e nell'intervallo da a .  Consideriamo allora la matrice a righe e colonne il cui elemento di posto è e la matrice a righe e colonne il cui elemento di posto è , vediamo che il prodotto coincide con la matrice identica di ordine . Consideriamo ora la matrice quadrata di ordine che si ottiene attaccando ad delle colonne nulle e la matrice quadrata di ordine che si ottiene attaccando a delle righe nulle. Formalmente, poniamo per e per . Facendo il prodotto vediamo che il suo elemento di posto è e, quindi, . Per il teorema di Binet (che vale nell'ipotesi che l'anello dei coefficienti sia commutativo), otteniamo allora , il che è assurdo, perché , avendo delle colonne nulle, ha determinante nullo.    Il teorema precedente ci permette di dare la     rango del modulo libero    Dato un -modulo libero con anello commutativo, definiamo rango di , denotato con , il numero di elementi di una sua qualsiasi base.      Siano , , , degli -moduli liberi. Allora è libero di rango .    Dimostriamo il caso in cui , lasciando il caso generale per esercizio.  Sia allora . Sia , , , una base di e sia , , , una base di . Consideriamo allora in gli elementi , , , , , e mostriamo che formano una base.  Consideriamo una loro combinazione lineare uguale a : . Con semplici calcoli, otteniamo: da cui segue e e, essendo gli linearmente indipendenti, otteniamo che tutti gli sono nulli e, analogamente, per i . Dunque, gli elementi dati sono linearmente indipendenti.  Sia ora un generico elemento di . Allora è combinazione lineare degli e è combinazione lineare degli . Ma allora si vede immediatamente che è combinazione lineare degli elementi e è combinazione lineare degli elementi . Ma allora, è combinazione lineare degli elementi dati che sono, quindi, generatori di .     La nozione di elementi dipendenti, indipendenti e di base che abbiamo dato coinvolgono un numero finito di elementi. Si potrebbero però introdurre questi concetti per una cardinalità qualunque di elementi, anche infinita.     Completare la dimostrazione della .    Completare la dimostrazione della .    Dimostrare il caso generale della .    "
 },
@@ -12074,7 +12452,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-dipendenza_lineare.html#def-dipendenza_indipendenza_lineare",
   "type": "Definizione",
-  "number": "24.2.1",
+  "number": "25.2.1",
   "title": "",
   "body": "  Dato un -modulo e degli elementi , , , di , questi sono detti linearmente dipendenti se esistono , , , in non tutti nulli tali che . Sono detti linearmente indipendenti altrimenti, cioè se l'unica possibilità per ottenere come loro combinazione lineare è quella di scegliere tutti gli uguali a .   "
 },
@@ -12083,7 +12461,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-dipendenza_lineare.html#sec-dipendenza_lineare-4",
   "type": "Nota",
-  "number": "24.2.2",
+  "number": "25.2.2",
   "title": "",
   "body": " In pratica, per stabilire se degli elementi , , , di un -modulo sono linearmente dipendenti o indipendenti si procede così: si pone e si risolve questa equazione in cui gli sono le incognite; se si mostra che l'unica soluzione è quella banale con tutti gli nulli, allora gli sono linearmente indipendenti mentre se si trova una soluzione non banale sono linearmente dipendenti.  "
 },
@@ -12092,7 +12470,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-dipendenza_lineare.html#rem-sottoinsieme_linearmente_indipendente",
   "type": "Osservazione",
-  "number": "24.2.3",
+  "number": "25.2.3",
   "title": "",
   "body": " Come avviene per gli spazi vettoriali, se , , , sono elementi linearmente dipendenti di un -modulo , allora , , , , sono linearmente dipendenti per ogni in . Infatti, se , , , in sono elementi non tutti nulli tali che allora, ponendo , si ha .  "
 },
@@ -12101,7 +12479,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-dipendenza_lineare.html#ex-periodo_finito_non_indipendente",
   "type": "Esempio",
-  "number": "24.2.4",
+  "number": "25.2.4",
   "title": "",
   "body": "  Sia un gruppo abeliano, pensato come uno -modulo e sia un elemento non nullo di di periodo additivo , allora non è linearmente indipendente: esiste una combinazione lineare non banale di che dà come risultato , e cioè .   "
 },
@@ -12110,7 +12488,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-dipendenza_lineare.html#prop-unica_decomposizione_linearmente_indipendenti",
   "type": "Proposizione",
-  "number": "24.2.5",
+  "number": "25.2.5",
   "title": "",
   "body": "  Dato un -modulo e degli elementi , , , di , questi sono linearmente indipendenti se e solo se ogni elemento del sottomodulo generato da , , , si esprime in maniera unica come loro combinazione lineare.    Supponiamo che ogni elemento del sottomodulo generato da , , , si esprima in maniera unica come loro combinazione lineare: in particolare, ciò vale per l'elemento nullo che, quindi, si può esprimere come loro combinazione lineare solo nel modo banale e, dunque, gli elementi , , , sono linearmente indipendenti.  Viceversa, siano , , , linearmente indipendenti, e sia un elemento del sottomodulo generato da essi: dunque, per la , si può esprimere come con gli in . Se ora abbiamo un'altra espressione di questo tipo per  , sottraendo l'una dall'altra otteniamo . Poiché , , , sono linearmente indipendenti, i coefficienti devono essere tutti nulli, cioè per ogni .   "
 },
@@ -12119,7 +12497,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-dipendenza_lineare.html#def-base_modulo_libero",
   "type": "Definizione",
-  "number": "24.2.6",
+  "number": "25.2.6",
   "title": "",
   "body": "  Gli elementi , , , di un -modulo formano una base se   generano ;    sono linearmente indipendenti.      "
 },
@@ -12128,7 +12506,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-dipendenza_lineare.html#rem-non_base",
   "type": "Osservazione",
-  "number": "24.2.7",
+  "number": "25.2.7",
   "title": "",
   "body": " Non tutti i moduli, anche se possono essere generati da un numero finito di elementi, ammettono una base. Ad esempio, in un gruppo abeliano finito , pensato come -modulo, abbiamo osservato nell' che nessun elemento singolarmente preso è linearmente indipendente. A maggior ragione, presi comunque dei generatori di , questi non formano una base.  "
 },
@@ -12137,7 +12515,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-dipendenza_lineare.html#def-modulo_libero",
   "type": "Definizione",
-  "number": "24.2.8",
+  "number": "25.2.8",
   "title": "",
   "body": "  Un -modulo che ammette una base è detto modulo libero .   "
 },
@@ -12146,7 +12524,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-dipendenza_lineare.html#prop-modulo_libero_e_libero",
   "type": "Proposizione",
-  "number": "24.2.9",
+  "number": "25.2.9",
   "title": "",
   "body": "  Sia un -modulo libero con una base , , , . Sia un -modulo e siano , , , elementi di (non necessariamente diversi). Allora esiste un unico omomorfismo tale che per ogni .    Per la , ogni elemento di si esprime unicamente come . Poniamo allora . Le verifiche che questo sia un omomorfismo, che mandi ciascun nel corrispondente e che sia l'unico omomorfismo con queste proprietà sono di routine.   "
 },
@@ -12155,7 +12533,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-dipendenza_lineare.html#prop-moduli_liberi_n_uple",
   "type": "Proposizione",
-  "number": "24.2.10",
+  "number": "25.2.10",
   "title": "",
   "body": "  Un -modulo è libero se e solo se è isomorfo a per qualche naturale .    Dimostriamo innanzitutto che è libero esibendone esplicitamente una base. Basta prendere, come nel caso degli spazi vettoriali, , , , : si verifica facilmente che questi elementi generano e sono linearmente indipendenti.  Sia ora un modulo libero avente una base , , , . Per la , esiste un unico omomorfismo che manda ciascun in . Si verifica facilmente che questo omomorfismo è un isomorfismo.   "
 },
@@ -12164,7 +12542,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-dipendenza_lineare.html#cor-moduli_fg_quozienti_di_liberi",
   "type": "Corollario",
-  "number": "24.2.11",
+  "number": "25.2.11",
   "title": "",
   "body": "  Ogni -modulo finitamente generato è quoziente di un modulo libero.    Supponiamo che sia generato dagli elementi , , , . Prendiamo un modulo libero con una base formata da elementi (grazie alla , un modulo libero siffatto esiste, ad esempio ) e, consideriamo l'omomorfismo, dato dalla , che manda gli elementi della base scelta di negli . Tale omomorfismo è ovviamente suriettivo (l'immagine contiene i generatori di ) e, quindi, per il , è isomorfo a un quoziente di .   "
 },
@@ -12173,7 +12551,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-dipendenza_lineare.html#thm-commutativo_IBN",
   "type": "Teorema",
-  "number": "24.2.12",
+  "number": "25.2.12",
   "title": "",
   "body": "  Sia un anello commutativo e sia un -modulo libero. Allora, tutte le basi di sono formate dallo stesso numero di elementi.    Siano , , , e , , , basi di . Dobbiamo mostrare che . Supponiamo, per assurdo, che .  Ogni elemento di è combinazione lineare degli : ciò in particolare è vero per gli . Possiamo allora scrivere per opportuni in . Analogamente, abbiamo per opportuni in . Combinando le due espressioni troviamo allora . Per la , questa decomposizione di deve coincidere con quella ovvia e, quindi con e nell'intervallo da a .  Consideriamo allora la matrice a righe e colonne il cui elemento di posto è e la matrice a righe e colonne il cui elemento di posto è , vediamo che il prodotto coincide con la matrice identica di ordine . Consideriamo ora la matrice quadrata di ordine che si ottiene attaccando ad delle colonne nulle e la matrice quadrata di ordine che si ottiene attaccando a delle righe nulle. Formalmente, poniamo per e per . Facendo il prodotto vediamo che il suo elemento di posto è e, quindi, . Per il teorema di Binet (che vale nell'ipotesi che l'anello dei coefficienti sia commutativo), otteniamo allora , il che è assurdo, perché , avendo delle colonne nulle, ha determinante nullo.   "
 },
@@ -12182,7 +12560,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-dipendenza_lineare.html#def-rango_modulo_libero",
   "type": "Definizione",
-  "number": "24.2.13",
+  "number": "25.2.13",
   "title": "",
   "body": "   rango del modulo libero    Dato un -modulo libero con anello commutativo, definiamo rango di , denotato con , il numero di elementi di una sua qualsiasi base.   "
 },
@@ -12191,7 +12569,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-dipendenza_lineare.html#prop-somma_diretta_di_liberi",
   "type": "Proposizione",
-  "number": "24.2.14",
+  "number": "25.2.14",
   "title": "",
   "body": "  Siano , , , degli -moduli liberi. Allora è libero di rango .    Dimostriamo il caso in cui , lasciando il caso generale per esercizio.  Sia allora . Sia , , , una base di e sia , , , una base di . Consideriamo allora in gli elementi , , , , , e mostriamo che formano una base.  Consideriamo una loro combinazione lineare uguale a : . Con semplici calcoli, otteniamo: da cui segue e e, essendo gli linearmente indipendenti, otteniamo che tutti gli sono nulli e, analogamente, per i . Dunque, gli elementi dati sono linearmente indipendenti.  Sia ora un generico elemento di . Allora è combinazione lineare degli e è combinazione lineare degli . Ma allora si vede immediatamente che è combinazione lineare degli elementi e è combinazione lineare degli elementi . Ma allora, è combinazione lineare degli elementi dati che sono, quindi, generatori di .   "
 },
@@ -12200,7 +12578,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-dipendenza_lineare.html#sec-dipendenza_lineare-22",
   "type": "Nota",
-  "number": "24.2.15",
+  "number": "25.2.15",
   "title": "",
   "body": " La nozione di elementi dipendenti, indipendenti e di base che abbiamo dato coinvolgono un numero finito di elementi. Si potrebbero però introdurre questi concetti per una cardinalità qualunque di elementi, anche infinita.  "
 },
@@ -12209,7 +12587,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-dipendenza_lineare.html#exercises-dipendenza_lineare-1",
   "type": "Esercizio",
-  "number": "24.2.1",
+  "number": "25.2.1",
   "title": "",
   "body": " Completare la dimostrazione della .  "
 },
@@ -12218,7 +12596,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-dipendenza_lineare.html#exercises-dipendenza_lineare-2",
   "type": "Esercizio",
-  "number": "24.2.2",
+  "number": "25.2.2",
   "title": "",
   "body": " Completare la dimostrazione della .  "
 },
@@ -12227,7 +12605,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-dipendenza_lineare.html#exercises-dipendenza_lineare-3",
   "type": "Esercizio",
-  "number": "24.2.3",
+  "number": "25.2.3",
   "title": "",
   "body": " Dimostrare il caso generale della .  "
 },
@@ -12236,7 +12614,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-elementi_di_torsione.html",
   "type": "Paragrafo",
-  "number": "24.3",
+  "number": "25.3",
   "title": "Elementi di torsione",
   "body": " Elementi di torsione  Abbiamo visto nell' che, per un elemento di un -modulo, essere linearmente indipendente non è, in generale, equivalente a essere non nullo. Ciò suggerisce la     annullatore di    Dato un elemento di un -modulo , l' annullatore di , denotato , è l'insieme degli elementi di tali che .      Dato un elemento di un -modulo , l'annullatore di è un ideale destro di . L'elemento è linearmente indipendente se e solo se . Inoltre, il sottomodulo generato da è isomorfo a .    Il fatto che sia linearmente indipendente se e solo se segue immediatamente dalla definizione.  Consideriamo la funzione che manda in . Si verifica facilmente che è un omomorfismo di -moduli il cui nucleo è . Grazie alla , l'immagine di è il sottomodulo generato da : per il , .      Se è un -modulo su un dominio di integrità , un elemento si dice di torsione se è non banale. Il modulo è detto di torsione se ogni suo elemento è di torsione.         torsione del modulo  Sia un -modulo su un dominio di integrità . Allora il sottoinsieme formato dagli elementi di torsione di è un sottomodulo detto sottomodulo di torsione .    Chiaramente perché è di torsione. Se e sono elementi di allora in esistono e non nulli tali che e . Dunque, , cioè , poiché essendo un dominio. Inoltre, per ogni , si ha e, quindi, .     Possiamo dire che un -modulo su un dominio di integrità è di torsione se e solo se .    Nella , l'ipotesi che sia un dominio (cioè un anello commutativo intero) non può essere tralasciata (vedi ). Per questo motivo, anche se di per sé si potrebbe dare la definizione di elemento di torsione per un -modulo con anello qualunque, abbiamo preferito limitare questa definizione al solo caso in cui l'anello sia un dominio.     Un -modulo su un dominio di integrità si dice privo di torsione se , vale a dire se tutti gli elementi non nulli hanno annullatore banale.      Un -modulo libero su un dominio di integrità è privo di torsione.    Per la , è sufficiente verificarlo nel caso in cui per qualche . Sia un elemento non nullo di : ciò significa che esiste tale che . Se è nell'annullatore di si ha allora . In particolare, : dal momento che è un dominio e ne segue che .      Se è un -modulo su un dominio di integrità , allora il modulo quoziente è privo di torsione.    Sia un elemento di torsione di : dunque, esiste in non nullo tale che , cioè . Ma allora esiste in non nullo tale che , cioè . Poiché è un dominio, si ha e, di conseguenza, , cioè è lo zero di .      Calcolare l'annullatore di ogni elemento di pensato come modulo destro su sé stesso. Verificare che l'insieme degli elementi con annullatore non banale non è un sottomodulo.   Si ha , , , , , . Gli elementi e hanno annullatore non banale, ma no e, dunque, gli elementi con annullatore non banale non formano un sottomodulo.    "
 },
@@ -12245,7 +12623,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-elementi_di_torsione.html#def-annullatore",
   "type": "Definizione",
-  "number": "24.3.1",
+  "number": "25.3.1",
   "title": "",
   "body": "   annullatore di    Dato un elemento di un -modulo , l' annullatore di , denotato , è l'insieme degli elementi di tali che .   "
 },
@@ -12254,7 +12632,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-elementi_di_torsione.html#prop-annullatore_ideale",
   "type": "Proposizione",
-  "number": "24.3.2",
+  "number": "25.3.2",
   "title": "",
   "body": "  Dato un elemento di un -modulo , l'annullatore di è un ideale destro di . L'elemento è linearmente indipendente se e solo se . Inoltre, il sottomodulo generato da è isomorfo a .    Il fatto che sia linearmente indipendente se e solo se segue immediatamente dalla definizione.  Consideriamo la funzione che manda in . Si verifica facilmente che è un omomorfismo di -moduli il cui nucleo è . Grazie alla , l'immagine di è il sottomodulo generato da : per il , .   "
 },
@@ -12263,7 +12641,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-elementi_di_torsione.html#def-elemento_di_torsione",
   "type": "Definizione",
-  "number": "24.3.3",
+  "number": "25.3.3",
   "title": "",
   "body": "  Se è un -modulo su un dominio di integrità , un elemento si dice di torsione se è non banale. Il modulo è detto di torsione se ogni suo elemento è di torsione.   "
 },
@@ -12272,7 +12650,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-elementi_di_torsione.html#prop-torsione_sottomodulo",
   "type": "Proposizione",
-  "number": "24.3.4",
+  "number": "25.3.4",
   "title": "",
   "body": "     torsione del modulo  Sia un -modulo su un dominio di integrità . Allora il sottoinsieme formato dagli elementi di torsione di è un sottomodulo detto sottomodulo di torsione .    Chiaramente perché è di torsione. Se e sono elementi di allora in esistono e non nulli tali che e . Dunque, , cioè , poiché essendo un dominio. Inoltre, per ogni , si ha e, quindi, .   "
 },
@@ -12281,7 +12659,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-elementi_di_torsione.html#rem-tutto_torsione",
   "type": "Osservazione",
-  "number": "24.3.5",
+  "number": "25.3.5",
   "title": "",
   "body": " Possiamo dire che un -modulo su un dominio di integrità è di torsione se e solo se .  "
 },
@@ -12290,7 +12668,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-elementi_di_torsione.html#rem-torsione_non_dominio",
   "type": "Osservazione",
-  "number": "24.3.6",
+  "number": "25.3.6",
   "title": "",
   "body": " Nella , l'ipotesi che sia un dominio (cioè un anello commutativo intero) non può essere tralasciata (vedi ). Per questo motivo, anche se di per sé si potrebbe dare la definizione di elemento di torsione per un -modulo con anello qualunque, abbiamo preferito limitare questa definizione al solo caso in cui l'anello sia un dominio.  "
 },
@@ -12299,7 +12677,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-elementi_di_torsione.html#def-privo_di_torsione",
   "type": "Definizione",
-  "number": "24.3.7",
+  "number": "25.3.7",
   "title": "",
   "body": "  Un -modulo su un dominio di integrità si dice privo di torsione se , vale a dire se tutti gli elementi non nulli hanno annullatore banale.   "
 },
@@ -12308,7 +12686,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-elementi_di_torsione.html#prop-libero_privo_di_torsione",
   "type": "Proposizione",
-  "number": "24.3.8",
+  "number": "25.3.8",
   "title": "",
   "body": "  Un -modulo libero su un dominio di integrità è privo di torsione.    Per la , è sufficiente verificarlo nel caso in cui per qualche . Sia un elemento non nullo di : ciò significa che esiste tale che . Se è nell'annullatore di si ha allora . In particolare, : dal momento che è un dominio e ne segue che .   "
 },
@@ -12317,7 +12695,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-elementi_di_torsione.html#prop-quoziente_su_torsione",
   "type": "Proposizione",
-  "number": "24.3.9",
+  "number": "25.3.9",
   "title": "",
   "body": "  Se è un -modulo su un dominio di integrità , allora il modulo quoziente è privo di torsione.    Sia un elemento di torsione di : dunque, esiste in non nullo tale che , cioè . Ma allora esiste in non nullo tale che , cioè . Poiché è un dominio, si ha e, di conseguenza, , cioè è lo zero di .   "
 },
@@ -12326,7 +12704,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-elementi_di_torsione.html#exercise-torsione_non_dominio",
   "type": "Esercizio",
-  "number": "24.3.1",
+  "number": "25.3.1",
   "title": "",
   "body": " Calcolare l'annullatore di ogni elemento di pensato come modulo destro su sé stesso. Verificare che l'insieme degli elementi con annullatore non banale non è un sottomodulo.   Si ha , , , , , . Gli elementi e hanno annullatore non banale, ma no e, dunque, gli elementi con annullatore non banale non formano un sottomodulo.  "
 },
@@ -12335,7 +12713,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-moduli_ciclici.html",
   "type": "Paragrafo",
-  "number": "25.1",
+  "number": "26.1",
   "title": "Moduli ciclici",
   "body": " Moduli ciclici  Ricordiamo che, in tutto questo capitolo, indichiamo con un dominio a ideali principali.  Volendo classificare i -moduli finitamente generati, cominciamo dal caso più semplice; cioè quello in cui abbiamo moduli generati da un singolo elemento. Utilizzeremo, con qualche adattamento, la terminologia utilizzata per i gruppi ciclici.    Se è un elemento di un -modulo, chiamiamo ordine di un qualunque generatore di .     Due elementi di generano lo stesso ideale principale se e solo se sono associati. In particolare, dato un elemento di un -modulo, l'ideale è generato da un elemento o da un qualsiasi elemento a esso associato: anche se non è, in genere, univocamente determinato, diremo, con un abuso di linguaggio, che è l'ordine dell'elemento . Più precisamente, dovremmo dire che è l' ideale ordine di .    Un elemento di un -modulo ha ordine se e solo se . Un elemento ha ordine se e solo se , cioè non è un elemento di torsione.    Sia un gruppo abeliano, visto come -modulo. Se è un elemento di di periodo finito , allora l'elemento ha ordine nello -modulo. Se, invece, ha periodo infinito, il suo ordine nello -modulo è .     Un -modulo è detto ciclico se è generato da un singolo elemento.     Dalla sappiamo che il -modulo ciclico generato da un elemento è isomorfo al quoziente : abbiamo dunque dove è l'ordine di , e, per alleggerire la notazione, scriveremo semplicemente .   In analogia al abbiamo la    Ogni sottomodulo di un modulo ciclico è ciclico.    Un modulo ciclico è isomorfo a un quoziente per qualche in . Per il , i sottomoduli di sono del tipo dove è un sottomodulo di contenente , ovvero un ideale di contenente : poiché è un domino a ideali principali, è generato come ideale (e, quindi, come modulo) da un singolo elemento . Pertanto, il quoziente è generato dal laterale .      Se è un elemento di ordine , gli elementi del modulo ciclico generato da hanno ordine che divide .    Se è un elemento di , allora per qualche in e, dunque, . Ma allora, contiene e, detto un qualsiasi generatore di , abbiamo che divide .    La proposizione precedente ci dice, in particolare, che se e sono elementi che generano lo stesso modulo ciclico, allora l'ordine di e l'ordine di si dividono reciprocamente: usando la convenzione che abbiamo posto di non distinguere tra elementi associati quando parliamo di ordine di un elemento, possiamo dire che gli elementi e hanno lo stesso ordine. Ciò giustifica la    Dato un -modulo ciclico , il suo ordine  è l'ordine di un qualsiasi elemento che genera .     L'ordine di un -modulo ciclico non è (in generale) un numero e non va quindi interpretato come il numero degli elementi del modulo. In particolare, dire che l'ordine è significa che è generato da un elemento il cui annullatore è banale e, pertanto, il modulo è isomorfo a : dunque, pensato come -modulo su sé stesso ha, in questa terminologia, ordine (mentre, nella tipica terminologia gruppale in cui l'ordine indica il numero degli elementi, ha ordine infinito).   In analogia al , abbiamo la    Due moduli ciclici sono isomorfi se e solo se hanno lo stesso ordine.    Se e sono isomorfi è facile vedere che hanno lo stesso ordine ( ). Viceversa, se due moduli ciclici hanno ordine , allora sono entrambi isomorfi a e sono, dunque, isomorfi tra loro.     Sia una somma diretta di -moduli e sia un elemento di . Un elemento di annulla se e solo se annulla tutti gli ; dunque, l'ordine di è il minimo comune multiplo degli ordini degli elementi . In particolare, è di torsione se e solo se tutti gli sono di torsione.   Abbiamo visto che ogni elemento di un modulo ciclico ha ordine che divide l'ordine del modulo. Ma come possiamo determinare l'ordine di tale elemento? Distinguiamo i casi in cui il modulo abbia ordine da quello in cui ha ordine diverso da . Nel primo caso abbiamo un risultato che ricalca il fatto che i sottogruppi non banali di un gruppo ciclico infinito sono anch'essi infiniti ( ).    Sia un modulo ciclico di ordine . Allora ogni elemento non nullo di ha ordine .    Sia un generatore di e sia un elemento non nullo di : dunque per qualche elemento non nullo di . Se , abbiamo , cioè . Poiché ha ordine , ciò implica che e, essendo , otteniamo : quindi, ha ordine .    Nel caso in cui l'ordine del modulo sia diverso da , abbiamo una formula che rispecchia l'analoga formula per l'ordine degli elementi di un gruppo ciclico finito ( ).    Sia un -modulo ciclico generato da un elemento di ordine con . Se con e è il massimo comun divisore di e , allora ha ordine dove è l'elemento di tale che .    Sia : dunque, e sono elementi coprimi di ( ). Dato , si ha , e dunque se e solo se , cioè se e solo se divide , vale a dire . Ma (altrimenti ) e, dunque, ciò è equivalente a : poiché e sono coprimi, ciò avviene se e solo se è multiplo di ( ). Abbiamo dunque mostrato che l'annullatore di è formato da tutti e soli i multipli di che è, dunque, l'ordine di .      Sia un modulo ciclico di ordine con . Se è un sottomodulo di di ordine , allora .    Sia un generatore di e sia un generatore di . Dunque per qualche in e dobbiamo mostrare che è multiplo di . Se è il massimo comune divisore tra e , abbiamo che e per qualche e in . Inoltre, per la , esistono e in tali che . Abbiamo allora : dunque è multiplo dell'ordine di , cioè e, d'altra parte, essendo , ne segue che e sono associati. Poiché , ciò significa che è invertibile. Ma allora , cioè è multiplo di .    In analogia a quanto avviene per i gruppi ciclici finiti ( ), abbiamo una descrizione dei sottomoduli di un modulo ciclico di ordine non nullo.    Sia un modulo ciclico di ordine con . Per ogni divisore di esiste esattamente un sottomodulo di di ordine e il quoziente è ciclico di ordine dove è tale che .    Sia tale che . Detto un generatore di , per la gli elementi di di ordine sono quelli del tipo con elemento di tale che . Dunque, genera un sottomodulo di ordine . Preso un altro sottomodulo di ordine , generato da un certo , abbiamo che è multiplo di , e, di conseguenza è multiplo di . Dunque, è contenuto in , ed entrambi hanno ordine : per il coincidono.  Consideriamo ora il quoziente : esso è generato dal laterale . Dato , si ha che se e solo se : poiché è generato da , per mostrare che ha ordine dobbiamo provare che se e solo se è multiplo di . Se è multiplo di , allora è multiplo di e, quindi, appartiene a . Viceversa, se appartiene a , allora esiste tale che , cioè . Poiché ha ordine , abbiamo che è multiplo di e, quindi, di e, di conseguenza, anche è multiplo di .    Il prodotto diretto di due gruppi ciclici non banali è un gruppo ciclico se e solo se i due gruppi sono finiti di ordine coprimo ( ). Analogamente, abbiamo la    Siano e due moduli ciclici di ordine rispettivamente e entrambi diversi da (cioè e sono entrambi non banali). Il modulo è ciclico se e solo se e sono entrambi non nulli e coprimi: in tal caso ha ordine .    Siano un generatore di e un generatore di .  Supponiamo che e siano entrambi non nulli e coprimi e sia che, grazie all' , ha ordine . Mostriamo che è generato da . Poiché il massimo comun divisore tra e è , per la , esistono e in tali che . Ora : pertanto, appartiene al sottomodulo generato da . Analogamente, appartiene al sottomodulo generato da . Poiché è generato da e , il sottomodulo generato da coincide con .  Viceversa, supponiamo che sia ciclico, generato da un suo elemento . In particolare, esistono e in tali che e : si noti che e sono non nulli perché e . Ora e : d'altra parte e, pertanto, . Ma allora e : dunque, sia che hanno annullatore non nullo. Sia ora il massimo comun divisore di e . Per la , contiene un sottomodulo di ordine come pure : essendo ciclico, un ulteriore utilizzo della implica che tali sottomoduli devono coincidere ed essere quindi contenuti in . Ma , cioè l'ordine di è e, quindi, divide cioè .    Applicando ripetutamente la proposizione precedente, otteniamo il:    Sia un elemento di con e non invertibile. Posto con , , irriducibili a due a due non associati e , , interi positivi, si ha       Dimostrare che se è un elemento di un -modulo e è un elemento di , allora se e solo se l'ordine di divide . In particolare, se è irriducibile. allora ha ordine oppure .   Dire che è equivalente a dire che , cioè all'ideale principale generato dall'ordine di . Otteniamo dunque subito la tesi.    Sia un omomorfismo tra -moduli e sia un elemento di . Mostrare che l'ordine di divide l'ordine di e che se è iniettivo, allora l'ordine di è uguale all'ordine di .   Sia l'ordine di : allora : poiché annulla l'ordine di è un divisore di . Supponiamo ora che sia iniettivo e che sia l'ordine di : abbiamo allora e, poiché è iniettivo abbiamo che cioè annulla . L'ordine di divide allora l'ordine di e, poiché l'ordine di e l'ordine di si dividono reciprocamente sono dunque associati) cioè e hanno lo stesso ordine).    "
 },
@@ -12344,7 +12722,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_ciclici.html#def-ordine_elemento_modulo_su_PID",
   "type": "Definizione",
-  "number": "25.1.1",
+  "number": "26.1.1",
   "title": "",
   "body": "  Se è un elemento di un -modulo, chiamiamo ordine di un qualunque generatore di .   "
 },
@@ -12353,7 +12731,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_ciclici.html#sec-moduli_ciclici-5",
   "type": "Nota",
-  "number": "25.1.2",
+  "number": "26.1.2",
   "title": "",
   "body": " Due elementi di generano lo stesso ideale principale se e solo se sono associati. In particolare, dato un elemento di un -modulo, l'ideale è generato da un elemento o da un qualsiasi elemento a esso associato: anche se non è, in genere, univocamente determinato, diremo, con un abuso di linguaggio, che è l'ordine dell'elemento . Più precisamente, dovremmo dire che è l' ideale ordine di .  "
 },
@@ -12362,7 +12740,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_ciclici.html#rem-ordine_1_e_0",
   "type": "Osservazione",
-  "number": "25.1.3",
+  "number": "26.1.3",
   "title": "",
   "body": " Un elemento di un -modulo ha ordine se e solo se . Un elemento ha ordine se e solo se , cioè non è un elemento di torsione.  "
 },
@@ -12371,7 +12749,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_ciclici.html#rem-ordine_Z_moduli",
   "type": "Osservazione",
-  "number": "25.1.4",
+  "number": "26.1.4",
   "title": "",
   "body": " Sia un gruppo abeliano, visto come -modulo. Se è un elemento di di periodo finito , allora l'elemento ha ordine nello -modulo. Se, invece, ha periodo infinito, il suo ordine nello -modulo è .  "
 },
@@ -12380,7 +12758,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_ciclici.html#def-moduli_ciclici",
   "type": "Definizione",
-  "number": "25.1.5",
+  "number": "26.1.5",
   "title": "",
   "body": "  Un -modulo è detto ciclico se è generato da un singolo elemento.   "
 },
@@ -12389,7 +12767,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_ciclici.html#sec-moduli_ciclici-9",
   "type": "Nota",
-  "number": "25.1.6",
+  "number": "26.1.6",
   "title": "",
   "body": " Dalla sappiamo che il -modulo ciclico generato da un elemento è isomorfo al quoziente : abbiamo dunque dove è l'ordine di , e, per alleggerire la notazione, scriveremo semplicemente .  "
 },
@@ -12398,7 +12776,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_ciclici.html#prop-sottomodulo_di_ciclico_ciclico",
   "type": "Proposizione",
-  "number": "25.1.7",
+  "number": "26.1.7",
   "title": "",
   "body": "  Ogni sottomodulo di un modulo ciclico è ciclico.    Un modulo ciclico è isomorfo a un quoziente per qualche in . Per il , i sottomoduli di sono del tipo dove è un sottomodulo di contenente , ovvero un ideale di contenente : poiché è un domino a ideali principali, è generato come ideale (e, quindi, come modulo) da un singolo elemento . Pertanto, il quoziente è generato dal laterale .   "
 },
@@ -12407,7 +12785,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_ciclici.html#prop-lagrange_moduli",
   "type": "Proposizione",
-  "number": "25.1.8",
+  "number": "26.1.8",
   "title": "",
   "body": "  Se è un elemento di ordine , gli elementi del modulo ciclico generato da hanno ordine che divide .    Se è un elemento di , allora per qualche in e, dunque, . Ma allora, contiene e, detto un qualsiasi generatore di , abbiamo che divide .   "
 },
@@ -12416,7 +12794,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_ciclici.html#def-ordine_modulo_ciclico",
   "type": "Definizione",
-  "number": "25.1.9",
+  "number": "26.1.9",
   "title": "",
   "body": "  Dato un -modulo ciclico , il suo ordine  è l'ordine di un qualsiasi elemento che genera .   "
 },
@@ -12425,7 +12803,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_ciclici.html#rem-ordine_non_numero",
   "type": "Osservazione",
-  "number": "25.1.10",
+  "number": "26.1.10",
   "title": "",
   "body": " L'ordine di un -modulo ciclico non è (in generale) un numero e non va quindi interpretato come il numero degli elementi del modulo. In particolare, dire che l'ordine è significa che è generato da un elemento il cui annullatore è banale e, pertanto, il modulo è isomorfo a : dunque, pensato come -modulo su sé stesso ha, in questa terminologia, ordine (mentre, nella tipica terminologia gruppale in cui l'ordine indica il numero degli elementi, ha ordine infinito).  "
 },
@@ -12434,7 +12812,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_ciclici.html#prop-moduli_ciclici_stesso_ordine",
   "type": "Proposizione",
-  "number": "25.1.11",
+  "number": "26.1.11",
   "title": "",
   "body": "  Due moduli ciclici sono isomorfi se e solo se hanno lo stesso ordine.    Se e sono isomorfi è facile vedere che hanno lo stesso ordine ( ). Viceversa, se due moduli ciclici hanno ordine , allora sono entrambi isomorfi a e sono, dunque, isomorfi tra loro.   "
 },
@@ -12443,7 +12821,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_ciclici.html#rem-ordine_somma_diretta",
   "type": "Osservazione",
-  "number": "25.1.12",
+  "number": "26.1.12",
   "title": "",
   "body": " Sia una somma diretta di -moduli e sia un elemento di . Un elemento di annulla se e solo se annulla tutti gli ; dunque, l'ordine di è il minimo comune multiplo degli ordini degli elementi . In particolare, è di torsione se e solo se tutti gli sono di torsione.  "
 },
@@ -12452,7 +12830,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_ciclici.html#prop-sottomoduli_ordine_0",
   "type": "Proposizione",
-  "number": "25.1.13",
+  "number": "26.1.13",
   "title": "",
   "body": "  Sia un modulo ciclico di ordine . Allora ogni elemento non nullo di ha ordine .    Sia un generatore di e sia un elemento non nullo di : dunque per qualche elemento non nullo di . Se , abbiamo , cioè . Poiché ha ordine , ciò implica che e, essendo , otteniamo : quindi, ha ordine .   "
 },
@@ -12461,7 +12839,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_ciclici.html#prop-ordine_sottomodulo_modulo_ciclico",
   "type": "Proposizione",
-  "number": "25.1.14",
+  "number": "26.1.14",
   "title": "",
   "body": "  Sia un -modulo ciclico generato da un elemento di ordine con . Se con e è il massimo comun divisore di e , allora ha ordine dove è l'elemento di tale che .    Sia : dunque, e sono elementi coprimi di ( ). Dato , si ha , e dunque se e solo se , cioè se e solo se divide , vale a dire . Ma (altrimenti ) e, dunque, ciò è equivalente a : poiché e sono coprimi, ciò avviene se e solo se è multiplo di ( ). Abbiamo dunque mostrato che l'annullatore di è formato da tutti e soli i multipli di che è, dunque, l'ordine di .   "
 },
@@ -12470,7 +12848,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_ciclici.html#lem-sottomodulo_stesso_ordine",
   "type": "Lemma",
-  "number": "25.1.15",
+  "number": "26.1.15",
   "title": "",
   "body": "  Sia un modulo ciclico di ordine con . Se è un sottomodulo di di ordine , allora .    Sia un generatore di e sia un generatore di . Dunque per qualche in e dobbiamo mostrare che è multiplo di . Se è il massimo comune divisore tra e , abbiamo che e per qualche e in . Inoltre, per la , esistono e in tali che . Abbiamo allora : dunque è multiplo dell'ordine di , cioè e, d'altra parte, essendo , ne segue che e sono associati. Poiché , ciò significa che è invertibile. Ma allora , cioè è multiplo di .   "
 },
@@ -12479,7 +12857,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_ciclici.html#prop-unico_sottomodulo",
   "type": "Proposizione",
-  "number": "25.1.16",
+  "number": "26.1.16",
   "title": "",
   "body": "  Sia un modulo ciclico di ordine con . Per ogni divisore di esiste esattamente un sottomodulo di di ordine e il quoziente è ciclico di ordine dove è tale che .    Sia tale che . Detto un generatore di , per la gli elementi di di ordine sono quelli del tipo con elemento di tale che . Dunque, genera un sottomodulo di ordine . Preso un altro sottomodulo di ordine , generato da un certo , abbiamo che è multiplo di , e, di conseguenza è multiplo di . Dunque, è contenuto in , ed entrambi hanno ordine : per il coincidono.  Consideriamo ora il quoziente : esso è generato dal laterale . Dato , si ha che se e solo se : poiché è generato da , per mostrare che ha ordine dobbiamo provare che se e solo se è multiplo di . Se è multiplo di , allora è multiplo di e, quindi, appartiene a . Viceversa, se appartiene a , allora esiste tale che , cioè . Poiché ha ordine , abbiamo che è multiplo di e, quindi, di e, di conseguenza, anche è multiplo di .   "
 },
@@ -12488,7 +12866,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_ciclici.html#prop-somma_diretta_ciclici",
   "type": "Proposizione",
-  "number": "25.1.17",
+  "number": "26.1.17",
   "title": "",
   "body": "  Siano e due moduli ciclici di ordine rispettivamente e entrambi diversi da (cioè e sono entrambi non banali). Il modulo è ciclico se e solo se e sono entrambi non nulli e coprimi: in tal caso ha ordine .    Siano un generatore di e un generatore di .  Supponiamo che e siano entrambi non nulli e coprimi e sia che, grazie all' , ha ordine . Mostriamo che è generato da . Poiché il massimo comun divisore tra e è , per la , esistono e in tali che . Ora : pertanto, appartiene al sottomodulo generato da . Analogamente, appartiene al sottomodulo generato da . Poiché è generato da e , il sottomodulo generato da coincide con .  Viceversa, supponiamo che sia ciclico, generato da un suo elemento . In particolare, esistono e in tali che e : si noti che e sono non nulli perché e . Ora e : d'altra parte e, pertanto, . Ma allora e : dunque, sia che hanno annullatore non nullo. Sia ora il massimo comun divisore di e . Per la , contiene un sottomodulo di ordine come pure : essendo ciclico, un ulteriore utilizzo della implica che tali sottomoduli devono coincidere ed essere quindi contenuti in . Ma , cioè l'ordine di è e, quindi, divide cioè .   "
 },
@@ -12497,7 +12875,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_ciclici.html#cor-ciclici_primari_distinti",
   "type": "Corollario",
-  "number": "25.1.18",
+  "number": "26.1.18",
   "title": "",
   "body": "  Sia un elemento di con e non invertibile. Posto con , , irriducibili a due a due non associati e , , interi positivi, si ha    "
 },
@@ -12506,7 +12884,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_ciclici.html#exercises-moduli_ciclici-1",
   "type": "Esercizio",
-  "number": "25.1.1",
+  "number": "26.1.1",
   "title": "",
   "body": " Dimostrare che se è un elemento di un -modulo e è un elemento di , allora se e solo se l'ordine di divide . In particolare, se è irriducibile. allora ha ordine oppure .   Dire che è equivalente a dire che , cioè all'ideale principale generato dall'ordine di . Otteniamo dunque subito la tesi.  "
 },
@@ -12515,7 +12893,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_ciclici.html#exercise-ordine_immagine",
   "type": "Esercizio",
-  "number": "25.1.2",
+  "number": "26.1.2",
   "title": "",
   "body": " Sia un omomorfismo tra -moduli e sia un elemento di . Mostrare che l'ordine di divide l'ordine di e che se è iniettivo, allora l'ordine di è uguale all'ordine di .   Sia l'ordine di : allora : poiché annulla l'ordine di è un divisore di . Supponiamo ora che sia iniettivo e che sia l'ordine di : abbiamo allora e, poiché è iniettivo abbiamo che cioè annulla . L'ordine di divide allora l'ordine di e, poiché l'ordine di e l'ordine di si dividono reciprocamente sono dunque associati) cioè e hanno lo stesso ordine).  "
 },
@@ -12524,7 +12902,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-moduli_primari.html",
   "type": "Paragrafo",
-  "number": "25.2",
+  "number": "26.2",
   "title": "Moduli primari",
   "body": " Moduli primari  Ricordiamo che, in tutto questo capitolo, indichiamo con un dominio a ideali principali.    Dato un elemento irriducibile di , un elemento di un -modulo è detto -elemento se ha ordine una potenza di . Un -modulo si dice -primario se tutti i suoi elementi sono -elementi. Un -modulo è detto primario se è -primario per qualche irriducibile .     Per verificare che un elemento è un -elemento è sufficiente trovare una potenza di che annulli perché in tal caso il suo ordine è un divisore di , cioè a sua volta una potenza di .    Grazie alla , un modulo ciclico è -primario se e solo se ha ordine una potenza di . Pertanto, il dice che ogni modulo ciclico di ordine diverso da e da si esprime come somma diretta di ciclici primari relativi a irriducibili a due a due non associati.     Il sottoinsieme formato dai -elementi di un -modulo è un sottomodulo di contenuto in : esso è il più grande sottomodulo -primario di ed è detto componente -primaria di .    Poiché si ha . Siano e due elementi di di ordini e rispettivamente. Detto , abbiamo ; inoltre, per ogni in si ha ; dunque e appartengono a , cioè è un sottomodulo. Poiché è formato esattamente da tutti i -elementi di , è il più grande sottomodulo -primario di .      Questo risultato, applicato agli -moduli, cioè ai gruppi abeliani, ci dice che l'insieme dei -elementi è un sottogruppo (più precisamente è l'unico -sottogruppo di Sylow). Ciò non è però in generale vero per gruppi non abeliani: ad esempio gli scambi e in sono -elementi (hanno ordine ) mentre il loro prodotto non è un -elemento (ha ordine ).       zoccolo di un modulo primario    Lo zoccolo  di un -modulo -primario è il sottoinsieme di formato dagli elementi tali che .      Se è un elemento irriducibile di , allora l'anello quoziente è un campo.    Poiché è un anello commutativo, per la è sufficiente mostrare che non ha ideali propri e non banali. Per il , un ideale di è della forma dove è un ideale di contenente . Se genera , allora divide : quindi, o è invertibile, nel qual caso e , o è associato a , nel qual caso e .      Lo zoccolo di un modulo -primario è un sottomodulo di che può essere visto come -spazio vettoriale. Inoltre, un insieme di elementi genera come -modulo se e solo se lo genera come -spazio vettoriale.    Chiaramente appartiene a che è, dunque, non vuoto. Se e appartengono a e allora e , cioè e appartengono a che è, dunque, un sottomodulo di .  Se appartiene a e è un elemento di , poniamo . Questa moltiplicazione è ben definita: se infatti è un elemento di tale che , cioè per qualche in , allora . È immediato poi mostrare che con questa moltiplicazione risulta essere un -spazio vettoriale e che -generatori e -generatori sono la stessa cosa.      Sia un -modulo ciclico di ordine con irriducibile e . Allora è ciclico di ordine e è ciclico di ordine . In particolare, ha dimensione come -spazio vettoriale.    Per la , sappiamo che ha un unico sottomodulo ciclico di ordine e che il quoziente di su questo sottomodulo ha ordine . Poiché gli elementi dello zoccolo hanno ordine che divide , questo sottomodulo coincide con lo zoccolo. Dalla , segue immediatamente che la dimensione di come -spazio vettoriale è .      Sia un elemento irriducibile di e sia somma diretta di -moduli ciclici -primari (con ciascun ). Posto e per , la dimensione di come -spazio vettoriale è uguale al numero degli tali che . In particolare, ha dimensione .    Sia un elemento di . Dal momento che , si ha che se e solo se per ogni : dunque, . Per il , segue che ha dimensione come -spazio vettoriale e che il quoziente sul proprio zoccolo di un addendo di ordine ha ordine : dunque, per la , abbiamo che . Il numero di addendi non banali in questa decomposizione è uguale al numero degli maggiori di : ripetendo il ragionamento precedente questo numero è uguale alla dimensione di . Iterando il procedimento e, notando che a ogni passo l'ordine di ciascun addendo diretto viene diviso per , otteniamo la tesi.     La proposizione precedente ci dice che, data una decomposizione di un modulo -primario come somma diretta di un numero finito di moduli ciclici, è possibile ottenere gli ordini di questi addendi calcolando le dimensioni degli zoccoli dei quozienti successivi : a ogni passo scompaiono gli addendi di un dato ordine e sopravvivono quelli di ordine maggiore. Più precisamente, il numero di addendi di ordine è uguale a . In particolare, se lo stesso modulo può essere decomposto in più di un modo, gli ordini degli addendi nelle diverse decomposizioni coincidono.     Supponiamo di avere un modulo -primario somma diretta di due moduli ciclici di ordine , due di ordine e uno di ordine . Usiamo una rappresentazione grafica di questo tipo per aiutarci nella visualizzazione: a ogni colonna corrisponde uno degli addendi diretti.   Righe di quadrati sovrapposte lunghe 5, 4, 4, 4, 2 e 2    Lo zoccolo è rappresentato dall'ultima riga e, quindi, ha dimensione . Quozientare su corrisponde a cancellare l'ultima riga. Lo zoccolo di ha così dimensione . Cancellando una riga a ogni passo troviamo così le dimensioni degli zoccoli: , , e .  Viceversa, supponiamo di conoscere questa successione di dimensioni. Possiamo allora ricostruire il disegno dato sopra: tracciamo prima una riga con blocchi, poi le disponiamo sopra una riga con , un'altra con blocchi, un'altra con blocchi, poi una con blocchi e un'ultima con blocchi. Dunque la decomposizione di che sarà formata da addendi: di ordine , di ordine , di ordine , di ordine , di ordine e di ordine . Ovviamente, il disegno non è necessario: è solo un aiuto alla comprensione.      Completare la dimostrazione della .    Sia un -modulo -primario per un certo irriducibile . La successione delle dimensioni degli zoccoli sia , , , , , , , . Esprimere come somma diretta di moduli ciclici.    .    "
 },
@@ -12533,7 +12911,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_primari.html#def-elemento_primario_in_modulo",
   "type": "Definizione",
-  "number": "25.2.1",
+  "number": "26.2.1",
   "title": "",
   "body": "  Dato un elemento irriducibile di , un elemento di un -modulo è detto -elemento se ha ordine una potenza di . Un -modulo si dice -primario se tutti i suoi elementi sono -elementi. Un -modulo è detto primario se è -primario per qualche irriducibile .   "
 },
@@ -12542,7 +12920,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_primari.html#rem-elemento_p_primario_se_annulato_da_potenza_di_p",
   "type": "Osservazione",
-  "number": "25.2.2",
+  "number": "26.2.2",
   "title": "",
   "body": " Per verificare che un elemento è un -elemento è sufficiente trovare una potenza di che annulli perché in tal caso il suo ordine è un divisore di , cioè a sua volta una potenza di .  "
 },
@@ -12551,7 +12929,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_primari.html#rem-decomposizione_ciclico_in_p_primari",
   "type": "Osservazione",
-  "number": "25.2.3",
+  "number": "26.2.3",
   "title": "",
   "body": " Grazie alla , un modulo ciclico è -primario se e solo se ha ordine una potenza di . Pertanto, il dice che ogni modulo ciclico di ordine diverso da e da si esprime come somma diretta di ciclici primari relativi a irriducibili a due a due non associati.  "
 },
@@ -12560,7 +12938,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_primari.html#prop-primari_sottomodulo",
   "type": "Proposizione",
-  "number": "25.2.4",
+  "number": "26.2.4",
   "title": "",
   "body": "  Il sottoinsieme formato dai -elementi di un -modulo è un sottomodulo di contenuto in : esso è il più grande sottomodulo -primario di ed è detto componente -primaria di .    Poiché si ha . Siano e due elementi di di ordini e rispettivamente. Detto , abbiamo ; inoltre, per ogni in si ha ; dunque e appartengono a , cioè è un sottomodulo. Poiché è formato esattamente da tutti i -elementi di , è il più grande sottomodulo -primario di .   "
 },
@@ -12569,7 +12947,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_primari.html#sec-moduli_primari-7",
   "type": "Esempio",
-  "number": "25.2.5",
+  "number": "26.2.5",
   "title": "",
   "body": "  Questo risultato, applicato agli -moduli, cioè ai gruppi abeliani, ci dice che l'insieme dei -elementi è un sottogruppo (più precisamente è l'unico -sottogruppo di Sylow). Ciò non è però in generale vero per gruppi non abeliani: ad esempio gli scambi e in sono -elementi (hanno ordine ) mentre il loro prodotto non è un -elemento (ha ordine ).   "
 },
@@ -12578,7 +12956,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_primari.html#def-zoccolo",
   "type": "Definizione",
-  "number": "25.2.6",
+  "number": "26.2.6",
   "title": "",
   "body": "   zoccolo di un modulo primario    Lo zoccolo  di un -modulo -primario è il sottoinsieme di formato dagli elementi tali che .   "
 },
@@ -12587,7 +12965,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_primari.html#lem-quoziente_su_irriducibile",
   "type": "Lemma",
-  "number": "25.2.7",
+  "number": "26.2.7",
   "title": "",
   "body": "  Se è un elemento irriducibile di , allora l'anello quoziente è un campo.    Poiché è un anello commutativo, per la è sufficiente mostrare che non ha ideali propri e non banali. Per il , un ideale di è della forma dove è un ideale di contenente . Se genera , allora divide : quindi, o è invertibile, nel qual caso e , o è associato a , nel qual caso e .   "
 },
@@ -12596,7 +12974,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_primari.html#prop-soccolo_spazio_vettoriale",
   "type": "Proposizione",
-  "number": "25.2.8",
+  "number": "26.2.8",
   "title": "",
   "body": "  Lo zoccolo di un modulo -primario è un sottomodulo di che può essere visto come -spazio vettoriale. Inoltre, un insieme di elementi genera come -modulo se e solo se lo genera come -spazio vettoriale.    Chiaramente appartiene a che è, dunque, non vuoto. Se e appartengono a e allora e , cioè e appartengono a che è, dunque, un sottomodulo di .  Se appartiene a e è un elemento di , poniamo . Questa moltiplicazione è ben definita: se infatti è un elemento di tale che , cioè per qualche in , allora . È immediato poi mostrare che con questa moltiplicazione risulta essere un -spazio vettoriale e che -generatori e -generatori sono la stessa cosa.   "
 },
@@ -12605,7 +12983,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_primari.html#lem-zoccolo_di_ciclico_primario",
   "type": "Lemma",
-  "number": "25.2.9",
+  "number": "26.2.9",
   "title": "",
   "body": "  Sia un -modulo ciclico di ordine con irriducibile e . Allora è ciclico di ordine e è ciclico di ordine . In particolare, ha dimensione come -spazio vettoriale.    Per la , sappiamo che ha un unico sottomodulo ciclico di ordine e che il quoziente di su questo sottomodulo ha ordine . Poiché gli elementi dello zoccolo hanno ordine che divide , questo sottomodulo coincide con lo zoccolo. Dalla , segue immediatamente che la dimensione di come -spazio vettoriale è .   "
 },
@@ -12614,7 +12992,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_primari.html#prop-ciclici_primari",
   "type": "Proposizione",
-  "number": "25.2.10",
+  "number": "26.2.10",
   "title": "",
   "body": "  Sia un elemento irriducibile di e sia somma diretta di -moduli ciclici -primari (con ciascun ). Posto e per , la dimensione di come -spazio vettoriale è uguale al numero degli tali che . In particolare, ha dimensione .    Sia un elemento di . Dal momento che , si ha che se e solo se per ogni : dunque, . Per il , segue che ha dimensione come -spazio vettoriale e che il quoziente sul proprio zoccolo di un addendo di ordine ha ordine : dunque, per la , abbiamo che . Il numero di addendi non banali in questa decomposizione è uguale al numero degli maggiori di : ripetendo il ragionamento precedente questo numero è uguale alla dimensione di . Iterando il procedimento e, notando che a ogni passo l'ordine di ciascun addendo diretto viene diviso per , otteniamo la tesi.   "
 },
@@ -12623,7 +13001,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_primari.html#rem-successione_dimensioni_decrescente",
   "type": "Osservazione",
-  "number": "25.2.11",
+  "number": "26.2.11",
   "title": "",
   "body": " La proposizione precedente ci dice che, data una decomposizione di un modulo -primario come somma diretta di un numero finito di moduli ciclici, è possibile ottenere gli ordini di questi addendi calcolando le dimensioni degli zoccoli dei quozienti successivi : a ogni passo scompaiono gli addendi di un dato ordine e sopravvivono quelli di ordine maggiore. Più precisamente, il numero di addendi di ordine è uguale a . In particolare, se lo stesso modulo può essere decomposto in più di un modo, gli ordini degli addendi nelle diverse decomposizioni coincidono.  "
 },
@@ -12632,7 +13010,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_primari.html#sec-moduli_primari-14",
   "type": "Esempio",
-  "number": "25.2.12",
+  "number": "26.2.12",
   "title": "",
   "body": "  Supponiamo di avere un modulo -primario somma diretta di due moduli ciclici di ordine , due di ordine e uno di ordine . Usiamo una rappresentazione grafica di questo tipo per aiutarci nella visualizzazione: a ogni colonna corrisponde uno degli addendi diretti.   Righe di quadrati sovrapposte lunghe 5, 4, 4, 4, 2 e 2    Lo zoccolo è rappresentato dall'ultima riga e, quindi, ha dimensione . Quozientare su corrisponde a cancellare l'ultima riga. Lo zoccolo di ha così dimensione . Cancellando una riga a ogni passo troviamo così le dimensioni degli zoccoli: , , e .  Viceversa, supponiamo di conoscere questa successione di dimensioni. Possiamo allora ricostruire il disegno dato sopra: tracciamo prima una riga con blocchi, poi le disponiamo sopra una riga con , un'altra con blocchi, un'altra con blocchi, poi una con blocchi e un'ultima con blocchi. Dunque la decomposizione di che sarà formata da addendi: di ordine , di ordine , di ordine , di ordine , di ordine e di ordine . Ovviamente, il disegno non è necessario: è solo un aiuto alla comprensione.   "
 },
@@ -12641,7 +13019,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_primari.html#exercises-moduli_primari-1",
   "type": "Esercizio",
-  "number": "25.2.1",
+  "number": "26.2.1",
   "title": "",
   "body": " Completare la dimostrazione della .  "
 },
@@ -12650,7 +13028,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_primari.html#exercises-moduli_primari-2",
   "type": "Esercizio",
-  "number": "25.2.2",
+  "number": "26.2.2",
   "title": "",
   "body": " Sia un -modulo -primario per un certo irriducibile . La successione delle dimensioni degli zoccoli sia , , , , , , , . Esprimere come somma diretta di moduli ciclici.    .  "
 },
@@ -12659,7 +13037,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-moduli_liberi.html",
   "type": "Paragrafo",
-  "number": "25.3",
+  "number": "26.3",
   "title": "Moduli liberi",
   "body": " Moduli liberi  Ricordiamo che, in tutto questo capitolo, indichiamo con un dominio a ideali principali.    Sia un omomorfismo di -moduli non banale. Scelto in tale che genera allora .    Sia . Dunque, per qualche in e . Ma allora . Poiché , (in quanto generatore di ) si ha che . Pertanto, , cioè .  Sia ora un elemento di : è multiplo di , cioè esiste in tale che , da cui segue facilmente che , cioè . Pertanto, , cioè .      Sia un -modulo libero di rango . Allora ogni sottomodulo di è libero di rango al più .    Procediamo per induzione su , notando che il caso è banale. Sia allora e identifichiamo con . Sia . Poiché è libero di rango , per ipotesi induttiva è libero di rango al più . Se abbiamo finito, altrimenti consideriamo l'omomorfismo di proiezione che manda in : il nucleo di è ovviamente e, pertanto, è un sottomodulo di non nullo, cioè un ideale non nullo di . Se è un elemento di tale che genera , applicando il alla restrizione di a , abbiamo che . Poiché è libero di rango , dalla segue che è libero di rango al più .       Sia un -modulo libero di base , , . Sia un elemento di e sia il massimo comun divisore di , , . Allora:   per ogni omomorfismo si ha che divide ;    esiste un omomorfismo tale che .       Abbiamo : poiché divide tutti gli segue immediatamente che divide .  Poiché è il massimo comun divisore di , , e è un dominio a ideali principali, per il esistono , , in tali che . Per la , esiste un omomorfismo che manda in per ogni : si ha allora , come richiesto.    Siamo ora pronti a dimostrare il     Sia un sottomodulo di un -modulo libero . Allora esiste una base , , di ed elementi , , in tali che , , generano .    Procediamo per induzione sul rango di , notando che il caso in cui ha rango è banale, così come il caso in cui (basta scegliere tutti i nulli). Sia allora . Data una base , , di , scegliamo non nullo in tale che il massimo comun divisore di , , sia di lunghezza minima possibile. Indicato con un elemento generico di e con il massimo comun divisore di , , , per il , esiste un omomorfismo tale che e divide : dunque, o . Pertanto, ha lunghezza minima tra gli elementi non nulli di e ne è, dunque, un generatore. Raccogliendo nell'espressione di , otteniamo per un certo in : di conseguenza, e, essendo , abbiamo . Ciò comporta che genera che, pertanto, coincide con .  Applicando il a e alla sua restrizione a , otteniamo allora che e che . La implica che e sono liberi. Poiché ha, evidentemente, rango , dalla segue che ha rango . Per ipotesi induttiva possiamo allora dire che esiste una base , , di ed elementi , , tali che , , generano . Notiamo che , , è una base di : poiché , si ha che , , generano .     Non è difficile verificare che se scartiamo gli elementi nulli dalla lista degli dati dal otteniamo una base di .     Sia un modulo libero e siano , , e , , due basi di . Dato un elemento di , espresso come , mostrare che il massimo comun divisore degli e il massimo comun divisore dei sono associati.    "
 },
@@ -12668,7 +13046,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_liberi.html#lem-omomorfismo_in_D",
   "type": "Lemma",
-  "number": "25.3.1",
+  "number": "26.3.1",
   "title": "",
   "body": "  Sia un omomorfismo di -moduli non banale. Scelto in tale che genera allora .    Sia . Dunque, per qualche in e . Ma allora . Poiché , (in quanto generatore di ) si ha che . Pertanto, , cioè .  Sia ora un elemento di : è multiplo di , cioè esiste in tale che , da cui segue facilmente che , cioè . Pertanto, , cioè .   "
 },
@@ -12677,7 +13055,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_liberi.html#prop-sottomodulo_di_libero_libero",
   "type": "Proposizione",
-  "number": "25.3.2",
+  "number": "26.3.2",
   "title": "",
   "body": "  Sia un -modulo libero di rango . Allora ogni sottomodulo di è libero di rango al più .    Procediamo per induzione su , notando che il caso è banale. Sia allora e identifichiamo con . Sia . Poiché è libero di rango , per ipotesi induttiva è libero di rango al più . Se abbiamo finito, altrimenti consideriamo l'omomorfismo di proiezione che manda in : il nucleo di è ovviamente e, pertanto, è un sottomodulo di non nullo, cioè un ideale non nullo di . Se è un elemento di tale che genera , applicando il alla restrizione di a , abbiamo che . Poiché è libero di rango , dalla segue che è libero di rango al più .   "
 },
@@ -12686,7 +13064,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_liberi.html#lem-MCD_e_immagini",
   "type": "Lemma",
-  "number": "25.3.3",
+  "number": "26.3.3",
   "title": "",
   "body": "  Sia un -modulo libero di base , , . Sia un elemento di e sia il massimo comun divisore di , , . Allora:   per ogni omomorfismo si ha che divide ;    esiste un omomorfismo tale che .       Abbiamo : poiché divide tutti gli segue immediatamente che divide .  Poiché è il massimo comun divisore di , , e è un dominio a ideali principali, per il esistono , , in tali che . Per la , esiste un omomorfismo che manda in per ogni : si ha allora , come richiesto.   "
 },
@@ -12695,7 +13073,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_liberi.html#thm-basi_compatibili",
   "type": "Teorema",
-  "number": "25.3.4",
+  "number": "26.3.4",
   "title": "",
   "body": "  Sia un sottomodulo di un -modulo libero . Allora esiste una base , , di ed elementi , , in tali che , , generano .    Procediamo per induzione sul rango di , notando che il caso in cui ha rango è banale, così come il caso in cui (basta scegliere tutti i nulli). Sia allora . Data una base , , di , scegliamo non nullo in tale che il massimo comun divisore di , , sia di lunghezza minima possibile. Indicato con un elemento generico di e con il massimo comun divisore di , , , per il , esiste un omomorfismo tale che e divide : dunque, o . Pertanto, ha lunghezza minima tra gli elementi non nulli di e ne è, dunque, un generatore. Raccogliendo nell'espressione di , otteniamo per un certo in : di conseguenza, e, essendo , abbiamo . Ciò comporta che genera che, pertanto, coincide con .  Applicando il a e alla sua restrizione a , otteniamo allora che e che . La implica che e sono liberi. Poiché ha, evidentemente, rango , dalla segue che ha rango . Per ipotesi induttiva possiamo allora dire che esiste una base , , di ed elementi , , tali che , , generano . Notiamo che , , è una base di : poiché , si ha che , , generano .   "
 },
@@ -12704,7 +13082,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_liberi.html#rem-basi",
   "type": "Osservazione",
-  "number": "25.3.5",
+  "number": "26.3.5",
   "title": "",
   "body": " Non è difficile verificare che se scartiamo gli elementi nulli dalla lista degli dati dal otteniamo una base di .  "
 },
@@ -12713,7 +13091,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-moduli_liberi.html#exercises-moduli_liberi-1",
   "type": "Esercizio",
-  "number": "25.3.1",
+  "number": "26.3.1",
   "title": "",
   "body": " Sia un modulo libero e siano , , e , , due basi di . Dato un elemento di , espresso come , mostrare che il massimo comun divisore degli e il massimo comun divisore dei sono associati.  "
 },
@@ -12722,7 +13100,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-classificazione_moduli_pid.html",
   "type": "Paragrafo",
-  "number": "25.4",
+  "number": "26.4",
   "title": "La classificazione dei moduli finitamente generati su un dominio a ideali principali",
   "body": " La classificazione dei moduli finitamente generati su un dominio a ideali principali  Ricordiamo che, in tutto questo capitolo, indichiamo con un dominio a ideali principali.  Siamo ora pronti a dimostrare i teoremi di classificazione dei moduli finitamente generati su un dominio a ideali principali. Cominciamo con un risultato parziale.    Sia un -modulo finitamente generato. Allora con e naturali e , , elementi non nulli e non invertibili di . Inoltre. e è libero di rango .    Per il , il modulo è isomorfo a dove è un modulo libero e un sottomodulo. Per il , esiste una base , , di ed elementi , , in tali che , , generano . Considerati i moduli ciclici generati dagli e i corrispondenti sottomoduli generati dagli , abbiamo che e : per la , abbiamo allora . Gli addendi per cui è invertibile sono moduli nulli e possiamo scartarli dalla decomposizione, mentre gli addendi per cui è nullo sono isomorfi a . Pur di rietichettare gli addendi abbiamo allora una decomposizione come quella in enunciato: con i non invertibili e non nulli.  Chiaramente, gli addendi sono contenuti nel sottomodulo di torsione. Viceversa, se è un elemento di torsione della somma diretta, cioè esiste non nullo tale che , allora che, poiché è un dominio, implica che e, quindi che il sottomodulo di torsione è contenuto in . Il quoziente di su questo sottomodulo è isomorfo a , grazie alla .    Notando che nella proposizione precedente è privo di torsione se e solo se , otteniamo immediatamente il    Un -modulo finitamente generato e privo di torsione è libero.    La decomposizione data dalla non è unica e non sono nemmeno unici gli ordini dei moduli ciclici coinvolti. Possiamo solo dire che l'intero è univocamente determinato, essendo il rango del modulo libero . Imponendo delle condizioni aggiuntive agli ordini dei moduli coinvolti possiamo però ottenere il    Sia un -modulo finitamente generato. Allora esistono irriducibili , , (non necessariamente non associati), interi positivi , , e un naturale tali che . Questa decomposizione, detta primaria , non è unica, ma e gli ordini degli addendi sono univocamente determinati a meno dell'ordinamento. Inoltre, dato un irriducibile in , la componente -primaria di è data dalla somma di quegli addendi tali per cui è associato a .    Consideriamo la decomposizione data dalla e applichiamo a ciascun addendo di ordine diverso da la decomposizione data dal : otteniamo così la decomposizione data in enunciato.  Fissato un irriducibile , chiaramente gli addendi tali per cui è associato a appartengono alla componente -primaria. Viceversa, se è un elemento -primario della somma diretta, cioè esiste tale che , allora ogni e ogni è un -elemento, il che implica che tutti gli siano nulli, così come gli con non associato a . Dunque, la componente -primaria è come in enunciato: per la , nella decomposizione di un modulo -primario in somma diretta di ciclici, gli ordini sono univocamente determinati. Avevamo già osservato nella che è univocamente determinato.     Grazie alla , gli addendi ciclici primari nella decomposizione primaria di un modulo non possono ulteriormente spezzarsi : quindi questa decomposizione ha il massimo numero possibile di addendi.   Vediamo ora un'altra decomposizione di un modulo finitamente generato. A differenza di quella primaria, questa avrà il minimo possibile di addendi.    Sia un -modulo finitamente generato. Allora esistono elementi non nulli e non invertibili , , con e un naturale tali che . Questa decomposizione, detta a fattori invarianti , non è unica, ma gli ordini degli addendi sono univocamente determinati.    Consideriamo la decomposizione data dal . Per ciascun irriducibile che compare almeno una volta consideriamo un addendo che ha ordine associato a una potenza di quell'irriducibile con esponente massimo possibile. Per il , la somma diretta di questi moduli ciclici è a sua volta ciclico di ordine prodotto degli ordini degli addendi: otteniamo così l'ultimo degli addendi di ordine non nullo dato in enunciato. Ripetendo il procedimento con gli addendi rimasti otteniamo un modulo ciclico il cui ordine è un divisore del precedente. Iterando il procedimento otteniamo la decomposizione cercata.  L'unicità degli ordini segue dal fatto che possiamo invertire il procedimento e ritrovare la decomposizione primaria.      Supponiamo che un -modulo abbia come decomposizione primaria con , , irriducibili a due a due non associati.  Riordiniamo questa decomposizione raggruppando per ciascun irriducibile coinvolto prima gli addendi il cui ordine è individuato dall'esponente maggiore, poi il secondo più grande esponente e così via: . In ciascun raggruppamento appaiono moduli ciclici a ordini a due a due a coprimi e, quindi, la loro somma diretta è ciclica di ordine il prodotto degli ordini cioè che possiamo riscrivere come dove , , e con .    "
 },
@@ -12731,7 +13109,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-classificazione_moduli_pid.html#prop-decomposizione_moduli_ciclici",
   "type": "Proposizione",
-  "number": "25.4.1",
+  "number": "26.4.1",
   "title": "",
   "body": "  Sia un -modulo finitamente generato. Allora con e naturali e , , elementi non nulli e non invertibili di . Inoltre. e è libero di rango .    Per il , il modulo è isomorfo a dove è un modulo libero e un sottomodulo. Per il , esiste una base , , di ed elementi , , in tali che , , generano . Considerati i moduli ciclici generati dagli e i corrispondenti sottomoduli generati dagli , abbiamo che e : per la , abbiamo allora . Gli addendi per cui è invertibile sono moduli nulli e possiamo scartarli dalla decomposizione, mentre gli addendi per cui è nullo sono isomorfi a . Pur di rietichettare gli addendi abbiamo allora una decomposizione come quella in enunciato: con i non invertibili e non nulli.  Chiaramente, gli addendi sono contenuti nel sottomodulo di torsione. Viceversa, se è un elemento di torsione della somma diretta, cioè esiste non nullo tale che , allora che, poiché è un dominio, implica che e, quindi che il sottomodulo di torsione è contenuto in . Il quoziente di su questo sottomodulo è isomorfo a , grazie alla .   "
 },
@@ -12740,7 +13118,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-classificazione_moduli_pid.html#cor-privo_di_torsione_libero",
   "type": "Corollario",
-  "number": "25.4.2",
+  "number": "26.4.2",
   "title": "",
   "body": "  Un -modulo finitamente generato e privo di torsione è libero.   "
 },
@@ -12749,7 +13127,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-classificazione_moduli_pid.html#thm-decomposizione_primaria",
   "type": "Teorema",
-  "number": "25.4.3",
+  "number": "26.4.3",
   "title": "",
   "body": "  Sia un -modulo finitamente generato. Allora esistono irriducibili , , (non necessariamente non associati), interi positivi , , e un naturale tali che . Questa decomposizione, detta primaria , non è unica, ma e gli ordini degli addendi sono univocamente determinati a meno dell'ordinamento. Inoltre, dato un irriducibile in , la componente -primaria di è data dalla somma di quegli addendi tali per cui è associato a .    Consideriamo la decomposizione data dalla e applichiamo a ciascun addendo di ordine diverso da la decomposizione data dal : otteniamo così la decomposizione data in enunciato.  Fissato un irriducibile , chiaramente gli addendi tali per cui è associato a appartengono alla componente -primaria. Viceversa, se è un elemento -primario della somma diretta, cioè esiste tale che , allora ogni e ogni è un -elemento, il che implica che tutti gli siano nulli, così come gli con non associato a . Dunque, la componente -primaria è come in enunciato: per la , nella decomposizione di un modulo -primario in somma diretta di ciclici, gli ordini sono univocamente determinati. Avevamo già osservato nella che è univocamente determinato.   "
 },
@@ -12758,7 +13136,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-classificazione_moduli_pid.html#rem-primaria_massimo_numero_addendi",
   "type": "Osservazione",
-  "number": "25.4.4",
+  "number": "26.4.4",
   "title": "",
   "body": " Grazie alla , gli addendi ciclici primari nella decomposizione primaria di un modulo non possono ulteriormente spezzarsi : quindi questa decomposizione ha il massimo numero possibile di addendi.  "
 },
@@ -12767,7 +13145,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-classificazione_moduli_pid.html#thm-decomposizione_fattori_invarianti",
   "type": "Teorema",
-  "number": "25.4.5",
+  "number": "26.4.5",
   "title": "",
   "body": "  Sia un -modulo finitamente generato. Allora esistono elementi non nulli e non invertibili , , con e un naturale tali che . Questa decomposizione, detta a fattori invarianti , non è unica, ma gli ordini degli addendi sono univocamente determinati.    Consideriamo la decomposizione data dal . Per ciascun irriducibile che compare almeno una volta consideriamo un addendo che ha ordine associato a una potenza di quell'irriducibile con esponente massimo possibile. Per il , la somma diretta di questi moduli ciclici è a sua volta ciclico di ordine prodotto degli ordini degli addendi: otteniamo così l'ultimo degli addendi di ordine non nullo dato in enunciato. Ripetendo il procedimento con gli addendi rimasti otteniamo un modulo ciclico il cui ordine è un divisore del precedente. Iterando il procedimento otteniamo la decomposizione cercata.  L'unicità degli ordini segue dal fatto che possiamo invertire il procedimento e ritrovare la decomposizione primaria.   "
 },
@@ -12776,7 +13154,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-classificazione_moduli_pid.html#sec-classificazione_moduli_pid-12",
   "type": "Esempio",
-  "number": "25.4.6",
+  "number": "26.4.6",
   "title": "",
   "body": "  Supponiamo che un -modulo abbia come decomposizione primaria con , , irriducibili a due a due non associati.  Riordiniamo questa decomposizione raggruppando per ciascun irriducibile coinvolto prima gli addendi il cui ordine è individuato dall'esponente maggiore, poi il secondo più grande esponente e così via: . In ciascun raggruppamento appaiono moduli ciclici a ordini a due a due a coprimi e, quindi, la loro somma diretta è ciclica di ordine il prodotto degli ordini cioè che possiamo riscrivere come dove , , e con .   "
 },
@@ -12785,7 +13163,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-gruppiabeliani.html",
   "type": "Paragrafo",
-  "number": "26.1",
+  "number": "27.1",
   "title": "Classificazione dei gruppi abeliani finitamente generati",
   "body": " Classificazione dei gruppi abeliani finitamente generati  Il ha una traduzione immediata nella terminologia dei gruppi abeliani.    Un gruppo abeliano finitamente generato può esprimersi come prodotto diretto di gruppi ciclici infiniti e di gruppi ciclici di ordine potenza di primi: con . I fattori in questa decomposizione non sono univocamente determinati ma l'intero e gli ordini sì (a meno dell'ordinamento in cui scriviamo i fattori).    In particolare per i gruppi abeliani finiti, abbiamo il    Un gruppo abeliano finito è prodotto diretto di un numero finito di gruppi ciclici di ordine potenza di primi. Gli ordini dei fattori diretti in questa decomposizione sono univocamente determinati (a meno dell'ordinamento in cui scriviamo i fattori).     Data una decomposizione di un gruppo abeliano finito come prodotto diretto di ciclici primari, l'ordine del gruppo è uguale al prodotto degli ordini dei fattori diretti: ciò permette di determinare tutti i gruppi abeliani di un dato ordine finito (a meno di isomorfismi).     Vogliamo determinare tutti i gruppi abeliani di ordine . Esprimiamo tale ordine come prodotto di primi: . Nella decomposizione di tali gruppi come prodotto diretto di ciclici primari avremo quindi -gruppi e -gruppi.  Poiché compare con esponente potremo avere un gruppo ciclico di ordine oppure gruppi ciclici di ordine . Poiché appare con esponente potremo avere un gruppo ciclico di ordine oppure uno di ordine e uno di ordine oppure gruppi ciclici di ordine oppure un gruppo ciclico di ordine e due di ordine o, infine, gruppi ciclici di ordine . Combinando le varie possibilità possiamo dunque elencare tutti i gruppi abeliani di ordine a meno di isomorfismi.                                                      Possiamo ora anche determinare in ciascuno di questi gruppi il numero di elementi di un dato ordine. Ad esempio, supponiamo di voler trovare il numero di elementi di ordine . Poiché l'ordine di un elemento di un prodotto diretto è il minimo comune multiplo degli ordini delle sue componenti ( ), affinché ci sia almeno un elemento di ordine è necessario che nella decomposizione appaia almeno un fattore di ordine con . Negli ultimi gruppi della lista non ci sono dunque elementi di ordine . Consideriamo i primi gruppi.  Ricordiamo che un gruppo ciclico finito di ordine contiene esattamente elementi di ordine per ogni divisore di ( ). In particolare, un gruppo ciclico di ordine con primo contiene elementi di ordine se .  Un elemento di si scrive nella forma con in e in . L'ordine di è se ha ordine e ha ordine . Poiché contiene elemento di ordine e contiene elementi di ordine abbiamo elementi di ordine .  Un elemento di si scrive nella forma con e in e in . L'ordine è se almeno uno tra e ha ordine e ha ordine . Poiché contiene un elemento di ordine e uno di ordine , abbiamo che almeno uno tra e ha ordine in casi. Abbiamo dunque elementi di ordine .  Un elemento di si scrive come con in , in e . Abbiamo ordine se e solo se ha ordine , ha ordine e ha ordine qualunque. Abbiamo dunque elementi di ordine .  Infine, un elemento di scritto come con in , in , in e ha ordine se e solo se almeno uno tra e ha ordine (e, come prima, abbiamo scelte per la coppia ), ha ordine e ha ordine qualunque. Dunque, abbiamo elementi di ordine .      Determinare tutti i gruppi abeliani di ordine (a meno di isomorfismi).                                                          Determinare quali dei gruppi trovati al punto precedente contengono elementi di ordine e, per ciascuno di essi, determinare quanti sono tali elementi.   L'ordine di un elemento appartenente al prodotto diretto di gruppi è uguale al minimo comune multiplo degli ordini delle sue componenti. Poiché nella decomposizione del gruppo come prodotto diretto di ciclici primari deve comparire un gruppo ciclico -primario di ordine almeno e un gruppo ciclico -primario di ordine almeno . Nella lista precedente i gruppi compatibili con questa condizione sono e . Se è un elemento del primo gruppo, con e , affinché l'ordine di sia , deve essere di ordine e di ordine . Il gruppo contiene elementi di ordine , mentre contiene elementi di ordine . In conclusione contiene elementi di ordine .  Per quanto riguarda , sia un suo generico elemento con , e . L'ordine di divide , l'ordine di divide e l'ordine di divide : affinché il minimo comune multiplo di questi ordini sia è necessario e sufficiente che l'ordine di sia esattamente e l'ordine di sia esattamente (l'ordine di può essere indifferentemente o ). Il gruppo contiene scelte per . L'elemento può essere scelto in modi e l'elemento può essere scelto in modi (abbiamo già calcolato in precedenza il numero di elementi di ordine di ). Dunque abbiamo elementi di ordine .    Dati i prodotti diretti                           stabilire quali sono isomorfi fra loro. Per ciascuno di essi calcolare poi il numero di elementi di ordine .   Riscriviamo i gruppi assegnati come prodotti diretti di ciclici primari, ricordando che un gruppo ciclico finito può essere espresso come prodotto diretto di ciclici i cui ordini sono i fattori primari del suo ordine. Abbiamo dunque i gruppi:                           Confrontando i fattori che appaiono in ciascuna decomposizione (trascurando l'ordinamento), vediamo che il primo e il terzo gruppo sono isomorfi tra loro, così come il secondo e il quinto.  Dato un elemento del gruppo affinché il suo ordine sia gli elementi , e devono avere ordine o e almeno uno di essi deve avere ordine . Poiché divide l'ordine di , questo gruppo contiene esattamente un sottogruppo ciclico di ordine , formato dagli elementi il cui periodo divide . Allo stesso modo anche in abbiamo elementi il cui periodo divide . Pertanto abbiamo esattamente terne tali che gli elementi , e abbiano ordine o . Dobbiamo però scartare la terna in cui tutti gli elementi hanno periodo (perché essa ha periodo a sua volta). Abbiamo dunque elementi di periodo .  Per quanto riguarda in maniera analoga abbiamo cinquine le cui componenti hanno periodo o . Scartando di nuovo la cinquina le cui componenti hanno tutte periodo rimangono elementi di periodo .  Infine possiede terne le cui componenti hanno periodo o . Scartando di nuovo la terna le cui componenti hanno tutte periodo rimangono elementi di periodo .    Siano e due gruppi abeliani di ordine . Dimostrare che e sono isomorfi se e solo se contengono lo stesso numero di elementi di periodo .   Ovviamente se e sono isomorfi hanno lo stesso numero di elementi di periodo .  Per mostrare il viceversa consideriamo i diversi tipi di isomorfismo dei gruppi abeliani di ordine . I possibili tipi di isomorfismo di un gruppo abeliano di ordine sono , e . Per ottenere la tesi basta mostrare che questi gruppi hanno un numero di elementi di periodo diverso tra loro.  Gli elementi di sono del tipo con , e in e in . Il periodo di è il minimo comune multiplo dei periodi di , , e . Poiché il periodo di , e divide mentre il periodo di divide , l'elemento ha periodo se e solo se almeno uno tra , e ha periodo e ha periodo . Deve dunque essere , mentre , e possono essere elementi qualunque di non tutti . Poiché possiamo scegliere ciascuno degli elementi , e in due modi diversi, mentre può essere scelto in unico modo abbiamo possibilità, da cui però dobbiamo scartare la scelta . Rimangono dunque elementi di periodo .  Gli elementi di sono del tipo con in , in e in . Con ragionamento analogo al precedente abbiamo che e devono avere periodo o (ma non contemporaneamente ) mentre deve avere periodo . In gli elementi che hanno periodo che divide sono quelli contenuti nell'unico sottogruppo di ordine e il loro numero è dunque : possiamo scegliere in modi diversi. Gli elementi di hanno tutti periodo che divide : possiamo scegliere in modi diversi. Possiamo poi scegliere in un unico modo. Di queste possibilità dobbiamo però scartare quella per cui e hanno entrambi periodo . Abbiamo dunque elementi di periodo .  Infine gli elementi di sono del tipo con in e in . Con ragionamento analogo al precedente abbiamo che deve avere periodo mentre deve avere periodo . In gli elementi che hanno periodo sono quelli contenuti nell'unico sottogruppo di ordine e il loro numero è dunque . Poiché anche può essere scelto in un unico modo abbiamo elemento di periodo .    Determinare (a meno di isomorfismi) tutti i gruppi abeliani di ordine che contengono almeno un elemento di ordine e nessun elemento di ordine .   Poiché potremo scrivere i gruppi cercati nella forma dove è il sottogruppo formato dagli elementi di periodo una potenza di e è il sottogruppo formato dagli elementi di periodo una potenza di . Il sottogruppo , avendo ordine , è isomorfo a o a , mentre , avendo ordine , è isomorfo a , a o a . Combinando queste possibilità otteniamo tutti i gruppi abeliani di ordine . Dobbiamo considerare quelli che soddisfano le ulteriori condizioni sui periodi degli elementi.  Se , non abbiamo elementi di periodo , mentre nei casi e abbiamo elementi di periodo . Si ottiene un elemento di periodo , prendendo un elemento di periodo in e un elemento di periodo in : un elemento di periodo in c'è sempre, mentre un elemento di periodo in c'è solo nel caso in cui . Dobbiamo quindi escludere questo caso. Dunque deve necessariamente essere mentre o . I gruppi cercati sono allora e .    Determinare (a meno di isomorfismi) tutti i gruppi abeliani tali che e che per ogni elemento si abbia .   Se per ogni elemento del gruppo significa che ogni elemento ha periodo che divide . Affinché ogni elemento abbia periodo che divide , è necessario e sufficiente che i fattori diretti nella decomposizione di come prodotto di ciclici primari abbiano ordine , , , e . L'ordine del gruppo è quindi un prodotto di una potenza di per una potenza di . Gli unici numeri compresi tra e che soddisfano questa condizione sono , , e .  Per l'ordine le possibilità sono , e , per l'ordine le possibilità sono , , e , per l'ordine le possibilità sono , e , mentre per l'ordine le possibilità sono , e .    Determinare tutti i gruppi abeliani di ordine che non hanno elementi di ordine .   Poiché potremo scrivere i gruppi cercati nella forma dove è il sottogruppo formato dagli elementi di periodo una potenza di e è il sottogruppo formato dagli elementi di periodo una potenza di . Il sottogruppo , avendo ordine , è isomorfo a o a mentre , avendo ordine , è isomorfo a , a o a . Combinando queste possibilità otteniamo tutti i gruppi abeliani di ordine (ne abbiamo ). Dobbiamo considerare quelli che non contengono elementi di ordine . Otteniamo elementi di quest'ordine se in ci sono elementi di ordine (il che avviene se è ) e in ci sono elementi di ordine (il che avviene se è o ). Dobbiamo quindi escludere i gruppi in cui queste condizioni sono entrambe soddisfatte. Rimangono dunque queste possibilità: , , e .    Si considerino i gruppi abeliani non ciclici di ordine .   Tra tutti i gruppi dati si trovino quelli (o quello) che contengono elementi di periodo massimo possibile.   Nella decomposizione dei gruppi dati, i fattori -primari possibili sono allora , e , mentre i fattori -primari possibili sono e . Combinando questi fattori in tutti i modi possibili otteniamo i gruppi abeliani di ordine non isomorfi tra loro:                                Tra questi, quello ciclico è il primo: infatti è prodotto diretto di ciclici di ordini coprimi. Escludendo il primo, possiamo cercare per ciascuno di essi l'elemento di periodo massimo. Tenuto conto che in un gruppo ciclico finito ogni elemento ha periodo che divide il periodo di un generatore e che il periodo di un elemento del prodotto diretto è il minimo comune multiplo dei periodi delle componenti otteniamo, come massimo periodo degli elementi nei gruppi dati, , , , e . Il gruppo in cui ci sono elementi di massimo periodo possibile è che ha elementi di ordine .   Per ciascuno dei gruppi trovati al punto precedente contare quanti elementi ci sono di periodo massimo.   Detto un elemento di affinché esso abbia periodo deve essere di periodo , di periodo qualunque e di periodo . In ci sono elementi di periodo , mentre in ci sono elementi di periodo . Infine ha elementi. Dunque abbiamo elementi di periodo massimo.    Determinare (a meno di isomorfismi) tutti i gruppi abeliani di ordine che hanno elementi di ordine con .   Detta la parte -primaria, poiché la massima potenza di che divide è , abbiamo queste possibilità per : , e . Detta la parte -primaria, poiché la massima potenza di che divide è , abbiamo queste possibilità per : e .  Se , abbiamo che il periodo di è il minimo comune multiplo dei periodi di e di : affinché abbia periodo deve allora essere di periodo e di periodo . In c'è un unico elemento di periodo , in ce ne sono e in ce ne sono ; in ci sono elementi di periodo , mentre in ce ne sono . Moltiplicando il numero di elementi di periodo per il numero di quelli di periodo troviamo il numero di elementi di periodo . Le possibilità affinché sono che corrisponde a e che corrisponde a .    Siano , , , primi distinti. Determinare quanti gruppi abeliani esistono (a meno di isomorfismi) di ordine .   Per ciascun primo coinvolto abbiamo fattori diretti il cui prodotto degli ordini è uguale a . Abbiamo dunque possibilità: , , , e . Combinando queste scelte per tutti gli primi coinvolti otteniamo quindi gruppi abeliani dell'ordine indicato.    Sia un gruppo abeliano di ordine . In esistano due elementi e di periodo tali che . Elencare tutti i possibili tipi di isomorfismo di .   Se ha periodo il suo quadrato ha periodo . Un gruppo ciclico di ordine contiene elemento di periodo e questo genera l'unico sottogruppo di ordine : poiché i sottogruppi di un gruppo ciclico di ordine sono il gruppo stesso, l'unico sottogruppo di ordine e l'identità, possiamo affermare che tutti i sottogruppi non banali di un gruppo ciclico di ordine contengono l'unico elemento di periodo . Pertanto se l'intersezione fosse non banale, essa dovrebbe contenere l'unico elemento di periodo di , cioè , e l'unico elemento di periodo di , cioè . In altri termini, dovremmo avere , contro la richiesta. Pertanto, e il prodotto ha ordine uguale al prodotto degli ordini, cioè , e coincide, quindi, con . Dunque, è prodotto di due gruppi ciclici di ordine , necessariamente normali perché è abeliano, e aventi intersezione banale: pertanto, .    Determinare (a meno di isomorfismi) tutti i gruppi abeliani di ordine che hanno esattamente sottogruppi di ordine .   Poiché potremo scrivere i gruppi cercati nella forma dove è il sottogruppo formato dagli elementi di periodo una potenza di e è il sottogruppo formato dagli elementi di periodo una potenza di . Il sottogruppo , avendo ordine , è isomorfo a , a o a mentre , avendo ordine , è isomorfo a o a . Combinando queste possibilità otteniamo tutti i gruppi abeliani di ordine .  Dobbiamo considerare quelli che soddisfano l'ulteriore condizione sul numero dei sottogruppi di ordine : questi sono contenuti in . Se è ciclico contiene un unico sottogruppo di ordine , se tutti i suoi elementi non banali hanno ordine e abbiamo dunque elementi di ordine , ciascuno dei quali genera un differente sottogruppo di ordine (un gruppo di ordine contiene un solo elemento di ordine ). Se, infine, , un elemento con e ha periodo se e solo se il minimo comune multiplo dei periodi di e è . Sia in che in ci sono due elementi il cui periodo divide . Di queste possibilità dobbiamo però scartare quella in cui sia che hanno periodo . Dunque, abbiamo esattamente elementi di periodo e, quindi, sottogruppi di ordine come richiesto. Dunque, deve necessariamente essere . Combinando con le varie possibilità per abbiamo che è uno dei seguenti gruppi: o .    "
 },
@@ -12794,7 +13172,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gruppiabeliani.html#thm-decomposizione_primaria_gruppi_abeliani",
   "type": "Teorema",
-  "number": "26.1.1",
+  "number": "27.1.1",
   "title": "",
   "body": "  Un gruppo abeliano finitamente generato può esprimersi come prodotto diretto di gruppi ciclici infiniti e di gruppi ciclici di ordine potenza di primi: con . I fattori in questa decomposizione non sono univocamente determinati ma l'intero e gli ordini sì (a meno dell'ordinamento in cui scriviamo i fattori).   "
 },
@@ -12803,7 +13181,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gruppiabeliani.html#cor-gruppi_abeliani_finiti",
   "type": "Corollario",
-  "number": "26.1.2",
+  "number": "27.1.2",
   "title": "",
   "body": "  Un gruppo abeliano finito è prodotto diretto di un numero finito di gruppi ciclici di ordine potenza di primi. Gli ordini dei fattori diretti in questa decomposizione sono univocamente determinati (a meno dell'ordinamento in cui scriviamo i fattori).   "
 },
@@ -12812,7 +13190,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gruppiabeliani.html#rem-gruppi_abeliani_ordine_fissato",
   "type": "Osservazione",
-  "number": "26.1.3",
+  "number": "27.1.3",
   "title": "",
   "body": " Data una decomposizione di un gruppo abeliano finito come prodotto diretto di ciclici primari, l'ordine del gruppo è uguale al prodotto degli ordini dei fattori diretti: ciò permette di determinare tutti i gruppi abeliani di un dato ordine finito (a meno di isomorfismi).  "
 },
@@ -12821,7 +13199,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gruppiabeliani.html#sec-gruppiabeliani-7",
   "type": "Esempio",
-  "number": "26.1.4",
+  "number": "27.1.4",
   "title": "",
   "body": "  Vogliamo determinare tutti i gruppi abeliani di ordine . Esprimiamo tale ordine come prodotto di primi: . Nella decomposizione di tali gruppi come prodotto diretto di ciclici primari avremo quindi -gruppi e -gruppi.  Poiché compare con esponente potremo avere un gruppo ciclico di ordine oppure gruppi ciclici di ordine . Poiché appare con esponente potremo avere un gruppo ciclico di ordine oppure uno di ordine e uno di ordine oppure gruppi ciclici di ordine oppure un gruppo ciclico di ordine e due di ordine o, infine, gruppi ciclici di ordine . Combinando le varie possibilità possiamo dunque elencare tutti i gruppi abeliani di ordine a meno di isomorfismi.                                                      Possiamo ora anche determinare in ciascuno di questi gruppi il numero di elementi di un dato ordine. Ad esempio, supponiamo di voler trovare il numero di elementi di ordine . Poiché l'ordine di un elemento di un prodotto diretto è il minimo comune multiplo degli ordini delle sue componenti ( ), affinché ci sia almeno un elemento di ordine è necessario che nella decomposizione appaia almeno un fattore di ordine con . Negli ultimi gruppi della lista non ci sono dunque elementi di ordine . Consideriamo i primi gruppi.  Ricordiamo che un gruppo ciclico finito di ordine contiene esattamente elementi di ordine per ogni divisore di ( ). In particolare, un gruppo ciclico di ordine con primo contiene elementi di ordine se .  Un elemento di si scrive nella forma con in e in . L'ordine di è se ha ordine e ha ordine . Poiché contiene elemento di ordine e contiene elementi di ordine abbiamo elementi di ordine .  Un elemento di si scrive nella forma con e in e in . L'ordine è se almeno uno tra e ha ordine e ha ordine . Poiché contiene un elemento di ordine e uno di ordine , abbiamo che almeno uno tra e ha ordine in casi. Abbiamo dunque elementi di ordine .  Un elemento di si scrive come con in , in e . Abbiamo ordine se e solo se ha ordine , ha ordine e ha ordine qualunque. Abbiamo dunque elementi di ordine .  Infine, un elemento di scritto come con in , in , in e ha ordine se e solo se almeno uno tra e ha ordine (e, come prima, abbiamo scelte per la coppia ), ha ordine e ha ordine qualunque. Dunque, abbiamo elementi di ordine .   "
 },
@@ -12830,7 +13208,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gruppiabeliani.html#exercises-gruppiabeliani-1",
   "type": "Esercizio",
-  "number": "26.1.1",
+  "number": "27.1.1",
   "title": "",
   "body": " Determinare tutti i gruppi abeliani di ordine (a meno di isomorfismi).                                                          Determinare quali dei gruppi trovati al punto precedente contengono elementi di ordine e, per ciascuno di essi, determinare quanti sono tali elementi.   L'ordine di un elemento appartenente al prodotto diretto di gruppi è uguale al minimo comune multiplo degli ordini delle sue componenti. Poiché nella decomposizione del gruppo come prodotto diretto di ciclici primari deve comparire un gruppo ciclico -primario di ordine almeno e un gruppo ciclico -primario di ordine almeno . Nella lista precedente i gruppi compatibili con questa condizione sono e . Se è un elemento del primo gruppo, con e , affinché l'ordine di sia , deve essere di ordine e di ordine . Il gruppo contiene elementi di ordine , mentre contiene elementi di ordine . In conclusione contiene elementi di ordine .  Per quanto riguarda , sia un suo generico elemento con , e . L'ordine di divide , l'ordine di divide e l'ordine di divide : affinché il minimo comune multiplo di questi ordini sia è necessario e sufficiente che l'ordine di sia esattamente e l'ordine di sia esattamente (l'ordine di può essere indifferentemente o ). Il gruppo contiene scelte per . L'elemento può essere scelto in modi e l'elemento può essere scelto in modi (abbiamo già calcolato in precedenza il numero di elementi di ordine di ). Dunque abbiamo elementi di ordine .  "
 },
@@ -12839,7 +13217,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gruppiabeliani.html#exercises-gruppiabeliani-2",
   "type": "Esercizio",
-  "number": "26.1.2",
+  "number": "27.1.2",
   "title": "",
   "body": " Dati i prodotti diretti                           stabilire quali sono isomorfi fra loro. Per ciascuno di essi calcolare poi il numero di elementi di ordine .   Riscriviamo i gruppi assegnati come prodotti diretti di ciclici primari, ricordando che un gruppo ciclico finito può essere espresso come prodotto diretto di ciclici i cui ordini sono i fattori primari del suo ordine. Abbiamo dunque i gruppi:                           Confrontando i fattori che appaiono in ciascuna decomposizione (trascurando l'ordinamento), vediamo che il primo e il terzo gruppo sono isomorfi tra loro, così come il secondo e il quinto.  Dato un elemento del gruppo affinché il suo ordine sia gli elementi , e devono avere ordine o e almeno uno di essi deve avere ordine . Poiché divide l'ordine di , questo gruppo contiene esattamente un sottogruppo ciclico di ordine , formato dagli elementi il cui periodo divide . Allo stesso modo anche in abbiamo elementi il cui periodo divide . Pertanto abbiamo esattamente terne tali che gli elementi , e abbiano ordine o . Dobbiamo però scartare la terna in cui tutti gli elementi hanno periodo (perché essa ha periodo a sua volta). Abbiamo dunque elementi di periodo .  Per quanto riguarda in maniera analoga abbiamo cinquine le cui componenti hanno periodo o . Scartando di nuovo la cinquina le cui componenti hanno tutte periodo rimangono elementi di periodo .  Infine possiede terne le cui componenti hanno periodo o . Scartando di nuovo la terna le cui componenti hanno tutte periodo rimangono elementi di periodo .  "
 },
@@ -12848,7 +13226,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gruppiabeliani.html#exercises-gruppiabeliani-3",
   "type": "Esercizio",
-  "number": "26.1.3",
+  "number": "27.1.3",
   "title": "",
   "body": " Siano e due gruppi abeliani di ordine . Dimostrare che e sono isomorfi se e solo se contengono lo stesso numero di elementi di periodo .   Ovviamente se e sono isomorfi hanno lo stesso numero di elementi di periodo .  Per mostrare il viceversa consideriamo i diversi tipi di isomorfismo dei gruppi abeliani di ordine . I possibili tipi di isomorfismo di un gruppo abeliano di ordine sono , e . Per ottenere la tesi basta mostrare che questi gruppi hanno un numero di elementi di periodo diverso tra loro.  Gli elementi di sono del tipo con , e in e in . Il periodo di è il minimo comune multiplo dei periodi di , , e . Poiché il periodo di , e divide mentre il periodo di divide , l'elemento ha periodo se e solo se almeno uno tra , e ha periodo e ha periodo . Deve dunque essere , mentre , e possono essere elementi qualunque di non tutti . Poiché possiamo scegliere ciascuno degli elementi , e in due modi diversi, mentre può essere scelto in unico modo abbiamo possibilità, da cui però dobbiamo scartare la scelta . Rimangono dunque elementi di periodo .  Gli elementi di sono del tipo con in , in e in . Con ragionamento analogo al precedente abbiamo che e devono avere periodo o (ma non contemporaneamente ) mentre deve avere periodo . In gli elementi che hanno periodo che divide sono quelli contenuti nell'unico sottogruppo di ordine e il loro numero è dunque : possiamo scegliere in modi diversi. Gli elementi di hanno tutti periodo che divide : possiamo scegliere in modi diversi. Possiamo poi scegliere in un unico modo. Di queste possibilità dobbiamo però scartare quella per cui e hanno entrambi periodo . Abbiamo dunque elementi di periodo .  Infine gli elementi di sono del tipo con in e in . Con ragionamento analogo al precedente abbiamo che deve avere periodo mentre deve avere periodo . In gli elementi che hanno periodo sono quelli contenuti nell'unico sottogruppo di ordine e il loro numero è dunque . Poiché anche può essere scelto in un unico modo abbiamo elemento di periodo .  "
 },
@@ -12857,7 +13235,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gruppiabeliani.html#exercises-gruppiabeliani-4",
   "type": "Esercizio",
-  "number": "26.1.4",
+  "number": "27.1.4",
   "title": "",
   "body": " Determinare (a meno di isomorfismi) tutti i gruppi abeliani di ordine che contengono almeno un elemento di ordine e nessun elemento di ordine .   Poiché potremo scrivere i gruppi cercati nella forma dove è il sottogruppo formato dagli elementi di periodo una potenza di e è il sottogruppo formato dagli elementi di periodo una potenza di . Il sottogruppo , avendo ordine , è isomorfo a o a , mentre , avendo ordine , è isomorfo a , a o a . Combinando queste possibilità otteniamo tutti i gruppi abeliani di ordine . Dobbiamo considerare quelli che soddisfano le ulteriori condizioni sui periodi degli elementi.  Se , non abbiamo elementi di periodo , mentre nei casi e abbiamo elementi di periodo . Si ottiene un elemento di periodo , prendendo un elemento di periodo in e un elemento di periodo in : un elemento di periodo in c'è sempre, mentre un elemento di periodo in c'è solo nel caso in cui . Dobbiamo quindi escludere questo caso. Dunque deve necessariamente essere mentre o . I gruppi cercati sono allora e .  "
 },
@@ -12866,7 +13244,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gruppiabeliani.html#exercises-gruppiabeliani-5",
   "type": "Esercizio",
-  "number": "26.1.5",
+  "number": "27.1.5",
   "title": "",
   "body": " Determinare (a meno di isomorfismi) tutti i gruppi abeliani tali che e che per ogni elemento si abbia .   Se per ogni elemento del gruppo significa che ogni elemento ha periodo che divide . Affinché ogni elemento abbia periodo che divide , è necessario e sufficiente che i fattori diretti nella decomposizione di come prodotto di ciclici primari abbiano ordine , , , e . L'ordine del gruppo è quindi un prodotto di una potenza di per una potenza di . Gli unici numeri compresi tra e che soddisfano questa condizione sono , , e .  Per l'ordine le possibilità sono , e , per l'ordine le possibilità sono , , e , per l'ordine le possibilità sono , e , mentre per l'ordine le possibilità sono , e .  "
 },
@@ -12875,7 +13253,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gruppiabeliani.html#exercises-gruppiabeliani-6",
   "type": "Esercizio",
-  "number": "26.1.6",
+  "number": "27.1.6",
   "title": "",
   "body": " Determinare tutti i gruppi abeliani di ordine che non hanno elementi di ordine .   Poiché potremo scrivere i gruppi cercati nella forma dove è il sottogruppo formato dagli elementi di periodo una potenza di e è il sottogruppo formato dagli elementi di periodo una potenza di . Il sottogruppo , avendo ordine , è isomorfo a o a mentre , avendo ordine , è isomorfo a , a o a . Combinando queste possibilità otteniamo tutti i gruppi abeliani di ordine (ne abbiamo ). Dobbiamo considerare quelli che non contengono elementi di ordine . Otteniamo elementi di quest'ordine se in ci sono elementi di ordine (il che avviene se è ) e in ci sono elementi di ordine (il che avviene se è o ). Dobbiamo quindi escludere i gruppi in cui queste condizioni sono entrambe soddisfatte. Rimangono dunque queste possibilità: , , e .  "
 },
@@ -12884,7 +13262,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gruppiabeliani.html#exercises-gruppiabeliani-7",
   "type": "Esercizio",
-  "number": "26.1.7",
+  "number": "27.1.7",
   "title": "",
   "body": " Si considerino i gruppi abeliani non ciclici di ordine .   Tra tutti i gruppi dati si trovino quelli (o quello) che contengono elementi di periodo massimo possibile.   Nella decomposizione dei gruppi dati, i fattori -primari possibili sono allora , e , mentre i fattori -primari possibili sono e . Combinando questi fattori in tutti i modi possibili otteniamo i gruppi abeliani di ordine non isomorfi tra loro:                                Tra questi, quello ciclico è il primo: infatti è prodotto diretto di ciclici di ordini coprimi. Escludendo il primo, possiamo cercare per ciascuno di essi l'elemento di periodo massimo. Tenuto conto che in un gruppo ciclico finito ogni elemento ha periodo che divide il periodo di un generatore e che il periodo di un elemento del prodotto diretto è il minimo comune multiplo dei periodi delle componenti otteniamo, come massimo periodo degli elementi nei gruppi dati, , , , e . Il gruppo in cui ci sono elementi di massimo periodo possibile è che ha elementi di ordine .   Per ciascuno dei gruppi trovati al punto precedente contare quanti elementi ci sono di periodo massimo.   Detto un elemento di affinché esso abbia periodo deve essere di periodo , di periodo qualunque e di periodo . In ci sono elementi di periodo , mentre in ci sono elementi di periodo . Infine ha elementi. Dunque abbiamo elementi di periodo massimo.  "
 },
@@ -12893,7 +13271,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gruppiabeliani.html#exercises-gruppiabeliani-8",
   "type": "Esercizio",
-  "number": "26.1.8",
+  "number": "27.1.8",
   "title": "",
   "body": " Determinare (a meno di isomorfismi) tutti i gruppi abeliani di ordine che hanno elementi di ordine con .   Detta la parte -primaria, poiché la massima potenza di che divide è , abbiamo queste possibilità per : , e . Detta la parte -primaria, poiché la massima potenza di che divide è , abbiamo queste possibilità per : e .  Se , abbiamo che il periodo di è il minimo comune multiplo dei periodi di e di : affinché abbia periodo deve allora essere di periodo e di periodo . In c'è un unico elemento di periodo , in ce ne sono e in ce ne sono ; in ci sono elementi di periodo , mentre in ce ne sono . Moltiplicando il numero di elementi di periodo per il numero di quelli di periodo troviamo il numero di elementi di periodo . Le possibilità affinché sono che corrisponde a e che corrisponde a .  "
 },
@@ -12902,7 +13280,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gruppiabeliani.html#exercises-gruppiabeliani-9",
   "type": "Esercizio",
-  "number": "26.1.9",
+  "number": "27.1.9",
   "title": "",
   "body": " Siano , , , primi distinti. Determinare quanti gruppi abeliani esistono (a meno di isomorfismi) di ordine .   Per ciascun primo coinvolto abbiamo fattori diretti il cui prodotto degli ordini è uguale a . Abbiamo dunque possibilità: , , , e . Combinando queste scelte per tutti gli primi coinvolti otteniamo quindi gruppi abeliani dell'ordine indicato.  "
 },
@@ -12911,7 +13289,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gruppiabeliani.html#exercises-gruppiabeliani-10",
   "type": "Esercizio",
-  "number": "26.1.10",
+  "number": "27.1.10",
   "title": "",
   "body": " Sia un gruppo abeliano di ordine . In esistano due elementi e di periodo tali che . Elencare tutti i possibili tipi di isomorfismo di .   Se ha periodo il suo quadrato ha periodo . Un gruppo ciclico di ordine contiene elemento di periodo e questo genera l'unico sottogruppo di ordine : poiché i sottogruppi di un gruppo ciclico di ordine sono il gruppo stesso, l'unico sottogruppo di ordine e l'identità, possiamo affermare che tutti i sottogruppi non banali di un gruppo ciclico di ordine contengono l'unico elemento di periodo . Pertanto se l'intersezione fosse non banale, essa dovrebbe contenere l'unico elemento di periodo di , cioè , e l'unico elemento di periodo di , cioè . In altri termini, dovremmo avere , contro la richiesta. Pertanto, e il prodotto ha ordine uguale al prodotto degli ordini, cioè , e coincide, quindi, con . Dunque, è prodotto di due gruppi ciclici di ordine , necessariamente normali perché è abeliano, e aventi intersezione banale: pertanto, .  "
 },
@@ -12920,7 +13298,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-gruppiabeliani.html#exercises-gruppiabeliani-11",
   "type": "Esercizio",
-  "number": "26.1.11",
+  "number": "27.1.11",
   "title": "",
   "body": " Determinare (a meno di isomorfismi) tutti i gruppi abeliani di ordine che hanno esattamente sottogruppi di ordine .   Poiché potremo scrivere i gruppi cercati nella forma dove è il sottogruppo formato dagli elementi di periodo una potenza di e è il sottogruppo formato dagli elementi di periodo una potenza di . Il sottogruppo , avendo ordine , è isomorfo a , a o a mentre , avendo ordine , è isomorfo a o a . Combinando queste possibilità otteniamo tutti i gruppi abeliani di ordine .  Dobbiamo considerare quelli che soddisfano l'ulteriore condizione sul numero dei sottogruppi di ordine : questi sono contenuti in . Se è ciclico contiene un unico sottogruppo di ordine , se tutti i suoi elementi non banali hanno ordine e abbiamo dunque elementi di ordine , ciascuno dei quali genera un differente sottogruppo di ordine (un gruppo di ordine contiene un solo elemento di ordine ). Se, infine, , un elemento con e ha periodo se e solo se il minimo comune multiplo dei periodi di e è . Sia in che in ci sono due elementi il cui periodo divide . Di queste possibilità dobbiamo però scartare quella in cui sia che hanno periodo . Dunque, abbiamo esattamente elementi di periodo e, quindi, sottogruppi di ordine come richiesto. Dunque, deve necessariamente essere . Combinando con le varie possibilità per abbiamo che è uno dei seguenti gruppi: o .  "
 },
@@ -12929,7 +13307,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-kx_moduli.html",
   "type": "Paragrafo",
-  "number": "27.1",
+  "number": "28.1",
   "title": "Spazi vettoriali con endomorfismi visti come moduli",
   "body": " Spazi vettoriali con endomorfismi visti come moduli  Dato un campo , sappiamo che l'anello dei polinomi a coefficienti in è un dominio euclideo ( ) e, quindi, un dominio a ideali principali ( ): possiamo quindi applicare i risultati del . Ma come possiamo descrivere un -modulo e i suoi sottomoduli?  Dalla , sappiamo che in è definita un'operazione di addizione rispetto a cui è un gruppo abeliano ed è inoltre definita una moltiplicazione tale che    per ogni in ;     per ogni in e e in ;     per ogni in e e in ;     per ogni e in e in .     Siccome contiene , le proprietà suesposte implicano che sia un -spazio vettoriale. Inoltre, il caso particolare in cui e è un elemento di dà le uguaglianze    per ogni e in      per ogni in e in (dove abbiamo usato il fatto che è commutativo).   Dunque, la moltiplicazione per definisce un endomorfismo del -spazio vettoriale .  Viceversa, se è un -spazio vettoriale e è un endomorfismo di , possiamo dare a una struttura di -modulo, ponendo per ogni in ed estendendo poi questa definizione al prodotto di un vettore per un polinomio. Dobbiamo però descrivere in dettaglio questa estensione e verificare che otteniamo così un -modulo.  Cominciamo allora con il notare che , l'insieme degli endomorfismi del -spazio vettoriale , ha una struttura di anello la cui addizione è definita ponendo e la cui moltiplicazione è la composizione: le verifiche che così facendo si ottiene effettivamente un anello sono di routine ( ).  Consideriamo ora la funzione che manda un elemento nell'endomorfismo (vale a dire l'endomorfismo che manda in ): si verifica facilmente che è un omomorfismo di anelli. Scelto un endomorfismo di , potremmo allora mandare in ed estendere così a un omomorfismo da in . C'è però un problema: l'ipotesi che l'anello di arrivo sia commutativo, condizione richiesta dal , non è, in generale, soddisfatta. Tuttavia, se consideriamo l'insieme formato dall'endomorfismo e dall'immagine di , cioè dagli endomorfismi del tipo al variare di in , notiamo che gli elementi di a due a due commutano e, per la , genera un sottoanello commutativo di . Possiamo allora applicare il considerando come anello di arrivo. Notiamo che non abbiamo bisogno di determinare ogni volta esplicitamente il sottoanello : esso ci è servito solo per dimostrare che è possibile estendere . Pertanto, dato un polinomio , l'estensione di manda nell'endomorfismo , e ha senso, quindi, porre . Lasciamo per esercizio la verifica che abbiamo così dotato di una struttura di -modulo e che la moltiplicazione per dà l'endomorfismo ( ).  Possiamo riassumere tutto ciò nella    Dato un -modulo , questo è un -spazio vettoriale e la moltiplicazione per è un endomorfismo di come -spazio vettoriale.  Viceversa, se è un endomorfismo di un -spazio vettoriale , è possibile dotare di una struttura di -modulo in modo tale che sia uguale alla moltiplicazione per .     La struttura di -modulo descritta nella dipende dall'endomorfismo considerato: preso un altro endomorfismo dello stesso spazio vettoriale, si ottiene una struttura di -modulo differente.   Dato un -modulo , cioè un -spazio vettoriale , dotato di un endomorfismo , ci chiediamo chi siano i -sottomoduli di . Un sottoinsieme non vuoto è un -sottomodulo se    appartiene a per ogni e in ;     appartiene a per ogni in e ogni in .   Queste due condizioni, scegliendo in nella seconda, implicano che è un -sottospazio vettoriale di . Inoltre, scegliendo nella seconda, vediamo che appartiene a per ogni in . Ciò suggerisce la    Dato un endomorfismo di uno spazio vettoriale , un sottospazio vettoriale di si dice - stabile se per ogni .    Abbiamo allora immediatamente la    Dato un -spazio vettoriale , dotato di un endomorfismo , i sottomoduli di rispetto alla struttura di -modulo indotta da sono i sottospazi -stabili.    Lasciamo i dettagli per esercizio ( ).     I sottospazi -stabili possono essere visti come una generalizzazione degli autospazi: infatti, se è un autovalore di un endomorfismo di un -spazio vettoriale , allora l'autospazio di relativo a è definito come l'insieme dei vettori di tali che : in particolare , essendo un multiplo di , appartiene ancora a , che è, dunque, -stabile. Più in generale, ogni sottospazio vettoriale di un autospazio di è -stabile.     Verificare che se è uno -spazio vettoriale, allora è un anello rispetto all'addizione definita ponendo e alla moltiplicazione data dalla composizione.    Dato un -spazio vettoriale e un endomorfismo , verificare che, identificando la moltiplicazione per con , ottiene una struttura di -modulo.   Dato un polinomio , ricordiamo che . Se è un elemento di e è il polinomio costante uguale a , per definizione abbiamo (si noti che in questo caso e per ). Siano ora e due elementi di e sia un polinomio come sopra. Abbiamo allora dove abbiamo usato il fatto che è un endomorfismo. Sia dato ora un vettore e due polinomi e . Dal momento che la valutazione in è un omomorfismo di anelli da in abbiamo allora che e : di conseguenza, e .    Dato un -spazio vettoriale , consideriamo due diverse strutture di -modulo su di esso: quelle associate, rispettivamente, all'endomorfismo nullo (cioè quello che manda tutti i vettori in ) e all'endomorfismo . In ciascuno di questi casi, determinare i -sottomoduli di .   In entrambi i casi, ogni -sottospazio vettoriale di è un -sottomodulo.    Sia un -spazio vettoriale dotato di un endomorfismo . Mostrare che è un -sottomodulo rispetto alla struttura indotta da se e solo se è un sottospazio -stabile.    "
 },
@@ -12938,7 +13316,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-kx_moduli.html#prop-caratterizzazioneKxmoduli",
   "type": "Proposizione",
-  "number": "27.1.1",
+  "number": "28.1.1",
   "title": "",
   "body": "  Dato un -modulo , questo è un -spazio vettoriale e la moltiplicazione per è un endomorfismo di come -spazio vettoriale.  Viceversa, se è un endomorfismo di un -spazio vettoriale , è possibile dotare di una struttura di -modulo in modo tale che sia uguale alla moltiplicazione per .   "
 },
@@ -12947,7 +13325,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-kx_moduli.html#rem-strutturadipendedatheta",
   "type": "Osservazione",
-  "number": "27.1.2",
+  "number": "28.1.2",
   "title": "",
   "body": " La struttura di -modulo descritta nella dipende dall'endomorfismo considerato: preso un altro endomorfismo dello stesso spazio vettoriale, si ottiene una struttura di -modulo differente.  "
 },
@@ -12956,7 +13334,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-kx_moduli.html#def-sottospazi_stabili",
   "type": "Definizione",
-  "number": "27.1.3",
+  "number": "28.1.3",
   "title": "",
   "body": "  Dato un endomorfismo di uno spazio vettoriale , un sottospazio vettoriale di si dice - stabile se per ogni .   "
 },
@@ -12965,7 +13343,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-kx_moduli.html#prop-sottospazi_stabili_sottomoduli",
   "type": "Proposizione",
-  "number": "27.1.4",
+  "number": "28.1.4",
   "title": "",
   "body": "  Dato un -spazio vettoriale , dotato di un endomorfismo , i sottomoduli di rispetto alla struttura di -modulo indotta da sono i sottospazi -stabili.    Lasciamo i dettagli per esercizio ( ).   "
 },
@@ -12974,7 +13352,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-kx_moduli.html#rem-autospazi_theta_stabili",
   "type": "Osservazione",
-  "number": "27.1.5",
+  "number": "28.1.5",
   "title": "",
   "body": " I sottospazi -stabili possono essere visti come una generalizzazione degli autospazi: infatti, se è un autovalore di un endomorfismo di un -spazio vettoriale , allora l'autospazio di relativo a è definito come l'insieme dei vettori di tali che : in particolare , essendo un multiplo di , appartiene ancora a , che è, dunque, -stabile. Più in generale, ogni sottospazio vettoriale di un autospazio di è -stabile.  "
 },
@@ -12983,7 +13361,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-kx_moduli.html#exercise-Endanello",
   "type": "Esercizio",
-  "number": "27.1.1",
+  "number": "28.1.1",
   "title": "",
   "body": " Verificare che se è uno -spazio vettoriale, allora è un anello rispetto all'addizione definita ponendo e alla moltiplicazione data dalla composizione.  "
 },
@@ -12992,7 +13370,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-kx_moduli.html#exercise-moltiplicazionethetax",
   "type": "Esercizio",
-  "number": "27.1.2",
+  "number": "28.1.2",
   "title": "",
   "body": " Dato un -spazio vettoriale e un endomorfismo , verificare che, identificando la moltiplicazione per con , ottiene una struttura di -modulo.   Dato un polinomio , ricordiamo che . Se è un elemento di e è il polinomio costante uguale a , per definizione abbiamo (si noti che in questo caso e per ). Siano ora e due elementi di e sia un polinomio come sopra. Abbiamo allora dove abbiamo usato il fatto che è un endomorfismo. Sia dato ora un vettore e due polinomi e . Dal momento che la valutazione in è un omomorfismo di anelli da in abbiamo allora che e : di conseguenza, e .  "
 },
@@ -13001,7 +13379,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-kx_moduli.html#exercises-kx_moduli-3",
   "type": "Esercizio",
-  "number": "27.1.3",
+  "number": "28.1.3",
   "title": "",
   "body": " Dato un -spazio vettoriale , consideriamo due diverse strutture di -modulo su di esso: quelle associate, rispettivamente, all'endomorfismo nullo (cioè quello che manda tutti i vettori in ) e all'endomorfismo . In ciascuno di questi casi, determinare i -sottomoduli di .   In entrambi i casi, ogni -sottospazio vettoriale di è un -sottomodulo.  "
 },
@@ -13010,7 +13388,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-kx_moduli.html#exercise-thetastabilesottomodulo",
   "type": "Esercizio",
-  "number": "27.1.4",
+  "number": "28.1.4",
   "title": "",
   "body": " Sia un -spazio vettoriale dotato di un endomorfismo . Mostrare che è un -sottomodulo rispetto alla struttura indotta da se e solo se è un sottospazio -stabile.  "
 },
@@ -13019,7 +13397,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-matrici_rappresentative.html",
   "type": "Paragrafo",
-  "number": "27.2",
+  "number": "28.2",
   "title": "Matrici rappresentative",
   "body": " Matrici rappresentative  Fissata una base , , di un -spazio vettoriale di dimensione finita, ricordiamo che la matrice rappresentativa di un endomorfismo rispetto alla base assegnata è la matrice a coefficienti in  definita da . In altri termini, la -esima riga di dà le componenti di rispetto alla base assegnata Si noti che alcuni testi usano una convenzione diversa, in cui la matrice rappresentativa è la trasposta della matrice da noi usata. . Viceversa, data una matrice , le formule soprastanti definiscono un endomorfismo detto endomorfismo associato ad rispetto alla base assegnata. Abbiamo così una corrispondenza biiettiva tra e e si vede facilmente che questa corrispondenza è un isomorfismo di anelli. Questo isomorfismo dipende dalla base scelta per : in particolare, dato un certo endomorfismo , le matrici che rappresentano al variare della base sono tutte e sole le matrici del tipo dove è una matrice invertibile, vale a dire sono le matrici simili ad .  Supponiamo ora che sia somma diretta di suoi sottospazi e . Unendo Il termine corretto sarebbe giustapponendo . una base , , di a una base , , di , otteniamo una base di . Possiamo allora rappresentare un endomorfismo di rispetto a questa base, evidenziando i blocchi dove e sono matrici quadrate di ordine, rispettivamente, e . Preso allora un vettore con , abbiamo con i primi addendi in e gli altri addendi in : i corrispondenti coefficienti stanno, rispettivamente, in e in . Vediamo allora che appartiene a se e solo se per . Pertanto, è la matrice nulla se e solo se appartiene a per ogni , con : poiché , , formano una base di , ciò è equivalente a dire che è un sottospazio -stabile. Analogamente, è la matrice nulla se e solo se è -stabile.  Dunque, se e sono sottospazi -stabili, la matrice rappresentativa rispetto alla base scelta come sopra (cioè unendo una base di a una base di ) è del tipo dove e sono le matrici quadrate che rappresentano l'endomorfismo indotto da in e, rispettivamente, in rispetto alle basi scelte. Più in generale abbiamo la    Sia un -spazio vettoriale di dimensione finita e dotato di un endomorfismo . Siano , , , sottospazi -stabili di tali che . Fissata una base per ciascuno dei , sia la matrice rappresentativa rispetto a tale base dell'endomorfismo di indotto da . Allora, la matrice rappresentativa di rispetto alla base di formata dall'unione delle basi scelte dei sottospazi è la matrice diagonale a blocchi : .    Il calcolo con le matrici diagonali a blocchi è particolarmente comodo. Richiamiamo alcuni risultati che possono essere agevolmente dimostrati:    Sia una matrice diagonale a blocchi. Allora    ;     ;     per ogni .         Dato un endomorfismo di uno spazio vettoriale di dimensione finita, dimostrare che è somma diretta di sottospazi -stabili di dimensione se e solo se è diagonalizzabile.    "
 },
@@ -13037,7 +13415,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-matrici_rappresentative.html#prop-diagonale_a_blocchi",
   "type": "Proposizione",
-  "number": "27.2.1",
+  "number": "28.2.1",
   "title": "",
   "body": "  Sia un -spazio vettoriale di dimensione finita e dotato di un endomorfismo . Siano , , , sottospazi -stabili di tali che . Fissata una base per ciascuno dei , sia la matrice rappresentativa rispetto a tale base dell'endomorfismo di indotto da . Allora, la matrice rappresentativa di rispetto alla base di formata dall'unione delle basi scelte dei sottospazi è la matrice diagonale a blocchi : .   "
 },
@@ -13046,7 +13424,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-matrici_rappresentative.html#prop-diagonali_blocchi",
   "type": "Proposizione",
-  "number": "27.2.2",
+  "number": "28.2.2",
   "title": "",
   "body": "  Sia una matrice diagonale a blocchi. Allora    ;     ;     per ogni .      "
 },
@@ -13055,7 +13433,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-matrici_rappresentative.html#exercises-matrici_rappresentative-1",
   "type": "Esercizio",
-  "number": "27.2.1",
+  "number": "28.2.1",
   "title": "",
   "body": " Dato un endomorfismo di uno spazio vettoriale di dimensione finita, dimostrare che è somma diretta di sottospazi -stabili di dimensione se e solo se è diagonalizzabile.  "
 },
@@ -13064,7 +13442,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-matrici_compagne.html",
   "type": "Paragrafo",
-  "number": "27.3",
+  "number": "28.3",
   "title": "Matrici compagne",
   "body": " Matrici compagne  Sia dato ancora una volta un -spazio vettoriale di dimensione finita , un suo endomorfismo e la struttura di -modulo indotta su da . Dal risultati del , sappiamo che ogni modulo finitamente generato su un dominio a ideali principali è somma diretta di moduli ciclici e tali moduli ciclici, grazie alla , possono essere descritti se conosciamo l'annullatore di un loro generatore. Vogliamo allora descrivere l'annullatore di un vettore di (pensato come -modulo) e la struttura del -modulo ciclico generato da .  Consideriamo i vettori , , , vale a dire i vettori che si ottengono applicando ripetutamente a . Poiché ha dimensione finita , questi vettori non possono esser linearmente indipendenti (anzi, possiamo dire che i primi vettori sono linearmente dipendenti). Esisteranno allora , , , in non tutti nulli tali che , vale a dire .  Dunque, esiste un polinomio non banale che annulla : poiché ciò è vero per ogni vettore di , possiamo concludere che è un -modulo di torsione. Se il suo annullatore è, ovviamente, tutto , altrimenti è un ideale principale generato da un certo polinomio non nullo . Il grado di è almeno , altrimenti sarebbe una costante non nulla e non potrebbe annullare il vettore non nullo . Pur di dividere eventualmente per il suo coefficiente direttivo, possiamo supporre che sia un polinomio monico: .  Dimostriamo ora che il -sottomodulo generato da ha, come -sottospazio vettoriale, dimensione e una sua base è formata dai vettori , , , . Questi vettori generano : infatti, se è un polinomio qualunque, possiamo eseguire la divisione per e ottenere dove . Ma allora e, dunque, ogni vettore di è -combinazione lineare di , , , .  Questi vettori sono anche -linearmente indipendenti: se infatti è una loro combinazione lineare che dà come risultato il vettore nullo, allora annulla ed è, quindi, un multiplo del polinomio . Poiché ha grado , ciò può avvenire se e solo se . Riassumiamo quanto visto nella    Sia uno spazio vettoriale di dimensione finita su un campo e sia un endomorfismo di . Allora , considerato come -modulo rispetto alla struttura indotta da , è di torsione. Se è un vettore non nullo, l'annullatore di è generato da un polinomio monico di grado con e il -sottomodulo ciclico generato da è un sottospazio vettoriale -stabile di dimensione e di base , , , .    Vediamo ora come tutto ciò ci permetta, prima in un caso particolare, di rappresentare un endomorfismo per mezzo di una matrice particolarmente semplice.     matrice compagna di un polinomio    matrice compagna del polinomio monico  Sia uno spazio vettoriale di dimensione finita su un campo e sia un endomorfismo di . Supponiamo che , con la struttura di -modulo indotta da , sia ciclico di generatore . Se è il polinomio monico che genera l'annullatore di allora , rispetto alla base di formata dai vettori , , , , si rappresenta con la matrice detta matrice compagna del polinomio monico . Il polinomio caratteristico della matrice è esattamente .    Determiniamo la matrice rappresentativa di rispetto alla base prescelta. Osserviamo che, per , si ha . In particolare, : quindi, i coefficienti sulla prima riga della matrice rappresentativa di sono . In maniera analoga determiniamo le righe della matrice fino alla -esima. Per determinare l'ultima riga, osserviamo che , cioè vale a dire . Ma allora .  Per mostrare che il polinomio caratteristico di è , procediamo per induzione su . Se (e, quindi, ), la matrice compagna di è e il polinomio caratteristico di questa matrice è, ovviamente, . Se , il polinomio caratteristico di è Se ora utilizziamo lo sviluppo di Laplace Pierre Simon Laplace , 1749 1827. Laplace, Pierre Simon rispetto alla prima colonna otteniamo: Il primo determinante che appare in questo sviluppo non è altri che il polinomio caratteristico della matrice compagna del polinomio e, per ipotesi induttiva, coincide con questo polinomio. Il secondo determinante è il determinante di una matrice triangolare inferiore ed è dunque il prodotto degli elementi sulla diagonale principale, vale a dire . Dunque .     La matrice compagna è definita solo per polinomi monici.   Possiamo ora dare il    Sia uno spazio vettoriale di dimensione su un campo e sia un endomorfismo di . Esistono allora polinomi irriducibili monici , , , (non necessariamente distinti) e interi positivi , , , e una base di rispetto a cui si rappresenta con la matrice diagonale a blocchi dove ciascun è la matrice compagna del polinomio . La matrice è univocamente determinata a meno dell'ordinamento dei blocchi .    Basta reinterpretare risultati già visti. L'endomorfismo induce su una struttura di -modulo: poiché è finitamente generato come -spazio vettoriale, a maggior ragione è finitamente generato come -modulo. Inoltre è un -modulo di torsione per la : quindi, grazie al , possiamo esprimere come somma diretta di un numero finito di moduli ciclici di ordine polinomi , , , con i irriducibili e monici (pur di dividere per il loro coefficiente direttivo), e tali ordini sono unici a meno dell'ordinamento. Scegliendo per ciascuno di questi sottomoduli una -base come nella , e rappresentando rispetto alla base che si ottiene unendo queste basi come nella , otteniamo esattamente la matrice .    Questo risultato può essere espresso direttamente in termini di matrici:    Sia una matrice quadrata di ordine a coefficienti in un campo . Esistono allora polinomi irriducibili monici , , , (non necessariamente distinti) e interi positivi , , , tali che è simile alla matrice diagonale a blocchi dove ciascun è la matrice compagna di . Inoltre, il polinomio caratteristico di è . La matrice è univocamente determinata a meno dell'ordinamento dei blocchi ed è detta forma canonica primaria di .    Questo teorema è semplicemente la traduzione in termini matriciali del precedente. Notiamo solo che il determinante di una matrice diagonale a blocchi è il prodotto dei determinanti dei blocchi ( ) e, di conseguenza, il polinomio caratteristico di (e, quindi di ) è il prodotto dei polinomi caratteristici dei singoli blocchi, che, per la sono esattamente i .     Sarebbe più corretto parlare di forma normale primaria invece che di forma canonica primaria, perché tale forma non è univocamente determinata (i blocchi possono essere riordinati arbitrariamente). Tuttavia è ormai invalso l'uso del termine canonica e pertanto lo useremo anche noi.     Sia uno spazio vettoriale di dimensione su un campo e sia un endomorfismo di . Esistono allora polinomi monici e una base di rispetto a cui si rappresenta con la matrice diagonale a blocchi dove ciascun è la matrice compagna del polinomio . La matrice è univocamente determinata.    Basta reinterpretare risultati già visti. L'endomorfismo induce su una struttura di -modulo: poiché è finitamente generato come -spazio vettoriale, a maggior ragione è finitamente generato come -modulo. Inoltre è un -modulo di torsione per la : quindi, grazie al , possiamo esprimere come somma diretta di un numero finito di moduli ciclici di ordine polinomi , che possiamo supporre monici pur di dividere per il loro coefficiente direttivo, e tali ordini sono unici. Scegliendo per ciascuno di questi sottomoduli una -base come nella , e rappresentando rispetto alla base che si ottiene unendo queste basi come nella , otteniamo esattamente la matrice .    Anche questo risultato può essere espresso direttamente in termini di matrici:    Sia una matrice quadrata di ordine a coefficienti in un campo . Allora esistono polinomi monici tali che è simile alla matrice diagonale a blocchi dove ciascun è la matrice compagna di . Inoltre il polinomio caratteristico di è . La matrice è univocamente determinata ed è detta forma canonica razionale di .    Questo teorema è semplicemente la traduzione in termini matriciali del precedente. Notiamo solo che il determinante di una matrice diagonale a blocchi è il prodotto dei determinanti dei blocchi ( ) e, di conseguenza, il polinomio caratteristico di (e, quindi di ) è il prodotto dei polinomi caratteristici dei singoli blocchi, che, per la sono esattamente i polinomi, che, per la sono esattamente gli .     In questo caso è corretto usare il termine canonica perché tale matrice è univocamente determinata.     Due matrici quadrate e dello stesso ordine sono simili se e solo se hanno la stessa forma canonica razionale.    Sia la forma canonica di (cioè sia simile a ). Se è simile ad allora è simile anche a . Viceversa se ha come sua forma canonica (cioè se è simile a ) allora e , essendo simili a sono simili fra loro.     Si può facilmente passare dalla forma canonica razionale a quella primaria e viceversa usando le tecniche che abbiamo descritto per passare dalla decomposizione a fattori invarianti a quella primaria di un modulo sopra un dominio a ideali principali.   I risultati dati finora ci dicono che, data una matrice , essa ha una forma canonica razionale e una forma canonica primaria ma non ci danno indicazioni su come determinarle. La conoscenza del polinomio caratteristico di ci dà qualche informazione sui blocchi ma in generale non è sufficiente.  Se il polinomio caratteristico di è il prodotto di polinomi irriducibili monici distinti, allora la forma canonica razionale è la matrice compagna di mentre la forma canonica primaria è la matrice diagonale a blocchi i cui blocchi sono le matrici compagne dei polinomi , , , . Se però nella fattorizzazione del polinomio caratteristico di lo stesso polinomio irriducibile monico appare più volte allora abbiamo bisogno di qualche informazione in più.    Consideriamo le matrici a coefficienti reali e . La matrice è una matrice diagonale a blocchi di ordine : ciascun blocco è la matrice compagna del polinomio irriducibile . La matrice è la matrice compagna del polinomio . Entrambe le matrici sono già in forma canonica (in questo caso particolare la forma canonica razionale e quella primaria coincidono) e hanno lo stesso polinomio caratteristico , tuttavia non sono simili tra loro.    Ovviamente ci sono dei metodi per determinare le forme canoniche a partire dalla matrice . Non approfondiamo però quest'aspetto nella sua generalità: ci limiteremo a considerare il caso particolare in cui il polinomio caratteristico di si fattorizzi come prodotto di polinomi di primo grado. Sceglieremo però in quest'ipotesi delle basi per i sottomoduli ciclici che porteranno una rappresentazione diversa da quella tramite matrici compagne di polinomi monici.  "
 },
@@ -13073,7 +13451,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-matrici_compagne.html#prop-torsione",
   "type": "Proposizione",
-  "number": "27.3.1",
+  "number": "28.3.1",
   "title": "",
   "body": "  Sia uno spazio vettoriale di dimensione finita su un campo e sia un endomorfismo di . Allora , considerato come -modulo rispetto alla struttura indotta da , è di torsione. Se è un vettore non nullo, l'annullatore di è generato da un polinomio monico di grado con e il -sottomodulo ciclico generato da è un sottospazio vettoriale -stabile di dimensione e di base , , , .   "
 },
@@ -13082,7 +13460,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-matrici_compagne.html#prop-compagna",
   "type": "Proposizione",
-  "number": "27.3.2",
+  "number": "28.3.2",
   "title": "",
   "body": "   matrice compagna di un polinomio    matrice compagna del polinomio monico  Sia uno spazio vettoriale di dimensione finita su un campo e sia un endomorfismo di . Supponiamo che , con la struttura di -modulo indotta da , sia ciclico di generatore . Se è il polinomio monico che genera l'annullatore di allora , rispetto alla base di formata dai vettori , , , , si rappresenta con la matrice detta matrice compagna del polinomio monico . Il polinomio caratteristico della matrice è esattamente .    Determiniamo la matrice rappresentativa di rispetto alla base prescelta. Osserviamo che, per , si ha . In particolare, : quindi, i coefficienti sulla prima riga della matrice rappresentativa di sono . In maniera analoga determiniamo le righe della matrice fino alla -esima. Per determinare l'ultima riga, osserviamo che , cioè vale a dire . Ma allora .  Per mostrare che il polinomio caratteristico di è , procediamo per induzione su . Se (e, quindi, ), la matrice compagna di è e il polinomio caratteristico di questa matrice è, ovviamente, . Se , il polinomio caratteristico di è Se ora utilizziamo lo sviluppo di Laplace Pierre Simon Laplace , 1749 1827. Laplace, Pierre Simon rispetto alla prima colonna otteniamo: Il primo determinante che appare in questo sviluppo non è altri che il polinomio caratteristico della matrice compagna del polinomio e, per ipotesi induttiva, coincide con questo polinomio. Il secondo determinante è il determinante di una matrice triangolare inferiore ed è dunque il prodotto degli elementi sulla diagonale principale, vale a dire . Dunque .   "
 },
@@ -13091,7 +13469,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-matrici_compagne.html#sec-matrici_compagne-10",
   "type": "Nota",
-  "number": "27.3.3",
+  "number": "28.3.3",
   "title": "",
   "body": " La matrice compagna è definita solo per polinomi monici.  "
 },
@@ -13100,7 +13478,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-matrici_compagne.html#thm-forma_canonica_primaria_endomorfismo",
   "type": "Teorema",
-  "number": "27.3.4",
+  "number": "28.3.4",
   "title": "",
   "body": "  Sia uno spazio vettoriale di dimensione su un campo e sia un endomorfismo di . Esistono allora polinomi irriducibili monici , , , (non necessariamente distinti) e interi positivi , , , e una base di rispetto a cui si rappresenta con la matrice diagonale a blocchi dove ciascun è la matrice compagna del polinomio . La matrice è univocamente determinata a meno dell'ordinamento dei blocchi .    Basta reinterpretare risultati già visti. L'endomorfismo induce su una struttura di -modulo: poiché è finitamente generato come -spazio vettoriale, a maggior ragione è finitamente generato come -modulo. Inoltre è un -modulo di torsione per la : quindi, grazie al , possiamo esprimere come somma diretta di un numero finito di moduli ciclici di ordine polinomi , , , con i irriducibili e monici (pur di dividere per il loro coefficiente direttivo), e tali ordini sono unici a meno dell'ordinamento. Scegliendo per ciascuno di questi sottomoduli una -base come nella , e rappresentando rispetto alla base che si ottiene unendo queste basi come nella , otteniamo esattamente la matrice .   "
 },
@@ -13109,7 +13487,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-matrici_compagne.html#thm-forma_canonica_primaria_matrice",
   "type": "Teorema",
-  "number": "27.3.5",
+  "number": "28.3.5",
   "title": "",
   "body": "  Sia una matrice quadrata di ordine a coefficienti in un campo . Esistono allora polinomi irriducibili monici , , , (non necessariamente distinti) e interi positivi , , , tali che è simile alla matrice diagonale a blocchi dove ciascun è la matrice compagna di . Inoltre, il polinomio caratteristico di è . La matrice è univocamente determinata a meno dell'ordinamento dei blocchi ed è detta forma canonica primaria di .    Questo teorema è semplicemente la traduzione in termini matriciali del precedente. Notiamo solo che il determinante di una matrice diagonale a blocchi è il prodotto dei determinanti dei blocchi ( ) e, di conseguenza, il polinomio caratteristico di (e, quindi di ) è il prodotto dei polinomi caratteristici dei singoli blocchi, che, per la sono esattamente i .   "
 },
@@ -13118,7 +13496,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-matrici_compagne.html#sec-matrici_compagne-15",
   "type": "Nota",
-  "number": "27.3.6",
+  "number": "28.3.6",
   "title": "",
   "body": " Sarebbe più corretto parlare di forma normale primaria invece che di forma canonica primaria, perché tale forma non è univocamente determinata (i blocchi possono essere riordinati arbitrariamente). Tuttavia è ormai invalso l'uso del termine canonica e pertanto lo useremo anche noi.  "
 },
@@ -13127,7 +13505,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-matrici_compagne.html#thm-forma_canonica_razionale_endomorfismo",
   "type": "Teorema",
-  "number": "27.3.7",
+  "number": "28.3.7",
   "title": "",
   "body": "  Sia uno spazio vettoriale di dimensione su un campo e sia un endomorfismo di . Esistono allora polinomi monici e una base di rispetto a cui si rappresenta con la matrice diagonale a blocchi dove ciascun è la matrice compagna del polinomio . La matrice è univocamente determinata.    Basta reinterpretare risultati già visti. L'endomorfismo induce su una struttura di -modulo: poiché è finitamente generato come -spazio vettoriale, a maggior ragione è finitamente generato come -modulo. Inoltre è un -modulo di torsione per la : quindi, grazie al , possiamo esprimere come somma diretta di un numero finito di moduli ciclici di ordine polinomi , che possiamo supporre monici pur di dividere per il loro coefficiente direttivo, e tali ordini sono unici. Scegliendo per ciascuno di questi sottomoduli una -base come nella , e rappresentando rispetto alla base che si ottiene unendo queste basi come nella , otteniamo esattamente la matrice .   "
 },
@@ -13136,7 +13514,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-matrici_compagne.html#thm-forma_canonica_razionale_matrice",
   "type": "Teorema",
-  "number": "27.3.8",
+  "number": "28.3.8",
   "title": "",
   "body": "  Sia una matrice quadrata di ordine a coefficienti in un campo . Allora esistono polinomi monici tali che è simile alla matrice diagonale a blocchi dove ciascun è la matrice compagna di . Inoltre il polinomio caratteristico di è . La matrice è univocamente determinata ed è detta forma canonica razionale di .    Questo teorema è semplicemente la traduzione in termini matriciali del precedente. Notiamo solo che il determinante di una matrice diagonale a blocchi è il prodotto dei determinanti dei blocchi ( ) e, di conseguenza, il polinomio caratteristico di (e, quindi di ) è il prodotto dei polinomi caratteristici dei singoli blocchi, che, per la sono esattamente i polinomi, che, per la sono esattamente gli .   "
 },
@@ -13145,7 +13523,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-matrici_compagne.html#sec-matrici_compagne-19",
   "type": "Nota",
-  "number": "27.3.9",
+  "number": "28.3.9",
   "title": "",
   "body": " In questo caso è corretto usare il termine canonica perché tale matrice è univocamente determinata.  "
 },
@@ -13154,7 +13532,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-matrici_compagne.html#cor-matrici_simili",
   "type": "Corollario",
-  "number": "27.3.10",
+  "number": "28.3.10",
   "title": "",
   "body": "  Due matrici quadrate e dello stesso ordine sono simili se e solo se hanno la stessa forma canonica razionale.    Sia la forma canonica di (cioè sia simile a ). Se è simile ad allora è simile anche a . Viceversa se ha come sua forma canonica (cioè se è simile a ) allora e , essendo simili a sono simili fra loro.   "
 },
@@ -13163,7 +13541,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-matrici_compagne.html#rem-da_primaria_a_razionale_e_viceversa",
   "type": "Osservazione",
-  "number": "27.3.11",
+  "number": "28.3.11",
   "title": "",
   "body": " Si può facilmente passare dalla forma canonica razionale a quella primaria e viceversa usando le tecniche che abbiamo descritto per passare dalla decomposizione a fattori invarianti a quella primaria di un modulo sopra un dominio a ideali principali.  "
 },
@@ -13172,7 +13550,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-matrici_compagne.html#sec-matrici_compagne-24",
   "type": "Esempio",
-  "number": "27.3.12",
+  "number": "28.3.12",
   "title": "",
   "body": "  Consideriamo le matrici a coefficienti reali e . La matrice è una matrice diagonale a blocchi di ordine : ciascun blocco è la matrice compagna del polinomio irriducibile . La matrice è la matrice compagna del polinomio . Entrambe le matrici sono già in forma canonica (in questo caso particolare la forma canonica razionale e quella primaria coincidono) e hanno lo stesso polinomio caratteristico , tuttavia non sono simili tra loro.   "
 },
@@ -13181,7 +13559,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-jordan.html",
   "type": "Paragrafo",
-  "number": "27.4",
+  "number": "28.4",
   "title": "Forma canonica di Jordan",
   "body": " Forma canonica di Jordan       blocco di Jordan di ordine relativo all'autovalore  Sia uno spazio vettoriale di dimensione finita su un campo e sia un endomorfismo di . Supponiamo che , con la struttura di -modulo indotta da , sia ciclico di generatore e che l'annullatore di sia generato dal polinomio . I vettori , , , formano allora una base di rispetto a cui si rappresenta con la matrice detta blocco di Jordan Camille Jordan , 1838 1922. Jordan, Camille di ordine relativo all'autovalore . Il polinomio caratteristico della matrice è esattamente . L'endomorfismo ha come unico autovalore di molteplicità algebrica e molteplicità geometrica .    Mostriamo che gli vettori , , sono linearmente indipendenti e sono quindi una base per , che sappiamo avere dimensione uguale al grado del polinomio ordine di . Siano allora , , elementi di tali che , vale a dire , cioè . Poiché l'annullatore di è generato da un polinomio di grado ciò comporta che è uguale a . Se espandiamo questo polinomio notiamo che il coefficiente di è e, dunque, . Una volta posto , il coefficiente di è e, dunque, e così via.  Mostriamo ora che la matrice rappresentativa di rispetto a questa base è la matrice data in enunciato. Per si ha e, pertanto, . Ciò permette di determinare i coefficienti della riga -esima. Per determinare l'ultima riga della matrice notiamo che . Pertanto da cui ricaviamo i coefficienti dell'ultima riga della matrice.  La matrice è triangolare, quindi si calcola immediatamente il suo polinomio caratteristico e, pertanto, l'unico autovalore è di molteplicità algebrica . La molteplicità geometrica di è uguale a . Ora ha, ovviamente, rango e, dunque, la molteplicità geometrica di è uguale a .    Partendo dalla forma canonica primaria e applicando blocco a blocco la scelta di base data dalla proposizione precedente, otteniamo il    Sia uno spazio vettoriale di dimensione su un campo e sia un endomorfismo di , il cui polinomio caratteristico sia totalmente riducibile (ciò avviene sempre se è algebricamente chiuso). Esiste allora una base di rispetto a cui si rappresenta con una matrice diagonale a blocchi del tipo dove ciascun è un blocco di Jordan. La matrice , detta matrice di Jordan , è univocamente determinata a meno dell'ordinamento in cui sono riportati i blocchi.    Anche questo risultato ha un corrispettivo matriciale:    Sia una matrice quadrata di ordine a coefficienti in un campo . Se il polinomio caratteristico di è totalmente riducibile (ciò avviene sempre se è algebricamente chiuso) allora è simile a una matrice diagonale a blocchi del tipo dove ciascun è un blocco di Jordan. Inoltre il polinomio caratteristico di è . La matrice è univocamente determinata a meno dell'ordinamento in cui sono riportati i blocchi e viene detta forma canonica di Jordan della matrice .     Anche in questo caso sarebbe più corretto parlare di forma normale di Jordan.    Notiamo che nella matrice di Jordan data dai teoremi precedenti non è detto che gli autovalori , , siano tutti diversi.     Due matrici quadrate e dello stesso ordine aventi polinomio caratteristico totalmente riducibile sono simili se e solo se hanno la stessa forma canonica di Jordan (a meno eventualmente dell'ordine dei blocchi).    Sia la forma canonica di Jordan di (cioè sia simile a ). Se è simile ad allora è simile anche a . Viceversa se ha come sua forma canonica di Jordan (cioè se è simile a ) allora e , essendo simili a sono simili fra loro.     Nel caso in cui i blocchi di Jordan abbiano tutti ordine otteniamo una usuale matrice diagonale.   Data una matrice il cui polinomio caratteristico è totalmente riducibile, viene allora naturale chiedersi come sia possibile determinare una matrice di Jordan a essa simile. Uno dei metodi per far questo è quello di cercare degli invarianti per similitudine. Più precisamente, data una matrice quadrata , ci chiediamo che cosa hanno in comune le matrici simili ad . Sappiamo già, ad esempio, che matrici simili hanno lo stesso determinante, lo stesso rango e lo stesso polinomio caratteristico. Diamo allora il    Se e sono matrici quadrate simili tra loro allora le matrici e sono simili fra loro per ogni e ogni .    Esiste una matrice invertibile tale che . Ma allora . Dunque l'enunciato è vero per . Procediamo per induzione su : per abbiamo allora       Dato un blocco di Jordan si ha per e per .    La matrice è la matrice il cui rango è . Calcolando le potenze successive di si trovano le matrici e così via. A ogni passo il rango decresce di fino ad azzerarsi.    Sia allora una matrice quadrata il cui polinomio caratteristico è totalmente riducibile. Sappiamo che è simile a una matrice di Jordan dove , , sono gli autovalori (non necessariamente distinti) di . Sia uno degli autovalori di . La matrice è ovviamente la matrice e, per la si ha che è la matrice . Ora se è diverso da il blocco è una matrice triangolare i cui elementi lungo la diagonale sono tutti uguali a e sono dunque non nulli: ciò implica che è invertibile così come tutte le potenze e, pertanto, questo blocco ha rango . Se invece è uguale a , grazie al sappiamo che il rango di decresce a ogni passo di fino ad azzerarsi. Per la sappiamo che il rango di è uguale alla somma dei ranghi dei blocchi . Dunque, se è l'ordine della matrice e consideriamo la sequenza , , , , abbiamo che al primo passo questa sequenza decresce di un numero uguale al numero di blocchi di Jordan relativi all'autovalore , al secondo passo decresce di un numero uguale al numero di blocchi di Jordan relativi all'autovalore di ordine almeno e così via. Dunque, la conoscenza dei ranghi delle matrici ci permette di determinare il numero di blocchi di Jordan relativi a e i loro ordini e, quindi, utilizzando lo stesso argomento per ciascun autovalore, di determinare stessa. Si potrebbe pensare che ciò non sia di grande aiuto, visto che per calcolare il rango di dobbiamo conoscere : tuttavia il ci dice che e sono simili per ogni e, in particolare, hanno lo stesso rango. Possiamo allora delineare un procedimento per determinare a partire da .    Sia una matrice quadrata di ordine . Vogliamo determinare, se esiste, una matrice di Jordan a essa simile.   Calcoliamo il polinomio caratteristico di . Se il polinomio caratteristico non è totalmente riducibile allora non è simile a una matrice di Jordan e non possiamo proseguire oltre. Se invece il polinomio caratteristico è totalmente riducibile lo scriviamo nella forma dove , , sono gli autovalori distinti di e , , sono le corrispondenti molteplicità algebriche.    Per ciascun autovalore consideriamo la sequenza di numeri , , , (si noti come primo termine). Questi numeri formano una successione che decresce strettamente fin quando non raggiunge .    Il numero dà il numero di blocchi di Jordan relativi a , il numero dà il numero di blocchi di Jordan relativi a di ordine almeno e così via. Determiniamo così il numero di blocchi di Jordan relativi a e i loro ordini.        Il procedimento precedente ci dice come determinare una matrice di Jordan simile a una matrice quadrata assegnata, ma non ci dice come determinare una matrice invertibile tale che : ovviamente esiste un metodo anche per determinare una tale matrice ma non lo trattiamo qui.   Per poter determinare più facilmente il numero di blocchi di Jordan di un dato ordine a partire dalla sequenza di interi , , , possiamo utilizzare un grafico di questo tipo. Innanzitutto consideriamo la differenza tra il primo e il secondo termine della sequenza e disegniamo una riga contenente dei simboli (ad esempio, dei quadrati) in tal numero:   Riga con 8 quadrati.    Ora consideriamo la differenza tra il secondo e il terzo termine della sequenza : questo è il numero di blocchi di Jordan di ordine almeno . Riportiamo questo numero di simboli in riga sopra la precedente (a partire da sinistra):   Due righe di quadrati sovrapposte lunghe 8 e 6    Procediamo così disegnando una terza riga, poi una quarta e così via: al termine avremo un grafico di questo tipo:   Righe di quadrati sovrapposte lunghe 8, 6, 6, 3, 3 e 1    Le colonne (e le rispettive altezze) corrispondono ora ai blocchi di Jordan relativi a (nel grafico in esempio avremmo un blocco di ordine , di ordine , di ordine e di ordine ).    Si consideri la matrice È facile calcolare il polinomio caratteristico di questa matrice (utilizzando a ogni passo opportuni sviluppi secondo Lagrange): si ottiene . Gli autovalori sono quindi , di molteplicità algebrica e di molteplicità algebrica . Si noti che in generale non è detto che gli autovalori di una matrice siano gli elementi della diagonale. Avremo dunque blocchi di Jordan relativi a di ordine totale e blocchi di Jordan relativi a di ordine totale .  Consideriamo l'autovalore : costruiamo la sequenza dei ranghi associata a : il primo numero è , il secondo è , il terzo è , il quarto è e qui ci fermiamo perché (ovviamente qui non sono riportati, per brevità, i calcoli necessari). Ora disegniamo il grafico come in precedenza:   Righe di quadrati sovrapposte lunghe 1, 1 e 1    Abbiamo una prima riga lunga , una seconda riga lunga e una terza riga lunga pure . Dunque un'unica colonna alta : c'è un unico blocco di Jordan relativo a di ordine . Notiamo però che avremmo potuto risparmiarci qualche calcolo: dopo aver calcolato il rango di avremmo potuto notare che la riga inferiore del nostro grafico contiene un unico elemento e, pertanto, che le righe successive avrebbero dovuto avere lunghezza .  Passiamo ora all'autovalore . Anche qui diamo, senza esplicitare i calcoli, la sequenza dei ranghi associati: otteniamo , , , , e qui ci fermiamo perché . Il grafico in questo caso è il seguente:   Righe di quadrati sovrapposte lunghe 3, 1 e 1    Abbiamo una prima riga lunga , una seconda riga lunga e una terza riga lunga pure . Anche qui, una volta visto che la seconda riga ha lunghezza avremmo potuto desumere che la terza riga ha pure lunghezza : si noti inoltre che il numero totale di quadretti deve essere uguale a . Guardando le colonne possiamo ricavare che ci deve essere un blocco di ordine e blocchi di ordine .  Riassumendo, la matrice è simile alla matrice di Jordan: . Ovviamente i blocchi possono essere disposti in qualsiasi ordine. Ad esempio anche la matrice è simile alla matrice .  Supponiamo ora di voler trovare la forma canonica primaria di . Ricordiamo che abbiamo ottenuto la forma canonica di Jordan a partire da una tale forma agendo blocco per blocco: precisamente il blocco matrice compagna del polinomio è stato sostituito a un blocco di Jordan relativo all'autovalore . Consideriamo allora . Dobbiamo sostituire al blocco di Jordan di ordine relativo a la matrice compagna del polinomio , che espanso dà : la matrice compagna di questo polinomio è . Si noti che gli elementi dell'ultima riga sono i coefficienti cambiati di segno del polinomio a partire dal termine noto e di grado crescente (tranne il coefficiente direttivo).  Al blocco di Jordan di ordine relativo a sostituiamo la matrice compagna del polinomio cioè: . Infine i due blocchi di Jordan di ordine sono anche matrici compagne di polinomi di primo grado e non necessitano quindi di modifica. Abbiamo così la matrice: .      Sia data la matrice a coefficienti reali .   Determinare (se esiste) una matrice di Jordan simile ad .   Il polinomio caratteristico di può essere calcolato facilmente: si ha . Il polinomio caratteristico è totalmente riducibile e la matrice ha come unico autovalore di molteplicità algebrica . Dunque la matrice è simile a una matrice di Jordan in cui avremo blocchi di Jordan di ordine complessivo . Calcoliamo la successione dei ranghi associati all'autovalore partendo, come sempre, dall'ordine della matrice che in questo caso è . Consideriamo ora il rango della matrice , vale a dire la matrice . Si vede facilmente che il rango di questa matrice è . Pertanto abbiamo blocchi di Jordan relativi a .  Iniziamo a costruire il solito schema   Riga con 2 quadrati.    Ovviamente dobbiamo proseguire: sappiamo che ci sono due blocchi ma non abbiamo ancora idea del loro ordine. Prendiamo allora la matrice , cioè la matrice . Il rango di questa matrice è : dunque nella successione dei ranghi siamo scesi di . Abbiamo pertanto blocchi di ordine almeno . Ecco il nostro schema aggiornato:   Due righe di quadrati sovrapposte lunghe 2 e 2    Purtroppo dobbiamo proseguire: dobbiamo piazzare ancora due simboli e non sappiamo come fare. Calcoliamo allora , cioè la matrice . Questa matrice ha rango : nella successione dei ranghi siamo scesi di . Abbiamo così un blocco di ordine almeno . Aggiorniamo ancora il nostro schema     Dobbiamo piazzare ancora un altro simbolo nel nostro grafico. È inutile calcolare il rango di : l'unica possibilità per il nostro grafico è che sia   Righe di quadrati sovrapposte lunghe 2, 2, 1 e 1    Abbiamo una colonna di altezza e una di altezza . La nostra matrice è allora simile alla matrice di Jordan .   Determinare poi la forma canonica primaria e la forma canonica razionale di .   Per trovare la forma canonica primaria di basta sostituire il blocco di Jordan di ordine relativo a con la matrice compagna del polinomio e il blocco di Jordan di ordine relativo a con la matrice compagna del polinomio ottenendo così la matrice . Poiché divide per ottenere la forma canonica razionale basta ordinare in maniera opportuna questi blocchi .    Si consideri la matrice dove i coefficienti sono elementi di un campo .   Determinare una matrice di Jordan simile ad nel caso in cui .   La matrice è triangolare, quindi i suoi autovalori sono , e qualunque sia il campo e il polinomio caratteristico di è sempre totalmente riducibile. Poiché , gli autovalori sono distinti e hanno tutti molteplicità algebrica . Per ciascun autovalore esiste dunque un unico blocco di Jordan ad esso relativo e tale blocco ha ordine . In altri termini, è diagonalizzabile e simile alla matrice .   Determinare una matrice di Jordan simile ad nel caso in cui con numero primo.   Possiamo riprendere i calcoli del punto precedente. Poiché dobbiamo stabilire, in dipendenza da , se gli autovalori sono distinti o meno. Gli autovalori e coincidono se e solo se la loro differenza è multipla di , cioè se e solo se . Analogamente e coincidono se e solo se è multiplo di , il che avviene se e solo se . Infine e coincidono se e solo se è multiplo di il che avviene, ancora una volta, se e solo se . Riassumendo: se la matrice ha tre autovalori aventi molteplicità algebrica e, quindi, come nel caso la matrice è simile alla matrice diagonale . Se, invece , la matrice ha un unico autovalore di molteplicità algebrica . Consideriamo la solita successione dei ranghi partendo da , ordine di . Consideriamo ora la matrice (si noti che in questo campo ). La matrice ha rango : dall'intero siamo scesi di e, quindi ci sono due blocchi relativi a . Non abbiamo bisogno di proseguire oltre: ci deve necessariamente essere un blocco di ordine e un blocco di ordine e, dunque, è simile alla matrice .     Per ciascuna delle seguenti coppie di matrici a coefficienti in stabilire se sono simili tra loro.     e .   La matrice è triangolare, quindi i suoi autovalori sono gli elementi lungo la diagonale. Dunque, ha come autovalori di molteplicità algebrica e di molteplicità algebrica . Il polinomio caratteristico di è .  Il polinomio caratteristico di è cioè . Espandendo il polinomio caratteristico di troviamo lo stesso polinomio: dunque, e hanno lo stesso polinomio caratteristico e questo è totalmente riducibile. Calcoliamo la forma canonica di Jordan per e . Poiché ha molteplicità algebrica , per entrambe le matrici c'è un unico blocco di Jordan di ordine relativo a . Consideriamo l'autovalore e calcoliamo la successione dei ranghi associati a , partendo, come sempre, dall'ordine della matrice, cioè . La matrice , cioè la matrice , ha rango . Il rango è sceso di : avremo, quindi, blocchi di Jordan relativi a . Consideriamo ora la successione dei ranghi per la matrice : La matrice , cioè la matrice , ha rango . Il rango è sceso di : avremo, quindi, un unico blocco di Jordan relativo a . Le due matrici non sono dunque simili.     e .   La matrice ha polinomio caratteristico . La matrice ha polinomio caratteristico . Espandendo il polinomio caratteristico di troviamo il polinomio . Le matrici hanno polinomio caratteristico differente, quindi non sono simili. Non è necessario calcolare gli autovalori delle due matrici né, tantomeno, la loro (eventuale) forma canonica di Jordan.     e .   La matrice ha polinomio caratteristico e la matrice ha polinomio caratteristico . Espandendo il polinomio caratteristico di troviamo lo stesso polinomio. Fattorizzando questo polinomio, troviamo , che è totalmente riducibile e, quindi, possiamo determinare la forma canonica di Jordan per entrambe le matrici. Entrambe hanno come unico autovalore di molteplicità algebrica . Consideriamo allora le successioni dei ranghi associate a questo autovalore, partendo dall'ordine delle matrici, cioè . La matrice cioè la matrice ha rango . Analogamente la matrice cioè la matrice ha rango . In entrambi i casi siamo scesi di : pertanto sia la forma canonica di Jordan di che la forma canonica di Jordan di contengono un unico blocco di Jordan relativo a di ordine . Le due matrici e sono entrambe simili alla matrice e sono, pertanto, simili tra loro.     "
 },
@@ -13190,7 +13568,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jordan.html#prop-blocco_jordan",
   "type": "Proposizione",
-  "number": "27.4.1",
+  "number": "28.4.1",
   "title": "",
   "body": "     blocco di Jordan di ordine relativo all'autovalore  Sia uno spazio vettoriale di dimensione finita su un campo e sia un endomorfismo di . Supponiamo che , con la struttura di -modulo indotta da , sia ciclico di generatore e che l'annullatore di sia generato dal polinomio . I vettori , , , formano allora una base di rispetto a cui si rappresenta con la matrice detta blocco di Jordan Camille Jordan , 1838 1922. Jordan, Camille di ordine relativo all'autovalore . Il polinomio caratteristico della matrice è esattamente . L'endomorfismo ha come unico autovalore di molteplicità algebrica e molteplicità geometrica .    Mostriamo che gli vettori , , sono linearmente indipendenti e sono quindi una base per , che sappiamo avere dimensione uguale al grado del polinomio ordine di . Siano allora , , elementi di tali che , vale a dire , cioè . Poiché l'annullatore di è generato da un polinomio di grado ciò comporta che è uguale a . Se espandiamo questo polinomio notiamo che il coefficiente di è e, dunque, . Una volta posto , il coefficiente di è e, dunque, e così via.  Mostriamo ora che la matrice rappresentativa di rispetto a questa base è la matrice data in enunciato. Per si ha e, pertanto, . Ciò permette di determinare i coefficienti della riga -esima. Per determinare l'ultima riga della matrice notiamo che . Pertanto da cui ricaviamo i coefficienti dell'ultima riga della matrice.  La matrice è triangolare, quindi si calcola immediatamente il suo polinomio caratteristico e, pertanto, l'unico autovalore è di molteplicità algebrica . La molteplicità geometrica di è uguale a . Ora ha, ovviamente, rango e, dunque, la molteplicità geometrica di è uguale a .   "
 },
@@ -13199,7 +13577,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jordan.html#thm-forma_canonica_jordan_endomorfismo",
   "type": "Teorema",
-  "number": "27.4.2",
+  "number": "28.4.2",
   "title": "",
   "body": "  Sia uno spazio vettoriale di dimensione su un campo e sia un endomorfismo di , il cui polinomio caratteristico sia totalmente riducibile (ciò avviene sempre se è algebricamente chiuso). Esiste allora una base di rispetto a cui si rappresenta con una matrice diagonale a blocchi del tipo dove ciascun è un blocco di Jordan. La matrice , detta matrice di Jordan , è univocamente determinata a meno dell'ordinamento in cui sono riportati i blocchi.   "
 },
@@ -13208,7 +13586,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jordan.html#thm-forma_canonica_jordan_matrice",
   "type": "Teorema",
-  "number": "27.4.3",
+  "number": "28.4.3",
   "title": "",
   "body": "  Sia una matrice quadrata di ordine a coefficienti in un campo . Se il polinomio caratteristico di è totalmente riducibile (ciò avviene sempre se è algebricamente chiuso) allora è simile a una matrice diagonale a blocchi del tipo dove ciascun è un blocco di Jordan. Inoltre il polinomio caratteristico di è . La matrice è univocamente determinata a meno dell'ordinamento in cui sono riportati i blocchi e viene detta forma canonica di Jordan della matrice .   "
 },
@@ -13217,7 +13595,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jordan.html#sec-jordan-7",
   "type": "Nota",
-  "number": "27.4.4",
+  "number": "28.4.4",
   "title": "",
   "body": " Anche in questo caso sarebbe più corretto parlare di forma normale di Jordan.  "
 },
@@ -13226,7 +13604,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jordan.html#rem-autovalori_non_distinti",
   "type": "Osservazione",
-  "number": "27.4.5",
+  "number": "28.4.5",
   "title": "",
   "body": " Notiamo che nella matrice di Jordan data dai teoremi precedenti non è detto che gli autovalori , , siano tutti diversi.  "
 },
@@ -13235,7 +13613,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jordan.html#cor-simili_se_jordan_uguale",
   "type": "Corollario",
-  "number": "27.4.6",
+  "number": "28.4.6",
   "title": "",
   "body": "  Due matrici quadrate e dello stesso ordine aventi polinomio caratteristico totalmente riducibile sono simili se e solo se hanno la stessa forma canonica di Jordan (a meno eventualmente dell'ordine dei blocchi).    Sia la forma canonica di Jordan di (cioè sia simile a ). Se è simile ad allora è simile anche a . Viceversa se ha come sua forma canonica di Jordan (cioè se è simile a ) allora e , essendo simili a sono simili fra loro.   "
 },
@@ -13244,7 +13622,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jordan.html#rem-blocchi_ordine_1_diagonalizzabile",
   "type": "Osservazione",
-  "number": "27.4.7",
+  "number": "28.4.7",
   "title": "",
   "body": " Nel caso in cui i blocchi di Jordan abbiano tutti ordine otteniamo una usuale matrice diagonale.  "
 },
@@ -13262,7 +13640,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jordan.html#lem-invarianti_di_simili",
   "type": "Lemma",
-  "number": "27.4.8",
+  "number": "28.4.8",
   "title": "",
   "body": "  Se e sono matrici quadrate simili tra loro allora le matrici e sono simili fra loro per ogni e ogni .    Esiste una matrice invertibile tale che . Ma allora . Dunque l'enunciato è vero per . Procediamo per induzione su : per abbiamo allora    "
 },
@@ -13271,7 +13649,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jordan.html#lem-rango_blocco",
   "type": "Lemma",
-  "number": "27.4.9",
+  "number": "28.4.9",
   "title": "",
   "body": "  Dato un blocco di Jordan si ha per e per .    La matrice è la matrice il cui rango è . Calcolando le potenze successive di si trovano le matrici e così via. A ogni passo il rango decresce di fino ad azzerarsi.   "
 },
@@ -13280,7 +13658,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jordan.html#alg-jordan",
   "type": "Algoritmo",
-  "number": "27.4.10",
+  "number": "28.4.10",
   "title": "",
   "body": "  Sia una matrice quadrata di ordine . Vogliamo determinare, se esiste, una matrice di Jordan a essa simile.   Calcoliamo il polinomio caratteristico di . Se il polinomio caratteristico non è totalmente riducibile allora non è simile a una matrice di Jordan e non possiamo proseguire oltre. Se invece il polinomio caratteristico è totalmente riducibile lo scriviamo nella forma dove , , sono gli autovalori distinti di e , , sono le corrispondenti molteplicità algebriche.    Per ciascun autovalore consideriamo la sequenza di numeri , , , (si noti come primo termine). Questi numeri formano una successione che decresce strettamente fin quando non raggiunge .    Il numero dà il numero di blocchi di Jordan relativi a , il numero dà il numero di blocchi di Jordan relativi a di ordine almeno e così via. Determiniamo così il numero di blocchi di Jordan relativi a e i loro ordini.      "
 },
@@ -13289,7 +13667,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jordan.html#rem-matrice_passaggio_jordan",
   "type": "Osservazione",
-  "number": "27.4.11",
+  "number": "28.4.11",
   "title": "",
   "body": " Il procedimento precedente ci dice come determinare una matrice di Jordan simile a una matrice quadrata assegnata, ma non ci dice come determinare una matrice invertibile tale che : ovviamente esiste un metodo anche per determinare una tale matrice ma non lo trattiamo qui.  "
 },
@@ -13298,7 +13676,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jordan.html#ex-matrice_jordan",
   "type": "Esempio",
-  "number": "27.4.12",
+  "number": "28.4.12",
   "title": "",
   "body": "  Si consideri la matrice È facile calcolare il polinomio caratteristico di questa matrice (utilizzando a ogni passo opportuni sviluppi secondo Lagrange): si ottiene . Gli autovalori sono quindi , di molteplicità algebrica e di molteplicità algebrica . Si noti che in generale non è detto che gli autovalori di una matrice siano gli elementi della diagonale. Avremo dunque blocchi di Jordan relativi a di ordine totale e blocchi di Jordan relativi a di ordine totale .  Consideriamo l'autovalore : costruiamo la sequenza dei ranghi associata a : il primo numero è , il secondo è , il terzo è , il quarto è e qui ci fermiamo perché (ovviamente qui non sono riportati, per brevità, i calcoli necessari). Ora disegniamo il grafico come in precedenza:   Righe di quadrati sovrapposte lunghe 1, 1 e 1    Abbiamo una prima riga lunga , una seconda riga lunga e una terza riga lunga pure . Dunque un'unica colonna alta : c'è un unico blocco di Jordan relativo a di ordine . Notiamo però che avremmo potuto risparmiarci qualche calcolo: dopo aver calcolato il rango di avremmo potuto notare che la riga inferiore del nostro grafico contiene un unico elemento e, pertanto, che le righe successive avrebbero dovuto avere lunghezza .  Passiamo ora all'autovalore . Anche qui diamo, senza esplicitare i calcoli, la sequenza dei ranghi associati: otteniamo , , , , e qui ci fermiamo perché . Il grafico in questo caso è il seguente:   Righe di quadrati sovrapposte lunghe 3, 1 e 1    Abbiamo una prima riga lunga , una seconda riga lunga e una terza riga lunga pure . Anche qui, una volta visto che la seconda riga ha lunghezza avremmo potuto desumere che la terza riga ha pure lunghezza : si noti inoltre che il numero totale di quadretti deve essere uguale a . Guardando le colonne possiamo ricavare che ci deve essere un blocco di ordine e blocchi di ordine .  Riassumendo, la matrice è simile alla matrice di Jordan: . Ovviamente i blocchi possono essere disposti in qualsiasi ordine. Ad esempio anche la matrice è simile alla matrice .  Supponiamo ora di voler trovare la forma canonica primaria di . Ricordiamo che abbiamo ottenuto la forma canonica di Jordan a partire da una tale forma agendo blocco per blocco: precisamente il blocco matrice compagna del polinomio è stato sostituito a un blocco di Jordan relativo all'autovalore . Consideriamo allora . Dobbiamo sostituire al blocco di Jordan di ordine relativo a la matrice compagna del polinomio , che espanso dà : la matrice compagna di questo polinomio è . Si noti che gli elementi dell'ultima riga sono i coefficienti cambiati di segno del polinomio a partire dal termine noto e di grado crescente (tranne il coefficiente direttivo).  Al blocco di Jordan di ordine relativo a sostituiamo la matrice compagna del polinomio cioè: . Infine i due blocchi di Jordan di ordine sono anche matrici compagne di polinomi di primo grado e non necessitano quindi di modifica. Abbiamo così la matrice: .   "
 },
@@ -13307,7 +13685,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jordan.html#exercise-jordan_ordine_6",
   "type": "Esercizio",
-  "number": "27.4.1",
+  "number": "28.4.1",
   "title": "",
   "body": " Sia data la matrice a coefficienti reali .   Determinare (se esiste) una matrice di Jordan simile ad .   Il polinomio caratteristico di può essere calcolato facilmente: si ha . Il polinomio caratteristico è totalmente riducibile e la matrice ha come unico autovalore di molteplicità algebrica . Dunque la matrice è simile a una matrice di Jordan in cui avremo blocchi di Jordan di ordine complessivo . Calcoliamo la successione dei ranghi associati all'autovalore partendo, come sempre, dall'ordine della matrice che in questo caso è . Consideriamo ora il rango della matrice , vale a dire la matrice . Si vede facilmente che il rango di questa matrice è . Pertanto abbiamo blocchi di Jordan relativi a .  Iniziamo a costruire il solito schema   Riga con 2 quadrati.    Ovviamente dobbiamo proseguire: sappiamo che ci sono due blocchi ma non abbiamo ancora idea del loro ordine. Prendiamo allora la matrice , cioè la matrice . Il rango di questa matrice è : dunque nella successione dei ranghi siamo scesi di . Abbiamo pertanto blocchi di ordine almeno . Ecco il nostro schema aggiornato:   Due righe di quadrati sovrapposte lunghe 2 e 2    Purtroppo dobbiamo proseguire: dobbiamo piazzare ancora due simboli e non sappiamo come fare. Calcoliamo allora , cioè la matrice . Questa matrice ha rango : nella successione dei ranghi siamo scesi di . Abbiamo così un blocco di ordine almeno . Aggiorniamo ancora il nostro schema     Dobbiamo piazzare ancora un altro simbolo nel nostro grafico. È inutile calcolare il rango di : l'unica possibilità per il nostro grafico è che sia   Righe di quadrati sovrapposte lunghe 2, 2, 1 e 1    Abbiamo una colonna di altezza e una di altezza . La nostra matrice è allora simile alla matrice di Jordan .   Determinare poi la forma canonica primaria e la forma canonica razionale di .   Per trovare la forma canonica primaria di basta sostituire il blocco di Jordan di ordine relativo a con la matrice compagna del polinomio e il blocco di Jordan di ordine relativo a con la matrice compagna del polinomio ottenendo così la matrice . Poiché divide per ottenere la forma canonica razionale basta ordinare in maniera opportuna questi blocchi .  "
 },
@@ -13316,7 +13694,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jordan.html#exercises-jordan-2",
   "type": "Esercizio",
-  "number": "27.4.2",
+  "number": "28.4.2",
   "title": "",
   "body": " Si consideri la matrice dove i coefficienti sono elementi di un campo .   Determinare una matrice di Jordan simile ad nel caso in cui .   La matrice è triangolare, quindi i suoi autovalori sono , e qualunque sia il campo e il polinomio caratteristico di è sempre totalmente riducibile. Poiché , gli autovalori sono distinti e hanno tutti molteplicità algebrica . Per ciascun autovalore esiste dunque un unico blocco di Jordan ad esso relativo e tale blocco ha ordine . In altri termini, è diagonalizzabile e simile alla matrice .   Determinare una matrice di Jordan simile ad nel caso in cui con numero primo.   Possiamo riprendere i calcoli del punto precedente. Poiché dobbiamo stabilire, in dipendenza da , se gli autovalori sono distinti o meno. Gli autovalori e coincidono se e solo se la loro differenza è multipla di , cioè se e solo se . Analogamente e coincidono se e solo se è multiplo di , il che avviene se e solo se . Infine e coincidono se e solo se è multiplo di il che avviene, ancora una volta, se e solo se . Riassumendo: se la matrice ha tre autovalori aventi molteplicità algebrica e, quindi, come nel caso la matrice è simile alla matrice diagonale . Se, invece , la matrice ha un unico autovalore di molteplicità algebrica . Consideriamo la solita successione dei ranghi partendo da , ordine di . Consideriamo ora la matrice (si noti che in questo campo ). La matrice ha rango : dall'intero siamo scesi di e, quindi ci sono due blocchi relativi a . Non abbiamo bisogno di proseguire oltre: ci deve necessariamente essere un blocco di ordine e un blocco di ordine e, dunque, è simile alla matrice .  "
 },
@@ -13325,7 +13703,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jordan.html#exercises-jordan-3-2",
   "type": "Esercizio",
-  "number": "27.4.3",
+  "number": "28.4.3",
   "title": "",
   "body": "  e .   La matrice è triangolare, quindi i suoi autovalori sono gli elementi lungo la diagonale. Dunque, ha come autovalori di molteplicità algebrica e di molteplicità algebrica . Il polinomio caratteristico di è .  Il polinomio caratteristico di è cioè . Espandendo il polinomio caratteristico di troviamo lo stesso polinomio: dunque, e hanno lo stesso polinomio caratteristico e questo è totalmente riducibile. Calcoliamo la forma canonica di Jordan per e . Poiché ha molteplicità algebrica , per entrambe le matrici c'è un unico blocco di Jordan di ordine relativo a . Consideriamo l'autovalore e calcoliamo la successione dei ranghi associati a , partendo, come sempre, dall'ordine della matrice, cioè . La matrice , cioè la matrice , ha rango . Il rango è sceso di : avremo, quindi, blocchi di Jordan relativi a . Consideriamo ora la successione dei ranghi per la matrice : La matrice , cioè la matrice , ha rango . Il rango è sceso di : avremo, quindi, un unico blocco di Jordan relativo a . Le due matrici non sono dunque simili.  "
 },
@@ -13334,7 +13712,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jordan.html#exercises-jordan-3-3",
   "type": "Esercizio",
-  "number": "27.4.4",
+  "number": "28.4.4",
   "title": "",
   "body": "  e .   La matrice ha polinomio caratteristico . La matrice ha polinomio caratteristico . Espandendo il polinomio caratteristico di troviamo il polinomio . Le matrici hanno polinomio caratteristico differente, quindi non sono simili. Non è necessario calcolare gli autovalori delle due matrici né, tantomeno, la loro (eventuale) forma canonica di Jordan.  "
 },
@@ -13343,7 +13721,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-jordan.html#exercises-jordan-3-4",
   "type": "Esercizio",
-  "number": "27.4.5",
+  "number": "28.4.5",
   "title": "",
   "body": "  e .   La matrice ha polinomio caratteristico e la matrice ha polinomio caratteristico . Espandendo il polinomio caratteristico di troviamo lo stesso polinomio. Fattorizzando questo polinomio, troviamo , che è totalmente riducibile e, quindi, possiamo determinare la forma canonica di Jordan per entrambe le matrici. Entrambe hanno come unico autovalore di molteplicità algebrica . Consideriamo allora le successioni dei ranghi associate a questo autovalore, partendo dall'ordine delle matrici, cioè . La matrice cioè la matrice ha rango . Analogamente la matrice cioè la matrice ha rango . In entrambi i casi siamo scesi di : pertanto sia la forma canonica di Jordan di che la forma canonica di Jordan di contengono un unico blocco di Jordan relativo a di ordine . Le due matrici e sono entrambe simili alla matrice e sono, pertanto, simili tra loro.  "
 },
@@ -13352,7 +13730,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-polinomio_minimo_matrici.html",
   "type": "Paragrafo",
-  "number": "27.5",
+  "number": "28.5",
   "title": "Polinomio minimo di matrici",
   "body": " Polinomio minimo di matrici  Nel abbiamo dato un significato alla valutazione di un polinomio a coefficienti in un campo in un endomorfismo di uno spazio vettoriale su , anche se non è un anello commutativo. Analogamente, data una matrice quadrata a coefficienti in un campo , possiamo definire un omomorfismo da in che manda un elemento di nella matrice e manda in . Esplicitamente, se è un polinomio in , poniamo .  L'insieme dei polinomi che si annullano in è il nucleo dell'omomorfismo di valutazione e costituisce quindi un ideale di . Al momento non sappiamo però se ci siano polinomi che si annullano in oltre a quello banale. Si potrebbe ragionare sulle dimensioni di opportuni spazi vettoriali e dimostrare l'esistenza di un tale polinomio. Possiamo però esibire esplicitamente un polinomio non nullo che si annulla in : precisamente il suo polinomio caratteristico. Abbiamo infatti il William Rowan Hamilton , 1805 1865. (che vale nell'ipotesi più generale di coefficienti presi in un anello commutativo).   Teorema di Cayley-Hamilton   Sia una matrice quadrata di ordine a coefficienti in un anello commutativo e sia il polinomio caratteristico di . Allora , cioè .    Consideriamo la matrice e indichiamo con la sua matrice aggiunta: sappiamo che . Poiché i coefficienti di sono polinomi in di grado minore o uguale a , i coefficienti di sono polinomi in di grado al più (infatti i coefficienti della matrice aggiunta sono, a meno del segno, determinanti di matrici di ordine estratti dalla matrice). Raccogliendo le varie potenze di possiamo allora scrivere per opportune matrici . Abbiamo allora ovvero . Sviluppiamo ora il membro a sinistra e uguagliando le matrici coefficienti delle rispettive potenze di troviamo allora: Moltiplichiamo ora a sinistra la prima di queste uguaglianze per , la seconda per e così via: Se ora sommiamo membro a membro tutte queste uguaglianze, troviamo: .     Potrebbe sembrare che questo teorema abbia una dimostrazione più semplice. Abbiamo infatti . Si ha allora . Tuttavia questa dimostrazione non funziona. Infatti è una matrice, mentre è un elemento di .   Mettiamoci ora nel caso particolare in cui l'anello dei coefficienti sia un campo . Sappiamo allora che è un dominio a ideali principali e, pertanto, ogni ideale non banale è formato dai multipli di un polinomio non nullo: questo polinomio non è univocamente determinato, ma se poniamo la condizione ulteriore che sia monico allora lo è. Possiamo allora dare la    Sia una matrice quadrata di ordine a coefficienti in un campo . Il polinomio minimo di è il polinomio monico di grado minimo che si annulla in .    Grazie al il polinomio minimo di una matrice quadrata è un divisore del suo polinomio caratteristico: in particolare il suo grado è minore o uguale dell'ordine della matrice. Supponiamo ora che e siano matrici quadrate simili a coefficienti in un campo (e, dunque, esista una matrice invertibile tale che ) e sia un polinomio a coefficienti in . Allora . In particolare il polinomio si annulla in se e solo se si annulla in . Abbiamo dunque la    Se e sono matrici quadrate simili a coefficienti in un campo , allora il polinomio minimo di e quello di coincidono.    Vogliamo ora determinare il polinomio minimo di una matrice di cui conosciamo una forma canonica diagonale a blocchi (con i blocchi matrici compagne di polinomi o blocchi di Jordan). Cominciamo a considerare un singolo blocco:    Sia uno spazio vettoriale di dimensione finita su un campo e sia un endomorfismo di . Supponiamo che , con la struttura di -modulo indotta da , sia ciclico di generatore e sia il polinomio monico che genera l'annullatore di .  Se è la matrice che rappresenta rispetto a una base qualunque allora il polinomio minimo e il polinomio caratteristico di coincidono con .    Possiamo scegliere una base qualunque per rappresentare , tanto sappiamo che il polinomio minimo e caratteristico della matrice sarà lo stesso. In particolare, possiamo scegliere una base rispetto a cui la matrice rappresentativa è la matrice compagna del polinomio : la ci dice allora che il polinomio caratteristico di è .  Se è un polinomio di grado minore di , per ipotesi sappiamo che . Inoltre sappiamo che per ogni vettore di . Ciò significa che se ha grado minore di e che . Dunque il polinomio minimo di è esattamente .      Se è la matrice compagna di un polinomio , il suo polinomio minimo coincide con il suo polinomio caratteristico ed è .      Dato un blocco di Jordan , il suo polinomio minimo coincide con il suo polinomio caratteristico ed è .    Siamo ora in grado di determinare il polinomio minimo di una matrice a partire da una sua forma canonica diagonale a blocchi, sia che i blocchi siano matrici compagne di polinomi, sia che i blocchi siano di Jordan. Come immediata conseguenza della abbiamo la    Sia una matrice diagonale a blocchi e sia un polinomio a coefficienti in . Allora . In particolare se e solo se , , e il polinomio minimo di è, dunque, il minimo comune multiplo dei polinomi minimi di , , .    Sia ora una matrice quadrata di ordine a coefficienti in un campo e sia la sua forma canonica razionale: con matrice compagna di un polinomio monico e . Il polinomio minimo di è allora il minimo comune multiplo degli cioè è . Poiché il polinomio caratteristico di è abbiamo immediatamente il    Ogni fattore irriducibile del polinomio caratteristico di una matrice divide anche il polinomio minimo di . In particolare, le radici del polinomio caratteristico sono anche radici del polinomio minimo e il polinomio minimo è totalmente riducibile se e solo se il polinomio caratteristico è totalmente riducibile.      Sia una matrice quadrata di ordine a coefficienti in un campo , il cui polinomio caratteristico sia totalmente riducibile. Allora il polinomio minimo di è dove , , sono gli autovalori distinti di e, per ciascun , l'intero positivo è il massimo ordine tra i blocchi di Jordan relativi a presenti nella forma canonica di Jordan di .    Per la il polinomio minimo di e quello della sua forma canonica di Jordan coincidono. Per la , il polinomio minimo di è il minimo comune multiplo dei polinomi minimi dei suoi blocchi di Jordan. La tesi segue immediatamente allora dal .      Se riprendiamo la matrice dell' i cui autovalori sono e vediamo che il massimo ordine dei blocchi di Jordan relativi a è e il massimo ordine dei blocchi di Jordan relativi a è : pertanto il suo polinomio minimo è .    Abbiamo inoltre l'immediato    Una matrice quadrata è diagonalizzabile se e solo se il polinomio minimo di è prodotto di fattori lineari distinti.      Determinare il polinomio minimo della matrice dell' .   Poiché l'unico autovalore è e il massimo ordine dei blocchi di Jordan relativi a è il polinomio minimo è .    Determinare le forme canoniche di Jordan di matrici a coefficienti razionali il cui polinomio caratteristico è e il cui polinomio minimo è .   Poiché il polinomio caratteristico ha grado , le matrici cercate hanno ordine . Tutti i blocchi di Jordan sono relativi all'unico autovalore . Poiché il polinomio minimo è , nella forma canonica di Jordan deve esserci un blocco di ordine e altri blocchi di ordine minore o uguale a . Considerando che l'ordine complessivo dei blocchi deve essere possiamo avere blocchi di ordine  oppure un blocco di ordine , uno di ordine e uno di ordine  oppure un blocco di ordine e di ordine  .    "
 },
@@ -13361,7 +13739,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-polinomio_minimo_matrici.html#thm-cayley_hamilton",
   "type": "Teorema",
-  "number": "27.5.1",
+  "number": "28.5.1",
   "title": "Teorema di Cayley-Hamilton.",
   "body": " Teorema di Cayley-Hamilton   Sia una matrice quadrata di ordine a coefficienti in un anello commutativo e sia il polinomio caratteristico di . Allora , cioè .    Consideriamo la matrice e indichiamo con la sua matrice aggiunta: sappiamo che . Poiché i coefficienti di sono polinomi in di grado minore o uguale a , i coefficienti di sono polinomi in di grado al più (infatti i coefficienti della matrice aggiunta sono, a meno del segno, determinanti di matrici di ordine estratti dalla matrice). Raccogliendo le varie potenze di possiamo allora scrivere per opportune matrici . Abbiamo allora ovvero . Sviluppiamo ora il membro a sinistra e uguagliando le matrici coefficienti delle rispettive potenze di troviamo allora: Moltiplichiamo ora a sinistra la prima di queste uguaglianze per , la seconda per e così via: Se ora sommiamo membro a membro tutte queste uguaglianze, troviamo: .   "
 },
@@ -13370,7 +13748,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-polinomio_minimo_matrici.html#rem-cayley_hamilton",
   "type": "Osservazione",
-  "number": "27.5.2",
+  "number": "28.5.2",
   "title": "",
   "body": " Potrebbe sembrare che questo teorema abbia una dimostrazione più semplice. Abbiamo infatti . Si ha allora . Tuttavia questa dimostrazione non funziona. Infatti è una matrice, mentre è un elemento di .  "
 },
@@ -13379,7 +13757,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-polinomio_minimo_matrici.html#def-polinomio_minimo_matrici",
   "type": "Definizione",
-  "number": "27.5.3",
+  "number": "28.5.3",
   "title": "",
   "body": "  Sia una matrice quadrata di ordine a coefficienti in un campo . Il polinomio minimo di è il polinomio monico di grado minimo che si annulla in .   "
 },
@@ -13388,7 +13766,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-polinomio_minimo_matrici.html#prop-polinomio_minimo_simili",
   "type": "Proposizione",
-  "number": "27.5.4",
+  "number": "28.5.4",
   "title": "",
   "body": "  Se e sono matrici quadrate simili a coefficienti in un campo , allora il polinomio minimo di e quello di coincidono.   "
 },
@@ -13397,7 +13775,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-polinomio_minimo_matrici.html#prop-polinomio_minimo_di_ciclico",
   "type": "Proposizione",
-  "number": "27.5.5",
+  "number": "28.5.5",
   "title": "",
   "body": "  Sia uno spazio vettoriale di dimensione finita su un campo e sia un endomorfismo di . Supponiamo che , con la struttura di -modulo indotta da , sia ciclico di generatore e sia il polinomio monico che genera l'annullatore di .  Se è la matrice che rappresenta rispetto a una base qualunque allora il polinomio minimo e il polinomio caratteristico di coincidono con .    Possiamo scegliere una base qualunque per rappresentare , tanto sappiamo che il polinomio minimo e caratteristico della matrice sarà lo stesso. In particolare, possiamo scegliere una base rispetto a cui la matrice rappresentativa è la matrice compagna del polinomio : la ci dice allora che il polinomio caratteristico di è .  Se è un polinomio di grado minore di , per ipotesi sappiamo che . Inoltre sappiamo che per ogni vettore di . Ciò significa che se ha grado minore di e che . Dunque il polinomio minimo di è esattamente .   "
 },
@@ -13406,7 +13784,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-polinomio_minimo_matrici.html#cor-polinomio_minimo_compagna",
   "type": "Corollario",
-  "number": "27.5.6",
+  "number": "28.5.6",
   "title": "",
   "body": "  Se è la matrice compagna di un polinomio , il suo polinomio minimo coincide con il suo polinomio caratteristico ed è .   "
 },
@@ -13415,7 +13793,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-polinomio_minimo_matrici.html#cor-polinomio_minimo_blocco_jordan",
   "type": "Corollario",
-  "number": "27.5.7",
+  "number": "28.5.7",
   "title": "",
   "body": "  Dato un blocco di Jordan , il suo polinomio minimo coincide con il suo polinomio caratteristico ed è .   "
 },
@@ -13424,7 +13802,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-polinomio_minimo_matrici.html#prop-polinomio_minimo_matrice_digonale_blocchi",
   "type": "Proposizione",
-  "number": "27.5.8",
+  "number": "28.5.8",
   "title": "",
   "body": "  Sia una matrice diagonale a blocchi e sia un polinomio a coefficienti in . Allora . In particolare se e solo se , , e il polinomio minimo di è, dunque, il minimo comune multiplo dei polinomi minimi di , , .   "
 },
@@ -13433,7 +13811,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-polinomio_minimo_matrici.html#cor-fattori_irriducibili_polinomi_minimo",
   "type": "Corollario",
-  "number": "27.5.9",
+  "number": "28.5.9",
   "title": "",
   "body": "  Ogni fattore irriducibile del polinomio caratteristico di una matrice divide anche il polinomio minimo di . In particolare, le radici del polinomio caratteristico sono anche radici del polinomio minimo e il polinomio minimo è totalmente riducibile se e solo se il polinomio caratteristico è totalmente riducibile.   "
 },
@@ -13442,7 +13820,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-polinomio_minimo_matrici.html#thm-polinomio_minimo_jordanizzabile",
   "type": "Teorema",
-  "number": "27.5.10",
+  "number": "28.5.10",
   "title": "",
   "body": "  Sia una matrice quadrata di ordine a coefficienti in un campo , il cui polinomio caratteristico sia totalmente riducibile. Allora il polinomio minimo di è dove , , sono gli autovalori distinti di e, per ciascun , l'intero positivo è il massimo ordine tra i blocchi di Jordan relativi a presenti nella forma canonica di Jordan di .    Per la il polinomio minimo di e quello della sua forma canonica di Jordan coincidono. Per la , il polinomio minimo di è il minimo comune multiplo dei polinomi minimi dei suoi blocchi di Jordan. La tesi segue immediatamente allora dal .   "
 },
@@ -13451,7 +13829,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-polinomio_minimo_matrici.html#sec-polinomio_minimo_matrici-19",
   "type": "Esempio",
-  "number": "27.5.11",
+  "number": "28.5.11",
   "title": "",
   "body": "  Se riprendiamo la matrice dell' i cui autovalori sono e vediamo che il massimo ordine dei blocchi di Jordan relativi a è e il massimo ordine dei blocchi di Jordan relativi a è : pertanto il suo polinomio minimo è .   "
 },
@@ -13460,7 +13838,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-polinomio_minimo_matrici.html#cor-diagonalizzabile_se_polinomio_minimo_fattori_lineari_distinti",
   "type": "Corollario",
-  "number": "27.5.12",
+  "number": "28.5.12",
   "title": "",
   "body": "  Una matrice quadrata è diagonalizzabile se e solo se il polinomio minimo di è prodotto di fattori lineari distinti.   "
 },
@@ -13469,7 +13847,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-polinomio_minimo_matrici.html#exercises-polinomio_minimo_matrici-1",
   "type": "Esercizio",
-  "number": "27.5.1",
+  "number": "28.5.1",
   "title": "",
   "body": " Determinare il polinomio minimo della matrice dell' .   Poiché l'unico autovalore è e il massimo ordine dei blocchi di Jordan relativi a è il polinomio minimo è .  "
 },
@@ -13478,423 +13856,9 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-polinomio_minimo_matrici.html#exercises-polinomio_minimo_matrici-2",
   "type": "Esercizio",
-  "number": "27.5.2",
+  "number": "28.5.2",
   "title": "",
   "body": " Determinare le forme canoniche di Jordan di matrici a coefficienti razionali il cui polinomio caratteristico è e il cui polinomio minimo è .   Poiché il polinomio caratteristico ha grado , le matrici cercate hanno ordine . Tutti i blocchi di Jordan sono relativi all'unico autovalore . Poiché il polinomio minimo è , nella forma canonica di Jordan deve esserci un blocco di ordine e altri blocchi di ordine minore o uguale a . Considerando che l'ordine complessivo dei blocchi deve essere possiamo avere blocchi di ordine  oppure un blocco di ordine , uno di ordine e uno di ordine  oppure un blocco di ordine e di ordine  .  "
-},
-{
-  "id": "sec-elementi_algebrici_e_trascendenti",
-  "level": "1",
-  "url": "sec-elementi_algebrici_e_trascendenti.html",
-  "type": "Paragrafo",
-  "number": "28.1",
-  "title": "Elementi algebrici e trascendenti",
-  "body": " Elementi algebrici e trascendenti  Se è un anello contenente un campo , allora possiamo considerare come uno spazio vettoriale su in maniera ovvia, prendendo come addizione l'addizione in e come moltiplicazione di uno scalare (cioè un elemento di ) per un vettore (cioè un elemento di ) la moltiplicazione di questi elementi in . Le verifiche che così facendo si ottiene effettivamente un -spazio vettoriale sono molto semplici e le lasciamo per esercizio. Nel caso in cui anche l'anello che contiene sia esso stesso un campo , diciamo che è un' estensione di e diamo la     grado di un'estensione di    Se è un'estensione di , il grado di su , denotato con è la dimensione (eventualmente infinita) di come -spazio vettoriale. Nel caso in cui sia finito, diremo che è un'estensione finita di .      Il campo dei complessi ha grado su .      Un campo finito ha ordine potenza di un primo.    Un campo finito ha caratteristica un primo ( e ). Per la , il sottocampo minimo di ha allora ordine . Ora è, ovviamente, un'estensione finita di , di grado, diciamo, . Come -spazio vettoriale è allora isomorfo a , lo spazio delle -uple a coefficienti in , che contiene esattamente elementi.      Sia un'estensione di un campo e sia un anello contenente . Allora ha dimensione finita come -spazio vettoriale se e solo se ha dimensione finita come -spazio vettoriale e è finito: in tal caso (in particolare, se è anch'esso un campo, risulta ).    Supponiamo che sia finita. Allora , essendo contenuto in , può essere visto come un -sottospazio vettoriale di e, quindi, ha -dimensione finita. Inoltre, presi i vettori di una -base di , questi sono anche -generatori di e, quindi, ha -dimensione finita.  Viceversa, supponiamo che e siano finiti. Sia allora , , , una -base di e sia , , , una -base di . Se mostriamo che con e formano una -base di , otteniamo che è finita ed è esattamente uguale a .  Mostriamo che i vettori dati generano come -spazio vettoriale. Infatti, dato un elemento di , questo può essere espresso come una -combinazione lineare dei : . Ciascun , in quanto elemento di , può essere espresso come -combinazione lineare degli : . Combinando le sommatorie date troviamo come -combinazione lineare degli : .  Mostriamo, infine, che gli sono -linearmente indipendenti, ponendo uguale a una loro -combinazione lineare: . Riscrivendola così possiamo pensare il primo membro come una -combinazione lineare dei e, essendo questi ultimi -linearmente indipendenti, otteniamo che tutti gli -coefficienti si annullano, cioè per ogni . Poiché gli sono -linearmente indipendenti, ciò implica che per ogni e , come richiesto.      Sia un'estensione di un campo e sia un elemento di . Diciamo che è algebrico su se è radice di un polinomio non nullo a coefficienti in ; altrimenti, cioè se l'unico polinomio a coefficienti in di cui è radice è il polinomio nullo, diciamo che è trascendente su .     Se è un'estensione di un campo , allora ogni elemento di è, banalmente, algebrico su in quanto radice del polinomio a coefficienti in .     Consideriamo il campo e la sua estensione . Allora è algebrico su in quanto radice di a coefficienti in . D'altra parte, Lindemann Ferdinand von Lindemann , 1852 1939. Lindemann, Ferdinand von nel 1882 ha dimostrato che è trascendente su .       sottocampo generato da e , ,     sottoanello generato da e , ,    Dati un'estensione di un campo ed elementi , , di , indichiamo con il sottocampo di generato da e , , e con il sottoanello di generato da e , , .      Un'estensione di un campo , è detta semplice se esiste in tale che .      Sia un'estensione di un campo e siano , , elementi di : allora contiene e è il campo dei quozienti di .    Per definizione, è contenuto in tutti i sottoanelli di contenenti e , , : in particolare, è un sottoanello che soddisfa queste proprietà e, quindi, contiene . Il fatto che sia il campo dei quozienti di segue dall' .      Sia un campo e sia un polinomio di grado positivo a coefficienti in . Se è irriducibile, allora è un campo, altrimenti non è un dominio.    Supponiamo che non sia irriducibile, ed esistano allora e di grado minore di tali che : in particolare, e non appartengono a , cioè e sono elementi non nulli di . D'altra parte è lo zero di che, quindi, non è un dominio.  Sia ora irriducibile. Per il , gli ideali di sono del tipo con ideale di contenente : poiché è un dominio a ideali principali, con polinomio di che divide e, essendo irriducibile, ciò può avvenire se e solo se è invertibile, cioè , o se è associato a , cioè . Dunque, gli unici ideali di sono , cioè l'ideale nullo e stesso: pertanto, per la , è un campo.      Sia un'estensione di un campo e sia un elemento di . Sia l'omomorfismo di anelli da in dato dalla valutazione di polinomi in . Allora e si verifica uno e uno solo dei due casi    è trascendente su , , , e ;     è algebrico su , è generato da un polinomio monico irriducibile detto polinomio minimo di su , , e una -base di è data da , , , con .       Se è un polinomio a coefficienti in , allora, per definizione : poiché gli e appartengono a anche appartiene a . Dunque, . D'altra parte, è contenuto in (ogni elemento di è immagine tramite di sé stesso pensato come polinomio costante) e appartiene all'immagine di : quindi, .  Il nucleo di è, evidentemente, l'insieme dei polinomi di che si annullano in e, quindi, è trascendente se e solo se .  Consideriamo prima il caso in cui è trascendente su : è allora iniettivo e . Inoltre, per il , non è un campo e, quindi, è contenuto strettamente in . Infine, le potenze , , , sono -linearmente indipendenti, altrimenti esisterebbero , , , in non tutti nulli tali che , cioè esisterebbe un polinomio non banale a coefficienti in che si annulla in .  Consideriamo ora il caso in cui sia algebrico su : poiché è un dominio a ideali principali, è generato da un polinomio non nullo che, pur di eventualmente dividerlo per il suo coefficiente direttivo, possiamo assumere sia monico. Per il , sappiamo che : poiché è un dominio, il implica che sia irriducibile e che sia un campo e, per la , ne segue che .  Sia ora il grado di : sappiamo che un generico elemento di è del tipo per qualche polinomio in . Dividendo per otteniamo dove e sono polinomi con o : in altri termini, con gli in . Ma allora , cioè è -combinazione lineare di , , , . D'altra parte, questi elementi sono -linearmente indipendenti: infatti presi , , , in tali che si ha che è un polinomio che si annulla in , ed è, quindi, multiplo di , il che è possibile se e solo se i sono tutti nulli. In conclusione, , , , formano una base per e, quindi, .      Dato un elemento di un campo , algebrico su un sottocampo , il grado di su è il grado del polinomio minimo di su , cioè il grado .     Un elemento di un'estensione di un campo è algebrico di grado se e solo se appartiene a .     Consideriamo di nuovo il polinomio a coefficienti razionali e la sua radice . Poiché . Il grado di su è e, di conseguenza .      Un'estensione di un campo è detta algebrica su se ogni elemento di è algebrico su .      Se è un'estensione finita di , allora è un'estensione algebrica di .    Grazie alla , sappiamo che è finito per ogni in e, quindi, per il , abbiamo che è algebrico su .    Ci chiediamo se, dati due elementi algebrici su un campo , la loro somma e il loro prodotto siano, a loro volta, algebrici. Se applicassimo direttamente la definizione di elemento algebrico, la conoscenza di polinomi non banali che si annullano su tali elementi non ci permette di stabilire facilmente se esistano polinomi non banali che si annullano sulla somma o sul prodotto. Abbiamo però la    Sia un'estensione di un campo , Il sottoinsieme di formato dagli elementi algebrici su è un sottocampo contenente .    Sappiamo già che gli elementi di sono algebrici su ( ): in particolare, è non vuoto e contiene . Dobbiamo allora provare che, per ogni e in , si ha che , , e (quest'ultimo nel caso in cui ) appartengono tutti a .  Abbiamo, dunque, . Ora , essendo algebrico su , a maggior ragione è algebrico su . Per il abbiamo allora che e sono finiti e, per la , è un'estensione finita di . Per il , è un'estensione algebrica di , e, dunque, . Poiché è un campo, abbiamo che contiene , , e che sono, quindi, elementi di , come richiesto.      Sia un'estensione di un campo e siano , , elementi di algebrici su . Allora è un'estensione algebrica di .    Dalla , sappiamo che l'insieme degli elementi di algebrici su è un sottocampo di : poiché contiene e tutti gli , contiene anche il sottocampo generato da essi.      Consideriamo l'estensione di . Sappiamo che è un'estensione di grado di . Con un argomento simile a quello dall' , si può verificare che non contiene . Dunque, ha grado maggiore di su : d'altra parte è un polinomio di grado a coefficienti in che ha come radice, quindi ha grado su . Dalla abbiamo allora . Dalla dimostrazione della , sappiamo inoltre che , , , formano una -base di .  Consideriamo ora l'estensione : chiaramente . Per la il grado di è un divisore di . Se fosse diverso da dovrebbe essere o : consideriamo allora un polinomio del tipo a coefficienti in che ha come radice. Risulta allora cioè : poiché , , , sono -linearmente indipendenti, ne segue che , , , cioè , e sono nulli. Dunque, il polinomio minimo su di ha grado maggiore di e, per quanto già osservato, è uguale a . Di conseguenza .      Verificare che se è un anello contenente un campo , allora è un -spazio vettoriale rispetto alle operazioni che abbiamo definito.    Mostrare che se è un'estensione algebrica di un campo e se è un'estensione algebrica di , allora è un'estensione algebrica di .    Dati i primi distinti , , , , dimostrare che ha grado su .   Procediamo per induzione su . Se , allora è radice di che è irriducibile su (infatti ha grado e non ha radici razionali): dunque, è il polinomio minimo di e , pertanto, ha grado su .  Sia allora . Sia . Per ipotesi induttiva , , da cui, per la , segue che : in particolare, e . Notiamo che ha grado al più su : se mostriamo allora che avremo, dunque, che e un'ulteriore applicazione della darà la tesi cercata.  Supponiamo allora per assurdo che : poiché ha grado su , esistono e in tali che . Ma , e, quindi, . Ora : se fosse , avremmo che . Dunque e : pertanto , cioè divide in , contro l'ipotesi che e siano primi distinti. Abbiamo così trovato l'assurdo.    "
-},
-{
-  "id": "sec-elementi_algebrici_e_trascendenti-2",
-  "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#sec-elementi_algebrici_e_trascendenti-2",
-  "type": "Capoverso (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "estensione "
-},
-{
-  "id": "def-grado_estensione",
-  "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#def-grado_estensione",
-  "type": "Definizione",
-  "number": "28.1.1",
-  "title": "",
-  "body": "   grado di un'estensione di    Se è un'estensione di , il grado di su , denotato con è la dimensione (eventualmente infinita) di come -spazio vettoriale. Nel caso in cui sia finito, diremo che è un'estensione finita di .   "
-},
-{
-  "id": "sec-elementi_algebrici_e_trascendenti-4",
-  "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#sec-elementi_algebrici_e_trascendenti-4",
-  "type": "Esempio",
-  "number": "28.1.2",
-  "title": "",
-  "body": "  Il campo dei complessi ha grado su .   "
-},
-{
-  "id": "prop-ordine_campo_finito",
-  "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#prop-ordine_campo_finito",
-  "type": "Proposizione",
-  "number": "28.1.3",
-  "title": "",
-  "body": "  Un campo finito ha ordine potenza di un primo.    Un campo finito ha caratteristica un primo ( e ). Per la , il sottocampo minimo di ha allora ordine . Ora è, ovviamente, un'estensione finita di , di grado, diciamo, . Come -spazio vettoriale è allora isomorfo a , lo spazio delle -uple a coefficienti in , che contiene esattamente elementi.   "
-},
-{
-  "id": "prop-moltiplicativita_grado",
-  "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#prop-moltiplicativita_grado",
-  "type": "Proposizione",
-  "number": "28.1.4",
-  "title": "",
-  "body": "  Sia un'estensione di un campo e sia un anello contenente . Allora ha dimensione finita come -spazio vettoriale se e solo se ha dimensione finita come -spazio vettoriale e è finito: in tal caso (in particolare, se è anch'esso un campo, risulta ).    Supponiamo che sia finita. Allora , essendo contenuto in , può essere visto come un -sottospazio vettoriale di e, quindi, ha -dimensione finita. Inoltre, presi i vettori di una -base di , questi sono anche -generatori di e, quindi, ha -dimensione finita.  Viceversa, supponiamo che e siano finiti. Sia allora , , , una -base di e sia , , , una -base di . Se mostriamo che con e formano una -base di , otteniamo che è finita ed è esattamente uguale a .  Mostriamo che i vettori dati generano come -spazio vettoriale. Infatti, dato un elemento di , questo può essere espresso come una -combinazione lineare dei : . Ciascun , in quanto elemento di , può essere espresso come -combinazione lineare degli : . Combinando le sommatorie date troviamo come -combinazione lineare degli : .  Mostriamo, infine, che gli sono -linearmente indipendenti, ponendo uguale a una loro -combinazione lineare: . Riscrivendola così possiamo pensare il primo membro come una -combinazione lineare dei e, essendo questi ultimi -linearmente indipendenti, otteniamo che tutti gli -coefficienti si annullano, cioè per ogni . Poiché gli sono -linearmente indipendenti, ciò implica che per ogni e , come richiesto.   "
-},
-{
-  "id": "def-algebrici_trascendenti",
-  "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#def-algebrici_trascendenti",
-  "type": "Definizione",
-  "number": "28.1.5",
-  "title": "",
-  "body": "  Sia un'estensione di un campo e sia un elemento di . Diciamo che è algebrico su se è radice di un polinomio non nullo a coefficienti in ; altrimenti, cioè se l'unico polinomio a coefficienti in di cui è radice è il polinomio nullo, diciamo che è trascendente su .   "
-},
-{
-  "id": "rem-Falgebrico_su_F",
-  "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#rem-Falgebrico_su_F",
-  "type": "Osservazione",
-  "number": "28.1.6",
-  "title": "",
-  "body": " Se è un'estensione di un campo , allora ogni elemento di è, banalmente, algebrico su in quanto radice del polinomio a coefficienti in .  "
-},
-{
-  "id": "sec-elementi_algebrici_e_trascendenti-9",
-  "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#sec-elementi_algebrici_e_trascendenti-9",
-  "type": "Esempio",
-  "number": "28.1.7",
-  "title": "",
-  "body": "  Consideriamo il campo e la sua estensione . Allora è algebrico su in quanto radice di a coefficienti in . D'altra parte, Lindemann Ferdinand von Lindemann , 1852 1939. Lindemann, Ferdinand von nel 1882 ha dimostrato che è trascendente su .   "
-},
-{
-  "id": "def-estensione_con_elementi",
-  "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#def-estensione_con_elementi",
-  "type": "Definizione",
-  "number": "28.1.8",
-  "title": "",
-  "body": "   sottocampo generato da e , ,     sottoanello generato da e , ,    Dati un'estensione di un campo ed elementi , , di , indichiamo con il sottocampo di generato da e , , e con il sottoanello di generato da e , , .   "
-},
-{
-  "id": "def-estensione_semplice",
-  "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#def-estensione_semplice",
-  "type": "Definizione",
-  "number": "28.1.9",
-  "title": "",
-  "body": "  Un'estensione di un campo , è detta semplice se esiste in tale che .   "
-},
-{
-  "id": "prop-sottocampo_generato_sottoanello_generato",
-  "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#prop-sottocampo_generato_sottoanello_generato",
-  "type": "Proposizione",
-  "number": "28.1.10",
-  "title": "",
-  "body": "  Sia un'estensione di un campo e siano , , elementi di : allora contiene e è il campo dei quozienti di .    Per definizione, è contenuto in tutti i sottoanelli di contenenti e , , : in particolare, è un sottoanello che soddisfa queste proprietà e, quindi, contiene . Il fatto che sia il campo dei quozienti di segue dall' .   "
-},
-{
-  "id": "lem-quoziente_anello_polinomi",
-  "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#lem-quoziente_anello_polinomi",
-  "type": "Lemma",
-  "number": "28.1.11",
-  "title": "",
-  "body": "  Sia un campo e sia un polinomio di grado positivo a coefficienti in . Se è irriducibile, allora è un campo, altrimenti non è un dominio.    Supponiamo che non sia irriducibile, ed esistano allora e di grado minore di tali che : in particolare, e non appartengono a , cioè e sono elementi non nulli di . D'altra parte è lo zero di che, quindi, non è un dominio.  Sia ora irriducibile. Per il , gli ideali di sono del tipo con ideale di contenente : poiché è un dominio a ideali principali, con polinomio di che divide e, essendo irriducibile, ciò può avvenire se e solo se è invertibile, cioè , o se è associato a , cioè . Dunque, gli unici ideali di sono , cioè l'ideale nullo e stesso: pertanto, per la , è un campo.   "
-},
-{
-  "id": "thm-caratterizzazione_algebrici_trascendenti",
-  "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#thm-caratterizzazione_algebrici_trascendenti",
-  "type": "Teorema",
-  "number": "28.1.12",
-  "title": "",
-  "body": "  Sia un'estensione di un campo e sia un elemento di . Sia l'omomorfismo di anelli da in dato dalla valutazione di polinomi in . Allora e si verifica uno e uno solo dei due casi    è trascendente su , , , e ;     è algebrico su , è generato da un polinomio monico irriducibile detto polinomio minimo di su , , e una -base di è data da , , , con .       Se è un polinomio a coefficienti in , allora, per definizione : poiché gli e appartengono a anche appartiene a . Dunque, . D'altra parte, è contenuto in (ogni elemento di è immagine tramite di sé stesso pensato come polinomio costante) e appartiene all'immagine di : quindi, .  Il nucleo di è, evidentemente, l'insieme dei polinomi di che si annullano in e, quindi, è trascendente se e solo se .  Consideriamo prima il caso in cui è trascendente su : è allora iniettivo e . Inoltre, per il , non è un campo e, quindi, è contenuto strettamente in . Infine, le potenze , , , sono -linearmente indipendenti, altrimenti esisterebbero , , , in non tutti nulli tali che , cioè esisterebbe un polinomio non banale a coefficienti in che si annulla in .  Consideriamo ora il caso in cui sia algebrico su : poiché è un dominio a ideali principali, è generato da un polinomio non nullo che, pur di eventualmente dividerlo per il suo coefficiente direttivo, possiamo assumere sia monico. Per il , sappiamo che : poiché è un dominio, il implica che sia irriducibile e che sia un campo e, per la , ne segue che .  Sia ora il grado di : sappiamo che un generico elemento di è del tipo per qualche polinomio in . Dividendo per otteniamo dove e sono polinomi con o : in altri termini, con gli in . Ma allora , cioè è -combinazione lineare di , , , . D'altra parte, questi elementi sono -linearmente indipendenti: infatti presi , , , in tali che si ha che è un polinomio che si annulla in , ed è, quindi, multiplo di , il che è possibile se e solo se i sono tutti nulli. In conclusione, , , , formano una base per e, quindi, .   "
-},
-{
-  "id": "def-grado_di_un_elemento",
-  "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#def-grado_di_un_elemento",
-  "type": "Definizione",
-  "number": "28.1.13",
-  "title": "",
-  "body": "  Dato un elemento di un campo , algebrico su un sottocampo , il grado di su è il grado del polinomio minimo di su , cioè il grado .   "
-},
-{
-  "id": "rem-algebrici_grado_1",
-  "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#rem-algebrici_grado_1",
-  "type": "Osservazione",
-  "number": "28.1.14",
-  "title": "",
-  "body": " Un elemento di un'estensione di un campo è algebrico di grado se e solo se appartiene a .  "
-},
-{
-  "id": "ex-radice_di_due",
-  "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#ex-radice_di_due",
-  "type": "Esempio",
-  "number": "28.1.15",
-  "title": "",
-  "body": "  Consideriamo di nuovo il polinomio a coefficienti razionali e la sua radice . Poiché . Il grado di su è e, di conseguenza .   "
-},
-{
-  "id": "def-estensione_algebrica",
-  "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#def-estensione_algebrica",
-  "type": "Definizione",
-  "number": "28.1.16",
-  "title": "",
-  "body": "  Un'estensione di un campo è detta algebrica su se ogni elemento di è algebrico su .   "
-},
-{
-  "id": "cor-estensione_finita_algebrica",
-  "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#cor-estensione_finita_algebrica",
-  "type": "Corollario",
-  "number": "28.1.17",
-  "title": "",
-  "body": "  Se è un'estensione finita di , allora è un'estensione algebrica di .    Grazie alla , sappiamo che è finito per ogni in e, quindi, per il , abbiamo che è algebrico su .   "
-},
-{
-  "id": "prop-elementi_algebrici_sottocampo",
-  "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#prop-elementi_algebrici_sottocampo",
-  "type": "Proposizione",
-  "number": "28.1.18",
-  "title": "",
-  "body": "  Sia un'estensione di un campo , Il sottoinsieme di formato dagli elementi algebrici su è un sottocampo contenente .    Sappiamo già che gli elementi di sono algebrici su ( ): in particolare, è non vuoto e contiene . Dobbiamo allora provare che, per ogni e in , si ha che , , e (quest'ultimo nel caso in cui ) appartengono tutti a .  Abbiamo, dunque, . Ora , essendo algebrico su , a maggior ragione è algebrico su . Per il abbiamo allora che e sono finiti e, per la , è un'estensione finita di . Per il , è un'estensione algebrica di , e, dunque, . Poiché è un campo, abbiamo che contiene , , e che sono, quindi, elementi di , come richiesto.   "
-},
-{
-  "id": "cor-estensione_con_algebrici",
-  "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#cor-estensione_con_algebrici",
-  "type": "Corollario",
-  "number": "28.1.19",
-  "title": "",
-  "body": "  Sia un'estensione di un campo e siano , , elementi di algebrici su . Allora è un'estensione algebrica di .    Dalla , sappiamo che l'insieme degli elementi di algebrici su è un sottocampo di : poiché contiene e tutti gli , contiene anche il sottocampo generato da essi.   "
-},
-{
-  "id": "sec-elementi_algebrici_e_trascendenti-23",
-  "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#sec-elementi_algebrici_e_trascendenti-23",
-  "type": "Esempio",
-  "number": "28.1.20",
-  "title": "",
-  "body": "  Consideriamo l'estensione di . Sappiamo che è un'estensione di grado di . Con un argomento simile a quello dall' , si può verificare che non contiene . Dunque, ha grado maggiore di su : d'altra parte è un polinomio di grado a coefficienti in che ha come radice, quindi ha grado su . Dalla abbiamo allora . Dalla dimostrazione della , sappiamo inoltre che , , , formano una -base di .  Consideriamo ora l'estensione : chiaramente . Per la il grado di è un divisore di . Se fosse diverso da dovrebbe essere o : consideriamo allora un polinomio del tipo a coefficienti in che ha come radice. Risulta allora cioè : poiché , , , sono -linearmente indipendenti, ne segue che , , , cioè , e sono nulli. Dunque, il polinomio minimo su di ha grado maggiore di e, per quanto già osservato, è uguale a . Di conseguenza .   "
-},
-{
-  "id": "exercises-elementi_algebrici_e_trascendenti-1",
-  "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#exercises-elementi_algebrici_e_trascendenti-1",
-  "type": "Esercizio",
-  "number": "28.1.1",
-  "title": "",
-  "body": " Verificare che se è un anello contenente un campo , allora è un -spazio vettoriale rispetto alle operazioni che abbiamo definito.  "
-},
-{
-  "id": "exercises-elementi_algebrici_e_trascendenti-2",
-  "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#exercises-elementi_algebrici_e_trascendenti-2",
-  "type": "Esercizio",
-  "number": "28.1.2",
-  "title": "",
-  "body": " Mostrare che se è un'estensione algebrica di un campo e se è un'estensione algebrica di , allora è un'estensione algebrica di .  "
-},
-{
-  "id": "exercises-elementi_algebrici_e_trascendenti-3",
-  "level": "2",
-  "url": "sec-elementi_algebrici_e_trascendenti.html#exercises-elementi_algebrici_e_trascendenti-3",
-  "type": "Esercizio",
-  "number": "28.1.3",
-  "title": "",
-  "body": " Dati i primi distinti , , , , dimostrare che ha grado su .   Procediamo per induzione su . Se , allora è radice di che è irriducibile su (infatti ha grado e non ha radici razionali): dunque, è il polinomio minimo di e , pertanto, ha grado su .  Sia allora . Sia . Per ipotesi induttiva , , da cui, per la , segue che : in particolare, e . Notiamo che ha grado al più su : se mostriamo allora che avremo, dunque, che e un'ulteriore applicazione della darà la tesi cercata.  Supponiamo allora per assurdo che : poiché ha grado su , esistono e in tali che . Ma , e, quindi, . Ora : se fosse , avremmo che . Dunque e : pertanto , cioè divide in , contro l'ipotesi che e siano primi distinti. Abbiamo così trovato l'assurdo.  "
-},
-{
-  "id": "sec-estensioni_di_omomorfismi",
-  "level": "1",
-  "url": "sec-estensioni_di_omomorfismi.html",
-  "type": "Paragrafo",
-  "number": "28.2",
-  "title": "Estensioni di omomorfismi",
-  "body": " Estensioni di omomorfismi  Se è un omomorfismo di campi ed è un'estensione di ci chiediamo se sia possibile estendere a \\(E\\), cioè determinare un omomorfismo tale che . Confineremo la nostra attenzione al caso in sia finito, cominciando con il caso delle estensioni semplici.     omomorfismo che estende e manda in    Dato un omomorfismo di campi denotiamo con l'omomorfismo da in che estende e manda in . Esplicitamente, il polinomio generico viene mandato nel polinomio .    "
-},
-{
-  "id": "def-omomorfismo_indotto_polinomi",
-  "level": "2",
-  "url": "sec-estensioni_di_omomorfismi.html#def-omomorfismo_indotto_polinomi",
-  "type": "Definizione",
-  "number": "28.2.1",
-  "title": "",
-  "body": "   omomorfismo che estende e manda in    Dato un omomorfismo di campi denotiamo con l'omomorfismo da in che estende e manda in . Esplicitamente, il polinomio generico viene mandato nel polinomio .   "
-},
-{
-  "id": "sec-campo_di_spezzamento",
-  "level": "1",
-  "url": "sec-campo_di_spezzamento.html",
-  "type": "Paragrafo",
-  "number": "28.3",
-  "title": "Campi di spezzamento",
-  "body": " Campi di spezzamento    Un polinomio di grado positivo a coefficienti in un campo si dice totalmente riducibile se si può fattorizzare come prodotto di polinomi di primo grado, cioè è uguale a con , , , radici (non necessariamente distinte) di .      Il polinomio a coefficienti in non è totalmente riducibile. Lo stesso polinomio, pensato come polinomio a coefficienti in si può esprimere come ed è, quindi, totalmente riducibile.      Dato un polinomio di grado positivo a coefficienti in un campo , un campo di spezzamento è un'estensione di tale che sia totalmente riducibile in  con , , , in e .    La definizione ci dice cosa sia un campo di spezzamento, ma al momento non sappiamo se un campo di spezzamento esiste. Nel , abbiamo visto che l'estensione con un elemento algebrico di polinomio minimo , è isomorfa al quoziente dove , è l'ideale generato da . Questo suggerisce un metodo per aggiungere a un campo le radici di un polinomio irriducibile.    Sia un campo e sia un polinomio irriducibile di grado con . Allora esiste un'estensione di con radice di . Inoltre e una -base di è data da , , , .    Detto l'ideale dell'anello generato da , consideriamo il quoziente : questo è un campo per il . La composizione dell'omomorfismo di inclusione di in con l'omomorfismo canonico di su , definisce un omomorfismo da in : poiché è un campo, questo omomorfismo è iniettivo e possiamo, dunque, identificare con un sottocampo di : più precisamente, un elemento di viene identificato con il laterale . Con questa identificazione, il polinomio può dunque essere scritto come Sia ora l'elemento di : valutando in abbiamo allora Ma è lo zero del quoziente e, dunque, è radice di . Sappiamo che è generato da e da e, quindi, , in quanto quoziente di , è generato dalle immagini di questi generatori tramite l'omomorfismo canonico, vale a dire stesso e , cioè : quindi . Poiché annulla il polinomio a coefficienti in , il polinomio minimo di su è un divisore irriducibile di , ma, essendo a sua volta irriducibile, il polinomio minimo di su è associato a : dunque, il polinomio minimo non è altri che il polinomio monico che si ottiene dividendo per il proprio coefficiente direttivo. Per il , e una -base per è quella data in enunciato.      Consideriamo il polinomio a coefficienti in . Mostriamo che è irriducibile: per la , basta mostrare che non ha radici in . Per la un'eventuale radice razionale di è del tipo con che divide e che divide . Le possibili radici sono allora , , , , e : sostituendo in , vediamo che nessuna di esse è radice di , che è, pertanto irriducibile.  Consideriamo ora un'estensione dove è una radice di . Per il , ha grado su e una -base di è , , . Supponiamo di voler esprimere l'inverso di e l'inverso di come combinazione lineare degli elementi di questa base.  Per quanto riguarda , basta notare che da cui segue che . Pertanto, l'inverso di è .  Per quanto riguarda l'inverso di , esprimiamolo come con , e in . Deve allora essere che, sviluppato, dà . Poiché , l'equazione trovata si può riscrivere come : poiché , e sono -linearmente indipendenti, ciò avviene se e solo se . Risolvendo il sistema, si trova , e e, quindi .     Costruzione dei complessi   Consideriamo il polinomio a coefficienti in : questo non ha radici in e, per la è irriducibile in . Per il , è un campo di grado su e una -base per è data da e dove denotiamo con l'elemento .  Ogni elemento di si può allora scrivere come per opportuni numeri reali e . Se è un altro elemento di , abbiamo allora e, dunque, abbiamo già una decomposizione di rispetto alla base scelta. Per quanto riguarda il prodotto abbiamo invece e questa non è una decomposizione rispetto alla base scelta. Il prodotto, pensato come elemento del quoziente , è il laterale di contenente il polinomio . Dividendo per , cioè per , otteniamo allora , e, quindi, il laterale coincide con . Il prodotto di per è, dunque cioè l'usuale prodotto tra numeri complessi. Si noti che non dobbiamo adesso verificare che con queste operazioni è effettivamente un campo, perché lo sappiamo dal .    Mostriamo ora l'esistenza di un campo di spezzamento per un qualsiasi polinomio.    Dato un polinomio di grado positivo a coefficienti in un campo , esiste un campo di spezzamento di su .    Basta ragionare per induzione sul grado di . Se , allora è totalmente riducibile già in e, quindi, stesso è campo di spezzamento di su . Se , sia un divisore irriducibile di . Per il , esiste un'estensione di con una radice di : ora è radice anche di e, pertanto, per il , abbiamo che con polinomio di grado a coefficienti in . Per ipotesi induttiva, esiste un campo di spezzamento di su : ma allora questo è campo di spezzamento di su .    Si potrebbe dimostrare che il campo di spezzamento di un polinomio è unico a meno di isomorfismi, cioè che se e sono campi di spezzamento di su un campo , allora esiste un isomorfismo da in la cui restrizione a è l'identità. Pertanto anche se possiamo aggiungere a radici di in modo diverso, alla fine il risultato che otteniamo è essenzialmente lo stesso.    Utilizzare la dimostrazione del per mostrare che se è un polinomio di grado a coefficienti in un campo , allora il campo di spezzamento di su è un'estensione finita di grado al più .    "
-},
-{
-  "id": "def-polinomio_totalmente_riducibile",
-  "level": "2",
-  "url": "sec-campo_di_spezzamento.html#def-polinomio_totalmente_riducibile",
-  "type": "Definizione",
-  "number": "28.3.1",
-  "title": "",
-  "body": "  Un polinomio di grado positivo a coefficienti in un campo si dice totalmente riducibile se si può fattorizzare come prodotto di polinomi di primo grado, cioè è uguale a con , , , radici (non necessariamente distinte) di .   "
-},
-{
-  "id": "sec-campo_di_spezzamento-3",
-  "level": "2",
-  "url": "sec-campo_di_spezzamento.html#sec-campo_di_spezzamento-3",
-  "type": "Esempio",
-  "number": "28.3.2",
-  "title": "",
-  "body": "  Il polinomio a coefficienti in non è totalmente riducibile. Lo stesso polinomio, pensato come polinomio a coefficienti in si può esprimere come ed è, quindi, totalmente riducibile.   "
-},
-{
-  "id": "def-campo_di_spezzamento",
-  "level": "2",
-  "url": "sec-campo_di_spezzamento.html#def-campo_di_spezzamento",
-  "type": "Definizione",
-  "number": "28.3.3",
-  "title": "",
-  "body": "  Dato un polinomio di grado positivo a coefficienti in un campo , un campo di spezzamento è un'estensione di tale che sia totalmente riducibile in  con , , , in e .   "
-},
-{
-  "id": "lem-estensione_semplice",
-  "level": "2",
-  "url": "sec-campo_di_spezzamento.html#lem-estensione_semplice",
-  "type": "Lemma",
-  "number": "28.3.4",
-  "title": "",
-  "body": "  Sia un campo e sia un polinomio irriducibile di grado con . Allora esiste un'estensione di con radice di . Inoltre e una -base di è data da , , , .    Detto l'ideale dell'anello generato da , consideriamo il quoziente : questo è un campo per il . La composizione dell'omomorfismo di inclusione di in con l'omomorfismo canonico di su , definisce un omomorfismo da in : poiché è un campo, questo omomorfismo è iniettivo e possiamo, dunque, identificare con un sottocampo di : più precisamente, un elemento di viene identificato con il laterale . Con questa identificazione, il polinomio può dunque essere scritto come Sia ora l'elemento di : valutando in abbiamo allora Ma è lo zero del quoziente e, dunque, è radice di . Sappiamo che è generato da e da e, quindi, , in quanto quoziente di , è generato dalle immagini di questi generatori tramite l'omomorfismo canonico, vale a dire stesso e , cioè : quindi . Poiché annulla il polinomio a coefficienti in , il polinomio minimo di su è un divisore irriducibile di , ma, essendo a sua volta irriducibile, il polinomio minimo di su è associato a : dunque, il polinomio minimo non è altri che il polinomio monico che si ottiene dividendo per il proprio coefficiente direttivo. Per il , e una -base per è quella data in enunciato.   "
-},
-{
-  "id": "sec-campo_di_spezzamento-7",
-  "level": "2",
-  "url": "sec-campo_di_spezzamento.html#sec-campo_di_spezzamento-7",
-  "type": "Esempio",
-  "number": "28.3.5",
-  "title": "",
-  "body": "  Consideriamo il polinomio a coefficienti in . Mostriamo che è irriducibile: per la , basta mostrare che non ha radici in . Per la un'eventuale radice razionale di è del tipo con che divide e che divide . Le possibili radici sono allora , , , , e : sostituendo in , vediamo che nessuna di esse è radice di , che è, pertanto irriducibile.  Consideriamo ora un'estensione dove è una radice di . Per il , ha grado su e una -base di è , , . Supponiamo di voler esprimere l'inverso di e l'inverso di come combinazione lineare degli elementi di questa base.  Per quanto riguarda , basta notare che da cui segue che . Pertanto, l'inverso di è .  Per quanto riguarda l'inverso di , esprimiamolo come con , e in . Deve allora essere che, sviluppato, dà . Poiché , l'equazione trovata si può riscrivere come : poiché , e sono -linearmente indipendenti, ciò avviene se e solo se . Risolvendo il sistema, si trova , e e, quindi .   "
-},
-{
-  "id": "sec-campo_di_spezzamento-8",
-  "level": "2",
-  "url": "sec-campo_di_spezzamento.html#sec-campo_di_spezzamento-8",
-  "type": "Esempio",
-  "number": "28.3.6",
-  "title": "Costruzione dei complessi.",
-  "body": " Costruzione dei complessi   Consideriamo il polinomio a coefficienti in : questo non ha radici in e, per la è irriducibile in . Per il , è un campo di grado su e una -base per è data da e dove denotiamo con l'elemento .  Ogni elemento di si può allora scrivere come per opportuni numeri reali e . Se è un altro elemento di , abbiamo allora e, dunque, abbiamo già una decomposizione di rispetto alla base scelta. Per quanto riguarda il prodotto abbiamo invece e questa non è una decomposizione rispetto alla base scelta. Il prodotto, pensato come elemento del quoziente , è il laterale di contenente il polinomio . Dividendo per , cioè per , otteniamo allora , e, quindi, il laterale coincide con . Il prodotto di per è, dunque cioè l'usuale prodotto tra numeri complessi. Si noti che non dobbiamo adesso verificare che con queste operazioni è effettivamente un campo, perché lo sappiamo dal .   "
-},
-{
-  "id": "thm-campo_spezzamento",
-  "level": "2",
-  "url": "sec-campo_di_spezzamento.html#thm-campo_spezzamento",
-  "type": "Teorema",
-  "number": "28.3.7",
-  "title": "",
-  "body": "  Dato un polinomio di grado positivo a coefficienti in un campo , esiste un campo di spezzamento di su .    Basta ragionare per induzione sul grado di . Se , allora è totalmente riducibile già in e, quindi, stesso è campo di spezzamento di su . Se , sia un divisore irriducibile di . Per il , esiste un'estensione di con una radice di : ora è radice anche di e, pertanto, per il , abbiamo che con polinomio di grado a coefficienti in . Per ipotesi induttiva, esiste un campo di spezzamento di su : ma allora questo è campo di spezzamento di su .   "
-},
-{
-  "id": "exercises-campo_di_spezzamento-1",
-  "level": "2",
-  "url": "sec-campo_di_spezzamento.html#exercises-campo_di_spezzamento-1",
-  "type": "Esercizio",
-  "number": "28.3.1",
-  "title": "",
-  "body": " Utilizzare la dimostrazione del per mostrare che se è un polinomio di grado a coefficienti in un campo , allora il campo di spezzamento di su è un'estensione finita di grado al più .  "
-},
-{
-  "id": "sec-chiusure_algebriche",
-  "level": "1",
-  "url": "sec-chiusure_algebriche.html",
-  "type": "Paragrafo",
-  "number": "28.4",
-  "title": "Cenni su campi algebricamente chiusi",
-  "body": " Cenni su campi algebricamente chiusi    Sia un campo. Sono equivalenti le condizioni:   ogni elemento che appartiene a un'estensione di ed è algebrico su appartiene a .    i polinomi irriducibili in hanno tutti grado ;    ogni polinomio in di grado positivo è totalmente riducibile;    ogni polinomio in di grado positivo ha almeno una radice in ;       Supponiamo che valga la condizione e mostriamo che vale la condizione . Sia allora un polinomio irriducibile (quindi ha grado positivo perché gli elementi di grado sono invertibili). Per il , esiste un'estensione di che contiene una radice di : per la condizione , appartiene a e per il , divide in : poiché è irriducibile, segue che è associato a che ha, quindi, grado .  Se vale la condizione , allora la fattorizzazione in irriducibili di un qualsiasi polinomio a coefficienti in è costituita da polinomi di primo grado e, dunque, vale la condizione .  Se vale la condizione allora, preso un polinomio di grado positivo a coefficienti in , questo si scrive come prodotto di polinomi di primo grado in : ognuno di essi ha, quindi, una radice in e, di conseguenza, ha una radice in , cioè vale la condizione .  Infine, supponiamo che valga la condizione e mostriamo che vale la condizione . Sia allora un elemento di un'estensione di che sia algebrico su e sia il suo polinomio minimo su . Poiché vale la condizione , ha una radice, sia , in : per il , divide in . Per il il polinomio è monico e irriducibile in : dunque, e , cioè . Pertanto, vale la condizione .      Un campo che soddisfa una (e, quindi, tutte) le condizioni del è detto algebricamente chiuso .      Sia un campo finito. Allora non è algebricamente chiuso.    Siano , , , gli elementi di . Consideriamo il polinomio . Allora per ogni in si ha e, dunque, è un polinomio di grado positivo che non ha alcuna radice in : pertanto non è algebricamente chiuso.      Dato un campo una sua estensione è detta chiusura algebrica di se    è un'estensione algebrica di ;     è algebricamente chiuso.        Ovviamente, se è algebricamente chiuso, allora è chiusura algebrica di sé stesso.   Diamo ora, senza dimostrazione, alcuni risultati sui campi algebricamente chiusi.   Teorema fondamentale dell'algebra   Il campo dei complessi è la chiusura algebrica del campo dei reali.    A dispetto del nome, le varie dimostrazioni del teorema fondamentale dell'algebra richiedono considerazioni di tipo analitico o topologico. Inoltre, anche se mantiene storicamente questo nome, non è di così fondamentale importanza dal punto di vista algebrico. Più interessante da questo punto di vista è il    Dato un qualsiasi campo esiste una sua chiusura algebrica . Inoltre è univocamente determinato a meno di isomorfismi, vale a dire che se è un'altra chiusura algebrica di allora esiste un isomorfismo la cui restrizione a è l'identità.     L'isomorfismo dato dal teorema non è unico e, quindi, non possiamo individuare gli elementi della chiusura algebrica di un campo  intrinsecamente a partire dagli elementi di . Ad esempio, se prendiamo come chiusura algebrica di , abbiamo due automorfismi di che ristretti a sono l'identità: la funzione identica di e la funzione che manda un complesso nel suo complesso coniugato. Da questo punto di vista e , le due radici di , sono indistinguibili.   "
-},
-{
-  "id": "thm-caratterizzazione_algebricamente_chiuso",
-  "level": "2",
-  "url": "sec-chiusure_algebriche.html#thm-caratterizzazione_algebricamente_chiuso",
-  "type": "Teorema",
-  "number": "28.4.1",
-  "title": "",
-  "body": "  Sia un campo. Sono equivalenti le condizioni:   ogni elemento che appartiene a un'estensione di ed è algebrico su appartiene a .    i polinomi irriducibili in hanno tutti grado ;    ogni polinomio in di grado positivo è totalmente riducibile;    ogni polinomio in di grado positivo ha almeno una radice in ;       Supponiamo che valga la condizione e mostriamo che vale la condizione . Sia allora un polinomio irriducibile (quindi ha grado positivo perché gli elementi di grado sono invertibili). Per il , esiste un'estensione di che contiene una radice di : per la condizione , appartiene a e per il , divide in : poiché è irriducibile, segue che è associato a che ha, quindi, grado .  Se vale la condizione , allora la fattorizzazione in irriducibili di un qualsiasi polinomio a coefficienti in è costituita da polinomi di primo grado e, dunque, vale la condizione .  Se vale la condizione allora, preso un polinomio di grado positivo a coefficienti in , questo si scrive come prodotto di polinomi di primo grado in : ognuno di essi ha, quindi, una radice in e, di conseguenza, ha una radice in , cioè vale la condizione .  Infine, supponiamo che valga la condizione e mostriamo che vale la condizione . Sia allora un elemento di un'estensione di che sia algebrico su e sia il suo polinomio minimo su . Poiché vale la condizione , ha una radice, sia , in : per il , divide in . Per il il polinomio è monico e irriducibile in : dunque, e , cioè . Pertanto, vale la condizione .   "
-},
-{
-  "id": "def-algebricamente_chiuso",
-  "level": "2",
-  "url": "sec-chiusure_algebriche.html#def-algebricamente_chiuso",
-  "type": "Definizione",
-  "number": "28.4.2",
-  "title": "",
-  "body": "  Un campo che soddisfa una (e, quindi, tutte) le condizioni del è detto algebricamente chiuso .   "
-},
-{
-  "id": "prop-campi_finiti_non_algebricamente_chiuso",
-  "level": "2",
-  "url": "sec-chiusure_algebriche.html#prop-campi_finiti_non_algebricamente_chiuso",
-  "type": "Proposizione",
-  "number": "28.4.3",
-  "title": "",
-  "body": "  Sia un campo finito. Allora non è algebricamente chiuso.    Siano , , , gli elementi di . Consideriamo il polinomio . Allora per ogni in si ha e, dunque, è un polinomio di grado positivo che non ha alcuna radice in : pertanto non è algebricamente chiuso.   "
-},
-{
-  "id": "def-chiusura_algebrica",
-  "level": "2",
-  "url": "sec-chiusure_algebriche.html#def-chiusura_algebrica",
-  "type": "Definizione",
-  "number": "28.4.4",
-  "title": "",
-  "body": "  Dato un campo una sua estensione è detta chiusura algebrica di se    è un'estensione algebrica di ;     è algebricamente chiuso.      "
-},
-{
-  "id": "rem-chiusura_di_algebricamente_chiuso",
-  "level": "2",
-  "url": "sec-chiusure_algebriche.html#rem-chiusura_di_algebricamente_chiuso",
-  "type": "Osservazione",
-  "number": "28.4.5",
-  "title": "",
-  "body": " Ovviamente, se è algebricamente chiuso, allora è chiusura algebrica di sé stesso.  "
-},
-{
-  "id": "thm-fondamentale_dell_algebra",
-  "level": "2",
-  "url": "sec-chiusure_algebriche.html#thm-fondamentale_dell_algebra",
-  "type": "Teorema",
-  "number": "28.4.6",
-  "title": "Teorema fondamentale dell’algebra.",
-  "body": " Teorema fondamentale dell'algebra   Il campo dei complessi è la chiusura algebrica del campo dei reali.   "
-},
-{
-  "id": "thm-esistenza_chiusura_algebrica",
-  "level": "2",
-  "url": "sec-chiusure_algebriche.html#thm-esistenza_chiusura_algebrica",
-  "type": "Teorema",
-  "number": "28.4.7",
-  "title": "",
-  "body": "  Dato un qualsiasi campo esiste una sua chiusura algebrica . Inoltre è univocamente determinato a meno di isomorfismi, vale a dire che se è un'altra chiusura algebrica di allora esiste un isomorfismo la cui restrizione a è l'identità.   "
-},
-{
-  "id": "rem-non_unicita_chiusura_algebrica",
-  "level": "2",
-  "url": "sec-chiusure_algebriche.html#rem-non_unicita_chiusura_algebrica",
-  "type": "Osservazione",
-  "number": "28.4.8",
-  "title": "",
-  "body": " L'isomorfismo dato dal teorema non è unico e, quindi, non possiamo individuare gli elementi della chiusura algebrica di un campo  intrinsecamente a partire dagli elementi di . Ad esempio, se prendiamo come chiusura algebrica di , abbiamo due automorfismi di che ristretti a sono l'identità: la funzione identica di e la funzione che manda un complesso nel suo complesso coniugato. Da questo punto di vista e , le due radici di , sono indistinguibili.  "
-},
-{
-  "id": "sec-estensioni_omomorfismi_campi",
-  "level": "1",
-  "url": "sec-estensioni_omomorfismi_campi.html",
-  "type": "Paragrafo",
-  "number": "29.1",
-  "title": "Estensioni di omomorfismi",
-  "body": " Estensioni di omomorfismi  Supponiamo di avere un omomorfismo di campi e un'estensione di , ci chiediamo se esiste un omomorfismo che estende , cioè tale che .  "
 },
 {
   "id": "sec-algebre_induttive",
