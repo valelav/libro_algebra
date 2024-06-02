@@ -98,14 +98,14 @@
     <definition xml:id="def-algebrici_trascendenti">
       <statement>
         <p>
-          Sia <m>E</m> un'estensione di un campo <m>F</m> e sia <m>\alpha</m> un elemento di <m>E</m>. Diciamo che <m>\alpha</m> è <term>algebrico</term> su <m>F</m> se <m>\alpha</m> è radice di un polinomio non nullo a coefficienti in <m>F</m>; altrimenti, cioè se l'unico polinomio a coefficienti in <m>F</m> di cui <m>\alpha</m> è radice è il polinomio nullo, diciamo che <m>\alpha</m> è <term>trascendente</term> su <m>F</m>.
+          Sia <m>E</m> un'estensione di un campo <m>F</m> e sia <m>u</m> un elemento di <m>E</m>. Diciamo che <m>u</m> è <term>algebrico</term> su <m>F</m> se <m>u</m> è radice di un polinomio non nullo a coefficienti in <m>F</m>; altrimenti, cioè se l'unico polinomio a coefficienti in <m>F</m> di cui <m>u</m> è radice è il polinomio nullo, diciamo che <m>u</m> è <term>trascendente</term> su <m>F</m>.
         </p>
       </statement>
     </definition>
 
     <remark xml:id="rem-Falgebrico_su_F">
       <p>
-        Se <m>E</m> è un'estensione di un campo <m>F</m>, allora ogni elemento <m>\alpha</m> di <m>F</m> è, banalmente, algebrico su <m>F</m> in quanto radice del polinomio <m>x-\alpha</m> a coefficienti in <m>F</m>.
+        Se <m>E</m> è un'estensione di un campo <m>F</m>, allora ogni elemento <m>u</m> di <m>F</m> è, banalmente, algebrico su <m>F</m> in quanto radice del polinomio <m>x-u</m> a coefficienti in <m>F</m>.
       </p>
     </remark>
 
@@ -119,16 +119,16 @@
 
     <definition xml:id="def-estensione_con_elementi">
       <notation>
-        <usage><m>F(\alpha_{1},\ldots,\alpha_{r})</m></usage>
-        <description>sottocampo generato da <m>F</m> e <m>\alpha_{1}</m>, <m>\ldots</m>, <m>\alpha_{r}</m></description>
+        <usage><m>F(u_{1},\ldots,u_{r})</m></usage>
+        <description>sottocampo generato da <m>F</m> e <m>u_{1}</m>, <m>\ldots</m>, <m>u_{r}</m></description>
       </notation>
       <notation>
-        <usage><m>F[\alpha_{1},\ldots,\alpha_{r}]</m></usage>
-        <description>sottoanello generato da <m>F</m> e <m>\alpha_{1}</m>, <m>\ldots</m>, <m>\alpha_{r}</m></description>
+        <usage><m>F[u_{1},\ldots,u_{r}]</m></usage>
+        <description>sottoanello generato da <m>F</m> e <m>u_{1}</m>, <m>\ldots</m>, <m>u_{r}</m></description>
       </notation>
       <statement>
         <p>
-          Dati un'estensione <m>E</m> di un campo <m>F</m> ed elementi <m>\alpha_{1}</m>, <m>\ldots</m>, <m>\alpha_{r}</m> di <m>E</m>, indichiamo con <m>F(\alpha_{1},\ldots,\alpha_{r})</m> il sottocampo di <m>E</m> generato da <m>F</m> e <m>\alpha_{1}</m>, <m>\ldots</m>, <m>\alpha_{r}</m> e con <m>F[\alpha_{1},\ldots,\alpha_{r}]</m> il sottoanello di <m>E</m> generato da <m>F</m> e <m>\alpha_{1}</m>, <m>\ldots</m>, <m>\alpha_{r}</m>.
+          Dati un'estensione <m>E</m> di un campo <m>F</m> ed elementi <m>u_{1}</m>, <m>\ldots</m>, <m>u_{r}</m> di <m>E</m>, indichiamo con <m>F(u_{1},\ldots,u_{r})</m> il sottocampo di <m>E</m> generato da <m>F</m> e <m>u_{1}</m>, <m>\ldots</m>, <m>u_{r}</m> e con <m>F[u_{1},\ldots,u_{r}]</m> il sottoanello di <m>E</m> generato da <m>F</m> e <m>u_{1}</m>, <m>\ldots</m>, <m>u_{r}</m>.
         </p>
       </statement>
     </definition>
@@ -136,7 +136,7 @@
     <definition xml:id="def-estensione_semplice">
       <statement>
         <p>
-          Un'estensione <m>E</m> di un campo <m>F</m>, è detta <term>semplice</term> se esiste <m>\alpha</m> in <m>E</m> tale che <m>E=F(\alpha)</m>.
+          Un'estensione <m>E</m> di un campo <m>F</m>, è detta <term>semplice</term> se esiste <m>u</m> in <m>E</m> tale che <m>E=F(u)</m>.
         </p>
       </statement>
     </definition>
@@ -144,13 +144,13 @@
     <proposition xml:id="prop-sottocampo_generato_sottoanello_generato">
       <statement>
         <p>
-          Sia <m>E</m> un'estensione di un campo <m>F</m> e siano <m>\alpha_{1}</m>, <m>\ldots</m>, <m>\alpha_{r}</m> elementi di <m>E</m>: allora <m>F(\alpha_{1},\ldots,\alpha_{r})</m> contiene <m>F[\alpha_{1},\ldots,\alpha_{r}]</m> e <m>F(\alpha_{1},\ldots,\alpha_{r})</m> è il campo dei quozienti di <m>F[\alpha_{1},\ldots,\alpha_{r}]</m>.
+          Sia <m>E</m> un'estensione di un campo <m>F</m> e siano <m>u_{1}</m>, <m>\ldots</m>, <m>u_{r}</m> elementi di <m>E</m>: allora <m>F(u_{1},\ldots,u_{r})</m> contiene <m>F[u_{1},\ldots,u_{r}]</m> e <m>F(u_{1},\ldots,u_{r})</m> è il campo dei quozienti di <m>F[u_{1},\ldots,u_{r}]</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Per definizione, <m>F[\alpha_{1},\ldots,\alpha_{r}]</m> è contenuto in tutti i sottoanelli di <m>E</m> contenenti <m>F</m> e <m>\alpha_{1}</m>, <m>\ldots</m>, <m>\alpha_{r}</m>: in particolare, <m>F(\alpha_{1},\ldots,\alpha_{r})</m> è un sottoanello che soddisfa queste proprietà e, quindi, contiene <m>F[\alpha_{1},\ldots,\alpha_{r}]</m>. Il fatto che <m>F(\alpha_{1},\ldots,\alpha_{r})</m> sia il campo dei quozienti di <m>F[\alpha_{1},\ldots,\alpha_{r}]</m> segue dall'<xref ref="rem-campo_quozienti_contenuto"/>.
+          Per definizione, <m>F[u_{1},\ldots,u_{r}]</m> è contenuto in tutti i sottoanelli di <m>E</m> contenenti <m>F</m> e <m>u_{1}</m>, <m>\ldots</m>, <m>u_{r}</m>: in particolare, <m>F(u_{1},\ldots,u_{r})</m> è un sottoanello che soddisfa queste proprietà e, quindi, contiene <m>F[u_{1},\ldots,u_{r}]</m>. Il fatto che <m>F(u_{1},\ldots,u_{r})</m> sia il campo dei quozienti di <m>F[u_{1},\ldots,u_{r}]</m> segue dall'<xref ref="rem-campo_quozienti_contenuto"/>.
         </p>
       </proof>
 
@@ -177,16 +177,16 @@
     <theorem xml:id="thm-caratterizzazione_algebrici_trascendenti">
       <statement>
         <p>
-          Sia <m>E</m> un'estensione di un campo <m>F</m> e sia <m>\alpha</m> un elemento di <m>E</m>. Sia <m>\phi</m> l'omomorfismo di anelli da <m>F[x]</m> in <m>E</m> dato dalla valutazione di polinomi in <m>\alpha</m>. Allora <m>\im\phi=F[\alpha]</m> e si verifica uno e uno solo dei due casi
+          Sia <m>E</m> un'estensione di un campo <m>F</m> e sia <m>u</m> un elemento di <m>E</m>. Sia <m>\phi</m> l'omomorfismo di anelli da <m>F[x]</m> in <m>E</m> dato dalla valutazione di polinomi in <m>u</m>. Allora <m>\im\phi=F[u]</m> e si verifica uno e uno solo dei due casi
           <ul>
             <li>
               <p>
-                <m>\alpha</m> è trascendente su <m>F</m>, <m>\ker\phi=0</m>, <m>F[\alpha]\simeq F[x]</m>, <m>\dim_{F}F[\alpha]=\infty</m> e <m>F[\alpha]\subsetneq F(\alpha)</m>;
+                <m>u</m> è trascendente su <m>F</m>, <m>\ker\phi=0</m>, <m>F[u]\simeq F[x]</m>, <m>\dim_{F}F[u]=\infty</m> e <m>F[u]\subsetneq F(u)</m>;
               </p>
             </li>
             <li>
               <p>
-                <m>\alpha</m> è algebrico su <m>F</m>, <m>\ker\phi</m> è generato da un polinomio monico irriducibile <m>p</m> detto <term>polinomio minimo</term> di <m>\alpha</m> su <m>F</m>, <m>F[\alpha]=F(\alpha)</m>, <m>\dim_{F}F[\alpha]=\degext{F(\alpha)}{F}=\deg p</m> e una <m>F</m>-base di <m>F(\alpha)</m> è data da <m>1</m>, <m>\alpha</m>, <m>\ldots</m>, <m>\alpha^{n-1}</m> con <m>n=\deg p</m>.
+                <m>u</m> è algebrico su <m>F</m>, <m>\ker\phi</m> è generato da un polinomio monico irriducibile <m>p</m> detto <term>polinomio minimo</term> di <m>u</m> su <m>F</m>, <m>F[u]=F(u)</m>, <m>\dim_{F}F[u]=\degext{F(u)}{F}=\deg p</m> e una <m>F</m>-base di <m>F(u)</m> è data da <m>1</m>, <m>u</m>, <m>\ldots</m>, <m>u^{n-1}</m> con <m>n=\deg p</m>.
               </p>
             </li>
           </ul>
@@ -195,31 +195,31 @@
 
       <proof>
         <p>
-          Se <m>f\coloneqq a_{0}+a_{1}x+\cdots+a_{n}x^{n}</m> è un polinomio a coefficienti in <m>F</m>, allora, per definizione <m>f\phi=f(\alpha)=a_{0}+a_{1}\alpha+\cdots+a_{n}\alpha^{n}</m>: poiché gli <m>a_{i}</m> e <m>\alpha</m> appartengono a <m>F[\alpha]</m> anche <m>f\phi</m> appartiene a <m>F[\alpha]</m>. Dunque, <m>\im\phi\subseteq F[\alpha]</m>. D'altra parte, <m>F</m> è contenuto in <m>\im\phi</m> (ogni elemento di <m>F</m> è immagine tramite <m>\phi</m> di sé stesso pensato come polinomio costante) e <m>\alpha=x\phi</m> appartiene all'immagine di <m>\phi</m>: quindi, <m>F[\alpha]\subseteq\im\phi</m>.
+          Se <m>f\coloneqq a_{0}+a_{1}x+\cdots+a_{n}x^{n}</m> è un polinomio a coefficienti in <m>F</m>, allora, per definizione <m>f\phi=f(u)=a_{0}+a_{1}u+\cdots+a_{n}u^{n}</m>: poiché gli <m>a_{i}</m> e <m>u</m> appartengono a <m>F[u]</m> anche <m>f\phi</m> appartiene a <m>F[u]</m>. Dunque, <m>\im\phi\subseteq F[u]</m>. D'altra parte, <m>F</m> è contenuto in <m>\im\phi</m> (ogni elemento di <m>F</m> è immagine tramite <m>\phi</m> di sé stesso pensato come polinomio costante) e <m>u=x\phi</m> appartiene all'immagine di <m>\phi</m>: quindi, <m>F[u]\subseteq\im\phi</m>.
         </p>
         <p>
-          Il nucleo di <m>\phi</m> è, evidentemente, l'insieme dei polinomi di <m>F[x]</m> che si annullano in <m>\alpha</m> e, quindi, <m>\alpha</m> è trascendente se e solo se <m>\ker\phi=0</m>.
+          Il nucleo di <m>\phi</m> è, evidentemente, l'insieme dei polinomi di <m>F[x]</m> che si annullano in <m>u</m> e, quindi, <m>u</m> è trascendente se e solo se <m>\ker\phi=0</m>.
         </p>
         <p>
-          Consideriamo prima il caso in cui <m>\alpha</m> è trascendente su <m>F</m>: <m>\phi</m> è allora iniettivo e <m>F[\alpha]\simeq F[x]</m>. Inoltre, per il <xref ref="cor-anello_dei_polinomi_non_corpo"/>, <m>F[\alpha]</m> non è un campo e, quindi, è contenuto strettamente in <m>F(\alpha)</m>. Infine, le potenze <m>1</m>, <m>\alpha</m>, <m>\alpha^{2}</m>, <m>\ldots</m> sono <m>F</m>-linearmente indipendenti, altrimenti esisterebbero <m>a_{0}</m>, <m>a_{1}</m>, <m>\ldots</m>, <m>a_{n}</m> in <m>F</m> non tutti nulli tali che <m>a_{0}1+a_{1}\alpha+\cdots+a_{n}\alpha^{n}=0</m>, cioè esisterebbe un polinomio non banale a coefficienti in <m>F</m> che si annulla in <m>\alpha</m>.
+          Consideriamo prima il caso in cui <m>u</m> è trascendente su <m>F</m>: <m>\phi</m> è allora iniettivo e <m>F[u]\simeq F[x]</m>. Inoltre, per il <xref ref="cor-anello_dei_polinomi_non_corpo"/>, <m>F[u]</m> non è un campo e, quindi, è contenuto strettamente in <m>F(u)</m>. Infine, le potenze <m>1</m>, <m>u</m>, <m>u^{2}</m>, <m>\ldots</m> sono <m>F</m>-linearmente indipendenti, altrimenti esisterebbero <m>a_{0}</m>, <m>a_{1}</m>, <m>\ldots</m>, <m>a_{n}</m> in <m>F</m> non tutti nulli tali che <m>a_{0}1+a_{1}u+\cdots+a_{n}u^{n}=0</m>, cioè esisterebbe un polinomio non banale a coefficienti in <m>F</m> che si annulla in <m>u</m>.
         </p>
         <p>
-          Consideriamo ora il caso in cui <m>\alpha</m> sia algebrico su <m>F</m>: poiché <m>F[x]</m> è un dominio a ideali principali, <m>\ker\phi</m> è generato da un polinomio non nullo <m>p</m> che, pur di eventualmente dividerlo per il suo coefficiente direttivo, possiamo assumere sia monico. Per il <xref ref="thm-isomorfismo_quoziente_sul_nucleo_anelli"/>, sappiamo che <m>F[\alpha]=\im\phi\simeq F[x]/\ker\phi=F[x]/\ideal{p}</m>: poiché <m>F[\alpha]</m> è un dominio, il <xref ref="lem-quoziente_anello_polinomi"/> implica che <m>p</m> sia irriducibile e che <m>F[\alpha]</m> sia un campo e, per la <xref ref="prop-sottocampo_generato_sottoanello_generato"/>, ne segue che <m>F[\alpha]=F(\alpha)</m>.
+          Consideriamo ora il caso in cui <m>u</m> sia algebrico su <m>F</m>: poiché <m>F[x]</m> è un dominio a ideali principali, <m>\ker\phi</m> è generato da un polinomio non nullo <m>p</m> che, pur di eventualmente dividerlo per il suo coefficiente direttivo, possiamo assumere sia monico. Per il <xref ref="thm-isomorfismo_quoziente_sul_nucleo_anelli"/>, sappiamo che <m>F[u]=\im\phi\simeq F[x]/\ker\phi=F[x]/\ideal{p}</m>: poiché <m>F[u]</m> è un dominio, il <xref ref="lem-quoziente_anello_polinomi"/> implica che <m>p</m> sia irriducibile e che <m>F[u]</m> sia un campo e, per la <xref ref="prop-sottocampo_generato_sottoanello_generato"/>, ne segue che <m>F[u]=F(u)</m>.
         </p>
         <p>
-          Sia ora <m>n</m> il grado di <m>p</m>: sappiamo che un generico elemento di <m>F[\alpha]</m> è del tipo <m>h\phi=h(\alpha)</m> per qualche polinomio <m>h</m> in <m>F[x]</m>. Dividendo <m>h</m> per <m>p</m> otteniamo
+          Sia ora <m>n</m> il grado di <m>p</m>: sappiamo che un generico elemento di <m>F[u]</m> è del tipo <m>h\phi=h(u)</m> per qualche polinomio <m>h</m> in <m>F[x]</m>. Dividendo <m>h</m> per <m>p</m> otteniamo
           <me>
             h=pq+r
           </me>
           dove <m>q</m> e <m>r</m> sono polinomi con <m>\deg r \lt n</m> o <m>r=0</m>: in altri termini, <m>r=r_{0}+r_{1}x+\cdots+r_{n-1}x^{n-1}</m> con gli <m>r_{i}</m> in <m>F</m>. Ma allora
           <me>
-            h(\alpha)=p(\alpha)q(\alpha)+r(\alpha)=0q(\alpha)+r(\alpha)=r(\alpha)=r_{0}+r_{1}\alpha+\cdots+r_{n-1}\alpha^{n-1}
+            h(u)=p(u)q(u)+r(u)=0q(u)+r(u)=r(u)=r_{0}+r_{1}u+\cdots+r_{n-1}u^{n-1}
           </me>,
-          cioè <m>h(\alpha)</m> è <m>F</m>-combinazione lineare di <m>1</m>, <m>\alpha</m>, <m>\ldots</m>, <m>\alpha^{n-1}</m>. D'altra parte, questi elementi sono <m>F</m>-linearmente indipendenti: infatti presi <m>c_{0}</m>, <m>c_{1}</m>, <m>\ldots</m>, <m>c_{n-1}</m> in <m>F</m> tali che
+          cioè <m>h(u)</m> è <m>F</m>-combinazione lineare di <m>1</m>, <m>u</m>, <m>\ldots</m>, <m>u^{n-1}</m>. D'altra parte, questi elementi sono <m>F</m>-linearmente indipendenti: infatti presi <m>c_{0}</m>, <m>c_{1}</m>, <m>\ldots</m>, <m>c_{n-1}</m> in <m>F</m> tali che
           <me>
-            c_{0}+c_{1}\alpha+\cdots+c_{n-1}\alpha^{n-1}=0
+            c_{0}+c_{1}u+\cdots+c_{n-1}u^{n-1}=0
           </me>
-          si ha che <m>c_{0}+c_{1}x+\cdots+c_{n-1}x^{n-1}</m> è un polinomio che si annulla in <m>\alpha</m>, ed è, quindi, multiplo di <m>p</m>, il che è possibile se e solo se i <m>c_{i}</m> sono tutti nulli. In conclusione, <m>1</m>, <m>\alpha</m>, <m>\ldots</m>, <m>\alpha^{n-1}</m> formano una base per <m>F[\alpha]</m> e, quindi, <m>\dim_{F}F[\alpha]=n</m>.
+          si ha che <m>c_{0}+c_{1}x+\cdots+c_{n-1}x^{n-1}</m> è un polinomio che si annulla in <m>u</m>, ed è, quindi, multiplo di <m>p</m>, il che è possibile se e solo se i <m>c_{i}</m> sono tutti nulli. In conclusione, <m>1</m>, <m>u</m>, <m>\ldots</m>, <m>u^{n-1}</m> formano una base per <m>F[u]</m> e, quindi, <m>\dim_{F}F[u]=n</m>.
         </p>
       </proof>
 
@@ -228,14 +228,14 @@
     <definition xml:id="def-grado_di_un_elemento">
       <statement>
         <p>
-          Dato un elemento <m>\alpha</m> di un campo <m>E</m>, algebrico su un sottocampo <m>F</m>, il <term>grado</term> di <m>\alpha</m> su <m>F</m> è il grado del polinomio minimo di <m>\alpha</m> su <m>F</m>, cioè il grado <m>\degext{F(\alpha)}{F}</m>.
+          Dato un elemento <m>u</m> di un campo <m>E</m>, algebrico su un sottocampo <m>F</m>, il <term>grado</term> di <m>u</m> su <m>F</m> è il grado del polinomio minimo di <m>u</m> su <m>F</m>, cioè il grado <m>\degext{F(u)}{F}</m>.
         </p>
       </statement>
     </definition>
 
     <remark xml:id="rem-algebrici_grado_1">
       <p>
-        Un elemento <m>\alpha</m> di un'estensione <m>E</m> di un campo <m>F</m> è algebrico di grado <m>1</m> se e solo se appartiene a <m>F</m>.
+        Un elemento <m>u</m> di un'estensione <m>E</m> di un campo <m>F</m> è algebrico di grado <m>1</m> se e solo se appartiene a <m>F</m>.
       </p>
     </remark>
 
@@ -267,7 +267,7 @@
 
       <proof>
         <p>
-          Grazie alla <xref ref="prop-moltiplicativita_grado"/>, sappiamo che <m>\degext{F(\alpha)}{F}</m> è finito per ogni <m>\alpha</m> in <m>E</m> e, quindi, per il <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>, abbiamo che <m>\alpha</m> è algebrico su <m>F</m>.
+          Grazie alla <xref ref="prop-moltiplicativita_grado"/>, sappiamo che <m>\degext{F(u)}{F}</m> è finito per ogni <m>u</m> in <m>E</m> e, quindi, per il <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>, abbiamo che <m>u</m> è algebrico su <m>F</m>.
         </p>
       </proof>
 
@@ -286,10 +286,10 @@
 
       <proof>
         <p>
-          Sappiamo già che gli elementi di <m>F</m> sono algebrici su <m>F</m> (<xref ref="rem-Falgebrico_su_F"/>): in particolare, <m>F</m> è non vuoto e contiene <m>1</m>. Dobbiamo allora provare che, per ogni  <m>\alpha</m> e <m>\beta</m> in <m>A</m>, si ha che <m>\alpha+\beta</m>, <m>\alpha\beta</m>, <m>-\alpha</m> e <m>\alpha^{-1}</m> (quest'ultimo nel caso in cui <m>\alpha\ne 0</m>) appartengono tutti a <m>A</m>.
+          Sappiamo già che gli elementi di <m>F</m> sono algebrici su <m>F</m> (<xref ref="rem-Falgebrico_su_F"/>): in particolare, <m>F</m> è non vuoto e contiene <m>1</m>. Dobbiamo allora provare che, per ogni  <m>u</m> e <m>v</m> in <m>A</m>, si ha che <m>u+v</m>, <m>uv</m>, <m>-u</m> e <m>u^{-1}</m> (quest'ultimo nel caso in cui <m>u\ne 0</m>) appartengono tutti a <m>A</m>.
         </p>
         <p>
-          Abbiamo, dunque, <m>F\subseteq F(\alpha)\subseteq F(\alpha,\beta)=F(\alpha)(\beta)</m>. Ora <m>\beta</m>, essendo algebrico su <m>F</m>, a maggior ragione è algebrico su <m>F(\alpha)</m>. Per il <xref ref="thm-caratterizzazione_algebrici_trascendenti"/> abbiamo allora che <m>\degext{F(\alpha)}{F}</m> e <m>\degext{F(\alpha,\beta)}{F(\alpha)}</m> sono finiti e, per la <xref ref="prop-moltiplicativita_grado"/>, <m>F(\alpha,\beta)</m> è un'estensione finita di <m>F</m>. Per il <xref ref="cor-estensione_finita_algebrica"/>, <m>F(\alpha,\beta)</m> è un'estensione algebrica di <m>F</m>, e, dunque, <m>F(\alpha,\beta)\subseteq A</m>. Poiché <m>F(\alpha,\beta)</m> è un campo, abbiamo che contiene <m>\alpha+\beta</m>, <m>\alpha\beta</m>, <m>-\alpha</m> e <m>\alpha^{-1}</m> che sono, quindi, elementi di <m>A</m>, come richiesto.
+          Abbiamo, dunque, <m>F\subseteq F(u)\subseteq F(u,v)=F(u)(v)</m>. Ora <m>v</m>, essendo algebrico su <m>F</m>, a maggior ragione è algebrico su <m>F(u)</m>. Per il <xref ref="thm-caratterizzazione_algebrici_trascendenti"/> abbiamo allora che <m>\degext{F(u)}{F}</m> e <m>\degext{F(u,v)}{F(u)}</m> sono finiti e, per la <xref ref="prop-moltiplicativita_grado"/>, <m>F(u,v)</m> è un'estensione finita di <m>F</m>. Per il <xref ref="cor-estensione_finita_algebrica"/>, <m>F(u,v)</m> è un'estensione algebrica di <m>F</m>, e, dunque, <m>F(u,v)\subseteq A</m>. Poiché <m>F(u,v)</m> è un campo, abbiamo che contiene <m>u+v</m>, <m>uv</m>, <m>-u</m> e <m>u^{-1}</m> che sono, quindi, elementi di <m>A</m>, come richiesto.
         </p>
       </proof>
 
@@ -298,13 +298,13 @@
     <corollary xml:id="cor-estensione_con_algebrici">
       <statement>
         <p>
-          Sia <m>E</m> un'estensione di un campo <m>F</m> e siano <m>\alpha_{1}</m>, <m>\ldots</m>, <m>\alpha_{r}</m> elementi di <m>F</m> algebrici su <m>F</m>. Allora <m>F(\alpha_{1},\ldots,\alpha_{r})</m> è un'estensione algebrica di <m>F</m>.
+          Sia <m>E</m> un'estensione di un campo <m>F</m> e siano <m>u_{1}</m>, <m>\ldots</m>, <m>u_{r}</m> elementi di <m>F</m> algebrici su <m>F</m>. Allora <m>F(u_{1},\ldots,u_{r})</m> è un'estensione algebrica di <m>F</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Dalla <xref ref="prop-elementi_algebrici_sottocampo"/>, sappiamo che l'insieme <m>A</m> degli elementi di <m>E</m> algebrici su <m>F</m> è un sottocampo di <m>F</m>: poiché <m>A</m> contiene <m>F</m> e tutti gli <m>\alpha_{i}</m>, contiene anche il sottocampo generato da essi.
+          Dalla <xref ref="prop-elementi_algebrici_sottocampo"/>, sappiamo che l'insieme <m>A</m> degli elementi di <m>E</m> algebrici su <m>F</m> è un sottocampo di <m>F</m>: poiché <m>A</m> contiene <m>F</m> e tutti gli <m>u_{i}</m>, contiene anche il sottocampo generato da essi.
         </p>
       </proof>
 
@@ -391,10 +391,37 @@
       </notation>
       <statement>
         <p>
-          Dato un omomorfismo di campi <m>\phi\colon F\to K</m> denotiamo con <m>\indotto{f}</m> l'omomorfismo da <m>F[x]</m> in <m>K[x]</m> che estende <m>\phi</m> e manda <m>x</m> in <m>x</m>. Esplicitamente, il polinomio generico <m>a_{0}+a_{1}x+\dots+a_{n}x^{n}</m> viene mandato nel polinomio <m>a_{0}\phi+a_{1}\phi x+\dots+a_{n}\phi x^{n}</m>.
+          Dato un omomorfismo di campi <m>\phi\colon F\to K</m> denotiamo con <m>\indotto{\phi}</m> l'omomorfismo da <m>F[x]</m> in <m>K[x]</m> che estende <m>\phi</m> e manda <m>x</m> in <m>x</m>. Esplicitamente, il polinomio generico <m>a_{0}+a_{1}x+\dots+a_{n}x^{n}</m> viene mandato nel polinomio <m>a_{0}\phi+a_{1}\phi x+\dots+a_{n}\phi x^{n}</m>.
         </p>
       </statement>
     </definition>
+
+    <proposition xml:id="prop-radice_in_radice">
+      <statement>
+        <p>
+          Sia <m>\phi\colon F\to K</m> un omomorfismo di campi. Sia <m>f</m> un polinomio di <m>F[x]</m> e sia <m>u</m> una radice di <m>f</m> in <m>F</m>. Allora <m>u\phi</m> è radice di <m>f\indotto{\phi}</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Sia <m>f\coloneqq a_{0}+a_{1}x+\dots+a_{n}x^{n}</m>: dunque, <m>f(u)=a_{0}+a_{1}u+\dots+a_{n}u^{n}=0_{F}</m>. Applicando <m>\phi</m>, otteniamo <m>a_{0}\phi +a_{1}\phi u\phi+\dots+a_{n}\phi(u\phi)^{n}=0_{K}</m>, da cui segue la tesi.
+        </p>
+      </proof>
+    </proposition>
+
+    <lemma xml:id="lem-estensione_omomorfismo_smplice">
+      <statement>
+        <p>
+          Sia <m>E\coloneqq F(u)</m> un'estensione semplice algebrica di un campo <m>F</m>. Sia <m>f\in F[x]</m> il polinomio minimo di <m>u</m> su <m>F</m>. Sia <m>\phi\colon F\to K</m> un omomorfismo di campi. Allora il numero delle estensioni di <m>\phi</m> a omomorfismi da <m>E</m> in <m>K</m> è uguale al numero delle radici di <m>f\indotto{\phi}</m> in <m>K</m>. In particolare, il numero di queste estensioni è al più uguale a <m>\degext{E}{F}</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          
+        </p>
+      </proof>
+    </lemma>
     
   </section>
 
@@ -406,9 +433,9 @@
         <p>
           Un polinomio <m>f</m> di grado positivo a coefficienti in un campo <m>F</m> si dice <term>totalmente riducibile</term> se <m>f</m> si può fattorizzare come prodotto di polinomi di primo grado, cioè <m>f</m> è uguale a
           <me>
-            f=c(x-\alpha_{1})(x-\alpha_{2})\cdots(x-\alpha_{r})
+            f=c(x-u_{1})(x-u_{2})\cdots(x-u_{r})
           </me>
-          con <m>\alpha_{1}</m>, <m>\alpha_{2}</m>, <m>\ldots</m>, <m>\alpha_{r}</m> radici (non necessariamente distinte) di <m>f</m>.
+          con <m>u_{1}</m>, <m>u_{2}</m>, <m>\ldots</m>, <m>u_{r}</m> radici (non necessariamente distinte) di <m>f</m>.
         </p>
       </statement>
     </definition>
@@ -426,21 +453,21 @@
         <p>
           Dato un polinomio <m>f</m> di grado positivo a coefficienti in un campo <m>F</m>, un <term>campo di spezzamento</term> è un'estensione <m>E</m> di <m>F</m> tale che <m>f</m> sia totalmente riducibile in <m>E</m>
           <me>
-            f=c(x-\alpha_{1})(x-\alpha_{2})\cdots(x-\alpha_{r})
+            f=c(x-u_{1})(x-u_{2})\cdots(x-u_{r})
           </me>
-          con <m>\alpha_{1}</m>, <m>\alpha_{2}</m>, <m>\ldots</m>, <m>\alpha_{r}</m> in <m>E</m> e <m>E=F(\alpha_{1},\ldots,\alpha_{r})</m>.
+          con <m>u_{1}</m>, <m>u_{2}</m>, <m>\ldots</m>, <m>u_{r}</m> in <m>E</m> e <m>E=F(u_{1},\ldots,u_{r})</m>.
          </p>
       </statement>
     </definition>
 
     <p>
-      La definizione ci dice cosa sia un campo di spezzamento, ma al momento non sappiamo se un campo di spezzamento esiste. Nel <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>, abbiamo visto che l'estensione <m>F(\alpha)</m> con un elemento algebrico <m>\alpha</m> di polinomio minimo <m>p</m>, è isomorfa al quoziente <m>F[x]/I</m> dove , <m>I</m> è l'ideale generato da <m>p</m>. Questo suggerisce un metodo per <q>aggiungere</q> a un campo le radici di un polinomio irriducibile.
+      La definizione ci dice cosa sia un campo di spezzamento, ma al momento non sappiamo se un campo di spezzamento esiste. Nel <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>, abbiamo visto che l'estensione <m>F(u)</m> con un elemento algebrico <m>u</m> di polinomio minimo <m>p</m>, è isomorfa al quoziente <m>F[x]/I</m> dove , <m>I</m> è l'ideale generato da <m>p</m>. Questo suggerisce un metodo per <q>aggiungere</q> a un campo le radici di un polinomio irriducibile.
     </p>
 
     <lemma xml:id="lem-estensione_semplice">
       <statement>
         <p>
-          Sia <m>F</m> un campo e sia <m>p</m> un polinomio irriducibile di grado <m>n</m> con <m>n\gt0</m>. Allora esiste un'estensione <m>F(\alpha)</m> di <m>F</m> con <m>\alpha</m> radice di <m>p</m>. Inoltre <m>\degext{F(\alpha)}{F}=n</m> e una <m>F</m>-base di <m>F(\alpha)</m> è data da <m>1</m>, <m>\alpha</m>, <m>\ldots</m>, <m>\alpha^{n-1}</m>.
+          Sia <m>F</m> un campo e sia <m>p</m> un polinomio irriducibile di grado <m>n</m> con <m>n\gt0</m>. Allora esiste un'estensione <m>F(u)</m> di <m>F</m> con <m>u</m> radice di <m>p</m>. Inoltre <m>\degext{F(u)}{F}=n</m> e una <m>F</m>-base di <m>F(u)</m> è data da <m>1</m>, <m>u</m>, <m>\ldots</m>, <m>u^{n-1}</m>.
         </p>
       </statement>
 
@@ -450,12 +477,12 @@
           <me>
             a_{0}+I+(a_{1}+I)x+\cdots+(a_{n}+I)x^{n}.
           </me>
-          Sia ora <m>\alpha</m> l'elemento <m>x+I</m> di <m>F[x]/I</m>: valutando <m>p</m> in <m>\alpha</m> abbiamo allora
+          Sia ora <m>u</m> l'elemento <m>x+I</m> di <m>F[x]/I</m>: valutando <m>p</m> in <m>u</m> abbiamo allora
           <md>
-            <mrow> p(\alpha)\amp =(a_{0}+I)+(a_{1}+I)(x+I)+\cdots+(a_{n}+I)(x+I)^{n}</mrow>
+            <mrow> p(u)\amp =(a_{0}+I)+(a_{1}+I)(x+I)+\cdots+(a_{n}+I)(x+I)^{n}</mrow>
             <mrow>  \amp =a_{0}+a_{1}x+\cdots+a_{n}x^{n}+I=p+I=I</mrow>
           </md>
-          Ma <m>I</m> è lo zero del quoziente <m>F[x]/I</m> e, dunque, <m>\alpha</m> è radice di <m>p</m>. Sappiamo che <m>F[x]</m> è generato da <m>F</m> e da <m>x</m> e, quindi, <m>F[x]/I</m>, in quanto quoziente di <m>F[x]</m>, è generato dalle immagini di questi generatori tramite l'omomorfismo canonico, vale a dire <m>F</m> stesso e <m>x+I</m>, cioè <m>\alpha</m>: quindi <m>F[x]/I=F(\alpha)</m>. Poiché <m>\alpha</m> annulla il polinomio <m>p</m> a coefficienti in <m>F</m>, il polinomio minimo di <m>\alpha</m> su <m>F</m> è un divisore irriducibile di <m>p</m>, ma, essendo <m>p</m> a sua volta irriducibile, il polinomio minimo di <m>\alpha</m> su <m>F</m> è associato a <m>p</m>: dunque, il polinomio minimo non è altri che il polinomio monico che si ottiene dividendo <m>p</m> per il proprio coefficiente direttivo. Per il <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>, <m>\degext{F(\alpha)}{F}=n</m> e una <m>F</m>-base per <m>F(\alpha)</m> è quella data in enunciato.
+          Ma <m>I</m> è lo zero del quoziente <m>F[x]/I</m> e, dunque, <m>u</m> è radice di <m>p</m>. Sappiamo che <m>F[x]</m> è generato da <m>F</m> e da <m>x</m> e, quindi, <m>F[x]/I</m>, in quanto quoziente di <m>F[x]</m>, è generato dalle immagini di questi generatori tramite l'omomorfismo canonico, vale a dire <m>F</m> stesso e <m>x+I</m>, cioè <m>u</m>: quindi <m>F[x]/I=F(u)</m>. Poiché <m>u</m> annulla il polinomio <m>p</m> a coefficienti in <m>F</m>, il polinomio minimo di <m>u</m> su <m>F</m> è un divisore irriducibile di <m>p</m>, ma, essendo <m>p</m> a sua volta irriducibile, il polinomio minimo di <m>u</m> su <m>F</m> è associato a <m>p</m>: dunque, il polinomio minimo non è altri che il polinomio monico che si ottiene dividendo <m>p</m> per il proprio coefficiente direttivo. Per il <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>, <m>\degext{F(u)}{F}=n</m> e una <m>F</m>-base per <m>F(u)</m> è quella data in enunciato.
         </p>
       </proof>
 
@@ -467,23 +494,23 @@
           Consideriamo il polinomio <m>p\coloneqq x^{3}+2x+4</m> a coefficienti in <m>\Razionali</m>. Mostriamo che <m>p</m> è irriducibile: per la <xref ref="prop-irriducibilita_e_radici"/>, basta mostrare che non ha radici in <m>\Razionali</m>. Per la <xref ref="prop-radici_razionali_intere_polinomio"/> un'eventuale radice razionale di <m>p</m> è del tipo <m>\frac{a}{b}</m> con <m>a</m> che divide <m>4</m> e <m>b</m> che divide <m>1</m>. Le possibili radici sono allora <m>1</m>, <m>-1</m>, <m>2</m>, <m>-2</m>, <m>4</m> e <m>-4</m>: sostituendo in <m>p</m>, vediamo che nessuna di esse è radice di <m>p</m>, che è, pertanto irriducibile.
         </p>
         <p>
-          Consideriamo ora un'estensione <m>\Razionali(\alpha)</m> dove <m>\alpha</m> è una radice di <m>p</m>. Per il <xref ref="lem-estensione_semplice"/>, <m>\Razionali(\alpha)</m> ha grado <m>3</m> su <m>\Razionali</m> e una <m>\Razionali</m>-base di <m>\Razionali(\alpha)</m> è <m>1</m>, <m>\alpha</m>, <m>\alpha^{2}</m>. Supponiamo di voler esprimere l'inverso di <m>\alpha</m> e l'inverso di <m>1+\alpha</m> come combinazione lineare degli elementi di questa base.
+          Consideriamo ora un'estensione <m>\Razionali(u)</m> dove <m>u</m> è una radice di <m>p</m>. Per il <xref ref="lem-estensione_semplice"/>, <m>\Razionali(u)</m> ha grado <m>3</m> su <m>\Razionali</m> e una <m>\Razionali</m>-base di <m>\Razionali(u)</m> è <m>1</m>, <m>u</m>, <m>u^{2}</m>. Supponiamo di voler esprimere l'inverso di <m>u</m> e l'inverso di <m>1+u</m> come combinazione lineare degli elementi di questa base.
         </p>
         <p>
-          Per quanto riguarda <m>\alpha^{-1}</m>, basta notare che <m>\alpha^{3}+2\alpha+4=0</m> da cui segue che <m>\alpha(\alpha^{2}+2)=-4</m>. Pertanto, l'inverso di <m>\alpha</m> è <m>-\frac{1}{4}\alpha^{2}+0\alpha-\frac{1}{2}\cdot 1</m>.
+          Per quanto riguarda <m>u^{-1}</m>, basta notare che <m>u^{3}+2u+4=0</m> da cui segue che <m>u(u^{2}+2)=-4</m>. Pertanto, l'inverso di <m>u</m> è <m>-\frac{1}{4}u^{2}+0u-\frac{1}{2}\cdot 1</m>.
         </p>
         <p>
-          Per quanto riguarda l'inverso di <m>\alpha+1</m>, esprimiamolo come <m>a\alpha^{2}+b\alpha+c</m> con <m>a</m>, <m>b</m> e <m>c</m> in <m>\Razionali</m>. Deve allora essere <m>(1+\alpha)(a\alpha^{2}+b\alpha+c)=1</m> che, sviluppato, dà
+          Per quanto riguarda l'inverso di <m>u+1</m>, esprimiamolo come <m>au^{2}+bu+c</m> con <m>a</m>, <m>b</m> e <m>c</m> in <m>\Razionali</m>. Deve allora essere <m>(1+u)(au^{2}+bu+c)=1</m> che, sviluppato, dà
           <me>
-            a\alpha^{3}+(a+b)\alpha^{2}+(b+c)\alpha+c-1=0
+            au^{3}+(a+b)u^{2}+(b+c)u+c-1=0
           </me>.
-          Poiché <m>\alpha^{3}=-2\alpha-4</m>, l'equazione trovata si può riscrivere come
+          Poiché <m>u^{3}=-2u-4</m>, l'equazione trovata si può riscrivere come
           <me>
-            (a+b)\alpha^{2}+(b+c-2a)\alpha+c-4a-1=0
+            (a+b)u^{2}+(b+c-2a)u+c-4a-1=0
           </me>:
-          poiché <m>1</m>, <m>\alpha</m> e <m>\alpha^{2}</m> sono <m>\Razionali</m>-linearmente indipendenti, ciò avviene se e solo se <m>a+b=b+c-2a=c-4a-1=0</m>. Risolvendo il sistema, si trova <m>a=-1</m>, <m>b=1</m> e <m>c=-3</m> e, quindi
+          poiché <m>1</m>, <m>u</m> e <m>u^{2}</m> sono <m>\Razionali</m>-linearmente indipendenti, ciò avviene se e solo se <m>a+b=b+c-2a=c-4a-1=0</m>. Risolvendo il sistema, si trova <m>a=-1</m>, <m>b=1</m> e <m>c=-3</m> e, quindi
           <me>
-            (1+\alpha)^{-1}=-\alpha^{2}+\alpha-3
+            (1+u)^{-1}=-u^{2}+u-3
           </me>.
         </p>
       </statement>
@@ -538,7 +565,7 @@
 
       <proof>
         <p>
-          Basta ragionare per induzione sul grado di <m>f</m>. Se <m>\deg f=1</m>, allora <m>f</m> è totalmente riducibile già in <m>F</m> e, quindi, <m>F</m> stesso è campo di spezzamento di <m>f</m> su <m>F</m>. Se <m>\deg f \gt 1</m>, sia <m>p</m> un divisore irriducibile di <m>f</m>. Per il <xref ref="lem-estensione_semplice"/>, esiste un'estensione <m>F(\alpha)</m> di <m>F</m> con una radice <m>\alpha</m> di <m>p</m>: ora <m>\alpha</m> è radice anche di <m>f</m> e, pertanto, per il  <xref ref="thm-del_resto" text="title"/>, abbiamo che <m>f=(x-\alpha)f'</m> con <m>f'</m> polinomio di grado <m>\deg f-1</m> a coefficienti in <m>F(\alpha)</m>. Per ipotesi induttiva, esiste un campo di spezzamento <m>E</m> di <m>f'</m> su <m>F(\alpha)</m>: ma allora questo è campo di spezzamento di <m>f</m> su <m>F</m>.
+          Basta ragionare per induzione sul grado di <m>f</m>. Se <m>\deg f=1</m>, allora <m>f</m> è totalmente riducibile già in <m>F</m> e, quindi, <m>F</m> stesso è campo di spezzamento di <m>f</m> su <m>F</m>. Se <m>\deg f \gt 1</m>, sia <m>p</m> un divisore irriducibile di <m>f</m>. Per il <xref ref="lem-estensione_semplice"/>, esiste un'estensione <m>F(u)</m> di <m>F</m> con una radice <m>u</m> di <m>p</m>: ora <m>u</m> è radice anche di <m>f</m> e, pertanto, per il  <xref ref="thm-del_resto" text="title"/>, abbiamo che <m>f=(x-u)f'</m> con <m>f'</m> polinomio di grado <m>\deg f-1</m> a coefficienti in <m>F(u)</m>. Per ipotesi induttiva, esiste un campo di spezzamento <m>E</m> di <m>f'</m> su <m>F(u)</m>: ma allora questo è campo di spezzamento di <m>f</m> su <m>F</m>.
         </p>
       </proof>
 
@@ -572,7 +599,7 @@
           <ol>
             <li xml:id="item-no_estensioni_algebriche_proprie">
               <p>
-                ogni elemento <m>\alpha</m> che appartiene a un'estensione di <m>K</m> ed è algebrico su <m>K</m> appartiene a <m>K</m>.
+                ogni elemento <m>u</m> che appartiene a un'estensione di <m>K</m> ed è algebrico su <m>K</m> appartiene a <m>K</m>.
               </p>
             </li>
             <li xml:id="item-polinomi_irriducibili_grado_1">
@@ -596,7 +623,7 @@
 
       <proof>
         <p>
-          Supponiamo che valga la <xref ref="item-no_estensioni_algebriche_proprie">condizione</xref> e mostriamo che vale la <xref ref="item-polinomi_irriducibili_grado_1">condizione</xref>. Sia allora <m>p</m> un polinomio irriducibile (quindi <m>p</m> ha grado positivo perché gli elementi di grado <m>0</m> sono invertibili). Per il <xref ref="lem-estensione_semplice"/>, esiste un'estensione di <m>K</m> che contiene una radice <m>\alpha</m> di <m>p</m>: per la <xref ref="item-no_estensioni_algebriche_proprie">condizione</xref>, <m>\alpha</m> appartiene a <m>K</m> e per il <xref ref="thm-del_resto" text="title"/>, <m>x-\alpha</m> divide <m>p</m> in <m>K[x]</m>: poiché <m>p</m> è irriducibile, segue che <m>x-\alpha</m> è associato a <m>p</m> che ha, quindi, grado <m>1</m>.
+          Supponiamo che valga la <xref ref="item-no_estensioni_algebriche_proprie">condizione</xref> e mostriamo che vale la <xref ref="item-polinomi_irriducibili_grado_1">condizione</xref>. Sia allora <m>p</m> un polinomio irriducibile (quindi <m>p</m> ha grado positivo perché gli elementi di grado <m>0</m> sono invertibili). Per il <xref ref="lem-estensione_semplice"/>, esiste un'estensione di <m>K</m> che contiene una radice <m>u</m> di <m>p</m>: per la <xref ref="item-no_estensioni_algebriche_proprie">condizione</xref>, <m>u</m> appartiene a <m>K</m> e per il <xref ref="thm-del_resto" text="title"/>, <m>x-u</m> divide <m>p</m> in <m>K[x]</m>: poiché <m>p</m> è irriducibile, segue che <m>x-u</m> è associato a <m>p</m> che ha, quindi, grado <m>1</m>.
         </p>
         <p>
           Se vale la <xref ref="item-polinomi_irriducibili_grado_1">condizione</xref>, allora la fattorizzazione in irriducibili di un qualsiasi polinomio a coefficienti in <m>K</m> è costituita da polinomi di primo grado e, dunque, vale la <xref ref="item-ogni_polinomio_totalmente_riducibile">condizione</xref>.
@@ -605,7 +632,7 @@
           Se vale la <xref ref="item-ogni_polinomio_totalmente_riducibile">condizione</xref> allora, preso un polinomio <m>f</m> di grado positivo a coefficienti in <m>K</m>, questo si scrive come prodotto di polinomi di primo grado in <m>K[x]</m>: ognuno di essi ha, quindi, una radice in <m>K</m> e, di conseguenza, <m>f</m> ha una radice in <m>K</m>, cioè vale la <xref ref="item-ogni_polinomio_ha_radice">condizione</xref>.
         </p>
         <p>
-          Infine, supponiamo che valga la <xref ref="item-ogni_polinomio_ha_radice">condizione</xref> e mostriamo che vale la <xref ref="item-no_estensioni_algebriche_proprie">condizione</xref>. Sia allora <m>\alpha</m> un elemento di un'estensione di <m>K</m> che sia algebrico su <m>K</m> e sia <m>p</m> il suo polinomio minimo su <m>F</m>. Poiché vale la <xref ref="item-ogni_polinomio_ha_radice">condizione</xref>, <m>p</m> ha una radice, sia <m>\beta</m>, in <m>K</m>: per il <xref ref="thm-del_resto" text="title"/>, <m>x-\beta</m> divide <m>p</m> in <m>K[x]</m>. Per il <xref ref="thm-caratterizzazione_algebrici_trascendenti"/> il polinomio <m>p</m> è monico e irriducibile in <m>K[x]</m>: dunque, <m>p=x-\beta</m> e <m>0=p(\alpha)=\alpha-\beta</m>, cioè <m>\alpha=\beta\in K</m>. Pertanto, vale la <xref ref="item-no_estensioni_algebriche_proprie">condizione</xref>.
+          Infine, supponiamo che valga la <xref ref="item-ogni_polinomio_ha_radice">condizione</xref> e mostriamo che vale la <xref ref="item-no_estensioni_algebriche_proprie">condizione</xref>. Sia allora <m>u</m> un elemento di un'estensione di <m>K</m> che sia algebrico su <m>K</m> e sia <m>p</m> il suo polinomio minimo su <m>F</m>. Poiché vale la <xref ref="item-ogni_polinomio_ha_radice">condizione</xref>, <m>p</m> ha una radice, sia <m>v</m>, in <m>K</m>: per il <xref ref="thm-del_resto" text="title"/>, <m>x-v</m> divide <m>p</m> in <m>K[x]</m>. Per il <xref ref="thm-caratterizzazione_algebrici_trascendenti"/> il polinomio <m>p</m> è monico e irriducibile in <m>K[x]</m>: dunque, <m>p=x-v</m> e <m>0=p(u)=u-v</m>, cioè <m>u=v\in K</m>. Pertanto, vale la <xref ref="item-no_estensioni_algebriche_proprie">condizione</xref>.
         </p>
       </proof>
 
@@ -628,11 +655,11 @@
 
       <proof>
         <p>
-          Siano <m>\alpha_{1}</m>, <m>\alpha_{2}</m>, <m>\ldots</m>, <m>\alpha_{n}</m> gli elementi di <m>K</m>. Consideriamo il polinomio
+          Siano <m>u_{1}</m>, <m>u_{2}</m>, <m>\ldots</m>, <m>u_{n}</m> gli elementi di <m>K</m>. Consideriamo il polinomio
           <me>
-            f\coloneqq(x-\alpha_{1})(x-\alpha_{2})\cdots(x-\alpha_{n})+1
+            f\coloneqq(x-u_{1})(x-u_{2})\cdots(x-u_{n})+1
           </me>.
-          Allora per ogni <m>\alpha_{i}</m> in <m>K</m> si ha <m>f(\alpha_{i})=0+1\ne0</m> e, dunque, <m>f</m> è un polinomio di grado positivo che non ha alcuna radice in <m>K</m>: pertanto <m>K</m> non è algebricamente chiuso.
+          Allora per ogni <m>u_{i}</m> in <m>K</m> si ha <m>f(u_{i})=0+1\ne0</m> e, dunque, <m>f</m> è un polinomio di grado positivo che non ha alcuna radice in <m>K</m>: pertanto <m>K</m> non è algebricamente chiuso.
         </p>
       </proof>
 
