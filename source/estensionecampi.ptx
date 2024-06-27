@@ -49,6 +49,18 @@
 
     </proposition>
 
+    <p>
+      Il prossimo risultato può essere dimostrato semplicemente verificando che basi sono mandate in basi. Lasciamo i dettagli per esercizio.
+    </p>
+
+    <proposition xml:id="prop-omomorfismo_preserva_grado">
+      <statement>
+        <p>
+          Sia <m>\phi\colon E\to L</m> un omomorfismo di campi. Se <m>F</m> è un sottocampo di <m>E</m>, risulta <m>\degext{E}{F}=\degext{E\phi}{F\phi}</m>.
+        </p>
+      </statement>
+    </proposition>
+
     <proposition xml:id="prop-moltiplicativita_grado">
       <statement>
         <p>
@@ -239,6 +251,13 @@
       </p>
     </remark>
 
+    <remark xml:id="rem-polinomio_minimo_grado_dipendono_dal_campo">
+      <p>
+        Se <m>u</m> è un elemento algebrico du un campo <m>F</m> e se <m>E</m> è un'estensione di <m>F</m>, il polinomio minimo di <m>u</m> su <m>F</m> è anche un polinomio a coefficienti in <m>E</m>: di conseguenza, è un multiplo del polinomio minimo di <m>u</m> su <m>E</m> (possono eventualmente coincidere). In particolare il grado di <m>u</m> su <m>E</m> è minore o uguale del grado di <m>u</m> su <m>F</m>. Ad esempio, l'unità immaginaria <m>i</m> ha polinomio minimo <m>x^{2}+1</m> su <m>\Reali</m> e polinomio minimo <m>x-i</m> su <m>\Complessi</m>.
+      </p>
+      
+    </remark>
+
     <example xml:id="ex-radice_di_due">
       <statement>
         <p>
@@ -258,7 +277,7 @@
       </statement>
     </definition>
 
-    <corollary xml:id="cor-estensione_finita_algebrica">
+    <proposition xml:id="prop-estensione_finita_algebrica">
       <statement>
         <p>
           Se <m>E</m> è un'estensione finita di <m>F</m>, allora <m>E</m> è un'estensione algebrica di <m>F</m>.
@@ -271,6 +290,21 @@
         </p>
       </proof>
 
+    </proposition>
+
+    <corollary xml:id="cor-estensione_con_algebrici">
+      <statement>
+        <p>
+          Sia <m>E</m> un'estensione di un campo <m>F</m> e siano <m>u_{1}</m>, <m>\ldots</m>, <m>u_{r}</m> elementi di <m>F</m> algebrici su <m>F</m>. Allora <m>F(u_{1},\ldots,u_{r})</m> è un'estensione finita di <m>F</m>. In particolare, è un'estensione algebrica di <m>F</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Procediamo per induzione su <m>r</m>, il caso <m>r=1</m> seguendo direttamente dal <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>. Sia allora <m>r\gt 1</m>: per ipotesi induttiva <m>F(u_{1},\ldots,u_{r-1})</m> è un'estensione finita di <m>F</m>. Ora <m>u_{r}</m>, essendo algebrico su <m>F</m>, a maggior ragione è algebrico su <m>F(u_{1},\ldots,u_{r-1})</m> e, usando ancora il <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>, abbiamo che <m>F(u_{1},\ldots,u_{r})</m> è un'estensione finita di <m>F(u_{1},\ldots,u_{r-1})</m>. La tesi segue allora dalla <xref ref="prop-moltiplicativita_grado"/>.
+        </p>
+      </proof>
+
     </corollary>
 
     <p>
@@ -280,35 +314,17 @@
     <proposition xml:id="prop-elementi_algebrici_sottocampo">
       <statement>
         <p>
-          Sia <m>E</m> un'estensione di un campo <m>F</m>, Il sottoinsieme <m>A</m> di <m>E</m> formato dagli elementi algebrici su <m>F</m> è un sottocampo contenente <m>F</m>.
+          Sia <m>E</m> un'estensione di un campo <m>F</m>. Il sottoinsieme <m>A</m> di <m>E</m> formato dagli elementi algebrici su <m>F</m> è un sottocampo contenente <m>F</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Sappiamo già che gli elementi di <m>F</m> sono algebrici su <m>F</m> (<xref ref="rem-Falgebrico_su_F"/>): in particolare, <m>F</m> è non vuoto e contiene <m>1</m>. Dobbiamo allora provare che, per ogni  <m>u</m> e <m>v</m> in <m>A</m>, si ha che <m>u+v</m>, <m>uv</m>, <m>-u</m> e <m>u^{-1}</m> (quest'ultimo nel caso in cui <m>u\ne 0</m>) appartengono tutti a <m>A</m>.
-        </p>
-        <p>
-          Abbiamo, dunque, <m>F\subseteq F(u)\subseteq F(u,v)=F(u)(v)</m>. Ora <m>v</m>, essendo algebrico su <m>F</m>, a maggior ragione è algebrico su <m>F(u)</m>. Per il <xref ref="thm-caratterizzazione_algebrici_trascendenti"/> abbiamo allora che <m>\degext{F(u)}{F}</m> e <m>\degext{F(u,v)}{F(u)}</m> sono finiti e, per la <xref ref="prop-moltiplicativita_grado"/>, <m>F(u,v)</m> è un'estensione finita di <m>F</m>. Per il <xref ref="cor-estensione_finita_algebrica"/>, <m>F(u,v)</m> è un'estensione algebrica di <m>F</m>, e, dunque, <m>F(u,v)\subseteq A</m>. Poiché <m>F(u,v)</m> è un campo, abbiamo che contiene <m>u+v</m>, <m>uv</m>, <m>-u</m> e <m>u^{-1}</m> che sono, quindi, elementi di <m>A</m>, come richiesto.
+          Sappiamo già che gli elementi di <m>F</m> sono algebrici su <m>F</m> (<xref ref="rem-Falgebrico_su_F"/>): in particolare, <m>F</m> è non vuoto e contiene <m>1</m>. Dobbiamo allora provare che, per ogni  <m>u</m> e <m>v</m> in <m>A</m>, si ha che <m>u+v</m>, <m>uv</m>, <m>-u</m> e <m>u^{-1}</m> (quest'ultimo nel caso in cui <m>u\ne 0</m>) appartengono tutti a <m>A</m>. Questi elementi appartengono tutti a <m>F(u,v)</m> che, per il <xref ref="cor-estensione_con_algebrici"/>, è contenuto in <m>A</m>.
         </p>
       </proof>
 
     </proposition>
-
-    <corollary xml:id="cor-estensione_con_algebrici">
-      <statement>
-        <p>
-          Sia <m>E</m> un'estensione di un campo <m>F</m> e siano <m>u_{1}</m>, <m>\ldots</m>, <m>u_{r}</m> elementi di <m>F</m> algebrici su <m>F</m>. Allora <m>F(u_{1},\ldots,u_{r})</m> è un'estensione algebrica di <m>F</m>.
-        </p>
-      </statement>
-
-      <proof>
-        <p>
-          Dalla <xref ref="prop-elementi_algebrici_sottocampo"/>, sappiamo che l'insieme <m>A</m> degli elementi di <m>E</m> algebrici su <m>F</m> è un sottocampo di <m>F</m>: poiché <m>A</m> contiene <m>F</m> e tutti gli <m>u_{i}</m>, contiene anche il sottocampo generato da essi.
-        </p>
-      </proof>
-
-    </corollary>
 
     <example>
       <statement>
@@ -317,10 +333,10 @@
           <me>
            \degext{\Razionali(\sqrt{2},\sqrt{3})}{\Razionali}=\degext{\Razionali(\sqrt{2},\sqrt{3})}{\Razionali(\sqrt{2})}\degext{\Razionali(\sqrt{2})}{\Razionali}=2\cdot2=4
           </me>.
-          Dalla dimostrazione della <xref ref="prop-moltiplicativita_grado"/>, sappiamo inoltre che <m>1</m>, <m>\sqrt{2}</m>, <m>\sqrt{3}</m>, <m>\sqrt{6}</m> formano una <m>\Razionali</m>-base di <m>\Razionali(\sqrt{2},\sqrt{6})</m>.
+          Dalla dimostrazione della <xref ref="prop-moltiplicativita_grado"/>, sappiamo inoltre che <m>1</m>, <m>\sqrt{2}</m>, <m>\sqrt{3}</m>, <m>\sqrt{6}</m> formano una <m>\Razionali</m>-base di <m>\Razionali(\sqrt{2},\sqrt{3})</m>.
         </p>
         <p>
-          Consideriamo ora l'estensione <m>\Razionali(\sqrt{2}+\sqrt{3})</m>: chiaramente <m>\Razionali(\sqrt{2}+\sqrt{3})\subseteq\Razionali(\sqrt{2},\sqrt{3})</m>. Per la <xref ref="prop-moltiplicativita_grado"/> il grado di <m>\sqrt{2}+\sqrt{3}</m> è un divisore di <m>4</m>. Se fosse diverso da <m>4</m> dovrebbe essere <m>1</m> o <m>2</m>: consideriamo allora un polinomio del tipo <m>ax^{2}+bx+c</m> a coefficienti in <m>\Razionali</m> che ha <m>\sqrt{2}+\sqrt{3}</m> come radice. Risulta allora
+          Consideriamo ora l'estensione <m>\Razionali(\sqrt{2}+\sqrt{3})</m>: chiaramente <m>\Razionali(\sqrt{2}+\sqrt{3})\subseteq\Razionali(\sqrt{2},\sqrt{3})</m>. Per la <xref ref="prop-moltiplicativita_grado"/>, il grado di <m>\sqrt{2}+\sqrt{3}</m> è un divisore di <m>4</m>. Se fosse diverso da <m>4</m> dovrebbe essere <m>1</m> o <m>2</m>: esisterebbe allora un polinomio del tipo <m>ax^{2}+bx+c</m> a coefficienti in <m>\Razionali</m> con <m>\sqrt{2}+\sqrt{3}</m> come radice. Risulterebbe allora
           <me>
             a(2+3+2\sqrt{6})+b(\sqrt{2}+\sqrt{3})+c=0
           </me>
@@ -345,11 +361,67 @@
       </exercise>
 
       <exercise>
+        <introduction>
+          <p>
+            Sia <m>E</m> un'estensione di <m>F</m> e sia <m>V</m> un <m>E</m>-spazio vettoriale.
+          </p>
+        </introduction>
+        <task>
+          <statement>
+            <p>
+              Dimostrare che in <m>V</m> può essere indotta una struttura di <m>F</m>-spazio vettoriale.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Se <m>V</m> è non nullo, mostrare che <m>V</m> ha <m>F</m>-dimensione finita se e solo se <m>\degext{E}{F}</m> è finita e <m>V</m> ha <m>E</m>-dimensione finita: in tal caso, mostrare che <m>\dim_{F}V=\dim_{E}V\cdot\degext{E}{F}</m>.
+            </p>
+          </statement>
+          <hint>
+            <p>
+              Adattare la dimostrazione della <xref ref="prop-moltiplicativita_grado"/>.
+            </p>
+          </hint>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Nel punto precedente come viene utilizzata l'ipotesi che <m>V</m> sia non nullo? Si può rimuovere?
+            </p>
+          </statement>
+        </task>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Dati un'estensione <m>E</m> di un campo <m>F</m> e un sottoinsieme <m>U</m> di <m>E</m>, indichiamo con <m>F(U)</m> il sottocampo di <m>E</m> generato da <m>F</m> e <m>U</m>. Mostrare che se gli elementi di <m>U</m> sono tutti algebrici su <m>F</m>, allora <m>F(U)</m> è un'estensione algebrica di <m>F</m>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare la <xref ref="prop-omomorfismo_preserva_grado"/>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
         <statement>
           <p>
             Mostrare che se <m>E</m> è un'estensione algebrica di un campo <m>F</m> e se <m>K</m> è un'estensione algebrica di <m>E</m>, allora <m>K</m> è un'estensione algebrica di <m>F</m>.
           </p>
         </statement>
+
+        <hint>
+          <p>
+            Preso un qualsiasi elemento di <m>K</m>, considerare il suo polinomio minimo su <m>E</m> e prendere l'estensione di <m>F</m> con i coefficienti di questo polinomio.
+          </p>
+        </hint>
       </exercise>
 
       <exercise>
@@ -368,7 +440,7 @@
           </p>
             
           <p>
-            Supponiamo allora per assurdo che <m>\sqrt{p_{n}}\in E(\sqrt{p_{n-1}})</m>: poiché <m>\sqrt{p_{n-1}}</m> ha grado <m>2</m> su <m>E</m>, esistono <m>a</m> e <m>b</m> in <m>E</m> tali che <m>a+b\sqrt{p_{n-1}}=\sqrt{p_{n}}</m>. Ma <m>\sqrt{p_{n}}\notin E</m>, e, quindi, <m>b\ne 0</m>. Ora <m>a^{2}+b^{2}p_{n-1}+2ab\sqrt{p_{n-1}}=p_{n}</m>: se fosse <m>a\ne0</m>, avremmo che <m>\sqrt{p_{n-1}}\in E</m>. Dunque <m>a=0</m> e <m>b\ne 0</m>: pertanto <m>b^{2}p_{n-1}=p_{n}</m>, cioè <m>p_{n-1}</m> divide <m>p_{n}</m> in <m>\interi</m>, contro l'ipotesi che <m>p_{n-1}</m> e <m>p_{n}</m> siano primi distinti. Abbiamo così trovato l'assurdo.
+            Supponiamo allora per assurdo che <m>\sqrt{p_{n}}\in E(\sqrt{p_{n-1}})</m>: poiché <m>\sqrt{p_{n-1}}</m> ha grado <m>2</m> su <m>E</m>, esistono <m>a</m> e <m>b</m> in <m>E</m> tali che <m>a+b\sqrt{p_{n-1}}=\sqrt{p_{n}}</m>. Ma <m>\sqrt{p_{n}}\notin E</m>, e, quindi, <m>b\ne 0</m>. Ora <m>a^{2}+b^{2}p_{n-1}+2ab\sqrt{p_{n-1}}=p_{n}</m>: se fosse <m>a\ne0</m>, avremmo che <m>\sqrt{p_{n-1}}\in E</m>. Dunque <m>a=0</m> e <m>b\ne 0</m>: pertanto <m>b^{2}p_{n-1}=p_{n}</m>, cioè <m>p_{n-1}</m> divide <m>p_{n}</m> in <m>\Interi</m>, contro l'ipotesi che <m>p_{n-1}</m> e <m>p_{n}</m> siano primi distinti. Abbiamo così trovato l'assurdo.
           </p>
         </solution>
       </exercise>
@@ -381,12 +453,16 @@
     <title>Estensioni di omomorfismi</title>
 
     <p>
-      Se <m>\phi\colon F\to K</m> è un omomorfismo di campi ed <m>E</m> è un'estensione di <m>F</m> ci chiediamo se sia possibile estendere <m>\phi</m> a \(E\), cioè determinare un omomorfismo <m>\psi\colon E\to K</m> tale che <m>\restrizione{\psi}{F}=\phi</m>. Confineremo la nostra attenzione al caso in <m>\degext{E}{F}</m> sia finito, cominciando con il caso delle estensioni semplici.
+      Sia <m>\phi\colon F\to K</m> un omomorfismo di campi. Sia <m>E</m> un'estensione di <m>F</m> e <m>L</m> un'estensione di <m>K</m>. Ci chiediamo se sia possibile estendere <m>\phi</m> a un omomorfismo <m>\psi\colon E\to L</m>, cioè un omomorfismo tale che <m>u\psi=u\phi</m> per ogni <m>u</m> in <m>F</m>. Nel caso in cui <m>L=K</m>, questo significa semplicemente che <m>\restrizione{\psi}{F}=\phi</m>. Confineremo la nostra attenzione al caso in <m>\degext{E}{F}</m> sia finito, cominciando con il caso delle estensioni semplici.
+    </p>
+
+    <p>
+      Grazie al <xref ref="thm-proprieta_universale_polinomi"/> possiamo introdurre la
     </p>
 
     <definition xml:id="def-omomorfismo_indotto_polinomi">
       <notation>
-        <usage><m>\indotto{\phi</m></usage>
+        <usage><m>\indotto{\phi}</m></usage>
         <description>omomorfismo che estende <m>\phi</m> e manda <m>x</m> in <m>x</m></description>
       </notation>
       <statement>
@@ -409,19 +485,53 @@
       </proof>
     </proposition>
 
-    <lemma xml:id="lem-estensione_omomorfismo_smplice">
+    <lemma xml:id="lem-estensione_omomorfismo_semplice">
       <statement>
         <p>
-          Sia <m>E\coloneqq F(u)</m> un'estensione semplice algebrica di un campo <m>F</m>. Sia <m>f\in F[x]</m> il polinomio minimo di <m>u</m> su <m>F</m>. Sia <m>\phi\colon F\to K</m> un omomorfismo di campi. Allora il numero delle estensioni di <m>\phi</m> a omomorfismi da <m>E</m> in <m>K</m> è uguale al numero delle radici di <m>f\indotto{\phi}</m> in <m>K</m>. In particolare, il numero di queste estensioni è al più uguale a <m>\degext{E}{F}</m>.
+          Sia <m>E\coloneqq F(u)</m> un'estensione algebrica semplice di un campo <m>F</m> e sia <m>f\in F[x]</m> il polinomio minimo di <m>u</m> su <m>F</m>. Sia <m>\phi\colon F\to K</m> un omomorfismo di campi. Allora il numero delle estensioni di <m>\phi</m> a omomorfismi da <m>E</m> in <m>K</m> è uguale al numero delle radici di <m>f\indotto{\phi}</m> in <m>K</m>. In particolare, il numero di queste estensioni è al più uguale a <m>\degext{E}{F}</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          
+          Se <m>\psi\colon E\to K</m> è un'estensione di <m>\phi</m>, dalla <xref ref="prop-radice_in_radice"/> sappiamo che <m>u\psi</m> è una radice di <m>f\indotto{\psi}</m>, che, ovviamente, coincide con <m>f\indotto{\phi}</m>. Dobbiamo allora mostrare che per ogni radice <m>w</m> di <m>f\indotto{\phi}</m> esiste esattamente un'estensione di <m>\phi</m> che manda <m>u</m> in <m>w</m>. Se due estensioni di <m>\phi</m> coincidono su <m>u</m>, esse devono essere uguali, dal momento che <m>E</m> è generato da <m>F</m> e da <m>u</m>: dunque, esiste al più un'estensione di <m>\phi</m> che manda <m>u</m> in <m>w</m>.
+
+          Mostriamo ora l'esistenza di una tale estensione. Per il <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>, ogni elemento di <m>E</m> è del tipo <m>p(u)</m> per qualche polinomio <m>p</m> in <m>F[x]</m>; inoltre, se <m>q</m> è un altro polinomio di <m>F[x]</m> tale che <m>q(u)=p(u)</m>, cioè <m>(q-p)(u)=0</m>, si ha che <m>q-p</m> è multiplo di <m>f</m>: di conseguenza, <m>(q-p)\indotto{\phi}(w)=0</m>, cioè <m>q\indotto{\phi}(w)=p\indotto{\phi}(w)</m>.  Ponendo <m>p(u)\psi\coloneqq p\indotto{\phi}(w)</m>, abbiamo allora una funzione ben definita <m>\psi\colon E\to K</m>. Si verifica facilmente che <m>\psi</m> estende <m>\phi</m> ed è un omomorfismo di campi.
         </p>
       </proof>
     </lemma>
+
+    <proposition xml:id="prop-numero_estensioni">
+      <statement>
+        <p>
+          Sia <m>E</m> un'estensione finita di un campo <m>F</m>. Sia <m>\phi\colon F\to K</m> un omomorfismo di campi. Allora <m>\phi</m> si estende a un omomorfismo da <m>E</m> in <m>K</m> in al più <m>\degext{E}{F}</m> modi.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Procediamo per induzione su <m>\degext{E}{F}</m>. Il caso <m>\degext{E}{F}=1</m> è banale. Sia allora <m>\degext{E}{F}\gt 1</m> (cioè <m>E</m> contiene strettamente <m>F</m>) e sia <m>u</m> un elemento di <m>E\setminus F</m>. Di conseguenza <m>\degext{F(u)}{F}\gt 1</m> e, per la <xref ref="prop-moltiplicativita_grado"/>, abbiamo che <m>\degext{E}{F(u)}=\frac{\degext{E}{F}}{\degext{F(u)}{F}}\lt \degext{E}{F}</m>. Per il <xref ref="lem-estensione_omomorfismo_semplice"/>, <m>\phi</m> si estende a <m>F(u)</m> in al più <m>\degext{F(u)}{F}</m> modi, mentre, per ipotesi induttiva, ciascuna di queste estensioni si estende in al più <m>\degext{E}{F(u)}</m> modi a <m>E</m>. Di conseguenza, abbiamo al più <m>\degext{F(u)}{F}\degext{E}{F(u)}=\degext{E}{F}</m> estensioni di <m>\phi</m> a <m>E</m>.
+        </p>
+      </proof>
+    </proposition>
+
+    <corollary xml:id="cor-conteggio_estensioni">
+      <statement>
+        <p>
+          Siano <m>E\supseteq L\supseteq F</m> campi con <m>\degext{E}{F}</m> finito. Sia <m>\phi\colon F\to K</m> un omomorfismo di campi. L'omomorfismo <m>\phi</m> ha <m>\degext{E}{F}</m> estensioni ad <m>E</m> se e solo se <m>\phi</m> ha <m>\degext{L}{F}</m> estensioni a <m>L</m> e ciascuna di queste ha <m>\degext{E}{L}</m> estensioni a <m>E</m>.
+        </p>
+      </statement>
+    </corollary>
+
+    <exercises xml:id="exercises-estensioni_di_omomorfismi">
+      <exercise>
+        <statement>
+          <p>
+            Sia <m>\phi\colon F\to K</m> un omomorfismo di campi. Mostrare che <m>\indotto{\phi}</m> è iniettivo. Mostrare inoltre che <m>\indotto{\phi}</m> è suriettivo se e solo se <m>\phi</m> è suriettivo (e, di conseguenza, che <m>\indotto{\phi}</m> è biiettivo se e solo se <m>\phi</m> è biiettivo). 
+          </p>
+        </statement>
+      </exercise>
+    </exercises>
     
   </section>
 
@@ -435,15 +545,21 @@
           <me>
             f=c(x-u_{1})(x-u_{2})\cdots(x-u_{r})
           </me>
-          con <m>u_{1}</m>, <m>u_{2}</m>, <m>\ldots</m>, <m>u_{r}</m> radici (non necessariamente distinte) di <m>f</m>.
+          con <m>u_{1}</m>, <m>u_{2}</m>, <m>\ldots</m>, <m>u_{r}</m> e <m>c</m> elementi di <m>F</m>.
         </p>
       </statement>
     </definition>
 
+    <remark>
+      <p>
+        Nella definizione precedente si ha chiaramente che <m>c</m> è il coefficiente direttivo di <m>f</m> e <m>u_{1}</m>, <m>u_{2}</m>, <m>\ldots</m>, <m>u_{r}</m> sono le radici (non necessariamente distinte) di <m>f</m>.
+      </p>
+    </remark>
+
     <example>
       <statement>
         <p>
-          Il polinomio <m>x^{2}+1</m> a coefficienti in <m>\Razionali</m> non è totalmente riducibile. Lo stesso polinomio, pensato come polinomio a coefficienti in <m>\Complessi</m> si può esprimere come <m>(x+i)(x-i)</m> ed è, quindi, totalmente riducibile.
+          Il polinomio <m>x^{4}-1</m> a coefficienti in <m>\Razionali</m> non è totalmente riducibile: infatti si fattorizza come <m>(x^{2}+1)(x+1)(x-1)</m> e <m>x^{2}+1</m> non è ulteriormente fattorizzabile. Lo stesso polinomio, pensato come polinomio a coefficienti in <m>\Complessi</m> si può esprimere come <m>(x+i)(x-i)(x+1)(x-1)</m> ed è, quindi, totalmente riducibile.
         </p>
       </statement>
     </example>
@@ -451,7 +567,7 @@
     <definition xml:id="def-campo_di_spezzamento">
       <statement>
         <p>
-          Dato un polinomio <m>f</m> di grado positivo a coefficienti in un campo <m>F</m>, un <term>campo di spezzamento</term> è un'estensione <m>E</m> di <m>F</m> tale che <m>f</m> sia totalmente riducibile in <m>E</m>
+          Dato un polinomio <m>f</m> di grado positivo a coefficienti in un campo <m>F</m>, un <term>campo di spezzamento</term> di <m>f</m> su <m>F</m> è un'estensione <m>E</m> di <m>F</m> tale che <m>f</m> sia totalmente riducibile in <m>E</m>
           <me>
             f=c(x-u_{1})(x-u_{2})\cdots(x-u_{r})
           </me>
@@ -459,9 +575,21 @@
          </p>
       </statement>
     </definition>
+    
+    <remark xml:id="rem-spezzamento_intermedio">
+      <p>
+        Se <m>E</m> è un campo di spezzamento di un polinomio <m>f</m> su <m>F</m>, e <m>L</m> è un sottocampo di <m>E</m> contenente <m>F</m>, allora <m>E</m> è campo di spezzamento di <m>f</m> anche su <m>L</m>.
+      </p>
+    </remark>
+
+    <remark xml:id="rem-spezzamento_estensione_finita">
+      <p>
+        Se <m>E</m> è un campo di spezzamento di un polinomio <m>f</m> su <m>F</m>, per il <xref ref="cor-estensione_con_algebrici"/>, <m>E</m> è un'estensione finita e, quindi, algebrica, di <m>F</m>. Il grado di <m>E</m> su <m>F</m> può essere limitato in termini del grado di <m>f</m> (<xref ref="exercise-grado_spezzamento"/>).
+      </p>
+    </remark>
 
     <p>
-      La definizione ci dice cosa sia un campo di spezzamento, ma al momento non sappiamo se un campo di spezzamento esiste. Nel <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>, abbiamo visto che l'estensione <m>F(u)</m> con un elemento algebrico <m>u</m> di polinomio minimo <m>p</m>, è isomorfa al quoziente <m>F[x]/I</m> dove , <m>I</m> è l'ideale generato da <m>p</m>. Questo suggerisce un metodo per <q>aggiungere</q> a un campo le radici di un polinomio irriducibile.
+      La definizione ci dice cosa sia un campo di spezzamento, ma al momento non sappiamo se un campo di spezzamento esiste. Nel <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>, abbiamo visto che l'estensione <m>F(u)</m> con un elemento algebrico <m>u</m> di polinomio minimo <m>p</m>, è isomorfa al quoziente <m>F[x]/I</m> dove <m>I</m> è l'ideale generato da <m>p</m>. Questo suggerisce un metodo per <q>aggiungere</q> a un campo le radici di un polinomio irriducibile.
     </p>
 
     <lemma xml:id="lem-estensione_semplice">
@@ -565,22 +693,39 @@
 
       <proof>
         <p>
-          Basta ragionare per induzione sul grado di <m>f</m>. Se <m>\deg f=1</m>, allora <m>f</m> è totalmente riducibile già in <m>F</m> e, quindi, <m>F</m> stesso è campo di spezzamento di <m>f</m> su <m>F</m>. Se <m>\deg f \gt 1</m>, sia <m>p</m> un divisore irriducibile di <m>f</m>. Per il <xref ref="lem-estensione_semplice"/>, esiste un'estensione <m>F(u)</m> di <m>F</m> con una radice <m>u</m> di <m>p</m>: ora <m>u</m> è radice anche di <m>f</m> e, pertanto, per il  <xref ref="thm-del_resto" text="title"/>, abbiamo che <m>f=(x-u)f'</m> con <m>f'</m> polinomio di grado <m>\deg f-1</m> a coefficienti in <m>F(u)</m>. Per ipotesi induttiva, esiste un campo di spezzamento <m>E</m> di <m>f'</m> su <m>F(u)</m>: ma allora questo è campo di spezzamento di <m>f</m> su <m>F</m>.
+          Basta ragionare per induzione sul grado di <m>f</m>. Se <m>\deg f=1</m>, allora <m>f</m> è totalmente riducibile già in <m>F</m> e, quindi, <m>F</m> stesso è campo di spezzamento di <m>f</m> su <m>F</m>. Se <m>\deg f \gt 1</m>, sia <m>p</m> un divisore irriducibile di <m>f</m>. Per il <xref ref="lem-estensione_semplice"/>, esiste un'estensione <m>F(u)</m> di <m>F</m> con una radice <m>u</m> di <m>p</m>: ora <m>u</m> è radice anche di <m>f</m> e, pertanto, per il  <xref ref="thm-del_resto" text="title"/>, abbiamo che <m>f=(x-u)g</m> con <m>g</m> polinomio di grado <m>\deg f-1</m> a coefficienti in <m>F(u)</m>. Per ipotesi induttiva, esiste un campo di spezzamento <m>E</m> di <m>g</m> su <m>F(u)</m>: ma allora questo è campo di spezzamento di <m>f</m> su <m>F</m>.
         </p>
       </proof>
 
     </theorem>
 
     <p>
-      Si potrebbe dimostrare che il campo di spezzamento di un polinomio è unico a meno di isomorfismi, cioè che se <m>E</m> e <m>E'</m> sono campi di spezzamento di <m>f</m> su un campo <m>F</m>, allora esiste un isomorfismo da <m>E</m> in <m>E'</m> la cui restrizione a <m>F</m> è l'identità. Pertanto anche se possiamo aggiungere a <m>F</m> radici di <m>f</m> in modo diverso, alla fine il risultato che otteniamo è essenzialmente lo stesso.
+      La costruzione di un campo di spezzamento non è univocamente determinata, perché potremmo aggiungere le radici in ordine diverso (o, anche, utilizzare un procedimento di costruzione completamente differente). Tuttavia, qualunque procedimento si utilizzi, si ottengono risultati equivalenti. Dimostriamo un risultato (apparentemente) più generale.
     </p>
+
+    <theorem xml:id="thm-isomorfismo_campi_spezzamento">
+      <statement>
+        <p>
+          Sia <m>\phi\colon F\to F'</m> un isomorfismo di campi. Sia <m>f</m> un polinomio di grado positivo a coefficienti in <m>F</m> e sia <m>E</m> un campo di spezzamento di <m>f</m> su <m>F</m>. Sia <m>E'</m> un campo di spezzamento di <m>f\indotto{\phi}</m> su <m>F'</m>. Allora esiste un isomorfismo <m>\psi</m> tra <m>E</m> ed <m>E'</m> che estende <m>\phi</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Procediamo per induzione su <m>\degext{E}{F}</m> che sappiamo essere finito grazie all'<xref ref="rem-spezzamento_estensione_finita"/>. Se <m>\degext{E}{F}=1</m>, cioè <m>E=F</m>, il polinomio <m>f</m> si spezza completamente in <m>F</m>. Di conseguenza, <m>f\indotto{\phi}</m> si spezza completamente in <m>F'</m> e <m>E'=F'</m> e la tesi si ottiene completamente.
+        </p>
+        <p>
+          Sia allora <m>\degext{E}{F}\gt 1</m>: dunque <m>f</m> non si spezza completamente in <m>F</m> ed esiste almeno una radice di <m>f</m>, sia <m>u</m>, che appartiene a <m>E</m> ma non a <m>F</m>. Sia <m>p</m> il polinomio minimo di <m>u</m> su <m>F</m>. Per il <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>, <m>p</m> è un divisore di <m>f</m>. Di conseguenza, <m>p\indotto{\phi}</m> è un divisore di <m>f\indotto{\phi}</m>, e, pertanto, <m>p\indotto{\phi}</m> ha una radice in <m>E'</m>. Per il <xref ref="lem-estensione_omomorfismo_semplice"/> esiste un'estensione, che indichiamo con <m>\theta</m>, di <m>\phi</m> a un omomorfismo da <m>F(u)</m> in <m>E'</m>. Poiché <m>u\notin F</m>, sappiamo che <m>\degext{F(u)}{F}\gt 1</m> e, di conseguenza, <m>\degext{E}{F(u)}=\frac{\degext{E}{F}}{\degext{F(u)}{F}}\lt \degext{E}{F}</m>. Chiaramente <m>E</m> è campo di spezzamento di <m>f</m> anche su <m>F(u)</m> ed <m>E'</m> è campo di spezzamento di <m>f\indotto{\phi}=f\indotto{\theta}</m> anche su <m>F\theta</m>: per ipotesi induttiva, <m>\theta</m> si estende allora a un isomorfismo tra <m>E</m> ed <m>E'</m>.
+        </p>
+      </proof>
+    </theorem>
 
     <exercises xml:id="exercises-campo_di_spezzamento">
 
-      <exercise>
+      <exercise xml:id="exercise-grado_spezzamento">
         <statement>
           <p>
-            Utilizzare la dimostrazione del <xref ref="thm-campo_spezzamento"/> per mostrare che se <m>f</m> è un polinomio di grado <m>n</m> a coefficienti in un campo <m>F</m>, allora il campo di spezzamento <m>E</m> di <m>f</m> su <m>F</m> è un'estensione finita di grado al più <m>n!</m>.
+            Utilizzare la dimostrazione del <xref ref="thm-campo_spezzamento"/> per mostrare che se <m>f</m> è un polinomio di grado <m>n</m> a coefficienti in un campo <m>F</m>, allora il campo di spezzamento <m>E</m> di <m>f</m> su <m>F</m> è un'estensione finita di grado al più <m>n!</m> su <m>f</m>.
           </p>
         </statement>
       </exercise>
