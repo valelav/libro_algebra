@@ -350,6 +350,30 @@
 
     </example>
 
+    <p>
+      Dal <xref ref="thm-caratterizzazione_algebrici_trascendenti"/> sappiamo che le estensioni con un elemento algebrico sono finite. Ci chiediamo quando un'estensione finita sia semplice. 
+    </p>
+
+    <theorem xml:id="thm-caratterizzazione_estensioni_algebriche_semplici">
+      <statement>
+        <p>
+          Sia <m>E</m> un'estensione finita di un campo <m>F</m>. Il campo <m>E</m> è un'estensione semplice di <m>F</m> se e solo se il numero di campi <m>L</m> tali che <m>E\supseteq L\supseteq F</m> è finito.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Supponiamo che <m>E=F(u)</m> per qualche elemento <m>u</m> di <m>E</m>. Per ogni sottocampo <m>L</m> di <m>E</m> contenente <m>F</m> indichiamo con <m>p_{L}</m> il polinomio minimo di <m>u</m> su <m>L</m>: questo è un polinomio monico a coefficienti in <m>L</m> ed è un divisore di ogni altro polinomio a coefficienti in <m>L</m> che si annulla in <m>u</m>. In particolare <m>p_{L}</m> è un divisore di <m>p_{F}</m>. Pensandoli entrambi come polinomi a coefficienti in <m>E</m>, vediamo che le possibilità per <m>p_{L}</m> sono finite, poiché <m>p_{L}</m> è necessariamente un prodotto di fattori monici irriducibili in <m>E[x]</m> di <m>p_{F}</m> e, questi fattori sono in numero finito perché <m>E[x]</m> è un dominio a fattorizzazione unica. Se allora mostriamo che, rispetto a sottocampi diversi, <m>u</m> ha polinomi minimi diversi, possiamo concludere che il numero di sottocampi intermedi tre <m>E</m> e <m>F</m> sia finito. Sia allora <m>p_{L}=x^{r}+a_{r-1}x^{r-1}+\cdots+a_{0}</m>: sappiamo che <m>r=\degext{E}{L}</m>. Sia ora <m>K=F(a_{0},\ldots,a_{r-1})</m>: chiaramente <m>K\subseteq L</m> e, dunque, <m>\degext{E}{K}\ge\degext{E}{L}=r</m>. D'altra parte <m>E=K(u)</m> e <m>u</m> è radice del polinomio <m>p_{L}</m> i cui coefficienti appartengono a <m>K</m> per costruzione: pertanto <m>\degext{E}{K}\le r</m>. Ma allora <m>\degext{E}{K}=r</m>, cioè <m>L=K</m>: dunque, il polinomio minimo di <m>u</m> rispetto a <m>L</m> determina <m>L</m>.
+        </p>
+        <p>
+          Viceversa, supponiamo che il numero di sottocampi intermedi sia finito e distinguiamo due casi a seconda che <m>F</m> sia un campo finito o meno. Se <m>F</m> è finito, anche <m>E</m>, avendo dimensione finita su <m>F</m>, è finito. Per il <xref ref="thm-sottogruppi_finiti_campo"/>, il gruppo moltiplicativo di <m>E</m> è ciclico: detto <m>u</m> un generatore di questo gruppo, si ha allora <m>E=F(u)</m>.
+        </p>
+        <p>
+          Supponiamo invece che <m>F</m> sia infinito e sia <m>u</m> un elemento di <m>E</m> tale che <m>\degext{F(u)}{F}</m> sia massimo possibile (questo esiste perché tale grado non può superare <m>\degext{E}{F}</m>): vogliamo mostrare che <m>F(u)=E</m>, cioè che per ogni <m>v</m> in <m>E</m> si ha che <m>v</m> appartiene a <m>F(u)</m>. Consideriamo i sottocampi <m>F(tu+v)</m> al variare di <m>t</m> in <m>F</m>: poiché <m>t</m> può assumere infiniti valori e ci sono solo un numero finito di sottocampi intermedi, esisteranno due elementi diversi <m>t</m> e <m>s</m> in <m>F</m> tali che <m>F(tu+v)=F(su+v)</m>. Pertanto <m>tu+v-(su+v)=(t-s)u</m> appartiene a <m>F(tu+v)</m>: poiché <m>t-s</m> è un elemento non nullo di <m>F</m>, moltiplicando per il suo inverso troviamo che <m>u</m> appartiene a <m>F(tu+v)</m>, cioè <m>F(u)\subseteq F(tu+v)</m>. Per la scelta di <m>u</m>, ciò significa che <m>F(u)=F(tu+v)</m>: ma allora <m>v=(tu+v)-tu</m> appartiene a <m>F(u)</m>, come richiesto.
+        </p>
+      </proof>
+    </theorem>
+
     <exercises xml:id="exercises-elementi_algebrici_e_trascendenti">
 
       <exercise>
@@ -454,6 +478,10 @@
 
     <p>
       Sia <m>\phi\colon F\to K</m> un omomorfismo di campi. Sia <m>E</m> un'estensione di <m>F</m> e <m>L</m> un'estensione di <m>K</m>. Ci chiediamo se sia possibile estendere <m>\phi</m> a un omomorfismo <m>\psi\colon E\to L</m>, cioè un omomorfismo tale che <m>u\psi=u\phi</m> per ogni <m>u</m> in <m>F</m>. Nel caso in cui <m>L=K</m>, questo significa semplicemente che <m>\restrizione{\psi}{F}=\phi</m>. Confineremo la nostra attenzione al caso in <m>\degext{E}{F}</m> sia finito, cominciando con il caso delle estensioni semplici.
+    </p>
+
+    <p>
+      Ricordiamo innanzitutto che, grazie al <xref ref="cor-omomorfismo_da_corpi"/>, un omomorfismo da un campo a un anello è necessariamente iniettivo. In particolare un omomorfismo tra campi è iniettivo e, di conseguenza realizza un isomorfismo tra il campo di partenza e la sua immagine: useremo spesso questo fatto senza richiamarlo esplicitamente ogni volta.
     </p>
 
     <p>
@@ -735,7 +763,11 @@
   </section>
 
   <section xml:id="sec-chiusure_algebriche">
-    <title>Cenni su campi algebricamente chiusi</title>
+    <title>Campi algebricamente chiusi</title>
+
+    <p>
+      Abbiamo visto come aggiungere le radici di un polinomio a un campo. Ovviamente potremmo ripetere il procedimento con un numero qualunque di polinomi. Ma possiamo fare qualcosa del genere con infiniti polinomi? Iniziamo a considerare campi in cui ogni polinomio è totalmente riducibile.
+    </p>
 
     <theorem xml:id="thm-caratterizzazione_algebricamente_chiuso">
       <statement>
@@ -768,7 +800,7 @@
 
       <proof>
         <p>
-          Supponiamo che valga la <xref ref="item-no_estensioni_algebriche_proprie">condizione</xref> e mostriamo che vale la <xref ref="item-polinomi_irriducibili_grado_1">condizione</xref>. Sia allora <m>p</m> un polinomio irriducibile (quindi <m>p</m> ha grado positivo perché gli elementi di grado <m>0</m> sono invertibili). Per il <xref ref="lem-estensione_semplice"/>, esiste un'estensione di <m>K</m> che contiene una radice <m>u</m> di <m>p</m>: per la <xref ref="item-no_estensioni_algebriche_proprie">condizione</xref>, <m>u</m> appartiene a <m>K</m> e per il <xref ref="thm-del_resto" text="title"/>, <m>x-u</m> divide <m>p</m> in <m>K[x]</m>: poiché <m>p</m> è irriducibile, segue che <m>x-u</m> è associato a <m>p</m> che ha, quindi, grado <m>1</m>.
+          Supponiamo che valga la <xref ref="item-no_estensioni_algebriche_proprie">condizione</xref> e mostriamo che vale la <xref ref="item-polinomi_irriducibili_grado_1">condizione</xref>. Sia allora <m>p</m> un polinomio irriducibile (quindi <m>p</m> ha grado positivo perché gli elementi di grado <m>0</m>, cioè gli elementi di <m>K</m>, sono invertibili). Per il <xref ref="lem-estensione_semplice"/>, esiste un'estensione di <m>K</m> che contiene una radice <m>u</m> di <m>p</m>: per la <xref ref="item-no_estensioni_algebriche_proprie">condizione</xref>, <m>u</m> appartiene a <m>K</m> e per il <xref ref="thm-del_resto" text="title"/>, <m>x-u</m> divide <m>p</m> in <m>K[x]</m>: poiché <m>p</m> è irriducibile, segue che <m>x-u</m> è associato a <m>p</m> che ha, quindi, grado <m>1</m>.
         </p>
         <p>
           Se vale la <xref ref="item-polinomi_irriducibili_grado_1">condizione</xref>, allora la fattorizzazione in irriducibili di un qualsiasi polinomio a coefficienti in <m>K</m> è costituita da polinomi di primo grado e, dunque, vale la <xref ref="item-ogni_polinomio_totalmente_riducibile">condizione</xref>.
