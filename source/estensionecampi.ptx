@@ -434,7 +434,7 @@
         </statement>
       </exercise>
 
-      <exercise>
+      <exercise xml:id="exercise_estensione_algebrica_di_algebrica">
         <statement>
           <p>
             Mostrare che se <m>E</m> è un'estensione algebrica di un campo <m>F</m> e se <m>K</m> è un'estensione algebrica di <m>E</m>, allora <m>K</m> è un'estensione algebrica di <m>F</m>.
@@ -869,8 +869,66 @@
     </remark>
 
     <p>
-      Diamo ora, senza dimostrazione, alcuni risultati sui campi algebricamente chiusi.
+      L'esistenza di una chiusura algebrica di un campo richiede considerazione abbastanza delicate di teoria assiomatica degli insiemi. Non entreremo in questi dettagli. Ci limiteremo ad assumere il seguente risultato che, a dispetto del nome, può essere considerato come uno degli assiomi di tale teoria.
     </p>
+
+    <lemma xml:id="lem-zorn">
+      <title>Lemma di Zorn</title>
+      <statement>
+        <p>
+          Sia <m>S</m> un insieme non vuoto parzialmente ordinato. Se ogni sottoinsieme totalmente ordinato di <m>S</m> ammette un elemento maggiorante in <m>S</m>, allora in <m>S</m> esiste almeno un elemento massimale.
+        </p>
+      </statement>
+    </lemma>
+
+    <proposition xml:id="prop-ideali_massimali">
+      <statement>
+        <p>
+          Sia <m>I</m> un ideale proprio di un anello <m>R</m>. Esiste allora un ideale massimale contenente <m>I</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Consideriamo l'insieme <m>S</m> degli ideali propri di <m>R</m> contenenti <m>I</m>, ordinato rispetto all'inclusione. Questo è un insieme non vuoto (contiene <m>I</m> stesso) e un suo eventuale elemento massimale sarebbe, ovviamente, un ideale massimale. Possiamo allora ottenere la tesi, se verifichiamo la condizione data dal <xref ref="lem-zorn" text="title"/>, cioè che ogni sottoinsieme totalmente ordinato <m>T</m> di <m>S</m> ha un maggiorante in <m>S</m>. Possiamo supporre che <m>T</m> sia non vuoto (se <m>T</m> è vuoto ogni elemento di <m>S</m> è un maggiorante di <m>T</m>): sia allora <m>J</m> l'unione degli elementi di <m>T</m>. Ovviamente, ogni elemento di <m>T</m> è contenuto in <m>J</m>. Se allora dimostriamo che <m>J</m> appartiene a <m>S</m>, cioè che <m>J</m> è un ideale proprio contenente <m>I</m>, abbiamo concluso. Per costruzione, <m>J</m> contiene <m>I</m>. Poiché gli elementi di <m>S</m> sono ideali propri, non contengono <m>1</m> (<xref ref="rem-ideali_non_sottoanelli"/>): di conseguenza, <m>1\notin J</m> e <m>J\ne R</m>. Concludiamo verificando che <m>J</m> è un ideale: siano <m>i</m> e <m>j</m> elementi di <m>J</m> e <m>a</m> un elemento di <m>R</m>. Esistono allora <m>K</m> e <m>L</m> in <m>T</m> tali che <m>i\in K</m> e <m>j\in L</m>: poiché <m>T</m> è totalmente ordinato, abbiamo che <m>K\subseteq L</m> o <m>L\subseteq K</m>. Senza perdere in generalità, possiamo assumere che <m>K\subseteq L</m> e che, quindi, sia <m>i</m> che <m>j</m> appartengono a <m>L</m>. Ma allora <m>i+j</m>, <m>ia</m> e <m>ai</m> appartengono a <m>L</m> e, quindi, a <m>J</m>.
+        </p>
+      </proof>
+    </proposition>
+
+    <theorem xml:id="thm-esistenza_chiusura_algebrica">
+      <statement>
+        <p>
+          Dato un qualsiasi campo <m>F</m> esiste una sua chiusura algebrica <m>K</m>. Inoltre <m>K</m> è univocamente determinato a meno di isomorfismi, vale a dire che se <m>K'</m> è un'altra chiusura algebrica di <m>F</m> allora esiste un isomorfismo <m>\theta\colon K\to K'</m> la cui restrizione a <m>F</m> è l'identità.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Sappiamo come aggiungere a un campo una radice di un polinomio e, ripetendo il procedimento, possiamo aggiungere radici di un qualunque numero finito di polinomi. Vogliamo però aggiungere radici di tutti i polinomi possibili. Consideriamo allora l'insieme <m>P</m> di tutti i polinomi di grado positivo a coefficienti in <m>F</m>. Consideriamo un insieme <m>X</m> di indeterminate che sia in corrispondenza biiettiva con <m>S</m>: per ogni polinomio <m>f</m> di <m>P</m>, indichiamo con <m>x_{f}</m> l'indeterminata corrispondente. Consideriamo l'ideale <m>I</m> di <m>F[X]</m> generato dagli elementi del tipo <m>f(x_{f})</m> al variare di <m>f</m> in <m>P</m>. Mostriamo che <m>I</m> è un ideale proprio: se così non fosse, <m>1</m> apparterrebbe a <m>I</m> e potrebbe essere espresso da una relazione del tipo
+          <men xml:id="eqn-identita_per_chiusura_algebrica">
+            1=c_{1}f_{1}(x_{f_{1}})+c_{2}f_{2}(x_{f_{2}})+\cdots+c_{r}f_{r}(x_{f_{r}})
+          </men>
+          con ogni <m>c_{i}</m> in <m>F[X]</m>. Sappiamo che esiste un'estensione <m>E</m> di <m>F</m> in cui <m>f_{1}</m>, <m>\ldots</m>, <m>f_{r}</m> hanno almeno una radice, siano, rispettivamente <m>u_{1}</m>, <m>u_{2}</m>, <m>\ldots</m>, <m>u_{r}</m>. Consideriamo allora l'omomorfismo da <m>F</m> in <m>K</m> che fissa gli elementi di <m>F</m>, manda ciascun <m>x_{f_{i}}</m> in <m>u_{i}</m> e le altre indeterminate in elementi qualunque (ad esempio, tutte a <m>0</m>). Sostituendo nella <xref ref="eqn-identita_per_chiusura_algebrica"/> otterremmo allora <m>1=0</m> in <m>K</m>, il che non può essere. 
+        </p>          
+        <p>  
+          Dunque <m>I</m> è un ideale proprio di <m>F[X]</m> e, per la <xref ref="prop-ideali_massimali"/>, esiste un ideale massimale <m>J</m> di <m>F[X]</m> contenente <m>I</m>. Grazie alla <xref ref="prop-quoziente_su_massimale_campo"/>, il quoziente <m>F[X]/J</m> è un campo che denotiamo <m>K_{1}</m>. Consideriamo allora l'omomorfismo da <m>F</m> in <m>K_{1}</m> che si ottiene dalla composizione dell'inclusione di <m>F</m> in <m>F[X]</m> con l'omomorfismo canonico da <m>F[X]</m> su <m>F[X]/J</m>. Otteniamo così un omomorfismo di campi da <m>F</m> in <m>K_{1}</m> necessariamente iniettivo. Notiamo ora che <m>K_{1}</m> è generato da <m>F</m> e dagli elementi del tipo <m>x_{f}+J</m> al variare di <m>f</m> in <m>P</m>. Se ora valutiamo il polinomio <m>f</m> in <m>x_{f}+J</m>, otteniamo chiaramente <m>f(x_{f})+J</m>: poiché <m>f(x_{f})</m> appartiene a <m>J</m> questo èlo <m>0</m> di <m>F[X]/J</m>. Pertanto ogni polinomio <m>f</m> a coefficienti in <m>F</m> ha almeno una radice in <m>K_{1}</m> e <m>K_{1}</m>, essendo generato da elementi algebrici su <m>F</m> è un'estensione algebrica di <m>F</m> (<xref ref="prop-elementi_algebrici_sottocampo"/>).
+        </p>
+        <p>
+          Possiamo iterare il procedimento e ottenere una sequenza di estensioni
+          <me>
+            F\subseteq K_{1}\subseteq K_{2}\subseteq \cdots K_{i}\subseteq \cdots
+          </me>
+          tale che ogni termine è algebrico sul precedente (e, quindi, algebrico su <m>F</m> grazie all'<xref ref="exercise_estensione_algebrica_di_algebrica"/>) e contiene una radice per ciascun polinomio di grado positivo contenuto nel precedente. Se ora consideriamo, l'unione <m>K</m> dei campi <m>K_{i}</m>, si può verificare facilmente che questo è un campo, estensione di <m>F</m>, che è algebrico su <m>F</m> e che ogni polinomio di grado positivo a coefficienti in <m>K</m>, avendo i coefficienti in qualche <m>K_{i}</m> ha una radice in <m>K_{i+1}</m>, cioè in <m>K</m>: in altri termini, <m>K</m> è una chiusura algebrica di <m>F</m>,
+        </p>
+        <p>
+          Dimostriamo ora l'unicità della chiusura algebrica. Sia <m>K'</m> come in enunciato una chiusura algebrica di <m>F</m>. Mostreremo l'esistenza di <m>\theta</m> applicando ancora il <xref ref="lem-zorn" text="title"/>. Consideriamo l'insieme <m>S</m> formato dalle coppie <m>(L,\phi)</m> con <m>L</m> estensione di <m>F</m> contenuta in <m>K</m> e <m>\phi\colon L\to K'</m> omomorfismo di campi che estende la funzione identica da <m>F</m> in sé. Ordiniamo <m>S</m> ponendo <m>(L,\phi)\le(H,\psi)</m> se <m>L\subseteq H</m> e m  <m>\psi</m> è un'estensione di <m>\phi</m>: lasciamo per esercizio le verifiche che questa sia effettivamente una relazione d'ordine. Chiaramente <m>S</m> è non vuoto: la coppia <m>(F,\iota)</m> dove <m>\iota</m> è l'inclusione di <m>F</m> in <m>K'</m> appartiene a <m>S</m>. Sia ora <m>T</m> un sottoinsieme totalmente ordinato di <m>S</m> e mostriamo che ammette un maggiorante. Possiamo assumere che <m>T</m> sia non vuoto, altrimenti la tesi è banale (qualunque elemento di <m>S</m> è un maggiorante di <m>T</m>). Si verifica facilmente (lasciamolo per esercizio) che la coppia <m>(E,\eta)</m> dove <m>E</m> è l'unione degli <m>L</m> al variare di <m>(L,\phi)</m> in <m>S</m> e <m>\eta</m> è definito ponendo <m>u\eta\coloneqq u\phi</m> se <m>u</m> appartiene a <m>L</m> è effettivamente un maggiorante di <m>T</m>. Possiamo dunque assumere che <m>S</m> abbia un elemento massimale, sia <m>(E,\theta)</m>: per concludere, basta mostrare che <m>E=K</m> e che <m>\theta</m> è suriettivo.
+        </p>
+        <p>
+          Sia allora <m>u</m> un elemento di <m>K</m>: sappiamo che <m>u</m> è algebrico su <m>F</m> e, a maggior ragione, su <m>E</m>. Sia <m>f</m> il polinomio minimo di <m>u</m> su <m>E</m>. Il polinomio <m>f\indotto{\theta}</m> è un polinomio a coefficienti in <m>K'</m> e ha quindi una radice in <m>K'</m>: per il <xref ref="lem-estensione_omomorfismo_semplice"/>, <m>\theta</m> si estende a un omomorfismo <m>\kappa</m> da <m>E(u)</m> in <m>K</m>. Dunque <m>(E,\kappa)</m> è un elemento di <m>S</m> tale che <m>(E,\theta)\le(E(u),\kappa)</m>: per la massimalità di <m>(E,\theta)</m>, ne consegue che <m>E=E(u)</m>, vale a dire <m>u</m> appartiene a <m>E</m>. L'arbitrarietà della scelta di <m>u</m> in <m>K</m> implica che <m>K=E</m>. Ora <m>K\theta</m>, essendo isomorfo a <m>K</m> è algebricamente chiuso e, ovviamente, contiene <m>F</m>: poiché <m>K'</m> è algebrico su <m>F</m>, ciò comporta che <m>K\theta=K'</m>, come richiesto.
+        </p>
+
+      </proof>
+    </theorem>
+    
 
     <theorem xml:id="thm-fondamentale_dell_algebra">
       <title>Teorema fondamentale dell'algebra</title>
@@ -882,22 +940,25 @@
     </theorem>
 
     <p>
-      A dispetto del nome, le varie dimostrazioni del teorema fondamentale dell'algebra richiedono considerazioni di tipo analitico o topologico. Inoltre, anche se mantiene storicamente questo nome, non è di così fondamentale importanza dal punto di vista algebrico. Più interessante da questo punto di vista è il
+      A dispetto del nome, le varie dimostrazioni del teorema fondamentale dell'algebra richiedono considerazioni di tipo analitico o topologico. Inoltre, anche se mantiene storicamente questo nome, non è di così fondamentale importanza dal punto di vista algebrico. Ne vedremo comunque una dimostrazione che usa il minimo possibile di argomenti analitici.
     </p>
-
-    <theorem xml:id="thm-esistenza_chiusura_algebrica">
-      <statement>
-        <p>
-          Dato un qualsiasi campo <m>F</m> esiste una sua chiusura algebrica <m>K</m>. Inoltre <m>K</m> è univocamente determinato a meno di isomorfismi, vale a dire che se <m>K'</m> è un'altra chiusura algebrica di <m>F</m> allora esiste un isomorfismo <m>\theta\colon K\to K'</m> la cui restrizione a <m>F</m> è l'identità.
-        </p>
-      </statement>
-    </theorem>
 
     <remark xml:id="rem-non_unicita_chiusura_algebrica">
       <p>
         L'isomorfismo <m>\theta</m> dato dal teorema <xref ref="thm-esistenza_chiusura_algebrica"/> non è unico e, quindi, non possiamo individuare gli elementi della chiusura algebrica di un campo <m>F</m> <q>intrinsecamente</q> a partire dagli elementi di <m>F</m>. Ad esempio, se prendiamo <m>\Complessi</m> come chiusura algebrica di <m>\Reali</m>, abbiamo due automorfismi di <m>\Complessi</m> che ristretti a <m>\Reali</m> sono l'identità: la funzione identica di <m>\Complessi</m> e la funzione che manda un complesso nel suo complesso coniugato. Da questo punto di vista <m>i</m> e <m>-i</m>, le due radici di <m>x^{2}+1</m>, sono indistinguibili.
       </p>
     </remark>
+
+    <exercises xml:id="exercisesc-chiusure_algebriche">
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare che la relazione in <m>S</m> nel <xref ref="thm-esistenza_chiusura_algebrica"/> è una relazione d'ordine. 
+          </p>
+        </statement>
+      </exercise>
+      
+    </exercises>
 
   </section>
 

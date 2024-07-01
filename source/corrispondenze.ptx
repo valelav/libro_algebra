@@ -596,6 +596,30 @@
       </statement>
     </example>
 
+    <definition xml:id="def-massimale_minimale">
+      <idx><h>massimale</h></idx>
+      <idx><h>minimale</h></idx>
+      <statement>
+        <p>
+          Sia <m>A</m> un insieme parzialmente ordinato <m>A</m>. Un elemento <m>x</m> si dice <term>massimale</term> se non esiste alcun elemento <m>y</m> tale che <m>x\le y</m> con <m>x\ne y</m>. Un elemento <m>x</m> si dice <term>minimale</term> se non esiste alcun elemento <m>y</m> tale che <m>x\ge y</m> con <m>x\ne y</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <remark>
+      <p>
+        Chiaramente un massimo di un insieme parzialmente ordinato è l'unico massimale per quell'insieme, e, analogamente, un minimo è l'unico minimale per quell'insieme.
+      </p>
+    </remark>
+
+    <example>
+      <statement>
+        <p>
+          Consideriamo l'insieme <m>S</m> dei numeri interi da <m>2</m> a <m>10</m> rispetto alla relazione di divisibilità. Si può verificare facilmente che i numeri <m>6</m>, <m>7</m>, <m>8</m>, <m>9</m> e <m>10</m> sono massimali, mentre <m>2</m>, <m>3</m>, <m>5</m>, <m>7</m> sono minimali.
+        </p>
+      </statement>
+    </example>
+
     <definition xml:id="def-relazione_ordine_totale">
 
       <idx><h>relazione</h><h>d'ordine totale</h></idx>
@@ -673,6 +697,14 @@
           </statement>
         </task>
 
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Sia <m>A</m> un insieme totalmente ordinato. Dimostrare che un elemento massimale è necessariamente un massimo e, analogamente, un elemento minimale è necessariamente un minimo.
+          </p>
+        </statement>
       </exercise>
 
       <exercise xml:id="exercise-preordine">

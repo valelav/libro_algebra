@@ -586,6 +586,28 @@
 
     </theorem>
 
+    <definition xml:id="def-ideale_massimale">
+      <idx><h>ideale massimale</h></idx>
+      <statement>
+        <p>
+          Sia <m>R</m> un anello. Un ideale <m>I</m> di <m>R</m> è detto <term>massimale</term> se è massimale rispetto all'inclusione tra gli ideali propri di <m>R</m>, cioè se <m>I</m> è un ideale proprio e non esiste nessun ideale <m>J</m> tale che <m>I\subsetneq J\subsetneq R</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <proposition xml:id="prop-quoziente_su_massimale_campo">
+      <statement>
+        <p>
+          Sia <m>I</m> un ideale proprio di un anello commutativo <m>R</m>. Il quoziente <m>R/I</m> è un campo se e solo se <m>I</m> è un ideale massimale.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Gli ideali di <m>R/I</m> sono del tipo <m>J/I</m> con <m>J</m> ideale di <m>R</m> tale che <m>I\subseteq J\subseteq R</m> (<xref ref="thm-sottoanelli_quoziente"/>). La tesi segue allora dal <xref ref="cor-ideali_corpo"/> e dalla <xref ref="prop-anello_commutativo_senza_ideali_campo"/>.
+        </p>
+      </proof>
+    </proposition>
+
     <p>
       Applichiamo ora il <xref ref="thm-isomorfismo_quoziente_sul_nucleo_anelli"/> per dare una descrizione più precisa del sottoanello minimo di un anello <m>R</m>. Se consideriamo la funzione <m>\phi\colon\Interi\to S</m> definita da <m>n\phi\coloneqq n1_{R}</m>, dalla <xref ref="prop-multipli_potenze_anello"/> e <xref ref="prop-multiplo_di_prodotti"/> segue immediatamente che <m>\phi</m> è un omomorfismo di anelli. Per la <xref ref="prop-sottoanello_minimo"/>, l'immagine di <m>\phi</m> non è altro che il sottoanello minimo di <m>R</m>. Abbiamo allora che il sottoanello minimo è isomorfo a <m>\Interi/\ker\phi</m>. Dobbiamo, quindi, descrivere <m>\ker\phi</m>: se <m>\car R=0</m>, allora <m>\ker\phi=0</m>, mentre se <m>\car R=n</m> con <m>n\ne 0</m> allora <m>\ker\phi=n\Interi</m>. Riassumiamo nella
     </p>
