@@ -1243,6 +1243,24 @@
       <exercise>
         <statement>
           <p>
+            Sia <m>a</m> un elemento non nullo e non invertibile di un dominio a ideali principali <m>D</m> e sia <m>I</m> l'ideale generato da <m>a</m>. Dimostrare che se <m>a</m> è irriducibile allora <m>D/I</m> è un campo, altrimenti non è un dominio.
+          </p>
+        </statement>
+        <solution>
+          <proof>
+            <p>
+              Supponiamo che <m>a</m> non sia irriducibile, ed esistano allora <m>b</m> e <m>c</m> non associati ad <m>a</m> tali che <m>a=bc</m>: in particolare, <m>b</m> e <m>c</m> non appartengono a <m>I</m>, cioè <m>b+I</m> e <m>c+I</m> sono elementi non nulli di <m>D/I</m>. D'altra parte <m>(b+I)(c+I)=bc+I=a+I</m> è lo zero di <m>D/I</m> che, quindi, non è un dominio.
+            </p>
+            <p>
+              Sia ora <m>s</m> irriducibile. Per il <xref ref="thm-sottoanelli_quoziente"/>, gli ideali di <m>D/I</m> sono del tipo <m>J/I</m> con <m>J</m> ideale di <m>D</m> contenente <m>I</m>: poiché <m>D</m> è un dominio a ideali principali, <m>J=\ideal{h}</m> con <m>h</m> divisore di <m>a</m> e, essendo <m>a</m> irriducibile, ciò può avvenire se e solo se <m>h</m> è invertibile, cioè <m>\ideal{h}=D</m>, o se <m>h</m> è associato ad <m>a</m>, cioè <m>\ideal{h}=I</m>. Dunque, gli unici ideali di <m>D/I</m> sono <m>D/I</m> e <m>I/I</m>  (cioè l'ideale nullo): pertanto, per la <xref ref="prop-anello_commutativo_senza_ideali_campo"/>, <m>D/I</m> è un campo.
+            </p>
+          </proof>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
             Sia <m>R</m> un anello commutativo. Mostrare che le seguenti condizioni sono equivalenti
             <ol>
               <li xml:id="item-ideali_finitamente_generati">
