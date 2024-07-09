@@ -120,7 +120,7 @@
     <proposition xml:id="prop-anello_incluso_polinomi">
       <statement>
         <p>
-          Dato un anello commutativo <m>R</m>, la funzione <m>\phi\colon R\to R[x]</m> che manda <m>a</m> nel polinomio <m>(a,0,0,\ldots)</m> è un omomorfismo iniettivo di anelli. Possiamo dunque identificare <m>R</m> con un sottoanello di <m>R[x]</m>: chiameremo <term>costanti</term> questi polinomi.
+          Dato un anello commutativo <m>R</m>, la funzione <m>\phi\colon R\to R[x]</m> che manda <m>a</m> nel polinomio <m>(a,0,0,\ldots)</m> è un omomorfismo iniettivo di anelli. Possiamo, dunque, identificare <m>R</m> con un sottoanello di <m>R[x]</m>: chiameremo <term>costanti</term> questi polinomi.
         </p>
       </statement>
 
@@ -264,7 +264,7 @@
           Se <m>a</m> è un elemento invertibile di <m>R</m>, allora chiaramente <m>a</m> è invertibile anche in <m>R[x]</m>.
         </p>
         <p>
-          Viceversa, sia <m>a</m> un elemento di <m>R</m> che sia invertibile in <m>R[x]</m> e sia <m>f\coloneqq b_{0}+b_{1}x+\cdots+b_{n}x^{n}</m> il suo inverso. Dunque abbiamo <m>1=af=ab_{0}+ab_{1}x+\cdots+ab_{n}x^{n}</m> e, quindi, <m>ab_{0}=1</m>, <m>ab_{1}=ab_{2}=\cdots=ab_{n}=0</m>. In particolare, <m>b_{0}</m> è l'inverso di <m>a</m> in <m>R</m>.
+          Viceversa, sia <m>a</m> un elemento di <m>R</m> che sia invertibile in <m>R[x]</m> e sia <m>f\coloneqq b_{0}+b_{1}x+\cdots+b_{n}x^{n}</m> il suo inverso. Dunque, abbiamo <m>1=af=ab_{0}+ab_{1}x+\cdots+ab_{n}x^{n}</m> e, quindi, <m>ab_{0}=1</m>, <m>ab_{1}=ab_{2}=\cdots=ab_{n}=0</m>. In particolare, <m>b_{0}</m> è l'inverso di <m>a</m> in <m>R</m>.
         </p>
       </proof>
 
@@ -286,7 +286,7 @@
     </corollary>
 
     <p>
-      Abbiamo dunque provato che se <m>R</m> è un dominio, gli unici elementi invertibili di <m>R[x]</m> sono gli elementi di <m>R</m> che sono già invertibili in <m>R</m> stesso. Se <m>R</m> non è un dominio, è possibile che in <m>R[x]</m> esistano polinomi invertibili di grado positivo.
+      Abbiamo, dunque, provato che se <m>R</m> è un dominio, gli unici elementi invertibili di <m>R[x]</m> sono gli elementi di <m>R</m> che sono già invertibili in <m>R</m> stesso. Se <m>R</m> non è un dominio, è possibile che in <m>R[x]</m> esistano polinomi invertibili di grado positivo.
     </p>
 
     <example>
@@ -526,7 +526,7 @@
           avendo posto <m>q\coloneqq \bar{q}+a_{n}b_{m}^{-1}x^{n-m}</m>.
         </p>
         <p>
-          Per quanto riguarda l'unicità, supponiamo che <m>f=gq+r=gq'+r'</m> con <m>\deg r' \lt\deg g</m> o <m>r'=0</m>. Allora <m>r-r'=g(q'-q)</m>. Se fosse <m>q'\ne q</m>, cioè <m>q'-q\ne 0</m>, per la <xref ref="prop-grado_e_operazioni"/> avremmo allora che <m>\deg(r-r')=\deg (g(q-q'))\ge \deg g</m> (il coefficiente direttivo di <m>g</m>, essendo invertibile non è un divisore dello zero). Ma ciò non può essere per le condizioni su <m>r</m> e <m>r'</m>. Dunque <m>q'=q</m> e <m>r-r'=g(q'-q)=g0=0</m>, cioè <m>r=r'</m>.
+          Per quanto riguarda l'unicità, supponiamo che <m>f=gq+r=gq'+r'</m> con <m>\deg r' \lt\deg g</m> o <m>r'=0</m>. Allora <m>r-r'=g(q'-q)</m>. Se fosse <m>q'\ne q</m>, cioè <m>q'-q\ne 0</m>, per la <xref ref="prop-grado_e_operazioni"/> avremmo allora che <m>\deg(r-r')=\deg (g(q-q'))\ge \deg g</m> (il coefficiente direttivo di <m>g</m>, essendo invertibile non è un divisore dello zero). Ma ciò non può essere per le condizioni su <m>r</m> e <m>r'</m>. Dunque, <m>q'=q</m> e <m>r-r'=g(q'-q)=g0=0</m>, cioè <m>r=r'</m>.
         </p>
       </proof>
 

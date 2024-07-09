@@ -61,7 +61,7 @@
 
     <note>
       <p>
-        Dalla <xref ref="prop-annullatore_ideale"/> sappiamo che il <m>D</m>-modulo ciclico <m>xD</m> generato da un elemento <m>x</m> è isomorfo al quoziente <m>D_{D}/\ann{x}</m>: abbiamo dunque <m>xD\simeq D_{D}/\ideal{d}</m> dove <m>d</m> è l'ordine di <m>x</m>, e, per alleggerire la notazione, scriveremo semplicemente <m>xD\simeq D/\ideal{d}</m>.
+        Dalla <xref ref="prop-annullatore_ideale"/> sappiamo che il <m>D</m>-modulo ciclico <m>xD</m> generato da un elemento <m>x</m> è isomorfo al quoziente <m>D_{D}/\ann{x}</m>: abbiamo, dunque, <m>xD\simeq D_{D}/\ideal{d}</m> dove <m>d</m> è l'ordine di <m>x</m>, e, per alleggerire la notazione, scriveremo semplicemente <m>xD\simeq D/\ideal{d}</m>.
       </p>
     </note>
 
@@ -155,7 +155,7 @@
 
       <proof>
         <p>
-          Sia <m>x</m> un generatore di <m>M</m> e sia <m>y</m> un elemento non nullo di <m>M</m>: dunque <m>y=xa</m> per qualche elemento non nullo <m>a</m> di <m>D</m>. Se <m>b\in\ann{y}</m>, abbiamo <m>0=(xa)b=x(ab)</m>, cioè <m>ab\in\ann{x}</m>. Poiché <m>x</m> ha ordine <m>0</m>, ciò implica che <m>ab=0</m> e, essendo <m>a\ne0</m>, otteniamo <m>b=0</m>: quindi, <m>y</m> ha ordine <m>0</m>.
+          Sia <m>x</m> un generatore di <m>M</m> e sia <m>y</m> un elemento non nullo di <m>M</m>: dunque, <m>y=xa</m> per qualche elemento non nullo <m>a</m> di <m>D</m>. Se <m>b\in\ann{y}</m>, abbiamo <m>0=(xa)b=x(ab)</m>, cioè <m>ab\in\ann{x}</m>. Poiché <m>x</m> ha ordine <m>0</m>, ciò implica che <m>ab=0</m> e, essendo <m>a\ne0</m>, otteniamo <m>b=0</m>: quindi, <m>y</m> ha ordine <m>0</m>.
         </p>
       </proof>
 
@@ -174,7 +174,7 @@
 
       <proof>
         <p>
-          Sia <m>r=es</m>: dunque, <m>f</m> e <m>s</m> sono elementi coprimi di <m>D</m> (<xref ref="exercise-raccoglimento_MCD"/>). Dato <m>a\in D</m>, si ha <m>ya=(xr)a=x(ra)</m>, e dunque <m>a\in\ann{y}</m> se e solo se <m>ra\in\ann{x}</m>, cioè se e solo se <m>d</m> divide <m>ra</m>, vale a dire <m>ef\mid esa</m>. Ma <m>e\ne0</m> (altrimenti <m>d=ef=0</m>) e, dunque, ciò è equivalente a <m>f\mid sa</m>: poiché <m>s</m> e <m>f</m> sono coprimi, ciò avviene se e solo se <m>a</m> è multiplo di <m>f</m> (<xref ref="exercise-divisore_coprimo_con_fattore"/>). Abbiamo dunque mostrato che l'annullatore di <m>y</m> è formato da tutti e soli i multipli di <m>f</m> che è, dunque, l'ordine di <m>y</m>.
+          Sia <m>r=es</m>: dunque, <m>f</m> e <m>s</m> sono elementi coprimi di <m>D</m> (<xref ref="exercise-raccoglimento_MCD"/>). Dato <m>a\in D</m>, si ha <m>ya=(xr)a=x(ra)</m>, e, dunque, <m>a\in\ann{y}</m> se e solo se <m>ra\in\ann{x}</m>, cioè se e solo se <m>d</m> divide <m>ra</m>, vale a dire <m>ef\mid esa</m>. Ma <m>e\ne0</m> (altrimenti <m>d=ef=0</m>) e, dunque, ciò è equivalente a <m>f\mid sa</m>: poiché <m>s</m> e <m>f</m> sono coprimi, ciò avviene se e solo se <m>a</m> è multiplo di <m>f</m> (<xref ref="exercise-divisore_coprimo_con_fattore"/>). Abbiamo, dunque, mostrato che l'annullatore di <m>y</m> è formato da tutti e soli i multipli di <m>f</m> che è, dunque, l'ordine di <m>y</m>.
         </p>
       </proof>
 
@@ -188,7 +188,7 @@
       </statement>
       <proof>
         <p>
-          Sia <m>x</m> un generatore di <m>M</m> e sia <m>y</m> un generatore di <m>N</m>. Dunque <m>y=xt</m> per qualche <m>t</m> in <m>D</m> e dobbiamo mostrare che <m>x</m> è multiplo di <m>y</m>. Se <m>e</m> è il massimo comune divisore tra <m>d</m> e <m>t</m>, abbiamo che <m>d=ed'</m> e <m>t=et'</m> per qualche <m>d'</m> e <m>t'</m> in <m>D</m>. Inoltre, per la <xref ref="prop-MCD_in_PID"/>, esistono <m>u</m> e <m>v</m> in <m>D</m> tali che <m>e=du+tv</m>. Abbiamo allora <m>yd'=xtd'=xet'd'=xed't'=xdt'=0t'=0</m>: dunque <m>d'</m> è multiplo dell'ordine di <m>y</m>, cioè <m>d</m> e, d'altra parte, essendo <m>d=ed'</m>, ne segue che <m>d</m> e <m>d'</m> sono associati. Poiché <m>d\ne0</m>, ciò significa che <m>e</m> è invertibile. Ma allora <m>x\sim xe=x(du+tv)=xdu+xtv=0+yv=yv</m>, cioè <m>x</m> è multiplo di <m>y</m>.
+          Sia <m>x</m> un generatore di <m>M</m> e sia <m>y</m> un generatore di <m>N</m>. Dunque, <m>y=xt</m> per qualche <m>t</m> in <m>D</m> e dobbiamo mostrare che <m>x</m> è multiplo di <m>y</m>. Se <m>e</m> è il massimo comune divisore tra <m>d</m> e <m>t</m>, abbiamo che <m>d=ed'</m> e <m>t=et'</m> per qualche <m>d'</m> e <m>t'</m> in <m>D</m>. Inoltre, per la <xref ref="prop-MCD_in_PID"/>, esistono <m>u</m> e <m>v</m> in <m>D</m> tali che <m>e=du+tv</m>. Abbiamo allora <m>yd'=xtd'=xet'd'=xed't'=xdt'=0t'=0</m>: dunque, <m>d'</m> è multiplo dell'ordine di <m>y</m>, cioè <m>d</m> e, d'altra parte, essendo <m>d=ed'</m>, ne segue che <m>d</m> e <m>d'</m> sono associati. Poiché <m>d\ne0</m>, ciò significa che <m>e</m> è invertibile. Ma allora <m>x\sim xe=x(du+tv)=xdu+xtv=0+yv=yv</m>, cioè <m>x</m> è multiplo di <m>y</m>.
         </p>
       </proof>
     </lemma>
@@ -270,7 +270,7 @@
 
         <solution>
           <p>
-            Dire che <m>xa=0</m> è equivalente a dire che <m>a\in\ann{x}</m>, cioè all'ideale principale generato dall'ordine <m>d</m> di <m>x</m>. Otteniamo dunque subito la tesi.
+            Dire che <m>xa=0</m> è equivalente a dire che <m>a\in\ann{x}</m>, cioè all'ideale principale generato dall'ordine <m>d</m> di <m>x</m>. Otteniamo, dunque, subito la tesi.
           </p>
         </solution>
       </exercise>
@@ -284,7 +284,7 @@
 
         <solution>
           <p>
-             Sia <m>d</m> l'ordine di <m>x</m>: allora <m>(x\phi)d=(xd)\phi=0\phi=0</m>: poiché <m>d</m> annulla <m>x\phi</m> l'ordine di <m>x\phi</m> è un divisore di <m>d</m>. Supponiamo ora che <m>\phi</m> sia iniettivo e che <m>e</m> sia l'ordine di <m>x\phi</m>: abbiamo allora <m>(xe)\phi=(x\phi)e=0</m> e, poiché <m>\phi</m> è iniettivo abbiamo che <m>xe=0</m> cioè <m>e</m> annulla <m>x</m>. L'ordine di <m>x</m> divide allora l'ordine di <m>x</m> e, poiché l'ordine di <m>x</m> e l'ordine di <m>x\phi</m> si dividono reciprocamente sono dunque associati) cioè <m>x</m> e <m>x\phi</m> hanno lo stesso ordine).
+             Sia <m>d</m> l'ordine di <m>x</m>: allora <m>(x\phi)d=(xd)\phi=0\phi=0</m>: poiché <m>d</m> annulla <m>x\phi</m> l'ordine di <m>x\phi</m> è un divisore di <m>d</m>. Supponiamo ora che <m>\phi</m> sia iniettivo e che <m>e</m> sia l'ordine di <m>x\phi</m>: abbiamo allora <m>(xe)\phi=(x\phi)e=0</m> e, poiché <m>\phi</m> è iniettivo abbiamo che <m>xe=0</m> cioè <m>e</m> annulla <m>x</m>. L'ordine di <m>x</m> divide allora l'ordine di <m>x</m> e, poiché l'ordine di <m>x</m> e l'ordine di <m>x\phi</m> si dividono reciprocamente sono, dunque, associati) cioè <m>x</m> e <m>x\phi</m> hanno lo stesso ordine).
           </p>
         </solution>
       </exercise>
@@ -330,7 +330,7 @@
 
       <proof>
         <p>
-          Poiché <m>0\in M_{p}</m> si ha <m>M_{p}\ne\vuoto</m>. Siano <m>x</m> e <m>y</m> due elementi di <m>M_{p}</m> di ordini <m>p^{i}</m> e <m>p^{j}</m> rispettivamente. Detto <m>l=\max(i,j)</m>, abbiamo <m>(x+y)p^{l}=xp^{l}+yp^{l}=xp^{i}p^{l-i}+yp^{j}p^{l-j}=0p^{l-i}+0p^{l-j}=0</m>; inoltre, per ogni <m>a</m> in <m>D</m> si ha <m>(xa)p^{i}=(xp^{i})a=0a=0</m>; dunque <m>x+y</m> e <m>xa</m> appartengono a <m>M_{p}</m>, cioè <m>M_{p}</m> è un sottomodulo. Poiché <m>M_{p}</m> è formato esattamente da tutti i <m>p</m>-elementi di <m>M</m>, è il più grande sottomodulo <m>p</m>-primario di <m>M</m>.
+          Poiché <m>0\in M_{p}</m> si ha <m>M_{p}\ne\vuoto</m>. Siano <m>x</m> e <m>y</m> due elementi di <m>M_{p}</m> di ordini <m>p^{i}</m> e <m>p^{j}</m> rispettivamente. Detto <m>l=\max(i,j)</m>, abbiamo <m>(x+y)p^{l}=xp^{l}+yp^{l}=xp^{i}p^{l-i}+yp^{j}p^{l-j}=0p^{l-i}+0p^{l-j}=0</m>; inoltre, per ogni <m>a</m> in <m>D</m> si ha <m>(xa)p^{i}=(xp^{i})a=0a=0</m>;, dunque, <m>x+y</m> e <m>xa</m> appartengono a <m>M_{p}</m>, cioè <m>M_{p}</m> è un sottomodulo. Poiché <m>M_{p}</m> è formato esattamente da tutti i <m>p</m>-elementi di <m>M</m>, è il più grande sottomodulo <m>p</m>-primario di <m>M</m>.
         </p>
       </proof>
 
@@ -443,7 +443,7 @@
           Lo zoccolo è rappresentato dall'ultima riga e, quindi, ha dimensione <m>5</m>. Quozientare <m>M</m> su <m>\Soc(M)</m> corrisponde a cancellare l'ultima riga. Lo zoccolo di <m>M^{2}</m> ha così dimensione <m>4</m>. Cancellando una riga a ogni passo troviamo così le dimensioni degli zoccoli: <m>\dim\Soc(M^{1})=5</m>, <m>\dim\Soc(M^{2})=\dim\Soc(M^{3})=\dim\Soc(M^{4})=4</m>, <m>\dim\Soc(M^{5})=\dim\Soc(M^{6})=2</m> e <m>\dim\Soc(M^{7})=0</m>.
         </p>
         <p>
-          Viceversa, supponiamo di conoscere questa successione di dimensioni. Possiamo allora ricostruire il disegno dato sopra: tracciamo prima una riga con <m>5</m> blocchi, poi le disponiamo sopra una riga con <m>4</m>, un'altra con <m>4</m> blocchi, un'altra con <m>4</m> blocchi, poi una con <m>2</m> blocchi e un'ultima con <m>2</m> blocchi. Dunque la decomposizione di <m>M</m> che sarà formata da <m>5</m> addendi: <m>5-4=1</m> di ordine <m>p</m>, <m>4-4=0</m> di ordine <m>p^{2}</m>, <m>4-4=0</m> di ordine <m>p^{3}</m>, <m>4-2=2</m> di ordine <m>p^{4}</m>, <m>2-2=0</m> di ordine <m>p^{5}</m> e <m>2-0=2</m> di ordine <m>p^{6}</m>. Ovviamente, il disegno non è necessario: è solo un aiuto alla comprensione.
+          Viceversa, supponiamo di conoscere questa successione di dimensioni. Possiamo allora ricostruire il disegno dato sopra: tracciamo prima una riga con <m>5</m> blocchi, poi le disponiamo sopra una riga con <m>4</m>, un'altra con <m>4</m> blocchi, un'altra con <m>4</m> blocchi, poi una con <m>2</m> blocchi e un'ultima con <m>2</m> blocchi. Dunque, la decomposizione di <m>M</m> che sarà formata da <m>5</m> addendi: <m>5-4=1</m> di ordine <m>p</m>, <m>4-4=0</m> di ordine <m>p^{2}</m>, <m>4-4=0</m> di ordine <m>p^{3}</m>, <m>4-2=2</m> di ordine <m>p^{4}</m>, <m>2-2=0</m> di ordine <m>p^{5}</m> e <m>2-0=2</m> di ordine <m>p^{6}</m>. Ovviamente, il disegno non è necessario: è solo un aiuto alla comprensione.
         </p>
       </statement>
 
@@ -584,7 +584,7 @@
 
         <p>
           Consideriamo l'elemento <m>y\coloneqq x_{1}d_{1}+x_{2}d_{2}</m>: questo appartiene a <m>L</m> e, applicando il <xref ref="lem-MCD_e_immagini"/> a <m>y</m> rispetto alla base <m>x_{1}</m>, <m>\ldots</m> <m>x_{n}</m>, sappiamo che esiste un omomorfismo <m>\theta</m> da <m>M</m> in <m>D</m> tale che <m>y\theta=d</m> con <m>d</m> massimo comun divisore di <m>d_{1}</m> e <m>d_{2}</m>. Se ora <m>y=e_{1}y_{1}+\cdots+e_{n}y_{n}</m>, nuovamente il <xref ref="lem-MCD_e_immagini"/>, stavolta rispetto alla base <m>e_{1}</m>, <m>\ldots</m>, <m>e_{n}</m>, ci dice che <m>v\theta</m> ha lunghezza maggiore o uguale del massimo comun divisore di
-          <m>y_{1}</m>, <m>\ldots</m>, <m>y_{n}</m>. Tale massimo comun divisore ha lunghezza maggiore o uguale del massimo comun divisore di <m>x_{1}</m>, <m>\ldots</m>, <m>x_{n}</m>, cioè di <m>d_{1}</m>. Dunque <m>d</m>, massimo comun divisore di <m>d_{1}</m> e <m>d_{2}</m> ha lunghezza maggiore o uguale di <m>d_{1}</m>: pertanto <m>d</m> è associato a <m>d_{1}</m>, cioè <m>d_{1}</m> divide <m>d_{2}</m>.
+          <m>y_{1}</m>, <m>\ldots</m>, <m>y_{n}</m>. Tale massimo comun divisore ha lunghezza maggiore o uguale del massimo comun divisore di <m>x_{1}</m>, <m>\ldots</m>, <m>x_{n}</m>, cioè di <m>d_{1}</m>. Dunque, <m>d</m>, massimo comun divisore di <m>d_{1}</m> e <m>d_{2}</m> ha lunghezza maggiore o uguale di <m>d_{1}</m>: pertanto <m>d</m> è associato a <m>d_{1}</m>, cioè <m>d_{1}</m> divide <m>d_{2}</m>.
         </p>
 
       </proof>

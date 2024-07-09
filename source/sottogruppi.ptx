@@ -816,7 +816,7 @@
 
         <solution>
           <p>
-            Poiché <m>G</m> contiene più di due elementi, in <m>H</m> esiste un elemento <m>x</m> con <m>x\ne 1</m>. Ora <m>xy\ne y</m> per le <xref ref="prop-cancellazione_gruppo" text="title"/> e, dunque <m>xy\in H</m>. Se <m>H</m> fosse un sottogruppo, per l'<xref ref="exercise-prodotto_in_sottogruppo_dentro_fuori"/>, <m>xy</m> dovrebbe non appartenere a <m>H</m>.
+            Poiché <m>G</m> contiene più di due elementi, in <m>H</m> esiste un elemento <m>x</m> con <m>x\ne 1</m>. Ora <m>xy\ne y</m> per le <xref ref="prop-cancellazione_gruppo" text="title"/> e, dunque, <m>xy\in H</m>. Se <m>H</m> fosse un sottogruppo, per l'<xref ref="exercise-prodotto_in_sottogruppo_dentro_fuori"/>, <m>xy</m> dovrebbe non appartenere a <m>H</m>.
           </p>
         </solution>
       </exercise>
@@ -1099,11 +1099,11 @@
               <me>
                 (a\ast b)\ast c=(a\cdot u\cdot b)\cdot u\cdot c=a\cdot u\cdot (b\cdot u\cdot c)=a\ast (b\ast c)
               </me>.
-              Per mostrare che <m>(G,\ast)</m> ha elemento neutro, dobbiamo trovare un elemento <m>e</m> tale che, per ogni <m>a\in G</m>, si abbia <m>a\ast e=e\ast a=a</m>. Ora <m>a\ast e=a\cdot u\cdot e</m>. Ponendo tale elemento uguale ad <m>a</m> troviamo <m>a\cdot u\cdot e=a</m>, da cui ricaviamo <m>e=u^{-1}</m> (dove l'inverso è inteso in <m>(G,\cdot)</m>). Abbiamo dunque <m>a\ast u^{-1}=a</m>. Se ora calcoliamo <m>u^{-1}\ast a</m> troviamo <m>u^{-1}\cdot u\cdot a=a</m>. Dunque <m>u^{-1}</m> è unità sia destra che sinistra.
+              Per mostrare che <m>(G,\ast)</m> ha elemento neutro, dobbiamo trovare un elemento <m>e</m> tale che, per ogni <m>a\in G</m>, si abbia <m>a\ast e=e\ast a=a</m>. Ora <m>a\ast e=a\cdot u\cdot e</m>. Ponendo tale elemento uguale ad <m>a</m> troviamo <m>a\cdot u\cdot e=a</m>, da cui ricaviamo <m>e=u^{-1}</m> (dove l'inverso è inteso in <m>(G,\cdot)</m>). Abbiamo, dunque, <m>a\ast u^{-1}=a</m>. Se ora calcoliamo <m>u^{-1}\ast a</m> troviamo <m>u^{-1}\cdot u\cdot a=a</m>. Dunque, <m>u^{-1}</m> è unità sia destra che sinistra.
             </p>
 
             <p>
-              Per mostrare che ogni elemento <m>a</m> di <m>(G,\ast)</m> ammette inverso dobbiamo trovare <m>b</m> in <m>G</m> tale che <m>a\ast b=b\ast a=u^{-1}</m>. Ponendo <m>a\ast b=u^{-1}</m>  troviamo <m>a\cdot u\cdot b=u^{-1}</m>, da cui ricaviamo <m>b=u^{-1}a^{-1}u^{-1}</m> (dove l'inverso è inteso in <m>(G,\cdot)</m>). Abbiamo dunque <m>a\ast b=u^{-1}</m>.  Se ora calcoliamo <m>b\ast a</m> troviamo <m>(u^{-1}a^{-1}u^{-1})\cdot u\cdot a=u^{-1}</m>. Dunque <m>u^{-1}a^{-1}u^{-1}</m> è inverso sia destro che sinistro di <m>a</m>.
+              Per mostrare che ogni elemento <m>a</m> di <m>(G,\ast)</m> ammette inverso dobbiamo trovare <m>b</m> in <m>G</m> tale che <m>a\ast b=b\ast a=u^{-1}</m>. Ponendo <m>a\ast b=u^{-1}</m>  troviamo <m>a\cdot u\cdot b=u^{-1}</m>, da cui ricaviamo <m>b=u^{-1}a^{-1}u^{-1}</m> (dove l'inverso è inteso in <m>(G,\cdot)</m>). Abbiamo, dunque, <m>a\ast b=u^{-1}</m>.  Se ora calcoliamo <m>b\ast a</m> troviamo <m>(u^{-1}a^{-1}u^{-1})\cdot u\cdot a=u^{-1}</m>. Dunque, <m>u^{-1}a^{-1}u^{-1}</m> è inverso sia destro che sinistro di <m>a</m>.
             </p>
           </solution>
         </task>

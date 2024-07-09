@@ -426,7 +426,7 @@
               0      \amp 0      \amp \dots  \amp -1
             \end{vmatrix}
           </me>
-          Il primo determinante che appare in questo sviluppo non è altri che il polinomio caratteristico della matrice compagna del polinomio <m>a_{1}+a_{2}x+\dots+x^{n-1}</m> e, per ipotesi induttiva, coincide con questo polinomio. Il secondo determinante è il determinante di una matrice triangolare inferiore ed è dunque il prodotto degli elementi sulla diagonale principale, vale a dire <m>(-1)^{n-1}</m>. Dunque
+          Il primo determinante che appare in questo sviluppo non è altri che il polinomio caratteristico della matrice compagna del polinomio <m>a_{1}+a_{2}x+\dots+x^{n-1}</m> e, per ipotesi induttiva, coincide con questo polinomio. Il secondo determinante è il determinante di una matrice triangolare inferiore ed è, dunque, il prodotto degli elementi sulla diagonale principale, vale a dire <m>(-1)^{n-1}</m>. Dunque
           <me>
             \det(x\Idmatrix-C(p))=x(a_{1}+a_{2}x+\dots+x^{n-1})+(-1)^{n+1}a_{0}(-1)^{n-1}=p
           </me>.
@@ -777,7 +777,7 @@
 
       <proof>
         <p>
-          Esiste una matrice invertibile <m>M</m> tale che <m>M^{-1}AM=B</m>. Ma allora <m>M^{-1}(A-k\Idmatrix)M=M^{-1}AM-kM^{-1}\Idmatrix M=B-k\Idmatrix</m>. Dunque l'enunciato è vero per <m>t=1</m>. Procediamo per induzione su <m>t</m>: per <m>t\gt 1</m> abbiamo allora
+          Esiste una matrice invertibile <m>M</m> tale che <m>M^{-1}AM=B</m>. Ma allora <m>M^{-1}(A-k\Idmatrix)M=M^{-1}AM-kM^{-1}\Idmatrix M=B-k\Idmatrix</m>. Dunque, l'enunciato è vero per <m>t=1</m>. Procediamo per induzione su <m>t</m>: per <m>t\gt 1</m> abbiamo allora
           <md>
             <mrow> M^{-1}(A-k\Idmatrix)^{t}M\amp =M^{-1}(A-k\Idmatrix)^{t-1}(A-k\Idmatrix)M</mrow>
             <mrow> \amp =M^{-1}(A-k\Idmatrix)^{t-1}MM^{-1}(A-k\Idmatrix)M</mrow>
@@ -865,7 +865,7 @@
           0      \amp 0      \amp \dots  \amp (J_{n_{s}}(\lambda_{s})-\lambda\Idmatrix)^{t}
         \end{pmatrix}
       </me>.
-      Ora se <m>\lambda</m> è diverso da <m>\lambda_{i}</m> il blocco <m>J_{n_{i}}(\lambda_{i})-\lambda\Idmatrix</m> è una matrice triangolare i cui elementi lungo la diagonale sono tutti uguali a <m>\lambda_{i}-\lambda</m> e sono dunque non nulli: ciò implica che <m>J_{n_{i}}(\lambda_{i})-\lambda\Idmatrix</m> è invertibile così come tutte le potenze <m>(J_{n_{i}}(\lambda_{i})-\lambda\Idmatrix)^{t}</m> e, pertanto, questo blocco ha rango <m>n_{i}</m>. Se invece <m>\lambda</m> è uguale a <m>\lambda_{i}</m>, grazie al <xref ref="lem-rango_blocco"/> sappiamo che il rango di <m>(J_{n_{i}}(\lambda_{i})-\lambda\Idmatrix)^{t}</m> decresce a ogni passo di <m>1</m> fino ad azzerarsi. Per la <xref ref="prop-diagonali_blocchi"/> sappiamo che il rango di <m>(J-\lambda\Idmatrix)^{t}</m> è uguale alla somma dei ranghi dei blocchi <m>(J_{n_{i}}(\lambda_{i})-\lambda\Idmatrix)^{t}</m>.
+      Ora se <m>\lambda</m> è diverso da <m>\lambda_{i}</m> il blocco <m>J_{n_{i}}(\lambda_{i})-\lambda\Idmatrix</m> è una matrice triangolare i cui elementi lungo la diagonale sono tutti uguali a <m>\lambda_{i}-\lambda</m> e sono, dunque, non nulli: ciò implica che <m>J_{n_{i}}(\lambda_{i})-\lambda\Idmatrix</m> è invertibile così come tutte le potenze <m>(J_{n_{i}}(\lambda_{i})-\lambda\Idmatrix)^{t}</m> e, pertanto, questo blocco ha rango <m>n_{i}</m>. Se invece <m>\lambda</m> è uguale a <m>\lambda_{i}</m>, grazie al <xref ref="lem-rango_blocco"/> sappiamo che il rango di <m>(J_{n_{i}}(\lambda_{i})-\lambda\Idmatrix)^{t}</m> decresce a ogni passo di <m>1</m> fino ad azzerarsi. Per la <xref ref="prop-diagonali_blocchi"/> sappiamo che il rango di <m>(J-\lambda\Idmatrix)^{t}</m> è uguale alla somma dei ranghi dei blocchi <m>(J_{n_{i}}(\lambda_{i})-\lambda\Idmatrix)^{t}</m>.
       Dunque, se <m>n</m> è l'ordine della matrice <m>A</m> e consideriamo la sequenza <m>n</m>, <m>\rk(J-\lambda\Idmatrix)</m>, <m>\rk((J-\lambda\Idmatrix)^{2})</m>, <m>\dots</m>, abbiamo che al primo passo questa sequenza decresce di un numero uguale al numero di blocchi di Jordan relativi all'autovalore <m>\lambda</m>, al secondo passo decresce di un numero uguale al numero di blocchi di Jordan relativi all'autovalore <m>\lambda</m> di ordine almeno <m>2</m> e così via. Dunque, la conoscenza dei ranghi delle matrici <m>(J-\lambda\Idmatrix)^{t}</m> ci permette di determinare il numero di blocchi di Jordan relativi a <m>\lambda</m> e i loro ordini e, quindi, utilizzando lo stesso argomento per ciascun autovalore, di determinare <m>J</m> stessa. Si potrebbe pensare che ciò non sia di grande aiuto, visto che per calcolare il rango di <m>(J-\lambda\Idmatrix)^{t}</m> dobbiamo conoscere <m>J</m>: tuttavia il <xref ref="lem-invarianti_di_simili"/> ci dice che <m>(J-\lambda\Idmatrix)^{t}</m> e <m>(A-\lambda\Idmatrix)^{t}</m> sono simili per ogni <m>t</m> e, in particolare, hanno lo stesso rango. Possiamo allora delineare un procedimento per determinare <m>J</m> a partire da <m>A</m>.
     </p>
 
@@ -950,7 +950,7 @@
             0\amp0\amp0\amp0\amp0\amp0\amp1\amp2
           \end{pmatrix}
           </me>
-          È facile calcolare il polinomio caratteristico di questa matrice (utilizzando a ogni passo opportuni sviluppi secondo Lagrange): si ottiene <m>\det(x\Idmatrix-A)=(x-1)^{3}(x-2)^{5}</m>. Gli autovalori sono quindi <m>1</m>, di molteplicità algebrica <m>3</m> e <m>2</m> di molteplicità algebrica <m>5</m>. Si noti che in generale non è detto che gli autovalori di una matrice siano gli elementi della diagonale. Avremo dunque blocchi di Jordan relativi a <m>1</m> di ordine totale <m>3</m> e blocchi di Jordan relativi a <m>2</m> di ordine totale <m>5</m>.
+          È facile calcolare il polinomio caratteristico di questa matrice (utilizzando a ogni passo opportuni sviluppi secondo Lagrange): si ottiene <m>\det(x\Idmatrix-A)=(x-1)^{3}(x-2)^{5}</m>. Gli autovalori sono quindi <m>1</m>, di molteplicità algebrica <m>3</m> e <m>2</m> di molteplicità algebrica <m>5</m>. Si noti che in generale non è detto che gli autovalori di una matrice siano gli elementi della diagonale. Avremo, dunque, blocchi di Jordan relativi a <m>1</m> di ordine totale <m>3</m> e blocchi di Jordan relativi a <m>2</m> di ordine totale <m>5</m>.
         </p>
         <p>
           Consideriamo l'autovalore <m>1</m>: costruiamo la sequenza dei ranghi associata a <m>1</m>: il primo numero è <m>8</m>, il secondo è <m>\rk(A-\Idmatrix)=7</m>, il terzo è <m>\rk((A-\Idmatrix)^{2})=6</m>, il quarto è <m>\rk((A-\Idmatrix)^{3})=5</m> e qui ci fermiamo perché <m>5=8-3</m> (ovviamente qui non sono riportati, per brevità, i calcoli necessari). Ora disegniamo il grafico come in precedenza:
@@ -962,7 +962,7 @@
           </latex-image>
         </image>
         <p>
-          Abbiamo una prima riga lunga <m>1=8-7</m>, una seconda riga lunga <m>1=7-6</m> e una terza riga lunga pure <m>1=6-5</m>. Dunque un'unica colonna alta <m>3</m>: c'è un unico blocco di Jordan relativo a <m>1</m> di ordine <m>3</m>. Notiamo però che avremmo potuto risparmiarci qualche calcolo: dopo aver calcolato il rango di <m>A-\Idmatrix</m> avremmo potuto notare che la riga inferiore del nostro grafico contiene un unico elemento e, pertanto, che le righe successive avrebbero dovuto avere lunghezza <m>1</m>.
+          Abbiamo una prima riga lunga <m>1=8-7</m>, una seconda riga lunga <m>1=7-6</m> e una terza riga lunga pure <m>1=6-5</m>. Dunque, un'unica colonna alta <m>3</m>: c'è un unico blocco di Jordan relativo a <m>1</m> di ordine <m>3</m>. Notiamo però che avremmo potuto risparmiarci qualche calcolo: dopo aver calcolato il rango di <m>A-\Idmatrix</m> avremmo potuto notare che la riga inferiore del nostro grafico contiene un unico elemento e, pertanto, che le righe successive avrebbero dovuto avere lunghezza <m>1</m>.
         </p>
         <p>
           Passiamo ora all'autovalore <m>2</m>. Anche qui diamo, senza esplicitare i calcoli, la sequenza dei ranghi associati: otteniamo <m>8</m>, <m>5</m>, <m>4</m>, <m>3</m>, e qui ci fermiamo perché <m>3=8-5</m>. Il grafico in questo caso è il seguente:
@@ -1073,7 +1073,7 @@
 
           <solution>
             <p>
-              Il polinomio caratteristico di <m>A</m> può essere calcolato facilmente: si ha <m>\det(x\Idmatrix-A)=(x-2)^{6}</m>. Il polinomio caratteristico è totalmente riducibile e la matrice <m>A</m> ha come unico autovalore <m>2</m> di molteplicità algebrica <m>6</m>. Dunque la matrice è simile a una matrice di Jordan in cui avremo blocchi di Jordan di ordine complessivo <m>6</m>. Calcoliamo la successione dei ranghi associati all'autovalore <m>6</m> partendo, come sempre, dall'ordine della matrice che in questo caso è <m>6</m>. Consideriamo ora il rango della matrice <m>A-2\Idmatrix</m>, vale a dire la matrice
+              Il polinomio caratteristico di <m>A</m> può essere calcolato facilmente: si ha <m>\det(x\Idmatrix-A)=(x-2)^{6}</m>. Il polinomio caratteristico è totalmente riducibile e la matrice <m>A</m> ha come unico autovalore <m>2</m> di molteplicità algebrica <m>6</m>. Dunque, la matrice è simile a una matrice di Jordan in cui avremo blocchi di Jordan di ordine complessivo <m>6</m>. Calcoliamo la successione dei ranghi associati all'autovalore <m>6</m> partendo, come sempre, dall'ordine della matrice che in questo caso è <m>6</m>. Consideriamo ora il rango della matrice <m>A-2\Idmatrix</m>, vale a dire la matrice
               <me>
                 \begin{pmatrix}
                   0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 2 \\
@@ -1108,7 +1108,7 @@
                   0 \amp 0 \amp 0 \amp 1 \amp 0 \amp 0
                 \end{pmatrix}
               </me>.
-              Il rango di questa matrice è <m>2</m>: dunque nella successione dei ranghi siamo scesi di <m>4-2</m>. Abbiamo pertanto <m>2</m> blocchi di ordine almeno <m>2</m>. Ecco il nostro schema aggiornato:
+              Il rango di questa matrice è <m>2</m>: dunque, nella successione dei ranghi siamo scesi di <m>4-2</m>. Abbiamo pertanto <m>2</m> blocchi di ordine almeno <m>2</m>. Ecco il nostro schema aggiornato:
             </p>
             <image xml:id="image-esercizio_jordan_seconda_riga">
               <shortdescription>Due righe di quadrati sovrapposte lunghe 2 e 2</shortdescription>
@@ -1218,7 +1218,7 @@
 
           <solution>
             <p>
-              La matrice <m>A</m> è triangolare, quindi i suoi autovalori sono <m>1</m>, <m>-1</m> e <m>3</m> qualunque sia il campo <m>F</m> e  il polinomio caratteristico di <m>A</m> è sempre totalmente riducibile. Poiché <m>F=\Razionali</m>, gli autovalori sono distinti e hanno tutti molteplicità algebrica <m>1</m>. Per ciascun autovalore esiste dunque un unico blocco di Jordan ad esso relativo e tale blocco ha ordine <m>1</m>. In altri termini, <m>A</m> è diagonalizzabile e simile alla matrice <m>
+              La matrice <m>A</m> è triangolare, quindi i suoi autovalori sono <m>1</m>, <m>-1</m> e <m>3</m> qualunque sia il campo <m>F</m> e  il polinomio caratteristico di <m>A</m> è sempre totalmente riducibile. Poiché <m>F=\Razionali</m>, gli autovalori sono distinti e hanno tutti molteplicità algebrica <m>1</m>. Per ciascun autovalore esiste, dunque, un unico blocco di Jordan ad esso relativo e tale blocco ha ordine <m>1</m>. In altri termini, <m>A</m> è diagonalizzabile e simile alla matrice <m>
               \begin{psmallmatrix}
                 1 \amp  0 \amp 0 \\
                 0 \amp -1 \amp 0 \\
@@ -1303,7 +1303,7 @@
                 -2 \amp 4  \amp 0 \\
                 1  \amp 0  \amp 2 \\
                 1  \amp -2 \amp 0
-              \end{psmallmatrix}</m>, ha rango <m>2</m>. Il rango è sceso di <m>3-2=1</m>: avremo, quindi, un unico blocco di Jordan relativo a <m>3</m>. Le due matrici non sono dunque simili.
+              \end{psmallmatrix}</m>, ha rango <m>2</m>. Il rango è sceso di <m>3-2=1</m>: avremo, quindi, un unico blocco di Jordan relativo a <m>3</m>. Le due matrici non sono, dunque, simili.
             </p>
           </solution>
         </exercise>
@@ -1453,7 +1453,7 @@
 
     <remark xml:id="rem-cayley_hamilton">
       <p>
-        Potrebbe sembrare che questo teorema abbia una dimostrazione più semplice. Abbiamo, infatti, <m>p_{A}(x)=\det(x\Idmatrix-A)</m>. Si ha allora <m>p_{A}(A)=\det(A\Idmatrix-A)=\det(A-A)=\det 0=0</m>. Tuttavia questa <q>dimostrazione</q> non funziona. Infatti <m>p_{A}(A)</m> è una matrice, mentre <m>\det(A-\Idmatrix A)</m> è un elemento di <m>R</m>.
+        Potrebbe sembrare che questo teorema abbia una dimostrazione più semplice. Abbiamo, infatti, <m>p_{A}(x)=\det(x\Idmatrix-A)</m>. Si ha allora <m>p_{A}(A)=\det(A\Idmatrix-A)=\det(A-A)=\det 0=0</m>. Tuttavia questa <q>dimostrazione</q> non funziona. Infatti, <m>p_{A}(A)</m> è una matrice, mentre <m>\det(A-\Idmatrix A)</m> è un elemento di <m>R</m>.
       </p>
     </remark>
 
@@ -1477,7 +1477,7 @@
         <mrow>  \amp =a_{0}M^{-1}\Idmatrix M+a_{1}M^{-1}AM+\dots+a_{t}M^{-1}A^{t}M</mrow>
         <mrow>  \amp =M^{-1}(a_{0}\Idmatrix+a_{1}B+\dots+a_{t}B^{t})M=M^{-1}p(A)M</mrow>
       </md>.
-      In particolare il polinomio <m>p</m> si annulla in <m>A</m> se e solo se si annulla in <m>B</m>. Abbiamo dunque la
+      In particolare il polinomio <m>p</m> si annulla in <m>A</m> se e solo se si annulla in <m>B</m>. Abbiamo, dunque, la
     </p>
 
     <proposition xml:id="prop-polinomio_minimo_simili">
@@ -1509,7 +1509,7 @@
         </p>
 
         <p>
-          Se <m>f</m> è un polinomio di grado minore di <m>p</m>, per ipotesi sappiamo che <m>\vect{v}f\ne\vect{0}</m>. Inoltre sappiamo che <m>\vect{w}p=0</m> per ogni vettore <m>\vect{w}</m> di <m>V</m>. Ciò significa che <m>f(A)\ne 0</m> se <m>f</m> ha grado minore di <m>p</m> e che <m>p(A)=0</m>. Dunque il polinomio minimo di <m>A</m> è esattamente <m>p</m>.
+          Se <m>f</m> è un polinomio di grado minore di <m>p</m>, per ipotesi sappiamo che <m>\vect{v}f\ne\vect{0}</m>. Inoltre sappiamo che <m>\vect{w}p=0</m> per ogni vettore <m>\vect{w}</m> di <m>V</m>. Ciò significa che <m>f(A)\ne 0</m> se <m>f</m> ha grado minore di <m>p</m> e che <m>p(A)=0</m>. Dunque, il polinomio minimo di <m>A</m> è esattamente <m>p</m>.
         </p>
       </proof>
 

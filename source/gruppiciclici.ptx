@@ -417,11 +417,11 @@
             Dato un elemento <m>a</m> in <m>\Interi</m> il numero <m>-a-2</m> costituisce inverso di <m>a</m> rispetto all'operazione <m>\triangledown</m>: infatti, si ha <m>a\triangledown(-a-2)=a+(-a-2)+1=-1</m> e <m>(-a-2)\triangledown a=-a-2+a+1=-1</m>.
           </p>
           <p>
-            Indichiamo con <m>x^{\triangledown n}</m> la potenza <m>n</m>-esima di un elemento <m>x</m> rispetto all'operazione <m>\triangledown</m>. Mostriamo che per ogni <m>n</m> intero si ha <m>0^{\triangledown n}=n-1</m>. Infatti per <m>n=0</m> la potenza <m>0^{\triangledown 0}</m> è l'elemento neutro, cioè <m>-1</m>. Per <m>n \gt 0</m> procediamo ora per induzione: supponendo che <m>0^{\triangledown n-1}=n-2</m> otteniamo <m>0^{\triangledown n}=0^{\triangledown n-1}\triangledown 0=n-2+0+1=n-1</m> come richiesto. Infine per <m>n</m> negativo, notiamo che <m>0^{\triangledown n}</m> è l'inverso di <m>0^{\triangledown(-n)}</m>. Poiché <m>-n</m> è positivo sappiamo che <m>0^{\triangledown(-n)}</m> è <m>-n-1</m>: per il punto precedente sappiamo che l'inverso di tale elemento è <m>-(-n-1)-2</m> cioè <m>n-1</m>, come richiesto.
+            Indichiamo con <m>x^{\triangledown n}</m> la potenza <m>n</m>-esima di un elemento <m>x</m> rispetto all'operazione <m>\triangledown</m>. Mostriamo che per ogni <m>n</m> intero si ha <m>0^{\triangledown n}=n-1</m>. Infatti, per <m>n=0</m> la potenza <m>0^{\triangledown 0}</m> è l'elemento neutro, cioè <m>-1</m>. Per <m>n \gt 0</m> procediamo ora per induzione: supponendo che <m>0^{\triangledown n-1}=n-2</m> otteniamo <m>0^{\triangledown n}=0^{\triangledown n-1}\triangledown 0=n-2+0+1=n-1</m> come richiesto. Infine per <m>n</m> negativo, notiamo che <m>0^{\triangledown n}</m> è l'inverso di <m>0^{\triangledown(-n)}</m>. Poiché <m>-n</m> è positivo sappiamo che <m>0^{\triangledown(-n)}</m> è <m>-n-1</m>: per il punto precedente sappiamo che l'inverso di tale elemento è <m>-(-n-1)-2</m> cioè <m>n-1</m>, come richiesto.
           </p>
 
           <p>
-            L'insieme delle potenze di <m>0</m> è dunque l'insieme dei numeri <m>n-1</m> al variare di <m>n</m> in <m>\Interi</m>. Ma tale insieme è l'insieme di tutti i numeri interi e, dunque, <m>0</m> genera <m>\Interi</m>.
+            L'insieme delle potenze di <m>0</m> è, dunque, l'insieme dei numeri <m>n-1</m> al variare di <m>n</m> in <m>\Interi</m>. Ma tale insieme è l'insieme di tutti i numeri interi e, dunque, <m>0</m> genera <m>\Interi</m>.
           </p>
         </solution>
       </exercise>
@@ -1079,7 +1079,7 @@
         </hint>
         <solution>
           <p>
-            Ogni elemento <m>g</m> di <m>G</m> è contenuto in almeno un sottogruppo ciclico: quello generato da <m>g</m> stesso. Dunque <m>G</m> è unione dei propri sottogruppi ciclici. Se questi sottogruppi ciclici sono tutti finiti allora il loro numero è necessariamente infinito e abbiamo il risultato. Se almeno uno di essi è infinito, allora per la <xref ref="prop-sottogruppi_di_ciclico_infinito"/> esso contiene infiniti sottogruppi e, a maggior ragione, anche <m>G</m> contiene infiniti sottogruppi.
+            Ogni elemento <m>g</m> di <m>G</m> è contenuto in almeno un sottogruppo ciclico: quello generato da <m>g</m> stesso. Dunque, <m>G</m> è unione dei propri sottogruppi ciclici. Se questi sottogruppi ciclici sono tutti finiti allora il loro numero è necessariamente infinito e abbiamo il risultato. Se almeno uno di essi è infinito, allora per la <xref ref="prop-sottogruppi_di_ciclico_infinito"/> esso contiene infiniti sottogruppi e, a maggior ragione, anche <m>G</m> contiene infiniti sottogruppi.
           </p>
         </solution>
       </exercise>
