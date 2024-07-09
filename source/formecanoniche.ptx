@@ -1386,7 +1386,7 @@
     </p>
 
     <p>
-      L'insieme dei polinomi che si annullano in <m>A</m> è il nucleo dell'omomorfismo di valutazione e costituisce quindi un ideale di <m>K[x]</m>. Al momento non sappiamo però se ci siano polinomi che si annullano in <m>A</m> oltre a quello banale. Si potrebbe ragionare sulle dimensioni di opportuni spazi vettoriali e dimostrare l'esistenza di un tale polinomio. Possiamo però esibire esplicitamente un polinomio non nullo che si annulla in <m>A</m>: precisamente il suo polinomio caratteristico. Abbiamo infatti il <xref ref="thm-cayley_hamilton" text="title"/><fn><url href="https://it.wikipedia.org/wiki/William_Rowan_Hamilton" visual="">William Rowan Hamilton</url>, 1805<ndash/>1865.</fn> (che vale nell'ipotesi più generale di coefficienti presi in un anello commutativo).
+      L'insieme dei polinomi che si annullano in <m>A</m> è il nucleo dell'omomorfismo di valutazione e costituisce quindi un ideale di <m>K[x]</m>. Al momento non sappiamo però se ci siano polinomi che si annullano in <m>A</m> oltre a quello banale. Si potrebbe ragionare sulle dimensioni di opportuni spazi vettoriali e dimostrare l'esistenza di un tale polinomio. Possiamo però esibire esplicitamente un polinomio non nullo che si annulla in <m>A</m>: precisamente il suo polinomio caratteristico. Abbiamo, infatti, il <xref ref="thm-cayley_hamilton" text="title"/><fn><url href="https://it.wikipedia.org/wiki/William_Rowan_Hamilton" visual="">William Rowan Hamilton</url>, 1805<ndash/>1865.</fn> (che vale nell'ipotesi più generale di coefficienti presi in un anello commutativo).
     </p>
 
     <theorem xml:id="thm-cayley_hamilton">
@@ -1406,7 +1406,7 @@
 
       <proof>
         <p>
-          Consideriamo la matrice <m>x\Idmatrix-A</m> e indichiamo con <m>B</m> la sua matrice aggiunta: sappiamo che <m>(x\Idmatrix-A)B=\det(x\Idmatrix-A)\Idmatrix</m>. Poiché i coefficienti di <m>x\Idmatrix-A</m> sono polinomi in <m>x</m> di grado minore o uguale a <m>1</m>, i coefficienti di <m>B</m> sono polinomi in <m>x</m> di grado al più <m>n-1</m> (infatti i coefficienti della matrice aggiunta sono, a meno del segno, determinanti di matrici di ordine <m>n-1</m> estratti dalla matrice). Raccogliendo le varie potenze di <m>x</m>
+          Consideriamo la matrice <m>x\Idmatrix-A</m> e indichiamo con <m>B</m> la sua matrice aggiunta: sappiamo che <m>(x\Idmatrix-A)B=\det(x\Idmatrix-A)\Idmatrix</m>. Poiché i coefficienti di <m>x\Idmatrix-A</m> sono polinomi in <m>x</m> di grado minore o uguale a <m>1</m>, i coefficienti di <m>B</m> sono polinomi in <m>x</m> di grado al più <m>n-1</m> (infatti, i coefficienti della matrice aggiunta sono, a meno del segno, determinanti di matrici di ordine <m>n-1</m> estratti dalla matrice). Raccogliendo le varie potenze di <m>x</m>
           possiamo allora scrivere
           <me>
             B=x^{n-1}B_{n-1}+x^{n-2}B_{n-2}+\dots+B_{0}
@@ -1453,7 +1453,7 @@
 
     <remark xml:id="rem-cayley_hamilton">
       <p>
-        Potrebbe sembrare che questo teorema abbia una dimostrazione più semplice. Abbiamo infatti <m>p_{A}(x)=\det(x\Idmatrix-A)</m>. Si ha allora <m>p_{A}(A)=\det(A\Idmatrix-A)=\det(A-A)=\det 0=0</m>. Tuttavia questa <q>dimostrazione</q> non funziona. Infatti <m>p_{A}(A)</m> è una matrice, mentre <m>\det(A-\Idmatrix A)</m> è un elemento di <m>R</m>.
+        Potrebbe sembrare che questo teorema abbia una dimostrazione più semplice. Abbiamo, infatti, <m>p_{A}(x)=\det(x\Idmatrix-A)</m>. Si ha allora <m>p_{A}(A)=\det(A\Idmatrix-A)=\det(A-A)=\det 0=0</m>. Tuttavia questa <q>dimostrazione</q> non funziona. Infatti <m>p_{A}(A)</m> è una matrice, mentre <m>\det(A-\Idmatrix A)</m> è un elemento di <m>R</m>.
       </p>
     </remark>
 

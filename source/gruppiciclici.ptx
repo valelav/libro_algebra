@@ -68,7 +68,7 @@
     <example>
       <statement>
         <p>
-          Gli interi <m>\Interi</m> sono un gruppo ciclico rispetto all'addizione, generato da <m>1</m>: infatti ogni intero è un multiplo intero di <m>1</m> (ricordiamo che in notazione additiva gli elementi di un gruppo ciclico sono i multipli interi di un generatore).
+          Gli interi <m>\Interi</m> sono un gruppo ciclico rispetto all'addizione, generato da <m>1</m>: infatti, ogni intero è un multiplo intero di <m>1</m> (ricordiamo che in notazione additiva gli elementi di un gruppo ciclico sono i multipli interi di un generatore).
         </p>
         <p>
           Preso un intero positivo <m>n</m>, le classi di resto <m>\Interi/n</m> modulo <m>n</m> sono un gruppo ciclico rispetto all'addizione, generato da <m>\class[n]{1}</m>: infatti, per ogni intero <m>t</m> si verifica facilmente che <m>t\class[n]{1}=\class[n]{t}</m> e, quindi, ciascun elemento di <m>\Interi/n</m> è un multiplo intero di <m>\class[n]{1}</m>.
@@ -414,7 +414,7 @@
           </p>
 
           <p>
-            Dato un elemento <m>a</m> in <m>\Interi</m> il numero <m>-a-2</m> costituisce inverso di <m>a</m> rispetto all'operazione <m>\triangledown</m>: infatti si ha <m>a\triangledown(-a-2)=a+(-a-2)+1=-1</m> e <m>(-a-2)\triangledown a=-a-2+a+1=-1</m>.
+            Dato un elemento <m>a</m> in <m>\Interi</m> il numero <m>-a-2</m> costituisce inverso di <m>a</m> rispetto all'operazione <m>\triangledown</m>: infatti, si ha <m>a\triangledown(-a-2)=a+(-a-2)+1=-1</m> e <m>(-a-2)\triangledown a=-a-2+a+1=-1</m>.
           </p>
           <p>
             Indichiamo con <m>x^{\triangledown n}</m> la potenza <m>n</m>-esima di un elemento <m>x</m> rispetto all'operazione <m>\triangledown</m>. Mostriamo che per ogni <m>n</m> intero si ha <m>0^{\triangledown n}=n-1</m>. Infatti per <m>n=0</m> la potenza <m>0^{\triangledown 0}</m> è l'elemento neutro, cioè <m>-1</m>. Per <m>n \gt 0</m> procediamo ora per induzione: supponendo che <m>0^{\triangledown n-1}=n-2</m> otteniamo <m>0^{\triangledown n}=0^{\triangledown n-1}\triangledown 0=n-2+0+1=n-1</m> come richiesto. Infine per <m>n</m> negativo, notiamo che <m>0^{\triangledown n}</m> è l'inverso di <m>0^{\triangledown(-n)}</m>. Poiché <m>-n</m> è positivo sappiamo che <m>0^{\triangledown(-n)}</m> è <m>-n-1</m>: per il punto precedente sappiamo che l'inverso di tale elemento è <m>-(-n-1)-2</m> cioè <m>n-1</m>, come richiesto.
@@ -616,7 +616,7 @@
           Sia ora <m>d</m> un divisore di <m>n</m>. Ogni elemento di periodo <m>d</m> genera un sottogruppo di ordine <m>d</m> e, per quanto detto in precedenza, ciascuno di questi sottogruppi contiene <m>\euler{d}</m> elementi di ordine <m>d</m>: la dimostrazione sarà quindi completa se mostreremo che c'è esattamente un sottogruppo di ordine <m>d</m>. Per la <xref ref="prop-periodo_di_potenze_di_elemento_di_periodo_finito"/>, gli elementi di periodo <m>d</m> sono quelli del tipo <m>g^{r}</m> dove <m>r</m> è un intero tale che <m>(n,r)=\frac{n}{d}</m>. Di interi di questo tipo ce ne è almeno uno: <m>\frac{n}{d}</m>. Pertanto, <m>g^{\frac{n}{d}}</m> genera un sottogruppo <m>H</m> di ordine <m>d</m>. Inoltre, gli interi <m>r</m> tali che <m>(n,r)=\frac{n}{d}</m> sono multipli di <m>\frac{n}{d}</m> e, quindi, gli elementi di periodo <m>d</m> sono potenza di <m>g^{\frac{n}{d}}</m> e appartengono, dunque, a <m>H</m>: ciò implica che <m>H</m> è l'unico sottogruppo di <m>G</m> di ordine <m>d</m>.
         </p>
         <p>
-          Siano ora <m>H</m> e <m>K</m> due sottogruppi di <m>G</m>. Se <m>H\le K</m>, per quanto detto sopra l'ordine di <m>H</m> divide l'ordine del gruppo ciclico finito <m>K</m>. Viceversa, se <m>\abs{H}</m> divide <m>\abs{K}</m>, abbiamo dimostrato che <m>K</m> contiene un sottogruppo, sia <m>H'</m>, di ordine <m>\abs{H}</m>: ma <m>G</m> contiene un unico sottogruppo di ordine <m>\abs{H}</m> e cioè <m>H</m> stesso. Di conseguenza <m>H=H'</m>, cioè <m>H\le K</m>.
+          Siano ora <m>H</m> e <m>K</m> due sottogruppi di <m>G</m>. Se <m>H\le K</m>, per quanto detto sopra l'ordine di <m>H</m> divide l'ordine del gruppo ciclico finito <m>K</m>. Viceversa, se <m>\abs{H}</m> divide <m>\abs{K}</m>, abbiamo dimostrato che <m>K</m> contiene un sottogruppo, sia <m>H'</m>, di ordine <m>\abs{H}</m>: ma <m>G</m> contiene un unico sottogruppo di ordine <m>\abs{H}</m> e cioè <m>H</m> stesso. Di conseguenza, <m>H=H'</m>, cioè <m>H\le K</m>.
         </p>
       </proof>
 

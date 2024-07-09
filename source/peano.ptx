@@ -156,7 +156,7 @@
     <example>
       <statement>
         <p>
-          Nel <xref ref="cor-algebra_induttiva_generata"/> l'unione data dell'enunciato può essere disgiunta o meno. Si consideri infatti l'insieme <m>A\coloneqq \{a,b,c\}</m> con la mappa <m>t</m> così definita: <m>at\coloneqq b</m>, <m>bt\coloneqq c</m> e <m>ct\coloneqq b</m>. Si verifica facilmente che <m>\alg{a}=A</m> e <m>\alg{b}=\alg{c}=\{b,c\}</m>. Dunque, <m>\alg{a}=\{a\}\cup\alg{at}=\{a\}\cup\{b,c\}</m> e l'unione è disgiunta, mentre <m>\alg{b}=\{b\}\cup\alg{bt}=\{b\}\cup\{b,c\}</m> e l'unione non è disgiunta. In altri termini, <m>a\notin\alg{at}</m> mentre <m>b\in\alg{bt}</m>.
+          Nel <xref ref="cor-algebra_induttiva_generata"/> l'unione data dell'enunciato può essere disgiunta o meno. Si consideri, infatti, l'insieme <m>A\coloneqq \{a,b,c\}</m> con la mappa <m>t</m> così definita: <m>at\coloneqq b</m>, <m>bt\coloneqq c</m> e <m>ct\coloneqq b</m>. Si verifica facilmente che <m>\alg{a}=A</m> e <m>\alg{b}=\alg{c}=\{b,c\}</m>. Dunque, <m>\alg{a}=\{a\}\cup\alg{at}=\{a\}\cup\{b,c\}</m> e l'unione è disgiunta, mentre <m>\alg{b}=\{b\}\cup\alg{bt}=\{b\}\cup\{b,c\}</m> e l'unione non è disgiunta. In altri termini, <m>a\notin\alg{at}</m> mentre <m>b\in\alg{bt}</m>.
         </p>
       </statement>
     </example>
@@ -185,7 +185,7 @@
     </definition>
 
     <p>
-      Nella definizione precedente la mappa <m>s</m> sta per <q>successore</q>: infatti vedremo che, dato un numero naturale <m>n</m>, il successore <m>ns</m> sarà il numero <m>n+1</m>. Indichiamo con <m>1</m> il numero <m>0s</m>. L'esistenza di un'algebra induttiva che soddisfa tali richieste può essere ottenuta a partire dagli assiomi della teoria degli insiemi la cui presentazione rigorosa va oltre le finalità di questo testo e la assumeremo, quindi, senza dimostrazione.
+      Nella definizione precedente la mappa <m>s</m> sta per <q>successore</q>: infatti, vedremo che, dato un numero naturale <m>n</m>, il successore <m>ns</m> sarà il numero <m>n+1</m>. Indichiamo con <m>1</m> il numero <m>0s</m>. L'esistenza di un'algebra induttiva che soddisfa tali richieste può essere ottenuta a partire dagli assiomi della teoria degli insiemi la cui presentazione rigorosa va oltre le finalità di questo testo e la assumeremo, quindi, senza dimostrazione.
     </p>
 
     <remark xml:id="rem-predecessore">
@@ -1151,7 +1151,7 @@
           Le operazioni sono ben definite perché la relazione di equivalenza <m>\sim</m> è compatibile con le operazioni <m>+</m> e <m>\cdot</m> definite in <m>S</m>. Rispetto a entrambe queste operazioni <m>\Interi</m> è, dunque, un monoide commutativo e vale la proprietà distributiva. Rimane da mostrare che ogni elemento ha opposto rispetto all'addizione e che vale il principio di annullamento del prodotto.
         </p>
         <p>
-          Dato un qualunque elemento <m>\class[\sim]{(a,b)}</m> di <m>\Interi</m>, il suo opposto è <m>\class[\sim]{(b,a)}</m>: infatti <m>\class[\sim]{(a,b)}+\class[\sim]{(b,a)}=\class[\sim]{(a+b,b+a)}=\class[\sim]{(0,0)}</m> per l'<xref ref="rem-0_intero"/>.
+          Dato un qualunque elemento <m>\class[\sim]{(a,b)}</m> di <m>\Interi</m>, il suo opposto è <m>\class[\sim]{(b,a)}</m>: infatti, <m>\class[\sim]{(a,b)}+\class[\sim]{(b,a)}=\class[\sim]{(a+b,b+a)}=\class[\sim]{(0,0)}</m> per l'<xref ref="rem-0_intero"/>.
         </p>
         <p>
           Siano ora <m>\class[\sim]{(a,b)}</m> e <m>\class[\sim]{(c,d)}</m> due elementi tali che <m>\class[\sim]{(a,b)}\cdot\class[\sim]{(c,d)}=\class[\sim]{(0,0)}</m>: dobbiamo mostrare che <m>\class[\sim]{(a,b)}=\class[\sim]{(0,0)}</m> o <m>\class[\sim]{(c,d)}=\class[\sim]{(0,0)}</m>. Supponiamo che <m>\class[\sim]{(a,b)}\ne\class[\sim]{(0,0)}</m>, cioè <m>a\ne b</m>: per la <xref ref="prop-ordine_differenza"/> esiste un naturale <m>l\ne 0</m> tale che <m>a=b+l</m> o <m>b=a+l</m>. Nel primo caso <m>\class[\sim]{(a,b)}=\class[\sim]{(l,0)}</m> e, quindi, da <m>\class[\sim]{(l,0)}\cdot\class[\sim]{(c,d)}=\class[\sim]{(0,0)}</m> ricaviamo <m>lc=ld</m> da cui, grazie alla <xref ref="prop-cancellazione_moltiplicazione"/> otteniamo <m>c=d</m>, cioè <m>\class[\sim]{(c,d)}=\class[\sim]{(0,0)}</m>. Il secondo caso è analogo.
@@ -1341,7 +1341,7 @@
 
       <proof>
         <p>
-          La relazione è ovviamente riflessiva: infatti per ogni <m>n\in\Interi</m>, si ha che <m>n-n=0\in\Naturali.</m>
+          La relazione è ovviamente riflessiva: infatti, per ogni <m>n\in\Interi</m>, si ha che <m>n-n=0\in\Naturali.</m>
         </p>
         <p>
           Mostriamo che è antisimmetrica. Siano <m>m</m> e <m>n</m> interi tali che <m>m\le n</m> e <m>n\le m</m>, cioè, <m>n-m</m> e <m>m-n</m> sono naturali. Ora, <m>(n-m)+(m-n)=0</m> e, quindi, per il <xref ref="lem-zeropiuzero"/>, si ha che <m>n-m=0</m>, cioè <m>m=n</m>.

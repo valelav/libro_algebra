@@ -515,7 +515,7 @@
         Notiamo ora che gli elementi del tipo <m>\class[n]{a}+\class[n]{x}</m> al variare di <m>\class[n]{x}</m> in <m>\Interi/n</m> sono quelli che stanno su una riga (e su una colonna) della tabella dell'operazione di addizione. La <xref ref="prop-cancellazione_addizione_classi_di_resto" text="title"/> ci dice che questi elementi sono tutti diversi e, quindi, che su ciascuna riga (e colonna) non ci sono ripetizioni. Dunque, dato che <m>\Interi/n</m> è un insieme finito, su ciascuna riga e colonna appaiono tutti gli elementi di <m>\Interi/n</m>, ciascuno esattamente una volta, fatto che avevamo già notato negli esempi ma che ora sappiamo avere validità generale.
       </p>
       <p>
-        Per quanto riguarda la moltiplicazione ci chiediamo se possiamo dare una legge di cancellazione del tipo: se <m>\class[n]{a}\class[n]{b}=\class[n]{a}\class[n]{c}</m> possiamo dire che <m>\class[n]{b}=\class[n]{c}</m>? Dobbiamo innanzitutto supporre che <m>\class[n]{a}\ne\class[n]{0}</m>: infatti <m>\class[n]{0}\class[n]{a}=\class[n]{0}</m> per ogni <m>\class[n]{a}</m>. Ma la tabella rispetto a <m>n=4</m> ci mostra che in generale anche questo non è sufficiente: infatti <m>\class[4]{2}\class[4]{1}=\class[4]{2}\class[4]{3}</m> e, quindi, non possiamo semplificare <m>\class[4]{2}</m>. D'altra parte ci sono righe e colonne sulle tabelle rispetto alla moltiplicazione in cui non ci sono ripetizioni e, quindi, possiamo semplificare gli elementi corrispondenti. Per poter studiare questa situazione ci occorre innanzitutto la
+        Per quanto riguarda la moltiplicazione ci chiediamo se possiamo dare una legge di cancellazione del tipo: se <m>\class[n]{a}\class[n]{b}=\class[n]{a}\class[n]{c}</m> possiamo dire che <m>\class[n]{b}=\class[n]{c}</m>? Dobbiamo innanzitutto supporre che <m>\class[n]{a}\ne\class[n]{0}</m>: infatti, <m>\class[n]{0}\class[n]{a}=\class[n]{0}</m> per ogni <m>\class[n]{a}</m>. Ma la tabella rispetto a <m>n=4</m> ci mostra che in generale anche questo non è sufficiente: infatti, <m>\class[4]{2}\class[4]{1}=\class[4]{2}\class[4]{3}</m> e, quindi, non possiamo semplificare <m>\class[4]{2}</m>. D'altra parte ci sono righe e colonne sulle tabelle rispetto alla moltiplicazione in cui non ci sono ripetizioni e, quindi, possiamo semplificare gli elementi corrispondenti. Per poter studiare questa situazione ci occorre innanzitutto la
       </p>
       <definition xml:id="def-classe_resto_invertibile">
         <statement>
@@ -618,7 +618,7 @@
             Supponiamo che <m>a</m> e <m>n</m> siano coprimi e sia <m>au+nv=1</m> un'identità di Bezout. Passando alle classi di resto modulo <m>n</m> otteniamo allora <m>\class[n]{a}\class[n]{u}+\class[n]{n}\class[n]{v}=\class[n]{1}</m>. Ora <m>\class[n]{n}=\class[n]{0}</m> da cui segue che <m>\class[n]{a}\class[n]{u}=\class[n]{1}</m>.
           </p>
           <p>
-            Viceversa, sia <m>\class[n]{a}</m> invertibile e sia <m>\class[n]{b}</m> la sua inversa: dunque, <m>\class[n]{a}\class[n]{b}=\class[n]{1}</m>, cioè <m>\class[n]{ab}=\class[n]{1}</m>. Di conseguenza <m>ab\equiv 1\pmod{n}</m>, cioè esiste un intero <m>h</m> tale che <m>ab=1+hn</m>: se ora <m>d</m> è il massimo comun divisore di <m>a</m> e <m>n</m>, abbiamo che <m>d</m> divide anche <m>1=ab-hn</m> e, di conseguenza, <m>d=1</m>.
+            Viceversa, sia <m>\class[n]{a}</m> invertibile e sia <m>\class[n]{b}</m> la sua inversa: dunque, <m>\class[n]{a}\class[n]{b}=\class[n]{1}</m>, cioè <m>\class[n]{ab}=\class[n]{1}</m>. Di conseguenza, <m>ab\equiv 1\pmod{n}</m>, cioè esiste un intero <m>h</m> tale che <m>ab=1+hn</m>: se ora <m>d</m> è il massimo comun divisore di <m>a</m> e <m>n</m>, abbiamo che <m>d</m> divide anche <m>1=ab-hn</m> e, di conseguenza, <m>d=1</m>.
           </p>
         </proof>
 
@@ -935,7 +935,7 @@
           </statement>
           <solution>
             <p>
-              Notiamo che <m>227\equiv -1\pmod{114}</m>: dunque, <m>227^{228^{229}}\equiv (-1)^{228^{229}}\pmod{114}</m>. Ora <m>228^{229}</m> è potenza a esponente positivo di un numero pari ed è, quindi, pari: di conseguenza <m>(-1)^{228^{229}}=1</m>. Il resto cercato è, quindi,
+              Notiamo che <m>227\equiv -1\pmod{114}</m>: dunque, <m>227^{228^{229}}\equiv (-1)^{228^{229}}\pmod{114}</m>. Ora <m>228^{229}</m> è potenza a esponente positivo di un numero pari ed è, quindi, pari: di conseguenza, <m>(-1)^{228^{229}}=1</m>. Il resto cercato è, quindi,
               <m>1</m>.
             </p>
           </solution>
@@ -964,7 +964,7 @@
 
           <solution>
             <p>
-              Se <m>n\ge5</m> allora <m>n!</m> è multiplo di <m>10</m>: infatti <m>5!=1\cdot2\cdot3\cdot4\cdot5=120</m> e ciascun fattoriale è multiplo del precedente. Per calcolare l'ultima cifra di <m>1!+2!+3!+\cdots+100!</m> è allora sufficiente calcolare l'ultima cifra di <m>1!+2!+3!+4!</m>, cioè <m>1+2+6+24=33</m>. L'ultima cifra è, quindi, <m>3</m>.
+              Se <m>n\ge5</m> allora <m>n!</m> è multiplo di <m>10</m>: infatti, <m>5!=1\cdot2\cdot3\cdot4\cdot5=120</m> e ciascun fattoriale è multiplo del precedente. Per calcolare l'ultima cifra di <m>1!+2!+3!+\cdots+100!</m> è allora sufficiente calcolare l'ultima cifra di <m>1!+2!+3!+4!</m>, cioè <m>1+2+6+24=33</m>. L'ultima cifra è, quindi, <m>3</m>.
             </p>
           </solution>
         </exercise>
@@ -1031,7 +1031,7 @@
               Poiché <m>12=4\cdot 3</m> e <m>4</m> e <m>3</m> sono coprimi, per l'<xref ref="exer-multiplo_di_coprimi"/> è sufficiente provare che <m>a+b</m> è multiplo di <m>4</m> e di <m>3</m>.
             </p>
             <p>
-              Sia <m>a=1+2k</m> per qualche intero <m>k</m>: allora <m>b=3+2k</m>. Di conseguenza <m>a+b=4+4k</m>; in particolare, <m>a+b</m> è multiplo di <m>4</m> qualunque sia <m>k</m>.
+              Sia <m>a=1+2k</m> per qualche intero <m>k</m>: allora <m>b=3+2k</m>. Di conseguenza, <m>a+b=4+4k</m>; in particolare, <m>a+b</m> è multiplo di <m>4</m> qualunque sia <m>k</m>.
             </p>
             <p>
               Lavoriamo ora modulo <m>3</m>. Poiché <m>ab</m> non è multiplo di <m>3</m> sappiamo che né <m>a</m> né <m>b</m> sono multipli di <m>3</m>: in particolare, <m>a\not\equiv 0\pmod{3}</m> e <m>a+2\not\equiv 3\pmod{3}</m>, cioè <m>a\not\equiv 1 \pmod{3}</m>. Pertanto, <m>a\equiv{2}\pmod{3}</m> e <m>b\equiv{2+2}\pmod{3}</m>: quindi, <m>a+b\equiv 2+4\pmod{3}</m> cioè <m>a+b</m> è multiplo di <m>3</m>.
@@ -1324,7 +1324,7 @@
 
           <solution>
             <p>
-              Poiché <m>a</m> è coprimo con <m>b</m>, per il <xref ref="thm-eulero" text="title"/> abbiamo <m>a^{\euler{b}}\equiv 1\pmod{b}</m>. D'altra parte <m>b\equiv 0\pmod{b}</m> e pertanto, si ha <m>b^{\euler{a}}\equiv 0\pmod{b}</m>. Di conseguenza <m>a^{\euler{b}}+b^{\euler{a}}\equiv 1\pmod{b}</m>. Analogamente, <m>a^{\euler{b}}+b^{\euler{a}}\equiv 1\pmod{a}</m>. Poiché <m>a</m> e <m>b</m> sono coprimi, per l'<xref ref="exer-multiplo_di_coprimi"/> otteniamo che <m>a^{\euler{b}}+b^{\euler{a}}\equiv 1\pmod{ab}</m>.
+              Poiché <m>a</m> è coprimo con <m>b</m>, per il <xref ref="thm-eulero" text="title"/> abbiamo <m>a^{\euler{b}}\equiv 1\pmod{b}</m>. D'altra parte <m>b\equiv 0\pmod{b}</m> e pertanto, si ha <m>b^{\euler{a}}\equiv 0\pmod{b}</m>. Di conseguenza, <m>a^{\euler{b}}+b^{\euler{a}}\equiv 1\pmod{b}</m>. Analogamente, <m>a^{\euler{b}}+b^{\euler{a}}\equiv 1\pmod{a}</m>. Poiché <m>a</m> e <m>b</m> sono coprimi, per l'<xref ref="exer-multiplo_di_coprimi"/> otteniamo che <m>a^{\euler{b}}+b^{\euler{a}}\equiv 1\pmod{ab}</m>.
             </p>
           </solution>
         </exercise>
@@ -1984,7 +1984,7 @@
               Dobbiamo determinare l'elemento compreso tra <m>0</m> e <m>32</m> nella classe di resto di <m>23^{8!}+4^{711}</m> modulo <m>33</m>.
             </p>
             <p>
-              Poiché <m>23</m> è coprimo con <m>33</m>, il <xref ref="thm-eulero" text="title"/> ci dice che <m>23^{\euler{33}}\equiv 1\pmod{33}</m>. Ora <m>33=3\cdot 11</m> e, quindi, <m>\euler{33}=\euler{3}\euler{11}=(3-1)(11-1)=20</m>. D'altra parte, <m>8!</m> è multiplo di <m>20</m>: di conseguenza <m>23^{8!}=(23^{20})^{k}</m> per qualche <m>k</m> intero e, quindi, <m>23^{8!}\equiv 1^{k}\pmod{33}\equiv 1 \pmod{33}</m>.
+              Poiché <m>23</m> è coprimo con <m>33</m>, il <xref ref="thm-eulero" text="title"/> ci dice che <m>23^{\euler{33}}\equiv 1\pmod{33}</m>. Ora <m>33=3\cdot 11</m> e, quindi, <m>\euler{33}=\euler{3}\euler{11}=(3-1)(11-1)=20</m>. D'altra parte, <m>8!</m> è multiplo di <m>20</m>: di conseguenza, <m>23^{8!}=(23^{20})^{k}</m> per qualche <m>k</m> intero e, quindi, <m>23^{8!}\equiv 1^{k}\pmod{33}\equiv 1 \pmod{33}</m>.
             </p>
             <p>
               Per quanto riguarda <m>4^{711}</m> osserviamo innanzitutto che è uguale a <m>2^{1422}</m>. Anche <m>2</m> è coprimo con <m>33</m>: quindi, come prima, <m>2^{20}\equiv 1\pmod{33}</m>. D'altra parte, <m>1422\equiv 2\pmod{20}</m> e, quindi, analogamente a prima, <m>2^{1422}\equiv 2^{2}\pmod{33}</m>.

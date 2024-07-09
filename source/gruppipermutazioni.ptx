@@ -255,7 +255,7 @@
               3 \amp 1 \amp 2 \amp 4 \amp 5 \\
             \end{pmatrix}
           </me>
-          non sono disgiunte: infatti <m>\Supp{\sigma}\cap\Supp{\tau}=\{1,2,3\}</m>.
+          non sono disgiunte: infatti, <m>\Supp{\sigma}\cap\Supp{\tau}=\{1,2,3\}</m>.
         </p>
         <p>
           Calcolando i due prodotti, troviamo:
@@ -287,7 +287,7 @@
 
       <proof>
         <p>
-          Per la <xref ref="prop-permutazioni_disgiunte_commutano"/>, le permutazioni <m>\sigma</m> e <m>\tau</m> commutano fra loro e, per la <xref ref="prop-potenza_del_prodotto_di_commutabili"/>, abbiamo <m>(\sigma\tau)^{r}=\sigma^{r}\tau^{r}</m> per ogni intero <m>r</m>. Se <m>r</m> è multiplo sia di <m>s</m> che di <m>t</m> (cioè di <m>m</m>), allora <m>\sigma^{r}=\tau^{r}=\Id</m> e, quindi, <m>(\sigma\tau)^{r}=\Id</m>. Viceversa, sia <m>r</m> un intero tale che <m>(\sigma\tau)^{r}=\Id</m>. Di conseguenza <m>\sigma^{r}=\tau^{-r}</m>. Per il <xref ref="cor-supporto_potenze"/>, il supporto del primo membro è contenuto in <m>\Supp{\sigma}</m>, mentre il supporto del secondo membro è contenuto in <m>\Supp{\tau}</m>. Ovviamente, però, primo e secondo membro hanno lo stesso supporto e, poiché <m>\sigma</m> e <m>\tau</m> sono disgiunte, segue che <m>\sigma^{r}=\tau^{-r}=\Id</m>.
+          Per la <xref ref="prop-permutazioni_disgiunte_commutano"/>, le permutazioni <m>\sigma</m> e <m>\tau</m> commutano fra loro e, per la <xref ref="prop-potenza_del_prodotto_di_commutabili"/>, abbiamo <m>(\sigma\tau)^{r}=\sigma^{r}\tau^{r}</m> per ogni intero <m>r</m>. Se <m>r</m> è multiplo sia di <m>s</m> che di <m>t</m> (cioè di <m>m</m>), allora <m>\sigma^{r}=\tau^{r}=\Id</m> e, quindi, <m>(\sigma\tau)^{r}=\Id</m>. Viceversa, sia <m>r</m> un intero tale che <m>(\sigma\tau)^{r}=\Id</m>. Di conseguenza, <m>\sigma^{r}=\tau^{-r}</m>. Per il <xref ref="cor-supporto_potenze"/>, il supporto del primo membro è contenuto in <m>\Supp{\sigma}</m>, mentre il supporto del secondo membro è contenuto in <m>\Supp{\tau}</m>. Ovviamente, però, primo e secondo membro hanno lo stesso supporto e, poiché <m>\sigma</m> e <m>\tau</m> sono disgiunte, segue che <m>\sigma^{r}=\tau^{-r}=\Id</m>.
           Pertanto, <m>r</m> è multiplo sia di <m>s</m> che di <m>t</m>, cioè di <m>m</m>. Dunque, <m>(\sigma\tau)^{r}=\Id</m> se e solo se <m>r</m> è multiplo di <m>m</m> che è, di conseguenza, il periodo di <m>\sigma\tau</m>.
         </p>
       </proof>
@@ -508,7 +508,7 @@
     </example>
 
     <p>
-      L'espressione di una permutazione come prodotto di cicli disgiunti è particolarmente comoda per calcolarne il periodo. Abbiamo infatti la
+      L'espressione di una permutazione come prodotto di cicli disgiunti è particolarmente comoda per calcolarne il periodo. Abbiamo, infatti, la
     </p>
 
     <proposition xml:id="prop-periodo_prodotto_cicli_disgiunti">
@@ -1238,7 +1238,7 @@
 
       <proof>
         <p>
-          Il sottoinsieme <m>A_{n}</m> è non vuoto: infatti <m>\Id</m> è una permutazione pari. Se <m>\sigma</m> e <m>\tau</m> sono permutazioni pari, cioè ciascuna di esse è prodotto di un numero pari di scambi, allora il prodotto <m>\sigma\tau</m> è prodotto di un numero pari di scambi: poiché <m>\Sym_{n}</m> è finito (e, quindi, anche <m>A_{n}</m> lo è), per la <xref ref="prop-sottogruppi_finiti"/> <m>A_{n}</m> è un sottogruppo.
+          Il sottoinsieme <m>A_{n}</m> è non vuoto: infatti, <m>\Id</m> è una permutazione pari. Se <m>\sigma</m> e <m>\tau</m> sono permutazioni pari, cioè ciascuna di esse è prodotto di un numero pari di scambi, allora il prodotto <m>\sigma\tau</m> è prodotto di un numero pari di scambi: poiché <m>\Sym_{n}</m> è finito (e, quindi, anche <m>A_{n}</m> lo è), per la <xref ref="prop-sottogruppi_finiti"/> <m>A_{n}</m> è un sottogruppo.
         </p>
         <p>
           Calcoliamo adesso l'ordine di <m>A_{n}</m>. Se <m>n=1</m>, sappiamo che <m>\Sym_{1}</m> ha ordine <m>1</m> e, quindi, anche <m>A_{1}</m> ha ordine <m>1</m>. Sia allora <m>n \gt1</m>. Per ogni permutazione pari <m>\sigma</m>, il prodotto <m>\sigma(1\;2)</m> è una permutazione dispari e, per le <xref ref="prop-cancellazione_gruppo" text="title"/>, <m>\sigma(1\;2)\ne\tau(1\;2)</m> se <m>\sigma</m> e <m>\tau</m> sono permutazioni pari diverse: dunque, il numero di permutazioni dispari è maggiore o uguale del numero di permutazioni pari. Analogamente, per ogni permutazione dispari <m>\sigma</m>, il prodotto <m>\sigma(1\;2)</m> è una permutazione pari e, quindi, il numero di permutazioni pari è maggiore o uguale del numero di permutazioni dispari. In conclusione il numero di permutazioni dispari è uguale al numero di permutazioni pari: quindi, <m>\abs{A_{n}}=\frac{\abs{\Sym_{n}}}{2}=\frac{n!}{2}</m>.
@@ -1372,7 +1372,7 @@
 
         <solution>
           <p>
-            Sappiamo che <m>\Sym_{n}</m> è generato dagli scambi. Basta allora mostrare che il sottogruppo generato dagli scambi dati contiene anche gli altri scambi, cioè quelli del tipo <m>(i\;j)</m> con <m>i\ne 1</m>, <m>j\ne 1</m> e <m>i\ne j</m>. Abbiamo infatti <m>(i\;j)=(1\;i)(1\;j)(1\;i)</m>.
+            Sappiamo che <m>\Sym_{n}</m> è generato dagli scambi. Basta allora mostrare che il sottogruppo generato dagli scambi dati contiene anche gli altri scambi, cioè quelli del tipo <m>(i\;j)</m> con <m>i\ne 1</m>, <m>j\ne 1</m> e <m>i\ne j</m>. Abbiamo, infatti, <m>(i\;j)=(1\;i)(1\;j)(1\;i)</m>.
           </p>
         </solution>
       </exercise>

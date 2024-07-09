@@ -227,7 +227,7 @@
 
       <proof>
         <p>
-          Consideriamo prima il caso in cui <m>n</m> sia un naturale. Procediamo per induzione. Il caso in cui <m>n=0</m> segue dalla <xref ref="prop-uno_va_in_uno"/>: infatti <m>(x^{0})\phi=1_{G}\phi=1_{H}=(x\phi)^{0}</m>.
+          Consideriamo prima il caso in cui <m>n</m> sia un naturale. Procediamo per induzione. Il caso in cui <m>n=0</m> segue dalla <xref ref="prop-uno_va_in_uno"/>: infatti, <m>(x^{0})\phi=1_{G}\phi=1_{H}=(x\phi)^{0}</m>.
         </p>
         <p>
           Sia allora <m>k</m> un naturale per cui si ha <m>(x^{k})\phi=(x\phi)^{k}</m>: pertanto
@@ -820,7 +820,7 @@
     <example>
       <statement>
         <p>
-          Sia <m>C\coloneqq\grgen{c}</m> un gruppo ciclico di ordine <m>12</m> e <m>D\coloneqq\grgen{d}</m> un gruppo ciclico di ordine <m>20</m>. Definiamo <m>\phi\colon C\to D</m> ponendo <m>(c^{r})\phi\coloneqq d^{5r}</m>. Mostriamo che questa funzione è ben definita: infatti <m>c^{r}=c^{s}</m> se e solo se <m>r-s</m> è multiplo di <m>12</m>. In tal caso, <m>5r-5s=5(r-s)</m> è multiplo di <m>60</m> e, a maggior ragione, di <m>20</m>, da cui segue che <m>d^{r}=d^{s}</m>. Si verifica poi facilmente che <m>\phi</m> rispetta il prodotto ed è, quindi, un omomorfismo (vedremo poi nella <xref ref="prop-omomorfismi_da_ciclici"/> che questo è un caso particolare di un risultato generale).
+          Sia <m>C\coloneqq\grgen{c}</m> un gruppo ciclico di ordine <m>12</m> e <m>D\coloneqq\grgen{d}</m> un gruppo ciclico di ordine <m>20</m>. Definiamo <m>\phi\colon C\to D</m> ponendo <m>(c^{r})\phi\coloneqq d^{5r}</m>. Mostriamo che questa funzione è ben definita: infatti, <m>c^{r}=c^{s}</m> se e solo se <m>r-s</m> è multiplo di <m>12</m>. In tal caso, <m>5r-5s=5(r-s)</m> è multiplo di <m>60</m> e, a maggior ragione, di <m>20</m>, da cui segue che <m>d^{r}=d^{s}</m>. Si verifica poi facilmente che <m>\phi</m> rispetta il prodotto ed è, quindi, un omomorfismo (vedremo poi nella <xref ref="prop-omomorfismi_da_ciclici"/> che questo è un caso particolare di un risultato generale).
         </p>
         <p>
           Consideriamo ora il sottogruppo <m>L\coloneqq\grgen{c^{6}}</m> di <m>C</m>. Sappiamo che i suoi elementi sono <m>c^{0}=1</m> e <m>c^{6}</m>, e, dunque,<m>L\phi=\{d^{0},d^{30}\}</m>. Ora <m>c^{2}\phi=d^{10}=d^{30}</m> e, quindi, <m>c^{2}\in L\phi\phi^{-1}</m> ma <m>c^{2}\notin L</m>.
@@ -1033,7 +1033,7 @@
 
           <solution>
             <p>
-              Dal punto precedente sappiamo che <m>\phi</m> è un endomorfismo. Se <m>x</m> è un elemento del nucleo di <m>\phi</m> abbiamo che<m>x^{n}=1</m> e, quindi, il periodo di <m>x</m> divide <m>n</m>. D'altra parte, il periodo di <m>x</m> deve dividere l'ordine <m>r</m> del gruppo e, poiché, <m>n</m> e <m>r</m> sono coprimi ciò significa che <m>x</m> ha periodo <m>1</m> cioè è <m>1</m>. Di conseguenza <m>\phi</m> è iniettivo e, poiché, <m>G</m> è finito è necessariamente anche suriettivo. Dunque
+              Dal punto precedente sappiamo che <m>\phi</m> è un endomorfismo. Se <m>x</m> è un elemento del nucleo di <m>\phi</m> abbiamo che<m>x^{n}=1</m> e, quindi, il periodo di <m>x</m> divide <m>n</m>. D'altra parte, il periodo di <m>x</m> deve dividere l'ordine <m>r</m> del gruppo e, poiché, <m>n</m> e <m>r</m> sono coprimi ciò significa che <m>x</m> ha periodo <m>1</m> cioè è <m>1</m>. Di conseguenza, <m>\phi</m> è iniettivo e, poiché, <m>G</m> è finito è necessariamente anche suriettivo. Dunque
               <m>\phi</m> è un automorfismo biiettivo, cioè un automorfismo.
             </p>
           </solution>
@@ -1134,7 +1134,7 @@
     <example>
       <statement>
         <p>
-          Consideriamo il sottoinsieme <m>X\coloneqq\{(1\;2),(1\;2\;3)\}</m> del gruppo <m>\Sym_{3}</m>. Si vede facilmente che <m>X</m> genera <m>G</m>: infatti <m>X</m> contiene un elemento di ordine <m>2</m> e un elemento di ordine <m>3</m> e, dunque, per il <xref ref="cor-periodo_elemento_divide_ordine"/>, <m>\grgen{X}</m> deve avere ordine multiplo sia di <m>2</m> che di <m>3</m> e, quindi, di <m>6</m>.
+          Consideriamo il sottoinsieme <m>X\coloneqq\{(1\;2),(1\;2\;3)\}</m> del gruppo <m>\Sym_{3}</m>. Si vede facilmente che <m>X</m> genera <m>G</m>: infatti, <m>X</m> contiene un elemento di ordine <m>2</m> e un elemento di ordine <m>3</m> e, dunque, per il <xref ref="cor-periodo_elemento_divide_ordine"/>, <m>\grgen{X}</m> deve avere ordine multiplo sia di <m>2</m> che di <m>3</m> e, quindi, di <m>6</m>.
         </p>
         <p>
           Supponiamo ora di voler definire un omomorfismo da <m>\Sym_{3}</m> in sé (vale a dire, un endomorfismo) assegnando le immagini dei generatori nel modo seguente
@@ -1185,7 +1185,7 @@
           Se <m>g</m> ha periodo finito <m>n</m> e <m>h</m> ha periodo infinito o periodo finito che non divide <m>n</m>, allora per il <xref ref="cor-periodo_immagine"/>, non esiste alcun omomorfismo che soddisfa la condizione.
         </p>
         <p>
-          Se <m>g</m> ha periodo finito <m>n</m> e <m>h</m> ha periodo <m>d</m> che divide <m>n</m>, poniamo ancora <m>g^{i}\phi\coloneqq h^{i}</m>: dal momento che ogni elemento di <m>G</m> si può esprimere in più modi come potenza di <m>g</m>, dobbiamo verificare che la definizione è ben posta. Abbiamo infatti <m>g^{i}=g^{j}</m> se e solo se <m>i-j</m> è multiplo di <m>n</m>: a maggior ragione, se ciò avviene, <m>i-j</m> è multiplo di <m>d</m> e, quindi, <m>h^{i}=h^{j}</m>. Pertanto, <m>\phi</m> è ben definita: la verifica che sia effettivamente un omomorfismo e che mandi <m>g</m> in <m>h</m> è uguale al caso in cui <m>\abs{g}=\infty</m>.
+          Se <m>g</m> ha periodo finito <m>n</m> e <m>h</m> ha periodo <m>d</m> che divide <m>n</m>, poniamo ancora <m>g^{i}\phi\coloneqq h^{i}</m>: dal momento che ogni elemento di <m>G</m> si può esprimere in più modi come potenza di <m>g</m>, dobbiamo verificare che la definizione è ben posta. Abbiamo, infatti, <m>g^{i}=g^{j}</m> se e solo se <m>i-j</m> è multiplo di <m>n</m>: a maggior ragione, se ciò avviene, <m>i-j</m> è multiplo di <m>d</m> e, quindi, <m>h^{i}=h^{j}</m>. Pertanto, <m>\phi</m> è ben definita: la verifica che sia effettivamente un omomorfismo e che mandi <m>g</m> in <m>h</m> è uguale al caso in cui <m>\abs{g}=\infty</m>.
         </p>
       </proof>
 
