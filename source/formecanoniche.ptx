@@ -141,7 +141,7 @@
 
     <remark xml:id="rem-autospazi_theta_stabili">
       <p>
-        I sottospazi <m>\theta</m>-stabili possono essere visti come una generalizzazione degli autospazi: infatti, se <m>\lambda</m> è un autovalore di un endomorfismo <m>\theta</m> di un <m>K</m>-spazio vettoriale <m>V</m>, allora l'autospazio di <m>\theta</m> relativo a <m>\lambda</m> è definito come l'insieme <m>U</m> dei vettori <m>\vect{v}</m> di <m>V</m> tali che <m>\vect{v}\theta=\vect{v}\lambda</m>: in particolare <m>\vect{v}\theta</m>, essendo un multiplo di <m>\vect{v}</m>, appartiene ancora a <m>U</m>, che è, dunque, <m>\theta</m>-stabile. Più in generale, ogni sottospazio vettoriale di un autospazio di <m>\theta</m> è <m>\theta</m>-stabile.
+        I sottospazi <m>\theta</m>-stabili possono essere visti come una generalizzazione degli autospazi: infatti, se <m>\lambda</m> è un autovalore di un endomorfismo <m>\theta</m> di un <m>K</m>-spazio vettoriale <m>V</m>, allora l'autospazio di <m>\theta</m> relativo a <m>\lambda</m> è definito come l'insieme <m>U</m> dei vettori <m>\vect{v}</m> di <m>V</m> tali che <m>\vect{v}\theta=\vect{v}\lambda</m>: in particolare, <m>\vect{v}\theta</m>, essendo un multiplo di <m>\vect{v}</m>, appartiene ancora a <m>U</m>, che è, dunque, <m>\theta</m>-stabile. Più in generale, ogni sottospazio vettoriale di un autospazio di <m>\theta</m> è <m>\theta</m>-stabile.
       </p>
     </remark>
 
@@ -1470,14 +1470,14 @@
     </definition>
 
     <p>
-      Grazie al <xref ref="thm-cayley_hamilton" text="title"/> il polinomio minimo di una matrice quadrata <m>A</m> è un divisore del suo polinomio caratteristico: in particolare il suo grado è minore o uguale dell'ordine della matrice. Supponiamo ora che <m>A</m> e <m>B</m> siano matrici quadrate simili a coefficienti in un campo <m>K</m> (e, dunque, esista una matrice invertibile <m>M</m> tale che <m>B=M^{-1}AM</m>) e sia <m>p\coloneqq a_{0}+a_{1}x+\dots+a_{t}x^{t}</m> un polinomio a coefficienti in <m>K</m>. Allora
+      Grazie al <xref ref="thm-cayley_hamilton" text="title"/> il polinomio minimo di una matrice quadrata <m>A</m> è un divisore del suo polinomio caratteristico: in particolare, il suo grado è minore o uguale dell'ordine della matrice. Supponiamo ora che <m>A</m> e <m>B</m> siano matrici quadrate simili a coefficienti in un campo <m>K</m> (e, dunque, esista una matrice invertibile <m>M</m> tale che <m>B=M^{-1}AM</m>) e sia <m>p\coloneqq a_{0}+a_{1}x+\dots+a_{t}x^{t}</m> un polinomio a coefficienti in <m>K</m>. Allora
       <md>
         <mrow> p(B) \amp =a_{0}\Idmatrix+a_{1}B+\dots+a_{t}B^{t} </mrow>
         <mrow> \amp =a_{0}M^{-1}\Idmatrix M+a_{1}M^{-1}AM+\dots+a_{t}(M^{-1}AM)^{t}</mrow>
         <mrow>  \amp =a_{0}M^{-1}\Idmatrix M+a_{1}M^{-1}AM+\dots+a_{t}M^{-1}A^{t}M</mrow>
         <mrow>  \amp =M^{-1}(a_{0}\Idmatrix+a_{1}B+\dots+a_{t}B^{t})M=M^{-1}p(A)M</mrow>
       </md>.
-      In particolare il polinomio <m>p</m> si annulla in <m>A</m> se e solo se si annulla in <m>B</m>. Abbiamo, dunque, la
+      In particolare, il polinomio <m>p</m> si annulla in <m>A</m> se e solo se si annulla in <m>B</m>. Abbiamo, dunque, la
     </p>
 
     <proposition xml:id="prop-polinomio_minimo_simili">
@@ -1550,7 +1550,7 @@
             0      \amp f(B_{2})  \amp \dots  \amp 0 \\
             \vdots \amp \vdots \amp \ddots \amp \vdots\\
             0      \amp 0      \amp \dots  \amp f(B_{s})
-          \end{psmallmatrix}</m>. In particolare <m>f(B)=0</m> se e solo se <m>f(B_{1})=0</m>,  <m>\ldots</m>, <m>f(B_{s})=0</m> e il polinomio minimo di <m>B</m> è, dunque, il minimo comune multiplo dei polinomi minimi di <m>B_{1}</m>, <m>\dots</m>, <m>B_{s}</m>.
+          \end{psmallmatrix}</m>. In particolare, <m>f(B)=0</m> se e solo se <m>f(B_{1})=0</m>,  <m>\ldots</m>, <m>f(B_{s})=0</m> e il polinomio minimo di <m>B</m> è, dunque, il minimo comune multiplo dei polinomi minimi di <m>B_{1}</m>, <m>\dots</m>, <m>B_{s}</m>.
         </p>
       </statement>
     </proposition>
