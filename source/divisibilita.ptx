@@ -985,7 +985,7 @@
     </corollary>
 
     <p>
-      Gli esempi di domini euclidei che abbiamo elencato, e cioè l'anello degli interi <m>\Interi</m>, l'anello dei polinomi <m>K[x]</m> a coefficienti in un campo <m>K</m>, e l'anello degli interi gaussiani <m>\Interi[i]</m> sono dunque domini a ideali principali e, di conseguenza domini a fattorizzazione unica. In particolare, notiamo che se <m>I</m> è un ideale non nullo di <m>K[x]</m> allora <m>I</m> può essere generato da un suo qualsiasi elemento non nullo di grado minimo.
+      Gli esempi di domini euclidei che abbiamo elencato, e cioè l'anello degli interi <m>\Interi</m>, l'anello dei polinomi <m>K[x]</m> a coefficienti in un campo <m>K</m>, e l'anello degli interi gaussiani <m>\Interi[i]</m> sono dunque domini a ideali principali e, di conseguenza, domini a fattorizzazione unica. In particolare, notiamo che se <m>I</m> è un ideale non nullo di <m>K[x]</m> allora <m>I</m> può essere generato da un suo qualsiasi elemento non nullo di grado minimo.
     </p>
 
     <p>
@@ -1240,7 +1240,7 @@
 
       </exercisegroup>
 
-      <exercise>
+      <exercise xml:id="exercise-quoziente_PID">
         <statement>
           <p>
             Sia <m>a</m> un elemento non nullo e non invertibile di un dominio a ideali principali <m>D</m> e sia <m>I</m> l'ideale generato da <m>a</m>. Dimostrare che se <m>a</m> è irriducibile allora <m>D/I</m> è un campo, altrimenti non è un dominio.
@@ -1285,7 +1285,7 @@
 
         <solution>
           <p>
-            Supponiamo che valga la <xref ref="item-ideali_finitamente_generati" text="local">condizione</xref> e mostriamo che vale la <xref ref="item-cca" text="local">condizione</xref>. Data una catena <m>I_{1}\subseteq I_{2}\subseteq \cdots\subseteq I_{j}\subseteq\cdots</m> ascendente di ideali, la loro unione è un ideale <m>I</m> come nella <xref ref="prop-PID_Noetheriani"/>. Poiché <m>I</m> è finitamente generato, da certi elementi <m>x_{1}</m>, <m>\ldots</m>, <m>x_{r}</m>, e ciascuno di essi è contenuto in un termine della catena, pur di prendere il più grande di questi termini, esiste un indice <m>n</m> tale che questi elementi sono tutti contenuti in <m>I_{n}</m> e, di conseguenza <m>I\subseteq I_{n}</m>: ciò implica che <m>I_{n+k}=I_{n}</m> per ogni naturale <m>k</m>.
+            Supponiamo che valga la <xref ref="item-ideali_finitamente_generati" text="local">condizione</xref> e mostriamo che vale la <xref ref="item-cca" text="local">condizione</xref>. Data una catena <m>I_{1}\subseteq I_{2}\subseteq \cdots\subseteq I_{j}\subseteq\cdots</m> ascendente di ideali, la loro unione è un ideale <m>I</m> come nella <xref ref="prop-PID_Noetheriani"/>. Poiché <m>I</m> è finitamente generato, da certi elementi <m>x_{1}</m>, <m>\ldots</m>, <m>x_{r}</m>, e ciascuno di essi è contenuto in un termine della catena, pur di prendere il più grande di questi termini, esiste un indice <m>n</m> tale che questi elementi sono tutti contenuti in <m>I_{n}</m> e, di conseguenza, <m>I\subseteq I_{n}</m>: ciò implica che <m>I_{n+k}=I_{n}</m> per ogni naturale <m>k</m>.
           </p>
           <p>
             Supponiamo che valga la <xref ref="item-cca" text="local">condizione</xref> e mostriamo che vale la <xref ref="item-ideali_finitamente_generati" text="local">condizione</xref>. Sia <m>I</m> un ideale e sia <m>a_{1}</m> un elemento di <m>I</m>. Se <m>I=\ideal{a_{1}}</m> abbiamo finito, altrimenti esiste <m>a_{2}\in I\setminus\ideal{a_{1}}</m>. Se <m>I=\ideal{a_{1},a_{2}}</m> abbiamo finito, altrimenti proseguiamo il procedimento costruendo una successione strettamente crescente di ideali

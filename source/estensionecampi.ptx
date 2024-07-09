@@ -145,6 +145,12 @@
       </statement>
     </definition>
 
+    <remark>
+      <p>
+        Se <m>E</m> è un'estensione finita di un campo <m>F</m>, allora <m>E=F(u_{1},\ldots,u_{r})</m> per opportuni elementi <m>u_{1}</m>, <m>\ldots</m>, <m>u_{r}</m> di <m>E</m>: basta, ad esempio, prendere elementi di una <m>F</m>-base di <m>E</m>.
+      </p>
+    </remark>
+
     <definition xml:id="def-estensione_semplice">
       <statement>
         <p>
@@ -167,6 +173,10 @@
       </proof>
 
     </proposition>
+
+    <p>
+      Diamo ora un risultato sui quozienti di anelli di polinomi che vale più in generale per domini a ideali principali (si veda <xref ref="exercise-quoziente_PID"/>).
+    </p>
 
     <lemma xml:id="lem-quoziente_anello_polinomi">
       <statement>
@@ -261,10 +271,21 @@
     <example xml:id="ex-radice_di_due">
       <statement>
         <p>
-          Consideriamo di nuovo il polinomio <m>x^{2}-2</m> a coefficienti razionali e la sua radice <m>\sqrt{2}</m>. Poiché <m>\sqrt{2}\notin\Razionali</m>. Il grado di <m>\sqrt{2}</m> su <m>\Razionali</m> è <m>2</m> e, di conseguenza
+          Consideriamo di nuovo il polinomio <m>x^{2}-2</m> a coefficienti razionali e la sua radice <m>\sqrt{2}</m>: dunque, <m>\sqrt{2}</m> ha grado al più <m>2</m> su <m>\Razionali</m>. D'altra parte, <m>\sqrt{2}\notin\Razionali</m> e, quindi, il suo grado di <m>\sqrt{2}</m>  sui <m>\Razionali</m> non è <m>1</m>. Il grado è allora esattamente <m>2</m> e, di conseguenza, <m>1</m>, <m>\sqrt{2}</m> formano una <m>\Razionali</m>-base di <m>\Razionali(\sqrt{2})</m>, cioè
           <me>
             \Razionali(\sqrt{2})=\{a+b\sqrt{2}\mid a\in\Razionali,b\in\Razionali\}
           </me>.
+        </p>
+        <p>
+          Supponiamo ora di voler calcolare l'inverso di un elemento non nullo di <m>\Razionali(\sqrt{2})</m>, ad esempio, <m>3+2\sqrt{2}</m>. Dobbiamo allora trovare <m>a+b\sqrt{2}</m> con <m>a</m> e <m>b</m> in <m>\Razionali</m> tale che <m>(3+2\sqrt{2})(a+b\sqrt{2})=1</m>. Sviluppando il prodotto, troviamo
+          <me>
+            3a+2a\sqrt{2}+3b\sqrt{2}+2b\sqrt{2}\sqrt{2}=1
+          </me>
+          cioè
+          <me>
+            3a+4b+(2a+3b)\sqrt{2}=1
+          </me>.
+          Poiché <m>1</m> e <m>\sqrt{2}</m> sono <m>\Razionali</m>-linearmente indipendenti, ciò avviene se e solo se <m>3a+4b=1</m> e <m>2a+3b=0</m>. Risolvendo, troviamo <m>a=3</m> e <m>b=-2</m>, cioè l'inverso di <m>3+2\sqrt{2}</m> è <m>3-2\sqrt{2}</m>.
         </p>
       </statement>
     </example>
@@ -280,13 +301,13 @@
     <proposition xml:id="prop-estensione_finita_algebrica">
       <statement>
         <p>
-          Se <m>E</m> è un'estensione finita di <m>F</m>, allora <m>E</m> è un'estensione algebrica di <m>F</m>.
+          Se <m>E</m> è un'estensione finita di <m>F</m>, allora <m>E</m> è un'estensione algebrica di <m>F</m>. Inoltre, ogni elemento di <m>E</m> ha grado su <m>F</m> che divide <m>\degext{E}{F}</m>
         </p>
       </statement>
 
       <proof>
         <p>
-          Grazie alla <xref ref="prop-moltiplicativita_grado"/>, sappiamo che <m>\degext{F(u)}{F}</m> è finito per ogni <m>u</m> in <m>E</m> e, quindi, per il <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>, abbiamo che <m>u</m> è algebrico su <m>F</m>.
+          Grazie alla <xref ref="prop-moltiplicativita_grado"/>, sappiamo che, per ogni <m>u</m> in <m>E</m>, il grado <m>\degext{F(u)}{F}</m> è finito e divide <m>\degext{E}{F}</m> e, quindi, per il <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>, abbiamo che <m>u</m> è algebrico su <m>F</m>.
         </p>
       </proof>
 
@@ -305,6 +326,19 @@
         </p>
       </proof>
 
+    </corollary>
+
+    <corollary xml:id="cor-estensione_algebrica_di_algebrica">
+      <statement>
+        <p>
+          Se <m>E</m> è un'estensione algebrica di un campo <m>F</m> e se <m>K</m> è un'estensione algebrica di <m>E</m>, allora <m>K</m> è un'estensione algebrica di <m>F</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Sia <m>u</m> un elemento di <m>K</m>: dobbiamo mostrare che è algebrico su <m>F</m>. Per ipotesi, <m>u</m> è radice di un polinomio non nullo <m>x^{r}+u_{1}x^{r-1}+\cdots+u_{r}</m> a coefficienti in <m>E</m>. Questo polinomio può essere pensato come avente coefficienti in <m>F(u_{1},\ldots,u_{r})</m> che, per il <xref ref="cor-estensione_con_algebrici"/>, è un'estensione finita di <m>F</m>. Dunque, <m>u</m> è algebrico su <m>F(u_{1},\ldots,u_{r})</m> e, per il <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>, <m>F(u_{1},\ldots,u_{r})(u)</m> è un'estensione finita di <m>F(u_{1},\ldots,u_{r})</m>. Per la <xref ref="prop-moltiplicativita_grado"/>, <m>F(u_{1},\ldots,u_{r})(u)</m> è un'estensione finita di <m>F</m> e per la <xref ref="prop-estensione_finita_algebrica"/> l'elemento <m>u</m> è algebrico su <m>F</m>.
+        </p>
+      </proof>
     </corollary>
 
     <p>
@@ -421,6 +455,19 @@
       <exercise>
         <statement>
           <p>
+            Determinare l'inverso in <m>\Razionali(\sqrt{2})</m> del generico elemento non nullo <m>a+b\sqrt{2}</m> dove <m>a</m> e <m>b</m> sono razionali non entrambi nulli.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <m>\frac{a}{a^{2}-2b^{2}}-\frac{b}{a^{2}-2b^{2}}\sqrt{2}</m>.
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
             Dati un'estensione <m>E</m> di un campo <m>F</m> e un sottoinsieme <m>U</m> di <m>E</m>, indichiamo con <m>F(U)</m> il sottocampo di <m>E</m> generato da <m>F</m> e <m>U</m>. Mostrare che se gli elementi di <m>U</m> sono tutti algebrici su <m>F</m>, allora <m>F(U)</m> è un'estensione algebrica di <m>F</m>.
           </p>
         </statement>
@@ -481,7 +528,7 @@
     </p>
 
     <p>
-      Ricordiamo innanzitutto che, grazie al <xref ref="cor-omomorfismo_da_corpi"/>, un omomorfismo da un campo a un anello è necessariamente iniettivo. In particolare un omomorfismo tra campi è iniettivo e, di conseguenza realizza un isomorfismo tra il campo di partenza e la sua immagine: useremo spesso questo fatto senza richiamarlo esplicitamente ogni volta.
+      Ricordiamo innanzitutto che, grazie al <xref ref="cor-omomorfismo_da_corpi"/>, un omomorfismo da un campo a un anello è necessariamente iniettivo. In particolare un omomorfismo tra campi è iniettivo e, di conseguenza, realizza un isomorfismo tra il campo di partenza e la sua immagine: useremo spesso questo fatto senza richiamarlo esplicitamente ogni volta.
     </p>
 
     <p>
@@ -538,7 +585,7 @@
 
       <proof>
         <p>
-          Procediamo per induzione su <m>\degext{E}{F}</m>. Il caso <m>\degext{E}{F}=1</m> è banale. Sia allora <m>\degext{E}{F}\gt 1</m> (cioè <m>E</m> contiene strettamente <m>F</m>) e sia <m>u</m> un elemento di <m>E\setminus F</m>. Di conseguenza <m>\degext{F(u)}{F}\gt 1</m> e, per la <xref ref="prop-moltiplicativita_grado"/>, abbiamo che <m>\degext{E}{F(u)}=\frac{\degext{E}{F}}{\degext{F(u)}{F}}\lt \degext{E}{F}</m>. Per il <xref ref="lem-estensione_omomorfismo_semplice"/>, <m>\phi</m> si estende a <m>F(u)</m> in al più <m>\degext{F(u)}{F}</m> modi, mentre, per ipotesi induttiva, ciascuna di queste estensioni si estende in al più <m>\degext{E}{F(u)}</m> modi a <m>E</m>. Di conseguenza, abbiamo al più <m>\degext{F(u)}{F}\degext{E}{F(u)}=\degext{E}{F}</m> estensioni di <m>\phi</m> a <m>E</m>.
+          Procediamo per induzione su <m>\degext{E}{F}</m>. Il caso <m>\degext{E}{F}=1</m> è banale. Sia allora <m>\degext{E}{F}\gt 1</m> (cioè <m>E</m> contiene strettamente <m>F</m>) e sia <m>u</m> un elemento di <m>E\setminus F</m>. Di conseguenza, <m>\degext{F(u)}{F}\gt 1</m> e, per la <xref ref="prop-moltiplicativita_grado"/>, abbiamo che <m>\degext{E}{F(u)}=\frac{\degext{E}{F}}{\degext{F(u)}{F}}\lt \degext{E}{F}</m>. Per il <xref ref="lem-estensione_omomorfismo_semplice"/>, <m>\phi</m> si estende a <m>F(u)</m> in al più <m>\degext{F(u)}{F}</m> modi, mentre, per ipotesi induttiva, ciascuna di queste estensioni si estende in al più <m>\degext{E}{F(u)}</m> modi a <m>E</m>. Di conseguenza, abbiamo al più <m>\degext{F(u)}{F}\degext{E}{F(u)}=\degext{E}{F}</m> estensioni di <m>\phi</m> a <m>E</m>.
         </p>
       </proof>
     </proposition>
@@ -917,7 +964,7 @@
           <me>
             F\subseteq K_{1}\subseteq K_{2}\subseteq \cdots K_{i}\subseteq \cdots
           </me>
-          tale che ogni termine è algebrico sul precedente (e, quindi, algebrico su <m>F</m> grazie all'<xref ref="exercise_estensione_algebrica_di_algebrica"/>) e contiene una radice per ciascun polinomio di grado positivo contenuto nel precedente. Se ora consideriamo, l'unione <m>K</m> dei campi <m>K_{i}</m>, si può verificare facilmente che questo è un campo, estensione di <m>F</m>, che è algebrico su <m>F</m> e che ogni polinomio di grado positivo a coefficienti in <m>K</m>, avendo i coefficienti in qualche <m>K_{i}</m> ha una radice in <m>K_{i+1}</m>, cioè in <m>K</m>: in altri termini, <m>K</m> è una chiusura algebrica di <m>F</m>,
+          tale che ogni termine è algebrico sul precedente (e, quindi, algebrico su <m>F</m> grazie al <xref ref="cor-estensione_algebrica_di_algebrica"/>) e contiene una radice per ciascun polinomio di grado positivo contenuto nel precedente. Se ora consideriamo, l'unione <m>K</m> dei campi <m>K_{i}</m>, si può verificare facilmente che questo è un campo, estensione di <m>F</m>, che è algebrico su <m>F</m> e che ogni polinomio di grado positivo a coefficienti in <m>K</m>, avendo i coefficienti in qualche <m>K_{i}</m> ha una radice in <m>K_{i+1}</m>, cioè in <m>K</m>: in altri termini, <m>K</m> è una chiusura algebrica di <m>F</m>,
         </p>
         <p>
           Dimostriamo ora l'unicità della chiusura algebrica. Sia <m>K'</m> come in enunciato una chiusura algebrica di <m>F</m>. Mostreremo l'esistenza di <m>\theta</m> applicando ancora il <xref ref="lem-zorn" text="title"/>. Consideriamo l'insieme <m>S</m> formato dalle coppie <m>(L,\phi)</m> con <m>L</m> estensione di <m>F</m> contenuta in <m>K</m> e <m>\phi\colon L\to K'</m> omomorfismo di campi che estende la funzione identica da <m>F</m> in sé. Ordiniamo <m>S</m> ponendo <m>(L,\phi)\le(H,\psi)</m> se <m>L\subseteq H</m> e m  <m>\psi</m> è un'estensione di <m>\phi</m>: lasciamo per esercizio le verifiche che questa sia effettivamente una relazione d'ordine. Chiaramente <m>S</m> è non vuoto: la coppia <m>(F,\iota)</m> dove <m>\iota</m> è l'inclusione di <m>F</m> in <m>K'</m> appartiene a <m>S</m>. Sia ora <m>T</m> un sottoinsieme totalmente ordinato di <m>S</m> e mostriamo che ammette un maggiorante. Possiamo assumere che <m>T</m> sia non vuoto, altrimenti la tesi è banale (qualunque elemento di <m>S</m> è un maggiorante di <m>T</m>). Si verifica facilmente (lasciamolo per esercizio) che la coppia <m>(E,\eta)</m> dove <m>E</m> è l'unione degli <m>L</m> al variare di <m>(L,\phi)</m> in <m>S</m> e <m>\eta</m> è definito ponendo <m>u\eta\coloneqq u\phi</m> se <m>u</m> appartiene a <m>L</m> è effettivamente un maggiorante di <m>T</m>. Possiamo dunque assumere che <m>S</m> abbia un elemento massimale, sia <m>(E,\theta)</m>: per concludere, basta mostrare che <m>E=K</m> e che <m>\theta</m> è suriettivo.
@@ -928,7 +975,18 @@
 
       </proof>
     </theorem>
-    
+
+    <remark>
+      <p>
+        Nella costruzione della chiusura algebrica appena data si potrebbe dimostrare che già il campo <m>K_{1}</m> è algebricamente chiuso.
+      </p>
+    </remark>
+  
+    <remark xml:id="rem-non_unicita_chiusura_algebrica">
+      <p>
+        L'isomorfismo <m>\theta</m> dato dal teorema <xref ref="thm-esistenza_chiusura_algebrica"/> non è unico e, quindi, non possiamo individuare gli elementi della chiusura algebrica di un campo <m>F</m> <q>intrinsecamente</q> a partire dagli elementi di <m>F</m>. Ad esempio, se prendiamo <m>\Complessi</m> come chiusura algebrica di <m>\Reali</m>, abbiamo due automorfismi di <m>\Complessi</m> che ristretti a <m>\Reali</m> sono l'identità: la funzione identica di <m>\Complessi</m> e la funzione che manda un complesso nel suo complesso coniugato. Da questo punto di vista <m>i</m> e <m>-i</m>, le due radici di <m>x^{2}+1</m>, sono indistinguibili.
+      </p>
+    </remark>
 
     <theorem xml:id="thm-fondamentale_dell_algebra">
       <title>Teorema fondamentale dell'algebra</title>
@@ -941,15 +999,9 @@
 
     <p>
       A dispetto del nome, le varie dimostrazioni del teorema fondamentale dell'algebra richiedono considerazioni di tipo analitico o topologico. Inoltre, anche se mantiene storicamente questo nome, non è di così fondamentale importanza dal punto di vista algebrico. Ne vedremo comunque una dimostrazione che usa il minimo possibile di argomenti analitici.
-    </p>
+    </p>  
 
-    <remark xml:id="rem-non_unicita_chiusura_algebrica">
-      <p>
-        L'isomorfismo <m>\theta</m> dato dal teorema <xref ref="thm-esistenza_chiusura_algebrica"/> non è unico e, quindi, non possiamo individuare gli elementi della chiusura algebrica di un campo <m>F</m> <q>intrinsecamente</q> a partire dagli elementi di <m>F</m>. Ad esempio, se prendiamo <m>\Complessi</m> come chiusura algebrica di <m>\Reali</m>, abbiamo due automorfismi di <m>\Complessi</m> che ristretti a <m>\Reali</m> sono l'identità: la funzione identica di <m>\Complessi</m> e la funzione che manda un complesso nel suo complesso coniugato. Da questo punto di vista <m>i</m> e <m>-i</m>, le due radici di <m>x^{2}+1</m>, sono indistinguibili.
-      </p>
-    </remark>
-
-    <exercises xml:id="exercisesc-chiusure_algebriche">
+    <exercises xml:id="exercises-chiusure_algebriche">
       <exercise>
         <statement>
           <p>
