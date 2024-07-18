@@ -117,7 +117,7 @@
 
     <remark xml:id="rem-Falgebrico_su_F">
       <p>
-        Se <m>E</m> è un'estensione di un campo <m>F</m>, allora ogni elemento <m>u</m> di <m>F</m> è, banalmente, algebrico su <m>F</m> in quanto radice del polinomio <m>x-u</m> a coefficienti in <m>F</m>.
+        Ogni elemento <m>u</m> di <m>F</m> è, banalmente, algebrico su <m>F</m> in quanto radice del polinomio <m>x-u</m> a coefficienti in <m>F</m>.
       </p>
     </remark>
 
@@ -154,7 +154,7 @@
     <definition xml:id="def-estensione_semplice">
       <statement>
         <p>
-          Un'estensione <m>E</m> di un campo <m>F</m>, è detta <term>semplice</term> se esiste <m>u</m> in <m>E</m> tale che <m>E=F(u)</m>.
+          Un'estensione <m>E</m> di un campo <m>F</m> è detta <term>semplice</term> se esiste <m>u</m> in <m>E</m> tale che <m>E=F(u)</m>.
         </p>
       </statement>
     </definition>
@@ -190,7 +190,7 @@
           Supponiamo che <m>p</m> non sia irriducibile, ed esistano allora <m>f</m> e <m>g</m> di grado minore di <m>\deg p</m> tali che <m>p=fg</m>: in particolare, <m>f</m> e <m>g</m> non appartengono a <m>\ideal{p}</m>, cioè <m>f+\ideal{p}</m> e <m>g+\ideal{p}</m> sono elementi non nulli di <m>F[x]/\ideal{p}</m>. D'altra parte <m>(f+\ideal{p})(g+\ideal{p})=fg+\ideal{p}=p+\ideal{p}</m> è lo zero di <m>F[x]/\ideal{p}</m> che, quindi, non è un dominio.
         </p>
         <p>
-          Sia ora <m>p</m> irriducibile. Per il <xref ref="thm-sottoanelli_quoziente"/>, gli ideali di <m>F[x]/\ideal{p}</m> sono del tipo <m>J/\ideal{p}</m> con <m>J</m> ideale di <m>F[x]</m> contenente <m>\ideal{p}</m>: poiché <m>F[x]</m> è un dominio a ideali principali, <m>J=\ideal{h}</m> con <m>h</m> polinomio di <m>F[x]</m> che divide <m>p</m> e, essendo <m>p</m> irriducibile, ciò può avvenire se e solo se <m>h</m> è invertibile, cioè <m>\ideal{h}=F[x]</m>, o se <m>h</m> è associato a <m>p</m>, cioè <m>\ideal{h}=\ideal{p}</m>. Dunque, gli unici ideali di <m>F[x]/\ideal{p}</m> sono <m>F[x]/\ideal{p}</m> e <m>\ideal{p}/\ideal{p}</m> (cioè l'ideale nullo): pertanto, per la <xref ref="prop-anello_commutativo_senza_ideali_campo"/>, <m>F[x]/\ideal{p}</m> è un campo.
+          Sia ora <m>p</m> irriducibile. Per il <xref ref="thm-sottoanelli_quoziente"/>, gli ideali di <m>F[x]/\ideal{p}</m> sono del tipo <m>J/\ideal{p}</m> con <m>J</m> ideale di <m>F[x]</m> contenente <m>\ideal{p}</m>: poiché <m>F[x]</m> è un dominio a ideali principali, <m>J=\ideal{h}</m> con <m>h</m> polinomio di <m>F[x]</m> che divide <m>p</m> e, essendo <m>p</m> irriducibile, ciò può avvenire se e solo se <m>h</m> è invertibile o se <m>h</m> è associato a <m>p</m>: nel primo caso <m>\ideal{h}=F[x]</m>, mentre nel secondo <m>\ideal{h}=\ideal{p}</m>. Dunque, gli unici ideali di <m>F[x]/\ideal{p}</m> sono <m>F[x]/\ideal{p}</m> e <m>\ideal{p}/\ideal{p}</m> (cioè l'ideale nullo): pertanto, per la <xref ref="prop-anello_commutativo_senza_ideali_campo"/>, <m>F[x]/\ideal{p}</m> è un campo.
         </p>
       </proof>
 
@@ -286,6 +286,98 @@
             3a+4b+(2a+3b)\sqrt{2}=1
           </me>.
           Poiché <m>1</m> e <m>\sqrt{2}</m> sono <m>\Razionali</m>-linearmente indipendenti, ciò avviene se e solo se <m>3a+4b=1</m> e <m>2a+3b=0</m>. Risolvendo, troviamo <m>a=3</m> e <m>b=-2</m>, cioè l'inverso di <m>3+2\sqrt{2}</m> è <m>3-2\sqrt{2}</m>.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Nel <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>, abbiamo visto che l'estensione <m>F(u)</m> con un elemento algebrico <m>u</m> di polinomio minimo <m>p</m>, è isomorfa al quoziente <m>F[x]/I</m> dove <m>I</m> è l'ideale generato da <m>p</m>. Questo suggerisce un metodo per <q>aggiungere</q> a un campo le radici di un polinomio irriducibile.
+    </p>
+
+    <lemma xml:id="lem-estensione_semplice">
+      <statement>
+        <p>
+          Sia <m>F</m> un campo e sia <m>p</m> un polinomio irriducibile di grado <m>n</m> con <m>n\gt0</m>. Allora esiste un'estensione <m>F(u)</m> di <m>F</m> con <m>u</m> radice di <m>p</m>. Inoltre <m>\degext{F(u)}{F}=n</m> e una <m>F</m>-base di <m>F(u)</m> è data da <m>1</m>, <m>u</m>, <m>\ldots</m>, <m>u^{n-1}</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Detto <m>I</m> l'ideale dell'anello <m>F[x]</m> generato da <m>p\coloneqq a_{0}+a_{1}x+\cdots+a_{n}x^{n}</m>, consideriamo il quoziente <m>F[x]/I</m>: questo è un campo per il <xref ref="lem-quoziente_anello_polinomi"/>. La composizione dell'omomorfismo di inclusione di <m>F</m> in <m>F[x]</m> con l'omomorfismo canonico di <m>F[x]</m> su <m>F[x]/I</m>, definisce un omomorfismo da <m>F</m> in <m>F[x]/I</m>: poiché <m>F</m> è un campo, questo omomorfismo è iniettivo e possiamo, dunque, identificare <m>F</m> con un sottocampo di <m>F[x]/I</m>: più precisamente, un elemento <m>a</m> di <m>F</m> viene identificato con il laterale <m>a+I</m>. Con questa identificazione, il polinomio <m>p</m> può, dunque, essere scritto come
+          <me>
+            a_{0}+I+(a_{1}+I)x+\cdots+(a_{n}+I)x^{n}.
+          </me>
+          Sia ora <m>u</m> l'elemento <m>x+I</m> di <m>F[x]/I</m>: valutando <m>p</m> in <m>u</m> abbiamo allora
+          <md>
+            <mrow> p(u)\amp =(a_{0}+I)+(a_{1}+I)(x+I)+\cdots+(a_{n}+I)(x+I)^{n}</mrow>
+            <mrow>  \amp =a_{0}+a_{1}x+\cdots+a_{n}x^{n}+I=p+I=I</mrow>
+          </md>
+          Ma <m>I</m> è lo zero del quoziente <m>F[x]/I</m> e, dunque, <m>u</m> è radice di <m>p</m>. Sappiamo che <m>F[x]</m> è generato da <m>F</m> e da <m>x</m> e, quindi, <m>F[x]/I</m>, in quanto quoziente di <m>F[x]</m>, è generato dalle immagini di questi generatori tramite l'omomorfismo canonico, vale a dire <m>F</m> stesso e <m>x+I</m>, cioè <m>u</m>: quindi <m>F[x]/I=F(u)</m>. Poiché <m>u</m> annulla il polinomio <m>p</m> a coefficienti in <m>F</m>, il polinomio minimo di <m>u</m> su <m>F</m> è un divisore irriducibile di <m>p</m>, ma, essendo <m>p</m> a sua volta irriducibile, il polinomio minimo di <m>u</m> su <m>F</m> è associato a <m>p</m>: dunque, il polinomio minimo non è altri che il polinomio monico che si ottiene dividendo <m>p</m> per il proprio coefficiente direttivo. Per il <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>, <m>\degext{F(u)}{F}=n</m> e una <m>F</m>-base per <m>F(u)</m> è quella data in enunciato.
+        </p>
+      </proof>
+
+    </lemma>
+
+    <example>
+      <statement>
+        <p>
+          Consideriamo il polinomio <m>p\coloneqq x^{3}+2x+4</m> a coefficienti in <m>\Razionali</m>. Mostriamo che <m>p</m> è irriducibile: per la <xref ref="prop-irriducibilita_e_radici"/>, basta mostrare che non ha radici in <m>\Razionali</m>. Per la <xref ref="prop-radici_razionali_intere_polinomio"/> un'eventuale radice razionale di <m>p</m> è del tipo <m>\frac{a}{b}</m> con <m>a</m> che divide <m>4</m> e <m>b</m> che divide <m>1</m>. Le possibili radici sono allora <m>1</m>, <m>-1</m>, <m>2</m>, <m>-2</m>, <m>4</m> e <m>-4</m>: sostituendo in <m>p</m>, vediamo che nessuna di esse è radice di <m>p</m>, che è, pertanto irriducibile.
+        </p>
+        <p>
+          Consideriamo ora un'estensione <m>\Razionali(u)</m> dove <m>u</m> è una radice di <m>p</m>. Per il <xref ref="lem-estensione_semplice"/>, <m>\Razionali(u)</m> ha grado <m>3</m> su <m>\Razionali</m> e una <m>\Razionali</m>-base di <m>\Razionali(u)</m> è <m>1</m>, <m>u</m>, <m>u^{2}</m>. Supponiamo di voler esprimere l'inverso di <m>u</m> e l'inverso di <m>1+u</m> come combinazione lineare degli elementi di questa base.
+        </p>
+        <p>
+          Per quanto riguarda <m>u^{-1}</m>, basta notare che <m>u^{3}+2u+4=0</m> da cui segue che <m>u(u^{2}+2)=-4</m>. Pertanto, l'inverso di <m>u</m> è <m>-\frac{1}{4}u^{2}+0u-\frac{1}{2}\cdot 1</m>.
+        </p>
+        <p>
+          Per quanto riguarda l'inverso di <m>u+1</m>, esprimiamolo come <m>au^{2}+bu+c</m> con <m>a</m>, <m>b</m> e <m>c</m> in <m>\Razionali</m>. Deve allora essere <m>(1+u)(au^{2}+bu+c)=1</m> che, sviluppato, dà
+          <me>
+            au^{3}+(a+b)u^{2}+(b+c)u+c-1=0
+          </me>.
+          Poiché <m>u^{3}=-2u-4</m>, l'equazione trovata si può riscrivere come
+          <me>
+            (a+b)u^{2}+(b+c-2a)u+c-4a-1=0
+          </me>:
+          poiché <m>1</m>, <m>u</m> e <m>u^{2}</m> sono <m>\Razionali</m>-linearmente indipendenti, ciò avviene se e solo se <m>a+b=b+c-2a=c-4a-1=0</m>. Risolvendo il sistema, si trova <m>a=-1</m>, <m>b=1</m> e <m>c=-3</m> e, quindi
+          <me>
+            (1+u)^{-1}=-u^{2}+u-3
+          </me>.
+        </p>
+      </statement>
+    </example>
+
+    <example>
+      <title>Costruzione dei complessi</title>
+      <statement>
+        <p>
+          Consideriamo il polinomio <m>p\coloneqq x^{2}+1</m> a coefficienti in <m>\Reali</m>: questo non ha radici in <m>\Reali</m> e, per la <xref ref="prop-irriducibilita_e_radici"/> è irriducibile in <m>\Reali[x]</m>. Per il <xref ref="lem-estensione_semplice"/>, <m>\Complessi\coloneqq\Reali[x]/\ideal{p}</m> è un campo di grado <m>2</m> su <m>\Reali</m> e una <m>\Reali</m>-base per <m>\Complessi</m> è data da <m>1</m> e <m>i</m> dove denotiamo con <m>i</m> l'elemento <m>x+\ideal{p}</m>.
+        </p>
+        <p>
+          Ogni elemento <m>z</m> di <m>\Complessi</m> si può allora scrivere come <m>a+bi</m> per opportuni numeri reali <m>a</m> e <m>b</m>. Se <m>w\coloneqq c+di</m> è un altro elemento di <m>\Complessi</m>, abbiamo allora
+          <me>
+            z+w=a+bi+c+di=(a+c)+(b+d)i
+          </me>
+          e, dunque, abbiamo già una decomposizione di <m>z+w</m> rispetto alla base scelta. Per quanto riguarda il prodotto abbiamo invece
+          <me>
+            zw=(a+bi)(c+di)=ac+(bc+ad)i+bdi^{2}
+          </me>
+          e questa non è una decomposizione rispetto alla base scelta. Il prodotto, pensato come elemento del quoziente <m>\Reali[x]/\ideal{p}</m>, è il laterale di <m>\ideal{p}</m> contenente il polinomio
+          <me>
+            f\coloneqq ac+(bc+ad)x+bdx^{2}
+          </me>.
+          Dividendo <m>f</m> per <m>p</m>, cioè per <m>x^{2}+1</m>, otteniamo allora
+          <me>
+            ac+(bc+ad)x+bdx^{2}=bd(x^{2}+1)+(ac-bd+(bc+ad)x)
+          </me>,
+          e, quindi, il laterale <m>f+\ideal{p}</m> coincide con
+          <me>
+            ac-bd+(bc+ad)x+\ideal{p}
+          </me>.
+          Il prodotto di <m>z</m> per <m>w</m> è, dunque
+          <me>
+            ac-bd+(bc+ad)i
+          </me>
+          cioè l'usuale prodotto tra numeri complessi. Si noti che non dobbiamo adesso verificare che <m>\Complessi</m> con queste operazioni è effettivamente un campo, perché lo sappiamo dal <xref ref="lem-estensione_semplice"/>.
         </p>
       </statement>
     </example>
@@ -542,7 +634,7 @@
       </notation>
       <statement>
         <p>
-          Dato un omomorfismo di campi <m>\phi\colon F\to K</m> denotiamo con <m>\indotto{\phi}</m> l'omomorfismo da <m>F[x]</m> in <m>K[x]</m> che estende <m>\phi</m> e manda <m>x</m> in <m>x</m>. Esplicitamente, il polinomio generico <m>a_{0}+a_{1}x+\dots+a_{n}x^{n}</m> viene mandato nel polinomio <m>a_{0}\phi+a_{1}\phi x+\dots+a_{n}\phi x^{n}</m>.
+          Dato un omomorfismo di campi <m>\phi\colon F\to K</m>, denotiamo con <m>\indotto{\phi}</m> l'omomorfismo da <m>F[x]</m> in <m>K[x]</m> che estende <m>\phi</m> e manda <m>x</m> in <m>x</m>. Esplicitamente, il polinomio generico <m>a_{0}+a_{1}x+\dots+a_{n}x^{n}</m> viene mandato nel polinomio <m>a_{0}\phi+a_{1}\phi x+\dots+a_{n}\phi x^{n}</m>.
         </p>
       </statement>
     </definition>
@@ -571,7 +663,7 @@
         <p>
           Se <m>\psi\colon E\to K</m> è un'estensione di <m>\phi</m>, dalla <xref ref="prop-radice_in_radice"/> sappiamo che <m>u\psi</m> è una radice di <m>f\indotto{\psi}</m>, che, ovviamente, coincide con <m>f\indotto{\phi}</m>. Dobbiamo allora mostrare che per ogni radice <m>w</m> di <m>f\indotto{\phi}</m> esiste esattamente un'estensione di <m>\phi</m> che manda <m>u</m> in <m>w</m>. Se due estensioni di <m>\phi</m> coincidono su <m>u</m>, esse devono essere uguali, dal momento che <m>E</m> è generato da <m>F</m> e da <m>u</m>: dunque, esiste al più un'estensione di <m>\phi</m> che manda <m>u</m> in <m>w</m>.
 
-          Mostriamo ora l'esistenza di una tale estensione. Per il <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>, ogni elemento di <m>E</m> è del tipo <m>p(u)</m> per qualche polinomio <m>p</m> in <m>F[x]</m>; inoltre, se <m>q</m> è un altro polinomio di <m>F[x]</m> tale che <m>q(u)=p(u)</m>, cioè <m>(q-p)(u)=0</m>, si ha che <m>q-p</m> è multiplo di <m>f</m>: di conseguenza, <m>(q-p)\indotto{\phi}(w)=0</m>, cioè <m>q\indotto{\phi}(w)=p\indotto{\phi}(w)</m>.  Ponendo <m>p(u)\psi\coloneqq p\indotto{\phi}(w)</m>, abbiamo allora una funzione ben definita <m>\psi\colon E\to K</m>. Si verifica facilmente che <m>\psi</m> estende <m>\phi</m> ed è un omomorfismo di campi.
+          Mostriamo ora l'esistenza di una tale estensione. Per il <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>, ogni elemento di <m>E</m> è del tipo <m>p(u)</m> per qualche polinomio <m>p</m> in <m>F[x]</m>; inoltre, se <m>q</m> è un altro polinomio di <m>F[x]</m> tale che <m>q(u)=p(u)</m>, cioè <m>(q-p)(u)=0</m>, si ha che <m>q-p</m> è multiplo di <m>f</m>: di conseguenza, <m>(q-p)\indotto{\phi}(w)=0</m>, cioè <m>q\indotto{\phi}(w)=p\indotto{\phi}(w)</m>.  Ponendo <m>p(u)\psi\coloneqq p\indotto{\phi}(w)</m>, abbiamo allora una funzione ben definita <m>\psi\colon E\to K</m>. Si verifica facilmente che <m>\psi</m> estende <m>\phi</m>, ed è un omomorfismo di campi che manda <m>u</m> in <m>w</m>.
         </p>
       </proof>
     </lemma>
@@ -610,13 +702,65 @@
     
   </section>
 
-  <section xml:id="sec-campo_di_spezzamento">
-    <title>Campi di spezzamento</title>
+  <section xml:id="sec-chiusure_algebriche">
+    <title>Campi algebricamente chiusi</title>
+
+    <p>
+      Abbiamo visto come aggiungere le radici di un polinomio a un campo. Ovviamente potremmo ripetere il procedimento con un numero finito qualunque di polinomi. Ma possiamo fare qualcosa del genere con infiniti polinomi? Ciò richiede considerazione abbastanza delicate di teoria assiomatica degli insiemi. Non entreremo in questi dettagli. Ci limiteremo ad assumere il seguente risultato che, a dispetto del nome, può essere considerato come uno degli assiomi di tale teoria.
+    </p>
+
+    <lemma xml:id="lem-zorn">
+      <title>Lemma di Zorn</title>
+      <statement>
+        <p>
+          Sia <m>S</m> un insieme non vuoto parzialmente ordinato. Se ogni sottoinsieme totalmente ordinato di <m>S</m> ammette un elemento maggiorante in <m>S</m>, allora in <m>S</m> esiste almeno un elemento massimale.
+        </p>
+      </statement>
+    </lemma>
+
+    <proposition xml:id="prop-ideali_massimali">
+      <statement>
+        <p>
+          Sia <m>I</m> un ideale proprio di un anello <m>R</m>. Esiste allora un ideale massimale contenente <m>I</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Consideriamo l'insieme <m>S</m> degli ideali propri di <m>R</m> contenenti <m>I</m>, ordinato rispetto all'inclusione. Questo è un insieme non vuoto (contiene <m>I</m> stesso) e un suo eventuale elemento massimale sarebbe, ovviamente, un ideale massimale. Possiamo allora ottenere la tesi, se verifichiamo la condizione data dal <xref ref="lem-zorn" text="title"/>, cioè che ogni sottoinsieme totalmente ordinato <m>T</m> di <m>S</m> ha un maggiorante in <m>S</m>. Possiamo supporre che <m>T</m> sia non vuoto (se <m>T</m> è vuoto ogni elemento di <m>S</m> è un maggiorante di <m>T</m>): sia allora <m>J</m> l'unione degli elementi di <m>T</m>. Ovviamente, ogni elemento di <m>T</m> è contenuto in <m>J</m>. Se allora dimostriamo che <m>J</m> appartiene a <m>S</m>, cioè che <m>J</m> è un ideale proprio contenente <m>I</m>, abbiamo concluso. Per costruzione, <m>J</m> contiene <m>I</m>. Poiché gli elementi di <m>S</m> sono ideali propri, non contengono <m>1</m> (<xref ref="rem-ideali_non_sottoanelli"/>): di conseguenza, <m>1\notin J</m> e <m>J\ne R</m>. Concludiamo verificando che <m>J</m> è un ideale: siano <m>i</m> e <m>j</m> elementi di <m>J</m> e <m>a</m> un elemento di <m>R</m>. Esistono allora <m>K</m> e <m>L</m> in <m>T</m> tali che <m>i\in K</m> e <m>j\in L</m>: poiché <m>T</m> è totalmente ordinato, abbiamo che <m>K\subseteq L</m> o <m>L\subseteq K</m>. Senza perdere in generalità, possiamo assumere che <m>K\subseteq L</m> e che, quindi, sia <m>i</m> che <m>j</m> appartengono a <m>L</m>. Ma allora <m>i+j</m>, <m>ia</m> e <m>ai</m> appartengono a <m>L</m> e, quindi, a <m>J</m>.
+        </p>
+      </proof>
+    </proposition>
+
+    <lemma xml:id="lem-aggiunta_infinite_radici">
+      <statement>
+        <p>
+          Sia <m>F</m> un campo e sia <m>P</m> un insieme di polinomi di grado positivo a coefficienti in <m>F</m>. Esiste allora un'estensione algebrica <m>K</m> di <m>F</m> in cui ciascun polinomio di <m>P</m> ha almeno una radice.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Consideriamo un insieme <m>X</m> di indeterminate che sia in corrispondenza biiettiva con <m>P</m>: per ogni polinomio <m>f</m> di <m>P</m>, indichiamo con <m>x_{f}</m> l'indeterminata corrispondente. Consideriamo l'ideale <m>I</m> di <m>F[X]</m> generato dagli elementi del tipo <m>f(x_{f})</m> al variare di <m>f</m> in <m>P</m>. Mostriamo che <m>I</m> è un ideale proprio: se così non fosse, <m>1</m> apparterrebbe a <m>I</m> e potrebbe essere espresso da una relazione del tipo
+          <men xml:id="eqn-identita_per_chiusura_algebrica">
+            1=c_{1}f_{1}(x_{f_{1}})+c_{2}f_{2}(x_{f_{2}})+\cdots+c_{r}f_{r}(x_{f_{r}})
+          </men>
+          con ogni <m>c_{i}</m> in <m>F[X]</m> e ogni <m>f_{i}</m> in <m>P</m>. Sappiamo che esiste un'estensione <m>E</m> di <m>F</m> in cui <m>f_{1}</m>, <m>\ldots</m>, <m>f_{r}</m> hanno almeno una radice: queste siano, rispettivamente, <m>u_{1}</m>, <m>u_{2}</m>, <m>\ldots</m>, <m>u_{r}</m>. Consideriamo allora l'omomorfismo da <m>F[X]</m> in <m>E</m> che fissa gli elementi di <m>F</m>, manda ciascun <m>x_{f_{i}}</m> in <m>u_{i}</m> e le altre indeterminate in elementi qualunque (ad esempio, tutte a <m>0</m>). Sostituendo nella <xref ref="eqn-identita_per_chiusura_algebrica"/> otterremmo allora <m>1=0</m> in <m>E</m>, il che non può essere. 
+        </p>          
+        <p>  
+          Dunque, <m>I</m> è un ideale proprio di <m>F[X]</m> e, per la <xref ref="prop-ideali_massimali"/>, esiste un ideale massimale <m>J</m> di <m>F[X]</m> contenente <m>I</m>. Grazie alla <xref ref="prop-quoziente_su_massimale_campo"/>, il quoziente <m>F[X]/J</m> è un campo che denotiamo <m>K</m>. Consideriamo allora l'omomorfismo da <m>F</m> in <m>K</m> che si ottiene dalla composizione dell'inclusione di <m>F</m> in <m>F[X]</m> con l'omomorfismo canonico da <m>F[X]</m> su <m>F[X]/J</m>. Otteniamo così un omomorfismo di campi da <m>F</m> in <m>K</m> (necessariamente iniettivo). Notiamo ora che <m>K</m> è generato da <m>F</m> e dagli elementi del tipo <m>x_{f}+J</m> al variare di <m>f</m> in <m>P</m>. Se ora valutiamo il polinomio <m>f</m> in <m>x_{f}+J</m>, otteniamo chiaramente <m>f(x_{f})+J</m>: poiché <m>f(x_{f})</m> appartiene a <m>J</m> questo è lo <m>0</m> di <m>F[X]/J</m>. Pertanto ogni polinomio <m>f</m> a coefficienti in <m>F</m> ha almeno una radice in <m>K</m> e <m>K</m>, essendo generato da elementi algebrici su <m>F</m> è un'estensione algebrica di <m>F</m> (<xref ref="prop-elementi_algebrici_sottocampo"/>).
+        </p>
+      </proof>
+    </lemma>
+
+    <p>
+      Concentriamo ora la nostra attenzione a campi in cui ogni polinomio ha, per così dire, tutte le radici possibili. 
+    </p>
 
     <definition xml:id="def-polinomio_totalmente_riducibile">
       <statement>
         <p>
-          Un polinomio <m>f</m> di grado positivo a coefficienti in un campo <m>F</m> si dice <term>totalmente riducibile</term> se <m>f</m> si può fattorizzare come prodotto di polinomi di primo grado, cioè <m>f</m> è uguale a
+          Un polinomio <m>f</m> di grado positivo a coefficienti in un campo <m>F</m> si dice <term>totalmente riducibile</term> (o, equivalentemente, che <m>f</m> si spezza totalmente in <m>F[x]</m>) se <m>f</m> si può fattorizzare come prodotto di polinomi di primo grado, cioè <m>f</m> è uguale a
           <me>
             f=c(x-u_{1})(x-u_{2})\cdots(x-u_{r})
           </me>
@@ -638,183 +782,6 @@
         </p>
       </statement>
     </example>
-
-    <definition xml:id="def-campo_di_spezzamento">
-      <statement>
-        <p>
-          Dato un polinomio <m>f</m> di grado positivo a coefficienti in un campo <m>F</m>, un <term>campo di spezzamento</term> di <m>f</m> su <m>F</m> è un'estensione <m>E</m> di <m>F</m> tale che <m>f</m> sia totalmente riducibile in <m>E</m>
-          <me>
-            f=c(x-u_{1})(x-u_{2})\cdots(x-u_{r})
-          </me>
-          con <m>u_{1}</m>, <m>u_{2}</m>, <m>\ldots</m>, <m>u_{r}</m> in <m>E</m> e <m>E=F(u_{1},\ldots,u_{r})</m>.
-         </p>
-      </statement>
-    </definition>
-    
-    <remark xml:id="rem-spezzamento_intermedio">
-      <p>
-        Se <m>E</m> è un campo di spezzamento di un polinomio <m>f</m> su <m>F</m>, e <m>L</m> è un sottocampo di <m>E</m> contenente <m>F</m>, allora <m>E</m> è campo di spezzamento di <m>f</m> anche su <m>L</m>.
-      </p>
-    </remark>
-
-    <remark xml:id="rem-spezzamento_estensione_finita">
-      <p>
-        Se <m>E</m> è un campo di spezzamento di un polinomio <m>f</m> su <m>F</m>, per il <xref ref="cor-estensione_con_algebrici"/>, <m>E</m> è un'estensione finita e, quindi, algebrica, di <m>F</m>. Il grado di <m>E</m> su <m>F</m> può essere limitato in termini del grado di <m>f</m> (<xref ref="exercise-grado_spezzamento"/>).
-      </p>
-    </remark>
-
-    <p>
-      La definizione ci dice cosa sia un campo di spezzamento, ma al momento non sappiamo se un campo di spezzamento esiste. Nel <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>, abbiamo visto che l'estensione <m>F(u)</m> con un elemento algebrico <m>u</m> di polinomio minimo <m>p</m>, è isomorfa al quoziente <m>F[x]/I</m> dove <m>I</m> è l'ideale generato da <m>p</m>. Questo suggerisce un metodo per <q>aggiungere</q> a un campo le radici di un polinomio irriducibile.
-    </p>
-
-    <lemma xml:id="lem-estensione_semplice">
-      <statement>
-        <p>
-          Sia <m>F</m> un campo e sia <m>p</m> un polinomio irriducibile di grado <m>n</m> con <m>n\gt0</m>. Allora esiste un'estensione <m>F(u)</m> di <m>F</m> con <m>u</m> radice di <m>p</m>. Inoltre <m>\degext{F(u)}{F}=n</m> e una <m>F</m>-base di <m>F(u)</m> è data da <m>1</m>, <m>u</m>, <m>\ldots</m>, <m>u^{n-1}</m>.
-        </p>
-      </statement>
-
-      <proof>
-        <p>
-          Detto <m>I</m> l'ideale dell'anello <m>F[x]</m> generato da <m>p\coloneqq a_{0}+a_{1}x+\cdots+a_{n}x^{n}</m>, consideriamo il quoziente <m>F[x]/I</m>: questo è un campo per il <xref ref="lem-quoziente_anello_polinomi"/>. La composizione dell'omomorfismo di inclusione di <m>F</m> in <m>F[x]</m> con l'omomorfismo canonico di <m>F[x]</m> su <m>F[x]/I</m>, definisce un omomorfismo da <m>F</m> in <m>F[x]/I</m>: poiché <m>F</m> è un campo, questo omomorfismo è iniettivo e possiamo, dunque, identificare <m>F</m> con un sottocampo di <m>F[x]/I</m>: più precisamente, un elemento <m>a</m> di <m>F</m> viene identificato con il laterale <m>a+I</m>. Con questa identificazione, il polinomio <m>p</m> può, dunque, essere scritto come
-          <me>
-            a_{0}+I+(a_{1}+I)x+\cdots+(a_{n}+I)x^{n}.
-          </me>
-          Sia ora <m>u</m> l'elemento <m>x+I</m> di <m>F[x]/I</m>: valutando <m>p</m> in <m>u</m> abbiamo allora
-          <md>
-            <mrow> p(u)\amp =(a_{0}+I)+(a_{1}+I)(x+I)+\cdots+(a_{n}+I)(x+I)^{n}</mrow>
-            <mrow>  \amp =a_{0}+a_{1}x+\cdots+a_{n}x^{n}+I=p+I=I</mrow>
-          </md>
-          Ma <m>I</m> è lo zero del quoziente <m>F[x]/I</m> e, dunque, <m>u</m> è radice di <m>p</m>. Sappiamo che <m>F[x]</m> è generato da <m>F</m> e da <m>x</m> e, quindi, <m>F[x]/I</m>, in quanto quoziente di <m>F[x]</m>, è generato dalle immagini di questi generatori tramite l'omomorfismo canonico, vale a dire <m>F</m> stesso e <m>x+I</m>, cioè <m>u</m>: quindi <m>F[x]/I=F(u)</m>. Poiché <m>u</m> annulla il polinomio <m>p</m> a coefficienti in <m>F</m>, il polinomio minimo di <m>u</m> su <m>F</m> è un divisore irriducibile di <m>p</m>, ma, essendo <m>p</m> a sua volta irriducibile, il polinomio minimo di <m>u</m> su <m>F</m> è associato a <m>p</m>: dunque, il polinomio minimo non è altri che il polinomio monico che si ottiene dividendo <m>p</m> per il proprio coefficiente direttivo. Per il <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>, <m>\degext{F(u)}{F}=n</m> e una <m>F</m>-base per <m>F(u)</m> è quella data in enunciato.
-        </p>
-      </proof>
-
-    </lemma>
-
-    <example>
-      <statement>
-        <p>
-          Consideriamo il polinomio <m>p\coloneqq x^{3}+2x+4</m> a coefficienti in <m>\Razionali</m>. Mostriamo che <m>p</m> è irriducibile: per la <xref ref="prop-irriducibilita_e_radici"/>, basta mostrare che non ha radici in <m>\Razionali</m>. Per la <xref ref="prop-radici_razionali_intere_polinomio"/> un'eventuale radice razionale di <m>p</m> è del tipo <m>\frac{a}{b}</m> con <m>a</m> che divide <m>4</m> e <m>b</m> che divide <m>1</m>. Le possibili radici sono allora <m>1</m>, <m>-1</m>, <m>2</m>, <m>-2</m>, <m>4</m> e <m>-4</m>: sostituendo in <m>p</m>, vediamo che nessuna di esse è radice di <m>p</m>, che è, pertanto irriducibile.
-        </p>
-        <p>
-          Consideriamo ora un'estensione <m>\Razionali(u)</m> dove <m>u</m> è una radice di <m>p</m>. Per il <xref ref="lem-estensione_semplice"/>, <m>\Razionali(u)</m> ha grado <m>3</m> su <m>\Razionali</m> e una <m>\Razionali</m>-base di <m>\Razionali(u)</m> è <m>1</m>, <m>u</m>, <m>u^{2}</m>. Supponiamo di voler esprimere l'inverso di <m>u</m> e l'inverso di <m>1+u</m> come combinazione lineare degli elementi di questa base.
-        </p>
-        <p>
-          Per quanto riguarda <m>u^{-1}</m>, basta notare che <m>u^{3}+2u+4=0</m> da cui segue che <m>u(u^{2}+2)=-4</m>. Pertanto, l'inverso di <m>u</m> è <m>-\frac{1}{4}u^{2}+0u-\frac{1}{2}\cdot 1</m>.
-        </p>
-        <p>
-          Per quanto riguarda l'inverso di <m>u+1</m>, esprimiamolo come <m>au^{2}+bu+c</m> con <m>a</m>, <m>b</m> e <m>c</m> in <m>\Razionali</m>. Deve allora essere <m>(1+u)(au^{2}+bu+c)=1</m> che, sviluppato, dà
-          <me>
-            au^{3}+(a+b)u^{2}+(b+c)u+c-1=0
-          </me>.
-          Poiché <m>u^{3}=-2u-4</m>, l'equazione trovata si può riscrivere come
-          <me>
-            (a+b)u^{2}+(b+c-2a)u+c-4a-1=0
-          </me>:
-          poiché <m>1</m>, <m>u</m> e <m>u^{2}</m> sono <m>\Razionali</m>-linearmente indipendenti, ciò avviene se e solo se <m>a+b=b+c-2a=c-4a-1=0</m>. Risolvendo il sistema, si trova <m>a=-1</m>, <m>b=1</m> e <m>c=-3</m> e, quindi
-          <me>
-            (1+u)^{-1}=-u^{2}+u-3
-          </me>.
-        </p>
-      </statement>
-    </example>
-
-    <example>
-      <title>Costruzione dei complessi</title>
-      <statement>
-        <p>
-          Consideriamo il polinomio <m>p\coloneqq x^{2}+1</m> a coefficienti in <m>\Reali</m>: questo non ha radici in <m>\Reali</m> e, per la <xref ref="prop-irriducibilita_e_radici"/> è irriducibile in <m>\Reali[x]</m>. Per il <xref ref="lem-estensione_semplice"/>, <m>\Complessi\coloneqq\Reali[x]/\ideal{p}</m> è un campo di grado <m>2</m> su <m>\Reali</m> e una <m>\Reali</m>-base per <m>\Complessi</m> è data da <m>1</m> e <m>i</m> dove denotiamo con <m>i</m> l'elemento <m>x+\ideal{p}</m>.
-        </p>
-        <p>
-          Ogni elemento <m>z</m> di <m>\Complessi</m> si può allora scrivere come <m>a+bi</m> per opportuni numeri reali <m>a</m> e <m>b</m>. Se <m>w\coloneqq c+di</m> è un altro elemento di <m>\Complessi</m>, abbiamo allora
-          <me>
-            z+w=a+bi+c+di=(a+c)+(b+d)i
-          </me>
-          e, dunque, abbiamo già una decomposizione di <m>z+w</m> rispetto alla base scelta. Per quanto riguarda il prodotto abbiamo invece
-          <me>
-            zw=(a+bi)(c+di)=ac+(bc+ad)i+bdi^{2}
-          </me>
-          e questa non è una decomposizione rispetto alla base scelta. Il prodotto, pensato come elemento del quoziente <m>\Reali[x]/\ideal{p}</m>, è il laterale di <m>\ideal{p}</m> contenente il polinomio
-          <me>
-            f\coloneqq ac+(bc+ad)x+bdx^{2}
-          </me>.
-          Dividendo <m>f</m> per <m>p</m>, cioè per <m>x^{2}+1</m>, otteniamo allora
-          <me>
-            ac+(bc+ad)x+bdx^{2}=bd(x^{2}+1)+(ac-bd+(bc+ad)x)
-          </me>,
-          e, quindi, il laterale <m>f+\ideal{p}</m> coincide con
-          <me>
-            ac-bd+(bc+ad)x+\ideal{p}
-          </me>.
-          Il prodotto di <m>z</m> per <m>w</m> è, dunque
-          <me>
-            ac-bd+(bc+ad)i
-          </me>
-          cioè l'usuale prodotto tra numeri complessi. Si noti che non dobbiamo adesso verificare che <m>\Complessi</m> con queste operazioni è effettivamente un campo, perché lo sappiamo dal <xref ref="lem-estensione_semplice"/>.
-        </p>
-      </statement>
-    </example>
-
-    <p>
-      Mostriamo ora l'esistenza di un campo di spezzamento per un qualsiasi polinomio.
-    </p>
-
-    <theorem xml:id="thm-campo_spezzamento">
-      <statement>
-        <p>
-          Dato un polinomio <m>f</m> di grado positivo a coefficienti in un campo <m>F</m>, esiste un campo di spezzamento <m>E</m> di <m>f</m> su <m>F</m>.
-        </p>
-      </statement>
-
-      <proof>
-        <p>
-          Basta ragionare per induzione sul grado di <m>f</m>. Se <m>\deg f=1</m>, allora <m>f</m> è totalmente riducibile già in <m>F</m> e, quindi, <m>F</m> stesso è campo di spezzamento di <m>f</m> su <m>F</m>. Se <m>\deg f \gt 1</m>, sia <m>p</m> un divisore irriducibile di <m>f</m>. Per il <xref ref="lem-estensione_semplice"/>, esiste un'estensione <m>F(u)</m> di <m>F</m> con una radice <m>u</m> di <m>p</m>: ora <m>u</m> è radice anche di <m>f</m> e, pertanto, per il  <xref ref="thm-del_resto" text="title"/>, abbiamo che <m>f=(x-u)g</m> con <m>g</m> polinomio di grado <m>\deg f-1</m> a coefficienti in <m>F(u)</m>. Per ipotesi induttiva, esiste un campo di spezzamento <m>E</m> di <m>g</m> su <m>F(u)</m>: ma allora questo è campo di spezzamento di <m>f</m> su <m>F</m>.
-        </p>
-      </proof>
-
-    </theorem>
-
-    <p>
-      La costruzione di un campo di spezzamento non è univocamente determinata, perché potremmo aggiungere le radici in ordine diverso (o, anche, utilizzare un procedimento di costruzione completamente differente). Tuttavia, qualunque procedimento si utilizzi, si ottengono risultati equivalenti. Dimostriamo un risultato (apparentemente) più generale.
-    </p>
-
-    <theorem xml:id="thm-isomorfismo_campi_spezzamento">
-      <statement>
-        <p>
-          Sia <m>\phi\colon F\to F'</m> un isomorfismo di campi. Sia <m>f</m> un polinomio di grado positivo a coefficienti in <m>F</m> e sia <m>E</m> un campo di spezzamento di <m>f</m> su <m>F</m>. Sia <m>E'</m> un campo di spezzamento di <m>f\indotto{\phi}</m> su <m>F'</m>. Allora esiste un isomorfismo <m>\psi</m> tra <m>E</m> ed <m>E'</m> che estende <m>\phi</m>.
-        </p>
-      </statement>
-
-      <proof>
-        <p>
-          Procediamo per induzione su <m>\degext{E}{F}</m> che sappiamo essere finito grazie all'<xref ref="rem-spezzamento_estensione_finita"/>. Se <m>\degext{E}{F}=1</m>, cioè <m>E=F</m>, il polinomio <m>f</m> si spezza completamente in <m>F</m>. Di conseguenza, <m>f\indotto{\phi}</m> si spezza completamente in <m>F'</m> e <m>E'=F'</m> e la tesi si ottiene completamente.
-        </p>
-        <p>
-          Sia allora <m>\degext{E}{F}\gt 1</m>: dunque, <m>f</m> non si spezza completamente in <m>F</m> ed esiste almeno una radice di <m>f</m>, sia <m>u</m>, che appartiene a <m>E</m> ma non a <m>F</m>. Sia <m>p</m> il polinomio minimo di <m>u</m> su <m>F</m>. Per il <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>, <m>p</m> è un divisore di <m>f</m>. Di conseguenza, <m>p\indotto{\phi}</m> è un divisore di <m>f\indotto{\phi}</m>, e, pertanto, <m>p\indotto{\phi}</m> ha una radice in <m>E'</m>. Per il <xref ref="lem-estensione_omomorfismo_semplice"/> esiste un'estensione, che indichiamo con <m>\theta</m>, di <m>\phi</m> a un omomorfismo da <m>F(u)</m> in <m>E'</m>. Poiché <m>u\notin F</m>, sappiamo che <m>\degext{F(u)}{F}\gt 1</m> e, di conseguenza, <m>\degext{E}{F(u)}=\frac{\degext{E}{F}}{\degext{F(u)}{F}}\lt \degext{E}{F}</m>. Chiaramente <m>E</m> è campo di spezzamento di <m>f</m> anche su <m>F(u)</m> ed <m>E'</m> è campo di spezzamento di <m>f\indotto{\phi}=f\indotto{\theta}</m> anche su <m>F\theta</m>: per ipotesi induttiva, <m>\theta</m> si estende allora a un isomorfismo tra <m>E</m> ed <m>E'</m>.
-        </p>
-      </proof>
-    </theorem>
-
-    <exercises xml:id="exercises-campo_di_spezzamento">
-
-      <exercise xml:id="exercise-grado_spezzamento">
-        <statement>
-          <p>
-            Utilizzare la dimostrazione del <xref ref="thm-campo_spezzamento"/> per mostrare che se <m>f</m> è un polinomio di grado <m>n</m> a coefficienti in un campo <m>F</m>, allora il campo di spezzamento <m>E</m> di <m>f</m> su <m>F</m> è un'estensione finita di grado al più <m>n!</m> su <m>f</m>.
-          </p>
-        </statement>
-      </exercise>
-
-    </exercises>
-
-  </section>
-
-  <section xml:id="sec-chiusure_algebriche">
-    <title>Campi algebricamente chiusi</title>
-
-    <p>
-      Abbiamo visto come aggiungere le radici di un polinomio a un campo. Ovviamente potremmo ripetere il procedimento con un numero qualunque di polinomi. Ma possiamo fare qualcosa del genere con infiniti polinomi? Iniziamo a considerare campi in cui ogni polinomio è totalmente riducibile.
-    </p>
 
     <theorem xml:id="thm-caratterizzazione_algebricamente_chiuso">
       <statement>
@@ -915,33 +882,6 @@
       </p>
     </remark>
 
-    <p>
-      L'esistenza di una chiusura algebrica di un campo richiede considerazione abbastanza delicate di teoria assiomatica degli insiemi. Non entreremo in questi dettagli. Ci limiteremo ad assumere il seguente risultato che, a dispetto del nome, può essere considerato come uno degli assiomi di tale teoria.
-    </p>
-
-    <lemma xml:id="lem-zorn">
-      <title>Lemma di Zorn</title>
-      <statement>
-        <p>
-          Sia <m>S</m> un insieme non vuoto parzialmente ordinato. Se ogni sottoinsieme totalmente ordinato di <m>S</m> ammette un elemento maggiorante in <m>S</m>, allora in <m>S</m> esiste almeno un elemento massimale.
-        </p>
-      </statement>
-    </lemma>
-
-    <proposition xml:id="prop-ideali_massimali">
-      <statement>
-        <p>
-          Sia <m>I</m> un ideale proprio di un anello <m>R</m>. Esiste allora un ideale massimale contenente <m>I</m>.
-        </p>
-      </statement>
-
-      <proof>
-        <p>
-          Consideriamo l'insieme <m>S</m> degli ideali propri di <m>R</m> contenenti <m>I</m>, ordinato rispetto all'inclusione. Questo è un insieme non vuoto (contiene <m>I</m> stesso) e un suo eventuale elemento massimale sarebbe, ovviamente, un ideale massimale. Possiamo allora ottenere la tesi, se verifichiamo la condizione data dal <xref ref="lem-zorn" text="title"/>, cioè che ogni sottoinsieme totalmente ordinato <m>T</m> di <m>S</m> ha un maggiorante in <m>S</m>. Possiamo supporre che <m>T</m> sia non vuoto (se <m>T</m> è vuoto ogni elemento di <m>S</m> è un maggiorante di <m>T</m>): sia allora <m>J</m> l'unione degli elementi di <m>T</m>. Ovviamente, ogni elemento di <m>T</m> è contenuto in <m>J</m>. Se allora dimostriamo che <m>J</m> appartiene a <m>S</m>, cioè che <m>J</m> è un ideale proprio contenente <m>I</m>, abbiamo concluso. Per costruzione, <m>J</m> contiene <m>I</m>. Poiché gli elementi di <m>S</m> sono ideali propri, non contengono <m>1</m> (<xref ref="rem-ideali_non_sottoanelli"/>): di conseguenza, <m>1\notin J</m> e <m>J\ne R</m>. Concludiamo verificando che <m>J</m> è un ideale: siano <m>i</m> e <m>j</m> elementi di <m>J</m> e <m>a</m> un elemento di <m>R</m>. Esistono allora <m>K</m> e <m>L</m> in <m>T</m> tali che <m>i\in K</m> e <m>j\in L</m>: poiché <m>T</m> è totalmente ordinato, abbiamo che <m>K\subseteq L</m> o <m>L\subseteq K</m>. Senza perdere in generalità, possiamo assumere che <m>K\subseteq L</m> e che, quindi, sia <m>i</m> che <m>j</m> appartengono a <m>L</m>. Ma allora <m>i+j</m>, <m>ia</m> e <m>ai</m> appartengono a <m>L</m> e, quindi, a <m>J</m>.
-        </p>
-      </proof>
-    </proposition>
-
     <theorem xml:id="thm-esistenza_chiusura_algebrica">
       <statement>
         <p>
@@ -950,17 +890,7 @@
       </statement>
       <proof>
         <p>
-          Sappiamo come aggiungere a un campo una radice di un polinomio e, ripetendo il procedimento, possiamo aggiungere radici di un qualunque numero finito di polinomi. Vogliamo però aggiungere radici di tutti i polinomi possibili. Consideriamo allora l'insieme <m>P</m> di tutti i polinomi di grado positivo a coefficienti in <m>F</m>. Consideriamo un insieme <m>X</m> di indeterminate che sia in corrispondenza biiettiva con <m>S</m>: per ogni polinomio <m>f</m> di <m>P</m>, indichiamo con <m>x_{f}</m> l'indeterminata corrispondente. Consideriamo l'ideale <m>I</m> di <m>F[X]</m> generato dagli elementi del tipo <m>f(x_{f})</m> al variare di <m>f</m> in <m>P</m>. Mostriamo che <m>I</m> è un ideale proprio: se così non fosse, <m>1</m> apparterrebbe a <m>I</m> e potrebbe essere espresso da una relazione del tipo
-          <men xml:id="eqn-identita_per_chiusura_algebrica">
-            1=c_{1}f_{1}(x_{f_{1}})+c_{2}f_{2}(x_{f_{2}})+\cdots+c_{r}f_{r}(x_{f_{r}})
-          </men>
-          con ogni <m>c_{i}</m> in <m>F[X]</m>. Sappiamo che esiste un'estensione <m>E</m> di <m>F</m> in cui <m>f_{1}</m>, <m>\ldots</m>, <m>f_{r}</m> hanno almeno una radice, siano, rispettivamente <m>u_{1}</m>, <m>u_{2}</m>, <m>\ldots</m>, <m>u_{r}</m>. Consideriamo allora l'omomorfismo da <m>F</m> in <m>K</m> che fissa gli elementi di <m>F</m>, manda ciascun <m>x_{f_{i}}</m> in <m>u_{i}</m> e le altre indeterminate in elementi qualunque (ad esempio, tutte a <m>0</m>). Sostituendo nella <xref ref="eqn-identita_per_chiusura_algebrica"/> otterremmo allora <m>1=0</m> in <m>K</m>, il che non può essere. 
-        </p>          
-        <p>  
-          Dunque, <m>I</m> è un ideale proprio di <m>F[X]</m> e, per la <xref ref="prop-ideali_massimali"/>, esiste un ideale massimale <m>J</m> di <m>F[X]</m> contenente <m>I</m>. Grazie alla <xref ref="prop-quoziente_su_massimale_campo"/>, il quoziente <m>F[X]/J</m> è un campo che denotiamo <m>K_{1}</m>. Consideriamo allora l'omomorfismo da <m>F</m> in <m>K_{1}</m> che si ottiene dalla composizione dell'inclusione di <m>F</m> in <m>F[X]</m> con l'omomorfismo canonico da <m>F[X]</m> su <m>F[X]/J</m>. Otteniamo così un omomorfismo di campi da <m>F</m> in <m>K_{1}</m> necessariamente iniettivo. Notiamo ora che <m>K_{1}</m> è generato da <m>F</m> e dagli elementi del tipo <m>x_{f}+J</m> al variare di <m>f</m> in <m>P</m>. Se ora valutiamo il polinomio <m>f</m> in <m>x_{f}+J</m>, otteniamo chiaramente <m>f(x_{f})+J</m>: poiché <m>f(x_{f})</m> appartiene a <m>J</m> questo èlo <m>0</m> di <m>F[X]/J</m>. Pertanto ogni polinomio <m>f</m> a coefficienti in <m>F</m> ha almeno una radice in <m>K_{1}</m> e <m>K_{1}</m>, essendo generato da elementi algebrici su <m>F</m> è un'estensione algebrica di <m>F</m> (<xref ref="prop-elementi_algebrici_sottocampo"/>).
-        </p>
-        <p>
-          Possiamo iterare il procedimento e ottenere una sequenza di estensioni
+          Sia <m>P</m> l'insieme di tutti i polinomi di grado positivo a coefficienti in <m>F</m>. Dal <xref ref="lem-aggiunta_infinite_radici"/>, sappiamo che esiste un'estensione algebrica <m>K_{1}</m> di <m>F</m> che contiene almeno una radice di ogni polinomio in <m>P</m>. Possiamo iterare il procedimento e ottenere una sequenza di estensioni
           <me>
             F\subseteq K_{1}\subseteq K_{2}\subseteq \cdots K_{i}\subseteq \cdots
           </me>
@@ -972,7 +902,6 @@
         <p>
           Sia allora <m>u</m> un elemento di <m>K</m>: sappiamo che <m>u</m> è algebrico su <m>F</m> e, a maggior ragione, su <m>E</m>. Sia <m>f</m> il polinomio minimo di <m>u</m> su <m>E</m>. Il polinomio <m>f\indotto{\theta}</m> è un polinomio a coefficienti in <m>K'</m> e ha quindi una radice in <m>K'</m>: per il <xref ref="lem-estensione_omomorfismo_semplice"/>, <m>\theta</m> si estende a un omomorfismo <m>\kappa</m> da <m>E(u)</m> in <m>K</m>. Dunque, <m>(E,\kappa)</m> è un elemento di <m>S</m> tale che <m>(E,\theta)\le(E(u),\kappa)</m>: per la massimalità di <m>(E,\theta)</m>, ne consegue che <m>E=E(u)</m>, vale a dire <m>u</m> appartiene a <m>E</m>. L'arbitrarietà della scelta di <m>u</m> in <m>K</m> implica che <m>K=E</m>. Ora <m>K\theta</m>, essendo isomorfo a <m>K</m> è algebricamente chiuso e, ovviamente, contiene <m>F</m>: poiché <m>K'</m> è algebrico su <m>F</m>, ciò comporta che <m>K\theta=K'</m>, come richiesto.
         </p>
-
       </proof>
     </theorem>
 
