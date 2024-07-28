@@ -544,6 +544,8 @@
     </theorem>
 
     <definition xml:id="def-caratteristica">
+      <idx><h>caratteristica</h><h>di un anello</h></idx>
+      <idx><h>anello</h><h>caratteristica</h></idx>
       <notation>
         <usage><m>\car R</m></usage>
         <description>caratteristica di un anello <m>R</m></description>
@@ -647,6 +649,7 @@
     </p>
 
     <definition xml:id="def-sottoanello">
+      <idx><h>sottoanello</h></idx>
       <statement>
         <p>
           Dato un anello <m>R</m>, un suo sottoinsieme <m>S</m> è detto <term>sottoanello</term> di <m>R</m> se
@@ -811,6 +814,9 @@
     </p>
 
     <proposition xml:id="prop-intersezione_di_sottoanelli">
+      
+      <idx><h>intersezione</h><h>di sottoanelli</h></idx>
+      <idx><h>sottoanello</h><h>intersezione</h></idx>
       <statement>
         <p>
           Se <m>R</m> è un anello e <m>\{S_{i}\}_{i\in I}</m> è una famiglia di sottoanelli di <m>R</m> (indicizzata da un insieme di indici <m>\Omega</m>), allora
@@ -866,6 +872,69 @@
     <p>
       La descrizione esplicita degli elementi del sottoanello generato da un sottoinsieme di un anello non è molto pratica. La rimandiamo all'<xref ref="exercise-sottoanello-generato"/>.
     </p>
+
+    <definition xml:id="def-sottocampo">
+      <idx><h>sottocampo</h></idx>
+      <statement>
+        <p>
+          Dato un campo <m>K</m>, un suo sottoinsieme <m>F</m> è detto <term>sottocampo</term> di <m>K</m> se <m>F</m> è un sottoanello di <m>K</m> e, per ogni elemento non nullo <m>a</m> di <m>F</m> si ha che <m>a^{-1}</m> appartiene a <m>F</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Ovviamente un sottocampo è un campo rispetto alle operazioni indotte. Analogamente a quanto fatto per sottomonoidi, sottogruppi, <etc /> si può mostrare la
+    </p>
+
+    <proposition xml:id="prop-intersezione_di_sottocampi">
+
+      
+      <idx><h>intersezione</h><h>di sottocampi</h></idx>
+      <idx><h>sottocampo</h><h>intersezione</h></idx>
+      <statement>
+        <p>
+          Se <m>K</m> è un campo e <m>\{F_{i}\}_{i\in I}</m> è una famiglia di sottocampi di <m>F</m> (indicizzata da un insieme di indici <m>\Omega</m>), allora
+          <me>
+            \bigcap_{i\in \Omega}F_{i}
+          </me>
+          è un sottocampo di <m>F</m>.
+        </p>
+      </statement>
+    </proposition>    
+
+    <proposition xml:id="prop-sottocampo_minimo">
+
+      <idx><h>sottocampo</h><h>minimo</h></idx>
+
+      <statement>
+        <p>
+          Dato un campo <m>K</m>, l'intersezione di tutti i sottocampi di <m>K</m> è un sottocampo <m>F</m>, detto <term>sottocampo minimo</term>. Il sottocampo minimo contiene il sottoanello minimo <m>S</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sappiamo che l'intersezione di tutti i sottocampi di <m>K</m> è un sottocampo <m>F</m>: in particolare, <m>F</m> è un sottoanello e, quindi, contiene l'intersezione <m>S</m> di tutti i sottoanelli di <m>K</m>.
+        </p>
+      </proof>
+
+    </proposition>
+    
+    <p>
+      Preciseremo più avanti (<xref ref="prop-sottocampo_sottoanello_minimo"/>) il legame esistente tra sottocampo minimo e sottoanello minimo di un campo.
+    </p>
+
+    <definition xml:id="def-sottocampo_generato">
+
+      <idx><h>sottocampo</h><h>generato da un sottoinsieme</h></idx>
+
+      <statement>
+        <p>
+          Dato un sottoinsieme <m>X</m> di un anello <m>R</m>, il <term>sottoanello generato</term> da <m>X</m> è l'intersezione di tutti i sottoanelli di <m>S</m> contenenti <m>X</m>.
+        </p>
+      </statement>
+    </definition>
+
 
     <definition xml:id="def-centralizzante">
 
@@ -1076,6 +1145,14 @@
           </p>
         </hint>
       </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare la <xref ref="prop-intersezione_di_sottocampi"/>.
+          </p>
+        </statement>
+      </exercise>      
 
       <exercise xml:id="exercise-quasi_triangolari">
         <statement>

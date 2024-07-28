@@ -905,30 +905,6 @@
       </p>
     </remark>
 
-    <definition xml:id="def-sottocampo">
-      <statement>
-        <p>
-          Dato un campo <m>K</m>, un suo sottoinsieme <m>F</m> è detto <term>sottocampo</term> di <m>K</m> se <m>F</m> è un sottoanello di <m>K</m> e, per ogni elemento non nullo <m>a</m> di <m>F</m> si ha che <m>a^{-1}</m> appartiene a <m>F</m>.
-        </p>
-      </statement>
-    </definition>
-
-    <p>
-      Analogamente a quanto fatto per sottomonoidi, sottogruppi, <etc /> si può mostrare la
-    </p>
-
-    <proposition xml:id="prop-intersezione_di_sottocampi">
-      <statement>
-        <p>
-          Se <m>K</m> è un campo e <m>\{F_{i}\}_{i\in I}</m> è una famiglia di sottocampi di <m>F</m> (indicizzata da un insieme di indici <m>\Omega</m>), allora
-          <me>
-            \bigcap_{i\in \Omega}F_{i}
-          </me>
-          è un sottocampo di <m>F</m>.
-        </p>
-      </statement>
-    </proposition>
-
     <remark xml:id="rem-campo_quozienti_contenuto">
       <p>
         Interpretiamo in altro modo il <xref ref="thm-campo_dei_quozienti"/>: sia dato un dominio <m>D</m> contenuto in un campo <m>K</m>. Consideriamo l'intersezione di tutti i sottocampi di <m>K</m> contenenti <m>D</m> (almeno uno ce n'è: <m>K</m> stesso). Otteniamo allora un sottocampo <m>F</m> contenente <m>D</m>. Consideriamo poi l'omomorfismo di inclusione <m>i\colon D\to F</m>: esiste allora un unico omomorfismo <m>\theta</m> dal campo dei quozienti <m>Q</m> di <m>D</m> in <m>F</m> tale che <m>\phi\theta=i</m>. Dunque, se <m>a</m> è un elemento di <m>D</m>, abbiamo <m>a=ai=a\phi\theta\in\im\theta</m>, cioè <m>D\subseteq\im\theta</m>: dall'<xref ref="rem-theta_iniettivo"/> sappiamo che <m>\theta</m> è iniettivo e, quindi, l'immagine di <m>\theta</m> è isomorfa a <m>Q</m>. In particolare, l'immagine di <m>\theta</m> è un sottocampo di <m>F</m> contenente <m>D</m>: per costruzione coincide con <m>F</m>, cioè <m>\theta</m> è anche suriettivo. In conclusione <m>Q</m> è isomorfo a <m>F</m> e, possiamo, anzi, identificare <m>Q</m> con <m>F</m>.
@@ -938,13 +914,15 @@
       </p>
     </remark>
 
-    <proposition xml:id="prop-sottocampo_minimo">
+    <p>
+      Abbiamo mostrato nella <xref ref="prop-sottocampo_minimo"/> che il sottocampo minimo di un campo contiene il sottoanello minimo. Possiamo ora descrivere meglio il legame tra questi oggetti.
+    </p>
 
-      <idx><h>sottocampo</h><h>minimo</h></idx>
+    <proposition xml:id="prop-sottocampo_sottoanello_minimo">
 
       <statement>
         <p>
-          Dato un campo <m>K</m>, l'intersezione di tutti i sottocampi di <m>K</m> è un sottocampo <m>F</m>, detto <term>sottocampo minimo</term>. Il sottocampo minimo contiene il sottoanello minimo <m>S</m> ed è il campo dei quozienti di <m>S</m>.
+          Dato un campo <m>K</m>, il suo sottocampo minimo <m>F</m> è il campo dei quozienti del suo sottoanello minimo <m>S</m>.
         </p>
         <p>
           Se <m>\car K=0</m>, allora <m>F</m> contiene strettamente <m>S</m> ed è isomorfo a <m>\Razionali</m>, mentre se <m>\car K=p</m> con <m>p</m> primo, allora <m>F=S</m> e <m>F</m> è isomorfo a <m>\Interi/p</m>.
@@ -953,7 +931,7 @@
 
       <proof>
         <p>
-          Sappiamo che l'intersezione di tutti i sottocampi di <m>K</m> è un sottocampo <m>F</m>: in particolare, <m>F</m> è un sottoanello e, quindi, contiene l'intersezione <m>S</m> di tutti i sottoanelli di <m>K</m>. Per l'<xref ref="rem-campo_quozienti_contenuto"/>, <m>F</m> è il campo dei quozienti di <m>S</m>.
+          Sappiamo che <m>F</m> contiene <m>S</m> e, quindi, per l'<xref ref="rem-campo_quozienti_contenuto"/> contiene il campo dei quozienti di <m>S</m>. Poiché <m>F</m> è contenuto in ogni sottocampo di <m>K</m>, il sottocampo <m>F</m> coincide esattamente con il campo dei quozienti di <m>S</m>,
         </p>
         <p>
           Per la <xref ref="prop-sottoanello_minimo_caratteristica"/>, sappiamo che se <m>\car K=0</m>, allora <m>S</m> è isomorfo a <m>\Interi</m> e, quindi, <m>F</m> è isomorfo a <m>\Razionali</m> (in particolare, <m>S</m> è contenuto strettamente in <m>F</m>); se, invece <m>\car K=p</m> con <m>p</m> primo, allora <m>S</m> è isomorfo a <m>\Interi/p</m>, che, essendo un campo, coincide con il proprio campo dei quozienti.
@@ -972,13 +950,6 @@
         </statement>
       </exercise>
 
-      <exercise>
-        <statement>
-          <p>
-            Dimostrare la <xref ref="prop-intersezione_di_sottocampi"/>.
-          </p>
-        </statement>
-      </exercise>
     </exercises>
 
   </section>

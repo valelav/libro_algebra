@@ -898,6 +898,10 @@
 
     </theorem>
 
+    <p>
+      Finora abbiamo visto alcune proprietà dei domini a ideali principali ma non ne abbiamo presentato alcun esempio. Per far ciò, introduciamo una classe di domini i cui membri sono, in particolare, domini a ideali principali.
+    </p>
+
     <definition xml:id="def-dominio_euclideo">
       <statement>
         <p>
@@ -989,7 +993,19 @@
     </p>
 
     <p>
-      Non tutti i domini a ideali principali sono domini euclidei: la costruzione di un dominio a ideali principali che non sia euclideo va però oltre lo scopo di questo libro.
+      Diamo ora un esempio di dominio che non è a ideali principali (e, a maggior ragione, non è euclideo).
+    </p>
+
+    <example xml:id="ex-Zx_non_PID">
+      <statement>
+        <p>
+          Consideriamo l'anello dei polinomi <m>\Interi[x]</m>. Si verifica facilmente che l'insieme <m>I</m> dei polinomi a termine noto pari è un ideale. Mostriamo che <m>I</m> non è un ideale principale (e, di conseguenza, <m>\Interi[x]</m> non è un dominio a ideali principali). Si verifica facilmente che non c'è nessun polinomio <m>f</m> in <m>I</m> che divide sia <m>2</m> che <m>x</m> (questi due sono elementi di <m>I</m>): dunque non c'è nessun <m>f</m> in <m>I</m> che genera <m>I</m>.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Dare invece un esempio di un dominio a ideali principali che non sia euclideo è decisamente più complicato: la costruzione di un tale esempio va però oltre lo scopo di questo libro.
     </p>
 
     <p>

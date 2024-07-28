@@ -38,7 +38,7 @@
 
       <proof>
         <p>
-          Chiaramente <m>p</m> è non nullo e non invertibile anche in <m>D[x]</m>. Per mostrare che <m>p</m> è primo in <m>D[x]</m> dobbiamo provare che se <m>p</m> non divide due polinomi allora non divide il loro prodotto. Notiamo innanzitutto che, poiché <m>p</m> ha grado <m>0</m>, abbiamo che <m>p</m> divide un polinomio se e solo se divide in <m>D</m> tutti i suoi coefficienti. Se allora <m>a</m> è un polinomio che non è divisibile per <m>p</m>, possiamo separare i coefficienti di <m>a</m> divisibili per <m>p</m> da quelli non divisibili per <m>p</m> e scrivere <m>a=a_{1}+pa_{2}</m> dove <m>a_{1}</m> è un polinomio non nullo i cui coefficienti non nulli sono tutti non divisibili per <m>p</m>: in particolare, il coefficiente direttivo di <m>a_{1}</m> non è divisibile per <m>p</m>. Se <m>b</m> è un altro polinomio non divisibile per <m>p</m> scriviamo analogamente <m>b=b_{1}+pb_{2}</m> con il coefficiente direttivo di <m>b</m> non divisibile per <m>p</m>. Allora <m>ab=a_{1}b_{1}+p(a_{2}b_{1}+a_{1}b_{2}+pa_{2}b_{2})</m>: pertanto <m>p</m> divide <m>ab</m> se e solo se divide <m>a_{1}b_{1}</m>. Ma il coefficiente direttivo di <m>a_{1}b_{1}</m> è il prodotto dei coefficienti direttivi di <m>a</m> e <m>b</m> e, quindi, non è un multiplo di <m>p</m>: dunque, <m>p</m> non divide <m>a_{1}b_{1}</m> e, di conseguenza, non divide <m>ab</m>.
+          Chiaramente <m>p</m> è non nullo e non invertibile anche in <m>D[x]</m>. Per mostrare che <m>p</m> è primo in <m>D[x]</m> dobbiamo provare che se <m>p</m> non divide due polinomi allora non divide il loro prodotto. Notiamo innanzitutto che, poiché <m>p</m> ha grado <m>0</m>, abbiamo che <m>p</m> divide un polinomio se e solo se divide in <m>D</m> tutti i suoi coefficienti. Dunque, un polinomio <m>a</m> che non è divisibile per <m>p</m> ha almeno un coefficiente non divisibile per <m>p</m> e possiamo allora scrivere <m>a=a_{1}+pa_{2}</m> dove <m>a_{1}</m> è un polinomio non nullo i cui coefficienti non nulli sono tutti non divisibili per <m>p</m>: in particolare, il coefficiente direttivo di <m>a_{1}</m> non è divisibile per <m>p</m>. Se <m>b</m> è un altro polinomio non divisibile per <m>p</m> scriviamo analogamente <m>b=b_{1}+pb_{2}</m> con il coefficiente direttivo di <m>b</m> non divisibile per <m>p</m>. Allora <m>ab=a_{1}b_{1}+p(a_{2}b_{1}+a_{1}b_{2}+pa_{2}b_{2})</m>: pertanto <m>p</m> divide <m>ab</m> se e solo se divide <m>a_{1}b_{1}</m>. Ma il coefficiente direttivo di <m>a_{1}b_{1}</m> è il prodotto dei coefficienti direttivi di <m>a</m> e <m>b</m> e, quindi, non è un multiplo di <m>p</m>: dunque, <m>p</m> non divide <m>a_{1}b_{1}</m> e, di conseguenza, non divide <m>ab</m>.
         </p>
       </proof>
 
@@ -113,7 +113,7 @@
 
       <proof>
         <p>
-          Gli elementi invertibili di <m>Q[x]</m> sono quelli di grado <m>0</m>, cioè gli elementi di <m>Q</m> e, dunque, <m>f</m> non è invertibile in <m>Q[x]</m>. Sia <m>g</m> un divisore di <m>f</m> in <m>Q[x]</m>: dobbiamo mostrare che <m>g</m> è invertibile in <m>Q[x]</m> oppure associato a <m>f</m> in <m>Q[x]</m>. Sia <m>d</m> un elemento non nullo di <m>D</m> tale che <m>dg</m> appartiene a <m>D[x]</m>. Detto <m>c</m> il contenuto (in <m>D</m>) di <m>dg</m> si ha <m>dg=cg_{1}</m> con <m>g_{1}</m> primitivo in <m>D[x]</m>: dunque, <m>g=d^{-1}cg_{1}</m> e, pertanto, <m>g</m> e <m>g_{1}</m> sono associati in <m>Q[x]</m>. In particolare, <m>g_{1}</m> divide <m>g</m> in <m>Q[x]</m> e, di conseguenza, <m>g_{1}</m> divide <m>f</m> in <m>Q[x]</m>: per la <xref ref="prop-divisore_primitivo"/>, <m>g_{1}</m> divide <m>f</m> in <m>D[x]</m>. Poiché <m>f</m> è irriducibile in <m>D[x]</m> abbiamo che <m>g_{1}</m> è invertibile in <m>D[x]</m> (e, a maggior ragione, invertibile in <m>Q[x]</m>) oppure associato a <m>f</m> in <m>D[x]</m> (e, a maggior ragione, associato a <m>f</m> in <m>Q[x]</m>). Poiché <m>g</m> e <m>g_{1}</m> sono associati in <m>Q[x]</m>, nel
+          Gli elementi invertibili di <m>Q[x]</m> sono quelli di grado <m>0</m>, cioè gli elementi di <m>Q</m>: dunque, <m>f</m> non è invertibile in <m>Q[x]</m>. Sia <m>g</m> un divisore di <m>f</m> in <m>Q[x]</m>: dobbiamo mostrare che <m>g</m> è invertibile in <m>Q[x]</m> oppure associato a <m>f</m> in <m>Q[x]</m>. Sia <m>d</m> un elemento non nullo di <m>D</m> tale che <m>dg</m> appartiene a <m>D[x]</m>. Detto <m>c</m> il contenuto (in <m>D</m>) di <m>dg</m> si ha <m>dg=cg_{1}</m> con <m>g_{1}</m> primitivo in <m>D[x]</m>: dunque, <m>g=d^{-1}cg_{1}</m> e, pertanto, <m>g</m> e <m>g_{1}</m> sono associati in <m>Q[x]</m>. In particolare, <m>g_{1}</m> divide <m>g</m> in <m>Q[x]</m> e, di conseguenza, <m>g_{1}</m> divide <m>f</m> in <m>Q[x]</m>: per la <xref ref="prop-divisore_primitivo"/>, <m>g_{1}</m> divide <m>f</m> in <m>D[x]</m>. Poiché <m>f</m> è irriducibile in <m>D[x]</m> abbiamo che <m>g_{1}</m> è invertibile in <m>D[x]</m> (e, a maggior ragione, invertibile in <m>Q[x]</m>) oppure associato a <m>f</m> in <m>D[x]</m> (e, a maggior ragione, associato a <m>f</m> in <m>Q[x]</m>). Poiché <m>g</m> e <m>g_{1}</m> sono associati in <m>Q[x]</m>, nel
           primo caso abbiamo che <m>g</m> è invertibile in <m>Q[x]</m>, nel secondo che <m>g</m> è associato a <m>f</m>
           in <m>Q[x]</m>.
         </p>
@@ -159,6 +159,10 @@
       </statement>
     </corollary>
 
+    <p>
+      Sappiamo che ogni dominio a ideali principali è un dominio a fattorizzazione unica (<xref ref="thm-PID_UFD"/>). Possiamo ora mostrare che non vale il viceversa: infatti  <m>\Interi[x]</m> non è un dominio a ideali principali (<xref ref="ex-Zx_non_PID"/>) ma, grazie al <xref ref="thm-del_trasporto"/>, sappiamo che <m>\Interi[x]</m> è un dominio a fattorizzazione unica. Altri esempi di domini a fattorizzazione unica che non sono a ideali principali si trovano nell'<xref ref="exercise-Dxy_non_PID"/>.
+    </p>
+
     <exercises xml:id="exercises-trasporto_UFD">
       <exercise>
         <statement>
@@ -188,7 +192,7 @@
         </solution>
       </exercise>
 
-      <exercise>
+      <exercise xml:id="exercise-Dxy_non_PID">
         <statement>
           <p>
             Mostrare che se <m>D</m> è un dominio a fattorizzazione unica, allora <m>D[x_{1},\ldots,x_{n}]</m> con <m>n\ge 2</m> è un dominio a fattorizzazione unica ma non è un dominio a ideali principali.
@@ -390,13 +394,84 @@
     </remark>
 
     <p>
+      Diamo ora una condizione sufficiente, ma non necessaria, per l'irriducibilità di un polinomio a coefficienti interi.
+    </p>
+
+    <lemma xml:id="lem-eisenstein">
+      <title>Criterio di Eisenstein</title>
+      <statement>
+        <p>
+          Sia <m>D</m> un dominio a fattorizzazione unica e sia <m>Q</m> il suo campo dei quozienti. Sia <m>f\coloneqq a_{n}x^{n}+a_{n-1}x^{n-1}+\cdots+a_{1}x+a_{0}</m> un polinomio a coefficienti in <m>D</m>. Se esiste un primo <m>p</m> tale che
+          <ol>
+            <li>
+              <p>
+                <m>p</m> divide <m>a_{0}</m>, <m>a_{1}</m>, <m>\ldots</m>, <m>a_{n-1}</m>,
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>p</m> non divide <m>a_{n}</m>,
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>p^{2}</m> non divide <m>a_{0}</m>,
+              </p>
+            </li>
+          </ol>
+          allora <m>f</m> è irriducibile in <m>Q[x]</m>. Se, inoltre, <m>f</m> è primitivo, allora è irriducibile anche in <m>D[x]</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Il primo <m>p</m> non divide il contenuto di <m>f</m> perché non divide <m>a_{n}</m>. Se dividiamo <m>f</m> per il suo contenuto, otteniamo allora un polinomio primitivo a coefficienti in <m>D</m> che soddisfa le ipotesi del criterio: senza perdere in generalità possiamo allora assumere che <m>f</m> sia primitivo e provare che è irriducibile in <m>D[x]</m> e applicare poi il <xref ref="cor-irriducibile_nel_camo_dei_quozienti"/> e ottenere che è irriducibile in <m>Q[x]</m>.
+        </p>
+        <p>
+          Supponiamo allora per assurdo che <m>f</m> sia riducibile in <m>D[x]</m>, cioè che <m>f=gh</m> con <m>g\coloneqq b_{r}x^{r}+\cdots+b_{0}</m> e <m>h\coloneqq c_{s}x^{s}+\cdots+c_{0}</m> polinomi a coefficienti in <m>D</m> e di grado positivo. Il termine noto di <m>gh</m> è semplicemente <m>b_{0}c_{0}</m>: poiché coincide con <m>a_{0}</m> che è multiplo di <m>p</m> ma non di <m>p^{2}</m>, abbiamo che <m>p</m> divide uno tra <m>b_{0}</m> e <m>c_{0}</m> ma non entrambi. Possiamo assumere che <m>p</m> divide <m>b_{0}</m> ma non <m>c_{0}</m>. Ora <m>g</m> non è multiplo di <m>p</m>, altrimenti anche <m>f</m> sarebbe multiplo di <m>p</m>. Sia <m>i</m> il più piccolo intero tale che <m>b_{i}</m> non è multiplo di <m>p</m>. Abbiamo allora
+          <me>
+            a_{i}=b_{i}c_{0}+b_{i-1}c_{1}+\cdots+b_{0}c_{i}
+          </me>
+          Poiché <m>p</m> divide <m>b_{0}</m>, <m>\ldots</m>, <m>b_{i-1}</m>, gli addendi dal secondo in poi sono multipli di <m>p</m>; poiché <m>p</m> non divide <m>b_{i}</m> e <m>c_{0}</m>, il primo addendo <m>b_{i}c_{0}</m> non è multiplo di <m>p</m>: di conseguenza, <m>a_{i}</m> non è multiplo di <m>p</m>. Per ipotesi, l'unico coefficiente di <m>f</m> che non è multiplo di <m>p</m> è <m>a_{n}</m> e, dunque, <m>i=n</m>. Dunque, <m>b_{n}</m> non è multiplo di <m>p</m>: in particolare, <m>b_{n}</m> è diverso da <m>0</m> e, quindi, <m>g</m> ha grado almeno <m>n</m>, cioè almeno grado uguale a <m>f</m>, ma questo è assurdo perché allora <m>h</m> non avrebbe grado positivo.
+        </p>
+      </proof>
+    </lemma>
+
+    <p>
+      Applicheremo questo risultato principalmente a polinomi a coefficienti interi.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Il polinomio <m>f\coloneqq 10x^{4}+18x^{2}+42x+6</m> a coefficienti interi soddisfa le condizioni del <xref ref="lem-eisenstein" text="title"/> rispetto al primo <m>3</m>, e, dunque, è irriducibile in <m>\Razionali[x]</m>. Non è però primitivo, quindi non è irriducibile in <m>\Interi[x]</m>: tuttavia, dividendo il polinomio <m>f</m> per il suo contenuto <m>2</m>, otteniamo il polinomio <m>5x^{4}+9x^{2}+21x+3</m> che è irriducibile sia in <m>\Interi[x]</m> che in <m>\Razionali[x]</m>.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Il <xref ref="lem-eisenstein" text="title"/> dà, come detto, una condizione sufficiente ma non necessaria.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Il polinomio <m>x^{2}+1</m> a coefficienti interi è, ovviamente, irriducibile perché di secondo grado e non ha radici intere. Non c'è però nessun primo che soddisfa le ipotesi del <xref ref="lem-eisenstein" text="title"/>,
+        </p>
+      </statement>
+    </example>
+
+
+
+
+    <p>
       Proviamo ora a fattorizzare un polinomio a coefficienti nel campo delle classi di resto modulo un primo <m>p</m>. Per semplificare la notazione scriveremo semplicemente i coefficienti come <m>a</m> invece che <m>\class[p]{a}</m>.
     </p>
 
     <example>
       <statement>
         <p>
-          Consideriamo il polinomio <m>f\coloneqq x^{3}+x+1</m> a coefficienti in <m>\Interi/3</m>. Cerchiamo innanzitutto se <m>f</m> ha qualche radice. Poiché il campo è finito possiamo semplicemente sostituire gli elementi uno a uno. Notiamo che <m>f(0)=0^{3}+0+1=1\ne0</m>, <m>f(1)=1^{3}+1+1=3=0</m> (ricordiamo che stiamo lavorando modulo <m>3</m>). Dunque, <m>1</m> è radice e <m>x-1</m> è un fattore di <m>f</m>. Dividendo, troviamo <m>f=(x-1)(x^{2}+x-1)</m>. Ci chiediamo ora se <m>g\coloneqq x^{2}+x-1</m> è irriducibile o no. Per far ciò, basta verificare se ha radici o meno. È inutile verificare se <m>0</m> è radice perché altrimenti sarebbe radice anche di <m>f</m>. Abbiamo poi <m>g(1)=1^{2}+1-1=1\ne 0</m> e <m>g(2)=2^{2}+2-1=2\ne 0</m>: pertanto <m>g</m> non ha radici e, avendo grado <m>2</m> è irriducibile. Dunque, la fattorizzazione in irriducibili di <m>f</m> è
+          Consideriamo il polinomio <m>f\coloneqq x^{3}+x+1</m> a coefficienti in <m>\Interi/3</m>. Cerchiamo innanzitutto se <m>f</m> ha qualche radice. Poiché il campo è finito possiamo semplicemente sostituire gli elementi uno a uno. Notiamo che <m>f(0)=0^{3}+0+1=1\ne0</m>, <m>f(1)=1^{3}+1+1=3=0</m> (ricordiamo che stiamo lavorando modulo <m>3</m>). Dunque, <m>1</m> è radice e <m>x-1</m> è un fattore di <m>f</m>. Dividendo, troviamo <m>f=(x-1)(x^{2}+x-1)</m>. Ci chiediamo ora se <m>g\coloneqq x^{2}+x-1</m> è irriducibile o no. Per far ciò, basta verificare se ha radici o meno. È inutile verificare se <m>0</m> è radice perché altrimenti sarebbe radice anche di <m>f</m>. Abbiamo poi <m>g(1)=1^{2}+1-1=1\ne 0</m> e <m>g(2)=2^{2}+2-1=2\ne 0</m>: pertanto <m>g</m> non ha radici e, avendo grado <m>2</m>, è irriducibile. Dunque, la fattorizzazione in irriducibili di <m>f</m> è
           <me>
             x^{3}+x+1=(x-1)(x^{2}+x-1)
           </me>.
@@ -404,7 +479,7 @@
       </statement>
     </example>
 
-    <example>
+    <example xml:id="ex-fattorizzazione_polinomio_vari_campi">
       <statement>
         <p>
           Consideriamo il polinomio <m>p\coloneqq x^4+2x^2-5</m> a coefficienti in un campo <m>K</m> e troviamone la fattorizzazione in irriducibili in diversi casi.
@@ -447,6 +522,60 @@
           </p>
         </solution>
       </exercise>
+
+      <exercisegroup>
+      
+        <introduction>
+          <p>
+            Dimostrare che i seguenti polinomi a coefficienti interi sono irriducibili in <m>\Razionali[x]</m>. Stabilire se sono irriducibili anche in <m>\Interi[x]</m>.
+          </p>
+        </introduction>
+      
+        <exercise>
+          <statement>
+            <p>
+              <m>6x^{5}+14x^{3}+98x^{2}+35x+21</m>
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Si applica il <xref ref="lem-eisenstein" text="title"/> con <m>p=7</m>. Il polinomio dato è irriducibile anche in <m>\Razionali[x]</m> perché è primitivo.
+            </p>
+          </solution>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>x^{4}+3x^{3}+x^{2}+2x+5</m>
+            </p>
+          </statement>
+
+          <hint>
+            <p>
+              Non si può applicare il <xref ref="lem-eisenstein" text="title"/>. Seguire il procedimento dell'<xref ref="ex-fattorizzazione_polinomio_vari_campi"/>.
+            </p>
+          </hint>
+        </exercise>
+        
+        <exercise>
+          <statement>
+            <p>
+              <m>14x^{4}-12x^{3}+40x+20</m>
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Il polinomio non è irriducibile in <m>\Interi[x[</m> perché multiplo di <m>2</m>.
+              Dividendo per <m>2</m>, si ottiene il polinomio <m>7x^{4}-6x^{3}+20x+10</m> a cui applichiamo il <xref ref="lem-eisenstein" text="title"/> con <m>p=2</m>: questo polinomio è associato in <m>\Razionali[x]</m> (ma non in <m>\Interi[x]</m>) al polinomio dato che è, quindi, irriducibile in <m>\Razionali[x]</m>.
+            </p>
+          </solution>
+          
+        </exercise>
+      
+      </exercisegroup>
 
      <exercisegroup>
        <introduction>

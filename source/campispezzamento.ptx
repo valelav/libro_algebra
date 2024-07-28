@@ -32,7 +32,7 @@
     
         <remark xml:id="rem-spezzamento_estensione_finita">
           <p>
-            Se <m>E</m> è un campo di spezzamento di un polinomio <m>f</m> su <m>F</m>, per il <xref ref="cor-estensione_con_algebrici"/>, <m>E</m> è un'estensione finita e, quindi, algebrica, di <m>F</m>. Il grado di <m>E</m> su <m>F</m> può essere limitato in termini del grado di <m>f</m> (<xref ref="exercise-grado_spezzamento"/>).
+            Se <m>E</m> è un campo di spezzamento di un polinomio <m>f</m> su <m>F</m>, per il <xref ref="cor-estensione_con_algebrici"/> <m>E</m> è un'estensione finita e, quindi, algebrica, di <m>F</m>. Il grado di <m>E</m> su <m>F</m> può essere limitato in termini del grado di <m>f</m> (<xref ref="exercise-grado_spezzamento"/>).
           </p>
         </remark>
     
@@ -80,10 +80,31 @@
           Vediamo qualche esempio di costruzione di un campo di spezzamento.
         </p>
 
+        <example xml:id="ex-spezzamento_x3-1">
+          <statement>
+            <p>
+              Consideriamo il polinomio <m>f\coloneqq x^{3}-1</m> a coefficienti in <m>\Razionali</m>. Chiaramente <m>1</m> è radice in <m>\Razionali</m> di <m>f</m>, che è, quindi,  divisibile per <m>x-1</m>: esplicitamente <m>f=(x-1)g</m> con <m>g\coloneqq x^{2}+x+1</m>. Le eventuali radici razionali di <m>g</m> dovrebbero avere numeratore che divide il termine noto <m>1</m> e denominatore che divide il coefficiente direttivo <m>1</m>: le possibilità sono <m>1</m> e <m>-1</m> e si nota facilmente che nessuna di esse è radice di <m>g</m>. Dunque <m>g</m>, essendo un polinomio di secondo grado senza radici, è irriducibile in <m>\Razionali[x]</m>. Consideriamo allora l'estensione semplice <m>E\coloneqq\Razionali(u)</m> con <m>u</m> radice di <m>f</m>, costruita come nel <xref ref="lem-estensione_semplice"/>. Questa ha grado <m>2</m> su <m>\Razionali</m> ed è il campo di spezzamento di <m>f</m> su <m>\Razionali</m>: infatti, in <m>E[x]</m> il polinomio <m>f</m> si fattorizza come <m>f=(x-1)(x-u)h</m> dove <m>h</m> è un polinomio di primo grado.
+            </p>
+          </statement>
+        </example>
+
         <example>
           <statement>
             <p>
-              Consideriamo il polinomio <m>f\coloneqq x^{3}-2</m> a coefficienti in <m>\Razionali</m>. Per la <xref ref="prop-radici_razionali_intere_polinomio"/>, le eventuali radici razionali di <m>f</m> sono del tipo <m>\frac{a}{b}</m> con <m>a</m> e <m>b</m> interi divisori rispettivamente di <m>1</m> e <m>2</m>. Le possibili radici razionali sono allora <m>1</m>, <m>-1</m>, <m>2</m> e <m>-2</m>: nessuna di queste è radice del polinomio <m>f</m> che, per la <xref ref="prop-irriducibilita_e_radici"/> è, quindi, irriducibile in <m>\Razionali[x]</m>. Consideriamo allora l'estensione semplice <m>E\coloneqq\Razionali(u)</m> con <m>u</m> radice di <m>f</m>, costruita come nel <xref ref="lem-estensione_semplice"/>. In <m>E[x]</m> il polinomio <m>f</m> è divisibile per <m>x-u</m>. Abbiamo allora <m>x^{3}-2=(x-u)g</m> con <m>g</m> polinomio di secondo grado a coefficienti in <m>E</m>. Deter
+              Consideriamo il polinomio <m>f\coloneqq x^{3}-2</m> a coefficienti in <m>\Razionali</m>. Applicando il <xref ref="lem-eisenstein" text="title"/> con <m>p=2</m>, vediamo che è irriducibile in <m>\Razionali[x]</m>. Consideriamo allora l'estensione semplice <m>E\coloneqq\Razionali(u)</m> con <m>u</m> radice di <m>f</m>, costruita come nel <xref ref="lem-estensione_semplice"/>. In <m>E[x]</m> il polinomio <m>f</m> è divisibile per <m>x-u</m>. Abbiamo allora <m>x^{3}-2=(x-u)g</m> con <m>g</m> polinomio di secondo grado a coefficienti in <m>E</m>. Non sappiamo però se <m>g</m> sia irriducibile in <m>E[x]</m> (e, quindi, per ottenere il campo di spezzamento di <m>f</m> dobbiamo fare un'ulteriore estensione di grado <m>2</m>) oppure no (nel qual caso <m>E</m> sarebbe il campo di spezzamento di <m>f</m>). Per evitare troppi calcoli, possiamo scegliere come <m>u</m> l'usuale numero reale <m>\sqrt[3]{2}</m>: in particolare <m>E</m> sarà contenuto in <m>\Reali</m>. Sappiamo che le altre radici cubiche di <m>2</m> sono numeri complessi non reali. Pertanto  <m>E</m> non è il campo di spezzamento di <m>f</m>. Il suo campo di spezzamento su <m>\Razionali</m> si ottiene quindi con un'estensione di <m>E</m> di grado <m>2</m>- Pertanto il campo di spezzamento di <m>f</m> ha grado <m>6</m> su <m>\Razionali</m>.
+            </p>
+          </statement>
+        </example>
+
+        <example>
+          <statement>
+            <p>
+              <m>x^{3}-3x-1</m>
+              Consideriamo il polinomio <m>f\coloneqq x^{3}+x^{2}-2x-1</m> a coefficienti in <m>\Razionali</m>. Poiché, in effetti, i suoi coefficienti sono interi possiamo cercarne le eventuali radici razionali: il numeratore dovrebbe dividere il termine noto <m>-1</m> e il denominatore il coefficiente direttivo <m>1</m>. Le possibili radici razionali sono allora <m>1</m> e <m>-1</m>: si verifica facilmente che queste non sono radici e, quindi, poiché <m>f</m> non ha radici e ha grado <m>3</m>, è irriducibile in <m>\Razionali[x]</m>. Consideriamo allora l'estensione semplice <m>E\coloneqq\Razionali(u)</m> con <m>u</m> radice di <m>f</m>, costruita come nel <xref ref="lem-estensione_semplice"/>. Gli elementi di <m>E</m> sono del tipo <m>au^{2}+bu+c</m> al variare di <m>a</m>, <m>b</m> e <m>c</m> in <m>\Razionali</m>. 
+              Per vedere se <m>E</m> contiene altre radici di <m>f</m> oltre a <m>u</m> dovremmo sostituire l'elemento generico di <m>E</m> nel polinomio <m>f</m> e vedere se soddisfa tale polinomio: i calcoli sono un po' lunghi e li lasciamo per esercizio. Si verifica che <m>u^{2}-2</m> e <m>-u^{2}-u+1</m> sono radici di <m>f</m> che appartengono a <m>E</m>. Pertanto, <m>E</m> è il campo di spezzamento di <m>f</m> su <m>\Razionali</m> e in <m>E[x]</m> il polinomio <m>f</m> si fattorizza come
+              <me>
+                f=(x-u)(x-u^{2}+2)(x+u^{2}+u-1)
+              </me>.
             </p>
           </statement>
         </example>
