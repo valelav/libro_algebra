@@ -397,13 +397,13 @@
     <theorem xml:id="thm-proprieta_universale_polinomi">
       <statement>
         <p>
-          Sia <m>R</m> un anello commutativo, identificato con un sottoanello di <m>R[x]</m> come nella <xref ref="prop-anello_incluso_polinomi"/>. Allora, per ogni omomorfismo <m>\psi\colon R\to S</m> con <m>S</m> anello commutativo e ogni <m>c</m> appartenente a <m>S</m>, esiste un unico omomorfismo <m>\theta\colon R[x]\to S</m> che estende <m>\psi</m> e tale che <m>x\theta=c</m>.
+          Sia <m>R</m> un anello commutativo, identificato con un sottoanello di <m>R[x]</m> come nella <xref ref="prop-anello_incluso_polinomi"/>. Allora, per ogni omomorfismo <m>\psi\colon R\to S</m> con <m>S</m> anello commutativo e ogni <m>u</m> appartenente a <m>S</m>, esiste un unico omomorfismo <m>\theta\colon R[x]\to S</m> che estende <m>\psi</m> e tale che <m>x\theta=u</m>.
         </p>
         <image xml:id="image-universale_anello_polinomi">
           <shortdescription>Diagramma commutativo che rappresenta la proprietà universale dell'anello dei polinomi</shortdescription>
           <description>
             <p>
-              Diagramma commutativo con rappresentati un anello commutativo <m>R</m>, il suo anello dei polinomi <m>R[x]</m>, una freccia da <m>R</m> a <m>R[x]</m> che rappresenta l'inclusione, un elemento <m>c</m> di un anello <m>S</m>, una freccia da <m>R</m> a <m>S</m> che rappresenta un omomorfismo <m>\psi</m>. Infine una freccia (tratteggiata, a indicare il fatto che non fa parte dei dati iniziali) da <m>R[x]</m> a <m>S</m> che rappresenta l'unico omomorfismo che estende <m>\psi</m> e tale che <m>x\theta=c</m>.
+              Diagramma commutativo con rappresentati un anello commutativo <m>R</m>, il suo anello dei polinomi <m>R[x]</m>, una freccia da <m>R</m> a <m>R[x]</m> che rappresenta l'inclusione, un elemento <m>u</m> di un anello commutativo <m>S</m>, una freccia da <m>R</m> a <m>S</m> che rappresenta un omomorfismo <m>\psi</m>. Infine una freccia (tratteggiata, a indicare il fatto che non fa parte dei dati iniziali) da <m>R[x]</m> a <m>S</m> che rappresenta l'unico omomorfismo che estende <m>\psi</m> e tale che <m>x\theta=u</m>.
             </p>
           </description>
           <latex-image>
@@ -412,12 +412,12 @@
               \matrix [matrix of math nodes, row sep = 1cm, column sep = 0.5cm]
               {
                 |(R)| R \amp\amp |(Rx)| R[x]  \amp |(x)| x\\
-                        \amp\amp |(S)|  S     \amp |(c)| c\\
+                        \amp\amp |(S)|  S     \amp |(u)| u\\
               };
               \draw[{Hooks[right]}->] (R)-- (Rx);
               \draw[->] (R)-- node[midway,below] {$\psi$} (S);
               \draw[->,dashed] (Rx)--node[midway,auto] {$\theta$}(S);
-              \draw[|->] (x)--(c);
+              \draw[|->] (x)--(u);
             \end{tikzpicture}
           </latex-image>
         </image>
@@ -427,12 +427,12 @@
         <p>
           Dato un polinomio <m>f\coloneqq a_{0}+a_{1}x+\cdots+a_{n}x^{n}</m> poniamo
           <me>
-            f\theta\coloneqq a_{0}\psi+a_{1}\psi\cdot c+\cdots+a_{n}\psi\cdot c^{n}
+            f\theta\coloneqq a_{0}\psi+a_{1}\psi\cdot u+\cdots+a_{n}\psi\cdot u^{n}
           </me>.
-          Notiamo che <m>\theta</m> è ben definita perché inserendo o eliminando termini del tipo <m>0_{R}x^{i}</m> nella scrittura di <m>f</m>, il contributo del corrispondente termine <m>0_{R}\psi\cdot c^{i}</m> è nullo.
+          Notiamo che <m>\theta</m> è ben definita perché inserendo o eliminando termini del tipo <m>0_{R}x^{i}</m> nella scrittura di <m>f</m>, il contributo del corrispondente termine <m>0_{R}\psi\cdot u^{i}</m> è nullo.
         </p>
         <p>
-          Per definizione di <m>\theta</m>, si ha <m>a\theta=a\psi</m>, cioè <m>\theta</m> è un'estensione di <m>\psi</m>. Inoltre <m>x\theta=1_{R}\psi\cdot c=1_{S}\cdot c=c</m>.
+          Per definizione di <m>\theta</m>, si ha <m>a\theta=a\psi</m>, cioè <m>\theta</m> è un'estensione di <m>\psi</m>. Inoltre <m>x\theta=1_{R}\psi\cdot u=1_{S}\cdot u=u</m>.
         </p>
         <p>
           Mostriamo che <m>\theta</m> è un omomorfismo. Per definizione, <m>1_{R}\theta=1_{S}</m>. Se <m>g\coloneqq b_{0}+b_{1}x+\cdots+b_{m}x^{m}</m> è un polinomio in <m>R[x]</m> e <m>f</m> è come sopra, abbiamo
@@ -443,19 +443,19 @@
           con <m>c_{i}=\sum_{h+k=i}a_{h}b_{k}</m>.
         </p>
         <p>
-          Poiché <m>g\theta=b_{0}\psi+b_{1}\psi\cdot c+\cdots+b_{m}\psi\cdot c^{m}</m> abbiamo
+          Poiché <m>g\theta=b_{0}\psi+b_{1}\psi\cdot u+\cdots+b_{m}\psi\cdot u^{m}</m> abbiamo
           <md>
-            <mrow> (f+g)\theta \amp =(a_{0}+b_{0})\psi+(a_{1}+b_{1})\psi\cdot c+\cdots</mrow>
-            <mrow> \amp =a_{0}\psi+b_{0}\psi+(a_{1}\psi+b_{1}\psi)\cdot c+\cdots</mrow>
-            <mrow> \amp = a_{0}\psi+a_{1}\psi\cdot c+\cdots+b_{0}\psi+b_{1}\psi\cdot c+\cdots </mrow>
+            <mrow> (f+g)\theta \amp =(a_{0}+b_{0})\psi+(a_{1}+b_{1})\psi\cdot u+\cdots</mrow>
+            <mrow> \amp =a_{0}\psi+b_{0}\psi+(a_{1}\psi+b_{1}\psi)\cdot u+\cdots</mrow>
+            <mrow> \amp = a_{0}\psi+a_{1}\psi\cdot u+\cdots+b_{0}\psi+b_{1}\psi\cdot u+\cdots </mrow>
             <mrow>  \amp = f\theta+g\theta </mrow>
           </md>
           e
           <md>
-            <mrow>(fg)\theta \amp =c_{0}\psi + c_{1}\psi c+\cdots</mrow>
-            <mrow> \amp = (a_{0}b_{0})\psi+(a_{0}b_{1}+a_{1}b_{0})\psi \cdot c+\cdots </mrow>
-            <mrow>  \amp = a_{0}\psi\cdot b_{0}\psi +(a_{0}\psi \cdot b_{1}\psi+a_{1}\psi \cdot b_{0}\psi) \cdot c+\cdots</mrow>
-            <mrow>  \amp =(a_{0}\psi+a_{1}\psi\cdot c+\cdots)(b_{0}\psi+b_{1}\psi\cdot c+\cdots) </mrow>
+            <mrow>(fg)\theta \amp =u_{0}\psi + c_{1}\psi u+\cdots</mrow>
+            <mrow> \amp = (a_{0}b_{0})\psi+(a_{0}b_{1}+a_{1}b_{0})\psi \cdot u+\cdots </mrow>
+            <mrow>  \amp = a_{0}\psi\cdot b_{0}\psi +(a_{0}\psi \cdot b_{1}\psi+a_{1}\psi \cdot b_{0}\psi) \cdot u+\cdots</mrow>
+            <mrow>  \amp =(a_{0}\psi+a_{1}\psi\cdot c+\cdots)(b_{0}\psi+b_{1}\psi\cdot u+\cdots) </mrow>
             <mrow>  \amp =f\theta\cdot g\theta</mrow>
           </md>.
           Notiamo che abbiamo usato la commutatività di <m>S</m> nel penultimo passaggio.
@@ -471,15 +471,15 @@
     <corollary xml:id="cor-valutazione_polinomio">
       <statement>
         <p>
-          Sia <m>R</m> un anello commutativo e sia <m>c</m> un elemento di <m>R</m>. Allora per ogni polinomio
+          Sia <m>R</m> un anello commutativo e sia <m>u</m> un elemento di <m>R</m>. Allora per ogni polinomio
           <me>
             f\coloneqq a_{0}+a_{1}x+\cdots+a_{n}x^{n}
           </me>
-           a coefficienti in <m>R</m> è definita la sua <term>valutazione</term> in <m>c</m>, denotata con <m>f(c)</m> nel modo seguente
+           a coefficienti in <m>R</m> è definita la sua <term>valutazione</term> in <m>u</m>, denotata con <m>f(u)</m> nel modo seguente
           <me>
-            f(c)\coloneqq a_{0}+a_{1}c+\cdots+a_{n}c^{n}
+            f(u)\coloneqq a_{0}+a_{1}u+\cdots+a_{n}u^{n}
           </me>.
-          Per ogni <m>f</m> e <m>g</m> in <m>R[x]</m> si ha, allora, <m>(f+g)(c)=f(c)+g(c)</m> e <m>(fg)(c)=f(c)g(c)</m>.
+          Per ogni <m>f</m> e <m>g</m> in <m>R[x]</m> si ha, allora, <m>(f+g)(u)=f(u)+g(u)</m> e <m>(fg)(u)=f(u)g(u)</m>.
         </p>
       </statement>
 
@@ -526,7 +526,7 @@
           avendo posto <m>q\coloneqq \bar{q}+a_{n}b_{m}^{-1}x^{n-m}</m>.
         </p>
         <p>
-          Per quanto riguarda l'unicità, supponiamo che <m>f=gq+r=gq'+r'</m> con <m>\deg r' \lt\deg g</m> o <m>r'=0</m>. Allora <m>r-r'=g(q'-q)</m>. Se fosse <m>q'\ne q</m>, cioè <m>q'-q\ne 0</m>, per la <xref ref="prop-grado_e_operazioni"/> avremmo allora che <m>\deg(r-r')=\deg (g(q-q'))\ge \deg g</m> (il coefficiente direttivo di <m>g</m>, essendo invertibile non è un divisore dello zero). Ma ciò non può essere per le condizioni su <m>r</m> e <m>r'</m>. Dunque, <m>q'=q</m> e <m>r-r'=g(q'-q)=g0=0</m>, cioè <m>r=r'</m>.
+          Per quanto riguarda l'unicità, supponiamo che <m>f=gq+r=g\tilde{q}+\tilde{r}</m> con <m>\deg \tilde{r} \lt\deg g</m> o <m>\tilde{r}=0</m>. Allora <m>r-\tilde{r}=g(\tilde{q}-q)</m>. Se fosse <m>\tilde{q}\ne q</m>, cioè <m>\tilde{q}-q\ne 0</m>, per la <xref ref="prop-grado_e_operazioni"/> avremmo allora che <m>\deg(r-\tilde{r})=\deg (g(q-\tilde{q}))\ge \deg g</m> (il coefficiente direttivo di <m>g</m>, essendo invertibile non è un divisore dello zero). Ma ciò non può essere per le condizioni su <m>r</m> e <m>\tilde{r}</m>. Dunque, <m>\tilde{q}=q</m> e <m>r-\tilde{r}=g(\tilde{q}-q)=g0=0</m>, cioè <m>r=\tilde{r}</m>.
         </p>
       </proof>
 
@@ -563,7 +563,7 @@
     <definition xml:id="def-radice_polinomio">
       <statement>
         <p>
-          Dato un polinomio <m>f</m> a coefficienti in un anello commutativo <m>R</m>, un elemento <m>c</m> di <m>R</m> è detto <term>radice</term> del polinomio <m>f</m> se <m>f(c)=0</m>.
+          Dato un polinomio <m>f</m> a coefficienti in un anello commutativo <m>R</m>, un elemento <m>u</m> di <m>R</m> è detto <term>radice</term> del polinomio <m>f</m> se <m>f(u)=0</m>.
         </p>
       </statement>
     </definition>
@@ -572,21 +572,21 @@
       <title>Teorema del resto</title>
       <statement>
         <p>
-          Dato un polinomio <m>f</m> a coefficienti in un anello commutativo e un elemento <m>c</m> di <m>R</m>, il resto della divisione di <m>f</m> per <m>x-c</m> è esattamente <m>f(c)</m>. In particolare, <m>c</m> è radice di <m>f</m> se e solo se <m>x-c</m> è un divisore di <m>f</m>.
+          Dato un polinomio <m>f</m> a coefficienti in un anello commutativo <m>R</m> e un elemento <m>u</m> di <m>R</m>, il resto della divisione di <m>f</m> per <m>x-u</m> è esattamente <m>f(u)</m>. In particolare, <m>u</m> è radice di <m>f</m> se e solo se <m>f=(x-u)q</m> per qualche polinomio <m>q</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Poiché il coefficiente direttivo di <m>x-c</m> è <m>1</m> ed è, quindi, invertibile, possiamo applicare la <xref ref="thm-divisione_tra_polinomi" text="title"/> e ottenere
+          Poiché il coefficiente direttivo di <m>x-u</m> è <m>1</m> ed è, quindi, invertibile, possiamo applicare la <xref ref="thm-divisione_tra_polinomi" text="title"/> e ottenere
           <me>
-            f=q(x-c)+r
+            f=q(x-u)+r
           </me>
-          con <m>\deg r \lt \deg(x-c)=1</m> o <m>r=0</m>: in altri termini, <m>r</m> è un elemento di <m>R</m>. In particolare, la sua valutazione in un qualunque elemento di <m>R</m> dà sempre valore <m>r</m>. Abbiamo allora
+          con <m>\deg r \lt \deg(x-u)=1</m> o <m>r=0</m>: in altri termini, <m>r</m> è un elemento di <m>R</m>. In particolare, la sua valutazione in un qualunque elemento di <m>R</m> dà sempre valore <m>r</m>. Abbiamo allora
           <me>
-            f(c)=q(c)(c-c)+r
+            f(u)=q(u)(u-u)+r
           </me>
-          cioè <m>f(c)=r</m>, come richiesto.
+          cioè <m>f(u)=r</m>, come richiesto.
         </p>
       </proof>
 
@@ -595,9 +595,9 @@
     <corollary xml:id="cor-radici_dominio">
       <statement>
         <p>
-          Sia <m>f</m> un polinomio non nullo a coefficienti in un dominio <m>D</m>. Se <m>c_{1}</m>, <m>c_{2}</m>, <m>\ldots</m>, <m>c_{t}</m> sono radici distinte di <m>f</m>, allora
+          Sia <m>f</m> un polinomio non nullo a coefficienti in un dominio <m>D</m>. Se <m>u_{1}</m>, <m>u_{2}</m>, <m>\ldots</m>, <m>u_{t}</m> sono radici distinte di <m>f</m>, allora
           <me>
-            f=q(x-c_{1})(x-c_{2})\cdots(x-c_{t})
+            f=q(x-u_{1})(x-u_{2})\cdots(x-u_{t})
           </me>
           per qualche <m>q</m> in <m>D[x]</m>. In particolare, <m>t\le\deg f</m>.
         </p>
@@ -605,9 +605,9 @@
 
       <proof>
         <p>
-          Procediamo per induzione su <m>t</m>. Se <m>t=0</m>, non c'è nulla da dimostrare. Se <m>t \gt 0</m>, per il <xref ref="thm-del_resto" text="title"/> sappiamo che <m>f=q'(x-c_{t})</m> per qualche <m>q'</m> in <m>D[x]</m>. Per ogni <m>i</m> con <m>1\le i\le t-1</m>, abbiamo <m>0=f(c_{i})=q'(c_{i})(c_{i}-c_{t})</m>: poiché <m>D</m> è un dominio e <m>c_{i}\ne c_{t}</m>, questo implica che <m>q'(c_{i})=0</m>. Per ipotesi induttiva abbiamo allora che
+          Procediamo per induzione su <m>t</m>. Se <m>t=0</m>, non c'è nulla da dimostrare. Se <m>t \gt 0</m>, per il <xref ref="thm-del_resto" text="title"/> sappiamo che <m>f=\tilde{q}(x-u_{t})</m> per qualche <m>\tilde{q}</m> in <m>D[x]</m>. Per ogni <m>i</m> con <m>1\le i\le t-1</m>, abbiamo <m>0=f(u_{i})=\tilde{q}(u_{i})(u_{i}-u_{t})</m>: poiché <m>D</m> è un dominio e <m>u_{i}\ne u_{t}</m>, questo implica che <m>\tilde{q}(u_{i})=0</m>. Per ipotesi induttiva abbiamo allora che
           <me>
-            q'=q(x-c_{1})(x-c_{2})\cdots(x-c_{t-1})
+            \tilde{q}=q(x-u_{1})(x-u_{2})\cdots(x-u_{t-1})
           </me>.
           Sostituendo, otteniamo la tesi.
         </p>
@@ -627,6 +627,46 @@
       </statement>
     </example>
 
+    <p>
+      Se <m>u</m> è una radice di un polinomio non nullo <m>f</m> a coefficienti in un anello commutativo <m>R</m>, dal <xref ref="thm-del_resto" text="title"/> sappiamo che <m>f=(x-u)q</m> per qualche polinomio <m>q</m>. Se <m>q(u)=0</m>, possiamo ripetere il procedimento e ottenere <m>f=(x-u)^{2}h</m> per qualche polinomio <m>h</m>. Il procedimento può essere iterato, raccogliendo via via potenze di <m>x-u</m> di esponente crescente: questo esponente non può, ovviamente, superare il grado di <m>f</m> e, quindi, a un certo punto troveremo <m>f=(x-u)^{m}h</m> con <m>h</m> polinomio tale che <m>h(u)\ne 0</m>. Ciò suggerisce la
+    </p>
+
+    <definition xml:id="def-radice_multipla">
+      <statement>
+        <p>
+          Sia <m>f</m> un polinomio non nullo a coefficienti in un anello commutativo <m>R</m> e sia <m>u</m> una radice di <m>f</m>. Diciamo che <m>u</m> ha <term>molteplicità</term> <m>m</m> se <m>f=(x-u)^{m}h</m> con <m>h</m> polinomio tale che <m>h(u)\ne 0</m>. Se <m>m=1</m>, diciamo che <m>u</m> è una radice <term>semplice</term>, altrimenti diciamo che <m>u</m> è una radice <term>multipla</term>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Estendiamo ora il <xref ref="cor-radici_dominio"/>.
+    </p>
+
+    <corollary xml:id="cor-radici_multiple_dominio">
+      <statement>
+        <p>
+          Sia <m>f</m> un polinomio non nullo a coefficienti in un dominio <m>D</m>. Se <m>u_{1}</m>, <m>u_{2}</m>, <m>\ldots</m>, <m>u_{t}</m> sono radici distinte di <m>f</m> di molteplicità rispettive <m>m_{1}</m>, <m>m_{2}</m>, <m>\ldots</m>, <m>m_{t}</m> allora
+          <me>
+            f=q(x-u_{1})^{m_{1}}(x-u_{2})^{m_{2}}\cdots(x-u_{t})^{m_{t}}
+          </me>
+          per qualche <m>q</m> in <m>D[x]</m>. In particolare, <m>m_{1}+m_{2}+\cdots+m_{t}\le\deg f</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Procediamo per induzione su <m>t</m>. Se <m>t=0</m>, non c'è nulla da dimostrare. Se <m>t \gt 0</m>, sappiamo che <m>f=\tilde{q}(x-u_{t})^{m_{t}}</m> per qualche <m>\tilde{q}</m> in <m>D[x]</m>. Per ogni <m>i</m> con <m>1\le i\le t-1</m>, abbiamo <m>0=f(u_{i})=\tilde{q}(u_{i})(u_{i}-u_{t})^{m_{i}}</m>: poiché <m>D</m> è un dominio e <m>u_{i}\ne u_{t}</m>, questo implica che <m>\tilde{q}(u_{i})=0</m>. Per ipotesi induttiva abbiamo allora che
+          <me>
+            \tilde{q}=q(x-u_{1})^{m_{1}}(x-u_{2})^{m_{2}}\cdots(x-u_{t-1})^{m_{t-1}}
+          </me>.
+          Sostituendo, otteniamo la tesi.
+        </p>
+      </proof>
+
+    </corollary>    
+
+    
     <p>
       Ricordiamo che nel <xref ref="thm-classificazione_gruppi_prodotto_pq"/> abbiamo usato, senza dimostrazione, il fatto che il gruppo degli automorfismi di un gruppo ciclico di ordine primo è, a sua volta, ciclico. Siamo ora in grado di dimostrarlo.
     </p>
@@ -723,6 +763,7 @@
           </p>
         </statement>
       </exercise>
+
 
     </exercises>
 

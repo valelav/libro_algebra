@@ -131,6 +131,14 @@
 
     <definition xml:id="def-estensione_con_elementi">
       <notation>
+        <usage><m>F(U)</m></usage>
+        <description>sottocampo generato da <m>F</m> e <m>U</m></description>
+      </notation>
+      <notation>
+        <usage><m>F[U]</m></usage>
+        <description>sottoanello generato da <m>F</m> e <m>U</m></description>
+      </notation>
+      <notation>
         <usage><m>F(u_{1},\ldots,u_{r})</m></usage>
         <description>sottocampo generato da <m>F</m> e <m>u_{1}</m>, <m>\ldots</m>, <m>u_{r}</m></description>
       </notation>
@@ -140,10 +148,10 @@
       </notation>
       <statement>
         <p>
-          Dati un'estensione <m>E</m> di un campo <m>F</m> ed elementi <m>u_{1}</m>, <m>\ldots</m>, <m>u_{r}</m> di <m>E</m>, indichiamo con <m>F(u_{1},\ldots,u_{r})</m> il sottocampo di <m>E</m> generato da <m>F</m> e <m>u_{1}</m>, <m>\ldots</m>, <m>u_{r}</m> e con <m>F[u_{1},\ldots,u_{r}]</m> il sottoanello di <m>E</m> generato da <m>F</m> e <m>u_{1}</m>, <m>\ldots</m>, <m>u_{r}</m>.
+          Dati un'estensione <m>E</m> di un campo <m>F</m> e un sottoinsieme <m>U</m> di <m>E</m>, indichiamo con <m>F(U)</m> il sottocampo di <m>E</m> generato da <m>F</m> e <m>U</m> e con <m>F[U]</m> il sottoanello di <m>E</m> generato da <m>F</m> e <m>U</m>. Nel caso particolare in cui <m>U\coloneqq\{u_{1},\ldots,u_{r}\}</m> sia un insieme finito, scriveremo semplicemente <m>F(u_{1},\ldots,u_{r})</m> per <m>F(U)</m> e <m>F[u_{1},\ldots,u_{r}]</m> per <m>F[U]</m>.
         </p>
       </statement>
-    </definition>
+    </definition>    
 
     <remark>
       <p>
@@ -162,13 +170,13 @@
     <proposition xml:id="prop-sottocampo_generato_sottoanello_generato">
       <statement>
         <p>
-          Sia <m>E</m> un'estensione di un campo <m>F</m> e siano <m>u_{1}</m>, <m>\ldots</m>, <m>u_{r}</m> elementi di <m>E</m>: allora <m>F(u_{1},\ldots,u_{r})</m> contiene <m>F[u_{1},\ldots,u_{r}]</m> e <m>F(u_{1},\ldots,u_{r})</m> è il campo dei quozienti di <m>F[u_{1},\ldots,u_{r}]</m>.
+          Sia <m>E</m> un'estensione di un campo <m>F</m> e sia <m>U</m> un sottoinsieme di <m>E</m>: allora <m>F(U)</m> contiene <m>F[U]</m> e <m>F(U)</m> è il campo dei quozienti di <m>F[U]</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Per definizione, <m>F[u_{1},\ldots,u_{r}]</m> è contenuto in tutti i sottoanelli di <m>E</m> contenenti <m>F</m> e <m>u_{1}</m>, <m>\ldots</m>, <m>u_{r}</m>: in particolare, <m>F(u_{1},\ldots,u_{r})</m> è un sottoanello che soddisfa queste proprietà e, quindi, contiene <m>F[u_{1},\ldots,u_{r}]</m>. Il fatto che <m>F(u_{1},\ldots,u_{r})</m> sia il campo dei quozienti di <m>F[u_{1},\ldots,u_{r}]</m> segue dall'<xref ref="rem-campo_quozienti_contenuto"/>.
+          Per definizione, <m>F[U]</m> è contenuto in tutti i sottoanelli di <m>E</m> contenenti <m>F</m> e <m>U</m>: in particolare, <m>F(U)</m> è un sottoanello che soddisfa queste proprietà e, quindi, contiene <m>F[U]</m>. Il fatto che <m>F(U)</m> sia il campo dei quozienti di <m>F[U]</m> segue dall'<xref ref="rem-campo_quozienti_contenuto"/>.
         </p>
       </proof>
 
@@ -560,7 +568,7 @@
       <exercise>
         <statement>
           <p>
-            Dati un'estensione <m>E</m> di un campo <m>F</m> e un sottoinsieme <m>U</m> di <m>E</m>, indichiamo con <m>F(U)</m> il sottocampo di <m>E</m> generato da <m>F</m> e <m>U</m>. Mostrare che se gli elementi di <m>U</m> sono tutti algebrici su <m>F</m>, allora <m>F(U)</m> è un'estensione algebrica di <m>F</m>.
+            Dati un'estensione <m>E</m> di un campo <m>F</m> e un sottoinsieme <m>U</m> di <m>E</m> formato da elementi algebrici su <m>F</m>, mostrare che <m>F(U)</m> è un'estensione algebrica di <m>F</m>.
           </p>
         </statement>
       </exercise>
@@ -706,7 +714,7 @@
     <title>Campi algebricamente chiusi</title>
 
     <p>
-      Abbiamo visto come aggiungere le radici di un polinomio a un campo. Ovviamente potremmo ripetere il procedimento con un numero finito qualunque di polinomi. Ma possiamo fare qualcosa del genere con infiniti polinomi? Ciò richiede considerazione abbastanza delicate di teoria assiomatica degli insiemi. Non entreremo in questi dettagli. Ci limiteremo ad assumere il seguente risultato che, a dispetto del nome, può essere considerato come uno degli assiomi di tale teoria.
+      Abbiamo visto come aggiungere le radici di un polinomio a un campo. Ovviamente potremmo ripetere il procedimento con un numero finito qualunque di polinomi. Ma possiamo fare qualcosa del genere con infiniti polinomi? Ciò richiede considerazione abbastanza delicate di teoria assiomatica degli insiemi. Non entreremo in questi dettagli e ci limiteremo ad assumere il seguente risultato.
     </p>
 
     <lemma xml:id="lem-zorn">

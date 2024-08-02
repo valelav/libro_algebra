@@ -272,6 +272,9 @@
       per ogni scelta di <m>i</m> e <m>j</m> in <m>I</m> e ogni scelta di <m>a</m> e <m>b</m> in <m>R</m>. In particolare, scegliendo <m>i=0</m>, abbiamo che <m>aj</m> deve appartenere a <m>I</m> per ogni <m>a</m> in <m>R</m> e ogni <m>j</m> in <m>I</m>; scegliendo invece <m>j=0</m>, abbiamo che <m>ib</m> deve appartenere a <m>I</m> per ogni <m>b</m> in <m>R</m> e ogni <m>i</m> in <m>I</m>. Riassumendo, il prodotto di due elementi di cui almeno uno in <m>I</m> deve appartenere a <m>I</m>. Viceversa, se questa condizione è soddisfatta allora <m>ij</m>, <m>ib</m> e <m>aj</m> appartengono a <m>I</m> per ogni possibile scelta e, quindi, la loro somma appartiene a <m>I</m>, visto che <m>I</m> è un sottogruppo del gruppo additivo. Ciò suggerisce la
     </p>
     <definition xml:id="def-ideale">
+      <idx><h>ideale</h></idx>
+      <idx><h>ideale</h><h>bilatero</h></idx>
+    
       <statement>
         <p>
           Sia <m>R</m> un anello. Un sottoinsieme non vuoto <m>I</m> di <m>R</m> è detto <term>ideale bilatero</term> o semplicemente <term>ideale</term> se
@@ -430,6 +433,8 @@
     </p>
 
     <proposition xml:id="prop-intersezione_di_ideali">
+      <idx><h>intersezione</h><h>di ideali</h></idx>
+      <idx><h>ideale</h><h>intersezione</h></idx>
       <statement>
         <p>
           Se <m>R</m> è un anello e <m>\{I_{i}\}_{i\in \Omega}</m> è una famiglia di ideali di <m>R</m> (indicizzata da un insieme di indici <m>\Omega</m>), allora
@@ -447,7 +452,7 @@
 
       <notation>
         <usage><m>\ideal{X}</m></usage>
-        <description>ideale generato da un insieme <m>X</m></description>
+        <description>ideale generato da un sottoinsieme <m>X</m></description>
       </notation>
 
       <statement>
