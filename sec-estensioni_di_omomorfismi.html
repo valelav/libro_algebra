@@ -88,6 +88,161 @@ window.MathJax = {
 <link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#prop-unione_intersezione-1-1-4 { counter-set: prop-unione_intersezione-1-1-4 0; }
+#prop-unione_intersezione-1-1-4 > li::marker { content: ""counter(prop-unione_intersezione-1-1-4,decimal)"."; }
+#prop-unione_intersezione-1-1-4 > li { counter-increment: prop-unione_intersezione-1-1-4; }
+#prop-inclusione_equivalente-1-1-3 { counter-set: prop-inclusione_equivalente-1-1-3 0; }
+#prop-inclusione_equivalente-1-1-3 > li::marker { content: ""counter(prop-inclusione_equivalente-1-1-3,decimal)"."; }
+#prop-inclusione_equivalente-1-1-3 > li { counter-increment: prop-inclusione_equivalente-1-1-3; }
+#prop-classe_equivalenza-1-1-3 { counter-set: prop-classe_equivalenza-1-1-3 0; }
+#prop-classe_equivalenza-1-1-3 > li::marker { content: ""counter(prop-classe_equivalenza-1-1-3,decimal)"."; }
+#prop-classe_equivalenza-1-1-3 > li { counter-increment: prop-classe_equivalenza-1-1-3; }
+#prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 { counter-set: prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 0; }
+#prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 > li::marker { content: ""counter(prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2,decimal)"."; }
+#prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 > li { counter-increment: prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2; }
+#prop-composizione_iniettive_suriettive-1-1-3 { counter-set: prop-composizione_iniettive_suriettive-1-1-3 0; }
+#prop-composizione_iniettive_suriettive-1-1-3 > li::marker { content: ""counter(prop-composizione_iniettive_suriettive-1-1-3,decimal)"."; }
+#prop-composizione_iniettive_suriettive-1-1-3 > li { counter-increment: prop-composizione_iniettive_suriettive-1-1-3; }
+#prop-addizione_matrici-1-2-1 { counter-set: prop-addizione_matrici-1-2-1 0; }
+#prop-addizione_matrici-1-2-1 > li::marker { content: ""counter(prop-addizione_matrici-1-2-1,decimal)"."; }
+#prop-addizione_matrici-1-2-1 > li { counter-increment: prop-addizione_matrici-1-2-1; }
+#prop-moltiplicazione_matrici-1-2-1 { counter-set: prop-moltiplicazione_matrici-1-2-1 0; }
+#prop-moltiplicazione_matrici-1-2-1 > li::marker { content: ""counter(prop-moltiplicazione_matrici-1-2-1,decimal)"."; }
+#prop-moltiplicazione_matrici-1-2-1 > li { counter-increment: prop-moltiplicazione_matrici-1-2-1; }
+#def-numeri_naturali_peano-5-1-7 { counter-set: def-numeri_naturali_peano-5-1-7 0; }
+#def-numeri_naturali_peano-5-1-7 > li::marker { content: ""counter(def-numeri_naturali_peano-5-1-7,decimal)"."; }
+#def-numeri_naturali_peano-5-1-7 > li { counter-increment: def-numeri_naturali_peano-5-1-7; }
+#prop-anello_degli_interi-1-2-1 { counter-set: prop-anello_degli_interi-1-2-1 0; }
+#prop-anello_degli_interi-1-2-1 > li::marker { content: ""counter(prop-anello_degli_interi-1-2-1,decimal)"."; }
+#prop-anello_degli_interi-1-2-1 > li { counter-increment: prop-anello_degli_interi-1-2-1; }
+#prop-ordine_interi-1-2-1 { counter-set: prop-ordine_interi-1-2-1 0; }
+#prop-ordine_interi-1-2-1 > li::marker { content: ""counter(prop-ordine_interi-1-2-1,decimal)"."; }
+#prop-ordine_interi-1-2-1 > li { counter-increment: prop-ordine_interi-1-2-1; }
+#prop-anello_degli_classi_di_resto-1-2-1 { counter-set: prop-anello_degli_classi_di_resto-1-2-1 0; }
+#prop-anello_degli_classi_di_resto-1-2-1 > li::marker { content: ""counter(prop-anello_degli_classi_di_resto-1-2-1,decimal)"."; }
+#prop-anello_degli_classi_di_resto-1-2-1 > li { counter-increment: prop-anello_degli_classi_di_resto-1-2-1; }
+#prop-classi_resto_invertibili-1-1-3 { counter-set: prop-classi_resto_invertibili-1-1-3 0; }
+#prop-classi_resto_invertibili-1-1-3 > li::marker { content: ""counter(prop-classi_resto_invertibili-1-1-3,decimal)"."; }
+#prop-classi_resto_invertibili-1-1-3 > li { counter-increment: prop-classi_resto_invertibili-1-1-3; }
+#prop-proprieta_potenze_monoide-1-1-5 { counter-set: prop-proprieta_potenze_monoide-1-1-5 0; }
+#prop-proprieta_potenze_monoide-1-1-5 > li::marker { content: ""counter(prop-proprieta_potenze_monoide-1-1-5,decimal)"."; }
+#prop-proprieta_potenze_monoide-1-1-5 > li { counter-increment: prop-proprieta_potenze_monoide-1-1-5; }
+#prop-proprieta_potenze_elemento_invertibile-1-1-5 { counter-set: prop-proprieta_potenze_elemento_invertibile-1-1-5 0; }
+#prop-proprieta_potenze_elemento_invertibile-1-1-5 > li::marker { content: ""counter(prop-proprieta_potenze_elemento_invertibile-1-1-5,decimal)"."; }
+#prop-proprieta_potenze_elemento_invertibile-1-1-5 > li { counter-increment: prop-proprieta_potenze_elemento_invertibile-1-1-5; }
+#prop-cancellazione_gruppo-2-1-5 { counter-set: prop-cancellazione_gruppo-2-1-5 0; }
+#prop-cancellazione_gruppo-2-1-5 > li::marker { content: ""counter(prop-cancellazione_gruppo-2-1-5,decimal)"."; }
+#prop-cancellazione_gruppo-2-1-5 > li { counter-increment: prop-cancellazione_gruppo-2-1-5; }
+#prop-supporto-1-1-4 { counter-set: prop-supporto-1-1-4 0; }
+#prop-supporto-1-1-4 > li::marker { content: ""counter(prop-supporto-1-1-4,decimal)"."; }
+#prop-supporto-1-1-4 > li { counter-increment: prop-supporto-1-1-4; }
+#prop-laterali_partizione-1-1-4 { counter-set: prop-laterali_partizione-1-1-4 0; }
+#prop-laterali_partizione-1-1-4 > li::marker { content: ""counter(prop-laterali_partizione-1-1-4,decimal)"."; }
+#prop-laterali_partizione-1-1-4 > li { counter-increment: prop-laterali_partizione-1-1-4; }
+#thm-prodotto_sottogruppo-1-1-4 { counter-set: thm-prodotto_sottogruppo-1-1-4 0; }
+#thm-prodotto_sottogruppo-1-1-4 > li::marker { content: ""counter(thm-prodotto_sottogruppo-1-1-4,decimal)"."; }
+#thm-prodotto_sottogruppo-1-1-4 > li { counter-increment: thm-prodotto_sottogruppo-1-1-4; }
+#prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottogruppi-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_sottogruppi-1-1-2; }
+#prop-controimmagini_omomorfismo-1-1-6 { counter-set: prop-controimmagini_omomorfismo-1-1-6 0; }
+#prop-controimmagini_omomorfismo-1-1-6 > li::marker { content: ""counter(prop-controimmagini_omomorfismo-1-1-6,decimal)"."; }
+#prop-controimmagini_omomorfismo-1-1-6 > li { counter-increment: prop-controimmagini_omomorfismo-1-1-6; }
+#thm-caratterizzazione_sottogruppi_normali-1-1-3 { counter-set: thm-caratterizzazione_sottogruppi_normali-1-1-3 0; }
+#thm-caratterizzazione_sottogruppi_normali-1-1-3 > li::marker { content: ""counter(thm-caratterizzazione_sottogruppi_normali-1-1-3,decimal)"."; }
+#thm-caratterizzazione_sottogruppi_normali-1-1-3 > li { counter-increment: thm-caratterizzazione_sottogruppi_normali-1-1-3; }
+#thm-normalizzante-1-1-3 { counter-set: thm-normalizzante-1-1-3 0; }
+#thm-normalizzante-1-1-3 > li::marker { content: ""counter(thm-normalizzante-1-1-3,decimal)"."; }
+#thm-normalizzante-1-1-3 > li { counter-increment: thm-normalizzante-1-1-3; }
+#prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2; }
+#prop-quoziente-eredita-1-1-5 { counter-set: prop-quoziente-eredita-1-1-5 0; }
+#prop-quoziente-eredita-1-1-5 > li::marker { content: ""counter(prop-quoziente-eredita-1-1-5,decimal)"."; }
+#prop-quoziente-eredita-1-1-5 > li { counter-increment: prop-quoziente-eredita-1-1-5; }
+#exercises-congruenze-2-1-1-3 { counter-set: exercises-congruenze-2-1-1-3 0; }
+#exercises-congruenze-2-1-1-3 > li::marker { content: "("counter(exercises-congruenze-2-1-1-3,lower-alpha)")"; }
+#exercises-congruenze-2-1-1-3 > li { counter-increment: exercises-congruenze-2-1-1-3; }
+#prop-proprieta_fattori_prodotto_diretto-1-1-9 { counter-set: prop-proprieta_fattori_prodotto_diretto-1-1-9 0; }
+#prop-proprieta_fattori_prodotto_diretto-1-1-9 > li::marker { content: ""counter(prop-proprieta_fattori_prodotto_diretto-1-1-9,decimal)"."; }
+#prop-proprieta_fattori_prodotto_diretto-1-1-9 > li { counter-increment: prop-proprieta_fattori_prodotto_diretto-1-1-9; }
+#thm-sylow-2-1-9 { counter-set: thm-sylow-2-1-9 0; }
+#thm-sylow-2-1-9 > li::marker { content: ""counter(thm-sylow-2-1-9,decimal)"."; }
+#thm-sylow-2-1-9 > li { counter-increment: thm-sylow-2-1-9; }
+#prop-moltiplicazione_opposti-1-1-2 { counter-set: prop-moltiplicazione_opposti-1-1-2 0; }
+#prop-moltiplicazione_opposti-1-1-2 > li::marker { content: ""counter(prop-moltiplicazione_opposti-1-1-2,decimal)"."; }
+#prop-moltiplicazione_opposti-1-1-2 > li { counter-increment: prop-moltiplicazione_opposti-1-1-2; }
+#prop-multipli_potenze_anello-1-1-4 { counter-set: prop-multipli_potenze_anello-1-1-4 0; }
+#prop-multipli_potenze_anello-1-1-4 > li::marker { content: ""counter(prop-multipli_potenze_anello-1-1-4,decimal)"."; }
+#prop-multipli_potenze_anello-1-1-4 > li { counter-increment: prop-multipli_potenze_anello-1-1-4; }
+#prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottoanelli-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_sottoanelli-1-1-2; }
+#prop-immagine_diretta_inversa_di_ideali-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_ideali-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_ideali-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_ideali-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_ideali-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_ideali-1-1-2; }
+#prop-grado_e_operazioni-1-1-4 { counter-set: prop-grado_e_operazioni-1-1-4 0; }
+#prop-grado_e_operazioni-1-1-4 > li::marker { content: ""counter(prop-grado_e_operazioni-1-1-4,decimal)"."; }
+#prop-grado_e_operazioni-1-1-4 > li { counter-increment: prop-grado_e_operazioni-1-1-4; }
+#prop-proprieta_divisibilita-1-1-7 { counter-set: prop-proprieta_divisibilita-1-1-7 0; }
+#prop-proprieta_divisibilita-1-1-7 > li::marker { content: ""counter(prop-proprieta_divisibilita-1-1-7,decimal)"."; }
+#prop-proprieta_divisibilita-1-1-7 > li { counter-increment: prop-proprieta_divisibilita-1-1-7; }
+#prop-irriducibile-1-1-3 { counter-set: prop-irriducibile-1-1-3 0; }
+#prop-irriducibile-1-1-3 > li::marker { content: ""counter(prop-irriducibile-1-1-3,decimal)"."; }
+#prop-irriducibile-1-1-3 > li { counter-increment: prop-irriducibile-1-1-3; }
+#prop-lunghezza-1-1-3 { counter-set: prop-lunghezza-1-1-3 0; }
+#prop-lunghezza-1-1-3 > li::marker { content: ""counter(prop-lunghezza-1-1-3,decimal)"."; }
+#prop-lunghezza-1-1-3 > li { counter-increment: prop-lunghezza-1-1-3; }
+#prop-MCD_esiste_sempre-1-1-5 { counter-set: prop-MCD_esiste_sempre-1-1-5 0; }
+#prop-MCD_esiste_sempre-1-1-5 > li::marker { content: ""counter(prop-MCD_esiste_sempre-1-1-5,decimal)"."; }
+#prop-MCD_esiste_sempre-1-1-5 > li { counter-increment: prop-MCD_esiste_sempre-1-1-5; }
+#thm-caratterizzazione_UFD-1-1-2 { counter-set: thm-caratterizzazione_UFD-1-1-2 0; }
+#thm-caratterizzazione_UFD-1-1-2 > li::marker { content: ""counter(thm-caratterizzazione_UFD-1-1-2,decimal)"."; }
+#thm-caratterizzazione_UFD-1-1-2 > li { counter-increment: thm-caratterizzazione_UFD-1-1-2; }
+#exercises-PID_euclidei-5-1-1-2 { counter-set: exercises-PID_euclidei-5-1-1-2 0; }
+#exercises-PID_euclidei-5-1-1-2 > li::marker { content: "("counter(exercises-PID_euclidei-5-1-1-2,lower-alpha)")"; }
+#exercises-PID_euclidei-5-1-1-2 > li { counter-increment: exercises-PID_euclidei-5-1-1-2; }
+#lem-eisenstein-2-1-6 { counter-set: lem-eisenstein-2-1-6 0; }
+#lem-eisenstein-2-1-6 > li::marker { content: ""counter(lem-eisenstein-2-1-6,decimal)"."; }
+#lem-eisenstein-2-1-6 > li { counter-increment: lem-eisenstein-2-1-6; }
+#prop-moltiplicazione_per_0-1-1-3 { counter-set: prop-moltiplicazione_per_0-1-1-3 0; }
+#prop-moltiplicazione_per_0-1-1-3 > li::marker { content: ""counter(prop-moltiplicazione_per_0-1-1-3,decimal)"."; }
+#prop-moltiplicazione_per_0-1-1-3 > li { counter-increment: prop-moltiplicazione_per_0-1-1-3; }
+#prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 { counter-set: prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 0; }
+#prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottomoduli-1-1-3,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 > li { counter-increment: prop-immagine_diretta_inversa_di_sottomoduli-1-1-3; }
+#prop-proprieta_addendi_somma_diretta-1-1-10 { counter-set: prop-proprieta_addendi_somma_diretta-1-1-10 0; }
+#prop-proprieta_addendi_somma_diretta-1-1-10 > li::marker { content: ""counter(prop-proprieta_addendi_somma_diretta-1-1-10,decimal)"."; }
+#prop-proprieta_addendi_somma_diretta-1-1-10 > li { counter-increment: prop-proprieta_addendi_somma_diretta-1-1-10; }
+#exercises-gruppiabeliani-2-1-1-1 { counter-set: exercises-gruppiabeliani-2-1-1-1 0; }
+#exercises-gruppiabeliani-2-1-1-1 > li::marker { content: "("counter(exercises-gruppiabeliani-2-1-1-1,lower-alpha)")"; }
+#exercises-gruppiabeliani-2-1-1-1 > li { counter-increment: exercises-gruppiabeliani-2-1-1-1; }
+#exercises-gruppiabeliani-2-2-1-1 { counter-set: exercises-gruppiabeliani-2-2-1-1 0; }
+#exercises-gruppiabeliani-2-2-1-1 > li::marker { content: "("counter(exercises-gruppiabeliani-2-2-1-1,lower-alpha)")"; }
+#exercises-gruppiabeliani-2-2-1-1 > li { counter-increment: exercises-gruppiabeliani-2-2-1-1; }
+#prop-diagonali_blocchi-1-1-2 { counter-set: prop-diagonali_blocchi-1-1-2 0; }
+#prop-diagonali_blocchi-1-1-2 > li::marker { content: ""counter(prop-diagonali_blocchi-1-1-2,decimal)"."; }
+#prop-diagonali_blocchi-1-1-2 > li { counter-increment: prop-diagonali_blocchi-1-1-2; }
+#thm-caratterizzazione_algebricamente_chiuso-1-1-2 { counter-set: thm-caratterizzazione_algebricamente_chiuso-1-1-2 0; }
+#thm-caratterizzazione_algebricamente_chiuso-1-1-2 > li::marker { content: ""counter(thm-caratterizzazione_algebricamente_chiuso-1-1-2,decimal)"."; }
+#thm-caratterizzazione_algebricamente_chiuso-1-1-2 > li { counter-increment: thm-caratterizzazione_algebricamente_chiuso-1-1-2; }
+#thm-normali_campi_di_spezzamento-1-1-3 { counter-set: thm-normali_campi_di_spezzamento-1-1-3 0; }
+#thm-normali_campi_di_spezzamento-1-1-3 > li::marker { content: ""counter(thm-normali_campi_di_spezzamento-1-1-3,decimal)"."; }
+#thm-normali_campi_di_spezzamento-1-1-3 > li { counter-increment: thm-normali_campi_di_spezzamento-1-1-3; }
+#prop-addizione_naturali-1-2-1 { counter-set: prop-addizione_naturali-1-2-1 0; }
+#prop-addizione_naturali-1-2-1 > li::marker { content: ""counter(prop-addizione_naturali-1-2-1,decimal)"."; }
+#prop-addizione_naturali-1-2-1 > li { counter-increment: prop-addizione_naturali-1-2-1; }
+#prop-moltiplicazione_naturali-1-2-1 { counter-set: prop-moltiplicazione_naturali-1-2-1 0; }
+#prop-moltiplicazione_naturali-1-2-1 > li::marker { content: ""counter(prop-moltiplicazione_naturali-1-2-1,decimal)"."; }
+#prop-moltiplicazione_naturali-1-2-1 > li { counter-increment: prop-moltiplicazione_naturali-1-2-1; }
+#cor-somma_prodotto_positivi_negativi-1-2-1 { counter-set: cor-somma_prodotto_positivi_negativi-1-2-1 0; }
+#cor-somma_prodotto_positivi_negativi-1-2-1 > li::marker { content: ""counter(cor-somma_prodotto_positivi_negativi-1-2-1,decimal)"."; }
+#cor-somma_prodotto_positivi_negativi-1-2-1 > li { counter-increment: cor-somma_prodotto_positivi_negativi-1-2-1; }
+#gfdl-section4-2-1 { counter-set: gfdl-section4-2-1 0; }
+#gfdl-section4-2-1 > li::marker { content: ""counter(gfdl-section4-2-1,upper-alpha)"."; }
+#gfdl-section4-2-1 > li { counter-increment: gfdl-section4-2-1; }
+</style>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Vai all'indice generale</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -106,7 +261,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-elementi_algebrici_e_trascendenti.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="up-button button" href="ch-estensione_campi.html" title="Su"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Su</span></a><a class="next-button button" href="sec-campo_di_spezzamento.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\require{mathtools}\DeclareMathOperator{\rk}{rk}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="sec-elementi_algebrici_e_trascendenti.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="up-button button" href="ch-estensione_campi.html" title="Su"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Su</span></a><a class="next-button button" href="sec-chiusure_algebriche.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\require{mathtools}\DeclareMathOperator{\rk}{rk}
 \DeclareMathOperator{\cont}{c}
 \DeclareMathOperator{\im}{Im}
 \DeclareMathOperator{\Inv}{Inv}
@@ -130,8 +285,9 @@ window.MathJax = {
 \newcommand{\Reali}{\mathbf{R}}
 \newcommand{\Naturali}{\mathbf{N}}
 \newcommand{\Interi}{\mathbf{Z}}
- \newcommand{\Razionali}{\mathbf{Q}}
- \newcommand{\Complessi}{\mathbf{C}}
+\newcommand{\Razionali}{\mathbf{Q}}
+\newcommand{\Complessi}{\mathbf{C}}
+\newcommand{\campo}[1]{\mathbf{F}_{#1}}
 
  \newcommand{\grgen}[1]{\langle#1\rangle}
  \newcommand{\ideal}[1]{\left(#1\right)}
@@ -677,17 +833,26 @@ window.MathJax = {
 <div class="toc-title-box"><a href="sec-elementi_algebrici_e_trascendenti.html" class="internal"><span class="codenumber">28.1</span> <span class="title">Elementi algebrici e trascendenti</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_algebrici_e_trascendenti.html#exercises-elementi_algebrici_e_trascendenti" class="internal"><span class="codenumber">28.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-estensioni_di_omomorfismi.html" class="internal"><span class="codenumber">28.2</span> <span class="title">Estensioni di omomorfismi</span></a></div></li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-campo_di_spezzamento.html" class="internal"><span class="codenumber">28.3</span> <span class="title">Campi di spezzamento</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-campo_di_spezzamento.html#exercises-campo_di_spezzamento" class="internal"><span class="codenumber">28.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="sec-estensioni_di_omomorfismi.html" class="internal"><span class="codenumber">28.2</span> <span class="title">Estensioni di omomorfismi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-estensioni_di_omomorfismi.html#exercises-estensioni_di_omomorfismi" class="internal"><span class="codenumber">28.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-chiusure_algebriche.html" class="internal"><span class="codenumber">28.4</span> <span class="title">Cenni su campi algebricamente chiusi</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-chiusure_algebriche.html" class="internal"><span class="codenumber">28.3</span> <span class="title">Campi algebricamente chiusi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-chiusure_algebriche.html#exercises-chiusure_algebriche" class="internal"><span class="codenumber">28.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-omomorfismi_campi.html" class="internal"><span class="codenumber">29</span> <span class="title">Omomorfismi di campi</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-estensioni_omomorfismi_campi.html" class="internal"><span class="codenumber">29.1</span> <span class="title">Estensioni di omomorfismi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="ch-campi_di_spezzamento.html" class="internal"><span class="codenumber">29</span> <span class="title">Campi di spezzamento</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-campo_di_spezzamento.html" class="internal"><span class="codenumber">29.1</span> <span class="title">Campi di spezzamento</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-campo_di_spezzamento.html#exercises-campo_di_spezzamento" class="internal"><span class="codenumber">29.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-estensioni_normali.html" class="internal"><span class="codenumber">29.2</span> <span class="title">Estensioni normali</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-chiusura_normale.html" class="internal"><span class="codenumber">29.3</span> <span class="title">Chiusura normale</span></a></div></li>
+</ul>
 </li>
 </ul>
 </li>
@@ -715,21 +880,36 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-estensioni_di_omomorfismi"><h2 class="heading hide-type">
 <span class="type">Paragrafo</span><span class="space"> </span><span class="codenumber">28.2</span><span class="space"> </span><span class="title">Estensioni di omomorfismi</span>
 </h2>
-<div class="para" id="sec-estensioni_di_omomorfismi-2">Se <span class="process-math">\(\phi\colon F\to K\)</span> è un omomorfismo di campi ed <span class="process-math">\(E\)</span> è un’estensione di <span class="process-math">\(F\)</span> ci chiediamo se sia possibile estendere <span class="process-math">\(\phi\)</span> a \(E\), cioè determinare un omomorfismo <span class="process-math">\(\psi\colon E\to K\)</span> tale che <span class="process-math">\(\restrizione{\psi}{F}=\phi\text{.}\)</span> Confineremo la nostra attenzione al caso in <span class="process-math">\(\degext{E}{F}\)</span> sia finito, cominciando con il caso delle estensioni semplici.</div>
+<div class="para" id="sec-estensioni_di_omomorfismi-2">Sia <span class="process-math">\(\phi\colon F\to K\)</span> un omomorfismo di campi. Sia <span class="process-math">\(E\)</span> un’estensione di <span class="process-math">\(F\)</span> e <span class="process-math">\(L\)</span> un’estensione di <span class="process-math">\(K\text{.}\)</span> Ci chiediamo se sia possibile estendere <span class="process-math">\(\phi\)</span> a un omomorfismo <span class="process-math">\(\psi\colon E\to L\text{,}\)</span> cioè un omomorfismo tale che <span class="process-math">\(u\psi=u\phi\)</span> per ogni <span class="process-math">\(u\)</span> in <span class="process-math">\(F\text{.}\)</span> Nel caso in cui <span class="process-math">\(L=K\text{,}\)</span> questo significa semplicemente che <span class="process-math">\(\restrizione{\psi}{F}=\phi\text{.}\)</span> Confineremo la nostra attenzione al caso in <span class="process-math">\(\degext{E}{F}\)</span> sia finito, cominciando con il caso delle estensioni semplici.</div>
+<div class="para" id="sec-estensioni_di_omomorfismi-3">Ricordiamo innanzitutto che, grazie al <a href="sec-anelli_quoziente.html#cor-omomorfismo_da_corpi" class="xref" data-knowl="./knowl/xref/cor-omomorfismo_da_corpi.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Corollario 19.2.14">Corollario 19.2.14</a>, un omomorfismo da un campo a un anello è necessariamente iniettivo. In particolare, un omomorfismo tra campi è iniettivo e, di conseguenza, realizza un isomorfismo tra il campo di partenza e la sua immagine: useremo spesso questo fatto senza richiamarlo esplicitamente ogni volta.</div>
+<div class="para" id="sec-estensioni_di_omomorfismi-4">Grazie al <a href="sec-valutazione_polinomi.html#thm-proprieta_universale_polinomi" class="xref" data-knowl="./knowl/xref/thm-proprieta_universale_polinomi.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 20.2.1">Teorema 20.2.1</a> possiamo introdurre la</div>
 <article class="definition definition-like" id="def-omomorfismo_indotto_polinomi"><h3 class="heading">
 <span class="type">Definizione</span><span class="space"> </span><span class="codenumber">28.2.1</span><span class="period">.</span>
-</h3> <div class="para" id="def-omomorfismo_indotto_polinomi-2-1">Dato un omomorfismo di campi <span class="process-math">\(\phi\colon F\to K\)</span> denotiamo con <span class="process-math">\(\indotto{\phi}\)</span> l’omomorfismo da <span class="process-math">\(F[x]\)</span> in <span class="process-math">\(K[x]\)</span> che estende <span class="process-math">\(\phi\)</span> e manda <span class="process-math">\(x\)</span> in <span class="process-math">\(x\text{.}\)</span> Esplicitamente, il polinomio generico <span class="process-math">\(a_{0}+a_{1}x+\dots+a_{n}x^{n}\)</span> viene mandato nel polinomio <span class="process-math">\(a_{0}\phi+a_{1}\phi x+\dots+a_{n}\phi x^{n}\text{.}\)</span>
+</h3> <div class="para" id="def-omomorfismo_indotto_polinomi-2-1">Dato un omomorfismo di campi <span class="process-math">\(\phi\colon F\to K\text{,}\)</span> denotiamo con <span class="process-math">\(\indotto{\phi}\)</span> l’omomorfismo da <span class="process-math">\(F[x]\)</span> in <span class="process-math">\(K[x]\)</span> che estende <span class="process-math">\(\phi\)</span> e manda <span class="process-math">\(x\)</span> in <span class="process-math">\(x\text{.}\)</span> Esplicitamente, il polinomio generico <span class="process-math">\(a_{0}+a_{1}x+\dots+a_{n}x^{n}\)</span> viene mandato nel polinomio <span class="process-math">\(a_{0}\phi+a_{1}\phi x+\dots+a_{n}\phi x^{n}\text{.}\)</span>
 </div></article><article class="proposition theorem-like" id="prop-radice_in_radice"><h3 class="heading">
 <span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">28.2.2</span><span class="period">.</span>
 </h3>
 <div class="para" id="prop-radice_in_radice-1-1">Sia <span class="process-math">\(\phi\colon F\to K\)</span> un omomorfismo di campi. Sia <span class="process-math">\(f\)</span> un polinomio di <span class="process-math">\(F[x]\)</span> e sia <span class="process-math">\(u\)</span> una radice di <span class="process-math">\(f\)</span> in <span class="process-math">\(F\text{.}\)</span> Allora <span class="process-math">\(u\phi\)</span> è radice di <span class="process-math">\(f\indotto{\phi}\text{.}\)</span>
-</div></article><details id="prop-radice_in_radice-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-radice_in_radice-2-1">Sia <span class="process-math">\(f\coloneqq a_{0}+a_{1}x+\dots+a_{n}x^{n}\text{:}\)</span> dunque, <span class="process-math">\(f(u)=a_{0}+a_{1}u+\dots+a_{n}u^{n}=0_{F}\text{.}\)</span> Applicando <span class="process-math">\(\phi\text{,}\)</span> otteniamo <span class="process-math">\(a_{0}\phi +a_{1}\phi u\phi+\dots+a_{n}\phi(u\phi)^{n}=0_{K}\text{,}\)</span> da cui segue la tesi.</div></article></details><article class="lemma theorem-like" id="lem-estensione_omomorfismo_smplice"><h3 class="heading">
+</div></article><details id="prop-radice_in_radice-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-radice_in_radice-2-1">Sia <span class="process-math">\(f\coloneqq a_{0}+a_{1}x+\dots+a_{n}x^{n}\text{:}\)</span> dunque, <span class="process-math">\(f(u)=a_{0}+a_{1}u+\dots+a_{n}u^{n}=0_{F}\text{.}\)</span> Applicando <span class="process-math">\(\phi\text{,}\)</span> otteniamo <span class="process-math">\(a_{0}\phi +a_{1}\phi u\phi+\dots+a_{n}\phi(u\phi)^{n}=0_{K}\text{,}\)</span> da cui segue la tesi.</div></article></details><article class="lemma theorem-like" id="lem-estensione_omomorfismo_semplice"><h3 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">28.2.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="lem-estensione_omomorfismo_smplice-1-1">Sia <span class="process-math">\(E\coloneqq F(u)\)</span> un’estensione semplice algebrica di un campo <span class="process-math">\(F\text{.}\)</span> Sia <span class="process-math">\(f\in F[x]\)</span> il polinomio minimo di <span class="process-math">\(u\)</span> su <span class="process-math">\(F\text{.}\)</span> Sia <span class="process-math">\(\phi\colon F\to K\)</span> un omomorfismo di campi. Allora esistono tante estensioni di <span class="process-math">\(\phi\)</span> a omomorfismi da <span class="process-math">\(E\)</span> in <span class="process-math">\(K\)</span> è uguale al numero delle radici di <span class="process-math">\(f\indotto{\phi}\)</span> in <span class="process-math">\(K\text{.}\)</span> In particolare, il numero di queste estensioni è al più uguale a <span class="process-math">\(\degext{E}{F}\text{.}\)</span>
-</div></article></section></div>
+<div class="para" id="lem-estensione_omomorfismo_semplice-1-1">Sia <span class="process-math">\(E\coloneqq F(u)\)</span> un’estensione algebrica semplice di un campo <span class="process-math">\(F\)</span> e sia <span class="process-math">\(f\in F[x]\)</span> il polinomio minimo di <span class="process-math">\(u\)</span> su <span class="process-math">\(F\text{.}\)</span> Sia <span class="process-math">\(\phi\colon F\to K\)</span> un omomorfismo di campi. Allora il numero delle estensioni di <span class="process-math">\(\phi\)</span> a omomorfismi da <span class="process-math">\(E\)</span> in <span class="process-math">\(K\)</span> è uguale al numero delle radici di <span class="process-math">\(f\indotto{\phi}\)</span> in <span class="process-math">\(K\text{.}\)</span> In particolare, il numero di queste estensioni è al più uguale a <span class="process-math">\(\degext{E}{F}\text{.}\)</span>
+</div></article><details id="lem-estensione_omomorfismo_semplice-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="lem-estensione_omomorfismo_semplice-2-1">Se <span class="process-math">\(\psi\colon E\to K\)</span> è un’estensione di <span class="process-math">\(\phi\text{,}\)</span> dalla <a href="sec-estensioni_di_omomorfismi.html#prop-radice_in_radice" class="xref" data-knowl="./knowl/xref/prop-radice_in_radice.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 28.2.2">Proposizione 28.2.2</a> sappiamo che <span class="process-math">\(u\psi\)</span> è una radice di <span class="process-math">\(f\indotto{\psi}\text{,}\)</span> che, ovviamente, coincide con <span class="process-math">\(f\indotto{\phi}\text{.}\)</span> Dobbiamo allora mostrare che per ogni radice <span class="process-math">\(w\)</span> di <span class="process-math">\(f\indotto{\phi}\)</span> esiste esattamente un’estensione di <span class="process-math">\(\phi\)</span> che manda <span class="process-math">\(u\)</span> in <span class="process-math">\(w\text{.}\)</span> Se due estensioni di <span class="process-math">\(\phi\)</span> coincidono su <span class="process-math">\(u\text{,}\)</span> esse devono essere uguali, dal momento che <span class="process-math">\(E\)</span> è generato da <span class="process-math">\(F\)</span> e da <span class="process-math">\(u\text{:}\)</span> dunque, esiste al più un’estensione di <span class="process-math">\(\phi\)</span> che manda <span class="process-math">\(u\)</span> in <span class="process-math">\(w\text{.}\)</span> Mostriamo ora l’esistenza di una tale estensione. Per il <a href="sec-elementi_algebrici_e_trascendenti.html#thm-caratterizzazione_algebrici_trascendenti" class="xref" data-knowl="./knowl/xref/thm-caratterizzazione_algebrici_trascendenti.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 28.1.14">Teorema 28.1.14</a>, ogni elemento di <span class="process-math">\(E\)</span> è del tipo <span class="process-math">\(p(u)\)</span> per qualche polinomio <span class="process-math">\(p\)</span> in <span class="process-math">\(F[x]\text{;}\)</span> inoltre, se <span class="process-math">\(q\)</span> è un altro polinomio di <span class="process-math">\(F[x]\)</span> tale che <span class="process-math">\(q(u)=p(u)\text{,}\)</span> cioè <span class="process-math">\((q-p)(u)=0\text{,}\)</span> si ha che <span class="process-math">\(q-p\)</span> è multiplo di <span class="process-math">\(f\text{:}\)</span> di conseguenza, <span class="process-math">\((q-p)\indotto{\phi}(w)=0\text{,}\)</span> cioè <span class="process-math">\(q\indotto{\phi}(w)=p\indotto{\phi}(w)\text{.}\)</span>  Ponendo <span class="process-math">\(p(u)\psi\coloneqq p\indotto{\phi}(w)\text{,}\)</span> abbiamo allora una funzione ben definita <span class="process-math">\(\psi\colon E\to K\text{.}\)</span> Si verifica facilmente che <span class="process-math">\(\psi\)</span> estende <span class="process-math">\(\phi\text{,}\)</span> ed è un omomorfismo di campi che manda <span class="process-math">\(u\)</span> in <span class="process-math">\(w\text{.}\)</span>
+</div></article></details><article class="proposition theorem-like" id="prop-numero_estensioni"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">28.2.4</span><span class="period">.</span>
+</h3>
+<div class="para" id="prop-numero_estensioni-1-1">Sia <span class="process-math">\(E\)</span> un’estensione finita di un campo <span class="process-math">\(F\text{.}\)</span> Sia <span class="process-math">\(\phi\colon F\to K\)</span> un omomorfismo di campi. Allora <span class="process-math">\(\phi\)</span> si estende a un omomorfismo da <span class="process-math">\(E\)</span> in <span class="process-math">\(K\)</span> in al più <span class="process-math">\(\degext{E}{F}\)</span> modi.</div></article><details id="prop-numero_estensioni-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-numero_estensioni-2-1">Procediamo per induzione su <span class="process-math">\(\degext{E}{F}\text{.}\)</span> Il caso <span class="process-math">\(\degext{E}{F}=1\)</span> è banale. Sia allora <span class="process-math">\(\degext{E}{F}\gt 1\)</span> (cioè <span class="process-math">\(E\)</span> contiene strettamente <span class="process-math">\(F\)</span>) e sia <span class="process-math">\(u\)</span> un elemento di <span class="process-math">\(E\setminus F\text{.}\)</span> Di conseguenza, <span class="process-math">\(\degext{F(u)}{F}\gt 1\)</span> e, per la <a href="sec-elementi_algebrici_e_trascendenti.html#prop-moltiplicativita_grado" class="xref" data-knowl="./knowl/xref/prop-moltiplicativita_grado.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 28.1.5">Proposizione 28.1.5</a>, abbiamo che <span class="process-math">\(\degext{E}{F(u)}=\frac{\degext{E}{F}}{\degext{F(u)}{F}}\lt \degext{E}{F}\text{.}\)</span> Per il <a href="sec-estensioni_di_omomorfismi.html#lem-estensione_omomorfismo_semplice" class="xref" data-knowl="./knowl/xref/lem-estensione_omomorfismo_semplice.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Lemma 28.2.3">Lemma 28.2.3</a>, <span class="process-math">\(\phi\)</span> si estende a <span class="process-math">\(F(u)\)</span> in al più <span class="process-math">\(\degext{F(u)}{F}\)</span> modi, mentre, per ipotesi induttiva, ciascuna di queste estensioni si estende in al più <span class="process-math">\(\degext{E}{F(u)}\)</span> modi a <span class="process-math">\(E\text{.}\)</span> Di conseguenza, abbiamo al più <span class="process-math">\(\degext{F(u)}{F}\degext{E}{F(u)}=\degext{E}{F}\)</span> estensioni di <span class="process-math">\(\phi\)</span> a <span class="process-math">\(E\text{.}\)</span>
+</div></article></details><article class="corollary theorem-like" id="cor-conteggio_estensioni"><h3 class="heading">
+<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">28.2.5</span><span class="period">.</span>
+</h3>
+<div class="para" id="cor-conteggio_estensioni-1-1">Siano <span class="process-math">\(E\supseteq L\supseteq F\)</span> campi con <span class="process-math">\(\degext{E}{F}\)</span> finito. Sia <span class="process-math">\(\phi\colon F\to K\)</span> un omomorfismo di campi. L’omomorfismo <span class="process-math">\(\phi\)</span> ha <span class="process-math">\(\degext{E}{F}\)</span> estensioni ad <span class="process-math">\(E\)</span> se e solo se <span class="process-math">\(\phi\)</span> ha <span class="process-math">\(\degext{L}{F}\)</span> estensioni a <span class="process-math">\(L\)</span> e ciascuna di queste ha <span class="process-math">\(\degext{E}{L}\)</span> estensioni a <span class="process-math">\(E\text{.}\)</span>
+</div></article><section class="exercises" id="exercises-estensioni_di_omomorfismi"><h3 class="heading hide-type">
+<span class="type">Esercizi</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Esercizi</span>
+</h3>
+<article class="exercise exercise-like" id="exercises-estensioni_di_omomorfismi-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="exercises-estensioni_di_omomorfismi-1-1-1">Sia <span class="process-math">\(\phi\colon F\to K\)</span> un omomorfismo di campi. Mostrare che <span class="process-math">\(\indotto{\phi}\)</span> è iniettivo. Mostrare inoltre che <span class="process-math">\(\indotto{\phi}\)</span> è suriettivo se e solo se <span class="process-math">\(\phi\)</span> è suriettivo (e, di conseguenza, che <span class="process-math">\(\indotto{\phi}\)</span> è biiettivo se e solo se <span class="process-math">\(\phi\)</span> è biiettivo).</div></article></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-elementi_algebrici_e_trascendenti.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-campo_di_spezzamento.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-elementi_algebrici_e_trascendenti.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-chiusure_algebriche.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

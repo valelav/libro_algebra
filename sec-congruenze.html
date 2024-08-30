@@ -88,6 +88,155 @@ window.MathJax = {
 <link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#prop-unione_intersezione-1-1-4 { counter-set: prop-unione_intersezione-1-1-4 0; }
+#prop-unione_intersezione-1-1-4 > li::marker { content: ""counter(prop-unione_intersezione-1-1-4,decimal)"."; }
+#prop-unione_intersezione-1-1-4 > li { counter-increment: prop-unione_intersezione-1-1-4; }
+#prop-inclusione_equivalente-1-1-3 { counter-set: prop-inclusione_equivalente-1-1-3 0; }
+#prop-inclusione_equivalente-1-1-3 > li::marker { content: ""counter(prop-inclusione_equivalente-1-1-3,decimal)"."; }
+#prop-inclusione_equivalente-1-1-3 > li { counter-increment: prop-inclusione_equivalente-1-1-3; }
+#prop-classe_equivalenza-1-1-3 { counter-set: prop-classe_equivalenza-1-1-3 0; }
+#prop-classe_equivalenza-1-1-3 > li::marker { content: ""counter(prop-classe_equivalenza-1-1-3,decimal)"."; }
+#prop-classe_equivalenza-1-1-3 > li { counter-increment: prop-classe_equivalenza-1-1-3; }
+#prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 { counter-set: prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 0; }
+#prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 > li::marker { content: ""counter(prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2,decimal)"."; }
+#prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 > li { counter-increment: prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2; }
+#prop-composizione_iniettive_suriettive-1-1-3 { counter-set: prop-composizione_iniettive_suriettive-1-1-3 0; }
+#prop-composizione_iniettive_suriettive-1-1-3 > li::marker { content: ""counter(prop-composizione_iniettive_suriettive-1-1-3,decimal)"."; }
+#prop-composizione_iniettive_suriettive-1-1-3 > li { counter-increment: prop-composizione_iniettive_suriettive-1-1-3; }
+#prop-addizione_matrici-1-2-1 { counter-set: prop-addizione_matrici-1-2-1 0; }
+#prop-addizione_matrici-1-2-1 > li::marker { content: ""counter(prop-addizione_matrici-1-2-1,decimal)"."; }
+#prop-addizione_matrici-1-2-1 > li { counter-increment: prop-addizione_matrici-1-2-1; }
+#prop-moltiplicazione_matrici-1-2-1 { counter-set: prop-moltiplicazione_matrici-1-2-1 0; }
+#prop-moltiplicazione_matrici-1-2-1 > li::marker { content: ""counter(prop-moltiplicazione_matrici-1-2-1,decimal)"."; }
+#prop-moltiplicazione_matrici-1-2-1 > li { counter-increment: prop-moltiplicazione_matrici-1-2-1; }
+#def-numeri_naturali_peano-5-1-7 { counter-set: def-numeri_naturali_peano-5-1-7 0; }
+#def-numeri_naturali_peano-5-1-7 > li::marker { content: ""counter(def-numeri_naturali_peano-5-1-7,decimal)"."; }
+#def-numeri_naturali_peano-5-1-7 > li { counter-increment: def-numeri_naturali_peano-5-1-7; }
+#prop-anello_degli_interi-1-2-1 { counter-set: prop-anello_degli_interi-1-2-1 0; }
+#prop-anello_degli_interi-1-2-1 > li::marker { content: ""counter(prop-anello_degli_interi-1-2-1,decimal)"."; }
+#prop-anello_degli_interi-1-2-1 > li { counter-increment: prop-anello_degli_interi-1-2-1; }
+#prop-ordine_interi-1-2-1 { counter-set: prop-ordine_interi-1-2-1 0; }
+#prop-ordine_interi-1-2-1 > li::marker { content: ""counter(prop-ordine_interi-1-2-1,decimal)"."; }
+#prop-ordine_interi-1-2-1 > li { counter-increment: prop-ordine_interi-1-2-1; }
+#prop-anello_degli_classi_di_resto-1-2-1 { counter-set: prop-anello_degli_classi_di_resto-1-2-1 0; }
+#prop-anello_degli_classi_di_resto-1-2-1 > li::marker { content: ""counter(prop-anello_degli_classi_di_resto-1-2-1,decimal)"."; }
+#prop-anello_degli_classi_di_resto-1-2-1 > li { counter-increment: prop-anello_degli_classi_di_resto-1-2-1; }
+#prop-classi_resto_invertibili-1-1-3 { counter-set: prop-classi_resto_invertibili-1-1-3 0; }
+#prop-classi_resto_invertibili-1-1-3 > li::marker { content: ""counter(prop-classi_resto_invertibili-1-1-3,decimal)"."; }
+#prop-classi_resto_invertibili-1-1-3 > li { counter-increment: prop-classi_resto_invertibili-1-1-3; }
+#prop-proprieta_potenze_monoide-1-1-5 { counter-set: prop-proprieta_potenze_monoide-1-1-5 0; }
+#prop-proprieta_potenze_monoide-1-1-5 > li::marker { content: ""counter(prop-proprieta_potenze_monoide-1-1-5,decimal)"."; }
+#prop-proprieta_potenze_monoide-1-1-5 > li { counter-increment: prop-proprieta_potenze_monoide-1-1-5; }
+#prop-proprieta_potenze_elemento_invertibile-1-1-5 { counter-set: prop-proprieta_potenze_elemento_invertibile-1-1-5 0; }
+#prop-proprieta_potenze_elemento_invertibile-1-1-5 > li::marker { content: ""counter(prop-proprieta_potenze_elemento_invertibile-1-1-5,decimal)"."; }
+#prop-proprieta_potenze_elemento_invertibile-1-1-5 > li { counter-increment: prop-proprieta_potenze_elemento_invertibile-1-1-5; }
+#prop-cancellazione_gruppo-2-1-5 { counter-set: prop-cancellazione_gruppo-2-1-5 0; }
+#prop-cancellazione_gruppo-2-1-5 > li::marker { content: ""counter(prop-cancellazione_gruppo-2-1-5,decimal)"."; }
+#prop-cancellazione_gruppo-2-1-5 > li { counter-increment: prop-cancellazione_gruppo-2-1-5; }
+#prop-supporto-1-1-4 { counter-set: prop-supporto-1-1-4 0; }
+#prop-supporto-1-1-4 > li::marker { content: ""counter(prop-supporto-1-1-4,decimal)"."; }
+#prop-supporto-1-1-4 > li { counter-increment: prop-supporto-1-1-4; }
+#prop-laterali_partizione-1-1-4 { counter-set: prop-laterali_partizione-1-1-4 0; }
+#prop-laterali_partizione-1-1-4 > li::marker { content: ""counter(prop-laterali_partizione-1-1-4,decimal)"."; }
+#prop-laterali_partizione-1-1-4 > li { counter-increment: prop-laterali_partizione-1-1-4; }
+#thm-prodotto_sottogruppo-1-1-4 { counter-set: thm-prodotto_sottogruppo-1-1-4 0; }
+#thm-prodotto_sottogruppo-1-1-4 > li::marker { content: ""counter(thm-prodotto_sottogruppo-1-1-4,decimal)"."; }
+#thm-prodotto_sottogruppo-1-1-4 > li { counter-increment: thm-prodotto_sottogruppo-1-1-4; }
+#prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottogruppi-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_sottogruppi-1-1-2; }
+#prop-controimmagini_omomorfismo-1-1-6 { counter-set: prop-controimmagini_omomorfismo-1-1-6 0; }
+#prop-controimmagini_omomorfismo-1-1-6 > li::marker { content: ""counter(prop-controimmagini_omomorfismo-1-1-6,decimal)"."; }
+#prop-controimmagini_omomorfismo-1-1-6 > li { counter-increment: prop-controimmagini_omomorfismo-1-1-6; }
+#thm-caratterizzazione_sottogruppi_normali-1-1-3 { counter-set: thm-caratterizzazione_sottogruppi_normali-1-1-3 0; }
+#thm-caratterizzazione_sottogruppi_normali-1-1-3 > li::marker { content: ""counter(thm-caratterizzazione_sottogruppi_normali-1-1-3,decimal)"."; }
+#thm-caratterizzazione_sottogruppi_normali-1-1-3 > li { counter-increment: thm-caratterizzazione_sottogruppi_normali-1-1-3; }
+#thm-normalizzante-1-1-3 { counter-set: thm-normalizzante-1-1-3 0; }
+#thm-normalizzante-1-1-3 > li::marker { content: ""counter(thm-normalizzante-1-1-3,decimal)"."; }
+#thm-normalizzante-1-1-3 > li { counter-increment: thm-normalizzante-1-1-3; }
+#prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2; }
+#prop-quoziente-eredita-1-1-5 { counter-set: prop-quoziente-eredita-1-1-5 0; }
+#prop-quoziente-eredita-1-1-5 > li::marker { content: ""counter(prop-quoziente-eredita-1-1-5,decimal)"."; }
+#prop-quoziente-eredita-1-1-5 > li { counter-increment: prop-quoziente-eredita-1-1-5; }
+#exercises-congruenze-2-1-1-3 { counter-set: exercises-congruenze-2-1-1-3 0; }
+#exercises-congruenze-2-1-1-3 > li::marker { content: "("counter(exercises-congruenze-2-1-1-3,lower-alpha)")"; }
+#exercises-congruenze-2-1-1-3 > li { counter-increment: exercises-congruenze-2-1-1-3; }
+#prop-proprieta_fattori_prodotto_diretto-1-1-9 { counter-set: prop-proprieta_fattori_prodotto_diretto-1-1-9 0; }
+#prop-proprieta_fattori_prodotto_diretto-1-1-9 > li::marker { content: ""counter(prop-proprieta_fattori_prodotto_diretto-1-1-9,decimal)"."; }
+#prop-proprieta_fattori_prodotto_diretto-1-1-9 > li { counter-increment: prop-proprieta_fattori_prodotto_diretto-1-1-9; }
+#thm-sylow-2-1-9 { counter-set: thm-sylow-2-1-9 0; }
+#thm-sylow-2-1-9 > li::marker { content: ""counter(thm-sylow-2-1-9,decimal)"."; }
+#thm-sylow-2-1-9 > li { counter-increment: thm-sylow-2-1-9; }
+#prop-moltiplicazione_opposti-1-1-2 { counter-set: prop-moltiplicazione_opposti-1-1-2 0; }
+#prop-moltiplicazione_opposti-1-1-2 > li::marker { content: ""counter(prop-moltiplicazione_opposti-1-1-2,decimal)"."; }
+#prop-moltiplicazione_opposti-1-1-2 > li { counter-increment: prop-moltiplicazione_opposti-1-1-2; }
+#prop-multipli_potenze_anello-1-1-4 { counter-set: prop-multipli_potenze_anello-1-1-4 0; }
+#prop-multipli_potenze_anello-1-1-4 > li::marker { content: ""counter(prop-multipli_potenze_anello-1-1-4,decimal)"."; }
+#prop-multipli_potenze_anello-1-1-4 > li { counter-increment: prop-multipli_potenze_anello-1-1-4; }
+#prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottoanelli-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_sottoanelli-1-1-2; }
+#prop-immagine_diretta_inversa_di_ideali-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_ideali-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_ideali-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_ideali-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_ideali-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_ideali-1-1-2; }
+#prop-grado_e_operazioni-1-1-4 { counter-set: prop-grado_e_operazioni-1-1-4 0; }
+#prop-grado_e_operazioni-1-1-4 > li::marker { content: ""counter(prop-grado_e_operazioni-1-1-4,decimal)"."; }
+#prop-grado_e_operazioni-1-1-4 > li { counter-increment: prop-grado_e_operazioni-1-1-4; }
+#prop-proprieta_divisibilita-1-1-7 { counter-set: prop-proprieta_divisibilita-1-1-7 0; }
+#prop-proprieta_divisibilita-1-1-7 > li::marker { content: ""counter(prop-proprieta_divisibilita-1-1-7,decimal)"."; }
+#prop-proprieta_divisibilita-1-1-7 > li { counter-increment: prop-proprieta_divisibilita-1-1-7; }
+#prop-irriducibile-1-1-3 { counter-set: prop-irriducibile-1-1-3 0; }
+#prop-irriducibile-1-1-3 > li::marker { content: ""counter(prop-irriducibile-1-1-3,decimal)"."; }
+#prop-irriducibile-1-1-3 > li { counter-increment: prop-irriducibile-1-1-3; }
+#prop-lunghezza-1-1-3 { counter-set: prop-lunghezza-1-1-3 0; }
+#prop-lunghezza-1-1-3 > li::marker { content: ""counter(prop-lunghezza-1-1-3,decimal)"."; }
+#prop-lunghezza-1-1-3 > li { counter-increment: prop-lunghezza-1-1-3; }
+#prop-MCD_esiste_sempre-1-1-5 { counter-set: prop-MCD_esiste_sempre-1-1-5 0; }
+#prop-MCD_esiste_sempre-1-1-5 > li::marker { content: ""counter(prop-MCD_esiste_sempre-1-1-5,decimal)"."; }
+#prop-MCD_esiste_sempre-1-1-5 > li { counter-increment: prop-MCD_esiste_sempre-1-1-5; }
+#thm-caratterizzazione_UFD-1-1-2 { counter-set: thm-caratterizzazione_UFD-1-1-2 0; }
+#thm-caratterizzazione_UFD-1-1-2 > li::marker { content: ""counter(thm-caratterizzazione_UFD-1-1-2,decimal)"."; }
+#thm-caratterizzazione_UFD-1-1-2 > li { counter-increment: thm-caratterizzazione_UFD-1-1-2; }
+#exercises-PID_euclidei-5-1-1-2 { counter-set: exercises-PID_euclidei-5-1-1-2 0; }
+#exercises-PID_euclidei-5-1-1-2 > li::marker { content: "("counter(exercises-PID_euclidei-5-1-1-2,lower-alpha)")"; }
+#exercises-PID_euclidei-5-1-1-2 > li { counter-increment: exercises-PID_euclidei-5-1-1-2; }
+#lem-eisenstein-2-1-6 { counter-set: lem-eisenstein-2-1-6 0; }
+#lem-eisenstein-2-1-6 > li::marker { content: ""counter(lem-eisenstein-2-1-6,decimal)"."; }
+#lem-eisenstein-2-1-6 > li { counter-increment: lem-eisenstein-2-1-6; }
+#prop-moltiplicazione_per_0-1-1-3 { counter-set: prop-moltiplicazione_per_0-1-1-3 0; }
+#prop-moltiplicazione_per_0-1-1-3 > li::marker { content: ""counter(prop-moltiplicazione_per_0-1-1-3,decimal)"."; }
+#prop-moltiplicazione_per_0-1-1-3 > li { counter-increment: prop-moltiplicazione_per_0-1-1-3; }
+#prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 { counter-set: prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 0; }
+#prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottomoduli-1-1-3,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 > li { counter-increment: prop-immagine_diretta_inversa_di_sottomoduli-1-1-3; }
+#prop-proprieta_addendi_somma_diretta-1-1-10 { counter-set: prop-proprieta_addendi_somma_diretta-1-1-10 0; }
+#prop-proprieta_addendi_somma_diretta-1-1-10 > li::marker { content: ""counter(prop-proprieta_addendi_somma_diretta-1-1-10,decimal)"."; }
+#prop-proprieta_addendi_somma_diretta-1-1-10 > li { counter-increment: prop-proprieta_addendi_somma_diretta-1-1-10; }
+#exercises-gruppiabeliani-2-1-1-1 { counter-set: exercises-gruppiabeliani-2-1-1-1 0; }
+#exercises-gruppiabeliani-2-1-1-1 > li::marker { content: "("counter(exercises-gruppiabeliani-2-1-1-1,lower-alpha)")"; }
+#exercises-gruppiabeliani-2-1-1-1 > li { counter-increment: exercises-gruppiabeliani-2-1-1-1; }
+#exercises-gruppiabeliani-2-2-1-1 { counter-set: exercises-gruppiabeliani-2-2-1-1 0; }
+#exercises-gruppiabeliani-2-2-1-1 > li::marker { content: "("counter(exercises-gruppiabeliani-2-2-1-1,lower-alpha)")"; }
+#exercises-gruppiabeliani-2-2-1-1 > li { counter-increment: exercises-gruppiabeliani-2-2-1-1; }
+#prop-diagonali_blocchi-1-1-2 { counter-set: prop-diagonali_blocchi-1-1-2 0; }
+#prop-diagonali_blocchi-1-1-2 > li::marker { content: ""counter(prop-diagonali_blocchi-1-1-2,decimal)"."; }
+#prop-diagonali_blocchi-1-1-2 > li { counter-increment: prop-diagonali_blocchi-1-1-2; }
+#prop-addizione_naturali-1-2-1 { counter-set: prop-addizione_naturali-1-2-1 0; }
+#prop-addizione_naturali-1-2-1 > li::marker { content: ""counter(prop-addizione_naturali-1-2-1,decimal)"."; }
+#prop-addizione_naturali-1-2-1 > li { counter-increment: prop-addizione_naturali-1-2-1; }
+#prop-moltiplicazione_naturali-1-2-1 { counter-set: prop-moltiplicazione_naturali-1-2-1 0; }
+#prop-moltiplicazione_naturali-1-2-1 > li::marker { content: ""counter(prop-moltiplicazione_naturali-1-2-1,decimal)"."; }
+#prop-moltiplicazione_naturali-1-2-1 > li { counter-increment: prop-moltiplicazione_naturali-1-2-1; }
+#cor-somma_prodotto_positivi_negativi-1-2-1 { counter-set: cor-somma_prodotto_positivi_negativi-1-2-1 0; }
+#cor-somma_prodotto_positivi_negativi-1-2-1 > li::marker { content: ""counter(cor-somma_prodotto_positivi_negativi-1-2-1,decimal)"."; }
+#cor-somma_prodotto_positivi_negativi-1-2-1 > li { counter-increment: cor-somma_prodotto_positivi_negativi-1-2-1; }
+#gfdl-section4-2-1 { counter-set: gfdl-section4-2-1 0; }
+#gfdl-section4-2-1 > li::marker { content: ""counter(gfdl-section4-2-1,upper-alpha)"."; }
+#gfdl-section4-2-1 > li { counter-increment: gfdl-section4-2-1; }
+</style>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Vai all'indice generale</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -130,8 +279,9 @@ window.MathJax = {
 \newcommand{\Reali}{\mathbf{R}}
 \newcommand{\Naturali}{\mathbf{N}}
 \newcommand{\Interi}{\mathbf{Z}}
- \newcommand{\Razionali}{\mathbf{Q}}
- \newcommand{\Complessi}{\mathbf{C}}
+\newcommand{\Razionali}{\mathbf{Q}}
+\newcommand{\Complessi}{\mathbf{C}}
+\newcommand{\campo}[1]{\mathbf{F}_{#1}}
 
  \newcommand{\grgen}[1]{\langle#1\rangle}
  \newcommand{\ideal}[1]{\left(#1\right)}
@@ -152,6 +302,7 @@ window.MathJax = {
  \newcommand{\euclidean}{\delta}
  \newcommand{\posto}[3]{#1_{#2#3}}
  \newcommand{\restrizione}[2]{\left. #1\right|_{#2}}
+ \newcommand{\indotto}[1]{\hat{#1}}
 
  \newcommand{\vect}[1]{\boldsymbol{#1}}
  
@@ -574,107 +725,93 @@ window.MathJax = {
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-estensione_campi.html" class="internal"><span class="codenumber">23</span> <span class="title">Estensioni di campi</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-elementi_algebrici_e_trascendenti.html" class="internal"><span class="codenumber">23.1</span> <span class="title">Elementi algebrici e trascendenti</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_algebrici_e_trascendenti.html#exercises-elementi_algebrici_e_trascendenti" class="internal"><span class="codenumber">23.1</span> <span class="title">Esercizi</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-campo_di_spezzamento.html" class="internal"><span class="codenumber">23.2</span> <span class="title">Campi di spezzamento</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-campo_di_spezzamento.html#exercises-campo_di_spezzamento" class="internal"><span class="codenumber">23.2</span> <span class="title">Esercizi</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-chiusure_algebriche.html" class="internal"><span class="codenumber">23.3</span> <span class="title">Cenni su campi algebricamente chiusi</span></a></div></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toc-item toc-part">
 <div class="toc-title-box"><a href="part-moduli.html" class="internal"><span class="codenumber">V</span> <span class="title">Moduli</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-moduli.html" class="internal"><span class="codenumber">24</span> <span class="title">Moduli</span></a></div>
+<div class="toc-title-box"><a href="ch-moduli.html" class="internal"><span class="codenumber">23</span> <span class="title">Moduli</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-definizione_di_moduli.html" class="internal"><span class="codenumber">24.1</span> <span class="title">Definizione di modulo</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizione_di_moduli.html#exercises-definizione_modulo" class="internal"><span class="codenumber">24.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-definizione_di_moduli.html" class="internal"><span class="codenumber">23.1</span> <span class="title">Definizione di modulo</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizione_di_moduli.html#exercises-definizione_modulo" class="internal"><span class="codenumber">23.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-sottomoduli.html" class="internal"><span class="codenumber">24.2</span> <span class="title">Sottomoduli</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottomoduli.html#exercises-sottomoduli" class="internal"><span class="codenumber">24.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-sottomoduli.html" class="internal"><span class="codenumber">23.2</span> <span class="title">Sottomoduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottomoduli.html#exercises-sottomoduli" class="internal"><span class="codenumber">23.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-omomorfismi_moduli.html" class="internal"><span class="codenumber">24.3</span> <span class="title">Omomorfismi di moduli</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-omomorfismi_moduli.html#exercises-omomorfismi_moduli" class="internal"><span class="codenumber">24.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-omomorfismi_moduli.html" class="internal"><span class="codenumber">23.3</span> <span class="title">Omomorfismi di moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-omomorfismi_moduli.html#exercises-omomorfismi_moduli" class="internal"><span class="codenumber">23.3</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-moduli_quoziente.html" class="internal"><span class="codenumber">24.4</span> <span class="title">Moduli quoziente</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_quoziente.html#exercises-moduli_quoziente" class="internal"><span class="codenumber">24.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-moduli_quoziente.html" class="internal"><span class="codenumber">23.4</span> <span class="title">Moduli quoziente</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_quoziente.html#exercises-moduli_quoziente" class="internal"><span class="codenumber">23.4</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-moduli_liberi.html" class="internal"><span class="codenumber">25</span> <span class="title">Moduli liberi</span></a></div>
+<div class="toc-title-box"><a href="ch-moduli_liberi.html" class="internal"><span class="codenumber">24</span> <span class="title">Moduli liberi</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-somma_diretta_moduli.html" class="internal"><span class="codenumber">25.1</span> <span class="title">Somma diretta di moduli</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-somma_diretta_moduli.html#exercises-somma_diretta_moduli" class="internal"><span class="codenumber">25.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-somma_diretta_moduli.html" class="internal"><span class="codenumber">24.1</span> <span class="title">Somma diretta di moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-somma_diretta_moduli.html#exercises-somma_diretta_moduli" class="internal"><span class="codenumber">24.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-dipendenza_lineare.html" class="internal"><span class="codenumber">25.2</span> <span class="title">Dipendenza e indipendenza lineare</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-dipendenza_lineare.html#exercises-dipendenza_lineare" class="internal"><span class="codenumber">25.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-dipendenza_lineare.html" class="internal"><span class="codenumber">24.2</span> <span class="title">Dipendenza e indipendenza lineare</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-dipendenza_lineare.html#exercises-dipendenza_lineare" class="internal"><span class="codenumber">24.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-elementi_di_torsione.html" class="internal"><span class="codenumber">25.3</span> <span class="title">Elementi di torsione</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_di_torsione.html#exercises-elementi_di_torsione" class="internal"><span class="codenumber">25.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-elementi_di_torsione.html" class="internal"><span class="codenumber">24.3</span> <span class="title">Elementi di torsione</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_di_torsione.html#exercises-elementi_di_torsione" class="internal"><span class="codenumber">24.3</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-modulisupid.html" class="internal"><span class="codenumber">26</span> <span class="title">Moduli finitamente generati su PID</span></a></div>
+<div class="toc-title-box"><a href="ch-modulisupid.html" class="internal"><span class="codenumber">25</span> <span class="title">Moduli finitamente generati su PID</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-moduli_ciclici.html" class="internal"><span class="codenumber">26.1</span> <span class="title">Moduli ciclici</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_ciclici.html#exercises-moduli_ciclici" class="internal"><span class="codenumber">26.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-moduli_ciclici.html" class="internal"><span class="codenumber">25.1</span> <span class="title">Moduli ciclici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_ciclici.html#exercises-moduli_ciclici" class="internal"><span class="codenumber">25.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-moduli_primari.html" class="internal"><span class="codenumber">26.2</span> <span class="title">Moduli primari</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_primari.html#exercises-moduli_primari" class="internal"><span class="codenumber">26.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-moduli_primari.html" class="internal"><span class="codenumber">25.2</span> <span class="title">Moduli primari</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_primari.html#exercises-moduli_primari" class="internal"><span class="codenumber">25.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-moduli_liberi.html" class="internal"><span class="codenumber">26.3</span> <span class="title">Moduli liberi</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_liberi.html#exercises-moduli_liberi" class="internal"><span class="codenumber">26.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-moduli_liberi.html" class="internal"><span class="codenumber">25.3</span> <span class="title">Moduli liberi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_liberi.html#exercises-moduli_liberi" class="internal"><span class="codenumber">25.3</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-classificazione_moduli_pid.html" class="internal"><span class="codenumber">26.4</span> <span class="title">La classificazione dei moduli finitamente generati su un dominio a ideali principali</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-classificazione_moduli_pid.html" class="internal"><span class="codenumber">25.4</span> <span class="title">La classificazione dei moduli finitamente generati su un dominio a ideali principali</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-gruppiabeliani.html" class="internal"><span class="codenumber">27</span> <span class="title">Gruppi abeliani finitamente generati</span></a></div>
+<div class="toc-title-box"><a href="ch-gruppiabeliani.html" class="internal"><span class="codenumber">26</span> <span class="title">Gruppi abeliani finitamente generati</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-gruppiabeliani.html" class="internal"><span class="codenumber">27.1</span> <span class="title">Classificazione dei gruppi abeliani finitamente generati</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppiabeliani.html#exercises-gruppiabeliani" class="internal"><span class="codenumber">27.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-gruppiabeliani.html" class="internal"><span class="codenumber">26.1</span> <span class="title">Classificazione dei gruppi abeliani finitamente generati</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppiabeliani.html#exercises-gruppiabeliani" class="internal"><span class="codenumber">26.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li></ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-formecanoniche.html" class="internal"><span class="codenumber">28</span> <span class="title">Forme canoniche di matrici</span></a></div>
+<div class="toc-title-box"><a href="ch-formecanoniche.html" class="internal"><span class="codenumber">27</span> <span class="title">Forme canoniche di matrici</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-kx_moduli.html" class="internal"><span class="codenumber">28.1</span> <span class="title">Spazi vettoriali con endomorfismi visti come moduli</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-kx_moduli.html#exercises-kx_moduli" class="internal"><span class="codenumber">28.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-kx_moduli.html" class="internal"><span class="codenumber">27.1</span> <span class="title">Spazi vettoriali con endomorfismi visti come moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-kx_moduli.html#exercises-kx_moduli" class="internal"><span class="codenumber">27.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-matrici_rappresentative.html" class="internal"><span class="codenumber">28.2</span> <span class="title">Matrici rappresentative</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-matrici_rappresentative.html#exercises-matrici_rappresentative" class="internal"><span class="codenumber">28.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-matrici_rappresentative.html" class="internal"><span class="codenumber">27.2</span> <span class="title">Matrici rappresentative</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-matrici_rappresentative.html#exercises-matrici_rappresentative" class="internal"><span class="codenumber">27.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-matrici_compagne.html" class="internal"><span class="codenumber">28.3</span> <span class="title">Matrici compagne</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-matrici_compagne.html" class="internal"><span class="codenumber">27.3</span> <span class="title">Matrici compagne</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-jordan.html" class="internal"><span class="codenumber">28.4</span> <span class="title">Forma canonica di Jordan</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-jordan.html#exercises-jordan" class="internal"><span class="codenumber">28.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-jordan.html" class="internal"><span class="codenumber">27.4</span> <span class="title">Forma canonica di Jordan</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-jordan.html#exercises-jordan" class="internal"><span class="codenumber">27.4</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html" class="internal"><span class="codenumber">28.5</span> <span class="title">Polinomio minimo di matrici</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html#exercises-polinomio_minimo_matrici" class="internal"><span class="codenumber">28.5</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html" class="internal"><span class="codenumber">27.5</span> <span class="title">Polinomio minimo di matrici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html#exercises-polinomio_minimo_matrici" class="internal"><span class="codenumber">27.5</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -731,7 +868,7 @@ window.MathJax = {
 \end{equation*}
 </div>
 <div class="para">Inoltre</div>
-<ol class="decimal">
+<ol class="decimal" id="prop-quoziente-eredita-1-1-5">
 <li id="prop-quoziente-eredita-1-1-5-1"><div class="para" id="prop-quoziente-eredita-1-1-5-1-1">se l’operazione in <span class="process-math">\(S\)</span> è associativa, allora l’operazione in <span class="process-math">\(S/\sim\)</span> è associativa;</div></li>
 <li id="prop-quoziente-eredita-1-1-5-2"><div class="para" id="prop-quoziente-eredita-1-1-5-2-1">se l’operazione in <span class="process-math">\(S\)</span> è commutativa, allora l’operazione in <span class="process-math">\(S/\sim\)</span> è commutativa;</div></li>
 <li id="prop-quoziente-eredita-1-1-5-3"><div class="para" id="prop-quoziente-eredita-1-1-5-3-1">se l’operazione in <span class="process-math">\(S\)</span> è dotata di elemento neutro <span class="process-math">\(1_{S}\text{,}\)</span> allora <span class="process-math">\(\class[\sim]{1_{S}}\)</span> è elemento neutro in <span class="process-math">\(S/\sim\text{;}\)</span>
@@ -794,7 +931,7 @@ g^{-1}hg\sim g^{-1}\cdot 1\cdot g=1
 <div class="para">cioè <span class="process-math">\(g^{-1}hg\)</span> appartiene ad <span class="process-math">\(H\text{,}\)</span> che è, quindi, normale in <span class="process-math">\(G\text{.}\)</span>
 </div>
 </div> <div class="para" id="thm-quozienti_su_normali-2-3">Mostriamo ora che le classi di equivalenza sono i laterali di <span class="process-math">\(H\text{,}\)</span> cioè che per ogni <span class="process-math">\(g\in G\)</span> si ha <span class="process-math">\(\class[\sim]{g}=gH\text{.}\)</span> Gli elementi di <span class="process-math">\(gH\)</span> sono del tipo <span class="process-math">\(gh\)</span> con <span class="process-math">\(h\sim 1\text{:}\)</span> dunque, <span class="process-math">\(gh\sim g\cdot 1=g\text{,}\)</span> cioè <span class="process-math">\(gH\subseteq\class[\sim]{g}\text{.}\)</span> Viceversa, se <span class="process-math">\(g'\sim g\text{,}\)</span> allora <span class="process-math">\(g^{-1}g'\sim g^{-1}g=1\text{,}\)</span> cioè <span class="process-math">\(g^{-1}g'\in H\)</span> e <span class="process-math">\(g'=g(g^{-1}g')\in gH\text{,}\)</span> cioè <span class="process-math">\(\class[\sim]{g}\subseteq gH\text{.}\)</span>
-</div> <div class="para" id="thm-quozienti_su_normali-2-4">Sia ora <span class="process-math">\(N\)</span> un sottogruppo normale di un gruppo <span class="process-math">\(G\)</span> e consideriamo la relazione di equivalenza <span class="process-math">\(\approx\)</span> le cui classi sono i laterali di <span class="process-math">\(N\)</span> in <span class="process-math">\(G\text{:}\)</span> in altri termini, <span class="process-math">\(g\approx g'\)</span> se e solo se <span class="process-math">\(g'\in gN\text{.}\)</span> Siano allora <span class="process-math">\(g\text{,}\)</span> <span class="process-math">\(g'\text{,}\)</span> <span class="process-math">\(h\)</span> e <span class="process-math">\(h'\)</span> in <span class="process-math">\(G\)</span> tali che <span class="process-math">\(g\approx g'\)</span> e <span class="process-math">\(h\approx h'\text{:}\)</span> dunque, esistono <span class="process-math">\(n_{1}\)</span> e <span class="process-math">\(n_{2}\)</span> in <span class="process-math">\(N\text{,}\)</span> tali che <span class="process-math">\(g'=gn_{1}\)</span> e <span class="process-math">\(h'=hn_{2}\text{.}\)</span> Ma allora <span class="process-math">\(g'h'=gn_{1}hn_{2}\text{:}\)</span> ora <span class="process-math">\(n_{1}h\in Nh=hN\text{,}\)</span> dal momento che <span class="process-math">\(N\)</span> è normale in <span class="process-math">\(G\text{:}\)</span> dunque, <span class="process-math">\(n_{1}h=hn_{3}\)</span> per qualche <span class="process-math">\(n_{3}\in N\text{.}\)</span> Di conseguenza <span class="process-math">\(g'h'=ghn_{3}n_{2}\in ghN\text{,}\)</span> vale a dire <span class="process-math">\(g'h'\approx gh\text{.}\)</span>
+</div> <div class="para" id="thm-quozienti_su_normali-2-4">Sia ora <span class="process-math">\(N\)</span> un sottogruppo normale di un gruppo <span class="process-math">\(G\)</span> e consideriamo la relazione di equivalenza <span class="process-math">\(\approx\)</span> le cui classi sono i laterali di <span class="process-math">\(N\)</span> in <span class="process-math">\(G\text{:}\)</span> in altri termini, <span class="process-math">\(g\approx g'\)</span> se e solo se <span class="process-math">\(g'\in gN\text{.}\)</span> Siano allora <span class="process-math">\(g\text{,}\)</span> <span class="process-math">\(g'\text{,}\)</span> <span class="process-math">\(h\)</span> e <span class="process-math">\(h'\)</span> in <span class="process-math">\(G\)</span> tali che <span class="process-math">\(g\approx g'\)</span> e <span class="process-math">\(h\approx h'\text{:}\)</span> dunque, esistono <span class="process-math">\(n_{1}\)</span> e <span class="process-math">\(n_{2}\)</span> in <span class="process-math">\(N\text{,}\)</span> tali che <span class="process-math">\(g'=gn_{1}\)</span> e <span class="process-math">\(h'=hn_{2}\text{.}\)</span> Ma allora <span class="process-math">\(g'h'=gn_{1}hn_{2}\text{:}\)</span> ora <span class="process-math">\(n_{1}h\in Nh=hN\text{,}\)</span> dal momento che <span class="process-math">\(N\)</span> è normale in <span class="process-math">\(G\text{:}\)</span> dunque, <span class="process-math">\(n_{1}h=hn_{3}\)</span> per qualche <span class="process-math">\(n_{3}\in N\text{.}\)</span> Di conseguenza, <span class="process-math">\(g'h'=ghn_{3}n_{2}\in ghN\text{,}\)</span> vale a dire <span class="process-math">\(g'h'\approx gh\text{.}\)</span>
 </div></article></details><div class="para" id="sec-congruenze-11">Il teorema precedente ci dice che tutte e sole le congruenze di un gruppo <span class="process-math">\(G\)</span> provengono da sottogruppi normali. Dato un sottogruppo normale <span class="process-math">\(N\)</span> di <span class="process-math">\(G\text{,}\)</span> l’operazione in <span class="process-math">\(G/N\)</span> è, dunque, definita da <span class="process-math">\(gN\cdot hN\coloneqq ghN\text{:}\)</span> se provassimo a usare questa definizione con un sottogruppo non normale, non avremmo un prodotto ben definito, cioè al variare dei rappresentanti dei laterali coinvolti non otterremmo sempre come risultato lo stesso laterale.</div>
 <article class="example example-like" id="ex-quoziente_su_non_normale"><h3 class="heading">
 <span class="type">Esempio</span><span class="space"> </span><span class="codenumber">15.1.7</span><span class="period">.</span>
@@ -814,7 +951,7 @@ g^{-1}hg\sim g^{-1}\cdot 1\cdot g=1
 </div></article><div class="conclusion" id="exercises-congruenze-1-4"><div class="para" id="exercises-congruenze-1-4-1">Abbiamo mostrato che in <span class="process-math">\(\Naturali\)</span> ci sono infinite congruenze rispetto a cui la classe di <span class="process-math">\(0\)</span> è sempre la medesima: dunque, la conoscenza della classe dell’elemento neutro non è sufficiente a ricostruire la congruenza.</div></div></article><article class="exercise exercise-like" id="exercises-congruenze-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
 <div class="para logical" id="exercises-congruenze-2-1-1">
 <div class="para">Sia <span class="process-math">\(H\)</span> un sottogruppo di un gruppo <span class="process-math">\(G\text{.}\)</span> Mostrare che le seguenti proprietà sono equivalenti:</div>
-<ol class="lower-alpha">
+<ol class="lower-alpha" id="exercises-congruenze-2-1-1-3">
 <li id="exercises-congruenze-2-1-1-3-1"><div class="para" id="exercises-congruenze-2-1-1-3-1-1">
 <span class="process-math">\(H\)</span> è normale in <span class="process-math">\(G\)</span> e il quoziente <span class="process-math">\(G/H\)</span> è abeliano;</div></li>
 <li id="exercises-congruenze-2-1-1-3-2"><div class="para" id="exercises-congruenze-2-1-1-3-2-1">
@@ -824,7 +961,7 @@ g^{-1}hg\sim g^{-1}\cdot 1\cdot g=1
 </div>
 <div class="solutions"><details id="exercises-congruenze-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="exercises-congruenze-2-2-1">Supponiamo che <span class="process-math">\(H\)</span> sia normale in <span class="process-math">\(G\)</span> e che <span class="process-math">\(G/H\)</span> sia abeliano. Siano <span class="process-math">\(x\)</span> e <span class="process-math">\(y\)</span> due elementi di <span class="process-math">\(G\text{:}\)</span> poiché <span class="process-math">\(G/H\)</span> è abeliano, abbiamo che <span class="process-math">\((xH)(yH)=(yH)(xH)\text{.}\)</span> Ma ciò significa che <span class="process-math">\(xyH=yxH\text{:}\)</span> moltiplicando a sinistra per <span class="process-math">\(x^{-1}y^{-1}H\)</span> otteniamo allora <span class="process-math">\(x^{-1}y^{-1}xyH=H\text{.}\)</span> Ma questo implica che <span class="process-math">\(x^{-1}y^{-1}xy\)</span> appartiene a <span class="process-math">\(H\text{.}\)</span>
-</div> <div class="para" id="exercises-congruenze-2-2-2">Viceversa, sia <span class="process-math">\(x^{-1}y^{-1}xy\)</span> in <span class="process-math">\(H\)</span> per ogni <span class="process-math">\(x\)</span> e <span class="process-math">\(y\)</span> in <span class="process-math">\(G\text{.}\)</span> Scegliamo in particolare <span class="process-math">\(x\)</span> in <span class="process-math">\(H\text{:}\)</span> allora <span class="process-math">\(x^{y}=y^{-1}xy=x(x^{-1}y^{-1}xy)\)</span> è un elemento di <span class="process-math">\(H\)</span> perché prodotto di due elementi di <span class="process-math">\(H\text{.}\)</span> Per l’arbitrarietà della scelta di <span class="process-math">\(x\)</span> in <span class="process-math">\(H\)</span> e di <span class="process-math">\(y\)</span> in <span class="process-math">\(G\)</span> abbiamo che <span class="process-math">\(H\)</span> è normale in <span class="process-math">\(G\text{.}\)</span> Mostriamo ora che <span class="process-math">\(G/H\)</span> è abeliano: siano <span class="process-math">\(xH\)</span> e <span class="process-math">\(yH\)</span> due elementi di <span class="process-math">\(G/H\text{.}\)</span> Poiché <span class="process-math">\(x^{-1}y^{-1}xy\)</span> appartiene a <span class="process-math">\(H\)</span> si ha <span class="process-math">\(x^{-1}y^{-1}xyH=H\)</span> e moltiplicando a sinistra per <span class="process-math">\(yxH\text{,}\)</span> otteniamo <span class="process-math">\(xyH=yxH\text{,}\)</span> cioè <span class="process-math">\((xH)(yH)=(yH)(xH)\text{.}\)</span>
+</div> <div class="para" id="exercises-congruenze-2-2-2">Viceversa, sia <span class="process-math">\(x^{-1}y^{-1}xy\)</span> in <span class="process-math">\(H\)</span> per ogni <span class="process-math">\(x\)</span> e <span class="process-math">\(y\)</span> in <span class="process-math">\(G\text{.}\)</span> Scegliamo in particolare, <span class="process-math">\(x\)</span> in <span class="process-math">\(H\text{:}\)</span> allora <span class="process-math">\(x^{y}=y^{-1}xy=x(x^{-1}y^{-1}xy)\)</span> è un elemento di <span class="process-math">\(H\)</span> perché prodotto di due elementi di <span class="process-math">\(H\text{.}\)</span> Per l’arbitrarietà della scelta di <span class="process-math">\(x\)</span> in <span class="process-math">\(H\)</span> e di <span class="process-math">\(y\)</span> in <span class="process-math">\(G\)</span> abbiamo che <span class="process-math">\(H\)</span> è normale in <span class="process-math">\(G\text{.}\)</span> Mostriamo ora che <span class="process-math">\(G/H\)</span> è abeliano: siano <span class="process-math">\(xH\)</span> e <span class="process-math">\(yH\)</span> due elementi di <span class="process-math">\(G/H\text{.}\)</span> Poiché <span class="process-math">\(x^{-1}y^{-1}xy\)</span> appartiene a <span class="process-math">\(H\)</span> si ha <span class="process-math">\(x^{-1}y^{-1}xyH=H\)</span> e moltiplicando a sinistra per <span class="process-math">\(yxH\text{,}\)</span> otteniamo <span class="process-math">\(xyH=yxH\text{,}\)</span> cioè <span class="process-math">\((xH)(yH)=(yH)(xH)\text{.}\)</span>
 </div>
 </div></details></div></article><article class="exercise exercise-like" id="exercises-congruenze-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
 <div class="introduction" id="exercises-congruenze-3-1"><div class="para" id="exercises-congruenze-3-1-1">Si consideri il gruppo <span class="process-math">\(G\coloneqq\frac{\Razionali}{\Interi}\)</span> rispetto all’addizione.</div></div>
@@ -839,12 +976,12 @@ g^{-1}hg\sim g^{-1}\cdot 1\cdot g=1
 </div>
 <div class="solutions"><details id="exercises-congruenze-3-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="exercises-congruenze-3-3-2-1">Dal punto precedente sappiamo che se <span class="process-math">\(m\)</span> è un intero coprimo con <span class="process-math">\(n\)</span> allora <span class="process-math">\(\frac{m}{n}+\Interi\)</span> ha periodo <span class="process-math">\(n\text{:}\)</span> basta prendere ad esempio <span class="process-math">\(m=1\text{.}\)</span>
-</div> <div class="para" id="exercises-congruenze-3-3-2-2">Per determinare esplicitamente il numero di elementi di periodo <span class="process-math">\(n\)</span> consideriamo due elementi <span class="process-math">\(\frac{m_{1}}{n}+\Interi\)</span> e <span class="process-math">\(\frac{m_{2}}{n}+\Interi\)</span> di periodo <span class="process-math">\(n\)</span> (quindi, con <span class="process-math">\(m_{1}\)</span> e <span class="process-math">\(m_{2}\)</span> coprimi con <span class="process-math">\(n\)</span>). Questi due elementi di <span class="process-math">\(G\)</span> coincidono se e solo se <span class="process-math">\(\frac{m_{1}}{n}-\frac{m_{2}}{n}\)</span> è un intero, cioè se e solo se <span class="process-math">\(m_{1}-m_{2}\)</span> è multiplo di <span class="process-math">\(n\text{:}\)</span> in altri termini, se e solo se <span class="process-math">\(m_{1}\)</span> e <span class="process-math">\(m_{2}\)</span> sono congrui modulo <span class="process-math">\(n\text{.}\)</span> Dunque possiamo limitarci a considerare elementi del tipo <span class="process-math">\(\frac{m}{n}+\Interi\)</span> con <span class="process-math">\(0\le m \lt n\text{:}\)</span> tra questi, esattamente <span class="process-math">\(\euler{n}\)</span> sono coprimi con <span class="process-math">\(n\)</span> e, quindi, questo è il numero di elementi di periodo <span class="process-math">\(n\text{.}\)</span>
+</div> <div class="para" id="exercises-congruenze-3-3-2-2">Per determinare esplicitamente il numero di elementi di periodo <span class="process-math">\(n\)</span> consideriamo due elementi <span class="process-math">\(\frac{m_{1}}{n}+\Interi\)</span> e <span class="process-math">\(\frac{m_{2}}{n}+\Interi\)</span> di periodo <span class="process-math">\(n\)</span> (quindi, con <span class="process-math">\(m_{1}\)</span> e <span class="process-math">\(m_{2}\)</span> coprimi con <span class="process-math">\(n\)</span>). Questi due elementi di <span class="process-math">\(G\)</span> coincidono se e solo se <span class="process-math">\(\frac{m_{1}}{n}-\frac{m_{2}}{n}\)</span> è un intero, cioè se e solo se <span class="process-math">\(m_{1}-m_{2}\)</span> è multiplo di <span class="process-math">\(n\text{:}\)</span> in altri termini, se e solo se <span class="process-math">\(m_{1}\)</span> e <span class="process-math">\(m_{2}\)</span> sono congrui modulo <span class="process-math">\(n\text{.}\)</span> Dunque, possiamo limitarci a considerare elementi del tipo <span class="process-math">\(\frac{m}{n}+\Interi\)</span> con <span class="process-math">\(0\le m \lt n\text{:}\)</span> tra questi, esattamente <span class="process-math">\(\euler{n}\)</span> sono coprimi con <span class="process-math">\(n\)</span> e, quindi, questo è il numero di elementi di periodo <span class="process-math">\(n\text{.}\)</span>
 </div>
 </div></details></div></article><article class="task exercise-like" id="exercises-congruenze-3-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
 <div class="para" id="exercises-congruenze-3-4-1-1">Mostrare che per ogni intero positivo <span class="process-math">\(n\)</span> esiste un unico sottogruppo ciclico di <span class="process-math">\(G\)</span> di ordine <span class="process-math">\(n\text{.}\)</span>
 </div>
-<div class="solutions"><details id="exercises-congruenze-3-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="exercises-congruenze-3-4-2-1">Dal punto precedente sappiamo che esistono elementi di periodo <span class="process-math">\(n\)</span> e, quindi, c’è almeno un sottogruppo ciclico <span class="process-math">\(C_{n}\)</span> di ordine <span class="process-math">\(n\text{.}\)</span> Un gruppo ciclico di ordine <span class="process-math">\(n\)</span> contiene esattamente <span class="process-math">\(\euler{n}\)</span> elementi di ordine <span class="process-math">\(n\text{.}\)</span> Dal punto precedente sappiamo che <span class="process-math">\(G\)</span> contiene esattamente <span class="process-math">\(\euler{n}\)</span> elementi di ordine <span class="process-math">\(n\text{:}\)</span> dunque <span class="process-math">\(C_{n}\)</span> contiene tutti gli elementi di ordine <span class="process-math">\(n\)</span> di <span class="process-math">\(G\)</span> ed è allora l’unico sottogruppo ciclico di ordine <span class="process-math">\(n\text{.}\)</span>
+<div class="solutions"><details id="exercises-congruenze-3-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="exercises-congruenze-3-4-2-1">Dal punto precedente sappiamo che esistono elementi di periodo <span class="process-math">\(n\)</span> e, quindi, c’è almeno un sottogruppo ciclico <span class="process-math">\(C_{n}\)</span> di ordine <span class="process-math">\(n\text{.}\)</span> Un gruppo ciclico di ordine <span class="process-math">\(n\)</span> contiene esattamente <span class="process-math">\(\euler{n}\)</span> elementi di ordine <span class="process-math">\(n\text{.}\)</span> Dal punto precedente sappiamo che <span class="process-math">\(G\)</span> contiene esattamente <span class="process-math">\(\euler{n}\)</span> elementi di ordine <span class="process-math">\(n\text{:}\)</span> dunque, <span class="process-math">\(C_{n}\)</span> contiene tutti gli elementi di ordine <span class="process-math">\(n\)</span> di <span class="process-math">\(G\)</span> ed è allora l’unico sottogruppo ciclico di ordine <span class="process-math">\(n\text{.}\)</span>
 </div></div></details></div></article><article class="task exercise-like" id="exercises-congruenze-3-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
 <div class="para" id="exercises-congruenze-3-5-1-1">Dimostrare che ogni sottogruppo finito di <span class="process-math">\(G\)</span> è ciclico.</div>
 <div class="solutions"><details id="exercises-congruenze-3-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="exercises-congruenze-3-5-2-1">Sia <span class="process-math">\(H\)</span> un sottogruppo finito di <span class="process-math">\(G\)</span> di ordine <span class="process-math">\(n\)</span> e sia <span class="process-math">\(C_{n}\)</span> l’unico sottogruppo ciclico di ordine <span class="process-math">\(n\)</span> di <span class="process-math">\(G\text{.}\)</span> Mostriamo che ogni elemento di <span class="process-math">\(H\)</span> è contenuto in <span class="process-math">\(C_{n}\)</span> e, quindi, <span class="process-math">\(H=C_{n}\text{.}\)</span> Sia <span class="process-math">\(x\)</span> un elemento di <span class="process-math">\(H\text{:}\)</span> il periodo di <span class="process-math">\(x\)</span> è un divisore <span class="process-math">\(d\)</span> di <span class="process-math">\(n\text{.}\)</span> Poiché <span class="process-math">\(C_{n}\)</span> è un gruppo ciclico finito, esso contiene  un sottogruppo ciclico <span class="process-math">\(C_{d}\)</span> di ordine <span class="process-math">\(d\text{.}\)</span> Ma in <span class="process-math">\(G\)</span> esiste un unico sottogruppo ciclico di ordine <span class="process-math">\(d\)</span> e, pertanto, il sottogruppo generato da <span class="process-math">\(x\)</span> coincide con <span class="process-math">\(C_{d}\text{,}\)</span> e allora <span class="process-math">\(x\in C_{d}\le C_{n}\text{.}\)</span>

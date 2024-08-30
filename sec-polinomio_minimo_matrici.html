@@ -88,6 +88,155 @@ window.MathJax = {
 <link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#prop-unione_intersezione-1-1-4 { counter-set: prop-unione_intersezione-1-1-4 0; }
+#prop-unione_intersezione-1-1-4 > li::marker { content: ""counter(prop-unione_intersezione-1-1-4,decimal)"."; }
+#prop-unione_intersezione-1-1-4 > li { counter-increment: prop-unione_intersezione-1-1-4; }
+#prop-inclusione_equivalente-1-1-3 { counter-set: prop-inclusione_equivalente-1-1-3 0; }
+#prop-inclusione_equivalente-1-1-3 > li::marker { content: ""counter(prop-inclusione_equivalente-1-1-3,decimal)"."; }
+#prop-inclusione_equivalente-1-1-3 > li { counter-increment: prop-inclusione_equivalente-1-1-3; }
+#prop-classe_equivalenza-1-1-3 { counter-set: prop-classe_equivalenza-1-1-3 0; }
+#prop-classe_equivalenza-1-1-3 > li::marker { content: ""counter(prop-classe_equivalenza-1-1-3,decimal)"."; }
+#prop-classe_equivalenza-1-1-3 > li { counter-increment: prop-classe_equivalenza-1-1-3; }
+#prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 { counter-set: prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 0; }
+#prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 > li::marker { content: ""counter(prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2,decimal)"."; }
+#prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 > li { counter-increment: prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2; }
+#prop-composizione_iniettive_suriettive-1-1-3 { counter-set: prop-composizione_iniettive_suriettive-1-1-3 0; }
+#prop-composizione_iniettive_suriettive-1-1-3 > li::marker { content: ""counter(prop-composizione_iniettive_suriettive-1-1-3,decimal)"."; }
+#prop-composizione_iniettive_suriettive-1-1-3 > li { counter-increment: prop-composizione_iniettive_suriettive-1-1-3; }
+#prop-addizione_matrici-1-2-1 { counter-set: prop-addizione_matrici-1-2-1 0; }
+#prop-addizione_matrici-1-2-1 > li::marker { content: ""counter(prop-addizione_matrici-1-2-1,decimal)"."; }
+#prop-addizione_matrici-1-2-1 > li { counter-increment: prop-addizione_matrici-1-2-1; }
+#prop-moltiplicazione_matrici-1-2-1 { counter-set: prop-moltiplicazione_matrici-1-2-1 0; }
+#prop-moltiplicazione_matrici-1-2-1 > li::marker { content: ""counter(prop-moltiplicazione_matrici-1-2-1,decimal)"."; }
+#prop-moltiplicazione_matrici-1-2-1 > li { counter-increment: prop-moltiplicazione_matrici-1-2-1; }
+#def-numeri_naturali_peano-5-1-7 { counter-set: def-numeri_naturali_peano-5-1-7 0; }
+#def-numeri_naturali_peano-5-1-7 > li::marker { content: ""counter(def-numeri_naturali_peano-5-1-7,decimal)"."; }
+#def-numeri_naturali_peano-5-1-7 > li { counter-increment: def-numeri_naturali_peano-5-1-7; }
+#prop-anello_degli_interi-1-2-1 { counter-set: prop-anello_degli_interi-1-2-1 0; }
+#prop-anello_degli_interi-1-2-1 > li::marker { content: ""counter(prop-anello_degli_interi-1-2-1,decimal)"."; }
+#prop-anello_degli_interi-1-2-1 > li { counter-increment: prop-anello_degli_interi-1-2-1; }
+#prop-ordine_interi-1-2-1 { counter-set: prop-ordine_interi-1-2-1 0; }
+#prop-ordine_interi-1-2-1 > li::marker { content: ""counter(prop-ordine_interi-1-2-1,decimal)"."; }
+#prop-ordine_interi-1-2-1 > li { counter-increment: prop-ordine_interi-1-2-1; }
+#prop-anello_degli_classi_di_resto-1-2-1 { counter-set: prop-anello_degli_classi_di_resto-1-2-1 0; }
+#prop-anello_degli_classi_di_resto-1-2-1 > li::marker { content: ""counter(prop-anello_degli_classi_di_resto-1-2-1,decimal)"."; }
+#prop-anello_degli_classi_di_resto-1-2-1 > li { counter-increment: prop-anello_degli_classi_di_resto-1-2-1; }
+#prop-classi_resto_invertibili-1-1-3 { counter-set: prop-classi_resto_invertibili-1-1-3 0; }
+#prop-classi_resto_invertibili-1-1-3 > li::marker { content: ""counter(prop-classi_resto_invertibili-1-1-3,decimal)"."; }
+#prop-classi_resto_invertibili-1-1-3 > li { counter-increment: prop-classi_resto_invertibili-1-1-3; }
+#prop-proprieta_potenze_monoide-1-1-5 { counter-set: prop-proprieta_potenze_monoide-1-1-5 0; }
+#prop-proprieta_potenze_monoide-1-1-5 > li::marker { content: ""counter(prop-proprieta_potenze_monoide-1-1-5,decimal)"."; }
+#prop-proprieta_potenze_monoide-1-1-5 > li { counter-increment: prop-proprieta_potenze_monoide-1-1-5; }
+#prop-proprieta_potenze_elemento_invertibile-1-1-5 { counter-set: prop-proprieta_potenze_elemento_invertibile-1-1-5 0; }
+#prop-proprieta_potenze_elemento_invertibile-1-1-5 > li::marker { content: ""counter(prop-proprieta_potenze_elemento_invertibile-1-1-5,decimal)"."; }
+#prop-proprieta_potenze_elemento_invertibile-1-1-5 > li { counter-increment: prop-proprieta_potenze_elemento_invertibile-1-1-5; }
+#prop-cancellazione_gruppo-2-1-5 { counter-set: prop-cancellazione_gruppo-2-1-5 0; }
+#prop-cancellazione_gruppo-2-1-5 > li::marker { content: ""counter(prop-cancellazione_gruppo-2-1-5,decimal)"."; }
+#prop-cancellazione_gruppo-2-1-5 > li { counter-increment: prop-cancellazione_gruppo-2-1-5; }
+#prop-supporto-1-1-4 { counter-set: prop-supporto-1-1-4 0; }
+#prop-supporto-1-1-4 > li::marker { content: ""counter(prop-supporto-1-1-4,decimal)"."; }
+#prop-supporto-1-1-4 > li { counter-increment: prop-supporto-1-1-4; }
+#prop-laterali_partizione-1-1-4 { counter-set: prop-laterali_partizione-1-1-4 0; }
+#prop-laterali_partizione-1-1-4 > li::marker { content: ""counter(prop-laterali_partizione-1-1-4,decimal)"."; }
+#prop-laterali_partizione-1-1-4 > li { counter-increment: prop-laterali_partizione-1-1-4; }
+#thm-prodotto_sottogruppo-1-1-4 { counter-set: thm-prodotto_sottogruppo-1-1-4 0; }
+#thm-prodotto_sottogruppo-1-1-4 > li::marker { content: ""counter(thm-prodotto_sottogruppo-1-1-4,decimal)"."; }
+#thm-prodotto_sottogruppo-1-1-4 > li { counter-increment: thm-prodotto_sottogruppo-1-1-4; }
+#prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottogruppi-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_sottogruppi-1-1-2; }
+#prop-controimmagini_omomorfismo-1-1-6 { counter-set: prop-controimmagini_omomorfismo-1-1-6 0; }
+#prop-controimmagini_omomorfismo-1-1-6 > li::marker { content: ""counter(prop-controimmagini_omomorfismo-1-1-6,decimal)"."; }
+#prop-controimmagini_omomorfismo-1-1-6 > li { counter-increment: prop-controimmagini_omomorfismo-1-1-6; }
+#thm-caratterizzazione_sottogruppi_normali-1-1-3 { counter-set: thm-caratterizzazione_sottogruppi_normali-1-1-3 0; }
+#thm-caratterizzazione_sottogruppi_normali-1-1-3 > li::marker { content: ""counter(thm-caratterizzazione_sottogruppi_normali-1-1-3,decimal)"."; }
+#thm-caratterizzazione_sottogruppi_normali-1-1-3 > li { counter-increment: thm-caratterizzazione_sottogruppi_normali-1-1-3; }
+#thm-normalizzante-1-1-3 { counter-set: thm-normalizzante-1-1-3 0; }
+#thm-normalizzante-1-1-3 > li::marker { content: ""counter(thm-normalizzante-1-1-3,decimal)"."; }
+#thm-normalizzante-1-1-3 > li { counter-increment: thm-normalizzante-1-1-3; }
+#prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2; }
+#prop-quoziente-eredita-1-1-5 { counter-set: prop-quoziente-eredita-1-1-5 0; }
+#prop-quoziente-eredita-1-1-5 > li::marker { content: ""counter(prop-quoziente-eredita-1-1-5,decimal)"."; }
+#prop-quoziente-eredita-1-1-5 > li { counter-increment: prop-quoziente-eredita-1-1-5; }
+#exercises-congruenze-2-1-1-3 { counter-set: exercises-congruenze-2-1-1-3 0; }
+#exercises-congruenze-2-1-1-3 > li::marker { content: "("counter(exercises-congruenze-2-1-1-3,lower-alpha)")"; }
+#exercises-congruenze-2-1-1-3 > li { counter-increment: exercises-congruenze-2-1-1-3; }
+#prop-proprieta_fattori_prodotto_diretto-1-1-9 { counter-set: prop-proprieta_fattori_prodotto_diretto-1-1-9 0; }
+#prop-proprieta_fattori_prodotto_diretto-1-1-9 > li::marker { content: ""counter(prop-proprieta_fattori_prodotto_diretto-1-1-9,decimal)"."; }
+#prop-proprieta_fattori_prodotto_diretto-1-1-9 > li { counter-increment: prop-proprieta_fattori_prodotto_diretto-1-1-9; }
+#thm-sylow-2-1-9 { counter-set: thm-sylow-2-1-9 0; }
+#thm-sylow-2-1-9 > li::marker { content: ""counter(thm-sylow-2-1-9,decimal)"."; }
+#thm-sylow-2-1-9 > li { counter-increment: thm-sylow-2-1-9; }
+#prop-moltiplicazione_opposti-1-1-2 { counter-set: prop-moltiplicazione_opposti-1-1-2 0; }
+#prop-moltiplicazione_opposti-1-1-2 > li::marker { content: ""counter(prop-moltiplicazione_opposti-1-1-2,decimal)"."; }
+#prop-moltiplicazione_opposti-1-1-2 > li { counter-increment: prop-moltiplicazione_opposti-1-1-2; }
+#prop-multipli_potenze_anello-1-1-4 { counter-set: prop-multipli_potenze_anello-1-1-4 0; }
+#prop-multipli_potenze_anello-1-1-4 > li::marker { content: ""counter(prop-multipli_potenze_anello-1-1-4,decimal)"."; }
+#prop-multipli_potenze_anello-1-1-4 > li { counter-increment: prop-multipli_potenze_anello-1-1-4; }
+#prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottoanelli-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_sottoanelli-1-1-2; }
+#prop-immagine_diretta_inversa_di_ideali-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_ideali-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_ideali-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_ideali-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_ideali-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_ideali-1-1-2; }
+#prop-grado_e_operazioni-1-1-4 { counter-set: prop-grado_e_operazioni-1-1-4 0; }
+#prop-grado_e_operazioni-1-1-4 > li::marker { content: ""counter(prop-grado_e_operazioni-1-1-4,decimal)"."; }
+#prop-grado_e_operazioni-1-1-4 > li { counter-increment: prop-grado_e_operazioni-1-1-4; }
+#prop-proprieta_divisibilita-1-1-7 { counter-set: prop-proprieta_divisibilita-1-1-7 0; }
+#prop-proprieta_divisibilita-1-1-7 > li::marker { content: ""counter(prop-proprieta_divisibilita-1-1-7,decimal)"."; }
+#prop-proprieta_divisibilita-1-1-7 > li { counter-increment: prop-proprieta_divisibilita-1-1-7; }
+#prop-irriducibile-1-1-3 { counter-set: prop-irriducibile-1-1-3 0; }
+#prop-irriducibile-1-1-3 > li::marker { content: ""counter(prop-irriducibile-1-1-3,decimal)"."; }
+#prop-irriducibile-1-1-3 > li { counter-increment: prop-irriducibile-1-1-3; }
+#prop-lunghezza-1-1-3 { counter-set: prop-lunghezza-1-1-3 0; }
+#prop-lunghezza-1-1-3 > li::marker { content: ""counter(prop-lunghezza-1-1-3,decimal)"."; }
+#prop-lunghezza-1-1-3 > li { counter-increment: prop-lunghezza-1-1-3; }
+#prop-MCD_esiste_sempre-1-1-5 { counter-set: prop-MCD_esiste_sempre-1-1-5 0; }
+#prop-MCD_esiste_sempre-1-1-5 > li::marker { content: ""counter(prop-MCD_esiste_sempre-1-1-5,decimal)"."; }
+#prop-MCD_esiste_sempre-1-1-5 > li { counter-increment: prop-MCD_esiste_sempre-1-1-5; }
+#thm-caratterizzazione_UFD-1-1-2 { counter-set: thm-caratterizzazione_UFD-1-1-2 0; }
+#thm-caratterizzazione_UFD-1-1-2 > li::marker { content: ""counter(thm-caratterizzazione_UFD-1-1-2,decimal)"."; }
+#thm-caratterizzazione_UFD-1-1-2 > li { counter-increment: thm-caratterizzazione_UFD-1-1-2; }
+#exercises-PID_euclidei-5-1-1-2 { counter-set: exercises-PID_euclidei-5-1-1-2 0; }
+#exercises-PID_euclidei-5-1-1-2 > li::marker { content: "("counter(exercises-PID_euclidei-5-1-1-2,lower-alpha)")"; }
+#exercises-PID_euclidei-5-1-1-2 > li { counter-increment: exercises-PID_euclidei-5-1-1-2; }
+#lem-eisenstein-2-1-6 { counter-set: lem-eisenstein-2-1-6 0; }
+#lem-eisenstein-2-1-6 > li::marker { content: ""counter(lem-eisenstein-2-1-6,decimal)"."; }
+#lem-eisenstein-2-1-6 > li { counter-increment: lem-eisenstein-2-1-6; }
+#prop-moltiplicazione_per_0-1-1-3 { counter-set: prop-moltiplicazione_per_0-1-1-3 0; }
+#prop-moltiplicazione_per_0-1-1-3 > li::marker { content: ""counter(prop-moltiplicazione_per_0-1-1-3,decimal)"."; }
+#prop-moltiplicazione_per_0-1-1-3 > li { counter-increment: prop-moltiplicazione_per_0-1-1-3; }
+#prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 { counter-set: prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 0; }
+#prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottomoduli-1-1-3,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 > li { counter-increment: prop-immagine_diretta_inversa_di_sottomoduli-1-1-3; }
+#prop-proprieta_addendi_somma_diretta-1-1-10 { counter-set: prop-proprieta_addendi_somma_diretta-1-1-10 0; }
+#prop-proprieta_addendi_somma_diretta-1-1-10 > li::marker { content: ""counter(prop-proprieta_addendi_somma_diretta-1-1-10,decimal)"."; }
+#prop-proprieta_addendi_somma_diretta-1-1-10 > li { counter-increment: prop-proprieta_addendi_somma_diretta-1-1-10; }
+#exercises-gruppiabeliani-2-1-1-1 { counter-set: exercises-gruppiabeliani-2-1-1-1 0; }
+#exercises-gruppiabeliani-2-1-1-1 > li::marker { content: "("counter(exercises-gruppiabeliani-2-1-1-1,lower-alpha)")"; }
+#exercises-gruppiabeliani-2-1-1-1 > li { counter-increment: exercises-gruppiabeliani-2-1-1-1; }
+#exercises-gruppiabeliani-2-2-1-1 { counter-set: exercises-gruppiabeliani-2-2-1-1 0; }
+#exercises-gruppiabeliani-2-2-1-1 > li::marker { content: "("counter(exercises-gruppiabeliani-2-2-1-1,lower-alpha)")"; }
+#exercises-gruppiabeliani-2-2-1-1 > li { counter-increment: exercises-gruppiabeliani-2-2-1-1; }
+#prop-diagonali_blocchi-1-1-2 { counter-set: prop-diagonali_blocchi-1-1-2 0; }
+#prop-diagonali_blocchi-1-1-2 > li::marker { content: ""counter(prop-diagonali_blocchi-1-1-2,decimal)"."; }
+#prop-diagonali_blocchi-1-1-2 > li { counter-increment: prop-diagonali_blocchi-1-1-2; }
+#prop-addizione_naturali-1-2-1 { counter-set: prop-addizione_naturali-1-2-1 0; }
+#prop-addizione_naturali-1-2-1 > li::marker { content: ""counter(prop-addizione_naturali-1-2-1,decimal)"."; }
+#prop-addizione_naturali-1-2-1 > li { counter-increment: prop-addizione_naturali-1-2-1; }
+#prop-moltiplicazione_naturali-1-2-1 { counter-set: prop-moltiplicazione_naturali-1-2-1 0; }
+#prop-moltiplicazione_naturali-1-2-1 > li::marker { content: ""counter(prop-moltiplicazione_naturali-1-2-1,decimal)"."; }
+#prop-moltiplicazione_naturali-1-2-1 > li { counter-increment: prop-moltiplicazione_naturali-1-2-1; }
+#cor-somma_prodotto_positivi_negativi-1-2-1 { counter-set: cor-somma_prodotto_positivi_negativi-1-2-1 0; }
+#cor-somma_prodotto_positivi_negativi-1-2-1 > li::marker { content: ""counter(cor-somma_prodotto_positivi_negativi-1-2-1,decimal)"."; }
+#cor-somma_prodotto_positivi_negativi-1-2-1 > li { counter-increment: cor-somma_prodotto_positivi_negativi-1-2-1; }
+#gfdl-section4-2-1 { counter-set: gfdl-section4-2-1 0; }
+#gfdl-section4-2-1 > li::marker { content: ""counter(gfdl-section4-2-1,upper-alpha)"."; }
+#gfdl-section4-2-1 > li { counter-increment: gfdl-section4-2-1; }
+</style>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Vai all'indice generale</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -130,8 +279,9 @@ window.MathJax = {
 \newcommand{\Reali}{\mathbf{R}}
 \newcommand{\Naturali}{\mathbf{N}}
 \newcommand{\Interi}{\mathbf{Z}}
- \newcommand{\Razionali}{\mathbf{Q}}
- \newcommand{\Complessi}{\mathbf{C}}
+\newcommand{\Razionali}{\mathbf{Q}}
+\newcommand{\Complessi}{\mathbf{C}}
+\newcommand{\campo}[1]{\mathbf{F}_{#1}}
 
  \newcommand{\grgen}[1]{\langle#1\rangle}
  \newcommand{\ideal}[1]{\left(#1\right)}
@@ -152,6 +302,7 @@ window.MathJax = {
  \newcommand{\euclidean}{\delta}
  \newcommand{\posto}[3]{#1_{#2#3}}
  \newcommand{\restrizione}[2]{\left. #1\right|_{#2}}
+ \newcommand{\indotto}[1]{\hat{#1}}
 
  \newcommand{\vect}[1]{\boldsymbol{#1}}
  
@@ -574,107 +725,93 @@ window.MathJax = {
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-estensione_campi.html" class="internal"><span class="codenumber">23</span> <span class="title">Estensioni di campi</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-elementi_algebrici_e_trascendenti.html" class="internal"><span class="codenumber">23.1</span> <span class="title">Elementi algebrici e trascendenti</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_algebrici_e_trascendenti.html#exercises-elementi_algebrici_e_trascendenti" class="internal"><span class="codenumber">23.1</span> <span class="title">Esercizi</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-campo_di_spezzamento.html" class="internal"><span class="codenumber">23.2</span> <span class="title">Campi di spezzamento</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-campo_di_spezzamento.html#exercises-campo_di_spezzamento" class="internal"><span class="codenumber">23.2</span> <span class="title">Esercizi</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-chiusure_algebriche.html" class="internal"><span class="codenumber">23.3</span> <span class="title">Cenni su campi algebricamente chiusi</span></a></div></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toc-item toc-part contains-active">
 <div class="toc-title-box"><a href="part-moduli.html" class="internal"><span class="codenumber">V</span> <span class="title">Moduli</span></a></div>
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-moduli.html" class="internal"><span class="codenumber">24</span> <span class="title">Moduli</span></a></div>
+<div class="toc-title-box"><a href="ch-moduli.html" class="internal"><span class="codenumber">23</span> <span class="title">Moduli</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-definizione_di_moduli.html" class="internal"><span class="codenumber">24.1</span> <span class="title">Definizione di modulo</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizione_di_moduli.html#exercises-definizione_modulo" class="internal"><span class="codenumber">24.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-definizione_di_moduli.html" class="internal"><span class="codenumber">23.1</span> <span class="title">Definizione di modulo</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizione_di_moduli.html#exercises-definizione_modulo" class="internal"><span class="codenumber">23.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-sottomoduli.html" class="internal"><span class="codenumber">24.2</span> <span class="title">Sottomoduli</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottomoduli.html#exercises-sottomoduli" class="internal"><span class="codenumber">24.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-sottomoduli.html" class="internal"><span class="codenumber">23.2</span> <span class="title">Sottomoduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottomoduli.html#exercises-sottomoduli" class="internal"><span class="codenumber">23.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-omomorfismi_moduli.html" class="internal"><span class="codenumber">24.3</span> <span class="title">Omomorfismi di moduli</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-omomorfismi_moduli.html#exercises-omomorfismi_moduli" class="internal"><span class="codenumber">24.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-omomorfismi_moduli.html" class="internal"><span class="codenumber">23.3</span> <span class="title">Omomorfismi di moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-omomorfismi_moduli.html#exercises-omomorfismi_moduli" class="internal"><span class="codenumber">23.3</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-moduli_quoziente.html" class="internal"><span class="codenumber">24.4</span> <span class="title">Moduli quoziente</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_quoziente.html#exercises-moduli_quoziente" class="internal"><span class="codenumber">24.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-moduli_quoziente.html" class="internal"><span class="codenumber">23.4</span> <span class="title">Moduli quoziente</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_quoziente.html#exercises-moduli_quoziente" class="internal"><span class="codenumber">23.4</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-moduli_liberi.html" class="internal"><span class="codenumber">25</span> <span class="title">Moduli liberi</span></a></div>
+<div class="toc-title-box"><a href="ch-moduli_liberi.html" class="internal"><span class="codenumber">24</span> <span class="title">Moduli liberi</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-somma_diretta_moduli.html" class="internal"><span class="codenumber">25.1</span> <span class="title">Somma diretta di moduli</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-somma_diretta_moduli.html#exercises-somma_diretta_moduli" class="internal"><span class="codenumber">25.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-somma_diretta_moduli.html" class="internal"><span class="codenumber">24.1</span> <span class="title">Somma diretta di moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-somma_diretta_moduli.html#exercises-somma_diretta_moduli" class="internal"><span class="codenumber">24.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-dipendenza_lineare.html" class="internal"><span class="codenumber">25.2</span> <span class="title">Dipendenza e indipendenza lineare</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-dipendenza_lineare.html#exercises-dipendenza_lineare" class="internal"><span class="codenumber">25.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-dipendenza_lineare.html" class="internal"><span class="codenumber">24.2</span> <span class="title">Dipendenza e indipendenza lineare</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-dipendenza_lineare.html#exercises-dipendenza_lineare" class="internal"><span class="codenumber">24.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-elementi_di_torsione.html" class="internal"><span class="codenumber">25.3</span> <span class="title">Elementi di torsione</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_di_torsione.html#exercises-elementi_di_torsione" class="internal"><span class="codenumber">25.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-elementi_di_torsione.html" class="internal"><span class="codenumber">24.3</span> <span class="title">Elementi di torsione</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_di_torsione.html#exercises-elementi_di_torsione" class="internal"><span class="codenumber">24.3</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-modulisupid.html" class="internal"><span class="codenumber">26</span> <span class="title">Moduli finitamente generati su PID</span></a></div>
+<div class="toc-title-box"><a href="ch-modulisupid.html" class="internal"><span class="codenumber">25</span> <span class="title">Moduli finitamente generati su PID</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-moduli_ciclici.html" class="internal"><span class="codenumber">26.1</span> <span class="title">Moduli ciclici</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_ciclici.html#exercises-moduli_ciclici" class="internal"><span class="codenumber">26.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-moduli_ciclici.html" class="internal"><span class="codenumber">25.1</span> <span class="title">Moduli ciclici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_ciclici.html#exercises-moduli_ciclici" class="internal"><span class="codenumber">25.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-moduli_primari.html" class="internal"><span class="codenumber">26.2</span> <span class="title">Moduli primari</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_primari.html#exercises-moduli_primari" class="internal"><span class="codenumber">26.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-moduli_primari.html" class="internal"><span class="codenumber">25.2</span> <span class="title">Moduli primari</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_primari.html#exercises-moduli_primari" class="internal"><span class="codenumber">25.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-moduli_liberi.html" class="internal"><span class="codenumber">26.3</span> <span class="title">Moduli liberi</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_liberi.html#exercises-moduli_liberi" class="internal"><span class="codenumber">26.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-moduli_liberi.html" class="internal"><span class="codenumber">25.3</span> <span class="title">Moduli liberi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_liberi.html#exercises-moduli_liberi" class="internal"><span class="codenumber">25.3</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-classificazione_moduli_pid.html" class="internal"><span class="codenumber">26.4</span> <span class="title">La classificazione dei moduli finitamente generati su un dominio a ideali principali</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-classificazione_moduli_pid.html" class="internal"><span class="codenumber">25.4</span> <span class="title">La classificazione dei moduli finitamente generati su un dominio a ideali principali</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-gruppiabeliani.html" class="internal"><span class="codenumber">27</span> <span class="title">Gruppi abeliani finitamente generati</span></a></div>
+<div class="toc-title-box"><a href="ch-gruppiabeliani.html" class="internal"><span class="codenumber">26</span> <span class="title">Gruppi abeliani finitamente generati</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-gruppiabeliani.html" class="internal"><span class="codenumber">27.1</span> <span class="title">Classificazione dei gruppi abeliani finitamente generati</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppiabeliani.html#exercises-gruppiabeliani" class="internal"><span class="codenumber">27.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-gruppiabeliani.html" class="internal"><span class="codenumber">26.1</span> <span class="title">Classificazione dei gruppi abeliani finitamente generati</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppiabeliani.html#exercises-gruppiabeliani" class="internal"><span class="codenumber">26.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li></ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
-<div class="toc-title-box"><a href="ch-formecanoniche.html" class="internal"><span class="codenumber">28</span> <span class="title">Forme canoniche di matrici</span></a></div>
+<div class="toc-title-box"><a href="ch-formecanoniche.html" class="internal"><span class="codenumber">27</span> <span class="title">Forme canoniche di matrici</span></a></div>
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-kx_moduli.html" class="internal"><span class="codenumber">28.1</span> <span class="title">Spazi vettoriali con endomorfismi visti come moduli</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-kx_moduli.html#exercises-kx_moduli" class="internal"><span class="codenumber">28.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-kx_moduli.html" class="internal"><span class="codenumber">27.1</span> <span class="title">Spazi vettoriali con endomorfismi visti come moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-kx_moduli.html#exercises-kx_moduli" class="internal"><span class="codenumber">27.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-matrici_rappresentative.html" class="internal"><span class="codenumber">28.2</span> <span class="title">Matrici rappresentative</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-matrici_rappresentative.html#exercises-matrici_rappresentative" class="internal"><span class="codenumber">28.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-matrici_rappresentative.html" class="internal"><span class="codenumber">27.2</span> <span class="title">Matrici rappresentative</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-matrici_rappresentative.html#exercises-matrici_rappresentative" class="internal"><span class="codenumber">27.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-matrici_compagne.html" class="internal"><span class="codenumber">28.3</span> <span class="title">Matrici compagne</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-matrici_compagne.html" class="internal"><span class="codenumber">27.3</span> <span class="title">Matrici compagne</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-jordan.html" class="internal"><span class="codenumber">28.4</span> <span class="title">Forma canonica di Jordan</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-jordan.html#exercises-jordan" class="internal"><span class="codenumber">28.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-jordan.html" class="internal"><span class="codenumber">27.4</span> <span class="title">Forma canonica di Jordan</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-jordan.html#exercises-jordan" class="internal"><span class="codenumber">27.4</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section active">
-<div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html" class="internal"><span class="codenumber">28.5</span> <span class="title">Polinomio minimo di matrici</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html#exercises-polinomio_minimo_matrici" class="internal"><span class="codenumber">28.5</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html" class="internal"><span class="codenumber">27.5</span> <span class="title">Polinomio minimo di matrici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html#exercises-polinomio_minimo_matrici" class="internal"><span class="codenumber">27.5</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -702,14 +839,14 @@ window.MathJax = {
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-polinomio_minimo_matrici"><h2 class="heading hide-type">
-<span class="type">Paragrafo</span><span class="space"> </span><span class="codenumber">28.5</span><span class="space"> </span><span class="title">Polinomio minimo di matrici</span>
+<span class="type">Paragrafo</span><span class="space"> </span><span class="codenumber">27.5</span><span class="space"> </span><span class="title">Polinomio minimo di matrici</span>
 </h2>
-<div class="para" id="sec-polinomio_minimo_matrici-2">Nel <a href="sec-kx_moduli.html" class="internal" title="Paragrafo 28.1: Spazi vettoriali con endomorfismi visti come moduli">Paragrafo 28.1</a> abbiamo dato un significato alla valutazione di un polinomio <span class="process-math">\(f\)</span> a coefficienti in un campo <span class="process-math">\(K\)</span> in un endomorfismo di uno spazio vettoriale <span class="process-math">\(V\)</span> su <span class="process-math">\(K\text{,}\)</span> anche se <span class="process-math">\(\End_{K}(V)\)</span> non è un anello commutativo. Analogamente, data una matrice quadrata <span class="process-math">\(A\)</span> a coefficienti in un campo <span class="process-math">\(K\text{,}\)</span> possiamo definire un omomorfismo da <span class="process-math">\(K[x]\)</span> in <span class="process-math">\(\mat{n}{K}\)</span> che manda un elemento <span class="process-math">\(k\)</span> di <span class="process-math">\(K\)</span> nella matrice <span class="process-math">\(k\Idmatrix\)</span> e manda <span class="process-math">\(x\)</span> in <span class="process-math">\(A\text{.}\)</span> Esplicitamente, se <span class="process-math">\(f\coloneqq a_{0}+a_{1}x+\dots+a_{s}x^{s}\)</span> è un polinomio in <span class="process-math">\(K[x]\text{,}\)</span> poniamo <span class="process-math">\(f(A)\coloneqq a_{0}\Idmatrix +a_{1}A+\dots+a_{s}A^{s}\text{.}\)</span>
+<div class="para" id="sec-polinomio_minimo_matrici-2">Nel <a href="sec-kx_moduli.html" class="internal" title="Paragrafo 27.1: Spazi vettoriali con endomorfismi visti come moduli">Paragrafo 27.1</a> abbiamo dato un significato alla valutazione di un polinomio <span class="process-math">\(f\)</span> a coefficienti in un campo <span class="process-math">\(K\)</span> in un endomorfismo di uno spazio vettoriale <span class="process-math">\(V\)</span> su <span class="process-math">\(K\text{,}\)</span> anche se <span class="process-math">\(\End_{K}(V)\)</span> non è un anello commutativo. Analogamente, data una matrice quadrata <span class="process-math">\(A\)</span> a coefficienti in un campo <span class="process-math">\(K\text{,}\)</span> possiamo definire un omomorfismo da <span class="process-math">\(K[x]\)</span> in <span class="process-math">\(\mat{n}{K}\)</span> che manda un elemento <span class="process-math">\(k\)</span> di <span class="process-math">\(K\)</span> nella matrice <span class="process-math">\(k\Idmatrix\)</span> e manda <span class="process-math">\(x\)</span> in <span class="process-math">\(A\text{.}\)</span> Esplicitamente, se <span class="process-math">\(f\coloneqq a_{0}+a_{1}x+\dots+a_{s}x^{s}\)</span> è un polinomio in <span class="process-math">\(K[x]\text{,}\)</span> poniamo <span class="process-math">\(f(A)\coloneqq a_{0}\Idmatrix +a_{1}A+\dots+a_{s}A^{s}\text{.}\)</span>
 </div>
-<div class="para" id="sec-polinomio_minimo_matrici-3">L’insieme dei polinomi che si annullano in <span class="process-math">\(A\)</span> è il nucleo dell’omomorfismo di valutazione e costituisce quindi un ideale di <span class="process-math">\(K[x]\text{.}\)</span> Al momento non sappiamo però se ci siano polinomi che si annullano in <span class="process-math">\(A\)</span> oltre a quello banale. Si potrebbe ragionare sulle dimensioni di opportuni spazi vettoriali e dimostrare l’esistenza di un tale polinomio. Possiamo però esibire esplicitamente un polinomio non nullo che si annulla in <span class="process-math">\(A\text{:}\)</span> precisamente il suo polinomio caratteristico. Abbiamo infatti il <a href="sec-polinomio_minimo_matrici.html#thm-cayley_hamilton" class="xref" data-knowl="./knowl/xref/thm-cayley_hamilton.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 28.5.1: Teorema di Cayley-Hamilton">Teorema di Cayley-Hamilton</a><details class="ptx-footnote" aria-live="polite" id="sec-polinomio_minimo_matrici-3-6"><summary class="ptx-footnote__number" title="Nota a piè di pagina 28.5.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec-polinomio_minimo_matrici-3-6">
+<div class="para" id="sec-polinomio_minimo_matrici-3">L’insieme dei polinomi che si annullano in <span class="process-math">\(A\)</span> è il nucleo dell’omomorfismo di valutazione e costituisce quindi un ideale di <span class="process-math">\(K[x]\text{.}\)</span> Al momento non sappiamo però se ci siano polinomi che si annullano in <span class="process-math">\(A\)</span> oltre a quello banale. Si potrebbe ragionare sulle dimensioni di opportuni spazi vettoriali e dimostrare l’esistenza di un tale polinomio. Possiamo però esibire esplicitamente un polinomio non nullo che si annulla in <span class="process-math">\(A\text{:}\)</span> precisamente il suo polinomio caratteristico. Abbiamo, infatti, il <a href="sec-polinomio_minimo_matrici.html#thm-cayley_hamilton" class="xref" data-knowl="./knowl/xref/thm-cayley_hamilton.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 27.5.1: Teorema di Cayley-Hamilton">Teorema di Cayley-Hamilton</a><details class="ptx-footnote" aria-live="polite" id="sec-polinomio_minimo_matrici-3-6"><summary class="ptx-footnote__number" title="Nota a piè di pagina 27.5.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec-polinomio_minimo_matrici-3-6">
 <a class="external" href="https://it.wikipedia.org/wiki/William_Rowan_Hamilton" target="_blank">William Rowan Hamilton</a>, 1805–1865.</div></details> (che vale nell’ipotesi più generale di coefficienti presi in un anello commutativo).</div>
 <article class="theorem theorem-like" id="thm-cayley_hamilton"><h3 class="heading">
-<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">28.5.1</span><span class="period">.</span><span class="space"> </span><span class="title">Teorema di Cayley-Hamilton.</span>
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">27.5.1</span><span class="period">.</span><span class="space"> </span><span class="title">Teorema di Cayley-Hamilton.</span>
 </h3>
 <div class="para logical" id="thm-cayley_hamilton-2-1">
 <div class="para">Sia <span class="process-math">\(A\)</span> una matrice quadrata di ordine <span class="process-math">\(n\)</span> a coefficienti in un anello commutativo <span class="process-math">\(R\)</span> e sia</div>
@@ -725,7 +862,7 @@ A^{n}+a_{n-1}A^{n-1}+\dots+a_{0}\Idmatrix=0\text{.}
 \end{equation*}
 </div>
 </div></article><details id="thm-cayley_hamilton-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-cayley_hamilton-3-1">
-<div class="para">Consideriamo la matrice <span class="process-math">\(x\Idmatrix-A\)</span> e indichiamo con <span class="process-math">\(B\)</span> la sua matrice aggiunta: sappiamo che <span class="process-math">\((x\Idmatrix-A)B=\det(x\Idmatrix-A)\Idmatrix\text{.}\)</span> Poiché i coefficienti di <span class="process-math">\(x\Idmatrix-A\)</span> sono polinomi in <span class="process-math">\(x\)</span> di grado minore o uguale a <span class="process-math">\(1\text{,}\)</span> i coefficienti di <span class="process-math">\(B\)</span> sono polinomi in <span class="process-math">\(x\)</span> di grado al più <span class="process-math">\(n-1\)</span> (infatti i coefficienti della matrice aggiunta sono, a meno del segno, determinanti di matrici di ordine <span class="process-math">\(n-1\)</span> estratti dalla matrice). Raccogliendo le varie potenze di <span class="process-math">\(x\)</span> possiamo allora scrivere</div>
+<div class="para">Consideriamo la matrice <span class="process-math">\(x\Idmatrix-A\)</span> e indichiamo con <span class="process-math">\(B\)</span> la sua matrice aggiunta: sappiamo che <span class="process-math">\((x\Idmatrix-A)B=\det(x\Idmatrix-A)\Idmatrix\text{.}\)</span> Poiché i coefficienti di <span class="process-math">\(x\Idmatrix-A\)</span> sono polinomi in <span class="process-math">\(x\)</span> di grado minore o uguale a <span class="process-math">\(1\text{,}\)</span> i coefficienti di <span class="process-math">\(B\)</span> sono polinomi in <span class="process-math">\(x\)</span> di grado al più <span class="process-math">\(n-1\)</span> (infatti, i coefficienti della matrice aggiunta sono, a meno del segno, determinanti di matrici di ordine <span class="process-math">\(n-1\)</span> estratti dalla matrice). Raccogliendo le varie potenze di <span class="process-math">\(x\)</span> possiamo allora scrivere</div>
 <div class="displaymath process-math">
 \begin{equation*}
 B=x^{n-1}B_{n-1}+x^{n-2}B_{n-2}+\dots+B_{0}
@@ -776,16 +913,16 @@ AB_{0}-A^{2}B_{1}\amp=a_{1}A\\
 \end{equation*}
 </div>
 </div></article></details><article class="remark remark-like" id="rem-cayley_hamilton"><h3 class="heading">
-<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">28.5.2</span><span class="period">.</span>
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">27.5.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="rem-cayley_hamilton-1">Potrebbe sembrare che questo teorema abbia una dimostrazione più semplice. Abbiamo infatti <span class="process-math">\(p_{A}(x)=\det(x\Idmatrix-A)\text{.}\)</span> Si ha allora <span class="process-math">\(p_{A}(A)=\det(A\Idmatrix-A)=\det(A-A)=\det 0=0\text{.}\)</span> Tuttavia questa “dimostrazione” non funziona. Infatti <span class="process-math">\(p_{A}(A)\)</span> è una matrice, mentre <span class="process-math">\(\det(A-\Idmatrix A)\)</span> è un elemento di <span class="process-math">\(R\text{.}\)</span>
+<div class="para" id="rem-cayley_hamilton-1">Potrebbe sembrare che questo teorema abbia una dimostrazione più semplice. Abbiamo, infatti, <span class="process-math">\(p_{A}(x)=\det(x\Idmatrix-A)\text{.}\)</span> Si ha allora <span class="process-math">\(p_{A}(A)=\det(A\Idmatrix-A)=\det(A-A)=\det 0=0\text{.}\)</span> Tuttavia questa “dimostrazione” non funziona. Infatti, <span class="process-math">\(p_{A}(A)\)</span> è una matrice, mentre <span class="process-math">\(\det(A-\Idmatrix A)\)</span> è un elemento di <span class="process-math">\(R\text{.}\)</span>
 </div></article><div class="para" id="sec-polinomio_minimo_matrici-6">Mettiamoci ora nel caso particolare in cui l’anello dei coefficienti sia un campo <span class="process-math">\(K\text{.}\)</span> Sappiamo allora che <span class="process-math">\(K[x]\)</span> è un dominio a ideali principali e, pertanto, ogni ideale non banale <span class="process-math">\(I\)</span> è formato dai multipli di un polinomio non nullo: questo polinomio non è univocamente determinato, ma se poniamo la condizione ulteriore che sia monico allora lo è. Possiamo allora dare la</div>
 <article class="definition definition-like" id="def-polinomio_minimo_matrici"><h3 class="heading">
-<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">28.5.3</span><span class="period">.</span>
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">27.5.3</span><span class="period">.</span>
 </h3>
 <div class="para" id="def-polinomio_minimo_matrici-1-1">Sia <span class="process-math">\(A\)</span> una matrice quadrata di ordine <span class="process-math">\(n\)</span> a coefficienti in un campo <span class="process-math">\(K\text{.}\)</span> Il <dfn class="terminology">polinomio minimo</dfn> di <span class="process-math">\(A\)</span> è il polinomio monico <span class="process-math">\(m_{A}\)</span> di grado minimo che si annulla in <span class="process-math">\(A\text{.}\)</span>
 </div></article><div class="para logical" id="sec-polinomio_minimo_matrici-8">
-<div class="para">Grazie al <a href="sec-polinomio_minimo_matrici.html#thm-cayley_hamilton" class="xref" data-knowl="./knowl/xref/thm-cayley_hamilton.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 28.5.1: Teorema di Cayley-Hamilton">Teorema di Cayley-Hamilton</a> il polinomio minimo di una matrice quadrata <span class="process-math">\(A\)</span> è un divisore del suo polinomio caratteristico: in particolare il suo grado è minore o uguale dell’ordine della matrice. Supponiamo ora che <span class="process-math">\(A\)</span> e <span class="process-math">\(B\)</span> siano matrici quadrate simili a coefficienti in un campo <span class="process-math">\(K\)</span> (e, dunque, esista una matrice invertibile <span class="process-math">\(M\)</span> tale che <span class="process-math">\(B=M^{-1}AM\)</span>) e sia <span class="process-math">\(p\coloneqq a_{0}+a_{1}x+\dots+a_{t}x^{t}\)</span> un polinomio a coefficienti in <span class="process-math">\(K\text{.}\)</span> Allora</div>
+<div class="para">Grazie al <a href="sec-polinomio_minimo_matrici.html#thm-cayley_hamilton" class="xref" data-knowl="./knowl/xref/thm-cayley_hamilton.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 27.5.1: Teorema di Cayley-Hamilton">Teorema di Cayley-Hamilton</a> il polinomio minimo di una matrice quadrata <span class="process-math">\(A\)</span> è un divisore del suo polinomio caratteristico: in particolare, il suo grado è minore o uguale dell’ordine della matrice. Supponiamo ora che <span class="process-math">\(A\)</span> e <span class="process-math">\(B\)</span> siano matrici quadrate simili a coefficienti in un campo <span class="process-math">\(K\)</span> (e, dunque, esista una matrice invertibile <span class="process-math">\(M\)</span> tale che <span class="process-math">\(B=M^{-1}AM\)</span>) e sia <span class="process-math">\(p\coloneqq a_{0}+a_{1}x+\dots+a_{t}x^{t}\)</span> un polinomio a coefficienti in <span class="process-math">\(K\text{.}\)</span> Allora</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-cayley_hamilton.html" id="sec-polinomio_minimo_matrici-8-10">
 \begin{align*}
 p(B) \amp =a_{0}\Idmatrix+a_{1}B+\dots+a_{t}B^{t} \\
@@ -794,30 +931,30 @@ p(B) \amp =a_{0}\Idmatrix+a_{1}B+\dots+a_{t}B^{t} \\
 \amp =M^{-1}(a_{0}\Idmatrix+a_{1}B+\dots+a_{t}B^{t})M=M^{-1}p(A)M\text{.}
 \end{align*}
 </div>
-<div class="para">In particolare il polinomio <span class="process-math">\(p\)</span> si annulla in <span class="process-math">\(A\)</span> se e solo se si annulla in <span class="process-math">\(B\text{.}\)</span> Abbiamo dunque la</div>
+<div class="para">In particolare, il polinomio <span class="process-math">\(p\)</span> si annulla in <span class="process-math">\(A\)</span> se e solo se si annulla in <span class="process-math">\(B\text{.}\)</span> Abbiamo, dunque, la</div>
 </div>
 <article class="proposition theorem-like" id="prop-polinomio_minimo_simili"><h3 class="heading">
-<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">28.5.4</span><span class="period">.</span>
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">27.5.4</span><span class="period">.</span>
 </h3>
 <div class="para" id="prop-polinomio_minimo_simili-1-1">Se <span class="process-math">\(A\)</span> e <span class="process-math">\(B\)</span> sono matrici quadrate simili a coefficienti in un campo <span class="process-math">\(K\text{,}\)</span> allora il polinomio minimo di <span class="process-math">\(A\)</span> e quello di <span class="process-math">\(B\)</span> coincidono.</div></article><div class="para" id="sec-polinomio_minimo_matrici-10">Vogliamo ora determinare il polinomio minimo di una matrice di cui conosciamo una forma canonica diagonale a blocchi (con i blocchi matrici compagne di polinomi o blocchi di Jordan). Cominciamo a considerare un singolo blocco:</div>
 <article class="proposition theorem-like" id="prop-polinomio_minimo_di_ciclico"><h3 class="heading">
-<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">28.5.5</span><span class="period">.</span>
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">27.5.5</span><span class="period">.</span>
 </h3>
 <div class="para" id="prop-polinomio_minimo_di_ciclico-1-1">Sia <span class="process-math">\(V\)</span> uno spazio vettoriale di dimensione finita <span class="process-math">\(n\)</span> su un campo <span class="process-math">\(K\)</span> e sia <span class="process-math">\(\theta\)</span> un endomorfismo di <span class="process-math">\(V\text{.}\)</span> Supponiamo che <span class="process-math">\(V\text{,}\)</span> con la struttura di <span class="process-math">\(K[x]\)</span>-modulo indotta da <span class="process-math">\(\theta\text{,}\)</span> sia ciclico di generatore <span class="process-math">\(\vect{v}\)</span> e sia <span class="process-math">\(p\)</span> il polinomio monico che genera l’annullatore di <span class="process-math">\(\vect{v}\text{.}\)</span>
 </div> <div class="para" id="prop-polinomio_minimo_di_ciclico-1-2">Se <span class="process-math">\(A\)</span> è la matrice che rappresenta <span class="process-math">\(\theta\)</span> rispetto a una base qualunque allora il polinomio minimo e il polinomio caratteristico di <span class="process-math">\(A\)</span> coincidono con <span class="process-math">\(p\text{.}\)</span>
-</div></article><details id="prop-polinomio_minimo_di_ciclico-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-polinomio_minimo_di_ciclico-2-1">Possiamo scegliere una base qualunque per rappresentare <span class="process-math">\(\theta\text{,}\)</span> tanto sappiamo che il polinomio minimo e caratteristico della matrice sarà lo stesso. In particolare, possiamo scegliere una base rispetto a cui la matrice rappresentativa <span class="process-math">\(A\)</span> è la matrice compagna del polinomio <span class="process-math">\(p\text{:}\)</span> la <a href="sec-matrici_compagne.html#prop-compagna" class="xref" data-knowl="./knowl/xref/prop-compagna.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 28.3.2">Proposizione 28.3.2</a> ci dice allora che il polinomio caratteristico di <span class="process-math">\(A\)</span> è <span class="process-math">\(p\text{.}\)</span>
-</div> <div class="para" id="prop-polinomio_minimo_di_ciclico-2-2">Se <span class="process-math">\(f\)</span> è un polinomio di grado minore di <span class="process-math">\(p\text{,}\)</span> per ipotesi sappiamo che <span class="process-math">\(\vect{v}f\ne\vect{0}\text{.}\)</span> Inoltre sappiamo che <span class="process-math">\(\vect{w}p=0\)</span> per ogni vettore <span class="process-math">\(\vect{w}\)</span> di <span class="process-math">\(V\text{.}\)</span> Ciò significa che <span class="process-math">\(f(A)\ne 0\)</span> se <span class="process-math">\(f\)</span> ha grado minore di <span class="process-math">\(p\)</span> e che <span class="process-math">\(p(A)=0\text{.}\)</span> Dunque il polinomio minimo di <span class="process-math">\(A\)</span> è esattamente <span class="process-math">\(p\text{.}\)</span>
+</div></article><details id="prop-polinomio_minimo_di_ciclico-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-polinomio_minimo_di_ciclico-2-1">Possiamo scegliere una base qualunque per rappresentare <span class="process-math">\(\theta\text{,}\)</span> tanto sappiamo che il polinomio minimo e caratteristico della matrice sarà lo stesso. In particolare, possiamo scegliere una base rispetto a cui la matrice rappresentativa <span class="process-math">\(A\)</span> è la matrice compagna del polinomio <span class="process-math">\(p\text{:}\)</span> la <a href="sec-matrici_compagne.html#prop-compagna" class="xref" data-knowl="./knowl/xref/prop-compagna.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 27.3.2">Proposizione 27.3.2</a> ci dice allora che il polinomio caratteristico di <span class="process-math">\(A\)</span> è <span class="process-math">\(p\text{.}\)</span>
+</div> <div class="para" id="prop-polinomio_minimo_di_ciclico-2-2">Se <span class="process-math">\(f\)</span> è un polinomio di grado minore di <span class="process-math">\(p\text{,}\)</span> per ipotesi sappiamo che <span class="process-math">\(\vect{v}f\ne\vect{0}\text{.}\)</span> Inoltre sappiamo che <span class="process-math">\(\vect{w}p=0\)</span> per ogni vettore <span class="process-math">\(\vect{w}\)</span> di <span class="process-math">\(V\text{.}\)</span> Ciò significa che <span class="process-math">\(f(A)\ne 0\)</span> se <span class="process-math">\(f\)</span> ha grado minore di <span class="process-math">\(p\)</span> e che <span class="process-math">\(p(A)=0\text{.}\)</span> Dunque, il polinomio minimo di <span class="process-math">\(A\)</span> è esattamente <span class="process-math">\(p\text{.}\)</span>
 </div></article></details><article class="corollary theorem-like" id="cor-polinomio_minimo_compagna"><h3 class="heading">
-<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">28.5.6</span><span class="period">.</span>
+<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">27.5.6</span><span class="period">.</span>
 </h3>
 <div class="para" id="cor-polinomio_minimo_compagna-1-1">Se <span class="process-math">\(C\)</span> è la matrice compagna di un polinomio <span class="process-math">\(p\text{,}\)</span> il suo polinomio minimo coincide con il suo polinomio caratteristico ed è <span class="process-math">\(p\text{.}\)</span>
 </div></article><article class="corollary theorem-like" id="cor-polinomio_minimo_blocco_jordan"><h3 class="heading">
-<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">28.5.7</span><span class="period">.</span>
+<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">27.5.7</span><span class="period">.</span>
 </h3>
 <div class="para" id="cor-polinomio_minimo_blocco_jordan-1-1">Dato un blocco di Jordan <span class="process-math">\(J_{n}(\lambda)\text{,}\)</span> il suo polinomio minimo coincide con il suo polinomio caratteristico ed è <span class="process-math">\((x-\lambda)^{n}\text{.}\)</span>
-</div></article><div class="para" id="sec-polinomio_minimo_matrici-14">Siamo ora in grado di determinare il polinomio minimo di una matrice a partire da una sua forma canonica diagonale a blocchi, sia che i blocchi siano matrici compagne di polinomi, sia che i blocchi siano di Jordan. Come immediata conseguenza della <a href="sec-matrici_rappresentative.html#prop-diagonali_blocchi" class="xref" data-knowl="./knowl/xref/prop-diagonali_blocchi.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 28.2.2">Proposizione 28.2.2</a> abbiamo la</div>
+</div></article><div class="para" id="sec-polinomio_minimo_matrici-14">Siamo ora in grado di determinare il polinomio minimo di una matrice a partire da una sua forma canonica diagonale a blocchi, sia che i blocchi siano matrici compagne di polinomi, sia che i blocchi siano di Jordan. Come immediata conseguenza della <a href="sec-matrici_rappresentative.html#prop-diagonali_blocchi" class="xref" data-knowl="./knowl/xref/prop-diagonali_blocchi.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 27.2.2">Proposizione 27.2.2</a> abbiamo la</div>
 <article class="proposition theorem-like" id="prop-polinomio_minimo_matrice_digonale_blocchi"><h3 class="heading">
-<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">28.5.8</span><span class="period">.</span>
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">27.5.8</span><span class="period">.</span>
 </h3>
 <div class="para" id="prop-polinomio_minimo_matrice_digonale_blocchi-1-1">Sia <span class="process-math">\(B\coloneqq
 \begin{psmallmatrix}
@@ -831,7 +968,7 @@ f(B_{1})  \amp 0      \amp \dots  \amp 0 \\
 0      \amp f(B_{2})  \amp \dots  \amp 0 \\
 \vdots \amp \vdots \amp \ddots \amp \vdots\\
 0      \amp 0      \amp \dots  \amp f(B_{s})
-\end{psmallmatrix}\text{.}\)</span> In particolare <span class="process-math">\(f(B)=0\)</span> se e solo se <span class="process-math">\(f(B_{1})=0\text{,}\)</span>  <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(f(B_{s})=0\)</span> e il polinomio minimo di <span class="process-math">\(B\)</span> è, dunque, il minimo comune multiplo dei polinomi minimi di <span class="process-math">\(B_{1}\text{,}\)</span> <span class="process-math">\(\dots\text{,}\)</span> <span class="process-math">\(B_{s}\text{.}\)</span>
+\end{psmallmatrix}\text{.}\)</span> In particolare, <span class="process-math">\(f(B)=0\)</span> se e solo se <span class="process-math">\(f(B_{1})=0\text{,}\)</span>  <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(f(B_{s})=0\)</span> e il polinomio minimo di <span class="process-math">\(B\)</span> è, dunque, il minimo comune multiplo dei polinomi minimi di <span class="process-math">\(B_{1}\text{,}\)</span> <span class="process-math">\(\dots\text{,}\)</span> <span class="process-math">\(B_{s}\text{.}\)</span>
 </div></article><div class="para logical" id="sec-polinomio_minimo_matrici-16">
 <div class="para">Sia ora <span class="process-math">\(A\)</span> una matrice quadrata di ordine <span class="process-math">\(n\)</span> a coefficienti in un campo <span class="process-math">\(K\)</span> e sia <span class="process-math">\(C\)</span> la sua forma canonica razionale:</div>
 <div class="displaymath process-math">
@@ -848,25 +985,25 @@ C_{1}  \amp 0      \amp \dots  \amp 0 \\
 <div class="para">con <span class="process-math">\(C_{i}\)</span> matrice compagna di un polinomio monico <span class="process-math">\(f_{i}\)</span> e <span class="process-math">\(f_{1}\mid f_{2}\mid\dots\mid f_{s}\text{.}\)</span> Il polinomio minimo di <span class="process-math">\(A\)</span> è allora il minimo comune multiplo degli <span class="process-math">\(f_{i}\)</span> cioè è <span class="process-math">\(f_{s}\text{.}\)</span> Poiché il polinomio caratteristico di <span class="process-math">\(A\)</span> è <span class="process-math">\(f_{1}f_{2}\dots f_{s}\)</span> abbiamo immediatamente il</div>
 </div>
 <article class="corollary theorem-like" id="cor-fattori_irriducibili_polinomi_minimo"><h3 class="heading">
-<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">28.5.9</span><span class="period">.</span>
+<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">27.5.9</span><span class="period">.</span>
 </h3>
 <div class="para" id="cor-fattori_irriducibili_polinomi_minimo-1-1">Ogni fattore irriducibile del polinomio caratteristico di una matrice <span class="process-math">\(A\)</span> divide anche il polinomio minimo di <span class="process-math">\(A\text{.}\)</span> In particolare, le radici del polinomio caratteristico sono anche radici del polinomio minimo e il polinomio minimo è totalmente riducibile se e solo se il polinomio caratteristico è totalmente riducibile.</div></article><article class="theorem theorem-like" id="thm-polinomio_minimo_jordanizzabile"><h3 class="heading">
-<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">28.5.10</span><span class="period">.</span>
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">27.5.10</span><span class="period">.</span>
 </h3>
 <div class="para" id="thm-polinomio_minimo_jordanizzabile-1-1">Sia <span class="process-math">\(A\)</span> una matrice quadrata di ordine <span class="process-math">\(n\)</span> a coefficienti in un campo <span class="process-math">\(K\text{,}\)</span> il cui polinomio caratteristico sia totalmente riducibile. Allora il polinomio minimo di <span class="process-math">\(A\)</span> è <span class="process-math">\((x-\lambda_{1})^{r_{1}}\cdots (x-\lambda_{s})^{r_{s}}\)</span> dove <span class="process-math">\(\lambda_{1}\text{,}\)</span> <span class="process-math">\(\dots\text{,}\)</span> <span class="process-math">\(\lambda_{s}\)</span> sono gli autovalori distinti di <span class="process-math">\(A\)</span> e, per ciascun <span class="process-math">\(i\text{,}\)</span> l’intero positivo <span class="process-math">\(r_{i}\)</span> è il massimo ordine tra i blocchi di Jordan relativi a <span class="process-math">\(\lambda_{i}\)</span> presenti nella forma canonica di Jordan di <span class="process-math">\(A\text{.}\)</span>
-</div></article><details id="thm-polinomio_minimo_jordanizzabile-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-polinomio_minimo_jordanizzabile-2-1">Per la <a href="sec-polinomio_minimo_matrici.html#prop-polinomio_minimo_simili" class="xref" data-knowl="./knowl/xref/prop-polinomio_minimo_simili.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 28.5.4">Proposizione 28.5.4</a> il polinomio minimo di <span class="process-math">\(A\)</span> e quello della sua forma canonica di Jordan <span class="process-math">\(J\)</span> coincidono. Per la <a href="sec-polinomio_minimo_matrici.html#prop-polinomio_minimo_matrice_digonale_blocchi" class="xref" data-knowl="./knowl/xref/prop-polinomio_minimo_matrice_digonale_blocchi.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 28.5.8">Proposizione 28.5.8</a>, il polinomio minimo di <span class="process-math">\(J\)</span> è il minimo comune multiplo dei polinomi minimi dei suoi blocchi di Jordan. La tesi segue immediatamente allora dal <a href="sec-polinomio_minimo_matrici.html#cor-polinomio_minimo_blocco_jordan" class="xref" data-knowl="./knowl/xref/cor-polinomio_minimo_blocco_jordan.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Corollario 28.5.7">Corollario 28.5.7</a>.</div></article></details><article class="example example-like" id="sec-polinomio_minimo_matrici-19"><h3 class="heading">
-<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">28.5.11</span><span class="period">.</span>
+</div></article><details id="thm-polinomio_minimo_jordanizzabile-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-polinomio_minimo_jordanizzabile-2-1">Per la <a href="sec-polinomio_minimo_matrici.html#prop-polinomio_minimo_simili" class="xref" data-knowl="./knowl/xref/prop-polinomio_minimo_simili.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 27.5.4">Proposizione 27.5.4</a> il polinomio minimo di <span class="process-math">\(A\)</span> e quello della sua forma canonica di Jordan <span class="process-math">\(J\)</span> coincidono. Per la <a href="sec-polinomio_minimo_matrici.html#prop-polinomio_minimo_matrice_digonale_blocchi" class="xref" data-knowl="./knowl/xref/prop-polinomio_minimo_matrice_digonale_blocchi.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 27.5.8">Proposizione 27.5.8</a>, il polinomio minimo di <span class="process-math">\(J\)</span> è il minimo comune multiplo dei polinomi minimi dei suoi blocchi di Jordan. La tesi segue immediatamente allora dal <a href="sec-polinomio_minimo_matrici.html#cor-polinomio_minimo_blocco_jordan" class="xref" data-knowl="./knowl/xref/cor-polinomio_minimo_blocco_jordan.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Corollario 27.5.7">Corollario 27.5.7</a>.</div></article></details><article class="example example-like" id="sec-polinomio_minimo_matrici-19"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">27.5.11</span><span class="period">.</span>
 </h3>
-<div class="para" id="sec-polinomio_minimo_matrici-19-1-1">Se riprendiamo la matrice dell’<a href="sec-jordan.html#ex-matrice_jordan" class="xref" data-knowl="./knowl/xref/ex-matrice_jordan.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Esempio 28.4.12">Esempio 28.4.12</a> i cui autovalori sono <span class="process-math">\(1\)</span> e <span class="process-math">\(2\)</span> vediamo che il massimo ordine dei blocchi di Jordan relativi a <span class="process-math">\(1\)</span> è <span class="process-math">\(3\)</span> e il massimo ordine dei blocchi di Jordan relativi a <span class="process-math">\(2\)</span> è <span class="process-math">\(3\text{:}\)</span> pertanto il suo polinomio minimo è <span class="process-math">\((x-1)^{3}(x-2)^{3}\text{.}\)</span>
+<div class="para" id="sec-polinomio_minimo_matrici-19-1-1">Se riprendiamo la matrice dell’<a href="sec-jordan.html#ex-matrice_jordan" class="xref" data-knowl="./knowl/xref/ex-matrice_jordan.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Esempio 27.4.12">Esempio 27.4.12</a> i cui autovalori sono <span class="process-math">\(1\)</span> e <span class="process-math">\(2\)</span> vediamo che il massimo ordine dei blocchi di Jordan relativi a <span class="process-math">\(1\)</span> è <span class="process-math">\(3\)</span> e il massimo ordine dei blocchi di Jordan relativi a <span class="process-math">\(2\)</span> è <span class="process-math">\(3\text{:}\)</span> pertanto il suo polinomio minimo è <span class="process-math">\((x-1)^{3}(x-2)^{3}\text{.}\)</span>
 </div></article><div class="para" id="sec-polinomio_minimo_matrici-20">Abbiamo inoltre l’immediato</div>
 <article class="corollary theorem-like" id="cor-diagonalizzabile_se_polinomio_minimo_fattori_lineari_distinti"><h3 class="heading">
-<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">28.5.12</span><span class="period">.</span>
+<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">27.5.12</span><span class="period">.</span>
 </h3>
 <div class="para" id="cor-diagonalizzabile_se_polinomio_minimo_fattori_lineari_distinti-1-1">Una matrice quadrata <span class="process-math">\(A\)</span> è diagonalizzabile se e solo se il polinomio minimo di <span class="process-math">\(A\)</span> è prodotto di fattori lineari distinti.</div></article><section class="exercises" id="exercises-polinomio_minimo_matrici"><h3 class="heading hide-type">
 <span class="type">Esercizi</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Esercizi</span>
 </h3>
 <article class="exercise exercise-like" id="exercises-polinomio_minimo_matrici-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="exercises-polinomio_minimo_matrici-1-1-1">Determinare il polinomio minimo della matrice <span class="process-math">\(A\)</span> dell’<a href="sec-jordan.html#exercise-jordan_ordine_6" class="xref" data-knowl="./knowl/xref/exercise-jordan_ordine_6.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Esercizio 28.4.1">Esercizio 28.4.1</a>.</div>
+<div class="para" id="exercises-polinomio_minimo_matrici-1-1-1">Determinare il polinomio minimo della matrice <span class="process-math">\(A\)</span> dell’<a href="sec-jordan.html#exercise-jordan_ordine_6" class="xref" data-knowl="./knowl/xref/exercise-jordan_ordine_6.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Esercizio 27.4.1">Esercizio 27.4.1</a>.</div>
 <div class="solutions"><details id="exercises-polinomio_minimo_matrici-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="exercises-polinomio_minimo_matrici-1-2-1">Poiché l’unico autovalore è <span class="process-math">\(2\)</span> e il massimo ordine dei blocchi di Jordan relativi a <span class="process-math">\(2\)</span> è <span class="process-math">\(4\)</span> il polinomio minimo è <span class="process-math">\((x-2)^{4}\text{.}\)</span>
 </div></div></details></div></article><article class="exercise exercise-like" id="exercises-polinomio_minimo_matrici-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
 <div class="para" id="exercises-polinomio_minimo_matrici-2-1-1">Determinare le forme canoniche di Jordan di matrici a coefficienti razionali il cui polinomio caratteristico è <span class="process-math">\((x+4)^{6}\)</span> e il cui polinomio minimo è <span class="process-math">\((x+4)^{3}\text{.}\)</span>

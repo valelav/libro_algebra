@@ -88,6 +88,155 @@ window.MathJax = {
 <link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#prop-unione_intersezione-1-1-4 { counter-set: prop-unione_intersezione-1-1-4 0; }
+#prop-unione_intersezione-1-1-4 > li::marker { content: ""counter(prop-unione_intersezione-1-1-4,decimal)"."; }
+#prop-unione_intersezione-1-1-4 > li { counter-increment: prop-unione_intersezione-1-1-4; }
+#prop-inclusione_equivalente-1-1-3 { counter-set: prop-inclusione_equivalente-1-1-3 0; }
+#prop-inclusione_equivalente-1-1-3 > li::marker { content: ""counter(prop-inclusione_equivalente-1-1-3,decimal)"."; }
+#prop-inclusione_equivalente-1-1-3 > li { counter-increment: prop-inclusione_equivalente-1-1-3; }
+#prop-classe_equivalenza-1-1-3 { counter-set: prop-classe_equivalenza-1-1-3 0; }
+#prop-classe_equivalenza-1-1-3 > li::marker { content: ""counter(prop-classe_equivalenza-1-1-3,decimal)"."; }
+#prop-classe_equivalenza-1-1-3 > li { counter-increment: prop-classe_equivalenza-1-1-3; }
+#prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 { counter-set: prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 0; }
+#prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 > li::marker { content: ""counter(prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2,decimal)"."; }
+#prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 > li { counter-increment: prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2; }
+#prop-composizione_iniettive_suriettive-1-1-3 { counter-set: prop-composizione_iniettive_suriettive-1-1-3 0; }
+#prop-composizione_iniettive_suriettive-1-1-3 > li::marker { content: ""counter(prop-composizione_iniettive_suriettive-1-1-3,decimal)"."; }
+#prop-composizione_iniettive_suriettive-1-1-3 > li { counter-increment: prop-composizione_iniettive_suriettive-1-1-3; }
+#prop-addizione_matrici-1-2-1 { counter-set: prop-addizione_matrici-1-2-1 0; }
+#prop-addizione_matrici-1-2-1 > li::marker { content: ""counter(prop-addizione_matrici-1-2-1,decimal)"."; }
+#prop-addizione_matrici-1-2-1 > li { counter-increment: prop-addizione_matrici-1-2-1; }
+#prop-moltiplicazione_matrici-1-2-1 { counter-set: prop-moltiplicazione_matrici-1-2-1 0; }
+#prop-moltiplicazione_matrici-1-2-1 > li::marker { content: ""counter(prop-moltiplicazione_matrici-1-2-1,decimal)"."; }
+#prop-moltiplicazione_matrici-1-2-1 > li { counter-increment: prop-moltiplicazione_matrici-1-2-1; }
+#def-numeri_naturali_peano-5-1-7 { counter-set: def-numeri_naturali_peano-5-1-7 0; }
+#def-numeri_naturali_peano-5-1-7 > li::marker { content: ""counter(def-numeri_naturali_peano-5-1-7,decimal)"."; }
+#def-numeri_naturali_peano-5-1-7 > li { counter-increment: def-numeri_naturali_peano-5-1-7; }
+#prop-anello_degli_interi-1-2-1 { counter-set: prop-anello_degli_interi-1-2-1 0; }
+#prop-anello_degli_interi-1-2-1 > li::marker { content: ""counter(prop-anello_degli_interi-1-2-1,decimal)"."; }
+#prop-anello_degli_interi-1-2-1 > li { counter-increment: prop-anello_degli_interi-1-2-1; }
+#prop-ordine_interi-1-2-1 { counter-set: prop-ordine_interi-1-2-1 0; }
+#prop-ordine_interi-1-2-1 > li::marker { content: ""counter(prop-ordine_interi-1-2-1,decimal)"."; }
+#prop-ordine_interi-1-2-1 > li { counter-increment: prop-ordine_interi-1-2-1; }
+#prop-anello_degli_classi_di_resto-1-2-1 { counter-set: prop-anello_degli_classi_di_resto-1-2-1 0; }
+#prop-anello_degli_classi_di_resto-1-2-1 > li::marker { content: ""counter(prop-anello_degli_classi_di_resto-1-2-1,decimal)"."; }
+#prop-anello_degli_classi_di_resto-1-2-1 > li { counter-increment: prop-anello_degli_classi_di_resto-1-2-1; }
+#prop-classi_resto_invertibili-1-1-3 { counter-set: prop-classi_resto_invertibili-1-1-3 0; }
+#prop-classi_resto_invertibili-1-1-3 > li::marker { content: ""counter(prop-classi_resto_invertibili-1-1-3,decimal)"."; }
+#prop-classi_resto_invertibili-1-1-3 > li { counter-increment: prop-classi_resto_invertibili-1-1-3; }
+#prop-proprieta_potenze_monoide-1-1-5 { counter-set: prop-proprieta_potenze_monoide-1-1-5 0; }
+#prop-proprieta_potenze_monoide-1-1-5 > li::marker { content: ""counter(prop-proprieta_potenze_monoide-1-1-5,decimal)"."; }
+#prop-proprieta_potenze_monoide-1-1-5 > li { counter-increment: prop-proprieta_potenze_monoide-1-1-5; }
+#prop-proprieta_potenze_elemento_invertibile-1-1-5 { counter-set: prop-proprieta_potenze_elemento_invertibile-1-1-5 0; }
+#prop-proprieta_potenze_elemento_invertibile-1-1-5 > li::marker { content: ""counter(prop-proprieta_potenze_elemento_invertibile-1-1-5,decimal)"."; }
+#prop-proprieta_potenze_elemento_invertibile-1-1-5 > li { counter-increment: prop-proprieta_potenze_elemento_invertibile-1-1-5; }
+#prop-cancellazione_gruppo-2-1-5 { counter-set: prop-cancellazione_gruppo-2-1-5 0; }
+#prop-cancellazione_gruppo-2-1-5 > li::marker { content: ""counter(prop-cancellazione_gruppo-2-1-5,decimal)"."; }
+#prop-cancellazione_gruppo-2-1-5 > li { counter-increment: prop-cancellazione_gruppo-2-1-5; }
+#prop-supporto-1-1-4 { counter-set: prop-supporto-1-1-4 0; }
+#prop-supporto-1-1-4 > li::marker { content: ""counter(prop-supporto-1-1-4,decimal)"."; }
+#prop-supporto-1-1-4 > li { counter-increment: prop-supporto-1-1-4; }
+#prop-laterali_partizione-1-1-4 { counter-set: prop-laterali_partizione-1-1-4 0; }
+#prop-laterali_partizione-1-1-4 > li::marker { content: ""counter(prop-laterali_partizione-1-1-4,decimal)"."; }
+#prop-laterali_partizione-1-1-4 > li { counter-increment: prop-laterali_partizione-1-1-4; }
+#thm-prodotto_sottogruppo-1-1-4 { counter-set: thm-prodotto_sottogruppo-1-1-4 0; }
+#thm-prodotto_sottogruppo-1-1-4 > li::marker { content: ""counter(thm-prodotto_sottogruppo-1-1-4,decimal)"."; }
+#thm-prodotto_sottogruppo-1-1-4 > li { counter-increment: thm-prodotto_sottogruppo-1-1-4; }
+#prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottogruppi-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_sottogruppi-1-1-2; }
+#prop-controimmagini_omomorfismo-1-1-6 { counter-set: prop-controimmagini_omomorfismo-1-1-6 0; }
+#prop-controimmagini_omomorfismo-1-1-6 > li::marker { content: ""counter(prop-controimmagini_omomorfismo-1-1-6,decimal)"."; }
+#prop-controimmagini_omomorfismo-1-1-6 > li { counter-increment: prop-controimmagini_omomorfismo-1-1-6; }
+#thm-caratterizzazione_sottogruppi_normali-1-1-3 { counter-set: thm-caratterizzazione_sottogruppi_normali-1-1-3 0; }
+#thm-caratterizzazione_sottogruppi_normali-1-1-3 > li::marker { content: ""counter(thm-caratterizzazione_sottogruppi_normali-1-1-3,decimal)"."; }
+#thm-caratterizzazione_sottogruppi_normali-1-1-3 > li { counter-increment: thm-caratterizzazione_sottogruppi_normali-1-1-3; }
+#thm-normalizzante-1-1-3 { counter-set: thm-normalizzante-1-1-3 0; }
+#thm-normalizzante-1-1-3 > li::marker { content: ""counter(thm-normalizzante-1-1-3,decimal)"."; }
+#thm-normalizzante-1-1-3 > li { counter-increment: thm-normalizzante-1-1-3; }
+#prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2; }
+#prop-quoziente-eredita-1-1-5 { counter-set: prop-quoziente-eredita-1-1-5 0; }
+#prop-quoziente-eredita-1-1-5 > li::marker { content: ""counter(prop-quoziente-eredita-1-1-5,decimal)"."; }
+#prop-quoziente-eredita-1-1-5 > li { counter-increment: prop-quoziente-eredita-1-1-5; }
+#exercises-congruenze-2-1-1-3 { counter-set: exercises-congruenze-2-1-1-3 0; }
+#exercises-congruenze-2-1-1-3 > li::marker { content: "("counter(exercises-congruenze-2-1-1-3,lower-alpha)")"; }
+#exercises-congruenze-2-1-1-3 > li { counter-increment: exercises-congruenze-2-1-1-3; }
+#prop-proprieta_fattori_prodotto_diretto-1-1-9 { counter-set: prop-proprieta_fattori_prodotto_diretto-1-1-9 0; }
+#prop-proprieta_fattori_prodotto_diretto-1-1-9 > li::marker { content: ""counter(prop-proprieta_fattori_prodotto_diretto-1-1-9,decimal)"."; }
+#prop-proprieta_fattori_prodotto_diretto-1-1-9 > li { counter-increment: prop-proprieta_fattori_prodotto_diretto-1-1-9; }
+#thm-sylow-2-1-9 { counter-set: thm-sylow-2-1-9 0; }
+#thm-sylow-2-1-9 > li::marker { content: ""counter(thm-sylow-2-1-9,decimal)"."; }
+#thm-sylow-2-1-9 > li { counter-increment: thm-sylow-2-1-9; }
+#prop-moltiplicazione_opposti-1-1-2 { counter-set: prop-moltiplicazione_opposti-1-1-2 0; }
+#prop-moltiplicazione_opposti-1-1-2 > li::marker { content: ""counter(prop-moltiplicazione_opposti-1-1-2,decimal)"."; }
+#prop-moltiplicazione_opposti-1-1-2 > li { counter-increment: prop-moltiplicazione_opposti-1-1-2; }
+#prop-multipli_potenze_anello-1-1-4 { counter-set: prop-multipli_potenze_anello-1-1-4 0; }
+#prop-multipli_potenze_anello-1-1-4 > li::marker { content: ""counter(prop-multipli_potenze_anello-1-1-4,decimal)"."; }
+#prop-multipli_potenze_anello-1-1-4 > li { counter-increment: prop-multipli_potenze_anello-1-1-4; }
+#prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottoanelli-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_sottoanelli-1-1-2; }
+#prop-immagine_diretta_inversa_di_ideali-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_ideali-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_ideali-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_ideali-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_ideali-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_ideali-1-1-2; }
+#prop-grado_e_operazioni-1-1-4 { counter-set: prop-grado_e_operazioni-1-1-4 0; }
+#prop-grado_e_operazioni-1-1-4 > li::marker { content: ""counter(prop-grado_e_operazioni-1-1-4,decimal)"."; }
+#prop-grado_e_operazioni-1-1-4 > li { counter-increment: prop-grado_e_operazioni-1-1-4; }
+#prop-proprieta_divisibilita-1-1-7 { counter-set: prop-proprieta_divisibilita-1-1-7 0; }
+#prop-proprieta_divisibilita-1-1-7 > li::marker { content: ""counter(prop-proprieta_divisibilita-1-1-7,decimal)"."; }
+#prop-proprieta_divisibilita-1-1-7 > li { counter-increment: prop-proprieta_divisibilita-1-1-7; }
+#prop-irriducibile-1-1-3 { counter-set: prop-irriducibile-1-1-3 0; }
+#prop-irriducibile-1-1-3 > li::marker { content: ""counter(prop-irriducibile-1-1-3,decimal)"."; }
+#prop-irriducibile-1-1-3 > li { counter-increment: prop-irriducibile-1-1-3; }
+#prop-lunghezza-1-1-3 { counter-set: prop-lunghezza-1-1-3 0; }
+#prop-lunghezza-1-1-3 > li::marker { content: ""counter(prop-lunghezza-1-1-3,decimal)"."; }
+#prop-lunghezza-1-1-3 > li { counter-increment: prop-lunghezza-1-1-3; }
+#prop-MCD_esiste_sempre-1-1-5 { counter-set: prop-MCD_esiste_sempre-1-1-5 0; }
+#prop-MCD_esiste_sempre-1-1-5 > li::marker { content: ""counter(prop-MCD_esiste_sempre-1-1-5,decimal)"."; }
+#prop-MCD_esiste_sempre-1-1-5 > li { counter-increment: prop-MCD_esiste_sempre-1-1-5; }
+#thm-caratterizzazione_UFD-1-1-2 { counter-set: thm-caratterizzazione_UFD-1-1-2 0; }
+#thm-caratterizzazione_UFD-1-1-2 > li::marker { content: ""counter(thm-caratterizzazione_UFD-1-1-2,decimal)"."; }
+#thm-caratterizzazione_UFD-1-1-2 > li { counter-increment: thm-caratterizzazione_UFD-1-1-2; }
+#exercises-PID_euclidei-5-1-1-2 { counter-set: exercises-PID_euclidei-5-1-1-2 0; }
+#exercises-PID_euclidei-5-1-1-2 > li::marker { content: "("counter(exercises-PID_euclidei-5-1-1-2,lower-alpha)")"; }
+#exercises-PID_euclidei-5-1-1-2 > li { counter-increment: exercises-PID_euclidei-5-1-1-2; }
+#lem-eisenstein-2-1-6 { counter-set: lem-eisenstein-2-1-6 0; }
+#lem-eisenstein-2-1-6 > li::marker { content: ""counter(lem-eisenstein-2-1-6,decimal)"."; }
+#lem-eisenstein-2-1-6 > li { counter-increment: lem-eisenstein-2-1-6; }
+#prop-moltiplicazione_per_0-1-1-3 { counter-set: prop-moltiplicazione_per_0-1-1-3 0; }
+#prop-moltiplicazione_per_0-1-1-3 > li::marker { content: ""counter(prop-moltiplicazione_per_0-1-1-3,decimal)"."; }
+#prop-moltiplicazione_per_0-1-1-3 > li { counter-increment: prop-moltiplicazione_per_0-1-1-3; }
+#prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 { counter-set: prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 0; }
+#prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottomoduli-1-1-3,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 > li { counter-increment: prop-immagine_diretta_inversa_di_sottomoduli-1-1-3; }
+#prop-proprieta_addendi_somma_diretta-1-1-10 { counter-set: prop-proprieta_addendi_somma_diretta-1-1-10 0; }
+#prop-proprieta_addendi_somma_diretta-1-1-10 > li::marker { content: ""counter(prop-proprieta_addendi_somma_diretta-1-1-10,decimal)"."; }
+#prop-proprieta_addendi_somma_diretta-1-1-10 > li { counter-increment: prop-proprieta_addendi_somma_diretta-1-1-10; }
+#exercises-gruppiabeliani-2-1-1-1 { counter-set: exercises-gruppiabeliani-2-1-1-1 0; }
+#exercises-gruppiabeliani-2-1-1-1 > li::marker { content: "("counter(exercises-gruppiabeliani-2-1-1-1,lower-alpha)")"; }
+#exercises-gruppiabeliani-2-1-1-1 > li { counter-increment: exercises-gruppiabeliani-2-1-1-1; }
+#exercises-gruppiabeliani-2-2-1-1 { counter-set: exercises-gruppiabeliani-2-2-1-1 0; }
+#exercises-gruppiabeliani-2-2-1-1 > li::marker { content: "("counter(exercises-gruppiabeliani-2-2-1-1,lower-alpha)")"; }
+#exercises-gruppiabeliani-2-2-1-1 > li { counter-increment: exercises-gruppiabeliani-2-2-1-1; }
+#prop-diagonali_blocchi-1-1-2 { counter-set: prop-diagonali_blocchi-1-1-2 0; }
+#prop-diagonali_blocchi-1-1-2 > li::marker { content: ""counter(prop-diagonali_blocchi-1-1-2,decimal)"."; }
+#prop-diagonali_blocchi-1-1-2 > li { counter-increment: prop-diagonali_blocchi-1-1-2; }
+#prop-addizione_naturali-1-2-1 { counter-set: prop-addizione_naturali-1-2-1 0; }
+#prop-addizione_naturali-1-2-1 > li::marker { content: ""counter(prop-addizione_naturali-1-2-1,decimal)"."; }
+#prop-addizione_naturali-1-2-1 > li { counter-increment: prop-addizione_naturali-1-2-1; }
+#prop-moltiplicazione_naturali-1-2-1 { counter-set: prop-moltiplicazione_naturali-1-2-1 0; }
+#prop-moltiplicazione_naturali-1-2-1 > li::marker { content: ""counter(prop-moltiplicazione_naturali-1-2-1,decimal)"."; }
+#prop-moltiplicazione_naturali-1-2-1 > li { counter-increment: prop-moltiplicazione_naturali-1-2-1; }
+#cor-somma_prodotto_positivi_negativi-1-2-1 { counter-set: cor-somma_prodotto_positivi_negativi-1-2-1 0; }
+#cor-somma_prodotto_positivi_negativi-1-2-1 > li::marker { content: ""counter(cor-somma_prodotto_positivi_negativi-1-2-1,decimal)"."; }
+#cor-somma_prodotto_positivi_negativi-1-2-1 > li { counter-increment: cor-somma_prodotto_positivi_negativi-1-2-1; }
+#gfdl-section4-2-1 { counter-set: gfdl-section4-2-1 0; }
+#gfdl-section4-2-1 > li::marker { content: ""counter(gfdl-section4-2-1,upper-alpha)"."; }
+#gfdl-section4-2-1 > li { counter-increment: gfdl-section4-2-1; }
+</style>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Vai all'indice generale</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -130,8 +279,9 @@ window.MathJax = {
 \newcommand{\Reali}{\mathbf{R}}
 \newcommand{\Naturali}{\mathbf{N}}
 \newcommand{\Interi}{\mathbf{Z}}
- \newcommand{\Razionali}{\mathbf{Q}}
- \newcommand{\Complessi}{\mathbf{C}}
+\newcommand{\Razionali}{\mathbf{Q}}
+\newcommand{\Complessi}{\mathbf{C}}
+\newcommand{\campo}[1]{\mathbf{F}_{#1}}
 
  \newcommand{\grgen}[1]{\langle#1\rangle}
  \newcommand{\ideal}[1]{\left(#1\right)}
@@ -152,6 +302,7 @@ window.MathJax = {
  \newcommand{\euclidean}{\delta}
  \newcommand{\posto}[3]{#1_{#2#3}}
  \newcommand{\restrizione}[2]{\left. #1\right|_{#2}}
+ \newcommand{\indotto}[1]{\hat{#1}}
 
  \newcommand{\vect}[1]{\boldsymbol{#1}}
  
@@ -574,107 +725,93 @@ window.MathJax = {
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-estensione_campi.html" class="internal"><span class="codenumber">23</span> <span class="title">Estensioni di campi</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-elementi_algebrici_e_trascendenti.html" class="internal"><span class="codenumber">23.1</span> <span class="title">Elementi algebrici e trascendenti</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_algebrici_e_trascendenti.html#exercises-elementi_algebrici_e_trascendenti" class="internal"><span class="codenumber">23.1</span> <span class="title">Esercizi</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-campo_di_spezzamento.html" class="internal"><span class="codenumber">23.2</span> <span class="title">Campi di spezzamento</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-campo_di_spezzamento.html#exercises-campo_di_spezzamento" class="internal"><span class="codenumber">23.2</span> <span class="title">Esercizi</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-chiusure_algebriche.html" class="internal"><span class="codenumber">23.3</span> <span class="title">Cenni su campi algebricamente chiusi</span></a></div></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toc-item toc-part">
 <div class="toc-title-box"><a href="part-moduli.html" class="internal"><span class="codenumber">V</span> <span class="title">Moduli</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-moduli.html" class="internal"><span class="codenumber">24</span> <span class="title">Moduli</span></a></div>
+<div class="toc-title-box"><a href="ch-moduli.html" class="internal"><span class="codenumber">23</span> <span class="title">Moduli</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-definizione_di_moduli.html" class="internal"><span class="codenumber">24.1</span> <span class="title">Definizione di modulo</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizione_di_moduli.html#exercises-definizione_modulo" class="internal"><span class="codenumber">24.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-definizione_di_moduli.html" class="internal"><span class="codenumber">23.1</span> <span class="title">Definizione di modulo</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizione_di_moduli.html#exercises-definizione_modulo" class="internal"><span class="codenumber">23.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-sottomoduli.html" class="internal"><span class="codenumber">24.2</span> <span class="title">Sottomoduli</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottomoduli.html#exercises-sottomoduli" class="internal"><span class="codenumber">24.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-sottomoduli.html" class="internal"><span class="codenumber">23.2</span> <span class="title">Sottomoduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottomoduli.html#exercises-sottomoduli" class="internal"><span class="codenumber">23.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-omomorfismi_moduli.html" class="internal"><span class="codenumber">24.3</span> <span class="title">Omomorfismi di moduli</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-omomorfismi_moduli.html#exercises-omomorfismi_moduli" class="internal"><span class="codenumber">24.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-omomorfismi_moduli.html" class="internal"><span class="codenumber">23.3</span> <span class="title">Omomorfismi di moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-omomorfismi_moduli.html#exercises-omomorfismi_moduli" class="internal"><span class="codenumber">23.3</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-moduli_quoziente.html" class="internal"><span class="codenumber">24.4</span> <span class="title">Moduli quoziente</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_quoziente.html#exercises-moduli_quoziente" class="internal"><span class="codenumber">24.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-moduli_quoziente.html" class="internal"><span class="codenumber">23.4</span> <span class="title">Moduli quoziente</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_quoziente.html#exercises-moduli_quoziente" class="internal"><span class="codenumber">23.4</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-moduli_liberi.html" class="internal"><span class="codenumber">25</span> <span class="title">Moduli liberi</span></a></div>
+<div class="toc-title-box"><a href="ch-moduli_liberi.html" class="internal"><span class="codenumber">24</span> <span class="title">Moduli liberi</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-somma_diretta_moduli.html" class="internal"><span class="codenumber">25.1</span> <span class="title">Somma diretta di moduli</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-somma_diretta_moduli.html#exercises-somma_diretta_moduli" class="internal"><span class="codenumber">25.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-somma_diretta_moduli.html" class="internal"><span class="codenumber">24.1</span> <span class="title">Somma diretta di moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-somma_diretta_moduli.html#exercises-somma_diretta_moduli" class="internal"><span class="codenumber">24.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-dipendenza_lineare.html" class="internal"><span class="codenumber">25.2</span> <span class="title">Dipendenza e indipendenza lineare</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-dipendenza_lineare.html#exercises-dipendenza_lineare" class="internal"><span class="codenumber">25.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-dipendenza_lineare.html" class="internal"><span class="codenumber">24.2</span> <span class="title">Dipendenza e indipendenza lineare</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-dipendenza_lineare.html#exercises-dipendenza_lineare" class="internal"><span class="codenumber">24.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-elementi_di_torsione.html" class="internal"><span class="codenumber">25.3</span> <span class="title">Elementi di torsione</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_di_torsione.html#exercises-elementi_di_torsione" class="internal"><span class="codenumber">25.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-elementi_di_torsione.html" class="internal"><span class="codenumber">24.3</span> <span class="title">Elementi di torsione</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_di_torsione.html#exercises-elementi_di_torsione" class="internal"><span class="codenumber">24.3</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-modulisupid.html" class="internal"><span class="codenumber">26</span> <span class="title">Moduli finitamente generati su PID</span></a></div>
+<div class="toc-title-box"><a href="ch-modulisupid.html" class="internal"><span class="codenumber">25</span> <span class="title">Moduli finitamente generati su PID</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-moduli_ciclici.html" class="internal"><span class="codenumber">26.1</span> <span class="title">Moduli ciclici</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_ciclici.html#exercises-moduli_ciclici" class="internal"><span class="codenumber">26.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-moduli_ciclici.html" class="internal"><span class="codenumber">25.1</span> <span class="title">Moduli ciclici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_ciclici.html#exercises-moduli_ciclici" class="internal"><span class="codenumber">25.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-moduli_primari.html" class="internal"><span class="codenumber">26.2</span> <span class="title">Moduli primari</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_primari.html#exercises-moduli_primari" class="internal"><span class="codenumber">26.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-moduli_primari.html" class="internal"><span class="codenumber">25.2</span> <span class="title">Moduli primari</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_primari.html#exercises-moduli_primari" class="internal"><span class="codenumber">25.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-moduli_liberi.html" class="internal"><span class="codenumber">26.3</span> <span class="title">Moduli liberi</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_liberi.html#exercises-moduli_liberi" class="internal"><span class="codenumber">26.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-moduli_liberi.html" class="internal"><span class="codenumber">25.3</span> <span class="title">Moduli liberi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_liberi.html#exercises-moduli_liberi" class="internal"><span class="codenumber">25.3</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-classificazione_moduli_pid.html" class="internal"><span class="codenumber">26.4</span> <span class="title">La classificazione dei moduli finitamente generati su un dominio a ideali principali</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-classificazione_moduli_pid.html" class="internal"><span class="codenumber">25.4</span> <span class="title">La classificazione dei moduli finitamente generati su un dominio a ideali principali</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-gruppiabeliani.html" class="internal"><span class="codenumber">27</span> <span class="title">Gruppi abeliani finitamente generati</span></a></div>
+<div class="toc-title-box"><a href="ch-gruppiabeliani.html" class="internal"><span class="codenumber">26</span> <span class="title">Gruppi abeliani finitamente generati</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-gruppiabeliani.html" class="internal"><span class="codenumber">27.1</span> <span class="title">Classificazione dei gruppi abeliani finitamente generati</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppiabeliani.html#exercises-gruppiabeliani" class="internal"><span class="codenumber">27.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-gruppiabeliani.html" class="internal"><span class="codenumber">26.1</span> <span class="title">Classificazione dei gruppi abeliani finitamente generati</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppiabeliani.html#exercises-gruppiabeliani" class="internal"><span class="codenumber">26.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li></ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-formecanoniche.html" class="internal"><span class="codenumber">28</span> <span class="title">Forme canoniche di matrici</span></a></div>
+<div class="toc-title-box"><a href="ch-formecanoniche.html" class="internal"><span class="codenumber">27</span> <span class="title">Forme canoniche di matrici</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-kx_moduli.html" class="internal"><span class="codenumber">28.1</span> <span class="title">Spazi vettoriali con endomorfismi visti come moduli</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-kx_moduli.html#exercises-kx_moduli" class="internal"><span class="codenumber">28.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-kx_moduli.html" class="internal"><span class="codenumber">27.1</span> <span class="title">Spazi vettoriali con endomorfismi visti come moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-kx_moduli.html#exercises-kx_moduli" class="internal"><span class="codenumber">27.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-matrici_rappresentative.html" class="internal"><span class="codenumber">28.2</span> <span class="title">Matrici rappresentative</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-matrici_rappresentative.html#exercises-matrici_rappresentative" class="internal"><span class="codenumber">28.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-matrici_rappresentative.html" class="internal"><span class="codenumber">27.2</span> <span class="title">Matrici rappresentative</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-matrici_rappresentative.html#exercises-matrici_rappresentative" class="internal"><span class="codenumber">27.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-matrici_compagne.html" class="internal"><span class="codenumber">28.3</span> <span class="title">Matrici compagne</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-matrici_compagne.html" class="internal"><span class="codenumber">27.3</span> <span class="title">Matrici compagne</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-jordan.html" class="internal"><span class="codenumber">28.4</span> <span class="title">Forma canonica di Jordan</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-jordan.html#exercises-jordan" class="internal"><span class="codenumber">28.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-jordan.html" class="internal"><span class="codenumber">27.4</span> <span class="title">Forma canonica di Jordan</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-jordan.html#exercises-jordan" class="internal"><span class="codenumber">27.4</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html" class="internal"><span class="codenumber">28.5</span> <span class="title">Polinomio minimo di matrici</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html#exercises-polinomio_minimo_matrici" class="internal"><span class="codenumber">28.5</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html" class="internal"><span class="codenumber">27.5</span> <span class="title">Polinomio minimo di matrici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html#exercises-polinomio_minimo_matrici" class="internal"><span class="codenumber">27.5</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -709,7 +846,7 @@ window.MathJax = {
 </div>
 <div class="para logical" id="sec-applicazioni_sylow-4">
 <div class="para">Indichiamo con <span class="process-math">\(n_{p}\)</span> il numero dei <span class="process-math">\(p\)</span>-sottogruppi di Sylow e con <span class="process-math">\(n_{q}\)</span> il numero dei <span class="process-math">\(q\)</span>-sottogruppi di Sylow. Applichiamo allora il <a href="sec-sylow.html#thm-sylow" class="xref" data-knowl="./knowl/xref/thm-sylow.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 17.2.3: Teorema di Sylow">Teorema di Sylow</a> e otteniamo queste informazioni</div>
-<ul class="disc">
+<ul class="disc" id="sec-applicazioni_sylow-4-6">
 <li id="sec-applicazioni_sylow-4-6-1"><div class="para" id="sec-applicazioni_sylow-4-6-1-1">
 <span class="process-math">\(n_{p}\)</span> divide <span class="process-math">\(q\)</span> e <span class="process-math">\(n_{p}\equiv 1\pmod{p}\text{:}\)</span> poiché i divisori di <span class="process-math">\(q\)</span> sono <span class="process-math">\(1\)</span> e <span class="process-math">\(q\text{,}\)</span> se <span class="process-math">\(q\equiv 1\pmod{p}\)</span> entrambi i divisori sono valori possibili, mentre se <span class="process-math">\(q\not\equiv 1\pmod{p}\)</span> allora l’unico valore possibile è <span class="process-math">\(1\)</span>
 </div></li>
@@ -719,20 +856,20 @@ window.MathJax = {
 </ul>
 <div class="para">Se <span class="process-math">\(n_{p}=1\)</span> e <span class="process-math">\(n_{q}=1\)</span> allora <span class="process-math">\(P\)</span> e <span class="process-math">\(Q\)</span> sono normali, e <span class="process-math">\(G\)</span> è il loro prodotto diretto: per la <a href="sec-prodotto_diretto_esterno.html#prop-prodotto_diretto_di_ciclici" class="xref" data-knowl="./knowl/xref/prop-prodotto_diretto_di_ciclici.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 16.1.10">Proposizione 16.1.10</a>, il gruppo <span class="process-math">\(G\)</span> è ciclico. Se <span class="process-math">\(q\not\equiv 1\pmod{p}\text{,}\)</span> questa è l’unica possibilità.</div>
 </div>
-<div class="para" id="sec-applicazioni_sylow-5">Se <span class="process-math">\(n_{p}=q\)</span> e <span class="process-math">\(n_{q}=1\)</span> allora <span class="process-math">\(Q\)</span> è normale ma <span class="process-math">\(P\)</span> no, e <span class="process-math">\(G\)</span> è il prodotto semidiretto <span class="process-math">\(P\ltimes Q\)</span> ma non è prodotto diretto di <span class="process-math">\(P\)</span> e <span class="process-math">\(Q\)</span> (in particolare, <span class="process-math">\(G\)</span> non è abeliano, perché i sottogruppi di un gruppo abeliano sono tutti normali): non sappiamo ancora però se questa possibilità può effettivamente verificarsi. Dobbiamo stabilire se esistono omomorfismi <span class="process-math">\(\phi\colon P\to\Aut(Q)\)</span> non banali (l’omomorfismo banale corrisponde al prodotto diretto). Per il <a href="sec-omomorfismi_da_gruppi_ciclici.html#thm-endomorfismi_automorfismi_di_ciclici" class="xref" data-knowl="./knowl/xref/thm-endomorfismi_automorfismi_di_ciclici.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 13.3.6">Teorema 13.3.6</a>, il gruppo <span class="process-math">\(\Aut(Q)\)</span> ha ordine <span class="process-math">\(\euler{q}=q-1\text{.}\)</span> Vedremo più avanti (<a href="sec-valutazione_polinomi.html#cor-automorfismi_ciclico_ordine_primo" class="xref" data-knowl="./knowl/xref/cor-automorfismi_ciclico_ordine_primo.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Corollario 20.2.12">Corollario 20.2.12</a>) che il gruppo <span class="process-math">\(\Aut(Q)\)</span> è ciclico: poiché stiamo supponendo che <span class="process-math">\(q\equiv 1\pmod{p}\text{,}\)</span> cioè che <span class="process-math">\(p\)</span> divida <span class="process-math">\(q-1\text{,}\)</span> per il <a href="sec-sottogruppi_di_ciclici.html#thm-sottogruppi_di_gruppo_ciclico_finito" class="xref" data-knowl="./knowl/xref/thm-sottogruppi_di_gruppo_ciclico_finito.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 10.2.8">Teorema 10.2.8</a> esistono in <span class="process-math">\(\Aut(Q)\)</span> un unico sottogruppo di ordine <span class="process-math">\(p\)</span> ed esattamente <span class="process-math">\(p-1\)</span> elementi di periodo <span class="process-math">\(p\text{.}\)</span> Per la <a href="sec-omomorfismi_da_gruppi_ciclici.html#prop-omomorfismi_da_ciclici" class="xref" data-knowl="./knowl/xref/prop-omomorfismi_da_ciclici.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 13.3.4">Proposizione 13.3.4</a>, un omomorfismo da <span class="process-math">\(P\)</span> in <span class="process-math">\(\Aut(Q)\)</span> è individuato dall’immagine di un generatore <span class="process-math">\(x\)</span> di <span class="process-math">\(P\text{,}\)</span> immagine che può essere scelta tra gli elementi il cui periodo divide il periodo di <span class="process-math">\(x\text{,}\)</span> cioè <span class="process-math">\(p\text{.}\)</span> Oltre all’omomorfismo banale, abbiamo, dunque, <span class="process-math">\(p-1\)</span> omomorfismi non banali che mandano <span class="process-math">\(x\)</span> in uno degli elementi di periodo <span class="process-math">\(p\)</span> in <span class="process-math">\(\Aut(Q)\text{.}\)</span> Siano <span class="process-math">\(\phi\)</span> e <span class="process-math">\(\psi\)</span> due di questi omomorfismi: poiché in <span class="process-math">\(\Aut{Q}\)</span> c’è un unico sottogruppo di ordine <span class="process-math">\(p\text{,}\)</span> gli elementi <span class="process-math">\(x\phi\)</span> e <span class="process-math">\(x\psi\)</span> sono uno potenza dell’altro, ad esempio, sia <span class="process-math">\(x\psi=(x\phi)^{r}\)</span> con <span class="process-math">\(r\not\equiv 1\pmod{p}\text{.}\)</span> Ora consideriamo l’automorfismo <span class="process-math">\(\theta\)</span> di <span class="process-math">\(P\)</span> che manda <span class="process-math">\(x\)</span> in <span class="process-math">\(x^{r}\text{:}\)</span> pertanto <span class="process-math">\(x\theta\phi=(x^{r})\phi=(x\phi)^{r}=x\psi\text{,}\)</span> cioè <span class="process-math">\(\theta\phi=\psi\text{:}\)</span> per la <a href="sec-prodotto_semidiretto.html#prop-semidiretti_isomorfi" class="xref" data-knowl="./knowl/xref/prop-semidiretti_isomorfi.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 16.3.9">Proposizione 16.3.9</a>, i gruppi <span class="process-math">\(P\ltimes_{\phi}Q\)</span> e <span class="process-math">\(P\ltimes_{\psi}Q\)</span> sono isomorfi. Pertanto, tutti i prodotti semidiretti non diretti tra <span class="process-math">\(P\)</span> e <span class="process-math">\(Q\)</span> sono isomorfi. Riassumendo:</div>
+<div class="para" id="sec-applicazioni_sylow-5">Se <span class="process-math">\(n_{p}=q\)</span> e <span class="process-math">\(n_{q}=1\)</span> allora <span class="process-math">\(Q\)</span> è normale ma <span class="process-math">\(P\)</span> no, e <span class="process-math">\(G\)</span> è il prodotto semidiretto <span class="process-math">\(P\ltimes Q\)</span> ma non è prodotto diretto di <span class="process-math">\(P\)</span> e <span class="process-math">\(Q\)</span> (in particolare, <span class="process-math">\(G\)</span> non è abeliano, perché i sottogruppi di un gruppo abeliano sono tutti normali): non sappiamo ancora però se questa possibilità può effettivamente verificarsi. Dobbiamo stabilire se esistono omomorfismi <span class="process-math">\(\phi\colon P\to\Aut(Q)\)</span> non banali (l’omomorfismo banale corrisponde al prodotto diretto). Per il <a href="sec-omomorfismi_da_gruppi_ciclici.html#thm-endomorfismi_automorfismi_di_ciclici" class="xref" data-knowl="./knowl/xref/thm-endomorfismi_automorfismi_di_ciclici.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 13.3.6">Teorema 13.3.6</a>, il gruppo <span class="process-math">\(\Aut(Q)\)</span> ha ordine <span class="process-math">\(\euler{q}=q-1\text{.}\)</span> Vedremo più avanti (<a href="sec-valutazione_polinomi.html#cor-automorfismi_ciclico_ordine_primo" class="xref" data-knowl="./knowl/xref/cor-automorfismi_ciclico_ordine_primo.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Corollario 20.2.14">Corollario 20.2.14</a>) che il gruppo <span class="process-math">\(\Aut(Q)\)</span> è ciclico: poiché stiamo supponendo che <span class="process-math">\(q\equiv 1\pmod{p}\text{,}\)</span> cioè che <span class="process-math">\(p\)</span> divida <span class="process-math">\(q-1\text{,}\)</span> per il <a href="sec-sottogruppi_di_ciclici.html#thm-sottogruppi_di_gruppo_ciclico_finito" class="xref" data-knowl="./knowl/xref/thm-sottogruppi_di_gruppo_ciclico_finito.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 10.2.8">Teorema 10.2.8</a> esistono in <span class="process-math">\(\Aut(Q)\)</span> un unico sottogruppo di ordine <span class="process-math">\(p\)</span> ed esattamente <span class="process-math">\(p-1\)</span> elementi di periodo <span class="process-math">\(p\text{.}\)</span> Per la <a href="sec-omomorfismi_da_gruppi_ciclici.html#prop-omomorfismi_da_ciclici" class="xref" data-knowl="./knowl/xref/prop-omomorfismi_da_ciclici.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 13.3.4">Proposizione 13.3.4</a>, un omomorfismo da <span class="process-math">\(P\)</span> in <span class="process-math">\(\Aut(Q)\)</span> è individuato dall’immagine di un generatore <span class="process-math">\(x\)</span> di <span class="process-math">\(P\text{,}\)</span> immagine che può essere scelta tra gli elementi il cui periodo divide il periodo di <span class="process-math">\(x\text{,}\)</span> cioè <span class="process-math">\(p\text{.}\)</span> Oltre all’omomorfismo banale, abbiamo, dunque, <span class="process-math">\(p-1\)</span> omomorfismi non banali che mandano <span class="process-math">\(x\)</span> in uno degli elementi di periodo <span class="process-math">\(p\)</span> in <span class="process-math">\(\Aut(Q)\text{.}\)</span> Siano <span class="process-math">\(\phi\)</span> e <span class="process-math">\(\psi\)</span> due di questi omomorfismi: poiché in <span class="process-math">\(\Aut{Q}\)</span> c’è un unico sottogruppo di ordine <span class="process-math">\(p\text{,}\)</span> gli elementi <span class="process-math">\(x\phi\)</span> e <span class="process-math">\(x\psi\)</span> sono uno potenza dell’altro, ad esempio, sia <span class="process-math">\(x\psi=(x\phi)^{r}\)</span> con <span class="process-math">\(r\not\equiv 1\pmod{p}\text{.}\)</span> Ora consideriamo l’automorfismo <span class="process-math">\(\theta\)</span> di <span class="process-math">\(P\)</span> che manda <span class="process-math">\(x\)</span> in <span class="process-math">\(x^{r}\text{:}\)</span> pertanto <span class="process-math">\(x\theta\phi=(x^{r})\phi=(x\phi)^{r}=x\psi\text{,}\)</span> cioè <span class="process-math">\(\theta\phi=\psi\text{:}\)</span> per la <a href="sec-prodotto_semidiretto.html#prop-semidiretti_isomorfi" class="xref" data-knowl="./knowl/xref/prop-semidiretti_isomorfi.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 16.3.9">Proposizione 16.3.9</a>, i gruppi <span class="process-math">\(P\ltimes_{\phi}Q\)</span> e <span class="process-math">\(P\ltimes_{\psi}Q\)</span> sono isomorfi. Pertanto, tutti i prodotti semidiretti non diretti tra <span class="process-math">\(P\)</span> e <span class="process-math">\(Q\)</span> sono isomorfi. Riassumendo:</div>
 <article class="theorem theorem-like" id="thm-classificazione_gruppi_prodotto_pq"><h3 class="heading">
 <span class="type">Teorema</span><span class="space"> </span><span class="codenumber">17.3.1</span><span class="period">.</span>
 </h3>
 <div class="para logical" id="thm-classificazione_gruppi_prodotto_pq-1-1">
 <div class="para">Siano dati due primi distinti <span class="process-math">\(p\)</span> e <span class="process-math">\(q\)</span> con <span class="process-math">\(p \lt q\text{.}\)</span> Allora:</div>
-<ul class="disc">
+<ul class="disc" id="thm-classificazione_gruppi_prodotto_pq-1-1-4">
 <li id="thm-classificazione_gruppi_prodotto_pq-1-1-4-1"><div class="para" id="thm-classificazione_gruppi_prodotto_pq-1-1-4-1-1">se <span class="process-math">\(q\not\equiv 1\pmod{p}\text{,}\)</span> esiste un unico gruppo di ordine <span class="process-math">\(pq\)</span> a meno di isomorfismi: il gruppo ciclico;</div></li>
 <li id="thm-classificazione_gruppi_prodotto_pq-1-1-4-2"><div class="para" id="thm-classificazione_gruppi_prodotto_pq-1-1-4-2-1">se <span class="process-math">\(q\equiv 1\pmod{p}\text{,}\)</span> esistono due gruppi di ordine <span class="process-math">\(pq\)</span> a meno di isomorfismi: il gruppo ciclico e un gruppo non abeliano.</div></li>
 </ul>
 </div></article><article class="example example-like" id="sec-applicazioni_sylow-7"><h3 class="heading">
 <span class="type">Esempio</span><span class="space"> </span><span class="codenumber">17.3.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="sec-applicazioni_sylow-7-1-1">Se <span class="process-math">\(G\)</span> è un gruppo di ordine <span class="process-math">\(15\text{,}\)</span> allora <span class="process-math">\(G\)</span> è ciclico: infatti <span class="process-math">\(5\not\equiv 1\pmod{3}\text{.}\)</span>
+<div class="para" id="sec-applicazioni_sylow-7-1-1">Se <span class="process-math">\(G\)</span> è un gruppo di ordine <span class="process-math">\(15\text{,}\)</span> allora <span class="process-math">\(G\)</span> è ciclico: infatti, <span class="process-math">\(5\not\equiv 1\pmod{3}\text{.}\)</span>
 </div> <div class="para" id="sec-applicazioni_sylow-7-1-2">Se <span class="process-math">\(G\)</span> è un gruppo di ordine <span class="process-math">\(21\text{,}\)</span> allora <span class="process-math">\(G\)</span> è ciclico oppure è isomorfo a <span class="process-math">\(P\ltimes_{\phi}Q\text{,}\)</span> dove <span class="process-math">\(P\)</span> è ciclico di ordine <span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(Q\)</span> è ciclico di ordine <span class="process-math">\(7\)</span> e <span class="process-math">\(\phi\)</span> è un qualsiasi omomorfismo non banale da <span class="process-math">\(P\)</span> in <span class="process-math">\(\Aut{Q}\text{.}\)</span> Detto <span class="process-math">\(x\)</span> un generatore di <span class="process-math">\(P\)</span> e <span class="process-math">\(y\)</span> un generatore di <span class="process-math">\(Q\text{,}\)</span> possiamo determinare esplicitamente un automorfismo di <span class="process-math">\(Q\)</span> di periodo <span class="process-math">\(3\)</span> procedendo per tentativi, assegnando l’immagine di <span class="process-math">\(y\)</span> in tutti i modi possibili, cioè tra le potenze di <span class="process-math">\(y\)</span> con esponente coprimo con <span class="process-math">\(7\text{.}\)</span> Si vede che, ad esempio, l’automorfismo di <span class="process-math">\(Q\)</span> in sé che manda <span class="process-math">\(y\)</span> in <span class="process-math">\(y^{2}\)</span> ha periodo <span class="process-math">\(3\text{.}\)</span> Possiamo allora prendere come <span class="process-math">\(\phi\)</span> l’omomorfismo che manda <span class="process-math">\(x\)</span> in questo automorfismo (in altri termini, avremo, quindi, <span class="process-math">\(y^{x}=y^{2}\)</span>).</div></article><article class="definition definition-like" id="def-gruppo_semplice"><h3 class="heading">
 <span class="type">Definizione</span><span class="space"> </span><span class="codenumber">17.3.3</span><span class="period">.</span>
 </h3>
@@ -743,7 +880,7 @@ window.MathJax = {
 <div class="para" id="rem-intersezione_sylow_primi_diversi-1">Sia <span class="process-math">\(G\)</span> un gruppo finito e siano <span class="process-math">\(p\)</span> e <span class="process-math">\(q\)</span> due primi distinti. Per il <a href="sec-teorema_di_lagrange.html#thm-lagrange" class="xref" data-knowl="./knowl/xref/thm-lagrange.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 12.2.6: Teorema di Lagrange">Teorema di Lagrange</a> gli elementi di un <span class="process-math">\(p\)</span>-sottogruppo di Sylow hanno periodo una potenza di <span class="process-math">\(p\text{,}\)</span> mentre gli elementi di un <span class="process-math">\(q\)</span>-sottogruppo di Sylow hanno periodo una potenza di <span class="process-math">\(q\text{:}\)</span> pertanto, l’intersezione di un <span class="process-math">\(p\)</span>-sottogruppo di Sylow con un <span class="process-math">\(q\)</span>-sottogruppo di Sylow è banale.</div></article><article class="example example-like" id="ex-gruppo_ordine_280"><h3 class="heading">
 <span class="type">Esempio</span><span class="space"> </span><span class="codenumber">17.3.5</span><span class="period">.</span>
 </h3>
-<div class="para" id="ex-gruppo_ordine_280-1-1">Mostriamo che un gruppo <span class="process-math">\(G\)</span> di ordine <span class="process-math">\(280\)</span> non è semplice. Poiché <span class="process-math">\(280=2^{3}\cdot 5\cdot 7\text{,}\)</span> avremo <span class="process-math">\(p\)</span>-sottogruppi di Sylow non banali per <span class="process-math">\(p=2\text{,}\)</span> <span class="process-math">\(p=5\)</span> e <span class="process-math">\(p=7\text{.}\)</span> Per ciascuno di questi primi indichiamo con <span class="process-math">\(n_{p}\)</span> il numero dei <span class="process-math">\(p\)</span>-sottogruppi di Sylow. Grazie all’<a href="sec-sylow.html#rem-sylow_coniugati" class="xref" data-knowl="./knowl/xref/rem-sylow_coniugati.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Osservazione 17.2.4">Osservazione 17.2.4</a>, se mostriamo che uno di questi <span class="process-math">\(n_{p}\)</span> è uguale a <span class="process-math">\(1\text{,}\)</span> potremo affermare che il corrispondente <span class="process-math">\(p\)</span>-sottogruppo di Sylow è un sottogruppo normale proprio e non banale di <span class="process-math">\(G\text{,}\)</span> che risulta, quindi, non semplice.</div> <div class="para" id="ex-gruppo_ordine_280-1-2">Consideriamo ora <span class="process-math">\(p=7\text{.}\)</span> Per il <a href="sec-sylow.html#thm-sylow" class="xref" data-knowl="./knowl/xref/thm-sylow.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 17.2.3: Teorema di Sylow">Teorema di Sylow</a>, <span class="process-math">\(n_{7}\)</span> è un divisore di <span class="process-math">\(2^{3}\cdot 5\)</span> congruo a <span class="process-math">\(1\)</span> modulo <span class="process-math">\(7\text{.}\)</span> I divisori di <span class="process-math">\(2^{3}\cdot 5\)</span> sono <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(4\text{,}\)</span> <span class="process-math">\(8\text{,}\)</span> <span class="process-math">\(5\text{,}\)</span> <span class="process-math">\(10\text{,}\)</span> <span class="process-math">\(20\)</span> e <span class="process-math">\(40\text{:}\)</span> di questi, solo <span class="process-math">\(1\)</span> e <span class="process-math">\(8\)</span> sono congrui a <span class="process-math">\(1\)</span> modulo <span class="process-math">\(7\text{.}\)</span> Come detto, se <span class="process-math">\(n_{7}=1\text{,}\)</span> il gruppo <span class="process-math">\(G\)</span> non è semplice e abbiamo finito. Supponiamo allora che <span class="process-math">\(n_{7}=8\text{.}\)</span> I <span class="process-math">\(7\)</span>-sottogruppi di Sylow hanno ordine <span class="process-math">\(7\)</span> e, quindi, il <a href="sec-teorema_di_lagrange.html#thm-lagrange" class="xref" data-knowl="./knowl/xref/thm-lagrange.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 12.2.6: Teorema di Lagrange">Teorema di Lagrange</a> implica che l’intersezione di due <span class="process-math">\(7\)</span>-sottogruppi di Sylow distinti è banale. In particolare ciascuno di essi contiene <span class="process-math">\(7-1=6\)</span> elementi che non sono contenuti in nessuno degli altri <span class="process-math">\(7\)</span>-sottogruppi di Sylow. Avremmo, dunque, <span class="process-math">\((7-1)\cdot8=48\)</span> elementi non banali contenuti nei <span class="process-math">\(7\)</span>-sottogruppi di Sylow.</div> <div class="para" id="ex-gruppo_ordine_280-1-3">Consideriamo ora il primo <span class="process-math">\(p=5\text{.}\)</span> Analogamente a <span class="process-math">\(p=7\text{,}\)</span> abbiamo che <span class="process-math">\(n_{5}\)</span> è un divisore di <span class="process-math">\(2^{3}\cdot 7\)</span> congruo a <span class="process-math">\(1\)</span> modulo <span class="process-math">\(5\text{.}\)</span> I divisori di <span class="process-math">\(2^{3}\cdot 7\)</span> sono <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(4\text{,}\)</span> <span class="process-math">\(8\text{,}\)</span> <span class="process-math">\(7\text{,}\)</span> <span class="process-math">\(14\text{,}\)</span> <span class="process-math">\(28\)</span> e <span class="process-math">\(56\text{:}\)</span> di questi, solo <span class="process-math">\(1\)</span> e <span class="process-math">\(56\)</span> sono congrui a <span class="process-math">\(1\)</span> modulo <span class="process-math">\(5\text{.}\)</span> Se <span class="process-math">\(n_{5}=1\text{,}\)</span> il gruppo <span class="process-math">\(G\)</span> non è semplice e abbiamo finito, altrimenti, ripetendo il ragionamento fatto per <span class="process-math">\(p=7\text{,}\)</span> avremmo <span class="process-math">\((5-1)\cdot 56=224\)</span> elementi non banali contenuti nei <span class="process-math">\(5\)</span>-sottogruppi di Sylow.</div> <div class="para" id="ex-gruppo_ordine_280-1-4">Riassumendo, se <span class="process-math">\(n_{5}\)</span> e <span class="process-math">\(n_{7}\)</span> fossero entrambi diversi da <span class="process-math">\(1\text{,}\)</span> avremmo <span class="process-math">\(48+224=272\)</span> elementi non banali contenuti in un <span class="process-math">\(5\)</span>-sottogruppo di Sylow o in un <span class="process-math">\(7\)</span>-sottogruppo di Sylow. Rimangono solo <span class="process-math">\(8\)</span> elementi: poiché i <span class="process-math">\(2\)</span>-sottogruppi di Sylow hanno ordine <span class="process-math">\(8\text{,}\)</span> ci può essere un unico <span class="process-math">\(2\)</span>-sottogruppo di Sylow che è, quindi, normale in <span class="process-math">\(G\text{.}\)</span>
+<div class="para" id="ex-gruppo_ordine_280-1-1">Mostriamo che un gruppo <span class="process-math">\(G\)</span> di ordine <span class="process-math">\(280\)</span> non è semplice. Poiché <span class="process-math">\(280=2^{3}\cdot 5\cdot 7\text{,}\)</span> avremo <span class="process-math">\(p\)</span>-sottogruppi di Sylow non banali per <span class="process-math">\(p=2\text{,}\)</span> <span class="process-math">\(p=5\)</span> e <span class="process-math">\(p=7\text{.}\)</span> Per ciascuno di questi primi indichiamo con <span class="process-math">\(n_{p}\)</span> il numero dei <span class="process-math">\(p\)</span>-sottogruppi di Sylow. Grazie all’<a href="sec-sylow.html#rem-sylow_coniugati" class="xref" data-knowl="./knowl/xref/rem-sylow_coniugati.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Osservazione 17.2.4">Osservazione 17.2.4</a>, se mostriamo che uno di questi <span class="process-math">\(n_{p}\)</span> è uguale a <span class="process-math">\(1\text{,}\)</span> potremo affermare che il corrispondente <span class="process-math">\(p\)</span>-sottogruppo di Sylow è un sottogruppo normale proprio e non banale di <span class="process-math">\(G\text{,}\)</span> che risulta, quindi, non semplice.</div> <div class="para" id="ex-gruppo_ordine_280-1-2">Consideriamo ora <span class="process-math">\(p=7\text{.}\)</span> Per il <a href="sec-sylow.html#thm-sylow" class="xref" data-knowl="./knowl/xref/thm-sylow.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 17.2.3: Teorema di Sylow">Teorema di Sylow</a>, <span class="process-math">\(n_{7}\)</span> è un divisore di <span class="process-math">\(2^{3}\cdot 5\)</span> congruo a <span class="process-math">\(1\)</span> modulo <span class="process-math">\(7\text{.}\)</span> I divisori di <span class="process-math">\(2^{3}\cdot 5\)</span> sono <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(4\text{,}\)</span> <span class="process-math">\(8\text{,}\)</span> <span class="process-math">\(5\text{,}\)</span> <span class="process-math">\(10\text{,}\)</span> <span class="process-math">\(20\)</span> e <span class="process-math">\(40\text{:}\)</span> di questi, solo <span class="process-math">\(1\)</span> e <span class="process-math">\(8\)</span> sono congrui a <span class="process-math">\(1\)</span> modulo <span class="process-math">\(7\text{.}\)</span> Come detto, se <span class="process-math">\(n_{7}=1\text{,}\)</span> il gruppo <span class="process-math">\(G\)</span> non è semplice e abbiamo finito. Supponiamo allora che <span class="process-math">\(n_{7}=8\text{.}\)</span> I <span class="process-math">\(7\)</span>-sottogruppi di Sylow hanno ordine <span class="process-math">\(7\)</span> e, quindi, il <a href="sec-teorema_di_lagrange.html#thm-lagrange" class="xref" data-knowl="./knowl/xref/thm-lagrange.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 12.2.6: Teorema di Lagrange">Teorema di Lagrange</a> implica che l’intersezione di due <span class="process-math">\(7\)</span>-sottogruppi di Sylow distinti è banale. In particolare, ciascuno di essi contiene <span class="process-math">\(7-1=6\)</span> elementi che non sono contenuti in nessuno degli altri <span class="process-math">\(7\)</span>-sottogruppi di Sylow. Avremmo, dunque, <span class="process-math">\((7-1)\cdot8=48\)</span> elementi non banali contenuti nei <span class="process-math">\(7\)</span>-sottogruppi di Sylow.</div> <div class="para" id="ex-gruppo_ordine_280-1-3">Consideriamo ora il primo <span class="process-math">\(p=5\text{.}\)</span> Analogamente a <span class="process-math">\(p=7\text{,}\)</span> abbiamo che <span class="process-math">\(n_{5}\)</span> è un divisore di <span class="process-math">\(2^{3}\cdot 7\)</span> congruo a <span class="process-math">\(1\)</span> modulo <span class="process-math">\(5\text{.}\)</span> I divisori di <span class="process-math">\(2^{3}\cdot 7\)</span> sono <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(4\text{,}\)</span> <span class="process-math">\(8\text{,}\)</span> <span class="process-math">\(7\text{,}\)</span> <span class="process-math">\(14\text{,}\)</span> <span class="process-math">\(28\)</span> e <span class="process-math">\(56\text{:}\)</span> di questi, solo <span class="process-math">\(1\)</span> e <span class="process-math">\(56\)</span> sono congrui a <span class="process-math">\(1\)</span> modulo <span class="process-math">\(5\text{.}\)</span> Se <span class="process-math">\(n_{5}=1\text{,}\)</span> il gruppo <span class="process-math">\(G\)</span> non è semplice e abbiamo finito, altrimenti, ripetendo il ragionamento fatto per <span class="process-math">\(p=7\text{,}\)</span> avremmo <span class="process-math">\((5-1)\cdot 56=224\)</span> elementi non banali contenuti nei <span class="process-math">\(5\)</span>-sottogruppi di Sylow.</div> <div class="para" id="ex-gruppo_ordine_280-1-4">Riassumendo, se <span class="process-math">\(n_{5}\)</span> e <span class="process-math">\(n_{7}\)</span> fossero entrambi diversi da <span class="process-math">\(1\text{,}\)</span> avremmo <span class="process-math">\(48+224=272\)</span> elementi non banali contenuti in un <span class="process-math">\(5\)</span>-sottogruppo di Sylow o in un <span class="process-math">\(7\)</span>-sottogruppo di Sylow. Rimangono solo <span class="process-math">\(8\)</span> elementi: poiché i <span class="process-math">\(2\)</span>-sottogruppi di Sylow hanno ordine <span class="process-math">\(8\text{,}\)</span> ci può essere un unico <span class="process-math">\(2\)</span>-sottogruppo di Sylow che è, quindi, normale in <span class="process-math">\(G\text{.}\)</span>
 </div></article><article class="remark remark-like" id="rem-conteggio_elementi_sylow"><h3 class="heading">
 <span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">17.3.6</span><span class="period">.</span>
 </h3>
@@ -793,7 +930,7 @@ window.MathJax = {
 </div>
 <div class="solutions">
 <details id="exercises-applicazioni_sylow-4-2-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Suggerimento</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="exercises-applicazioni_sylow-4-2-2-1">Considerare il prodotto di <span class="process-math">\(N\)</span> con un <span class="process-math">\(5\)</span>-sottogruppo di Sylow di <span class="process-math">\(G\text{.}\)</span>
-</div></div></details><details id="exercises-applicazioni_sylow-4-2-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="exercises-applicazioni_sylow-4-2-3-1">Poiché <span class="process-math">\(105=3\cdot5\cdot7\text{,}\)</span> per il <a href="sec-sylow.html#thm-sylow" class="xref" data-knowl="./knowl/xref/thm-sylow.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 17.2.3: Teorema di Sylow">Teorema di Sylow</a> si ha che <span class="process-math">\(\abs{N}=3\)</span> e che <span class="process-math">\(G\)</span> contiene un sottogruppo <span class="process-math">\(K\)</span> di ordine <span class="process-math">\(5\text{.}\)</span> Poiché <span class="process-math">\(N\)</span> e <span class="process-math">\(K\)</span> hanno ordine coprimo, per il <a href="sec-teorema_di_lagrange.html#thm-lagrange" class="xref" data-knowl="./knowl/xref/thm-lagrange.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 12.2.6: Teorema di Lagrange">Teorema di Lagrange</a> hanno intersezione banale e per la <a href="sec-prodotto_sottogruppi.html#prop-diverse_espressioni-prodotto" class="xref" data-knowl="./knowl/xref/prop-diverse_espressioni-prodotto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 12.3.4">Proposizione 12.3.4</a> il prodotto ha ordine <span class="process-math">\(3\cdot5=15\text{.}\)</span> Poiché <span class="process-math">\(N\)</span> è normale in <span class="process-math">\(G\text{,}\)</span> il prodotto <span class="process-math">\(NK\)</span> è un sottogruppo di <span class="process-math">\(G\text{.}\)</span> Ora <span class="process-math">\(K\)</span> è un <span class="process-math">\(5\)</span>-sottogruppo di Sylow anche di <span class="process-math">\(NK\text{,}\)</span> e il numero di <span class="process-math">\(5\)</span>-sottogruppi di Sylow di <span class="process-math">\(HK\)</span> è un divisore di <span class="process-math">\(3\)</span> congruo a <span class="process-math">\(1\)</span> modulo <span class="process-math">\(5\text{.}\)</span> Pertanto <span class="process-math">\(NK\)</span> contiene un unico <span class="process-math">\(5\)</span>-sottogruppo di Sylow, cioè <span class="process-math">\(K\text{,}\)</span> ed esso è normale in <span class="process-math">\(NK\text{.}\)</span> Dunque <span class="process-math">\(\nrm{G}{K}\ge NK\)</span> e, quindi <span class="process-math">\(\ind{G}{\nrm{G}{K}}\)</span> divide <span class="process-math">\(7\text{.}\)</span> Poiché <span class="process-math">\(\ind{G}{\nrm{G}{K}}\)</span> è uguale al numero dei <span class="process-math">\(5\)</span>-sottogruppi di Sylow di <span class="process-math">\(G\)</span> e questo numero è congruo a <span class="process-math">\(1\)</span> modulo <span class="process-math">\(5\text{,}\)</span> ne segue che <span class="process-math">\(G\)</span> ha un unico <span class="process-math">\(5\)</span>-sottogruppo di Sylow e questo è normale in <span class="process-math">\(G\text{.}\)</span>
+</div></div></details><details id="exercises-applicazioni_sylow-4-2-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="exercises-applicazioni_sylow-4-2-3-1">Poiché <span class="process-math">\(105=3\cdot5\cdot7\text{,}\)</span> per il <a href="sec-sylow.html#thm-sylow" class="xref" data-knowl="./knowl/xref/thm-sylow.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 17.2.3: Teorema di Sylow">Teorema di Sylow</a> si ha che <span class="process-math">\(\abs{N}=3\)</span> e che <span class="process-math">\(G\)</span> contiene un sottogruppo <span class="process-math">\(K\)</span> di ordine <span class="process-math">\(5\text{.}\)</span> Poiché <span class="process-math">\(N\)</span> e <span class="process-math">\(K\)</span> hanno ordine coprimo, per il <a href="sec-teorema_di_lagrange.html#thm-lagrange" class="xref" data-knowl="./knowl/xref/thm-lagrange.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 12.2.6: Teorema di Lagrange">Teorema di Lagrange</a> hanno intersezione banale e per la <a href="sec-prodotto_sottogruppi.html#prop-diverse_espressioni-prodotto" class="xref" data-knowl="./knowl/xref/prop-diverse_espressioni-prodotto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 12.3.4">Proposizione 12.3.4</a> il prodotto ha ordine <span class="process-math">\(3\cdot5=15\text{.}\)</span> Poiché <span class="process-math">\(N\)</span> è normale in <span class="process-math">\(G\text{,}\)</span> il prodotto <span class="process-math">\(NK\)</span> è un sottogruppo di <span class="process-math">\(G\text{.}\)</span> Ora <span class="process-math">\(K\)</span> è un <span class="process-math">\(5\)</span>-sottogruppo di Sylow anche di <span class="process-math">\(NK\text{,}\)</span> e il numero di <span class="process-math">\(5\)</span>-sottogruppi di Sylow di <span class="process-math">\(HK\)</span> è un divisore di <span class="process-math">\(3\)</span> congruo a <span class="process-math">\(1\)</span> modulo <span class="process-math">\(5\text{.}\)</span> Pertanto <span class="process-math">\(NK\)</span> contiene un unico <span class="process-math">\(5\)</span>-sottogruppo di Sylow, cioè <span class="process-math">\(K\text{,}\)</span> ed esso è normale in <span class="process-math">\(NK\text{.}\)</span> Dunque, <span class="process-math">\(\nrm{G}{K}\ge NK\)</span> e, quindi <span class="process-math">\(\ind{G}{\nrm{G}{K}}\)</span> divide <span class="process-math">\(7\text{.}\)</span> Poiché <span class="process-math">\(\ind{G}{\nrm{G}{K}}\)</span> è uguale al numero dei <span class="process-math">\(5\)</span>-sottogruppi di Sylow di <span class="process-math">\(G\)</span> e questo numero è congruo a <span class="process-math">\(1\)</span> modulo <span class="process-math">\(5\text{,}\)</span> ne segue che <span class="process-math">\(G\)</span> ha un unico <span class="process-math">\(5\)</span>-sottogruppo di Sylow e questo è normale in <span class="process-math">\(G\text{.}\)</span>
 </div></div></details>
 </div></article><article class="task exercise-like" id="exercises-applicazioni_sylow-4-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para" id="exercises-applicazioni_sylow-4-3-1-1">Mostrare che <span class="process-math">\(G\)</span> contiene un <span class="process-math">\(7\)</span>-sottogruppo di Sylow normale <span class="process-math">\(L\text{.}\)</span>
@@ -821,7 +958,7 @@ window.MathJax = {
 pqr+qr-r-q=pqr-1+(q-1)(r-1)\text{,}
 \end{equation*}
 </div>
-<div class="para">ma questo numero è maggiore di <span class="process-math">\(pqr-1\text{,}\)</span> cioè il numero totale di elementi non banali di <span class="process-math">\(G\text{.}\)</span> Possiamo dunque affermare che almeno uno tra <span class="process-math">\(n_{p}\text{,}\)</span> <span class="process-math">\(n_{q}\)</span> e <span class="process-math">\(n_{r}\)</span> è uguale a <span class="process-math">\(1\text{.}\)</span>
+<div class="para">ma questo numero è maggiore di <span class="process-math">\(pqr-1\text{,}\)</span> cioè il numero totale di elementi non banali di <span class="process-math">\(G\text{.}\)</span> Possiamo, dunque, affermare che almeno uno tra <span class="process-math">\(n_{p}\text{,}\)</span> <span class="process-math">\(n_{q}\)</span> e <span class="process-math">\(n_{r}\)</span> è uguale a <span class="process-math">\(1\text{.}\)</span>
 </div>
 </div>
 </div></details></div></article><article class="task exercise-like" id="exercise-pqr-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>

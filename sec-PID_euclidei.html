@@ -88,6 +88,155 @@ window.MathJax = {
 <link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#prop-unione_intersezione-1-1-4 { counter-set: prop-unione_intersezione-1-1-4 0; }
+#prop-unione_intersezione-1-1-4 > li::marker { content: ""counter(prop-unione_intersezione-1-1-4,decimal)"."; }
+#prop-unione_intersezione-1-1-4 > li { counter-increment: prop-unione_intersezione-1-1-4; }
+#prop-inclusione_equivalente-1-1-3 { counter-set: prop-inclusione_equivalente-1-1-3 0; }
+#prop-inclusione_equivalente-1-1-3 > li::marker { content: ""counter(prop-inclusione_equivalente-1-1-3,decimal)"."; }
+#prop-inclusione_equivalente-1-1-3 > li { counter-increment: prop-inclusione_equivalente-1-1-3; }
+#prop-classe_equivalenza-1-1-3 { counter-set: prop-classe_equivalenza-1-1-3 0; }
+#prop-classe_equivalenza-1-1-3 > li::marker { content: ""counter(prop-classe_equivalenza-1-1-3,decimal)"."; }
+#prop-classe_equivalenza-1-1-3 > li { counter-increment: prop-classe_equivalenza-1-1-3; }
+#prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 { counter-set: prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 0; }
+#prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 > li::marker { content: ""counter(prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2,decimal)"."; }
+#prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 > li { counter-increment: prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2; }
+#prop-composizione_iniettive_suriettive-1-1-3 { counter-set: prop-composizione_iniettive_suriettive-1-1-3 0; }
+#prop-composizione_iniettive_suriettive-1-1-3 > li::marker { content: ""counter(prop-composizione_iniettive_suriettive-1-1-3,decimal)"."; }
+#prop-composizione_iniettive_suriettive-1-1-3 > li { counter-increment: prop-composizione_iniettive_suriettive-1-1-3; }
+#prop-addizione_matrici-1-2-1 { counter-set: prop-addizione_matrici-1-2-1 0; }
+#prop-addizione_matrici-1-2-1 > li::marker { content: ""counter(prop-addizione_matrici-1-2-1,decimal)"."; }
+#prop-addizione_matrici-1-2-1 > li { counter-increment: prop-addizione_matrici-1-2-1; }
+#prop-moltiplicazione_matrici-1-2-1 { counter-set: prop-moltiplicazione_matrici-1-2-1 0; }
+#prop-moltiplicazione_matrici-1-2-1 > li::marker { content: ""counter(prop-moltiplicazione_matrici-1-2-1,decimal)"."; }
+#prop-moltiplicazione_matrici-1-2-1 > li { counter-increment: prop-moltiplicazione_matrici-1-2-1; }
+#def-numeri_naturali_peano-5-1-7 { counter-set: def-numeri_naturali_peano-5-1-7 0; }
+#def-numeri_naturali_peano-5-1-7 > li::marker { content: ""counter(def-numeri_naturali_peano-5-1-7,decimal)"."; }
+#def-numeri_naturali_peano-5-1-7 > li { counter-increment: def-numeri_naturali_peano-5-1-7; }
+#prop-anello_degli_interi-1-2-1 { counter-set: prop-anello_degli_interi-1-2-1 0; }
+#prop-anello_degli_interi-1-2-1 > li::marker { content: ""counter(prop-anello_degli_interi-1-2-1,decimal)"."; }
+#prop-anello_degli_interi-1-2-1 > li { counter-increment: prop-anello_degli_interi-1-2-1; }
+#prop-ordine_interi-1-2-1 { counter-set: prop-ordine_interi-1-2-1 0; }
+#prop-ordine_interi-1-2-1 > li::marker { content: ""counter(prop-ordine_interi-1-2-1,decimal)"."; }
+#prop-ordine_interi-1-2-1 > li { counter-increment: prop-ordine_interi-1-2-1; }
+#prop-anello_degli_classi_di_resto-1-2-1 { counter-set: prop-anello_degli_classi_di_resto-1-2-1 0; }
+#prop-anello_degli_classi_di_resto-1-2-1 > li::marker { content: ""counter(prop-anello_degli_classi_di_resto-1-2-1,decimal)"."; }
+#prop-anello_degli_classi_di_resto-1-2-1 > li { counter-increment: prop-anello_degli_classi_di_resto-1-2-1; }
+#prop-classi_resto_invertibili-1-1-3 { counter-set: prop-classi_resto_invertibili-1-1-3 0; }
+#prop-classi_resto_invertibili-1-1-3 > li::marker { content: ""counter(prop-classi_resto_invertibili-1-1-3,decimal)"."; }
+#prop-classi_resto_invertibili-1-1-3 > li { counter-increment: prop-classi_resto_invertibili-1-1-3; }
+#prop-proprieta_potenze_monoide-1-1-5 { counter-set: prop-proprieta_potenze_monoide-1-1-5 0; }
+#prop-proprieta_potenze_monoide-1-1-5 > li::marker { content: ""counter(prop-proprieta_potenze_monoide-1-1-5,decimal)"."; }
+#prop-proprieta_potenze_monoide-1-1-5 > li { counter-increment: prop-proprieta_potenze_monoide-1-1-5; }
+#prop-proprieta_potenze_elemento_invertibile-1-1-5 { counter-set: prop-proprieta_potenze_elemento_invertibile-1-1-5 0; }
+#prop-proprieta_potenze_elemento_invertibile-1-1-5 > li::marker { content: ""counter(prop-proprieta_potenze_elemento_invertibile-1-1-5,decimal)"."; }
+#prop-proprieta_potenze_elemento_invertibile-1-1-5 > li { counter-increment: prop-proprieta_potenze_elemento_invertibile-1-1-5; }
+#prop-cancellazione_gruppo-2-1-5 { counter-set: prop-cancellazione_gruppo-2-1-5 0; }
+#prop-cancellazione_gruppo-2-1-5 > li::marker { content: ""counter(prop-cancellazione_gruppo-2-1-5,decimal)"."; }
+#prop-cancellazione_gruppo-2-1-5 > li { counter-increment: prop-cancellazione_gruppo-2-1-5; }
+#prop-supporto-1-1-4 { counter-set: prop-supporto-1-1-4 0; }
+#prop-supporto-1-1-4 > li::marker { content: ""counter(prop-supporto-1-1-4,decimal)"."; }
+#prop-supporto-1-1-4 > li { counter-increment: prop-supporto-1-1-4; }
+#prop-laterali_partizione-1-1-4 { counter-set: prop-laterali_partizione-1-1-4 0; }
+#prop-laterali_partizione-1-1-4 > li::marker { content: ""counter(prop-laterali_partizione-1-1-4,decimal)"."; }
+#prop-laterali_partizione-1-1-4 > li { counter-increment: prop-laterali_partizione-1-1-4; }
+#thm-prodotto_sottogruppo-1-1-4 { counter-set: thm-prodotto_sottogruppo-1-1-4 0; }
+#thm-prodotto_sottogruppo-1-1-4 > li::marker { content: ""counter(thm-prodotto_sottogruppo-1-1-4,decimal)"."; }
+#thm-prodotto_sottogruppo-1-1-4 > li { counter-increment: thm-prodotto_sottogruppo-1-1-4; }
+#prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottogruppi-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_sottogruppi-1-1-2; }
+#prop-controimmagini_omomorfismo-1-1-6 { counter-set: prop-controimmagini_omomorfismo-1-1-6 0; }
+#prop-controimmagini_omomorfismo-1-1-6 > li::marker { content: ""counter(prop-controimmagini_omomorfismo-1-1-6,decimal)"."; }
+#prop-controimmagini_omomorfismo-1-1-6 > li { counter-increment: prop-controimmagini_omomorfismo-1-1-6; }
+#thm-caratterizzazione_sottogruppi_normali-1-1-3 { counter-set: thm-caratterizzazione_sottogruppi_normali-1-1-3 0; }
+#thm-caratterizzazione_sottogruppi_normali-1-1-3 > li::marker { content: ""counter(thm-caratterizzazione_sottogruppi_normali-1-1-3,decimal)"."; }
+#thm-caratterizzazione_sottogruppi_normali-1-1-3 > li { counter-increment: thm-caratterizzazione_sottogruppi_normali-1-1-3; }
+#thm-normalizzante-1-1-3 { counter-set: thm-normalizzante-1-1-3 0; }
+#thm-normalizzante-1-1-3 > li::marker { content: ""counter(thm-normalizzante-1-1-3,decimal)"."; }
+#thm-normalizzante-1-1-3 > li { counter-increment: thm-normalizzante-1-1-3; }
+#prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2; }
+#prop-quoziente-eredita-1-1-5 { counter-set: prop-quoziente-eredita-1-1-5 0; }
+#prop-quoziente-eredita-1-1-5 > li::marker { content: ""counter(prop-quoziente-eredita-1-1-5,decimal)"."; }
+#prop-quoziente-eredita-1-1-5 > li { counter-increment: prop-quoziente-eredita-1-1-5; }
+#exercises-congruenze-2-1-1-3 { counter-set: exercises-congruenze-2-1-1-3 0; }
+#exercises-congruenze-2-1-1-3 > li::marker { content: "("counter(exercises-congruenze-2-1-1-3,lower-alpha)")"; }
+#exercises-congruenze-2-1-1-3 > li { counter-increment: exercises-congruenze-2-1-1-3; }
+#prop-proprieta_fattori_prodotto_diretto-1-1-9 { counter-set: prop-proprieta_fattori_prodotto_diretto-1-1-9 0; }
+#prop-proprieta_fattori_prodotto_diretto-1-1-9 > li::marker { content: ""counter(prop-proprieta_fattori_prodotto_diretto-1-1-9,decimal)"."; }
+#prop-proprieta_fattori_prodotto_diretto-1-1-9 > li { counter-increment: prop-proprieta_fattori_prodotto_diretto-1-1-9; }
+#thm-sylow-2-1-9 { counter-set: thm-sylow-2-1-9 0; }
+#thm-sylow-2-1-9 > li::marker { content: ""counter(thm-sylow-2-1-9,decimal)"."; }
+#thm-sylow-2-1-9 > li { counter-increment: thm-sylow-2-1-9; }
+#prop-moltiplicazione_opposti-1-1-2 { counter-set: prop-moltiplicazione_opposti-1-1-2 0; }
+#prop-moltiplicazione_opposti-1-1-2 > li::marker { content: ""counter(prop-moltiplicazione_opposti-1-1-2,decimal)"."; }
+#prop-moltiplicazione_opposti-1-1-2 > li { counter-increment: prop-moltiplicazione_opposti-1-1-2; }
+#prop-multipli_potenze_anello-1-1-4 { counter-set: prop-multipli_potenze_anello-1-1-4 0; }
+#prop-multipli_potenze_anello-1-1-4 > li::marker { content: ""counter(prop-multipli_potenze_anello-1-1-4,decimal)"."; }
+#prop-multipli_potenze_anello-1-1-4 > li { counter-increment: prop-multipli_potenze_anello-1-1-4; }
+#prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottoanelli-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_sottoanelli-1-1-2; }
+#prop-immagine_diretta_inversa_di_ideali-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_ideali-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_ideali-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_ideali-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_ideali-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_ideali-1-1-2; }
+#prop-grado_e_operazioni-1-1-4 { counter-set: prop-grado_e_operazioni-1-1-4 0; }
+#prop-grado_e_operazioni-1-1-4 > li::marker { content: ""counter(prop-grado_e_operazioni-1-1-4,decimal)"."; }
+#prop-grado_e_operazioni-1-1-4 > li { counter-increment: prop-grado_e_operazioni-1-1-4; }
+#prop-proprieta_divisibilita-1-1-7 { counter-set: prop-proprieta_divisibilita-1-1-7 0; }
+#prop-proprieta_divisibilita-1-1-7 > li::marker { content: ""counter(prop-proprieta_divisibilita-1-1-7,decimal)"."; }
+#prop-proprieta_divisibilita-1-1-7 > li { counter-increment: prop-proprieta_divisibilita-1-1-7; }
+#prop-irriducibile-1-1-3 { counter-set: prop-irriducibile-1-1-3 0; }
+#prop-irriducibile-1-1-3 > li::marker { content: ""counter(prop-irriducibile-1-1-3,decimal)"."; }
+#prop-irriducibile-1-1-3 > li { counter-increment: prop-irriducibile-1-1-3; }
+#prop-lunghezza-1-1-3 { counter-set: prop-lunghezza-1-1-3 0; }
+#prop-lunghezza-1-1-3 > li::marker { content: ""counter(prop-lunghezza-1-1-3,decimal)"."; }
+#prop-lunghezza-1-1-3 > li { counter-increment: prop-lunghezza-1-1-3; }
+#prop-MCD_esiste_sempre-1-1-5 { counter-set: prop-MCD_esiste_sempre-1-1-5 0; }
+#prop-MCD_esiste_sempre-1-1-5 > li::marker { content: ""counter(prop-MCD_esiste_sempre-1-1-5,decimal)"."; }
+#prop-MCD_esiste_sempre-1-1-5 > li { counter-increment: prop-MCD_esiste_sempre-1-1-5; }
+#thm-caratterizzazione_UFD-1-1-2 { counter-set: thm-caratterizzazione_UFD-1-1-2 0; }
+#thm-caratterizzazione_UFD-1-1-2 > li::marker { content: ""counter(thm-caratterizzazione_UFD-1-1-2,decimal)"."; }
+#thm-caratterizzazione_UFD-1-1-2 > li { counter-increment: thm-caratterizzazione_UFD-1-1-2; }
+#exercises-PID_euclidei-5-1-1-2 { counter-set: exercises-PID_euclidei-5-1-1-2 0; }
+#exercises-PID_euclidei-5-1-1-2 > li::marker { content: "("counter(exercises-PID_euclidei-5-1-1-2,lower-alpha)")"; }
+#exercises-PID_euclidei-5-1-1-2 > li { counter-increment: exercises-PID_euclidei-5-1-1-2; }
+#lem-eisenstein-2-1-6 { counter-set: lem-eisenstein-2-1-6 0; }
+#lem-eisenstein-2-1-6 > li::marker { content: ""counter(lem-eisenstein-2-1-6,decimal)"."; }
+#lem-eisenstein-2-1-6 > li { counter-increment: lem-eisenstein-2-1-6; }
+#prop-moltiplicazione_per_0-1-1-3 { counter-set: prop-moltiplicazione_per_0-1-1-3 0; }
+#prop-moltiplicazione_per_0-1-1-3 > li::marker { content: ""counter(prop-moltiplicazione_per_0-1-1-3,decimal)"."; }
+#prop-moltiplicazione_per_0-1-1-3 > li { counter-increment: prop-moltiplicazione_per_0-1-1-3; }
+#prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 { counter-set: prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 0; }
+#prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottomoduli-1-1-3,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 > li { counter-increment: prop-immagine_diretta_inversa_di_sottomoduli-1-1-3; }
+#prop-proprieta_addendi_somma_diretta-1-1-10 { counter-set: prop-proprieta_addendi_somma_diretta-1-1-10 0; }
+#prop-proprieta_addendi_somma_diretta-1-1-10 > li::marker { content: ""counter(prop-proprieta_addendi_somma_diretta-1-1-10,decimal)"."; }
+#prop-proprieta_addendi_somma_diretta-1-1-10 > li { counter-increment: prop-proprieta_addendi_somma_diretta-1-1-10; }
+#exercises-gruppiabeliani-2-1-1-1 { counter-set: exercises-gruppiabeliani-2-1-1-1 0; }
+#exercises-gruppiabeliani-2-1-1-1 > li::marker { content: "("counter(exercises-gruppiabeliani-2-1-1-1,lower-alpha)")"; }
+#exercises-gruppiabeliani-2-1-1-1 > li { counter-increment: exercises-gruppiabeliani-2-1-1-1; }
+#exercises-gruppiabeliani-2-2-1-1 { counter-set: exercises-gruppiabeliani-2-2-1-1 0; }
+#exercises-gruppiabeliani-2-2-1-1 > li::marker { content: "("counter(exercises-gruppiabeliani-2-2-1-1,lower-alpha)")"; }
+#exercises-gruppiabeliani-2-2-1-1 > li { counter-increment: exercises-gruppiabeliani-2-2-1-1; }
+#prop-diagonali_blocchi-1-1-2 { counter-set: prop-diagonali_blocchi-1-1-2 0; }
+#prop-diagonali_blocchi-1-1-2 > li::marker { content: ""counter(prop-diagonali_blocchi-1-1-2,decimal)"."; }
+#prop-diagonali_blocchi-1-1-2 > li { counter-increment: prop-diagonali_blocchi-1-1-2; }
+#prop-addizione_naturali-1-2-1 { counter-set: prop-addizione_naturali-1-2-1 0; }
+#prop-addizione_naturali-1-2-1 > li::marker { content: ""counter(prop-addizione_naturali-1-2-1,decimal)"."; }
+#prop-addizione_naturali-1-2-1 > li { counter-increment: prop-addizione_naturali-1-2-1; }
+#prop-moltiplicazione_naturali-1-2-1 { counter-set: prop-moltiplicazione_naturali-1-2-1 0; }
+#prop-moltiplicazione_naturali-1-2-1 > li::marker { content: ""counter(prop-moltiplicazione_naturali-1-2-1,decimal)"."; }
+#prop-moltiplicazione_naturali-1-2-1 > li { counter-increment: prop-moltiplicazione_naturali-1-2-1; }
+#cor-somma_prodotto_positivi_negativi-1-2-1 { counter-set: cor-somma_prodotto_positivi_negativi-1-2-1 0; }
+#cor-somma_prodotto_positivi_negativi-1-2-1 > li::marker { content: ""counter(cor-somma_prodotto_positivi_negativi-1-2-1,decimal)"."; }
+#cor-somma_prodotto_positivi_negativi-1-2-1 > li { counter-increment: cor-somma_prodotto_positivi_negativi-1-2-1; }
+#gfdl-section4-2-1 { counter-set: gfdl-section4-2-1 0; }
+#gfdl-section4-2-1 > li::marker { content: ""counter(gfdl-section4-2-1,upper-alpha)"."; }
+#gfdl-section4-2-1 > li { counter-increment: gfdl-section4-2-1; }
+</style>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Vai all'indice generale</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -130,8 +279,9 @@ window.MathJax = {
 \newcommand{\Reali}{\mathbf{R}}
 \newcommand{\Naturali}{\mathbf{N}}
 \newcommand{\Interi}{\mathbf{Z}}
- \newcommand{\Razionali}{\mathbf{Q}}
- \newcommand{\Complessi}{\mathbf{C}}
+\newcommand{\Razionali}{\mathbf{Q}}
+\newcommand{\Complessi}{\mathbf{C}}
+\newcommand{\campo}[1]{\mathbf{F}_{#1}}
 
  \newcommand{\grgen}[1]{\langle#1\rangle}
  \newcommand{\ideal}[1]{\left(#1\right)}
@@ -152,6 +302,7 @@ window.MathJax = {
  \newcommand{\euclidean}{\delta}
  \newcommand{\posto}[3]{#1_{#2#3}}
  \newcommand{\restrizione}[2]{\left. #1\right|_{#2}}
+ \newcommand{\indotto}[1]{\hat{#1}}
 
  \newcommand{\vect}[1]{\boldsymbol{#1}}
  
@@ -574,107 +725,93 @@ window.MathJax = {
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-estensione_campi.html" class="internal"><span class="codenumber">23</span> <span class="title">Estensioni di campi</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-elementi_algebrici_e_trascendenti.html" class="internal"><span class="codenumber">23.1</span> <span class="title">Elementi algebrici e trascendenti</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_algebrici_e_trascendenti.html#exercises-elementi_algebrici_e_trascendenti" class="internal"><span class="codenumber">23.1</span> <span class="title">Esercizi</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-campo_di_spezzamento.html" class="internal"><span class="codenumber">23.2</span> <span class="title">Campi di spezzamento</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-campo_di_spezzamento.html#exercises-campo_di_spezzamento" class="internal"><span class="codenumber">23.2</span> <span class="title">Esercizi</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-chiusure_algebriche.html" class="internal"><span class="codenumber">23.3</span> <span class="title">Cenni su campi algebricamente chiusi</span></a></div></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toc-item toc-part">
 <div class="toc-title-box"><a href="part-moduli.html" class="internal"><span class="codenumber">V</span> <span class="title">Moduli</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-moduli.html" class="internal"><span class="codenumber">24</span> <span class="title">Moduli</span></a></div>
+<div class="toc-title-box"><a href="ch-moduli.html" class="internal"><span class="codenumber">23</span> <span class="title">Moduli</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-definizione_di_moduli.html" class="internal"><span class="codenumber">24.1</span> <span class="title">Definizione di modulo</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizione_di_moduli.html#exercises-definizione_modulo" class="internal"><span class="codenumber">24.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-definizione_di_moduli.html" class="internal"><span class="codenumber">23.1</span> <span class="title">Definizione di modulo</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizione_di_moduli.html#exercises-definizione_modulo" class="internal"><span class="codenumber">23.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-sottomoduli.html" class="internal"><span class="codenumber">24.2</span> <span class="title">Sottomoduli</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottomoduli.html#exercises-sottomoduli" class="internal"><span class="codenumber">24.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-sottomoduli.html" class="internal"><span class="codenumber">23.2</span> <span class="title">Sottomoduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottomoduli.html#exercises-sottomoduli" class="internal"><span class="codenumber">23.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-omomorfismi_moduli.html" class="internal"><span class="codenumber">24.3</span> <span class="title">Omomorfismi di moduli</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-omomorfismi_moduli.html#exercises-omomorfismi_moduli" class="internal"><span class="codenumber">24.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-omomorfismi_moduli.html" class="internal"><span class="codenumber">23.3</span> <span class="title">Omomorfismi di moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-omomorfismi_moduli.html#exercises-omomorfismi_moduli" class="internal"><span class="codenumber">23.3</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-moduli_quoziente.html" class="internal"><span class="codenumber">24.4</span> <span class="title">Moduli quoziente</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_quoziente.html#exercises-moduli_quoziente" class="internal"><span class="codenumber">24.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-moduli_quoziente.html" class="internal"><span class="codenumber">23.4</span> <span class="title">Moduli quoziente</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_quoziente.html#exercises-moduli_quoziente" class="internal"><span class="codenumber">23.4</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-moduli_liberi.html" class="internal"><span class="codenumber">25</span> <span class="title">Moduli liberi</span></a></div>
+<div class="toc-title-box"><a href="ch-moduli_liberi.html" class="internal"><span class="codenumber">24</span> <span class="title">Moduli liberi</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-somma_diretta_moduli.html" class="internal"><span class="codenumber">25.1</span> <span class="title">Somma diretta di moduli</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-somma_diretta_moduli.html#exercises-somma_diretta_moduli" class="internal"><span class="codenumber">25.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-somma_diretta_moduli.html" class="internal"><span class="codenumber">24.1</span> <span class="title">Somma diretta di moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-somma_diretta_moduli.html#exercises-somma_diretta_moduli" class="internal"><span class="codenumber">24.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-dipendenza_lineare.html" class="internal"><span class="codenumber">25.2</span> <span class="title">Dipendenza e indipendenza lineare</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-dipendenza_lineare.html#exercises-dipendenza_lineare" class="internal"><span class="codenumber">25.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-dipendenza_lineare.html" class="internal"><span class="codenumber">24.2</span> <span class="title">Dipendenza e indipendenza lineare</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-dipendenza_lineare.html#exercises-dipendenza_lineare" class="internal"><span class="codenumber">24.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-elementi_di_torsione.html" class="internal"><span class="codenumber">25.3</span> <span class="title">Elementi di torsione</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_di_torsione.html#exercises-elementi_di_torsione" class="internal"><span class="codenumber">25.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-elementi_di_torsione.html" class="internal"><span class="codenumber">24.3</span> <span class="title">Elementi di torsione</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_di_torsione.html#exercises-elementi_di_torsione" class="internal"><span class="codenumber">24.3</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-modulisupid.html" class="internal"><span class="codenumber">26</span> <span class="title">Moduli finitamente generati su PID</span></a></div>
+<div class="toc-title-box"><a href="ch-modulisupid.html" class="internal"><span class="codenumber">25</span> <span class="title">Moduli finitamente generati su PID</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-moduli_ciclici.html" class="internal"><span class="codenumber">26.1</span> <span class="title">Moduli ciclici</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_ciclici.html#exercises-moduli_ciclici" class="internal"><span class="codenumber">26.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-moduli_ciclici.html" class="internal"><span class="codenumber">25.1</span> <span class="title">Moduli ciclici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_ciclici.html#exercises-moduli_ciclici" class="internal"><span class="codenumber">25.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-moduli_primari.html" class="internal"><span class="codenumber">26.2</span> <span class="title">Moduli primari</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_primari.html#exercises-moduli_primari" class="internal"><span class="codenumber">26.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-moduli_primari.html" class="internal"><span class="codenumber">25.2</span> <span class="title">Moduli primari</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_primari.html#exercises-moduli_primari" class="internal"><span class="codenumber">25.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-moduli_liberi.html" class="internal"><span class="codenumber">26.3</span> <span class="title">Moduli liberi</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_liberi.html#exercises-moduli_liberi" class="internal"><span class="codenumber">26.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-moduli_liberi.html" class="internal"><span class="codenumber">25.3</span> <span class="title">Moduli liberi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_liberi.html#exercises-moduli_liberi" class="internal"><span class="codenumber">25.3</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-classificazione_moduli_pid.html" class="internal"><span class="codenumber">26.4</span> <span class="title">La classificazione dei moduli finitamente generati su un dominio a ideali principali</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-classificazione_moduli_pid.html" class="internal"><span class="codenumber">25.4</span> <span class="title">La classificazione dei moduli finitamente generati su un dominio a ideali principali</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-gruppiabeliani.html" class="internal"><span class="codenumber">27</span> <span class="title">Gruppi abeliani finitamente generati</span></a></div>
+<div class="toc-title-box"><a href="ch-gruppiabeliani.html" class="internal"><span class="codenumber">26</span> <span class="title">Gruppi abeliani finitamente generati</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-gruppiabeliani.html" class="internal"><span class="codenumber">27.1</span> <span class="title">Classificazione dei gruppi abeliani finitamente generati</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppiabeliani.html#exercises-gruppiabeliani" class="internal"><span class="codenumber">27.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-gruppiabeliani.html" class="internal"><span class="codenumber">26.1</span> <span class="title">Classificazione dei gruppi abeliani finitamente generati</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppiabeliani.html#exercises-gruppiabeliani" class="internal"><span class="codenumber">26.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li></ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-formecanoniche.html" class="internal"><span class="codenumber">28</span> <span class="title">Forme canoniche di matrici</span></a></div>
+<div class="toc-title-box"><a href="ch-formecanoniche.html" class="internal"><span class="codenumber">27</span> <span class="title">Forme canoniche di matrici</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-kx_moduli.html" class="internal"><span class="codenumber">28.1</span> <span class="title">Spazi vettoriali con endomorfismi visti come moduli</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-kx_moduli.html#exercises-kx_moduli" class="internal"><span class="codenumber">28.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-kx_moduli.html" class="internal"><span class="codenumber">27.1</span> <span class="title">Spazi vettoriali con endomorfismi visti come moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-kx_moduli.html#exercises-kx_moduli" class="internal"><span class="codenumber">27.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-matrici_rappresentative.html" class="internal"><span class="codenumber">28.2</span> <span class="title">Matrici rappresentative</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-matrici_rappresentative.html#exercises-matrici_rappresentative" class="internal"><span class="codenumber">28.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-matrici_rappresentative.html" class="internal"><span class="codenumber">27.2</span> <span class="title">Matrici rappresentative</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-matrici_rappresentative.html#exercises-matrici_rappresentative" class="internal"><span class="codenumber">27.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-matrici_compagne.html" class="internal"><span class="codenumber">28.3</span> <span class="title">Matrici compagne</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-matrici_compagne.html" class="internal"><span class="codenumber">27.3</span> <span class="title">Matrici compagne</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-jordan.html" class="internal"><span class="codenumber">28.4</span> <span class="title">Forma canonica di Jordan</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-jordan.html#exercises-jordan" class="internal"><span class="codenumber">28.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-jordan.html" class="internal"><span class="codenumber">27.4</span> <span class="title">Forma canonica di Jordan</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-jordan.html#exercises-jordan" class="internal"><span class="codenumber">27.4</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html" class="internal"><span class="codenumber">28.5</span> <span class="title">Polinomio minimo di matrici</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html#exercises-polinomio_minimo_matrici" class="internal"><span class="codenumber">28.5</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html" class="internal"><span class="codenumber">27.5</span> <span class="title">Polinomio minimo di matrici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html#exercises-polinomio_minimo_matrici" class="internal"><span class="codenumber">27.5</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -710,7 +847,7 @@ window.MathJax = {
 <div class="para" id="def-PID-1-1">Un dominio in cui tutti gli ideali sono principali è detto <dfn class="terminology">dominio a ideali principali</dfn> (in breve, PID<details class="ptx-footnote" aria-live="polite" id="def-PID-1-1-2"><summary class="ptx-footnote__number" title="Nota a piè di pagina 21.3.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="def-PID-1-1-2">Dall’inglese Principal Ideal Domain.</div></details>).</div></article><article class="proposition theorem-like" id="prop-PID_Noetheriani"><h3 class="heading">
 <span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">21.3.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="prop-PID_Noetheriani-1-1">In un dominio a ideali principali <span class="process-math">\(D\text{,}\)</span> ogni famiglia non vuota <span class="process-math">\(\mathcal{F}\)</span> di ideali ammette un elemento massimale.</div></article><details id="prop-PID_Noetheriani-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-PID_Noetheriani-2-1">Sia <span class="process-math">\(I_{1}\)</span> un elemento di <span class="process-math">\(\mathcal{F}\text{:}\)</span> se <span class="process-math">\(I_{1}\)</span> è massimale in <span class="process-math">\(\mathcal{F}\text{,}\)</span> abbiamo finito, altrimenti esiste un elemento <span class="process-math">\(I_{2}\)</span> in <span class="process-math">\(\mathcal{F}\)</span> tale che <span class="process-math">\(I_{1}\subsetneq I_{2}\text{.}\)</span> Procedendo così, costruiamo una catena strettamente ascendente di ideali <span class="process-math">\(I_{1}\subsetneq I_{2}\subsetneq I_{3}\subsetneq \cdots\text{.}\)</span> Se non trovassimo mai un ideale massimale, il procedimento non avrebbe termine: mostriamo quindi che ciò non può avvenire. Posto <span class="process-math">\(I\coloneqq \bigcup_{j}I_{j}\text{,}\)</span> questo è un ideale di <span class="process-math">\(D\text{:}\)</span> infatti è non vuoto e se <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> sono due elementi di <span class="process-math">\(I\)</span> e <span class="process-math">\(c\)</span> un elemento di <span class="process-math">\(D\text{,}\)</span> sappiamo che <span class="process-math">\(a\in I_{t}\)</span> e <span class="process-math">\(b\in I_{u}\)</span> per qualche <span class="process-math">\(t\)</span> e <span class="process-math">\(u\text{;}\)</span> detto <span class="process-math">\(m\)</span> il massimo di <span class="process-math">\(t\)</span> e <span class="process-math">\(u\)</span> abbiamo che <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> sono elementi di <span class="process-math">\(I_{m}\)</span> e, di conseguenza, <span class="process-math">\(a+b\in I_{m}\subseteq I\)</span> e <span class="process-math">\(ac\in I_{t}\subseteq I\text{.}\)</span>
+<div class="para" id="prop-PID_Noetheriani-1-1">In un dominio a ideali principali <span class="process-math">\(D\text{,}\)</span> ogni famiglia non vuota <span class="process-math">\(\mathcal{F}\)</span> di ideali ammette un elemento massimale.</div></article><details id="prop-PID_Noetheriani-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-PID_Noetheriani-2-1">Sia <span class="process-math">\(I_{1}\)</span> un elemento di <span class="process-math">\(\mathcal{F}\text{:}\)</span> se <span class="process-math">\(I_{1}\)</span> è massimale in <span class="process-math">\(\mathcal{F}\text{,}\)</span> abbiamo finito, altrimenti esiste un elemento <span class="process-math">\(I_{2}\)</span> in <span class="process-math">\(\mathcal{F}\)</span> tale che <span class="process-math">\(I_{1}\subsetneq I_{2}\text{.}\)</span> Procedendo così, costruiamo una catena strettamente ascendente di ideali <span class="process-math">\(I_{1}\subsetneq I_{2}\subsetneq I_{3}\subsetneq \cdots\text{.}\)</span> Se non trovassimo mai un ideale massimale, il procedimento non avrebbe termine: mostriamo quindi che ciò non può avvenire. Posto <span class="process-math">\(I\coloneqq \bigcup_{j}I_{j}\text{,}\)</span> questo è un ideale di <span class="process-math">\(D\text{:}\)</span> infatti, è non vuoto e se <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> sono due elementi di <span class="process-math">\(I\)</span> e <span class="process-math">\(c\)</span> un elemento di <span class="process-math">\(D\text{,}\)</span> sappiamo che <span class="process-math">\(a\in I_{t}\)</span> e <span class="process-math">\(b\in I_{u}\)</span> per qualche <span class="process-math">\(t\)</span> e <span class="process-math">\(u\text{;}\)</span> detto <span class="process-math">\(m\)</span> il massimo di <span class="process-math">\(t\)</span> e <span class="process-math">\(u\)</span> abbiamo che <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> sono elementi di <span class="process-math">\(I_{m}\)</span> e, di conseguenza, <span class="process-math">\(a+b\in I_{m}\subseteq I\)</span> e <span class="process-math">\(ac\in I_{t}\subseteq I\text{.}\)</span>
 </div> <div class="para" id="prop-PID_Noetheriani-2-2">Ora <span class="process-math">\(I\)</span> è un ideale principale generato da un suo certo elemento <span class="process-math">\(b\text{.}\)</span> Ma allora <span class="process-math">\(b\in I_{k}\)</span> per qualche <span class="process-math">\(k\text{:}\)</span> pertanto <span class="process-math">\(I=\ideal{b}\subseteq I_{k}\subseteq I_{k+1}\subseteq I\)</span> da cui segue <span class="process-math">\(I_{k}=I_{k+1}\text{,}\)</span> contro il modo in cui abbiamo costruito la sequenza di ideali <span class="process-math">\(I_{j}\text{.}\)</span>
 </div></article></details><article class="proposition theorem-like" id="prop-MCD_in_PID"><h3 class="heading">
 <span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">21.3.3</span><span class="period">.</span>
@@ -734,7 +871,8 @@ d\coloneqq a_{1}u_{1}+a_{2}u_{2}+\cdots+a_{n}u_{n}
 </div></article><article class="theorem theorem-like" id="thm-PID_UFD"><h3 class="heading">
 <span class="type">Teorema</span><span class="space"> </span><span class="codenumber">21.3.5</span><span class="period">.</span>
 </h3>
-<div class="para" id="thm-PID_UFD-1-1">Un dominio a ideali principali <span class="process-math">\(D\)</span> è un dominio a fattorizzazione unica.</div></article><details id="thm-PID_UFD-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-PID_UFD-2-1">Grazie al <a href="sec-fattorizzazione.html#thm-caratterizzazione_UFD" class="xref" data-knowl="./knowl/xref/thm-caratterizzazione_UFD.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 21.2.23">Teorema 21.2.23</a> e alla <a href="sec-PID_euclidei.html#prop-MCD_in_PID" class="xref" data-knowl="./knowl/xref/prop-MCD_in_PID.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 21.3.3">Proposizione 21.3.3</a> è sufficiente mostrare che ogni elemento non nullo e non invertibile si esprime come prodotto di irriducibili. Supponiamo, per assurdo, che esista qualche elemento per cui ciò non sia vero e consideriamo la famiglia di ideali generati da tali elementi. Per la <a href="sec-PID_euclidei.html#prop-PID_Noetheriani" class="xref" data-knowl="./knowl/xref/prop-PID_Noetheriani.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 21.3.2">Proposizione 21.3.2</a>, esiste un ideale massimale <span class="process-math">\(\ideal{a}\)</span> in questa famiglia: in particolare, <span class="process-math">\(a\)</span> non è un elemento irriducibile e, quindi, esistono <span class="process-math">\(b\)</span> e <span class="process-math">\(c\)</span> tali che <span class="process-math">\(a=bc\)</span> con <span class="process-math">\(b\)</span> e <span class="process-math">\(c\)</span> non associati ad <span class="process-math">\(a\)</span> e non invertibili. Ciò significa che gli ideali <span class="process-math">\(\ideal{b}\)</span> e <span class="process-math">\(\ideal{c}\)</span> contengono strettamente <span class="process-math">\(\ideal{a}\text{.}\)</span> Per la massimalità di <span class="process-math">\(\ideal{a}\)</span> gli elementi <span class="process-math">\(b\)</span> e <span class="process-math">\(c\)</span> si possono esprimere come prodotto di irriducibili: ma allora <span class="process-math">\(a=bc\)</span> è prodotto di irriducibili.</div></article></details><article class="definition definition-like" id="def-dominio_euclideo"><h3 class="heading">
+<div class="para" id="thm-PID_UFD-1-1">Un dominio a ideali principali <span class="process-math">\(D\)</span> è un dominio a fattorizzazione unica.</div></article><details id="thm-PID_UFD-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-PID_UFD-2-1">Grazie al <a href="sec-fattorizzazione.html#thm-caratterizzazione_UFD" class="xref" data-knowl="./knowl/xref/thm-caratterizzazione_UFD.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 21.2.23">Teorema 21.2.23</a> e alla <a href="sec-PID_euclidei.html#prop-MCD_in_PID" class="xref" data-knowl="./knowl/xref/prop-MCD_in_PID.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 21.3.3">Proposizione 21.3.3</a> è sufficiente mostrare che ogni elemento non nullo e non invertibile si esprime come prodotto di irriducibili. Supponiamo, per assurdo, che esista qualche elemento per cui ciò non sia vero e consideriamo la famiglia di ideali generati da tali elementi. Per la <a href="sec-PID_euclidei.html#prop-PID_Noetheriani" class="xref" data-knowl="./knowl/xref/prop-PID_Noetheriani.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 21.3.2">Proposizione 21.3.2</a>, esiste un ideale massimale <span class="process-math">\(\ideal{a}\)</span> in questa famiglia: in particolare, <span class="process-math">\(a\)</span> non è un elemento irriducibile e, quindi, esistono <span class="process-math">\(b\)</span> e <span class="process-math">\(c\)</span> tali che <span class="process-math">\(a=bc\)</span> con <span class="process-math">\(b\)</span> e <span class="process-math">\(c\)</span> non associati ad <span class="process-math">\(a\)</span> e non invertibili. Ciò significa che gli ideali <span class="process-math">\(\ideal{b}\)</span> e <span class="process-math">\(\ideal{c}\)</span> contengono strettamente <span class="process-math">\(\ideal{a}\text{.}\)</span> Per la massimalità di <span class="process-math">\(\ideal{a}\)</span> gli elementi <span class="process-math">\(b\)</span> e <span class="process-math">\(c\)</span> si possono esprimere come prodotto di irriducibili: ma allora <span class="process-math">\(a=bc\)</span> è prodotto di irriducibili.</div></article></details><div class="para" id="sec-PID_euclidei-8">Finora abbiamo visto alcune proprietà dei domini a ideali principali ma non ne abbiamo presentato alcun esempio. Per far ciò, introduciamo una classe di domini i cui membri sono, in particolare, domini a ideali principali.</div>
+<article class="definition definition-like" id="def-dominio_euclideo"><h3 class="heading">
 <span class="type">Definizione</span><span class="space"> </span><span class="codenumber">21.3.6</span><span class="period">.</span>
 </h3>
 <div class="para logical" id="def-dominio_euclideo-1-1">
@@ -746,10 +884,10 @@ a=bq+r
 </div>
 <div class="para">e <span class="process-math">\(\euclidean(r) \lt \euclidean(b)\)</span> o <span class="process-math">\(r=0\text{.}\)</span>
 </div>
-</div></article><article class="example example-like" id="sec-PID_euclidei-9"><h3 class="heading">
+</div></article><article class="example example-like" id="sec-PID_euclidei-10"><h3 class="heading">
 <span class="type">Esempio</span><span class="space"> </span><span class="codenumber">21.3.7</span><span class="period">.</span>
 </h3>
-<div class="para" id="sec-PID_euclidei-9-1-1">Consideriamo l’anello degli interi <span class="process-math">\(\Interi\)</span> e sia <span class="process-math">\(\euclidean\)</span> la funzione valore assoluto. Siano ora <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> due interi con <span class="process-math">\(b\ne0\text{.}\)</span> Ovviamente, <span class="process-math">\(\abs{b} \gt 0\)</span> e, quindi, considerando l’usuale divisione con resto, troviamo <span class="process-math">\(q'\)</span> e <span class="process-math">\(r\)</span> tali che <span class="process-math">\(a=\abs{b}q'+r\)</span> con <span class="process-math">\(0\le r \lt \abs{b}\text{.}\)</span> Abbiamo allora <span class="process-math">\(a=bq+r\)</span> dove <span class="process-math">\(q=q'\)</span> se <span class="process-math">\(b \gt 0\)</span> e <span class="process-math">\(q=-q'\)</span> se <span class="process-math">\(b \lt 0\text{.}\)</span> Dunque, gli interi sono un dominio euclideo rispetto alla funzione valore assoluto.</div> <div class="para" id="sec-PID_euclidei-9-1-2">Notiamo che in generale gli elementi <span class="process-math">\(q\)</span> e <span class="process-math">\(r\)</span> non sono univocamente determinati. Ad esempio, dati <span class="process-math">\(a\coloneqq 5\)</span> e <span class="process-math">\(b\coloneqq 3\)</span> in <span class="process-math">\(\Interi\text{,}\)</span> possiamo scrivere <span class="process-math">\(5=3\cdot 2-1\)</span> e <span class="process-math">\(5=3\cdot 1+2\)</span> (si noti che <span class="process-math">\(\abs{-1} \lt \abs{3}\)</span> e <span class="process-math">\(\abs{2} \lt \abs{3}\)</span>).</div></article><div class="para" id="sec-PID_euclidei-10">Nel <a href="sec-valutazione_polinomi.html#thm-divisione_tra_polinomi" class="xref" data-knowl="./knowl/xref/thm-divisione_tra_polinomi.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 20.2.3: Divisione tra polinomi">Teorema 20.2.3</a> abbiamo descritto la divisione tra polinomi, assumendo che il divisore avesse coefficiente direttivo invertibile. Poiché tutti gli elementi non nulli di un campo sono invertibili, abbiamo immediatamente</div>
+<div class="para" id="sec-PID_euclidei-10-1-1">Consideriamo l’anello degli interi <span class="process-math">\(\Interi\)</span> e sia <span class="process-math">\(\euclidean\)</span> la funzione valore assoluto. Siano ora <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> due interi con <span class="process-math">\(b\ne0\text{.}\)</span> Ovviamente, <span class="process-math">\(\abs{b} \gt 0\)</span> e, quindi, considerando l’usuale divisione con resto, troviamo <span class="process-math">\(q'\)</span> e <span class="process-math">\(r\)</span> tali che <span class="process-math">\(a=\abs{b}q'+r\)</span> con <span class="process-math">\(0\le r \lt \abs{b}\text{.}\)</span> Abbiamo allora <span class="process-math">\(a=bq+r\)</span> dove <span class="process-math">\(q=q'\)</span> se <span class="process-math">\(b \gt 0\)</span> e <span class="process-math">\(q=-q'\)</span> se <span class="process-math">\(b \lt 0\text{.}\)</span> Dunque, gli interi sono un dominio euclideo rispetto alla funzione valore assoluto.</div> <div class="para" id="sec-PID_euclidei-10-1-2">Notiamo che in generale gli elementi <span class="process-math">\(q\)</span> e <span class="process-math">\(r\)</span> non sono univocamente determinati. Ad esempio, dati <span class="process-math">\(a\coloneqq 5\)</span> e <span class="process-math">\(b\coloneqq 3\)</span> in <span class="process-math">\(\Interi\text{,}\)</span> possiamo scrivere <span class="process-math">\(5=3\cdot 2-1\)</span> e <span class="process-math">\(5=3\cdot 1+2\)</span> (si noti che <span class="process-math">\(\abs{-1} \lt \abs{3}\)</span> e <span class="process-math">\(\abs{2} \lt \abs{3}\)</span>).</div></article><div class="para" id="sec-PID_euclidei-11">Nel <a href="sec-valutazione_polinomi.html#thm-divisione_tra_polinomi" class="xref" data-knowl="./knowl/xref/thm-divisione_tra_polinomi.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 20.2.3: Divisione tra polinomi">Teorema 20.2.3</a> abbiamo descritto la divisione tra polinomi, assumendo che il divisore avesse coefficiente direttivo invertibile. Poiché tutti gli elementi non nulli di un campo sono invertibili, abbiamo immediatamente</div>
 <article class="example example-like" id="ex-kx-euclideo"><h3 class="heading">
 <span class="type">Esempio</span><span class="space"> </span><span class="codenumber">21.3.8</span><span class="period">.</span>
 </h3>
@@ -761,7 +899,7 @@ f=gq+r
 \end{equation*}
 </div>
 <div class="para">con <span class="process-math">\(\deg r \lt \deg g\)</span> o <span class="process-math">\(r=0\text{.}\)</span> In particolare, <span class="process-math">\(K[x]\text{,}\)</span> è un dominio euclideo rispetto alla funzione grado.</div>
-</div></article><div class="para" id="sec-PID_euclidei-12">Vediamo ora un esempio meno immediato.</div>
+</div></article><div class="para" id="sec-PID_euclidei-13">Vediamo ora un esempio meno immediato.</div>
 <article class="example example-like" id="ex-interi_gaussiani"><h3 class="heading">
 <span class="type">Esempio</span><span class="space"> </span><span class="codenumber">21.3.9</span><span class="period">.</span>
 </h3>
@@ -777,15 +915,20 @@ f=gq+r
 <span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">21.3.10</span><span class="period">.</span>
 </h3>
 <div class="para" id="prop-euclideo_PID-1-1">Un dominio euclideo <span class="process-math">\(D\)</span> è un dominio a ideali principali.</div></article><details id="prop-euclideo_PID-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-euclideo_PID-2-1">Sia <span class="process-math">\(I\)</span> un ideale di <span class="process-math">\(D\text{.}\)</span> Se <span class="process-math">\(I=0\text{,}\)</span> l’ideale è ovviamente principale. Se <span class="process-math">\(I\ne0\text{,}\)</span> scegliamo tra gli elementi non nulli di <span class="process-math">\(I\)</span> un elemento <span class="process-math">\(b\)</span> tale che <span class="process-math">\(\euclidean(b)\)</span> sia minimo possibile. Mostriamo che <span class="process-math">\(b\)</span> genera <span class="process-math">\(I\text{.}\)</span> Sia infatti <span class="process-math">\(a\)</span> un elemento di <span class="process-math">\(I\)</span> e siano <span class="process-math">\(q\)</span> e <span class="process-math">\(r\)</span> in <span class="process-math">\(D\)</span> tali che <span class="process-math">\(a=bq+r\)</span> e <span class="process-math">\(\euclidean(r) \lt\euclidean(b)\)</span> o <span class="process-math">\(r=0\text{.}\)</span> Ora <span class="process-math">\(r=a-bq\in I\)</span> quindi, se fosse <span class="process-math">\(r\ne0\text{,}\)</span> avremmo <span class="process-math">\(\euclidean(r) \lt \euclidean(b)\)</span> contro la scelta di <span class="process-math">\(b\text{.}\)</span> Dunque, <span class="process-math">\(r=0\)</span> cioè <span class="process-math">\(a=bq\text{,}\)</span> vale a dire <span class="process-math">\(a\)</span> è multiplo di <span class="process-math">\(b\text{.}\)</span>
-</div></article></details><div class="para" id="sec-PID_euclidei-15">Tenuto conto del <a href="sec-PID_euclidei.html#thm-PID_UFD" class="xref" data-knowl="./knowl/xref/thm-PID_UFD.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 21.3.5">Teorema 21.3.5</a> segue allora immediatamente il:</div>
+</div></article></details><div class="para" id="sec-PID_euclidei-16">Tenuto conto del <a href="sec-PID_euclidei.html#thm-PID_UFD" class="xref" data-knowl="./knowl/xref/thm-PID_UFD.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 21.3.5">Teorema 21.3.5</a> segue allora immediatamente il:</div>
 <article class="corollary theorem-like" id="cor-euclideo_UFD"><h3 class="heading">
 <span class="type">Corollario</span><span class="space"> </span><span class="codenumber">21.3.11</span><span class="period">.</span>
 </h3>
-<div class="para" id="cor-euclideo_UFD-1-1">Un dominio euclideo è un dominio a fattorizzazione unica.</div></article><div class="para" id="sec-PID_euclidei-17">Gli esempi di domini euclidei che abbiamo elencato, e cioè l’anello degli interi <span class="process-math">\(\Interi\text{,}\)</span> l’anello dei polinomi <span class="process-math">\(K[x]\)</span> a coefficienti in un campo <span class="process-math">\(K\text{,}\)</span> e l’anello degli interi gaussiani <span class="process-math">\(\Interi[i]\)</span> sono dunque domini a ideali principali e, di conseguenza domini a fattorizzazione unica. In particolare, notiamo che se <span class="process-math">\(I\)</span> è un ideale non nullo di <span class="process-math">\(K[x]\)</span> allora <span class="process-math">\(I\)</span> può essere generato da un suo qualsiasi elemento non nullo di grado minimo.</div>
-<div class="para" id="sec-PID_euclidei-18">Non tutti i domini a ideali principali sono domini euclidei: la costruzione di un dominio a ideali principali che non sia euclideo va però oltre lo scopo di questo libro.</div>
-<div class="para" id="sec-PID_euclidei-19">L’<a href="sec-divisibilita_interi.html#alg-euclide" class="xref" data-knowl="./knowl/xref/alg-euclide.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Algoritmo 5.3.15: Algoritmo di Euclide">Algoritmo 5.3.15</a>, che abbiamo utilizzato per determinare il massimo comun divisore e un’identità di Bezout tra due numeri interi può essere adattato a un dominio euclideo qualunque.</div>
+<div class="para" id="cor-euclideo_UFD-1-1">Un dominio euclideo è un dominio a fattorizzazione unica.</div></article><div class="para" id="sec-PID_euclidei-18">Gli esempi di domini euclidei che abbiamo elencato, e cioè l’anello degli interi <span class="process-math">\(\Interi\text{,}\)</span> l’anello dei polinomi <span class="process-math">\(K[x]\)</span> a coefficienti in un campo <span class="process-math">\(K\text{,}\)</span> e l’anello degli interi gaussiani <span class="process-math">\(\Interi[i]\)</span> sono, dunque, domini a ideali principali e, di conseguenza, domini a fattorizzazione unica. In particolare, notiamo che se <span class="process-math">\(I\)</span> è un ideale non nullo di <span class="process-math">\(K[x]\)</span> allora <span class="process-math">\(I\)</span> può essere generato da un suo qualsiasi elemento non nullo di grado minimo.</div>
+<div class="para" id="sec-PID_euclidei-19">Diamo ora un esempio di dominio che non è a ideali principali (e, a maggior ragione, non è euclideo).</div>
+<article class="example example-like" id="ex-Zx_non_PID"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">21.3.12</span><span class="period">.</span>
+</h3>
+<div class="para" id="ex-Zx_non_PID-1-1">Consideriamo l’anello dei polinomi <span class="process-math">\(\Interi[x]\text{.}\)</span> Si verifica facilmente che l’insieme <span class="process-math">\(I\)</span> dei polinomi a termine noto pari è un ideale. Mostriamo che <span class="process-math">\(I\)</span> non è un ideale principale (e, di conseguenza, <span class="process-math">\(\Interi[x]\)</span> non è un dominio a ideali principali). Si verifica facilmente che non c’è nessun polinomio <span class="process-math">\(f\)</span> in <span class="process-math">\(I\)</span> che divide sia <span class="process-math">\(2\)</span> che <span class="process-math">\(x\)</span> (questi due sono elementi di <span class="process-math">\(I\)</span>): dunque non c’è nessun <span class="process-math">\(f\)</span> in <span class="process-math">\(I\)</span> che genera <span class="process-math">\(I\text{.}\)</span>
+</div></article><div class="para" id="sec-PID_euclidei-21">Dare invece un esempio di un dominio a ideali principali che non sia euclideo è decisamente più complicato: la costruzione di un tale esempio va però oltre lo scopo di questo libro.</div>
+<div class="para" id="sec-PID_euclidei-22">L’<a href="sec-divisibilita_interi.html#alg-euclide" class="xref" data-knowl="./knowl/xref/alg-euclide.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Algoritmo 5.3.15: Algoritmo di Euclide">Algoritmo 5.3.15</a>, che abbiamo utilizzato per determinare il massimo comun divisore e un’identità di Bezout tra due numeri interi può essere adattato a un dominio euclideo qualunque.</div>
 <article class="algorithm theorem-like" id="alg-euclide_domini"><h3 class="heading">
-<span class="type">Algoritmo</span><span class="space"> </span><span class="codenumber">21.3.12</span><span class="period">.</span><span class="space"> </span><span class="title">Algoritmo di Euclide per i domini euclidei.</span>
+<span class="type">Algoritmo</span><span class="space"> </span><span class="codenumber">21.3.13</span><span class="period">.</span><span class="space"> </span><span class="title">Algoritmo di Euclide per i domini euclidei.</span>
 </h3>
 <div class="para" id="alg-euclide_domini-3-1">Sia <span class="process-math">\(D\)</span> un dominio euclideo rispetto alla mappa <span class="process-math">\(\euclidean\)</span> e siano <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> due elementi di <span class="process-math">\(D\text{.}\)</span> Se <span class="process-math">\(b=0\)</span> allora <span class="process-math">\((a,b)\sim 0\)</span> e un’identità di Bezout è banalmente data da <span class="process-math">\(a\cdot0+b\cdot0=0\text{.}\)</span>
 </div> <div class="para logical" id="alg-euclide_domini-3-2">
@@ -810,25 +953,25 @@ d=au+bv
 </div>
 <div class="para">per opportuni elementi <span class="process-math">\(u\)</span> e <span class="process-math">\(v\)</span> di <span class="process-math">\(D\text{.}\)</span>
 </div>
-</div></article><article class="example example-like" id="sec-PID_euclidei-21"><h3 class="heading">
-<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">21.3.13</span><span class="period">.</span>
+</div></article><article class="example example-like" id="sec-PID_euclidei-24"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">21.3.14</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="sec-PID_euclidei-21-1-1">
-<div class="para">Applichiamo l’<a href="sec-PID_euclidei.html#alg-euclide_domini" class="xref" data-knowl="./knowl/xref/alg-euclide_domini.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Algoritmo 21.3.12: Algoritmo di Euclide per i domini euclidei">Algoritmo 21.3.12</a> per trovare il massimo comun divisore tra i polinomi <span class="process-math">\(a\coloneqq 4x^{5}-8x^{4}+x^{3}-5x^{2}+7x-2\)</span> e <span class="process-math">\(b\coloneqq 2x^{4}-3x^{3}-2x^{2}-4x+1\)</span> a coefficienti in <span class="process-math">\(\Razionali\text{.}\)</span> Dividendo <span class="process-math">\(a\)</span> per <span class="process-math">\(b\)</span> troviamo</div>
+<div class="para logical" id="sec-PID_euclidei-24-1-1">
+<div class="para">Applichiamo l’<a href="sec-PID_euclidei.html#alg-euclide_domini" class="xref" data-knowl="./knowl/xref/alg-euclide_domini.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Algoritmo 21.3.13: Algoritmo di Euclide per i domini euclidei">Algoritmo 21.3.13</a> per trovare il massimo comun divisore tra i polinomi <span class="process-math">\(a\coloneqq 4x^{5}-8x^{4}+x^{3}-5x^{2}+7x-2\)</span> e <span class="process-math">\(b\coloneqq 2x^{4}-3x^{3}-2x^{2}-4x+1\)</span> a coefficienti in <span class="process-math">\(\Razionali\text{.}\)</span> Dividendo <span class="process-math">\(a\)</span> per <span class="process-math">\(b\)</span> troviamo</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/alg-euclide_domini.html">
 \begin{equation*}
 a=b(2x-1)+2x^{3}+x^{2}+x-1\text{.}
 \end{equation*}
 </div>
 <div class="para">Procediamo con le altre divisioni:</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/alg-euclide_domini.html" id="sec-PID_euclidei-21-1-1-8">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/alg-euclide_domini.html" id="sec-PID_euclidei-24-1-1-8">
 \begin{align*}
 b \amp =(2x^{3}+x^{2}+x-1)(x-2)-x^{2}-x-1\\
 2x^{3}+x^{2}+x-1 \amp =(-x^{2}-x-1)(-2x+1)+0
 \end{align*}
 </div>
-<div class="para">L’ultimo resto non nullo è <span class="process-math">\(-x^{2}-x-1\)</span> che è dunque il massimo comun divisore di <span class="process-math">\(a\)</span> e <span class="process-math">\(b\text{.}\)</span> Per ottenere un’identità di Bezout procediamo così:</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/alg-euclide_domini.html" id="sec-PID_euclidei-21-1-1-12">
+<div class="para">L’ultimo resto non nullo è <span class="process-math">\(-x^{2}-x-1\)</span> che è, dunque, il massimo comun divisore di <span class="process-math">\(a\)</span> e <span class="process-math">\(b\text{.}\)</span> Per ottenere un’identità di Bezout procediamo così:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/alg-euclide_domini.html" id="sec-PID_euclidei-24-1-1-12">
 \begin{align*}
 -x^{2}-x-1 \amp =b-(2x^{3}+x^{2}+x-1)(x-2)\\
 \amp =b-(a-b(2x-1))(x-2)=a(2-x)+b(2x^{2}-5x+3) 
@@ -844,7 +987,7 @@ b \amp =(2x^{3}+x^{2}+x-1)(x-2)-x^{2}-x-1\\
 <article class="exercise exercise-like" id="exercises-PID_euclidei-1-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
 <div class="para" id="exercises-PID_euclidei-1-2-1-1"><span class="process-math">\(13\)</span></div>
 <div class="solutions"><details id="exercises-PID_euclidei-1-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="exercises-PID_euclidei-1-2-2-1">Usiamo la funzione <span class="process-math">\(\euclidean\)</span> definita nell’<a href="sec-PID_euclidei.html#ex-interi_gaussiani" class="xref" data-knowl="./knowl/xref/ex-interi_gaussiani.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Esempio 21.3.9">Esempio 21.3.9</a>, rispetto a cui <span class="process-math">\(\Interi[i]\)</span> è un dominio euclideo.</div> <div class="para" id="exercises-PID_euclidei-1-2-2-2">Sappiamo che <span class="process-math">\(13\)</span> è irriducibile in <span class="process-math">\(\Interi\text{,}\)</span> ma non è detto che lo sia in <span class="process-math">\(\Interi[i]\text{.}\)</span> Ora <span class="process-math">\(\euclidean(13)=13^{2}+0^{2}=169\)</span> e, dall’<a href="sec-PID_euclidei.html#ex-interi_gaussiani" class="xref" data-knowl="./knowl/xref/ex-interi_gaussiani.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Esempio 21.3.9">Esempio 21.3.9</a> sappiamo che se <span class="process-math">\(13=zw\)</span> per qualche <span class="process-math">\(z\)</span> e <span class="process-math">\(w\)</span> in <span class="process-math">\(\Interi[i]\text{,}\)</span> allora <span class="process-math">\(169=\euclidean(13)=\euclidean(z)\euclidean(w)\text{:}\)</span> le possibilità sono che uno tra <span class="process-math">\(\euclidean(z)\)</span> e <span class="process-math">\(\euclidean(w)\)</span> sia <span class="process-math">\(1\)</span> e l’altro <span class="process-math">\(169\)</span> (cioè che uno sia invertibile e l’altro associato a <span class="process-math">\(13\text{,}\)</span> caso che non ci interessa) o che <span class="process-math">\(\euclidean(z)=\euclidean(w)=13\text{.}\)</span> Sia allora <span class="process-math">\(z=a+ib\)</span> con <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> interi e <span class="process-math">\(a^{2}+b^{2}=13\text{.}\)</span> Le uniche possibilità sono <span class="process-math">\(a=\pm 2\)</span> e <span class="process-math">\(b=\pm 3\)</span> o <span class="process-math">\(a=\pm 3\)</span> e <span class="process-math">\(b=\pm 2\text{.}\)</span> Ci sono allora <span class="process-math">\(8\)</span> numeri che soddisfano le condizioni: non sappiamo però se siano divisori di <span class="process-math">\(13\text{.}\)</span> Per evitare di verificarli tutti a uno a uno, notiamo però che se un numero <span class="process-math">\(z\)</span> è divisore di <span class="process-math">\(13\text{,}\)</span> allora tutti i numeri associati a <span class="process-math">\(z\)</span> sono pure divisori di <span class="process-math">\(13\text{.}\)</span> Poiché in <span class="process-math">\(z\)</span> ho <span class="process-math">\(4\)</span> elementi invertibili, e cioè <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(-1\text{,}\)</span> <span class="process-math">\(i\)</span> e <span class="process-math">\(-i\text{,}\)</span> ogni numero non nullo <span class="process-math">\(z\)</span> ha <span class="process-math">\(4\)</span> associati. In particolare <span class="process-math">\(2+3i\)</span> è associato a <span class="process-math">\(-2-3i\text{,}\)</span> <span class="process-math">\(-3+2i\)</span> e <span class="process-math">\(3-2i\text{,}\)</span> mentre gli altri quattro sono associati tra loro (uno di essi è <span class="process-math">\(2-3i\)</span>). Abbiamo ridotto i casi da verificare: o <span class="process-math">\(z\)</span> e <span class="process-math">\(w\)</span> sono uno associato a <span class="process-math">\(2+3i\)</span> e l’altro a <span class="process-math">\(2-3i\)</span> o sono associati tra loro e associati a uno di quei due valori. Si vede però che <span class="process-math">\((2+3i)(2-3i)=13\)</span> e questa è una fattorizzazione in irriducibili di <span class="process-math">\(13\text{:}\)</span> infatti abbiamo già elencato i valori possibili di <span class="process-math">\(\euclidean(z)\)</span> per i divisori <span class="process-math">\(z\)</span> di <span class="process-math">\(13\text{.}\)</span>
+<div class="para" id="exercises-PID_euclidei-1-2-2-1">Usiamo la funzione <span class="process-math">\(\euclidean\)</span> definita nell’<a href="sec-PID_euclidei.html#ex-interi_gaussiani" class="xref" data-knowl="./knowl/xref/ex-interi_gaussiani.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Esempio 21.3.9">Esempio 21.3.9</a>, rispetto a cui <span class="process-math">\(\Interi[i]\)</span> è un dominio euclideo.</div> <div class="para" id="exercises-PID_euclidei-1-2-2-2">Sappiamo che <span class="process-math">\(13\)</span> è irriducibile in <span class="process-math">\(\Interi\text{,}\)</span> ma non è detto che lo sia in <span class="process-math">\(\Interi[i]\text{.}\)</span> Ora <span class="process-math">\(\euclidean(13)=13^{2}+0^{2}=169\)</span> e, dall’<a href="sec-PID_euclidei.html#ex-interi_gaussiani" class="xref" data-knowl="./knowl/xref/ex-interi_gaussiani.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Esempio 21.3.9">Esempio 21.3.9</a> sappiamo che se <span class="process-math">\(13=zw\)</span> per qualche <span class="process-math">\(z\)</span> e <span class="process-math">\(w\)</span> in <span class="process-math">\(\Interi[i]\text{,}\)</span> allora <span class="process-math">\(169=\euclidean(13)=\euclidean(z)\euclidean(w)\text{:}\)</span> le possibilità sono che uno tra <span class="process-math">\(\euclidean(z)\)</span> e <span class="process-math">\(\euclidean(w)\)</span> sia <span class="process-math">\(1\)</span> e l’altro <span class="process-math">\(169\)</span> (cioè che uno sia invertibile e l’altro associato a <span class="process-math">\(13\text{,}\)</span> caso che non ci interessa) o che <span class="process-math">\(\euclidean(z)=\euclidean(w)=13\text{.}\)</span> Sia allora <span class="process-math">\(z=a+ib\)</span> con <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> interi e <span class="process-math">\(a^{2}+b^{2}=13\text{.}\)</span> Le uniche possibilità sono <span class="process-math">\(a=\pm 2\)</span> e <span class="process-math">\(b=\pm 3\)</span> o <span class="process-math">\(a=\pm 3\)</span> e <span class="process-math">\(b=\pm 2\text{.}\)</span> Ci sono allora <span class="process-math">\(8\)</span> numeri che soddisfano le condizioni: non sappiamo però se siano divisori di <span class="process-math">\(13\text{.}\)</span> Per evitare di verificarli tutti a uno a uno, notiamo però che se un numero <span class="process-math">\(z\)</span> è divisore di <span class="process-math">\(13\text{,}\)</span> allora tutti i numeri associati a <span class="process-math">\(z\)</span> sono pure divisori di <span class="process-math">\(13\text{.}\)</span> Poiché in <span class="process-math">\(z\)</span> ho <span class="process-math">\(4\)</span> elementi invertibili, e cioè <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(-1\text{,}\)</span> <span class="process-math">\(i\)</span> e <span class="process-math">\(-i\text{,}\)</span> ogni numero non nullo <span class="process-math">\(z\)</span> ha <span class="process-math">\(4\)</span> associati. In particolare, <span class="process-math">\(2+3i\)</span> è associato a <span class="process-math">\(-2-3i\text{,}\)</span> <span class="process-math">\(-3+2i\)</span> e <span class="process-math">\(3-2i\text{,}\)</span> mentre gli altri quattro sono associati tra loro (uno di essi è <span class="process-math">\(2-3i\)</span>). Abbiamo ridotto i casi da verificare: o <span class="process-math">\(z\)</span> e <span class="process-math">\(w\)</span> sono uno associato a <span class="process-math">\(2+3i\)</span> e l’altro a <span class="process-math">\(2-3i\)</span> o sono associati tra loro e associati a uno di quei due valori. Si vede però che <span class="process-math">\((2+3i)(2-3i)=13\)</span> e questa è una fattorizzazione in irriducibili di <span class="process-math">\(13\text{:}\)</span> infatti, abbiamo già elencato i valori possibili di <span class="process-math">\(\euclidean(z)\)</span> per i divisori <span class="process-math">\(z\)</span> di <span class="process-math">\(13\text{.}\)</span>
 </div>
 </div></details></div></article><article class="exercise exercise-like" id="exercises-PID_euclidei-1-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
 <div class="para" id="exercises-PID_euclidei-1-3-1-1"><span class="process-math">\(7+17i\)</span></div>
@@ -862,7 +1005,7 @@ b \amp =(2x^{3}+x^{2}+x-1)(x-2)-x^{2}-x-1\\
 <span class="process-math">\(7+17i\)</span> e <span class="process-math">\(8-14i\)</span>
 </div>
 <div class="solutions"><details id="exercises-PID_euclidei-2-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="exercises-PID_euclidei-2-2-2-1">Applichiamo l’<a href="sec-PID_euclidei.html#alg-euclide_domini" class="xref" data-knowl="./knowl/xref/alg-euclide_domini.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Algoritmo 21.3.12: Algoritmo di Euclide per i domini euclidei">Algoritmo di Euclide per i domini euclidei</a> usando la funzione <span class="process-math">\(\euclidean\)</span> e la divisione data nell’<a href="sec-PID_euclidei.html#ex-interi_gaussiani" class="xref" data-knowl="./knowl/xref/ex-interi_gaussiani.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Esempio 21.3.9">Esempio 21.3.9</a>.</div> <div class="para logical" id="exercises-PID_euclidei-2-2-2-2">
+<div class="para" id="exercises-PID_euclidei-2-2-2-1">Applichiamo l’<a href="sec-PID_euclidei.html#alg-euclide_domini" class="xref" data-knowl="./knowl/xref/alg-euclide_domini.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Algoritmo 21.3.13: Algoritmo di Euclide per i domini euclidei">Algoritmo di Euclide per i domini euclidei</a> usando la funzione <span class="process-math">\(\euclidean\)</span> e la divisione data nell’<a href="sec-PID_euclidei.html#ex-interi_gaussiani" class="xref" data-knowl="./knowl/xref/ex-interi_gaussiani.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Esempio 21.3.9">Esempio 21.3.9</a>.</div> <div class="para logical" id="exercises-PID_euclidei-2-2-2-2">
 <div class="para">Abbiamo <span class="process-math">\(\euclidean(7+17i)=7^{2}+17^{2}=338\)</span> e <span class="process-math">\(\euclidean(8-14i)=8^{2}+(-14)^{2}=260\text{.}\)</span> Dividiamo, dunque, <span class="process-math">\(7+17i\)</span> per <span class="process-math">\(8-14i\)</span> in <span class="process-math">\(\Razionali[i]\)</span> e approssimiamo poi il quoziente in <span class="process-math">\(\Interi[i]\text{.}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -930,38 +1073,40 @@ b \amp =(2x^{3}+x^{2}+x-1)(x-2)-x^{2}-x-1\\
 <div class="solutions"><details id="exercises-PID_euclidei-3-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="exercises-PID_euclidei-3-4-2-1"><span class="process-math">\(x^{2}-\frac{1}{3}=(3x^{4}+3x^{3}+2x^{2}-x-1)(\frac{2}{3}x-\frac{2}{3})+(6x^{5}-9x^{2}-2x^{3}+3)(-\frac{1}{3})\)</span></div></div></details></div></article>
 </div>
 </div>
-<article class="exercise exercise-like" id="exercises-PID_euclidei-4"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
-<div class="para logical" id="exercises-PID_euclidei-4-1-1">
+<article class="exercise exercise-like" id="exercise-quoziente_PID"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="para" id="exercise-quoziente_PID-1-1">Sia <span class="process-math">\(a\)</span> un elemento non nullo e non invertibile di un dominio a ideali principali <span class="process-math">\(D\)</span> e sia <span class="process-math">\(I\)</span> l’ideale generato da <span class="process-math">\(a\text{.}\)</span> Dimostrare che se <span class="process-math">\(a\)</span> è irriducibile allora <span class="process-math">\(D/I\)</span> è un campo, altrimenti non è un dominio.</div>
+<div class="solutions"><details id="exercise-quoziente_PID-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><details id="exercise-quoziente_PID-2-1" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para" id="exercise-quoziente_PID-2-1-1">Supponiamo che <span class="process-math">\(a\)</span> non sia irriducibile, ed esistano allora <span class="process-math">\(b\)</span> e <span class="process-math">\(c\)</span> non associati ad <span class="process-math">\(a\)</span> tali che <span class="process-math">\(a=bc\text{:}\)</span> in particolare, <span class="process-math">\(b\)</span> e <span class="process-math">\(c\)</span> non appartengono a <span class="process-math">\(I\text{,}\)</span> cioè <span class="process-math">\(b+I\)</span> e <span class="process-math">\(c+I\)</span> sono elementi non nulli di <span class="process-math">\(D/I\text{.}\)</span> D’altra parte <span class="process-math">\((b+I)(c+I)=bc+I=a+I\)</span> è lo zero di <span class="process-math">\(D/I\)</span> che, quindi, non è un dominio.</div> <div class="para" id="exercise-quoziente_PID-2-1-2">Sia ora <span class="process-math">\(s\)</span> irriducibile. Per il <a href="sec-anelli_quoziente.html#thm-sottoanelli_quoziente" class="xref" data-knowl="./knowl/xref/thm-sottoanelli_quoziente.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 19.2.22">Teorema 19.2.22</a>, gli ideali di <span class="process-math">\(D/I\)</span> sono del tipo <span class="process-math">\(J/I\)</span> con <span class="process-math">\(J\)</span> ideale di <span class="process-math">\(D\)</span> contenente <span class="process-math">\(I\text{:}\)</span> poiché <span class="process-math">\(D\)</span> è un dominio a ideali principali, <span class="process-math">\(J=\ideal{h}\)</span> con <span class="process-math">\(h\)</span> divisore di <span class="process-math">\(a\)</span> e, essendo <span class="process-math">\(a\)</span> irriducibile, ciò può avvenire se e solo se <span class="process-math">\(h\)</span> è invertibile, cioè <span class="process-math">\(\ideal{h}=D\text{,}\)</span> o se <span class="process-math">\(h\)</span> è associato ad <span class="process-math">\(a\text{,}\)</span> cioè <span class="process-math">\(\ideal{h}=I\text{.}\)</span> Dunque, gli unici ideali di <span class="process-math">\(D/I\)</span> sono <span class="process-math">\(D/I\)</span> e <span class="process-math">\(I/I\)</span>  (cioè l’ideale nullo): pertanto, per la <a href="sec-anelli_quoziente.html#prop-anello_commutativo_senza_ideali_campo" class="xref" data-knowl="./knowl/xref/prop-anello_commutativo_senza_ideali_campo.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 19.2.18">Proposizione 19.2.18</a>, <span class="process-math">\(D/I\)</span> è un campo.</div></article></details></div></details></div></article><article class="exercise exercise-like" id="exercises-PID_euclidei-5"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<div class="para logical" id="exercises-PID_euclidei-5-1-1">
 <div class="para">Sia <span class="process-math">\(R\)</span> un anello commutativo. Mostrare che le seguenti condizioni sono equivalenti</div>
-<ol class="lower-alpha">
+<ol class="lower-alpha" id="exercises-PID_euclidei-5-1-1-2">
 <li id="item-ideali_finitamente_generati"><div class="para" id="item-ideali_finitamente_generati-1">ogni ideale di <span class="process-math">\(R\)</span> è finitamente generato;</div></li>
 <li id="item-cca"><div class="para" id="item-cca-1">se <span class="process-math">\(I_{1}\subseteq I_{2}\subseteq \cdots\subseteq I_{j}\subseteq\cdots\)</span> è una successione ascendente di ideali, allora esiste un indice <span class="process-math">\(n\)</span> tale che <span class="process-math">\(I_{n}=I_{n+1}=\cdots=I_{n+k}=\cdots\text{;}\)</span>
 </div></li>
 <li id="item-ideale_massimale"><div class="para" id="item-ideale_massimale-1">ogni famiglia non vuota <span class="process-math">\(\mathcal{F}\)</span> di ideali ammette un elemento massimale.</div></li>
 </ol>
-<div class="para">Un anello che soddisfa queste condizioni è detto <dfn class="terminology">noetheriano</dfn>.<details class="ptx-footnote" aria-live="polite" id="exercises-PID_euclidei-4-1-1-4"><summary class="ptx-footnote__number" title="Nota a piè di pagina 21.3.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="exercises-PID_euclidei-4-1-1-4">
+<div class="para">Un anello che soddisfa queste condizioni è detto <dfn class="terminology">noetheriano</dfn>.<details class="ptx-footnote" aria-live="polite" id="exercises-PID_euclidei-5-1-1-4"><summary class="ptx-footnote__number" title="Nota a piè di pagina 21.3.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="exercises-PID_euclidei-5-1-1-4">
 <a class="external" href="https://it.wikipedia.org/wiki/Emmy_Noether" target="_blank">Emmy Noether</a>, 1882–1935.</div></details>
 </div>
 </div>
-<div class="solutions"><details id="exercises-PID_euclidei-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="exercises-PID_euclidei-4-2-1">Supponiamo che valga la <a href="sec-PID_euclidei.html#item-ideali_finitamente_generati" class="xref" data-knowl="./knowl/xref/item-ideali_finitamente_generati.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 21.3.11.a">condizione a</a> e mostriamo che vale la <a href="sec-PID_euclidei.html#item-cca" class="xref" data-knowl="./knowl/xref/item-cca.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 21.3.11.b">condizione b</a>. Data una catena <span class="process-math">\(I_{1}\subseteq I_{2}\subseteq \cdots\subseteq I_{j}\subseteq\cdots\)</span> ascendente di ideali, la loro unione è un ideale <span class="process-math">\(I\)</span> come nella <a href="sec-PID_euclidei.html#prop-PID_Noetheriani" class="xref" data-knowl="./knowl/xref/prop-PID_Noetheriani.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 21.3.2">Proposizione 21.3.2</a>. Poiché <span class="process-math">\(I\)</span> è finitamente generato, da certi elementi <span class="process-math">\(x_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(x_{r}\text{,}\)</span> e ciascuno di essi è contenuto in un termine della catena, pur di prendere il più grande di questi termini, esiste un indice <span class="process-math">\(n\)</span> tale che questi elementi sono tutti contenuti in <span class="process-math">\(I_{n}\)</span> e, di conseguenza <span class="process-math">\(I\subseteq I_{n}\text{:}\)</span> ciò implica che <span class="process-math">\(I_{n+k}=I_{n}\)</span> per ogni naturale <span class="process-math">\(k\text{.}\)</span>
-</div> <div class="para logical" id="exercises-PID_euclidei-4-2-2">
-<div class="para">Supponiamo che valga la <a href="sec-PID_euclidei.html#item-cca" class="xref" data-knowl="./knowl/xref/item-cca.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 21.3.11.b">condizione b</a> e mostriamo che vale la <a href="sec-PID_euclidei.html#item-ideali_finitamente_generati" class="xref" data-knowl="./knowl/xref/item-ideali_finitamente_generati.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 21.3.11.a">condizione a</a>. Sia <span class="process-math">\(I\)</span> un ideale e sia <span class="process-math">\(a_{1}\)</span> un elemento di <span class="process-math">\(I\text{.}\)</span> Se <span class="process-math">\(I=\ideal{a_{1}}\)</span> abbiamo finito, altrimenti esiste <span class="process-math">\(a_{2}\in I\setminus\ideal{a_{1}}\text{.}\)</span> Se <span class="process-math">\(I=\ideal{a_{1},a_{2}}\)</span> abbiamo finito, altrimenti proseguiamo il procedimento costruendo una successione strettamente crescente di ideali</div>
+<div class="solutions"><details id="exercises-PID_euclidei-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="exercises-PID_euclidei-5-2-1">Supponiamo che valga la <a href="sec-PID_euclidei.html#item-ideali_finitamente_generati" class="xref" data-knowl="./knowl/xref/item-ideali_finitamente_generati.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 21.3.12.a">condizione a</a> e mostriamo che vale la <a href="sec-PID_euclidei.html#item-cca" class="xref" data-knowl="./knowl/xref/item-cca.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 21.3.12.b">condizione b</a>. Data una catena <span class="process-math">\(I_{1}\subseteq I_{2}\subseteq \cdots\subseteq I_{j}\subseteq\cdots\)</span> ascendente di ideali, la loro unione è un ideale <span class="process-math">\(I\)</span> come nella <a href="sec-PID_euclidei.html#prop-PID_Noetheriani" class="xref" data-knowl="./knowl/xref/prop-PID_Noetheriani.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 21.3.2">Proposizione 21.3.2</a>. Poiché <span class="process-math">\(I\)</span> è finitamente generato, da certi elementi <span class="process-math">\(x_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(x_{r}\text{,}\)</span> e ciascuno di essi è contenuto in un termine della catena, pur di prendere il più grande di questi termini, esiste un indice <span class="process-math">\(n\)</span> tale che questi elementi sono tutti contenuti in <span class="process-math">\(I_{n}\)</span> e, di conseguenza, <span class="process-math">\(I\subseteq I_{n}\text{:}\)</span> ciò implica che <span class="process-math">\(I_{n+k}=I_{n}\)</span> per ogni naturale <span class="process-math">\(k\text{.}\)</span>
+</div> <div class="para logical" id="exercises-PID_euclidei-5-2-2">
+<div class="para">Supponiamo che valga la <a href="sec-PID_euclidei.html#item-cca" class="xref" data-knowl="./knowl/xref/item-cca.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 21.3.12.b">condizione b</a> e mostriamo che vale la <a href="sec-PID_euclidei.html#item-ideali_finitamente_generati" class="xref" data-knowl="./knowl/xref/item-ideali_finitamente_generati.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 21.3.12.a">condizione a</a>. Sia <span class="process-math">\(I\)</span> un ideale e sia <span class="process-math">\(a_{1}\)</span> un elemento di <span class="process-math">\(I\text{.}\)</span> Se <span class="process-math">\(I=\ideal{a_{1}}\)</span> abbiamo finito, altrimenti esiste <span class="process-math">\(a_{2}\in I\setminus\ideal{a_{1}}\text{.}\)</span> Se <span class="process-math">\(I=\ideal{a_{1},a_{2}}\)</span> abbiamo finito, altrimenti proseguiamo il procedimento costruendo una successione strettamente crescente di ideali</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-cca.html ./knowl/xref/item-ideali_finitamente_generati.html">
 \begin{equation*}
 \ideal{a_{1}}\subsetneq\ideal{a_{1},a_{2}}\subsetneq\cdots\subsetneq\ideal{a_{1},\ldots,a_{k}}\subsetneq\cdots
 \end{equation*}
 </div>
 <div class="para">Questo procedimento deve avere termine e, quindi, <span class="process-math">\(I\)</span> è finitamente generato.</div>
-</div> <div class="para logical" id="exercises-PID_euclidei-4-2-3">
-<div class="para">Supponiamo ora che valga la <a href="sec-PID_euclidei.html#item-cca" class="xref" data-knowl="./knowl/xref/item-cca.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 21.3.11.b">condizione b</a> e mostriamo che vale la <a href="sec-PID_euclidei.html#item-ideale_massimale" class="xref" data-knowl="./knowl/xref/item-ideale_massimale.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 21.3.11.c">condizione c</a>. Sia <span class="process-math">\(\mathcal{F}\)</span> una famiglia non vuota di ideali. Scegliamo <span class="process-math">\(I_{1}\)</span> in <span class="process-math">\(\mathcal{F}\text{:}\)</span> se è massimale in <span class="process-math">\(\mathcal{F}\text{,}\)</span> abbiamo finito, altrimenti esiste <span class="process-math">\(I_{2}\)</span> in <span class="process-math">\(\mathcal{F}\)</span> tale che <span class="process-math">\(I_{1}\subsetneq I_{2}\text{.}\)</span> Proseguendo così creiamo una successione strettamente crescente di ideali</div>
+</div> <div class="para logical" id="exercises-PID_euclidei-5-2-3">
+<div class="para">Supponiamo ora che valga la <a href="sec-PID_euclidei.html#item-cca" class="xref" data-knowl="./knowl/xref/item-cca.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 21.3.12.b">condizione b</a> e mostriamo che vale la <a href="sec-PID_euclidei.html#item-ideale_massimale" class="xref" data-knowl="./knowl/xref/item-ideale_massimale.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 21.3.12.c">condizione c</a>. Sia <span class="process-math">\(\mathcal{F}\)</span> una famiglia non vuota di ideali. Scegliamo <span class="process-math">\(I_{1}\)</span> in <span class="process-math">\(\mathcal{F}\text{:}\)</span> se è massimale in <span class="process-math">\(\mathcal{F}\text{,}\)</span> abbiamo finito, altrimenti esiste <span class="process-math">\(I_{2}\)</span> in <span class="process-math">\(\mathcal{F}\)</span> tale che <span class="process-math">\(I_{1}\subsetneq I_{2}\text{.}\)</span> Proseguendo così creiamo una successione strettamente crescente di ideali</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-cca.html ./knowl/xref/item-ideale_massimale.html">
 \begin{equation*}
 I_{1}\subsetneq I_{2}\subsetneq\cdots\subsetneq I_{k}\subsetneq\cdots
 \end{equation*}
 </div>
 <div class="para">Questo procedimento deve avere termine e, quindi, <span class="process-math">\(\mathcal{F}\)</span> ha un elemento massimale.</div>
-</div> <div class="para" id="exercises-PID_euclidei-4-2-4">Infine, supponiamo ora che valga la <a href="sec-PID_euclidei.html#item-ideale_massimale" class="xref" data-knowl="./knowl/xref/item-ideale_massimale.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 21.3.11.c">condizione c</a> e mostriamo che vale la <a href="sec-PID_euclidei.html#item-cca" class="xref" data-knowl="./knowl/xref/item-cca.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 21.3.11.b">condizione b</a>. Data una successione ascendente di ideali <span class="process-math">\(I_{1}\subseteq I_{2}\subseteq \cdots\subseteq I_{j}\subseteq\cdots\)</span> questa ammette un elemento massimale e, di conseguenza, la successione si stabilizza.</div>
+</div> <div class="para" id="exercises-PID_euclidei-5-2-4">Infine, supponiamo ora che valga la <a href="sec-PID_euclidei.html#item-ideale_massimale" class="xref" data-knowl="./knowl/xref/item-ideale_massimale.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 21.3.12.c">condizione c</a> e mostriamo che vale la <a href="sec-PID_euclidei.html#item-cca" class="xref" data-knowl="./knowl/xref/item-cca.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 21.3.12.b">condizione b</a>. Data una successione ascendente di ideali <span class="process-math">\(I_{1}\subseteq I_{2}\subseteq \cdots\subseteq I_{j}\subseteq\cdots\)</span> questa ammette un elemento massimale e, di conseguenza, la successione si stabilizza.</div>
 </div></details></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-fattorizzazione.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-fattorizzazione_polinomi.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>

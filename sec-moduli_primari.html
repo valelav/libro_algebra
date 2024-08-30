@@ -88,6 +88,155 @@ window.MathJax = {
 <link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#prop-unione_intersezione-1-1-4 { counter-set: prop-unione_intersezione-1-1-4 0; }
+#prop-unione_intersezione-1-1-4 > li::marker { content: ""counter(prop-unione_intersezione-1-1-4,decimal)"."; }
+#prop-unione_intersezione-1-1-4 > li { counter-increment: prop-unione_intersezione-1-1-4; }
+#prop-inclusione_equivalente-1-1-3 { counter-set: prop-inclusione_equivalente-1-1-3 0; }
+#prop-inclusione_equivalente-1-1-3 > li::marker { content: ""counter(prop-inclusione_equivalente-1-1-3,decimal)"."; }
+#prop-inclusione_equivalente-1-1-3 > li { counter-increment: prop-inclusione_equivalente-1-1-3; }
+#prop-classe_equivalenza-1-1-3 { counter-set: prop-classe_equivalenza-1-1-3 0; }
+#prop-classe_equivalenza-1-1-3 > li::marker { content: ""counter(prop-classe_equivalenza-1-1-3,decimal)"."; }
+#prop-classe_equivalenza-1-1-3 > li { counter-increment: prop-classe_equivalenza-1-1-3; }
+#prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 { counter-set: prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 0; }
+#prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 > li::marker { content: ""counter(prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2,decimal)"."; }
+#prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 > li { counter-increment: prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2; }
+#prop-composizione_iniettive_suriettive-1-1-3 { counter-set: prop-composizione_iniettive_suriettive-1-1-3 0; }
+#prop-composizione_iniettive_suriettive-1-1-3 > li::marker { content: ""counter(prop-composizione_iniettive_suriettive-1-1-3,decimal)"."; }
+#prop-composizione_iniettive_suriettive-1-1-3 > li { counter-increment: prop-composizione_iniettive_suriettive-1-1-3; }
+#prop-addizione_matrici-1-2-1 { counter-set: prop-addizione_matrici-1-2-1 0; }
+#prop-addizione_matrici-1-2-1 > li::marker { content: ""counter(prop-addizione_matrici-1-2-1,decimal)"."; }
+#prop-addizione_matrici-1-2-1 > li { counter-increment: prop-addizione_matrici-1-2-1; }
+#prop-moltiplicazione_matrici-1-2-1 { counter-set: prop-moltiplicazione_matrici-1-2-1 0; }
+#prop-moltiplicazione_matrici-1-2-1 > li::marker { content: ""counter(prop-moltiplicazione_matrici-1-2-1,decimal)"."; }
+#prop-moltiplicazione_matrici-1-2-1 > li { counter-increment: prop-moltiplicazione_matrici-1-2-1; }
+#def-numeri_naturali_peano-5-1-7 { counter-set: def-numeri_naturali_peano-5-1-7 0; }
+#def-numeri_naturali_peano-5-1-7 > li::marker { content: ""counter(def-numeri_naturali_peano-5-1-7,decimal)"."; }
+#def-numeri_naturali_peano-5-1-7 > li { counter-increment: def-numeri_naturali_peano-5-1-7; }
+#prop-anello_degli_interi-1-2-1 { counter-set: prop-anello_degli_interi-1-2-1 0; }
+#prop-anello_degli_interi-1-2-1 > li::marker { content: ""counter(prop-anello_degli_interi-1-2-1,decimal)"."; }
+#prop-anello_degli_interi-1-2-1 > li { counter-increment: prop-anello_degli_interi-1-2-1; }
+#prop-ordine_interi-1-2-1 { counter-set: prop-ordine_interi-1-2-1 0; }
+#prop-ordine_interi-1-2-1 > li::marker { content: ""counter(prop-ordine_interi-1-2-1,decimal)"."; }
+#prop-ordine_interi-1-2-1 > li { counter-increment: prop-ordine_interi-1-2-1; }
+#prop-anello_degli_classi_di_resto-1-2-1 { counter-set: prop-anello_degli_classi_di_resto-1-2-1 0; }
+#prop-anello_degli_classi_di_resto-1-2-1 > li::marker { content: ""counter(prop-anello_degli_classi_di_resto-1-2-1,decimal)"."; }
+#prop-anello_degli_classi_di_resto-1-2-1 > li { counter-increment: prop-anello_degli_classi_di_resto-1-2-1; }
+#prop-classi_resto_invertibili-1-1-3 { counter-set: prop-classi_resto_invertibili-1-1-3 0; }
+#prop-classi_resto_invertibili-1-1-3 > li::marker { content: ""counter(prop-classi_resto_invertibili-1-1-3,decimal)"."; }
+#prop-classi_resto_invertibili-1-1-3 > li { counter-increment: prop-classi_resto_invertibili-1-1-3; }
+#prop-proprieta_potenze_monoide-1-1-5 { counter-set: prop-proprieta_potenze_monoide-1-1-5 0; }
+#prop-proprieta_potenze_monoide-1-1-5 > li::marker { content: ""counter(prop-proprieta_potenze_monoide-1-1-5,decimal)"."; }
+#prop-proprieta_potenze_monoide-1-1-5 > li { counter-increment: prop-proprieta_potenze_monoide-1-1-5; }
+#prop-proprieta_potenze_elemento_invertibile-1-1-5 { counter-set: prop-proprieta_potenze_elemento_invertibile-1-1-5 0; }
+#prop-proprieta_potenze_elemento_invertibile-1-1-5 > li::marker { content: ""counter(prop-proprieta_potenze_elemento_invertibile-1-1-5,decimal)"."; }
+#prop-proprieta_potenze_elemento_invertibile-1-1-5 > li { counter-increment: prop-proprieta_potenze_elemento_invertibile-1-1-5; }
+#prop-cancellazione_gruppo-2-1-5 { counter-set: prop-cancellazione_gruppo-2-1-5 0; }
+#prop-cancellazione_gruppo-2-1-5 > li::marker { content: ""counter(prop-cancellazione_gruppo-2-1-5,decimal)"."; }
+#prop-cancellazione_gruppo-2-1-5 > li { counter-increment: prop-cancellazione_gruppo-2-1-5; }
+#prop-supporto-1-1-4 { counter-set: prop-supporto-1-1-4 0; }
+#prop-supporto-1-1-4 > li::marker { content: ""counter(prop-supporto-1-1-4,decimal)"."; }
+#prop-supporto-1-1-4 > li { counter-increment: prop-supporto-1-1-4; }
+#prop-laterali_partizione-1-1-4 { counter-set: prop-laterali_partizione-1-1-4 0; }
+#prop-laterali_partizione-1-1-4 > li::marker { content: ""counter(prop-laterali_partizione-1-1-4,decimal)"."; }
+#prop-laterali_partizione-1-1-4 > li { counter-increment: prop-laterali_partizione-1-1-4; }
+#thm-prodotto_sottogruppo-1-1-4 { counter-set: thm-prodotto_sottogruppo-1-1-4 0; }
+#thm-prodotto_sottogruppo-1-1-4 > li::marker { content: ""counter(thm-prodotto_sottogruppo-1-1-4,decimal)"."; }
+#thm-prodotto_sottogruppo-1-1-4 > li { counter-increment: thm-prodotto_sottogruppo-1-1-4; }
+#prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottogruppi-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_sottogruppi-1-1-2; }
+#prop-controimmagini_omomorfismo-1-1-6 { counter-set: prop-controimmagini_omomorfismo-1-1-6 0; }
+#prop-controimmagini_omomorfismo-1-1-6 > li::marker { content: ""counter(prop-controimmagini_omomorfismo-1-1-6,decimal)"."; }
+#prop-controimmagini_omomorfismo-1-1-6 > li { counter-increment: prop-controimmagini_omomorfismo-1-1-6; }
+#thm-caratterizzazione_sottogruppi_normali-1-1-3 { counter-set: thm-caratterizzazione_sottogruppi_normali-1-1-3 0; }
+#thm-caratterizzazione_sottogruppi_normali-1-1-3 > li::marker { content: ""counter(thm-caratterizzazione_sottogruppi_normali-1-1-3,decimal)"."; }
+#thm-caratterizzazione_sottogruppi_normali-1-1-3 > li { counter-increment: thm-caratterizzazione_sottogruppi_normali-1-1-3; }
+#thm-normalizzante-1-1-3 { counter-set: thm-normalizzante-1-1-3 0; }
+#thm-normalizzante-1-1-3 > li::marker { content: ""counter(thm-normalizzante-1-1-3,decimal)"."; }
+#thm-normalizzante-1-1-3 > li { counter-increment: thm-normalizzante-1-1-3; }
+#prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2; }
+#prop-quoziente-eredita-1-1-5 { counter-set: prop-quoziente-eredita-1-1-5 0; }
+#prop-quoziente-eredita-1-1-5 > li::marker { content: ""counter(prop-quoziente-eredita-1-1-5,decimal)"."; }
+#prop-quoziente-eredita-1-1-5 > li { counter-increment: prop-quoziente-eredita-1-1-5; }
+#exercises-congruenze-2-1-1-3 { counter-set: exercises-congruenze-2-1-1-3 0; }
+#exercises-congruenze-2-1-1-3 > li::marker { content: "("counter(exercises-congruenze-2-1-1-3,lower-alpha)")"; }
+#exercises-congruenze-2-1-1-3 > li { counter-increment: exercises-congruenze-2-1-1-3; }
+#prop-proprieta_fattori_prodotto_diretto-1-1-9 { counter-set: prop-proprieta_fattori_prodotto_diretto-1-1-9 0; }
+#prop-proprieta_fattori_prodotto_diretto-1-1-9 > li::marker { content: ""counter(prop-proprieta_fattori_prodotto_diretto-1-1-9,decimal)"."; }
+#prop-proprieta_fattori_prodotto_diretto-1-1-9 > li { counter-increment: prop-proprieta_fattori_prodotto_diretto-1-1-9; }
+#thm-sylow-2-1-9 { counter-set: thm-sylow-2-1-9 0; }
+#thm-sylow-2-1-9 > li::marker { content: ""counter(thm-sylow-2-1-9,decimal)"."; }
+#thm-sylow-2-1-9 > li { counter-increment: thm-sylow-2-1-9; }
+#prop-moltiplicazione_opposti-1-1-2 { counter-set: prop-moltiplicazione_opposti-1-1-2 0; }
+#prop-moltiplicazione_opposti-1-1-2 > li::marker { content: ""counter(prop-moltiplicazione_opposti-1-1-2,decimal)"."; }
+#prop-moltiplicazione_opposti-1-1-2 > li { counter-increment: prop-moltiplicazione_opposti-1-1-2; }
+#prop-multipli_potenze_anello-1-1-4 { counter-set: prop-multipli_potenze_anello-1-1-4 0; }
+#prop-multipli_potenze_anello-1-1-4 > li::marker { content: ""counter(prop-multipli_potenze_anello-1-1-4,decimal)"."; }
+#prop-multipli_potenze_anello-1-1-4 > li { counter-increment: prop-multipli_potenze_anello-1-1-4; }
+#prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottoanelli-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_sottoanelli-1-1-2; }
+#prop-immagine_diretta_inversa_di_ideali-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_ideali-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_ideali-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_ideali-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_ideali-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_ideali-1-1-2; }
+#prop-grado_e_operazioni-1-1-4 { counter-set: prop-grado_e_operazioni-1-1-4 0; }
+#prop-grado_e_operazioni-1-1-4 > li::marker { content: ""counter(prop-grado_e_operazioni-1-1-4,decimal)"."; }
+#prop-grado_e_operazioni-1-1-4 > li { counter-increment: prop-grado_e_operazioni-1-1-4; }
+#prop-proprieta_divisibilita-1-1-7 { counter-set: prop-proprieta_divisibilita-1-1-7 0; }
+#prop-proprieta_divisibilita-1-1-7 > li::marker { content: ""counter(prop-proprieta_divisibilita-1-1-7,decimal)"."; }
+#prop-proprieta_divisibilita-1-1-7 > li { counter-increment: prop-proprieta_divisibilita-1-1-7; }
+#prop-irriducibile-1-1-3 { counter-set: prop-irriducibile-1-1-3 0; }
+#prop-irriducibile-1-1-3 > li::marker { content: ""counter(prop-irriducibile-1-1-3,decimal)"."; }
+#prop-irriducibile-1-1-3 > li { counter-increment: prop-irriducibile-1-1-3; }
+#prop-lunghezza-1-1-3 { counter-set: prop-lunghezza-1-1-3 0; }
+#prop-lunghezza-1-1-3 > li::marker { content: ""counter(prop-lunghezza-1-1-3,decimal)"."; }
+#prop-lunghezza-1-1-3 > li { counter-increment: prop-lunghezza-1-1-3; }
+#prop-MCD_esiste_sempre-1-1-5 { counter-set: prop-MCD_esiste_sempre-1-1-5 0; }
+#prop-MCD_esiste_sempre-1-1-5 > li::marker { content: ""counter(prop-MCD_esiste_sempre-1-1-5,decimal)"."; }
+#prop-MCD_esiste_sempre-1-1-5 > li { counter-increment: prop-MCD_esiste_sempre-1-1-5; }
+#thm-caratterizzazione_UFD-1-1-2 { counter-set: thm-caratterizzazione_UFD-1-1-2 0; }
+#thm-caratterizzazione_UFD-1-1-2 > li::marker { content: ""counter(thm-caratterizzazione_UFD-1-1-2,decimal)"."; }
+#thm-caratterizzazione_UFD-1-1-2 > li { counter-increment: thm-caratterizzazione_UFD-1-1-2; }
+#exercises-PID_euclidei-5-1-1-2 { counter-set: exercises-PID_euclidei-5-1-1-2 0; }
+#exercises-PID_euclidei-5-1-1-2 > li::marker { content: "("counter(exercises-PID_euclidei-5-1-1-2,lower-alpha)")"; }
+#exercises-PID_euclidei-5-1-1-2 > li { counter-increment: exercises-PID_euclidei-5-1-1-2; }
+#lem-eisenstein-2-1-6 { counter-set: lem-eisenstein-2-1-6 0; }
+#lem-eisenstein-2-1-6 > li::marker { content: ""counter(lem-eisenstein-2-1-6,decimal)"."; }
+#lem-eisenstein-2-1-6 > li { counter-increment: lem-eisenstein-2-1-6; }
+#prop-moltiplicazione_per_0-1-1-3 { counter-set: prop-moltiplicazione_per_0-1-1-3 0; }
+#prop-moltiplicazione_per_0-1-1-3 > li::marker { content: ""counter(prop-moltiplicazione_per_0-1-1-3,decimal)"."; }
+#prop-moltiplicazione_per_0-1-1-3 > li { counter-increment: prop-moltiplicazione_per_0-1-1-3; }
+#prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 { counter-set: prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 0; }
+#prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottomoduli-1-1-3,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 > li { counter-increment: prop-immagine_diretta_inversa_di_sottomoduli-1-1-3; }
+#prop-proprieta_addendi_somma_diretta-1-1-10 { counter-set: prop-proprieta_addendi_somma_diretta-1-1-10 0; }
+#prop-proprieta_addendi_somma_diretta-1-1-10 > li::marker { content: ""counter(prop-proprieta_addendi_somma_diretta-1-1-10,decimal)"."; }
+#prop-proprieta_addendi_somma_diretta-1-1-10 > li { counter-increment: prop-proprieta_addendi_somma_diretta-1-1-10; }
+#exercises-gruppiabeliani-2-1-1-1 { counter-set: exercises-gruppiabeliani-2-1-1-1 0; }
+#exercises-gruppiabeliani-2-1-1-1 > li::marker { content: "("counter(exercises-gruppiabeliani-2-1-1-1,lower-alpha)")"; }
+#exercises-gruppiabeliani-2-1-1-1 > li { counter-increment: exercises-gruppiabeliani-2-1-1-1; }
+#exercises-gruppiabeliani-2-2-1-1 { counter-set: exercises-gruppiabeliani-2-2-1-1 0; }
+#exercises-gruppiabeliani-2-2-1-1 > li::marker { content: "("counter(exercises-gruppiabeliani-2-2-1-1,lower-alpha)")"; }
+#exercises-gruppiabeliani-2-2-1-1 > li { counter-increment: exercises-gruppiabeliani-2-2-1-1; }
+#prop-diagonali_blocchi-1-1-2 { counter-set: prop-diagonali_blocchi-1-1-2 0; }
+#prop-diagonali_blocchi-1-1-2 > li::marker { content: ""counter(prop-diagonali_blocchi-1-1-2,decimal)"."; }
+#prop-diagonali_blocchi-1-1-2 > li { counter-increment: prop-diagonali_blocchi-1-1-2; }
+#prop-addizione_naturali-1-2-1 { counter-set: prop-addizione_naturali-1-2-1 0; }
+#prop-addizione_naturali-1-2-1 > li::marker { content: ""counter(prop-addizione_naturali-1-2-1,decimal)"."; }
+#prop-addizione_naturali-1-2-1 > li { counter-increment: prop-addizione_naturali-1-2-1; }
+#prop-moltiplicazione_naturali-1-2-1 { counter-set: prop-moltiplicazione_naturali-1-2-1 0; }
+#prop-moltiplicazione_naturali-1-2-1 > li::marker { content: ""counter(prop-moltiplicazione_naturali-1-2-1,decimal)"."; }
+#prop-moltiplicazione_naturali-1-2-1 > li { counter-increment: prop-moltiplicazione_naturali-1-2-1; }
+#cor-somma_prodotto_positivi_negativi-1-2-1 { counter-set: cor-somma_prodotto_positivi_negativi-1-2-1 0; }
+#cor-somma_prodotto_positivi_negativi-1-2-1 > li::marker { content: ""counter(cor-somma_prodotto_positivi_negativi-1-2-1,decimal)"."; }
+#cor-somma_prodotto_positivi_negativi-1-2-1 > li { counter-increment: cor-somma_prodotto_positivi_negativi-1-2-1; }
+#gfdl-section4-2-1 { counter-set: gfdl-section4-2-1 0; }
+#gfdl-section4-2-1 > li::marker { content: ""counter(gfdl-section4-2-1,upper-alpha)"."; }
+#gfdl-section4-2-1 > li { counter-increment: gfdl-section4-2-1; }
+</style>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Vai all'indice generale</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -130,8 +279,9 @@ window.MathJax = {
 \newcommand{\Reali}{\mathbf{R}}
 \newcommand{\Naturali}{\mathbf{N}}
 \newcommand{\Interi}{\mathbf{Z}}
- \newcommand{\Razionali}{\mathbf{Q}}
- \newcommand{\Complessi}{\mathbf{C}}
+\newcommand{\Razionali}{\mathbf{Q}}
+\newcommand{\Complessi}{\mathbf{C}}
+\newcommand{\campo}[1]{\mathbf{F}_{#1}}
 
  \newcommand{\grgen}[1]{\langle#1\rangle}
  \newcommand{\ideal}[1]{\left(#1\right)}
@@ -152,6 +302,7 @@ window.MathJax = {
  \newcommand{\euclidean}{\delta}
  \newcommand{\posto}[3]{#1_{#2#3}}
  \newcommand{\restrizione}[2]{\left. #1\right|_{#2}}
+ \newcommand{\indotto}[1]{\hat{#1}}
 
  \newcommand{\vect}[1]{\boldsymbol{#1}}
  
@@ -574,107 +725,93 @@ window.MathJax = {
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-estensione_campi.html" class="internal"><span class="codenumber">23</span> <span class="title">Estensioni di campi</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-elementi_algebrici_e_trascendenti.html" class="internal"><span class="codenumber">23.1</span> <span class="title">Elementi algebrici e trascendenti</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_algebrici_e_trascendenti.html#exercises-elementi_algebrici_e_trascendenti" class="internal"><span class="codenumber">23.1</span> <span class="title">Esercizi</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-campo_di_spezzamento.html" class="internal"><span class="codenumber">23.2</span> <span class="title">Campi di spezzamento</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-campo_di_spezzamento.html#exercises-campo_di_spezzamento" class="internal"><span class="codenumber">23.2</span> <span class="title">Esercizi</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-chiusure_algebriche.html" class="internal"><span class="codenumber">23.3</span> <span class="title">Cenni su campi algebricamente chiusi</span></a></div></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toc-item toc-part contains-active">
 <div class="toc-title-box"><a href="part-moduli.html" class="internal"><span class="codenumber">V</span> <span class="title">Moduli</span></a></div>
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-moduli.html" class="internal"><span class="codenumber">24</span> <span class="title">Moduli</span></a></div>
+<div class="toc-title-box"><a href="ch-moduli.html" class="internal"><span class="codenumber">23</span> <span class="title">Moduli</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-definizione_di_moduli.html" class="internal"><span class="codenumber">24.1</span> <span class="title">Definizione di modulo</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizione_di_moduli.html#exercises-definizione_modulo" class="internal"><span class="codenumber">24.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-definizione_di_moduli.html" class="internal"><span class="codenumber">23.1</span> <span class="title">Definizione di modulo</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizione_di_moduli.html#exercises-definizione_modulo" class="internal"><span class="codenumber">23.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-sottomoduli.html" class="internal"><span class="codenumber">24.2</span> <span class="title">Sottomoduli</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottomoduli.html#exercises-sottomoduli" class="internal"><span class="codenumber">24.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-sottomoduli.html" class="internal"><span class="codenumber">23.2</span> <span class="title">Sottomoduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottomoduli.html#exercises-sottomoduli" class="internal"><span class="codenumber">23.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-omomorfismi_moduli.html" class="internal"><span class="codenumber">24.3</span> <span class="title">Omomorfismi di moduli</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-omomorfismi_moduli.html#exercises-omomorfismi_moduli" class="internal"><span class="codenumber">24.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-omomorfismi_moduli.html" class="internal"><span class="codenumber">23.3</span> <span class="title">Omomorfismi di moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-omomorfismi_moduli.html#exercises-omomorfismi_moduli" class="internal"><span class="codenumber">23.3</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-moduli_quoziente.html" class="internal"><span class="codenumber">24.4</span> <span class="title">Moduli quoziente</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_quoziente.html#exercises-moduli_quoziente" class="internal"><span class="codenumber">24.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-moduli_quoziente.html" class="internal"><span class="codenumber">23.4</span> <span class="title">Moduli quoziente</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_quoziente.html#exercises-moduli_quoziente" class="internal"><span class="codenumber">23.4</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-moduli_liberi.html" class="internal"><span class="codenumber">25</span> <span class="title">Moduli liberi</span></a></div>
+<div class="toc-title-box"><a href="ch-moduli_liberi.html" class="internal"><span class="codenumber">24</span> <span class="title">Moduli liberi</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-somma_diretta_moduli.html" class="internal"><span class="codenumber">25.1</span> <span class="title">Somma diretta di moduli</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-somma_diretta_moduli.html#exercises-somma_diretta_moduli" class="internal"><span class="codenumber">25.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-somma_diretta_moduli.html" class="internal"><span class="codenumber">24.1</span> <span class="title">Somma diretta di moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-somma_diretta_moduli.html#exercises-somma_diretta_moduli" class="internal"><span class="codenumber">24.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-dipendenza_lineare.html" class="internal"><span class="codenumber">25.2</span> <span class="title">Dipendenza e indipendenza lineare</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-dipendenza_lineare.html#exercises-dipendenza_lineare" class="internal"><span class="codenumber">25.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-dipendenza_lineare.html" class="internal"><span class="codenumber">24.2</span> <span class="title">Dipendenza e indipendenza lineare</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-dipendenza_lineare.html#exercises-dipendenza_lineare" class="internal"><span class="codenumber">24.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-elementi_di_torsione.html" class="internal"><span class="codenumber">25.3</span> <span class="title">Elementi di torsione</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_di_torsione.html#exercises-elementi_di_torsione" class="internal"><span class="codenumber">25.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-elementi_di_torsione.html" class="internal"><span class="codenumber">24.3</span> <span class="title">Elementi di torsione</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_di_torsione.html#exercises-elementi_di_torsione" class="internal"><span class="codenumber">24.3</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
-<div class="toc-title-box"><a href="ch-modulisupid.html" class="internal"><span class="codenumber">26</span> <span class="title">Moduli finitamente generati su PID</span></a></div>
+<div class="toc-title-box"><a href="ch-modulisupid.html" class="internal"><span class="codenumber">25</span> <span class="title">Moduli finitamente generati su PID</span></a></div>
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-moduli_ciclici.html" class="internal"><span class="codenumber">26.1</span> <span class="title">Moduli ciclici</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_ciclici.html#exercises-moduli_ciclici" class="internal"><span class="codenumber">26.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-moduli_ciclici.html" class="internal"><span class="codenumber">25.1</span> <span class="title">Moduli ciclici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_ciclici.html#exercises-moduli_ciclici" class="internal"><span class="codenumber">25.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section active">
-<div class="toc-title-box"><a href="sec-moduli_primari.html" class="internal"><span class="codenumber">26.2</span> <span class="title">Moduli primari</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_primari.html#exercises-moduli_primari" class="internal"><span class="codenumber">26.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-moduli_primari.html" class="internal"><span class="codenumber">25.2</span> <span class="title">Moduli primari</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_primari.html#exercises-moduli_primari" class="internal"><span class="codenumber">25.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-moduli_liberi.html" class="internal"><span class="codenumber">26.3</span> <span class="title">Moduli liberi</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_liberi.html#exercises-moduli_liberi" class="internal"><span class="codenumber">26.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-moduli_liberi.html" class="internal"><span class="codenumber">25.3</span> <span class="title">Moduli liberi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_liberi.html#exercises-moduli_liberi" class="internal"><span class="codenumber">25.3</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-classificazione_moduli_pid.html" class="internal"><span class="codenumber">26.4</span> <span class="title">La classificazione dei moduli finitamente generati su un dominio a ideali principali</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-classificazione_moduli_pid.html" class="internal"><span class="codenumber">25.4</span> <span class="title">La classificazione dei moduli finitamente generati su un dominio a ideali principali</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-gruppiabeliani.html" class="internal"><span class="codenumber">27</span> <span class="title">Gruppi abeliani finitamente generati</span></a></div>
+<div class="toc-title-box"><a href="ch-gruppiabeliani.html" class="internal"><span class="codenumber">26</span> <span class="title">Gruppi abeliani finitamente generati</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-gruppiabeliani.html" class="internal"><span class="codenumber">27.1</span> <span class="title">Classificazione dei gruppi abeliani finitamente generati</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppiabeliani.html#exercises-gruppiabeliani" class="internal"><span class="codenumber">27.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-gruppiabeliani.html" class="internal"><span class="codenumber">26.1</span> <span class="title">Classificazione dei gruppi abeliani finitamente generati</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppiabeliani.html#exercises-gruppiabeliani" class="internal"><span class="codenumber">26.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li></ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-formecanoniche.html" class="internal"><span class="codenumber">28</span> <span class="title">Forme canoniche di matrici</span></a></div>
+<div class="toc-title-box"><a href="ch-formecanoniche.html" class="internal"><span class="codenumber">27</span> <span class="title">Forme canoniche di matrici</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-kx_moduli.html" class="internal"><span class="codenumber">28.1</span> <span class="title">Spazi vettoriali con endomorfismi visti come moduli</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-kx_moduli.html#exercises-kx_moduli" class="internal"><span class="codenumber">28.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-kx_moduli.html" class="internal"><span class="codenumber">27.1</span> <span class="title">Spazi vettoriali con endomorfismi visti come moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-kx_moduli.html#exercises-kx_moduli" class="internal"><span class="codenumber">27.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-matrici_rappresentative.html" class="internal"><span class="codenumber">28.2</span> <span class="title">Matrici rappresentative</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-matrici_rappresentative.html#exercises-matrici_rappresentative" class="internal"><span class="codenumber">28.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-matrici_rappresentative.html" class="internal"><span class="codenumber">27.2</span> <span class="title">Matrici rappresentative</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-matrici_rappresentative.html#exercises-matrici_rappresentative" class="internal"><span class="codenumber">27.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-matrici_compagne.html" class="internal"><span class="codenumber">28.3</span> <span class="title">Matrici compagne</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-matrici_compagne.html" class="internal"><span class="codenumber">27.3</span> <span class="title">Matrici compagne</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-jordan.html" class="internal"><span class="codenumber">28.4</span> <span class="title">Forma canonica di Jordan</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-jordan.html#exercises-jordan" class="internal"><span class="codenumber">28.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-jordan.html" class="internal"><span class="codenumber">27.4</span> <span class="title">Forma canonica di Jordan</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-jordan.html#exercises-jordan" class="internal"><span class="codenumber">27.4</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html" class="internal"><span class="codenumber">28.5</span> <span class="title">Polinomio minimo di matrici</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html#exercises-polinomio_minimo_matrici" class="internal"><span class="codenumber">28.5</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html" class="internal"><span class="codenumber">27.5</span> <span class="title">Polinomio minimo di matrici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html#exercises-polinomio_minimo_matrici" class="internal"><span class="codenumber">27.5</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -702,59 +839,59 @@ window.MathJax = {
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-moduli_primari"><h2 class="heading hide-type">
-<span class="type">Paragrafo</span><span class="space"> </span><span class="codenumber">26.2</span><span class="space"> </span><span class="title">Moduli primari</span>
+<span class="type">Paragrafo</span><span class="space"> </span><span class="codenumber">25.2</span><span class="space"> </span><span class="title">Moduli primari</span>
 </h2>
 <div class="para" id="sec-moduli_primari-2">Ricordiamo che, in tutto questo capitolo, indichiamo con <span class="process-math">\(D\)</span> un dominio a ideali principali.</div>
 <article class="definition definition-like" id="def-elemento_primario_in_modulo"><h3 class="heading">
-<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">26.2.1</span><span class="period">.</span>
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">25.2.1</span><span class="period">.</span>
 </h3>
 <div class="para" id="def-elemento_primario_in_modulo-1-1">Dato un elemento irriducibile <span class="process-math">\(p\)</span> di <span class="process-math">\(D\text{,}\)</span> un elemento di un <span class="process-math">\(D\)</span>-modulo è detto <dfn class="terminology"><span class="process-math">\(p\)</span>-elemento</dfn> se ha ordine una potenza di <span class="process-math">\(p\text{.}\)</span> Un <span class="process-math">\(D\)</span>-modulo si dice <dfn class="terminology"><span class="process-math">\(p\)</span>-primario</dfn> se tutti i suoi elementi sono <span class="process-math">\(p\)</span>-elementi. Un <span class="process-math">\(D\)</span>-modulo è detto <dfn class="terminology">primario</dfn> se è <span class="process-math">\(p\)</span>-primario per qualche irriducibile <span class="process-math">\(p\text{.}\)</span>
 </div></article><article class="remark remark-like" id="rem-elemento_p_primario_se_annulato_da_potenza_di_p"><h3 class="heading">
-<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">26.2.2</span><span class="period">.</span>
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">25.2.2</span><span class="period">.</span>
 </h3>
 <div class="para" id="rem-elemento_p_primario_se_annulato_da_potenza_di_p-1">Per verificare che un elemento <span class="process-math">\(x\)</span> è un <span class="process-math">\(p\)</span>-elemento è sufficiente trovare una potenza <span class="process-math">\(p^{i}\)</span> di <span class="process-math">\(p\)</span> che annulli <span class="process-math">\(x\)</span> perché in tal caso il suo ordine è un divisore di <span class="process-math">\(p^{i}\text{,}\)</span> cioè a sua volta una potenza di <span class="process-math">\(p\text{.}\)</span>
 </div></article><article class="remark remark-like" id="rem-decomposizione_ciclico_in_p_primari"><h3 class="heading">
-<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">26.2.3</span><span class="period">.</span>
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">25.2.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="rem-decomposizione_ciclico_in_p_primari-1">Grazie alla <a href="sec-moduli_ciclici.html#prop-lagrange_moduli" class="xref" data-knowl="./knowl/xref/prop-lagrange_moduli.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 26.1.8">Proposizione 26.1.8</a>, un modulo ciclico è <span class="process-math">\(p\)</span>-primario se e solo se ha ordine una potenza di <span class="process-math">\(p\text{.}\)</span> Pertanto, il <a href="sec-moduli_ciclici.html#cor-ciclici_primari_distinti" class="xref" data-knowl="./knowl/xref/cor-ciclici_primari_distinti.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Corollario 26.1.18">Corollario 26.1.18</a> dice che ogni modulo ciclico di ordine diverso da <span class="process-math">\(0\)</span> e da <span class="process-math">\(1\)</span> si esprime come somma diretta di ciclici primari relativi a irriducibili a due a due non associati.</div></article><article class="proposition theorem-like" id="prop-primari_sottomodulo"><h3 class="heading">
-<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">26.2.4</span><span class="period">.</span>
+<div class="para" id="rem-decomposizione_ciclico_in_p_primari-1">Grazie alla <a href="sec-moduli_ciclici.html#prop-lagrange_moduli" class="xref" data-knowl="./knowl/xref/prop-lagrange_moduli.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 25.1.8">Proposizione 25.1.8</a>, un modulo ciclico è <span class="process-math">\(p\)</span>-primario se e solo se ha ordine una potenza di <span class="process-math">\(p\text{.}\)</span> Pertanto, il <a href="sec-moduli_ciclici.html#cor-ciclici_primari_distinti" class="xref" data-knowl="./knowl/xref/cor-ciclici_primari_distinti.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Corollario 25.1.18">Corollario 25.1.18</a> dice che ogni modulo ciclico di ordine diverso da <span class="process-math">\(0\)</span> e da <span class="process-math">\(1\)</span> si esprime come somma diretta di ciclici primari relativi a irriducibili a due a due non associati.</div></article><article class="proposition theorem-like" id="prop-primari_sottomodulo"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">25.2.4</span><span class="period">.</span>
 </h3>
 <div class="para" id="prop-primari_sottomodulo-1-1">Il sottoinsieme <span class="process-math">\(M_{p}\)</span> formato dai <span class="process-math">\(p\)</span>-elementi di un <span class="process-math">\(D\)</span>-modulo <span class="process-math">\(M\)</span> è un sottomodulo di <span class="process-math">\(M\)</span> contenuto in <span class="process-math">\(\Tor(M)\text{:}\)</span> esso è il più grande sottomodulo <span class="process-math">\(p\)</span>-primario di <span class="process-math">\(M\)</span> ed è detto <dfn class="terminology">componente <span class="process-math">\(p\)</span>-primaria</dfn> di <span class="process-math">\(M\text{.}\)</span>
-</div></article><details id="prop-primari_sottomodulo-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-primari_sottomodulo-2-1">Poiché <span class="process-math">\(0\in M_{p}\)</span> si ha <span class="process-math">\(M_{p}\ne\vuoto\text{.}\)</span> Siano <span class="process-math">\(x\)</span> e <span class="process-math">\(y\)</span> due elementi di <span class="process-math">\(M_{p}\)</span> di ordini <span class="process-math">\(p^{i}\)</span> e <span class="process-math">\(p^{j}\)</span> rispettivamente. Detto <span class="process-math">\(l=\max(i,j)\text{,}\)</span> abbiamo <span class="process-math">\((x+y)p^{l}=xp^{l}+yp^{l}=xp^{i}p^{l-i}+yp^{j}p^{l-j}=0p^{l-i}+0p^{l-j}=0\text{;}\)</span> inoltre, per ogni <span class="process-math">\(a\)</span> in <span class="process-math">\(D\)</span> si ha <span class="process-math">\((xa)p^{i}=(xp^{i})a=0a=0\text{;}\)</span> dunque <span class="process-math">\(x+y\)</span> e <span class="process-math">\(xa\)</span> appartengono a <span class="process-math">\(M_{p}\text{,}\)</span> cioè <span class="process-math">\(M_{p}\)</span> è un sottomodulo. Poiché <span class="process-math">\(M_{p}\)</span> è formato esattamente da tutti i <span class="process-math">\(p\)</span>-elementi di <span class="process-math">\(M\text{,}\)</span> è il più grande sottomodulo <span class="process-math">\(p\)</span>-primario di <span class="process-math">\(M\text{.}\)</span>
+</div></article><details id="prop-primari_sottomodulo-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-primari_sottomodulo-2-1">Poiché <span class="process-math">\(0\in M_{p}\)</span> si ha <span class="process-math">\(M_{p}\ne\vuoto\text{.}\)</span> Siano <span class="process-math">\(x\)</span> e <span class="process-math">\(y\)</span> due elementi di <span class="process-math">\(M_{p}\)</span> di ordini <span class="process-math">\(p^{i}\)</span> e <span class="process-math">\(p^{j}\)</span> rispettivamente. Detto <span class="process-math">\(l=\max(i,j)\text{,}\)</span> abbiamo <span class="process-math">\((x+y)p^{l}=xp^{l}+yp^{l}=xp^{i}p^{l-i}+yp^{j}p^{l-j}=0p^{l-i}+0p^{l-j}=0\text{;}\)</span> inoltre, per ogni <span class="process-math">\(a\)</span> in <span class="process-math">\(D\)</span> si ha <span class="process-math">\((xa)p^{i}=(xp^{i})a=0a=0\text{;,}\)</span> dunque, <span class="process-math">\(x+y\)</span> e <span class="process-math">\(xa\)</span> appartengono a <span class="process-math">\(M_{p}\text{,}\)</span> cioè <span class="process-math">\(M_{p}\)</span> è un sottomodulo. Poiché <span class="process-math">\(M_{p}\)</span> è formato esattamente da tutti i <span class="process-math">\(p\)</span>-elementi di <span class="process-math">\(M\text{,}\)</span> è il più grande sottomodulo <span class="process-math">\(p\)</span>-primario di <span class="process-math">\(M\text{.}\)</span>
 </div></article></details><article class="example example-like" id="sec-moduli_primari-7"><h3 class="heading">
-<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">26.2.5</span><span class="period">.</span>
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">25.2.5</span><span class="period">.</span>
 </h3>
 <div class="para" id="sec-moduli_primari-7-1-1">Questo risultato, applicato agli <span class="process-math">\(\Interi\)</span>-moduli, cioè ai gruppi abeliani, ci dice che l’insieme dei <span class="process-math">\(p\)</span>-elementi è un sottogruppo (più precisamente è l’unico <span class="process-math">\(p\)</span>-sottogruppo di Sylow). Ciò non è però in generale vero per gruppi non abeliani: ad esempio gli scambi <span class="process-math">\((1\;2)\)</span> e <span class="process-math">\((2\;3)\)</span> in <span class="process-math">\(\Sym{3}\)</span> sono <span class="process-math">\(2\)</span>-elementi (hanno ordine <span class="process-math">\(2\)</span>) mentre il loro prodotto <span class="process-math">\((1\;2)(2\;3)=(1\;3\;2)\)</span> non è un <span class="process-math">\(2\)</span>-elemento (ha ordine <span class="process-math">\(3\)</span>).</div></article><article class="definition definition-like" id="def-zoccolo"><h3 class="heading">
-<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">26.2.6</span><span class="period">.</span>
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">25.2.6</span><span class="period">.</span>
 </h3> <div class="para" id="def-zoccolo-2-1">Lo <dfn class="terminology">zoccolo</dfn> <span class="process-math">\(\Soc(M)\)</span> di un <span class="process-math">\(D\)</span>-modulo <span class="process-math">\(p\)</span>-primario <span class="process-math">\(M\)</span> è il sottoinsieme di <span class="process-math">\(M\)</span> formato dagli elementi <span class="process-math">\(x\)</span> tali che <span class="process-math">\(xp=0\text{.}\)</span>
 </div></article><article class="lemma theorem-like" id="lem-quoziente_su_irriducibile"><h3 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">26.2.7</span><span class="period">.</span>
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">25.2.7</span><span class="period">.</span>
 </h3>
 <div class="para" id="lem-quoziente_su_irriducibile-1-1">Se <span class="process-math">\(p\)</span> è un elemento irriducibile di <span class="process-math">\(D\text{,}\)</span> allora l’anello quoziente <span class="process-math">\(D/\ideal{p}\)</span> è un campo.</div></article><details id="lem-quoziente_su_irriducibile-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="lem-quoziente_su_irriducibile-2-1">Poiché <span class="process-math">\(D/\ideal{p}\)</span> è un anello commutativo, per la <a href="sec-anelli_quoziente.html#prop-anello_commutativo_senza_ideali_campo" class="xref" data-knowl="./knowl/xref/prop-anello_commutativo_senza_ideali_campo.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 19.2.18">Proposizione 19.2.18</a> è sufficiente mostrare che non ha ideali propri e non banali. Per il <a href="sec-anelli_quoziente.html#thm-sottoanelli_quoziente" class="xref" data-knowl="./knowl/xref/thm-sottoanelli_quoziente.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 19.2.22">Teorema 19.2.22</a>, un ideale di <span class="process-math">\(D/\ideal{p}\)</span> è della forma <span class="process-math">\(I/\ideal{p}\)</span> dove <span class="process-math">\(I\)</span> è un ideale di <span class="process-math">\(D\)</span> contenente <span class="process-math">\(\ideal{p}\text{.}\)</span> Se <span class="process-math">\(d\)</span> genera <span class="process-math">\(I\text{,}\)</span> allora <span class="process-math">\(d\)</span> divide <span class="process-math">\(p\text{:}\)</span> quindi, o <span class="process-math">\(d\)</span> è invertibile, nel qual caso <span class="process-math">\(I=D\)</span> e <span class="process-math">\(I/\ideal{p}=D/\ideal{p}\text{,}\)</span> o <span class="process-math">\(d\)</span> è associato a <span class="process-math">\(p\text{,}\)</span> nel qual caso <span class="process-math">\(I=\ideal{d}=\ideal{p}\)</span> e <span class="process-math">\(I/\ideal{p}=0\text{.}\)</span>
 </div></article></details><article class="proposition theorem-like" id="prop-soccolo_spazio_vettoriale"><h3 class="heading">
-<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">26.2.8</span><span class="period">.</span>
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">25.2.8</span><span class="period">.</span>
 </h3>
 <div class="para" id="prop-soccolo_spazio_vettoriale-1-1">Lo zoccolo di un modulo <span class="process-math">\(p\)</span>-primario <span class="process-math">\(M\)</span> è un sottomodulo di <span class="process-math">\(M\)</span> che può essere visto come <span class="process-math">\(D/\ideal{p}\)</span>-spazio vettoriale. Inoltre, un insieme di elementi genera <span class="process-math">\(\Soc{M}\)</span> come <span class="process-math">\(D\)</span>-modulo se e solo se lo genera come <span class="process-math">\(D/\ideal{p}\)</span>-spazio vettoriale.</div></article><details id="prop-soccolo_spazio_vettoriale-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-soccolo_spazio_vettoriale-2-1">Chiaramente <span class="process-math">\(0\)</span> appartiene a <span class="process-math">\(\Soc(M)\)</span> che è, dunque, non vuoto. Se <span class="process-math">\(x\)</span> e <span class="process-math">\(y\)</span> appartengono a <span class="process-math">\(\Soc(M)\)</span> e <span class="process-math">\(a\in D\)</span> allora <span class="process-math">\((x+y)p=xp+yp=0+0\)</span> e <span class="process-math">\((xa)p=x(ap)=x(pa)=(xp)a=0a=0\text{,}\)</span> cioè <span class="process-math">\(x+y\)</span> e <span class="process-math">\(xa\)</span> appartengono a <span class="process-math">\(\Soc(M)\)</span> che è, dunque, un sottomodulo di <span class="process-math">\(M\text{.}\)</span>
-</div> <div class="para" id="prop-soccolo_spazio_vettoriale-2-2">Se <span class="process-math">\(x\)</span> appartiene a <span class="process-math">\(\Soc(M)\)</span> e <span class="process-math">\(\ideal{p}+a\)</span> è un elemento di <span class="process-math">\(D/\ideal{p}\text{,}\)</span> poniamo <span class="process-math">\(x(\ideal{p}+a)\coloneqq xa\text{.}\)</span> Questa moltiplicazione è ben definita: se infatti <span class="process-math">\(a'\)</span> è un elemento di <span class="process-math">\(D\)</span> tale che <span class="process-math">\(\ideal{p}+a'=\ideal{p}+a\text{,}\)</span> cioè <span class="process-math">\(a'=pb+a\)</span> per qualche <span class="process-math">\(b\)</span> in <span class="process-math">\(D\text{,}\)</span> allora <span class="process-math">\(xa'=x(pb+a)=xpb+xa=0+xa=xa\text{.}\)</span> È immediato poi mostrare che con questa moltiplicazione <span class="process-math">\(\Soc(M)\)</span> risulta essere un <span class="process-math">\(D/\ideal{p}\)</span>-spazio vettoriale e che <span class="process-math">\(D\)</span>-generatori e <span class="process-math">\(D/\ideal{p}\)</span>-generatori sono la stessa cosa.</div></article></details><article class="lemma theorem-like" id="lem-zoccolo_di_ciclico_primario"><h3 class="heading">
-<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">26.2.9</span><span class="period">.</span>
+</div> <div class="para" id="prop-soccolo_spazio_vettoriale-2-2">Se <span class="process-math">\(x\)</span> appartiene a <span class="process-math">\(\Soc(M)\)</span> e <span class="process-math">\(\ideal{p}+a\)</span> è un elemento di <span class="process-math">\(D/\ideal{p}\text{,}\)</span> poniamo <span class="process-math">\(x(\ideal{p}+a)\coloneqq xa\text{.}\)</span> Questa moltiplicazione è ben definita: se, infatti, <span class="process-math">\(a'\)</span> è un elemento di <span class="process-math">\(D\)</span> tale che <span class="process-math">\(\ideal{p}+a'=\ideal{p}+a\text{,}\)</span> cioè <span class="process-math">\(a'=pb+a\)</span> per qualche <span class="process-math">\(b\)</span> in <span class="process-math">\(D\text{,}\)</span> allora <span class="process-math">\(xa'=x(pb+a)=xpb+xa=0+xa=xa\text{.}\)</span> È immediato poi mostrare che con questa moltiplicazione <span class="process-math">\(\Soc(M)\)</span> risulta essere un <span class="process-math">\(D/\ideal{p}\)</span>-spazio vettoriale e che <span class="process-math">\(D\)</span>-generatori e <span class="process-math">\(D/\ideal{p}\)</span>-generatori sono la stessa cosa.</div></article></details><article class="lemma theorem-like" id="lem-zoccolo_di_ciclico_primario"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">25.2.9</span><span class="period">.</span>
 </h3>
-<div class="para" id="lem-zoccolo_di_ciclico_primario-1-1">Sia <span class="process-math">\(M\)</span> un <span class="process-math">\(D\)</span>-modulo ciclico di ordine <span class="process-math">\(p^{\alpha}\)</span> con <span class="process-math">\(p\)</span> irriducibile e <span class="process-math">\(\alpha \gt 0\text{.}\)</span> Allora <span class="process-math">\(\Soc(M)\)</span> è ciclico di ordine <span class="process-math">\(p\)</span> e <span class="process-math">\(M/\Soc(M)\)</span>  è ciclico di ordine <span class="process-math">\(p^{\alpha-1}\text{.}\)</span> In particolare, <span class="process-math">\(\Soc(M)\)</span> ha dimensione <span class="process-math">\(1\)</span> come <span class="process-math">\(D/\ideal{p}\)</span>-spazio vettoriale.</div></article><details id="lem-zoccolo_di_ciclico_primario-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="lem-zoccolo_di_ciclico_primario-2-1">Per la <a href="sec-moduli_ciclici.html#prop-unico_sottomodulo" class="xref" data-knowl="./knowl/xref/prop-unico_sottomodulo.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 26.1.16">Proposizione 26.1.16</a>, sappiamo che <span class="process-math">\(M\)</span> ha un unico sottomodulo ciclico di ordine <span class="process-math">\(p\)</span> e che il quoziente di <span class="process-math">\(M\)</span> su questo sottomodulo ha ordine <span class="process-math">\(p^{\alpha-1}\text{.}\)</span> Poiché gli elementi dello zoccolo hanno ordine che divide <span class="process-math">\(p\text{,}\)</span> questo sottomodulo coincide con lo zoccolo. Dalla <a href="sec-moduli_primari.html#prop-soccolo_spazio_vettoriale" class="xref" data-knowl="./knowl/xref/prop-soccolo_spazio_vettoriale.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 26.2.8">Proposizione 26.2.8</a>, segue immediatamente che la dimensione di <span class="process-math">\(\Soc{M}\)</span> come <span class="process-math">\(D/\ideal{p}\)</span>-spazio vettoriale è <span class="process-math">\(1\text{.}\)</span>
+<div class="para" id="lem-zoccolo_di_ciclico_primario-1-1">Sia <span class="process-math">\(M\)</span> un <span class="process-math">\(D\)</span>-modulo ciclico di ordine <span class="process-math">\(p^{\alpha}\)</span> con <span class="process-math">\(p\)</span> irriducibile e <span class="process-math">\(\alpha \gt 0\text{.}\)</span> Allora <span class="process-math">\(\Soc(M)\)</span> è ciclico di ordine <span class="process-math">\(p\)</span> e <span class="process-math">\(M/\Soc(M)\)</span>  è ciclico di ordine <span class="process-math">\(p^{\alpha-1}\text{.}\)</span> In particolare, <span class="process-math">\(\Soc(M)\)</span> ha dimensione <span class="process-math">\(1\)</span> come <span class="process-math">\(D/\ideal{p}\)</span>-spazio vettoriale.</div></article><details id="lem-zoccolo_di_ciclico_primario-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="lem-zoccolo_di_ciclico_primario-2-1">Per la <a href="sec-moduli_ciclici.html#prop-unico_sottomodulo" class="xref" data-knowl="./knowl/xref/prop-unico_sottomodulo.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 25.1.16">Proposizione 25.1.16</a>, sappiamo che <span class="process-math">\(M\)</span> ha un unico sottomodulo ciclico di ordine <span class="process-math">\(p\)</span> e che il quoziente di <span class="process-math">\(M\)</span> su questo sottomodulo ha ordine <span class="process-math">\(p^{\alpha-1}\text{.}\)</span> Poiché gli elementi dello zoccolo hanno ordine che divide <span class="process-math">\(p\text{,}\)</span> questo sottomodulo coincide con lo zoccolo. Dalla <a href="sec-moduli_primari.html#prop-soccolo_spazio_vettoriale" class="xref" data-knowl="./knowl/xref/prop-soccolo_spazio_vettoriale.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 25.2.8">Proposizione 25.2.8</a>, segue immediatamente che la dimensione di <span class="process-math">\(\Soc{M}\)</span> come <span class="process-math">\(D/\ideal{p}\)</span>-spazio vettoriale è <span class="process-math">\(1\text{.}\)</span>
 </div></article></details><article class="proposition theorem-like" id="prop-ciclici_primari"><h3 class="heading">
-<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">26.2.10</span><span class="period">.</span>
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">25.2.10</span><span class="period">.</span>
 </h3>
 <div class="para" id="prop-ciclici_primari-1-1">Sia <span class="process-math">\(p\)</span> un elemento irriducibile di <span class="process-math">\(D\)</span> e sia <span class="process-math">\(M\coloneqq\frac{D}{\ideal{p^{\alpha_{1}}}}\oplus\cdots\oplus\frac{D}{\ideal{p^{\alpha_{r}}}}\)</span> somma diretta di <span class="process-math">\(D\)</span>-moduli ciclici <span class="process-math">\(p\)</span>-primari (con ciascun <span class="process-math">\(\alpha_{j} \gt 0\)</span>). Posto <span class="process-math">\(M^{1}\coloneqq M\)</span> e <span class="process-math">\(M^{i}\coloneqq M^{i-1}/\Soc(M^{i-1})\)</span> per <span class="process-math">\(i&gt;1\text{,}\)</span> la dimensione di <span class="process-math">\(\Soc(M^{i})\)</span> come <span class="process-math">\(D/\ideal{p}\)</span>-spazio vettoriale è uguale al numero degli <span class="process-math">\(\alpha_{j}\)</span> tali che <span class="process-math">\(\alpha_{j}\ge i\text{.}\)</span> In particolare, <span class="process-math">\(\Soc(M)\)</span> ha dimensione <span class="process-math">\(r\text{.}\)</span>
-</div></article><details id="prop-ciclici_primari-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-ciclici_primari-2-1">Sia <span class="process-math">\(x\coloneqq(x_{1},\ldots,x_{r})\)</span> un elemento di <span class="process-math">\(M\text{.}\)</span> Dal momento che <span class="process-math">\(xp=(x_{1}p,\ldots,x_{r}p)\text{,}\)</span> si ha che <span class="process-math">\(x\in\Soc(M)\)</span> se e solo se <span class="process-math">\(x_{j}\in\Soc\left(D/\ideal{p^{\alpha_{j}}}\right)\)</span> per ogni <span class="process-math">\(j\text{:}\)</span> dunque, <span class="process-math">\(\Soc(M)=\Soc\left(D/\ideal{p^{\alpha_{1}}}\right)\oplus\cdots\oplus\Soc\left(D/\ideal{p^{\alpha_{r}}}\right)\text{.}\)</span> Per il <a href="sec-moduli_primari.html#lem-zoccolo_di_ciclico_primario" class="xref" data-knowl="./knowl/xref/lem-zoccolo_di_ciclico_primario.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Lemma 26.2.9">Lemma 26.2.9</a>, segue che <span class="process-math">\(\Soc{M}\)</span> ha dimensione <span class="process-math">\(r\)</span> come <span class="process-math">\(D/\ideal{p}\)</span>-spazio vettoriale e che il quoziente sul proprio zoccolo di un addendo di ordine <span class="process-math">\(p^{\alpha_{j}}\)</span> ha ordine <span class="process-math">\(p^{\alpha_{j}-1}\text{:}\)</span> dunque, per la <a href="sec-somma_diretta_moduli.html#prop-somma_diretta_quozienti" class="xref" data-knowl="./knowl/xref/prop-somma_diretta_quozienti.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 25.1.10">Proposizione 25.1.10</a>, abbiamo che <span class="process-math">\(M^{2}=M/\Soc(M)\simeq\frac{D}{\ideal{p^{\alpha_{1}-1}}}\oplus\cdots\oplus\frac{D}{\ideal{p^{\alpha_{r}-1}}}\text{.}\)</span> Il numero di addendi non banali in questa decomposizione è uguale al numero degli <span class="process-math">\(\alpha_{j}\)</span> maggiori di <span class="process-math">\(1\text{:}\)</span> ripetendo il ragionamento precedente questo numero è uguale alla dimensione di <span class="process-math">\(\Soc(M^{2})\text{.}\)</span> Iterando il procedimento e, notando che a ogni passo l’ordine di ciascun addendo diretto viene diviso per <span class="process-math">\(p\text{,}\)</span> otteniamo la tesi.</div></article></details><article class="remark remark-like" id="rem-successione_dimensioni_decrescente"><h3 class="heading">
-<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">26.2.11</span><span class="period">.</span>
+</div></article><details id="prop-ciclici_primari-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-ciclici_primari-2-1">Sia <span class="process-math">\(x\coloneqq(x_{1},\ldots,x_{r})\)</span> un elemento di <span class="process-math">\(M\text{.}\)</span> Dal momento che <span class="process-math">\(xp=(x_{1}p,\ldots,x_{r}p)\text{,}\)</span> si ha che <span class="process-math">\(x\in\Soc(M)\)</span> se e solo se <span class="process-math">\(x_{j}\in\Soc\left(D/\ideal{p^{\alpha_{j}}}\right)\)</span> per ogni <span class="process-math">\(j\text{:}\)</span> dunque, <span class="process-math">\(\Soc(M)=\Soc\left(D/\ideal{p^{\alpha_{1}}}\right)\oplus\cdots\oplus\Soc\left(D/\ideal{p^{\alpha_{r}}}\right)\text{.}\)</span> Per il <a href="sec-moduli_primari.html#lem-zoccolo_di_ciclico_primario" class="xref" data-knowl="./knowl/xref/lem-zoccolo_di_ciclico_primario.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Lemma 25.2.9">Lemma 25.2.9</a>, segue che <span class="process-math">\(\Soc{M}\)</span> ha dimensione <span class="process-math">\(r\)</span> come <span class="process-math">\(D/\ideal{p}\)</span>-spazio vettoriale e che il quoziente sul proprio zoccolo di un addendo di ordine <span class="process-math">\(p^{\alpha_{j}}\)</span> ha ordine <span class="process-math">\(p^{\alpha_{j}-1}\text{:}\)</span> dunque, per la <a href="sec-somma_diretta_moduli.html#prop-somma_diretta_quozienti" class="xref" data-knowl="./knowl/xref/prop-somma_diretta_quozienti.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 24.1.10">Proposizione 24.1.10</a>, abbiamo che <span class="process-math">\(M^{2}=M/\Soc(M)\simeq\frac{D}{\ideal{p^{\alpha_{1}-1}}}\oplus\cdots\oplus\frac{D}{\ideal{p^{\alpha_{r}-1}}}\text{.}\)</span> Il numero di addendi non banali in questa decomposizione è uguale al numero degli <span class="process-math">\(\alpha_{j}\)</span> maggiori di <span class="process-math">\(1\text{:}\)</span> ripetendo il ragionamento precedente questo numero è uguale alla dimensione di <span class="process-math">\(\Soc(M^{2})\text{.}\)</span> Iterando il procedimento e, notando che a ogni passo l’ordine di ciascun addendo diretto viene diviso per <span class="process-math">\(p\text{,}\)</span> otteniamo la tesi.</div></article></details><article class="remark remark-like" id="rem-successione_dimensioni_decrescente"><h3 class="heading">
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">25.2.11</span><span class="period">.</span>
 </h3>
 <div class="para" id="rem-successione_dimensioni_decrescente-1">La proposizione precedente ci dice che, data una decomposizione di un modulo <span class="process-math">\(p\)</span>-primario <span class="process-math">\(M\)</span> come somma diretta di un numero finito di moduli ciclici, è possibile ottenere gli ordini di questi addendi calcolando le dimensioni degli zoccoli dei quozienti successivi <span class="process-math">\(M^{i}\text{:}\)</span> a ogni passo “scompaiono” gli addendi di un dato ordine e “sopravvivono” quelli di ordine maggiore. Più precisamente, il numero di addendi di ordine <span class="process-math">\(p^{i}\)</span> è uguale a <span class="process-math">\(\dim\Soc(M^{i})-\dim\Soc(M^{i+1})\text{.}\)</span> In particolare, se lo stesso modulo può essere decomposto in più di un modo, gli ordini degli addendi nelle diverse decomposizioni coincidono.</div></article><article class="example example-like" id="sec-moduli_primari-14"><h3 class="heading">
-<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">26.2.12</span><span class="period">.</span>
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">25.2.12</span><span class="period">.</span>
 </h3>
 <div class="para" id="sec-moduli_primari-14-1-1">Supponiamo di avere un modulo <span class="process-math">\(p\)</span>-primario <span class="process-math">\(M\)</span> somma diretta di due moduli ciclici di ordine <span class="process-math">\(p^{6}\text{,}\)</span> due di ordine <span class="process-math">\(p^{4}\)</span> e uno di ordine <span class="process-math">\(p\text{.}\)</span> Usiamo una rappresentazione grafica di questo tipo per aiutarci nella visualizzazione: a ogni colonna corrisponde uno degli addendi diretti.</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image-colonne_modulo_primario.svg" role="img" class="contained" alt="Righe di quadrati sovrapposte lunghe 5, 4, 4, 4, 2 e 2"></div> <div class="para" id="sec-moduli_primari-14-1-3">Lo zoccolo è rappresentato dall’ultima riga e, quindi, ha dimensione <span class="process-math">\(5\text{.}\)</span> Quozientare <span class="process-math">\(M\)</span> su <span class="process-math">\(\Soc(M)\)</span> corrisponde a cancellare l’ultima riga. Lo zoccolo di <span class="process-math">\(M^{2}\)</span> ha così dimensione <span class="process-math">\(4\text{.}\)</span> Cancellando una riga a ogni passo troviamo così le dimensioni degli zoccoli: <span class="process-math">\(\dim\Soc(M^{1})=5\text{,}\)</span> <span class="process-math">\(\dim\Soc(M^{2})=\dim\Soc(M^{3})=\dim\Soc(M^{4})=4\text{,}\)</span> <span class="process-math">\(\dim\Soc(M^{5})=\dim\Soc(M^{6})=2\)</span> e <span class="process-math">\(\dim\Soc(M^{7})=0\text{.}\)</span>
-</div> <div class="para" id="sec-moduli_primari-14-1-4">Viceversa, supponiamo di conoscere questa successione di dimensioni. Possiamo allora ricostruire il disegno dato sopra: tracciamo prima una riga con <span class="process-math">\(5\)</span> blocchi, poi le disponiamo sopra una riga con <span class="process-math">\(4\text{,}\)</span> un’altra con <span class="process-math">\(4\)</span> blocchi, un’altra con <span class="process-math">\(4\)</span> blocchi, poi una con <span class="process-math">\(2\)</span> blocchi e un’ultima con <span class="process-math">\(2\)</span> blocchi. Dunque la decomposizione di <span class="process-math">\(M\)</span> che sarà formata da <span class="process-math">\(5\)</span> addendi: <span class="process-math">\(5-4=1\)</span> di ordine <span class="process-math">\(p\text{,}\)</span> <span class="process-math">\(4-4=0\)</span> di ordine <span class="process-math">\(p^{2}\text{,}\)</span> <span class="process-math">\(4-4=0\)</span> di ordine <span class="process-math">\(p^{3}\text{,}\)</span> <span class="process-math">\(4-2=2\)</span> di ordine <span class="process-math">\(p^{4}\text{,}\)</span> <span class="process-math">\(2-2=0\)</span> di ordine <span class="process-math">\(p^{5}\)</span> e <span class="process-math">\(2-0=2\)</span> di ordine <span class="process-math">\(p^{6}\text{.}\)</span> Ovviamente, il disegno non è necessario: è solo un aiuto alla comprensione.</div></article><section class="exercises" id="exercises-moduli_primari"><h3 class="heading hide-type">
+</div> <div class="para" id="sec-moduli_primari-14-1-4">Viceversa, supponiamo di conoscere questa successione di dimensioni. Possiamo allora ricostruire il disegno dato sopra: tracciamo prima una riga con <span class="process-math">\(5\)</span> blocchi, poi le disponiamo sopra una riga con <span class="process-math">\(4\text{,}\)</span> un’altra con <span class="process-math">\(4\)</span> blocchi, un’altra con <span class="process-math">\(4\)</span> blocchi, poi una con <span class="process-math">\(2\)</span> blocchi e un’ultima con <span class="process-math">\(2\)</span> blocchi. Dunque, la decomposizione di <span class="process-math">\(M\)</span> che sarà formata da <span class="process-math">\(5\)</span> addendi: <span class="process-math">\(5-4=1\)</span> di ordine <span class="process-math">\(p\text{,}\)</span> <span class="process-math">\(4-4=0\)</span> di ordine <span class="process-math">\(p^{2}\text{,}\)</span> <span class="process-math">\(4-4=0\)</span> di ordine <span class="process-math">\(p^{3}\text{,}\)</span> <span class="process-math">\(4-2=2\)</span> di ordine <span class="process-math">\(p^{4}\text{,}\)</span> <span class="process-math">\(2-2=0\)</span> di ordine <span class="process-math">\(p^{5}\)</span> e <span class="process-math">\(2-0=2\)</span> di ordine <span class="process-math">\(p^{6}\text{.}\)</span> Ovviamente, il disegno non è necessario: è solo un aiuto alla comprensione.</div></article><section class="exercises" id="exercises-moduli_primari"><h3 class="heading hide-type">
 <span class="type">Esercizi</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Esercizi</span>
 </h3>
 <article class="exercise exercise-like" id="exercises-moduli_primari-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="exercises-moduli_primari-1-1-1">Completare la dimostrazione della <a href="sec-moduli_primari.html#prop-soccolo_spazio_vettoriale" class="xref" data-knowl="./knowl/xref/prop-soccolo_spazio_vettoriale.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 26.2.8">Proposizione 26.2.8</a>.</div></article><article class="exercise exercise-like" id="exercises-moduli_primari-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="exercises-moduli_primari-1-1-1">Completare la dimostrazione della <a href="sec-moduli_primari.html#prop-soccolo_spazio_vettoriale" class="xref" data-knowl="./knowl/xref/prop-soccolo_spazio_vettoriale.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 25.2.8">Proposizione 25.2.8</a>.</div></article><article class="exercise exercise-like" id="exercises-moduli_primari-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
 <div class="para" id="exercises-moduli_primari-2-1-1">Sia <span class="process-math">\(M\)</span> un <span class="process-math">\(D\)</span>-modulo <span class="process-math">\(p\)</span>-primario per un certo irriducibile <span class="process-math">\(p\text{.}\)</span> La successione delle dimensioni degli zoccoli sia <span class="process-math">\(8\text{,}\)</span> <span class="process-math">\(6\text{,}\)</span> <span class="process-math">\(6\text{,}\)</span> <span class="process-math">\(5\text{,}\)</span> <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(0\text{.}\)</span> Esprimere <span class="process-math">\(M\)</span> come somma diretta di moduli ciclici.</div>
 <div class="solutions"><details id="exercises-moduli_primari-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="exercises-moduli_primari-2-2-1"><span class="process-math">\(M\simeq \frac{D}{\ideal{p}}\oplus\frac{D}{\ideal{p}}\oplus\frac{D}{\ideal{p^{3}}}\oplus\frac{D}{\ideal{p^{4}}}\oplus\frac{D}{\ideal{p^{4}}}\oplus\frac{D}{\ideal{p^{4}}}\oplus\frac{D}{\ideal{p^{4}}}\oplus\frac{D}{\ideal{p^{7}}}\text{.}\)</span></div></div></details></div></article></section></section></div>
 <div class="ptx-content-footer">

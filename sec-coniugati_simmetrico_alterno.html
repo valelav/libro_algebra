@@ -88,6 +88,155 @@ window.MathJax = {
 <link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#prop-unione_intersezione-1-1-4 { counter-set: prop-unione_intersezione-1-1-4 0; }
+#prop-unione_intersezione-1-1-4 > li::marker { content: ""counter(prop-unione_intersezione-1-1-4,decimal)"."; }
+#prop-unione_intersezione-1-1-4 > li { counter-increment: prop-unione_intersezione-1-1-4; }
+#prop-inclusione_equivalente-1-1-3 { counter-set: prop-inclusione_equivalente-1-1-3 0; }
+#prop-inclusione_equivalente-1-1-3 > li::marker { content: ""counter(prop-inclusione_equivalente-1-1-3,decimal)"."; }
+#prop-inclusione_equivalente-1-1-3 > li { counter-increment: prop-inclusione_equivalente-1-1-3; }
+#prop-classe_equivalenza-1-1-3 { counter-set: prop-classe_equivalenza-1-1-3 0; }
+#prop-classe_equivalenza-1-1-3 > li::marker { content: ""counter(prop-classe_equivalenza-1-1-3,decimal)"."; }
+#prop-classe_equivalenza-1-1-3 > li { counter-increment: prop-classe_equivalenza-1-1-3; }
+#prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 { counter-set: prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 0; }
+#prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 > li::marker { content: ""counter(prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2,decimal)"."; }
+#prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 > li { counter-increment: prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2; }
+#prop-composizione_iniettive_suriettive-1-1-3 { counter-set: prop-composizione_iniettive_suriettive-1-1-3 0; }
+#prop-composizione_iniettive_suriettive-1-1-3 > li::marker { content: ""counter(prop-composizione_iniettive_suriettive-1-1-3,decimal)"."; }
+#prop-composizione_iniettive_suriettive-1-1-3 > li { counter-increment: prop-composizione_iniettive_suriettive-1-1-3; }
+#prop-addizione_matrici-1-2-1 { counter-set: prop-addizione_matrici-1-2-1 0; }
+#prop-addizione_matrici-1-2-1 > li::marker { content: ""counter(prop-addizione_matrici-1-2-1,decimal)"."; }
+#prop-addizione_matrici-1-2-1 > li { counter-increment: prop-addizione_matrici-1-2-1; }
+#prop-moltiplicazione_matrici-1-2-1 { counter-set: prop-moltiplicazione_matrici-1-2-1 0; }
+#prop-moltiplicazione_matrici-1-2-1 > li::marker { content: ""counter(prop-moltiplicazione_matrici-1-2-1,decimal)"."; }
+#prop-moltiplicazione_matrici-1-2-1 > li { counter-increment: prop-moltiplicazione_matrici-1-2-1; }
+#def-numeri_naturali_peano-5-1-7 { counter-set: def-numeri_naturali_peano-5-1-7 0; }
+#def-numeri_naturali_peano-5-1-7 > li::marker { content: ""counter(def-numeri_naturali_peano-5-1-7,decimal)"."; }
+#def-numeri_naturali_peano-5-1-7 > li { counter-increment: def-numeri_naturali_peano-5-1-7; }
+#prop-anello_degli_interi-1-2-1 { counter-set: prop-anello_degli_interi-1-2-1 0; }
+#prop-anello_degli_interi-1-2-1 > li::marker { content: ""counter(prop-anello_degli_interi-1-2-1,decimal)"."; }
+#prop-anello_degli_interi-1-2-1 > li { counter-increment: prop-anello_degli_interi-1-2-1; }
+#prop-ordine_interi-1-2-1 { counter-set: prop-ordine_interi-1-2-1 0; }
+#prop-ordine_interi-1-2-1 > li::marker { content: ""counter(prop-ordine_interi-1-2-1,decimal)"."; }
+#prop-ordine_interi-1-2-1 > li { counter-increment: prop-ordine_interi-1-2-1; }
+#prop-anello_degli_classi_di_resto-1-2-1 { counter-set: prop-anello_degli_classi_di_resto-1-2-1 0; }
+#prop-anello_degli_classi_di_resto-1-2-1 > li::marker { content: ""counter(prop-anello_degli_classi_di_resto-1-2-1,decimal)"."; }
+#prop-anello_degli_classi_di_resto-1-2-1 > li { counter-increment: prop-anello_degli_classi_di_resto-1-2-1; }
+#prop-classi_resto_invertibili-1-1-3 { counter-set: prop-classi_resto_invertibili-1-1-3 0; }
+#prop-classi_resto_invertibili-1-1-3 > li::marker { content: ""counter(prop-classi_resto_invertibili-1-1-3,decimal)"."; }
+#prop-classi_resto_invertibili-1-1-3 > li { counter-increment: prop-classi_resto_invertibili-1-1-3; }
+#prop-proprieta_potenze_monoide-1-1-5 { counter-set: prop-proprieta_potenze_monoide-1-1-5 0; }
+#prop-proprieta_potenze_monoide-1-1-5 > li::marker { content: ""counter(prop-proprieta_potenze_monoide-1-1-5,decimal)"."; }
+#prop-proprieta_potenze_monoide-1-1-5 > li { counter-increment: prop-proprieta_potenze_monoide-1-1-5; }
+#prop-proprieta_potenze_elemento_invertibile-1-1-5 { counter-set: prop-proprieta_potenze_elemento_invertibile-1-1-5 0; }
+#prop-proprieta_potenze_elemento_invertibile-1-1-5 > li::marker { content: ""counter(prop-proprieta_potenze_elemento_invertibile-1-1-5,decimal)"."; }
+#prop-proprieta_potenze_elemento_invertibile-1-1-5 > li { counter-increment: prop-proprieta_potenze_elemento_invertibile-1-1-5; }
+#prop-cancellazione_gruppo-2-1-5 { counter-set: prop-cancellazione_gruppo-2-1-5 0; }
+#prop-cancellazione_gruppo-2-1-5 > li::marker { content: ""counter(prop-cancellazione_gruppo-2-1-5,decimal)"."; }
+#prop-cancellazione_gruppo-2-1-5 > li { counter-increment: prop-cancellazione_gruppo-2-1-5; }
+#prop-supporto-1-1-4 { counter-set: prop-supporto-1-1-4 0; }
+#prop-supporto-1-1-4 > li::marker { content: ""counter(prop-supporto-1-1-4,decimal)"."; }
+#prop-supporto-1-1-4 > li { counter-increment: prop-supporto-1-1-4; }
+#prop-laterali_partizione-1-1-4 { counter-set: prop-laterali_partizione-1-1-4 0; }
+#prop-laterali_partizione-1-1-4 > li::marker { content: ""counter(prop-laterali_partizione-1-1-4,decimal)"."; }
+#prop-laterali_partizione-1-1-4 > li { counter-increment: prop-laterali_partizione-1-1-4; }
+#thm-prodotto_sottogruppo-1-1-4 { counter-set: thm-prodotto_sottogruppo-1-1-4 0; }
+#thm-prodotto_sottogruppo-1-1-4 > li::marker { content: ""counter(thm-prodotto_sottogruppo-1-1-4,decimal)"."; }
+#thm-prodotto_sottogruppo-1-1-4 > li { counter-increment: thm-prodotto_sottogruppo-1-1-4; }
+#prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottogruppi-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_sottogruppi-1-1-2; }
+#prop-controimmagini_omomorfismo-1-1-6 { counter-set: prop-controimmagini_omomorfismo-1-1-6 0; }
+#prop-controimmagini_omomorfismo-1-1-6 > li::marker { content: ""counter(prop-controimmagini_omomorfismo-1-1-6,decimal)"."; }
+#prop-controimmagini_omomorfismo-1-1-6 > li { counter-increment: prop-controimmagini_omomorfismo-1-1-6; }
+#thm-caratterizzazione_sottogruppi_normali-1-1-3 { counter-set: thm-caratterizzazione_sottogruppi_normali-1-1-3 0; }
+#thm-caratterizzazione_sottogruppi_normali-1-1-3 > li::marker { content: ""counter(thm-caratterizzazione_sottogruppi_normali-1-1-3,decimal)"."; }
+#thm-caratterizzazione_sottogruppi_normali-1-1-3 > li { counter-increment: thm-caratterizzazione_sottogruppi_normali-1-1-3; }
+#thm-normalizzante-1-1-3 { counter-set: thm-normalizzante-1-1-3 0; }
+#thm-normalizzante-1-1-3 > li::marker { content: ""counter(thm-normalizzante-1-1-3,decimal)"."; }
+#thm-normalizzante-1-1-3 > li { counter-increment: thm-normalizzante-1-1-3; }
+#prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2; }
+#prop-quoziente-eredita-1-1-5 { counter-set: prop-quoziente-eredita-1-1-5 0; }
+#prop-quoziente-eredita-1-1-5 > li::marker { content: ""counter(prop-quoziente-eredita-1-1-5,decimal)"."; }
+#prop-quoziente-eredita-1-1-5 > li { counter-increment: prop-quoziente-eredita-1-1-5; }
+#exercises-congruenze-2-1-1-3 { counter-set: exercises-congruenze-2-1-1-3 0; }
+#exercises-congruenze-2-1-1-3 > li::marker { content: "("counter(exercises-congruenze-2-1-1-3,lower-alpha)")"; }
+#exercises-congruenze-2-1-1-3 > li { counter-increment: exercises-congruenze-2-1-1-3; }
+#prop-proprieta_fattori_prodotto_diretto-1-1-9 { counter-set: prop-proprieta_fattori_prodotto_diretto-1-1-9 0; }
+#prop-proprieta_fattori_prodotto_diretto-1-1-9 > li::marker { content: ""counter(prop-proprieta_fattori_prodotto_diretto-1-1-9,decimal)"."; }
+#prop-proprieta_fattori_prodotto_diretto-1-1-9 > li { counter-increment: prop-proprieta_fattori_prodotto_diretto-1-1-9; }
+#thm-sylow-2-1-9 { counter-set: thm-sylow-2-1-9 0; }
+#thm-sylow-2-1-9 > li::marker { content: ""counter(thm-sylow-2-1-9,decimal)"."; }
+#thm-sylow-2-1-9 > li { counter-increment: thm-sylow-2-1-9; }
+#prop-moltiplicazione_opposti-1-1-2 { counter-set: prop-moltiplicazione_opposti-1-1-2 0; }
+#prop-moltiplicazione_opposti-1-1-2 > li::marker { content: ""counter(prop-moltiplicazione_opposti-1-1-2,decimal)"."; }
+#prop-moltiplicazione_opposti-1-1-2 > li { counter-increment: prop-moltiplicazione_opposti-1-1-2; }
+#prop-multipli_potenze_anello-1-1-4 { counter-set: prop-multipli_potenze_anello-1-1-4 0; }
+#prop-multipli_potenze_anello-1-1-4 > li::marker { content: ""counter(prop-multipli_potenze_anello-1-1-4,decimal)"."; }
+#prop-multipli_potenze_anello-1-1-4 > li { counter-increment: prop-multipli_potenze_anello-1-1-4; }
+#prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottoanelli-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_sottoanelli-1-1-2; }
+#prop-immagine_diretta_inversa_di_ideali-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_ideali-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_ideali-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_ideali-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_ideali-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_ideali-1-1-2; }
+#prop-grado_e_operazioni-1-1-4 { counter-set: prop-grado_e_operazioni-1-1-4 0; }
+#prop-grado_e_operazioni-1-1-4 > li::marker { content: ""counter(prop-grado_e_operazioni-1-1-4,decimal)"."; }
+#prop-grado_e_operazioni-1-1-4 > li { counter-increment: prop-grado_e_operazioni-1-1-4; }
+#prop-proprieta_divisibilita-1-1-7 { counter-set: prop-proprieta_divisibilita-1-1-7 0; }
+#prop-proprieta_divisibilita-1-1-7 > li::marker { content: ""counter(prop-proprieta_divisibilita-1-1-7,decimal)"."; }
+#prop-proprieta_divisibilita-1-1-7 > li { counter-increment: prop-proprieta_divisibilita-1-1-7; }
+#prop-irriducibile-1-1-3 { counter-set: prop-irriducibile-1-1-3 0; }
+#prop-irriducibile-1-1-3 > li::marker { content: ""counter(prop-irriducibile-1-1-3,decimal)"."; }
+#prop-irriducibile-1-1-3 > li { counter-increment: prop-irriducibile-1-1-3; }
+#prop-lunghezza-1-1-3 { counter-set: prop-lunghezza-1-1-3 0; }
+#prop-lunghezza-1-1-3 > li::marker { content: ""counter(prop-lunghezza-1-1-3,decimal)"."; }
+#prop-lunghezza-1-1-3 > li { counter-increment: prop-lunghezza-1-1-3; }
+#prop-MCD_esiste_sempre-1-1-5 { counter-set: prop-MCD_esiste_sempre-1-1-5 0; }
+#prop-MCD_esiste_sempre-1-1-5 > li::marker { content: ""counter(prop-MCD_esiste_sempre-1-1-5,decimal)"."; }
+#prop-MCD_esiste_sempre-1-1-5 > li { counter-increment: prop-MCD_esiste_sempre-1-1-5; }
+#thm-caratterizzazione_UFD-1-1-2 { counter-set: thm-caratterizzazione_UFD-1-1-2 0; }
+#thm-caratterizzazione_UFD-1-1-2 > li::marker { content: ""counter(thm-caratterizzazione_UFD-1-1-2,decimal)"."; }
+#thm-caratterizzazione_UFD-1-1-2 > li { counter-increment: thm-caratterizzazione_UFD-1-1-2; }
+#exercises-PID_euclidei-5-1-1-2 { counter-set: exercises-PID_euclidei-5-1-1-2 0; }
+#exercises-PID_euclidei-5-1-1-2 > li::marker { content: "("counter(exercises-PID_euclidei-5-1-1-2,lower-alpha)")"; }
+#exercises-PID_euclidei-5-1-1-2 > li { counter-increment: exercises-PID_euclidei-5-1-1-2; }
+#lem-eisenstein-2-1-6 { counter-set: lem-eisenstein-2-1-6 0; }
+#lem-eisenstein-2-1-6 > li::marker { content: ""counter(lem-eisenstein-2-1-6,decimal)"."; }
+#lem-eisenstein-2-1-6 > li { counter-increment: lem-eisenstein-2-1-6; }
+#prop-moltiplicazione_per_0-1-1-3 { counter-set: prop-moltiplicazione_per_0-1-1-3 0; }
+#prop-moltiplicazione_per_0-1-1-3 > li::marker { content: ""counter(prop-moltiplicazione_per_0-1-1-3,decimal)"."; }
+#prop-moltiplicazione_per_0-1-1-3 > li { counter-increment: prop-moltiplicazione_per_0-1-1-3; }
+#prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 { counter-set: prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 0; }
+#prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottomoduli-1-1-3,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 > li { counter-increment: prop-immagine_diretta_inversa_di_sottomoduli-1-1-3; }
+#prop-proprieta_addendi_somma_diretta-1-1-10 { counter-set: prop-proprieta_addendi_somma_diretta-1-1-10 0; }
+#prop-proprieta_addendi_somma_diretta-1-1-10 > li::marker { content: ""counter(prop-proprieta_addendi_somma_diretta-1-1-10,decimal)"."; }
+#prop-proprieta_addendi_somma_diretta-1-1-10 > li { counter-increment: prop-proprieta_addendi_somma_diretta-1-1-10; }
+#exercises-gruppiabeliani-2-1-1-1 { counter-set: exercises-gruppiabeliani-2-1-1-1 0; }
+#exercises-gruppiabeliani-2-1-1-1 > li::marker { content: "("counter(exercises-gruppiabeliani-2-1-1-1,lower-alpha)")"; }
+#exercises-gruppiabeliani-2-1-1-1 > li { counter-increment: exercises-gruppiabeliani-2-1-1-1; }
+#exercises-gruppiabeliani-2-2-1-1 { counter-set: exercises-gruppiabeliani-2-2-1-1 0; }
+#exercises-gruppiabeliani-2-2-1-1 > li::marker { content: "("counter(exercises-gruppiabeliani-2-2-1-1,lower-alpha)")"; }
+#exercises-gruppiabeliani-2-2-1-1 > li { counter-increment: exercises-gruppiabeliani-2-2-1-1; }
+#prop-diagonali_blocchi-1-1-2 { counter-set: prop-diagonali_blocchi-1-1-2 0; }
+#prop-diagonali_blocchi-1-1-2 > li::marker { content: ""counter(prop-diagonali_blocchi-1-1-2,decimal)"."; }
+#prop-diagonali_blocchi-1-1-2 > li { counter-increment: prop-diagonali_blocchi-1-1-2; }
+#prop-addizione_naturali-1-2-1 { counter-set: prop-addizione_naturali-1-2-1 0; }
+#prop-addizione_naturali-1-2-1 > li::marker { content: ""counter(prop-addizione_naturali-1-2-1,decimal)"."; }
+#prop-addizione_naturali-1-2-1 > li { counter-increment: prop-addizione_naturali-1-2-1; }
+#prop-moltiplicazione_naturali-1-2-1 { counter-set: prop-moltiplicazione_naturali-1-2-1 0; }
+#prop-moltiplicazione_naturali-1-2-1 > li::marker { content: ""counter(prop-moltiplicazione_naturali-1-2-1,decimal)"."; }
+#prop-moltiplicazione_naturali-1-2-1 > li { counter-increment: prop-moltiplicazione_naturali-1-2-1; }
+#cor-somma_prodotto_positivi_negativi-1-2-1 { counter-set: cor-somma_prodotto_positivi_negativi-1-2-1 0; }
+#cor-somma_prodotto_positivi_negativi-1-2-1 > li::marker { content: ""counter(cor-somma_prodotto_positivi_negativi-1-2-1,decimal)"."; }
+#cor-somma_prodotto_positivi_negativi-1-2-1 > li { counter-increment: cor-somma_prodotto_positivi_negativi-1-2-1; }
+#gfdl-section4-2-1 { counter-set: gfdl-section4-2-1 0; }
+#gfdl-section4-2-1 > li::marker { content: ""counter(gfdl-section4-2-1,upper-alpha)"."; }
+#gfdl-section4-2-1 > li { counter-increment: gfdl-section4-2-1; }
+</style>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Vai all'indice generale</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -130,8 +279,9 @@ window.MathJax = {
 \newcommand{\Reali}{\mathbf{R}}
 \newcommand{\Naturali}{\mathbf{N}}
 \newcommand{\Interi}{\mathbf{Z}}
- \newcommand{\Razionali}{\mathbf{Q}}
- \newcommand{\Complessi}{\mathbf{C}}
+\newcommand{\Razionali}{\mathbf{Q}}
+\newcommand{\Complessi}{\mathbf{C}}
+\newcommand{\campo}[1]{\mathbf{F}_{#1}}
 
  \newcommand{\grgen}[1]{\langle#1\rangle}
  \newcommand{\ideal}[1]{\left(#1\right)}
@@ -152,6 +302,7 @@ window.MathJax = {
  \newcommand{\euclidean}{\delta}
  \newcommand{\posto}[3]{#1_{#2#3}}
  \newcommand{\restrizione}[2]{\left. #1\right|_{#2}}
+ \newcommand{\indotto}[1]{\hat{#1}}
 
  \newcommand{\vect}[1]{\boldsymbol{#1}}
  
@@ -574,107 +725,93 @@ window.MathJax = {
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-estensione_campi.html" class="internal"><span class="codenumber">23</span> <span class="title">Estensioni di campi</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-elementi_algebrici_e_trascendenti.html" class="internal"><span class="codenumber">23.1</span> <span class="title">Elementi algebrici e trascendenti</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_algebrici_e_trascendenti.html#exercises-elementi_algebrici_e_trascendenti" class="internal"><span class="codenumber">23.1</span> <span class="title">Esercizi</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-campo_di_spezzamento.html" class="internal"><span class="codenumber">23.2</span> <span class="title">Campi di spezzamento</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-campo_di_spezzamento.html#exercises-campo_di_spezzamento" class="internal"><span class="codenumber">23.2</span> <span class="title">Esercizi</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-chiusure_algebriche.html" class="internal"><span class="codenumber">23.3</span> <span class="title">Cenni su campi algebricamente chiusi</span></a></div></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toc-item toc-part">
 <div class="toc-title-box"><a href="part-moduli.html" class="internal"><span class="codenumber">V</span> <span class="title">Moduli</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-moduli.html" class="internal"><span class="codenumber">24</span> <span class="title">Moduli</span></a></div>
+<div class="toc-title-box"><a href="ch-moduli.html" class="internal"><span class="codenumber">23</span> <span class="title">Moduli</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-definizione_di_moduli.html" class="internal"><span class="codenumber">24.1</span> <span class="title">Definizione di modulo</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizione_di_moduli.html#exercises-definizione_modulo" class="internal"><span class="codenumber">24.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-definizione_di_moduli.html" class="internal"><span class="codenumber">23.1</span> <span class="title">Definizione di modulo</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizione_di_moduli.html#exercises-definizione_modulo" class="internal"><span class="codenumber">23.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-sottomoduli.html" class="internal"><span class="codenumber">24.2</span> <span class="title">Sottomoduli</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottomoduli.html#exercises-sottomoduli" class="internal"><span class="codenumber">24.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-sottomoduli.html" class="internal"><span class="codenumber">23.2</span> <span class="title">Sottomoduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottomoduli.html#exercises-sottomoduli" class="internal"><span class="codenumber">23.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-omomorfismi_moduli.html" class="internal"><span class="codenumber">24.3</span> <span class="title">Omomorfismi di moduli</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-omomorfismi_moduli.html#exercises-omomorfismi_moduli" class="internal"><span class="codenumber">24.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-omomorfismi_moduli.html" class="internal"><span class="codenumber">23.3</span> <span class="title">Omomorfismi di moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-omomorfismi_moduli.html#exercises-omomorfismi_moduli" class="internal"><span class="codenumber">23.3</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-moduli_quoziente.html" class="internal"><span class="codenumber">24.4</span> <span class="title">Moduli quoziente</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_quoziente.html#exercises-moduli_quoziente" class="internal"><span class="codenumber">24.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-moduli_quoziente.html" class="internal"><span class="codenumber">23.4</span> <span class="title">Moduli quoziente</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_quoziente.html#exercises-moduli_quoziente" class="internal"><span class="codenumber">23.4</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-moduli_liberi.html" class="internal"><span class="codenumber">25</span> <span class="title">Moduli liberi</span></a></div>
+<div class="toc-title-box"><a href="ch-moduli_liberi.html" class="internal"><span class="codenumber">24</span> <span class="title">Moduli liberi</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-somma_diretta_moduli.html" class="internal"><span class="codenumber">25.1</span> <span class="title">Somma diretta di moduli</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-somma_diretta_moduli.html#exercises-somma_diretta_moduli" class="internal"><span class="codenumber">25.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-somma_diretta_moduli.html" class="internal"><span class="codenumber">24.1</span> <span class="title">Somma diretta di moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-somma_diretta_moduli.html#exercises-somma_diretta_moduli" class="internal"><span class="codenumber">24.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-dipendenza_lineare.html" class="internal"><span class="codenumber">25.2</span> <span class="title">Dipendenza e indipendenza lineare</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-dipendenza_lineare.html#exercises-dipendenza_lineare" class="internal"><span class="codenumber">25.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-dipendenza_lineare.html" class="internal"><span class="codenumber">24.2</span> <span class="title">Dipendenza e indipendenza lineare</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-dipendenza_lineare.html#exercises-dipendenza_lineare" class="internal"><span class="codenumber">24.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-elementi_di_torsione.html" class="internal"><span class="codenumber">25.3</span> <span class="title">Elementi di torsione</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_di_torsione.html#exercises-elementi_di_torsione" class="internal"><span class="codenumber">25.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-elementi_di_torsione.html" class="internal"><span class="codenumber">24.3</span> <span class="title">Elementi di torsione</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_di_torsione.html#exercises-elementi_di_torsione" class="internal"><span class="codenumber">24.3</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-modulisupid.html" class="internal"><span class="codenumber">26</span> <span class="title">Moduli finitamente generati su PID</span></a></div>
+<div class="toc-title-box"><a href="ch-modulisupid.html" class="internal"><span class="codenumber">25</span> <span class="title">Moduli finitamente generati su PID</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-moduli_ciclici.html" class="internal"><span class="codenumber">26.1</span> <span class="title">Moduli ciclici</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_ciclici.html#exercises-moduli_ciclici" class="internal"><span class="codenumber">26.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-moduli_ciclici.html" class="internal"><span class="codenumber">25.1</span> <span class="title">Moduli ciclici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_ciclici.html#exercises-moduli_ciclici" class="internal"><span class="codenumber">25.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-moduli_primari.html" class="internal"><span class="codenumber">26.2</span> <span class="title">Moduli primari</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_primari.html#exercises-moduli_primari" class="internal"><span class="codenumber">26.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-moduli_primari.html" class="internal"><span class="codenumber">25.2</span> <span class="title">Moduli primari</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_primari.html#exercises-moduli_primari" class="internal"><span class="codenumber">25.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-moduli_liberi.html" class="internal"><span class="codenumber">26.3</span> <span class="title">Moduli liberi</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_liberi.html#exercises-moduli_liberi" class="internal"><span class="codenumber">26.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-moduli_liberi.html" class="internal"><span class="codenumber">25.3</span> <span class="title">Moduli liberi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_liberi.html#exercises-moduli_liberi" class="internal"><span class="codenumber">25.3</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-classificazione_moduli_pid.html" class="internal"><span class="codenumber">26.4</span> <span class="title">La classificazione dei moduli finitamente generati su un dominio a ideali principali</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-classificazione_moduli_pid.html" class="internal"><span class="codenumber">25.4</span> <span class="title">La classificazione dei moduli finitamente generati su un dominio a ideali principali</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-gruppiabeliani.html" class="internal"><span class="codenumber">27</span> <span class="title">Gruppi abeliani finitamente generati</span></a></div>
+<div class="toc-title-box"><a href="ch-gruppiabeliani.html" class="internal"><span class="codenumber">26</span> <span class="title">Gruppi abeliani finitamente generati</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-gruppiabeliani.html" class="internal"><span class="codenumber">27.1</span> <span class="title">Classificazione dei gruppi abeliani finitamente generati</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppiabeliani.html#exercises-gruppiabeliani" class="internal"><span class="codenumber">27.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-gruppiabeliani.html" class="internal"><span class="codenumber">26.1</span> <span class="title">Classificazione dei gruppi abeliani finitamente generati</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppiabeliani.html#exercises-gruppiabeliani" class="internal"><span class="codenumber">26.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li></ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-formecanoniche.html" class="internal"><span class="codenumber">28</span> <span class="title">Forme canoniche di matrici</span></a></div>
+<div class="toc-title-box"><a href="ch-formecanoniche.html" class="internal"><span class="codenumber">27</span> <span class="title">Forme canoniche di matrici</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-kx_moduli.html" class="internal"><span class="codenumber">28.1</span> <span class="title">Spazi vettoriali con endomorfismi visti come moduli</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-kx_moduli.html#exercises-kx_moduli" class="internal"><span class="codenumber">28.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-kx_moduli.html" class="internal"><span class="codenumber">27.1</span> <span class="title">Spazi vettoriali con endomorfismi visti come moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-kx_moduli.html#exercises-kx_moduli" class="internal"><span class="codenumber">27.1</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-matrici_rappresentative.html" class="internal"><span class="codenumber">28.2</span> <span class="title">Matrici rappresentative</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-matrici_rappresentative.html#exercises-matrici_rappresentative" class="internal"><span class="codenumber">28.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-matrici_rappresentative.html" class="internal"><span class="codenumber">27.2</span> <span class="title">Matrici rappresentative</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-matrici_rappresentative.html#exercises-matrici_rappresentative" class="internal"><span class="codenumber">27.2</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-matrici_compagne.html" class="internal"><span class="codenumber">28.3</span> <span class="title">Matrici compagne</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-matrici_compagne.html" class="internal"><span class="codenumber">27.3</span> <span class="title">Matrici compagne</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-jordan.html" class="internal"><span class="codenumber">28.4</span> <span class="title">Forma canonica di Jordan</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-jordan.html#exercises-jordan" class="internal"><span class="codenumber">28.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-jordan.html" class="internal"><span class="codenumber">27.4</span> <span class="title">Forma canonica di Jordan</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-jordan.html#exercises-jordan" class="internal"><span class="codenumber">27.4</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html" class="internal"><span class="codenumber">28.5</span> <span class="title">Polinomio minimo di matrici</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html#exercises-polinomio_minimo_matrici" class="internal"><span class="codenumber">28.5</span> <span class="title">Esercizi</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html" class="internal"><span class="codenumber">27.5</span> <span class="title">Polinomio minimo di matrici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html#exercises-polinomio_minimo_matrici" class="internal"><span class="codenumber">27.5</span> <span class="title">Esercizi</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -717,7 +854,7 @@ window.MathJax = {
 </div>
 <div class="para">Notiamo che il coniugato del <span class="process-math">\(3\)</span>-ciclo <span class="process-math">\(\sigma\)</span> è ancora un <span class="process-math">\(3\)</span>-ciclo. Non solo: <span class="process-math">\(1\tau=2\text{,}\)</span> <span class="process-math">\(3\tau=4\)</span> e <span class="process-math">\(5\tau=5\text{,}\)</span> e, dunque, abbiamo che <span class="process-math">\((1\;3\;5)^{\tau}=(1\tau\;3\tau\;5\tau)\text{.}\)</span>
 </div>
-</div></article><div class="para" id="sec-coniugati_simmetrico_alterno-4">Quanto visto nell’esempio precedente ha validità generale. Abbiamo infatti il</div>
+</div></article><div class="para" id="sec-coniugati_simmetrico_alterno-4">Quanto visto nell’esempio precedente ha validità generale. Abbiamo, infatti, il</div>
 <article class="lemma theorem-like" id="lem-coniugato_ciclo"><h3 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">14.4.2</span><span class="period">.</span>
 </h3>
@@ -806,7 +943,7 @@ window.MathJax = {
 \end{equation*}
 </div>
 </div> <div class="para" id="ex-classi_coniugio_simmetrico-1-5">Ricordiamo ora che il centralizzante di un elemento <span class="process-math">\(g\)</span> di un gruppo <span class="process-math">\(G\)</span> contiene il sottogruppo ciclico <span class="process-math">\(\grgen{g}\text{.}\)</span> In alcuni casi, questa inclusione può essere un’uguaglianza. Nelle tabelle suesposte, possiamo confrontare il periodo di un elemento (cioè l’ordine del gruppo ciclico da esso generato) con l’ordine del suo centralizzante, per notare, ad esempio, che in <span class="process-math">\(\Sym_{5}\)</span> si ha <span class="process-math">\(\cent{\Sym_{5}}{(1\;2\;3)}\ne\grgen{(1\;2\;3)}\text{,}\)</span> mentre  <span class="process-math">\(\cent{\Sym_{5}}{(1\;2\;3\;4)}=\grgen{(1\;2\;3\;4)}\text{.}\)</span>
-</div></article><div class="para" id="sec-coniugati_simmetrico_alterno-9">Dalle tabelle precedenti possiamo ricavare tutti i sottogruppi normali dei gruppi simmetrici studiati. Un sottogruppo normale, infatti è unione di classi di coniugio.</div>
+</div></article><div class="para" id="sec-coniugati_simmetrico_alterno-9">Dalle tabelle precedenti possiamo ricavare tutti i sottogruppi normali dei gruppi simmetrici studiati. Un sottogruppo normale, infatti, è unione di classi di coniugio.</div>
 <article class="example example-like" id="ex-sottogruppi_normali_simmetrico"><h3 class="heading">
 <span class="type">Esempio</span><span class="space"> </span><span class="codenumber">14.4.6</span><span class="period">.</span>
 </h3>
@@ -814,11 +951,11 @@ window.MathJax = {
 </div> <div class="para" id="ex-sottogruppi_normali_simmetrico-1-3">Consideriamo ora il caso <span class="process-math">\(n=4\text{.}\)</span> Consideriamo tutte le possibili unioni di classi di coniugio (includendo <span class="process-math">\(\Id\)</span>) e contiamo quanti elementi contiene ciascuna di queste unioni: se il numero che otteniamo non è un divisore dell’ordine del gruppo, allora sicuramente il sottoinsieme considerato non è un sottogruppo e possiamo scartarlo, altrimenti dobbiamo verificare se è un sottogruppo. Facendo tutti i calcoli, vediamo che, oltre a <span class="process-math">\(\Id\text{,}\)</span> <span class="process-math">\(A_{4}\)</span> e <span class="process-math">\(\Sym_{4}\text{,}\)</span> l’unica possibilità da considerare è il sottoinsieme <span class="process-math">\(T\)</span> unione della classe di <span class="process-math">\(\Id\)</span> e della classe di <span class="process-math">\((1\;2)(3\;4)\text{:}\)</span> il sottoinsieme <span class="process-math">\(T\)</span> ha <span class="process-math">\(4\)</span> elementi e, quindi, potrebbe essere un sottogruppo di <span class="process-math">\(\Sym_{4}\text{.}\)</span> Facendo le verifiche, vediamo che è effettivamente così e, quindi, è un sottogruppo (necessariamente normale) di <span class="process-math">\(\Sym_{4}\text{.}\)</span>
 </div> <div class="para logical" id="ex-sottogruppi_normali_simmetrico-1-4">
 <div class="para">Il caso <span class="process-math">\(n=5\)</span> si tratta in maniera analoga. Consideriamo tutte le possibili unioni di classi di coniugio (includendo <span class="process-math">\(\Id\)</span>) e cerchiamo quelle formate da un numero di elementi che sia un divisore dell’ordine di <span class="process-math">\(\Sym_{5}\)</span> (cioè di <span class="process-math">\(5!=120\)</span>). Oltre a quelle che danno il sottogruppo banale, il sottogruppo alterno e il gruppo simmetrico stesso, abbiamo due casi da considerare:</div>
-<ul class="disc">
+<ul class="disc" id="ex-sottogruppi_normali_simmetrico-1-4-5">
 <li id="ex-sottogruppi_normali_simmetrico-1-4-5-1"><div class="para" id="ex-sottogruppi_normali_simmetrico-1-4-5-1-1">l’unione delle classi di <span class="process-math">\(\Id\text{,}\)</span> di <span class="process-math">\((1\;2\;3\;4\;5)\)</span> e di <span class="process-math">\((1\;2)(3\;4)\)</span> che contiene <span class="process-math">\(40\)</span> elementi</div></li>
 <li id="ex-sottogruppi_normali_simmetrico-1-4-5-2"><div class="para" id="ex-sottogruppi_normali_simmetrico-1-4-5-2-1">l’unione delle classi di <span class="process-math">\(\Id\text{,}\)</span> di <span class="process-math">\((1\;2\;3\;4\;5)\text{,}\)</span> di <span class="process-math">\((1\;2)(3\;4)\)</span> e di <span class="process-math">\((1\;2\;3)(4\;5)\)</span> che contiene <span class="process-math">\(60\)</span> elementi</div></li>
 </ul>
-<div class="para">Né l’una ne l’altra sono sottogruppi del simmetrico: infatti entrambe contengono gli elementi <span class="process-math">\((1\;2)(3\;4)\)</span> e <span class="process-math">\((1\;2)(3\;5)\)</span> ma non il loro prodotto e cioè <span class="process-math">\((3\;4\;5)\text{.}\)</span> Dunque, gli unici sottogruppi normali di <span class="process-math">\(\Sym_{5}\)</span> sono <span class="process-math">\(\Id\text{,}\)</span> <span class="process-math">\(A_{5}\)</span> e <span class="process-math">\(\Sym_{5}\text{.}\)</span>
+<div class="para">Né l’una ne l’altra sono sottogruppi del simmetrico: infatti, entrambe contengono gli elementi <span class="process-math">\((1\;2)(3\;4)\)</span> e <span class="process-math">\((1\;2)(3\;5)\)</span> ma non il loro prodotto e cioè <span class="process-math">\((3\;4\;5)\text{.}\)</span> Dunque, gli unici sottogruppi normali di <span class="process-math">\(\Sym_{5}\)</span> sono <span class="process-math">\(\Id\text{,}\)</span> <span class="process-math">\(A_{5}\)</span> e <span class="process-math">\(\Sym_{5}\text{.}\)</span>
 </div>
 </div></article><article class="remark remark-like" id="rem-conteggio_elementi_classi_coniugio"><h3 class="heading">
 <span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">14.4.7</span><span class="period">.</span>
@@ -826,7 +963,7 @@ window.MathJax = {
 <div class="para" id="rem-conteggio_elementi_classi_coniugio-1">Ovviamente, il metodo di cercare i sottogruppi normali del gruppo simmetrico contando il numero di elementi nell’unione di classi di coniugio non è molto efficiente in generale. Già per <span class="process-math">\(n=5\)</span> i casi da considerare sono parecchi e a mano a mano che <span class="process-math">\(n\)</span> cresce questo metodo diventa improponibile. Si potrebbe però dimostrare (con altri metodi, sempre relativamente elementari) che gli unici sottogruppi normali di <span class="process-math">\(\Sym_{n}\)</span> per <span class="process-math">\(n\ne 4\text{,}\)</span> sono <span class="process-math">\(\Id\text{,}\)</span> <span class="process-math">\(A_{n}\)</span> e <span class="process-math">\(\Sym_{n}\)</span> stesso.</div></article><article class="example example-like" id="ex-normalita_non_transitiva"><h3 class="heading">
 <span class="type">Esempio</span><span class="space"> </span><span class="codenumber">14.4.8</span><span class="period">.</span>
 </h3>
-<div class="para" id="ex-normalita_non_transitiva-1-1">Nell’<a href="sec-coniugati_simmetrico_alterno.html#ex-sottogruppi_normali_simmetrico" class="xref" data-knowl="./knowl/xref/ex-sottogruppi_normali_simmetrico.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Esempio 14.4.6">Esempio 14.4.6</a> abbiamo determinato i sottogruppi normali di <span class="process-math">\(\Sym_{4}\text{.}\)</span> In particolare abbiamo trovato un sottogruppo normale <span class="process-math">\(T\)</span> di ordine <span class="process-math">\(4\text{:}\)</span> per l’<a href="sec-gruppi_del_piano.html#rem-gruppi_di_ordine_4_abeliani" class="xref" data-knowl="./knowl/xref/rem-gruppi_di_ordine_4_abeliani.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Osservazione 9.3.12">Osservazione 9.3.12</a>, <span class="process-math">\(T\)</span> è abeliano e i suoi sottogruppi sono normali in esso. In particolare, posto <span class="process-math">\(C\coloneqq\grgen{(1\;2)(3\;4)}\text{,}\)</span> abbiamo che <span class="process-math">\(C\trianglelefteq T\trianglelefteq \Sym_{4}\)</span> ma <span class="process-math">\(C\)</span> non è normale in <span class="process-math">\(\Sym_{4}\text{.}\)</span> Questo mostra che la relazione di normalità non è transitiva.</div></article><div class="para" id="sec-coniugati_simmetrico_alterno-13">Ci chiediamo ora cosa possiamo dire delle classi di coniugio dell’alterno. Avendo indice <span class="process-math">\(2\)</span> nel simmetrico, il sottogruppo alterno è normale nel simmetrico (<a href="sec-sottogruppi_normali.html#cor-indice_2_normale" class="xref" data-knowl="./knowl/xref/cor-indice_2_normale.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Corollario 14.3.9">Corollario 14.3.9</a>). Dunque, se <span class="process-math">\(\sigma\)</span> è una permutazione contenuta nell’alterno, la sua classe di coniugio è contenuta nell’alterno: tuttavia, ciò non significa che questa sia anche la sua classe di coniugio nell’alterno.</div>
+<div class="para" id="ex-normalita_non_transitiva-1-1">Nell’<a href="sec-coniugati_simmetrico_alterno.html#ex-sottogruppi_normali_simmetrico" class="xref" data-knowl="./knowl/xref/ex-sottogruppi_normali_simmetrico.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Esempio 14.4.6">Esempio 14.4.6</a> abbiamo determinato i sottogruppi normali di <span class="process-math">\(\Sym_{4}\text{.}\)</span> In particolare, abbiamo trovato un sottogruppo normale <span class="process-math">\(T\)</span> di ordine <span class="process-math">\(4\text{:}\)</span> per l’<a href="sec-gruppi_del_piano.html#rem-gruppi_di_ordine_4_abeliani" class="xref" data-knowl="./knowl/xref/rem-gruppi_di_ordine_4_abeliani.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Osservazione 9.3.12">Osservazione 9.3.12</a>, <span class="process-math">\(T\)</span> è abeliano e i suoi sottogruppi sono normali in esso. In particolare, posto <span class="process-math">\(C\coloneqq\grgen{(1\;2)(3\;4)}\text{,}\)</span> abbiamo che <span class="process-math">\(C\trianglelefteq T\trianglelefteq \Sym_{4}\)</span> ma <span class="process-math">\(C\)</span> non è normale in <span class="process-math">\(\Sym_{4}\text{.}\)</span> Questo mostra che la relazione di normalità non è transitiva.</div></article><div class="para" id="sec-coniugati_simmetrico_alterno-13">Ci chiediamo ora cosa possiamo dire delle classi di coniugio dell’alterno. Avendo indice <span class="process-math">\(2\)</span> nel simmetrico, il sottogruppo alterno è normale nel simmetrico (<a href="sec-sottogruppi_normali.html#cor-indice_2_normale" class="xref" data-knowl="./knowl/xref/cor-indice_2_normale.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Corollario 14.3.9">Corollario 14.3.9</a>). Dunque, se <span class="process-math">\(\sigma\)</span> è una permutazione contenuta nell’alterno, la sua classe di coniugio è contenuta nell’alterno: tuttavia, ciò non significa che questa sia anche la sua classe di coniugio nell’alterno.</div>
 <article class="example example-like" id="sec-coniugati_simmetrico_alterno-14"><h3 class="heading">
 <span class="type">Esempio</span><span class="space"> </span><span class="codenumber">14.4.9</span><span class="period">.</span>
 </h3>
@@ -843,7 +980,7 @@ window.MathJax = {
 </h3>
 <div class="para logical" id="prop-classi_coniugio_indice_2-1-1">
 <div class="para">Sia <span class="process-math">\(G\)</span> un gruppo finito e sia <span class="process-math">\(H\)</span> un suo sottogruppo di indice <span class="process-math">\(2\text{.}\)</span> Preso un elemento <span class="process-math">\(h\in H\)</span> si verifica uno e uno solo dei seguenti casi</div>
-<ul class="disc">
+<ul class="disc" id="prop-classi_coniugio_indice_2-1-1-5">
 <li id="prop-classi_coniugio_indice_2-1-1-5-1"><div class="para" id="prop-classi_coniugio_indice_2-1-1-5-1-1">
 <span class="process-math">\(h^{H}=h^{G}\)</span> e <span class="process-math">\(\abs{\cent{H}{h}}=\frac{1}{2}\abs{\cent{G}{h}}\text{;}\)</span>
 </div></li>
@@ -872,7 +1009,7 @@ window.MathJax = {
 </h3>
 <div class="para" id="ex-classi_coniugio_alterno-1-1">Riprendiamo le tabelle date nell’<a href="sec-coniugati_simmetrico_alterno.html#ex-classi_coniugio_simmetrico" class="xref" data-knowl="./knowl/xref/ex-classi_coniugio_simmetrico.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Esempio 14.4.5">Esempio 14.4.5</a> e consideriamo le classi in <span class="process-math">\(\Sym_{n}\)</span> di permutazioni pari: quelle di cardinalità dispari, sono anche classi di coniugio nell’alterno; quelle che sono formate da elementi il cui centralizzante ha ordine dispari, si “spezzano” in due classi nell’alterno di cardinalità uguale e per le altre vediamo caso per caso.</div> <div class="para logical" id="ex-classi_coniugio_alterno-1-2">
 <div class="para">In <span class="process-math">\(\Sym_{3}\)</span> abbiamo</div>
-<ul class="disc">
+<ul class="disc" id="ex-classi_coniugio_alterno-1-2-2">
 <li id="ex-classi_coniugio_alterno-1-2-2-1"><div class="para" id="ex-classi_coniugio_alterno-1-2-2-1-1">la classe di <span class="process-math">\(\Id\)</span> che ha un solo elemento ed è, quindi, una classe anche in <span class="process-math">\(A_{3}\text{;}\)</span>
 </div></li>
 <li id="ex-classi_coniugio_alterno-1-2-2-2"><div class="para" id="ex-classi_coniugio_alterno-1-2-2-2-1">la classe di <span class="process-math">\((1\;2\;3)\)</span> che ha cardinalità <span class="process-math">\(2\)</span> e i cui elementi hanno centralizzante di ordine <span class="process-math">\(1\)</span> e, dunque, si spezza in due classi di cardinalità <span class="process-math">\(1\text{.}\)</span>
@@ -880,7 +1017,7 @@ window.MathJax = {
 </ul>
 </div> <div class="para logical" id="ex-classi_coniugio_alterno-1-3">
 <div class="para">In <span class="process-math">\(\Sym_{4}\)</span> abbiamo</div>
-<ul class="disc">
+<ul class="disc" id="ex-classi_coniugio_alterno-1-3-2">
 <li id="ex-classi_coniugio_alterno-1-3-2-1"><div class="para" id="ex-classi_coniugio_alterno-1-3-2-1-1">la classe di <span class="process-math">\(\Id\)</span> che ha un solo elemento ed è, quindi, una classe anche in <span class="process-math">\(A_{4}\text{;}\)</span>
 </div></li>
 <li id="ex-classi_coniugio_alterno-1-3-2-2"><div class="para" id="ex-classi_coniugio_alterno-1-3-2-2-1">la classe di <span class="process-math">\((1\;2\;3)\)</span> che ha cardinalità <span class="process-math">\(8\)</span> e i cui elementi hanno centralizzante di ordine <span class="process-math">\(3\)</span> e, dunque, si spezza in due classi di cardinalità <span class="process-math">\(4\text{;}\)</span>
@@ -890,7 +1027,7 @@ window.MathJax = {
 </ul>
 </div> <div class="para logical" id="ex-classi_coniugio_alterno-1-4">
 <div class="para">In <span class="process-math">\(\Sym_{5}\)</span> abbiamo</div>
-<ul class="disc">
+<ul class="disc" id="ex-classi_coniugio_alterno-1-4-2">
 <li id="ex-classi_coniugio_alterno-1-4-2-1"><div class="para" id="ex-classi_coniugio_alterno-1-4-2-1-1">la classe di <span class="process-math">\(\Id\)</span> che ha un solo elemento ed è, quindi, una classe anche in <span class="process-math">\(A_{5}\text{;}\)</span>
 </div></li>
 <li id="ex-classi_coniugio_alterno-1-4-2-2"><div class="para" id="ex-classi_coniugio_alterno-1-4-2-2-1">la classe di <span class="process-math">\((1\;2\;3)\)</span> che ha cardinalità <span class="process-math">\(20\)</span> e i cui elementi hanno centralizzante di ordine <span class="process-math">\(6\)</span> e, dunque, non possiamo analizzarla semplicemente guardando alle parità. Notiamo però che <span class="process-math">\((4\;5)\)</span> appartiene al centralizzante di <span class="process-math">\((1\;2\;3)\)</span> ma non sta nel sottogruppo alterno. Di conseguenza, il centralizzante nel simmetrico e nell’alterno di <span class="process-math">\((1\;2\;3)\)</span> non coincidono. Dunque, la classe di <span class="process-math">\((1\;2\;3)\)</span> nel simmetrico è una classe anche nell’alterno;</div></li>
@@ -910,7 +1047,7 @@ window.MathJax = {
 <div class="solutions"><details id="exercises-coniugati_simmetrico_alterno-1-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="exercises-coniugati_simmetrico_alterno-1-2-2-1">Gli elementi coniugati di <span class="process-math">\(\sigma\)</span> sono gli <span class="process-math">\(r\)</span>-cicli. Per determinare un <span class="process-math">\(r\)</span>-ciclo <span class="process-math">\((a_{1}\;a_{2}\;\ldots\;a_{r})\)</span> possiamo scegliere <span class="process-math">\(a_{1}\)</span> in <span class="process-math">\(n\)</span> modi diversi, poi <span class="process-math">\(a_{2}\)</span> in <span class="process-math">\(n-1\)</span> modi diversi e così via fino a <span class="process-math">\(a_{r}\)</span> che può essere scelto in <span class="process-math">\(n-r+1\)</span> modi diversi. In questo modo lo stesso ciclo appare però <span class="process-math">\(r\)</span> volte, quindi la classe di coniugio di <span class="process-math">\(\sigma\)</span> è formata da <span class="process-math">\(\frac{n\cdot(n-1)\cdots(n-r+1)}{r}\)</span> elementi.</div></div></details></div></article><article class="task exercise-like" id="exercises-coniugati_simmetrico_alterno-1-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para" id="exercises-coniugati_simmetrico_alterno-1-3-1-1">Determinare i valori di <span class="process-math">\(r\)</span> per cui <span class="process-math">\(\cent{S}{\sigma}=\grgen{\sigma}\text{.}\)</span>
 </div>
-<div class="solutions"><details id="exercises-coniugati_simmetrico_alterno-1-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="exercises-coniugati_simmetrico_alterno-1-3-2-1">Sappiamo che <span class="process-math">\(\abs{\sigma^{S}}\abs{\cent{S}{\sigma}}=\abs{S}\text{.}\)</span> Poiché <span class="process-math">\(\abs{S}=n!\)</span> e <span class="process-math">\(\abs{\sigma^{S}}=\frac{n\cdot(n-1)\cdots(n-r+1)}{r}\)</span> dal punto precedente, ne consegue che <span class="process-math">\(\abs{\cent{S}{\sigma}}=r(n-r)!\text{.}\)</span> Il centralizzante di <span class="process-math">\(\sigma\)</span> contiene tutte le potenze di <span class="process-math">\(\sigma\)</span> e, dunque, contiene <span class="process-math">\(\grgen{\sigma}\text{.}\)</span> Poiché <span class="process-math">\(\sigma\)</span> ha periodo <span class="process-math">\(r\text{,}\)</span> possiamo dunque affermare che <span class="process-math">\(\cent{S}{\sigma}=\grgen{\sigma}\)</span> se e solo se <span class="process-math">\(r(n-r)!=r\)</span> il che avviene se e solo se <span class="process-math">\((n-r)!=1\text{:}\)</span> questo si verifica se e solo se <span class="process-math">\(n-r=0\)</span> oppure <span class="process-math">\(n-r=1\text{,}\)</span> cioè <span class="process-math">\(r=n\)</span> o <span class="process-math">\(r=n-1\text{.}\)</span>
+<div class="solutions"><details id="exercises-coniugati_simmetrico_alterno-1-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="exercises-coniugati_simmetrico_alterno-1-3-2-1">Sappiamo che <span class="process-math">\(\abs{\sigma^{S}}\abs{\cent{S}{\sigma}}=\abs{S}\text{.}\)</span> Poiché <span class="process-math">\(\abs{S}=n!\)</span> e <span class="process-math">\(\abs{\sigma^{S}}=\frac{n\cdot(n-1)\cdots(n-r+1)}{r}\)</span> dal punto precedente, ne consegue che <span class="process-math">\(\abs{\cent{S}{\sigma}}=r(n-r)!\text{.}\)</span> Il centralizzante di <span class="process-math">\(\sigma\)</span> contiene tutte le potenze di <span class="process-math">\(\sigma\)</span> e, dunque, contiene <span class="process-math">\(\grgen{\sigma}\text{.}\)</span> Poiché <span class="process-math">\(\sigma\)</span> ha periodo <span class="process-math">\(r\text{,}\)</span> possiamo, dunque, affermare che <span class="process-math">\(\cent{S}{\sigma}=\grgen{\sigma}\)</span> se e solo se <span class="process-math">\(r(n-r)!=r\)</span> il che avviene se e solo se <span class="process-math">\((n-r)!=1\text{:}\)</span> questo si verifica se e solo se <span class="process-math">\(n-r=0\)</span> oppure <span class="process-math">\(n-r=1\text{,}\)</span> cioè <span class="process-math">\(r=n\)</span> o <span class="process-math">\(r=n-1\text{.}\)</span>
 </div></div></details></div></article></article><article class="exercise exercise-like" id="exercises-coniugati_simmetrico_alterno-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
 <div class="introduction" id="exercises-coniugati_simmetrico_alterno-2-1"><div class="para" id="exercises-coniugati_simmetrico_alterno-2-1-1">Sia <span class="process-math">\(S\coloneqq\Sym_{8}\)</span> il gruppo simmetrico su <span class="process-math">\(8\)</span> lettere.</div></div>
 <article class="task exercise-like" id="exercises-coniugati_simmetrico_alterno-2-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
@@ -945,7 +1082,7 @@ window.MathJax = {
 <article class="task exercise-like" id="exercises-coniugati_simmetrico_alterno-3-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para" id="exercises-coniugati_simmetrico_alterno-3-2-1-1">Quanti elementi di <span class="process-math">\(S\)</span> commutano con <span class="process-math">\(\sigma\text{?}\)</span> Quanti di questi sono permutazioni pari?</div>
 <div class="solutions"><details id="exercises-coniugati_simmetrico_alterno-3-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="exercises-coniugati_simmetrico_alterno-3-2-2-1">L’indice del centralizzante di <span class="process-math">\(\sigma\)</span> in <span class="process-math">\(S\)</span> è uguale alla cardinalità della classe di <span class="process-math">\(\sigma\text{.}\)</span> Gli elementi coniugati di <span class="process-math">\(\sigma\)</span> sono tutti e soli quelli del tipo <span class="process-math">\((a\;b)(c\;d)\)</span> con <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\)</span> e <span class="process-math">\(d\)</span> numeri distinti compresi tra <span class="process-math">\(1\)</span> e <span class="process-math">\(5\text{.}\)</span> Abbiamo <span class="process-math">\(5\)</span> scelte per <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(4\)</span> scelte per <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(3\)</span> scelte per <span class="process-math">\(c\)</span> e <span class="process-math">\(2\)</span> scelte per <span class="process-math">\(d\text{:}\)</span> in tutto <span class="process-math">\(5\cdot4\cdot3\cdot2=120\)</span> scelte. Tutte queste scelte non corrispondono però a elementi distinti. Infatti possiamo scambiare tra loro <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> (e dobbiamo, dunque, dividere il numero delle scelte per <span class="process-math">\(2\)</span>), scambiare fra loro <span class="process-math">\(c\)</span> e <span class="process-math">\(d\)</span> (e dobbiamo, dunque, dividere ancora per <span class="process-math">\(2\)</span>), e scambiare tra loro i cicli <span class="process-math">\((a\;b)\)</span> e <span class="process-math">\((c\;d)\)</span> (e dividere ulteriormente per <span class="process-math">\(2\)</span>). Pertanto, la classe di coniugio di <span class="process-math">\(\sigma\)</span> contiene <span class="process-math">\(\frac{120}{2\cdot2\cdot2}=15\)</span> elementi. Poiché <span class="process-math">\(S\)</span> ha ordine <span class="process-math">\(5!=120\text{,}\)</span> il centralizzante di <span class="process-math">\(\sigma\)</span> contiene <span class="process-math">\(\frac{120}{15}=8\)</span> elementi.</div> <div class="para" id="exercises-coniugati_simmetrico_alterno-3-2-2-2">Dobbiamo ora trovare l’ordine di <span class="process-math">\(\cent{S}{\sigma}\cap A_{5}\text{.}\)</span> Per il <a href="sec-coniugati_simmetrico_alterno.html#lem-indice_intersezione" class="xref" data-knowl="./knowl/xref/lem-indice_intersezione.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Lemma 14.4.10">Lemma 14.4.10</a>, <span class="process-math">\(\ind{\cent{S}{\sigma}}{\cent{S}{\sigma}\cap A_{5}}\le\ind{S}{A_{5}}=2\text{,}\)</span> cioè <span class="process-math">\(\cent{S}{\sigma}\cap A_{5}\)</span> ha ordine <span class="process-math">\(8\)</span> o <span class="process-math">\(4\text{.}\)</span> Notiamo che <span class="process-math">\(\cent{S}{\sigma}\)</span> contiene <span class="process-math">\((1\;2)\)</span> che non appartiene ad <span class="process-math">\(A_{5}\text{:}\)</span> pertanto, <span class="process-math">\(\cent{S}{\sigma}\cap A_{5}\ne\cent{S}{\sigma}\)</span> e, quindi, <span class="process-math">\(\cent{S}{\sigma}\cap A_{5}\)</span> ha ordine <span class="process-math">\(4\text{.}\)</span>
+<div class="para" id="exercises-coniugati_simmetrico_alterno-3-2-2-1">L’indice del centralizzante di <span class="process-math">\(\sigma\)</span> in <span class="process-math">\(S\)</span> è uguale alla cardinalità della classe di <span class="process-math">\(\sigma\text{.}\)</span> Gli elementi coniugati di <span class="process-math">\(\sigma\)</span> sono tutti e soli quelli del tipo <span class="process-math">\((a\;b)(c\;d)\)</span> con <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\)</span> e <span class="process-math">\(d\)</span> numeri distinti compresi tra <span class="process-math">\(1\)</span> e <span class="process-math">\(5\text{.}\)</span> Abbiamo <span class="process-math">\(5\)</span> scelte per <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(4\)</span> scelte per <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(3\)</span> scelte per <span class="process-math">\(c\)</span> e <span class="process-math">\(2\)</span> scelte per <span class="process-math">\(d\text{:}\)</span> in tutto <span class="process-math">\(5\cdot4\cdot3\cdot2=120\)</span> scelte. Tutte queste scelte non corrispondono però a elementi distinti. Infatti, possiamo scambiare tra loro <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> (e dobbiamo, dunque, dividere il numero delle scelte per <span class="process-math">\(2\)</span>), scambiare fra loro <span class="process-math">\(c\)</span> e <span class="process-math">\(d\)</span> (e dobbiamo, dunque, dividere ancora per <span class="process-math">\(2\)</span>), e scambiare tra loro i cicli <span class="process-math">\((a\;b)\)</span> e <span class="process-math">\((c\;d)\)</span> (e dividere ulteriormente per <span class="process-math">\(2\)</span>). Pertanto, la classe di coniugio di <span class="process-math">\(\sigma\)</span> contiene <span class="process-math">\(\frac{120}{2\cdot2\cdot2}=15\)</span> elementi. Poiché <span class="process-math">\(S\)</span> ha ordine <span class="process-math">\(5!=120\text{,}\)</span> il centralizzante di <span class="process-math">\(\sigma\)</span> contiene <span class="process-math">\(\frac{120}{15}=8\)</span> elementi.</div> <div class="para" id="exercises-coniugati_simmetrico_alterno-3-2-2-2">Dobbiamo ora trovare l’ordine di <span class="process-math">\(\cent{S}{\sigma}\cap A_{5}\text{.}\)</span> Per il <a href="sec-coniugati_simmetrico_alterno.html#lem-indice_intersezione" class="xref" data-knowl="./knowl/xref/lem-indice_intersezione.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Lemma 14.4.10">Lemma 14.4.10</a>, <span class="process-math">\(\ind{\cent{S}{\sigma}}{\cent{S}{\sigma}\cap A_{5}}\le\ind{S}{A_{5}}=2\text{,}\)</span> cioè <span class="process-math">\(\cent{S}{\sigma}\cap A_{5}\)</span> ha ordine <span class="process-math">\(8\)</span> o <span class="process-math">\(4\text{.}\)</span> Notiamo che <span class="process-math">\(\cent{S}{\sigma}\)</span> contiene <span class="process-math">\((1\;2)\)</span> che non appartiene ad <span class="process-math">\(A_{5}\text{:}\)</span> pertanto, <span class="process-math">\(\cent{S}{\sigma}\cap A_{5}\ne\cent{S}{\sigma}\)</span> e, quindi, <span class="process-math">\(\cent{S}{\sigma}\cap A_{5}\)</span> ha ordine <span class="process-math">\(4\text{.}\)</span>
 </div>
 </div></details></div></article><article class="task exercise-like" id="exercises-coniugati_simmetrico_alterno-3-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para" id="exercises-coniugati_simmetrico_alterno-3-3-1-1">Quanti elementi di <span class="process-math">\(S\)</span> commutano con <span class="process-math">\(\tau\text{?}\)</span> Quanti di questi sono permutazioni pari?</div>
@@ -959,7 +1096,7 @@ window.MathJax = {
 <article class="task exercise-like" id="exercises-coniugati_simmetrico_alterno-4-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para" id="exercises-coniugati_simmetrico_alterno-4-2-1-1">Determinare l’ordine della classe di coniugio e l’ordine del centralizzante di <span class="process-math">\(\sigma\)</span> in <span class="process-math">\(\Sym_{7}\text{.}\)</span>
 </div>
-<div class="solutions"><details id="exercises-coniugati_simmetrico_alterno-4-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="exercises-coniugati_simmetrico_alterno-4-2-2-1">la classe di coniugio di <span class="process-math">\(\sigma\)</span> è formata dalle permutazioni del tipo <span class="process-math">\((a\;b\;c\;d)(e\;f)\)</span> con <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\text{,}\)</span> <span class="process-math">\(d\text{,}\)</span> <span class="process-math">\(e\)</span> ed <span class="process-math">\(f\)</span> interi distinti compresi tra <span class="process-math">\(1\)</span> e <span class="process-math">\(7\text{.}\)</span> Possiamo scegliere <span class="process-math">\(a\)</span> in <span class="process-math">\(7\)</span> modi, poi <span class="process-math">\(b\)</span> in <span class="process-math">\(6\)</span> modi, <span class="process-math">\(c\)</span> in <span class="process-math">\(5\)</span> modi e così via fino a <span class="process-math">\(2\)</span> scelte per <span class="process-math">\(f\text{.}\)</span> Tuttavia queste <span class="process-math">\(7\cdot6\cdot5\cdot4\cdot3\cdot2=7!\)</span> scelte non danno origine a permutazioni distinte. Infatti scambiando fra loro <span class="process-math">\(e\)</span> e <span class="process-math">\(f\)</span> otteniamo la stessa permutazione, e, allo stesso modo, <span class="process-math">\((a\;b\;c\;d)\)</span> può essere scritto in <span class="process-math">\(4\)</span> modi distinti. Dunque, il numero di elementi nella classe di <span class="process-math">\(\sigma\)</span> è uguale a <span class="process-math">\(\frac{7!}{4\cdot2}\text{:}\)</span> questo numero è uguale all’indice in <span class="process-math">\(\Sym_{7}\)</span> di <span class="process-math">\(\cent{\Sym_{7}}{\sigma}\text{.}\)</span> Poiché <span class="process-math">\(\abs{\Sym_{7}}=7!\text{,}\)</span> il centralizzante di <span class="process-math">\(\sigma\)</span> contiene <span class="process-math">\(8\)</span> elementi.</div></div></details></div></article><article class="task exercise-like" id="exercises-coniugati_simmetrico_alterno-4-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="solutions"><details id="exercises-coniugati_simmetrico_alterno-4-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="exercises-coniugati_simmetrico_alterno-4-2-2-1">la classe di coniugio di <span class="process-math">\(\sigma\)</span> è formata dalle permutazioni del tipo <span class="process-math">\((a\;b\;c\;d)(e\;f)\)</span> con <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\text{,}\)</span> <span class="process-math">\(d\text{,}\)</span> <span class="process-math">\(e\)</span> ed <span class="process-math">\(f\)</span> interi distinti compresi tra <span class="process-math">\(1\)</span> e <span class="process-math">\(7\text{.}\)</span> Possiamo scegliere <span class="process-math">\(a\)</span> in <span class="process-math">\(7\)</span> modi, poi <span class="process-math">\(b\)</span> in <span class="process-math">\(6\)</span> modi, <span class="process-math">\(c\)</span> in <span class="process-math">\(5\)</span> modi e così via fino a <span class="process-math">\(2\)</span> scelte per <span class="process-math">\(f\text{.}\)</span> Tuttavia queste <span class="process-math">\(7\cdot6\cdot5\cdot4\cdot3\cdot2=7!\)</span> scelte non danno origine a permutazioni distinte. Infatti, scambiando fra loro <span class="process-math">\(e\)</span> e <span class="process-math">\(f\)</span> otteniamo la stessa permutazione, e, allo stesso modo, <span class="process-math">\((a\;b\;c\;d)\)</span> può essere scritto in <span class="process-math">\(4\)</span> modi distinti. Dunque, il numero di elementi nella classe di <span class="process-math">\(\sigma\)</span> è uguale a <span class="process-math">\(\frac{7!}{4\cdot2}\text{:}\)</span> questo numero è uguale all’indice in <span class="process-math">\(\Sym_{7}\)</span> di <span class="process-math">\(\cent{\Sym_{7}}{\sigma}\text{.}\)</span> Poiché <span class="process-math">\(\abs{\Sym_{7}}=7!\text{,}\)</span> il centralizzante di <span class="process-math">\(\sigma\)</span> contiene <span class="process-math">\(8\)</span> elementi.</div></div></details></div></article><article class="task exercise-like" id="exercises-coniugati_simmetrico_alterno-4-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para" id="exercises-coniugati_simmetrico_alterno-4-3-1-1">Determinare l’ordine della classe di coniugio di <span class="process-math">\(\sigma\)</span> in <span class="process-math">\(A_{7}\text{.}\)</span>
 </div>
 <div class="solutions"><details id="exercises-coniugati_simmetrico_alterno-4-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="exercises-coniugati_simmetrico_alterno-4-3-2-1">Notiamo che <span class="process-math">\(\sigma\)</span> commuta con <span class="process-math">\((5\;6)\)</span> e, di conseguenza, il centralizzante di <span class="process-math">\(\sigma\)</span> non è contenuto nell’alterno. Per la <a href="sec-coniugati_simmetrico_alterno.html#prop-classi_coniugio_indice_2" class="xref" data-knowl="./knowl/xref/prop-classi_coniugio_indice_2.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 14.4.11">Proposizione 14.4.11</a>, la classe di coniugio di <span class="process-math">\(\sigma\)</span> nell’alterno coincide con la sua classe nel simmetrico e ha quindi ordine <span class="process-math">\(\frac{7!}{4\cdot2}\text{.}\)</span>
