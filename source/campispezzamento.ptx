@@ -88,23 +88,18 @@
           </statement>
         </example>
 
-        <example>
+        <example xml:id="ex-radice_cubica_due">
           <statement>
             <p>
-              Consideriamo il polinomio <m>f\coloneqq x^{3}-2</m> a coefficienti in <m>\Razionali</m>. Applicando il <xref ref="lem-eisenstein" text="title"/> con <m>p=2</m>, vediamo che è irriducibile in <m>\Razionali[x]</m>. Consideriamo allora l'estensione semplice <m>E\coloneqq\Razionali(u)</m> con <m>u</m> radice di <m>f</m>, costruita come nel <xref ref="lem-estensione_semplice"/>. In <m>E[x]</m> il polinomio <m>f</m> è divisibile per <m>x-u</m>. Abbiamo allora <m>x^{3}-2=(x-u)g</m> con <m>g</m> polinomio di secondo grado a coefficienti in <m>E</m>. Non sappiamo però se <m>g</m> sia irriducibile in <m>E[x]</m> (e, quindi, per ottenere il campo di spezzamento di <m>f</m> dobbiamo fare un'ulteriore estensione di grado <m>2</m>) oppure no (nel qual caso <m>E</m> sarebbe il campo di spezzamento di <m>f</m>). Per evitare troppi calcoli, possiamo scegliere come <m>u</m> l'usuale numero reale <m>\sqrt[3]{2}</m>: in particolare <m>E</m> sarà contenuto in <m>\Reali</m>. Sappiamo che le altre radici cubiche di <m>2</m> sono numeri complessi non reali. Pertanto  <m>E</m> non è il campo di spezzamento di <m>f</m>. Il suo campo di spezzamento su <m>\Razionali</m> si ottiene quindi con un'estensione di <m>E</m> di grado <m>2</m>- Pertanto il campo di spezzamento di <m>f</m> ha grado <m>6</m> su <m>\Razionali</m>.
+              Consideriamo il polinomio <m>f\coloneqq x^{3}-2</m> a coefficienti in <m>\Razionali</m>. Applicando il <xref ref="lem-eisenstein" text="title"/> con <m>p=2</m>, vediamo che è irriducibile in <m>\Razionali[x]</m>. Consideriamo allora l'estensione semplice <m>E\coloneqq\Razionali(u)</m> con <m>u</m> radice di <m>f</m>, costruita come nel <xref ref="lem-estensione_semplice"/>. In <m>E[x]</m> il polinomio <m>f</m> è divisibile per <m>x-u</m>. Abbiamo allora <m>x^{3}-2=(x-u)g</m> con <m>g</m> polinomio di secondo grado a coefficienti in <m>E</m>. Non sappiamo però se <m>g</m> sia irriducibile in <m>E[x]</m> (e, quindi, per ottenere il campo di spezzamento di <m>f</m> dobbiamo fare un'ulteriore estensione di grado <m>2</m>) oppure no (nel qual caso <m>E</m> sarebbe il campo di spezzamento di <m>f</m>). Per evitare troppi calcoli, possiamo scegliere come <m>u</m> l'usuale numero reale <m>\sqrt[3]{2}</m>: in particolare <m>E</m> sarà contenuto in <m>\Reali</m>. Sappiamo che le altre radici cubiche di <m>2</m> sono numeri complessi non reali. Pertanto  <m>E</m> non è il campo di spezzamento di <m>f</m>. Il suo campo di spezzamento su <m>\Razionali</m> si ottiene quindi con un'estensione di <m>E</m> di grado <m>2</m>. Pertanto il campo di spezzamento di <m>f</m> ha grado <m>6</m> su <m>\Razionali</m>.
             </p>
           </statement>
         </example>
 
-        <example>
+        <example xml:id="ex-spezzamento_in_campo_due">
           <statement>
             <p>
-              <m>x^{3}-3x-1</m>
-              Consideriamo il polinomio <m>f\coloneqq x^{3}+x^{2}-2x-1</m> a coefficienti in <m>\Razionali</m>. Poiché, in effetti, i suoi coefficienti sono interi possiamo cercarne le eventuali radici razionali: il numeratore dovrebbe dividere il termine noto <m>-1</m> e il denominatore il coefficiente direttivo <m>1</m>. Le possibili radici razionali sono allora <m>1</m> e <m>-1</m>: si verifica facilmente che queste non sono radici e, quindi, poiché <m>f</m> non ha radici e ha grado <m>3</m>, è irriducibile in <m>\Razionali[x]</m>. Consideriamo allora l'estensione semplice <m>E\coloneqq\Razionali(u)</m> con <m>u</m> radice di <m>f</m>, costruita come nel <xref ref="lem-estensione_semplice"/>. Gli elementi di <m>E</m> sono del tipo <m>au^{2}+bu+c</m> al variare di <m>a</m>, <m>b</m> e <m>c</m> in <m>\Razionali</m>. 
-              Per vedere se <m>E</m> contiene altre radici di <m>f</m> oltre a <m>u</m> dovremmo sostituire l'elemento generico di <m>E</m> nel polinomio <m>f</m> e vedere se soddisfa tale polinomio: i calcoli sono un po' lunghi e li lasciamo per esercizio. Si verifica che <m>u^{2}-2</m> e <m>-u^{2}-u+1</m> sono radici di <m>f</m> che appartengono a <m>E</m>. Pertanto, <m>E</m> è il campo di spezzamento di <m>f</m> su <m>\Razionali</m> e in <m>E[x]</m> il polinomio <m>f</m> si fattorizza come
-              <me>
-                f=(x-u)(x-u^{2}+2)(x+u^{2}+u-1)
-              </me>.
+              Consideriamo il polinomio <m>f\coloneqq x^{3}+x+1</m> a coefficienti nel campo <m>\Interi/2</m>. Si verifica facilmente che nessuno dei due elementi di <m>\Interi/2</m> è radice di <m>f</m>: poiché <m>f</m> ha grado <m>3</m>, ciò significa che <m>f</m> è irriducibile. Consideriamo allora l'estensione semplice <m>E\coloneqq\Interi/2(u)</m> con <m>u</m> radice di <m>f</m>, costruita come nel <xref ref="lem-estensione_semplice"/>. In <m>E[x]</m> il polinomio <m>f</m> è divisibile per <m>x-u</m>. Abbiamo allora <m>x^{3}-2=(x-u)(x^{2}+ux+u^{2}+1)</m> (lasciamo i calcoli per esercizio). Posto allora <m>g\coloneqq x^{2}+ux+u^{2}+1</m>, ci chiediamo se <m>g</m> sia totalmente riducibile in <m>E[x]</m>: poiché <m>g</m> ha grado <m>2</m>, ciò si verifica se e solo se <m>g</m> ha almeno una <m>E</m>. Poiché una base di <m>E</m> su <m>\Interi/2</m> è formata da <m>1</m>, <m>u</m> e <m>u^{2}</m>. Si possono quindi facilmente elencare gli elementi di <m>E</m> (sono <m>8</m>) e verificare se qualcuno di essi è radice del polinomio. Si trova allora che <m>u^{2}</m> è radice di <m>g</m>: dunque <m>g</m> è divisibile per <m>x-u^{2}</m> in <m>E[x]</m>, cioè <m>g=(x-u^{2})h</m> con <m>h</m> di primo grado. In conclusione <m>f=(x-u)(x-u^{2})h</m> è totalmente riducibile in <m>E</m> che è dunque il campo di spezzamento di <m>f</m> su <m>\Interi/2</m>. Lasciamo per esercizio la verifica che <m>u^{2}</m> è radice di <m>g</m> e la determinazione esplicita di <m>h</m>.
             </p>
           </statement>
         </example>
@@ -114,9 +109,53 @@
           <exercise xml:id="exercise-grado_spezzamento">
             <statement>
               <p>
-                Utilizzare la dimostrazione del <xref ref="thm-campo_spezzamento"/> per mostrare che se <m>f</m> è un polinomio di grado <m>n</m> a coefficienti in un campo <m>F</m>, allora il campo di spezzamento <m>E</m> di <m>f</m> su <m>F</m> è un'estensione finita di grado al più <m>n!</m> su <m>f</m>.
+                Utilizzare la dimostrazione del <xref ref="thm-campo_spezzamento"/> per mostrare che se <m>f</m> è un polinomio di grado <m>n</m> a coefficienti in un campo <m>F</m>, allora il campo di spezzamento <m>E</m> di <m>f</m> su <m>F</m> è un'estensione finita di grado al più <m>n!</m> su <m>f</m>. 
               </p>
             </statement>
+          </exercise>
+
+          <exercise>
+            <introduction>
+              <p>
+                Completare i calcoli nell'<xref ref="ex-spezzamento_in_campo_due"/>. In particolare
+              </p>
+            </introduction>
+            <task>
+              <statement>
+                <p>
+                  Determinare i coefficienti del polinomio <m>g</m> tale che <m>f=(x-u)g</m>.
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  Poiché <m>f</m> e <m>x-u</m> sono monici, anche <m>g</m> lo è. Sia allora <m>g\coloneqq x^{2}+ax+b</m> con <m>a</m> e <m>b</m> in <m>E</m>. Sviluppando il prodotto <m>(x-u)(x^{2}+ax+b)</m>, troviamo <m>x^{3}+(a-u)x^{2}+(b-au)x-bu</m>. Uguagliando i coefficienti di questo prodotto con i coefficienti di <m>f</m> troviamo le equazioni <m>a-u=0</m>, <m>b-au=1</m> e <m>-bu=1</m>, da cui ricaviamo <m>a=u</m> e <m>b=1+u^{2}</m> (si noti che basta usare due delle equazioni).
+                </p>
+              </solution>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Verificare che <m>u^{2}</m> è radice di <m>g</m>.
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  Sostituendo <m>u^{2}</m> in <m>g</m> otteniamo <m>g(u^{2})=u^{6}+u^{2}+1</m>. Poiché <m>u</m> è radice di <m>f</m>, sappiamo che <m>u^{3}+u+1=0</m>, da cui segue che <m>u^{3}=u+1</m> (in caratteristica <m>2</m> ogni elemento coincide con il proprio opposto). Ma allora <m>g(u)=(u+1)^{2}+u^{2}+1</m>, cioè <m>g(u)=u^{2}+1+u^{2}+1=0</m>.
+                </p>
+              </solution>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Determinare i coefficienti del polinomio <m>h</m> tale che <m>g=(x-u)h</m>.
+                </p>
+              </statement>
+              <solution>
+                <p>
+                  Poiché <m>g</m> e <m>x-u^{2}</m> sono monici, anche <m>h</m> lo è. Sia allora <m>g\coloneqq x+a</m> con <m>a</m> in <m>E</m>. Sviluppando il prodotto <m>(x-u^{2})(x+a)</m>, troviamo <m>x^{2}+(a-u^{2})x+(b-au)x-au^{2}</m>. Uguagliando i coefficienti di questo prodotto con i coefficienti di <m>h</m> troviamo le equazioni <m>a-u^{2}=u</m> e <m>-au^{2}=1+u^{2}</m>, da cui ricaviamo <m>a=u+u^{2}</m> (si noti che basta usare una equazione).
+                </p>
+              </solution>
+            </task>
           </exercise>
     
         </exercises>
@@ -133,6 +172,12 @@
                 </p>
             </statement>
         </definition>
+
+        <remark>
+          <p>
+            La definizione di estensione normale ci dice che, dato un polinomio irriducibile a coefficienti in <m>F</m>, quando pensato come polinomio a coefficienti in <m>E</m> si verifica una e una sola delle due possibilità: o il polinomio non ha radici in <m>E</m> oppure è totalmente riducibile in <m>E[x]</m>.
+          </p>
+        </remark>
 
         <remark>
             <p>
@@ -152,7 +197,63 @@
             </p>
           </proof>
         </proposition>
+
+        <example xml:id="ex-estensione_non_normale">
+          <statement>
+            <p>
+              Riprendiamo l'<xref ref="ex-radice_cubica_due"/>. Il polinomio <m>x^{3}-2</m> a coefficienti razionali ha una radice <m>u</m> in <m>E\coloneqq\Razionali(u)</m>: abbiamo mostrato che <m>f</m> non si spezza totalmente in <m>E[x]</m> e, quindi, <m>E</m> non è un'estensione normale di <m>\Razionali</m>.
+            </p>
+          </statement> 
+        </example>
+
+        <p>
+          Per dare esempi di estensioni normali oltre a quelle aventi grado <m>1</m> e <m>2</m>, diamo il
+        </p>
+        <theorem xml:id="thm-normali_campi_di_spezzamento">
+          <statement>
+            <p>
+              Sia <m>E</m> un'estensione di un campo <m>F</m>. Sono equivalenti le condizioni
+              <ol>
+                <li xml:id="item-finita_normale">
+                  <p>
+                    <m>E</m> è un estensione finita e normale di <m>F</m>;
+                  </p>
+                </li>
+                <li xml:id="item-spezzamento">
+                  <p>
+                    <m>E</m> è il campo di spezzamento su <m>F</m> di un polinomio.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+          <proof>
+            <p>
+              Supponiamo che valga la <xref ref="item-finita_normale"/>. Dunque, <m>E=F(u_{1},\ldots,u_{r})</m> per certi <m>u_{1}</m>, <m>\ldots</m>, <m>u_{r}</m> in <m>E</m>. Siano allora <m>f_{1}</m>, <m>\ldots</m>, <m>f_{r}</m> i rispettivi polinomi minimi su <m>F</m>: questi sono irriducibili in <m>F[x]</m> e, avendo almeno una radice in <m>E</m> estensione normale di <m>F</m>, sono totalmente riducibili in <m>E[x]</m>. Dunque, il polinomio <m>f\coloneqq f_{1}\cdots f_{r}</m> è totalmente riducibile in <m>E[x]</m>. Notiamo inoltre che <m>E</m> è generato da <m>F</m> e dalle radici di <m>f</m>: pertanto <m>E</m> è il campo di spezzamento di <m>f</m> su <m>F</m>.
+            </p>
+            <p>
+              Supponiamo ora che valga la <xref ref="item-spezzamento"/>. Dunque, <m>E</m> è il campo di spezzamento su <m>F</m> di un certo polinomio <m>f</m> a coefficienti in <m>F</m>. In particolare, <m>E</m> è un'estensione finita di <m>F</m>. Siano <m>u_{1}</m>, <m>\ldots</m>, <m>u_{r}</m> le radici di <m>f</m>. Consideriamo ora un polinomio <m>g</m> irriducibile a coefficienti in <m>F</m> che abbia una radice <m>v</m> in <m>E</m>. Dobbiamo mostrare che <m>g</m> è totalmente riducibile in <m>E[x]</m>. Consideriamo il campo di spezzamento <m>K</m> di <m>g</m> su <m>E</m> e sia <m>w</m> una radice di <m>g</m>: dobbiamo mostrare che <m>w</m> appartiene a <m>E</m>. Consideriamo allora il campo <m>F(w)</m>: dalla dimostrazione del <xref ref="lem-estensione_omomorfismo_semplice"/>, sappiamo che esiste un isomorfismo <m>\phi</m> tra <m>F(v)</m> e <m>F(w)</m> che è l'identità su <m>F</m>. In particolare <m>f\indotto{\phi}=f</m>. Per il <xref ref="thm-isomorfismo_campi_spezzamento"/> esiste un isomorfismo che estende <m>\phi</m> tra il campo di spezzamento <m>K</m> di <m>f</m> su <m>F(v)</m> e il campo di spezzamento <m>L</m> di <m>f</m> su <m>F(w)</m>. Per la <xref ref="prop-omomorfismo_preserva_grado"/>, si ha <m>\degext{K}{F(v)}=\degext{L}{F(w)}</m>. Ora <m>K=F(v,u_{1},\ldots,u_{r})=E</m>, mentre <m>L=F(w,u_{1},\ldots,u_{r})=E(w)</m>. Abbiamo allora 
+              <md>
+                <mrow> \degext{E(w)}{F} \amp =\degext{E(w)}{F(w)}\degext{F(w)}{F}=\degext{L}{F(w)}\degext{F(w)}{F}\\</mrow>
+                <mrow> \amp =\degext{K}{F(v)}\degext{F(v)}{F}=\degext{E}{F(v)}\degext{F(v)}{F}=\degext{E}{F}</mrow>
+              </md>.
+              Di conseguenza, <m>\degext{E(w)}{E}=\frac{\degext{E(w)}{F}}{\degext{E}{F}}=1</m>, cioè <m>E(w)=E</m>, vale a dire <m>w</m> appartiene a <m>E</m>, come richiesto.
+            </p>
+          </proof>
+        </theorem>
+
+        <p>
+          Il teorema precedente ci permette perciò di fornire vari esempi di estensioni normali finite. Non studieremo in dettaglio le estensioni normali infinite anche se i risultati dati si possono generalizzare introducendo la nozione di campo di spezzamento di una famiglia qualunque (anche infinita) di polinomi.
+        </p>
         
+    </section>
+
+    <section xml:id="sec-chiusura_normale">
+      <title>Chiusura normale</title>
+      <p>
+        Da completare
+      </p>
+      
     </section>
     
     
