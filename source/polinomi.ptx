@@ -628,7 +628,28 @@
     </example>
 
     <p>
-      Se <m>u</m> è una radice di un polinomio non nullo <m>f</m> a coefficienti in un anello commutativo <m>R</m>, dal <xref ref="thm-del_resto" text="title"/> sappiamo che <m>f=(x-u)q</m> per qualche polinomio <m>q</m>. Se <m>q(u)=0</m>, possiamo ripetere il procedimento e ottenere <m>f=(x-u)^{2}h</m> per qualche polinomio <m>h</m>. Il procedimento può essere iterato, raccogliendo via via potenze di <m>x-u</m> di esponente crescente: questo esponente non può, ovviamente, superare il grado di <m>f</m> e, quindi, a un certo punto troveremo <m>f=(x-u)^{m}h</m> con <m>h</m> polinomio tale che <m>h(u)\ne 0</m>. Ciò suggerisce la
+      Se <m>u</m> è una radice di un polinomio non nullo <m>f</m> a coefficienti in un anello commutativo <m>R</m>, dal <xref ref="thm-del_resto" text="title"/> sappiamo che <m>f=(x-u)q</m> per qualche polinomio <m>q</m>. Se <m>q(u)=0</m>, possiamo ripetere il procedimento e ottenere <m>f=(x-u)^{2}h</m> per qualche polinomio <m>h</m>. Il procedimento può essere iterato, raccogliendo via via potenze di <m>x-u</m> di esponente crescente: questo esponente non può, ovviamente, superare il grado di <m>f</m> e, quindi, a un certo punto troveremo <m>f=(x-u)^{m}h</m> con <m>h</m> polinomio tale che <m>h(u)\ne 0</m>. L'intero <m>m</m> e il polinomio <m>h</m> così determinati sono univocamente determinati. Abbiamo, infatti, il
+    </p>
+
+    <lemma xml:id="lem-unicita_molteplicita">
+      <statement>
+        <p>
+          Sia <m>f</m> un polinomio non nullo a coefficienti in un anello commutativo <m>R</m>. Sia <m>u</m> un elemento di <m>R</m>. Esistono allora e sono unici un naturale <m>m</m> e un polinomio <m>h</m> a coefficienti in <m>R</m> con <m>h(u)\ne 0</m> tali che <m>f=(x-u)^{m}h</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          L'esistenza di <m>m</m> e <m>h</m> segue dalla discussione precedente (nel caso in cui <m>u</m> non sia radice di <m>f</m>, basta prendere <m>m=0</m> e <m>h=f</m>).
+
+          Per quanto riguarda l'unicità sia <m>f=(x-u)^{n}k</m> con <m>n</m> naturale e <m>k</m> polinomio con <m>k(u)\ne 0</m>. Sia <m>m\le n</m>. Abbiamo allora <m>f=(x-u)^{m}h+0=(x-u)^{m}((x-u)^{n-m}k)+0</m>. Poiché il coefficiente direttivo di <m>(x-u)^{m}</m> è invertibile, possiamo applicare la <xref ref="thm-divisione_tra_polinomi" text="title"/>, e, dall'unicità del quoziente, ricavare che <m>h=(x-u)^{n-m}k</m>. Poiché <m>h(u)\ne 0</m>, segue che <m>n-m=0</m> (e <m>h=k</m>).
+        </p>
+      </proof>
+
+    </lemma>
+
+    <p>
+      Questo lemma consente di dare la
     </p>
 
     <definition xml:id="def-radice_multipla">
@@ -656,13 +677,21 @@
 
       <proof>
         <p>
-          Procediamo per induzione su <m>t</m>. Se <m>t=0</m>, non c'è nulla da dimostrare. Se <m>t \gt 0</m>, sappiamo che <m>f=\tilde{q}(x-u_{t})^{m_{t}}</m> per qualche <m>\tilde{q}</m> in <m>D[x]</m>. Per ogni <m>i</m> con <m>1\le i\le t-1</m>, abbiamo <m>0=f(u_{i})=\tilde{q}(u_{i})(u_{i}-u_{t})^{m_{i}}</m>: poiché <m>D</m> è un dominio e <m>u_{i}\ne u_{t}</m>, questo implica che <m>\tilde{q}(u_{i})=0</m>. Per ipotesi induttiva abbiamo allora che
+          Procediamo per induzione su <m>t</m>. Se <m>t=0</m>, non c'è nulla da dimostrare. Se <m>t \gt 0</m>, per ipotesi induttiva sappiamo che 
           <me>
-            \tilde{q}=q(x-u_{1})^{m_{1}}(x-u_{2})^{m_{2}}\cdots(x-u_{t-1})^{m_{t-1}}
+            f=\tilde{q}(x-u_{2})^{m_{2}}(x-u_{3})^{m_{3}}\cdots(x-u_{t})^{m_{t}}
+          </me>
+          per qualche polinomio <m>\tilde{q}</m>. Per il <xref ref="lem-unicita_molteplicita"/>, sappiamo che esiste un naturale <m>m</m> e un polinomio <m>q</m> con <m>q(u_{1})\ne 0</m> tali che <m>\tilde{q}=q(x-u_{1})^{m}</m>. Pertanto <m>f=(x-u_{1})^{m}h</m> dove
+          <me>
+            h\coloneqq q(x-u_{2})^{m_{2}}(x-u_{3})^{m_{3}}\cdots(x-u_{t})^{m_{t}}
           </me>.
-          Sostituendo, otteniamo la tesi.
+          Ora
+          <me>
+            h(u_{1})=q(u_{1})(u_{1}-u_{2})^{m_{2}}(u_{1}-u_{3})^{m_{3}}\cdots(u_{1}-u_{t})^{m_{t}}\ne 0
+          </me>.
+          L'unicità garantita dal <xref ref="lem-unicita_molteplicita"/> implica allora che <m>m=m_{1}</m>, da cui la tesi.
         </p>
-      </proof>
+      </proof>      
 
     </corollary>    
 
