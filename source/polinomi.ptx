@@ -616,25 +616,25 @@
     </corollary>
 
     <p>
-      Il fatto che il numero di radici di un polinomio non possa superare il suo grado non è detto valga se l'anello dei coefficienti non è un dominio.
+      Il fatto che il numero di radici di un polinomio non possa superare il suo grado non ha validità generale se l'anello dei coefficienti non è un dominio.
     </p>
 
     <example>
       <statement>
         <p>
-          Consideriamo in <m>\Interi/8[x]</m> il polinomio <m>x^{2}-\class[8]{1}</m>. Si verifica facilmente che <m>\class[8]{1}</m>, <m>\class[8]{3}</m>, <m>\class[8]{5}</m> e <m>\class[8]{7}</m> sono radici. Notiamo che se fattorizziamo <m>x^{2}-\class[8]{1}=(x+\class[8]{1})(x-\class[8]{1})</m> le radici <m>\class[8]{3}</m> e <m>\class[8]{5}</m> non annullano nessuno dei fattori.
+          Consideriamo in <m>\Interi/8[x]</m> il polinomio <m>x^{2}-\class[8]{1}</m>. Si verifica facilmente che <m>\class[8]{1}</m>, <m>\class[8]{3}</m>, <m>\class[8]{5}</m> e <m>\class[8]{7}</m> sono radici. Notiamo che <m>x^{2}-\class[8]{1}=(x+\class[8]{1})(x-\class[8]{1})</m>, ma le radici <m>\class[8]{3}</m> e <m>\class[8]{5}</m> non annullano nessuno dei fattori il che impedisce di applicare l'argomento usato per dimostrare il <xref ref="cor-radici_dominio"/>.
         </p>
       </statement>
     </example>
 
     <p>
-      Se <m>u</m> è una radice di un polinomio non nullo <m>f</m> a coefficienti in un anello commutativo <m>R</m>, dal <xref ref="thm-del_resto" text="title"/> sappiamo che <m>f=(x-u)q</m> per qualche polinomio <m>q</m>. Se <m>q(u)=0</m>, possiamo ripetere il procedimento e ottenere <m>f=(x-u)^{2}h</m> per qualche polinomio <m>h</m>. Il procedimento può essere iterato, raccogliendo via via potenze di <m>x-u</m> di esponente crescente: questo esponente non può, ovviamente, superare il grado di <m>f</m> e, quindi, a un certo punto troveremo <m>f=(x-u)^{m}h</m> con <m>h</m> polinomio tale che <m>h(u)\ne 0</m>. L'intero <m>m</m> e il polinomio <m>h</m> così determinati sono univocamente determinati. Abbiamo, infatti, il
+      Se <m>u</m> è una radice di un polinomio non nullo <m>f</m> a coefficienti in un anello commutativo <m>R</m>, dal <xref ref="thm-del_resto" text="title"/> sappiamo che <m>f=(x-u)q</m> per qualche polinomio <m>q</m>. Se <m>q(u)=0</m>, possiamo ripetere il procedimento e ottenere <m>f=(x-u)^{2}q_{2}</m> per qualche polinomio <m>q_{2}</m>. Il procedimento può essere iterato, raccogliendo via via potenze di <m>x-u</m> di esponente crescente. Se a un certo passo abbiamo <m>f=(x-u)^{i}q_{i}</m> (dove <m>q_{i}</m> è un certo polinomio, chiaramente non nullo), dal <xref ref="item-grado_prodotto_non_zero"/> della <xref ref="prop-grado_e_operazioni"/> segue che il grado di <m>(x-u)^{i}q_{i}</m> è uguale a <m>i+\deg q_{i}</m> (dove usiamo il fatto che il coefficiente direttivo di <m>x-u</m> è <m>1</m>): in particolare <m>i</m> non può superare <m>\deg f</m> e il procedimento deve avere termine, vale a dire esistono un naturale <m>m</m> con <m>m\le\deg f</m> e un polinomio <m>h</m> a coefficienti in <m>R</m> con <m>h(u)\ne 0</m> tali che <m>f=(x-u)^{m}h</m>. Tali <m>m</m> e <m>h</m> sono univocamente determinati: abbiamo infatti il
     </p>
 
     <lemma xml:id="lem-unicita_molteplicita">
       <statement>
         <p>
-          Sia <m>f</m> un polinomio non nullo a coefficienti in un anello commutativo <m>R</m>. Sia <m>u</m> un elemento di <m>R</m>. Esistono allora e sono unici un naturale <m>m</m> e un polinomio <m>h</m> a coefficienti in <m>R</m> con <m>h(u)\ne 0</m> tali che <m>f=(x-u)^{m}h</m>.
+          Sia <m>f</m> un polinomio non nullo a coefficienti in un anello commutativo <m>R</m>. Sia <m>u</m> un elemento di <m>R</m>. Esistono allora e sono unici un naturale <m>m</m> con <m>m\le\deg f</m> e un polinomio <m>h</m> a coefficienti in <m>R</m> con <m>h(u)\ne 0</m> tali che <m>f=(x-u)^{m}h</m>.
         </p>
       </statement>
 
@@ -695,7 +695,18 @@
 
     </corollary>    
 
-    
+    <p>
+      Anche questo risultato non ha validità generale se l'anello dei coefficienti non è un dominio.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Consideriamo in <m>\Interi/4[x]</m> il polinomio <m>x^{2}</m>. Chiaramente <m>\class[4]{0}</m> è radice del polinomio di molteplicità <m>2</m>. Anche <m>\class[4]{2}</m> è radice di molteplicità <m>2</m>: infatti <m>(x-\class[4]{2}^{2}=x^{2}</m>. La somma delle molteplicità eccede, dunque, il grado.
+        </p>
+      </statement>
+    </example>
+
     <p>
       Ricordiamo che nel <xref ref="thm-classificazione_gruppi_prodotto_pq"/> abbiamo usato, senza dimostrazione, il fatto che il gruppo degli automorfismi di un gruppo ciclico di ordine primo è, a sua volta, ciclico. Siamo ora in grado di dimostrarlo.
     </p>
