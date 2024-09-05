@@ -332,7 +332,10 @@
           Consideriamo il polinomio <m>p\coloneqq x^{3}+2x+4</m> a coefficienti in <m>\Razionali</m>. Mostriamo che <m>p</m> è irriducibile: per la <xref ref="prop-irriducibilita_e_radici"/>, basta mostrare che non ha radici in <m>\Razionali</m>. Per la <xref ref="prop-radici_razionali_intere_polinomio"/> un'eventuale radice razionale di <m>p</m> è del tipo <m>\frac{a}{b}</m> con <m>a</m> che divide <m>4</m> e <m>b</m> che divide <m>1</m>. Le possibili radici sono allora <m>1</m>, <m>-1</m>, <m>2</m>, <m>-2</m>, <m>4</m> e <m>-4</m>: sostituendo in <m>p</m>, vediamo che nessuna di esse è radice di <m>p</m>, che è, pertanto irriducibile.
         </p>
         <p>
-          Consideriamo ora un'estensione <m>\Razionali(u)</m> dove <m>u</m> è una radice di <m>p</m>. Per il <xref ref="lem-estensione_semplice"/>, <m>\Razionali(u)</m> ha grado <m>3</m> su <m>\Razionali</m> e una <m>\Razionali</m>-base di <m>\Razionali(u)</m> è <m>1</m>, <m>u</m>, <m>u^{2}</m>. Supponiamo di voler esprimere l'inverso di <m>u</m> e l'inverso di <m>1+u</m> come combinazione lineare degli elementi di questa base.
+          Per il <xref ref="lem-estensione_semplice"/>, possiamo costruire un'estensione <m>\Razionali(u)</m> di <m>\Razionali</m>, con una radice <m>u</m> di <m>p</m>. Sappiamo che <m>\Razionali(u)</m> ha grado <m>3</m> su <m>\Razionali</m> e una <m>\Razionali</m>-base di <m>\Razionali(u)</m> è <m>1</m>, <m>u</m>, <m>u^{2}</m>.
+        </p>          
+        <p>  
+          Vediamo qualche esempio di calcolo in <m>\Razionali(u)</m>. Supponiamo di voler esprimere l'inverso di <m>u</m> e l'inverso di <m>1+u</m> come combinazione lineare degli elementi della base scelta.
         </p>
         <p>
           Per quanto riguarda <m>u^{-1}</m>, basta notare che <m>u^{3}+2u+4=0</m> da cui segue che <m>u(u^{2}+2)=-4</m>. Pertanto, l'inverso di <m>u</m> è <m>-\frac{1}{4}u^{2}+0u-\frac{1}{2}\cdot 1</m>.
@@ -478,14 +481,14 @@
           <me>
             2a\sqrt{6}+b\sqrt{3}+b\sqrt{2}+(5a+c)=0
           </me>:
-          poiché <m>1</m>, <m>\sqrt{2}</m>, <m>\sqrt{3}</m>, <m>\sqrt{6}</m> sono <m>\Razionali</m>-linearmente indipendenti, ne segue che <m>2a=0</m>, <m>b=0</m>, <m>5a+c=0</m>, cioè <m>a</m>, <m>b</m> e <m>c</m> sono nulli. Dunque, il polinomio minimo su <m>\Razionali</m> di <m>\sqrt{2}+\sqrt{3}</m> ha grado maggiore di <m>2</m> e, per quanto già osservato, è uguale a <m>4</m>. Di conseguenza, <m>\Razionali(\sqrt{2}+\sqrt{3})=\Razionali(\sqrt{2},\sqrt{3})</m>.
+          poiché <m>1</m>, <m>\sqrt{2}</m>, <m>\sqrt{3}</m>, <m>\sqrt{6}</m> sono <m>\Razionali</m>-linearmente indipendenti, ne segue che <m>2a=0</m>, <m>b=0</m>, <m>5a+c=0</m>, cioè <m>a</m>, <m>b</m> e <m>c</m> sono nulli. Dunque, il polinomio minimo su <m>\Razionali</m> di <m>\sqrt{2}+\sqrt{3}</m> ha grado maggiore di <m>2</m> e, per quanto già osservato, questo grado è uguale a <m>4</m>. Di conseguenza, <m>\Razionali(\sqrt{2}+\sqrt{3})=\Razionali(\sqrt{2},\sqrt{3})</m>.
         </p>
       </statement>
 
     </example>
 
     <p>
-      Dal <xref ref="thm-caratterizzazione_algebrici_trascendenti"/> sappiamo che le estensioni con un elemento algebrico sono finite. Ci chiediamo quando un'estensione finita sia semplice. 
+      Dal <xref ref="thm-caratterizzazione_algebrici_trascendenti"/> sappiamo che le estensioni semplici con un elemento algebrico sono finite. Ci chiediamo quando un'estensione finita sia semplice. 
     </p>
 
     <theorem xml:id="thm-caratterizzazione_estensioni_algebriche_semplici">
@@ -497,10 +500,10 @@
 
       <proof>
         <p>
-          Supponiamo che <m>E=F(u)</m> per qualche elemento <m>u</m> di <m>E</m>. Per ogni sottocampo <m>L</m> di <m>E</m> contenente <m>F</m> indichiamo con <m>p_{L}</m> il polinomio minimo di <m>u</m> su <m>L</m>: questo è un polinomio monico a coefficienti in <m>L</m> ed è un divisore di ogni altro polinomio a coefficienti in <m>L</m> che si annulla in <m>u</m>. In particolare, <m>p_{L}</m> è un divisore di <m>p_{F}</m>. Pensandoli entrambi come polinomi a coefficienti in <m>E</m>, vediamo che le possibilità per <m>p_{L}</m> sono finite, poiché <m>p_{L}</m> è necessariamente un prodotto di fattori monici irriducibili in <m>E[x]</m> di <m>p_{F}</m> e, questi fattori sono in numero finito perché <m>E[x]</m> è un dominio a fattorizzazione unica. Se allora mostriamo che, rispetto a sottocampi diversi, <m>u</m> ha polinomi minimi diversi, possiamo concludere che il numero di sottocampi intermedi tre <m>E</m> e <m>F</m> sia finito. Sia allora <m>p_{L}=x^{r}+a_{r-1}x^{r-1}+\cdots+a_{0}</m>: sappiamo che <m>r=\degext{E}{L}</m>. Sia ora <m>K=F(a_{0},\ldots,a_{r-1})</m>: chiaramente <m>K\subseteq L</m> e, dunque, <m>\degext{E}{K}\ge\degext{E}{L}=r</m>. D'altra parte <m>E=K(u)</m> e <m>u</m> è radice del polinomio <m>p_{L}</m> i cui coefficienti appartengono a <m>K</m> per costruzione: pertanto <m>\degext{E}{K}\le r</m>. Ma allora <m>\degext{E}{K}=r</m>, cioè <m>L=K</m>: dunque, il polinomio minimo di <m>u</m> rispetto a <m>L</m> determina <m>L</m>.
+          Supponiamo che <m>E=F(u)</m> per qualche elemento <m>u</m> di <m>E</m>. Per ogni sottocampo <m>L</m> di <m>E</m> contenente <m>F</m>, indichiamo con <m>p_{L}</m> il polinomio minimo di <m>u</m> su <m>L</m>: questo è un polinomio monico a coefficienti in <m>L</m> ed è un divisore di ogni altro polinomio a coefficienti in <m>L</m> che si annulla in <m>u</m>. In particolare, <m>p_{L}</m> è un divisore di <m>p_{F}</m>. Pensandoli entrambi come polinomi a coefficienti in <m>E</m>, vediamo che le possibilità per <m>p_{L}</m> sono finite, poiché <m>p_{L}</m> è necessariamente un prodotto di fattori monici irriducibili in <m>E[x]</m> di <m>p_{F}</m> e, questi fattori sono in numero finito perché <m>E[x]</m> è un dominio a fattorizzazione unica. Se allora mostriamo che, rispetto a sottocampi diversi, <m>u</m> ha polinomi minimi diversi, possiamo concludere che il numero di sottocampi intermedi tra <m>E</m> e <m>F</m> sia finito. Sia allora <m>p_{L}=x^{r}+a_{r-1}x^{r-1}+\cdots+a_{0}</m>: sappiamo che <m>r=\degext{E}{L}</m>. Sia ora <m>K=F(a_{0},\ldots,a_{r-1})</m>: chiaramente <m>K\subseteq L</m> e, dunque, <m>\degext{E}{K}\ge\degext{E}{L}=r</m>. D'altra parte <m>E=K(u)</m> e <m>u</m> è radice del polinomio <m>p_{L}</m> i cui coefficienti appartengono a <m>K</m> per costruzione: pertanto <m>\degext{E}{K}\le r</m>. Ma allora <m>\degext{E}{K}=r</m>, cioè <m>L=K</m>: dunque, il polinomio minimo di <m>u</m> rispetto a <m>L</m> determina <m>L</m>.
         </p>
         <p>
-          Viceversa, supponiamo che il numero di sottocampi intermedi sia finito e distinguiamo due casi a seconda che <m>F</m> sia un campo finito o meno. Se <m>F</m> è finito, anche <m>E</m>, avendo dimensione finita su <m>F</m>, è finito. Per il <xref ref="thm-sottogruppi_finiti_campo"/>, il gruppo moltiplicativo di <m>E</m> è ciclico: detto <m>u</m> un generatore di questo gruppo, si ha allora <m>E=F(u)</m>.
+          Viceversa, supponiamo che il numero di sottocampi intermedi sia finito: distinguiamo due casi a seconda che <m>F</m> sia un campo finito o meno. Se <m>F</m> è finito, anche <m>E</m>, avendo dimensione finita su <m>F</m>, è finito. Per il <xref ref="thm-sottogruppi_finiti_campo"/>, il gruppo moltiplicativo di <m>E</m> è ciclico: detto <m>u</m> un generatore di questo gruppo, si ha allora <m>E=F(u)</m>.
         </p>
         <p>
           Supponiamo invece che <m>F</m> sia infinito e sia <m>u</m> un elemento di <m>E</m> tale che <m>\degext{F(u)}{F}</m> sia massimo possibile (questo esiste perché tale grado non può superare <m>\degext{E}{F}</m>): vogliamo mostrare che <m>F(u)=E</m>, cioè che per ogni <m>v</m> in <m>E</m> si ha che <m>v</m> appartiene a <m>F(u)</m>. Consideriamo i sottocampi <m>F(tu+v)</m> al variare di <m>t</m> in <m>F</m>: poiché <m>t</m> può assumere infiniti valori e ci sono solo un numero finito di sottocampi intermedi, esisteranno due elementi diversi <m>t</m> e <m>s</m> in <m>F</m> tali che <m>F(tu+v)=F(su+v)</m>. Pertanto <m>tu+v-(su+v)=(t-s)u</m> appartiene a <m>F(tu+v)</m>: poiché <m>t-s</m> è un elemento non nullo di <m>F</m>, moltiplicando per il suo inverso troviamo che <m>u</m> appartiene a <m>F(tu+v)</m>, cioè <m>F(u)\subseteq F(tu+v)</m>. Per la scelta di <m>u</m>, ciò significa che <m>F(u)=F(tu+v)</m>: ma allora <m>v=(tu+v)-tu</m> appartiene a <m>F(u)</m>, come richiesto.
@@ -579,20 +582,6 @@
             Dimostrare la <xref ref="prop-omomorfismo_preserva_grado"/>.
           </p>
         </statement>
-      </exercise>
-
-      <exercise xml:id="exercise_estensione_algebrica_di_algebrica">
-        <statement>
-          <p>
-            Mostrare che se <m>E</m> è un'estensione algebrica di un campo <m>F</m> e se <m>K</m> è un'estensione algebrica di <m>E</m>, allora <m>K</m> è un'estensione algebrica di <m>F</m>.
-          </p>
-        </statement>
-
-        <hint>
-          <p>
-            Preso un qualsiasi elemento di <m>K</m>, considerare il suo polinomio minimo su <m>E</m> e prendere l'estensione di <m>F</m> con i coefficienti di questo polinomio.
-          </p>
-        </hint>
       </exercise>
 
       <exercise>
