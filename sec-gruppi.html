@@ -843,7 +843,8 @@ window.MathJax = {
 </h2>
 <article class="definition definition-like" id="def-gruppo"><h3 class="heading">
 <span class="type">Definizione</span><span class="space"> </span><span class="codenumber">8.2.1</span><span class="period">.</span>
-</h3> <div class="para logical" id="def-gruppo-4-1">
+</h3>
+<div class="para logical" id="def-gruppo-4-1">
 <div class="para">Un monoide <span class="process-math">\(G\)</span> in cui ogni elemento ha inverso è detto <dfn class="terminology">gruppo</dfn>. Più esplicitamente, un gruppo <span class="process-math">\(G\)</span> è un insieme in cui sia definita un’operazione <span class="process-math">\(\cdot\)</span> tale che:</div>
 <ul class="disc" id="def-gruppo-4-1-5">
 <li id="def-gruppo-4-1-5-1"><div class="para" id="def-gruppo-4-1-5-1-1">
@@ -865,7 +866,8 @@ g\cdot h=h\cdot g\text{ per ogni }g\text{ e }h\text{ in }G
 </div>
 </div></article><article class="definition definition-like" id="def-ordine_di_un_gruppo"><h3 class="heading">
 <span class="type">Definizione</span><span class="space"> </span><span class="codenumber">8.2.2</span><span class="period">.</span>
-</h3> <div class="para" id="def-ordine_di_un_gruppo-2-1">Dato un gruppo <span class="process-math">\(G\text{,}\)</span> l’<dfn class="terminology">ordine</dfn> di <span class="process-math">\(G\)</span> è la cardinalità <span class="process-math">\(\abs{G}\)</span> dell’insieme <span class="process-math">\(G\text{.}\)</span> Un gruppo è detto <dfn class="terminology">finito</dfn> o di <dfn class="terminology">ordine finito</dfn> se <span class="process-math">\(\abs{G}\)</span> è finito, è detto <dfn class="terminology">infinito</dfn> o di <dfn class="terminology">ordine infinito</dfn>, altrimenti.</div></article><article class="example example-like" id="sec-gruppi-4"><h3 class="heading">
+</h3>
+<div class="para" id="def-ordine_di_un_gruppo-2-1">Dato un gruppo <span class="process-math">\(G\text{,}\)</span> l’<dfn class="terminology">ordine</dfn> di <span class="process-math">\(G\)</span> è la cardinalità <span class="process-math">\(\abs{G}\)</span> dell’insieme <span class="process-math">\(G\text{.}\)</span> Un gruppo è detto <dfn class="terminology">finito</dfn> o di <dfn class="terminology">ordine finito</dfn> se <span class="process-math">\(\abs{G}\)</span> è finito, è detto <dfn class="terminology">infinito</dfn> o di <dfn class="terminology">ordine infinito</dfn>, altrimenti.</div></article><article class="example example-like" id="sec-gruppi-4"><h3 class="heading">
 <span class="type">Esempio</span><span class="space"> </span><span class="codenumber">8.2.3</span><span class="period">.</span>
 </h3>
 <div class="para" id="sec-gruppi-4-1-1">Gli insiemi <span class="process-math">\(\Interi\text{,}\)</span> <span class="process-math">\(\Razionali\text{,}\)</span> <span class="process-math">\(\Reali\)</span> e <span class="process-math">\(\Complessi\)</span> sono gruppi abeliani infiniti rispetto all’addizione (con elemento neutro <span class="process-math">\(0\)</span>).</div> <div class="para" id="sec-gruppi-4-1-2">L’insieme <span class="process-math">\(\Interi/n\)</span> è un gruppo abeliano di ordine <span class="process-math">\(n\)</span> rispetto all’addizione (con elemento neutro <span class="process-math">\(\class[n]{0}\)</span>).</div></article><article class="example example-like" id="sec-gruppi-5"><h3 class="heading">
@@ -934,11 +936,13 @@ eg=(gh)g=g(hg)=ge=g\text{.}
 <div class="para" id="exercises-gruppi-2-1-1">In un insieme <span class="process-math">\(G\text{,}\)</span> sia data un’operazione associativa la cui tabella di Cayley riporta su ciascuna riga e su ciascuna colonna ogni elemento di <span class="process-math">\(G\)</span> esattamente una volta. Dimostrare che <span class="process-math">\(G\)</span> è un gruppo.</div>
 <div class="solutions"><details id="exercises-gruppi-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para" id="exercises-gruppi-2-2-1">Scegliamo arbitrariamente un elemento <span class="process-math">\(x\)</span> in <span class="process-math">\(G\text{.}\)</span> Sulla colonna di <span class="process-math">\(x\)</span> compare, in particolare, <span class="process-math">\(x\)</span> stesso, cioè esiste un elemento <span class="process-math">\(e\)</span> tale che <span class="process-math">\(ex=x\text{.}\)</span> Preso un elemento <span class="process-math">\(g\)</span> qualunque, si ha allora <span class="process-math">\(gx=g(ex)=(ge)x\text{:}\)</span> ora <span class="process-math">\(gx\)</span> e <span class="process-math">\((ge)x\)</span> compaiono sulla colonna di <span class="process-math">\(x\)</span> e, poiché ogni elemento compare solo una volta su ciascuna colonna, ciò significa che <span class="process-math">\(ge=g\)</span> per ogni <span class="process-math">\(g\)</span> in <span class="process-math">\(G\text{.}\)</span>
-</div> <div class="para" id="exercises-gruppi-2-2-2">Sulla riga di <span class="process-math">\(g\)</span> deve apparire l’elemento <span class="process-math">\(e\text{,}\)</span> cioè deve esistere <span class="process-math">\(h\)</span> in <span class="process-math">\(G\)</span> tale che <span class="process-math">\(gh=e\text{.}\)</span> Possiamo ora applicare l’<a href="sec-gruppi.html#exercise-unita_e_inverso_destro_implica_gruppo" class="xref" data-knowl="./knowl/xref/exercise-unita_e_inverso_destro_implica_gruppo.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Esercizio 8.2.1">Esercizio 8.2.1</a> e concludere che <span class="process-math">\(G\)</span> è un gruppo.</div>
+</div>
+<div class="para" id="exercises-gruppi-2-2-2">Sulla riga di <span class="process-math">\(g\)</span> deve apparire l’elemento <span class="process-math">\(e\text{,}\)</span> cioè deve esistere <span class="process-math">\(h\)</span> in <span class="process-math">\(G\)</span> tale che <span class="process-math">\(gh=e\text{.}\)</span> Possiamo ora applicare l’<a href="sec-gruppi.html#exercise-unita_e_inverso_destro_implica_gruppo" class="xref" data-knowl="./knowl/xref/exercise-unita_e_inverso_destro_implica_gruppo.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Esercizio 8.2.1">Esercizio 8.2.1</a> e concludere che <span class="process-math">\(G\)</span> è un gruppo.</div>
 </div></details></div></article><article class="exercise exercise-like" id="exercises-gruppi-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
 <div class="para" id="exercises-gruppi-3-1-1">Sia <span class="process-math">\(G\coloneqq\Razionali\setminus\{-1\}\text{.}\)</span> Dimostrare che <span class="process-math">\(x\ast y\coloneqq x+y+xy\)</span> è un’operazione ben definita in <span class="process-math">\(G\)</span> e che rispetto a questa operazione <span class="process-math">\(G\)</span> è un gruppo abeliano.</div>
 <div class="solutions"><details id="exercises-gruppi-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="exercises-gruppi-3-2-1">Dobbiamo innanzitutto verificare che il prodotto sia ben definito, cioè che se <span class="process-math">\(x\)</span> e <span class="process-math">\(y\)</span> sono in <span class="process-math">\(G\text{,}\)</span> allora <span class="process-math">\(x\ast y\)</span> è in <span class="process-math">\(G\text{.}\)</span> Supponiamo infatti per assurdo che <span class="process-math">\(x\ast y\)</span> non sia in <span class="process-math">\(G\text{,}\)</span> cioè che <span class="process-math">\(x\ast y=-1\text{,}\)</span> vale a dire <span class="process-math">\(x+y+xy=-1\text{.}\)</span> Con semplici calcoli, ciò implicherebbe che <span class="process-math">\((x+1)(y+1)=0\text{,}\)</span> da cui seguirebbe che <span class="process-math">\(x+1=0\)</span> o <span class="process-math">\(y+1=0\text{,}\)</span> il che non avviene se <span class="process-math">\(x\)</span> e <span class="process-math">\(y\)</span> appartengono a <span class="process-math">\(G\text{.}\)</span> Dunque, l’operazione è ben definita.</div> <div class="para logical" id="exercises-gruppi-3-2-2">
+<div class="para" id="exercises-gruppi-3-2-1">Dobbiamo innanzitutto verificare che il prodotto sia ben definito, cioè che se <span class="process-math">\(x\)</span> e <span class="process-math">\(y\)</span> sono in <span class="process-math">\(G\text{,}\)</span> allora <span class="process-math">\(x\ast y\)</span> è in <span class="process-math">\(G\text{.}\)</span> Supponiamo infatti per assurdo che <span class="process-math">\(x\ast y\)</span> non sia in <span class="process-math">\(G\text{,}\)</span> cioè che <span class="process-math">\(x\ast y=-1\text{,}\)</span> vale a dire <span class="process-math">\(x+y+xy=-1\text{.}\)</span> Con semplici calcoli, ciò implicherebbe che <span class="process-math">\((x+1)(y+1)=0\text{,}\)</span> da cui seguirebbe che <span class="process-math">\(x+1=0\)</span> o <span class="process-math">\(y+1=0\text{,}\)</span> il che non avviene se <span class="process-math">\(x\)</span> e <span class="process-math">\(y\)</span> appartengono a <span class="process-math">\(G\text{.}\)</span> Dunque, l’operazione è ben definita.</div>
+<div class="para logical" id="exercises-gruppi-3-2-2">
 <div class="para">La verifica che l’operazione sia associativa richiede solo un po’ di attenzione. Per ogni <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\)</span> e <span class="process-math">\(z\)</span> in <span class="process-math">\(G\)</span> si ha</div>
 <div class="displaymath process-math" id="exercises-gruppi-3-2-2-5">
 \begin{align*}
@@ -948,21 +952,24 @@ eg=(gh)g=g(hg)=ge=g\text{.}
 \amp =x \ast(y+z+yz)=x\ast(y\ast z)\text{.}
 \end{align*}
 </div>
-</div> <div class="para logical" id="exercises-gruppi-3-2-3">
+</div>
+<div class="para logical" id="exercises-gruppi-3-2-3">
 <div class="para">L’operazione è commutativa. Infatti, per ogni <span class="process-math">\(x\)</span> e <span class="process-math">\(y\)</span> in <span class="process-math">\(G\)</span> si ha</div>
 <div class="displaymath process-math">
 \begin{equation*}
 x\ast y=x+y+xy=y+x+yx=y\ast x\text{.}
 \end{equation*}
 </div>
-</div> <div class="para logical" id="exercises-gruppi-3-2-4">
+</div>
+<div class="para logical" id="exercises-gruppi-3-2-4">
 <div class="para">L’operazione ammette elemento neutro <span class="process-math">\(0\text{:}\)</span> infatti, per ogni <span class="process-math">\(x\in G\)</span> si ha</div>
 <div class="displaymath process-math">
 \begin{equation*}
 x\ast 0 =x+0+x\cdot 0=x\text{.}
 \end{equation*}
 </div>
-</div> <div class="para" id="exercises-gruppi-3-2-5">Infine, verifichiamo che ogni elemento <span class="process-math">\(x\)</span> in <span class="process-math">\(G\)</span> ha inverso. Questo deve essere un elemento <span class="process-math">\(y\)</span> tale che <span class="process-math">\(x\ast y=0\text{,}\)</span> cioè <span class="process-math">\(x+y+xy=0\text{,}\)</span> cioè <span class="process-math">\((x+1)y=-x\text{.}\)</span> Poiché <span class="process-math">\(x+1\ne 0\text{,}\)</span> otteniamo allora <span class="process-math">\(y=-\frac{x}{x+1}\)</span> e questo è effettivamente un elemento di <span class="process-math">\(G\text{,}\)</span> dato che, se fosse <span class="process-math">\(y=-1\text{,}\)</span> otterremmo <span class="process-math">\(x=x+1\text{.}\)</span>
+</div>
+<div class="para" id="exercises-gruppi-3-2-5">Infine, verifichiamo che ogni elemento <span class="process-math">\(x\)</span> in <span class="process-math">\(G\)</span> ha inverso. Questo deve essere un elemento <span class="process-math">\(y\)</span> tale che <span class="process-math">\(x\ast y=0\text{,}\)</span> cioè <span class="process-math">\(x+y+xy=0\text{,}\)</span> cioè <span class="process-math">\((x+1)y=-x\text{.}\)</span> Poiché <span class="process-math">\(x+1\ne 0\text{,}\)</span> otteniamo allora <span class="process-math">\(y=-\frac{x}{x+1}\)</span> e questo è effettivamente un elemento di <span class="process-math">\(G\text{,}\)</span> dato che, se fosse <span class="process-math">\(y=-1\text{,}\)</span> otterremmo <span class="process-math">\(x=x+1\text{.}\)</span>
 </div>
 </div></details></div></article><article class="exercise exercise-like" id="exercise-triangolari_nascoste"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
 <div class="introduction" id="exercise-triangolari_nascoste-1"><div class="para logical" id="exercise-triangolari_nascoste-1-1">
@@ -997,7 +1004,8 @@ x\ast 0 =x+0+x\cdot 0=x\text{.}
 \end{gather*}
 </div>
 <div class="para">Poiché i risultati coincidono, l’operazione è associativa.</div>
-</div> <div class="para logical" id="exercise-triangolari_nascoste-2-2-2">
+</div>
+<div class="para logical" id="exercise-triangolari_nascoste-2-2-2">
 <div class="para">Verifichiamo che esiste un elemento neutro: questo deve essere una terna <span class="process-math">\((x,y,z)\)</span> tale che per ogni <span class="process-math">\((a,b,c)\)</span> in <span class="process-math">\(G\)</span> si abbia</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1011,7 +1019,8 @@ x\ast 0 =x+0+x\cdot 0=x\text{.}
 \end{equation*}
 </div>
 <div class="para">vale a dire <span class="process-math">\((a+x,b+y,c+z+ay)=(a,b,c)\)</span> e <span class="process-math">\((x+a,y+b,z+c+xb)=(a,b,c)\text{.}\)</span> Si vede immediatamente che la terna <span class="process-math">\((0,0,0)\)</span> soddisfa questa condizione.</div>
-</div> <div class="para logical" id="exercise-triangolari_nascoste-2-2-3">
+</div>
+<div class="para logical" id="exercise-triangolari_nascoste-2-2-3">
 <div class="para">Verifichiamo se ogni elemento <span class="process-math">\((a,b,c)\)</span> in <span class="process-math">\(G\)</span> ammette inverso: questo deve essere una terna <span class="process-math">\((x,y,z)\)</span> tale che</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -1079,7 +1088,8 @@ x\ast(y\ast z)=x\ast(y+z+l)=x+(y+z+l)+l=x+y+z+2l\text{.}
 \end{equation*}
 </div>
 <div class="para">Dunque, la proprietà associativa è soddisfatta.</div>
-</div> <div class="para" id="exercises-gruppi-8-2-2">Sappiamo già che l’operazione ammette elemento neutro <span class="process-math">\(-l\text{.}\)</span> Verifichiamo se ogni <span class="process-math">\(x\)</span> in <span class="process-math">\(\Reali\)</span> ha inverso <span class="process-math">\(y\text{,}\)</span> cioè un elemento tale che <span class="process-math">\(x\ast y=-l\)</span> e <span class="process-math">\(y\ast x=-l\text{.}\)</span> Ora <span class="process-math">\(x\ast y =y\ast x=x+y+l\text{.}\)</span> Ponendo <span class="process-math">\(x+y+l=-l\)</span> si trova che l’elemento <span class="process-math">\(y\)</span> esiste sempre ed è uguale a <span class="process-math">\(-x-2l\text{.}\)</span> Pertanto, <span class="process-math">\(\Reali\)</span> è un gruppo rispetto all’operazione <span class="process-math">\(\ast\)</span> se e solo se <span class="process-math">\(h=k=1\)</span> e <span class="process-math">\(l\)</span> è qualsiasi.</div>
+</div>
+<div class="para" id="exercises-gruppi-8-2-2">Sappiamo già che l’operazione ammette elemento neutro <span class="process-math">\(-l\text{.}\)</span> Verifichiamo se ogni <span class="process-math">\(x\)</span> in <span class="process-math">\(\Reali\)</span> ha inverso <span class="process-math">\(y\text{,}\)</span> cioè un elemento tale che <span class="process-math">\(x\ast y=-l\)</span> e <span class="process-math">\(y\ast x=-l\text{.}\)</span> Ora <span class="process-math">\(x\ast y =y\ast x=x+y+l\text{.}\)</span> Ponendo <span class="process-math">\(x+y+l=-l\)</span> si trova che l’elemento <span class="process-math">\(y\)</span> esiste sempre ed è uguale a <span class="process-math">\(-x-2l\text{.}\)</span> Pertanto, <span class="process-math">\(\Reali\)</span> è un gruppo rispetto all’operazione <span class="process-math">\(\ast\)</span> se e solo se <span class="process-math">\(h=k=1\)</span> e <span class="process-math">\(l\)</span> è qualsiasi.</div>
 </div></details></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-monoidi.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-gruppi_piccoli.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
