@@ -12,9 +12,9 @@
 </head>
 <body class="ignore-math">
 <article class="exercise exercise-like"><h4 class="heading">
-<span class="type">Esercizio</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">1<span xmlns:pf="https://prefigure.org" class="period">.</span></span>
+<span class="type">Esercizio</span><span class="space"> </span><span class="codenumber">1<span class="period">.</span></span>
 </h4>
-<div class="introduction"><div xmlns:pf="https://prefigure.org" class="para logical">
+<div class="introduction"><div class="para logical">
 <div class="para">Sia data la matrice a coefficienti reali</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -31,9 +31,9 @@ A\coloneqq
 </div>
 </div></div>
 <article class="task exercise-like"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div xmlns:pf="https://prefigure.org" class="para">Determinare (se esiste) una matrice di Jordan <span class="process-math">\(J\)</span> simile ad <span class="process-math">\(A\text{.}\)</span>
+<div class="para">Determinare (se esiste) una matrice di Jordan <span class="process-math">\(J\)</span> simile ad <span class="process-math">\(A\text{.}\)</span>
 </div>
-<div class="solutions"><details xmlns:pf="https://prefigure.org" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical">
 <div class="para">Il polinomio caratteristico di <span class="process-math">\(A\)</span> può essere calcolato facilmente: si ha <span class="process-math">\(\det(x\Idmatrix-A)=(x-2)^{6}\text{.}\)</span> Il polinomio caratteristico è totalmente riducibile e la matrice <span class="process-math">\(A\)</span> ha come unico autovalore <span class="process-math">\(2\)</span> di molteplicità algebrica <span class="process-math">\(6\text{.}\)</span> Dunque, la matrice è simile a una matrice di Jordan in cui avremo blocchi di Jordan di ordine complessivo <span class="process-math">\(6\text{.}\)</span> Calcoliamo la successione dei ranghi associati all’autovalore <span class="process-math">\(6\)</span> partendo, come sempre, dall’ordine della matrice che in questo caso è <span class="process-math">\(6\text{.}\)</span> Consideriamo ora il rango della matrice <span class="process-math">\(A-2\Idmatrix\text{,}\)</span> vale a dire la matrice</div>
 <div class="displaymath process-math">
@@ -50,10 +50,7 @@ A\coloneqq
 </div>
 <div class="para">Si vede facilmente che il rango di questa matrice è <span class="process-math">\(4\text{.}\)</span> Pertanto abbiamo <span class="process-math">\(6-4=2\)</span> blocchi di Jordan relativi a <span class="process-math">\(2\text{.}\)</span>
 </div>
-</div>
-<div class="para">Iniziamo a costruire il solito schema</div>
-<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image-esercizio_jordan_prima_riga.svg" role="img" class="contained" alt="Riga con 2 quadrati."></div>
-<div class="para logical">
+</div> <div class="para">Iniziamo a costruire il solito schema</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image-esercizio_jordan_prima_riga.svg" role="img" class="contained" alt="Riga con 2 quadrati."></div> <div class="para logical">
 <div class="para">Ovviamente dobbiamo proseguire: sappiamo che ci sono due blocchi ma non abbiamo ancora idea del loro ordine. Prendiamo allora la matrice <span class="process-math">\((A-2\Idmatrix)^{2}\text{,}\)</span> cioè la matrice</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -68,9 +65,7 @@ A\coloneqq
 \end{equation*}
 </div>
 <div class="para">Il rango di questa matrice è <span class="process-math">\(2\text{:}\)</span> dunque, nella successione dei ranghi siamo scesi di <span class="process-math">\(4-2\text{.}\)</span> Abbiamo pertanto <span class="process-math">\(2\)</span> blocchi di ordine almeno <span class="process-math">\(2\text{.}\)</span> Ecco il nostro schema aggiornato:</div>
-</div>
-<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image-esercizio_jordan_seconda_riga.svg" role="img" class="contained" alt="Due righe di quadrati sovrapposte lunghe 2 e 2"></div>
-<div class="para logical">
+</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image-esercizio_jordan_seconda_riga.svg" role="img" class="contained" alt="Due righe di quadrati sovrapposte lunghe 2 e 2"></div> <div class="para logical">
 <div class="para">Purtroppo dobbiamo proseguire: dobbiamo piazzare ancora due simboli e non sappiamo come fare. Calcoliamo allora  <span class="process-math">\((A-2\Idmatrix)^{3}\text{,}\)</span> cioè la matrice</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -85,11 +80,7 @@ A\coloneqq
 \end{equation*}
 </div>
 <div class="para">Questa matrice ha rango <span class="process-math">\(1\text{:}\)</span> nella successione dei ranghi siamo scesi di <span class="process-math">\(2-1=1\text{.}\)</span> Abbiamo così un blocco di ordine almeno <span class="process-math">\(3\text{.}\)</span> Aggiorniamo ancora il nostro schema</div>
-</div>
-<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image-esercizio_jordan_terza_riga.svg" role="img" class="contained"></div>
-<div class="para">Dobbiamo piazzare ancora un altro simbolo nel nostro grafico. È inutile calcolare il rango di <span class="process-math">\((A-2\Idmatrix)^{4}\text{:}\)</span> l’unica possibilità per il nostro grafico è che sia</div>
-<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image-esercizio_jordan_quarta_riga.svg" role="img" class="contained" alt="Righe di quadrati sovrapposte lunghe 2, 2, 1 e 1"></div>
-<div class="para logical">
+</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image-esercizio_jordan_terza_riga.svg" role="img" class="contained"></div> <div class="para">Dobbiamo piazzare ancora un altro simbolo nel nostro grafico. È inutile calcolare il rango di <span class="process-math">\((A-2\Idmatrix)^{4}\text{:}\)</span> l’unica possibilità per il nostro grafico è che sia</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/image-esercizio_jordan_quarta_riga.svg" role="img" class="contained" alt="Righe di quadrati sovrapposte lunghe 2, 2, 1 e 1"></div> <div class="para logical">
 <div class="para">Abbiamo una colonna di altezza <span class="process-math">\(4\)</span> e una di altezza <span class="process-math">\(2\text{.}\)</span> La nostra matrice <span class="process-math">\(A\)</span> è allora simile alla matrice di Jordan</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -105,9 +96,9 @@ A\coloneqq
 </div>
 </div>
 </div></details></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div xmlns:pf="https://prefigure.org" class="para">Determinare poi la forma canonica primaria e la forma canonica razionale di <span class="process-math">\(A\text{.}\)</span>
+<div class="para">Determinare poi la forma canonica primaria e la forma canonica razionale di <span class="process-math">\(A\text{.}\)</span>
 </div>
-<div class="solutions"><details xmlns:pf="https://prefigure.org" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical">
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical">
 <div class="para">Per trovare la forma canonica primaria di <span class="process-math">\(A\)</span> basta sostituire il blocco di Jordan di ordine <span class="process-math">\(4\)</span> relativo a <span class="process-math">\(2\)</span> con la matrice compagna del polinomio <span class="process-math">\((x-2)^{4}=x^{4}-8x^{3}+24x^{2}-32x+16\)</span> e il blocco di Jordan di ordine <span class="process-math">\(2\)</span> relativo a <span class="process-math">\(2\)</span> con la matrice compagna del polinomio <span class="process-math">\((x-2)^{2}=x^{2}-4x+4\)</span> ottenendo così la matrice</div>
 <div class="displaymath process-math">
 \begin{equation*}
