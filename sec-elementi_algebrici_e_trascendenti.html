@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="it-IT" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Elementi algebrici e trascendenti</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta xmlns:pf="https://prefigure.org" property="og:type" content="book">
+<meta xmlns:pf="https://prefigure.org" property="book:title" content="Algebra">
+<meta xmlns:pf="https://prefigure.org" property="book:author" content="Valerio Monti">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
+</script><link xmlns:pf="https://prefigure.org" rel="preconnect" href="https://fonts.googleapis.com">
+<link xmlns:pf="https://prefigure.org" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#prop-unione_intersezione-1-1-4 { counter-set: prop-unione_intersezione-1-1-4 0; }
+#prop-unione_intersezione-1-1-4 > li::marker { content: ""counter(prop-unione_intersezione-1-1-4,decimal)"."; }
+#prop-unione_intersezione-1-1-4 > li { counter-increment: prop-unione_intersezione-1-1-4; }
+#prop-inclusione_equivalente-1-1-3 { counter-set: prop-inclusione_equivalente-1-1-3 0; }
+#prop-inclusione_equivalente-1-1-3 > li::marker { content: ""counter(prop-inclusione_equivalente-1-1-3,decimal)"."; }
+#prop-inclusione_equivalente-1-1-3 > li { counter-increment: prop-inclusione_equivalente-1-1-3; }
+#prop-classe_equivalenza-1-1-3 { counter-set: prop-classe_equivalenza-1-1-3 0; }
+#prop-classe_equivalenza-1-1-3 > li::marker { content: ""counter(prop-classe_equivalenza-1-1-3,decimal)"."; }
+#prop-classe_equivalenza-1-1-3 > li { counter-increment: prop-classe_equivalenza-1-1-3; }
+#prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 { counter-set: prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 0; }
+#prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 > li::marker { content: ""counter(prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2,decimal)"."; }
+#prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2 > li { counter-increment: prop-iniettiva_suriettiva_biiettiva_controimmagine-1-1-2; }
+#prop-composizione_iniettive_suriettive-1-1-3 { counter-set: prop-composizione_iniettive_suriettive-1-1-3 0; }
+#prop-composizione_iniettive_suriettive-1-1-3 > li::marker { content: ""counter(prop-composizione_iniettive_suriettive-1-1-3,decimal)"."; }
+#prop-composizione_iniettive_suriettive-1-1-3 > li { counter-increment: prop-composizione_iniettive_suriettive-1-1-3; }
+#prop-addizione_matrici-1-2-1 { counter-set: prop-addizione_matrici-1-2-1 0; }
+#prop-addizione_matrici-1-2-1 > li::marker { content: ""counter(prop-addizione_matrici-1-2-1,decimal)"."; }
+#prop-addizione_matrici-1-2-1 > li { counter-increment: prop-addizione_matrici-1-2-1; }
+#prop-moltiplicazione_matrici-1-2-1 { counter-set: prop-moltiplicazione_matrici-1-2-1 0; }
+#prop-moltiplicazione_matrici-1-2-1 > li::marker { content: ""counter(prop-moltiplicazione_matrici-1-2-1,decimal)"."; }
+#prop-moltiplicazione_matrici-1-2-1 > li { counter-increment: prop-moltiplicazione_matrici-1-2-1; }
+#def-numeri_naturali_peano-5-1-7 { counter-set: def-numeri_naturali_peano-5-1-7 0; }
+#def-numeri_naturali_peano-5-1-7 > li::marker { content: ""counter(def-numeri_naturali_peano-5-1-7,decimal)"."; }
+#def-numeri_naturali_peano-5-1-7 > li { counter-increment: def-numeri_naturali_peano-5-1-7; }
+#prop-anello_degli_interi-1-2-1 { counter-set: prop-anello_degli_interi-1-2-1 0; }
+#prop-anello_degli_interi-1-2-1 > li::marker { content: ""counter(prop-anello_degli_interi-1-2-1,decimal)"."; }
+#prop-anello_degli_interi-1-2-1 > li { counter-increment: prop-anello_degli_interi-1-2-1; }
+#prop-ordine_interi-1-2-1 { counter-set: prop-ordine_interi-1-2-1 0; }
+#prop-ordine_interi-1-2-1 > li::marker { content: ""counter(prop-ordine_interi-1-2-1,decimal)"."; }
+#prop-ordine_interi-1-2-1 > li { counter-increment: prop-ordine_interi-1-2-1; }
+#prop-anello_degli_classi_di_resto-1-2-1 { counter-set: prop-anello_degli_classi_di_resto-1-2-1 0; }
+#prop-anello_degli_classi_di_resto-1-2-1 > li::marker { content: ""counter(prop-anello_degli_classi_di_resto-1-2-1,decimal)"."; }
+#prop-anello_degli_classi_di_resto-1-2-1 > li { counter-increment: prop-anello_degli_classi_di_resto-1-2-1; }
+#prop-classi_resto_invertibili-1-1-3 { counter-set: prop-classi_resto_invertibili-1-1-3 0; }
+#prop-classi_resto_invertibili-1-1-3 > li::marker { content: ""counter(prop-classi_resto_invertibili-1-1-3,decimal)"."; }
+#prop-classi_resto_invertibili-1-1-3 > li { counter-increment: prop-classi_resto_invertibili-1-1-3; }
+#prop-proprieta_potenze_monoide-1-1-5 { counter-set: prop-proprieta_potenze_monoide-1-1-5 0; }
+#prop-proprieta_potenze_monoide-1-1-5 > li::marker { content: ""counter(prop-proprieta_potenze_monoide-1-1-5,decimal)"."; }
+#prop-proprieta_potenze_monoide-1-1-5 > li { counter-increment: prop-proprieta_potenze_monoide-1-1-5; }
+#prop-proprieta_potenze_elemento_invertibile-1-1-5 { counter-set: prop-proprieta_potenze_elemento_invertibile-1-1-5 0; }
+#prop-proprieta_potenze_elemento_invertibile-1-1-5 > li::marker { content: ""counter(prop-proprieta_potenze_elemento_invertibile-1-1-5,decimal)"."; }
+#prop-proprieta_potenze_elemento_invertibile-1-1-5 > li { counter-increment: prop-proprieta_potenze_elemento_invertibile-1-1-5; }
+#prop-cancellazione_gruppo-2-1-5 { counter-set: prop-cancellazione_gruppo-2-1-5 0; }
+#prop-cancellazione_gruppo-2-1-5 > li::marker { content: ""counter(prop-cancellazione_gruppo-2-1-5,decimal)"."; }
+#prop-cancellazione_gruppo-2-1-5 > li { counter-increment: prop-cancellazione_gruppo-2-1-5; }
+#prop-supporto-1-1-4 { counter-set: prop-supporto-1-1-4 0; }
+#prop-supporto-1-1-4 > li::marker { content: ""counter(prop-supporto-1-1-4,decimal)"."; }
+#prop-supporto-1-1-4 > li { counter-increment: prop-supporto-1-1-4; }
+#prop-laterali_partizione-1-1-4 { counter-set: prop-laterali_partizione-1-1-4 0; }
+#prop-laterali_partizione-1-1-4 > li::marker { content: ""counter(prop-laterali_partizione-1-1-4,decimal)"."; }
+#prop-laterali_partizione-1-1-4 > li { counter-increment: prop-laterali_partizione-1-1-4; }
+#thm-prodotto_sottogruppo-1-1-4 { counter-set: thm-prodotto_sottogruppo-1-1-4 0; }
+#thm-prodotto_sottogruppo-1-1-4 > li::marker { content: ""counter(thm-prodotto_sottogruppo-1-1-4,decimal)"."; }
+#thm-prodotto_sottogruppo-1-1-4 > li { counter-increment: thm-prodotto_sottogruppo-1-1-4; }
+#prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottogruppi-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottogruppi-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_sottogruppi-1-1-2; }
+#prop-controimmagini_omomorfismo-1-1-6 { counter-set: prop-controimmagini_omomorfismo-1-1-6 0; }
+#prop-controimmagini_omomorfismo-1-1-6 > li::marker { content: ""counter(prop-controimmagini_omomorfismo-1-1-6,decimal)"."; }
+#prop-controimmagini_omomorfismo-1-1-6 > li { counter-increment: prop-controimmagini_omomorfismo-1-1-6; }
+#thm-caratterizzazione_sottogruppi_normali-1-1-3 { counter-set: thm-caratterizzazione_sottogruppi_normali-1-1-3 0; }
+#thm-caratterizzazione_sottogruppi_normali-1-1-3 > li::marker { content: ""counter(thm-caratterizzazione_sottogruppi_normali-1-1-3,decimal)"."; }
+#thm-caratterizzazione_sottogruppi_normali-1-1-3 > li { counter-increment: thm-caratterizzazione_sottogruppi_normali-1-1-3; }
+#thm-normalizzante-1-1-3 { counter-set: thm-normalizzante-1-1-3 0; }
+#thm-normalizzante-1-1-3 > li::marker { content: ""counter(thm-normalizzante-1-1-3,decimal)"."; }
+#thm-normalizzante-1-1-3 > li { counter-increment: thm-normalizzante-1-1-3; }
+#prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_sottogruppi_normali-1-1-2; }
+#prop-quoziente-eredita-1-1-5 { counter-set: prop-quoziente-eredita-1-1-5 0; }
+#prop-quoziente-eredita-1-1-5 > li::marker { content: ""counter(prop-quoziente-eredita-1-1-5,decimal)"."; }
+#prop-quoziente-eredita-1-1-5 > li { counter-increment: prop-quoziente-eredita-1-1-5; }
+#exercises-congruenze-2-1-1-3 { counter-set: exercises-congruenze-2-1-1-3 0; }
+#exercises-congruenze-2-1-1-3 > li::marker { content: "("counter(exercises-congruenze-2-1-1-3,lower-alpha)")"; }
+#exercises-congruenze-2-1-1-3 > li { counter-increment: exercises-congruenze-2-1-1-3; }
+#prop-proprieta_fattori_prodotto_diretto-1-1-9 { counter-set: prop-proprieta_fattori_prodotto_diretto-1-1-9 0; }
+#prop-proprieta_fattori_prodotto_diretto-1-1-9 > li::marker { content: ""counter(prop-proprieta_fattori_prodotto_diretto-1-1-9,decimal)"."; }
+#prop-proprieta_fattori_prodotto_diretto-1-1-9 > li { counter-increment: prop-proprieta_fattori_prodotto_diretto-1-1-9; }
+#thm-sylow-2-1-9 { counter-set: thm-sylow-2-1-9 0; }
+#thm-sylow-2-1-9 > li::marker { content: ""counter(thm-sylow-2-1-9,decimal)"."; }
+#thm-sylow-2-1-9 > li { counter-increment: thm-sylow-2-1-9; }
+#prop-moltiplicazione_opposti-1-1-2 { counter-set: prop-moltiplicazione_opposti-1-1-2 0; }
+#prop-moltiplicazione_opposti-1-1-2 > li::marker { content: ""counter(prop-moltiplicazione_opposti-1-1-2,decimal)"."; }
+#prop-moltiplicazione_opposti-1-1-2 > li { counter-increment: prop-moltiplicazione_opposti-1-1-2; }
+#prop-multipli_potenze_anello-1-1-4 { counter-set: prop-multipli_potenze_anello-1-1-4 0; }
+#prop-multipli_potenze_anello-1-1-4 > li::marker { content: ""counter(prop-multipli_potenze_anello-1-1-4,decimal)"."; }
+#prop-multipli_potenze_anello-1-1-4 > li { counter-increment: prop-multipli_potenze_anello-1-1-4; }
+#prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottoanelli-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottoanelli-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_sottoanelli-1-1-2; }
+#prop-immagine_diretta_inversa_di_ideali-1-1-2 { counter-set: prop-immagine_diretta_inversa_di_ideali-1-1-2 0; }
+#prop-immagine_diretta_inversa_di_ideali-1-1-2 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_ideali-1-1-2,decimal)"."; }
+#prop-immagine_diretta_inversa_di_ideali-1-1-2 > li { counter-increment: prop-immagine_diretta_inversa_di_ideali-1-1-2; }
+#prop-grado_e_operazioni-1-1-4 { counter-set: prop-grado_e_operazioni-1-1-4 0; }
+#prop-grado_e_operazioni-1-1-4 > li::marker { content: ""counter(prop-grado_e_operazioni-1-1-4,decimal)"."; }
+#prop-grado_e_operazioni-1-1-4 > li { counter-increment: prop-grado_e_operazioni-1-1-4; }
+#prop-proprieta_divisibilita-1-1-7 { counter-set: prop-proprieta_divisibilita-1-1-7 0; }
+#prop-proprieta_divisibilita-1-1-7 > li::marker { content: ""counter(prop-proprieta_divisibilita-1-1-7,decimal)"."; }
+#prop-proprieta_divisibilita-1-1-7 > li { counter-increment: prop-proprieta_divisibilita-1-1-7; }
+#prop-irriducibile-1-1-3 { counter-set: prop-irriducibile-1-1-3 0; }
+#prop-irriducibile-1-1-3 > li::marker { content: ""counter(prop-irriducibile-1-1-3,decimal)"."; }
+#prop-irriducibile-1-1-3 > li { counter-increment: prop-irriducibile-1-1-3; }
+#prop-lunghezza-1-1-3 { counter-set: prop-lunghezza-1-1-3 0; }
+#prop-lunghezza-1-1-3 > li::marker { content: ""counter(prop-lunghezza-1-1-3,decimal)"."; }
+#prop-lunghezza-1-1-3 > li { counter-increment: prop-lunghezza-1-1-3; }
+#prop-MCD_esiste_sempre-1-1-5 { counter-set: prop-MCD_esiste_sempre-1-1-5 0; }
+#prop-MCD_esiste_sempre-1-1-5 > li::marker { content: ""counter(prop-MCD_esiste_sempre-1-1-5,decimal)"."; }
+#prop-MCD_esiste_sempre-1-1-5 > li { counter-increment: prop-MCD_esiste_sempre-1-1-5; }
+#thm-caratterizzazione_UFD-1-1-2 { counter-set: thm-caratterizzazione_UFD-1-1-2 0; }
+#thm-caratterizzazione_UFD-1-1-2 > li::marker { content: ""counter(thm-caratterizzazione_UFD-1-1-2,decimal)"."; }
+#thm-caratterizzazione_UFD-1-1-2 > li { counter-increment: thm-caratterizzazione_UFD-1-1-2; }
+#exercises-PID_euclidei-5-1-1-2 { counter-set: exercises-PID_euclidei-5-1-1-2 0; }
+#exercises-PID_euclidei-5-1-1-2 > li::marker { content: "("counter(exercises-PID_euclidei-5-1-1-2,lower-alpha)")"; }
+#exercises-PID_euclidei-5-1-1-2 > li { counter-increment: exercises-PID_euclidei-5-1-1-2; }
+#lem-eisenstein-2-1-6 { counter-set: lem-eisenstein-2-1-6 0; }
+#lem-eisenstein-2-1-6 > li::marker { content: ""counter(lem-eisenstein-2-1-6,decimal)"."; }
+#lem-eisenstein-2-1-6 > li { counter-increment: lem-eisenstein-2-1-6; }
+#prop-moltiplicazione_per_0-1-1-3 { counter-set: prop-moltiplicazione_per_0-1-1-3 0; }
+#prop-moltiplicazione_per_0-1-1-3 > li::marker { content: ""counter(prop-moltiplicazione_per_0-1-1-3,decimal)"."; }
+#prop-moltiplicazione_per_0-1-1-3 > li { counter-increment: prop-moltiplicazione_per_0-1-1-3; }
+#prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 { counter-set: prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 0; }
+#prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 > li::marker { content: ""counter(prop-immagine_diretta_inversa_di_sottomoduli-1-1-3,decimal)"."; }
+#prop-immagine_diretta_inversa_di_sottomoduli-1-1-3 > li { counter-increment: prop-immagine_diretta_inversa_di_sottomoduli-1-1-3; }
+#prop-proprieta_addendi_somma_diretta-1-1-10 { counter-set: prop-proprieta_addendi_somma_diretta-1-1-10 0; }
+#prop-proprieta_addendi_somma_diretta-1-1-10 > li::marker { content: ""counter(prop-proprieta_addendi_somma_diretta-1-1-10,decimal)"."; }
+#prop-proprieta_addendi_somma_diretta-1-1-10 > li { counter-increment: prop-proprieta_addendi_somma_diretta-1-1-10; }
+#exercises-gruppiabeliani-2-1-1-1 { counter-set: exercises-gruppiabeliani-2-1-1-1 0; }
+#exercises-gruppiabeliani-2-1-1-1 > li::marker { content: "("counter(exercises-gruppiabeliani-2-1-1-1,lower-alpha)")"; }
+#exercises-gruppiabeliani-2-1-1-1 > li { counter-increment: exercises-gruppiabeliani-2-1-1-1; }
+#exercises-gruppiabeliani-2-2-1-1 { counter-set: exercises-gruppiabeliani-2-2-1-1 0; }
+#exercises-gruppiabeliani-2-2-1-1 > li::marker { content: "("counter(exercises-gruppiabeliani-2-2-1-1,lower-alpha)")"; }
+#exercises-gruppiabeliani-2-2-1-1 > li { counter-increment: exercises-gruppiabeliani-2-2-1-1; }
+#prop-diagonali_blocchi-1-1-2 { counter-set: prop-diagonali_blocchi-1-1-2 0; }
+#prop-diagonali_blocchi-1-1-2 > li::marker { content: ""counter(prop-diagonali_blocchi-1-1-2,decimal)"."; }
+#prop-diagonali_blocchi-1-1-2 > li { counter-increment: prop-diagonali_blocchi-1-1-2; }
+#thm-caratterizzazione_algebricamente_chiuso-1-1-2 { counter-set: thm-caratterizzazione_algebricamente_chiuso-1-1-2 0; }
+#thm-caratterizzazione_algebricamente_chiuso-1-1-2 > li::marker { content: ""counter(thm-caratterizzazione_algebricamente_chiuso-1-1-2,decimal)"."; }
+#thm-caratterizzazione_algebricamente_chiuso-1-1-2 > li { counter-increment: thm-caratterizzazione_algebricamente_chiuso-1-1-2; }
+#thm-normali_campi_di_spezzamento-1-1-3 { counter-set: thm-normali_campi_di_spezzamento-1-1-3 0; }
+#thm-normali_campi_di_spezzamento-1-1-3 > li::marker { content: ""counter(thm-normali_campi_di_spezzamento-1-1-3,decimal)"."; }
+#thm-normali_campi_di_spezzamento-1-1-3 > li { counter-increment: thm-normali_campi_di_spezzamento-1-1-3; }
+#prop-addizione_naturali-1-2-1 { counter-set: prop-addizione_naturali-1-2-1 0; }
+#prop-addizione_naturali-1-2-1 > li::marker { content: ""counter(prop-addizione_naturali-1-2-1,decimal)"."; }
+#prop-addizione_naturali-1-2-1 > li { counter-increment: prop-addizione_naturali-1-2-1; }
+#prop-moltiplicazione_naturali-1-2-1 { counter-set: prop-moltiplicazione_naturali-1-2-1 0; }
+#prop-moltiplicazione_naturali-1-2-1 > li::marker { content: ""counter(prop-moltiplicazione_naturali-1-2-1,decimal)"."; }
+#prop-moltiplicazione_naturali-1-2-1 > li { counter-increment: prop-moltiplicazione_naturali-1-2-1; }
+#cor-somma_prodotto_positivi_negativi-1-2-1 { counter-set: cor-somma_prodotto_positivi_negativi-1-2-1 0; }
+#cor-somma_prodotto_positivi_negativi-1-2-1 > li::marker { content: ""counter(cor-somma_prodotto_positivi_negativi-1-2-1,decimal)"."; }
+#cor-somma_prodotto_positivi_negativi-1-2-1 > li { counter-increment: cor-somma_prodotto_positivi_negativi-1-2-1; }
+#gfdl-section4-2-1 { counter-set: gfdl-section4-2-1 0; }
+#gfdl-section4-2-1 > li::marker { content: ""counter(gfdl-section4-2-1,upper-alpha)"."; }
+#gfdl-section4-2-1 > li { counter-increment: gfdl-section4-2-1; }
+</style>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Vai all'indice generale</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a xmlns:pf="https://prefigure.org" id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-algebra.html"><span class="title">Algebra</span></a></h1>
+<p class="byline">Valerio Monti</p>
+</div>
+</div></header><nav xmlns:pf="https://prefigure.org" id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Indice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Indice</span></button><a class="index-button button" href="indice.html" title="Indice analitico"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Indice analitico</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Risultati: </h2>
+<div id="searchempty" class="searchempty"><span>Nessun risultato.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="ch-estensione_campi.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="up-button button" href="ch-estensione_campi.html" title="Su"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Su</span></a><a class="next-button button" href="sec-estensioni_di_omomorfismi.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div xmlns:pf="https://prefigure.org" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{cancel}\require{mathtools}\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\cont}{c}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\Inv}{Inv}
+\DeclareMathOperator{\MCD}{MCD}
+\DeclareMathOperator{\mcm}{mcm}
+\DeclareMathOperator{\centro}{Z}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Soc}{Soc}
+\DeclareMathOperator{\Rad}{Rad}
+\DeclareMathOperator{\car}{char}
+
+
+\newcommand{\Sym}{\mathrm{Sym}}
+\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\Idmatrix}{\mathrm{I}}
+\newcommand{\Nullmatrix}{{\large 0}}
+\newcommand{\dist}{\mathrm{d}}
+
+\newcommand{\Reali}{\mathbf{R}}
+\newcommand{\Naturali}{\mathbf{N}}
+\newcommand{\Interi}{\mathbf{Z}}
+\newcommand{\Razionali}{\mathbf{Q}}
+\newcommand{\Complessi}{\mathbf{C}}
+\newcommand{\campo}[1]{\mathbf{F}_{#1}}
+
+ \newcommand{\grgen}[1]{\langle#1\rangle}
+ \newcommand{\ideal}[1]{\left(#1\right)}
+ \newcommand{\alg}[1]{\left\lbrack#1\right\rvert}
+ \newcommand{\seg}[1]{\left\lvert#1\right)}
+ \newcommand{\ann}[1]{\operatorname{Ann}\left(#1\right)}
+ \newcommand{\len}[1]{\operatorname{l}\left(#1\right)}
+ \newcommand{\class}[2][\sim]{\lbrack #2\rbrack_{#1}}
+ \newcommand{\cent}[2]{\operatorname{C}_{#1}\left(#2\right)}
+ \newcommand{\nrm}[2]{\operatorname{N}_{#1}\left(#2\right)}
+ \newcommand{\stab}[2]{\operatorname{Stab}_{#1}\left(#2\right)}
+ \newcommand{\Supp}[1]{\operatorname{Supp}\left(#1\right)}
+ \newcommand{\Gal}[1]{\operatorname{Gal}\left(#1\right)}
+ \newcommand{\tr}[1]{#1^{\top}}
+ \newcommand{\vuoto}{\varnothing}
+ \newcommand{\parti}[1]{\mathcal{P}(#1)}
+ \newcommand{\euler}[1]{\varphi(#1)}
+ \newcommand{\euclidean}{\delta}
+ \newcommand{\posto}[3]{#1_{#2#3}}
+ \newcommand{\restrizione}[2]{\left. #1\right|_{#2}}
+ \newcommand{\indotto}[1]{\hat{#1}}
+
+ \newcommand{\vect}[1]{\boldsymbol{#1}}
+ 
+ \newcommand{\mat}[2]{\operatorname{M}_{#1}(#2)} 
+ \newcommand{\matt}[3]{\operatorname{M}_{#1,#2}(#3)} 
+ \newcommand{\Sim}[2]{\operatorname{S}_{#1}(#2)} 
+ \newcommand{\AntiSim}[2]{\operatorname{A}_{#1}(#2)} 
+ \newcommand{\Diag}[2]{\operatorname{D}_{#1}(#2)} 
+ \newcommand{\TS}[2]{\operatorname{TS}_{#1}(#2)} 
+ \newcommand{\TI}[2]{\operatorname{TI}_{#1}(#2)} 
+ \newcommand{\GL}[2]{\operatorname{GL}(#1,#2)} 
+ \newcommand{\SL}[2]{\operatorname{SL}(#1,#2)} 
+ \newcommand{\Ort}[2]{\operatorname{O}(#1,#2)} 
+
+ \newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+ \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+ \newcommand{\ind}[2]{\left\lvert#1:#2\right\rvert}
+ \newcommand{\degext}[2]{\left\lbrack#1:#2\right\rbrack}
+
+ \newcommand{\invprov}[1]{\widehat{#1}}
+
+ \newcommand\YoungTableau[1]{
+ \begin{tikzpicture}[scale=0.4,keepsize]
+ \foreach \y [count=\yi] in {#1}
+ \foreach \x in {1,...,\y}
+ {
+ \draw (\x,\yi) rectangle +(1,1);
+ }
+ \end{tikzpicture}
+ }
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div xmlns:pf="https://prefigure.org" id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth3 parts focused" data-preexpanded-levels="0" data-max-levels="3"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Materiale iniziale</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Prefazione</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-preliminari.html" class="internal"><span class="codenumber">I</span> <span class="title">Preliminari</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-insiemi.html" class="internal"><span class="codenumber">1</span> <span class="title">Insiemi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-insiemi.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Concetti di base</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-insiemi.html#exercises-insiemi" class="internal"><span class="codenumber">1.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-operazioni_insiemi.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Operazioni tra insiemi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-operazioni_insiemi.html#exercises-operazioni_insiemi" class="internal"><span class="codenumber">1.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prodotto-cartesiano.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Prodotto cartesiano</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prodotto-cartesiano.html#exercises-prodotto_cartesiano" class="internal"><span class="codenumber">1.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Russell.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Il paradosso di Russell</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-corrispondenze.html" class="internal"><span class="codenumber">2</span> <span class="title">Corrispondenze e relazioni</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-corrispondenze_definizione.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Corrispondenze tra insiemi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-corrispondenze_definizione.html#exercises-corrispondenze_definizione" class="internal"><span class="codenumber">2.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-relazioni_equivalenza.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Relazioni di equivalenza</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-relazioni_equivalenza.html#exercises-relazioni_equivalenza" class="internal"><span class="codenumber">2.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-relazioni_ordine.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Relazioni d’ordine</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-relazioni_ordine.html#exercises-relazioni_ordine" class="internal"><span class="codenumber">2.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-funzioni.html" class="internal"><span class="codenumber">3</span> <span class="title">Funzioni</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-funzioni_definizione.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Definizioni di base</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-funzioni_definizione.html#exercises-funzioni_definizione" class="internal"><span class="codenumber">3.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-funzioni_iniettive_suriettive.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Funzioni iniettive, suriettive e biiettive</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-funzioni_iniettive_suriettive.html#exercises-funzioni_iniettive_suriettive" class="internal"><span class="codenumber">3.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-cardinalita.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Cenni sulla cardinalità</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-matrici.html" class="internal"><span class="codenumber">4</span> <span class="title">Matrici</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-definizioni_matrici.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Definizioni di base</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizioni_matrici.html#exercises-definizioni_matrici" class="internal"><span class="codenumber">4.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-operazioni_matrici.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Operazioni tra matrici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-operazioni_matrici.html#exercises-operazioni_matrici" class="internal"><span class="codenumber">4.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-aritmetica.html" class="internal"><span class="codenumber">II</span> <span class="title">Aritmetica</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-interi.html" class="internal"><span class="codenumber">5</span> <span class="title">I numeri interi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-naturali_base.html" class="internal"><span class="codenumber">5.1</span> <span class="title">I numeri naturali e i numeri interi</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-induzione_ricorrenza.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Dimostrazioni per induzione e definizioni per ricorrenza</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-induzione_ricorrenza.html#exercises-induzione" class="internal"><span class="codenumber">5.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-divisibilita_interi.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Divisibilità negli interi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-divisibilita_interi.html#exercises-divisibilita_interi" class="internal"><span class="codenumber">5.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-fattorizzazione_interi.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Il teorema fondamentale dell’aritmetica</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-fattorizzazione_interi.html#exercises-fattorizzazione_interi" class="internal"><span class="codenumber">5.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-equazioni_lineari_diofantine.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Equazioni lineari diofantine</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-equazioni_lineari_diofantine.html#exercises-equazioni_lineari_diofantine" class="internal"><span class="codenumber">5.5</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-classidiresto.html" class="internal"><span class="codenumber">6</span> <span class="title">Classi di resto</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-congruenzemodulon.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Congruenze modulo un intero</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-congruenzemodulon.html#exercises-congruenzemodulon" class="internal"><span class="codenumber">6.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-operazioniclassiresto.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Operazioni tra classi di resto</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-operazioniclassiresto.html#exercises-operazioniclassiresto" class="internal"><span class="codenumber">6.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-eulero.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Il teorema di Eulero</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-eulero.html#exercises-eulero" class="internal"><span class="codenumber">6.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-congruenze_con_incognite.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Congruenze con incognite</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-congruenze_con_incognite.html#exercises-congruenze_con_incognite" class="internal"><span class="codenumber">6.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-gruppi.html" class="internal"><span class="codenumber">III</span> <span class="title">Gruppi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-operazioni.html" class="internal"><span class="codenumber">7</span> <span class="title">Operazioni</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-operazioni_definizioni.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Definizioni ed esempi</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-proprieta_operazioni.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Proprietà delle operazioni</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-proprieta_operazioni.html#exercises-proprieta_operazioni" class="internal"><span class="codenumber">7.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-gruppi.html" class="internal"><span class="codenumber">8</span> <span class="title">Monoidi e gruppi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-monoidi.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Monoidi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-monoidi.html#exercises-monoidi" class="internal"><span class="codenumber">8.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-gruppi.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Gruppi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppi.html#exercises-gruppi" class="internal"><span class="codenumber">8.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-gruppi_piccoli.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Alcuni esempi di gruppi piccoli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppi_piccoli.html#exercises-gruppi_piccoli" class="internal"><span class="codenumber">8.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-sottogruppi.html" class="internal"><span class="codenumber">9</span> <span class="title">Sottogruppi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-sottomonoidi_sottogruppi.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Sottomonoidi e sottogruppi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottomonoidi_sottogruppi.html#exercises-sottomonoidi_sottogruppi" class="internal"><span class="codenumber">9.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prime_proprieta_sottogruppi.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Prime proprietà dei sottogruppi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prime_proprieta_sottogruppi.html#exercises-prime_proprieta_sottogruppi" class="internal"><span class="codenumber">9.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-gruppi_del_piano.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Gruppi di trasformazioni del piano</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppi_del_piano.html#exercises-gruppi_del_piano" class="internal"><span class="codenumber">9.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-gruppi_ciclici.html" class="internal"><span class="codenumber">10</span> <span class="title">Gruppi ciclici</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-definizione_gruppi_ciclici.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Definizioni e prime proprietà</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizione_gruppi_ciclici.html#exercises-definizione_gruppi_ciclici" class="internal"><span class="codenumber">10.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-sottogruppi_di_ciclici.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Sottogruppi di gruppi ciclici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottogruppi_di_ciclici.html#exercises-sottogruppi_di_ciclici" class="internal"><span class="codenumber">10.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-gruppi_permutazioni.html" class="internal"><span class="codenumber">11</span> <span class="title">Gruppi di permutazioni</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-definizioni_gruppi_permutazioni.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Definizioni e prime proprietà</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizioni_gruppi_permutazioni.html#exercises-definizioni_gruppi_permutazioni" class="internal"><span class="codenumber">11.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-cicli.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Cicli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-cicli.html#exercises-cicli" class="internal"><span class="codenumber">11.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-scambi.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Scambi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-scambi.html#exercises-scambi" class="internal"><span class="codenumber">11.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-laterali.html" class="internal"><span class="codenumber">12</span> <span class="title">Laterali e teorema di Lagrange</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prodotto_sottoinsiemi.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Prodotto di sottoinsiemi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prodotto_sottoinsiemi.html#exercises-prodotto_sottoinsiemi" class="internal"><span class="codenumber">12.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-teorema_di_lagrange.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Teorema di Lagrange</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-teorema_di_lagrange.html#exercises-teorema_di_lagrange" class="internal"><span class="codenumber">12.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prodotto_sottogruppi.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Prodotto di sottogruppi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prodotto_sottogruppi.html#exercises-prodotto_sottogruppi" class="internal"><span class="codenumber">12.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-omomorfismi.html" class="internal"><span class="codenumber">13</span> <span class="title">Omomorfismi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-definizione_omomorfismo.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Definizioni e prime proprietà</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizione_omomorfismo.html#exercises-definizione_omomorfismo" class="internal"><span class="codenumber">13.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-nucleo_immagine.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Immagine e nucleo di un omomorfismo</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-nucleo_immagine.html#exercises-nucleo_immagine" class="internal"><span class="codenumber">13.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-omomorfismi_da_gruppi_ciclici.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Omomorfismi da gruppi ciclici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-omomorfismi_da_gruppi_ciclici.html#exercises-omomorfismi_da_gruppi_ciclici" class="internal"><span class="codenumber">13.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-azioni.html" class="internal"><span class="codenumber">14</span> <span class="title">Azioni di gruppi su insiemi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-azioni_definizioni.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Definizioni e prime proprietà</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-azioni_definizioni.html#exercises-azioni_definizioni" class="internal"><span class="codenumber">14.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-orbite_stabilizzatori.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Orbite e stabilizzatori</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-orbite_stabilizzatori.html#exercises-orbite_stabilizzatori" class="internal"><span class="codenumber">14.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-sottogruppi_normali.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Sottogruppi normali</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottogruppi_normali.html#exercises-sottogruppi_normali" class="internal"><span class="codenumber">14.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-coniugati_simmetrico_alterno.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Classi di coniugio nel gruppo simmetrico e nel gruppo alterno</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-coniugati_simmetrico_alterno.html#exercises-coniugati_simmetrico_alterno" class="internal"><span class="codenumber">14.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-quozienti.html" class="internal"><span class="codenumber">15</span> <span class="title">Gruppi quoziente</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-congruenze.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Congruenze in gruppi e monoidi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-congruenze.html#exercises-congruenze" class="internal"><span class="codenumber">15.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-proprieta_quozienti.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Proprietà dei gruppi quoziente</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-proprieta_quozienti.html#exercises-proprieta_quozienti" class="internal"><span class="codenumber">15.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-teoremi_di_isomorfismo.html" class="internal"><span class="codenumber">15.3</span> <span class="title">I teoremi di isomorfismo</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-teoremi_di_isomorfismo.html#exercises-teoremi_di_isomorfismo" class="internal"><span class="codenumber">15.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-direttosemidiretto.html" class="internal"><span class="codenumber">16</span> <span class="title">Prodotto diretto e semidiretto</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prodotto_diretto_esterno.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Prodotto diretto esterno</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prodotto_diretto_esterno.html#exercises-prodotto_diretto_esterno" class="internal"><span class="codenumber">16.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prodotto_diretto_interno.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Prodotto diretto interno</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prodotto_diretto_interno.html#exercises-prodotto_diretto_interno" class="internal"><span class="codenumber">16.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prodotto_semidiretto.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Prodotto semidiretto</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prodotto_semidiretto.html#exercises--prodotto_semidiretto" class="internal"><span class="codenumber">16.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-sylow.html" class="internal"><span class="codenumber">17</span> <span class="title">Il teorema di Sylow</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-inversione_lagrange.html" class="internal"><span class="codenumber">17.1</span> <span class="title">Inversione del teorema di Lagrange</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-sylow.html" class="internal"><span class="codenumber">17.2</span> <span class="title">Il teorema di Sylow</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sylow.html#exercises-sylow" class="internal"><span class="codenumber">17.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-applicazioni_sylow.html" class="internal"><span class="codenumber">17.3</span> <span class="title">Applicazioni del teorema di Sylow</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-applicazioni_sylow.html#exercises-applicazioni_sylow" class="internal"><span class="codenumber">17.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-anelli.html" class="internal"><span class="codenumber">IV</span> <span class="title">Anelli</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-anelli.html" class="internal"><span class="codenumber">18</span> <span class="title">Anelli</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-prime_proprieta_anelli.html" class="internal"><span class="codenumber">18.1</span> <span class="title">Definizioni e prime proprietà</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-prime_proprieta_anelli.html#exercises-prime_proprieta_anelli" class="internal"><span class="codenumber">18.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-multipli_potenze.html" class="internal"><span class="codenumber">18.2</span> <span class="title">Multipli e potenze in un anello</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-multipli_potenze.html#exercises-multipli_potenze" class="internal"><span class="codenumber">18.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-sottoanelli.html" class="internal"><span class="codenumber">18.3</span> <span class="title">Sottoanelli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottoanelli.html#exercises-sottoanelli" class="internal"><span class="codenumber">18.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-omomorfismiideali.html" class="internal"><span class="codenumber">19</span> <span class="title">Omomorfismi e ideali</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-omomorfismi_anelli.html" class="internal"><span class="codenumber">19.1</span> <span class="title">Omomorfismi di anelli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-omomorfismi_anelli.html#exercises-omomorfismi_anelli" class="internal"><span class="codenumber">19.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-anelli_quoziente.html" class="internal"><span class="codenumber">19.2</span> <span class="title">Anelli quoziente e ideali</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-anelli_quoziente.html#exercises-anelli_quoziente" class="internal"><span class="codenumber">19.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-campo_dei_quozienti.html" class="internal"><span class="codenumber">19.3</span> <span class="title">Campo dei quozienti di un dominio</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-campo_dei_quozienti.html#exercises-campo_dei_quozienti" class="internal"><span class="codenumber">19.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-polinomi.html" class="internal"><span class="codenumber">20</span> <span class="title">Polinomi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-anello_polinomi.html" class="internal"><span class="codenumber">20.1</span> <span class="title">Anello dei polinomi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-anello_polinomi.html#exercises-anello_polinomi" class="internal"><span class="codenumber">20.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-valutazione_polinomi.html" class="internal"><span class="codenumber">20.2</span> <span class="title">Valutazione di polinomi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-valutazione_polinomi.html#exercises-valutazione_polinomi" class="internal"><span class="codenumber">20.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-divisibilita.html" class="internal"><span class="codenumber">21</span> <span class="title">Divisibilità nei domini</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-divisibilita.html" class="internal"><span class="codenumber">21.1</span> <span class="title">Relazione di divisibilità</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-divisibilita.html#exercises-divisibilita" class="internal"><span class="codenumber">21.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-fattorizzazione.html" class="internal"><span class="codenumber">21.2</span> <span class="title">Fattorizzazione</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-fattorizzazione.html#exercises-fattorizzazione" class="internal"><span class="codenumber">21.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-PID_euclidei.html" class="internal"><span class="codenumber">21.3</span> <span class="title">Domini a ideali principali e domini euclidei</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-PID_euclidei.html#exercises-PID_euclidei" class="internal"><span class="codenumber">21.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-fattorizzazione_polinomi.html" class="internal"><span class="codenumber">22</span> <span class="title">Fattorizzazione dei polinomi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-trasporto_UFD.html" class="internal"><span class="codenumber">22.1</span> <span class="title">Il teorema del trasporto per domini a fattorizzazione unica</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-trasporto_UFD.html#exercises-trasporto_UFD" class="internal"><span class="codenumber">22.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-esempi_fattorizzazione_polinomi.html" class="internal"><span class="codenumber">22.2</span> <span class="title">Tecniche di fattorizzazione</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-esempi_fattorizzazione_polinomi.html#exercises-esempi_fattorizzazione_polinomi" class="internal"><span class="codenumber">22.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="part-moduli.html" class="internal"><span class="codenumber">V</span> <span class="title">Moduli</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-moduli.html" class="internal"><span class="codenumber">23</span> <span class="title">Moduli</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-definizione_di_moduli.html" class="internal"><span class="codenumber">23.1</span> <span class="title">Definizione di modulo</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-definizione_di_moduli.html#exercises-definizione_modulo" class="internal"><span class="codenumber">23.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-sottomoduli.html" class="internal"><span class="codenumber">23.2</span> <span class="title">Sottomoduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-sottomoduli.html#exercises-sottomoduli" class="internal"><span class="codenumber">23.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-omomorfismi_moduli.html" class="internal"><span class="codenumber">23.3</span> <span class="title">Omomorfismi di moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-omomorfismi_moduli.html#exercises-omomorfismi_moduli" class="internal"><span class="codenumber">23.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-moduli_quoziente.html" class="internal"><span class="codenumber">23.4</span> <span class="title">Moduli quoziente</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_quoziente.html#exercises-moduli_quoziente" class="internal"><span class="codenumber">23.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-moduli_liberi.html" class="internal"><span class="codenumber">24</span> <span class="title">Moduli liberi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-somma_diretta_moduli.html" class="internal"><span class="codenumber">24.1</span> <span class="title">Somma diretta di moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-somma_diretta_moduli.html#exercises-somma_diretta_moduli" class="internal"><span class="codenumber">24.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-dipendenza_lineare.html" class="internal"><span class="codenumber">24.2</span> <span class="title">Dipendenza e indipendenza lineare</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-dipendenza_lineare.html#exercises-dipendenza_lineare" class="internal"><span class="codenumber">24.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-elementi_di_torsione.html" class="internal"><span class="codenumber">24.3</span> <span class="title">Elementi di torsione</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_di_torsione.html#exercises-elementi_di_torsione" class="internal"><span class="codenumber">24.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-modulisupid.html" class="internal"><span class="codenumber">25</span> <span class="title">Moduli finitamente generati su PID</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-moduli_ciclici.html" class="internal"><span class="codenumber">25.1</span> <span class="title">Moduli ciclici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_ciclici.html#exercises-moduli_ciclici" class="internal"><span class="codenumber">25.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-moduli_primari.html" class="internal"><span class="codenumber">25.2</span> <span class="title">Moduli primari</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_primari.html#exercises-moduli_primari" class="internal"><span class="codenumber">25.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-moduli_liberi.html" class="internal"><span class="codenumber">25.3</span> <span class="title">Moduli liberi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-moduli_liberi.html#exercises-moduli_liberi" class="internal"><span class="codenumber">25.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-classificazione_moduli_pid.html" class="internal"><span class="codenumber">25.4</span> <span class="title">La classificazione dei moduli finitamente generati su un dominio a ideali principali</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-gruppiabeliani.html" class="internal"><span class="codenumber">26</span> <span class="title">Gruppi abeliani finitamente generati</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-gruppiabeliani.html" class="internal"><span class="codenumber">26.1</span> <span class="title">Classificazione dei gruppi abeliani finitamente generati</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-gruppiabeliani.html#exercises-gruppiabeliani" class="internal"><span class="codenumber">26.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-formecanoniche.html" class="internal"><span class="codenumber">27</span> <span class="title">Forme canoniche di matrici</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-kx_moduli.html" class="internal"><span class="codenumber">27.1</span> <span class="title">Spazi vettoriali con endomorfismi visti come moduli</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-kx_moduli.html#exercises-kx_moduli" class="internal"><span class="codenumber">27.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-matrici_rappresentative.html" class="internal"><span class="codenumber">27.2</span> <span class="title">Matrici rappresentative</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-matrici_rappresentative.html#exercises-matrici_rappresentative" class="internal"><span class="codenumber">27.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-matrici_compagne.html" class="internal"><span class="codenumber">27.3</span> <span class="title">Matrici compagne</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-jordan.html" class="internal"><span class="codenumber">27.4</span> <span class="title">Forma canonica di Jordan</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-jordan.html#exercises-jordan" class="internal"><span class="codenumber">27.4</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html" class="internal"><span class="codenumber">27.5</span> <span class="title">Polinomio minimo di matrici</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-polinomio_minimo_matrici.html#exercises-polinomio_minimo_matrici" class="internal"><span class="codenumber">27.5</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-part contains-active">
+<div class="toc-title-box"><a href="part-campi_galois.html" class="internal"><span class="codenumber">VI</span> <span class="title">Campi e teoria di Galois</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-estensione_campi.html" class="internal"><span class="codenumber">28</span> <span class="title">Estensioni di campi</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="sec-elementi_algebrici_e_trascendenti.html" class="internal"><span class="codenumber">28.1</span> <span class="title">Elementi algebrici e trascendenti</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-elementi_algebrici_e_trascendenti.html#exercises-elementi_algebrici_e_trascendenti" class="internal"><span class="codenumber">28.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-estensioni_di_omomorfismi.html" class="internal"><span class="codenumber">28.2</span> <span class="title">Estensioni di omomorfismi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-estensioni_di_omomorfismi.html#exercises-estensioni_di_omomorfismi" class="internal"><span class="codenumber">28.2</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-chiusure_algebriche.html" class="internal"><span class="codenumber">28.3</span> <span class="title">Campi algebricamente chiusi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-chiusure_algebriche.html#exercises-chiusure_algebriche" class="internal"><span class="codenumber">28.3</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-campi_di_spezzamento.html" class="internal"><span class="codenumber">29</span> <span class="title">Campi di spezzamento</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-campo_di_spezzamento.html" class="internal"><span class="codenumber">29.1</span> <span class="title">Campi di spezzamento</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-campo_di_spezzamento.html#exercises-campo_di_spezzamento" class="internal"><span class="codenumber">29.1</span> <span class="title">Esercizi</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-estensioni_normali.html" class="internal"><span class="codenumber">29.2</span> <span class="title">Estensioni normali</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-chiusura_normale.html" class="internal"><span class="codenumber">29.3</span> <span class="title">Chiusura normale</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Appendici</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="appendix-peano.html" class="internal"><span class="codenumber">A</span> <span class="title">Numeri naturali e interi</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-algebre_induttive.html" class="internal"><span class="codenumber">A.1</span> <span class="title">Algebre induttive</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-assiomi_peano.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Gli assiomi di Peano</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-insiemi_finiti_infiniti.html" class="internal"><span class="codenumber">A.3</span> <span class="title">Insiemi finiti e infiniti</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-operazioni_naturali.html" class="internal"><span class="codenumber">A.4</span> <span class="title">Operazioni tra numeri naturali</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-interi.html" class="internal"><span class="codenumber">A.5</span> <span class="title">Costruzione degli interi</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">Notazioni</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="codenumber">C</span> <span class="title">Soluzioni e suggerimenti</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-gfdl.html" class="internal"><span class="codenumber">D</span> <span class="title">GNU Free Documentation License</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="indice.html" class="internal"><span class="title">Indice analitico</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="back-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:pf="https://prefigure.org" class="section" id="sec-elementi_algebrici_e_trascendenti"><h2 class="heading hide-type">
+<span class="type">Paragrafo</span><span class="space"> </span><span class="codenumber">28.1</span><span class="space"> </span><span class="title">Elementi algebrici e trascendenti</span>
+</h2>
+<div class="para" id="sec-elementi_algebrici_e_trascendenti-2">Se <span class="process-math">\(R\)</span> è un anello contenente un campo <span class="process-math">\(F\text{,}\)</span> allora possiamo considerare <span class="process-math">\(R\)</span> come uno spazio vettoriale su <span class="process-math">\(F\)</span> in maniera ovvia, prendendo come addizione l’addizione in <span class="process-math">\(R\)</span> e come moltiplicazione di uno scalare (cioè un elemento di <span class="process-math">\(F\)</span>) per un vettore (cioè un elemento di <span class="process-math">\(R\)</span>) la moltiplicazione di questi elementi in <span class="process-math">\(R\text{.}\)</span> Le verifiche che così facendo si ottiene effettivamente un <span class="process-math">\(F\)</span>-spazio vettoriale sono molto semplici e le lasciamo per esercizio. Nel caso in cui anche l’anello che contiene <span class="process-math">\(F\)</span> sia esso stesso un campo <span class="process-math">\(E\text{,}\)</span> diciamo che <span class="process-math">\(E\)</span> è un’<dfn class="terminology">estensione</dfn> di <span class="process-math">\(F\)</span> e diamo la</div>
+<article class="definition definition-like" id="def-grado_estensione"><h3 class="heading">
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">28.1.1</span><span class="period">.</span>
+</h3>
+<div class="para" id="def-grado_estensione-2-1">Se <span class="process-math">\(E\)</span> è un’estensione di <span class="process-math">\(F\text{,}\)</span> il <dfn class="terminology">grado</dfn> di <span class="process-math">\(E\)</span> su <span class="process-math">\(F\text{,}\)</span> denotato con <span class="process-math">\(\degext{E}{F}\text{,}\)</span> è la dimensione (eventualmente infinita) di <span class="process-math">\(E\)</span> come <span class="process-math">\(F\)</span>-spazio vettoriale. Nel caso in cui <span class="process-math">\(\degext{E}{F}\)</span> sia finito, diremo che <span class="process-math">\(E\)</span> è un’estensione <dfn class="terminology">finita</dfn> di <span class="process-math">\(F\text{.}\)</span>
+</div></article><article class="example example-like" id="sec-elementi_algebrici_e_trascendenti-4"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">28.1.2</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec-elementi_algebrici_e_trascendenti-4-1-1">Il campo dei complessi <span class="process-math">\(\Complessi\)</span> ha grado <span class="process-math">\(2\)</span> su <span class="process-math">\(\Reali\text{.}\)</span>
+</div></article><article class="proposition theorem-like" id="prop-ordine_campo_finito"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">28.1.3</span><span class="period">.</span>
+</h3>
+<div class="para" id="prop-ordine_campo_finito-1-1">Un campo finito ha ordine potenza di un primo.</div></article><details id="prop-ordine_campo_finito-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-ordine_campo_finito-2-1">Un campo finito <span class="process-math">\(E\)</span> ha caratteristica un primo <span class="process-math">\(p\)</span> (<a href="sec-multipli_potenze.html#rem-anelli_finiti" class="xref" data-knowl="./knowl/xref/rem-anelli_finiti.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Osservazione 18.2.7">Osservazione 18.2.7</a> e <a href="sec-multipli_potenze.html#prop-caratteristica_anello_intero" class="xref" data-knowl="./knowl/xref/prop-caratteristica_anello_intero.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 18.2.9">Proposizione 18.2.9</a>). Per la <a href="sec-campo_dei_quozienti.html#prop-sottocampo_sottoanello_minimo" class="xref" data-knowl="./knowl/xref/prop-sottocampo_sottoanello_minimo.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 19.3.5">Proposizione 19.3.5</a>, il sottocampo minimo <span class="process-math">\(F\)</span> di <span class="process-math">\(E\)</span> ha allora ordine <span class="process-math">\(p\text{.}\)</span> Ora <span class="process-math">\(E\)</span> è, ovviamente, un’estensione finita di <span class="process-math">\(F\text{,}\)</span> di grado, diciamo, <span class="process-math">\(n\text{.}\)</span> Come <span class="process-math">\(F\)</span>-spazio vettoriale <span class="process-math">\(E\)</span> è allora isomorfo a <span class="process-math">\(F^{n}\text{,}\)</span> lo spazio delle <span class="process-math">\(n\)</span>-uple a coefficienti in <span class="process-math">\(F\text{,}\)</span> che contiene esattamente <span class="process-math">\(p^{n}\)</span> elementi.</div></article></details><div class="para" id="sec-elementi_algebrici_e_trascendenti-6">Il prossimo risultato può essere dimostrato semplicemente verificando che basi sono mandate in basi. Lasciamo i dettagli per esercizio.</div>
+<article class="proposition theorem-like" id="prop-omomorfismo_preserva_grado"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">28.1.4</span><span class="period">.</span>
+</h3>
+<div class="para" id="prop-omomorfismo_preserva_grado-1-1">Sia <span class="process-math">\(\phi\colon E\to L\)</span> un omomorfismo di campi. Se <span class="process-math">\(F\)</span> è un sottocampo di <span class="process-math">\(E\text{,}\)</span> risulta <span class="process-math">\(\degext{E}{F}=\degext{E\phi}{F\phi}\text{.}\)</span>
+</div></article><article class="proposition theorem-like" id="prop-moltiplicativita_grado"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">28.1.5</span><span class="period">.</span>
+</h3>
+<div class="para" id="prop-moltiplicativita_grado-1-1">Sia <span class="process-math">\(E\)</span> un’estensione di un campo <span class="process-math">\(F\)</span> e sia <span class="process-math">\(R\)</span> un anello contenente <span class="process-math">\(E\text{.}\)</span> Allora <span class="process-math">\(R\)</span> ha dimensione finita come <span class="process-math">\(F\)</span>-spazio vettoriale se e solo se <span class="process-math">\(R\)</span> ha dimensione finita come <span class="process-math">\(E\)</span>-spazio vettoriale e <span class="process-math">\(\degext{E}{F}\)</span> è finito: in tal caso <span class="process-math">\(\dim_{F}R=\dim_{E}R\cdot\degext{E}{F}\)</span> (in particolare, se <span class="process-math">\(R\)</span> è anch’esso un campo, risulta <span class="process-math">\(\degext{R}{F}=\degext{R}{E}\degext{E}{F}\)</span>).</div></article><details id="prop-moltiplicativita_grado-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-moltiplicativita_grado-2-1">Supponiamo che <span class="process-math">\(\dim_{F}R\)</span> sia finita. Allora <span class="process-math">\(E\text{,}\)</span> essendo contenuto in <span class="process-math">\(R\text{,}\)</span> può essere visto come un <span class="process-math">\(F\)</span>-sottospazio vettoriale di <span class="process-math">\(R\)</span> e, quindi, ha <span class="process-math">\(F\)</span>-dimensione finita. Inoltre, presi i vettori di una <span class="process-math">\(F\)</span>-base di <span class="process-math">\(R\text{,}\)</span> questi sono anche <span class="process-math">\(E\)</span>-generatori di <span class="process-math">\(R\)</span> e, quindi, <span class="process-math">\(R\)</span> ha <span class="process-math">\(E\)</span>-dimensione finita.</div>
+<div class="para" id="prop-moltiplicativita_grado-2-2">Viceversa, supponiamo che <span class="process-math">\(\dim_{E}R\)</span> e <span class="process-math">\(\degext{E}{F}\)</span> siano finiti. Sia allora <span class="process-math">\(v_{1}\text{,}\)</span> <span class="process-math">\(v_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(v_{r}\)</span> una <span class="process-math">\(E\)</span>-base di <span class="process-math">\(R\)</span> e sia <span class="process-math">\(e_{1}\text{,}\)</span> <span class="process-math">\(e_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(e_{s}\)</span> una <span class="process-math">\(F\)</span>-base di <span class="process-math">\(E\text{.}\)</span> Se mostriamo che <span class="process-math">\(e_{i}v_{j}\)</span> con <span class="process-math">\(1\le i\le s\)</span> e <span class="process-math">\(1\le j\le r\)</span> formano una <span class="process-math">\(F\)</span>-base di <span class="process-math">\(R\text{,}\)</span> otteniamo che <span class="process-math">\(\dim_{F}R\)</span> è finita ed è esattamente uguale a <span class="process-math">\(\dim_{E}R\cdot\degext{E}{F}\text{.}\)</span>
+</div>
+<div class="para logical" id="prop-moltiplicativita_grado-2-3">
+<div class="para">Mostriamo che i vettori dati generano <span class="process-math">\(R\)</span> come <span class="process-math">\(F\)</span>-spazio vettoriale. Infatti, dato un elemento <span class="process-math">\(v\)</span> di <span class="process-math">\(R\text{,}\)</span> questo può essere espresso come una <span class="process-math">\(E\)</span>-combinazione lineare dei <span class="process-math">\(v_{j}\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+v=\sum_{j=1}^{r}b_{j}v_{j}\text{.}
+\end{equation*}
+</div>
+<div class="para">Ciascun <span class="process-math">\(b_{j}\text{,}\)</span> in quanto elemento di <span class="process-math">\(E\text{,}\)</span> può essere espresso come <span class="process-math">\(F\)</span>-combinazione lineare degli <span class="process-math">\(e_{i}\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+b_{j}=\sum_{i=1}^{s}c_{ij}e_{i}\text{.}
+\end{equation*}
+</div>
+<div class="para">Combinando le sommatorie date troviamo <span class="process-math">\(v\)</span> come <span class="process-math">\(F\)</span>-combinazione lineare degli <span class="process-math">\(e_{i}v_{j}\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+v=\sum_{j=1}^{r}\sum_{i=1}^{s}c_{ij}e_{i}v_{j}\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="prop-moltiplicativita_grado-2-4">
+<div class="para">Mostriamo, infine, che gli <span class="process-math">\(e_{i}v_{j}\)</span> sono <span class="process-math">\(F\)</span>-linearmente indipendenti, ponendo uguale a <span class="process-math">\(0\)</span> una loro <span class="process-math">\(F\)</span>-combinazione lineare:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{j=1}^{r}\sum_{i=1}^{s}d_{ij}e_{i}v_{j}=0\text{.}
+\end{equation*}
+</div>
+<div class="para">Riscrivendola così</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{j=1}^{r}(\sum_{i=1}^{s}d_{ij}e_{i})v_{j}=0
+\end{equation*}
+</div>
+<div class="para">possiamo pensare il primo membro come una <span class="process-math">\(E\)</span>-combinazione lineare dei <span class="process-math">\(v_{j}\)</span> e, essendo questi ultimi <span class="process-math">\(E\)</span>-linearmente indipendenti, otteniamo che tutti gli <span class="process-math">\(E\)</span>-coefficienti si annullano, cioè</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{i=1}^{s}d_{ij}e_{i}=0
+\end{equation*}
+</div>
+<div class="para">per ogni <span class="process-math">\(j\text{.}\)</span> Poiché gli <span class="process-math">\(e_{i}\)</span> sono <span class="process-math">\(F\)</span>-linearmente indipendenti, ciò implica che <span class="process-math">\(d_{ij}=0\)</span> per ogni <span class="process-math">\(i\)</span> e <span class="process-math">\(j\text{,}\)</span> come richiesto.</div>
+</div></article></details><article class="definition definition-like" id="def-algebrici_trascendenti"><h3 class="heading">
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">28.1.6</span><span class="period">.</span>
+</h3>
+<div class="para" id="def-algebrici_trascendenti-1-1">Sia <span class="process-math">\(E\)</span> un’estensione di un campo <span class="process-math">\(F\)</span> e sia <span class="process-math">\(u\)</span> un elemento di <span class="process-math">\(E\text{.}\)</span> Diciamo che <span class="process-math">\(u\)</span> è <dfn class="terminology">algebrico</dfn> su <span class="process-math">\(F\)</span> se <span class="process-math">\(u\)</span> è radice di un polinomio non nullo a coefficienti in <span class="process-math">\(F\text{;}\)</span> altrimenti, cioè se l’unico polinomio a coefficienti in <span class="process-math">\(F\)</span> di cui <span class="process-math">\(u\)</span> è radice è il polinomio nullo, diciamo che <span class="process-math">\(u\)</span> è <dfn class="terminology">trascendente</dfn> su <span class="process-math">\(F\text{.}\)</span>
+</div></article><article class="remark remark-like" id="rem-Falgebrico_su_F"><h3 class="heading">
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">28.1.7</span><span class="period">.</span>
+</h3>
+<div class="para" id="rem-Falgebrico_su_F-1">Ogni elemento <span class="process-math">\(u\)</span> di <span class="process-math">\(F\)</span> è, banalmente, algebrico su <span class="process-math">\(F\)</span> in quanto radice del polinomio <span class="process-math">\(x-u\)</span> a coefficienti in <span class="process-math">\(F\text{.}\)</span>
+</div></article><article class="example example-like" id="sec-elementi_algebrici_e_trascendenti-11"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">28.1.8</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec-elementi_algebrici_e_trascendenti-11-1-1">Consideriamo il campo <span class="process-math">\(\Razionali\)</span> e la sua estensione <span class="process-math">\(\Reali\text{.}\)</span> Allora <span class="process-math">\(\sqrt{2}\)</span> è algebrico su <span class="process-math">\(\Razionali\)</span> in quanto radice di <span class="process-math">\(x^{2}-2\)</span> a coefficienti in <span class="process-math">\(\Razionali\text{.}\)</span> D’altra parte, Lindemann<details class="ptx-footnote" aria-live="polite" id="sec-elementi_algebrici_e_trascendenti-11-1-1-7"><summary class="ptx-footnote__number" title="Nota a piè di pagina 28.1.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec-elementi_algebrici_e_trascendenti-11-1-1-7">
+<a class="external" href="https://it.wikipedia.org/wiki/Ferdinand_von_Lindemann" target="_blank">Ferdinand von Lindemann</a>, 1852–1939.</div></details> nel 1882 ha dimostrato che <span class="process-math">\(\pi\)</span> è trascendente su <span class="process-math">\(\Razionali\text{.}\)</span>
+</div></article><article class="definition definition-like" id="def-estensione_con_elementi"><h3 class="heading">
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">28.1.9</span><span class="period">.</span>
+</h3>
+<div class="para" id="def-estensione_con_elementi-5-1">Dati un’estensione <span class="process-math">\(E\)</span> di un campo <span class="process-math">\(F\)</span> e un sottoinsieme <span class="process-math">\(U\)</span> di <span class="process-math">\(E\text{,}\)</span> indichiamo con <span class="process-math">\(F(U)\)</span> il sottocampo di <span class="process-math">\(E\)</span> generato da <span class="process-math">\(F\)</span> e <span class="process-math">\(U\)</span> e con <span class="process-math">\(F[U]\)</span> il sottoanello di <span class="process-math">\(E\)</span> generato da <span class="process-math">\(F\)</span> e <span class="process-math">\(U\text{.}\)</span> Nel caso particolare in cui <span class="process-math">\(U\coloneqq\{u_{1},\ldots,u_{r}\}\)</span> sia un insieme finito, scriveremo semplicemente <span class="process-math">\(F(u_{1},\ldots,u_{r})\)</span> per <span class="process-math">\(F(U)\)</span> e <span class="process-math">\(F[u_{1},\ldots,u_{r}]\)</span> per <span class="process-math">\(F[U]\text{.}\)</span>
+</div></article><article class="remark remark-like" id="sec-elementi_algebrici_e_trascendenti-13"><h3 class="heading">
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">28.1.10</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec-elementi_algebrici_e_trascendenti-13-1">Se <span class="process-math">\(E\)</span> è un’estensione finita di un campo <span class="process-math">\(F\text{,}\)</span> allora <span class="process-math">\(E=F(u_{1},\ldots,u_{r})\)</span> per opportuni elementi <span class="process-math">\(u_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(u_{r}\)</span> di <span class="process-math">\(E\text{:}\)</span> basta, ad esempio, prendere elementi di una <span class="process-math">\(F\)</span>-base di <span class="process-math">\(E\text{.}\)</span>
+</div></article><article class="definition definition-like" id="def-estensione_semplice"><h3 class="heading">
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">28.1.11</span><span class="period">.</span>
+</h3>
+<div class="para" id="def-estensione_semplice-1-1">Un’estensione <span class="process-math">\(E\)</span> di un campo <span class="process-math">\(F\)</span> è detta <dfn class="terminology">semplice</dfn> se esiste <span class="process-math">\(u\)</span> in <span class="process-math">\(E\)</span> tale che <span class="process-math">\(E=F(u)\text{.}\)</span>
+</div></article><article class="proposition theorem-like" id="prop-sottocampo_generato_sottoanello_generato"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">28.1.12</span><span class="period">.</span>
+</h3>
+<div class="para" id="prop-sottocampo_generato_sottoanello_generato-1-1">Sia <span class="process-math">\(E\)</span> un’estensione di un campo <span class="process-math">\(F\)</span> e sia <span class="process-math">\(U\)</span> un sottoinsieme di <span class="process-math">\(E\text{:}\)</span> allora <span class="process-math">\(F(U)\)</span> contiene <span class="process-math">\(F[U]\)</span> e <span class="process-math">\(F(U)\)</span> è il campo dei quozienti di <span class="process-math">\(F[U]\text{.}\)</span>
+</div></article><details id="prop-sottocampo_generato_sottoanello_generato-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-sottocampo_generato_sottoanello_generato-2-1">Per definizione, <span class="process-math">\(F[U]\)</span> è contenuto in tutti i sottoanelli di <span class="process-math">\(E\)</span> contenenti <span class="process-math">\(F\)</span> e <span class="process-math">\(U\text{:}\)</span> in particolare, <span class="process-math">\(F(U)\)</span> è un sottoanello che soddisfa queste proprietà e, quindi, contiene <span class="process-math">\(F[U]\text{.}\)</span> Il fatto che <span class="process-math">\(F(U)\)</span> sia il campo dei quozienti di <span class="process-math">\(F[U]\)</span> segue dall’<a href="sec-campo_dei_quozienti.html#rem-campo_quozienti_contenuto" class="xref" data-knowl="./knowl/xref/rem-campo_quozienti_contenuto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Osservazione 19.3.4">Osservazione 19.3.4</a>.</div></article></details><div class="para" id="sec-elementi_algebrici_e_trascendenti-16">Diamo ora un risultato sui quozienti di anelli di polinomi che vale più in generale per domini a ideali principali (si veda <a href="sec-PID_euclidei.html#exercise-quoziente_PID" class="xref" data-knowl="./knowl/xref/exercise-quoziente_PID.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Esercizio 21.3.11">Esercizio 21.3.11</a>).</div>
+<article class="lemma theorem-like" id="lem-quoziente_anello_polinomi"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">28.1.13</span><span class="period">.</span>
+</h3>
+<div class="para" id="lem-quoziente_anello_polinomi-1-1">Sia <span class="process-math">\(F\)</span> un campo e sia <span class="process-math">\(p\)</span> un polinomio di grado positivo a coefficienti in <span class="process-math">\(F\text{.}\)</span> Se <span class="process-math">\(p\)</span> è irriducibile, allora <span class="process-math">\(F[x]/\ideal{p}\)</span> è un campo, altrimenti <span class="process-math">\(F[x]/\ideal{p}\)</span> non è un dominio.</div></article><details id="lem-quoziente_anello_polinomi-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="lem-quoziente_anello_polinomi-2-1">Supponiamo che <span class="process-math">\(p\)</span> non sia irriducibile, ed esistano allora <span class="process-math">\(f\)</span> e <span class="process-math">\(g\)</span> di grado minore di <span class="process-math">\(\deg p\)</span> tali che <span class="process-math">\(p=fg\text{:}\)</span> in particolare, <span class="process-math">\(f\)</span> e <span class="process-math">\(g\)</span> non appartengono a <span class="process-math">\(\ideal{p}\text{,}\)</span> cioè <span class="process-math">\(f+\ideal{p}\)</span> e <span class="process-math">\(g+\ideal{p}\)</span> sono elementi non nulli di <span class="process-math">\(F[x]/\ideal{p}\text{.}\)</span> D’altra parte <span class="process-math">\((f+\ideal{p})(g+\ideal{p})=fg+\ideal{p}=p+\ideal{p}\)</span> è lo zero di <span class="process-math">\(F[x]/\ideal{p}\)</span> che, quindi, non è un dominio.</div>
+<div class="para" id="lem-quoziente_anello_polinomi-2-2">Sia ora <span class="process-math">\(p\)</span> irriducibile. Per il <a href="sec-anelli_quoziente.html#thm-sottoanelli_quoziente" class="xref" data-knowl="./knowl/xref/thm-sottoanelli_quoziente.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 19.2.22">Teorema 19.2.22</a>, gli ideali di <span class="process-math">\(F[x]/\ideal{p}\)</span> sono del tipo <span class="process-math">\(J/\ideal{p}\)</span> con <span class="process-math">\(J\)</span> ideale di <span class="process-math">\(F[x]\)</span> contenente <span class="process-math">\(\ideal{p}\text{:}\)</span> poiché <span class="process-math">\(F[x]\)</span> è un dominio a ideali principali, <span class="process-math">\(J=\ideal{h}\)</span> con <span class="process-math">\(h\)</span> polinomio di <span class="process-math">\(F[x]\)</span> che divide <span class="process-math">\(p\)</span> e, essendo <span class="process-math">\(p\)</span> irriducibile, ciò può avvenire se e solo se <span class="process-math">\(h\)</span> è invertibile o se <span class="process-math">\(h\)</span> è associato a <span class="process-math">\(p\text{:}\)</span> nel primo caso <span class="process-math">\(\ideal{h}=F[x]\text{,}\)</span> mentre nel secondo <span class="process-math">\(\ideal{h}=\ideal{p}\text{.}\)</span> Dunque, gli unici ideali di <span class="process-math">\(F[x]/\ideal{p}\)</span> sono <span class="process-math">\(F[x]/\ideal{p}\)</span> e <span class="process-math">\(\ideal{p}/\ideal{p}\)</span> (cioè l’ideale nullo): pertanto, per la <a href="sec-anelli_quoziente.html#prop-anello_commutativo_senza_ideali_campo" class="xref" data-knowl="./knowl/xref/prop-anello_commutativo_senza_ideali_campo.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 19.2.18">Proposizione 19.2.18</a>, <span class="process-math">\(F[x]/\ideal{p}\)</span> è un campo.</div></article></details><article class="theorem theorem-like" id="thm-caratterizzazione_algebrici_trascendenti"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">28.1.14</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="thm-caratterizzazione_algebrici_trascendenti-1-1">
+<div class="para">Sia <span class="process-math">\(E\)</span> un’estensione di un campo <span class="process-math">\(F\)</span> e sia <span class="process-math">\(u\)</span> un elemento di <span class="process-math">\(E\text{.}\)</span> Sia <span class="process-math">\(\phi\)</span> l’omomorfismo di anelli da <span class="process-math">\(F[x]\)</span> in <span class="process-math">\(E\)</span> dato dalla valutazione di polinomi in <span class="process-math">\(u\text{.}\)</span> Allora <span class="process-math">\(\im\phi=F[u]\)</span> e si verifica uno e uno solo dei due casi</div>
+<ul class="disc" id="thm-caratterizzazione_algebrici_trascendenti-1-1-10">
+<li id="thm-caratterizzazione_algebrici_trascendenti-1-1-10-1"><div class="para" id="thm-caratterizzazione_algebrici_trascendenti-1-1-10-1-1">
+<span class="process-math">\(u\)</span> è trascendente su <span class="process-math">\(F\text{,}\)</span> <span class="process-math">\(\ker\phi=0\text{,}\)</span> <span class="process-math">\(F[u]\simeq F[x]\text{,}\)</span> <span class="process-math">\(\dim_{F}F[u]=\infty\)</span> e <span class="process-math">\(F[u]\subsetneq F(u)\text{;}\)</span>
+</div></li>
+<li id="thm-caratterizzazione_algebrici_trascendenti-1-1-10-2"><div class="para" id="thm-caratterizzazione_algebrici_trascendenti-1-1-10-2-1">
+<span class="process-math">\(u\)</span> è algebrico su <span class="process-math">\(F\text{,}\)</span> <span class="process-math">\(\ker\phi\)</span> è generato da un polinomio monico irriducibile <span class="process-math">\(p\)</span> detto <dfn class="terminology">polinomio minimo</dfn> di <span class="process-math">\(u\)</span> su <span class="process-math">\(F\text{,}\)</span> <span class="process-math">\(F[u]=F(u)\text{,}\)</span> <span class="process-math">\(\dim_{F}F[u]=\degext{F(u)}{F}=\deg p\)</span> e una <span class="process-math">\(F\)</span>-base di <span class="process-math">\(F(u)\)</span> è data da <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(u\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(u^{n-1}\)</span> con <span class="process-math">\(n=\deg p\text{.}\)</span>
+</div></li>
+</ul>
+</div></article><details id="thm-caratterizzazione_algebrici_trascendenti-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-caratterizzazione_algebrici_trascendenti-2-1">Se <span class="process-math">\(f\coloneqq a_{0}+a_{1}x+\cdots+a_{n}x^{n}\)</span> è un polinomio a coefficienti in <span class="process-math">\(F\text{,}\)</span> allora, per definizione <span class="process-math">\(f\phi=f(u)=a_{0}+a_{1}u+\cdots+a_{n}u^{n}\text{:}\)</span> poiché gli <span class="process-math">\(a_{i}\)</span> e <span class="process-math">\(u\)</span> appartengono a <span class="process-math">\(F[u]\)</span> anche <span class="process-math">\(f\phi\)</span> appartiene a <span class="process-math">\(F[u]\text{.}\)</span> Dunque, <span class="process-math">\(\im\phi\subseteq F[u]\text{.}\)</span> D’altra parte, <span class="process-math">\(F\)</span> è contenuto in <span class="process-math">\(\im\phi\)</span> (ogni elemento di <span class="process-math">\(F\)</span> è immagine tramite <span class="process-math">\(\phi\)</span> di sé stesso pensato come polinomio costante) e <span class="process-math">\(u=x\phi\)</span> appartiene all’immagine di <span class="process-math">\(\phi\text{:}\)</span> quindi, <span class="process-math">\(F[u]\subseteq\im\phi\text{.}\)</span>
+</div>
+<div class="para" id="thm-caratterizzazione_algebrici_trascendenti-2-2">Il nucleo di <span class="process-math">\(\phi\)</span> è, evidentemente, l’insieme dei polinomi di <span class="process-math">\(F[x]\)</span> che si annullano in <span class="process-math">\(u\)</span> e, quindi, <span class="process-math">\(u\)</span> è trascendente se e solo se <span class="process-math">\(\ker\phi=0\text{.}\)</span>
+</div>
+<div class="para" id="thm-caratterizzazione_algebrici_trascendenti-2-3">Consideriamo prima il caso in cui <span class="process-math">\(u\)</span> è trascendente su <span class="process-math">\(F\text{:}\)</span> <span class="process-math">\(\phi\)</span> è allora iniettivo e <span class="process-math">\(F[u]\simeq F[x]\text{.}\)</span> Inoltre, per il <a href="sec-anello_polinomi.html#cor-anello_dei_polinomi_non_corpo" class="xref" data-knowl="./knowl/xref/cor-anello_dei_polinomi_non_corpo.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Corollario 20.1.16">Corollario 20.1.16</a>, <span class="process-math">\(F[u]\)</span> non è un campo e, quindi, è contenuto strettamente in <span class="process-math">\(F(u)\text{.}\)</span> Infine, le potenze <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(u\text{,}\)</span> <span class="process-math">\(u^{2}\text{,}\)</span> <span class="process-math">\(\ldots\)</span> sono <span class="process-math">\(F\)</span>-linearmente indipendenti, altrimenti esisterebbero <span class="process-math">\(a_{0}\text{,}\)</span> <span class="process-math">\(a_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(a_{n}\)</span> in <span class="process-math">\(F\)</span> non tutti nulli tali che <span class="process-math">\(a_{0}1+a_{1}u+\cdots+a_{n}u^{n}=0\text{,}\)</span> cioè esisterebbe un polinomio non banale a coefficienti in <span class="process-math">\(F\)</span> che si annulla in <span class="process-math">\(u\text{.}\)</span>
+</div>
+<div class="para" id="thm-caratterizzazione_algebrici_trascendenti-2-4">Consideriamo ora il caso in cui <span class="process-math">\(u\)</span> sia algebrico su <span class="process-math">\(F\text{:}\)</span> poiché <span class="process-math">\(F[x]\)</span> è un dominio a ideali principali, <span class="process-math">\(\ker\phi\)</span> è generato da un polinomio non nullo <span class="process-math">\(p\)</span> che, pur di eventualmente dividerlo per il suo coefficiente direttivo, possiamo assumere sia monico. Per il <a href="sec-anelli_quoziente.html#thm-isomorfismo_quoziente_sul_nucleo_anelli" class="xref" data-knowl="./knowl/xref/thm-isomorfismo_quoziente_sul_nucleo_anelli.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 19.2.20">Teorema 19.2.20</a>, sappiamo che <span class="process-math">\(F[u]=\im\phi\simeq F[x]/\ker\phi=F[x]/\ideal{p}\text{:}\)</span> poiché <span class="process-math">\(F[u]\)</span> è un dominio, il <a href="sec-elementi_algebrici_e_trascendenti.html#lem-quoziente_anello_polinomi" class="xref" data-knowl="./knowl/xref/lem-quoziente_anello_polinomi.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Lemma 28.1.13">Lemma 28.1.13</a> implica che <span class="process-math">\(p\)</span> sia irriducibile e che <span class="process-math">\(F[u]\)</span> sia un campo e, per la <a href="sec-elementi_algebrici_e_trascendenti.html#prop-sottocampo_generato_sottoanello_generato" class="xref" data-knowl="./knowl/xref/prop-sottocampo_generato_sottoanello_generato.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 28.1.12">Proposizione 28.1.12</a>, ne segue che <span class="process-math">\(F[u]=F(u)\text{.}\)</span>
+</div>
+<div class="para logical" id="thm-caratterizzazione_algebrici_trascendenti-2-5">
+<div class="para">Sia ora <span class="process-math">\(n\)</span> il grado di <span class="process-math">\(p\text{:}\)</span> sappiamo che un generico elemento di <span class="process-math">\(F[u]\)</span> è del tipo <span class="process-math">\(h\phi=h(u)\)</span> per qualche polinomio <span class="process-math">\(h\)</span> in <span class="process-math">\(F[x]\text{.}\)</span> Dividendo <span class="process-math">\(h\)</span> per <span class="process-math">\(p\)</span> otteniamo</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h=pq+r
+\end{equation*}
+</div>
+<div class="para">dove <span class="process-math">\(q\)</span> e <span class="process-math">\(r\)</span> sono polinomi con <span class="process-math">\(\deg r \lt n\)</span> o <span class="process-math">\(r=0\text{:}\)</span> in altri termini, <span class="process-math">\(r=r_{0}+r_{1}x+\cdots+r_{n-1}x^{n-1}\)</span> con gli <span class="process-math">\(r_{i}\)</span> in <span class="process-math">\(F\text{.}\)</span> Ma allora</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h(u)=p(u)q(u)+r(u)=0q(u)+r(u)=r(u)=r_{0}+r_{1}u+\cdots+r_{n-1}u^{n-1}\text{,}
+\end{equation*}
+</div>
+<div class="para">cioè <span class="process-math">\(h(u)\)</span> è <span class="process-math">\(F\)</span>-combinazione lineare di <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(u\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(u^{n-1}\text{.}\)</span> D’altra parte, questi elementi sono <span class="process-math">\(F\)</span>-linearmente indipendenti: infatti, presi <span class="process-math">\(c_{0}\text{,}\)</span> <span class="process-math">\(c_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(c_{n-1}\)</span> in <span class="process-math">\(F\)</span> tali che</div>
+<div class="displaymath process-math">
+\begin{equation*}
+c_{0}+c_{1}u+\cdots+c_{n-1}u^{n-1}=0
+\end{equation*}
+</div>
+<div class="para">si ha che <span class="process-math">\(c_{0}+c_{1}x+\cdots+c_{n-1}x^{n-1}\)</span> è un polinomio che si annulla in <span class="process-math">\(u\text{,}\)</span> ed è, quindi, multiplo di <span class="process-math">\(p\text{,}\)</span> il che è possibile se e solo se i <span class="process-math">\(c_{i}\)</span> sono tutti nulli. In conclusione, <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(u\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(u^{n-1}\)</span> formano una base per <span class="process-math">\(F[u]\)</span> e, quindi, <span class="process-math">\(\dim_{F}F[u]=n\text{.}\)</span>
+</div>
+</div></article></details><article class="definition definition-like" id="def-grado_di_un_elemento"><h3 class="heading">
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">28.1.15</span><span class="period">.</span>
+</h3>
+<div class="para" id="def-grado_di_un_elemento-1-1">Dato un elemento <span class="process-math">\(u\)</span> di un campo <span class="process-math">\(E\text{,}\)</span> algebrico su un sottocampo <span class="process-math">\(F\text{,}\)</span> il <dfn class="terminology">grado</dfn> di <span class="process-math">\(u\)</span> su <span class="process-math">\(F\)</span> è il grado del polinomio minimo di <span class="process-math">\(u\)</span> su <span class="process-math">\(F\text{,}\)</span> cioè il grado <span class="process-math">\(\degext{F(u)}{F}\text{.}\)</span>
+</div></article><article class="remark remark-like" id="rem-algebrici_grado_1"><h3 class="heading">
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">28.1.16</span><span class="period">.</span>
+</h3>
+<div class="para" id="rem-algebrici_grado_1-1">Un elemento <span class="process-math">\(u\)</span> di un’estensione <span class="process-math">\(E\)</span> di un campo <span class="process-math">\(F\)</span> è algebrico di grado <span class="process-math">\(1\)</span> se e solo se appartiene a <span class="process-math">\(F\text{.}\)</span>
+</div></article><article class="remark remark-like" id="rem-polinomio_minimo_grado_dipendono_dal_campo"><h3 class="heading">
+<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">28.1.17</span><span class="period">.</span>
+</h3>
+<div class="para" id="rem-polinomio_minimo_grado_dipendono_dal_campo-1">Se <span class="process-math">\(u\)</span> è un elemento algebrico di un campo <span class="process-math">\(F\)</span> e se <span class="process-math">\(E\)</span> è un’estensione di <span class="process-math">\(F\text{,}\)</span> il polinomio minimo di <span class="process-math">\(u\)</span> su <span class="process-math">\(F\)</span> è anche un polinomio a coefficienti in <span class="process-math">\(E\text{:}\)</span> di conseguenza, è un multiplo del polinomio minimo di <span class="process-math">\(u\)</span> su <span class="process-math">\(E\)</span> (possono eventualmente coincidere). In particolare, il grado di <span class="process-math">\(u\)</span> su <span class="process-math">\(E\)</span> è minore o uguale del grado di <span class="process-math">\(u\)</span> su <span class="process-math">\(F\text{.}\)</span> Ad esempio, l’unità immaginaria <span class="process-math">\(i\)</span> ha polinomio minimo <span class="process-math">\(x^{2}+1\)</span> su <span class="process-math">\(\Reali\)</span> e polinomio minimo <span class="process-math">\(x-i\)</span> su <span class="process-math">\(\Complessi\text{.}\)</span>
+</div></article><article class="example example-like" id="ex-radice_di_due"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">28.1.18</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="ex-radice_di_due-1-1">
+<div class="para">Consideriamo di nuovo il polinomio <span class="process-math">\(x^{2}-2\)</span> a coefficienti razionali e la sua radice <span class="process-math">\(\sqrt{2}\text{:}\)</span> dunque, <span class="process-math">\(\sqrt{2}\)</span> ha grado al più <span class="process-math">\(2\)</span> su <span class="process-math">\(\Razionali\text{.}\)</span> D’altra parte, <span class="process-math">\(\sqrt{2}\notin\Razionali\)</span> e, quindi, il suo grado di <span class="process-math">\(\sqrt{2}\)</span>  sui <span class="process-math">\(\Razionali\)</span> non è <span class="process-math">\(1\text{.}\)</span> Il grado è allora esattamente <span class="process-math">\(2\)</span> e, di conseguenza, <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(\sqrt{2}\)</span> formano una <span class="process-math">\(\Razionali\)</span>-base di <span class="process-math">\(\Razionali(\sqrt{2})\text{,}\)</span> cioè</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Razionali(\sqrt{2})=\{a+b\sqrt{2}\mid a\in\Razionali,b\in\Razionali\}\text{.}
+\end{equation*}
+</div>
+</div> <div class="para logical" id="ex-radice_di_due-1-2">
+<div class="para">Supponiamo ora di voler calcolare l’inverso di un elemento non nullo di <span class="process-math">\(\Razionali(\sqrt{2})\text{,}\)</span> ad esempio, <span class="process-math">\(3+2\sqrt{2}\text{.}\)</span> Dobbiamo allora trovare <span class="process-math">\(a+b\sqrt{2}\)</span> con <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> in <span class="process-math">\(\Razionali\)</span> tale che <span class="process-math">\((3+2\sqrt{2})(a+b\sqrt{2})=1\text{.}\)</span> Sviluppando il prodotto, troviamo</div>
+<div class="displaymath process-math">
+\begin{equation*}
+3a+2a\sqrt{2}+3b\sqrt{2}+2b\sqrt{2}\sqrt{2}=1
+\end{equation*}
+</div>
+<div class="para">cioè</div>
+<div class="displaymath process-math">
+\begin{equation*}
+3a+4b+(2a+3b)\sqrt{2}=1\text{.}
+\end{equation*}
+</div>
+<div class="para">Poiché <span class="process-math">\(1\)</span> e <span class="process-math">\(\sqrt{2}\)</span> sono <span class="process-math">\(\Razionali\)</span>-linearmente indipendenti, ciò avviene se e solo se <span class="process-math">\(3a+4b=1\)</span> e <span class="process-math">\(2a+3b=0\text{.}\)</span> Risolvendo, troviamo <span class="process-math">\(a=3\)</span> e <span class="process-math">\(b=-2\text{,}\)</span> cioè l’inverso di <span class="process-math">\(3+2\sqrt{2}\)</span> è <span class="process-math">\(3-2\sqrt{2}\text{.}\)</span>
+</div>
+</div></article><div class="para" id="sec-elementi_algebrici_e_trascendenti-23">Nel <a href="sec-elementi_algebrici_e_trascendenti.html#thm-caratterizzazione_algebrici_trascendenti" class="xref" data-knowl="./knowl/xref/thm-caratterizzazione_algebrici_trascendenti.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 28.1.14">Teorema 28.1.14</a>, abbiamo visto che l’estensione <span class="process-math">\(F(u)\)</span> con un elemento algebrico <span class="process-math">\(u\)</span> di polinomio minimo <span class="process-math">\(p\text{,}\)</span> è isomorfa al quoziente <span class="process-math">\(F[x]/I\)</span> dove <span class="process-math">\(I\)</span> è l’ideale generato da <span class="process-math">\(p\text{.}\)</span> Questo suggerisce un metodo per “aggiungere” a un campo le radici di un polinomio irriducibile.</div>
+<article class="lemma theorem-like" id="lem-estensione_semplice"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">28.1.19</span><span class="period">.</span>
+</h3>
+<div class="para" id="lem-estensione_semplice-1-1">Sia <span class="process-math">\(F\)</span> un campo e sia <span class="process-math">\(p\)</span> un polinomio irriducibile di grado <span class="process-math">\(n\)</span> con <span class="process-math">\(n\gt0\text{.}\)</span> Allora esiste un’estensione <span class="process-math">\(F(u)\)</span> di <span class="process-math">\(F\)</span> con <span class="process-math">\(u\)</span> radice di <span class="process-math">\(p\text{.}\)</span> Inoltre <span class="process-math">\(\degext{F(u)}{F}=n\)</span> e una <span class="process-math">\(F\)</span>-base di <span class="process-math">\(F(u)\)</span> è data da <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(u\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(u^{n-1}\text{.}\)</span>
+</div></article><details id="lem-estensione_semplice-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="lem-estensione_semplice-2-1">
+<div class="para">Detto <span class="process-math">\(I\)</span> l’ideale dell’anello <span class="process-math">\(F[x]\)</span> generato da <span class="process-math">\(p\coloneqq a_{0}+a_{1}x+\cdots+a_{n}x^{n}\text{,}\)</span> consideriamo il quoziente <span class="process-math">\(F[x]/I\text{:}\)</span> questo è un campo per il <a href="sec-elementi_algebrici_e_trascendenti.html#lem-quoziente_anello_polinomi" class="xref" data-knowl="./knowl/xref/lem-quoziente_anello_polinomi.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Lemma 28.1.13">Lemma 28.1.13</a>. La composizione dell’omomorfismo di inclusione di <span class="process-math">\(F\)</span> in <span class="process-math">\(F[x]\)</span> con l’omomorfismo canonico di <span class="process-math">\(F[x]\)</span> su <span class="process-math">\(F[x]/I\text{,}\)</span> definisce un omomorfismo da <span class="process-math">\(F\)</span> in <span class="process-math">\(F[x]/I\text{:}\)</span> poiché <span class="process-math">\(F\)</span> è un campo, questo omomorfismo è iniettivo e possiamo, dunque, identificare <span class="process-math">\(F\)</span> con un sottocampo di <span class="process-math">\(F[x]/I\text{:}\)</span> più precisamente, un elemento <span class="process-math">\(a\)</span> di <span class="process-math">\(F\)</span> viene identificato con il laterale <span class="process-math">\(a+I\text{.}\)</span> Con questa identificazione, il polinomio <span class="process-math">\(p\)</span> può, dunque, essere scritto come</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lem-quoziente_anello_polinomi.html ./knowl/xref/thm-caratterizzazione_algebrici_trascendenti.html">
+\begin{equation*}
+a_{0}+I+(a_{1}+I)x+\cdots+(a_{n}+I)x^{n}.
+\end{equation*}
+</div>
+<div class="para">Sia ora <span class="process-math">\(u\)</span> l’elemento <span class="process-math">\(x+I\)</span> di <span class="process-math">\(F[x]/I\text{:}\)</span> valutando <span class="process-math">\(p\)</span> in <span class="process-math">\(u\)</span> abbiamo allora</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lem-quoziente_anello_polinomi.html ./knowl/xref/thm-caratterizzazione_algebrici_trascendenti.html" id="lem-estensione_semplice-2-1-25">
+\begin{align*}
+p(u)\amp =(a_{0}+I)+(a_{1}+I)(x+I)+\cdots+(a_{n}+I)(x+I)^{n}\\
+\amp =a_{0}+a_{1}x+\cdots+a_{n}x^{n}+I=p+I=I
+\end{align*}
+</div>
+<div class="para">Ma <span class="process-math">\(I\)</span> è lo zero del quoziente <span class="process-math">\(F[x]/I\)</span> e, dunque, <span class="process-math">\(u\)</span> è radice di <span class="process-math">\(p\text{.}\)</span> Sappiamo che <span class="process-math">\(F[x]\)</span> è generato da <span class="process-math">\(F\)</span> e da <span class="process-math">\(x\)</span> e, quindi, <span class="process-math">\(F[x]/I\text{,}\)</span> in quanto quoziente di <span class="process-math">\(F[x]\text{,}\)</span> è generato dalle immagini di questi generatori tramite l’omomorfismo canonico, vale a dire <span class="process-math">\(F\)</span> stesso e <span class="process-math">\(x+I\text{,}\)</span> cioè <span class="process-math">\(u\text{:}\)</span> quindi <span class="process-math">\(F[x]/I=F(u)\text{.}\)</span> Poiché <span class="process-math">\(u\)</span> annulla il polinomio <span class="process-math">\(p\)</span> a coefficienti in <span class="process-math">\(F\text{,}\)</span> il polinomio minimo di <span class="process-math">\(u\)</span> su <span class="process-math">\(F\)</span> è un divisore irriducibile di <span class="process-math">\(p\text{,}\)</span> ma, essendo <span class="process-math">\(p\)</span> a sua volta irriducibile, il polinomio minimo di <span class="process-math">\(u\)</span> su <span class="process-math">\(F\)</span> è associato a <span class="process-math">\(p\text{:}\)</span> dunque, il polinomio minimo non è altri che il polinomio monico che si ottiene dividendo <span class="process-math">\(p\)</span> per il proprio coefficiente direttivo. Per il <a href="sec-elementi_algebrici_e_trascendenti.html#thm-caratterizzazione_algebrici_trascendenti" class="xref" data-knowl="./knowl/xref/thm-caratterizzazione_algebrici_trascendenti.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 28.1.14">Teorema 28.1.14</a>, <span class="process-math">\(\degext{F(u)}{F}=n\)</span> e una <span class="process-math">\(F\)</span>-base per <span class="process-math">\(F(u)\)</span> è quella data in enunciato.</div>
+</div></article></details><article class="example example-like" id="sec-elementi_algebrici_e_trascendenti-25"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">28.1.20</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec-elementi_algebrici_e_trascendenti-25-1-1">Consideriamo il polinomio <span class="process-math">\(p\coloneqq x^{3}+2x+4\)</span> a coefficienti in <span class="process-math">\(\Razionali\text{.}\)</span> Mostriamo che <span class="process-math">\(p\)</span> è irriducibile: per la <a href="sec-esempi_fattorizzazione_polinomi.html#prop-irriducibilita_e_radici" class="xref" data-knowl="./knowl/xref/prop-irriducibilita_e_radici.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 22.2.1">Proposizione 22.2.1</a>, basta mostrare che non ha radici in <span class="process-math">\(\Razionali\text{.}\)</span> Per la <a href="sec-esempi_fattorizzazione_polinomi.html#prop-radici_razionali_intere_polinomio" class="xref" data-knowl="./knowl/xref/prop-radici_razionali_intere_polinomio.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 22.2.2">Proposizione 22.2.2</a> un’eventuale radice razionale di <span class="process-math">\(p\)</span> è del tipo <span class="process-math">\(\frac{a}{b}\)</span> con <span class="process-math">\(a\)</span> che divide <span class="process-math">\(4\)</span> e <span class="process-math">\(b\)</span> che divide <span class="process-math">\(1\text{.}\)</span> Le possibili radici sono allora <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(-1\text{,}\)</span> <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(-2\text{,}\)</span> <span class="process-math">\(4\)</span> e <span class="process-math">\(-4\text{:}\)</span> sostituendo in <span class="process-math">\(p\text{,}\)</span> vediamo che nessuna di esse è radice di <span class="process-math">\(p\text{,}\)</span> che è, pertanto irriducibile.</div> <div class="para" id="sec-elementi_algebrici_e_trascendenti-25-1-2">Per il <a href="sec-elementi_algebrici_e_trascendenti.html#lem-estensione_semplice" class="xref" data-knowl="./knowl/xref/lem-estensione_semplice.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Lemma 28.1.19">Lemma 28.1.19</a>, possiamo costruire un’estensione <span class="process-math">\(\Razionali(u)\)</span> di <span class="process-math">\(\Razionali\text{,}\)</span> con una radice <span class="process-math">\(u\)</span> di <span class="process-math">\(p\text{.}\)</span> Sappiamo che <span class="process-math">\(\Razionali(u)\)</span> ha grado <span class="process-math">\(3\)</span> su <span class="process-math">\(\Razionali\)</span> e una <span class="process-math">\(\Razionali\)</span>-base di <span class="process-math">\(\Razionali(u)\)</span> è <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(u\text{,}\)</span> <span class="process-math">\(u^{2}\text{.}\)</span>
+</div> <div class="para" id="sec-elementi_algebrici_e_trascendenti-25-1-3">Vediamo qualche esempio di calcolo in <span class="process-math">\(\Razionali(u)\text{.}\)</span> Supponiamo di voler esprimere l’inverso di <span class="process-math">\(u\)</span> e l’inverso di <span class="process-math">\(1+u\)</span> come combinazione lineare degli elementi della base scelta.</div> <div class="para" id="sec-elementi_algebrici_e_trascendenti-25-1-4">Per quanto riguarda <span class="process-math">\(u^{-1}\text{,}\)</span> basta notare che <span class="process-math">\(u^{3}+2u+4=0\)</span> da cui segue che <span class="process-math">\(u(u^{2}+2)=-4\text{.}\)</span> Pertanto, l’inverso di <span class="process-math">\(u\)</span> è <span class="process-math">\(-\frac{1}{4}u^{2}+0u-\frac{1}{2}\cdot 1\text{.}\)</span>
+</div> <div class="para logical" id="sec-elementi_algebrici_e_trascendenti-25-1-5">
+<div class="para">Per quanto riguarda l’inverso di <span class="process-math">\(u+1\text{,}\)</span> esprimiamolo come <span class="process-math">\(au^{2}+bu+c\)</span> con <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\)</span> e <span class="process-math">\(c\)</span> in <span class="process-math">\(\Razionali\text{.}\)</span> Deve allora essere <span class="process-math">\((1+u)(au^{2}+bu+c)=1\)</span> che, sviluppato, dà</div>
+<div class="displaymath process-math">
+\begin{equation*}
+au^{3}+(a+b)u^{2}+(b+c)u+c-1=0\text{.}
+\end{equation*}
+</div>
+<div class="para">Poiché <span class="process-math">\(u^{3}=-2u-4\text{,}\)</span> l’equazione trovata si può riscrivere come</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a+b)u^{2}+(b+c-2a)u+c-4a-1=0\text{:}
+\end{equation*}
+</div>
+<div class="para">poiché <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(u\)</span> e <span class="process-math">\(u^{2}\)</span> sono <span class="process-math">\(\Razionali\)</span>-linearmente indipendenti, ciò avviene se e solo se <span class="process-math">\(a+b=b+c-2a=c-4a-1=0\text{.}\)</span> Risolvendo il sistema, si trova <span class="process-math">\(a=-1\text{,}\)</span> <span class="process-math">\(b=1\)</span> e <span class="process-math">\(c=-3\)</span> e, quindi</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(1+u)^{-1}=-u^{2}+u-3\text{.}
+\end{equation*}
+</div>
+</div></article><article class="example example-like" id="sec-elementi_algebrici_e_trascendenti-26"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">28.1.21</span><span class="period">.</span><span class="space"> </span><span class="title">Costruzione dei complessi.</span>
+</h3>
+<div class="para" id="sec-elementi_algebrici_e_trascendenti-26-2-1">Consideriamo il polinomio <span class="process-math">\(p\coloneqq x^{2}+1\)</span> a coefficienti in <span class="process-math">\(\Reali\text{:}\)</span> questo non ha radici in <span class="process-math">\(\Reali\)</span> e, per la <a href="sec-esempi_fattorizzazione_polinomi.html#prop-irriducibilita_e_radici" class="xref" data-knowl="./knowl/xref/prop-irriducibilita_e_radici.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 22.2.1">Proposizione 22.2.1</a> è irriducibile in <span class="process-math">\(\Reali[x]\text{.}\)</span> Per il <a href="sec-elementi_algebrici_e_trascendenti.html#lem-estensione_semplice" class="xref" data-knowl="./knowl/xref/lem-estensione_semplice.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Lemma 28.1.19">Lemma 28.1.19</a>, <span class="process-math">\(\Complessi\coloneqq\Reali[x]/\ideal{p}\)</span> è un campo di grado <span class="process-math">\(2\)</span> su <span class="process-math">\(\Reali\)</span> e una <span class="process-math">\(\Reali\)</span>-base per <span class="process-math">\(\Complessi\)</span> è data da <span class="process-math">\(1\)</span> e <span class="process-math">\(i\)</span> dove denotiamo con <span class="process-math">\(i\)</span> l’elemento <span class="process-math">\(x+\ideal{p}\text{.}\)</span>
+</div> <div class="para logical" id="sec-elementi_algebrici_e_trascendenti-26-2-2">
+<div class="para">Ogni elemento <span class="process-math">\(z\)</span> di <span class="process-math">\(\Complessi\)</span> si può allora scrivere come <span class="process-math">\(a+bi\)</span> per opportuni numeri reali <span class="process-math">\(a\)</span> e <span class="process-math">\(b\text{.}\)</span> Se <span class="process-math">\(w\coloneqq c+di\)</span> è un altro elemento di <span class="process-math">\(\Complessi\text{,}\)</span> abbiamo allora</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lem-estensione_semplice.html">
+\begin{equation*}
+z+w=a+bi+c+di=(a+c)+(b+d)i
+\end{equation*}
+</div>
+<div class="para">e, dunque, abbiamo già una decomposizione di <span class="process-math">\(z+w\)</span> rispetto alla base scelta. Per quanto riguarda il prodotto abbiamo invece</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lem-estensione_semplice.html">
+\begin{equation*}
+zw=(a+bi)(c+di)=ac+(bc+ad)i+bdi^{2}
+\end{equation*}
+</div>
+<div class="para">e questa non è una decomposizione rispetto alla base scelta. Il prodotto, pensato come elemento del quoziente <span class="process-math">\(\Reali[x]/\ideal{p}\text{,}\)</span> è il laterale di <span class="process-math">\(\ideal{p}\)</span> contenente il polinomio</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lem-estensione_semplice.html">
+\begin{equation*}
+f\coloneqq ac+(bc+ad)x+bdx^{2}\text{.}
+\end{equation*}
+</div>
+<div class="para">Dividendo <span class="process-math">\(f\)</span> per <span class="process-math">\(p\text{,}\)</span> cioè per <span class="process-math">\(x^{2}+1\text{,}\)</span> otteniamo allora</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lem-estensione_semplice.html">
+\begin{equation*}
+ac+(bc+ad)x+bdx^{2}=bd(x^{2}+1)+(ac-bd+(bc+ad)x)\text{,}
+\end{equation*}
+</div>
+<div class="para">e, quindi, il laterale <span class="process-math">\(f+\ideal{p}\)</span> coincide con</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lem-estensione_semplice.html">
+\begin{equation*}
+ac-bd+(bc+ad)x+\ideal{p}\text{.}
+\end{equation*}
+</div>
+<div class="para">Il prodotto di <span class="process-math">\(z\)</span> per <span class="process-math">\(w\)</span> è, dunque</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lem-estensione_semplice.html">
+\begin{equation*}
+ac-bd+(bc+ad)i
+\end{equation*}
+</div>
+<div class="para">cioè l’usuale prodotto tra numeri complessi. Si noti che non dobbiamo adesso verificare che <span class="process-math">\(\Complessi\)</span> con queste operazioni è effettivamente un campo, perché lo sappiamo dal <a href="sec-elementi_algebrici_e_trascendenti.html#lem-estensione_semplice" class="xref" data-knowl="./knowl/xref/lem-estensione_semplice.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Lemma 28.1.19">Lemma 28.1.19</a>.</div>
+</div></article><article class="definition definition-like" id="def-estensione_algebrica"><h3 class="heading">
+<span class="type">Definizione</span><span class="space"> </span><span class="codenumber">28.1.22</span><span class="period">.</span>
+</h3>
+<div class="para" id="def-estensione_algebrica-1-1">Un’estensione <span class="process-math">\(E\)</span> di un campo <span class="process-math">\(F\)</span> è detta <dfn class="terminology">algebrica</dfn> su <span class="process-math">\(F\)</span> se ogni elemento di <span class="process-math">\(E\)</span> è algebrico su <span class="process-math">\(F\text{.}\)</span>
+</div></article><article class="proposition theorem-like" id="prop-estensione_finita_algebrica"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">28.1.23</span><span class="period">.</span>
+</h3>
+<div class="para" id="prop-estensione_finita_algebrica-1-1">Se <span class="process-math">\(E\)</span> è un’estensione finita di <span class="process-math">\(F\text{,}\)</span> allora <span class="process-math">\(E\)</span> è un’estensione algebrica di <span class="process-math">\(F\text{.}\)</span> Inoltre, ogni elemento di <span class="process-math">\(E\)</span> ha grado su <span class="process-math">\(F\)</span> che divide <span class="process-math">\(\degext{E}{F}\)</span>
+</div></article><details id="prop-estensione_finita_algebrica-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-estensione_finita_algebrica-2-1">Grazie alla <a href="sec-elementi_algebrici_e_trascendenti.html#prop-moltiplicativita_grado" class="xref" data-knowl="./knowl/xref/prop-moltiplicativita_grado.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 28.1.5">Proposizione 28.1.5</a>, sappiamo che, per ogni <span class="process-math">\(u\)</span> in <span class="process-math">\(E\text{,}\)</span> il grado <span class="process-math">\(\degext{F(u)}{F}\)</span> è finito e divide <span class="process-math">\(\degext{E}{F}\)</span> e, quindi, per il <a href="sec-elementi_algebrici_e_trascendenti.html#thm-caratterizzazione_algebrici_trascendenti" class="xref" data-knowl="./knowl/xref/thm-caratterizzazione_algebrici_trascendenti.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 28.1.14">Teorema 28.1.14</a>, abbiamo che <span class="process-math">\(u\)</span> è algebrico su <span class="process-math">\(F\text{.}\)</span>
+</div></article></details><article class="corollary theorem-like" id="cor-estensione_con_algebrici"><h3 class="heading">
+<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">28.1.24</span><span class="period">.</span>
+</h3>
+<div class="para" id="cor-estensione_con_algebrici-1-1">Sia <span class="process-math">\(E\)</span> un’estensione di un campo <span class="process-math">\(F\)</span> e siano <span class="process-math">\(u_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(u_{r}\)</span> elementi di <span class="process-math">\(F\)</span> algebrici su <span class="process-math">\(F\text{.}\)</span> Allora <span class="process-math">\(F(u_{1},\ldots,u_{r})\)</span> è un’estensione finita di <span class="process-math">\(F\text{.}\)</span> In particolare, è un’estensione algebrica di <span class="process-math">\(F\text{.}\)</span>
+</div></article><details id="cor-estensione_con_algebrici-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="cor-estensione_con_algebrici-2-1">Procediamo per induzione su <span class="process-math">\(r\text{,}\)</span> il caso <span class="process-math">\(r=1\)</span> seguendo direttamente dal <a href="sec-elementi_algebrici_e_trascendenti.html#thm-caratterizzazione_algebrici_trascendenti" class="xref" data-knowl="./knowl/xref/thm-caratterizzazione_algebrici_trascendenti.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 28.1.14">Teorema 28.1.14</a>. Sia allora <span class="process-math">\(r\gt 1\text{:}\)</span> per ipotesi induttiva <span class="process-math">\(F(u_{1},\ldots,u_{r-1})\)</span> è un’estensione finita di <span class="process-math">\(F\text{.}\)</span> Ora <span class="process-math">\(u_{r}\text{,}\)</span> essendo algebrico su <span class="process-math">\(F\text{,}\)</span> a maggior ragione è algebrico su <span class="process-math">\(F(u_{1},\ldots,u_{r-1})\)</span> e, usando ancora il <a href="sec-elementi_algebrici_e_trascendenti.html#thm-caratterizzazione_algebrici_trascendenti" class="xref" data-knowl="./knowl/xref/thm-caratterizzazione_algebrici_trascendenti.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 28.1.14">Teorema 28.1.14</a>, abbiamo che <span class="process-math">\(F(u_{1},\ldots,u_{r})\)</span> è un’estensione finita di <span class="process-math">\(F(u_{1},\ldots,u_{r-1})\text{.}\)</span> La tesi segue allora dalla <a href="sec-elementi_algebrici_e_trascendenti.html#prop-moltiplicativita_grado" class="xref" data-knowl="./knowl/xref/prop-moltiplicativita_grado.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 28.1.5">Proposizione 28.1.5</a>.</div></article></details><article class="corollary theorem-like" id="cor-estensione_algebrica_di_algebrica"><h3 class="heading">
+<span class="type">Corollario</span><span class="space"> </span><span class="codenumber">28.1.25</span><span class="period">.</span>
+</h3>
+<div class="para" id="cor-estensione_algebrica_di_algebrica-1-1">Se <span class="process-math">\(E\)</span> è un’estensione algebrica di un campo <span class="process-math">\(F\)</span> e se <span class="process-math">\(K\)</span> è un’estensione algebrica di <span class="process-math">\(E\text{,}\)</span> allora <span class="process-math">\(K\)</span> è un’estensione algebrica di <span class="process-math">\(F\text{.}\)</span>
+</div></article><details id="cor-estensione_algebrica_di_algebrica-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="cor-estensione_algebrica_di_algebrica-2-1">Sia <span class="process-math">\(u\)</span> un elemento di <span class="process-math">\(K\text{:}\)</span> dobbiamo mostrare che è algebrico su <span class="process-math">\(F\text{.}\)</span> Per ipotesi, <span class="process-math">\(u\)</span> è radice di un polinomio non nullo <span class="process-math">\(x^{r}+u_{1}x^{r-1}+\cdots+u_{r}\)</span> a coefficienti in <span class="process-math">\(E\text{.}\)</span> Questo polinomio può essere pensato come avente coefficienti in <span class="process-math">\(F(u_{1},\ldots,u_{r})\)</span> che, per il <a href="sec-elementi_algebrici_e_trascendenti.html#cor-estensione_con_algebrici" class="xref" data-knowl="./knowl/xref/cor-estensione_con_algebrici.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Corollario 28.1.24">Corollario 28.1.24</a>, è un’estensione finita di <span class="process-math">\(F\text{.}\)</span> Dunque, <span class="process-math">\(u\)</span> è algebrico su <span class="process-math">\(F(u_{1},\ldots,u_{r})\)</span> e, per il <a href="sec-elementi_algebrici_e_trascendenti.html#thm-caratterizzazione_algebrici_trascendenti" class="xref" data-knowl="./knowl/xref/thm-caratterizzazione_algebrici_trascendenti.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 28.1.14">Teorema 28.1.14</a>, <span class="process-math">\(F(u_{1},\ldots,u_{r})(u)\)</span> è un’estensione finita di <span class="process-math">\(F(u_{1},\ldots,u_{r})\text{.}\)</span> Per la <a href="sec-elementi_algebrici_e_trascendenti.html#prop-moltiplicativita_grado" class="xref" data-knowl="./knowl/xref/prop-moltiplicativita_grado.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 28.1.5">Proposizione 28.1.5</a>, <span class="process-math">\(F(u_{1},\ldots,u_{r})(u)\)</span> è un’estensione finita di <span class="process-math">\(F\)</span> e per la <a href="sec-elementi_algebrici_e_trascendenti.html#prop-estensione_finita_algebrica" class="xref" data-knowl="./knowl/xref/prop-estensione_finita_algebrica.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 28.1.23">Proposizione 28.1.23</a> l’elemento <span class="process-math">\(u\)</span> è algebrico su <span class="process-math">\(F\text{.}\)</span>
+</div></article></details><div class="para" id="sec-elementi_algebrici_e_trascendenti-31">Ci chiediamo se, dati due elementi algebrici su un campo <span class="process-math">\(F\text{,}\)</span> la loro somma e il loro prodotto siano, a loro volta, algebrici. Se applicassimo direttamente la definizione di elemento algebrico, la conoscenza di polinomi non banali che si annullano su tali elementi non ci permette di stabilire facilmente se esistano polinomi non banali che si annullano sulla somma o sul prodotto. Abbiamo però la</div>
+<article class="proposition theorem-like" id="prop-elementi_algebrici_sottocampo"><h3 class="heading">
+<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">28.1.26</span><span class="period">.</span>
+</h3>
+<div class="para" id="prop-elementi_algebrici_sottocampo-1-1">Sia <span class="process-math">\(E\)</span> un’estensione di un campo <span class="process-math">\(F\text{.}\)</span> Il sottoinsieme <span class="process-math">\(A\)</span> di <span class="process-math">\(E\)</span> formato dagli elementi algebrici su <span class="process-math">\(F\)</span> è un sottocampo contenente <span class="process-math">\(F\text{.}\)</span>
+</div></article><details id="prop-elementi_algebrici_sottocampo-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-elementi_algebrici_sottocampo-2-1">Sappiamo già che gli elementi di <span class="process-math">\(F\)</span> sono algebrici su <span class="process-math">\(F\)</span> (<a href="sec-elementi_algebrici_e_trascendenti.html#rem-Falgebrico_su_F" class="xref" data-knowl="./knowl/xref/rem-Falgebrico_su_F.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Osservazione 28.1.7">Osservazione 28.1.7</a>): in particolare, <span class="process-math">\(F\)</span> è non vuoto e contiene <span class="process-math">\(1\text{.}\)</span> Dobbiamo allora provare che, per ogni  <span class="process-math">\(u\)</span> e <span class="process-math">\(v\)</span> in <span class="process-math">\(A\text{,}\)</span> si ha che <span class="process-math">\(u+v\text{,}\)</span> <span class="process-math">\(uv\text{,}\)</span> <span class="process-math">\(-u\)</span> e <span class="process-math">\(u^{-1}\)</span> (quest’ultimo nel caso in cui <span class="process-math">\(u\ne 0\)</span>) appartengono tutti a <span class="process-math">\(A\text{.}\)</span> Questi elementi appartengono tutti a <span class="process-math">\(F(u,v)\)</span> che, per il <a href="sec-elementi_algebrici_e_trascendenti.html#cor-estensione_con_algebrici" class="xref" data-knowl="./knowl/xref/cor-estensione_con_algebrici.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Corollario 28.1.24">Corollario 28.1.24</a>, è contenuto in <span class="process-math">\(A\text{.}\)</span>
+</div></article></details><article class="example example-like" id="sec-elementi_algebrici_e_trascendenti-33"><h3 class="heading">
+<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">28.1.27</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="sec-elementi_algebrici_e_trascendenti-33-1-1">
+<div class="para">Consideriamo l’estensione <span class="process-math">\(\Razionali(\sqrt{2},\sqrt{3})\)</span> di <span class="process-math">\(\Razionali\text{.}\)</span> Sappiamo che <span class="process-math">\(\Razionali(\sqrt{2})\)</span> è un’estensione di grado <span class="process-math">\(2\)</span> di <span class="process-math">\(\Razionali\text{.}\)</span> Con un argomento simile a quello dall’<a href="sec-omomorfismi_anelli.html#exercise-radice_di_due_e_di_tre" class="xref" data-knowl="./knowl/xref/exercise-radice_di_due_e_di_tre.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Esercizio 19.1.4">Esercizio 19.1.4</a>, si può verificare che <span class="process-math">\(\Razionali(\sqrt{2})\)</span> non contiene <span class="process-math">\(\sqrt{3}\text{.}\)</span> Dunque, <span class="process-math">\(\sqrt{3}\)</span> ha grado maggiore di <span class="process-math">\(1\)</span> su <span class="process-math">\(\Razionali(\sqrt{2})\text{:}\)</span> d’altra parte <span class="process-math">\(x^{2}-3\)</span> è un polinomio di grado <span class="process-math">\(2\)</span> a coefficienti in <span class="process-math">\(\Razionali(\sqrt{2})\)</span> che ha <span class="process-math">\(\sqrt{3}\)</span> come radice, quindi <span class="process-math">\(\sqrt{3}\)</span> ha grado <span class="process-math">\(2\)</span> su <span class="process-math">\(\Razionali(\sqrt{2})\text{.}\)</span> Dalla <a href="sec-elementi_algebrici_e_trascendenti.html#prop-moltiplicativita_grado" class="xref" data-knowl="./knowl/xref/prop-moltiplicativita_grado.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 28.1.5">Proposizione 28.1.5</a> abbiamo allora</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/exercise-radice_di_due_e_di_tre.html ./knowl/xref/prop-moltiplicativita_grado.html ./knowl/xref/prop-moltiplicativita_grado.html">
+\begin{equation*}
+\degext{\Razionali(\sqrt{2},\sqrt{3})}{\Razionali}=\degext{\Razionali(\sqrt{2},\sqrt{3})}{\Razionali(\sqrt{2})}\degext{\Razionali(\sqrt{2})}{\Razionali}=2\cdot2=4\text{.}
+\end{equation*}
+</div>
+<div class="para">Dalla dimostrazione della <a href="sec-elementi_algebrici_e_trascendenti.html#prop-moltiplicativita_grado" class="xref" data-knowl="./knowl/xref/prop-moltiplicativita_grado.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 28.1.5">Proposizione 28.1.5</a>, sappiamo inoltre che <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(\sqrt{2}\text{,}\)</span> <span class="process-math">\(\sqrt{3}\text{,}\)</span> <span class="process-math">\(\sqrt{6}\)</span> formano una <span class="process-math">\(\Razionali\)</span>-base di <span class="process-math">\(\Razionali(\sqrt{2},\sqrt{3})\text{.}\)</span>
+</div>
+</div> <div class="para logical" id="sec-elementi_algebrici_e_trascendenti-33-1-2">
+<div class="para">Consideriamo ora l’estensione <span class="process-math">\(\Razionali(\sqrt{2}+\sqrt{3})\text{:}\)</span> chiaramente <span class="process-math">\(\Razionali(\sqrt{2}+\sqrt{3})\subseteq\Razionali(\sqrt{2},\sqrt{3})\text{.}\)</span> Per la <a href="sec-elementi_algebrici_e_trascendenti.html#prop-moltiplicativita_grado" class="xref" data-knowl="./knowl/xref/prop-moltiplicativita_grado.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 28.1.5">Proposizione 28.1.5</a>, il grado di <span class="process-math">\(\sqrt{2}+\sqrt{3}\)</span> è un divisore di <span class="process-math">\(4\text{.}\)</span> Se fosse diverso da <span class="process-math">\(4\)</span> dovrebbe essere <span class="process-math">\(1\)</span> o <span class="process-math">\(2\text{:}\)</span> esisterebbe allora un polinomio del tipo <span class="process-math">\(ax^{2}+bx+c\)</span> a coefficienti in <span class="process-math">\(\Razionali\)</span> con <span class="process-math">\(\sqrt{2}+\sqrt{3}\)</span> come radice. Risulterebbe allora</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-moltiplicativita_grado.html">
+\begin{equation*}
+a(2+3+2\sqrt{6})+b(\sqrt{2}+\sqrt{3})+c=0
+\end{equation*}
+</div>
+<div class="para">cioè</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-moltiplicativita_grado.html">
+\begin{equation*}
+2a\sqrt{6}+b\sqrt{3}+b\sqrt{2}+(5a+c)=0\text{:}
+\end{equation*}
+</div>
+<div class="para">poiché <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(\sqrt{2}\text{,}\)</span> <span class="process-math">\(\sqrt{3}\text{,}\)</span> <span class="process-math">\(\sqrt{6}\)</span> sono <span class="process-math">\(\Razionali\)</span>-linearmente indipendenti, ne segue che <span class="process-math">\(2a=0\text{,}\)</span> <span class="process-math">\(b=0\text{,}\)</span> <span class="process-math">\(5a+c=0\text{,}\)</span> cioè <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\)</span> e <span class="process-math">\(c\)</span> sono nulli. Dunque, il polinomio minimo su <span class="process-math">\(\Razionali\)</span> di <span class="process-math">\(\sqrt{2}+\sqrt{3}\)</span> ha grado maggiore di <span class="process-math">\(2\)</span> e, per quanto già osservato, questo grado è uguale a <span class="process-math">\(4\text{.}\)</span> Di conseguenza, <span class="process-math">\(\Razionali(\sqrt{2}+\sqrt{3})=\Razionali(\sqrt{2},\sqrt{3})\text{.}\)</span>
+</div>
+</div></article><div class="para" id="sec-elementi_algebrici_e_trascendenti-34">Dal <a href="sec-elementi_algebrici_e_trascendenti.html#thm-caratterizzazione_algebrici_trascendenti" class="xref" data-knowl="./knowl/xref/thm-caratterizzazione_algebrici_trascendenti.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 28.1.14">Teorema 28.1.14</a> sappiamo che le estensioni semplici con un elemento algebrico sono finite. Ci chiediamo quando un’estensione finita sia semplice.</div>
+<article class="theorem theorem-like" id="thm-caratterizzazione_estensioni_algebriche_semplici"><h3 class="heading">
+<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">28.1.28</span><span class="period">.</span>
+</h3>
+<div class="para" id="thm-caratterizzazione_estensioni_algebriche_semplici-1-1">Sia <span class="process-math">\(E\)</span> un’estensione finita di un campo <span class="process-math">\(F\text{.}\)</span> Il campo <span class="process-math">\(E\)</span> è un’estensione semplice di <span class="process-math">\(F\)</span> se e solo se il numero di campi <span class="process-math">\(L\)</span> tali che <span class="process-math">\(E\supseteq L\supseteq F\)</span> è finito.</div></article><details id="thm-caratterizzazione_estensioni_algebriche_semplici-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-caratterizzazione_estensioni_algebriche_semplici-2-1">Supponiamo che <span class="process-math">\(E=F(u)\)</span> per qualche elemento <span class="process-math">\(u\)</span> di <span class="process-math">\(E\text{.}\)</span> Per ogni sottocampo <span class="process-math">\(L\)</span> di <span class="process-math">\(E\)</span> contenente <span class="process-math">\(F\text{,}\)</span> indichiamo con <span class="process-math">\(p_{L}\)</span> il polinomio minimo di <span class="process-math">\(u\)</span> su <span class="process-math">\(L\text{:}\)</span> questo è un polinomio monico a coefficienti in <span class="process-math">\(L\)</span> ed è un divisore di ogni altro polinomio a coefficienti in <span class="process-math">\(L\)</span> che si annulla in <span class="process-math">\(u\text{.}\)</span> In particolare, <span class="process-math">\(p_{L}\)</span> è un divisore di <span class="process-math">\(p_{F}\text{.}\)</span> Pensandoli entrambi come polinomi a coefficienti in <span class="process-math">\(E\text{,}\)</span> vediamo che le possibilità per <span class="process-math">\(p_{L}\)</span> sono finite, poiché <span class="process-math">\(p_{L}\)</span> è necessariamente un prodotto di fattori monici irriducibili in <span class="process-math">\(E[x]\)</span> di <span class="process-math">\(p_{F}\)</span> e, questi fattori sono in numero finito perché <span class="process-math">\(E[x]\)</span> è un dominio a fattorizzazione unica. Se allora mostriamo che, rispetto a sottocampi diversi, <span class="process-math">\(u\)</span> ha polinomi minimi diversi, possiamo concludere che il numero di sottocampi intermedi tra <span class="process-math">\(E\)</span> e <span class="process-math">\(F\)</span> sia finito. Sia allora <span class="process-math">\(p_{L}=x^{r}+a_{r-1}x^{r-1}+\cdots+a_{0}\text{:}\)</span> sappiamo che <span class="process-math">\(r=\degext{E}{L}\text{.}\)</span> Sia ora <span class="process-math">\(K=F(a_{0},\ldots,a_{r-1})\text{:}\)</span> chiaramente <span class="process-math">\(K\subseteq L\)</span> e, dunque, <span class="process-math">\(\degext{E}{K}\ge\degext{E}{L}=r\text{.}\)</span> D’altra parte <span class="process-math">\(E=K(u)\)</span> e <span class="process-math">\(u\)</span> è radice del polinomio <span class="process-math">\(p_{L}\)</span> i cui coefficienti appartengono a <span class="process-math">\(K\)</span> per costruzione: pertanto <span class="process-math">\(\degext{E}{K}\le r\text{.}\)</span> Ma allora <span class="process-math">\(\degext{E}{K}=r\text{,}\)</span> cioè <span class="process-math">\(L=K\text{:}\)</span> dunque, il polinomio minimo di <span class="process-math">\(u\)</span> rispetto a <span class="process-math">\(L\)</span> determina <span class="process-math">\(L\text{.}\)</span>
+</div>
+<div class="para" id="thm-caratterizzazione_estensioni_algebriche_semplici-2-2">Viceversa, supponiamo che il numero di sottocampi intermedi sia finito: distinguiamo due casi a seconda che <span class="process-math">\(F\)</span> sia un campo finito o meno. Se <span class="process-math">\(F\)</span> è finito, anche <span class="process-math">\(E\text{,}\)</span> avendo dimensione finita su <span class="process-math">\(F\text{,}\)</span> è finito. Per il <a href="sec-valutazione_polinomi.html#thm-sottogruppi_finiti_campo" class="xref" data-knowl="./knowl/xref/thm-sottogruppi_finiti_campo.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 20.2.15">Teorema 20.2.15</a>, il gruppo moltiplicativo di <span class="process-math">\(E\)</span> è ciclico: detto <span class="process-math">\(u\)</span> un generatore di questo gruppo, si ha allora <span class="process-math">\(E=F(u)\text{.}\)</span>
+</div>
+<div class="para" id="thm-caratterizzazione_estensioni_algebriche_semplici-2-3">Supponiamo invece che <span class="process-math">\(F\)</span> sia infinito e sia <span class="process-math">\(u\)</span> un elemento di <span class="process-math">\(E\)</span> tale che <span class="process-math">\(\degext{F(u)}{F}\)</span> sia massimo possibile (questo esiste perché tale grado non può superare <span class="process-math">\(\degext{E}{F}\)</span>): vogliamo mostrare che <span class="process-math">\(F(u)=E\text{,}\)</span> cioè che per ogni <span class="process-math">\(v\)</span> in <span class="process-math">\(E\)</span> si ha che <span class="process-math">\(v\)</span> appartiene a <span class="process-math">\(F(u)\text{.}\)</span> Consideriamo i sottocampi <span class="process-math">\(F(tu+v)\)</span> al variare di <span class="process-math">\(t\)</span> in <span class="process-math">\(F\text{:}\)</span> poiché <span class="process-math">\(t\)</span> può assumere infiniti valori e ci sono solo un numero finito di sottocampi intermedi, esisteranno due elementi diversi <span class="process-math">\(t\)</span> e <span class="process-math">\(s\)</span> in <span class="process-math">\(F\)</span> tali che <span class="process-math">\(F(tu+v)=F(su+v)\text{.}\)</span> Pertanto <span class="process-math">\(tu+v-(su+v)=(t-s)u\)</span> appartiene a <span class="process-math">\(F(tu+v)\text{:}\)</span> poiché <span class="process-math">\(t-s\)</span> è un elemento non nullo di <span class="process-math">\(F\text{,}\)</span> moltiplicando per il suo inverso troviamo che <span class="process-math">\(u\)</span> appartiene a <span class="process-math">\(F(tu+v)\text{,}\)</span> cioè <span class="process-math">\(F(u)\subseteq F(tu+v)\text{.}\)</span> Per la scelta di <span class="process-math">\(u\text{,}\)</span> ciò significa che <span class="process-math">\(F(u)=F(tu+v)\text{:}\)</span> ma allora <span class="process-math">\(v=(tu+v)-tu\)</span> appartiene a <span class="process-math">\(F(u)\text{,}\)</span> come richiesto.</div></article></details><section class="exercises" id="exercises-elementi_algebrici_e_trascendenti"><h3 class="heading hide-type">
+<span class="type">Esercizi</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Esercizi</span>
+</h3>
+<article class="exercise exercise-like" id="exercises-elementi_algebrici_e_trascendenti-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="exercises-elementi_algebrici_e_trascendenti-1-1-1">Verificare che se <span class="process-math">\(R\)</span> è un anello contenente un campo <span class="process-math">\(F\text{,}\)</span> allora <span class="process-math">\(R\)</span> è un <span class="process-math">\(F\)</span>-spazio vettoriale rispetto alle operazioni che abbiamo definito.</div></article><article class="exercise exercise-like" id="exercises-elementi_algebrici_e_trascendenti-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="introduction" id="exercises-elementi_algebrici_e_trascendenti-2-1"><div class="para" id="exercises-elementi_algebrici_e_trascendenti-2-1-1">Sia <span class="process-math">\(E\)</span> un’estensione di <span class="process-math">\(F\)</span> e sia <span class="process-math">\(V\)</span> un <span class="process-math">\(E\)</span>-spazio vettoriale.</div></div>
+<article class="task exercise-like" id="exercises-elementi_algebrici_e_trascendenti-2-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="exercises-elementi_algebrici_e_trascendenti-2-2-1-1">Dimostrare che in <span class="process-math">\(V\)</span> può essere indotta una struttura di <span class="process-math">\(F\)</span>-spazio vettoriale.</div></article><article class="task exercise-like" id="exercises-elementi_algebrici_e_trascendenti-2-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="exercises-elementi_algebrici_e_trascendenti-2-3-1-1">Se <span class="process-math">\(V\)</span> è non nullo, mostrare che <span class="process-math">\(V\)</span> ha <span class="process-math">\(F\)</span>-dimensione finita se e solo se <span class="process-math">\(\degext{E}{F}\)</span> è finita e <span class="process-math">\(V\)</span> ha <span class="process-math">\(E\)</span>-dimensione finita: in tal caso, mostrare che <span class="process-math">\(\dim_{F}V=\dim_{E}V\cdot\degext{E}{F}\text{.}\)</span>
+</div>
+<div class="solutions"><details id="exercises-elementi_algebrici_e_trascendenti-2-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Suggerimento</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="exercises-elementi_algebrici_e_trascendenti-2-3-2-1">Adattare la dimostrazione della <a href="sec-elementi_algebrici_e_trascendenti.html#prop-moltiplicativita_grado" class="xref" data-knowl="./knowl/xref/prop-moltiplicativita_grado.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 28.1.5">Proposizione 28.1.5</a>.</div></div></details></div></article><article class="task exercise-like" id="exercises-elementi_algebrici_e_trascendenti-2-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="exercises-elementi_algebrici_e_trascendenti-2-4-1-1">Nel punto precedente come viene utilizzata l’ipotesi che <span class="process-math">\(V\)</span> sia non nullo? Si può rimuovere?</div></article></article><article class="exercise exercise-like" id="exercises-elementi_algebrici_e_trascendenti-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="exercises-elementi_algebrici_e_trascendenti-3-1-1">Determinare l’inverso in <span class="process-math">\(\Razionali(\sqrt{2})\)</span> del generico elemento non nullo <span class="process-math">\(a+b\sqrt{2}\)</span> dove <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> sono razionali non entrambi nulli.</div>
+<div class="solutions"><details id="exercises-elementi_algebrici_e_trascendenti-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="exercises-elementi_algebrici_e_trascendenti-3-2-1"><span class="process-math">\(\frac{a}{a^{2}-2b^{2}}-\frac{b}{a^{2}-2b^{2}}\sqrt{2}\text{.}\)</span></div></div></details></div></article><article class="exercise exercise-like" id="exercises-elementi_algebrici_e_trascendenti-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="exercises-elementi_algebrici_e_trascendenti-4-1-1">Dati un’estensione <span class="process-math">\(E\)</span> di un campo <span class="process-math">\(F\)</span> e un sottoinsieme <span class="process-math">\(U\)</span> di <span class="process-math">\(E\)</span> formato da elementi algebrici su <span class="process-math">\(F\text{,}\)</span> mostrare che <span class="process-math">\(F(U)\)</span> è un’estensione algebrica di <span class="process-math">\(F\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercises-elementi_algebrici_e_trascendenti-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="exercises-elementi_algebrici_e_trascendenti-5-1-1">Dimostrare la <a href="sec-elementi_algebrici_e_trascendenti.html#prop-omomorfismo_preserva_grado" class="xref" data-knowl="./knowl/xref/prop-omomorfismo_preserva_grado.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 28.1.4">Proposizione 28.1.4</a>.</div></article><article class="exercise exercise-like" id="exercises-elementi_algebrici_e_trascendenti-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="exercises-elementi_algebrici_e_trascendenti-6-1-1">Dati i primi distinti <span class="process-math">\(p_{1}\text{,}\)</span> <span class="process-math">\(p_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(p_{n}\text{,}\)</span> dimostrare che <span class="process-math">\(\Razionali(\sqrt{p_{1}},\ldots,\sqrt{p_{n}})\)</span> ha grado <span class="process-math">\(2^{n}\)</span> su <span class="process-math">\(\Razionali\text{.}\)</span>
+</div>
+<div class="solutions"><details id="exercises-elementi_algebrici_e_trascendenti-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="exercises-elementi_algebrici_e_trascendenti-6-2-1">Procediamo per induzione su <span class="process-math">\(n\text{.}\)</span> Se <span class="process-math">\(n=1\text{,}\)</span> allora <span class="process-math">\(\sqrt{p_{1}}\)</span> è radice di <span class="process-math">\(x^{2}-p_{1}\)</span> che è irriducibile su <span class="process-math">\(\Razionali\)</span> (infatti, ha grado <span class="process-math">\(2\)</span> e non ha radici razionali): dunque, <span class="process-math">\(x^{2}-p_{1}\)</span> è il polinomio minimo di <span class="process-math">\(\sqrt{p_{1}}\)</span> e , pertanto, <span class="process-math">\(\Razionali(\sqrt{p_{1}})\)</span> ha grado <span class="process-math">\(2\)</span> su <span class="process-math">\(\Razionali\text{.}\)</span>
+</div>
+<div class="para" id="exercises-elementi_algebrici_e_trascendenti-6-2-2">Sia allora <span class="process-math">\(n \gt 1\text{.}\)</span> Sia <span class="process-math">\(E\coloneqq\Razionali(\sqrt{p_{1}},\ldots,\sqrt{p_{n-2}})\text{.}\)</span> Per ipotesi induttiva <span class="process-math">\(\degext{E}{\Razionali}=2^{n-2}\text{,}\)</span> <span class="process-math">\(\degext{E(\sqrt{p_{n-1}})}{\Razionali}=\degext{E(\sqrt{p_{n}})}{\Razionali}=2^{n-1}\text{,}\)</span> da cui, per la <a href="sec-elementi_algebrici_e_trascendenti.html#prop-moltiplicativita_grado" class="xref" data-knowl="./knowl/xref/prop-moltiplicativita_grado.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 28.1.5">Proposizione 28.1.5</a>, segue che <span class="process-math">\(\degext{E(\sqrt{p_{n-1}})}{E}=\degext{E(\sqrt{p_{n}})}{E}=2\text{:}\)</span> in particolare, <span class="process-math">\(\sqrt{p_{n-1}}\notin E\)</span> e <span class="process-math">\(\sqrt{p_{n}}\notin E\text{.}\)</span> Notiamo che <span class="process-math">\(\sqrt{p_{n}}\)</span> ha grado al più <span class="process-math">\(2\)</span> su <span class="process-math">\(E(\sqrt{p_{n-1}})\text{:}\)</span> se mostriamo allora che <span class="process-math">\(\sqrt{p_{n}}\notin E(\sqrt{p_{n-1}})\)</span> avremo, dunque, che <span class="process-math">\(\degext{E(\sqrt{p_{n-1}},\sqrt{p_{n}})}{E(\sqrt{p_{n-1}})}=2\)</span> e un’ulteriore applicazione della <a href="sec-elementi_algebrici_e_trascendenti.html#prop-moltiplicativita_grado" class="xref" data-knowl="./knowl/xref/prop-moltiplicativita_grado.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 28.1.5">Proposizione 28.1.5</a> darà la tesi cercata.</div>
+<div class="para" id="exercises-elementi_algebrici_e_trascendenti-6-2-3">Supponiamo allora per assurdo che <span class="process-math">\(\sqrt{p_{n}}\in E(\sqrt{p_{n-1}})\text{:}\)</span> poiché <span class="process-math">\(\sqrt{p_{n-1}}\)</span> ha grado <span class="process-math">\(2\)</span> su <span class="process-math">\(E\text{,}\)</span> esistono <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> in <span class="process-math">\(E\)</span> tali che <span class="process-math">\(a+b\sqrt{p_{n-1}}=\sqrt{p_{n}}\text{.}\)</span> Ma <span class="process-math">\(\sqrt{p_{n}}\notin E\text{,}\)</span> e, quindi, <span class="process-math">\(b\ne 0\text{.}\)</span> Ora <span class="process-math">\(a^{2}+b^{2}p_{n-1}+2ab\sqrt{p_{n-1}}=p_{n}\text{:}\)</span> se fosse <span class="process-math">\(a\ne0\text{,}\)</span> avremmo che <span class="process-math">\(\sqrt{p_{n-1}}\in E\text{.}\)</span> Dunque, <span class="process-math">\(a=0\)</span> e <span class="process-math">\(b\ne 0\text{:}\)</span> pertanto <span class="process-math">\(b^{2}p_{n-1}=p_{n}\text{,}\)</span> cioè <span class="process-math">\(p_{n-1}\)</span> divide <span class="process-math">\(p_{n}\)</span> in <span class="process-math">\(\Interi\text{,}\)</span> contro l’ipotesi che <span class="process-math">\(p_{n-1}\)</span> e <span class="process-math">\(p_{n}\)</span> siano primi distinti. Abbiamo così trovato l’assurdo.</div>
+</div></details></div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="ch-estensione_campi.html" title="Precedente"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="top-button button" href="#" title="Top"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-estensioni_di_omomorfismi.html" title="Successivo"><span class="name">Succ</span><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a xmlns:pf="https://prefigure.org" class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a xmlns:pf="https://prefigure.org" class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a xmlns:pf="https://prefigure.org" class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>
