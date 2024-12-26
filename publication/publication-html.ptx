@@ -25,35 +25,17 @@
     <footnotes level="3"/>
   </numbering>
 
-    <!-- LaTeX specific options: set @print="yes" to get pdf set up   -->
-    <!-- for printing; set @sides="two" if the printing woudl be two- -->
-    <!-- sided.  The asymptote/@links set to "yes" would produce      -->
-    <!-- links the html version of asymptote graphics.                -->
   <latex print="no" sides="one">
     <asymptote links="no"/>
   </latex>
+
   
   <html>
-    <!-- Whether to knowl a particular elements is set here    -->
-    <!-- Lots of elements have this possibility; see the guide -->
     <knowl remark="no" example="no" proof="yes"/>
-    <!-- Specify the style of the html by giving names to      -->
-    <!-- override defaults.  Ex: to use "style_oscarlevin.css" -->
-    <!-- put <css style="oscarlevin"/>                         -->
-    <!-- @colors now implemented                               -->
-    <!-- also @knowls, @toc, and @banner, although no          -->
-    <!-- alternative styles exist yet for those.               -->
-    <css style="default" colors="blue_red"/>
-    <!-- Magic IDs identify HTML pages to analytics services   -->
-    <!-- Presence implies relevant Javascript will be added    -->
-    <!-- StatCounter requires both values to be set            -->
-    <!-- <analytics google-gst="UA-0123456-1" statcounter-project="0123456" statcounter-security="0123456"/> -->
-    <!-- Google search, via masthead textbox is switched on    -->
-    <!-- and associated with a Google account via CX number    -->
-    <!-- <search google-cx=""/> -->
-    <!-- ***************************************************** -->
+     <css theme="default-modern"/>
      <search variant="default"/>
      <tableofcontents focused="yes"/> 
+     <!--<exercises tabbed-tasks="divisional"/>-->
   </html>
 
   <common>
