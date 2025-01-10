@@ -24,38 +24,38 @@
 <li><div class="para">
 <span class="process-math">\((A+B)C=AC+BC\)</span> per ogni <span class="process-math">\(A\)</span> e <span class="process-math">\(B\)</span> in <span class="process-math">\(\matt{m}{n}{R}\)</span> e ogni  <span class="process-math">\(C\)</span> in <span class="process-math">\(\matt{n}{p}{R}\)</span> (distributiva destra).</div></li>
 </ol></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical">
-<div class="para">Dimostriamo solo il <a href="sec-operazioni_matrici.html#item-associativa_maatrici" class="xref" data-knowl="./knowl/xref/item-associativa_maatrici.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 1">Punto 1</a> e lasciamo il resto per esercizio. Indichiamo con <span class="process-math">\(D\)</span> la matrice <span class="process-math">\(AB\)</span> e con <span class="process-math">\(E\)</span> la matrice <span class="process-math">\(BC\text{:}\)</span> dunque, <span class="process-math">\(D\in\matt{m}{p}{R}\)</span> e <span class="process-math">\(E\in\matt{n}{q}{R}\text{.}\)</span> L’elemento di posto <span class="process-math">\((i,k)\)</span> in <span class="process-math">\((AB)C=DC\)</span> è allora</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_maatrici.html">
+<div class="para">Dimostriamo solo il <a href="sec-operazioni_matrici.html#item-associativa_matrici" class="xref" data-knowl="./knowl/xref/item-associativa_matrici.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 1">Punto 1</a> e lasciamo il resto per esercizio. Indichiamo con <span class="process-math">\(D\)</span> la matrice <span class="process-math">\(AB\)</span> e con <span class="process-math">\(E\)</span> la matrice <span class="process-math">\(BC\text{:}\)</span> dunque, <span class="process-math">\(D\in\matt{m}{p}{R}\)</span> e <span class="process-math">\(E\in\matt{n}{q}{R}\text{.}\)</span> L’elemento di posto <span class="process-math">\((i,k)\)</span> in <span class="process-math">\((AB)C=DC\)</span> è allora</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_matrici.html">
 \begin{equation*}
 \sum_{h=1}^{p}\posto{D}{i}{h}\posto{C}{h}{k}\text{.}
 \end{equation*}
 </div>
 <div class="para">Ma l’elemento di posto <span class="process-math">\((i,h)\)</span> di <span class="process-math">\(D=AB\)</span> è</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_maatrici.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_matrici.html">
 \begin{equation*}
 \sum_{j=1}^{n}\posto{A}{i}{j}\posto{B}{j}{h}\text{.}
 \end{equation*}
 </div>
 <div class="para">Dunque, l’elemento di posto <span class="process-math">\((i,k)\)</span> in <span class="process-math">\((AB)C\)</span> è</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_maatrici.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_matrici.html">
 \begin{equation*}
 \sum_{h=1}^{p}\sum_{j=1}^{n}\posto{A}{i}{j}\posto{B}{j}{h}\posto{C}{h}{k}\text{.}
 \end{equation*}
 </div>
 <div class="para">Analogamente, l’elemento di posto <span class="process-math">\((i,k)\)</span> in <span class="process-math">\(A(BC)=AE\)</span> è allora</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_maatrici.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_matrici.html">
 \begin{equation*}
 \sum_{j=1}^{n}\posto{A}{i}{j}\posto{E}{j}{k}\text{.}
 \end{equation*}
 </div>
 <div class="para">Ma l’elemento di posto <span class="process-math">\((j,k)\)</span> di <span class="process-math">\(E=BC\)</span> è</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_maatrici.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_matrici.html">
 \begin{equation*}
 \sum_{h=1}^{p}\posto{B}{j}{h}\posto{C}{h}{k}\text{.}
 \end{equation*}
 </div>
 <div class="para">Dunque, l’elemento di posto <span class="process-math">\((i,k)\)</span> in <span class="process-math">\(A(BC)\)</span> è</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_maatrici.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_matrici.html">
 \begin{equation*}
 \sum_{j=1}^{n}\posto{A}{i}{j}\sum_{h=1}^{p}\posto{B}{j}{h}\posto{C}{h}{k}\text{:}
 \end{equation*}

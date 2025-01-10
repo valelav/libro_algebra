@@ -987,7 +987,7 @@ AB=
 <span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">4.2.10</span><span class="period">.</span>
 </h3>
 <div class="para" id="prop-moltiplicazione_matrici-1-1">L’operazione di moltiplicazione di matrici soddisfa le seguenti proprietà:</div> <div class="para logical" id="prop-moltiplicazione_matrici-1-2"><ol class="decimal" id="prop-moltiplicazione_matrici-1-2-1">
-<li id="item-associativa_maatrici"><div class="para" id="item-associativa_maatrici-1">
+<li id="item-associativa_matrici"><div class="para" id="item-associativa_matrici-1">
 <span class="process-math">\((AB)C=A(BC)\)</span> per ogni <span class="process-math">\(A\)</span> in <span class="process-math">\(\matt{m}{n}{R}\text{,}\)</span> <span class="process-math">\(B\)</span> in <span class="process-math">\(\matt{n}{p}{R}\)</span> e <span class="process-math">\(C\)</span> in <span class="process-math">\(\matt{p}{q}{R}\)</span> (la moltiplicazione è associativa);</div></li>
 <li id="prop-moltiplicazione_matrici-1-2-1-2"><div class="para" id="prop-moltiplicazione_matrici-1-2-1-2-1">
 <span class="process-math">\(\Idmatrix_{m}A=A\)</span> e <span class="process-math">\(A\Idmatrix_{n}=A\)</span> per ogni <span class="process-math">\(A\)</span> in <span class="process-math">\(\matt{m}{n}{R}\)</span> (la matrice identica è elemento neutro);</div></li>
@@ -996,38 +996,38 @@ AB=
 <li id="prop-moltiplicazione_matrici-1-2-1-4"><div class="para" id="prop-moltiplicazione_matrici-1-2-1-4-1">
 <span class="process-math">\((A+B)C=AC+BC\)</span> per ogni <span class="process-math">\(A\)</span> e <span class="process-math">\(B\)</span> in <span class="process-math">\(\matt{m}{n}{R}\)</span> e ogni  <span class="process-math">\(C\)</span> in <span class="process-math">\(\matt{n}{p}{R}\)</span> (distributiva destra).</div></li>
 </ol></div></article><details id="prop-moltiplicazione_matrici-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="prop-moltiplicazione_matrici-2-1">
-<div class="para">Dimostriamo solo il <a href="sec-operazioni_matrici.html#item-associativa_maatrici" class="xref" data-knowl="./knowl/xref/item-associativa_maatrici.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 1">Punto 1</a> e lasciamo il resto per esercizio. Indichiamo con <span class="process-math">\(D\)</span> la matrice <span class="process-math">\(AB\)</span> e con <span class="process-math">\(E\)</span> la matrice <span class="process-math">\(BC\text{:}\)</span> dunque, <span class="process-math">\(D\in\matt{m}{p}{R}\)</span> e <span class="process-math">\(E\in\matt{n}{q}{R}\text{.}\)</span> L’elemento di posto <span class="process-math">\((i,k)\)</span> in <span class="process-math">\((AB)C=DC\)</span> è allora</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_maatrici.html">
+<div class="para">Dimostriamo solo il <a href="sec-operazioni_matrici.html#item-associativa_matrici" class="xref" data-knowl="./knowl/xref/item-associativa_matrici.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 1">Punto 1</a> e lasciamo il resto per esercizio. Indichiamo con <span class="process-math">\(D\)</span> la matrice <span class="process-math">\(AB\)</span> e con <span class="process-math">\(E\)</span> la matrice <span class="process-math">\(BC\text{:}\)</span> dunque, <span class="process-math">\(D\in\matt{m}{p}{R}\)</span> e <span class="process-math">\(E\in\matt{n}{q}{R}\text{.}\)</span> L’elemento di posto <span class="process-math">\((i,k)\)</span> in <span class="process-math">\((AB)C=DC\)</span> è allora</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_matrici.html">
 \begin{equation*}
 \sum_{h=1}^{p}\posto{D}{i}{h}\posto{C}{h}{k}\text{.}
 \end{equation*}
 </div>
 <div class="para">Ma l’elemento di posto <span class="process-math">\((i,h)\)</span> di <span class="process-math">\(D=AB\)</span> è</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_maatrici.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_matrici.html">
 \begin{equation*}
 \sum_{j=1}^{n}\posto{A}{i}{j}\posto{B}{j}{h}\text{.}
 \end{equation*}
 </div>
 <div class="para">Dunque, l’elemento di posto <span class="process-math">\((i,k)\)</span> in <span class="process-math">\((AB)C\)</span> è</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_maatrici.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_matrici.html">
 \begin{equation*}
 \sum_{h=1}^{p}\sum_{j=1}^{n}\posto{A}{i}{j}\posto{B}{j}{h}\posto{C}{h}{k}\text{.}
 \end{equation*}
 </div>
 <div class="para">Analogamente, l’elemento di posto <span class="process-math">\((i,k)\)</span> in <span class="process-math">\(A(BC)=AE\)</span> è allora</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_maatrici.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_matrici.html">
 \begin{equation*}
 \sum_{j=1}^{n}\posto{A}{i}{j}\posto{E}{j}{k}\text{.}
 \end{equation*}
 </div>
 <div class="para">Ma l’elemento di posto <span class="process-math">\((j,k)\)</span> di <span class="process-math">\(E=BC\)</span> è</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_maatrici.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_matrici.html">
 \begin{equation*}
 \sum_{h=1}^{p}\posto{B}{j}{h}\posto{C}{h}{k}\text{.}
 \end{equation*}
 </div>
 <div class="para">Dunque, l’elemento di posto <span class="process-math">\((i,k)\)</span> in <span class="process-math">\(A(BC)\)</span> è</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_maatrici.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-associativa_matrici.html">
 \begin{equation*}
 \sum_{j=1}^{n}\posto{A}{i}{j}\sum_{h=1}^{p}\posto{B}{j}{h}\posto{C}{h}{k}\text{:}
 \end{equation*}
@@ -1110,10 +1110,10 @@ BA=
 x \amp y \\
 z \amp w \\                    
 \end{psmallmatrix}\)</span> di ordine <span class="process-math">\(2\text{,}\)</span> il prodotto <span class="process-math">\(CD\)</span> è uguale a <span class="process-math">\(\begin{psmallmatrix}
-x+2y \amp y+2w \\
-2x +4y \amp 2y+4w \\
+x+2z \amp y+2w \\
+2x+4z \amp 2y+4w \\
 \end{psmallmatrix}
-\text{:}\)</span> se si scelgono <span class="process-math">\(x\)</span> e <span class="process-math">\(y\)</span> in modo che l’elemento in posizione <span class="process-math">\((1,1)\)</span> sia <span class="process-math">\(1\text{,}\)</span> allora l’elemento in posizione <span class="process-math">\((1,2)\)</span> risulta <span class="process-math">\(2\text{,}\)</span> quindi non otteniamo mai la matrice identica.</div></article><article class="proposition theorem-like" id="prop-matrice_invertibile"><h3 class="heading">
+\text{:}\)</span> se si scelgono <span class="process-math">\(x\)</span> e <span class="process-math">\(z\)</span> in modo che l’elemento in posizione <span class="process-math">\((1,1)\)</span> sia <span class="process-math">\(1\text{,}\)</span> allora l’elemento in posizione <span class="process-math">\((1,2)\)</span> risulta <span class="process-math">\(2\text{,}\)</span> quindi non otteniamo mai la matrice identica.</div></article><article class="proposition theorem-like" id="prop-matrice_invertibile"><h3 class="heading">
 <span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">4.2.18</span><span class="period">.</span>
 </h3>
 <div class="para" id="prop-matrice_invertibile-1-1"> Se <span class="process-math">\(A\)</span> è una matrice invertibile, allora la matrice <span class="process-math">\(B\)</span> tale che <span class="process-math">\(AB=BA=\Idmatrix\)</span> è univocamente determinata e viene, quindi, detta matrice <dfn class="terminology">inversa</dfn> di <span class="process-math">\(A\)</span> e denotata con <span class="process-math">\(A^{-1}\text{.}\)</span>
