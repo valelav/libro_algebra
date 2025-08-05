@@ -19,36 +19,68 @@
 </head>
 <body class="ignore-math">
 <article class="proposition theorem-like"><h3 class="heading">
-<span class="type">Proposizione</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span>
+<span class="type">Proposizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical">
 <div class="para">Siano <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\)</span> e <span class="process-math">\(C\)</span> tre insiemi. Allora:</div>
 <ol class="decimal" id="prop-unione_intersezione-1-1-4">
-<li><div class="para">
-<span class="process-math">\(A\cup B=B\cup A\)</span> e <span class="process-math">\(A\cap B=B\cap A\)</span>
-</div></li>
-<li><div class="para">
-<span class="process-math">\((A\cup B)\cup C=A\cup(B\cup C)\)</span> e <span class="process-math">\((A\cap B)\cap C=A\cap(B\cap C)\)</span>
-</div></li>
-<li><div class="para">
-<span class="process-math">\(A\subseteq A\cup B\)</span> e <span class="process-math">\(B\subseteq A\cup B\)</span>
-</div></li>
-<li><div class="para">
-<span class="process-math">\(A\supseteq A\cap B\)</span> e <span class="process-math">\(B\supseteq A\cap B\)</span>
-</div></li>
-<li><div class="para">
-<span class="process-math">\(A\cup B\subseteq C\)</span> se e solo se <span class="process-math">\(A\subseteq C\)</span> e <span class="process-math">\(B\subseteq C\)</span>
-</div></li>
-<li><div class="para">
-<span class="process-math">\(A\cap B\supseteq C\)</span> se e solo se <span class="process-math">\(A\supseteq C\)</span> e <span class="process-math">\(B\supseteq C\)</span>
-</div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle (A\cup B)\cap C=(A\cap C)\cup (B\cap C)\)</span></div></li>
-<li><div class="para"><span class="process-math">\(\displaystyle (A\cap B)\cup C=(A\cup C)\cap (B\cup C)\)</span></div></li>
-</ol>
-</div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para">Ci limitiamo a provare il <a href="sec-operazioni_insiemi.html#distributiva_unione_intersezione" class="xref" data-knowl="./knowl/xref/distributiva_unione_intersezione.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 7">Punto 7</a> e lasciamo il resto per esercizio.</div>
-<div class="para">Dal  <a href="sec-operazioni_insiemi.html#inclusione_intersezione" class="xref" data-knowl="./knowl/xref/inclusione_intersezione.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 4">Punto 4</a>, sappiamo che <span class="process-math">\(A\cap C\)</span> è contenuto in <span class="process-math">\(A\text{,}\)</span> mentre dal <a href="sec-operazioni_insiemi.html#inclusione_unione" class="xref" data-knowl="./knowl/xref/inclusione_unione.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 3">Punto 3</a>, sappiamo che <span class="process-math">\(A\)</span> è contenuto in <span class="process-math">\(A\cup B\text{:}\)</span> quindi, per la <a href="sec-insiemi.html#prop-inclusione_transitiva" class="xref" data-knowl="./knowl/xref/prop-inclusione_transitiva.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 1.1.5">Proposizione 1.1.5</a>, <span class="process-math">\(A\cap C\subseteq A\cup B\text{.}\)</span> Ancora dal <a href="sec-operazioni_insiemi.html#inclusione_intersezione" class="xref" data-knowl="./knowl/xref/inclusione_intersezione.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 4">Punto 4</a>, <span class="process-math">\(A\cap C\subseteq C\text{:}\)</span> per il <a href="sec-operazioni_insiemi.html#intersezione_minimo_contenente" class="xref" data-knowl="./knowl/xref/intersezione_minimo_contenente.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 6">Punto 6</a> si ha allora che <span class="process-math">\(A\cap C \subseteq (A\cup B)\cap C\text{.}\)</span> Analogamente, <span class="process-math">\(B\cap C\subseteq (A\cup B)\cap C\text{.}\)</span> Per il <a href="sec-operazioni_insiemi.html#unione_massimo_contenuto" class="xref" data-knowl="./knowl/xref/unione_massimo_contenuto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 5">Punto 5</a>, risulta <span class="process-math">\((A\cap C)\cup (B\cap C)\subseteq (A\cup B)\cap C\text{.}\)</span>
+<li>
+<div class="para">
+<span class="process-math">\(A\cup B=B\cup A\)</span> e <span class="process-math">\(A\cap B=B\cap A\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-unione_intersezione-1-1-4-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="para">Per il viceversa, sia <span class="process-math">\(x\)</span> un elemento di <span class="process-math">\((A\cup B)\cap C\text{:}\)</span> dunque, <span class="process-math">\(x\in A\cup B\)</span> e <span class="process-math">\(x\in C\text{.}\)</span> La prima inclusione ci dice che <span class="process-math">\(x\)</span> appartiene ad almeno uno tra <span class="process-math">\(A\)</span> e <span class="process-math">\(B\text{.}\)</span> Se <span class="process-math">\(x\)</span> appartiene ad <span class="process-math">\(A\)</span> allora, appartenendo anche a <span class="process-math">\(C\text{,}\)</span> appartiene a <span class="process-math">\(A\cap C\)</span> e, per il <a href="sec-operazioni_insiemi.html#inclusione_unione" class="xref" data-knowl="./knowl/xref/inclusione_unione.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 3">Punto 3</a>, appartiene a <span class="process-math">\((A\cap C)\cup (B\cap C)\text{.}\)</span> Analogamente se <span class="process-math">\(x\)</span> appartiene a <span class="process-math">\(B\text{.}\)</span> Per l’arbitrarietà di <span class="process-math">\(x\)</span> abbiamo che <span class="process-math">\((A\cup B)\cap C\subseteq(A\cap C)\cup (B\cap C)\text{.}\)</span>
-</div></article></details><span class="incontext"><a class="internal" href="sec-operazioni_insiemi.html#prop-unione_intersezione">Nel contesto</a></span>
+<div class="autopermalink" data-description="Punto 1"><a href="#prop-unione_intersezione-1-1-4-1" title="Copy heading and permalink for Punto 1" aria-label="Copy heading and permalink for Punto 1">🔗</a></div>
+</li>
+<li>
+<div class="para">
+<span class="process-math">\((A\cup B)\cup C=A\cup(B\cup C)\)</span> e <span class="process-math">\((A\cap B)\cap C=A\cap(B\cap C)\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-unione_intersezione-1-1-4-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 2"><a href="#prop-unione_intersezione-1-1-4-2" title="Copy heading and permalink for Punto 2" aria-label="Copy heading and permalink for Punto 2">🔗</a></div>
+</li>
+<li>
+<div class="para">
+<span class="process-math">\(A\subseteq A\cup B\)</span> e <span class="process-math">\(B\subseteq A\cup B\)</span><div class="autopermalink" data-description="Capoverso"><a href="#inclusione_unione-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 3"><a href="#inclusione_unione" title="Copy heading and permalink for Punto 3" aria-label="Copy heading and permalink for Punto 3">🔗</a></div>
+</li>
+<li>
+<div class="para">
+<span class="process-math">\(A\supseteq A\cap B\)</span> e <span class="process-math">\(B\supseteq A\cap B\)</span><div class="autopermalink" data-description="Capoverso"><a href="#inclusione_intersezione-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 4"><a href="#inclusione_intersezione" title="Copy heading and permalink for Punto 4" aria-label="Copy heading and permalink for Punto 4">🔗</a></div>
+</li>
+<li>
+<div class="para">
+<span class="process-math">\(A\cup B\subseteq C\)</span> se e solo se <span class="process-math">\(A\subseteq C\)</span> e <span class="process-math">\(B\subseteq C\)</span><div class="autopermalink" data-description="Capoverso"><a href="#unione_massimo_contenuto-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 5"><a href="#unione_massimo_contenuto" title="Copy heading and permalink for Punto 5" aria-label="Copy heading and permalink for Punto 5">🔗</a></div>
+</li>
+<li>
+<div class="para">
+<span class="process-math">\(A\cap B\supseteq C\)</span> se e solo se <span class="process-math">\(A\supseteq C\)</span> e <span class="process-math">\(B\supseteq C\)</span><div class="autopermalink" data-description="Capoverso"><a href="#intersezione_minimo_contenente-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 6"><a href="#intersezione_minimo_contenente" title="Copy heading and permalink for Punto 6" aria-label="Copy heading and permalink for Punto 6">🔗</a></div>
+</li>
+<li>
+<div class="para">
+<span class="process-math">\(\displaystyle (A\cup B)\cap C=(A\cap C)\cup (B\cap C)\)</span><div class="autopermalink" data-description="Capoverso"><a href="#distributiva_unione_intersezione-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 7"><a href="#distributiva_unione_intersezione" title="Copy heading and permalink for Punto 7" aria-label="Copy heading and permalink for Punto 7">🔗</a></div>
+</li>
+<li>
+<div class="para">
+<span class="process-math">\(\displaystyle (A\cap B)\cup C=(A\cup C)\cap (B\cup C)\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-unione_intersezione-1-1-4-8-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto 8"><a href="#prop-unione_intersezione-1-1-4-8" title="Copy heading and permalink for Punto 8" aria-label="Copy heading and permalink for Punto 8">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Capoverso"><a href="#prop-unione_intersezione-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposizione 1.2.4"><a href="#prop-unione_intersezione" title="Copy heading and permalink for Proposizione 1.2.4" aria-label="Copy heading and permalink for Proposizione 1.2.4">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para">Ci limitiamo a provare il <a href="sec-operazioni_insiemi.html#distributiva_unione_intersezione" class="xref" data-knowl="./knowl/xref/distributiva_unione_intersezione.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 7">Punto 7</a> e lasciamo il resto per esercizio.<div class="autopermalink" data-description="Capoverso"><a href="#prop-unione_intersezione-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="para">Dal  <a href="sec-operazioni_insiemi.html#inclusione_intersezione" class="xref" data-knowl="./knowl/xref/inclusione_intersezione.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 4">Punto 4</a>, sappiamo che <span class="process-math">\(A\cap C\)</span> è contenuto in <span class="process-math">\(A\text{,}\)</span> mentre dal <a href="sec-operazioni_insiemi.html#inclusione_unione" class="xref" data-knowl="./knowl/xref/inclusione_unione.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 3">Punto 3</a>, sappiamo che <span class="process-math">\(A\)</span> è contenuto in <span class="process-math">\(A\cup B\text{:}\)</span> quindi, per la <a href="sec-insiemi.html#prop-inclusione_transitiva" class="xref" data-knowl="./knowl/xref/prop-inclusione_transitiva.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 1.1.5">Proposizione 1.1.5</a>, <span class="process-math">\(A\cap C\subseteq A\cup B\text{.}\)</span> Ancora dal <a href="sec-operazioni_insiemi.html#inclusione_intersezione" class="xref" data-knowl="./knowl/xref/inclusione_intersezione.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 4">Punto 4</a>, <span class="process-math">\(A\cap C\subseteq C\text{:}\)</span> per il <a href="sec-operazioni_insiemi.html#intersezione_minimo_contenente" class="xref" data-knowl="./knowl/xref/intersezione_minimo_contenente.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 6">Punto 6</a> si ha allora che <span class="process-math">\(A\cap C \subseteq (A\cup B)\cap C\text{.}\)</span> Analogamente, <span class="process-math">\(B\cap C\subseteq (A\cup B)\cap C\text{.}\)</span> Per il <a href="sec-operazioni_insiemi.html#unione_massimo_contenuto" class="xref" data-knowl="./knowl/xref/unione_massimo_contenuto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 5">Punto 5</a>, risulta <span class="process-math">\((A\cap C)\cup (B\cap C)\subseteq (A\cup B)\cap C\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-unione_intersezione-2-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="para">Per il viceversa, sia <span class="process-math">\(x\)</span> un elemento di <span class="process-math">\((A\cup B)\cap C\text{:}\)</span> dunque, <span class="process-math">\(x\in A\cup B\)</span> e <span class="process-math">\(x\in C\text{.}\)</span> La prima inclusione ci dice che <span class="process-math">\(x\)</span> appartiene ad almeno uno tra <span class="process-math">\(A\)</span> e <span class="process-math">\(B\text{.}\)</span> Se <span class="process-math">\(x\)</span> appartiene ad <span class="process-math">\(A\)</span> allora, appartenendo anche a <span class="process-math">\(C\text{,}\)</span> appartiene a <span class="process-math">\(A\cap C\)</span> e, per il <a href="sec-operazioni_insiemi.html#inclusione_unione" class="xref" data-knowl="./knowl/xref/inclusione_unione.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 3">Punto 3</a>, appartiene a <span class="process-math">\((A\cap C)\cup (B\cap C)\text{.}\)</span> Analogamente se <span class="process-math">\(x\)</span> appartiene a <span class="process-math">\(B\text{.}\)</span> Per l’arbitrarietà di <span class="process-math">\(x\)</span> abbiamo che <span class="process-math">\((A\cup B)\cap C\subseteq(A\cap C)\cup (B\cap C)\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-unione_intersezione-2-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Dimostrazione 1.2.4.1"><a href="#prop-unione_intersezione-2" title="Copy heading and permalink for Dimostrazione 1.2.4.1" aria-label="Copy heading and permalink for Dimostrazione 1.2.4.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="sec-operazioni_insiemi.html#prop-unione_intersezione">Nel contesto</a></span>
 </body>
 </html>

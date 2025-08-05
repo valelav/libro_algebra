@@ -102,15 +102,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.7.1';
+eBookConfig.runestone_version = '7.9.4';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.cf591bce111c14c1.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.472f5a2f0bfe3571.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="_static/prefix-runtime.879b99e54406967d.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.28cc3c4821792be5.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
 </script>
 </head>
@@ -715,31 +715,48 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-induzione_ricorrenza"><h2 class="heading hide-type">
-<span class="type">Paragrafo</span><span class="space"> </span><span class="codenumber">5.2</span><span class="space"> </span><span class="title">Dimostrazioni per induzione e definizioni per ricorrenza</span>
+<span class="type">Paragrafo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dimostrazioni per induzione e definizioni per ricorrenza</span>
 </h2>
-<div class="para" id="sec-induzione_ricorrenza-2">Supponiamo di voler dimostrare una proprietà che dipenda dai numeri naturali: ad esempio, il fatto che, per ogni naturale <span class="process-math">\(n\text{,}\)</span> la somma dei numeri naturali da <span class="process-math">\(0\)</span> a <span class="process-math">\(n\)</span> è uguale a <span class="process-math">\(\frac{n(n+1)}{2}\text{.}\)</span> Questa (e altre) proprietà possono essere dimostrate usando la tecnica per <dfn class="terminology">induzione</dfn> che consiste nel dimostrare la proprietà per il valore iniziale <span class="process-math">\(n=0\)</span> (questa è la cosiddetta <dfn class="terminology">base induttiva</dfn>) e, supponendo che valga per un certo naturale generico <span class="process-math">\(k\text{,}\)</span> mostrare che vale per il naturale successivo <span class="process-math">\(k+1\)</span> (questo è il cosiddetto <dfn class="terminology">passo induttivo</dfn>). Più precisamente:</div>
+<div class="para" id="sec-induzione_ricorrenza-2">Supponiamo di voler dimostrare una proprietà che dipenda dai numeri naturali: ad esempio, il fatto che, per ogni naturale <span class="process-math">\(n\text{,}\)</span> la somma dei numeri naturali da <span class="process-math">\(0\)</span> a <span class="process-math">\(n\)</span> è uguale a <span class="process-math">\(\frac{n(n+1)}{2}\text{.}\)</span> Questa (e altre) proprietà possono essere dimostrate usando la tecnica per <dfn class="terminology">induzione</dfn> che consiste nel dimostrare la proprietà per il valore iniziale <span class="process-math">\(n=0\)</span> (questa è la cosiddetta <dfn class="terminology">base induttiva</dfn>) e, supponendo che valga per un certo naturale generico <span class="process-math">\(k\text{,}\)</span> mostrare che vale per il naturale successivo <span class="process-math">\(k+1\)</span> (questo è il cosiddetto <dfn class="terminology">passo induttivo</dfn>). Più precisamente:<div class="autopermalink" data-description="Capoverso"><a href="#sec-induzione_ricorrenza-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="principle-induzione"><h3 class="heading">
-<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">5.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Principio di induzione.</span>
+<span class="type">Teorema</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Principio di induzione.</span>
 </h3>
 <div class="para logical" id="principle-induzione-3-1">
 <div class="para">Per ciascun naturale <span class="process-math">\(n\)</span> sia data una proposizione <span class="process-math">\(P_{n}\text{.}\)</span> Si supponga che:</div>
 <ul class="disc" id="principle-induzione-3-1-3">
-<li id="principle-induzione-3-1-3-1"><div class="para" id="principle-induzione-3-1-3-1-1">
-<span class="process-math">\(P_{0}\)</span> sia vera;</div></li>
-<li id="principle-induzione-3-1-3-2"><div class="para" id="principle-induzione-3-1-3-2-1">per ogni naturale <span class="process-math">\(k\)</span> tale che <span class="process-math">\(P_{k}\)</span> è vera si ha che anche <span class="process-math">\(P_{k+1}\)</span> è vera.</div></li>
+<li id="principle-induzione-3-1-3-1">
+<div class="para" id="principle-induzione-3-1-3-1-1">
+<span class="process-math">\(P_{0}\)</span> sia vera;<div class="autopermalink" data-description="Capoverso"><a href="#principle-induzione-3-1-3-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#principle-induzione-3-1-3-1" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="principle-induzione-3-1-3-2">
+<div class="para" id="principle-induzione-3-1-3-2-1">per ogni naturale <span class="process-math">\(k\)</span> tale che <span class="process-math">\(P_{k}\)</span> è vera si ha che anche <span class="process-math">\(P_{k+1}\)</span> è vera.<div class="autopermalink" data-description="Capoverso"><a href="#principle-induzione-3-1-3-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#principle-induzione-3-1-3-2" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
 </ul>
 <div class="para">Allora <span class="process-math">\(P_{n}\)</span> è vera per ogni naturale <span class="process-math">\(n\text{.}\)</span>
 </div>
-</div></article><details id="principle-induzione-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="principle-induzione-4-1">Se <span class="process-math">\(A\)</span> è il sottoinsieme di <span class="process-math">\(\Naturali\)</span> formato dai numeri <span class="process-math">\(n\)</span> tali che <span class="process-math">\(P_{n}\)</span> è vera, per ipotesi sappiamo che <span class="process-math">\(0\in A\)</span> e che per ogni <span class="process-math">\(k\in A\)</span> si ha <span class="process-math">\(k+1\in A\text{:}\)</span> dunque, <span class="process-math">\(A=\Naturali\)</span> per l’<a href="sec-naturali_base.html#item-assioma_induzione" class="xref" data-knowl="./knowl/xref/item-assioma_induzione.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 3">Assioma 3</a> della <a href="sec-naturali_base.html#def-numeri_naturali_peano" class="xref" data-knowl="./knowl/xref/def-numeri_naturali_peano.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Definizione 5.1.1">Definizione 5.1.1</a>.</div></article></details><article class="example example-like" id="ex-somma_primi_naturali"><h3 class="heading">
-<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">5.2.2</span><span class="period">.</span>
+<div class="autopermalink" data-description="Capoverso"><a href="#principle-induzione-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Teorema 5.2.1: Principio di induzione"><a href="#principle-induzione" title="Copy heading and permalink for Teorema 5.2.1: Principio di induzione" aria-label="Copy heading and permalink for Teorema 5.2.1: Principio di induzione">🔗</a></div></article><details id="principle-induzione-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="principle-induzione-4-1">Se <span class="process-math">\(A\)</span> è il sottoinsieme di <span class="process-math">\(\Naturali\)</span> formato dai numeri <span class="process-math">\(n\)</span> tali che <span class="process-math">\(P_{n}\)</span> è vera, per ipotesi sappiamo che <span class="process-math">\(0\in A\)</span> e che per ogni <span class="process-math">\(k\in A\)</span> si ha <span class="process-math">\(k+1\in A\text{:}\)</span> dunque, <span class="process-math">\(A=\Naturali\)</span> per l’<a href="sec-naturali_base.html#item-assioma_induzione" class="xref" data-knowl="./knowl/xref/item-assioma_induzione.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 3">Assioma 3</a> della <a href="sec-naturali_base.html#def-numeri_naturali_peano" class="xref" data-knowl="./knowl/xref/def-numeri_naturali_peano.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Definizione 5.1.1">Definizione 5.1.1</a>.<div class="autopermalink" data-description="Capoverso"><a href="#principle-induzione-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Dimostrazione 5.2.1.1"><a href="#principle-induzione-4" title="Copy heading and permalink for Dimostrazione 5.2.1.1" aria-label="Copy heading and permalink for Dimostrazione 5.2.1.1">🔗</a></div></article></details><article class="example example-like" id="ex-somma_primi_naturali"><h3 class="heading">
+<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="ex-somma_primi_naturali-1-1">
 <div class="para">Vogliamo mostrare che la somma dei naturali da <span class="process-math">\(0\)</span> a <span class="process-math">\(n\)</span> è uguale a <span class="process-math">\(\frac{n(n+1)}{2}\text{.}\)</span> In simboli, <span class="process-math">\(\sum_{i=0}^{n}i=\frac{n(n+1)}{2}\text{.}\)</span>
 </div>
 <ul class="disc" id="ex-somma_primi_naturali-1-1-5">
-<li id="ex-somma_primi_naturali-1-1-5-1"><div class="para" id="ex-somma_primi_naturali-1-1-5-1-1">Se <span class="process-math">\(n=0\text{,}\)</span> la somma dei numeri da <span class="process-math">\(0\)</span> a <span class="process-math">\(0\)</span> è, ovviamente, <span class="process-math">\(0\)</span> e <span class="process-math">\(\frac{0(0+1)}{2}=0\text{.}\)</span> Dunque, la proprietà vale per <span class="process-math">\(n=0\text{.}\)</span>
-</div></li>
-<li id="ex-somma_primi_naturali-1-1-5-2"><div class="para logical" id="ex-somma_primi_naturali-1-1-5-2-1">
+<li id="ex-somma_primi_naturali-1-1-5-1">
+<div class="para" id="ex-somma_primi_naturali-1-1-5-1-1">Se <span class="process-math">\(n=0\text{,}\)</span> la somma dei numeri da <span class="process-math">\(0\)</span> a <span class="process-math">\(0\)</span> è, ovviamente, <span class="process-math">\(0\)</span> e <span class="process-math">\(\frac{0(0+1)}{2}=0\text{.}\)</span> Dunque, la proprietà vale per <span class="process-math">\(n=0\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#ex-somma_primi_naturali-1-1-5-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#ex-somma_primi_naturali-1-1-5-1" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="ex-somma_primi_naturali-1-1-5-2">
+<div class="para logical" id="ex-somma_primi_naturali-1-1-5-2-1">
 <div class="para">Sia <span class="process-math">\(k\)</span> un intero tale per cui <span class="process-math">\(\sum_{i=0}^{k}i=\frac{k(k+1)}{2}\text{:}\)</span> allora</div>
 <div class="displaymath process-math" id="ex-somma_primi_naturali-1-1-5-2-1-3">
 \begin{align*}
@@ -747,22 +764,36 @@ eBookConfig.enable_chatcodes =  false;
 \amp=\frac{k(k+1)+2(k+1)}{2}=\frac{(k+1)(k+2)}{2}\text{.}
 \end{align*}
 </div>
-</div></li>
+<div class="autopermalink" data-description="Capoverso"><a href="#ex-somma_primi_naturali-1-1-5-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#ex-somma_primi_naturali-1-1-5-2" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
 </ul>
-</div></article><div class="para" id="sec-induzione_ricorrenza-5">Un altro modo di utilizzare la tecnica di dimostrazione per induzione discende dal cosiddetto <dfn class="terminology">buon ordinamento</dfn> dei naturali. Più precisamente dal</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#ex-somma_primi_naturali-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Esempio 5.2.2"><a href="#ex-somma_primi_naturali" title="Copy heading and permalink for Esempio 5.2.2" aria-label="Copy heading and permalink for Esempio 5.2.2">🔗</a></div></article><div class="para" id="sec-induzione_ricorrenza-5">Un altro modo di utilizzare la tecnica di dimostrazione per induzione discende dal cosiddetto <dfn class="terminology">buon ordinamento</dfn> dei naturali. Più precisamente dal<div class="autopermalink" data-description="Capoverso"><a href="#sec-induzione_ricorrenza-5" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="thm-buon_ordinamento_capitolo_interi"><h3 class="heading">
-<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">5.2.3</span><span class="period">.</span>
+<span class="type">Teorema</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="thm-buon_ordinamento_capitolo_interi-1-1">Ogni sottoinsieme non vuoto di <span class="process-math">\(\Naturali\)</span> ha un minimo.</div></article><div class="para" id="sec-induzione_ricorrenza-7">Questo può essere così reinterpretato:</div>
+<div class="para" id="thm-buon_ordinamento_capitolo_interi-1-1">Ogni sottoinsieme non vuoto di <span class="process-math">\(\Naturali\)</span> ha un minimo.<div class="autopermalink" data-description="Capoverso"><a href="#thm-buon_ordinamento_capitolo_interi-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Teorema 5.2.3"><a href="#thm-buon_ordinamento_capitolo_interi" title="Copy heading and permalink for Teorema 5.2.3" aria-label="Copy heading and permalink for Teorema 5.2.3">🔗</a></div></article><div class="para" id="sec-induzione_ricorrenza-7">Questo può essere così reinterpretato:<div class="autopermalink" data-description="Capoverso"><a href="#sec-induzione_ricorrenza-7" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="principle-induzione_completa"><h3 class="heading">
-<span class="type">Teorema</span><span class="space"> </span><span class="codenumber">5.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Principio di induzione completa.</span>
+<span class="type">Teorema</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Principio di induzione completa.</span>
 </h3>
-<div class="para" id="principle-induzione_completa-3-1">Per ciascun naturale <span class="process-math">\(n\)</span> sia data una proposizione <span class="process-math">\(P_{n}\text{.}\)</span> Se, per ogni naturale <span class="process-math">\(m\text{,}\)</span> si può provare che <span class="process-math">\(P_{m}\)</span> è vera supposto che <span class="process-math">\(P_{k}\)</span> sia vera per ogni <span class="process-math">\(k \lt m\text{,}\)</span> allora <span class="process-math">\(P_{n}\)</span> è vera per ogni naturale <span class="process-math">\(n\text{.}\)</span>
-</div></article><details id="principle-induzione_completa-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="principle-induzione_completa-4-1">Indichiamo con <span class="process-math">\(B\)</span> il sottoinsieme di <span class="process-math">\(\Naturali\)</span> formato dai numeri <span class="process-math">\(n\)</span> per cui <span class="process-math">\(P_{n}\)</span> è falsa. Per mostrare che <span class="process-math">\(P_{n}\)</span> è vera per ogni <span class="process-math">\(n\text{,}\)</span> basta allora provare che <span class="process-math">\(B\)</span> è vuoto. Se <span class="process-math">\(B\)</span> non fosse vuoto, dovrebbe avere un minimo <span class="process-math">\(m\text{,}\)</span> cioè <span class="process-math">\(P_{m}\)</span> dovrebbe essere falsa e <span class="process-math">\(P_{k}\)</span> dovrebbe essere vera per ogni <span class="process-math">\(k \lt m\text{,}\)</span> contro l’ipotesi. Dunque, <span class="process-math">\(B\)</span> è vuoto, cioè <span class="process-math">\(P_{n}\)</span> è vera per ogni <span class="process-math">\(n\text{.}\)</span>
-</div></article></details><article class="remark remark-like" id="sec-induzione_ricorrenza-9"><h3 class="heading">
-<span class="type">Osservazione</span><span class="space"> </span><span class="codenumber">5.2.5</span><span class="period">.</span>
+<div class="para" id="principle-induzione_completa-3-1">Per ciascun naturale <span class="process-math">\(n\)</span> sia data una proposizione <span class="process-math">\(P_{n}\text{.}\)</span> Se, per ogni naturale <span class="process-math">\(m\text{,}\)</span> si può provare che <span class="process-math">\(P_{m}\)</span> è vera supposto che <span class="process-math">\(P_{k}\)</span> sia vera per ogni <span class="process-math">\(k \lt m\text{,}\)</span> allora <span class="process-math">\(P_{n}\)</span> è vera per ogni naturale <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#principle-induzione_completa-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Teorema 5.2.4: Principio di induzione completa"><a href="#principle-induzione_completa" title="Copy heading and permalink for Teorema 5.2.4: Principio di induzione completa" aria-label="Copy heading and permalink for Teorema 5.2.4: Principio di induzione completa">🔗</a></div></article><details id="principle-induzione_completa-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="principle-induzione_completa-4-1">Indichiamo con <span class="process-math">\(B\)</span> il sottoinsieme di <span class="process-math">\(\Naturali\)</span> formato dai numeri <span class="process-math">\(n\)</span> per cui <span class="process-math">\(P_{n}\)</span> è falsa. Per mostrare che <span class="process-math">\(P_{n}\)</span> è vera per ogni <span class="process-math">\(n\text{,}\)</span> basta allora provare che <span class="process-math">\(B\)</span> è vuoto. Se <span class="process-math">\(B\)</span> non fosse vuoto, dovrebbe avere un minimo <span class="process-math">\(m\text{,}\)</span> cioè <span class="process-math">\(P_{m}\)</span> dovrebbe essere falsa e <span class="process-math">\(P_{k}\)</span> dovrebbe essere vera per ogni <span class="process-math">\(k \lt m\text{,}\)</span> contro l’ipotesi. Dunque, <span class="process-math">\(B\)</span> è vuoto, cioè <span class="process-math">\(P_{n}\)</span> è vera per ogni <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#principle-induzione_completa-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Dimostrazione 5.2.4.1"><a href="#principle-induzione_completa-4" title="Copy heading and permalink for Dimostrazione 5.2.4.1" aria-label="Copy heading and permalink for Dimostrazione 5.2.4.1">🔗</a></div></article></details><article class="remark remark-like" id="sec-induzione_ricorrenza-9"><h3 class="heading">
+<span class="type">Osservazione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="sec-induzione_ricorrenza-9-1">Nella prima forma dell’induzione occorre provare che <span class="process-math">\(P_{n+1}\)</span> è vera assumendo che sia vera <span class="process-math">\(P_{n}\text{,}\)</span> cioè la proposizione immediatamente precedente. Nella seconda forma di induzione occorre provare che una certa <span class="process-math">\(P_{m}\)</span> è vera assumendo che sia vera per tutti i naturali precedenti e, quindi, con una assunzione più forte che in molti casi è di aiuto. Apparentemente nella seconda forma dell’induzione non c’è la base induttiva, ma, per l’appunto, è solo un’apparenza: quando <span class="process-math">\(m=0\text{,}\)</span> dobbiamo provare che <span class="process-math">\(P_{0}\)</span> è vera assumendo che sia vera <span class="process-math">\(P_{k}\)</span> per tutti i naturali <span class="process-math">\(k\)</span> minori di <span class="process-math">\(0\text{,}\)</span> cioè senza di fatto fare alcuna assunzione. Nella pratica, anche nell’induzione completa è spesso necessario provare la base induttiva separatamente.</div></article><div class="para" id="sec-induzione_ricorrenza-10">Daremo più avanti un esempio di induzione completa, precisamente nella dimostrazione del <a href="sec-fattorizzazione_interi.html#thm-teorema_fondamentale_aritmetica" class="xref" data-knowl="./knowl/xref/thm-teorema_fondamentale_aritmetica.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 5.4.10: Teorema fondamentale dell’aritmetica">Teorema fondamentale dell’aritmetica</a>.</div>
+<div class="para" id="sec-induzione_ricorrenza-9-1">Nella prima forma dell’induzione occorre provare che <span class="process-math">\(P_{n+1}\)</span> è vera assumendo che sia vera <span class="process-math">\(P_{n}\text{,}\)</span> cioè la proposizione immediatamente precedente. Nella seconda forma di induzione occorre provare che una certa <span class="process-math">\(P_{m}\)</span> è vera assumendo che sia vera per tutti i naturali precedenti e, quindi, con una assunzione più forte che in molti casi è di aiuto. Apparentemente nella seconda forma dell’induzione non c’è la base induttiva, ma, per l’appunto, è solo un’apparenza: quando <span class="process-math">\(m=0\text{,}\)</span> dobbiamo provare che <span class="process-math">\(P_{0}\)</span> è vera assumendo che sia vera <span class="process-math">\(P_{k}\)</span> per tutti i naturali <span class="process-math">\(k\)</span> minori di <span class="process-math">\(0\text{,}\)</span> cioè senza di fatto fare alcuna assunzione. Nella pratica, anche nell’induzione completa è spesso necessario provare la base induttiva separatamente.<div class="autopermalink" data-description="Capoverso"><a href="#sec-induzione_ricorrenza-9-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Osservazione 5.2.5"><a href="#sec-induzione_ricorrenza-9" title="Copy heading and permalink for Osservazione 5.2.5" aria-label="Copy heading and permalink for Osservazione 5.2.5">🔗</a></div></article><div class="para" id="sec-induzione_ricorrenza-10">Daremo più avanti un esempio di induzione completa, precisamente nella dimostrazione del <a href="sec-fattorizzazione_interi.html#thm-teorema_fondamentale_aritmetica" class="xref" data-knowl="./knowl/xref/thm-teorema_fondamentale_aritmetica.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 5.4.10: Teorema fondamentale dell’aritmetica">Teorema fondamentale dell’aritmetica</a>.<div class="autopermalink" data-description="Capoverso"><a href="#sec-induzione_ricorrenza-10" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
 <div class="para logical" id="sec-induzione_ricorrenza-11">
 <div class="para">Oltre a dimostrare proprietà per induzione, gli assiomi di Peano ci permettono di definire successioni di oggetti (numeri, funzioni, insiemi, qualunque cosa) <span class="process-math">\(x_{n}\)</span> indicizzate dai naturali. Un modo per far ciò è definire esplicitamente <span class="process-math">\(x_{0}\)</span> e poi definire il generico <span class="process-math">\(x_{n}\)</span> in termini di <span class="process-math">\(x_{k}\)</span> per <span class="process-math">\(k \lt n\)</span> e del numero <span class="process-math">\(n\)</span> stesso. Ad esempio, il fattoriale <span class="process-math">\(n!\)</span> di un numero naturale <span class="process-math">\(n\)</span> è così definito:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-definizione_ricorrenza.html">
@@ -775,40 +806,66 @@ n!\coloneqq
 \end{equation*}
 </div>
 <div class="para">Una definizione di questo tipo è detta per <dfn class="terminology">ricorrenza</dfn>: intuitivamente è chiaro perché sia accettabile, ma il fatto che la successione di oggetti introdotta in questo modo esista e sia ben definita va dimostrato a partire dalle proprietà dei numeri naturali (si veda la <a href="sec-assiomi_peano.html#prop-definizione_ricorrenza" class="xref" data-knowl="./knowl/xref/prop-definizione_ricorrenza.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione A.2.10">Proposizione A.2.10</a>).</div>
+<div class="autopermalink" data-description="Capoverso"><a href="#sec-induzione_ricorrenza-11" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="para" id="sec-induzione_ricorrenza-12">Notiamo infine che sia la dimostrazione per induzione che la definizione per ricorrenza possono avere come base non solo il caso <span class="process-math">\(n=0\)</span> ma un qualsiasi numero naturale <span class="process-math">\(n_{0}\text{.}\)</span> Vediamo un esempio.</div>
+<div class="para" id="sec-induzione_ricorrenza-12">Notiamo infine che sia la dimostrazione per induzione che la definizione per ricorrenza possono avere come base non solo il caso <span class="process-math">\(n=0\)</span> ma un qualsiasi numero naturale <span class="process-math">\(n_{0}\text{.}\)</span> Vediamo un esempio.<div class="autopermalink" data-description="Capoverso"><a href="#sec-induzione_ricorrenza-12" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
 <article class="example example-like" id="ex-base_induttiva_non_zero"><h3 class="heading">
-<span class="type">Esempio</span><span class="space"> </span><span class="codenumber">5.2.6</span><span class="period">.</span>
+<span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="ex-base_induttiva_non_zero-1-1">Proviamo che per ogni intero <span class="process-math">\(n\ge 8\)</span> esistono naturali <span class="process-math">\(u\)</span> e <span class="process-math">\(v\)</span> tali che <span class="process-math">\(n=3u+5v\text{.}\)</span>
+<div class="para" id="ex-base_induttiva_non_zero-1-1">Proviamo che per ogni intero <span class="process-math">\(n\ge 8\)</span> esistono naturali <span class="process-math">\(u\)</span> e <span class="process-math">\(v\)</span> tali che <span class="process-math">\(n=3u+5v\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#ex-base_induttiva_non_zero-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div> <div class="para logical" id="ex-base_induttiva_non_zero-1-2">
 <div class="para">Possiamo allora procedere per induzione in questo modo:</div>
 <ul class="disc" id="ex-base_induttiva_non_zero-1-2-1">
-<li id="ex-base_induttiva_non_zero-1-2-1-1"><div class="para" id="ex-base_induttiva_non_zero-1-2-1-1-1">Chiaramente <span class="process-math">\(8=3\cdot 1 +5\cdot 1\text{:}\)</span> questa è la base induttiva.</div></li>
-<li id="ex-base_induttiva_non_zero-1-2-1-2"><div class="para logical" id="ex-base_induttiva_non_zero-1-2-1-2-1">
+<li id="ex-base_induttiva_non_zero-1-2-1-1">
+<div class="para" id="ex-base_induttiva_non_zero-1-2-1-1-1">Chiaramente <span class="process-math">\(8=3\cdot 1 +5\cdot 1\text{:}\)</span> questa è la base induttiva.<div class="autopermalink" data-description="Capoverso"><a href="#ex-base_induttiva_non_zero-1-2-1-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#ex-base_induttiva_non_zero-1-2-1-1" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="ex-base_induttiva_non_zero-1-2-1-2">
+<div class="para logical" id="ex-base_induttiva_non_zero-1-2-1-2-1">
 <div class="para">Per il passo induttivo, sia vera la proprietà per un certo <span class="process-math">\(k\ge 8\)</span> e proviamo che è vera per <span class="process-math">\(k+1\text{:}\)</span> sia allora <span class="process-math">\(k=3u+5v\)</span> per opportuni naturali <span class="process-math">\(u\)</span> e <span class="process-math">\(v\text{.}\)</span> Distinguiamo ora due casi:</div>
 <ul class="circle" id="ex-base_induttiva_non_zero-1-2-1-2-1-6">
-<li id="ex-base_induttiva_non_zero-1-2-1-2-1-6-1"><div class="para" id="ex-base_induttiva_non_zero-1-2-1-2-1-6-1-1">se <span class="process-math">\(v \gt 0\text{,}\)</span> allora <span class="process-math">\(k+1=3(u+2)+5(v-1)\text{;}\)</span>
-</div></li>
-<li id="ex-base_induttiva_non_zero-1-2-1-2-1-6-2"><div class="para" id="ex-base_induttiva_non_zero-1-2-1-2-1-6-2-1">se <span class="process-math">\(v=0\text{,}\)</span> allora <span class="process-math">\(u\ge 3\text{,}\)</span> altrimenti <span class="process-math">\(k\le 3\cdot 2=6\text{.}\)</span> Dunque, <span class="process-math">\(k+1=3(u-3)+5\cdot2\text{.}\)</span>
-</div></li>
+<li id="ex-base_induttiva_non_zero-1-2-1-2-1-6-1">
+<div class="para" id="ex-base_induttiva_non_zero-1-2-1-2-1-6-1-1">se <span class="process-math">\(v \gt 0\text{,}\)</span> allora <span class="process-math">\(k+1=3(u+2)+5(v-1)\text{;}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#ex-base_induttiva_non_zero-1-2-1-2-1-6-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#ex-base_induttiva_non_zero-1-2-1-2-1-6-1" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="ex-base_induttiva_non_zero-1-2-1-2-1-6-2">
+<div class="para" id="ex-base_induttiva_non_zero-1-2-1-2-1-6-2-1">se <span class="process-math">\(v=0\text{,}\)</span> allora <span class="process-math">\(u\ge 3\text{,}\)</span> altrimenti <span class="process-math">\(k\le 3\cdot 2=6\text{.}\)</span> Dunque, <span class="process-math">\(k+1=3(u-3)+5\cdot2\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#ex-base_induttiva_non_zero-1-2-1-2-1-6-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#ex-base_induttiva_non_zero-1-2-1-2-1-6-2" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
 </ul>
-</div></li>
+<div class="autopermalink" data-description="Capoverso"><a href="#ex-base_induttiva_non_zero-1-2-1-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#ex-base_induttiva_non_zero-1-2-1-2" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
 </ul>
-</div></article><section class="exercises" id="exercises-induzione"><h3 class="heading hide-type">
-<span class="type">Esercizi</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Esercizi</span>
+<div class="autopermalink" data-description="Capoverso"><a href="#ex-base_induttiva_non_zero-1-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Esempio 5.2.6"><a href="#ex-base_induttiva_non_zero" title="Copy heading and permalink for Esempio 5.2.6" aria-label="Copy heading and permalink for Esempio 5.2.6">🔗</a></div></article><section class="exercises" id="exercises-induzione"><h3 class="heading hide-type">
+<span class="type">Esercizi</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Esercizi</span>
 </h3>
 <div class="exercisegroup" id="exercises-induzione-1">
 <h4 class="heading"><span class="title">Gruppo di esercizi.</span></h4>
-<div class="introduction" id="exercises-induzione-1-1"><div class="para" id="exercises-induzione-1-1-1">Provare la validità delle seguenti uguaglianze.</div></div>
+<div class="introduction" id="exercises-induzione-1-1"><div class="para" id="exercises-induzione-1-1-1">Provare la validità delle seguenti uguaglianze.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-induzione-1-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div></div>
 <div class="exercisegroup-exercises">
-<article class="exercise exercise-like" id="exercises-induzione-1-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<article class="exercise exercise-like" id="exercises-induzione-1-2"><h5 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-induzione-1-2-1-1">
-<span class="process-math">\(\sum_{i=0}^{n}i^{2}=\frac{n(n+1)(2n+1)}{6}\)</span> per ogni <span class="process-math">\(n\ge 0\text{.}\)</span>
+<span class="process-math">\(\sum_{i=0}^{n}i^{2}=\frac{n(n+1)(2n+1)}{6}\)</span> per ogni <span class="process-math">\(n\ge 0\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-induzione-1-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-induzione-1-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="exercises-induzione-1-2-2-1"><ul class="disc" id="exercises-induzione-1-2-2-1-1">
-<li id="exercises-induzione-1-2-2-1-1-1"><div class="para" id="exercises-induzione-1-2-2-1-1-1-1">Per <span class="process-math">\(n=0\)</span> abbiamo <span class="process-math">\(\sum_{i=0}^{0}i^{2}=0\)</span> e <span class="process-math">\(\frac{0(0+1)(2\cdot 0+1)}{6}=0\text{:}\)</span> questa è la base induttiva.</div></li>
-<li id="exercises-induzione-1-2-2-1-1-2"><div class="para logical" id="exercises-induzione-1-2-2-1-1-2-1">
+<div class="solutions"><details id="exercises-induzione-1-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="exercises-induzione-1-2-2-1">
+<ul class="disc" id="exercises-induzione-1-2-2-1-1">
+<li id="exercises-induzione-1-2-2-1-1-1">
+<div class="para" id="exercises-induzione-1-2-2-1-1-1-1">Per <span class="process-math">\(n=0\)</span> abbiamo <span class="process-math">\(\sum_{i=0}^{0}i^{2}=0\)</span> e <span class="process-math">\(\frac{0(0+1)(2\cdot 0+1)}{6}=0\text{:}\)</span> questa è la base induttiva.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-induzione-1-2-2-1-1-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#exercises-induzione-1-2-2-1-1-1" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+<li id="exercises-induzione-1-2-2-1-1-2">
+<div class="para logical" id="exercises-induzione-1-2-2-1-1-2-1">
 <div class="para">Sia <span class="process-math">\(k\)</span> un intero per cui la proprietà sia vera, cioè sia <span class="process-math">\(\sum_{i=0}^{k}i^{2}=\frac{k(k+1)(2k+1)}{6}\text{.}\)</span> Allora</div>
 <div class="displaymath process-math" id="exercises-induzione-1-2-2-1-1-2-1-3">
 \begin{align*}
@@ -818,27 +875,40 @@ n!\coloneqq
 \amp = \frac{(k+1)((k+2)(2(k+1)+1))}{6}
 \end{align*}
 </div>
-</div></li>
-</ul></div></div></details></div></article><article class="exercise exercise-like" id="exercises-induzione-1-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="autopermalink" data-description="Capoverso"><a href="#exercises-induzione-1-2-2-1-1-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Punto"><a href="#exercises-induzione-1-2-2-1-1-2" title="Copy heading and permalink for Punto" aria-label="Copy heading and permalink for Punto">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Capoverso"><a href="#exercises-induzione-1-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Soluzione 5.2.1.1"><a href="#exercises-induzione-1-2-2" title="Copy heading and permalink for Soluzione 5.2.1.1" aria-label="Copy heading and permalink for Soluzione 5.2.1.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Esercizio 5.2.1"><a href="#exercises-induzione-1-2" title="Copy heading and permalink for Esercizio 5.2.1" aria-label="Copy heading and permalink for Esercizio 5.2.1">🔗</a></div></article><article class="exercise exercise-like" id="exercises-induzione-1-3"><h5 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-induzione-1-3-1-1">
-<span class="process-math">\(\sum_{i=1}^{n}(2i-1)=n^{2}\)</span> per ogni <span class="process-math">\(n\ge 1\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exercises-induzione-1-4"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<span class="process-math">\(\sum_{i=1}^{n}(2i-1)=n^{2}\)</span> per ogni <span class="process-math">\(n\ge 1\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-induzione-1-3-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Esercizio 5.2.2"><a href="#exercises-induzione-1-3" title="Copy heading and permalink for Esercizio 5.2.2" aria-label="Copy heading and permalink for Esercizio 5.2.2">🔗</a></div></article><article class="exercise exercise-like" id="exercises-induzione-1-4"><h5 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-induzione-1-4-1-1">
-<span class="process-math">\(\sum_{i=0}^{n}i^{3}=\left(\frac{n(n+1)}{2}\right)^{2}\)</span> per ogni <span class="process-math">\(n\ge 0\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exercises-induzione-1-5"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<span class="process-math">\(\sum_{i=0}^{n}i^{3}=\left(\frac{n(n+1)}{2}\right)^{2}\)</span> per ogni <span class="process-math">\(n\ge 0\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-induzione-1-4-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Esercizio 5.2.3"><a href="#exercises-induzione-1-4" title="Copy heading and permalink for Esercizio 5.2.3" aria-label="Copy heading and permalink for Esercizio 5.2.3">🔗</a></div></article><article class="exercise exercise-like" id="exercises-induzione-1-5"><h5 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-induzione-1-5-1-1">
-<span class="process-math">\(\sum_{i=0}^{n}i(i+1)=\frac{n(n+1)(n+2)}{3}\)</span> per ogni <span class="process-math">\(n\ge 0\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exercises-induzione-1-6"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<span class="process-math">\(\sum_{i=0}^{n}i(i+1)=\frac{n(n+1)(n+2)}{3}\)</span> per ogni <span class="process-math">\(n\ge 0\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-induzione-1-5-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Esercizio 5.2.4"><a href="#exercises-induzione-1-5" title="Copy heading and permalink for Esercizio 5.2.4" aria-label="Copy heading and permalink for Esercizio 5.2.4">🔗</a></div></article><article class="exercise exercise-like" id="exercises-induzione-1-6"><h5 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-induzione-1-6-1-1">
-<span class="process-math">\(\sum_{i=0}^{n}i!i=(n+1)!-1\)</span> per ogni <span class="process-math">\(n\ge 0\text{.}\)</span>
-</div></article>
+<span class="process-math">\(\sum_{i=0}^{n}i!i=(n+1)!-1\)</span> per ogni <span class="process-math">\(n\ge 0\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-induzione-1-6-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
+<div class="autopermalink" data-description="Esercizio 5.2.5"><a href="#exercises-induzione-1-6" title="Copy heading and permalink for Esercizio 5.2.5" aria-label="Copy heading and permalink for Esercizio 5.2.5">🔗</a></div></article>
 </div>
-<article class="exercise exercise-like" id="exercises-induzione-2"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="exercises-induzione-2-1-1">Dimostrare che <span class="process-math">\(n^{2}\le n!\)</span> per ogni <span class="process-math">\(n\ge 4\text{.}\)</span>
+<div class="autopermalink" data-description="Gruppo di esercizi 5.2.1–5"><a href="#exercises-induzione-1" title="Copy heading and permalink for Gruppo di esercizi 5.2.1–5" aria-label="Copy heading and permalink for Gruppo di esercizi 5.2.1–5">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-induzione-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="exercises-induzione-2-2-1">La base induttiva si stabilisce facilmente: <span class="process-math">\(4^{2}=16\)</span> e <span class="process-math">\(4!=24\text{.}\)</span>
+<article class="exercise exercise-like" id="exercises-induzione-2"><h4 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="exercises-induzione-2-1-1">Dimostrare che <span class="process-math">\(n^{2}\le n!\)</span> per ogni <span class="process-math">\(n\ge 4\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-induzione-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+<div class="solutions"><details id="exercises-induzione-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="exercises-induzione-2-2-1">La base induttiva si stabilisce facilmente: <span class="process-math">\(4^{2}=16\)</span> e <span class="process-math">\(4!=24\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-induzione-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="para logical" id="exercises-induzione-2-2-2">
 <div class="para">Sia ora <span class="process-math">\(k\ge 4\)</span> un intero tale per cui <span class="process-math">\(k^{2}\le k!\text{:}\)</span> abbiamo allora</div>
@@ -847,8 +917,11 @@ n!\coloneqq
 (k+1)^{2}=k^{2}+2k+1\le k!+2k+1\le k!+2k!+k!\le 4\cdot k!\le (k+1)k!=(k+1)!\text{.}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Capoverso"><a href="#exercises-induzione-2-2-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-</div></details></div></article></section></section></div>
+<div class="autopermalink" data-description="Soluzione 5.2.6.1"><a href="#exercises-induzione-2-2" title="Copy heading and permalink for Soluzione 5.2.6.1" aria-label="Copy heading and permalink for Soluzione 5.2.6.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Esercizio 5.2.6"><a href="#exercises-induzione-2" title="Copy heading and permalink for Esercizio 5.2.6" aria-label="Copy heading and permalink for Esercizio 5.2.6">🔗</a></div></article><div class="autopermalink" data-description="Esercizi 5.2"><a href="#exercises-induzione" title="Copy heading and permalink for Esercizi 5.2" aria-label="Copy heading and permalink for Esercizi 5.2">🔗</a></div></section><div class="autopermalink" data-description="Paragrafo 5.2: Dimostrazioni per induzione e definizioni per ricorrenza"><a href="#sec-induzione_ricorrenza" title="Copy heading and permalink for Paragrafo 5.2: Dimostrazioni per induzione e definizioni per ricorrenza" aria-label="Copy heading and permalink for Paragrafo 5.2: Dimostrazioni per induzione e definizioni per ricorrenza">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-naturali_base.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-divisibilita_interi.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
