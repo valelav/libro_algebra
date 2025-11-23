@@ -102,15 +102,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.10';
+eBookConfig.runestone_version = '7.10.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.fea5c754ab3e056b.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.b37c97cbe7a5455b.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
 </script>
 </head>
@@ -762,44 +762,44 @@ eBookConfig.enable_chatcodes =  false;
 </h3>
 <div class="para logical" id="sec-esempi_fattorizzazione_polinomi-10-1-1">
 <div class="para">Vogliamo determinare le radici razionali del polinomio</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-del_resto.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-del_resto.html" id="sec-esempi_fattorizzazione_polinomi-10-1-1-1">
 \begin{equation*}
 \frac{3}{2}x^{6}+\frac{3}{4}x^{5}-\frac{15}{4}x^{4}-\frac{21}{4}x^{3}-\frac{9}{2}x^{2}\text{.}
 \end{equation*}
 </div>
 <div class="para">Innanzitutto, riconduciamoci a un polinomio a coefficienti interi moltiplicando per <span class="process-math">\(4\text{:}\)</span>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-del_resto.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-del_resto.html" id="sec-esempi_fattorizzazione_polinomi-10-1-1-3">
 \begin{equation*}
 6x^{6}+3x^{5}-15x^{4}-21x^{3}-18x^{2}\text{.}
 \end{equation*}
 </div>
 <div class="para">Ora dividiamo per il suo contenuto <span class="process-math">\(3\)</span> per ottenere un polinomio primitivo</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-del_resto.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-del_resto.html" id="sec-esempi_fattorizzazione_polinomi-10-1-1-5">
 \begin{equation*}
 2x^{6}+x^{5}-5x^{4}-7x^{3}-6x^{2}\text{.}
 \end{equation*}
 </div>
 <div class="para">Il termine noto è <span class="process-math">\(0\text{:}\)</span> dunque, <span class="process-math">\(0\)</span> è una radice di questo polinomio e possiamo raccogliere <span class="process-math">\(x^{2}\)</span> per ottenere</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-del_resto.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-del_resto.html" id="sec-esempi_fattorizzazione_polinomi-10-1-1-9">
 \begin{equation*}
 x^{2}(2x^{4}+x^{3}-5x^{2}-7x-6)\text{.}
 \end{equation*}
 </div>
 <div class="para">Consideriamo ora il polinomio</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-del_resto.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-del_resto.html" id="sec-esempi_fattorizzazione_polinomi-10-1-1-10">
 \begin{equation*}
 f\coloneqq 2x^{4}+x^{3}-5x^{2}-7x-6\text{:}
 \end{equation*}
 </div>
 <div class="para">i divisori del termine noto sono <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(-1\text{,}\)</span> <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(-2\text{,}\)</span> <span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(-3\text{,}\)</span> <span class="process-math">\(6\)</span> e <span class="process-math">\(-6\text{,}\)</span> mentre i divisori del coefficiente direttivo sono <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(-1\text{,}\)</span> <span class="process-math">\(2\)</span> e <span class="process-math">\(-2\text{.}\)</span> Apparentemente dovremmo considerare <span class="process-math">\(32\)</span> possibilità: tuttavia, possiamo assumere che il denominatore sia positivo (e, quindi, considerare solo i due valori <span class="process-math">\(1\)</span> e <span class="process-math">\(2\)</span>) e che denominatore e numeratore siano coprimi. Cominciamo a verificare le possibili radici intere. Vediamo che <span class="process-math">\(f(1)=2+1-5-7-6\ne0\text{,}\)</span> <span class="process-math">\(f(-1)=2-1-5+7-6\ne0\)</span> e <span class="process-math">\(f(2)=32+8-20-14-6=0\text{.}\)</span> Potremmo proseguire e fare le altre verifiche, ma conviene notare che, per il <a href="sec-valutazione_polinomi.html#thm-del_resto" class="xref" data-knowl="./knowl/xref/thm-del_resto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 20.2.6: Teorema del resto">Teorema del resto</a>, <span class="process-math">\(x-2\)</span> è un divisore del polinomio che stiamo considerando. Abbiamo allora</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-del_resto.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-del_resto.html" id="sec-esempi_fattorizzazione_polinomi-10-1-1-31">
 \begin{equation*}
 2x^{4}+x^{3}-5x^{2}-7x-6=(x-2)(2x^{3}+5x^{2}+5x+3)\text{.}
 \end{equation*}
 </div>
 <div class="para">Consideriamo ora il polinomio</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-del_resto.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-del_resto.html" id="sec-esempi_fattorizzazione_polinomi-10-1-1-32">
 \begin{equation*}
 g\coloneqq 2x^{3}+5x^{2}+5x+3\text{:}
 \end{equation*}
@@ -809,19 +809,19 @@ g\coloneqq 2x^{3}+5x^{2}+5x+3\text{:}
 <div class="autopermalink" data-description="Capoverso"><a href="#sec-esempi_fattorizzazione_polinomi-10-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div> <div class="para logical" id="sec-esempi_fattorizzazione_polinomi-10-1-2">
 <div class="para">Possiamo fare a meno di considerare <span class="process-math">\(1\)</span> e <span class="process-math">\(-1\text{:}\)</span> non sono radici di <span class="process-math">\(f\)</span> e, quindi, non sono radici di <span class="process-math">\(g\text{.}\)</span> Facendo le varie verifiche si vede che solo <span class="process-math">\(-\frac{3}{2}\)</span> è radice. Allora possiamo dire che <span class="process-math">\(x+\frac{3}{2}\)</span> divide <span class="process-math">\(g\)</span> in <span class="process-math">\(\Razionali[x]\)</span> e, per la <a href="sec-trasporto_UFD.html#prop-divisore_primitivo" class="xref" data-knowl="./knowl/xref/prop-divisore_primitivo.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 22.1.7">Proposizione 22.1.7</a>, <span class="process-math">\(2x+3\)</span> divide <span class="process-math">\(g\)</span> in <span class="process-math">\(\Interi[x]\text{.}\)</span> Abbiamo allora</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-divisore_primitivo.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-divisore_primitivo.html" id="sec-esempi_fattorizzazione_polinomi-10-1-2-13">
 \begin{equation*}
 g=(2x+3)(x^{2}+x+1)\text{.}
 \end{equation*}
 </div>
 <div class="para">Consideriamo ora il polinomio</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-divisore_primitivo.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-divisore_primitivo.html" id="sec-esempi_fattorizzazione_polinomi-10-1-2-14">
 \begin{equation*}
 h\coloneqq x^{2}+x+1\text{:}
 \end{equation*}
 </div>
 <div class="para">i divisori del termine noto sono <span class="process-math">\(1\)</span> e <span class="process-math">\(-1\text{,}\)</span> mentre i divisori del coefficiente direttivo sono <span class="process-math">\(1\)</span> e <span class="process-math">\(-1\text{.}\)</span> Anche qui, possiamo supporre che i denominatori siano positivi e che numeratore e denominatore siano coprimi. Le possibili radici razionali sono allora <span class="process-math">\(1\)</span> e <span class="process-math">\(-1\text{:}\)</span> ma nessuna di queste è radice di <span class="process-math">\(g\)</span> e, a maggior ragione, non è radice di <span class="process-math">\(h\text{.}\)</span> Dunque, non abbiamo fattori di grado <span class="process-math">\(1\text{:}\)</span> poiché <span class="process-math">\(h\)</span> ha grado <span class="process-math">\(2\text{,}\)</span> possiamo concludere che è irriducibile. Pertanto, abbiamo la fattorizzazione in irriducibili</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-divisore_primitivo.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-divisore_primitivo.html" id="sec-esempi_fattorizzazione_polinomi-10-1-2-26">
 \begin{equation*}
 2x^{6}+x^{5}-5x^{4}-7x^{3}-6x^{2}=x^{2}(x-2)(2x+3)(x^{2}+x+1)
 \end{equation*}
@@ -836,31 +836,31 @@ h\coloneqq x^{2}+x+1\text{:}
 </h3>
 <div class="para logical" id="ex-polinomio_grado_4_riducibile-1-1">
 <div class="para">Vogliamo fattorizzare come prodotto di irriducibili il polinomio a coefficienti interi</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-irriducibile_nel_camo_dei_quozienti.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-irriducibile_nel_camo_dei_quozienti.html" id="ex-polinomio_grado_4_riducibile-1-1-1">
 \begin{equation*}
 2x^{4}+5x^{3}-7x^{2}-5x+2\text{.}
 \end{equation*}
 </div>
 <div class="para">Questo polinomio è a coefficienti interi e primitivo: quindi, possiamo cercare direttamente le eventuali radici razionali. Poiché il termine noto è non nullo, <span class="process-math">\(0\)</span> non è radice razionale. I divisori, tanto del termine noto, quanto del coefficiente direttivo sono <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(-1\text{,}\)</span> <span class="process-math">\(2\)</span> e <span class="process-math">\(-2\text{.}\)</span> Le possibili radici razionali sono <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(-1\text{,}\)</span> <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(-2\text{,}\)</span> <span class="process-math">\(\frac{1}{2}\)</span> e <span class="process-math">\(-\frac{1}{2}\text{.}\)</span> Facendo le opportune verifiche si vede che nessuna di queste è radice, quindi il polinomio non ha fattori irriducibili di primo grado. Potrebbe però essere prodotto di due polinomi di secondo grado a coefficienti interi:</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-irriducibile_nel_camo_dei_quozienti.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-irriducibile_nel_camo_dei_quozienti.html" id="ex-polinomio_grado_4_riducibile-1-1-13">
 \begin{equation*}
 2x^{4}+5x^{3}-7x^{2}-5x+2=(ax^{2}+bx+c)(dx^{2}+ex+f)\text{.}
 \end{equation*}
 </div>
 <div class="para">Sviluppando il membro a destra e, uguagliando coefficiente per coefficiente, troviamo delle condizioni che devono essere soddisfatte dai parametri <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\text{,}\)</span> <span class="process-math">\(d\text{,}\)</span> <span class="process-math">\(e\)</span> e <span class="process-math">\(f\text{.}\)</span> Considerando il coefficiente di grado <span class="process-math">\(4\text{,}\)</span> abbiamo allora:</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-irriducibile_nel_camo_dei_quozienti.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-irriducibile_nel_camo_dei_quozienti.html" id="ex-polinomio_grado_4_riducibile-1-1-21">
 \begin{equation*}
 2=ad\text{.}
 \end{equation*}
 </div>
 <div class="para">Poiché <span class="process-math">\(a\)</span> e <span class="process-math">\(d\)</span> devono essere interi, le uniche possibilità sono che siano uno <span class="process-math">\(1\)</span> e l’altro <span class="process-math">\(2\)</span> oppure uno <span class="process-math">\(-1\)</span> e l’altro <span class="process-math">\(-2\text{:}\)</span> in questo secondo caso, però, potremmo moltiplicare entrambi i fattori per <span class="process-math">\(-1\)</span> e ricondurci al primo caso; inoltre, una volta fatto ciò, pur di scambiare l’ordine dei due fattori, possiamo supporre che <span class="process-math">\(a=1\)</span> e <span class="process-math">\(d=2\text{.}\)</span> Otteniamo così:</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-irriducibile_nel_camo_dei_quozienti.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-irriducibile_nel_camo_dei_quozienti.html" id="ex-polinomio_grado_4_riducibile-1-1-31">
 \begin{equation*}
 2x^{4}+5x^{3}-7x^{2}-5x+2=(x^{2}+bx+c)(2x^{2}+ex+f)\text{.}
 \end{equation*}
 </div>
 <div class="para">Espandiamo il prodotto a secondo membro e otteniamo</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-irriducibile_nel_camo_dei_quozienti.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-irriducibile_nel_camo_dei_quozienti.html" id="ex-polinomio_grado_4_riducibile-1-1-32">
 \begin{equation*}
 2x^{4}+5x^{3}-7x^{2}-5x+2=2x^{4}+(e+2b)x^{3}+(f+be+2c)x^{2}+(bf+ce)x+cf
 \end{equation*}
@@ -897,13 +897,13 @@ h\coloneqq x^{2}+x+1\text{:}
 \end{align*}
 </div>
 <div class="para">la seconda equazione è un’identità, mentre la prima si riduce a</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-irriducibile_nel_camo_dei_quozienti.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-irriducibile_nel_camo_dei_quozienti.html" id="ex-polinomio_grado_4_riducibile-1-1-45">
 \begin{equation*}
 2b^{2}-5b-3=0\text{.}
 \end{equation*}
 </div>
 <div class="para">Dobbiamo vedere se esistono valori interi di <span class="process-math">\(b\)</span> che soddisfano questa equazione: potremmo usare la formula risolutiva dell’equazione di secondo grado o notare che eventuali valori interi di <span class="process-math">\(b\)</span> che soddisfano questa equazione devono dividere <span class="process-math">\(3\text{.}\)</span> Facendo le varie prove, si vede che <span class="process-math">\(b=3\)</span> soddisfa questa equazione: abbiamo quindi trovato una soluzione a valori interi di questo sistema e cioè <span class="process-math">\(c=-1\text{,}\)</span> <span class="process-math">\(f=-2\text{,}\)</span> <span class="process-math">\(b=3\)</span> e <span class="process-math">\(e=5-2b=-1\text{.}\)</span> Abbiamo quindi la fattorizzazione in irriducibili del nostro polinomio.</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-irriducibile_nel_camo_dei_quozienti.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-irriducibile_nel_camo_dei_quozienti.html" id="ex-polinomio_grado_4_riducibile-1-1-54">
 \begin{equation*}
 2x^{4}+5x^{3}-7x^{2}-5x+2=(x^{2}+3x-1)(2x^{2}-x-2)\text{:}
 \end{equation*}
@@ -952,7 +952,7 @@ h\coloneqq x^{2}+x+1\text{:}
 </div>
 <div class="para logical" id="lem-eisenstein-3-2">
 <div class="para">Supponiamo allora per assurdo che <span class="process-math">\(f\)</span> sia riducibile in <span class="process-math">\(D[x]\text{,}\)</span> cioè che <span class="process-math">\(f=gh\)</span> con <span class="process-math">\(g\coloneqq b_{r}x^{r}+\cdots+b_{0}\)</span> e <span class="process-math">\(h\coloneqq c_{s}x^{s}+\cdots+c_{0}\)</span> polinomi a coefficienti in <span class="process-math">\(D\)</span> e di grado positivo. Il termine noto di <span class="process-math">\(gh\)</span> è semplicemente <span class="process-math">\(b_{0}c_{0}\text{:}\)</span> poiché coincide con <span class="process-math">\(a_{0}\)</span> che è multiplo di <span class="process-math">\(p\)</span> ma non di <span class="process-math">\(p^{2}\text{,}\)</span> abbiamo che <span class="process-math">\(p\)</span> divide uno tra <span class="process-math">\(b_{0}\)</span> e <span class="process-math">\(c_{0}\)</span> ma non entrambi. Possiamo assumere che <span class="process-math">\(p\)</span> divide <span class="process-math">\(b_{0}\)</span> ma non <span class="process-math">\(c_{0}\text{.}\)</span> Ora <span class="process-math">\(g\)</span> non è multiplo di <span class="process-math">\(p\text{,}\)</span> altrimenti anche <span class="process-math">\(f\)</span> sarebbe multiplo di <span class="process-math">\(p\text{.}\)</span> Sia <span class="process-math">\(i\)</span> il più piccolo intero tale che <span class="process-math">\(b_{i}\)</span> non è multiplo di <span class="process-math">\(p\text{.}\)</span> Abbiamo allora</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="lem-eisenstein-3-2-25">
 \begin{equation*}
 a_{i}=b_{i}c_{0}+b_{i-1}c_{1}+\cdots+b_{0}c_{i}
 \end{equation*}
@@ -981,7 +981,7 @@ a_{i}=b_{i}c_{0}+b_{i-1}c_{1}+\cdots+b_{0}c_{i}
 </h3>
 <div class="para logical" id="sec-esempi_fattorizzazione_polinomi-21-1-1">
 <div class="para">Consideriamo il polinomio <span class="process-math">\(f\coloneqq x^{3}+x+1\)</span> a coefficienti in <span class="process-math">\(\Interi/3\text{.}\)</span> Cerchiamo innanzitutto se <span class="process-math">\(f\)</span> ha qualche radice. Poiché il campo è finito possiamo semplicemente sostituire gli elementi uno a uno. Notiamo che <span class="process-math">\(f(0)=0^{3}+0+1=1\ne0\text{,}\)</span> <span class="process-math">\(f(1)=1^{3}+1+1=3=0\)</span> (ricordiamo che stiamo lavorando modulo <span class="process-math">\(3\)</span>). Dunque, <span class="process-math">\(1\)</span> è radice e <span class="process-math">\(x-1\)</span> è un fattore di <span class="process-math">\(f\text{.}\)</span> Dividendo, troviamo <span class="process-math">\(f=(x-1)(x^{2}+x-1)\text{.}\)</span> Ci chiediamo ora se <span class="process-math">\(g\coloneqq x^{2}+x-1\)</span> è irriducibile o no. Per far ciò, basta verificare se ha radici o meno. È inutile verificare se <span class="process-math">\(0\)</span> è radice perché altrimenti sarebbe radice anche di <span class="process-math">\(f\text{.}\)</span> Abbiamo poi <span class="process-math">\(g(1)=1^{2}+1-1=1\ne 0\)</span> e <span class="process-math">\(g(2)=2^{2}+2-1=2\ne 0\text{:}\)</span> pertanto <span class="process-math">\(g\)</span> non ha radici e, avendo grado <span class="process-math">\(2\text{,}\)</span> è irriducibile. Dunque, la fattorizzazione in irriducibili di <span class="process-math">\(f\)</span> è</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-esempi_fattorizzazione_polinomi-21-1-1-19">
 \begin{equation*}
 x^{3}+x+1=(x-1)(x^{2}+x-1)\text{.}
 \end{equation*}
@@ -994,13 +994,13 @@ x^{3}+x+1=(x-1)(x^{2}+x-1)\text{.}
 <div class="para" id="ex-fattorizzazione_polinomio_vari_campi-1-1">Consideriamo il polinomio <span class="process-math">\(p\coloneqq x^4+2x^2-5\)</span> a coefficienti in un campo <span class="process-math">\(K\)</span> e troviamone la fattorizzazione in irriducibili in diversi casi.<div class="autopermalink" data-description="Capoverso"><a href="#ex-fattorizzazione_polinomio_vari_campi-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div> <div class="para logical" id="ex-fattorizzazione_polinomio_vari_campi-1-2">
 <div class="para">Consideriamo prima il caso in cui <span class="process-math">\(K=\Razionali\text{.}\)</span> Poiché <span class="process-math">\(p\)</span> è un polinomio a coefficienti interi primitivo una sua fattorizzazione in irriducibili in <span class="process-math">\(\Interi[x]\)</span> è anche una fattorizzazione in irriducibili in <span class="process-math">\(\Razionali[x]\text{,}\)</span> grazie al <a href="sec-trasporto_UFD.html#cor-irriducibile_nel_camo_dei_quozienti" class="xref" data-knowl="./knowl/xref/cor-irriducibile_nel_camo_dei_quozienti.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Corollario 22.1.9">Corollario 22.1.9</a>. Poiché <span class="process-math">\(p\)</span> è monico i suoi fattori sono (associati a) polinomi monici. Se <span class="process-math">\(p\)</span> non fosse irriducibile in <span class="process-math">\(\Interi[x]\)</span> dovrebbe avere un fattore di primo o di secondo grado. Se avesse un fattore di primo grado, dovrebbe avere una radice in <span class="process-math">\(\Razionali\text{.}\)</span> Le eventuali radici razionali sono del tipo <span class="process-math">\(\frac{a}{b}\)</span> con <span class="process-math">\(a\)</span> divisore del temine noto <span class="process-math">\(5\)</span> e <span class="process-math">\(b\)</span> divisore del coefficiente direttivo <span class="process-math">\(1\text{:}\)</span> i valori possibili sono <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(-1\text{,}\)</span> <span class="process-math">\(5\)</span> e <span class="process-math">\(-5\text{.}\)</span> Sostituendo nel polinomio questi valori vediamo che nessuno di essi è soluzione. Verifichiamo allora se <span class="process-math">\(p\)</span> è prodotto di due polinomi di secondo grado monici a coefficienti interi:</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-irriducibile_nel_camo_dei_quozienti.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-irriducibile_nel_camo_dei_quozienti.html" id="ex-fattorizzazione_polinomio_vari_campi-1-2-20">
 \begin{equation*}
 p=(x^{2}+ax+b)(x^{2}+cx+d)
 \end{equation*}
 </div>
 <div class="para">cioè</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-irriducibile_nel_camo_dei_quozienti.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-irriducibile_nel_camo_dei_quozienti.html" id="ex-fattorizzazione_polinomio_vari_campi-1-2-21">
 \begin{equation*}
 p=x^{4}+(a+c)x^{3}+(d+ac+b)x^{2}+(ad+bc)x+bd
 \end{equation*}
@@ -1010,7 +1010,7 @@ p=x^{4}+(a+c)x^{3}+(d+ac+b)x^{2}+(ad+bc)x+bd
 <div class="autopermalink" data-description="Capoverso"><a href="#ex-fattorizzazione_polinomio_vari_campi-1-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div> <div class="para logical" id="ex-fattorizzazione_polinomio_vari_campi-1-3">
 <div class="para">Consideriamo ora il caso in cui <span class="process-math">\(K=\Interi/3\text{.}\)</span> Valutando <span class="process-math">\(p\)</span> in ciascuno degli elementi di <span class="process-math">\(\Interi/3\text{,}\)</span> vediamo che nessuno di essi è radice di <span class="process-math">\(p\)</span> che quindi non ha fattori di primo grado. Il polinomio <span class="process-math">\(p\)</span> potrebbe però essere prodotto di due polinomi di secondo grado, che possiamo assumere monici. Riprendendo i calcoli fatti al punto precedente e riducendoli modulo <span class="process-math">\(3\)</span> otteniamo le seguenti equazioni: <span class="process-math">\(a+c=0\text{,}\)</span> <span class="process-math">\(d+ac+b=2\text{,}\)</span> <span class="process-math">\(ad+bc=0\)</span> e <span class="process-math">\(bd=1\text{.}\)</span> Come prima, otteniamo <span class="process-math">\(c=-a\)</span> e le altre uguaglianze diventano <span class="process-math">\(d-a^{2}+b=2\text{,}\)</span> <span class="process-math">\(a(d-b)=0\)</span> e <span class="process-math">\(bd=2\text{.}\)</span> Dalla seconda troviamo <span class="process-math">\(a=0\)</span> o <span class="process-math">\(b=d\text{.}\)</span> Nel primo caso, le altre equazioni si riducono a <span class="process-math">\(d+b=2\)</span> e <span class="process-math">\(bd=1\text{:}\)</span> considerando i vari casi, queste sono soddisfatte se <span class="process-math">\(d=b=1\text{.}\)</span> Dunque, <span class="process-math">\(p\)</span> si fattorizza come</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-fattorizzazione_polinomio_vari_campi-1-3-21">
 \begin{equation*}
 p=(x^{2}+1)(x^{2}+1)\text{.}
 \end{equation*}

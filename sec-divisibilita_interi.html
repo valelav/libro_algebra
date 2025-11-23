@@ -102,15 +102,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.10';
+eBookConfig.runestone_version = '7.10.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.fea5c754ab3e056b.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.b37c97cbe7a5455b.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
 </script>
 </head>
@@ -813,13 +813,13 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para logical" id="sec-divisibilita_interi-20">
 <div class="para">Ricordiamo che per definire il massimo comun divisore, abbiamo richiesto (almeno per il momento) che <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> non siano entrambi nulli: ad esempio, sia <span class="process-math">\(b\ne 0\text{.}\)</span> Per la <a href="sec-divisibilita_interi.html#prop-divisori_di_opposti" class="xref" data-knowl="./knowl/xref/prop-divisori_di_opposti.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 5.3.2">Proposizione 5.3.2</a>, i divisori comuni di <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> coincidono con i divisori comuni di <span class="process-math">\(a\)</span> e <span class="process-math">\(\abs{b}\text{.}\)</span> Non c’è, dunque, perdita di generalità se assumiamo che <span class="process-math">\(b \gt 0\text{.}\)</span> Dividiamo ora <span class="process-math">\(a\)</span> per <span class="process-math">\(b\text{.}\)</span> Otteniamo</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-divisori_di_opposti.html ./knowl/xref/lem-mcd_tra_divisori.html ./knowl/xref/lem-divisori_comuni_quoziente_resto.html ./knowl/xref/lem-mcd_tra_divisori.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-divisori_di_opposti.html ./knowl/xref/lem-mcd_tra_divisori.html ./knowl/xref/lem-divisori_comuni_quoziente_resto.html ./knowl/xref/lem-mcd_tra_divisori.html" id="sec-divisibilita_interi-20-12">
 \begin{equation*}
 a=bq+r
 \end{equation*}
 </div>
 <div class="para">con <span class="process-math">\(q\)</span> e <span class="process-math">\(r\)</span> interi tali che <span class="process-math">\(0\le r \lt b\text{.}\)</span> Se <span class="process-math">\(r=0\text{,}\)</span> allora <span class="process-math">\(b\mid a\)</span> e, per il <a href="sec-divisibilita_interi.html#lem-mcd_tra_divisori" class="xref" data-knowl="./knowl/xref/lem-mcd_tra_divisori.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Lemma 5.3.12">Lemma 5.3.12</a>, il massimo comun divisore tra <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> è esattamente <span class="process-math">\(b\)</span> che, quindi, è multiplo di tutti i divisori comuni tra <span class="process-math">\(a\)</span> e <span class="process-math">\(b\text{.}\)</span> Se <span class="process-math">\(r\ne 0\text{,}\)</span> dal <a href="sec-divisibilita_interi.html#lem-divisori_comuni_quoziente_resto" class="xref" data-knowl="./knowl/xref/lem-divisori_comuni_quoziente_resto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Lemma 5.3.13">Lemma 5.3.13</a> sappiamo che i divisori comuni tra <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> coincidono con i divisori comuni tra <span class="process-math">\(b\)</span> e <span class="process-math">\(r\text{.}\)</span> Possiamo allora ragionare come sopra e dividere <span class="process-math">\(b\)</span> per <span class="process-math">\(r\text{,}\)</span> ottenendo</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-divisori_di_opposti.html ./knowl/xref/lem-mcd_tra_divisori.html ./knowl/xref/lem-divisori_comuni_quoziente_resto.html ./knowl/xref/lem-mcd_tra_divisori.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-divisori_di_opposti.html ./knowl/xref/lem-mcd_tra_divisori.html ./knowl/xref/lem-divisori_comuni_quoziente_resto.html ./knowl/xref/lem-mcd_tra_divisori.html" id="sec-divisibilita_interi-20-32">
 \begin{equation*}
 b=rq_{1}+r_{1}
 \end{equation*}
@@ -847,19 +847,19 @@ r_{n+1} \amp = r_{n+2}q_{n+3}+0
 </div>
 <div class="para logical" id="sec-divisibilita_interi-21">
 <div class="para">Possiamo ora riguardare la catena di uguaglianze data dalle divisioni successive per ottenere qualcosa di più. Detto <span class="process-math">\(d\coloneqq r_{n+2}\)</span> il massimo comun divisore di <span class="process-math">\(a\)</span> e <span class="process-math">\(b\text{,}\)</span> abbiamo</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-divisibilita_interi-21-4">
 \begin{equation*}
 d=r_{n}-r_{n+1}q_{n+2}\text{.}
 \end{equation*}
 </div>
 <div class="para">Sostituendo poi l’espressione del resto <span class="process-math">\(r_{n+1}\)</span> data dalle precedente divisione, otteniamo</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-divisibilita_interi-21-6">
 \begin{equation*}
 d=r_{n}-r_{n+1}q_{n+2}=r_{n}-(r_{n-1}-r_{n}q_{n+1})q_{n+2}=r_{n}(1+q_{n+1}q_{n+2})+r_{n-1}(-q_{n+2})\text{.}
 \end{equation*}
 </div>
 <div class="para">Proseguendo così e sostituendo via via tutti i resti arriviamo a un’identità del tipo:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-divisibilita_interi-21-7">
 \begin{equation*}
 d=au+bv
 \end{equation*}
@@ -889,7 +889,7 @@ r_{n+1} \amp = r_{n+2}q_{n+3}+0
 \end{align*}
 </div>
 <div class="para">I resti di queste divisioni formano una catena strettamente decrescente di numeri naturali che deve terminare con un resto nullo. L’ultimo resto non nullo <span class="process-math">\(r_{n+2}\)</span> è allora il massimo comun divisore di <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> e ha la proprietà di essere un multiplo di tutti gli altri divisori comuni di <span class="process-math">\(a\)</span> e <span class="process-math">\(b\text{.}\)</span> Inoltre, dalla successione di equazioni è possibile ottenere un’identità, cosiddetta di Bezout, del tipo</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="alg-euclide-6-1-13">
 \begin{equation*}
 d=au+bv
 \end{equation*}
@@ -928,7 +928,7 @@ d=au+bv
 \end{align*}
 </div>
 <div class="para">cioè</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-divisibilita_interi-25-1-3-2">
 \begin{equation*}
 1350(-3)+156\cdot 26=6\text{.}
 \end{equation*}
@@ -936,7 +936,7 @@ d=au+bv
 <div class="autopermalink" data-description="Capoverso"><a href="#sec-divisibilita_interi-25-1-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div> <div class="para logical" id="sec-divisibilita_interi-25-1-4">
 <div class="para">Se avessimo scambiato i ruoli di <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> e avessimo diviso <span class="process-math">\(156\)</span> per <span class="process-math">\(1350\text{,}\)</span> la prima divisione sarebbe stata</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-divisibilita_interi-25-1-4-5">
 \begin{equation*}
 156=1350\cdot0 +156
 \end{equation*}
@@ -968,7 +968,7 @@ d=au+bv
 </h3>
 <div class="para logical" id="prop-massimo_comun_divisore_molti-1-1">
 <div class="para">Dati gli interi <span class="process-math">\(a_{1}\text{,}\)</span> <span class="process-math">\(a_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(a_{n}\)</span> il loro massimo comun divisore esiste ed è unico. Inoltre, esistono interi <span class="process-math">\(u_{1}\text{,}\)</span> <span class="process-math">\(u_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(u_{n}\)</span> tali che</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="prop-massimo_comun_divisore_molti-1-1-9">
 \begin{equation*}
 a_{1}u_{1}+\cdots+a_{n}u_{n}=(a_{1},\ldots,a_{n})\text{.}
 \end{equation*}
@@ -983,13 +983,13 @@ a_{1}u_{1}+\cdots+a_{n}u_{n}=(a_{1},\ldots,a_{n})\text{.}
 </div>
 <div class="para logical" id="prop-massimo_comun_divisore_molti-2-3">
 <div class="para">Sia allora <span class="process-math">\(n \gt 1\text{.}\)</span> Per ipotesi induttiva il massimo comun divisore <span class="process-math">\(c\)</span> tra <span class="process-math">\(a_{1}\text{,}\)</span> <span class="process-math">\(a_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(a_{n-1}\)</span> esiste e, per opportuni interi <span class="process-math">\(v_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(v_{n_{1}}\)</span> si ha</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/alg-euclide.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/alg-euclide.html" id="prop-massimo_comun_divisore_molti-2-3-10">
 \begin{equation*}
 a_{1}v_{1}+\cdots+a_{n-1}v_{n-1}=c\text{.}
 \end{equation*}
 </div>
 <div class="para">Per l’<a href="sec-divisibilita_interi.html#alg-euclide" class="xref" data-knowl="./knowl/xref/alg-euclide.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Algoritmo 5.3.15: Algoritmo di Euclide">Algoritmo di Euclide</a> esiste <span class="process-math">\(d\coloneqq (c,a_{n})\)</span> e <span class="process-math">\(d=cu+a_{n}u_{n}\)</span> per opportuni interi <span class="process-math">\(v\)</span> e <span class="process-math">\(u_{n}\text{.}\)</span> Dunque, abbiamo</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/alg-euclide.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/alg-euclide.html" id="prop-massimo_comun_divisore_molti-2-3-16">
 \begin{equation*}
 d=cu+a_{n}u_{n}=(a_{1}v_{1}+\cdots+a_{n-1}v_{n-1})u+a_{n}u_{n}=a_{1}u_{1}+\cdots+a_{n}u_{n}
 \end{equation*}

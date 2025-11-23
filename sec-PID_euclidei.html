@@ -102,15 +102,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.10';
+eBookConfig.runestone_version = '7.10.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.fea5c754ab3e056b.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.b37c97cbe7a5455b.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
 </script>
 </head>
@@ -747,7 +747,7 @@ eBookConfig.enable_chatcodes =  false;
 </h3>
 <div class="para logical" id="cor-multi_bezout-1-1">
 <div class="para">Dati <span class="process-math">\(a_{1}\text{,}\)</span> <span class="process-math">\(a_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(a_{n}\)</span> in un dominio a ideali principali <span class="process-math">\(D\text{,}\)</span> il loro massimo comun divisore <span class="process-math">\(d\)</span> esiste e può essere espresso nella forma</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="cor-multi_bezout-1-1-7">
 \begin{equation*}
 d\coloneqq a_{1}u_{1}+a_{2}u_{2}+\cdots+a_{n}u_{n}
 \end{equation*}
@@ -770,7 +770,7 @@ d\coloneqq a_{1}u_{1}+a_{2}u_{2}+\cdots+a_{n}u_{n}
 </h3>
 <div class="para logical" id="def-dominio_euclideo-1-1">
 <div class="para">Un dominio <span class="process-math">\(D\)</span> è detto <dfn class="terminology">euclideo</dfn> se esiste una funzione <span class="process-math">\(\euclidean\colon D\setminus\{0\}\to\Naturali\)</span> tale che per ogni <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> in <span class="process-math">\(D\)</span> con <span class="process-math">\(b\ne0\)</span> esistono <span class="process-math">\(q\)</span> e <span class="process-math">\(r\)</span> in <span class="process-math">\(D\)</span> tali che</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="def-dominio_euclideo-1-1-11">
 \begin{equation*}
 a=bq+r
 \end{equation*}
@@ -792,7 +792,7 @@ a=bq+r
 </h3>
 <div class="para logical" id="ex-kx-euclideo-1-1">
 <div class="para">Sia <span class="process-math">\(K\)</span> un campo e siano <span class="process-math">\(f\)</span> e <span class="process-math">\(g\)</span> due polinomi in <span class="process-math">\(K[x]\)</span> con <span class="process-math">\(g\)</span> diverso da <span class="process-math">\(0\text{.}\)</span> Allora esistono e sono univocamente determinati <span class="process-math">\(q\)</span> e <span class="process-math">\(r\)</span> in <span class="process-math">\(K[x]\)</span> tali che</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-kx-euclideo-1-1-10">
 \begin{equation*}
 f=gq+r
 \end{equation*}
@@ -862,7 +862,7 @@ r_{n+1} \amp = r_{n+2}q_{n+3}+0
 \end{align*}
 </div>
 <div class="para">I valori <span class="process-math">\(\euclidean(r_{k})\)</span> formano una catena strettamente decrescente di numeri naturali. Poiché questa successione deve avere termine, ciò significa che dobbiamo arrivare a un resto nullo. L’ultimo resto non nullo <span class="process-math">\(r_{n+2}\)</span> è allora il massimo comun divisore di <span class="process-math">\(a\)</span> e <span class="process-math">\(b\text{.}\)</span> Inoltre, dalla successione di equazioni è possibile ottenere un’identità, cosiddetta di Bezout, del tipo</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="alg-euclide_domini-3-2-7">
 \begin{equation*}
 d=au+bv
 \end{equation*}
@@ -876,7 +876,7 @@ d=au+bv
 </h3>
 <div class="para logical" id="sec-PID_euclidei-24-1-1">
 <div class="para">Applichiamo l’<a href="sec-PID_euclidei.html#alg-euclide_domini" class="xref" data-knowl="./knowl/xref/alg-euclide_domini.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Algoritmo 21.3.13: Algoritmo di Euclide per i domini euclidei">Algoritmo 21.3.13</a> per trovare il massimo comun divisore tra i polinomi <span class="process-math">\(a\coloneqq 4x^{5}-8x^{4}+x^{3}-5x^{2}+7x-2\)</span> e <span class="process-math">\(b\coloneqq 2x^{4}-3x^{3}-2x^{2}-4x+1\)</span> a coefficienti in <span class="process-math">\(\Razionali\text{.}\)</span> Dividendo <span class="process-math">\(a\)</span> per <span class="process-math">\(b\)</span> troviamo</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/alg-euclide_domini.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/alg-euclide_domini.html" id="sec-PID_euclidei-24-1-1-7">
 \begin{equation*}
 a=b(2x-1)+2x^{3}+x^{2}+x-1\text{.}
 \end{equation*}
@@ -955,32 +955,32 @@ b \amp =(2x^{3}+x^{2}+x-1)(x-2)-x^{2}-x-1\\
 <div class="para logical" id="exercises-PID_euclidei-2-2-2-2">
 <div class="para">Abbiamo <span class="process-math">\(\euclidean(7+17i)=7^{2}+17^{2}=338\)</span> e <span class="process-math">\(\euclidean(8-14i)=8^{2}+(-14)^{2}=260\text{.}\)</span> Dividiamo, dunque, <span class="process-math">\(7+17i\)</span> per <span class="process-math">\(8-14i\)</span> in <span class="process-math">\(\Razionali[i]\)</span> e approssimiamo poi il quoziente in <span class="process-math">\(\Interi[i]\text{.}\)</span>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="exercises-PID_euclidei-2-2-2-2-7">
 \begin{equation*}
 \frac{7+17i}{8-14i}=\frac{7+17i}{8-14i}\frac{8-14i}{8+14i}=-\frac{182}{260}+\frac{234}{260}i\text{.}
 \end{equation*}
 </div>
 <div class="para">Approssimiamo questo quoziente con <span class="process-math">\(-1+i\coloneqq q\text{.}\)</span> Troviamo allora</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="exercises-PID_euclidei-2-2-2-2-9">
 \begin{equation*}
 7+17i=(8-14i)(-1+i)+r
 \end{equation*}
 </div>
 <div class="para">- Svolgendo i calcoli troviamo che <span class="process-math">\(r=1-5i\text{.}\)</span> Dividiamo ora <span class="process-math">\(8-14i\)</span> per <span class="process-math">\(1-5i\text{:}\)</span>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="exercises-PID_euclidei-2-2-2-2-13">
 \begin{equation*}
 \frac{8-14i}{1-5i}=\frac{8-14i}{1-5i}\frac{1+5i}{1+5i}=3+i\text{.}
 \end{equation*}
 </div>
 <div class="para">Abbiamo dunque</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="exercises-PID_euclidei-2-2-2-2-14">
 \begin{equation*}
 8-14i=(1-5i)(3+i)\text{.}
 \end{equation*}
 </div>
 <div class="para">L’ultimo resto cercato è <span class="process-math">\(1-5i\)</span> che è, dunque, il massimo comun divisore. Possiamo poi scrivere facilmente un’identità di Bezout</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="exercises-PID_euclidei-2-2-2-2-16">
 \begin{equation*}
 1+5i=(7+17i)\cdot1+(8-14i)(1-i)\text{.}
 \end{equation*}
@@ -1102,7 +1102,7 @@ b \amp =(2x^{3}+x^{2}+x-1)(x-2)-x^{2}-x-1\\
 </div>
 <div class="para logical" id="exercises-PID_euclidei-5-2-2">
 <div class="para">Supponiamo che valga la <a href="sec-PID_euclidei.html#item-cca" class="xref" data-knowl="./knowl/xref/item-cca.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 21.3.12.b">Condizione 21.3.12.b</a> e mostriamo che vale la <a href="sec-PID_euclidei.html#item-ideali_finitamente_generati" class="xref" data-knowl="./knowl/xref/item-ideali_finitamente_generati.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 21.3.12.a">Condizione 21.3.12.a</a>. Sia <span class="process-math">\(I\)</span> un ideale e sia <span class="process-math">\(a_{1}\)</span> un elemento di <span class="process-math">\(I\text{.}\)</span> Se <span class="process-math">\(I=\ideal{a_{1}}\)</span> abbiamo finito, altrimenti esiste <span class="process-math">\(a_{2}\in I\setminus\ideal{a_{1}}\text{.}\)</span> Se <span class="process-math">\(I=\ideal{a_{1},a_{2}}\)</span> abbiamo finito, altrimenti proseguiamo il procedimento costruendo una successione strettamente crescente di ideali</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-cca.html ./knowl/xref/item-ideali_finitamente_generati.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-cca.html ./knowl/xref/item-ideali_finitamente_generati.html" id="exercises-PID_euclidei-5-2-2-9">
 \begin{equation*}
 \ideal{a_{1}}\subsetneq\ideal{a_{1},a_{2}}\subsetneq\cdots\subsetneq\ideal{a_{1},\ldots,a_{k}}\subsetneq\cdots
 \end{equation*}
@@ -1112,7 +1112,7 @@ b \amp =(2x^{3}+x^{2}+x-1)(x-2)-x^{2}-x-1\\
 </div>
 <div class="para logical" id="exercises-PID_euclidei-5-2-3">
 <div class="para">Supponiamo ora che valga la <a href="sec-PID_euclidei.html#item-cca" class="xref" data-knowl="./knowl/xref/item-cca.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 21.3.12.b">Condizione 21.3.12.b</a> e mostriamo che vale la <a href="sec-PID_euclidei.html#item-ideale_massimale" class="xref" data-knowl="./knowl/xref/item-ideale_massimale.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 21.3.12.c">Condizione 21.3.12.c</a>. Sia <span class="process-math">\(\mathcal{F}\)</span> una famiglia non vuota di ideali. Scegliamo <span class="process-math">\(I_{1}\)</span> in <span class="process-math">\(\mathcal{F}\text{:}\)</span> se è massimale in <span class="process-math">\(\mathcal{F}\text{,}\)</span> abbiamo finito, altrimenti esiste <span class="process-math">\(I_{2}\)</span> in <span class="process-math">\(\mathcal{F}\)</span> tale che <span class="process-math">\(I_{1}\subsetneq I_{2}\text{.}\)</span> Proseguendo così creiamo una successione strettamente crescente di ideali</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-cca.html ./knowl/xref/item-ideale_massimale.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-cca.html ./knowl/xref/item-ideale_massimale.html" id="exercises-PID_euclidei-5-2-3-10">
 \begin{equation*}
 I_{1}\subsetneq I_{2}\subsetneq\cdots\subsetneq I_{k}\subsetneq\cdots
 \end{equation*}

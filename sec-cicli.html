@@ -102,15 +102,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.10';
+eBookConfig.runestone_version = '7.10.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.fea5c754ab3e056b.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.b37c97cbe7a5455b.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
 </script>
 </head>
@@ -772,38 +772,38 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para" id="sec-cicli-13-1-1">Siano date le due permutazioni <span class="process-math">\(\sigma\coloneqq(1\;3\;2)(4\;6)\)</span> e <span class="process-math">\(\tau\coloneqq(1\;2)(3\;5)\)</span> di <span class="process-math">\(\Sym_{7}\text{.}\)</span> Vogliamo esprimere il prodotto <span class="process-math">\(\sigma\tau\)</span> come prodotto di cicli disgiunti. Ovviamente, <span class="process-math">\(\sigma\tau=(1\;3\;2)(4\;6)(1\;2)(3\;5)\text{,}\)</span> ma questi cicli non sono disgiunti.<div class="autopermalink" data-description="Capoverso"><a href="#sec-cicli-13-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div> <div class="para logical" id="sec-cicli-13-1-2">
 <div class="para">Consideriamo allora una lettera che appare in almeno uno dei cicli, ad esempio, <span class="process-math">\(1\text{.}\)</span> Abbiamo allora:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-cicli-13-1-2-2">
 \begin{equation*}
 1\xmapsto{(1\;3\;2)}3\xmapsto{(4\;6)}3\xmapsto{(1\;2)}3\xmapsto{(3\;5)}5\text{.}
 \end{equation*}
 </div>
 <div class="para">Dunque, <span class="process-math">\(1\)</span> viene mandato in <span class="process-math">\(5\)</span> da <span class="process-math">\(\sigma\tau\text{.}\)</span> Procediamo adesso a calcolare l’immagine di <span class="process-math">\(5\text{:}\)</span>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-cicli-13-1-2-7">
 \begin{equation*}
 5\xmapsto{(1\;3\;2)}5\xmapsto{(4\;6)}5\xmapsto{(1\;2)}5\xmapsto{(3\;5)}3\text{.}
 \end{equation*}
 </div>
 <div class="para">Dunque, <span class="process-math">\(5\)</span> viene mandato in <span class="process-math">\(3\text{.}\)</span> L’immagine di <span class="process-math">\(3\)</span> si ottiene così:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-cicli-13-1-2-11">
 \begin{equation*}
 3\xmapsto{(1\;3\;2)}2\xmapsto{(4\;6)}2\xmapsto{(1\;2)}1\xmapsto{(3\;5)}1\text{.}
 \end{equation*}
 </div>
 <div class="para">Dunque, <span class="process-math">\(3\)</span> viene mandato in <span class="process-math">\(1\)</span> e abbiamo così ottenuto il primo ciclo: <span class="process-math">\((1\;5\;3)\text{.}\)</span> Consideriamo ora una lettera diversa da <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(5\)</span> e <span class="process-math">\(3\text{,}\)</span> ad esempio, <span class="process-math">\(2\text{.}\)</span> Abbiamo allora</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-cicli-13-1-2-19">
 \begin{equation*}
 2\xmapsto{(1\;3\;2)}1\xmapsto{(4\;6)}1\xmapsto{(1\;2)}2\xmapsto{(3\;5)}2\text{.}
 \end{equation*}
 </div>
 <div class="para">Dunque, <span class="process-math">\(2\)</span> viene mandato in sé: abbiamo, pertanto, un ciclo di lunghezza <span class="process-math">\(1\text{,}\)</span> cioè l’identità e possiamo fare a meno di scriverlo esplicitamente. Consideriamo ora <span class="process-math">\(4\text{.}\)</span> Abbiamo allora</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-cicli-13-1-2-23">
 \begin{equation*}
 4\xmapsto{(1\;3\;2)}4\xmapsto{(4\;6)}6\xmapsto{(1\;2)}6\xmapsto{(3\;5)}6\text{.}
 \end{equation*}
 </div>
 <div class="para">Dunque, <span class="process-math">\(4\)</span> viene mandato in <span class="process-math">\(6\text{,}\)</span> la cui immagine calcoliamo così</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-cicli-13-1-2-26">
 \begin{equation*}
 6\xmapsto{(1\;3\;2)}6\xmapsto{(4\;6)}4\xmapsto{(1\;2)}4\xmapsto{(3\;5)}4\text{.}
 \end{equation*}
@@ -813,7 +813,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Capoverso"><a href="#sec-cicli-13-1-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div> <div class="para logical" id="sec-cicli-13-1-3">
 <div class="para">Non dobbiamo proseguire oltre: anche se siamo in <span class="process-math">\(\Sym_{7}\text{,}\)</span> la lettera <span class="process-math">\(7\)</span> non appare esplicitamente e viene, quindi, fissata da questa permutazione. Notiamo che i calcoli che abbiamo fatto sarebbero stati gli stessi anche se fossimo stati in <span class="process-math">\(\Sym_{n}\)</span> con <span class="process-math">\(n \ge 6\)</span> qualunque. Riassumendo, abbiamo</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-cicli-13-1-3-5">
 \begin{equation*}
 \sigma\tau=(1\;5\;3)(4\;6)\text{.}
 \end{equation*}
@@ -852,7 +852,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Esempio 11.2.13"><a href="#sec-cicli-19" title="Copy heading and permalink for Esempio 11.2.13" aria-label="Copy heading and permalink for Esempio 11.2.13">🔗</a></div></article><div class="para logical" id="sec-cicli-20">
 <div class="para">Vogliamo ora contare quante permutazioni di ciascun tipo ci sono in <span class="process-math">\(\Sym_{n}\text{.}\)</span> Cominciamo dagli <span class="process-math">\(r\)</span>-cicli con <span class="process-math">\(r\ge 2\)</span> (l’unico <span class="process-math">\(1\)</span>-ciclo è l’identità). Per scrivere un <span class="process-math">\(r\)</span>-ciclo <span class="process-math">\((a_{1}\; a_{2}\;\ldots\; a_{r})\text{,}\)</span> dobbiamo innanzitutto scegliere la lettera <span class="process-math">\(a_{1}\text{:}\)</span> possiamo farlo in <span class="process-math">\(n\)</span> modi diversi. Una volta scelta <span class="process-math">\(a_{1}\text{,}\)</span> dobbiamo scegliere <span class="process-math">\(a_{2}\)</span> che sia diversa da <span class="process-math">\(a_{1}\text{:}\)</span> abbiamo <span class="process-math">\(n-1\)</span> possibilità. Scegliamo poi <span class="process-math">\(a_{3}\)</span> tra <span class="process-math">\(n-2\)</span> possibilità e così via fino ad arrivare a <span class="process-math">\(a_{r}\)</span> da scegliere tra <span class="process-math">\(n-r+1\)</span> possibilità residue. Abbiamo così ottenuto <span class="process-math">\(n(n-1)\cdots(n-r+1)\)</span> scritture diverse: queste scritture non sono però tutte distinte, perché ogni <span class="process-math">\(r\)</span>-ciclo può essere scritto in <span class="process-math">\(r\)</span> modi diversi. Dobbiamo, quindi, dividere il numero delle scritture per <span class="process-math">\(r\)</span> e ottenere così il numero degli <span class="process-math">\(r\)</span>-cicli in <span class="process-math">\(\Sym_{n}\text{:}\)</span>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-cicli-20-23">
 \begin{equation*}
 \frac{n(n-1)\cdots(n-r+1)}{r}\text{.}
 \end{equation*}
@@ -863,19 +863,19 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para logical" id="sec-cicli-21">
 <div class="para">Passiamo adesso a considerare il caso di permutazioni di tipo <span class="process-math">\((r_{1},r_{2},\ldots,r_{t})\)</span> con <span class="process-math">\(r_{1} \gt r_{2} \gt \cdots \gt r_{t} \gt 1\text{.}\)</span> Dunque, una permutazione di questo tipo si scrive così</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-cicli-21-3">
 \begin{equation*}
 (a_{1}\; a_{2}\;\ldots\; a_{r_{1}}) (a_{r_{1}+1}\; a_{r_{1}+2}\;\ldots\; a_{r_{1}+r_{2}})\cdots (a_{r_{1}+\cdots+r_{t-1}+1}\; \ldots\; a_{r_{1}+\cdots+r_{n}})\text{.}
 \end{equation*}
 </div>
 <div class="para">Non facciamoci spaventare dagli indici: dobbiamo scegliere <span class="process-math">\(a_{1}\)</span> tra <span class="process-math">\(n\)</span> possibilità, <span class="process-math">\(a_{2}\)</span> tra <span class="process-math">\(n-1\)</span> possibilità e così via, fino all’ultima lettera, da scegliere tra <span class="process-math">\(n-r_{1}-r_{2}-\cdots-r_{t}+1\)</span> possibilità. Il numero di possibili scelte va poi diviso per ciascuna lunghezza dei cicli coinvolti, fino a ottenere il numero di questo tipo di permutazioni:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-cicli-21-9">
 \begin{equation*}
 \frac{n(n-1)\cdots (n-r_{1}-r_{2}-\cdots-r_{t}+1)}{r_{1}r_{2}\cdots r_{t}}\text{.}
 \end{equation*}
 </div>
 <div class="para">Ad esempio, il numero di permutazioni di tipo <span class="process-math">\((6,3,2)\)</span> in <span class="process-math">\(\Sym_{13}\)</span> è uguale a</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-cicli-21-12">
 \begin{equation*}
 \frac{13\cdot12\cdot11\cdot10\cdot9\cdot8\cdot7\cdot6\cdot5\cdot4\cdot3}{6\cdot3\cdot2}\text{.}
 \end{equation*}
@@ -884,19 +884,19 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para logical" id="sec-cicli-22">
 <div class="para">Veniamo, infine, al caso in cui abbiamo più cicli della stessa lunghezza. Dare la formula generale, anche se non difficile concettualmente, richiederebbe veramente troppi indici. Accontentiamoci di un esempio abbastanza generale. Prendiamo una permutazione di tipo <span class="process-math">\((3,3,2,2,2)\)</span> in <span class="process-math">\(\Sym_{14}\text{.}\)</span> Come nel caso precedente avremmo</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-cicli-22-3">
 \begin{equation*}
 \frac{14\cdot13\cdot12\cdot11\cdot10\cdot9\cdot8\cdot7\cdot6\cdot5\cdot4\cdot3}{3\cdot3\cdot2\cdot2\cdot2}
 \end{equation*}
 </div>
 <div class="para">possibilità. Ma non è finita qui: possiamo anche ottenere la stessa permutazione scrivendo in un ordine diverso i <span class="process-math">\(3\)</span>-cicli e i <span class="process-math">\(2\)</span>-cicli, sempre rispettando l’ordine debolmente decrescente delle lunghezze dei cicli:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-cicli-22-6">
 \begin{equation*}
 (1\;2\;3)(4\;5\;6)(7\;8)(9\;10)(11\;12)=(4\;5\;6)(1\;2\;3)(7\;8)(11\;12)(9\;10)=\cdots\text{.}
 \end{equation*}
 </div>
 <div class="para">Possiamo riordinare i <span class="process-math">\(3\)</span>-cicli in <span class="process-math">\(2!=2\)</span> modi diversi e i <span class="process-math">\(2\)</span>-cicli in <span class="process-math">\(3!=6\)</span> modi diversi. Dobbiamo, quindi, dividere per <span class="process-math">\(2!\cdot 3!\)</span> e ottenere così:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-cicli-22-12">
 \begin{equation*}
 \frac{14\cdot13\cdot12\cdot11\cdot10\cdot9\cdot8\cdot7\cdot6\cdot5\cdot4\cdot3}{3\cdot3\cdot2\cdot2\cdot2\cdot 2!\cdot3!}\text{.}
 \end{equation*}
@@ -911,7 +911,7 @@ eBookConfig.enable_chatcodes =  false;
 </div> <div class="para logical" id="ex-permutazioni_per_tipo-1-2">
 <div class="para">In <span class="process-math">\(\Sym_{3}\text{:}\)</span>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-permutazioni_per_tipo-1-2-2">
 \begin{equation*}
 \begin{array}{ccc}
 \Id       \amp 1                        \amp 1\\
@@ -925,7 +925,7 @@ eBookConfig.enable_chatcodes =  false;
 </div> <div class="para logical" id="ex-permutazioni_per_tipo-1-3">
 <div class="para">In <span class="process-math">\(\Sym_{4}\text{:}\)</span>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-permutazioni_per_tipo-1-3-2">
 \begin{equation*}
 \begin{array}{ccc}
 \Id          \amp 1                                            \amp 1\\
@@ -941,7 +941,7 @@ eBookConfig.enable_chatcodes =  false;
 </div> <div class="para logical" id="ex-permutazioni_per_tipo-1-4">
 <div class="para">In <span class="process-math">\(\Sym_{5}\text{:}\)</span>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-permutazioni_per_tipo-1-4-2">
 \begin{equation*}
 \begin{array}{ccc}
 \Id             \amp 1                                             \amp 1\\

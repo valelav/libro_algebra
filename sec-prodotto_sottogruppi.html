@@ -102,15 +102,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.10';
+eBookConfig.runestone_version = '7.10.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.fea5c754ab3e056b.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.b37c97cbe7a5455b.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
 </script>
 </head>
@@ -724,7 +724,7 @@ eBookConfig.enable_chatcodes =  false;
 </h3>
 <div class="para logical" id="ex-prodotto_sottogruppi_non_sottogruppo-1-1">
 <div class="para">Consideriamo i sottogruppo <span class="process-math">\(H\coloneqq\grgen{(1\;2)}\)</span> e <span class="process-math">\(K\coloneqq\grgen{(1\;3)}\)</span> di <span class="process-math">\(\Sym_{3}\)</span> e calcoliamo il prodotto <span class="process-math">\(HK\text{.}\)</span> Ora <span class="process-math">\(H=\{\Id,(1\;2)\}\)</span> e <span class="process-math">\(K=\{\Id,(1\;3)\}\text{.}\)</span> Quindi</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-lagrange.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-lagrange.html" id="ex-prodotto_sottogruppi_non_sottogruppo-1-1-7">
 \begin{equation*}
 HK=\{\Id\Id,\Id (1\;3),(1\;2)\Id,(1\;2)(1\;3)\}=\{\Id, (1\;3),(1\;2),(1\;2\;3)\}\text{.}
 \end{equation*}
@@ -740,13 +740,13 @@ HK=\{\Id\Id,\Id (1\;3),(1\;2)\Id,(1\;2)(1\;3)\}=\{\Id, (1\;3),(1\;2),(1\;2\;3)\}
 </h3>
 <div class="para logical" id="prop-prodotto_contiene_sottogruppi-1-1">
 <div class="para">Se <span class="process-math">\(H\)</span> e <span class="process-math">\(K\)</span> sono sottogruppi di un gruppo <span class="process-math">\(G\text{,}\)</span> allora</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="prop-prodotto_contiene_sottogruppi-1-1-4">
 \begin{equation*}
 H\cup K\subseteq HK \subseteq\grgen{H\cup K}\text{.}
 \end{equation*}
 </div>
 <div class="para">Più in generale, se <span class="process-math">\(H_{1}\text{,}\)</span> <span class="process-math">\(H_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(H_{r}\)</span> sono sottogruppi di <span class="process-math">\(G\text{,}\)</span> allora</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="prop-prodotto_contiene_sottogruppi-1-1-10">
 \begin{equation*}
 H_{1}\cup \cdots\cup H_{r}\subseteq H_{1}\cdots H_{r}\subseteq\grgen{H_{1}\cup \cdots\cup H_{r}}\text{.}
 \end{equation*}
@@ -766,7 +766,7 @@ H_{1}\cup \cdots\cup H_{r}\subseteq H_{1}\cdots H_{r}\subseteq\grgen{H_{1}\cup \
 </h3>
 <div class="para logical" id="sec-prodotto_sottogruppi-7-1-1">
 <div class="para">Consideriamo in <span class="process-math">\(\Sym_{4}\)</span> i sottogruppi <span class="process-math">\(H\coloneqq\grgen{(1\;2),(1\;2\;3)}\)</span> e <span class="process-math">\(K\coloneqq\grgen{(1\;3),(1\;3\;4)}\text{.}\)</span> Ora, anche senza determinare tutti gli elementi di <span class="process-math">\(H\)</span> e <span class="process-math">\(K\text{,}\)</span> notiamo che l’elemento <span class="process-math">\((1\;2\;3)\)</span> si può ottenere come prodotto di un elemento di <span class="process-math">\(H\)</span> per un elemento di <span class="process-math">\(K\)</span> in (almeno) due modi diversi:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-prodotto_sottogruppi-7-1-1-9">
 \begin{equation*}
 (1\;2\;3)=(1\;2)(1\;3)=(1\;2\;3)\Id\text{.}
 \end{equation*}
@@ -819,13 +819,13 @@ H_{1}\cup \cdots\cup H_{r}\subseteq H_{1}\cdots H_{r}\subseteq\grgen{H_{1}\cup \
 </div>
 <div class="para logical" id="thm-prodotto_sottogruppo-2-3">
 <div class="para">Supponiamo valga il <a href="sec-prodotto_sottogruppi.html#item-HKugualeKH" class="xref" data-knowl="./knowl/xref/item-HKugualeKH.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 3">Punto 3</a> e mostriamo che vale il <a href="sec-prodotto_sottogruppi.html#item-HKsottogruppo" class="xref" data-knowl="./knowl/xref/item-HKsottogruppo.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 1">Punto 1</a>. Ovviamente, <span class="process-math">\(HK\)</span> è non vuoto. Presi due elementi in <span class="process-math">\(HK\text{,}\)</span> questi sono del tipo <span class="process-math">\(h_{1}k_{1}\)</span> e <span class="process-math">\(h_{2}k_{2}\)</span> con <span class="process-math">\(h_{1}\)</span> e <span class="process-math">\(h_{2}\)</span> in <span class="process-math">\(H\)</span> e <span class="process-math">\(k_{1}\)</span> e <span class="process-math">\(k_{2}\)</span> in <span class="process-math">\(K\text{.}\)</span> Allora</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-HKugualeKH.html ./knowl/xref/item-HKsottogruppo.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-HKugualeKH.html ./knowl/xref/item-HKsottogruppo.html" id="thm-prodotto_sottogruppo-2-3-13">
 \begin{equation*}
 h_{1}k_{1}(h_{2}k_{2})^{-1}=h_{1}k_{1}k_{2}^{-1}h_{2}^{-1}\text{:}
 \end{equation*}
 </div>
 <div class="para">ora <span class="process-math">\(k_{1}k_{2}^{-1}\in K\)</span> e, quindi, <span class="process-math">\(k_{1}k_{2}^{-1}h_{2}^{-1}\in KH=HK\text{.}\)</span> Pertanto, esistono <span class="process-math">\(\bar{h}\in H\)</span> e <span class="process-math">\(\bar{k}\in K\)</span> tali che <span class="process-math">\(k_{1}k_{2}^{-1}h_{2}^{-1}=\bar{h}\bar{k}\text{.}\)</span> Quindi,</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-HKugualeKH.html ./knowl/xref/item-HKsottogruppo.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/item-HKugualeKH.html ./knowl/xref/item-HKsottogruppo.html" id="thm-prodotto_sottogruppo-2-3-19">
 \begin{equation*}
 h_{1}k_{1}(h_{2}k_{2})^{-1}=h_{1}\bar{h}\bar{k}\in HK\text{,}
 \end{equation*}

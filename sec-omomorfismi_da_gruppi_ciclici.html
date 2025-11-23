@@ -102,15 +102,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.10';
+eBookConfig.runestone_version = '7.10.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.fea5c754ab3e056b.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.b37c97cbe7a5455b.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
 </script>
 </head>
@@ -726,7 +726,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para logical" id="prop-omomorfismi_coincidenti-2-2">
 <div class="para">Siano ora <span class="process-math">\(x\)</span> e <span class="process-math">\(y\)</span> due elementi di <span class="process-math">\(L\text{,}\)</span> vale a dire <span class="process-math">\(x\phi=x\psi\)</span> e <span class="process-math">\(y\phi=y\psi\text{.}\)</span> Ma allora,</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="prop-omomorfismi_coincidenti-2-2-6">
 \begin{equation*}
 (xy^{-1})\phi=x\phi(y\phi)^{-1}=x\psi(y\psi)^{-1}=(xy^{-1})\psi\text{,}
 \end{equation*}
@@ -785,7 +785,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para logical" id="prop-omomorfismi_da_ciclici-2-2">
 <div class="para">Supponiamo allora che <span class="process-math">\(g\)</span> abbia periodo infinito: dunque, ogni elemento di <span class="process-math">\(G\)</span> si scrive come <span class="process-math">\(g^{i}\)</span> per un unico intero <span class="process-math">\(i\text{.}\)</span> Definiamo allora <span class="process-math">\(\phi\colon G\to H\)</span> ponendo <span class="process-math">\(g^{i}\phi\coloneqq h^{i}\text{.}\)</span> Ovviamente, <span class="process-math">\(g\phi=h\)</span> e, dati due elementi <span class="process-math">\(g^{i}\)</span> e <span class="process-math">\(g^{j}\)</span> di <span class="process-math">\(G\text{,}\)</span> si ha</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="prop-omomorfismi_da_ciclici-2-2-11">
 \begin{equation*}
 (g^{i}g^{j})\phi=g^{i+j}\phi=h^{i+j}=h^{i}h^{j}=g^{i}\phi\cdot g^{j}\phi\text{,}
 \end{equation*}
@@ -821,13 +821,13 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para logical" id="thm-endomorfismi_automorfismi_di_ciclici-2-2">
 <div class="para">Dato <span class="process-math">\(x\)</span> in <span class="process-math">\(C\text{,}\)</span> si ha <span class="process-math">\(x=c^{t}\)</span> per qualche intero <span class="process-math">\(t\)</span> e, per la <a href="sec-definizione_omomorfismo.html#prop-immagini_di_potenze" class="xref" data-knowl="./knowl/xref/prop-immagini_di_potenze.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 13.1.17">Proposizione 13.1.17</a>, risulta</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-immagini_di_potenze.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-immagini_di_potenze.html" id="thm-endomorfismi_automorfismi_di_ciclici-2-2-6">
 \begin{equation*}
 x\phi_{r}=c^{t}\phi_{r}=(c\phi_{r})^{t}=(c^{r})^{t}=c^{rt}=(c^{t})^{r}=x^{r}\text{.}
 \end{equation*}
 </div>
 <div class="para">Consideriamo ora la composizione di due endomorfismi <span class="process-math">\(\phi_{r}\)</span> e <span class="process-math">\(\phi_{s}\text{:}\)</span> per quanto detto,</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-immagini_di_potenze.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-immagini_di_potenze.html" id="thm-endomorfismi_automorfismi_di_ciclici-2-2-9">
 \begin{equation*}
 c\phi_{r}\phi_{s}=(c^{r})\phi_{s}=(c^{r})^{s}=c^{rs}=c\phi_{rs}\text{.}
 \end{equation*}

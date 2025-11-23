@@ -102,15 +102,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.10';
+eBookConfig.runestone_version = '7.10.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.fea5c754ab3e056b.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.b37c97cbe7a5455b.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
 </script>
 </head>
@@ -722,13 +722,13 @@ eBookConfig.enable_chatcodes =  false;
 </h3>
 <div class="para logical" id="def-prodotto_sottoinsiemi-2-1">
 <div class="para">In un gruppo <span class="process-math">\(G\text{,}\)</span> scritto in notazione moltiplicativa, siano dati due sottoinsiemi non vuoti <span class="process-math">\(S\)</span> e <span class="process-math">\(T\text{.}\)</span> Il <dfn class="terminology">prodotto</dfn> di <span class="process-math">\(S\)</span> e <span class="process-math">\(T\text{,}\)</span> indicato con <span class="process-math">\(ST\)</span> è l’insieme dei prodotti <span class="process-math">\(st\)</span> al variare di <span class="process-math">\(s\)</span> in <span class="process-math">\(S\)</span> e <span class="process-math">\(t\)</span> in <span class="process-math">\(T\text{.}\)</span> In simboli</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="def-prodotto_sottoinsiemi-2-1-13">
 \begin{equation*}
 ST\coloneqq\{st\mid s\in S, t\in T\}\text{.}
 \end{equation*}
 </div>
 <div class="para">Più in generale, se <span class="process-math">\(S_{1}\text{,}\)</span> <span class="process-math">\(S_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(S_{r}\)</span> sono sottoinsiemi di <span class="process-math">\(G\text{,}\)</span> il loro prodotto è così definito</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="def-prodotto_sottoinsiemi-2-1-19">
 \begin{equation*}
 S_{1}S_{2}\cdots S_{r}\coloneqq\{s_{1}s_{2}\cdots s_{r}\mid s_{i}\in S_{i}, 1\le i\le r\}\text{.}
 \end{equation*}
@@ -764,13 +764,13 @@ S_{1}S_{2}\cdots S_{r}\coloneqq\{s_{1}s_{2}\cdots s_{r}\mid s_{i}\in S_{i}, 1\le
 </h3>
 <div class="para logical" id="def-laterali-3-1">
 <div class="para">Dato un gruppo <span class="process-math">\(G\text{,}\)</span> un suo sottogruppo <span class="process-math">\(H\)</span> e un elemento <span class="process-math">\(g\in G\text{,}\)</span> chiamiamo <dfn class="terminology">laterale destro</dfn> di <span class="process-math">\(H\)</span> in <span class="process-math">\(G\)</span> contenente <span class="process-math">\(g\)</span> il prodotto <span class="process-math">\(H\{g\}\)</span> che, per semplificare la notazione, indicheremo con <span class="process-math">\(Hg\text{.}\)</span> In simboli</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="def-laterali-3-1-10">
 \begin{equation*}
 Hg\coloneqq\{hg\mid h\in H\}\text{.}
 \end{equation*}
 </div>
 <div class="para">Analogamente, il <dfn class="terminology">laterale sinistro</dfn> di <span class="process-math">\(H\)</span> in <span class="process-math">\(G\)</span> contenente <span class="process-math">\(g\)</span> è il sottoinsieme <span class="process-math">\(gH\)</span> così definito</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="def-laterali-3-1-16">
 \begin{equation*}
 gH\coloneqq\{gh\mid h\in H\}\text{.}
 \end{equation*}
@@ -788,7 +788,7 @@ gH\coloneqq\{gh\mid h\in H\}\text{.}
 </h3>
 <div class="para logical" id="ex-classe_di_resto_laterale-1-1">
 <div class="para">Nel gruppo <span class="process-math">\(\Interi\)</span> rispetto all’addizione, consideriamo il sottogruppo <span class="process-math">\(n\Interi\)</span> formato dai multipli del numero positivo <span class="process-math">\(n\text{.}\)</span> Dato un numero intero <span class="process-math">\(a\)</span> abbiamo allora</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-classe_di_resto_laterale-1-1-5">
 \begin{equation*}
 n\Interi+a=\{h+a\mid h\in n\Interi\}=\{nt+a\mid t\in\Interi\}\text{.}
 \end{equation*}
@@ -802,13 +802,13 @@ n\Interi+a=\{h+a\mid h\in n\Interi\}=\{nt+a\mid t\in\Interi\}\text{.}
 </h3>
 <div class="para logical" id="ex-laterale_in_sym3-1-1">
 <div class="para">In <span class="process-math">\(\Sym_{3}\text{,}\)</span> consideriamo il sottogruppo <span class="process-math">\(H\coloneqq\grgen{(1\;2)}\)</span> e l’elemento <span class="process-math">\((1\;3)\text{.}\)</span> Ora <span class="process-math">\(H=\{\Id,(1\;2)\}\text{.}\)</span> Dunque</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-laterale_in_sym3-1-1-5">
 \begin{equation*}
 H(1\;3)=\{\Id(1\;3),(1\;2)(1\;3)\}=\{(1\;3),(1\;2\;3)\}
 \end{equation*}
 </div>
 <div class="para">e</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="ex-laterale_in_sym3-1-1-6">
 \begin{equation*}
 (1\;3)H=\{(1\;3)\Id,(1\;3)(1\;2)\}=\{(1\;3),(1\;3\;2)\}\text{.}
 \end{equation*}

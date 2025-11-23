@@ -102,15 +102,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.10';
+eBookConfig.runestone_version = '7.10.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.fea5c754ab3e056b.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.b37c97cbe7a5455b.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
 </script>
 </head>
@@ -722,13 +722,13 @@ eBookConfig.enable_chatcodes =  false;
 </h3>
 <div class="para logical" id="def-dipendenza_indipendenza_lineare-1-1">
 <div class="para">Dato un <span class="process-math">\(R\)</span>-modulo <span class="process-math">\(M\)</span> e degli elementi <span class="process-math">\(x_{1}\text{,}\)</span> <span class="process-math">\(x_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(x_{r}\)</span> di <span class="process-math">\(M\text{,}\)</span> questi sono detti <dfn class="terminology">linearmente dipendenti</dfn> se esistono <span class="process-math">\(a_{1}\text{,}\)</span> <span class="process-math">\(a_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(a_{r}\)</span> in <span class="process-math">\(R\)</span> non tutti nulli tali che</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="def-dipendenza_indipendenza_lineare-1-1-14">
 \begin{equation*}
 x_{1}a_{1}+x_{2}a_{2}+\cdots+x_{r}a_{r}=0\text{.}
 \end{equation*}
 </div>
 <div class="para">Sono detti <dfn class="terminology">linearmente indipendenti</dfn> altrimenti, cioè se l’unica possibilità per ottenere <span class="process-math">\(0\)</span> come loro combinazione lineare</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="def-dipendenza_indipendenza_lineare-1-1-17">
 \begin{equation*}
 x_{1}a_{1}+x_{2}a_{2}+\cdots+x_{r}a_{r}=0
 \end{equation*}
@@ -744,7 +744,7 @@ x_{1}a_{1}+x_{2}a_{2}+\cdots+x_{r}a_{r}=0
 </h3>
 <div class="para logical" id="sec-dipendenza_lineare-4-1">
 <div class="para">In pratica, per stabilire se degli elementi <span class="process-math">\(x_{1}\text{,}\)</span> <span class="process-math">\(x_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(x_{r}\)</span> di un <span class="process-math">\(R\)</span>-modulo <span class="process-math">\(M\)</span> sono linearmente dipendenti o indipendenti si procede così: si pone</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-dipendenza_lineare-4-1-7">
 \begin{equation*}
 x_{1}a_{1}+x_{2}a_{2}+\cdots+x_{r}a_{r}=0
 \end{equation*}
@@ -757,13 +757,13 @@ x_{1}a_{1}+x_{2}a_{2}+\cdots+x_{r}a_{r}=0
 </h3>
 <div class="para logical" id="rem-sottoinsieme_linearmente_indipendente-1">
 <div class="para">Come avviene per gli spazi vettoriali, se <span class="process-math">\(x_{1}\text{,}\)</span> <span class="process-math">\(x_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(x_{r}\)</span> sono elementi linearmente dipendenti di un <span class="process-math">\(R\)</span>-modulo <span class="process-math">\(M\text{,}\)</span> allora <span class="process-math">\(x_{1}\text{,}\)</span> <span class="process-math">\(x_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(x_{r}\text{,}\)</span> <span class="process-math">\(x_{r+1}\)</span> sono linearmente dipendenti per ogni <span class="process-math">\(x_{r+1}\)</span> in <span class="process-math">\(M\text{.}\)</span> Infatti, se <span class="process-math">\(a_{1}\text{,}\)</span> <span class="process-math">\(a_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(a_{r}\)</span> in <span class="process-math">\(R\)</span> sono elementi non tutti nulli tali che</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="rem-sottoinsieme_linearmente_indipendente-1-19">
 \begin{equation*}
 x_{1}a_{1}+x_{2}a_{2}+\cdots+x_{r}a_{r}=0
 \end{equation*}
 </div>
 <div class="para">allora, ponendo <span class="process-math">\(a_{r+1}\coloneqq 0\text{,}\)</span> si ha</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="rem-sottoinsieme_linearmente_indipendente-1-21">
 \begin{equation*}
 x_{1}a_{1}+x_{2}a_{2}+\cdots+x_{r}a_{r}+x_{r+1}a_{r+1}=0\text{.}
 \end{equation*}
@@ -788,20 +788,20 @@ x_{1}a_{1}+x_{2}a_{2}+\cdots+x_{r}a_{r}+x_{r+1}a_{r+1}=0\text{.}
 </div>
 <div class="para logical" id="prop-unica_decomposizione_linearmente_indipendenti-2-2">
 <div class="para">Viceversa, siano <span class="process-math">\(x_{1}\text{,}\)</span> <span class="process-math">\(x_{2}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(x_{r}\)</span> linearmente indipendenti, e sia <span class="process-math">\(x\)</span> un elemento del sottomodulo generato da essi: dunque, per la <a href="sec-sottomoduli.html#prop-elementi_del_sottomodulo_generato" class="xref" data-knowl="./knowl/xref/prop-elementi_del_sottomodulo_generato.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 23.2.11">Proposizione 23.2.11</a>, <span class="process-math">\(x\)</span> si può esprimere come</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-elementi_del_sottomodulo_generato.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-elementi_del_sottomodulo_generato.html" id="prop-unica_decomposizione_linearmente_indipendenti-2-2-8">
 \begin{equation*}
 x=x_{1}a_{1}+x_{2}a_{2}+\cdots +x_{r}a_{r}
 \end{equation*}
 </div>
 <div class="para">con gli <span class="process-math">\(a_{i}\)</span> in <span class="process-math">\(R\text{.}\)</span> Se ora abbiamo un’altra espressione di questo tipo per <span class="process-math">\(x\)</span>
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-elementi_del_sottomodulo_generato.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-elementi_del_sottomodulo_generato.html" id="prop-unica_decomposizione_linearmente_indipendenti-2-2-12">
 \begin{equation*}
 x=x_{1}b_{1}+x_{2}b_{2}+\cdots +x_{r}b_{r}\text{,}
 \end{equation*}
 </div>
 <div class="para">sottraendo l’una dall’altra otteniamo</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-elementi_del_sottomodulo_generato.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-elementi_del_sottomodulo_generato.html" id="prop-unica_decomposizione_linearmente_indipendenti-2-2-13">
 \begin{equation*}
 0=x_{1}(a_{1}-b_{1})+x_{2}(a_{2}-b_{2})+\cdots +x_{r}(a_{r}-b_{r})\text{.}
 \end{equation*}
@@ -848,13 +848,13 @@ x=x_{1}b_{1}+x_{2}b_{2}+\cdots +x_{r}b_{r}\text{,}
 </div>
 <div class="autopermalink" data-description="Proposizione 24.2.9"><a href="#prop-modulo_libero_e_libero" title="Copy heading and permalink for Proposizione 24.2.9" aria-label="Copy heading and permalink for Proposizione 24.2.9">🔗</a></div></article><details id="prop-modulo_libero_e_libero-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="prop-modulo_libero_e_libero-2-1">
 <div class="para">Per la <a href="sec-dipendenza_lineare.html#prop-unica_decomposizione_linearmente_indipendenti" class="xref" data-knowl="./knowl/xref/prop-unica_decomposizione_linearmente_indipendenti.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 24.2.5">Proposizione 24.2.5</a>, ogni elemento <span class="process-math">\(x\)</span> di <span class="process-math">\(M\)</span> si esprime unicamente come</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-unica_decomposizione_linearmente_indipendenti.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-unica_decomposizione_linearmente_indipendenti.html" id="prop-modulo_libero_e_libero-2-1-4">
 \begin{equation*}
 x=x_{1}a_{1}+x_{2}a_{2}+\cdots+x_{n}a_{n}\text{.}
 \end{equation*}
 </div>
 <div class="para">Poniamo allora</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-unica_decomposizione_linearmente_indipendenti.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-unica_decomposizione_linearmente_indipendenti.html" id="prop-modulo_libero_e_libero-2-1-5">
 \begin{equation*}
 x\phi\coloneqq y_{1}a_{1}+y_{2}a_{2}+\cdots+y_{n}a_{n}\text{.}
 \end{equation*}
@@ -889,31 +889,31 @@ x\phi\coloneqq y_{1}a_{1}+y_{2}a_{2}+\cdots+y_{n}a_{n}\text{.}
 </div>
 <div class="para logical" id="thm-commutativo_IBN-2-2">
 <div class="para">Ogni elemento di <span class="process-math">\(M\)</span> è combinazione lineare degli <span class="process-math">\(x_{i}\text{:}\)</span> ciò in particolare, è vero per gli <span class="process-math">\(y_{j}\text{.}\)</span> Possiamo allora scrivere</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-unica_decomposizione_linearmente_indipendenti.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-unica_decomposizione_linearmente_indipendenti.html" id="thm-commutativo_IBN-2-2-4">
 \begin{equation*}
 y_{j}=x_{1}a_{1j}+x_{2}a_{2j}+\cdots+x_{m}a_{mj}=\sum_{h=1}^{m}x_{h}a_{hj}
 \end{equation*}
 </div>
 <div class="para">per opportuni <span class="process-math">\(a_{hj}\)</span> in <span class="process-math">\(R\text{.}\)</span> Analogamente, abbiamo</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-unica_decomposizione_linearmente_indipendenti.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-unica_decomposizione_linearmente_indipendenti.html" id="thm-commutativo_IBN-2-2-7">
 \begin{equation*}
 x_{i}=\sum_{j=1}^{n}y_{j}b_{ji}
 \end{equation*}
 </div>
 <div class="para">per opportuni <span class="process-math">\(b_{ji}\)</span> in <span class="process-math">\(R\text{.}\)</span> Combinando le due espressioni troviamo allora</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-unica_decomposizione_linearmente_indipendenti.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-unica_decomposizione_linearmente_indipendenti.html" id="thm-commutativo_IBN-2-2-10">
 \begin{equation*}
 x_{i}=\sum_{j=1}^{n}\sum_{h=1}^{m}x_{h}a_{hj}b_{ji}=\sum_{h=1}^{m}x_{h}(\sum_{j=1}^{n}a_{hj}b_{ji})\text{.}
 \end{equation*}
 </div>
 <div class="para">Per la <a href="sec-dipendenza_lineare.html#prop-unica_decomposizione_linearmente_indipendenti" class="xref" data-knowl="./knowl/xref/prop-unica_decomposizione_linearmente_indipendenti.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 24.2.5">Proposizione 24.2.5</a>, questa decomposizione di <span class="process-math">\(x_{i}\)</span> deve coincidere con quella ovvia</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-unica_decomposizione_linearmente_indipendenti.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-unica_decomposizione_linearmente_indipendenti.html" id="thm-commutativo_IBN-2-2-13">
 \begin{equation*}
 x_{i}=x_{1}0+\cdots+x_{i-1}0+x_{i}1+x_{i+1}0+\cdots+x_{m}0
 \end{equation*}
 </div>
 <div class="para">e, quindi</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-unica_decomposizione_linearmente_indipendenti.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-unica_decomposizione_linearmente_indipendenti.html" id="thm-commutativo_IBN-2-2-14">
 \begin{equation*}
 \sum_{j=1}^{n}a_{hj}b_{ji}=
 \begin{cases}
@@ -928,7 +928,7 @@ x_{i}=x_{1}0+\cdots+x_{i-1}0+x_{i}1+x_{i+1}0+\cdots+x_{m}0
 </div>
 <div class="para logical" id="thm-commutativo_IBN-2-3">
 <div class="para">Consideriamo allora la matrice <span class="process-math">\(A\)</span> a <span class="process-math">\(m\)</span> righe e <span class="process-math">\(n\)</span> colonne il cui elemento di posto <span class="process-math">\((h,j)\)</span> è <span class="process-math">\(a_{hj}\)</span> e la matrice <span class="process-math">\(B\)</span> a <span class="process-math">\(n\)</span> righe e <span class="process-math">\(m\)</span> colonne il cui elemento di posto <span class="process-math">\((j,i)\)</span> è <span class="process-math">\(b_{ji}\text{,}\)</span> vediamo che il prodotto <span class="process-math">\(AB\)</span> coincide con la matrice identica di ordine <span class="process-math">\(m\text{.}\)</span> Consideriamo ora la matrice quadrata <span class="process-math">\(A^{*}\)</span> di ordine <span class="process-math">\(m\)</span> che si ottiene “attaccando” ad <span class="process-math">\(A\)</span> delle colonne nulle e la matrice quadrata <span class="process-math">\(B^{*}\)</span> di ordine <span class="process-math">\(m\)</span> che si ottiene “attaccando” a <span class="process-math">\(B\)</span> delle righe nulle. Formalmente,  poniamo <span class="process-math">\(a_{hj}\coloneqq 0\)</span> per <span class="process-math">\(n+1\le j\le m\)</span> e <span class="process-math">\(b_{ji}\coloneqq 0\)</span> per <span class="process-math">\(n+1\le i\le m\text{.}\)</span> Facendo il prodotto <span class="process-math">\(A^{*}B^{*}\)</span> vediamo che il suo elemento di posto <span class="process-math">\((h,i)\)</span> è</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="thm-commutativo_IBN-2-3-27">
 \begin{equation*}
 \sum_{j=1}^{m}a_{hj}b_{ji}=\sum_{j=1}^{n}a_{hj}b_{ji}+\sum_{j=n+1}^{m}a_{hj}b_{ji}=\sum_{j=1}^{n}a_{hj}b_{ji}+0=\sum_{j=1}^{n}a_{hj}b_{ji}
 \end{equation*}
@@ -955,25 +955,25 @@ x_{i}=x_{1}0+\cdots+x_{i-1}0+x_{i}1+x_{i+1}0+\cdots+x_{m}0
 <div class="para logical" id="prop-somma_diretta_di_liberi-2-3">
 <div class="para">Consideriamo una loro combinazione lineare uguale a <span class="process-math">\(0\text{:}\)</span>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="prop-somma_diretta_di_liberi-2-3-2">
 \begin{equation*}
 (x_{1},0)a_{1}+\cdots+(x_{m},0)a_{m}+(0,y_{1})b_{1}+\cdots+(0,y_{n})b_{n}=(0,0)\text{.}
 \end{equation*}
 </div>
 <div class="para">Con semplici calcoli, otteniamo:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="prop-somma_diretta_di_liberi-2-3-3">
 \begin{equation*}
 (x_{1}a_{1}+\cdots+x_{m}a_{m},y_{1}b_{1}+\cdots+y_{n}b_{n})=(0,0)
 \end{equation*}
 </div>
 <div class="para">da cui segue</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="prop-somma_diretta_di_liberi-2-3-4">
 \begin{equation*}
 x_{1}a_{1}+\cdots+x_{m}a_{m}=0
 \end{equation*}
 </div>
 <div class="para">e</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="prop-somma_diretta_di_liberi-2-3-5">
 \begin{equation*}
 y_{1}b_{1}+\cdots+y_{n}b_{n}=0
 \end{equation*}

@@ -102,15 +102,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.10';
+eBookConfig.runestone_version = '7.10.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.fea5c754ab3e056b.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.b37c97cbe7a5455b.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
 </script>
 </head>
@@ -721,13 +721,13 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para logical" id="sec-campo_dei_quozienti-3">
 <div class="para">Cominciamo allora considerando il sottoinsieme <span class="process-math">\(S\)</span> di <span class="process-math">\(D\times D\text{,}\)</span> così definito</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rem-anello_intero_cancellazione.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rem-anello_intero_cancellazione.html" id="sec-campo_dei_quozienti-3-3">
 \begin{equation*}
 S\coloneqq\{(a,b)\in D\times D\mid b\ne 0\}\text{.}
 \end{equation*}
 </div>
 <div class="para">Definiamo ora in <span class="process-math">\(S\)</span> una relazione <span class="process-math">\(\sim\)</span> ponendo <span class="process-math">\((a,b)\sim(c,d)\)</span> se <span class="process-math">\(ad=bc\text{.}\)</span> Mostriamo che è una relazione di equivalenza: è, ovviamente, riflessiva e simmetrica. Per quanto riguarda la transitività, supponiamo che <span class="process-math">\((a,b)\sim(c,d)\sim(e,f)\text{,}\)</span> cioè <span class="process-math">\(ad=bc\)</span> e <span class="process-math">\(cf=de\text{.}\)</span> Abbiamo allora</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rem-anello_intero_cancellazione.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rem-anello_intero_cancellazione.html" id="sec-campo_dei_quozienti-3-11">
 \begin{equation*}
 adf=bcf=bde\text{,}
 \end{equation*}
@@ -746,13 +746,13 @@ adf=bcf=bde\text{,}
 \end{align*}
 </div>
 <div class="para">Mostriamo che queste operazioni sono compatibili con la relazione di equivalenza. Siano allora <span class="process-math">\((a,b)\sim(a',b')\)</span> e <span class="process-math">\((c,d)\sim(c',d')\text{,}\)</span> cioè <span class="process-math">\(ab'=ba'\)</span> e <span class="process-math">\(cd'=dc'\text{.}\)</span> Abbiamo allora</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-campo_dei_quozienti-5-7">
 \begin{equation*}
 (ad+bc)b'd'=ab'dd'+cd'bb'=ba'dd'+dc'bb'=(a'd'+b'c')bd
 \end{equation*}
 </div>
 <div class="para">cioè <span class="process-math">\((ad+bc,bd)\sim(a'd'+b'c',b'd')\)</span> e</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-campo_dei_quozienti-5-9">
 \begin{equation*}
 acb'd'=ab'cd'=ba'dc'=bda'c'
 \end{equation*}
@@ -765,19 +765,19 @@ acb'd'=ab'cd'=ba'dc'=bda'c'
 \end{align*}
 </div>
 <div class="para">Si verifica immediatamente che queste operazioni sono commutative. Verifichiamo che sono entrambe associative:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-campo_dei_quozienti-5-13">
 \begin{equation*}
 \left(\frac{a}{b}+\frac{c}{d}\right)+\frac{e}{f}=\frac{ad+bc}{bd}+\frac{e}{f}=\frac{(ad+bc)f+bde}{bdf}=\frac{adf+bcf+bde}{bdf}
 \end{equation*}
 </div>
 <div class="para">e</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-campo_dei_quozienti-5-14">
 \begin{equation*}
 \frac{a}{b}+\left(\frac{c}{d}+\frac{e}{f}\right)=\frac{a}{b}+\frac{cf+de}{df}=\frac{adf+b(cf+de)}{bdf}=\frac{adf+bcf+bde}{bdf}\text{.}
 \end{equation*}
 </div>
 <div class="para">L’addizione è, dunque, associativa. Per quanto riguarda la moltiplicazione abbiamo</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-campo_dei_quozienti-5-15">
 \begin{equation*}
 \left(\frac{a}{b}\frac{c}{d}\right)\frac{e}{f}=\frac{ac}{bd}\frac{e}{f}=\frac{ace}{bdf}=\frac{a}{b}\frac{ce}{df}=\frac{a}{b}\left(\frac{c}{d}\frac{e}{f}\right)
 \end{equation*}
@@ -787,13 +787,13 @@ acb'd'=ab'cd'=ba'dc'=bda'c'
 </div>
 <div class="para logical" id="sec-campo_dei_quozienti-6">
 <div class="para">L’addizione ha elemento neutro <span class="process-math">\(\frac{0}{1}\)</span> e la moltiplicazione ha elemento neutro <span class="process-math">\(\frac{1}{1}\text{.}\)</span> Infatti, per ogni <span class="process-math">\(\frac{a}{b}\)</span> risulta</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-campo_dei_quozienti-6-4">
 \begin{equation*}
 \frac{a}{b}+\frac{0}{1}=\frac{a1+0b}{b1}=\frac{a}{b}
 \end{equation*}
 </div>
 <div class="para">e</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-campo_dei_quozienti-6-5">
 \begin{equation*}
 \frac{a}{b}\frac{1}{1}=\frac{a1}{b1}=\frac{a}{b}\text{.}
 \end{equation*}
@@ -803,13 +803,13 @@ acb'd'=ab'cd'=ba'dc'=bda'c'
 <div class="para logical" id="sec-campo_dei_quozienti-7">
 <div class="para">Ogni elemento <span class="process-math">\(\frac{a}{b}\)</span> ha opposto <span class="process-math">\(\frac{-a}{b}\)</span> e, se <span class="process-math">\(\frac{a}{b}\ne\frac{0}{1}\text{,}\)</span> cioè, <span class="process-math">\(a\ne0\text{,}\)</span> allora <span class="process-math">\(\frac{a}{b}\)</span> ha inverso <span class="process-math">\(\frac{b}{a}\text{:}\)</span>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-campo_dei_quozienti-7-7">
 \begin{equation*}
 \frac{a}{b}+\frac{-a}{b}=\frac{ab-ab}{bb}=\frac{0}{bb}=\frac{0}{1}
 \end{equation*}
 </div>
 <div class="para">e</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-campo_dei_quozienti-7-8">
 \begin{equation*}
 \frac{a}{b}\frac{b}{a}=\frac{ab}{ba}=\frac{1}{1}\text{.}
 \end{equation*}
@@ -818,13 +818,13 @@ acb'd'=ab'cd'=ba'dc'=bda'c'
 </div>
 <div class="para logical" id="sec-campo_dei_quozienti-8">
 <div class="para">Per la proprietà distributiva abbiamo (possiamo limitarci a verificarne solo una perché abbiamo già osservato la commutatività della moltiplicazione)</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-campo_dei_quozienti-8-1">
 \begin{equation*}
 \left(\frac{a}{b}+\frac{c}{d}\right)\frac{e}{f}=\frac{ad+bc}{bd}\frac{e}{f}=\frac{ade+bce}{bdf}
 \end{equation*}
 </div>
 <div class="para">e</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-campo_dei_quozienti-8-2">
 \begin{equation*}
 \frac{a}{b}\frac{e}{f}+\frac{c}{d}\frac{e}{f}=\frac{ae}{bf}+\frac{ce}{df}=\frac{aedf+bfce}{bfdf}=\frac{ade+bce}{bdf}\frac{f}{f}=\frac{ade+bce}{bdf}\text{.}
 \end{equation*}
@@ -858,19 +858,19 @@ a\phi\cdot b\phi \amp=\frac{a}{1}\frac{b}{1}=\frac{ab}{1}=(ab)\phi
 </div>
 <div class="para logical" id="thm-campo_dei_quozienti-2-2">
 <div class="para">Dato un elemento <span class="process-math">\(\frac{a}{b}\)</span> di <span class="process-math">\(Q\text{,}\)</span> sappiamo che <span class="process-math">\(b\ne 0\)</span> e, poiché <span class="process-math">\(\psi\)</span> è iniettivo, <span class="process-math">\(b\psi\)</span> è un elemento non nullo del campo <span class="process-math">\(K\)</span> ed è quindi invertibile. Poniamo allora</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="thm-campo_dei_quozienti-2-2-7">
 \begin{equation*}
 \frac{a}{b}\theta\coloneqq a\psi(b\psi)^{-1}\text{.}
 \end{equation*}
 </div>
 <div class="para">Dobbiamo innanzitutto verificare che <span class="process-math">\(\theta\)</span> sia ben definita: infatti, <span class="process-math">\(\frac{a}{b}\)</span> è la classe di equivalenza della coppia <span class="process-math">\((a,b)\)</span> ma la classe di equivalenza contiene altri elementi. Sia, allora, <span class="process-math">\((c,d)\)</span> uno di tali elementi, cioè sia <span class="process-math">\(ad=bc\text{:}\)</span> poiché <span class="process-math">\(\psi\)</span> è un omomorfismo, abbiamo</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="thm-campo_dei_quozienti-2-2-14">
 \begin{equation*}
 a\psi\cdot d\psi=(ad)\psi=(bc)\psi=b\psi\cdot c\psi\text{.}
 \end{equation*}
 </div>
 <div class="para">Moltiplicando ambo i membri per <span class="process-math">\((d\psi)^{-1}(b\psi)^{-1}\)</span> otteniamo</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="thm-campo_dei_quozienti-2-2-16">
 \begin{equation*}
 a\psi(b\psi)^{-1}=c\psi(d\psi)^{-1}\text{,}
 \end{equation*}
@@ -889,19 +889,19 @@ a\psi(b\psi)^{-1}=c\psi(d\psi)^{-1}\text{,}
 \end{align*}
 </div>
 <div class="para">e</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="thm-campo_dei_quozienti-2-3-3">
 \begin{equation*}
 \left(\frac{a}{b}\frac{c}{d}\right)\theta=\frac{ac}{bd}\theta=(ac)\psi((bd)\psi)^{-1}=a\psi\cdot c\psi(b\psi)^{-1}(d\psi)^{-1}=\frac{a}{b}\theta\cdot \frac{c}{d}\theta
 \end{equation*}
 </div>
 <div class="para">e</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="thm-campo_dei_quozienti-2-3-4">
 \begin{equation*}
 1_{Q}\theta=\frac{1}{1}\theta=(1\psi)(1\psi)^{-1}=1_{K}1_{K}^{-1}=1_{K}\text{.}
 \end{equation*}
 </div>
 <div class="para">Ora, preso <span class="process-math">\(a\)</span> in <span class="process-math">\(D\text{,}\)</span> abbiamo</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="thm-campo_dei_quozienti-2-3-7">
 \begin{equation*}
 a\phi\theta=\frac{a}{1}\theta=a\psi(1\psi)^{-1}=a\psi(1_{K})^{-1}=a\psi
 \end{equation*}

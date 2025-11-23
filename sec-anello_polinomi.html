@@ -102,15 +102,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.10';
+eBookConfig.runestone_version = '7.10.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.fea5c754ab3e056b.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.b37c97cbe7a5455b.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.fe35e59c546f8d19.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
 </script>
 </head>
@@ -724,13 +724,13 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" data-description="Definizione 20.1.1"><a href="#def-polinomio" title="Copy heading and permalink for Definizione 20.1.1" aria-label="Copy heading and permalink for Definizione 20.1.1">🔗</a></div></article><div class="para logical" id="sec-anello_polinomi-3">
 <div class="para">Possiamo ora definire in <span class="process-math">\(R[x]\)</span> due operazioni: dati due polinomi</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-anello_polinomi-3-2">
 \begin{equation*}
 f\coloneqq (a_{0},a_{1},\ldots,a_{i},\ldots)
 \end{equation*}
 </div>
 <div class="para">e</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-anello_polinomi-3-3">
 \begin{equation*}
 g\coloneqq (b_{0},b_{1},\ldots,b_{i},\ldots)
 \end{equation*}
@@ -764,13 +764,13 @@ h \amp\coloneqq(c_{0},c_{1},\ldots,c_{i},\ldots)
 \end{align*}
 </div>
 <div class="para">tre polinomi. Abbiamo allora che <span class="process-math">\(fg\)</span> è il polinomio il cui coefficiente di indice <span class="process-math">\(j\)</span> è <span class="process-math">\(d_{j}\coloneqq\sum_{h+k=j}a_{h}b_{k}\)</span> e, di conseguenza, il coefficiente di indice <span class="process-math">\(i\)</span> di <span class="process-math">\((fg)h\)</span> è</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="thm-anello_dei_polinomi-2-2-7">
 \begin{equation*}
 \sum_{j+l=i}d_{j}c_{l}=\sum_{j+l=i}\sum_{h+k=j}a_{h}b_{k}c_{l}=\sum_{h+k+l=i}a_{h}b_{k}c_{l}\text{.}
 \end{equation*}
 </div>
 <div class="para">Analogamente, <span class="process-math">\(gh\)</span> è il polinomio il cui coefficiente di indice <span class="process-math">\(j\)</span> è <span class="process-math">\(e_{j}\coloneqq\sum_{k+l=j}b_{k}c_{l}\)</span> e, di conseguenza, il coefficiente di indice <span class="process-math">\(i\)</span> di <span class="process-math">\(f(gh)\)</span> è</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="thm-anello_dei_polinomi-2-2-13">
 \begin{equation*}
 \sum_{h+j=i}a_{h}e_{j}=\sum_{h+j=i}\sum_{k+l=j}a_{h}b_{k}c_{l}=\sum_{h+k+l=i}a_{h}b_{k}c_{l}\text{.}
 \end{equation*}
@@ -805,7 +805,7 @@ h \amp\coloneqq(c_{0},c_{1},\ldots,c_{i},\ldots)
 </h3>
 <div class="para logical" id="prop-polinomi_forma_usuale-1-1">
 <div class="para">Sia <span class="process-math">\(R\)</span> un anello commutativo identificato con un sottoanello di <span class="process-math">\(R[x]\)</span> come nella <a href="sec-anello_polinomi.html#prop-anello_incluso_polinomi" class="xref" data-knowl="./knowl/xref/prop-anello_incluso_polinomi.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 20.1.5">Proposizione 20.1.5</a> e sia <span class="process-math">\(x\)</span> il polinomio come nel <a href="sec-anello_polinomi.html#cor-potenze_di_x" class="xref" data-knowl="./knowl/xref/cor-potenze_di_x.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Corollario 20.1.4">Corollario 20.1.4</a>. Dato il polinomio <span class="process-math">\(f\coloneqq(a_{0},a_{1},\ldots,a_{n},0,0,\ldots)\)</span> possiamo allora scrivere</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-anello_incluso_polinomi.html ./knowl/xref/cor-potenze_di_x.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/prop-anello_incluso_polinomi.html ./knowl/xref/cor-potenze_di_x.html" id="prop-polinomi_forma_usuale-1-1-7">
 \begin{equation*}
 f=a_{0}+a_{1}x+\cdots+a_{n}x^{n}\text{.}
 \end{equation*}
@@ -921,7 +921,7 @@ f=a_{0}+a_{1}x+\cdots+a_{n}x^{n}\text{.}
 </h3>
 <div class="para logical" id="sec-anello_polinomi-26-1-1">
 <div class="para">Consideriamo l’anello dei polinomi a coefficienti in <span class="process-math">\(\Interi/4\text{.}\)</span> Il polinomio <span class="process-math">\(f\coloneqq\class[4]{1}+\class[4]{2}x\)</span> è invertibile e coincide con il proprio inverso. Infatti</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="sec-anello_polinomi-26-1-1-3">
 \begin{equation*}
 (\class[4]{1}+\class[4]{2}x)(\class[4]{1}+\class[4]{2}x)=\class[4]{1}+(\class[4]{2}+\class[4]{2})x+\class[4]{2}\class[4]{2}x^{2}=\class[4]{1}\text{.}
 \end{equation*}
@@ -964,7 +964,7 @@ f=a_{0}+a_{1}x+\cdots+a_{n}x^{n}\text{.}
 <div class="para logical" id="exercises-anello_polinomi-4-3-2-2">
 <div class="para">Viceversa, supponiamo che <span class="process-math">\(a_{0}\)</span> sia invertibile e definiamo <span class="process-math">\(b_{i}\)</span> per ricorrenza, ponendo <span class="process-math">\(b_{0}\coloneqq a_{0}^{-1}\)</span> e <span class="process-math">\(b_{i}\coloneqq -a_{0}^{-1}\sum_{j=0}^{i-1}a_{i-j}b_{j}\text{.}\)</span> Abbiamo allora <span class="process-math">\(a_{0}b_{0}=1\)</span> e, per <span class="process-math">\(i \gt 0\)</span>
 </div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="exercises-anello_polinomi-4-3-2-2-7">
 \begin{equation*}
 \sum_{j=0}^{i}a_{i-j}b_{j}=\sum_{j=0}^{i-1}a_{i-j}b_{j}+a_{0}b_{i}=\sum_{j=0}^{i-1}a_{i-j}b_{j}+a_{0}(-a_{0}^{-1}\sum_{j=0}^{i-1}a_{i-j}b_{j})=0\text{.}
 \end{equation*}
