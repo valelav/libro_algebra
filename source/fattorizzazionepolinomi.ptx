@@ -131,9 +131,9 @@
       <proof>
         <p>
           Sia <m>f</m> un polinomio diverso da <m>0</m> e non invertibile. Mostriamo, per induzione sul grado <m>n</m> di <m>f</m>, che <m>f</m> si scrive come prodotto di irriducibili. Se <m>\deg f=0</m> allora <m>f</m> è un elemento di <m>D</m> e si può scrivere
-          <me>
+          <md>
             f=p_{1}p_{2}\cdots p_{r}
-          </me>
+          </md>
           con ciascun <m>p_{i}</m> irriducibile in <m>D</m>: per l'<xref ref="rem-irriducibili_in_Dx"/>, questa è una fattorizzazione di <m>f</m> in irriducibili di <m>D[x]</m>.
         </p>
         <p>
@@ -277,48 +277,48 @@
       <statement>
         <p>
           Vogliamo determinare le radici razionali del polinomio
-          <me>
+          <md>
             \frac{3}{2}x^{6}+\frac{3}{4}x^{5}-\frac{15}{4}x^{4}-\frac{21}{4}x^{3}-\frac{9}{2}x^{2}
-          </me>.
+          </md>.
           Innanzitutto, riconduciamoci a un polinomio a coefficienti interi moltiplicando per <m>4</m>:
-          <me>
+          <md>
             6x^{6}+3x^{5}-15x^{4}-21x^{3}-18x^{2}
-          </me>.
+          </md>.
           Ora dividiamo per il suo contenuto <m>3</m> per ottenere un polinomio primitivo
-          <me>
+          <md>
             2x^{6}+x^{5}-5x^{4}-7x^{3}-6x^{2}
-          </me>.
+          </md>.
           Il termine noto è <m>0</m>: dunque, <m>0</m> è una radice di questo polinomio e possiamo raccogliere <m>x^{2}</m> per ottenere
-          <me>
+          <md>
             x^{2}(2x^{4}+x^{3}-5x^{2}-7x-6)
-          </me>.
+          </md>.
           Consideriamo ora il polinomio
-          <me>
+          <md>
             f\coloneqq 2x^{4}+x^{3}-5x^{2}-7x-6
-          </me>:
+          </md>:
           i divisori del termine noto sono <m>1</m>, <m>-1</m>, <m>2</m>, <m>-2</m>, <m>3</m>, <m>-3</m>, <m>6</m> e <m>-6</m>, mentre i divisori del coefficiente direttivo sono <m>1</m>, <m>-1</m>, <m>2</m> e <m>-2</m>. Apparentemente dovremmo considerare <m>32</m> possibilità: tuttavia, possiamo assumere che il denominatore sia positivo (e, quindi, considerare solo i due valori <m>1</m> e <m>2</m>) e che denominatore e numeratore siano coprimi. Cominciamo a verificare le possibili radici intere. Vediamo che <m>f(1)=2+1-5-7-6\ne0</m>, <m>f(-1)=2-1-5+7-6\ne0</m> e <m>f(2)=32+8-20-14-6=0</m>. Potremmo proseguire e fare le altre verifiche, ma conviene notare che, per il <xref ref="thm-del_resto" text="title"/>, <m>x-2</m> è un divisore del polinomio che stiamo considerando. Abbiamo allora
-          <me>
+          <md>
             2x^{4}+x^{3}-5x^{2}-7x-6=(x-2)(2x^{3}+5x^{2}+5x+3)
-          </me>.
+          </md>.
           Consideriamo ora il polinomio
-          <me>
+          <md>
             g\coloneqq 2x^{3}+5x^{2}+5x+3
-          </me>:
+          </md>:
           i divisori del termine noto sono <m>1</m>, <m>-1</m>, <m>3</m>, <m>-3</m>, mentre i divisori del coefficiente direttivo sono <m>1</m>, <m>-1</m>, <m>2</m> e <m>-2</m>. Anche qui, possiamo supporre che i denominatori siano positivi e che numeratore e denominatore siano coprimi. Le possibili radici razionali sono allora <m>1</m>, <m>-1</m>, <m>3</m>, <m>-3</m>, <m>\frac{1}{2}</m>  <m>-\frac{1}{2}</m>, <m>\frac{3}{2}</m>, <m>-\frac{3}{2}</m>.
         </p>
         <p>
           Possiamo fare a meno di considerare <m>1</m> e <m>-1</m>: non sono radici di <m>f</m> e, quindi, non sono radici di <m>g</m>. Facendo le varie verifiche si vede che solo <m>-\frac{3}{2}</m> è radice. Allora possiamo dire che <m>x+\frac{3}{2}</m> divide <m>g</m> in <m>\Razionali[x]</m> e, per la <xref ref="prop-divisore_primitivo"/>, <m>2x+3</m> divide <m>g</m> in <m>\Interi[x]</m>. Abbiamo allora
-          <me>
+          <md>
             g=(2x+3)(x^{2}+x+1)
-          </me>.
+          </md>.
           Consideriamo ora il polinomio
-          <me>
+          <md>
             h\coloneqq x^{2}+x+1
-          </me>:
+          </md>:
           i divisori del termine noto sono <m>1</m> e <m>-1</m>, mentre i divisori del coefficiente direttivo sono <m>1</m> e <m>-1</m>. Anche qui, possiamo supporre che i denominatori siano positivi e che numeratore e denominatore siano coprimi. Le possibili radici razionali sono allora <m>1</m> e <m>-1</m>: ma nessuna di queste è radice di <m>g</m> e, a maggior ragione, non è radice di <m>h</m>. Dunque, non abbiamo fattori di grado <m>1</m>: poiché <m>h</m> ha grado <m>2</m>, possiamo concludere che è irriducibile. Pertanto, abbiamo la fattorizzazione in irriducibili
-          <me>
+          <md>
             2x^{6}+x^{5}-5x^{4}-7x^{3}-6x^{2}=x^{2}(x-2)(2x+3)(x^{2}+x+1)
-          </me>
+          </md>
           (notiamo che <m>x^2</m> è il prodotto dell'irriducibile <m>x</m> con sé stesso).
         </p>
       </statement>
@@ -332,25 +332,25 @@
       <statement>
         <p>
           Vogliamo fattorizzare come prodotto di irriducibili il polinomio a coefficienti interi
-          <me>
+          <md>
           2x^{4}+5x^{3}-7x^{2}-5x+2
-          </me>.
+          </md>.
           Questo polinomio è a coefficienti interi e primitivo: quindi, possiamo cercare direttamente le eventuali radici razionali. Poiché il termine noto è non nullo, <m>0</m> non è radice razionale. I divisori, tanto del termine noto, quanto del coefficiente direttivo sono <m>1</m>, <m>-1</m>, <m>2</m> e <m>-2</m>. Le possibili radici razionali sono <m>1</m>, <m>-1</m>, <m>2</m>, <m>-2</m>, <m>\frac{1}{2}</m> e <m>-\frac{1}{2}</m>. Facendo le opportune verifiche si vede che nessuna di queste è radice, quindi il polinomio non ha fattori irriducibili di primo grado. Potrebbe però essere prodotto di due polinomi di secondo grado a coefficienti interi:
-          <me>
+          <md>
             2x^{4}+5x^{3}-7x^{2}-5x+2=(ax^{2}+bx+c)(dx^{2}+ex+f)
-          </me>.
+          </md>.
           Sviluppando il membro a destra e, uguagliando coefficiente per coefficiente, troviamo delle condizioni che devono essere soddisfatte dai parametri <m>a</m>, <m>b</m>, <m>c</m>, <m>d</m>, <m>e</m> e <m>f</m>. Considerando il coefficiente di grado <m>4</m>, abbiamo allora:
-          <me>
+          <md>
             2=ad
-          </me>.
+          </md>.
           Poiché <m>a</m> e <m>d</m> devono essere interi, le uniche possibilità sono che siano uno <m>1</m> e l'altro <m>2</m> oppure uno <m>-1</m> e l'altro <m>-2</m>: in questo secondo caso, però, potremmo moltiplicare entrambi i fattori per <m>-1</m> e ricondurci al primo caso; inoltre, una volta fatto ciò, pur di scambiare l'ordine dei due fattori, possiamo supporre che <m>a=1</m> e <m>d=2</m>. Otteniamo così:
-          <me>
+          <md>
             2x^{4}+5x^{3}-7x^{2}-5x+2=(x^{2}+bx+c)(2x^{2}+ex+f)
-          </me>.
+          </md>.
           Espandiamo il prodotto a secondo membro e otteniamo
-          <me>
+          <md>
             2x^{4}+5x^{3}-7x^{2}-5x+2=2x^{4}+(e+2b)x^{3}+(f+be+2c)x^{2}+(bf+ce)x+cf
-          </me>
+          </md>
           che dà il sistema
           <md>
             <mrow> 5\amp =e+2b</mrow>
@@ -375,13 +375,13 @@
             <mrow>-5\amp =-2b-5+2b</mrow>
           </md>:
           la seconda equazione è un'identità, mentre la prima si riduce a
-          <me>
+          <md>
             2b^{2}-5b-3=0
-          </me>.
+          </md>.
           Dobbiamo vedere se esistono valori interi di <m>b</m> che soddisfano questa equazione: potremmo usare la formula risolutiva dell'equazione di secondo grado o notare che eventuali valori interi di <m>b</m> che soddisfano questa equazione devono dividere <m>3</m>. Facendo le varie prove, si vede che <m>b=3</m> soddisfa questa equazione: abbiamo quindi trovato una soluzione a valori interi di questo sistema e cioè <m>c=-1</m>, <m>f=-2</m>, <m>b=3</m> e <m>e=5-2b=-1</m>. Abbiamo quindi la fattorizzazione in irriducibili del nostro polinomio.
-          <me>
+          <md>
             2x^{4}+5x^{3}-7x^{2}-5x+2=(x^{2}+3x-1)(2x^{2}-x-2)
-          </me>:
+          </md>:
           per il <xref ref="cor-irriducibile_nel_camo_dei_quozienti"/> questa è anche la sua fattorizzazione in irriducibili in <m>\Razionali[x]</m>.
         </p>
       </statement>
@@ -429,9 +429,9 @@
         </p>
         <p>
           Supponiamo allora per assurdo che <m>f</m> sia riducibile in <m>D[x]</m>, cioè che <m>f=gh</m> con <m>g\coloneqq b_{r}x^{r}+\cdots+b_{0}</m> e <m>h\coloneqq c_{s}x^{s}+\cdots+c_{0}</m> polinomi a coefficienti in <m>D</m> e di grado positivo. Il termine noto di <m>gh</m> è semplicemente <m>b_{0}c_{0}</m>: poiché coincide con <m>a_{0}</m> che è multiplo di <m>p</m> ma non di <m>p^{2}</m>, abbiamo che <m>p</m> divide uno tra <m>b_{0}</m> e <m>c_{0}</m> ma non entrambi. Possiamo assumere che <m>p</m> divide <m>b_{0}</m> ma non <m>c_{0}</m>. Ora <m>g</m> non è multiplo di <m>p</m>, altrimenti anche <m>f</m> sarebbe multiplo di <m>p</m>. Sia <m>i</m> il più piccolo intero tale che <m>b_{i}</m> non è multiplo di <m>p</m>. Abbiamo allora
-          <me>
+          <md>
             a_{i}=b_{i}c_{0}+b_{i-1}c_{1}+\cdots+b_{0}c_{i}
-          </me>
+          </md>
           Poiché <m>p</m> divide <m>b_{0}</m>, <m>\ldots</m>, <m>b_{i-1}</m>, gli addendi dal secondo in poi sono multipli di <m>p</m>; poiché <m>p</m> non divide <m>b_{i}</m> e <m>c_{0}</m>, il primo addendo <m>b_{i}c_{0}</m> non è multiplo di <m>p</m>: di conseguenza, <m>a_{i}</m> non è multiplo di <m>p</m>. Per ipotesi, l'unico coefficiente di <m>f</m> che non è multiplo di <m>p</m> è <m>a_{n}</m> e, dunque, <m>i=n</m>. Dunque, <m>b_{n}</m> non è multiplo di <m>p</m>: in particolare, <m>b_{n}</m> è diverso da <m>0</m> e, quindi, <m>g</m> ha grado almeno <m>n</m>, cioè almeno grado uguale a <m>f</m>, ma questo è assurdo perché allora <m>h</m> non avrebbe grado positivo.
         </p>
       </proof>
@@ -472,9 +472,9 @@
       <statement>
         <p>
           Consideriamo il polinomio <m>f\coloneqq x^{3}+x+1</m> a coefficienti in <m>\Interi/3</m>. Cerchiamo innanzitutto se <m>f</m> ha qualche radice. Poiché il campo è finito possiamo semplicemente sostituire gli elementi uno a uno. Notiamo che <m>f(0)=0^{3}+0+1=1\ne0</m>, <m>f(1)=1^{3}+1+1=3=0</m> (ricordiamo che stiamo lavorando modulo <m>3</m>). Dunque, <m>1</m> è radice e <m>x-1</m> è un fattore di <m>f</m>. Dividendo, troviamo <m>f=(x-1)(x^{2}+x-1)</m>. Ci chiediamo ora se <m>g\coloneqq x^{2}+x-1</m> è irriducibile o no. Per far ciò, basta verificare se ha radici o meno. È inutile verificare se <m>0</m> è radice perché altrimenti sarebbe radice anche di <m>f</m>. Abbiamo poi <m>g(1)=1^{2}+1-1=1\ne 0</m> e <m>g(2)=2^{2}+2-1=2\ne 0</m>: pertanto <m>g</m> non ha radici e, avendo grado <m>2</m>, è irriducibile. Dunque, la fattorizzazione in irriducibili di <m>f</m> è
-          <me>
+          <md>
             x^{3}+x+1=(x-1)(x^{2}+x-1)
-          </me>.
+          </md>.
         </p>
       </statement>
     </example>
@@ -487,21 +487,21 @@
 
         <p>
           Consideriamo prima il caso in cui <m>K=\Razionali</m>. Poiché <m>p</m> è un polinomio a coefficienti interi primitivo una sua fattorizzazione in irriducibili in <m>\Interi[x]</m> è anche una fattorizzazione in irriducibili in <m>\Razionali[x]</m>, grazie al <xref ref="cor-irriducibile_nel_camo_dei_quozienti"/>. Poiché <m>p</m> è monico i suoi fattori sono (associati a) polinomi monici. Se <m>p</m> non fosse irriducibile in <m>\Interi[x]</m> dovrebbe avere un fattore di primo o di secondo grado. Se avesse un fattore di primo grado, dovrebbe avere una radice in <m>\Razionali</m>. Le eventuali radici razionali sono del tipo <m>\frac{a}{b}</m> con <m>a</m> divisore del temine noto <m>5</m> e <m>b</m> divisore del coefficiente direttivo <m>1</m>: i valori possibili sono <m>1</m>, <m>-1</m>, <m>5</m> e <m>-5</m>. Sostituendo nel polinomio questi valori vediamo che nessuno di essi è soluzione. Verifichiamo allora se <m>p</m> è prodotto di due polinomi di secondo grado monici a coefficienti interi:
-          <me>
+          <md>
             p=(x^{2}+ax+b)(x^{2}+cx+d)
-          </me>
+          </md>
           cioè
-          <me>
+          <md>
             p=x^{4}+(a+c)x^{3}+(d+ac+b)x^{2}+(ad+bc)x+bd
-          </me>
+          </md>
           Uguagliando i coefficienti troviamo <m>a+c=0</m>, <m>d+ac+b=2</m>, <m>ad+bc=0</m> e <m>bd=-5</m>. Dalla prima uguaglianza troviamo <m>c=-a</m>. Le altre uguaglianze diventano <m>d+b-a^{2}=2</m>, <m>a(d-b)=0</m> e <m>bd=-5</m>. Dalla seconda di queste uguaglianze troviamo <m>a=0</m> o <m>b=d</m>: se fosse <m>b=d</m>, l'ultima uguaglianza diverrebbe <m>b^{2}=5</m> che non può essere soddisfatta per nessun valore intero di <m>b</m>; se, invece <m>a=0</m>, otteniamo <m>c=0</m> e le altre uguaglianze diventano <m>d+b=2</m> e <m>db=-5</m>: il prodotto di due numeri interi è <m>-5</m> se uno dei due è <m>1</m> e l'altro <m>-5</m> oppure uno dei due è <m>1</m> e l'altro <m>-5</m> e, in nessuno di questi casi, la somma di questi numeri è <m>2</m>. Pertanto <m>p</m> è irriducibile in <m>\Razionali[x]</m>.
         </p>
 
         <p>
           Consideriamo ora il caso in cui <m>K=\Interi/3</m>. Valutando <m>p</m> in ciascuno degli elementi di <m>\Interi/3</m>, vediamo che nessuno di essi è radice di <m>p</m> che quindi non ha fattori di primo grado. Il polinomio <m>p</m> potrebbe però essere prodotto di due polinomi di secondo grado, che possiamo assumere monici. Riprendendo i calcoli fatti al punto precedente e riducendoli modulo <m>3</m> otteniamo le seguenti equazioni: <m>a+c=0</m>, <m>d+ac+b=2</m>, <m>ad+bc=0</m> e <m>bd=1</m>. Come prima, otteniamo <m>c=-a</m> e le altre uguaglianze diventano <m>d-a^{2}+b=2</m>, <m>a(d-b)=0</m> e <m>bd=2</m>. Dalla seconda troviamo <m>a=0</m> o <m>b=d</m>. Nel primo caso, le altre equazioni si riducono a <m>d+b=2</m> e <m>bd=1</m>: considerando i vari casi, queste sono soddisfatte se <m>d=b=1</m>. Dunque, <m>p</m> si fattorizza come
-          <me>
+          <md>
             p=(x^{2}+1)(x^{2}+1)
-          </me>.
+          </md>.
           Abbiamo già notato che <m>p</m> non ha fattori di primo grado, quindi questa è la sua fattorizzazione in irriducibili.
         </p>
       </statement>

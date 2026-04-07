@@ -70,9 +70,9 @@
         <statement>
           <p>
             Un elemento <m>a</m> di un monoide <m>M</m> è detto <term>invertibile</term> se esiste un elemento <m>b</m> in <m>M</m> tale che
-            <me>
+            <md>
               a\cdot b=b\cdot a=1
-            </me>.
+            </md>.
           </p>
         </statement>
       </definition>
@@ -92,9 +92,9 @@
         <statement>
           <p>
             Se <m>a</m> è un elemento invertibile di un monoide <m>M</m>, allora l'elemento <m>b</m> tale che
-            <me>
+            <md>
               a\cdot b=b\cdot a=1
-            </me>
+            </md>
             è univocamente determinato e viene detto <term>inverso</term> di <m>a</m> (o opposto, se stiamo usando la notazione additiva). Per il momento lo denoteremo con <m>\invprov{a}</m>.
           </p>
         </statement>
@@ -102,13 +102,13 @@
         <proof>
           <p>
             Sia <m>c</m> un elemento tale che
-            <me>
+            <md>
               a\cdot c=c\cdot a=1
-            </me>.
+            </md>.
             Abbiamo allora
-            <me>
+            <md>
               b=b\cdot 1=b\cdot (a\cdot c)=(b\cdot a)\cdot c=1\cdot c=c
-            </me>.
+            </md>.
           </p>
         </proof>
 
@@ -139,9 +139,9 @@
         <proof>
           <p>
             Basta osservare che, usando ripetutamente la proprietà associativa, si ha
-            <me>
+            <md>
               (a\cdot b)\cdot(\invprov{b}\cdot\invprov{a})= ((a\cdot b)\cdot\invprov{b})\cdot\invprov{a}=(a\cdot (b\cdot\invprov{b}))\cdot\invprov{a}= (a\cdot 1)\cdot\invprov{a}=a\cdot\invprov{a}=1
-            </me>
+            </md>
             e, analogamente, <m>(\invprov{b}\cdot\invprov{a})\cdot(a\cdot b)=1</m>.
           </p>
         </proof>
@@ -159,19 +159,19 @@
         <statement>
           <p>
             Dato un elemento <m>a</m> di un monoide <m>M</m> e un numero naturale <m>n</m>, la <term>potenza</term> <m>n</m>-esima <m>a^{n}</m> di <m>a</m> è così definita ricorsivamente:
-            <me>
+            <md>
               a^{n}\coloneqq
               \begin{cases}
                 1              \amp \text{se }n=0\\
                 a^{n-1}\cdot a \amp \text{se }n \gt 0
               \end{cases}
-            </me>
+            </md>
           </p>
           <p>
             Se <m>a</m> è invertibile e <m>n</m> è un numero intero negativo poniamo inoltre
-            <me>
+            <md>
               a^{n}\coloneqq\invprov{a}^{-n}
-            </me>
+            </md>
             dove abbiamo usato il fatto che <m>-n</m> è un intero positivo.
           </p>
           <p>
@@ -316,17 +316,17 @@
                     <li>
                       <p>
                         se uno tra <m>m</m> e <m>n</m> è negativo (ad esempio, <m>n \lt 0</m>, l'altro caso è analogo) allora, per la <xref ref="prop-proprieta_potenze_monoide"/>, abbiamo
-                        <me>
+                        <md>
                           a^{m+n}a^{-n}=a^{m+n-n}=a^{m}
-                        </me>.
+                        </md>.
                         Moltiplicando a destra ambo i membri per <m>a^{n}</m>, otteniamo
-                        <me>
+                        <md>
                           (a^{m+n}a^{-n})a^{n}=a^{m}a^{n}
-                        </me>
+                        </md>
                         che, per la proprietà associativa, dà
-                        <me>
+                        <md>
                           a^{m+n}(a^{-n}a^{n})=a^{m}a^{n}
-                        </me>:
+                        </md>:
                         poiché <m>a^{-n}a^{n}=1</m> per il <xref ref="lem-inverso_di_potenze"/>, otteniamo immediatamente l'uguaglianza voluta.
                       </p>
                     </li>
@@ -336,9 +336,9 @@
               <li>
                 <p>
                   Se <m>m+n\lt 0</m> abbiamo
-                  <me>
+                  <md>
                     a^{m+n}=\invprov{a}^{-m-n}=\invprov{a}^{-m}\cdot\invprov{a}^{-n}=a^{m}\cdot a^{n}
-                  </me>
+                  </md>
                   dove abbiamo usato il caso precedente.
                 </p>
               </li>
@@ -361,9 +361,9 @@
         <proof>
           <p>
             Per ogni <m>m</m> e <m>n</m> naturali si ha, grazie alla <xref ref="prop-proprieta_potenze_monoide"/>
-            <me>
+            <md>
               a^{m}\cdot a^{n}=a^{m+n}=a^{n+m}=a^{n}\cdot a^{m}
-            </me>.
+            </md>.
             Se <m>a</m> è invertibile si estende al caso di esponenti interi qualunque usando la <xref ref="prop-proprieta_potenze_elemento_invertibile"/>.
           </p>
         </proof>
@@ -392,17 +392,17 @@
           </p>
           <p>
             Supponiamo ora che <m>b</m> sia invertibile e mostriamo che <m>a</m> commuta con <m>b^{n}</m> con <m>n</m> intero negativo. Sappiamo che <m>a</m> commuta con <m>b^{-n}</m> perché <m>-n</m> è positivo:
-            <me>
+            <md>
               ab^{-n}=b^{-n}a
-            </me>.
+            </md>.
             Moltiplicando ambo i membri di questa uguaglianza a sinistra e a destra per <m>b^{n}</m> (non scriviamo le parentesi perché usiamo la proprietà associativa), abbiamo
-            <me>
+            <md>
               b^{n}ab^{-n}b^{n}=b^{n}b^{-n}ab^{n}
-            </me>.
+            </md>.
             Usiamo ora il <xref ref="lem-inverso_di_potenze"/> e otteniamo
-            <me>
+            <md>
               b^{n}a\cdot 1=1\cdot ab^{n}
-            </me>
+            </md>
             da cui segue la tesi.
           </p>
           <p>
@@ -513,9 +513,9 @@
               </li>
             </ul>
             Nel caso in cui risulti
-            <me>
+            <md>
               g\cdot h=h\cdot g\text{ per ogni }g\text{ e }h\text{ in }G
-            </me>
+            </md>
             diremo che il gruppo è <term>commutativo</term> o <term>abeliano</term>.<fn><url href="https://it.wikipedia.org/wiki/Niels_Henrik_Abel" visual="">Niels Henrik Abel</url>, 1802<ndash/>1829.</fn><idx><h>Abel, Niels Henrik</h></idx>
           </p>
         </statement>
@@ -686,13 +686,13 @@
           <solution>
             <p>
               Dato un elemento <m>g</m>, sappiamo che esiste <m>h</m> tale che <m>gh=e</m>. Applicando la stessa ipotesi a <m>h</m>, sappiamo che esiste <m>k</m> tale che <m>hk=e</m>. Ora
-              <me>
+              <md>
                 hg=(hg)e=(hg)(hk)=h(gh)k=(he)k=hk=e
-              </me>.
+              </md>.
               Inoltre,
-              <me>
+              <md>
                 eg=(gh)g=g(hg)=ge=g
-              </me>.
+              </md>.
             </p>
           </solution>
         </exercise>
@@ -737,15 +737,15 @@
             </p>
             <p>
               L'operazione è commutativa. Infatti, per ogni <m>x</m> e <m>y</m> in <m>G</m> si ha
-              <me>
+              <md>
                 x\ast y=x+y+xy=y+x+yx=y\ast x
-              </me>.
+              </md>.
             </p>
             <p>
               L'operazione ammette elemento neutro <m>0</m>: infatti, per ogni <m>x\in G</m> si ha
-              <me>
+              <md>
                 x\ast 0 =x+0+x\cdot 0=x
-              </me>.
+              </md>.
             </p>
             <p>
               Infine, verifichiamo che ogni elemento <m>x</m> in <m>G</m> ha inverso. Questo deve essere un elemento <m>y</m> tale che <m>x\ast y=0</m>, cioè <m>x+y+xy=0</m>, cioè <m>(x+1)y=-x</m>. Poiché <m>x+1\ne 0</m>, otteniamo allora <m>y=-\frac{x}{x+1}</m> e questo è effettivamente un elemento di <m>G</m>, dato che, se fosse <m>y=-1</m>, otterremmo <m>x=x+1</m>.
@@ -757,10 +757,10 @@
           <introduction>
             <p>
               Sia <m>G</m> l'insieme formato dagli elementi del tipo <m>(a,b,c)</m> con <m>a</m>, <m>b</m> e <m>c</m> in <m>\Interi</m> dotato dell'operazione <m>\diamond</m> definita da
-              <me>
+              <md>
                 (a_{1},b_{1},c_{1})\diamond(a_{2},b_{2},c_{2})\coloneqq
                 (a_{1}+a_{2},b_{1}+b_{2},c_{1}+c_{2}+a_{1}b_{2})
-              </me>.
+              </md>.
             </p>
           </introduction>
           <task>
@@ -797,25 +797,25 @@
               </p>
               <p>
                 Verifichiamo che esiste un elemento neutro: questo deve essere una terna <m>(x,y,z)</m> tale che per ogni <m>(a,b,c)</m> in <m>G</m> si abbia
-                <me>
+                <md>
                   (a,b,c)\diamond(x,y,z)=(a,b,c)
-                </me>
+                </md>
                 e
-                <me>
+                <md>
                   (x,y,z)\diamond(a,b,c)=(a,b,c)
-                </me>,
+                </md>,
                 vale a dire <m>(a+x,b+y,c+z+ay)=(a,b,c)</m> e <m>(x+a,y+b,z+c+xb)=(a,b,c)</m>. Si vede immediatamente che la terna <m>(0,0,0)</m> soddisfa questa condizione.
               </p>
 
               <p>
                 Verifichiamo se ogni elemento <m>(a,b,c)</m> in <m>G</m> ammette inverso: questo deve essere una terna <m>(x,y,z)</m> tale che
-                <me>
+                <md>
                   (a,b,c)\diamond(x,y,z)=(0,0,0)
-                </me>
+                </md>
                 e
-                <me>
+                <md>
                   (x,y,z)\diamond(a,b,c)=(0,0,0)
-                </me>,
+                </md>,
                 vale a dire <m>(a+x,b+x,c+z+ay)=(0,0,0)</m> e <m>(x+a,y+b,z+c+xb)=(0,0,0)</m>. Si vede immediatamente che la terna <m>(-a,-b,-c+ab)</m> soddisfa questa condizione.
               </p>
             </solution>
@@ -831,12 +831,12 @@
             <solution>
               <p>
                 Per stabilire se <m>G</m> è abeliano consideriamo i prodotti
-                <me>
+                <md>
                   (a_{1},b_{1},c_{1})\diamond(a_{2},b_{2},c_{2})=(a_{1}+a_{2},b_{1}+b_{2},c_{1}+c_{2}+a_{1}b_{2})
-                </me>
-                e <me>
+                </md>
+                e <md>
                   (a_{2},b_{2},c_{2})\diamond(a_{1},b_{1},c_{1})=(a_{2}+a_{1},b_{2}+b_{1},c_{2}+c_{1}+a_{2}b_{1})
-                </me>.
+                </md>.
                 In generale questi prodotti non coincidono: ad esempio <m>(1,0,0)\diamond(0,1,0)=(1,1,1)</m> mentre <m>(0,1,0)\diamond(1,0,0)=(1,1,0)</m> e, dunque, il gruppo non è abeliano.
               </p>
             </solution>
@@ -933,13 +933,13 @@
           <solution>
             <p>
               Verifichiamo se esiste un elemento neutro: supponiamo che <m>e</m> sia un tale elemento. Dobbiamo avere allora <m>hx+ke+l=x</m> per ogni <m>x</m> in <m>\Reali</m>, cioè <m>(h-1)x+ke+l=0</m> per ogni <m>x</m>. Ciò avviene se e solo se <m>h=1</m> e <m>ke+l=0</m>. Analogamente, deve essere <m>he+ky+l=y</m> per ogni <m>y</m>, cioè <m>he+l+(k-1)y=0</m> per ogni <m>y</m>. Ciò avviene se e solo se <m>k=1</m> e <m>he+l=0</m>. Quindi l'operazione ammette elemento neutro se e solo se <m>h=k=1</m> e, in tal caso l'elemento neutro è uguale a <m>-l</m>. Consideriamo allora il caso in cui <m>h=k=1</m> e <m>l</m> è qualsiasi. Verifichiamo se vale la proprietà associativa. Abbiamo allora
-              <me>
+              <md>
                 (x\ast y)\ast z=(x+y+l)\ast z=(x+y+l)+z+l=x+y+z+2l
-              </me>
+              </md>
               e
-              <me>
+              <md>
                 x\ast(y\ast z)=x\ast(y+z+l)=x+(y+z+l)+l=x+y+z+2l
-              </me>.
+              </md>.
               Dunque, la proprietà associativa è soddisfatta.
             </p>
 
@@ -962,39 +962,39 @@
       </p>
       <p>
         Descriviamo adesso i gruppi di ordine piccolo, per mezzo delle loro tabelle di Cayley. Sappiamo che ci deve essere un elemento neutro e che su ogni riga e ogni colonna ciascun elemento deve apparire esattamente una volta. Cominciamo con <m>n=1</m>. C'è ovviamente un'unica possibilità
-        <me>
+        <md>
           \begin{array}{c|c}
               \amp 1 \\
             \hline
             1 \amp 1
           \end{array}
-        </me>
+        </md>
         Questa tabella corrisponde in maniera ovvia alla tabella dell'addizione tra le classi di resto modulo <m>1</m>: basta sostituire a <m>\class[1]{0}</m> il simbolo <m>1</m>.
       </p>
       <p>
         Passiamo ora a considerare il caso <m>n=2</m>. Oltre all'elemento neutro, denotato con <m>1</m>, abbiamo un altro elemento, che possiamo indicare con il simbolo <m>a</m>. Abbiamo così una tabella incompleta
-        <me>
+        <md>
           \begin{array}{c|cc}
               \amp 1 \amp a\\
             \hline
             1 \amp 1 \amp a\\
             a \amp a \amp \\
           \end{array}
-        </me>
+        </md>
         Rimane da riempire una casella. Non dovendoci essere ripetizioni sulle righe e sulle colonne, l'unica possibilità è avere un simbolo <m>1</m> nella casella vuota.
-        <me>
+        <md>
           \begin{array}{c|cc}
               \amp 1 \amp a\\
             \hline
             1 \amp 1 \amp a\\
             a \amp a \amp 1\\
           \end{array}
-        </me>
+        </md>
         Anche questa tabella corrisponde in maniera ovvia alla tabella dell'addizione tra le classi di resto modulo <m>2</m>: basta sostituire a <m>\class[2]{0}</m> il simbolo <m>1</m> e a <m>\class[2]{1}</m> il simbolo <m>a</m>.
       </p>
       <p>
         Consideriamo ora il caso <m>n=3</m>. Oltre all'elemento neutro, denotato con <m>1</m>, abbiamo altri due elementi, che possiamo indicare con i simboli <m>a</m> e <m>b</m>. Abbiamo così una tabella incompleta
-        <me>
+        <md>
           \begin{array}{c|ccc}
               \amp 1 \amp a \amp b\\
             \hline
@@ -1002,9 +1002,9 @@
             a \amp a \amp   \amp \\
             b \amp b \amp   \amp \\
           \end{array}
-        </me>
+        </md>
         Rimangono da riempire alcune caselle. All'incrocio della riga <m>a</m> con la riga <m>b</m> non ci può essere <m>a</m>, già presente nella riga, e non ci può essere <m>b</m>, già presente nella colonna: dunque, non ci può che essere <m>1</m>. Allo stesso modo all'incrocio della riga <m>b</m> con la colonna <m>a</m>. Procedendo poi a riempire le ulteriori caselle vuote, evitando ripetizioni sulle righe e sulle colonne otteniamo l'unica possibilità.
-        <me>
+        <md>
           \begin{array}{c|ccc}
               \amp 1 \amp a \amp b\\
             \hline
@@ -1012,12 +1012,12 @@
             a \amp a \amp b \amp 1\\
             b \amp b \amp 1 \amp a\\
           \end{array}
-        </me>
+        </md>
         Pure questa tabella corrisponde in maniera ovvia alla tabella dell'addizione tra le classi di resto modulo <m>3</m>: basta sostituire a <m>\class[3]{0}</m> il simbolo <m>1</m>, a <m>\class[3]{1}</m> il simbolo <m>a</m>, e a <m>\class[3]{2}</m> il simbolo <m>b</m> (ma possiamo anche scambiare il ruolo di <m>a</m> e <m>b</m>).
       </p>
       <p>
         Consideriamo ora il caso <m>n=4</m>. Oltre all'elemento neutro, denotato con <m>1</m>, abbiamo altri tre elementi, che possiamo indicare con i simboli <m>a</m>, <m>b</m> e <m>c</m>. Abbiamo così una tabella incompleta
-        <me>
+        <md>
           \begin{array}{c|cccc}
               \amp 1 \amp a \amp b \amp c\\
             \hline
@@ -1026,9 +1026,9 @@
             b \amp b \amp   \amp   \amp  \\
             c \amp c \amp   \amp   \amp  \\
           \end{array}
-        </me>
+        </md>
         Ora le caselle da riempire sono diverse e non possiamo andare per esclusione come in precedenza. Sappiamo che ogni elemento deve avere un inverso: oltre a <m>1</m>, che sappiamo essere inverso di sé stesso, non conosciamo gli inversi degli altri elementi. Consideriamo prima il caso in cui ci sia almeno un elemento che non sia inverso di sé stesso: pur di rinominare gli elementi possiamo supporre che <m>a</m> e <m>b</m> siano uno l'inverso dell'altro.
-        <me>
+        <md>
           \begin{array}{c|cccc}
               \amp 1 \amp a \amp b \amp c\\
             \hline
@@ -1037,9 +1037,9 @@
             b \amp b \amp 1 \amp   \amp  \\
             c \amp c \amp   \amp   \amp  \\
           \end{array}
-        </me>
+        </md>
         Possiamo ora completare la tabella per esclusione: ad esempio, all'incrocio della riga <m>a</m> con la colonna <m>c</m> non ci può essere né <m>a</m>, né <m>1</m> già presenti nella riga e non ci può essere <m>c</m>, già presente nella colonna. Ci deve, quindi, essere <m>b</m>. Proseguendo così possiamo completare la tabella:
-        <me>
+        <md>
           \begin{array}{c|cccc}
               \amp 1 \amp a \amp b \amp c\\
             \hline
@@ -1048,9 +1048,9 @@
             b \amp b \amp 1 \amp c \amp a\\
             c \amp c \amp b \amp a \amp 1\\
           \end{array}
-        </me>
+        </md>
         Consideriamo ora il caso in cui ogni elemento è inverso di sé stesso:
-        <me>
+        <md>
           \begin{array}{c|cccc}
               \amp 1 \amp a \amp b \amp c\\
             \hline
@@ -1059,9 +1059,9 @@
             b \amp b \amp   \amp 1 \amp   \\
             c \amp c \amp   \amp   \amp 1 \\
           \end{array}
-        </me>
+        </md>
         Anche qui possiamo ora completare per esclusione: ad esempio, all'incrocio della riga <m>a</m> con la colonna <m>c</m> non ci può essere né <m>a</m>, né <m>1</m> già presenti nella riga e non ci può essere <m>c</m>, già presente nella colonna. Ci deve, quindi, essere <m>b</m>. Proseguendo così possiamo completare la tabella:
-        <me>
+        <md>
           \begin{array}{c|cccc}
               \amp 1 \amp a \amp b \amp c\\
             \hline
@@ -1070,12 +1070,12 @@
             b \amp b \amp c \amp 1 \amp a \\
             c \amp c \amp b \amp a \amp 1 \\
           \end{array}
-        </me>
+        </md>
         Abbiamo, quindi, trovato due tabelle possibili
       </p>
       <sidebyside>
         <p>
-          <me>
+          <md>
             \begin{array}{c|cccc}
                 \amp 1 \amp a \amp b \amp c\\
               \hline
@@ -1084,10 +1084,10 @@
               b \amp b \amp 1 \amp c \amp a\\
               c \amp c \amp b \amp a \amp 1\\
             \end{array}
-          </me>
+          </md>
         </p>
         <p>
-          <me>
+          <md>
             \begin{array}{c|cccc}
                 \amp 1 \amp a \amp b \amp c\\
               \hline
@@ -1096,7 +1096,7 @@
               b \amp b \amp c \amp 1 \amp a \\
               c \amp c \amp b \amp a \amp 1 \\
             \end{array}
-          </me>
+          </md>
         </p>
       </sidebyside>
       <p>
@@ -1107,7 +1107,7 @@
       </p>
       <p>
         Ci rendiamo conto facilmente che se continuassimo a considerare tabelle di questo tipo per valori più alti di <m>n</m>, otterremmo sempre più tabelle e, quindi, questo metodo diventa poco efficiente. Come già accennato, non tutte le tabelle che rispettano le condizioni imposte definiscono effettivamente un'operazione di gruppo. Ad esempio, per <m>n=5</m>, la tabella
-        <me>
+        <md>
           \begin{array}{c|ccccc}
               \amp 1 \amp a \amp b \amp c \amp d \\
             \hline
@@ -1117,7 +1117,7 @@
             c \amp c \amp d \amp a \amp 1 \amp b \\
             d \amp d \amp b \amp c \amp a \amp 1 \\
           \end{array}
-        </me>
+        </md>
         non ha ripetizioni su righe e colonne e ha un elemento neutro, ma non definisce un'operazione associativa: ad esempio, <m>(aa)b=1b=b</m> e <m>a(ab)=ad=c</m>. Questa non è, quindi, la tabella di Cayley di un gruppo.
       </p>
 

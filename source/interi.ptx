@@ -327,13 +327,13 @@
 
     <p>
       Oltre a dimostrare proprietà per induzione, gli assiomi di Peano ci permettono di definire successioni di oggetti (numeri, funzioni, insiemi, qualunque cosa) <m>x_{n}</m> indicizzate dai naturali. Un modo per far ciò è definire esplicitamente <m>x_{0}</m> e poi definire il generico <m>x_{n}</m> in termini di <m>x_{k}</m> per <m>k \lt n</m> e del numero <m>n</m> stesso. Ad esempio, il fattoriale <m>n!</m> di un numero naturale <m>n</m> è così definito:
-      <me>
+      <md>
         n!\coloneqq
         \begin{cases}
           1 \amp \text{se }n=0\\
           (n-1)!n \amp \text{se }n \gt 0
         \end{cases}
-      </me>
+      </md>
       Una definizione di questo tipo è detta per <term>ricorrenza</term>: intuitivamente è chiaro perché sia accettabile, ma il fatto che la successione di oggetti introdotta in questo modo esista e sia ben definita va dimostrato a partire dalle proprietà dei numeri naturali (si veda la <xref ref="prop-definizione_ricorrenza"/>).
     </p>
 
@@ -462,9 +462,9 @@
           </p>
           <p>
             Sia ora <m>k\ge 4</m> un intero tale per cui <m>k^{2}\le k!</m>: abbiamo allora
-            <me>
+            <md>
               (k+1)^{2}=k^{2}+2k+1\le k!+2k+1\le k!+2k!+k!\le 4\cdot k!\le (k+1)k!=(k+1)!
-            </me>.
+            </md>.
           </p>
         </solution>
       </exercise>
@@ -660,13 +660,13 @@
 
     <p>
       Ricordiamo che per definire il massimo comun divisore, abbiamo richiesto (almeno per il momento) che <m>a</m> e <m>b</m> non siano entrambi nulli: ad esempio, sia <m>b\ne 0</m>. Per la <xref ref="prop-divisori_di_opposti"/>, i divisori comuni di <m>a</m> e <m>b</m> coincidono con i divisori comuni di <m>a</m> e <m>\abs{b}</m>. Non c'è, dunque, perdita di generalità se assumiamo che <m>b \gt 0</m>. Dividiamo ora <m>a</m> per <m>b</m>. Otteniamo
-      <me>
+      <md>
         a=bq+r
-      </me>
+      </md>
       con <m>q</m> e <m>r</m> interi tali che <m>0\le r \lt b</m>. Se <m>r=0</m>, allora <m>b\mid a</m> e, per il <xref ref="lem-mcd_tra_divisori"/>, il massimo comun divisore tra <m>a</m> e <m>b</m> è esattamente <m>b</m> che, quindi, è multiplo di tutti i divisori comuni tra <m>a</m> e <m>b</m>. Se <m>r\ne 0</m>, dal <xref ref="lem-divisori_comuni_quoziente_resto"/> sappiamo che i divisori comuni tra <m>a</m> e <m>b</m> coincidono con i divisori comuni tra <m>b</m> e <m>r</m>. Possiamo allora ragionare come sopra e dividere <m>b</m> per <m>r</m>, ottenendo
-      <me>
+      <md>
         b=rq_{1}+r_{1}
-      </me>
+      </md>
       con <m>q_{1}</m> e <m>r_{1}</m> interi tali che <m>0\le r_{1} \lt r</m>. Iterando il procedimento troviamo una successione di divisioni
       <md>
         <mrow>a     \amp = bq+r                   \amp \amp 0\le r \lt b             </mrow>
@@ -685,17 +685,17 @@
     </p>
     <p>
       Possiamo ora riguardare la catena di uguaglianze data dalle divisioni successive per ottenere qualcosa di più. Detto <m>d\coloneqq r_{n+2}</m> il massimo comun divisore di <m>a</m> e <m>b</m>, abbiamo
-      <me>
+      <md>
         d=r_{n}-r_{n+1}q_{n+2}
-      </me>.
+      </md>.
       Sostituendo poi l'espressione del resto <m>r_{n+1}</m> data dalle precedente divisione, otteniamo
-      <me>
+      <md>
         d=r_{n}-r_{n+1}q_{n+2}=r_{n}-(r_{n-1}-r_{n}q_{n+1})q_{n+2}=r_{n}(1+q_{n+1}q_{n+2})+r_{n-1}(-q_{n+2})
-      </me>.
+      </md>.
       Proseguendo così e sostituendo via via tutti i resti arriviamo a un'identità del tipo:
-      <me>
+      <md>
         d=au+bv
-      </me>
+      </md>
       per opportuni interi <m>u</m> e <m>v</m>. Questa è detta <term>identità di Bezout</term>.<fn><url href="https://it.wikipedia.org/wiki/%C3%89tienne_B%C3%A9zout" visual="">Étienne Bézout</url>, 1730<ndash/>1783.</fn>
     </p>
     <p>
@@ -725,9 +725,9 @@
             <mrow>r_{n+1} \amp = r_{n+2}q_{n+3}+0                                             </mrow>
           </md>
           I resti di queste divisioni formano una catena strettamente decrescente di numeri naturali che deve terminare con un resto nullo. L'ultimo resto non nullo <m>r_{n+2}</m> è allora il massimo comun divisore di <m>a</m> e <m>b</m> e ha la proprietà di essere un multiplo di tutti gli altri divisori comuni di <m>a</m> e <m>b</m>. Inoltre, dalla successione di equazioni è possibile ottenere un'identità, cosiddetta di Bezout, del tipo
-          <me>
+          <md>
             d=au+bv
-          </me>
+          </md>
           per opportuni interi <m>u</m> e <m>v</m>.
         </p>
       </statement>
@@ -761,15 +761,15 @@
             <mrow> \amp = 156\cdot 2+(1350-156\cdot 8)(-3)=1350(-3)+156\cdot 26 </mrow>
           </md>
           cioè
-          <me>
+          <md>
             1350(-3)+156\cdot 26=6
-          </me>.
+          </md>.
         </p>
         <p>
           Se avessimo scambiato i ruoli di <m>a</m> e <m>b</m> e avessimo diviso <m>156</m> per <m>1350</m>, la prima divisione sarebbe stata
-          <me>
+          <md>
             156=1350\cdot0 +156
-          </me>
+          </md>
           e, avremmo poi comunque dovuto dividere <m>1350</m> per il resto di questa prima divisione, cioè <m>156</m>. In pratica avremmo fatto una divisione in più (sia pur banale): conviene, dunque, dividere il più grande per il più piccolo.
         </p>
       </statement>
@@ -812,9 +812,9 @@
       <statement>
         <p>
           Dati gli interi <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n}</m> il loro massimo comun divisore esiste ed è unico. Inoltre, esistono interi <m>u_{1}</m>, <m>u_{2}</m>, <m>\ldots</m>, <m>u_{n}</m> tali che
-          <me>
+          <md>
             a_{1}u_{1}+\cdots+a_{n}u_{n}=(a_{1},\ldots,a_{n})
-          </me>.
+          </md>.
           Infine, per <m>n\ge 2</m>, si ha <m>((a_{1},\ldots,a_{n-1}),a_{n})=(a_{1},\ldots,a_{n})</m>.
         </p>
       </statement>
@@ -828,13 +828,13 @@
         </p>
         <p>
           Sia allora <m>n \gt 1</m>. Per ipotesi induttiva il massimo comun divisore <m>c</m> tra <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n-1}</m> esiste e, per opportuni interi <m>v_{1}</m>, <m>\ldots</m>, <m>v_{n_{1}}</m> si ha
-          <me>
+          <md>
             a_{1}v_{1}+\cdots+a_{n-1}v_{n-1}=c
-          </me>.
+          </md>.
           Per l'<xref ref="alg-euclide" text="title"/> esiste <m>d\coloneqq (c,a_{n})</m> e <m>d=cu+a_{n}u_{n}</m> per opportuni interi <m>v</m> e <m>u_{n}</m>. Dunque, abbiamo
-          <me>
+          <md>
             d=cu+a_{n}u_{n}=(a_{1}v_{1}+\cdots+a_{n-1}v_{n-1})u+a_{n}u_{n}=a_{1}u_{1}+\cdots+a_{n}u_{n}
-          </me>
+          </md>
           dove abbiamo posto <m>u_{i}\coloneqq v_{i}u</m> per <m>1\le i\le n-1</m>.
           Per completare la dimostrazione dobbiamo provare che <m>d</m> è massimo comun divisore di <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n}</m>.
         </p>
@@ -1095,9 +1095,9 @@
       <proof>
         <p>
           Per ipotesi esiste un intero <m>d</m> tale che <m>ad=bc</m>. Dall'<xref ref="alg-euclide" text="title"/>, sappiamo inoltre che esistono interi <m>u</m> e <m>v</m> tali che <m>au+bv=1</m>. Dunque,
-          <me>
+          <md>
            c=c(au+bv)=acu+bcv=acu+adv=a(cu+dv)
-          </me>,
+          </md>,
           da cui la tesi.
         </p>
       </proof>
@@ -1205,9 +1205,9 @@
             <mrow> au_{2}+b_{2}v_{2} \amp =1</mrow>
           </md>
           Moltiplicando membro a membro, con semplici passaggi otteniamo
-          <me>
+          <md>
             a(au_{1}u_{2}+u_{1}b_{2}v_{2}+u_{2}b_{1}v_{1})+b_{1}b_{2}v_{1}v_{2}=1
-          </me>.
+          </md>.
           Se <m>d</m> è il massimo comun divisore di <m>a</m> e <m>b_{1}b_{2}</m>, allora <m>d</m> deve dividere il primo membro della precedente uguaglianza e, di conseguenza, il secondo, cioè <m>d</m> divide <m>1</m> ed è, dunque, esattamente <m>1</m>.
         </p>
         <p>
@@ -1261,9 +1261,9 @@
 
     <p>
       Data una fattorizzazione in primi di un numero <m>n</m> maggiore o uguale a <m>2</m> possiamo raccogliere tutte le diverse occorrenze di ciascun primo e ottenere una scrittura del tipo
-      <me>
+      <md>
         n=p_{1}^{\alpha_{1}}p_{2}^{\alpha_{2}}\cdots p_{t}^{\alpha_{t}}
-      </me>
+      </md>
       dove <m>p_{1}</m>, <m>p_{2}</m>, <m>\ldots</m>, <m>p_{t}</m> sono primi diversi e <m>\alpha_{1}</m>, <m>\alpha_{2}</m>, <m>\ldots</m>, <m>\alpha_{t}</m> sono interi positivi. Se ammettiamo che gli interi <m>\alpha_{i}</m> possano essere anche uguali a <m>0</m> questa scrittura si estende anche a <m>1</m>. Tale scrittura è unica a meno dell'ordinamento dei primi e del possibile inserimento o cancellazione di termini del tipo <m>p_{i}^{0}</m>. Ad esempio il numero <m>12</m> può essere scritto come <m>2^{2}\cdot 3^{1}</m> o <m>2^{2}\cdot 3^{1}\cdot 5^{0}</m> o <m>3^{1}\cdot 13^{0}\cdot 2^{3}\cdot 17^{0}</m> e così via.
     </p>
 
@@ -1309,9 +1309,9 @@
             <mrow>b \amp =p_{1}^{\beta_{1}}p_{2}^{\beta_{2}}\cdots p_{t}^{\beta_{t}}</mrow>
           </md>
           con <m>p_{1}</m>, <m>p_{2}</m>, <m>\ldots</m>, <m>p_{t}</m> primi diversi e gli <m>\alpha_{i}</m> e i <m>\beta_{i}</m> naturali, si ha che
-          <me>
+          <md>
             (a,b)=p_{1}^{\gamma_{1}}p_{2}^{\gamma_{2}}\cdots p_{t}^{\gamma_{t}}
-          </me>
+          </md>
           dove <m>\gamma_{i}=\min\{\alpha_{i},\beta_{i}\}</m>.
         </p>
       </statement>
@@ -1377,9 +1377,9 @@
                 <mrow>b \amp =p_{1}^{\beta_{1}}p_{2}^{\beta_{2}}\cdots p_{t}^{\beta_{t}}</mrow>
               </md>
               con <m>p_{1}</m>, <m>p_{2}</m>, <m>\ldots</m>, <m>p_{t}</m> primi diversi e gli <m>\alpha_{i}</m> e i <m>\beta_{i}</m> naturali, si ha che
-              <me>
+              <md>
                 m=p_{1}^{\delta_{1}}p_{2}^{\delta_{2}}\cdots p_{t}^{\delta_{t}}
-              </me>
+              </md>
               dove <m>\delta_{i}=\max\{\alpha_{i},\beta_{i}\}</m>.
             </p>
           </statement>
@@ -1421,9 +1421,9 @@
 
     <p>
       Prima di darne una definizione precisa, supponiamo di avere un'equazione del tipo
-      <me>
+      <md>
         ax+by=c
-      </me>
+      </md>
       dove <m>a</m>, <m>b</m> e <m>c</m> sono interi assegnati e cerchiamo le coppie di interi <m>x</m> e <m>y</m> che soddisfano l'equazione assegnata.
     </p>
 
@@ -1435,13 +1435,13 @@
       <statement>
         <p>
           Cerchiamo le soluzioni formate da coppie di interi per ciascuna delle equazioni
-          <me>
+          <md>
             8x+20y=6
-          </me>
+          </md>
           e
-          <me>
+          <md>
             8x+20y=12
-          </me>.
+          </md>.
         </p>
         <p>
           Ci accorgiamo immediatamente che, sostituendo a <m>x</m> e <m>y</m> valori interi nella prima equazione, a primo membro otteniamo sempre un multiplo di <m>4</m> e, poiché <m>6</m> non è multiplo di <m>4</m>, l'uguaglianza non può essere soddisfatta.
@@ -1460,9 +1460,9 @@
       <statement>
         <p>
           Un'equazione del tipo
-          <me>
+          <md>
             a_{1}x_{1}+\cdots+a_{n}x_{n}=b
-          </me>
+          </md>
           con <m>a_{1}</m>, <m>\ldots</m>, <m>a_{n}</m> e <m>b</m> interi, <m>x_{1}</m>, <m>\ldots</m>, <m>x_{n}</m> incognite e di cui cerchiamo soluzioni con ciascun <m>x_{i}</m> intero è detta <term>equazione lineare diofantina</term>.
         </p>
       </statement>
@@ -1476,9 +1476,9 @@
       <statement>
         <p>
           Sia data un'equazione lineare diofantina
-          <me>
+          <md>
             ax+by=c
-          </me>
+          </md>
           nelle incognite <m>x</m> e <m>y</m> con <m>a</m>, <m>b</m> e <m>c</m> interi. L'equazione ha soluzione se e solo se il massimo comun divisore <m>(a,b)</m> divide <m>c</m>.
         </p>
       </statement>
@@ -1489,9 +1489,9 @@
         </p>
         <p>
           Supponiamo ora che <m>(a,b)</m> divida <m>c</m>, cioè <m>c=(a,b)e</m> per un opportuno intero <m>e</m>. Sappiamo che esistono interi <m>u</m> e <m>v</m> per cui vale l'identità di Bezout
-          <me>
+          <md>
             au+bv=(a,b)
-          </me>.
+          </md>.
           Allora <m>aue+bve=(a,b)e=c</m>, cioè una soluzione intera è data da <m>x=ue</m> e <m>y=ve</m>.
         </p>
       </proof>
@@ -1508,19 +1508,19 @@
       <statement>
         <p>
           Riprendiamo ora l'equazione dell'<xref ref="ex-equazione_lineare_diofantina"/> e vediamo come possiamo determinarne delle soluzioni
-          <me>
+          <md>
             8x+20y=12
-          </me>.
+          </md>.
         </p>
         <p>
           Il massimo comun divisore tra <m>8</m> e <m>20</m> è <m>4</m> che divide <m>12</m>: l'equazione è effettivamente risolubile. Un'identità di Bezout tra <m>8</m> e <m>20</m> e il loro massimo comun divisore <m>4</m> si vede facilmente: <m>8(-2)+20\cdot 1=4</m> (ovviamente non sempre si vede così facilmente, ma sappiamo che possiamo usare l'algoritmo di Euclide per trovarne una). Ora, <m>12=4\cdot 3</m>: dunque, <m>8(-6)+20\cdot 3=12</m> e <m>x=-6</m> e <m>y=3</m> è una soluzione particolare. Vogliamo ora vedere se ci sono altre soluzioni. Possiamo innanzitutto semplificarci un po' la vita e dividere tutto per <m>4</m> e ottenere così l'equazione equivalente
-          <me>
+          <md>
             2x+5y=3
-          </me>.
+          </md>.
           A dire il vero, avremmo potuto farlo subito, prima ancora di determinare la soluzione particolare. Notiamo ora che se sommiamo <m>5</m> a <m>-6</m> e sommiamo <m>-2</m> a <m>3</m> otteniamo un'altra soluzione dell'equazione data, infatti:
-          <me>
+          <md>
             2(-6+5)+5(3-2)=2(-6)+2\cdot5+5\cdot3+5(-2)=2(-6)+5\cdot3=3
-          </me>.
+          </md>.
           Possiamo ovviamente ripetere il procedimento quante volte vogliamo e ottenere, quindi, infinite soluzioni dell'equazione
           <md>
             <mrow>x \amp =-6+5h</mrow>
@@ -1535,9 +1535,9 @@
       <statement>
         <p>
           Sia data un'equazione lineare diofantina
-          <me>
+          <md>
             ax+by=c
-          </me>
+          </md>
           nelle incognite <m>x</m> e <m>y</m> con <m>a</m>, <m>b</m> e <m>c</m> interi tale che <m>d\coloneqq (a,b)</m> divide <m>c</m> (dunque, l'equazione è risolubile).
         </p>
         <p>
@@ -1545,9 +1545,9 @@
         </p>
         <p>
           Se <m>d\ne 0</m>,  posto <m>a=da'</m>, <m>b=db'</m> e <m>c=dc'</m>, l'equazione è equivalente a
-          <me>
+          <md>
             a'x+b'y=c'
-          </me>:
+          </md>:
           in tal caso, detta <m>x=\bar{x}</m> e <m>y=\bar{y}</m> una soluzione particolare dell'equazione (determinata ad esempio, con un'identità di Bezout come nella <xref ref="prop-equazione_lineare_diofantina_due_incognite"/>), l'equazione ha infinite soluzioni date da
           <md>
             <mrow>x \amp =\bar{x}+b'h</mrow>
@@ -1582,18 +1582,18 @@
 
     <p>
       Descriviamo ora sommariamente il procedimento con cui affrontare equazioni lineari diofantine in più di due incognite. Cominciamo a considerare il caso di un'equazione in <m>3</m> incognite <m>x</m>, <m>y</m> e <m>z</m>
-      <me>
+      <md>
         ax+by+cz=d
-      </me>
+      </md>
       Assegnando valori arbitrari interi a <m>x</m> e <m>y</m>, dall'<xref ref="rem-combinazione_lineare_multiplo_MCD"/> sappiamo che <m>ax+by</m> assume esattamente tutti e soli i valori multipli del massimo comun divisore <m>e</m> di <m>a</m> e <m>b</m>. Possiamo allora introdurre un'incognita supplementare <m>w</m> e riscrivere l'equazione come un sistema:
-      <me>
+      <md>
         \left\{
           \begin{aligned}
             ax + by \amp = ew \\
             ew + cz \amp = d  \\
 	        \end{aligned}
         \right.
-      </me>
+      </md>
       La seconda equazione ha soluzione se e solo se il massimo comun divisore tra <m>e</m> e <m>c</m> divide <m>d</m>. Ma <m>e</m> è il massimo comun divisore tra <m>a</m> e <m>b</m> e, quindi, per la <xref ref="prop-massimo_comun_divisore_molti"/>, abbiamo che <m>(e,c)=((a,b),c)=(a,b,c)</m>. Dunque, la seconda equazione ha soluzione se e solo se <m>(a,b,c)</m> divide <m>d</m>. Data poi una qualunque soluzione per la seconda equazione, e sostituito il valore di <m>w</m> nella prima equazione, il termine noto è multiplo di <m>e</m>, per cui la prima equazione ha sicuramente soluzione. Riassumendo, il sistema (e, quindi, l'equazione originale) è risolubile se e solo se <m>(a,b,c)</m> divide <m>d</m>. Vediamo un esempio.
     </p>
 
@@ -1604,32 +1604,32 @@
         </p>
         <p>
           Il massimo comun divisore di <m>12</m>, <m>18</m> e <m>-10</m> è <m>2</m> che divide <m>14</m>: l'equazione è, quindi, risolubile. Possiamo innanzitutto dividere l'equazione per <m>2</m> e ottenere l'equazione equivalente <m>6x+9y-5z=7</m>. Il massimo comun divisore tra <m>6</m> e <m>9</m> è <m>3</m>. Introduciamo allora l'incognita ausiliaria <m>w</m> e consideriamo il sistema:
-          <me>
+          <md>
             \left\{
               \begin{aligned}
                 6x + 9y \amp = 3w \\
                 3w - 5z \amp = 7  \\
     	        \end{aligned}
             \right.
-          </me>
+          </md>
           Possiamo anche dividere la prima equazione per <m>3</m> e ottenere il sistema equivalente:
-          <me>
+          <md>
             \left\{
               \begin{aligned}
                 2x + 3y \amp = w \\
                 3w - 5z \amp = 7  \\
     	        \end{aligned}
             \right.
-          </me>
+          </md>
           Risolviamo allora la seconda equazione. Un'identità di Bezout tra <m>3</m> e <m>5</m> è, ad esempio, <m>3\cdot 2-5\cdot1=1</m> (lasciamo i calcoli necessari a determinare questa e altre identità per esercizio). Una soluzione particolare della seconda equazione è allora <m>w=14</m> e <m>z=7</m>, mentre la soluzione generale è data da
           <md>
             <mrow>w \amp = 14+5h</mrow>
             <mrow>z \amp = 7+3h</mrow>
           </md>
           al variare di <m>h</m> in <m>\Interi</m>. La prima equazione allora diviene
-          <me>
+          <md>
             2x+3y=14+5h
-          </me>
+          </md>
           dove <m>h</m> viene considerato come un parametro. Un'identità di Bezout tra <m>2</m> e <m>3</m> è, ad esempio, <m>2\cdot 2+3\cdot(-1)=1</m> e, quindi, una soluzione particolare per l'equazione è
           <md>
             <mrow>x \amp =28+10h</mrow>
@@ -1658,9 +1658,9 @@
       <statement>
         <p>
           L'equazione diofantina
-          <me>
+          <md>
             a_{1}x_{1}+\cdots+a_{n}x_{n}=b
-          </me>
+          </md>
           è risolubile se e solo se <m>(a_{1},\ldots,a_{n})</m> divide <m>b</m>. Se <m>(a_{1},\ldots,a_{n})=0</m>, l'equazione è un'identità. Se <m>(a_{1},\ldots,a_{n})\ne 0</m>, le soluzioni dipendono da <m>n-1</m> parametri interi.
         </p>
       </statement>

@@ -275,9 +275,9 @@
           </p>
           <p>
             Viceversa, sia <m>P</m> un qualsiasi <m>p</m>-sottogruppo di Sylow di <m>G</m>. Ora <m>P\cap N</m> è un <m>p</m>-sottogruppo di <m>N</m> per il <xref ref="thm-lagrange" text="title"/> e, per il <xref ref="thm-sylow" text="title"/>, è contenuto in un <m>p</m>-sottogruppo di Sylow <m>T</m> di <m>N</m>. Dobbiamo mostrare che <m>T=P\cap N</m>. Per quanto visto in precedenza, <m>T=Q\cap N</m> per qualche <m>p</m>-sottogruppo di Sylow di <m>G</m>. Un'ulteriore applicazione del <xref ref="thm-sylow" text="title"/> garantisce che esiste <m>g</m> in <m>G</m> tale che <m>Q=P^{g}</m>: poiché <m>N</m> è normale in <m>G</m> e, quindi, <m>N=N^{g}</m> abbiamo allora che
-            <me>
+            <md>
               T=Q\cap N=P^{g}\cap N=P^{g}\cap N^{g}=(P\cap N)^{g}
-            </me>.
+            </md>.
             Poiché <m>P\cap N</m> e <m>(P\cap N)^{g}</m> hanno lo stesso ordine, segue che <m>P\cap N=T</m>.
           </p>
         </solution>
@@ -477,9 +477,9 @@
             <p>
               Poiché <m>n_{13}\equiv 1\pmod{13}</m> e <m>n_{13}\mid 3^{2}\cdot 5\cdot 11</m>, i valori possibili per <m>n_{13}</m> sono <m>1</m> e <m>3^{2}\cdot 5\cdot 11</m>. Poiché <m>n_{11}\equiv 1\pmod{11}</m> e <m>n_{11}\mid 3^{2}\cdot 5\cdot 13</m>, i valori possibili per <m>n_{11}</m> sono <m>1</m> e <m>3^{2}\cdot 5</m>. Poiché <m>n_{5}\equiv 1\pmod{5}</m> e <m>n_{5}\mid 3^{2}\cdot 11\cdot 13</m>, i valori possibili per <m>n_{5}</m> sono <m>1</m> e <m>11</m>. Per <m>p=5</m>, <m>p=11</m> e <m>p=13</m> i corrispondenti <m>p</m>-sottogruppi di Sylow, avendo ordine primo, hanno intersezione a due a due banale.
               Dunque, se nessuno tra <m>n_{13}</m>, <m>n_{11}</m> e <m>n_{5}</m> fosse uguale a <m>1</m>, avremmo
-              <me>
+              <md>
                (13-1)\cdot(3^{2}\cdot 5\cdot 11)+(11-1)\cdot(3^{2}\cdot 13)+(5-1)\cdot 11=6434
-              </me>
+              </md>
               elementi di ordine <m>13</m>, <m>11</m> o <m>5</m>, cioè ci sarebbe un unico elemento di ordine diverso da questi, il che non può essere perché in <m>G</m> ci deve essere un <m>3</m>-sottogruppo di Sylow di ordine <m>3^{2}</m>. Dunque, almeno uno tra <m>n_{13}</m>, <m>n_{11}</m> e <m>n_{5}</m> è uguale a <m>1</m>, cioè esiste un <m>p</m>-sottogruppo di Sylow normale per almeno uno di questi primi.
             </p>
           </solution>
@@ -592,13 +592,13 @@
             </p>
             <p>
               Riassumendo: se, per assurdo, nessuno tra <m>n_{p}</m>, <m>n_{q}</m> e <m>n_{r}</m> fosse uguale a <m>1</m> avremmo allora almeno
-              <me>
+              <md>
                 (r-1)pq+(q-1)r+(p-1)q
-              </me>
+              </md>
               elementi non banali in <m>G</m>. Sviluppando tale espressione troviamo che è uguale a
-              <me>
+              <md>
                 pqr+qr-r-q=pqr-1+(q-1)(r-1)
-              </me>,
+              </md>,
               ma questo numero è maggiore di <m>pqr-1</m>, cioè il numero totale di elementi non banali di <m>G</m>. Possiamo, dunque, affermare che almeno uno tra <m>n_{p}</m>, <m>n_{q}</m> e <m>n_{r}</m> è uguale a <m>1</m>.
             </p>
           </solution>

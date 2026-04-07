@@ -250,9 +250,9 @@
       <statement>
         <p>
           Sia <m>d</m> un elemento di <m>D</m> con <m>d\ne0</m> e <m>d</m> non invertibile. Posto <m>d\sim p_{1}^{\alpha_{1}}\cdots p_{r}^{\alpha_{r}}</m> con <m>p_{1}</m>, <m>\ldots</m>, <m>p_{r}</m> irriducibili a due a due non associati e <m>\alpha_{1}</m>, <m>\ldots</m>, <m>\alpha_{r}</m> interi positivi, si ha
-          <me>
+          <md>
             \frac{D}{\ideal{d}}\simeq \frac{D}{\ideal{p_{1}^{\alpha_{1}}}}\oplus\cdots\oplus\frac{D}{\ideal{p_{r}^{\alpha_{r}}}}
-          </me>
+          </md>
         </p>
       </statement>
     </corollary>
@@ -551,9 +551,9 @@
         </p>
         <p>
           Poiché <m>c</m> è il massimo comun divisore di <m>a_{1}</m>, <m>\ldots</m>, <m>a_{n}</m> e <m>D</m> è un dominio a ideali principali, per il <xref ref="cor-multi_bezout"/> esistono <m>u_{1}</m>, <m>\ldots</m>, <m>u_{n}</m> in <m>D</m> tali che <m>c=u_{1}a_{1}+\cdots+u_{n}a_{n}</m>. Per la <xref ref="prop-modulo_libero_e_libero"/>, esiste un omomorfismo <m>\psi\colon M \to D</m> che manda <m>x_{i}</m> in <m>u_{i}</m> per ogni <m>i</m>: si ha allora
-          <me>
+          <md>
             x\psi=(x_{1}a_{1}+\cdots+x_{n}a_{n})\psi=x_{1}\psi a_{1}+\cdots+x_{n}\psi a_{n}=u_{1}a_{1}+\cdots+u_{n}a_{n}=c
-          </me>,
+          </md>,
           come richiesto.
         </p>
       </proof>
@@ -648,9 +648,9 @@
       <statement>
         <p>
           Sia <m>N</m> un <m>D</m>-modulo finitamente generato. Allora
-          <me>
+          <md>
             N\simeq \frac{D}{\ideal{c_{1}}}\oplus\cdots\oplus\frac{D}{\ideal{c_{s}}}\oplus D^{r}
-          </me>
+          </md>
           con <m>s</m> e <m>r</m> naturali e <m>c_{1}</m>, <m>\ldots</m>, <m>c_{s}</m> elementi non nulli e non invertibili di <m>D</m>. Inoltre. <m>\Tor(N)\simeq \frac{D}{\ideal{c_{1}}}\oplus\cdots\oplus\frac{D}{\ideal{c_{s}}}</m> e <m>N/\Tor(N)</m> è libero di rango <m>r</m>.
         </p>
       </statement>
@@ -658,20 +658,20 @@
       <proof>
         <p>
           Per il <xref ref="cor-moduli_fg_quozienti_di_liberi"/>, il modulo <m>N</m> è isomorfo a <m>M/L</m> dove <m>M</m> è un modulo libero e <m>L</m> un sottomodulo. Per il <xref ref="thm-basi_compatibili"/>, esiste una base <m>x_{1}</m>, <m>\ldots</m>, <m>x_{n}</m> di <m>M</m> ed elementi <m>c_{1}</m>, <m>\ldots</m>, <m>c_{n}</m> in <m>D</m> tali che <m>x_{1}c_{1}</m>, <m>\ldots</m>, <m>x_{n}c_{n}</m> generano <m>L</m>. Considerati i moduli ciclici generati dagli <m>x_{i}</m> e i corrispondenti sottomoduli generati dagli <m>x_{i}c_{i}</m>, abbiamo che <m>M=x_{1}D\oplus\cdots\oplus x_{n}D</m> e <m>L=x_{1}c_{1}D\oplus\cdots\oplus x_{n}c_{n}D</m>: per la <xref ref="prop-somma_diretta_quozienti"/>, abbiamo allora
-          <me>
+          <md>
             N\simeq \frac{D}{\ideal{c_{1}}}\oplus\cdots\oplus\frac{D}{\ideal{c_{n}}}
-          </me>.
+          </md>.
           Gli addendi <m>D/\ideal{c_{i}}</m> per cui <m>c_{i}</m> è invertibile sono moduli nulli e possiamo scartarli dalla decomposizione, mentre gli addendi <m>D/\ideal{c_{i}}</m> per cui <m>c_{i}</m> è nullo sono isomorfi a <m>D</m>. Pur di rietichettare gli addendi abbiamo allora una decomposizione come quella in enunciato:
-          <me>
+          <md>
             M/L\simeq \frac{D}{\ideal{c_{1}}}\oplus\cdots\oplus\frac{D}{\ideal{c_{s}}}\oplus D^{r}
-          </me>
+          </md>
           con i <m>c_{i}</m> non invertibili e non nulli.
         </p>
         <p>
           Chiaramente, gli addendi <m>D/\ideal{c_{i}}</m> sono contenuti nel sottomodulo di torsione. Viceversa, se
-          <me>
+          <md>
             x\coloneqq(x_{1},\ldots,x_{s},y_{1},\ldots,y_{r})
-          </me>
+          </md>
           è un elemento di torsione della somma diretta, cioè esiste <m>d</m> non nullo tale che <m>xd=0</m>, allora <m>y_{1}d=\cdots=y_{r}d=0</m> che, poiché <m>D</m> è un dominio, implica che <m>y_{1}=y_{2}=\cdots=y_{r}=0</m> e, quindi che il sottomodulo di torsione è contenuto in <m>\frac{D}{\ideal{c_{1}}}\oplus\cdots\oplus\frac{D}{\ideal{c_{s}}}</m>. Il quoziente di <m>M/L</m> su questo sottomodulo è isomorfo a <m>D^{r}</m>, grazie alla <xref ref="prop-quoziente_somma_diretta"/>.
         </p>
       </proof>
@@ -699,9 +699,9 @@
       <statement>
         <p>
           Sia <m>N</m> un <m>D</m>-modulo finitamente generato. Allora esistono irriducibili <m>p_{1}</m>, <m>\ldots</m>, <m>p_{t}</m> (non necessariamente non associati), interi positivi <m>\alpha_{1}</m>, <m>\ldots</m>, <m>\alpha_{t}</m> e un naturale <m>r</m> tali che
-          <me>
+          <md>
             N\simeq \frac{D}{\ideal{p_{1}^{\alpha_{1}}}}\oplus\cdots\oplus\frac{D}{\ideal{p_{t}^{\alpha_{t}}}}\oplus D^{r}
-          </me>.
+          </md>.
           Questa decomposizione, detta <term>primaria</term>, non è unica, ma <m>r</m> e gli ordini degli addendi sono univocamente determinati a meno dell'ordinamento. Inoltre, dato un irriducibile <m>p</m> in <m>D</m>, la componente <m>p</m>-primaria di <m>N</m> è data dalla somma di quegli addendi <m>D/\ideal{p_{i}^{\alpha_{i}}}</m> tali per cui <m>p_{i}</m> è associato a <m>p</m>.
         </p>
       </statement>
@@ -712,9 +712,9 @@
         </p>
         <p>
           Fissato un irriducibile <m>p</m>, chiaramente gli addendi <m>D/\ideal{p_{i}^{\alpha_{i}}}</m> tali per cui <m>p_{i}</m> è associato a <m>p</m> appartengono alla componente <m>p</m>-primaria. Viceversa, se
-          <me>
+          <md>
             x\coloneqq(x_{1},\ldots,x_{t},y_{1},\ldots,y_{r})
-          </me>
+          </md>
           è un elemento <m>p</m>-primario della somma diretta, cioè esiste <m>p^{\beta}</m> tale che <m>xp^{\beta}=0</m>, allora ogni <m>x_{i}</m> e ogni <m>y_{j}</m>  è un <m>p</m>-elemento, il che implica che tutti gli <m>y_{j}</m> siano nulli, così come gli <m>x_{i}</m> con <m>p_{i}</m> non associato a <m>p</m>. Dunque, la componente <m>p</m>-primaria è come in enunciato: per la <xref ref="prop-ciclici_primari"/>, nella decomposizione di un modulo <m>p</m>-primario in somma diretta di ciclici, gli ordini sono univocamente determinati. Avevamo già osservato nella <xref ref="prop-decomposizione_moduli_ciclici"/> che <m>r</m> è univocamente determinato.
         </p>
       </proof>
@@ -736,9 +736,9 @@
       <statement>
         <p>
           Sia <m>N</m> un <m>D</m>-modulo finitamente generato. Allora esistono elementi non nulli e non invertibili <m>d_{1}</m>, <m>\ldots</m>, <m>d_{s}</m> con <m>d_{1}\mid d_{2}\mid\cdots\mid d_{s}</m> e un naturale <m>r</m> tali che
-          <me>
+          <md>
             N\simeq \frac{D}{\ideal{d_{1}}}\oplus\cdots\oplus\frac{D}{\ideal{d_{s}}}\oplus D^{r}
-          </me>.
+          </md>.
           Questa decomposizione, detta <term>a fattori invarianti</term>, non è unica, ma gli ordini degli addendi sono univocamente determinati.
         </p>
       </statement>
@@ -758,25 +758,25 @@
       <statement>
         <p>
           Supponiamo che un <m>D</m>-modulo <m>N</m> abbia come decomposizione primaria
-          <me>
+          <md>
             \frac{D}{\ideal{p_{1}^{3}}}\oplus\frac{D}{\ideal{p_{1}^{3}}}\oplus\frac{D}{\ideal{p_{1}}}\oplus\frac{D}{\ideal{p_{1}}}\oplus \frac{D}{\ideal{p_{2}^{2}}}\oplus\frac{D}{\ideal{p_{2}^{2}}}\oplus\frac{D}{\ideal{p_{2}}}\oplus \frac{D}{\ideal{p_{3}^{4}}}\oplus D^{5}
-          </me>
+          </md>
           con <m>p_{1}</m>, <m>p_{2}</m>, <m>p_{3}</m> irriducibili a due a due non associati.
         </p>
 
         <p>
           Riordiniamo questa decomposizione raggruppando per ciascun irriducibile coinvolto prima gli addendi il cui ordine è individuato dall'esponente maggiore, poi il secondo più grande esponente e così via:
-          <me>
+          <md>
             \left(\frac{D}{\ideal{p_{1}^{3}}}\oplus\frac{D}{\ideal{p_{2}^{2}}}\oplus\frac{D}{\ideal{p_{3}^{4}}}\right)\oplus \left(\frac{D}{\ideal{p_{1}^{3}}}\oplus\frac{D}{\ideal{p_{2}^{2}}}\right)\oplus \left(\frac{D}{\ideal{p_{1}}}\oplus\frac{D}{\ideal{p_{2}}}\right)\oplus \left(\frac{D}{\ideal{p_{1}}}\right)\oplus D^{5}
-          </me>.
+          </md>.
           In ciascun raggruppamento appaiono moduli ciclici a ordini a due a due a coprimi e, quindi, la loro somma diretta è ciclica di ordine il prodotto degli ordini cioè
-          <me>
+          <md>
             \frac{D}{\ideal{p_{1}^{3}p_{2}^{2}p_{3}^{4}}} \oplus\frac{D}{\ideal{p_{1}^{3}p_{2}^{2}}} \oplus\frac{D}{\ideal{p_{1}p_{2}}} \oplus\frac{D}{\ideal{p_{1}}}\oplus D^{5}
-          </me>
+          </md>
           che possiamo riscrivere come
-          <me>
+          <md>
             \frac{D}{\ideal{d_{4}}}\oplus\frac{D}{\ideal{d_{3}}} \oplus\frac{D}{\ideal{d_{2}}}\oplus\frac{D}{\ideal{d_{1}}}\oplus D^{5}
-          </me>
+          </md>
           dove <m>d_{1}\coloneqq p_{1}</m>, <m>d_{2}\coloneqq p_{1}p_{2}</m>, <m>d_{3}\coloneqq p_{1}^{3}p_{2}^{2}</m> e <m>d_{4}\coloneqq p_{1}^{3}p_{2}^{2}p_{3}^{4}</m> con <m>d_{1}\mid d_{2}\mid d_{3}\mid d_{4}</m>.
         </p>
       </statement>

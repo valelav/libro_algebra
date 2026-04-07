@@ -91,19 +91,19 @@
       <statement>
         <p>
           Consideriamo il monoide <m>\mat{2}{R}</m> delle matrici quadrate di ordine <m>2</m> a coefficienti in un anello <m>R</m> rispetto alla moltiplicazione. Sia <m>L</m> il sottoinsieme formato dalle matrici del tipo
-          <me>
+          <md>
             \begin{pmatrix}
               a \amp 0 \\
               0 \amp 0
             \end{pmatrix}
-          </me>
+          </md>
           al variare di <m>a</m> in <m>R</m>. Il prodotto di due matrici di <m>L</m> è ancora una matrice di <m>L</m> e la matrice
-          <me>
+          <md>
             \begin{pmatrix}
               1 \amp 0 \\
               0 \amp 0
             \end{pmatrix}
-          </me>
+          </md>
           è elemento neutro per l'operazione indotta. Dunque, <m>L</m> è un monoide rispetto all'operazione indotta dall'operazione di <m>\mat{2}{R}</m>, ma non è un sottomonoide, perché il suo elemento neutro non è l'elemento neutro di <m>\mat{2}{R}</m>.
         </p>
       </statement>
@@ -327,7 +327,7 @@
           <answer>
             <p>
               È sottogruppo di <m>(\mat{n}{R},+)</m> ma non è sottomonoide di <m>(\mat{n}{R},\cdot)</m> (a parte il caso banale in cui <m>n=1</m>). Per <m>n=2</m> ecco due matrici simmetriche il cui prodotto non è una matrice simmetrica:
-              <me>
+              <md>
                 \begin{pmatrix}
                   1 \amp 0 \\
                   0 \amp 0
@@ -340,7 +340,7 @@
                   0 \amp 1 \\
                   0 \amp 0
                 \end{pmatrix}
-              </me>.
+              </md>.
               Questo esempio si può facilmente estendere a <m>n\ge 2</m>.
             </p>
           </answer>
@@ -493,9 +493,9 @@
       <proof>
         <p>
           Per la <xref ref="prop-non_vuoto_equivalente_esistenza_1"/>, basta provare che, se <m>H</m> soddisfa le proprietà date in enunciato e <m>a\in H</m>, allora <m>a^{-1}\in H</m>. Si verifica facilmente per induzione che <m>a^{r}\in H</m> per ogni intero positivo <m>r</m>. Poiché gli interi positivi sono infiniti e <m>H</m> è finito, ciò significa che esistono due interi positivi diversi <m>r</m> e <m>s</m> tali che <m>a^{r}=a^{s}</m>. Sia, ad esempio, <m>r \gt s</m>: allora, posto <m>t\coloneqq r-s</m>, si ha <m>t\ge 1</m> e
-          <me>
+          <md>
             a^{t}=a^{r-s}=a^{r}(a^{s})^{-1}=a^{r}(a^{r})^{-1}=1
-          </me>.
+          </md>.
           Di conseguenza, <m>a^{2t}=(a^{t})^{2}=1^{2}=1</m> e <m>2t\ge 2</m>: pertanto, <m>2t-1\ge 1</m> e <m>a^{2t-1}\in H</m>. Ma <m>a^{2t-1}a=1=a^{-1}a</m>: per le <xref ref="prop-cancellazione_gruppo" text="title"/>, abbiamo allora che <m>a^{-1}=a^{2t-1}\in H</m>, come richiesto.
          </p>
       </proof>
@@ -535,9 +535,9 @@
       <statement>
         <p>
           Se <m>G</m> è un gruppo e <m>\{H_{i}\}_{i\in \Omega}</m> è una famiglia di sottogruppi di <m>G</m> (indicizzata da un insieme di indici <m>\Omega</m>), allora
-          <me>
+          <md>
             \bigcap_{i\in \Omega}H_{i}
-          </me>
+          </md>
           è un sottogruppo di <m>G</m>.
         </p>
       </statement>
@@ -589,9 +589,9 @@
       <statement>
         <p>
           Dato un sottoinsieme <m>X</m> di un gruppo <m>G</m>, il <term>sottogruppo generato</term> da <m>X</m> è l'intersezione di tutti i sottogruppi di <m>G</m> contenenti <m>X</m>, denotata con <m>\grgen{X}</m>. In simboli
-          <me>
+          <md>
             \grgen{X}\coloneqq\bigcap_{X\subseteq H\le G}H
-          </me>.
+          </md>.
           Gli elementi di <m>X</m> sono detti <term>generatori</term> di <m>\grgen{X}</m>.
           Nel caso in cui <m>X\coloneqq\{x_{1},\ldots,x_{r}\}</m> sia un insieme finito, scriveremo semplicemente <m>\grgen{x_{1},\ldots,x_{r}}</m>.
         </p>
@@ -621,9 +621,9 @@
       <statement>
         <p>
           Dato un sottoinsieme <m>X</m> di un gruppo <m>G</m>, il sottogruppo <m>\grgen{X}</m> è uguale a <m>1</m> se <m>X=\vuoto</m>, altrimenti è l'insieme dei prodotti del tipo
-          <me>
+          <md>
             x_{1}x_{2}\cdots x_{r}
-          </me>
+          </md>
           dove <m>r</m> è un intero positivo e ciascun <m>x_{i}</m> appartiene a <m>X</m> o è l'inverso di un elemento di <m>X</m>.
         </p>
       </statement>
@@ -660,9 +660,9 @@
       <statement>
         <p>
           Dato un elemento <m>a</m> di un gruppo <m>G</m>, il <term>centralizzante</term> di <m>a</m> in <m>G</m>, denotato con <m>\cent{G}{a}</m>, è il sottoinsieme di <m>G</m> formato dagli elementi di <m>G</m> che commutano con <m>a</m>. In simboli
-          <me>
+          <md>
             \cent{G}{a}\coloneqq \{g\in G\mid ga=ag\}
-          </me>.
+          </md>.
         </p>
       </statement>
     </definition>
@@ -680,9 +680,9 @@
         </p>
         <p>
           Siano <m>g</m> e <m>h</m> due elementi di <m>\cent{G}{a}</m>. Allora
-          <me>
+          <md>
             gha=gah=agh
-          </me>
+          </md>
           e, dunque, <m>gh\in\cent{G}{a}</m>. Infine, sia <m>g</m> un elemento di <m>\cent{G}{a}</m>. Allora, per la <xref ref="prop-potenze_di_commutabili"/>, <m>g^{-1}</m> commuta con <m>a</m>.
         </p>
       </proof>
@@ -866,13 +866,13 @@
         <task>
           <p>
             Mostrare che
-            <me>
+            <md>
               A\coloneqq\{\{a\},\{a,b,c\},\{a,b,d\},\{a,b,c,d\}\}
-            </me>
+            </md>
             e
-            <me>
+            <md>
               B\coloneqq\{\{b\},\{a,b,c\},\{a,b,d\},\{a,b,c,d\}\}
-            </me>
+            </md>
             sono chiusi rispetto all'operazione di <m>M</m> e sono monoidi rispetto all'operazione indotta.
           </p>
         </task>
@@ -931,12 +931,12 @@
                 <mrow> \amp =1\cdot b_{2}+1\cdot d_{2}=b_{2}+d_{2}=1</mrow>
               </md>.
               Quindi <m>AB</m> appartiene ad <m>H</m>. L'inversa di <m>A</m> è la matrice
-              <me>
+              <md>
                 \begin{pmatrix}
                   \frac{d_{1}}{\Delta} \amp -\frac{b_{1}}{\Delta} \\
                   -\frac{c_{1}}{\Delta} \amp \frac{a_{1}}{\Delta}
                 \end{pmatrix}
-              </me>
+              </md>
               dove <m>\Delta=a_{1}d_{1}-b_{1}c_{1}</m>. Abbiamo allora
               <md>
                 <mrow> \frac{d_{1}}{\Delta}-\frac{c_{1}}{\Delta} \amp =\frac{d_{1}-c_{1}}{\Delta}=\frac{d_{1}-c_{1}}{a_{1}d_{1}-b_{1}c_{1}}=\frac{d_{1}-c_{1}}{(1-c_{1})d_{1}-b_{1}c_{1}}</mrow>
@@ -1099,9 +1099,9 @@
           <solution>
             <p>
               Mostriamo che <m>\ast</m> è associativa. Dati <m>a</m>, <m>b</m> e <m>c</m> in <m>G</m> abbiamo:
-              <me>
+              <md>
                 (a\ast b)\ast c=(a\cdot u\cdot b)\cdot u\cdot c=a\cdot u\cdot (b\cdot u\cdot c)=a\ast (b\ast c)
-              </me>.
+              </md>.
               Per mostrare che <m>(G,\ast)</m> ha elemento neutro, dobbiamo trovare un elemento <m>e</m> tale che, per ogni <m>a\in G</m>, si abbia <m>a\ast e=e\ast a=a</m>. Ora <m>a\ast e=a\cdot u\cdot e</m>. Ponendo tale elemento uguale ad <m>a</m> troviamo <m>a\cdot u\cdot e=a</m>, da cui ricaviamo <m>e=u^{-1}</m> (dove l'inverso è inteso in <m>(G,\cdot)</m>). Abbiamo, dunque, <m>a\ast u^{-1}=a</m>. Se ora calcoliamo <m>u^{-1}\ast a</m> troviamo <m>u^{-1}\cdot u\cdot a=a</m>. Dunque, <m>u^{-1}</m> è unità sia destra che sinistra.
             </p>
 
@@ -1125,9 +1125,9 @@
 
             <p>
               Viceversa, se <m>(G,\diamond)</m> è un gruppo allora, per ogni <m>a</m>, <m>b</m> e <m>c</m> in <m>G</m> si ha <m>(a\diamond b)\diamond c=a\diamond (b\diamond c)</m> ovvero
-              <me>
+              <md>
                 (a\cdot b\cdot u)\cdot c\cdot u=a\cdot(b\cdot c\cdot u)\cdot u
-              </me>.
+              </md>.
               Rimuovendo le parentesi (in <m>(G,\cdot)</m> vale la legge associativa) e cancellando <m>a\cdot b</m> a sinistra e <m>u</m> a destra troviamo <m>u\cdot c=c\cdot u</m>: per l'arbitrarietà di <m>c</m> in <m>G</m>, ciò implica che <m>u</m> appartiene al centro di <m>(G,\cdot)</m>.
             </p>
           </solution>
@@ -1248,16 +1248,16 @@
       <proof>
         <p>
           Siano <m>\sigma</m> e <m>\tau</m> due isometrie. Allora, presi due punti arbitrari <m>P</m> e <m>Q</m> del piano si ha
-          <me>
+          <md>
             \dist(P\sigma\tau,Q\sigma\tau)=\dist(P\sigma,Q\sigma)=\dist(P,Q)
-          </me>
+          </md>
           cioè <m>\sigma\tau</m> è un'isometria.
         </p>
         <p>
           Per il <xref ref="fact-isometria_biiettiva"/>, sappiamo ora che <m>\sigma^{-1}</m> esiste. Presi due punti arbitrari <m>P</m> e <m>Q</m> del piano si ha
-          <me>
+          <md>
             \dist(P\sigma^{-1},Q\sigma^{-1})=\dist(P\sigma^{-1}\sigma,Q\sigma^{-1}\sigma)= \dist(P\Id,Q\Id)=\dist(P,Q)
-          </me>
+          </md>
           cioè <m>\sigma^{-1}</m> è un'isometria.
         </p>
       </proof>
@@ -1438,7 +1438,7 @@
     </p>
     <p>
       Vogliamo ora determinare la tabella di Cayley del gruppo trirettangolo. Ovviamente, potremmo calcolare tutti i prodotti: non sono molti. Alternativamente, ricordiamo che nel <xref ref="sec-gruppi_piccoli"/> abbiamo determinato le possibili tabelle di Cayley di gruppi di ordine <m>4</m>. Una di esse è la tabella di <m>\Interi/4</m> rispetto all'addizione; per quanto riguarda l'altra tabella non avevamo verificato la proprietà associativa e non sapevamo, quindi, se fosse effettivamente la tabella di un gruppo. Notiamo ora che tutti gli elementi del gruppo trirettangolo coincidono con il proprio inverso e, dunque, sulla diagonale della tabella di Cayley deve sempre esserci l'elemento neutro. La tabella di <m>\Interi/4</m> non soddisfa questa proprietà e, quindi, la tabella di Cayley del gruppo trirettangolo è la seconda tabella che qui riportiamo
-      <me>
+      <md>
         \begin{array}{c|cccc}
             \amp 1 \amp a \amp b \amp c\\
           \hline
@@ -1447,7 +1447,7 @@
           b \amp b \amp c \amp 1 \amp a \\
           c \amp c \amp b \amp a \amp 1 \\
         \end{array}
-      </me>
+      </md>
       Ora sappiamo che questa tabella è effettivamente la tabella di un gruppo, precisamente il gruppo trirettangolo, e che questo gruppo è abeliano.
     </p>
 

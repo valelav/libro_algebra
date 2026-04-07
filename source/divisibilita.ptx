@@ -737,9 +737,9 @@
 
         <p>
           Supponiamo che valga la <xref ref="item-MCD">Condizione</xref> e mostriamo che vale la <xref ref="item-irriducibile_primo">Condizione</xref>. Sia allora <m>p</m> un elemento irriducibile: per provare che <m>p</m> è primo, dobbiamo mostrare che se <m>a</m> e <m>b</m> sono due elementi tali che <m>p\nmid a</m> e <m>p\nmid b</m> allora <m>p\nmid ab</m>. Per la <xref ref="prop-MCD_con_irriducibile"/>, ciò è equivalente a mostrare che se <m>(p,a)\sim 1</m> e <m>(p,b)\sim 1</m> allora <m>(p,ab)\sim 1</m>. Usando ripetutamente le proprietà del massimo comun divisore (<xref ref="prop-MCD_esiste_sempre"/>):
-          <me>
+          <md>
             (p,ab)\sim((p,pb),ab)\sim(p,(pb,ab))\sim(p,(p,a)b)\sim(p,1b)\sim(p,b)\sim 1
-          </me>.
+          </md>.
           Infine, supponiamo che valga la <xref ref="item-irriducibile_primo">Condizione</xref> e proviamo che vale la <xref ref="item-UFD">Condizione</xref>. Siano allora <m>a=p_{1}p_{2}\cdots p_{r}</m> e <m>a=q_{1}q_{2}\cdots q_{s}</m> due fattorizzazioni in irriducibili dello stesso elemento <m>a</m>. Sia <m>r\le s</m> e procediamo per induzione su <m>r</m>. Se <m>r=1</m> allora <m>a=p_{1}</m> è irriducibile e, di conseguenza, la seconda fattorizzazione deve avere un unico fattore anch'essa e <m>p_{1}=q_{1}</m>. Se <m>r>1</m>, abbiamo che <m>p_{1}</m> divide <m>q_{1}q_{2}\cdots q_{s}</m>: poiché <m>p_{1}</m> è irriducibile e, quindi, primo, abbiamo che <m>p_{1}</m> divide uno dei fattori <m>q_{1}</m>, <m>\ldots</m>, <m>q_{s}</m>.
           Pur di riordinare possiamo supporre che <m>p_{1}</m> divida <m>q_{1}</m> e, essendo <m>p_{1}</m> e <m>q_{1}</m> irriducibili, ciò implica che <m>p_{1}\sim q_{1}</m>. Esiste allora <m>u</m> invertibile tale che <m>p_{1}u=q_{1}</m>. Abbiamo così <m>p_{1}p_{2}\cdots p_{r}=p_{1}uq_{2}\cdots q_{s}</m> e, semplificando, otteniamo <m>p_{2}\cdots p_{r}=uq_{2}\cdots q_{s}</m> che possiamo riscrivere come <m>p_{2}\cdots p_{r}=q_{2}'\cdots q_{s}</m> dove <m>q_{2}'\coloneqq uq_{2}</m> è associato a <m>q_{2}</m> e, quindi, irriducibile.
           Per ipotesi induttiva abbiamo allora <m>r-1=s-1</m> (da cui segue <m>r=s</m>) e, pur di riordinare, che <m>p_{2}\sim q_{2}'</m>, <m>\ldots</m>, <m>p_{r}\sim q_{r}</m>: ricordando che abbiamo già mostrato che <m>p_{1}\sim q_{1}</m> e che <m>p_{2}\sim q_{2}'\sim q_{2}</m> abbiamo la tesi.
@@ -875,9 +875,9 @@
       <statement>
         <p>
           Dati <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n}</m> in un dominio a ideali principali <m>D</m>, il loro massimo comun divisore <m>d</m> esiste e può essere espresso nella forma
-          <me>
+          <md>
             d\coloneqq a_{1}u_{1}+a_{2}u_{2}+\cdots+a_{n}u_{n}
-          </me>
+          </md>
           per opportuni <m>u_{1}</m>, <m>u_{2}</m>, <m>\ldots</m>, <m>u_{n}</m> in <m>D</m>.
         </p>
       </statement>
@@ -906,9 +906,9 @@
       <statement>
         <p>
           Un dominio <m>D</m> è detto <term>euclideo</term> se esiste una funzione <m>\euclidean\colon D\setminus\{0\}\to\Naturali</m> tale che per ogni <m>a</m> e <m>b</m> in <m>D</m> con <m>b\ne0</m> esistono <m>q</m> e <m>r</m> in <m>D</m> tali che
-          <me>
+          <md>
             a=bq+r
-          </me>
+          </md>
           e <m>\euclidean(r) \lt \euclidean(b)</m> o <m>r=0</m>.
         </p>
       </statement>
@@ -933,9 +933,9 @@
       <statement>
         <p>
           Sia <m>K</m> un campo e siano <m>f</m> e <m>g</m> due polinomi in <m>K[x]</m> con <m>g</m> diverso da <m>0</m>. Allora esistono e sono univocamente determinati <m>q</m> e <m>r</m> in <m>K[x]</m> tali che
-          <me>
+          <md>
             f=gq+r
-          </me>
+          </md>
           con <m>\deg r \lt \deg g</m> o <m>r=0</m>. In particolare, <m>K[x]</m>, è un dominio euclideo rispetto alla funzione grado.
         </p>
       </statement>
@@ -1032,9 +1032,9 @@
             <mrow>r_{n+1} \amp = r_{n+2}q_{n+3}+0                                          </mrow>
           </md>
           I valori <m>\euclidean(r_{k})</m> formano una catena strettamente decrescente di numeri naturali. Poiché questa successione deve avere termine, ciò significa che dobbiamo arrivare a un resto nullo. L'ultimo resto non nullo <m>r_{n+2}</m> è allora il massimo comun divisore di <m>a</m> e <m>b</m>. Inoltre, dalla successione di equazioni è possibile ottenere un'identità, cosiddetta di Bezout, del tipo
-          <me>
+          <md>
             d=au+bv
-          </me>
+          </md>
           per opportuni elementi <m>u</m> e <m>v</m> di <m>D</m>.
         </p>
       </statement>
@@ -1044,9 +1044,9 @@
       <statement>
         <p>
           Applichiamo l'<xref ref="alg-euclide_domini"/> per trovare il massimo comun divisore tra i polinomi <m>a\coloneqq 4x^{5}-8x^{4}+x^{3}-5x^{2}+7x-2</m> e <m>b\coloneqq 2x^{4}-3x^{3}-2x^{2}-4x+1</m> a coefficienti in <m>\Razionali</m>. Dividendo <m>a</m> per <m>b</m> troviamo
-          <me>
+          <md>
             a=b(2x-1)+2x^{3}+x^{2}+x-1
-          </me>.
+          </md>.
           Procediamo con le altre divisioni:
           <md>
             <mrow> b \amp =(2x^{3}+x^{2}+x-1)(x-2)-x^{2}-x-1</mrow>
@@ -1138,25 +1138,25 @@
             </p>
             <p>
               Abbiamo <m>\euclidean(7+17i)=7^{2}+17^{2}=338</m> e <m>\euclidean(8-14i)=8^{2}+(-14)^{2}=260</m>. Dividiamo, dunque, <m>7+17i</m> per <m>8-14i</m> in <m>\Razionali[i]</m> e approssimiamo poi il quoziente in <m>\Interi[i]</m>.
-              <me>
+              <md>
                 \frac{7+17i}{8-14i}=\frac{7+17i}{8-14i}\frac{8-14i}{8+14i}=-\frac{182}{260}+\frac{234}{260}i
-              </me>.
+              </md>.
               Approssimiamo questo quoziente con <m>-1+i\coloneqq q</m>. Troviamo allora
-              <me>
+              <md>
                 7+17i=(8-14i)(-1+i)+r
-              </me>-
+              </md>-
               Svolgendo i calcoli troviamo che <m>r=1-5i</m>. Dividiamo ora <m>8-14i</m> per <m>1-5i</m>:
-              <me>
+              <md>
                 \frac{8-14i}{1-5i}=\frac{8-14i}{1-5i}\frac{1+5i}{1+5i}=3+i
-              </me>.
+              </md>.
               Abbiamo dunque
-              <me>
+              <md>
                 8-14i=(1-5i)(3+i)
-              </me>.
+              </md>.
               L'ultimo resto cercato è <m>1-5i</m> che è, dunque, il massimo comun divisore. Possiamo poi scrivere facilmente un'identità di Bezout
-              <me>
+              <md>
                 1+5i=(7+17i)\cdot1+(8-14i)(1-i)
-              </me>.
+              </md>.
             </p>
           </solution>
 
@@ -1303,16 +1303,16 @@
           </p>
           <p>
             Supponiamo che valga la <xref ref="item-cca">Condizione</xref> e mostriamo che vale la <xref ref="item-ideali_finitamente_generati">Condizione</xref>. Sia <m>I</m> un ideale e sia <m>a_{1}</m> un elemento di <m>I</m>. Se <m>I=\ideal{a_{1}}</m> abbiamo finito, altrimenti esiste <m>a_{2}\in I\setminus\ideal{a_{1}}</m>. Se <m>I=\ideal{a_{1},a_{2}}</m> abbiamo finito, altrimenti proseguiamo il procedimento costruendo una successione strettamente crescente di ideali
-            <me>
+            <md>
               \ideal{a_{1}}\subsetneq\ideal{a_{1},a_{2}}\subsetneq\cdots\subsetneq\ideal{a_{1},\ldots,a_{k}}\subsetneq\cdots
-            </me>
+            </md>
             Questo procedimento deve avere termine e, quindi, <m>I</m> è finitamente generato.
           </p>
           <p>
             Supponiamo ora che valga la <xref ref="item-cca">Condizione</xref> e mostriamo che vale la <xref ref="item-ideale_massimale">Condizione</xref>. Sia <m>\mathcal{F}</m> una famiglia non vuota di ideali. Scegliamo <m>I_{1}</m> in <m>\mathcal{F}</m>: se è massimale in <m>\mathcal{F}</m>, abbiamo finito, altrimenti esiste <m>I_{2}</m> in <m>\mathcal{F}</m> tale che <m>I_{1}\subsetneq I_{2}</m>. Proseguendo così creiamo una successione strettamente crescente di ideali
-            <me>
+            <md>
               I_{1}\subsetneq I_{2}\subsetneq\cdots\subsetneq I_{k}\subsetneq\cdots
-            </me>
+            </md>
             Questo procedimento deve avere termine e, quindi, <m>\mathcal{F}</m> ha un elemento massimale.
           </p>
           <p>

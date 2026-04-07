@@ -86,9 +86,9 @@
         </p>
         <p>
           Notiamo che <m>h^{1_{G}}=1_{G}^{-1}h1_{G}=h</m> per ogni <m>h</m> in <m>G</m> e che
-          <me>
+          <md>
             h^{gk}=(gk)^{-1}h(gk)=k^{-1}g^{-1}hgk=k^{-1}(h^{g})k=(h^{g})^{k}
-          </me>
+          </md>
           per ogni <m>h</m>, <m>k</m> e <m>g</m> in <m>G</m> e, quindi, abbiamo effettivamente un'azione (in questo caso abbiamo usato una notazione esponenziale invece che una notazione moltiplicativa per l'azione ma il concetto rimane lo stesso).
         </p>
       </statement>
@@ -113,9 +113,9 @@
       <proof>
         <p>
           Basta mostrare che la funzione <m>\phi_{g}</m> e la funzione <m>\phi_{g^{-1}}</m> sono una inversa dell'altra. Infatti, per ogni <m>x</m> in <m>X</m>, si ha
-          <me>
+          <md>
             x(\phi_{g}\phi_{g^{-1}})=(x\phi_{g})\phi_{g^{-1}}=(xg)g^{-1}=x(gg^{-1})=x1_{G}=x
-          </me>,
+          </md>,
           dove abbiamo usato le due proprietà che definiscono un'azione. Analogamente, si vede che <m>x(\phi_{g^{-1}}\phi_{g})=x</m>.
         </p>
       </proof>
@@ -131,9 +131,9 @@
       </p>
       <p>
         La seconda funzione è invece un automorfismo qualunque sia <m>g</m> in <m>G</m>: infatti, dati <m>h</m> e <m>k</m> in <m>G</m>, abbiamo
-        <me>
+        <md>
           (hk)^{g}=g^{-1}hkg=g^{-1}hgg^{-1}kg=h^{g}k^{g}
-        </me>.
+        </md>.
         Come conseguenza, abbiamo che per ogni <m>n</m> intero risulta <m>(h^{n})^{g}=(h^{g})^{n}</m>: in particolare, <m>(h^{-1})^{g}=(h^{g})^{-1}</m>.
       </p>
     </example>
@@ -165,9 +165,9 @@
           <solution>
             <p>
               Poiché <m>\phi</m> è un omomorfismo di gruppi, manda <m>1_{G}</m> in <m>\Id</m>. Dunque, <m>x1_{G}=x\Id=x</m> per ogni <m>x</m> in <m>X</m>. Inoltre <m>\phi_{gh}=\phi_{g}\phi_{h}</m> per ogni <m>g</m> e <m>h</m> in <m>G</m>: quindi,
-              <me>
+              <md>
                 x(gh)=x\phi_{gh}=x\phi_{g}\phi_{h}=(xg)h
-              </me>
+              </md>
               per ogni <m>x</m> in <m>X</m>.
             </p>
           </solution>
@@ -234,16 +234,16 @@
         </p>
         <p>
           Se <m>x\sim_{G}y</m>, allora esiste <m>g\in G</m> tale che <m>y=xg</m>: applicando <m>g^{-1}</m> a entrambi i membri di questa uguaglianza e usando le proprietà che definiscono un'azione otteniamo
-          <me>
+          <md>
             yg^{-1}=(xg)g^{-1}=x(gg^{-1})=x1_{G}=x
-          </me>.
+          </md>.
           Dunque, <m>\sim_{G}</m> soddisfa la proprietà simmetrica.
         </p>
         <p>
           Infine, se <m>x\sim_{G}y</m> e <m>y\sim_{G}z</m>, allora esistono <m>g</m> e <m>h</m> in <m>G</m> tali che <m>y=xg</m> e <m>z=yh</m>. Applicando le proprietà che definiscono un'azione otteniamo
-          <me>
+          <md>
             z=yh=(xg)h=x(gh)
-          </me>.
+          </md>.
           Dunque, l'elemento <m>gh</m> di <m>G</m> manda <m>x</m> in <m>z</m> e, pertanto, <m>\sim_{G}</m> soddisfa la proprietà transitiva.
         </p>
       </proof>
@@ -257,9 +257,9 @@
       <statement>
         <p>
           Dato un gruppo <m>G</m> che agisce su un insieme <m>X</m>, le classi di equivalenza della relazione <m>\sim_{G}</m> definita nella <xref ref="prop-azione_partizione"/> sono dette <term>orbite</term>. Dato un elemento <m>x</m> in <m>X</m>, l'orbita contenente <m>x</m> è denotata con <m>xG</m> ed è precisamente
-          <me>
+          <md>
             xG\coloneqq\{xg\mid g\in G\}
-          </me>.
+          </md>.
         </p>
       </statement>
     </definition>
@@ -272,9 +272,9 @@
       <statement>
         <p>
           Nel caso particolare in cui consideriamo l'azione di un gruppo <m>G</m> su sé stesso per coniugio, l'orbita contenente un certo elemento <m>h</m> è detta <term>classe di coniugio</term> e denotata con il simbolo <m>h^{G}</m>. Esplicitamente
-          <me>
+          <md>
             h^{G}\coloneqq\{h^{g}\mid g\in G\}
-          </me>.
+          </md>.
         </p>
       </statement>
     </definition>
@@ -287,9 +287,9 @@
       <statement>
         <p>
           Dato un gruppo <m>G</m> che agisce su un insieme <m>X</m> e un elemento <m>x\in X</m>, lo <term>stabilizzatore</term> di <m>x</m> in <m>G</m> è il sottoinsieme <m>\stab{G}{x}</m> di <m>G</m> così definito
-          <me>
+          <md>
             \stab{G}{x}\coloneqq\{g\in G\mid xg=x\}
-          </me>.
+          </md>.
         </p>
       </statement>
     </definition>
@@ -307,9 +307,9 @@
         </p>
         <p>
           Siano ora <m>g</m> e <m>h</m> elementi di <m>\stab{G}{x}</m>: dunque, <m>xg=x</m> e <m>xh=x</m>. Pertanto, <m>x(gh)=(xg)h=xh=</m>, cioè <m>gh\in \stab{G}{x}</m>. Inoltre, applicando <m>g^{-1}</m> ad ambo i membri di <m>x=xg</m>, otteniamo
-          <me>
+          <md>
             xg^{-1}=(xg)g^{-1}=x(gg^{-1})=x1_{G}=x
-          </me>.
+          </md>.
           Dunque, <m>g^{-1}\in\stab{G}{x}</m>.
         </p>
       </proof>
@@ -331,15 +331,15 @@
       <proof>
         <p>
           Supponiamo prima che <m>\stab{G}{x}g=\stab{G}{x}h</m>: dunque, esiste <m>s\in\stab{G}{x}</m> tale che <m>g=sh</m>. Ma allora
-          <me>
+          <md>
             xg=x(sh)=(xs)h=xh
-          </me>.
+          </md>.
         </p>
         <p>
           Viceversa, sia <m>xg=xh</m>: applicando <m>h^{-1}</m> a entrambi i membri, troviamo
-          <me>
+          <md>
             xgh^{-1}=xhh^{-1}=x1_{G}=x
-          </me>.
+          </md>.
           Dunque, <m>gh^{-1}</m> è un elemento di <m>\stab{G}{x}</m>: ma allora <m>g=(gh^{-1})h\in\stab{G}{x}h</m>.
         </p>
       </proof>
@@ -378,9 +378,9 @@
         </p>
         <p>
           Viceversa, se <m>h=h^{g}</m>, cioè <m>h=g^{-1}hg</m>, allora, moltiplicando a sinistra ambo i membri per <m>g</m>, otteniamo
-          <me>
+          <md>
             gh=gg^{-1}hg=hg
-          </me>.
+          </md>.
         </p>
       </proof>
 
@@ -390,9 +390,9 @@
       <statement>
         <p>
           Dato un elemento <m>h</m> di un gruppo <m>G</m>, la cardinalità della classe di coniugio <m>h^{G}</m> è uguale all'indice in <m>G</m> del centralizzante di <m>h</m> in <m>G</m>. In formule
-          <me>
+          <md>
             \abs{h^{G}}=\ind{G}{\cent{G}{h}}
-          </me>.
+          </md>.
           In particolare, se <m>G</m> è finito, allora <m>\abs{h^{G}}</m> divide <m>\abs{G}</m>.
         </p>
       </statement>
@@ -409,9 +409,9 @@
       <statement>
         <p>
           Dato un gruppo finito <m>G</m>, possiamo scrivere
-          <me>
+          <md>
             \abs{G}=\abs{\centro(G)}+c_{1}+c_{2}+\cdots+c_{r}
-          </me>
+          </md>
           dove <m>c_{1}</m>, <m>\ldots</m>, <m>c_{r}</m> sono divisori di <m>\abs{G}</m> e, precisamente, sono le cardinalità delle classi di coniugio di <m>G</m> che contengono più di un elemento. L'equazione è detta <term>equazione delle classi</term>.
         </p>
       </statement>
@@ -451,13 +451,13 @@
       <proof>
         <p>
           Sia <m>\abs{G}=p^{n}</m> con <m>n \gt 0</m>. L'equazione delle classi di <m>G</m> è allora
-          <me>
+          <md>
             p^{n}=\abs{\centro(G)}+c_{1}+c_{2}+\cdots+c_{r}
-          </me>
+          </md>
           dove i <m>c_{i}</m> sono divisori di <m>p^{n}</m> maggiori di <m>1</m>. Poiché <m>p</m> è primo, i divisori di <m>p^{n}</m> sono i numeri del tipo <m>p^{t}</m> con <m>0\le t\le n</m>: in particolare, i divisori di <m>p^{n}</m> maggiori di <m>1</m> sono multipli di <m>p</m>. Ma allora
-          <me>
+          <md>
             \abs{\centro(G)}=p^{n}-c_{1}-c_{2}-\cdots-c_{r}
-          </me>
+          </md>
           è somma di multipli di <m>p</m> ed è, quindi, a sua volta un multiplo di <m>p</m>. In particolare, <m>\centro(G)\ne 1</m>.
         </p>
       </proof>
@@ -486,9 +486,9 @@
         <introduction>
           <p>
             Sia data l'azione di <m>S\coloneqq\Sym_{3}</m> su
-            <me>
+            <md>
               X\coloneqq\{(i,j)\in\Interi\times\Interi\mid 1\le i\le 3,1\le j\le 3\}
-            </me>
+            </md>
             definita da <m>(i,j)\sigma\coloneqq(i\sigma,j\sigma)</m>.
           </p>
         </introduction>
@@ -534,9 +534,9 @@
         <statement>
           <p>
             Sia data l'azione di <m>S\coloneqq\Sym_{3}</m> su
-            <me>
+            <md>
               X\coloneqq\{(i,j,k)\in\Interi\times\Interi\times\Interi\mid 1\le i\le 3,1\le j\le 3,1\le k\le 3\}
-            </me>
+            </md>
             definita da <m>(i,j,k)\sigma\coloneqq(i\sigma,j\sigma,k\sigma)</m>, determinare tutte le orbite di quest'azione.
           </p>
         </statement>
@@ -586,9 +586,9 @@
             <description>coniugato di un sottogruppo <m>H</m> tramite un elemento <m>g</m></description>
           </notation>
           Dato un gruppo <m>G</m>, un suo sottogruppo <m>H</m> e un elemento <m>g</m> di <m>G</m>, il sottoinsieme
-          <me>
+          <md>
             H^{g}\coloneqq\{h^{g}\mid h\in H\}
-          </me>
+          </md>
           è un sottogruppo di <m>G</m> isomorfo a <m>H</m>. Tale sottogruppo è detto <term>coniugato</term> di <m>H</m> tramite <m>G</m>.
         </p>
       </statement>
@@ -616,9 +616,9 @@
       <statement>
         <p>
           Consideriamo il gruppo lineare generale <m>\GL{n}{\Razionali}</m> delle matrici invertibili di ordine <m>n</m> a coefficienti in <m>\Razionali</m>. Consideriamo il sottoinsieme <m>\SL{n}{\Razionali}</m> delle matrici aventi determinante <m>1</m>. Si verifica facilmente, usando il teorema di Binet, che <m>\SL{n}{\Razionali}</m> è un sottogruppo di <m>\GL{n}{\Razionali}</m>, detto <term>gruppo speciale lineare</term>. Inoltre se <m>A\in\SL{n}{\Razionali}</m> e <m>B\in\GL{n}{\Razionali}</m>, abbiamo
-          <me>
+          <md>
             \det(A^{B})=(\det B)^{-1}\det A\det B=(\det B)^{-1}\cdot 1\cdot \det B=(\det B)^{-1}\det B=1
-          </me>
+          </md>
           cioè <m>A^{B}\in\SL{n}{\Razionali}</m>. Dunque, <m>\SL{n}{\Razionali}\trianglelefteq\GL{n}{\Razionali}</m>.
         </p>
       </statement>
@@ -785,9 +785,9 @@
       <statement>
         <p>
           Se <m>H</m> è un sottogruppo di un gruppo <m>G</m>, allora il sottoinsieme di <m>G</m> così definito
-          <me>
+          <md>
             \nrm{G}{H}\coloneqq\{g\in G\mid H^{g}=H\}
-          </me>
+          </md>
           è detto <term>normalizzante</term> di <m>H</m> in <m>G</m>.
         </p>
       </statement>
@@ -878,9 +878,9 @@
       <proof>
         <p>
           Abbiamo
-          <me>
+          <md>
             (l^{g})\phi=(g^{-1}lg)\phi=(g\phi)^{-1}\cdot l\phi\cdot g\phi=(l\phi)^{g\phi}
-          </me>.
+          </md>.
         </p>
       </proof>
 
@@ -965,9 +965,9 @@
 
     <p>
       Abbiamo visto nell'<xref ref="ex-azioni_su_di_se_omomorfismi"/> che, dato un elemento <m>g</m> di un gruppo <m>G</m>, il coniugio tramite <m>g</m> è un automorfismo di <m>G</m>. Possiamo però dire qualcosa di più. Se <m>N</m> è un sottogruppo normale di <m>G</m>, allora, per il <xref ref="thm-caratterizzazione_sottogruppi_normali"/>, sappiamo che <m>N^{g}=N</m> e, quindi, il coniugio tramite <m>g</m> definisce un automorfismo di <m>N</m>. Se denotiamo con <m>\phi_{g}</m> questo automorfismo di <m>N</m> e componiamo due di questi automorfismi <m>\phi_{g}</m> e <m>\phi_{h}</m> otteniamo
-      <me>
+      <md>
         n\phi_{g}\phi_{h}=(g^{-1}ng)\phi_{h}=h^{-1}g^{-1}ngh=(gh)^{-1}ngh=n\phi_{gh}
-      </me>
+      </md>
       cioè <m>\phi{g}\phi_{h}=\phi_{gh}</m>. possiamo riassumere tutto ciò nella
     </p>
 
@@ -1089,9 +1089,9 @@
         <solution>
           <p>
             Sia <m>h</m> un elemento di <m>\stab{G}{x}</m>. Abbiamo allora
-            <me>
+            <md>
               yh^{g}=(xg)(g^{-1}hg)=xhg=xg=y
-            </me>:
+            </md>:
             dunque,  <m>\stab{G}{y}\ge\stab{G}{x}^{g}</m>. Poiché <m>x=yg^{-1}</m>, abbiamo, analogamente, <m>\stab{G}{x}\ge\stab{G}{y}^{g^{-1}}</m> e, coniugando per <m>g</m>, otteniamo <m>\stab{G}{x}^{g}\ge\stab{G}{y}</m>.
           </p>
         </solution>
@@ -1232,10 +1232,10 @@
         <introduction>
           <p>
             Dato il gruppo <m>G</m> formato dagli elementi del tipo <m>(a,b,c)</m> con <m>a</m>, <m>b</m> e <m>c</m> in <m>\Interi</m> dotato dell'operazione <m>\diamond</m> definita da
-            <me>
+            <md>
               (a_{1},b_{1},c_{1})\diamond(a_{2},b_{2},c_{2})\coloneqq
               (a_{1}+a_{2},b_{1}+b_{2},c_{1}+c_{2}+a_{1}b_{2})
-            </me>
+            </md>
             come nell'<xref ref="exercise-triangolari_nascoste"/> per ciascuno dei sottoinsiemi definiti dalle condizioni sulle terne <m>(a,b,c)</m> stabilire se sono sottogruppi e, in caso affermativo, se sono normali in <m>G</m>.
           </p>
         </introduction>
@@ -1384,9 +1384,9 @@
       <statement>
         <p>
           Supponiamo di voler fare il coniugato del ciclo <m>\sigma\coloneqq(1\;3\;5)</m> tramite la permutazione <m>\tau\coloneqq(1\;2)(3\;4\;6)</m> (siamo in <m>\Sym_{n}</m> con <m>n\ge 6</m>). Abbiamo allora
-          <me>
+          <md>
             \sigma^{\tau}=\tau^{-1}\sigma\tau=(6\;4\;3)(1\;2)(1\;3\;5)(1\;2)(3\;4\;6)=(2\;4\;5)
-          </me>.
+          </md>.
           Notiamo che il coniugato del <m>3</m>-ciclo <m>\sigma</m> è ancora un <m>3</m>-ciclo. Non solo: <m>1\tau=2</m>, <m>3\tau=4</m> e <m>5\tau=5</m>, e, dunque, abbiamo che <m>(1\;3\;5)^{\tau}=(1\tau\;3\tau\;5\tau)</m>.
         </p>
       </statement>
@@ -1430,20 +1430,20 @@
       <proof>
         <p>
           Sia <m>\sigma</m> una permutazione di tipo <m>(r_{1},r_{2},\ldots,r_{t})</m> con <m>r_{1}\ge r_{2}\ge\cdots\ge r_{t}\gt 1</m>. Dunque,
-          <me>
+          <md>
             \sigma=(a_{1,1}\;\ldots\;a_{1r_{1}})\cdots(a_{t1}\;\ldots\;a_{tr_{t}})
-          </me>
+          </md>
           con gli <m>a_{ij}</m> tutti distinti. Se <m>\tau</m> è un elemento qualunque di <m>\Sym_{n}</m>, per il <xref ref="lem-coniugato_ciclo"/> abbiamo allora
-          <me>
+          <md>
             \sigma^{\tau}=(a_{1,1}\;\ldots\;a_{1r_{1}})^{\tau}\cdots(a_{t1}\;\ldots\;a_{tr_{t}})^{\tau}=  (a_{1,1}\tau\;\ldots\;a_{1r_{1}}\tau)\cdots(a_{t1}\tau\;\ldots\;a_{tr_{t}}\tau)
-          </me>.
+          </md>.
           Per l'iniettività di <m>\tau</m>, gli <m>a_{ij}\tau</m> sono tutti distinti e, quindi, i cicli che appaiono in questa espressione di <m>\sigma^{\tau}</m> sono disgiunti: pertanto, <m>\sigma^{\tau}</m> ha lo stesso tipo di <m>\sigma</m>.
         </p>
         <p>
           Viceversa, sia
-          <me>
+          <md>
             \sigma'=(b_{1,1}\;\ldots\;b_{1r_{1}})\cdots(b_{t1}\;\ldots\;b_{tr_{t}})
-          </me>
+          </md>
           con i <m>b_{ij}</m> tutti distinti: definita una permutazione <m>\rho</m> ponendo <m>a_{ij}\rho\coloneqq b_{ij}</m> per ogni <m>i</m> e <m>j</m> e estendendola arbitrariamente agli elementi diversi dagli <m>a_{j}</m>, un'ulteriore applicazione del <xref ref="lem-coniugato_ciclo"/> mostra che <m>\sigma^{\rho}=\sigma'</m>, come richiesto
         </p>
       </proof>
@@ -1465,7 +1465,7 @@
         </p>
         <p>
           In <m>\Sym_{3}</m>:
-          <me>
+          <md>
             \begin{array}{cccc}
               \sigma    \amp \abs{\sigma^{S}} \amp \abs{\sigma} \amp\abs{\cent{S}{\sigma}}\\
               \hline
@@ -1473,11 +1473,11 @@
               (1\;2)    \amp 3                \amp 2            \amp 2\\
               (1\;2\;3) \amp 2                \amp 3            \amp 3\\
             \end{array}
-          </me>
+          </md>
         </p>
         <p>
           In <m>\Sym_{4}</m>:
-          <me>
+          <md>
             \begin{array}{cccc}
               \sigma       \amp \abs{\sigma^{S}} \amp \abs{\sigma} \amp\abs{\cent{S}{\sigma}}\\
               \hline
@@ -1487,11 +1487,11 @@
               (1\;2\;3\;4) \amp 6                \amp 4            \amp  4\\
               (1\;2)(3\;4) \amp 3                \amp 2            \amp  8\\
             \end{array}
-          </me>
+          </md>
         </p>
         <p>
           In <m>\Sym_{5}</m>:
-          <me>
+          <md>
             \begin{array}{cccc}
               \sigma          \amp \abs{\sigma^{S}} \amp \abs{\sigma} \amp\abs{\cent{S}{\sigma}}\\
               \hline
@@ -1503,7 +1503,7 @@
               (1\;2)(3\;4)    \amp 15               \amp 2            \amp 8\\
               (1\;2\;3)(4\;5) \amp 20               \amp 6            \amp 6\\
             \end{array}
-          </me>
+          </md>
         </p>
         <p>
           Ricordiamo ora che il centralizzante di un elemento <m>g</m> di un gruppo <m>G</m> contiene il sottogruppo ciclico <m>\grgen{g}</m>. In alcuni casi, questa inclusione può essere un'uguaglianza. Nelle tabelle suesposte, possiamo confrontare il periodo di un elemento (cioè l'ordine del gruppo ciclico da esso generato) con l'ordine del suo centralizzante, per notare, ad esempio, che in <m>\Sym_{5}</m> si ha <m>\cent{\Sym_{5}}{(1\;2\;3)}\ne\grgen{(1\;2\;3)}</m>, mentre  <m>\cent{\Sym_{5}}{(1\;2\;3\;4)}=\grgen{(1\;2\;3\;4)}</m>.
@@ -1771,15 +1771,15 @@
             </p>
             <p>
               Abbiamo poi la classe di coniugio degli elementi del tipo
-              <me>
+              <md>
                 (a_{1}\;a_{2}\;a_{3}\;a_{4})(a_{5}\;a_{6})
-              </me>: possiamo scegliere le lettere <m>a_{1}</m>, <m>\ldots</m>, <m>a_{6}</m> in <m>8\cdot7\cdot6\cdot5\cdot4\cdot3</m> modi diversi. Il ciclo di lunghezza <m>4</m> può essere scritto in <m>4</m> modi diversi, mentre il ciclo di lunghezza <m>2</m> può essere scritto in <m>2</m> modi diversi. Ci sono così <m>\frac{8\cdot7\cdot6\cdot5\cdot4\cdot3}{4\cdot2}</m> elementi in questa classe.
+              </md>: possiamo scegliere le lettere <m>a_{1}</m>, <m>\ldots</m>, <m>a_{6}</m> in <m>8\cdot7\cdot6\cdot5\cdot4\cdot3</m> modi diversi. Il ciclo di lunghezza <m>4</m> può essere scritto in <m>4</m> modi diversi, mentre il ciclo di lunghezza <m>2</m> può essere scritto in <m>2</m> modi diversi. Ci sono così <m>\frac{8\cdot7\cdot6\cdot5\cdot4\cdot3}{4\cdot2}</m> elementi in questa classe.
             </p>
             <p>
               Infine abbiamo la classe di coniugio degli elementi del tipo
-              <me>
+              <md>
                 (a_{1}\;a_{2}\;a_{3}\;a_{4})(a_{5}\;a_{6})(a_{7}\;a_{8})
-              </me>:
+              </md>:
               possiamo scegliere le lettere <m>a_{1}</m>, <m>\ldots</m>, <m>a_{8}</m> in <m>8!</m> modi diversi. Il ciclo di lunghezza <m>4</m> può essere scritto in <m>4</m> modi diversi, mentre ciascun ciclo di lunghezza <m>2</m> può essere scritto in <m>2</m> modi diversi. Inoltre, possiamo scambiare tra loro i cicli di lunghezza <m>2</m>. Ci sono così <m>\frac{8!}{4\cdot2\cdot2\cdot2}</m> elementi in questa classe.
             </p>
           </solution>
@@ -1937,9 +1937,9 @@
             </p>
             <p>
               Il centralizzante <m>\cent{\Sym_{12}}{\sigma}</m> contiene perlomeno il sottogruppo ciclico generato da <m>\sigma</m>: poiché <m>\sigma</m> ha periodo <m>35</m> e il centralizzante ha pure ordine <m>35</m>, ne consegue che <m>\cent{\Sym_{12}}{\sigma}=\grgen{\sigma}</m>. Notiamo ora che la permutazione <m>\sigma</m> è pari e appartiene quindi ad <m>A_{12}</m>: pertanto, tutto il gruppo ciclico generato da <m>\sigma</m> è contenuto in <m>A_{12}</m> e, quindi,
-              <me>
+              <md>
                 \cent{A_{12}}{\sigma}=\cent{\Sym_{12}}{\sigma}\cap A_{12}=\grgen{\sigma}
-              </me>:
+              </md>:
               dunque, <m>\cent{A_{12}}{\sigma}</m> contiene <m>35</m> elementi.
             </p>
           </solution>
@@ -1979,9 +1979,9 @@
           <solution>
             <p>
               Dal <xref ref="lem-indice_intersezione"/> segue che
-              <me>
+              <md>
                 \ind{\cent{\Sym_{8}}{\sigma}}{\cent{A_{8}}{\sigma}}\le\ind{\Sym_{8}}{A_{8}}=2
-              </me>.
+              </md>.
               Notiamo che <m>(7\;8)\in\cent{\Sym_{8}}{\sigma}\setminus A_{8}</m> e, dunque, <m>\cent{\Sym_{8}}{\sigma}\nleq
               A_{8}</m>. Quindi, <m>\ind{\cent{\Sym_{8}}{\sigma}}{\cent{A_{8}}{\sigma}} \gt 1</m>. Di conseguenza, <m>\ind{\cent{\Sym_{8}}{\sigma}}{\cent{A_{8}}{\sigma}}=2</m> e <m>\abs{\cent{A_{8}}{\sigma}}=\abs{\cent{\Sym_{8}}{\sigma}}/2=8</m>.
             </p>

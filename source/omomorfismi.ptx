@@ -53,13 +53,13 @@
       <statement>
         <p>
           Consideriamo la funzione <m>\phi\colon\Razionali\to\mat{2}{\Razionali}</m> dal monoide dei razionali rispetto al prodotto al monoide delle matrici quadrate di ordine <m>2</m> a coefficienti in <m>\Razionali</m> rispetto al prodotto definita da
-          <me>
+          <md>
             a\phi\coloneqq
             \begin{pmatrix}
               a \amp 0 \\
               0 \amp 0
             \end{pmatrix}
-          </me>.
+          </md>.
           Anche se questa funzione rispetta il prodotto, non è un omomorfismo perché <m>1\phi\ne\Idmatrix</m>.
         </p>
       </statement>
@@ -77,9 +77,9 @@
       <statement>
         <p>
           Dati due gruppi <m>G</m> e <m>H</m>, un <term>omomorfismo</term> di gruppi da <m>G</m> in <m>H</m> è una funzione <m>\phi\colon G\to H</m> tale che
-          <me>
+          <md>
             (x\cdot y)\phi=x\phi\cdot y\phi
-          </me>
+          </md>
           per ogni <m>x</m> e <m>y</m> in <m>G</m>: ciò si esprime dicendo che <m>\phi</m> <term>rispetta</term> l'operazione.
         </p>
       </statement>
@@ -164,9 +164,9 @@
       <proof>
         <p>
           È una semplice verifica: dati <m>x</m> e <m>y</m> in <m>G</m> si ha
-          <me>
+          <md>
             (xy)\phi\psi=(x\phi \cdot y\phi)\psi=x\phi\psi\cdot y\phi\psi
-          </me>.
+          </md>.
         </p>
       </proof>
 
@@ -231,23 +231,23 @@
         </p>
         <p>
           Sia allora <m>k</m> un naturale per cui si ha <m>(x^{k})\phi=(x\phi)^{k}</m>: pertanto
-          <me>
+          <md>
             (x^{k+1})\phi=(x^{k}x)\phi=(x^{k})\phi \cdot x\phi=(x\phi)^{k} \cdot x\phi=(x\phi)^{k+1}
-          </me>.
+          </md>.
         </p>
         <p>
           Supponiamo, infine che <m>n</m> sia un intero negativo. Allora, <m>-n</m> è positivo e <m>x^{-n}\phi=(x\phi)^{-n}</m>. Moltiplicando ambo i membri per <m>(x\phi)^{n}</m> otteniamo
-          <me>
+          <md>
             x^{-n}\phi\cdot (x\phi)^{n}=(x\phi)^{-n}(x\phi)^{n}=1_{H}
-          </me>.
+          </md>.
           D'altra parte
-          <me>
+          <md>
             x^{-n}\phi\cdot x^{n}\phi =(x^{-n}x^{n})\phi=(x^{0})\phi=1_{G}\phi=1_{H}
-          </me>.
+          </md>.
           Pertanto,
-          <me>
+          <md>
             x^{-n}\phi\cdot (x\phi)^{n}=x^{-n}\phi\cdot x^{n}\phi
-          </me>,
+          </md>,
           e la tesi segue dalle <xref ref="prop-cancellazione_gruppo" text="title"/>.
         </p>
       </proof>
@@ -285,9 +285,9 @@
           </p>
           <p>
             Allora
-            <me>
+            <md>
               1_{N}=x\phi=(x1_{M})\phi=x\phi\cdot 1_{M}\phi=1_{N}\cdot 1_{M}\phi=1_{M}\phi
-            </me>.
+            </md>.
           </p>
         </solution>
       </exercise>
@@ -441,9 +441,9 @@
         <solution>
           <p>
             Se <m>G</m> è abeliano, allora, per ogni <m>x</m> e <m>y</m> in <m>G</m>, abbiamo
-            <me>
+            <md>
               (xy)\phi=(xy)^{2}=xyxy=xxyy=x^{2}y^{2}=x\phi y\phi
-            </me>.
+            </md>.
           </p>
           <p>
             Viceversa, sia <m>\phi</m> endomorfismo e siano <m>x</m> e <m>y</m> due elementi di <m>G</m>. Allora <m>(xy)\phi=x\phi y\phi</m>, cioè <m>xyxy=xxyy</m>. Per le <xref ref="prop-cancellazione_gruppo" text="title"/>, otteniamo che <m>yx=xy</m>.
@@ -491,12 +491,12 @@
         <exercise>
           <statement>
             <p>
-              <m>\phi\colon \mat{2}{\Razionali}\to \Razionali</m> così definita <me>
+              <m>\phi\colon \mat{2}{\Razionali}\to \Razionali</m> così definita <md>
                 \begin{psmallmatrix}
                   a \amp b \\
                   c \amp d
                 \end{psmallmatrix}\phi\coloneqq a+b
-              </me>
+              </md>
               dove intendiamo i gruppi additivi.
             </p>
           </statement>
@@ -512,12 +512,12 @@
           <statement>
             <p>
               <m>\phi\colon \GL{2}{\Razionali}\to\Inv{\Razionali}</m> così definita
-              <me>
+              <md>
                 \begin{psmallmatrix}
                   a \amp b \\
                   c \amp d
                 \end{psmallmatrix}\phi\coloneqq ab
-              </me>
+              </md>
               dove intendiamo i gruppi moltiplicativi.
             </p>
           </statement>
@@ -533,13 +533,13 @@
           <statement>
             <p>
               <m>\phi\colon \Inv{\Razionali}\to\GL{2}{\Razionali}</m> così definita
-              <me>
+              <md>
                 a\phi\coloneqq
                 \begin{psmallmatrix}
                   a \amp 0 \\
                   0 \amp 1
                 \end{psmallmatrix}
-              </me>
+              </md>
               dove intendiamo i gruppi moltiplicativi.
             </p>
           </statement>
@@ -555,13 +555,13 @@
           <statement>
             <p>
               <m>\phi\colon \Inv{\Razionali}\to\GL{2}{\Razionali}</m> così definita
-              <me>
+              <md>
                 a\phi\coloneqq
                 \begin{psmallmatrix}
                   0 \amp a \\
                   1 \amp 0
                 \end{psmallmatrix}
-              </me>
+              </md>
               dove intendiamo i gruppi moltiplicativi.
             </p>
           </statement>
@@ -620,16 +620,16 @@
       <proof>
         <p>
           Preso un elemento <m>x</m> in <m>L</m>, si ha che <m>x\phi\in L\phi</m>: dunque, <m>L\phi</m> è non vuoto. Siano ora <m>x'</m> e <m>y'</m> elementi di <m>L\phi</m>: dunque, esistono <m>x</m> e <m>y</m> in <m>L</m> tali che <m>x'=x\phi</m> e <m>y'=y\phi</m>. Pertanto
-          <me>
+          <md>
             x'(y')^{-1}=x\phi\cdot (y\phi)^{-1}=x\phi\cdot y^{-1}\phi=(xy^{-1})\phi\in L\phi
-          </me>
+          </md>
           dove abbiamo usato la <xref ref="prop-immagini_di_potenze"/> e il fatto che <m>xy^{-1}</m> appartiene al sottogruppo <m>L</m>. Il <xref ref="item-immagine_diretta_di_sottogruppo"/> è così provato.
         </p>
         <p>
           Per quanto riguarda il <xref ref="item-immagine_inversa_di_sottogruppo"/>, notiamo che <m>1_{G}\phi=1_{H}\in K</m> e, quindi, <m>1_{G}\in K\phi^{-1}</m>: in particolare, <m>K\phi^{-1}\ne\vuoto</m>. Siano ora <m>x</m> e <m>y</m> elementi di <m>K\phi^{-1}</m>, cioè <m>x\phi\in K</m> e <m>y\phi\in K</m>. Ora
-          <me>
+          <md>
             (xy^{-1})\phi=x\phi(y^{-1})\phi=x\phi(y\phi)^{-1}
-          </me>
+          </md>
           appartiene a <m>K</m>, dove abbiamo usato la <xref ref="prop-immagini_di_potenze"/> e il fatto che <m>K</m> è un sottogruppo. Pertanto, <m>xy^{-1}</m> appartiene a <m>K\phi^{-1}</m> che è, dunque, un sottogruppo.
         </p>
       </proof>
@@ -658,9 +658,9 @@
       <statement>
         <p>
           Sia <m>\phi\colon G\to H</m> un omomorfismo di gruppi. Il <term>nucleo</term> di <m>\phi</m>, denotato con <m>\ker\phi</m>, è così definito
-          <me>
+          <md>
             \ker\phi\coloneqq\{x\in G\mid x\phi=1_{H}\}
-          </me>.
+          </md>.
         </p>
       </statement>
     </definition>
@@ -690,13 +690,13 @@
         </p>
         <p>
           Se <m>X\ne\vuoto</m>, sempre dalla <xref ref="prop-elementi_del_sottogruppo_generato"/>, sappiamo che <m>\grgen{X}</m> è l'insieme degli elementi del tipo
-          <me>
+          <md>
             x_{1}x_{2}\cdots x_{r}
-          </me>
+          </md>
           dove ciascun <m>x_{i}</m> è un elemento di <m>X</m> o l'inverso di un elemento di <m>X</m>. Ma allora <m>\grgen{X}\phi</m> è l'insieme degli elementi del tipo
-          <me>
+          <md>
             (x_{1}x_{2}\cdots x_{r})\phi=x_{1}\phi\cdot x_{2}\phi\cdots x_{r}\phi
-          </me>.
+          </md>.
           Ora, se <m>x_{i}\in X</m>, allora <m>x_{i}\phi\in X\phi</m>, mentre se <m>x_{i}=\bar{x}_{i}^{-1}</m> con <m>\bar{x}_{i}\in X</m>, allora <m>x_{i}\phi=\bar{x}_{i}^{-1}\phi=(\bar{x}_{i}\phi)^{-1}</m> con <m>\bar{x}_{i}\phi\in X\phi</m>, cioè <m>\grgen{X}\phi</m> è formato dagli elementi che sono prodotti di elementi che stanno in <m>X\phi</m> o sono inversi di elementi che stanno in <m>X\phi</m>: ma questi prodotti sono esattamente tutti e soli gli elementi di <m>\grgen{X\phi}</m>.
         </p>
       </proof>
@@ -756,9 +756,9 @@
         </p>
         <p>
           Viceversa, sia <m>\ker\phi=1_{G}</m> e siano <m>x</m> e <m>y</m> elementi di <m>G</m> tali che <m>x\phi=y\phi</m>. Allora,
-          <me>
+          <md>
             (xy^{-1})\phi=x\phi(y^{-1})\phi=x\phi(y\phi)^{-1}=x\phi(x\phi)^{-1}=1_{H}
-          </me>,
+          </md>,
           cioè <m>xy^{-1}\in\ker\phi</m>. Ma <m>\ker\phi=1_{G}</m>, e, dunque, <m>xy^{-1}=1_{G}</m>, cioè <m>x=y</m>: pertanto, <m>\phi</m> è iniettivo.
         </p>
       </proof>
@@ -797,13 +797,13 @@
       <proof>
         <p>
           Supponiamo che valga il <xref ref="item-laterali_destri_nucleo"/>: dunque, esiste <m>k\in N</m> tale che <m>x=ky</m>. Pertanto,
-          <me>
+          <md>
             x\phi=(ky)\phi=k\phi\cdot y\phi=1_{H}\cdot y\phi=y\phi
-          </me>,
+          </md>,
           cioè vale il <xref ref="item-stessa_immagine"/>. Viceversa, se <m>x\phi=y\phi</m> allora
-          <me>
+          <md>
             (xy^{-1})\phi=x\phi(y^{-1})\phi=x\phi(y\phi)^{-1}=x\phi(x\phi)^{-1}=1_{H}
-          </me>,
+          </md>,
           cioè <m>xy^{-1}\in N</m>. Dunque, esiste <m>k\in N</m> tale che <m>xy^{-1}=k</m>, vale a dire <m>x=ky\in Ny</m> e vale il <xref ref="item-laterali_destri_nucleo"/>.
         </p>
         <p>
@@ -919,15 +919,15 @@
           <solution>
             <p>
               Siano <m>a</m> e <m>b</m> due elementi di <m>\Inv\Reali</m>: abbiamo allora
-              <me>
+              <md>
                 (ab)\phi=
                 \begin{psmallmatrix}
                   ab \amp 0 \\
                   0 \amp (ab)^{2}
                 \end{psmallmatrix}
-              </me>
+              </md>
               e
-              <me>
+              <md>
                 a\phi b\phi=
                 \begin{psmallmatrix}
                   a \amp 0 \\
@@ -941,7 +941,7 @@
                   ab \amp 0 \\
                   0 \amp a^{2}b^{2}
                 \end{psmallmatrix}
-              </me>
+              </md>
               Poiché le due matrici coincidono (ovviamente <m>(ab)^{2}=a^{2}b^{2}</m>) la mappa <m>\phi</m> è un omomorfismo. Il nucleo di <m>\phi</m> è dato dagli elementi <m>a</m> tali che <m>a\phi</m> è la matrice identica: ciò avviene se e solo se <m>a=1</m> e <m>a^{2}=1</m>, il che avviene se e solo se <m>a=1</m>. Il nucleo di <m>\phi</m> è formato solo dall'elemento <m>1</m>, cioè <m>\phi</m> è iniettivo.
             </p>
           </solution>
@@ -964,15 +964,15 @@
           <solution>
             <p>
               Siano <m>a</m> e <m>b</m> due elementi di <m>\Inv\Reali</m>: abbiamo allora
-              <me>
+              <md>
                 (ab)\phi=
                 \begin{psmallmatrix}
                   (ab)^{4} \amp 0 \\
                   0 \amp (ab)^{2}
                 \end{psmallmatrix}
-              </me>
+              </md>
               e
-              <me>
+              <md>
                 a\phi b\phi=
                 \begin{psmallmatrix}
                   a^{4} \amp 0 \\
@@ -986,7 +986,7 @@
                   a^{4}b^{4} \amp 0 \\
                   0 \amp a^{2}b^{2}
                 \end{psmallmatrix}
-              </me>
+              </md>
               Poiché le due matrici coincidono (ovviamente <m>(ab)^{2}=a^{2}b^{2}</m> e <m>(ab)^{5}=a^{4}b^{4}</m>) la mappa <m>\phi</m> è un omomorfismo. Il nucleo di <m>\phi</m> è dato dagli elementi <m>a</m> tali che <m>a\phi</m> è la matrice identica: ciò avviene se e solo se <m>a^{4}=1</m> e <m>a^{2}=1</m>, il che avviene se e solo se <m>a=1</m> o <m>a=-1</m>. Il nucleo di <m>\phi</m> è formato da <m>1</m> e <m>-1</m>.
             </p>
           </solution>
@@ -1099,9 +1099,9 @@
         </p>
         <p>
           Siano ora <m>x</m> e <m>y</m> due elementi di <m>L</m>, vale a dire <m>x\phi=x\psi</m> e <m>y\phi=y\psi</m>. Ma allora,
-          <me>
+          <md>
             (xy^{-1})\phi=x\phi(y\phi)^{-1}=x\psi(y\psi)^{-1}=(xy^{-1})\psi
-          </me>,
+          </md>,
           vale a dire <m>xy^{-1}\in L</m>: quindi, <m>L</m> è un sottogruppo.
         </p>
       </proof>
@@ -1176,9 +1176,9 @@
         </p>
         <p>
           Supponiamo allora che <m>g</m> abbia periodo infinito: dunque, ogni elemento di <m>G</m> si scrive come <m>g^{i}</m> per un unico intero <m>i</m>. Definiamo allora <m>\phi\colon G\to H</m> ponendo <m>g^{i}\phi\coloneqq h^{i}</m>. Ovviamente, <m>g\phi=h</m> e, dati due elementi <m>g^{i}</m> e <m>g^{j}</m> di <m>G</m>, si ha
-          <me>
+          <md>
             (g^{i}g^{j})\phi=g^{i+j}\phi=h^{i+j}=h^{i}h^{j}=g^{i}\phi\cdot g^{j}\phi
-          </me>,
+          </md>,
            e, dunque, <m>\phi</m> è un omomorfismo.
         </p>
         <p>
@@ -1245,13 +1245,13 @@
 
         <p>
           Dato <m>x</m> in <m>C</m>, si ha <m>x=c^{t}</m> per qualche intero <m>t</m> e, per la <xref ref="prop-immagini_di_potenze"/>, risulta
-          <me>
+          <md>
             x\phi_{r}=c^{t}\phi_{r}=(c\phi_{r})^{t}=(c^{r})^{t}=c^{rt}=(c^{t})^{r}=x^{r}
-          </me>.
+          </md>.
           Consideriamo ora la composizione di due endomorfismi <m>\phi_{r}</m> e <m>\phi_{s}</m>: per quanto detto,
-          <me>
+          <md>
             c\phi_{r}\phi_{s}=(c^{r})\phi_{s}=(c^{r})^{s}=c^{rs}=c\phi_{rs}
-          </me>.
+          </md>.
           Pertanto, <m>\phi_{r}\phi_{s}=\phi_{rs}</m>.
         </p>
 
