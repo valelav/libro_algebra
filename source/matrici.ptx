@@ -19,7 +19,7 @@
             informalmente, una tabella a <m>m</m> righe e <m>n</m> colonne di elementi di <m>R</m>,
             indicizzati da una coppia di indici <m>i</m> e <m>j</m> con <m>1\le i\le m</m> e <m>1\le
             j\le n</m> e rappresentata nel modo seguente: 
-            <me>
+            <md>
                 A\coloneqq
                 \begin{pmatrix}
                 a_{11} \amp a_{12} \amp \dots \amp a_{1n} \\
@@ -27,7 +27,7 @@
                 \vdots \amp \vdots \amp \ddots \amp \vdots \\
                 a_{m1} \amp a_{m2} \amp \dots \amp a_{mn} \\
                 \end{pmatrix}
-            </me>
+            </md>
             I numeri <m>m</m> e <m>n</m> sono detti <term>dimensioni</term> della matrice. Diremo
             anche che <m>A</m> è una matrice <m>m</m> per <m>n</m>. L'indice <m>i</m> è detto <term>indice di riga</term>, mentre l'indice <m>j</m> è detto <term>indice di colonna</term>. L'elemento <m>a_{ij}</m> è detto elemento di <term>posto</term> <m>(i,j)</m>. Data la matrice <m>A</m>, per indicare il suo elemento di posto <m>(i,j)</m> si usa la scrittura <m>\posto{A}{i}{j}</m>
                 <notation>
@@ -39,14 +39,14 @@
             </p>
             <p> 
                 Ad esempio la matrice seguente 
-                <me>
+                <md>
                     A\coloneqq
                     \begin{pmatrix}
                     1 \amp 0 \amp 2 \amp -1 \\
                     0 \amp 1 \amp 3 \amp 0 \\
                     -2 \amp 2 \amp 5 \amp 0
                     \end{pmatrix}
-                </me>
+                </md>
                 ha dimensioni <m>3</m> e <m>4</m>, cioè è una matrice <m>3</m> per <m>4</m>. L'elemento di posto <m>(2,3)</m> è <m>3</m>, mentre l'elemento di posto <m>(3,4)</m> è <m>0</m>: possiamo anche scrivere <m>\posto{A}{2}{3}=3</m> e <m>\posto{A}{3}{4}=0</m>. 
             </p>
 
@@ -127,7 +127,7 @@
             <statement>
                 <p> 
                     Le matrici 
-                        <me>
+                        <md>
                             \begin{pmatrix}
                             3 \amp 0 \amp 0 \\
                             0 \amp 0 \amp 0 \\
@@ -145,7 +145,7 @@
                             2 \amp 1 \amp 0 \\
                             1 \amp 0 \amp 1
                             \end{pmatrix}
-                    </me>
+                    </md>
                     sono, rispettivamente, diagonale, triangolare superiore e triangolare inferiore.
                 </p>
             </statement>
@@ -176,16 +176,16 @@
             <statement>
                 <p> 
                     La trasposta della matrice 
-                    <me>
+                    <md>
                         A\coloneqq
                         \begin{pmatrix}
                         3 \amp 2 \amp 0 \amp -2 \\
                         1 \amp 0 \amp -1 \amp 4 \\
                         -1 \amp 1 \amp 3 \amp 2 \\
                         \end{pmatrix}
-                    </me>
+                    </md>
                     è la matrice 
-                    <me>
+                    <md>
                         \tr{A}=
                         \begin{pmatrix}
                         3 \amp 1 \amp -1 \\
@@ -193,7 +193,7 @@
                         0 \amp -1 \amp 3 \\
                         -2 \amp 4 \amp 2 \\
                         \end{pmatrix}
-                    </me>.
+                    </md>.
                 </p>
             </statement>
 
@@ -268,23 +268,23 @@
 
         <example>
             <statement>
-                <p> La somma delle matrici <me>
+                <p> La somma delle matrici <md>
                         A\coloneqq
                         \begin{pmatrix}
                         2 \amp 0 \amp 1 \amp -1\\
                         3 \amp 1 \amp 2 \amp 1\\
                         2 \amp 2 \amp 0 \amp 0\\
                         \end{pmatrix}
-                    </me>
-                    e <me>
+                    </md>
+                    e <md>
                         B\coloneqq
                         \begin{pmatrix}
                         -1 \amp 0 \amp 0 \amp 1\\
                         1 \amp 3 \amp 3 \amp 0\\
                         1 \amp 1 \amp 1 \amp 1\\
                         \end{pmatrix}
-                    </me>
-                    è la matrice <me>
+                    </md>
+                    è la matrice <md>
                         A+B=
                         \begin{pmatrix}
                         2+(-1) \amp 0+0 \amp 1+0 \amp -1+1\\
@@ -296,7 +296,7 @@
                         4 \amp 4 \amp 5 \amp 1\\
                         3 \amp 3 \amp 1 \amp 1\\
                         \end{pmatrix}
-                    </me>. 
+                    </md>. 
                 </p>
             </statement>
         </example>
@@ -396,7 +396,7 @@
             <statement>
                 <p>
                     Consideriamo le matrici
-                    <me>
+                    <md>
                         A\coloneqq
                         \begin{pmatrix}
                         3 \amp 2 \amp -1 \\
@@ -404,18 +404,18 @@
                         2 \amp 0 \amp 1 \\
                         4 \amp 1 \amp 0 \\
                         \end{pmatrix}
-                    </me>
+                    </md>
                     e
-                    <me>
+                    <md>
                         B\coloneqq
                         \begin{pmatrix}
                         1 \amp 0 \\
                         2 \amp 1 \\
                         -2 \amp 2 \\
                         \end{pmatrix}
-                    </me>
+                    </md>
                     La matrice <m>A</m> è <m>4</m> per <m>3</m>, mentre la matrice <m>B</m> è <m>3</m> per <m>2</m>, quindi il prodotto <m>AB</m> esiste ed è <m>4</m> per <m>2</m> (mentre il prodotto <m>BA</m> non esiste). Esplicitamente
-                    <me>
+                    <md>
                         AB=
                         \begin{pmatrix}
                         3\cdot 1+2\cdot 2+(-1)\cdot(-2) \amp 3\cdot 0+2\cdot 1+(-1)\cdot 2\\
@@ -429,7 +429,7 @@
                         0 \amp 2 \\
                         6 \amp 1 \\
                         \end{pmatrix}
-                    </me>       
+                    </md>       
                 </p>
             </statement>
         </example>
@@ -479,29 +479,29 @@
             <proof>
                 <p>
                     Dimostriamo solo il <xref ref="item-associativa_matrici">Punto</xref> e lasciamo il resto per esercizio. Indichiamo con <m>D</m> la matrice <m>AB</m> e con <m>E</m> la matrice <m>BC</m>: dunque, <m>D\in\matt{m}{p}{R}</m> e <m>E\in\matt{n}{q}{R}</m>. L'elemento di posto <m>(i,k)</m> in <m>(AB)C=DC</m> è allora
-                    <me>
+                    <md>
                         \sum_{h=1}^{p}\posto{D}{i}{h}\posto{C}{h}{k}
-                    </me>.
+                    </md>.
                     Ma l'elemento di posto <m>(i,h)</m> di <m>D=AB</m> è
-                    <me>
+                    <md>
                         \sum_{j=1}^{n}\posto{A}{i}{j}\posto{B}{j}{h}
-                    </me>.
+                    </md>.
                     Dunque, l'elemento di posto <m>(i,k)</m> in <m>(AB)C</m> è
-                    <me>
+                    <md>
                         \sum_{h=1}^{p}\sum_{j=1}^{n}\posto{A}{i}{j}\posto{B}{j}{h}\posto{C}{h}{k}
-                    </me>.
+                    </md>.
                     Analogamente, l'elemento di posto <m>(i,k)</m> in <m>A(BC)=AE</m> è allora
-                    <me>
+                    <md>
                         \sum_{j=1}^{n}\posto{A}{i}{j}\posto{E}{j}{k}
-                    </me>.
+                    </md>.
                     Ma l'elemento di posto <m>(j,k)</m> di <m>E=BC</m> è
-                    <me>
+                    <md>
                         \sum_{h=1}^{p}\posto{B}{j}{h}\posto{C}{h}{k}
-                    </me>.
+                    </md>.
                     Dunque, l'elemento di posto <m>(i,k)</m> in <m>A(BC)</m> è
-                    <me>
+                    <md>
                         \sum_{j=1}^{n}\posto{A}{i}{j}\sum_{h=1}^{p}\posto{B}{j}{h}\posto{C}{h}{k}
-                    </me>:
+                    </md>:
                     gli elementi di posto <m>(i,k)</m> in <m>(AB)C</m> e <m>A(BC)</m> coincidono e, quindi, <m>(AB)C=A(BC)</m>.
                 </p>
             </proof>
@@ -515,7 +515,7 @@
             <statement>
                 <p> 
                     Consideriamo le matrici 
-                    <me>
+                    <md>
                         A\coloneqq
                         \begin{pmatrix}
                         0 \amp 1 \\
@@ -527,9 +527,9 @@
                         0 \amp 0 \\
                         0 \amp 1
                         \end{pmatrix}
-                    </me>
+                    </md>
                 e calcoliamo i prodotti <m>AB</m> e <m>BA</m>: 
-                    <me>
+                    <md>
                         AB=
                         \begin{pmatrix}
                         0 \amp 1 \\
@@ -541,7 +541,7 @@
                         0 \amp 0 \\
                         0 \amp 0
                         \end{pmatrix}
-                    </me>
+                    </md>
                     Poiché <m>AB\ne BA</m>, l'operazione di moltiplicazione riga per colonna non è commutativa. 
                 </p>
             </statement>
@@ -657,9 +657,9 @@
             <proof>
                 <p>
                     Basta osservare che, usando ripetutamente la proprietà associativa, si ha
-                    <me>
+                    <md>
                     (AB)(B^{-1}A^{-1})= ((AB)B^{-1})A^{-1}=(A(BB^{-1}))A^{-1}= (A\Idmatrix)A^{-1}=AA^{-1}=\Idmatrix
-                    </me>
+                    </md>
                     e, analogamente, <m>(B^{-1}A^{-1})(AB)=\Idmatrix</m>.
                 </p>
             </proof>  
@@ -717,21 +717,21 @@
             <statement>
                 <p>
                     Sia <m>A</m> una matrice in <m>\matt{m}{n}{R}</m> e <m>B</m> una matrice in <m>\matt{n}{p}{R}</m>. Risulta allora
-                    <me>
+                    <md>
                         \tr{(AB)}=\tr{B}\tr{A}
-                    </me>.
+                    </md>.
                 </p>
             </statement>
             <proof>
                 <p>
                     Indichiamo con <m>C</m> la matrice <m>\tr{A}</m> e con <m>D</m> la matrice <m>\tr{B}</m>: dunque, <m>A_{ij}=C_{ji}</m> e <m>B_{jh}=D_{hj}</m>. L'elemento di posto <m>(i,h)</m> di <m>AB</m> è
-                    <me>
+                    <md>
                         \sum_{j=1}^{n}A_{ij}B_{jh}
-                    </me>. 
+                    </md>. 
                     Questo elemento può essere riscritto come
-                    <me>
+                    <md>
                         \sum_{j=1}^{n}C_{ji}D_{hj}=\sum_{j=1}^{n}D_{hj}C_{ji}
-                    </me>,
+                    </md>,
                     cioè coincide con l'elemento di posto <m>(h,i)</m> di <m>DC</m>, vale a dire di <m>\tr{B}\tr{A}</m>. In conclusione, l'elemento di posto <m>(i,h)</m> di <m>AB</m> coincide con l'elemento di posto <m>(h,i)</m> di <m>\tr{B}\tr{A}</m>, cioè <m>AB</m> e <m>\tr{B}\tr{A}</m> sono una la trasposta dell'altra.
                 </p>
             </proof>
@@ -745,16 +745,16 @@
             <statement>
                 <p>
                     Consideriamo il sistema lineare
-                    <me>
+                    <md>
                     \left\{
                         \begin{aligned}
                             6x + 9y - 2z \amp = 3 \\
                             3x - 5y + 4z \amp = 7  \\
     	                \end{aligned}
                     \right.
-                    </me>
+                    </md>
                     e consideriamo le matrici 
-                    <me>
+                    <md>
                     A\coloneqq
                     \begin{pmatrix}
                         6 \amp 9 \amp -2 \\
@@ -767,20 +767,20 @@
                     y \\ 
                     z \\
                     \end{pmatrix}
-                    </me>.
+                    </md>.
                     Notiamo che
-                    <me>
+                    <md>
                         AX=\begin{pmatrix}
                         6x + 9y - 2z \\
                         3x - 5y + 4z \\
                         \end{pmatrix}
-                    </me>. Dunque, se, indichiamo con <m>B</m> la matrice
-                    <me>
+                    </md>. Dunque, se, indichiamo con <m>B</m> la matrice
+                    <md>
                        \begin{pmatrix}
                         3 \\
                         7 \\
                         \end{pmatrix} 
-                    </me>,
+                    </md>,
                     il sistema lineare si può riscrivere come <m>AX=B</m>, dove <m>X</m> è una matrice incognita.
                 </p>
             </statement>

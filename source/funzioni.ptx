@@ -337,20 +337,20 @@
       <statement>
         <p>
           Sia data una funzione <m>f\colon A\to B</m>. Se <m>C</m> è un sottoinsieme di <m>A</m>, l'<term>immagine</term> di <m>C</m> tramite <m>f</m> è il sottoinsieme <m>Cf</m> di <m>B</m> formato dalle immagini degli elementi di <m>C</m> tramite <m>f</m>, cioè
-          <me>
+          <md>
             Cf\coloneqq \{b\in B\mid b=af\text{ per qualche }a\in C\}
-          </me>.
+          </md>.
           In particolare, se <m>C=A</m>, il sottoinsieme <m>Af</m> è detto <term>immagine</term> di <m>f</m> e denotato con il simbolo <m>\im f</m>.
         </p>
         <p>
           Se <m>D</m> è un sottoinsieme di <m>B</m>, l'<term>immagine inversa</term> o <term>controimmagine</term> di <m>D</m> è il sottoinsieme <m>Df^{-1}</m> di <m>A</m> formato dagli elementi la cui immagine tramite <m>f</m> appartiene a <m>D</m>, cioè
-          <me>
+          <md>
             Df^{-1}\coloneqq \{a\in A\mid af\in D\}
-          </me>.
+          </md>.
           Se <m>D</m> è formato da un singolo elemento <m>b</m>, scriveremo semplicemente <m>bf^{-1}</m> invece di <m>\{b\}f^{-1}</m>, e, dunque,
-          <me>
+          <md>
             bf^{-1}=\{a\in A\mid af=b\}
-          </me>.
+          </md>.
         </p>
       </statement>
     </definition>
@@ -946,9 +946,9 @@
 
         <p>
           Sia ora <m>h\colon\Reali\to\Reali</m> definita da <m>x\mapsto\abs{x+1}</m> e sia <m>l\colon\Reali\to\Reali^{\ge0}</m> definita da <m>x\mapsto x^{2}</m>. La composizione <m>hl</m> è allora la funzione che manda <m>x</m> in <m>\abs{x+1}^{2}</m>, cioè in <m>(x+1)^{2}</m>. Questa funzione è suriettiva: infatti, dato un numero reale non negativo <m>r</m> esiste sempre un numero reale <m>s</m> tale che <m>s^{2}=r</m> e, di conseguenza,
-          <me>
+          <md>
             (s-1)hl=\abs{s-1+1}l=\abs{s}l=\abs{s}^{2}=s^{2}=r
-          </me>.
+          </md>.
           La funzione <m>h</m> non è però suriettiva: dato un numero reale negativo <m>t</m> non c'è alcun numero reale <m>u</m> tale che <m>\abs{u+1}=t</m>.
         </p>
       </statement>
@@ -1014,9 +1014,9 @@
       <proof>
         <p>
           Sia <m>h\colon B\to A</m> tale che <m>fh=\Id_{A}</m> e <m>hf=\Id_{B}</m>. Allora
-            <me>
+            <md>
               g=g\Id_{A}=g(fh)=(gf)h=\Id_{B}h=h
-            </me>.
+            </md>.
         </p>
       </proof>
 
@@ -1038,9 +1038,9 @@
         </p>
         <p>
           Notiamo ora che <m>f^{-1}\colon B\to A</m> e <m>g^{-1}\colon C\to B</m>: dunque, la composizione <m>g^{-1}f^{-1}</m> esiste ed è una funzione da <m>C</m> ad <m>A</m>. Ora
-          <me>
+          <md>
             (fg)(g^{-1}f^{-1})=f(gg^{-1})f^{-1}=f\Id_{B}f^{-1}=ff^{-1}=\Id_{A}
-          </me>
+          </md>
           e, analogamente, <m>(g^{-1}f^{-1})(fg)=\Id_{C}</m>. Dunque, <m>fg</m> è invertibile con inversa <m>(g^{-1}f^{-1})</m>.
         </p>
       </proof>
@@ -1080,14 +1080,14 @@
         <statement>
           <p>
             Siano <m>a_{1}</m> e <m>a_{2}</m> due elementi diversi di un insieme <m>A</m>. Sia data la funzione <m>g\colon A\to A</m> così definita:
-              <me>
+              <md>
                 xg\coloneqq
                 \begin{cases}
                   a_{2} \amp\text{ se }x=a_{1}\\
                   a_{1} \amp\text{ se }x=a_{2}\\
                   x \amp\text{ se }x\ne a_{1}\text{ e }x\ne a_{2}
                 \end{cases}
-              </me>
+              </md>
               Mostrare che <m>gg=\Id_{A}</m> e dedurre che <m>g</m> è biiettiva.
           </p>
         </statement>

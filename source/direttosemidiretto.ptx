@@ -21,9 +21,9 @@
       <statement>
         <p>
           Siano <m>G_{1}</m>, <m>G_{2}</m>, <m>\ldots</m>, <m>G_{r}</m> gruppi. Il loro prodotto cartesiano <m>G_{1}\times G_{2}\times \cdots \times G_{r}</m> dotato dell'operazione così definita
-          <me>
+          <md>
             (g_{1},g_{2},\ldots,g_{r})(h_{1},h_{2},\ldots,h_{r})\coloneqq (g_{1}h_{1},g_{2}h_{2},\ldots,g_{r}h_{r})
-          </me>
+          </md>
           è detto <term>prodotto diretto (esterno)</term> dei gruppi <m>G_{1}</m>, <m>G_{2}</m>, <m>\ldots</m>, <m>G_{r}</m>.
         </p>
       </statement>
@@ -57,13 +57,13 @@
       <statement>
         <p>
           Dato un elemento <m>(g_{1},\ldots,g_{r})</m> nel prodotto diretto esterno <m>G_{1}\times G_{2}\times \cdots \times G_{r}</m> e un numero intero <m>n</m>, si ha
-          <me>
+          <md>
             (g_{1},\ldots,g_{r})^{n}=(g_{1}^{n},\ldots,g_{r}^{n})
-          </me>.
+          </md>.
           Dato un altro elemento <m>(h_{1},\ldots,h_{r})</m> si ha
-          <me>
+          <md>
             (g_{1},\ldots,g_{r})^{(h_{1},\ldots,h_{r})}=(g_{1}^{h_{1}},\ldots,g_{r}^{h_{r}})
-          </me>.
+          </md>.
         </p>
       </statement>
     </proposition>
@@ -81,9 +81,9 @@
         </p>
         <p>
           Viceversa, supponiamo che ciascun <m>g_{i}</m> abbia periodo finito e sia <m>m</m> il minimo comune multiplo dei loro periodi. Allora
-          <me>
+          <md>
             g^{m}=(g_{1}^{m},\ldots,g_{r}^{m})=(1_{G_{1}},\ldots,1_{G_{r}})=1_{G}
-          </me>.
+          </md>.
           Dunque, <m>g</m> ha periodo finito e il suo periodo è un divisore di <m>m</m>: d'altra parte abbiamo già mostrato che se <m>g</m> ha periodo finito, il suo periodo è un multiplo del minimo comune multiplo dei periodi dei <m>g_{i}</m> e, quindi, il periodo di <m>g</m> è esattamente <m>m</m>.
         </p>
       </proof>
@@ -117,9 +117,9 @@
       <statement>
         <p>
           Siano <m>G_{1}</m>, <m>G_{2}</m>, <m>\ldots</m>, <m>G_{r}</m> gruppi e sia <m>i</m> con <m>1\le i\le r-1</m>. Allora
-          <me>
+          <md>
             (G_{1}\times \cdots \times G_{i})\times(G_{i+1}\times \cdots \times G_{r})
-          </me>
+          </md>
           è isomorfo a <m>G_{1}\times \cdots \times G_{r}</m>.
         </p>
       </statement>
@@ -127,13 +127,13 @@
       <proof>
         <p>
           Un generico elemento di
-          <me>
+          <md>
             (G_{1}\times \cdots \times G_{i})\times(G_{i+1}\times \cdots \times G_{r})
-          </me>
+          </md>
           è una coppia del tipo
-          <me>
+          <md>
             ((g_{1},\ldots,g_{i}),(g_{i+1},\ldots,g_{r}))
-          </me>
+          </md>
           con <m>g_{j}</m> in <m>G_{j}</m> per ogni <m>j</m>. La funzione che manda l'elemento generico di cui sopra nella <m>r</m>-upla <m>(g_{1},\ldots, g_{r})</m> realizza un isomorfismo, come è facile verificare.
         </p>
       </proof>
@@ -148,9 +148,9 @@
       <statement>
         <p>
           Sia dato il prodotto diretto esterno <m>G_{1}\times G_{2}\times \cdots \times G_{r}</m>. Fissato <m>i</m> con <m>1\le i\le n</m>, il sottoinsieme
-          <me>
+          <md>
             H_{i}\coloneqq\{(1_{G_{1}},\ldots,1_{G_{i-1}},x_{i},1_{G_{i+1}},\ldots,1_{G_{r}})\mid x_{i}\in G_{i}\}
-          </me>
+          </md>
           è un sottogruppo normale di <m>G_{1}\times G_{2}\times \cdots \times G_{r}</m> isomorfo a <m>G_{i}</m>.
         </p>
       </statement>
@@ -253,17 +253,17 @@
           <solution>
             <p>
               Sappiamo che in un prodotto diretto se cambiamo l'ordine dei fattori o se associamo tra loro alcuni fattori otteniamo un gruppo isomorfo all'originale. Dunque
-              <me>
+              <md>
                 C_{16}\times C_{4}\times C_{3}\simeq C_{16}\times C_{3}\times C_{4}\simeq(C_{16}\times C_{3})\times C_{4}\simeq C_{48}\times C_{4}
-              </me>
+              </md>
               poiché <m>16</m> e <m>3</m> sono coprimi.
             </p>
 
             <p>
               Analogamente
-              <me>
+              <md>
                 C_{16}\times C_{4}\times C_{3}\simeq C_{16}\times(C_{4}\times C_{3})\simeq C_{16}\times C_{12}
-              </me>
+              </md>
               poiché <m>4</m> e <m>3</m> sono coprimi.
             </p>
           </solution>
@@ -401,9 +401,9 @@
       <proof>
         <p>
           Dato un elemento generico <m>g\coloneqq(g_{1},g_{2},\ldots,g_{r})</m> di <m>G</m> abbiamo
-          <me>
+          <md>
             g=(g_{1},1_{G_{2}},\ldots,1_{G_{r}})(1_{G_{2}},g_{2},1_{G_{3}}\ldots,1_{G_{r}})\cdots(1_{G_{1}},\ldots 1_{G_{r-1}},g_{r})
-          </me>.
+          </md>.
           Abbiamo, dunque, espresso <m>g</m> come prodotto di elementi in <m>H_{1}</m>, <m>H_{2}</m>, <m>\ldots</m>, <m>H_{r}</m> rispettivamente e il <xref ref="item-G_prodotto_dei_suoi_fattori"/> è dimostrato.
         </p>
         <p>
@@ -467,40 +467,40 @@
         <p>
           Sia <m>G</m> un gruppo che sia prodotto diretto interno dei sottogruppi <m>H_{1}</m>, <m>H_{2}</m>, <m>\ldots</m>, <m>H_{r}</m>.
           Allora <m>G</m> è isomorfo al prodotto diretto esterno dei gruppi <m>H_{1}</m>, <m>H_{2}</m>, <m>\ldots</m>, <m>H_{r}</m> (pensati come gruppi indipendenti). Inoltre, per <m>i\ne j</m>, ogni elemento di <m>H_{i}</m> commuta con ogni elemento di <m>H_{j}</m>. Si ha poi che ogni elemento <m>g</m> di <m>G</m> si scrive in un unico modo nella forma
-          <men xml:id="eqn-decomposizione_prodotto_diretto">
+          <md number="yes" xml:id="eqn-decomposizione_prodotto_diretto">
             g=g_{1}g_{2}\cdots g_{r}
-          </men>
+          </md>
           con <m>g_{i}\in H_{i}</m> e, scritto un altro elemento <m>h</m> di <m>G</m> nella forma
-          <me>
+          <md>
             h=h_{1}h_{2}\cdots h_{r}
-          </me>
+          </md>
           con <m>h_{i}\in H_{i}</m>, risulta
-          <me>
+          <md>
             gh=g_{1}h_{1}g_{2}h_{2}\cdots g_{r}h_{r}
-          </me>. 
+          </md>. 
         </p>
       </statement>
 
       <proof>
         <p>
           Sia <m>H\coloneqq H_{1}\times H_{2}\times\cdots\times H_{r}</m> e sia <m>\phi\colon H\to G</m> definita da
-          <me>
+          <md>
             (g_{1},g_{2},\ldots,g_{r})\coloneqq g_{1}g_{2}\cdots g_{r}
-          </me>.
+          </md>.
           Poiché <m>G=H_{1}H_{2}\cdots H_{r}</m>, la funzione <m>\phi</m> è suriettiva.
         </p>
         <p>
           Dati due elementi <m>g\coloneqq g_{1}\cdots g_{r}</m> e <m>h\coloneqq h_{1}\cdots h_{r}</m> con <m>g_{i}\in H_{i}</m> e <m>h_{i}\in H_{i}</m>, per il <xref ref="lem-elementi_in_normali_intersezione_banale_commutano"/> sappiamo che elementi in <m>H_{i}</m> commutano con elementi in <m>H_{j}</m> se <m>i\ne j</m> (infatti, <m>H_{i}</m> ha intersezione banale con il prodotto dei rimanenti e, a maggior ragione, con <m>H_{j}</m> per <m>i\ne j</m>). Pertanto,
-          <me>
+          <md>
             gh=(g_{1}\cdots g_{r})(h_{1}\cdots h_{r})=g_{1}h_{1}g_{2}h_{2}\cdots g_{r}h_{r}
-          </me>:
+          </md>:
           questo prova che <m>\phi</m> è un omomorfismo e l'ultima affermazione in enunciato.
         </p>
         <p>
           Per completare la dimostrazione, basta mostrare che <m>\phi</m> è iniettiva (questo implicherà l'unicità della decomposizione <xref ref="eqn-decomposizione_prodotto_diretto"/>). Sia allora <m>(g_{1},g_{2},\cdots ,g_{r})</m> un elemento di <m>\ker\phi</m>, cioè <m>g_{1}g_{2}\cdots g_{r}=1</m>. Mostriamo che <m>g_{i}=1</m> per ogni <m>i</m>: poiché <m>g_{i}</m> commuta con <m>g_{j}</m> per <m>i\ne j</m>, si ha allora
-          <me>
+          <md>
             g_{i}^{-1}=g_{1}\cdots g_{i-1}g_{i+1}\cdots g_{r}
-          </me>.
+          </md>.
           Ma allora, <m>g_{i}^{-1}</m> appartiene a <m>G_{i}</m> e al prodotto dei rimanenti ed è, dunque, uguale a <m>1</m> e, quindi, <m>g_{i}=1</m>, come richiesto.
         </p>
       </proof>
@@ -630,9 +630,9 @@
           </p>
           <p>
             Riassumendo
-            <me>
+            <md>
               \frac{G}{M\cap N}=\bar{M}\times\bar{N}\simeq \frac{G}{N}\times\frac{G}{M}
-            </me>
+            </md>
             come richiesto.
           </p>
         </solution>
@@ -758,9 +758,9 @@
             <mrow>(2\;3) \amp =(1\;2)(1\;3\;2)</mrow>
           </md>
           Calcoliamo ora il prodotto di questi due elementi, e decomponiamolo come prodotto di un elemento di <m>H</m> per un elemento di <m>A_{3}</m>:
-          <me>
+          <md>
             (1\;3)(2\;3)=(1\;2\;3)=\Id (1\;2\;3)
-          </me>.
+          </md>.
           Notiamo ora che se facciamo il prodotto degli elementi di <m>H</m> dati dalla decomposizione dei fattori otteniamo <m>(1\;2)(1\;2)=\Id</m>, cioè l'elemento di <m>H</m> della decomposizione di <m>(1\;3)(2\;3)</m>,
           mentre il prodotto degli elementi di <m>A_{3}</m> dati dalla decomposizione dei fattori è uguale a <m>(1\;2\;3)(1\;3\;2)=\Id</m> che non coincide con l'elemento di <m>A_{3}</m> della decomposizione di <m>(1\;3)(2\;3)</m>.
         </p>
@@ -769,9 +769,9 @@
 
     <p>
       Dall'esempio precedente vediamo che la conoscenza di <m>H</m> e di <m>N</m> non è sufficiente a descrivere <m>G=H\ltimes N</m>. Vediamo che altre informazioni ci servono. Siano allora <m>g_{1}=h_{1}n_{1}</m> e <m>g_{2}=h_{2}n_{2}</m> due elementi di <m>G</m>, con <m>h_{1}</m> e <m>h_{2}</m> in <m>H</m> e <m>n_{1}</m> e <m>n_{2}</m> in <m>N</m>. Vogliamo esprimere il prodotto <m>g_{1}g_{2}</m> nella forma <m>h_{3}n_{3}</m> con <m>h_{3}</m> in <m>H</m> e <m>n_{3}</m> in <m>N</m>. Possiamo procedere così:
-      <me>
+      <md>
         g_{1}g_{2}=h_{1}n_{1}h_{2}n_{2}=h_{1}h_{2}h_{2}^{-1}n_{1}h_{2}n_{2}=h_{1}h_{2}n_{1}^{h_{2}}n_{2}
-      </me>.
+      </md>.
       Vediamo allora che possiamo porre <m>h_{3}\coloneqq h_{1}h_{2}</m> e <m>n_{3}\coloneqq n_{1}^{h_{2}}n_{2}</m> (poiché <m>N</m> è normale in <m>G</m>, abbiamo che <m>n_{1}^{h_{2}}</m> appartiene a <m>N</m>). Dunque, per poter calcolare il prodotto di due elementi del prodotto semidiretto ci serve conoscere il prodotto in <m>H</m>, il prodotto in <m>N</m> e il coniugio di elementi di <m>N</m> tramite elementi di <m>H</m>. Se volessimo invertire il procedimento, cioè, analogamente a quanto fatto con il prodotto diretto esterno, costruire <m>G</m> a partire da due gruppi qualunque <m>H</m> e <m>N</m>, come possiamo procedere? Conosciamo <m>H</m>, conosciamo <m>N</m>, ma cosa significa conoscere i coniugati di elementi di <m>N</m> tramite elementi di <m>H</m>? A priori, <m>H</m> e <m>N</m> non sono sottogruppi di uno stesso gruppo.
     </p>
     <p>
@@ -799,9 +799,9 @@
             <description>prodotto semidiretto esterno di <m>H</m> e <m>N</m> rispetto a <m>\phi</m></description>
           </notation>
           Siano dati due gruppi <m>H</m> e <m>N</m> e un omomorfismo <m>\phi\colon H\to\Aut{N}</m>. Denotato con <m>\phi_{h}</m> l'omomorfismo <m>h\phi</m>, sia definita nel prodotto cartesiano <m>H\times N</m> un'operazione nel modo seguente
-          <me>
+          <md>
             (h_{1},n_{1})(h_{2},n_{2})\coloneqq(h_{1}h_{2},n_{1}\phi_{h_{2}}\cdot n_{2})
-          </me>.
+          </md>.
           Rispetto a questa operazione il prodotto cartesiano è un gruppo detto <term>prodotto semidiretto (esterno)</term> e denotato con <m>H\ltimes_{\phi}N</m>.
         </p>
       </statement>
@@ -820,13 +820,13 @@
         </p>
         <p>
           Mostriamo ora che <m>(1_{H},1_{N})</m> è elemento neutro. Infatti, per ogni <m>(h,n)\in H\ltimes_{\phi} N</m> si ha
-          <me>
+          <md>
             (h,n)(1_{H},1_{N})=(h1_{H},n\phi_{1_{H}}\cdot 1_{N})=(h,n\Id_{N}\cdot 1_{N})=(h,n\cdot 1_{N})=(h,n)
-          </me>
+          </md>
           e
-          <me>
+          <md>
             (1_{H},1_{N})(h,n)=(1_{H}h,1_{N}\phi_{h}\cdot n)=(h,1_{N}\cdot n)=(h,n)
-          </me>.
+          </md>.
         </p>
         <p>
           Infine mostriamo che ogni elemento <m>(h,n)</m> ha come inverso <m>(h^{-1},n^{-1}\phi_{h^{-1}})</m>. Infatti
@@ -854,13 +854,13 @@
     <remark xml:id="rem-prodotto_semidiretto_non_abeliano">
       <p>
         Se l'omomorfismo <m>\phi</m> non è banale, allora il prodotto semidiretto <m>H\ltimes_{\phi}N</m> non è abeliano, nemmeno se <m>H</m> e <m>N</m> sono abeliani. Infatti, sia <m>h</m> un elemento di <m>H</m> tale che <m>\phi_{h}</m> non sia l'automorfismo banale di <m>N</m>. Dunque, esiste un elemento <m>n</m> di <m>N</m> tale che <m>n\phi_{h}\ne n</m>. Consideriamo allora i due elementi <m>(h,1_{N})</m> e <m>(1_{H},n)</m>. Abbiamo allora
-        <me>
+        <md>
           (h,1_{N})(1_{H},n)=(h1_{H},1_{N}\phi_{1_{H}}\cdot n)=(h,1_{N}\cdot n)=(h,n)
-        </me>
+        </md>
         e
-        <me>
+        <md>
           (1_{H},n)(h,1_{N})=(1_{H}h,n\phi_{h}\cdot 1_{N})=(h,n\phi_{h})
-        </me>:
+        </md>:
         questi due prodotti sono diversi.
       </p>
     </remark>
@@ -898,9 +898,9 @@
       <proof>
         <p>
           Definiamo una funzione <m>\tau\colon H\ltimes_{\psi}N\to H\ltimes_{\phi}N</m> ponendo
-          <me>
+          <md>
             (h,n)\tau\coloneqq(h\theta,n)
-          </me>.
+          </md>.
           Questa funzione è chiaramente biiettiva. Mostriamo che è un omomorfismo: dal momento che come insiemi <m>H\ltimes_{\phi}N</m> e <m>H\ltimes_{\psi}N</m> coincidono, denotiamo con <m>\ast</m> l'operazione in <m>H\ltimes_{\phi}N</m> e con <m>\circ</m> l'operazione in <m>H\ltimes_{\psi}N</m>. Abbiamo allora
           <md>
             <mrow>(h_{1},n_{1})\tau\ast(h_{2},n_{2})\tau \amp =(h_{1}\theta,n_{1})\ast(h_{2}\theta,n_{2}) = (h_{1}\theta\cdot h_{2}\theta,n_{1}(h_{2}\theta\phi)\cdot n_{2}) </mrow>
@@ -924,9 +924,9 @@
         <solution>
           <p>
             Definiamo una funzione <m>\tau\colon H\ltimes_{\phi}N\to H\ltimes_{\psi}N</m> ponendo
-            <me>
+            <md>
               (h,n)\tau\coloneqq(h,n\theta)
-            </me>.
+            </md>.
             Questa funzione è chiaramente biiettiva. Mostriamo che è un omomorfismo: dal momento che come insiemi <m>H\ltimes_{\phi}N</m> e <m>H\ltimes_{\psi}N</m> coincidono, denotiamo con <m>\ast</m> l'operazione in <m>H\ltimes_{\phi}N</m> e con <m>\circ</m> l'operazione in <m>H\ltimes_{\psi}N</m>. Abbiamo allora
             <md>
               <mrow>(h_{1},n_{1})\tau\circ(h_{2},n_{2})\tau \amp =(h_{1},n_{1}\theta)\circ(h_{2},n_{2}\theta) = (h_{1}h_{2},n_{1}\theta(h_{2}\psi)\cdot n_{2}\theta) </mrow>

@@ -81,9 +81,9 @@
       <statement>
         <p>
           Sia <m>\phi\colon R\to S</m> un omomorfismo di anelli. Il <term>nucleo</term> di <m>\phi</m>, denotato con <m>\ker\phi</m>, è così definito
-          <me>
+          <md>
             \ker\phi\coloneqq\{x\in R\mid x\phi=0_{S}\}
-          </me>.
+          </md>.
         </p>
       </statement>
     </definition>
@@ -262,13 +262,13 @@
 
     <p>
       Vogliamo ora descrivere un anello quoziente in altro modo, così come abbiamo fatto per i gruppi quoziente. Se consideriamo solo la struttura additiva di un anello <m>R</m> dotato di una congruenza <m>\sim</m>, applicando il <xref ref="thm-quozienti_su_normali"/> vediamo che <m>\class[\sim]{0_{R}}</m> è un sottogruppo (normale) <m>I</m> di <m>(R,+)</m> (il fatto che sia normale è irrilevante, visto che, essendo <m>(R,+)</m> abeliano, ogni suo sottogruppo è normale). Inoltre le classi equivalenza sono i laterali <m>I+a</m> di <m>I</m> in <m>R</m>. Ci chiediamo se possiamo caratterizzare in qualche modo i sottogruppi <m>I</m> di <m>(R,+)</m> i cui i laterali sono le classi di equivalenza di una congruenza. Siano allora <m>I+a=I+a'</m> e <m>I+b=I+b'</m>: vogliamo che <m>I+ab=I+a'b'</m>. Sappiamo che esistono <m>i</m> e <m>j</m> in <m>I</m> tali che <m>a'=i+a</m> e <m>b'=j+b</m>. Pertanto
-      <me>
+      <md>
         a'b'=(i+a)(j+b)=ij+ib+aj+ab
-      </me>.
+      </md>.
       Abbiamo allora che <m>I+a'b'=I+ab</m> se e solo se
-      <me>
+      <md>
         ij+ib+aj\in I
-      </me>
+      </md>
       per ogni scelta di <m>i</m> e <m>j</m> in <m>I</m> e ogni scelta di <m>a</m> e <m>b</m> in <m>R</m>. In particolare, scegliendo <m>i=0</m>, abbiamo che <m>aj</m> deve appartenere a <m>I</m> per ogni <m>a</m> in <m>R</m> e ogni <m>j</m> in <m>I</m>; scegliendo invece <m>j=0</m>, abbiamo che <m>ib</m> deve appartenere a <m>I</m> per ogni <m>b</m> in <m>R</m> e ogni <m>i</m> in <m>I</m>. Riassumendo, il prodotto di due elementi di cui almeno uno in <m>I</m> deve appartenere a <m>I</m>. Viceversa, se questa condizione è soddisfatta allora <m>ij</m>, <m>ib</m> e <m>aj</m> appartengono a <m>I</m> per ogni possibile scelta e, quindi, la loro somma appartiene a <m>I</m>, visto che <m>I</m> è un sottogruppo del gruppo additivo. Ciò suggerisce la
     </p>
     <definition xml:id="def-ideale">
@@ -438,9 +438,9 @@
       <statement>
         <p>
           Se <m>R</m> è un anello e <m>\{I_{i}\}_{i\in \Omega}</m> è una famiglia di ideali di <m>R</m> (indicizzata da un insieme di indici <m>\Omega</m>), allora
-          <me>
+          <md>
             \bigcap_{i\in \Omega}I_{i}
-          </me>
+          </md>
           è un ideale di <m>S</m>.
         </p>
       </statement>
@@ -470,9 +470,9 @@
       <statement>
         <p>
           Dato un sottoinsieme <m>X</m> di un anello commutativo <m>R</m>, l'ideale <m>\ideal{X}</m> è uguale a <m>0</m> se <m>X=\vuoto</m>, altrimenti è l'insieme degli elementi del tipo
-          <me>
+          <md>
             a_{1}c_{1}+a_{2}c_{2}+\cdots+a_{r}c_{r}
-          </me>
+          </md>
           dove <m>r</m> è un intero positivo, ciascun <m>a_{i}</m> appartiene a <m>X</m> e ciascun <m>c_{i}</m> appartiene a <m>R</m>. In particolare, se <m>X</m> è formato da un singolo elemento <m>a</m>, allora l'ideale principale <m>\ideal{a}</m> è formato dagli elementi del tipo <m>ac</m> al variare di <m>c</m> in <m>R</m>.
         </p>
       </statement>
@@ -489,9 +489,9 @@
         </p>
         <p>
           Nel caso <m>X</m> sia formato da un singolo elemento <m>a</m>, abbiamo
-          <me>
+          <md>
             ac_{1}+ac_{2}+\cdots+ac_{r}=a(c_{1}+c_{2}+\cdots c_{r})=ac
-          </me>
+          </md>
           con <m>c=c_{1}+c_{2}+\cdots+c_{r}</m>.
         </p>
       </proof>
@@ -539,16 +539,16 @@
 
         <p>
           Due elementi di <m>S+I</m> sono del tipo <m>a+i</m> e <m>b+j</m> con <m>a</m> e <m>b</m> in <m>S</m> e <m>i</m> e <m>j</m> in <m>I</m>. Abbiamo allora
-          <me>
+          <md>
             (a+i)(b+j)=ab+aj+ib+ij
-          </me>:
+          </md>:
           ora <m>ab</m> appartiene a <m>S</m> per definizione di sottoanello, mentre gli altri tre addendi appartengono a <m>I</m> per definizione di ideale e, quindi, la loro somma appartiene a <m>I</m>. Pertanto <m>(a+i)(b+j)</m> appartiene a <m>S+I</m>.
         </p>
         <p>
           Infine, due elementi di <m>I+J</m> sono del tipo <m>i_{1}+j_{1}</m> e <m>i_{2}+j_{2}</m> con <m>i_{1}</m> e <m>i_{2}</m> in <m>I</m> e <m>j_{1}</m> e <m>j_{2}</m> in <m>J</m>. Abbiamo allora
-          <me>
+          <md>
             (i_{1}+j_{1})(i_{2}+j_{2})=i_{1}i_{2}+i_{1}j_{2}+j_{1}i_{2}+j_{1}j_{2}
-          </me>:
+          </md>:
           ciascun addendo appartiene a <m>I</m> o <m>J</m> (o a entrambi) e, quindi, la loro somma appartiene a <m>I+J</m>.
         </p>
       </proof>
@@ -571,9 +571,9 @@
       <statement>
         <p>
           Sia <m>R</m> un anello, <m>S</m> un sottoanello e <m>I</m> un ideale di <m>R</m>. Allora <m>S\cap I</m> è un ideale di <m>S</m> e
-          <me>
+          <md>
             \frac{S+I}{I}\simeq\frac{S}{S\cap I}
-          </me>.
+          </md>.
         </p>
       </statement>
 
@@ -583,9 +583,9 @@
       <statement>
         <p>
           Sia <m>R</m> un anello e sia <m>I</m> un suo ideale. I sottoanelli di <m>R/I</m> sono i quozienti del tipo <m>S/I</m> con <m>S</m> sottoanello di <m>R</m> contenente <m>I</m>, mentre gli ideali di <m>R/I</m> sono i quozienti del tipo <m>J/I</m> con <m>J</m> ideale di <m>R</m> contenente <m>I</m>. Dato un ideale <m>J/I</m> di <m>R/I</m> si ha
-          <me>
+          <md>
             \frac{R/I}{J/I}\simeq \frac{R}{J}
-          </me>.
+          </md>.
         </p>
       </statement>
 
@@ -647,9 +647,9 @@
         <statement>
           <p>
             Sia <m>X</m> un sottoinsieme di un anello <m>R</m>. Mostrare che  l'ideale <m>\ideal{X}</m> è uguale a <m>0</m> se <m>X=\vuoto</m>, altrimenti è l'insieme degli elementi del tipo
-            <me>
+            <md>
               b_{1}a_{1}c_{1}+b_{2}a_{2}c_{2}+\cdots+b_{r}a_{r}c_{r}
-            </me>
+            </md>
             dove <m>r</m> è un intero positivo, ciascun <m>a_{i}</m> appartiene a <m>X</m> e ciascun <m>b_{i}</m> e <m>c_{i}</m> appartengono a <m>R</m>.
           </p>
         </statement>
@@ -718,13 +718,13 @@
     </p>
     <p>
       Cominciamo allora considerando il sottoinsieme <m>S</m> di <m>D\times D</m>, così definito
-      <me>
+      <md>
         S\coloneqq\{(a,b)\in D\times D\mid b\ne 0\}
-      </me>.
+      </md>.
       Definiamo ora in <m>S</m> una relazione <m>\sim</m> ponendo <m>(a,b)\sim(c,d)</m> se <m>ad=bc</m>. Mostriamo che è una relazione di equivalenza: è, ovviamente, riflessiva e simmetrica. Per quanto riguarda la transitività, supponiamo che <m>(a,b)\sim(c,d)\sim(e,f)</m>, cioè <m>ad=bc</m> e <m>cf=de</m>. Abbiamo allora
-      <me>
+      <md>
         adf=bcf=bde
-      </me>,
+      </md>,
       che, riordinando, dà <m>afd=bed</m> e, essendo <m>d\ne0</m>, dall'<xref ref="rem-anello_intero_cancellazione"/> segue che <m>af=be</m>, cioè <m>(a,b)\sim(e,f)</m>. Indicheremo con <m>Q</m> l'insieme quoziente delle classi di equivalenza, che chiameremo <term>frazioni</term>, e indicheremo con <m>\frac{a}{b}</m> la classe di equivalenza di <m>(a,b)</m>. Notiamo allora che <m>\frac{a}{b}=\frac{c}{d}</m> se e solo se <m>ad=bc</m>, cioè i cosiddetti <q>prodotti in croce</q> coincidono.
     </p>
     <p>
@@ -737,61 +737,61 @@
         <mrow>(a,b)(c,d)    \amp \coloneqq (ac,bd)    </mrow>
       </md>
       Mostriamo che queste operazioni sono compatibili con la relazione di equivalenza. Siano allora <m>(a,b)\sim(a',b')</m> e <m>(c,d)\sim(c',d')</m>, cioè <m>ab'=ba'</m> e <m>cd'=dc'</m>. Abbiamo allora
-      <me>
+      <md>
         (ad+bc)b'd'=ab'dd'+cd'bb'=ba'dd'+dc'bb'=(a'd'+b'c')bd
-      </me>
+      </md>
       cioè <m>(ad+bc,bd)\sim(a'd'+b'c',b'd')</m> e
-      <me>
+      <md>
         acb'd'=ab'cd'=ba'dc'=bda'c'
-      </me>
+      </md>
       cioè <m>(ac,bd)\sim(a'c',b'd')</m>. Poiché queste operazioni sono compatibili con la relazione di equivalenza, le seguenti operazioni in <m>Q</m> sono ben definite
       <md>
         <mrow>\frac{a}{b}+\frac{c}{d} \amp \coloneqq \frac{ad+bc}{bd}</mrow>
         <mrow>\frac{a}{b}\frac{c}{d} \amp \coloneqq \frac{ac}{bd}</mrow>
       </md>
       Si verifica immediatamente che queste operazioni sono commutative. Verifichiamo che sono entrambe associative:
-      <me>
+      <md>
         \left(\frac{a}{b}+\frac{c}{d}\right)+\frac{e}{f}=\frac{ad+bc}{bd}+\frac{e}{f}=\frac{(ad+bc)f+bde}{bdf}=\frac{adf+bcf+bde}{bdf}
-      </me>
+      </md>
       e
-      <me>
+      <md>
         \frac{a}{b}+\left(\frac{c}{d}+\frac{e}{f}\right)=\frac{a}{b}+\frac{cf+de}{df}=\frac{adf+b(cf+de)}{bdf}=\frac{adf+bcf+bde}{bdf}
-      </me>.
+      </md>.
       L'addizione è, dunque, associativa. Per quanto riguarda la moltiplicazione abbiamo
-      <me>
+      <md>
         \left(\frac{a}{b}\frac{c}{d}\right)\frac{e}{f}=\frac{ac}{bd}\frac{e}{f}=\frac{ace}{bdf}=\frac{a}{b}\frac{ce}{df}=\frac{a}{b}\left(\frac{c}{d}\frac{e}{f}\right)
-      </me>
+      </md>
       e anche questa risulta associativa.
     </p>
     <p>
       L'addizione ha elemento neutro <m>\frac{0}{1}</m> e la moltiplicazione ha elemento neutro <m>\frac{1}{1}</m>. Infatti, per ogni <m>\frac{a}{b}</m> risulta
-      <me>
+      <md>
         \frac{a}{b}+\frac{0}{1}=\frac{a1+0b}{b1}=\frac{a}{b}
-      </me>
+      </md>
       e
-      <me>
+      <md>
         \frac{a}{b}\frac{1}{1}=\frac{a1}{b1}=\frac{a}{b}
-      </me>.
+      </md>.
     </p>
     <p>
       Ogni elemento <m>\frac{a}{b}</m> ha opposto <m>\frac{-a}{b}</m> e, se <m>\frac{a}{b}\ne\frac{0}{1}</m>, cioè, <m>a\ne0</m>, allora <m>\frac{a}{b}</m> ha inverso <m>\frac{b}{a}</m>:
-      <me>
+      <md>
         \frac{a}{b}+\frac{-a}{b}=\frac{ab-ab}{bb}=\frac{0}{bb}=\frac{0}{1}
-      </me>
+      </md>
       e
-      <me>
+      <md>
         \frac{a}{b}\frac{b}{a}=\frac{ab}{ba}=\frac{1}{1}
-      </me>.
+      </md>.
     </p>
     <p>
       Per la proprietà distributiva abbiamo (possiamo limitarci a verificarne solo una perché abbiamo già osservato la commutatività della moltiplicazione)
-      <me>
+      <md>
         \left(\frac{a}{b}+\frac{c}{d}\right)\frac{e}{f}=\frac{ad+bc}{bd}\frac{e}{f}=\frac{ade+bce}{bdf}
-      </me>
+      </md>
       e
-      <me>
+      <md>
         \frac{a}{b}\frac{e}{f}+\frac{c}{d}\frac{e}{f}=\frac{ae}{bf}+\frac{ce}{df}=\frac{aedf+bfce}{bfdf}=\frac{ade+bce}{bdf}\frac{f}{f}=\frac{ade+bce}{bdf}
-      </me>.
+      </md>.
     </p>
     <p>
       Abbiamo così mostrato che <m>Q</m> è un campo. Definiamo ora una funzione <m>\phi\colon D\to Q</m> ponendo <m>a\phi\coloneqq \frac{a}{1}</m>. Questa funzione è ovviamente un omomorfismo dal momento che
@@ -839,17 +839,17 @@
         </p>
         <p>
           Dato un elemento <m>\frac{a}{b}</m> di <m>Q</m>, sappiamo che <m>b\ne 0</m> e, poiché <m>\psi</m> è iniettivo, <m>b\psi</m> è un elemento non nullo del campo <m>K</m> ed è quindi invertibile. Poniamo allora
-          <me>
+          <md>
             \frac{a}{b}\theta\coloneqq a\psi(b\psi)^{-1}
-          </me>.
+          </md>.
           Dobbiamo innanzitutto verificare che <m>\theta</m> sia ben definita: infatti, <m>\frac{a}{b}</m> è la classe di equivalenza della coppia <m>(a,b)</m> ma la classe di equivalenza contiene altri elementi. Sia, allora, <m>(c,d)</m> uno di tali elementi, cioè sia <m>ad=bc</m>: poiché <m>\psi</m> è un omomorfismo, abbiamo
-          <me>
+          <md>
             a\psi\cdot d\psi=(ad)\psi=(bc)\psi=b\psi\cdot c\psi
-          </me>.
+          </md>.
           Moltiplicando ambo i membri per <m>(d\psi)^{-1}(b\psi)^{-1}</m> otteniamo
-          <me>
+          <md>
             a\psi(b\psi)^{-1}=c\psi(d\psi)^{-1}
-          </me>,
+          </md>,
           e, dunque, <m>\theta</m> è ben definita.
         </p>
         <p>
@@ -861,17 +861,17 @@
             <mrow>  \amp =a\psi(b\psi)^{-1}+c\psi(d\psi)^{-1}=\frac{a}{b}\theta+\frac{c}{d}\theta</mrow>
           </md>
           e
-          <me>
+          <md>
             \left(\frac{a}{b}\frac{c}{d}\right)\theta=\frac{ac}{bd}\theta=(ac)\psi((bd)\psi)^{-1}=a\psi\cdot c\psi(b\psi)^{-1}(d\psi)^{-1}=\frac{a}{b}\theta\cdot \frac{c}{d}\theta
-          </me>
+          </md>
           e
-          <me>
+          <md>
             1_{Q}\theta=\frac{1}{1}\theta=(1\psi)(1\psi)^{-1}=1_{K}1_{K}^{-1}=1_{K}
-          </me>.
+          </md>.
           Ora, preso <m>a</m> in <m>D</m>, abbiamo
-          <me>
+          <md>
             a\phi\theta=\frac{a}{1}\theta=a\psi(1\psi)^{-1}=a\psi(1_{K})^{-1}=a\psi
-          </me>
+          </md>
           cioè <m>\phi\theta=\psi</m>.
         </p>
         <p>

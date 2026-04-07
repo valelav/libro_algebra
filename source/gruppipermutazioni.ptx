@@ -22,13 +22,13 @@
 
     <p>
       Vogliamo dare una rappresentazione degli elementi del gruppo simmetrico <m>\Sym_{n}</m> in modo che sia possibile fare i prodotti in questo gruppo. Il primo modo che introduciamo è il seguente: preso <m>\sigma\in\Sym_{n}</m> scriviamo
-      <me>
+      <md>
         \sigma\coloneqq
         \begin{pmatrix}
           1       \amp 2       \amp \ldots \amp n \\
           1\sigma \amp 2\sigma \amp \ldots \amp n\sigma \\
         \end{pmatrix}
-      </me>:
+      </md>:
       in questa tabella sotto ogni lettera <m>i</m> scriviamo la corrispondente immagine <m>i\sigma</m>.
     </p>
 
@@ -46,40 +46,40 @@
       <statement>
         <p>
           La permutazione di <m>\Sym_{4}</m>
-          <me>
+          <md>
             \sigma\coloneqq
             \begin{pmatrix}
               1 \amp 2 \amp 3 \amp 4 \\
               4 \amp 1 \amp 3 \amp 2 \\
             \end{pmatrix}
-          </me>
+          </md>
           manda <m>1</m> in <m>4</m>, <m>2</m> in <m>1</m>, <m>3</m> in <m>3</m> e <m>4</m> in <m>2</m>.
         </p>
         <p>
           Consideriamo ora un altro elemento di <m>\Sym_{4}</m>, ad esempio
-          <me>
+          <md>
             \tau\coloneqq
             \begin{pmatrix}
               1 \amp 2 \amp 3 \amp 4 \\
               2 \amp 3 \amp 4 \amp 1 \\
             \end{pmatrix}
-          </me>
+          </md>
           e calcoliamo i prodotti <m>\sigma\tau</m> e <m>\tau\sigma</m>. Ricordiamo che applicare  <m>\sigma\tau</m> significa applicare prima <m>\sigma</m>, poi <m>\tau</m>. Dunque, <m>1\sigma\tau=4\tau=1</m>, <m>2\sigma\tau=1\tau=2</m>, <m>3\sigma\tau=3\tau=4</m> e <m>4\sigma\tau=2\tau=3</m>, cioè
-          <me>
+          <md>
             \sigma\tau=
             \begin{pmatrix}
               1 \amp 2 \amp 3 \amp 4 \\
               1 \amp 2 \amp 4 \amp 3 \\
             \end{pmatrix}
-          </me>.
+          </md>.
           Analogamente
-          <me>
+          <md>
             \tau\sigma=
             \begin{pmatrix}
               1 \amp 2 \amp 3 \amp 4 \\
               1 \amp 3 \amp 2 \amp 4 \\
             \end{pmatrix}
-          </me>.
+          </md>.
         </p>
       </statement>
     </example>
@@ -94,21 +94,21 @@
       <proof>
         <p>
           Basta considerare le permutazioni
-          <me>
+          <md>
             \sigma\coloneqq
             \begin{pmatrix}
               1 \amp 2 \amp 3 \amp \ldots \amp n \\
               2 \amp 1 \amp 3 \amp \ldots \amp n \\
             \end{pmatrix}
-          </me>
+          </md>
           e
-          <me>
+          <md>
             \tau\coloneqq
             \begin{pmatrix}
               1 \amp 2 \amp 3 \amp \ldots \amp n \\
               3 \amp 2 \amp 1 \amp \ldots \amp n \\
             \end{pmatrix}
-          </me>
+          </md>
           e notare che <m>1\sigma\tau=2</m> e <m>1\tau\sigma=3</m>.
         </p>
       </proof>
@@ -124,9 +124,9 @@
       <statement>
         <p>
           Dato un elemento <m>\sigma</m> di <m>\Sym_{n}</m>, il suo <term>supporto</term> <m>\Supp{\sigma}</m> è il sottoinsieme di <m>\{1,2,\ldots,n\}</m> formato dalle lettere che non sono fissate da <m>\sigma</m>, in simboli
-          <me>
+          <md>
             \Supp{\sigma}\coloneqq\{i\in\{1,2,\ldots,n\}\mid i\sigma\ne i\}
-          </me>.
+          </md>.
         </p>
       </statement>
     </definition>
@@ -240,40 +240,40 @@
       <statement>
         <p>
           Due permutazioni possono commutare anche se non sono disgiunte. Ad esempio
-          <me>
+          <md>
             \sigma\coloneqq
             \begin{pmatrix}
               1 \amp 2 \amp 3 \amp 4 \amp 5 \\
               2 \amp 3 \amp 1 \amp 5 \amp 4 \\
             \end{pmatrix}
-          </me>
+          </md>
           e
-          <me>
+          <md>
             \tau\coloneqq
             \begin{pmatrix}
               1 \amp 2 \amp 3 \amp 4 \amp 5 \\
               3 \amp 1 \amp 2 \amp 4 \amp 5 \\
             \end{pmatrix}
-          </me>
+          </md>
           non sono disgiunte: infatti, <m>\Supp{\sigma}\cap\Supp{\tau}=\{1,2,3\}</m>.
         </p>
         <p>
           Calcolando i due prodotti, troviamo:
-          <me>
+          <md>
             \sigma\tau=
             \begin{pmatrix}
               1 \amp 2 \amp 3 \amp 4 \amp 5 \\
               1 \amp 2 \amp 3 \amp 5 \amp 4 \\
             \end{pmatrix}
-          </me>
+          </md>
           e
-          <me>
+          <md>
             \tau\sigma=
             \begin{pmatrix}
               1 \amp 2 \amp 3 \amp 4 \amp 5 \\
               1 \amp 2 \amp 3 \amp 5 \amp 4 \\
             \end{pmatrix}
-          </me>.
+          </md>.
         </p>
       </statement>
     </example>
@@ -313,9 +313,9 @@
         <solution>
           <p>
             Dalla <xref ref="prop-supporto"/>, sappiamo già che
-            <me>
+            <md>
               \Supp{\sigma\tau}\subseteq\Supp{\sigma}\cup\Supp{\tau}
-            </me>.
+            </md>.
             Viceversa, sia <m>i\in\Supp{\sigma}\cup\Supp{\tau}</m>: poiché <m>\sigma</m> e <m>\tau</m> sono disgiunte, <m>i</m> appartiene al supporto di una ma non al supporto dell'altra. Poiché <m>\sigma</m> e <m>\tau</m> commutano per la <xref ref="prop-permutazioni_disgiunte_commutano"/>, non perdiamo in generalità se supponiamo che <m>i\in\Supp{\tau}</m> e <m>i\notin\Supp{\sigma}</m>. Ma allora, <m>i\sigma\tau=i\tau\ne i</m>, cioè <m>i\in\Supp{\sigma\tau}</m>.
           </p>
         </solution>
@@ -473,36 +473,36 @@
         </p>
         <p>
           Consideriamo allora una lettera che appare in almeno uno dei cicli, ad esempio, <m>1</m>. Abbiamo allora:
-          <me>
+          <md>
             1\xmapsto{(1\;3\;2)}3\xmapsto{(4\;6)}3\xmapsto{(1\;2)}3\xmapsto{(3\;5)}5
-          </me>.
+          </md>.
           Dunque, <m>1</m> viene mandato in <m>5</m> da <m>\sigma\tau</m>. Procediamo adesso a calcolare l'immagine di <m>5</m>:
-          <me>
+          <md>
             5\xmapsto{(1\;3\;2)}5\xmapsto{(4\;6)}5\xmapsto{(1\;2)}5\xmapsto{(3\;5)}3
-          </me>.
+          </md>.
           Dunque, <m>5</m> viene mandato in <m>3</m>. L'immagine di <m>3</m> si ottiene così:
-          <me>
+          <md>
             3\xmapsto{(1\;3\;2)}2\xmapsto{(4\;6)}2\xmapsto{(1\;2)}1\xmapsto{(3\;5)}1
-          </me>.
+          </md>.
           Dunque, <m>3</m> viene mandato in <m>1</m> e abbiamo così ottenuto il primo ciclo: <m>(1\;5\;3)</m>. Consideriamo ora una lettera diversa da <m>1</m>, <m>5</m> e <m>3</m>, ad esempio, <m>2</m>. Abbiamo allora
-          <me>
+          <md>
             2\xmapsto{(1\;3\;2)}1\xmapsto{(4\;6)}1\xmapsto{(1\;2)}2\xmapsto{(3\;5)}2
-          </me>.
+          </md>.
           Dunque, <m>2</m> viene mandato in sé: abbiamo, pertanto, un ciclo di lunghezza <m>1</m>, cioè l'identità e possiamo fare a meno di scriverlo esplicitamente. Consideriamo ora <m>4</m>. Abbiamo allora
-          <me>
+          <md>
             4\xmapsto{(1\;3\;2)}4\xmapsto{(4\;6)}6\xmapsto{(1\;2)}6\xmapsto{(3\;5)}6
-          </me>.
+          </md>.
           Dunque, <m>4</m> viene mandato in <m>6</m>, la cui immagine calcoliamo così
-          <me>
+          <md>
             6\xmapsto{(1\;3\;2)}6\xmapsto{(4\;6)}4\xmapsto{(1\;2)}4\xmapsto{(3\;5)}4
-          </me>.
+          </md>.
           Siamo tornati a <m>4</m>: il ciclo si è chiuso ed è <m>(4\;6)</m>
         </p>
         <p>
           Non dobbiamo proseguire oltre: anche se siamo in <m>\Sym_{7}</m>, la lettera <m>7</m> non appare esplicitamente e viene, quindi, fissata da questa permutazione. Notiamo che i calcoli che abbiamo fatto sarebbero stati gli stessi anche se fossimo stati in <m>\Sym_{n}</m> con <m>n \ge 6</m> qualunque. Riassumendo, abbiamo
-          <me>
+          <md>
             \sigma\tau=(1\;5\;3)(4\;6)
-          </me>.
+          </md>.
         </p>
       </statement>
     </example>
@@ -558,39 +558,39 @@
 
     <p>
       Vogliamo ora contare quante permutazioni di ciascun tipo ci sono in <m>\Sym_{n}</m>. Cominciamo dagli <m>r</m>-cicli con <m>r\ge 2</m> (l'unico <m>1</m>-ciclo è l'identità). Per scrivere un <m>r</m>-ciclo <m>(a_{1}\; a_{2}\;\ldots\; a_{r})</m>, dobbiamo innanzitutto scegliere la lettera <m>a_{1}</m>: possiamo farlo in <m>n</m> modi diversi. Una volta scelta <m>a_{1}</m>, dobbiamo scegliere <m>a_{2}</m> che sia diversa da <m>a_{1}</m>: abbiamo <m>n-1</m> possibilità. Scegliamo poi <m>a_{3}</m> tra <m>n-2</m> possibilità e così via fino ad arrivare a <m>a_{r}</m> da scegliere tra <m>n-r+1</m> possibilità residue. Abbiamo così ottenuto <m>n(n-1)\cdots(n-r+1)</m> scritture diverse: queste scritture non sono però tutte distinte, perché ogni <m>r</m>-ciclo può essere scritto in <m>r</m> modi diversi. Dobbiamo, quindi, dividere il numero delle scritture per <m>r</m> e ottenere così il numero degli <m>r</m>-cicli in <m>\Sym_{n}</m>:
-      <me>
+      <md>
         \frac{n(n-1)\cdots(n-r+1)}{r}
-      </me>.
+      </md>.
       Ad esempio i <m>4</m>-cicli in <m>\Sym_{6}</m> sono <m>\frac{6\cdot5\cdot4\cdot3}{4}=90</m>.
     </p>
     <p>
       Passiamo adesso a considerare il caso di permutazioni di tipo <m>(r_{1},r_{2},\ldots,r_{t})</m> con <m>r_{1} \gt r_{2} \gt \cdots \gt r_{t} \gt 1</m>. Dunque, una permutazione di questo tipo si scrive così
-      <me>
+      <md>
         (a_{1}\; a_{2}\;\ldots\; a_{r_{1}}) (a_{r_{1}+1}\; a_{r_{1}+2}\;\ldots\; a_{r_{1}+r_{2}})\cdots (a_{r_{1}+\cdots+r_{t-1}+1}\; \ldots\; a_{r_{1}+\cdots+r_{n}})
-      </me>.
+      </md>.
       Non facciamoci spaventare dagli indici: dobbiamo scegliere <m>a_{1}</m> tra <m>n</m> possibilità, <m>a_{2}</m> tra <m>n-1</m> possibilità e così via, fino all'ultima lettera, da scegliere tra <m>n-r_{1}-r_{2}-\cdots-r_{t}+1</m> possibilità. Il numero di possibili scelte va poi diviso per ciascuna lunghezza dei cicli coinvolti, fino a ottenere il numero di questo tipo di permutazioni:
-      <me>
+      <md>
         \frac{n(n-1)\cdots (n-r_{1}-r_{2}-\cdots-r_{t}+1)}{r_{1}r_{2}\cdots r_{t}}
-      </me>.
+      </md>.
       Ad esempio, il numero di permutazioni di tipo <m>(6,3,2)</m> in <m>\Sym_{13}</m> è uguale a
-      <me>
+      <md>
       \frac{13\cdot12\cdot11\cdot10\cdot9\cdot8\cdot7\cdot6\cdot5\cdot4\cdot3}{6\cdot3\cdot2}
-      </me>.
+      </md>.
     </p>
 
     <p>
       Veniamo, infine, al caso in cui abbiamo più cicli della stessa lunghezza. Dare la formula generale, anche se non difficile concettualmente, richiederebbe veramente troppi indici. Accontentiamoci di un esempio abbastanza generale. Prendiamo una permutazione di tipo <m>(3,3,2,2,2)</m> in <m>\Sym_{14}</m>. Come nel caso precedente avremmo
-      <me>
+      <md>
         \frac{14\cdot13\cdot12\cdot11\cdot10\cdot9\cdot8\cdot7\cdot6\cdot5\cdot4\cdot3}{3\cdot3\cdot2\cdot2\cdot2}
-      </me>
+      </md>
       possibilità. Ma non è finita qui: possiamo anche ottenere la stessa permutazione scrivendo in un ordine diverso i <m>3</m>-cicli e i <m>2</m>-cicli, sempre rispettando l'ordine debolmente decrescente delle lunghezze dei cicli:
-      <me>
+      <md>
         (1\;2\;3)(4\;5\;6)(7\;8)(9\;10)(11\;12)=(4\;5\;6)(1\;2\;3)(7\;8)(11\;12)(9\;10)=\cdots
-      </me>.
+      </md>.
       Possiamo riordinare i <m>3</m>-cicli in <m>2!=2</m> modi diversi e i <m>2</m>-cicli in <m>3!=6</m> modi diversi. Dobbiamo, quindi, dividere per <m>2!\cdot 3!</m> e ottenere così:
-      <me>
+      <md>
         \frac{14\cdot13\cdot12\cdot11\cdot10\cdot9\cdot8\cdot7\cdot6\cdot5\cdot4\cdot3}{3\cdot3\cdot2\cdot2\cdot2\cdot 2!\cdot3!}
-      </me>.
+      </md>.
       In generale si procede come nel caso dei cicli di lunghezza diversa e poi si divide per il prodotto dei fattoriali delle occorrenze di ciascuna lunghezza.
     </p>
 
@@ -601,18 +601,18 @@
         </p>
         <p>
           In <m>\Sym_{3}</m>:
-          <me>
+          <md>
             \begin{array}{ccc}
               \Id       \amp 1                        \amp 1\\
               (1\;2)    \amp \frac{3\cdot2}{2}=3      \amp 2\\
               (1\;2\;3) \amp \frac{3\cdot2\cdot1}{3}=2\amp 3\\
             \end{array}
-          </me>
+          </md>
           Sommando i numeri nella seconda colonna, otteniamo <m>1+3+2=6</m>, come previsto.
         </p>
         <p>
           In <m>\Sym_{4}</m>:
-          <me>
+          <md>
             \begin{array}{ccc}
               \Id          \amp 1                                            \amp 1\\
               (1\;2)       \amp \frac{4\cdot3}{2}=6                          \amp 2\\
@@ -620,12 +620,12 @@
               (1\;2\;3\;4) \amp \frac{4\cdot3\cdot2\cdot1}{4}=6              \amp 4\\
               (1\;2)(3\;4) \amp \frac{4\cdot3\cdot2\cdot1}{2\cdot2\cdot2!}=3 \amp 2\\
             \end{array}
-          </me>
+          </md>
           Sommando i numeri nella seconda colonna, otteniamo <m>1+6+8+6+3=24</m>, come previsto.
         </p>
         <p>
           In <m>\Sym_{5}</m>:
-          <me>
+          <md>
             \begin{array}{ccc}
               \Id             \amp 1                                             \amp 1\\
               (1\;2)          \amp \frac{5\cdot4}{2}=10                          \amp 2\\
@@ -635,7 +635,7 @@
               (1\;2)(3\;4)    \amp \frac{5\cdot4\cdot3\cdot2}{2\cdot2\cdot2!}=15 \amp 2\\
               (1\;2\;3)(4\;5) \amp \frac{5\cdot4\cdot3\cdot2\cdot1}{3\cdot2}=20  \amp 6\\
             \end{array}
-          </me>
+          </md>
           Sommando i numeri nella seconda colonna, otteniamo <m>1+10+20+30+24+15+20=120</m>, come previsto.
         </p>
 
@@ -1118,9 +1118,9 @@
       <statement>
         <p>
           Si consideri in <m>\Sym_{4}</m> il <m>3</m>-ciclo <m>\sigma\coloneqq(1\;2\;3)</m>. Abbiamo allora
-          <me>
+          <md>
             (1\;2\;3)=(1\;2)(1\;3)=(1\;4)(4\;2)(3\;4)(1\;4)
-          </me>.
+          </md>.
         </p>
       </statement>
     </example>
@@ -1141,13 +1141,13 @@
         </p>
         <p>
           Sia allora <m>k \gt 0</m>. Presa una lettera <m>a</m> che compare in almeno uno scambio della fattorizzazione, consideriamone la prima occorrenza: sia <m>\tau_{l}=(a\;b)</m>. Se <m>\tau_{l}</m> fosse in ultima posizione, avremmo
-          <me>
+          <md>
             \Id=\tau_{1}\cdots\tau_{k-1}(a\;b)
-          </me>
+          </md>
           con <m>a\tau_{1}=\cdots=a\tau_{k-1}=a</m>, da cui
-          <me>
+          <md>
             a=a\Id=a\tau_{1}\cdots\tau_{k-1}(a\;b)=a(a\;b)=b
-          </me>.
+          </md>.
           Poiché <m>a\ne b</m>, <m>\tau_{l}</m> non è in ultima posizione ed è seguita dallo scambio <m>\tau_{l+1}</m>. Studiamo prima il caso in cui <m>\tau_{l+1}\ne\tau_{l}</m>, distinguendo varie possibilità
           <ul>
             <li>

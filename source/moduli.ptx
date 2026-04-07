@@ -47,13 +47,13 @@
     <remark xml:id="rem-modulo_sinistro">
       <p>
         In maniera del tutto analoga si definisce la nozione di <m>R</m>-modulo sinistro. Ogni risultato che dimostreremo per i moduli destri avrà un corrispondente per i moduli sinistri. Occorre fare attenzione che, dato un modulo destro, non lo si può in generale considerare come modulo sinistro. Infatti, la proprietà
-        <me>
+        <md>
           x(ab)=(xa)b
-        </me>
+        </md>
         viene sostituita da
-        <me>
+        <md>
           (ab)x=a(bx)
-        </me>
+        </md>
         e, dunque, la moltiplicazione per <m>ab</m> in un caso corrisponde a moltiplicare <m>x</m> prima per <m>a</m> e poi il risultato per <m>b</m>, mentre nell'altro caso è il contrario. Ovviamente, se l'anello è commutativo, la differenza è irrilevante.
       </p>
 
@@ -137,9 +137,9 @@
       </p>
       <p>
         Per anelli qualunque, questo principio di annullamento non vale, anche se l'anello è un dominio. Si consideri, ad esempio, il gruppo additivo <m>\Interi/6</m>. Per quanto detto nell'<xref ref="ex-Z_modulo"/>, questo è uno <m>\Interi</m>-modulo. Abbiamo allora
-        <me>
+        <md>
           \class[6]{2}3=\class[6]{6}=\class[6]{0}
-        </me>.
+        </md>.
         Più in generale, se <m>x</m> è un elemento non nullo di un gruppo abeliano <m>G</m> avente periodo additivo finito <m>d</m>, allora, pensato <m>G</m> come <m>\Interi</m>-modulo, si ha <m>xd=0</m> con <m>x\ne 0</m> e <m>d\ne 0</m>.
       </p>
     </remark>
@@ -148,23 +148,23 @@
       <statement>
         <p>
           Sia <m>M</m> un <m>R</m>-modulo. Allora, per ogni <m>x</m> in <m>M</m> e <m>a</m> in <m>R</m> si ha
-          <me>
+          <md>
             x(-a)=(-x)a=-(xa)
-          </me>.
+          </md>.
           Potremo allora scrivere semplicemente <m>-xa</m> senza ambiguità.
           In particolare, risulta
-          <me>
+          <md>
             x(-1)=-x
-          </me>.
+          </md>.
         </p>
       </statement>
 
       <proof>
         <p>
           Dimostriamo solo l'uguaglianza <m>x(-a)=-(xa)</m>, lasciando per esercizio l'altra uguaglianza. Abbiamo allora
-          <me>
+          <md>
             x(-a)+xa=x(-a+a)=x0_{R}=0_{M}
-          </me>,
+          </md>,
           dove abbiamo usato la <xref ref="prop-moltiplicazione_per_0"/>: dunque, <m>x(-a)</m> e <m>xa</m> sono opposti, cioè <m>x(-a)=-(xa)</m>.
         </p>
       </proof>
@@ -325,9 +325,9 @@
       <statement>
         <p>
           Se <m>M</m> è un <m>R</m>-modulo e <m>\{N_{i}\}_{i\in I}</m> è una famiglia di sottomoduli di <m>M</m> (indicizzata da un insieme di indici <m>\Omega</m>), allora
-          <me>
+          <md>
             \bigcap_{i\in \Omega}N_{i}
-          </me>
+          </md>
           è un sottomodulo di <m>M</m>.
         </p>
       </statement>
@@ -357,9 +357,9 @@
       <statement>
         <p>
           Dato un sottoinsieme <m>X</m> di un <m>R</m>-modulo <m>M</m>, il sottomodulo <m>XR</m> è uguale a <m>0</m> se <m>X=\vuoto</m>, altrimenti è l'insieme delle <term>combinazioni lineari</term> del tipo
-          <me>
+          <md>
             x_{1}a_{1}+x_{2}a_{2}+\cdots +x_{r}a_{r}
-          </me>
+          </md>
           dove <m>r</m> è un intero positivo, ciascun <m>x_{i}</m> appartiene a <m>X</m> e ciascun <m>a_{i}</m> appartiene a <m>R</m>.
         </p>
       </statement>
@@ -373,9 +373,9 @@
         </p>
         <p>
           Riassumendo, <m>X\subseteq L\subseteq XR</m>: basta allora provare che <m>L</m> è un sottomodulo. Chiaramente <m>L</m>, contenendo <m>X</m>, è non vuoto. La somma di due elementi di <m>L</m> è ancora un elemento di <m>L</m>. Se <m>l\coloneqq x_{1}a_{1}+x_{2}a_{2}+\cdots +x_{r}a_{r}</m> è un elemento di <m>L</m> e <m>b</m> è un elemento di <m>R</m>, allora
-          <me>
+          <md>
             lb=(x_{1}a_{1}+x_{2}a_{2}+\cdots +x_{r}a_{r})b= x_{1}a_{1}b+x_{2}a_{2}b+\cdots +x_{r}a_{r}b
-          </me>
+          </md>
           che, quindi, appartiene a <m>L</m>. Dunque, <m>L</m> è un sottomodulo, come richiesto.
         </p>
       </proof>
@@ -392,9 +392,9 @@
       <statement>
         <p>
           Dati due sottomoduli <m>N</m> e <m>L</m> di un <m>R</m>-modulo <m>M</m>, la loro somma <m>N+L\coloneqq\{n+l\mid n\in N, l\in L\}</m> è un sottomodulo di <m>M</m>. Più in generale, dati <m>N_{1}</m>, <m>N_{2}</m>, <m>\ldots</m>, <m>N_{r}</m> sottomoduli di <m>M</m> la loro somma
-          <me>
+          <md>
             N_{1}+N_{2}+\cdots+N_{r}\coloneqq\{n_{1}+n_{2}+\cdots+n_{r}\mid n_{i}\in N_{i}\}
-          </me>
+          </md>
           è un sottomodulo di <m>M</m>.
         </p>
       </statement>
@@ -405,9 +405,9 @@
         </p>
         <p>
           Grazie all'<xref ref="rem-prodotto_sottogruppi_abeliano"/> sappiamo che la somma <m>N+L</m> è un sottogruppo del gruppo additivo di <m>M</m>. Dato un elemento <m>m=n+l</m> con <m>n</m> in <m>N</m> e <m>l</m> in <m>L</m> e un elemento <m>a</m> di <m>R</m>, abbiamo
-          <me>
+          <md>
             (n+l)a=na+la
-          </me>:
+          </md>:
           ora <m>na</m> appartiene a <m>N</m> e <m>la</m> appartiene a <m>L</m> e, quindi, <m>(n+l)a</m> appartiene a <m>N+L</m>.
         </p>
       </proof>
@@ -545,9 +545,9 @@
       <statement>
         <p>
           Sia <m>\phi\colon M\to N</m> un omomorfismo di <m>R</m>-moduli. Il <term>nucleo</term> di <m>\phi</m>, denotato con <m>\ker\phi</m>, è così definito
-          <me>
+          <md>
             \ker\phi\coloneqq\{x\in M\mid x\phi=0_{N}\}
-          </me>.
+          </md>.
         </p>
       </statement>
     </definition>
@@ -655,13 +655,13 @@
 
     <p>
       Vogliamo ora descrivere un modulo quoziente in altro modo, così come abbiamo fatto per i gruppi quoziente e gli anelli quoziente. Se consideriamo solo la struttura additiva di un <m>R</m>-modulo <m>M</m> dotato di una congruenza <m>\sim</m>, applicando il <xref ref="thm-quozienti_su_normali"/> vediamo che <m>\class[\sim]{0_{M}}</m> è un sottogruppo (normale) <m>N</m> di <m>(M,+)</m> (il fatto che sia normale è irrilevante, visto che, essendo <m>(M,+)</m> abeliano, ogni suo sottogruppo è normale). Inoltre, le classi equivalenza sono i laterali <m>N+x</m> di <m>N</m> in <m>M</m>. Vogliamo caratterizzare i sottogruppi <m>N</m> di <m>(M,+)</m> rispetto a cui i laterali di <m>N</m> sono le classi di equivalenza di una congruenza. Sia allora <m>N+x=N+x'</m> e sia <m>a</m> un elemento di <m>R</m>: vogliamo che <m>N+xa=N+x'a</m>. Sappiamo che esiste <m>n</m> in <m>N</m> tale che <m>x'=n+x</m>. Pertanto
-      <me>
+      <md>
         x'a=na+xa
-      </me>.
+      </md>.
       Abbiamo allora che <m>N+xa=N+x'a</m> se e solo se
-      <me>
+      <md>
         na\in N
-      </me>
+      </md>
       per ogni scelta di <m>n</m> in <m>N</m> e ogni scelta di <m>a</m> in <m>R</m>. Ma allora stiamo semplicemente richiedendo che <m>N</m> sia un sottomodulo. Le cose sono, in un certo senso, più semplici rispetto al caso dei gruppi e degli anelli. Non dobbiamo, come nel caso dei gruppi, richiedere la proprietà addizionale della normalità o, come nel caso degli anelli, distinguere tra sottoanelli e ideali.
     </p>
 
@@ -713,9 +713,9 @@
       <statement>
         <p>
           Sia <m>M</m> un <m>R</m>-modulo e siano <m>L</m> e <m>N</m> sottomoduli di <m>M</m>. Allora
-          <me>
+          <md>
             \frac{L+N}{N}\simeq\frac{L}{L\cap N}
-          </me>.
+          </md>.
         </p>
       </statement>
 
@@ -725,9 +725,9 @@
       <statement>
         <p>
           Sia <m>M</m> un <m>R</m>-modulo e sia <m>N</m> un suo sottomodulo. I sottomoduli di <m>M/N</m> sono i quozienti del tipo <m>L/N</m> con <m>L</m> sottomodulo di <m>M</m> contenente <m>N</m>. Dato un sottomodulo <m>L/N</m> di <m>M/N</m> si ha
-          <me>
+          <md>
             \frac{M/N}{L/N}\simeq \frac{M}{L}
-          </me>.
+          </md>.
         </p>
       </statement>
 

@@ -82,13 +82,13 @@
       <statement>
         <p>
           Date due algebre induttive <m>(A,t)</m> e <m>(B,u)</m>, un <term>omomorfismo</term> di algebre induttive è una funzione <m>f\colon A\to B</m> tale che <m>fu=tf</m>.
-          <me>
+          <md>
             \begin{CD}
               A @>f>> B \\
               @VtVV @VVuV \\
               A @>>f> B
             \end{CD}
-          </me>
+          </md>
         </p>
 
       </statement>
@@ -129,9 +129,9 @@
       <proof>
         <p>
           Dalla <xref ref="prop-immagine_diretta_inversa_sottoalgebre"/> segue che <m>\alg{a}f</m> è una sottoalgebra di <m>B</m> (chiaramente contenente <m>af</m>) e che <m>\alg{af}f^{-1}</m> è una sottoalgebra di <m>A</m> (chiaramente contenente <m>a</m>). La <xref ref="def-sottoalgebra_generata"/> implica allora che <m>\alg{af}\subseteq\alg{a}f</m> e che <m>\alg{a}\subseteq\alg{af}f^{-1}</m>: da quest'ultima segue che <m>\alg{a}f\subseteq\alg{af}f^{-1}f</m>. Per la seconda parte della <xref ref="prop-avanti_indietro"/>, abbiamo d'altra parte che <m>\alg{af}f^{-1}f\subseteq\alg{af}</m>. Abbiamo così la catena di inclusioni
-          <me>
+          <md>
             \alg{af}\subseteq\alg{a}f\subseteq\alg{af}f^{-1}f\subseteq\alg{af}
-          </me>
+          </md>
           che risultano, quindi, uguaglianze, da cui la tesi.
         </p>
       </proof>
@@ -498,12 +498,12 @@
       <proof>
         <p>
           Sia <m>f\colon\seg{n}\to B</m> una funzione biiettiva. Si verifica immediatamente che si può definire una funzione biiettiva da <m>\seg{ns}</m> in <m>A</m> così:
-          <me>
+          <md>
             xg\coloneqq \begin{cases}
                   xf \amp\text{ se }x\ne n\\
                   a  \amp\text{ se }x=n
                 \end{cases}
-          </me>
+          </md>
         </p>
       </proof>
 
@@ -562,7 +562,7 @@
       <statement>
         <p>
           Fissato un naturale <m>n</m>, denotiamo con <m>f_{n}</m> l'omomorfismo di algebre induttive da <m>(\Naturali,s)</m> in sé tale che <m>0f_{n}=n</m> e con <m>g_{n}</m> l'omomorfismo da <m>(\Naturali,s)</m> in <m>(\Naturali,f_{n})</m> tale che <m>0g_{n}=0</m>.
-          <me>
+          <md>
             \begin{CD}
               \Naturali @>f_{n}>> \Naturali \\
               @VsVV @VVsV \\
@@ -574,7 +574,7 @@
               @VsVV @VVf_{n}V \\
               \Naturali @>>g_{n}> \Naturali
             \end{CD}
-          </me>
+          </md>
         </p>
       </statement>
     </definition>
@@ -1195,16 +1195,16 @@
         </p>
         <p>
           Ora <m>0\phi=\class[\sim]{(0,0)}</m>, cioè <m>\phi</m> manda l'elemento neutro di <m>+</m> in <m>\Naturali</m> nell'elemento neutro di <m>+</m> in <m>\Interi</m>. Inoltre
-          <me>
+          <md>
             m\phi+n\phi=\class[\sim]{(m,0)}+\class[\sim]{(n,0)}=\class[\sim]{(m+n,0)}=(m+n)\phi
-          </me>.
+          </md>.
           Dunque, <m>\phi</m> è un omomorfismo di monoidi additivi.
         </p>
         <p>
           Ora <m>1\phi=\class[\sim]{(1,0)}</m>, cioè <m>\phi</m> manda l'elemento neutro di <m>\cdot</m> in <m>\Naturali</m> nell'elemento neutro di <m>\cdot</m> in <m>\Interi</m>. Inoltre
-          <me>
+          <md>
           m\phi\cdot n\phi=\class[\sim]{(m,0)}\cdot \class[\sim]{(n,0)}=\class[\sim]{(m\cdot 0+0\cdot n,0)}=\class[\sim]{(m\cdot n,0)}=(m\cdot n)\phi
-          </me>.
+          </md>.
           Dunque, <m>\phi</m> è un omomorfismo di monoidi moltiplicativi.
         </p>
       </proof>

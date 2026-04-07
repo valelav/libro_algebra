@@ -9,13 +9,13 @@
     </p>
     <p>
       Volendo introdurre formalmente i polinomi a coefficienti in un anello <m>R</m>, il primo problema che incontriamo è quello di dire che cosa sia esattamente un polinomio. Una possibilità è quella di dire che un polinomio è una somma formale del tipo
-      <me>
+      <md>
         a_{0}+a_{1}x+a_{2}x^{2}+\cdots+a_{n}x^{n}
-      </me>
+      </md>
       dove <m>n</m> è un naturale, <m>x</m> è un non meglio precisato simbolo e gli <m>a_{i}</m> sono elementi di <m>R</m>. Possiamo poi definire le operazioni tra polinomi in una maniera che ricalca il modo in cui svolgiamo le operazioni tra numeri reali. Notiamo però che se alla scrittura precedente noi aggiungiamo un addendo <m>0x^{n+1}</m> otteniamo il polinomio
-      <me>
+      <md>
         a_{0}+a_{1}x+a_{2}x^{2}+\cdots+a_{n}x^{n}+a_{n+1}x^{n+1}
-      </me>
+      </md>
       con <m>a_{n+1}=0</m>, che vogliamo però considerare uguale al polinomio precedente. Quello che dovremmo fare è, in realtà, considerare una relazione di equivalenza tra le somme formali e poi verificare che le operazioni sono compatibili con questa relazione: la cosa è senz'altro fattibile ma richiede di fare molte verifiche. C'è però un altro approccio che discende dall'osservazione che, dato un polinomio scritto come somma formale come sopra, possiamo innanzitutto descrivere il polinomio tramite la sua successione dei coefficienti <m>a_{i}</m> e supporre che questa successione sia infinita ma che sia definitivamente nulla. Anche se una parte della teoria dei polinomi può essere sviluppata in un anello qualunque, le applicazioni più interessanti richiedono che l'anello sia commutativo e perciò imporremo questa ipotesi.
     </p>
   </introduction>
@@ -38,13 +38,13 @@
 
     <p>
       Possiamo ora definire in <m>R[x]</m> due operazioni: dati due polinomi
-      <me>
+      <md>
         f\coloneqq (a_{0},a_{1},\ldots,a_{i},\ldots)
-      </me>
+      </md>
       e
-      <me>
+      <md>
         g\coloneqq (b_{0},b_{1},\ldots,b_{i},\ldots)
-      </me>
+      </md>
       poniamo
       <md>
         <mrow>f+g \amp \coloneqq (a_{0}+b_{0},a_{1}+b_{1},\ldots,a_{i}+b_{i},\ldots) </mrow>
@@ -74,13 +74,13 @@
             <mrow>h \amp\coloneqq(c_{0},c_{1},\ldots,c_{i},\ldots) </mrow>
           </md>
           tre polinomi. Abbiamo allora che <m>fg</m> è il polinomio il cui coefficiente di indice <m>j</m> è <m>d_{j}\coloneqq\sum_{h+k=j}a_{h}b_{k}</m> e, di conseguenza, il coefficiente di indice <m>i</m> di <m>(fg)h</m> è
-          <me>
+          <md>
             \sum_{j+l=i}d_{j}c_{l}=\sum_{j+l=i}\sum_{h+k=j}a_{h}b_{k}c_{l}=\sum_{h+k+l=i}a_{h}b_{k}c_{l}
-          </me>.
+          </md>.
           Analogamente, <m>gh</m> è il polinomio il cui coefficiente di indice <m>j</m> è <m>e_{j}\coloneqq\sum_{k+l=j}b_{k}c_{l}</m> e, di conseguenza, il coefficiente di indice <m>i</m> di <m>f(gh)</m> è
-          <me>
+          <md>
             \sum_{h+j=i}a_{h}e_{j}=\sum_{h+j=i}\sum_{k+l=j}a_{h}b_{k}c_{l}=\sum_{h+k+l=i}a_{h}b_{k}c_{l}
-          </me>.
+          </md>.
         </p>
         <p>
           Consideriamo ora il polinomio <m>1\coloneqq(1,0,0,\ldots)</m> che ha il coefficiente di indice <m>0</m> uguale a <m>1</m> e tutti gli altri coefficienti nulli. Si verifica facilmente che <m>1</m> è elemento neutro rispetto alla moltiplicazione. Lasciamo per esercizio la dimostrazione delle proprietà distributive e del fatto che <m>R[x]</m> è commutativo.
@@ -130,9 +130,9 @@
       <statement>
         <p>
           Sia <m>R</m> un anello commutativo identificato con un sottoanello di <m>R[x]</m> come nella <xref ref="prop-anello_incluso_polinomi"/> e sia <m>x</m> il polinomio come nel <xref ref="cor-potenze_di_x"/>. Dato il polinomio <m>f\coloneqq(a_{0},a_{1},\ldots,a_{n},0,0,\ldots)</m> possiamo allora scrivere
-          <me>
+          <md>
             f=a_{0}+a_{1}x+\cdots+a_{n}x^{n}
-          </me>.
+          </md>.
           Chiameremo <term>indeterminata</term> il simbolo <m>x</m> e diremo che <m>f</m> è un polinomio nell'indeterminata <m>x</m>.
         </p>
       </statement>
@@ -293,9 +293,9 @@
       <statement>
         <p>
           Consideriamo l'anello dei polinomi a coefficienti in <m>\Interi/4</m>. Il polinomio <m>f\coloneqq\class[4]{1}+\class[4]{2}x</m> è invertibile e coincide con il proprio inverso. Infatti
-          <me>
+          <md>
             (\class[4]{1}+\class[4]{2}x)(\class[4]{1}+\class[4]{2}x)=\class[4]{1}+(\class[4]{2}+\class[4]{2})x+\class[4]{2}\class[4]{2}x^{2}=\class[4]{1}
-          </me>.
+          </md>.
         </p>
       </statement>
     </example>
@@ -374,9 +374,9 @@
             </p>
             <p>
               Viceversa, supponiamo che <m>a_{0}</m> sia invertibile e definiamo <m>b_{i}</m> per ricorrenza, ponendo <m>b_{0}\coloneqq a_{0}^{-1}</m> e <m>b_{i}\coloneqq -a_{0}^{-1}\sum_{j=0}^{i-1}a_{i-j}b_{j}</m>. Abbiamo allora <m>a_{0}b_{0}=1</m> e, per <m>i \gt 0</m>
-              <me>
+              <md>
                 \sum_{j=0}^{i}a_{i-j}b_{j}=\sum_{j=0}^{i-1}a_{i-j}b_{j}+a_{0}b_{i}=\sum_{j=0}^{i-1}a_{i-j}b_{j}+a_{0}(-a_{0}^{-1}\sum_{j=0}^{i-1}a_{i-j}b_{j})=0
-              </me>.
+              </md>.
             </p>
           </solution>
         </task>
@@ -426,9 +426,9 @@
       <proof>
         <p>
           Dato un polinomio <m>f\coloneqq a_{0}+a_{1}x+\cdots+a_{n}x^{n}</m> poniamo
-          <me>
+          <md>
             f\theta\coloneqq a_{0}\psi+a_{1}\psi\cdot u+\cdots+a_{n}\psi\cdot u^{n}
-          </me>.
+          </md>.
           Notiamo che <m>\theta</m> è ben definita perché inserendo o eliminando termini del tipo <m>0_{R}x^{i}</m> nella scrittura di <m>f</m>, il contributo del corrispondente termine <m>0_{R}\psi\cdot u^{i}</m> è nullo.
         </p>
         <p>
@@ -472,13 +472,13 @@
       <statement>
         <p>
           Sia <m>R</m> un anello commutativo e sia <m>u</m> un elemento di <m>R</m>. Allora per ogni polinomio
-          <me>
+          <md>
             f\coloneqq a_{0}+a_{1}x+\cdots+a_{n}x^{n}
-          </me>
+          </md>
            a coefficienti in <m>R</m> è definita la sua <term>valutazione</term> in <m>u</m>, denotata con <m>f(u)</m> nel modo seguente
-          <me>
+          <md>
             f(u)\coloneqq a_{0}+a_{1}u+\cdots+a_{n}u^{n}
-          </me>.
+          </md>.
           Per ogni <m>f</m> e <m>g</m> in <m>R[x]</m> si ha, allora, <m>(f+g)(u)=f(u)+g(u)</m> e <m>(fg)(u)=f(u)g(u)</m>.
         </p>
       </statement>
@@ -500,9 +500,9 @@
       <statement>
         <p>
           Sia <m>R</m> un anello commutativo e siano <m>f</m> e <m>g</m> due polinomi in <m>R[x]</m> con <m>g</m> diverso da <m>0</m> e coefficiente direttivo invertibile. Allora esistono e sono univocamente determinati <m>q</m> e <m>r</m> in <m>R[x]</m> tali che
-          <me>
+          <md>
             f=gq+r
-          </me>
+          </md>
           con <m>\deg r \lt \deg g</m> o <m>r=0</m>. I polinomi <m>q</m> e <m>r</m> sono detti, rispettivamente, <term>quoziente</term> e <term>resto</term> della divisione di <m>f</m> per <m>g</m>.
         </p>
       </statement>
@@ -520,9 +520,9 @@
             <mrow> \amp = c_{0}+c_{1}x+\cdots+c_{n-1}x^{n-1}</mrow>
           </md>
           per certi <m>c_{i}</m> in <m>R</m>. Per ipotesi induttiva, esistono allora <m>\bar{q}</m> e <m>r</m> tali che <m>h=g\bar{q}+r</m> con <m>\deg r \lt \deg g</m> o <m>r=0</m>. Ma allora
-          <me>
+          <md>
             f=h+ga_{n}b_{m}^{-1}x^{n-m}=g\bar{q}+r+ga_{n}b_{m}^{-1}x^{n-m}=g(\bar{q}+a_{n}b_{m}^{-1}x^{n-m})+r=gq+r
-          </me>
+          </md>
           avendo posto <m>q\coloneqq \bar{q}+a_{n}b_{m}^{-1}x^{n-m}</m>.
         </p>
         <p>
@@ -540,21 +540,21 @@
       <statement>
         <p>
           Siano dati i polinomi <m>f\coloneqq 3x^{4}+2x^{3}-1</m> e <m>g\coloneqq 2x^{2}+1</m> a coefficienti in <m>\Razionali</m>. Dividiamo allora i termini di grado massimo: <m>3x^{4}=\frac{3}{2}x^{2}\cdot 2x^{2}</m>. Otteniamo così
-          <me>
+          <md>
             3x^{4}+2x^{3}-1-\frac{3}{2}x^{2}(2x^{2}+1)=2x^{3}-\frac{3}{2}x^{2}-1
-          </me>.
+          </md>.
           Dividiamo ora il termine di grado massimo del polinomio così ottenuto per il termine di grado massimo di <m>g</m>, ottenendo così  <m>2x^{3}=x\cdot 2x^{2}</m>. Pertanto
-          <me>
+          <md>
             2x^{3}-\frac{3}{2}x^{2}-1-x(2x^{2}+1)=-\frac{3}{2}x^{2}-x-1
-          </me>.
+          </md>.
           Dividiamo ora il termine di grado massimo del polinomio così ottenuto per il termine di grado massimo di <m>g</m>, ottenendo così <m>-\frac{3}{2}x^{2}=-\frac{3}{4}\cdot 2x^{2}</m>. Pertanto
-          <me>
+          <md>
             -\frac{3}{2}x^{2}-x-1-\left(-\frac{3}{4}\right)(2x^{2}+1)=-x-\frac{1}{4}
-          </me>.
+          </md>.
           Possiamo fermarci. Abbiamo allora
-          <me>
+          <md>
             3x^{4}+2x^{3}-1=\left(\frac{3}{2}x^{2}+x-\frac{3}{4}\right)(2x^{2}+1)+\left(-x-\frac{1}{4}\right)
-          </me>,
+          </md>,
           cioè <m>q=\frac{3}{2}x^{2}+x-\frac{3}{4}</m> e <m>r=-x-\frac{1}{4}</m>.
         </p>
       </statement>
@@ -579,13 +579,13 @@
       <proof>
         <p>
           Poiché il coefficiente direttivo di <m>x-u</m> è <m>1</m> ed è, quindi, invertibile, possiamo applicare la <xref ref="thm-divisione_tra_polinomi" text="title"/> e ottenere
-          <me>
+          <md>
             f=q(x-u)+r
-          </me>
+          </md>
           con <m>\deg r \lt \deg(x-u)=1</m> o <m>r=0</m>: in altri termini, <m>r</m> è un elemento di <m>R</m>. In particolare, la sua valutazione in un qualunque elemento di <m>R</m> dà sempre valore <m>r</m>. Abbiamo allora
-          <me>
+          <md>
             f(u)=q(u)(u-u)+r
-          </me>
+          </md>
           cioè <m>f(u)=r</m>, come richiesto.
         </p>
       </proof>
@@ -596,9 +596,9 @@
       <statement>
         <p>
           Sia <m>f</m> un polinomio non nullo a coefficienti in un dominio <m>D</m>. Se <m>u_{1}</m>, <m>u_{2}</m>, <m>\ldots</m>, <m>u_{t}</m> sono radici distinte di <m>f</m>, allora
-          <me>
+          <md>
             f=q(x-u_{1})(x-u_{2})\cdots(x-u_{t})
-          </me>
+          </md>
           per qualche <m>q</m> in <m>D[x]</m>. In particolare, <m>t\le\deg f</m>.
         </p>
       </statement>
@@ -606,9 +606,9 @@
       <proof>
         <p>
           Procediamo per induzione su <m>t</m>. Se <m>t=0</m>, non c'è nulla da dimostrare. Se <m>t \gt 0</m>, per il <xref ref="thm-del_resto" text="title"/> sappiamo che <m>f=\tilde{q}(x-u_{t})</m> per qualche <m>\tilde{q}</m> in <m>D[x]</m>. Per ogni <m>i</m> con <m>1\le i\le t-1</m>, abbiamo <m>0=f(u_{i})=\tilde{q}(u_{i})(u_{i}-u_{t})</m>: poiché <m>D</m> è un dominio e <m>u_{i}\ne u_{t}</m>, questo implica che <m>\tilde{q}(u_{i})=0</m>. Per ipotesi induttiva abbiamo allora che
-          <me>
+          <md>
             \tilde{q}=q(x-u_{1})(x-u_{2})\cdots(x-u_{t-1})
-          </me>.
+          </md>.
           Sostituendo, otteniamo la tesi.
         </p>
       </proof>
@@ -668,9 +668,9 @@
       <statement>
         <p>
           Sia <m>f</m> un polinomio non nullo a coefficienti in un dominio <m>D</m>. Se <m>u_{1}</m>, <m>u_{2}</m>, <m>\ldots</m>, <m>u_{t}</m> sono radici distinte di <m>f</m> di molteplicità rispettive <m>m_{1}</m>, <m>m_{2}</m>, <m>\ldots</m>, <m>m_{t}</m> allora
-          <me>
+          <md>
             f=q(x-u_{1})^{m_{1}}(x-u_{2})^{m_{2}}\cdots(x-u_{t})^{m_{t}}
-          </me>
+          </md>
           per qualche <m>q</m> in <m>D[x]</m>. In particolare, <m>m_{1}+m_{2}+\cdots+m_{t}\le\deg f</m>.
         </p>
       </statement>
@@ -678,17 +678,17 @@
       <proof>
         <p>
           Procediamo per induzione su <m>t</m>. Se <m>t=0</m>, non c'è nulla da dimostrare. Se <m>t \gt 0</m>, per ipotesi induttiva sappiamo che 
-          <me>
+          <md>
             f=\tilde{q}(x-u_{2})^{m_{2}}(x-u_{3})^{m_{3}}\cdots(x-u_{t})^{m_{t}}
-          </me>
+          </md>
           per qualche polinomio <m>\tilde{q}</m>. Per il <xref ref="lem-unicita_molteplicita"/>, sappiamo che esiste un naturale <m>m</m> e un polinomio <m>q</m> con <m>q(u_{1})\ne 0</m> tali che <m>\tilde{q}=q(x-u_{1})^{m}</m>. Pertanto <m>f=(x-u_{1})^{m}h</m> dove
-          <me>
+          <md>
             h\coloneqq q(x-u_{2})^{m_{2}}(x-u_{3})^{m_{3}}\cdots(x-u_{t})^{m_{t}}
-          </me>.
+          </md>.
           Ora
-          <me>
+          <md>
             h(u_{1})=q(u_{1})(u_{1}-u_{2})^{m_{2}}(u_{1}-u_{3})^{m_{3}}\cdots(u_{1}-u_{t})^{m_{t}}\ne 0
-          </me>.
+          </md>.
           L'unicità garantita dal <xref ref="lem-unicita_molteplicita"/> implica allora che <m>m=m_{1}</m>, da cui la tesi.
         </p>
       </proof>      
@@ -720,9 +720,9 @@
       <proof>
         <p>
           Poiché <m>g</m> e <m>h</m> commutano, abbiamo
-          <me>
+          <md>
             (gh)^{mn}=g^{mn}h^{mn}=(g^{m})^{n}(h^{n})^{m}=1^{n}1^{m}=1
-          </me>:
+          </md>:
           dunque, <m>gh</m> ha periodo finito <m>d</m> che divide <m>mn</m>. Ora <m>1=(gh)^{d}=g^{d}h^{d}</m>, da cui segue che <m>g^{d}=h^{-d}</m>. L'elemento <m>g^{d}</m> ha periodo che divide <m>n</m> e l'elemento <m>h^{-d}</m> ha periodo che divide <m>m</m>: ma, essendo lo stesso elemento, il suo periodo divide il massimo comun divisore tra <m>m</m> e <m>n</m>, cioè <m>1</m>. Pertanto <m>g^{d}=h^{-d}=1</m>: ma allora, <m>d</m> è un multiplo del periodo di <m>g</m>, cioè <m>m</m>, ed è anche un multiplo del periodo di <m>h</m>, cioè <m>n</m>: usando ancora una volta il fatto che <m>m</m> e <m>n</m> sono coprimi, otteniamo che <m>d</m> è multiplo di <m>mn</m>. Avendo già notato che <m>d</m> divide <m>mn</m>, segue che <m>d=mn</m>.
         </p>
       </proof>

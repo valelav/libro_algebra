@@ -274,9 +274,9 @@
         </p>
         <p>
           Supponiamo ora che <m>a</m> non sia un divisore sinistro dello zero, e siano <m>b</m> e <m>c</m> elementi di <m>R</m> tali che <m>ab=ac</m>. Abbiamo allora
-          <me>
+          <md>
             a(b-c)=ab+a(-c)=ab-ac=0
-          </me>.
+          </md>.
           Poiché <m>a</m> non è un divisore sinistro dello zero, ciò implica che <m>b-c=0</m>, cioè <m>b=c</m>.
         </p>
       </proof>
@@ -333,9 +333,9 @@
         <statement>
           <p>
             Sia <m>G</m> un gruppo abeliano non banale, scritto in notazione additiva. Sia <m>R\coloneqq G^{G}</m> l'insieme delle funzioni da <m>G</m> in sé. Si definisca un'addizione di due funzioni <m>\phi</m> e <m>\psi</m> di <m>R</m> ponendo
-            <me>
+            <md>
               g(\phi+\psi)\coloneqq g\phi+g\psi
-            </me>
+            </md>
             per ogni <m>g</m> in <m>G</m>. Mostrare che <m>R</m> è un gruppo abeliano rispetto all'operazione così definita. Ricordando che <m>R</m> è un monoide rispetto alla composizione (<xref ref="ex-monoide_funzioni"/>), mostrare che <m>R</m> soddisfa solo una delle proprietà distributive e, quindi, <m>R</m> non è un anello.
           </p>
         </statement>
@@ -346,19 +346,19 @@
           </p>
           <p>
             Per ogni <m>g</m> in <m>G</m> e ogni <m>\phi</m>, <m>\psi</m> e <m>\theta</m> in <m>R</m> si ha che
-             <me>
+             <md>
               g\phi(\psi+\theta)=g\phi\psi+g\phi\theta=g(\phi\psi+\phi\theta)
-            </me>
+            </md>
             cioè
-            <me>
+            <md>
               \phi(\psi+\theta)=\phi\psi+\phi\theta
-            </me>.
+            </md>.
           </p>
           <p>
             Tuttavia non vale in generale che
-            <me>
+            <md>
              g(\phi+\psi)\theta=g\phi\theta+g\psi\theta
-           </me>.
+           </md>.
            Prendiamo, ad esempio, come <m>\theta</m> la funzione che manda ogni elemento di <m>G</m> in un elemento non nullo <m>h</m> di <m>G</m> fissato: a primo membro abbiamo <m>h</m> e a secondo membro abbiamo <m>h+h</m> (e <m>h\ne h+h</m> perché <m>h\ne 0</m>).
           </p>
         </solution>
@@ -389,9 +389,9 @@
         <statement>
           <p>
             Sia <m>R</m> un anello. Sia definita in <m>R</m> un'operazione <m>\ast</m> ponendo
-            <me>
+            <md>
               a \ast b\coloneqq b\cdot a
-            </me>.
+            </md>.
             Verificare che rispetto all'operazione di addizione e a questa nuova operazione <m>\ast</m>, <m>R</m> è un anello, detto <term>anello opposto</term> di <m>R</m> e denotato con <m>R^{\text{op}}</m>.
           </p>
         </statement>
@@ -468,25 +468,25 @@
       <statement>
         <p>
           Siano <m>a</m> e <m>b</m> elementi di un anello <m>R</m> e sia <m>n</m> un intero. Allora
-          <me>
+          <md>
             n(ab)=(na)b=a(nb)
-          </me>.
+          </md>.
         </p>
       </statement>
 
       <proof>
         <p>
           Dimostriamo l'uguaglianza <m>n(ab)=(na)b</m>, considerando prima il caso in cui <m>n</m> è un naturale. Procediamo allora per induzione su <m>n</m>. Se <m>n</m> è il numero naturale <m>0</m>, allora, per definizione si ha <m>0(ab)=0_{R}</m> e <m>0a=0_{R}</m>. Ora <m>(0a)b=0_{R}b=0_{R}</m> per la <xref ref="prop-zero_assorbente"/>. Sia allora <m>k</m> un naturale per cui si ha <m>k(ab)=(ka)b</m>. Per definizione di multiplo, si ha <m>(k+1)(ab)=k(ab)+ab</m> e <m>(k+1)a=ka+a</m>. Abbiamo allora
-          <me>
+          <md>
             (k+1)(ab)=k(ab)+ab=(ka)b+ab=(ka+a)b=((k+1)a)b
-          </me>
+          </md>
           dove abbiamo usato l'ipotesi induttiva e una delle proprietà distributive.
         </p>
         <p>
           Supponiamo ora che <m>n</m> sia un intero negativo. Per definizione di multiplo si ha <m>n(ab)=-n(-(ab))</m> e <m>na=(-n)(-a)</m>. Abbiamo allora
-          <me>
+          <md>
             n(ab)=-n(-(ab))=-n((-a)b)=(-n(-a))b=(na)b
-          </me>
+          </md>
           dove abbiamo usato la <xref ref="prop-moltiplicazione_opposti"/> e il caso in cui l'intero sia positivo (<m>-n</m> è positivo).
         </p>
         <p>
@@ -504,18 +504,18 @@
 
     <p>
       Per quanto riguarda invece la potenza di una somma? Dati <m>a</m> e <m>b</m> in un anello <m>R</m> e <m>n</m> numero naturale, come possiamo esprimere <m>(a+b)^{n}</m>? Per fissare le idee, prendiamo il caso <m>n=2</m>. Abbiamo allora
-      <me>
+      <md>
         (a+b)^{2}=(a+b)(a+b)=a(a+b)+b(a+b)=a^{2}+ab+ba+b^{2}
-      </me>:
+      </md>:
       se <m>a</m> e <m>b</m> commutano, possiamo allora scrivere <m>(a+b)^{2}=a^{2}+2ab+b^{2}</m>, cioè una formula simile all'usuale prodotto notevole. Ciò suggerisce che possiamo dare una formula relativamente compatta se <m>a</m> e <m>b</m> commutano:
     </p>
     <theorem xml:id="thm-binomiale">
       <statement>
         <p>
           Se <m>a</m> e <m>b</m> sono elementi che commutano in un anello <m>R</m> e <m>n</m> è un numero naturale si ha
-          <me>
+          <md>
             (a+b)^{n}=\sum_{i=0}^{n}\binom{n}{i}a^{i}b^{n-i}
-          </me>
+          </md>
           dove <m>\binom{n}{i}</m> indica l'usuale coefficiente binomiale definito da <m>\binom{n}{i}=\frac{n!}{i!(n-i)!}</m>.
         </p>
       </statement>
@@ -784,20 +784,20 @@
       <statement>
         <p>
           Consideriamo l'anello <m>\mat{2}{\Complessi}</m> e sia <m>Q</m> il sottoinsieme delle matrici del tipo
-          <me>
+          <md>
           A\coloneqq
             \begin{pmatrix}
               z \amp w \\
               -\bar{w} \amp \bar{z}
             \end{pmatrix}
-          </me>
+          </md>
           al variare di <m>z</m> e <m>w</m> in <m>\Complessi</m> (con <m>\bar{z}</m> indichiamo l'usuale complesso coniugato di <m>z</m>). Si verifica facilmente che <m>Q</m> è un sottoanello di <m>\mat{2}{\Complessi}</m>. Mostriamo che <m>Q</m> è un corpo, cioè che ogni elemento diverso da <m>0</m> ha inverso in <m>Q</m>. Data una matrice <m>A</m> come sopra, si vede che <m>\det A=z\bar{z}+w\bar{w}=\abs{z}^{2}+\abs{w}^{2}</m> e, dunque, <m>\det A</m> è un numero reale positivo se <m>A</m> è non nulla. Si può allora verificare direttamente che
-          <me>
+          <md>
             \begin{pmatrix}
               \frac{\bar{z}}{\det A} \amp -\frac{w}{\det A} \\
               \frac{\bar{w}}{\det A} \amp \frac{z}{\det A}
             \end{pmatrix}
-          </me>
+          </md>
           è la matrice inversa di <m>A</m> e appartiene a <m>Q</m>. Dunque, <m>Q</m> è un corpo, detto corpo dei <term>quaternioni</term>. Il corpo <m>Q</m> non è commutativo: ad esempio, le due matrici <m>\begin{psmallmatrix}
             i \amp 0 \\
             0 \amp -i
@@ -820,9 +820,9 @@
       <statement>
         <p>
           Se <m>R</m> è un anello e <m>\{S_{i}\}_{i\in I}</m> è una famiglia di sottoanelli di <m>R</m> (indicizzata da un insieme di indici <m>\Omega</m>), allora
-          <me>
+          <md>
             \bigcap_{i\in \Omega}S_{i}
-          </me>
+          </md>
           è un sottoanello di <m>S</m>.
         </p>
       </statement>
@@ -839,9 +839,9 @@
       <statement>
         <p>
           Dato un anello <m>R</m>, l'intersezione di tutti i sottoanelli di <m>R</m> è un sottoanello <m>S</m>, detto <term>sottoanello minimo</term>. Gli elementi di <m>S</m> sono i multipli interi di <m>1_{R}</m>, cioè
-          <me>
+          <md>
             S=\{n1_{R}\mid n\in\Interi\}
-          </me>.
+          </md>.
           Se <m>\car R=0</m>, allora <m>S</m> è infinito, mentre se <m>\car R=n</m> con <m>n\ne0</m>, allora <m>\abs{S}=n</m>.
         </p>
       </statement>
@@ -849,9 +849,9 @@
       <proof>
         <p>
           Sappiamo che l'intersezione di tutti i sottoanelli è un sottoanello <m>S</m>: in particolare, questo contiene <m>1_{R}</m> e, come notato nell'<xref ref="rem-multipli_potenze_in_sottoanello"/>, tutti i multipli <m>n1_{R}</m> al variare di <m>n</m> in <m>\Interi</m>. Se mostriamo che l'insieme <m>M</m> di questi multipli è un sottoanello, abbiamo che <m>M=S</m>. Ovviamente, <m>M</m> contiene <m>1_{R}</m> ed è un sottogruppo di <m>(R,+)</m> (è il sottogruppo ciclico generato da <m>1_{R}</m>). Per concludere basta mostrare che il prodotto di due elementi di <m>M</m> appartiene a <m>M</m>. Per ogni <m>n</m> e <m>m</m> interi, applicando la <xref ref="prop-multiplo_di_prodotti"/> e la <xref ref="prop-multipli_potenze_anello"/>, abbiamo allora
-          <me>
+          <md>
             (n1_{R})(m1_{R})=n(1_{R}(m1_{R}))=n(m(1_{R}1_{R}))=(nm)1_{R}
-          </me>.
+          </md>.
           L'affermazione sulla cardinalità di <m>M</m> segue poi immediatamente dal fatto che <m>S</m> è il sottogruppo additivo di <m>R</m> generato da <m>1_{R}</m> e dalla definizione di caratteristica.
         </p>
       </proof>
@@ -894,9 +894,9 @@
       <statement>
         <p>
           Se <m>K</m> è un campo e <m>\{F_{i}\}_{i\in I}</m> è una famiglia di sottocampi di <m>F</m> (indicizzata da un insieme di indici <m>\Omega</m>), allora
-          <me>
+          <md>
             \bigcap_{i\in \Omega}F_{i}
-          </me>
+          </md>
           è un sottocampo di <m>F</m>.
         </p>
       </statement>
@@ -948,9 +948,9 @@
       <statement>
         <p>
           Dato un elemento <m>a</m> di un anello <m>R</m>, il <term>centralizzante</term> di <m>a</m> in <m>R</m>, denotato con <m>\cent{R}{a}</m>, è il sottoinsieme di <m>R</m> formato dagli elementi di <m>R</m> che commutano con <m>a</m>. In simboli
-          <me>
+          <md>
             \cent{R}{a}\coloneqq \{b\in R\mid ba=ab\}
-          </me>.
+          </md>.
         </p>
       </statement>
     </definition>
@@ -971,9 +971,9 @@
         </p>
         <p>
           Siano <m>b</m> e <m>c</m> due elementi di <m>\cent{R}{a}</m>. Allora
-          <me>
+          <md>
             bca=bac=abc
-          </me>
+          </md>
           e, dunque, <m>bc\in\cent{G}{a}</m>. Infine, <m>1a=a1=a</m>, cioè <m>1\in\cent{R}{a}</m>.
         </p>
       </proof>
@@ -1077,13 +1077,13 @@
       <statement>
         <p>
           Si consideri l'anello <m>\mat{3}{R}</m> delle matrici di ordine <m>3</m> a coefficienti in un anello <m>R</m>. Prendiamo i sottoanelli <m>S</m> delle matrici del tipo
-          <me>
+          <md>
             \begin{pmatrix}
               a_{11} \amp 0      \amp 0 \\
               0      \amp a_{22} \amp 0      \\
               a_{31} \amp 0      \amp a_{33}
             \end{pmatrix}
-          </me>
+          </md>
           e il sottoanello <m>T</m> delle matrici triangolari superiori
           (per la verifica che <m>S</m> sia un sottoanello si veda l'<xref ref="exercise-quasi_triangolari"/>). La matrice <m>A\coloneqq
             \begin{psmallmatrix}
@@ -1164,9 +1164,9 @@
         <solution>
           <p>
             Chiaramente <m>U</m> è un sottogruppo del gruppo additivo di <m>S</m> e <m>U</m> contiene la matrice identica. Siano allora <m>A\coloneqq(a_{ij})</m> e <m>B\coloneqq(b_{ij})</m> due matrici di <m>U</m>: poiché <m>A</m> e <m>B</m> sono triangolari inferiori abbiamo che <m>a_{ij}=b_{ij}=0</m> se <m>i \lt j</m>. Inoltre, la condizione che definisce <m>U</m> mi dice che <m>a_{ij}=b_{ij}=0</m> se <m>i=j+1</m>. Consideriamo ora la matrice <m>AB</m>: sappiamo che è una matrice triangolare inferiore e dobbiamo, quindi, verificare che si annulla in ogni posizione <m>(i+1,i)</m>. L'elemento di posto <m>(i+1,i)</m> in <m>AB</m> si calcola così
-            <me>
+            <md>
               \sum_{h=1}^{n}a_{i+1,h}b_{h,i}
-            </me>.
+            </md>.
             Ora se <m>h \lt i</m> abbiamo che <m>b_{h,i}=0</m>, se <m>h=i</m> abbiamo che <m>a_{i+1,h}=0</m>, se <m>h=i+1</m> abbiamo che <m>b_{h,i}=0</m> e se <m>h \gt i+1</m> abbiamo che <m>a_{i+1,h}=0</m>. In ogni caso, almeno uno dei fattori nei prodotti della sommatoria si annulla e, quindi, <m>AB</m> appartiene a <m>U</m>.
           </p>
         </solution>

@@ -15,9 +15,9 @@
 
     <p>
       Supponiamo che in un insieme <m>S</m> sia definita un'operazione <m>\cdot</m> e una relazione di equivalenza <m>\sim</m>. Preso l'insieme quoziente <m>S/\sim</m>, cioè l'insieme delle classi di equivalenza (si veda la <xref ref="def-classe"/>), vogliamo definire in <m>S/\sim</m> un'operazione ponendo
-      <me>
+      <md>
         \class[\sim]{x}\class[\sim]{y}\coloneqq\class[\sim]{xy}
-      </me>.
+      </md>.
       Prima ancora di verificarne le eventuali proprietà, dovremmo controllare se la definizione è posta in maniera corretta. L'elemento <m>x</m> e l'elemento <m>y</m> sono dei rappresentanti delle rispettive classi, ma non sono (in generale) gli unici elementi di queste classi: se scelgo altri rappresentanti <m>x'</m> e <m>y'</m> rispettivamente, non è detto che <m>x'y'</m> stia nella stessa classe di <m>xy</m>. L'operazione è ben definita se e solo se soddisfa la proprietà data dalla definizione seguente.
     </p>
 
@@ -48,9 +48,9 @@
       <statement>
         <p>
           Se <m>\sim</m> è una congruenza in un insieme <m>S</m> dotato di un'operazione, allora nell'insieme quoziente <m>S/\sim</m> è possibile definire un'operazione ponendo
-          <me>
+          <md>
             \class[\sim]{x}\class[\sim]{y}\coloneqq\class[\sim]{xy}
-          </me>.
+          </md>.
           Inoltre
           <ol>
             <li>
@@ -83,9 +83,9 @@
         </p>
         <p>
           Le verifiche delle altre affermazioni sono immediate. Ad esempio, supponendo che l'operazione in <m>S</m> sia associativa, vediamo che, dati tre elementi <m>\class[\sim]{x}</m>, <m>\class[\sim]{y}</m> e <m>\class[\sim]{z}</m> in <m>S/\sim</m>, si ha
-          <me>
+          <md>
            (\class[\sim]{x}\class[\sim]{y})\class[\sim]{z} = \class[\sim]{xy}\class[\sim]{z} = \class[\sim]{(xy)z} = \class[\sim]{x(yz)} = \class[\sim]{x}\class[\sim]{yz}= \class[\sim]{x}(\class[\sim]{y}\class[\sim]{z})
-          </me>.
+          </md>.
           Le altre verifiche sono simili.
         </p>
 
@@ -97,9 +97,9 @@
       <statement>
         <p>
           Se <m>\sim</m> è una congruenza in un monoide <m>M</m>, allora nell'insieme quoziente <m>M/\sim</m> è possibile definire un'operazione ponendo
-          <me>
+          <md>
             \class[\sim]{x}\class[\sim]{y}\coloneqq\class[\sim]{xy}
-          </me>
+          </md>
           e, rispetto a tale operazione, <m>M/\sim</m> è un monoide, detto <term>monoide quoziente</term>. Se <m>M</m> è commutativo, allora <m>M/\sim</m> è commutativo.
         </p>
       </statement>
@@ -109,9 +109,9 @@
       <statement>
         <p>
           Se <m>\sim</m> è una congruenza in un gruppo <m>G</m>, allora nell'insieme quoziente <m>G/\sim</m> è possibile definire un'operazione ponendo
-          <me>
+          <md>
             \class[\sim]{x}\class[\sim]{y}\coloneqq\class[\sim]{xy}
-          </me>
+          </md>
           e, rispetto a tale operazione, <m>G/\sim</m> è un gruppo, detto <term>gruppo quoziente</term>. Se <m>G</m> è abeliano, allora <m>G/\sim</m> è abeliano.
         </p>
       </statement>
@@ -139,16 +139,16 @@
       <proof>
         <p>
           Denotiamo con <m>H</m> la classe <m>\class[\sim]{1}</m>. Chiaramente <m>H</m> è non vuoto. Presi <m>h_{1}</m> e <m>h_{2}</m> in <m>H</m>, cioè <m>h_{1}\sim 1</m> e <m>h_{2}\sim 1</m>, abbiamo
-          <me>
+          <md>
             h_{1}h_{2}^{-1}\sim 1\cdot h_{2}^{-1}\sim h_{2}h_{2}^{-1}=1
-          </me>
+          </md>
           cioè <m>h_{1}h_{2}^{-1}</m> appartiene ad <m>H</m>: pertanto, <m>H</m> è un sottogruppo di <m>G</m>.
         </p>
         <p>
           Siano ora <m>h\in H</m> e <m>g\in G</m>. Abbiamo
-          <me>
+          <md>
             g^{-1}hg\sim g^{-1}\cdot 1\cdot g=1
-          </me>
+          </md>
           cioè <m>g^{-1}hg</m> appartiene ad <m>H</m>, che è, quindi, normale in <m>G</m>.
         </p>
         <p>
@@ -336,9 +336,9 @@
       <proof>
         <p>
           Per definizione dell'operazione nel gruppo quoziente, abbiamo, per ogni <m>g</m> e <m>h</m> in <m>G</m>:
-          <me>
+          <md>
             (gh)\phi=ghN=gN\cdot hN=g\phi\cdot h\phi
-          </me>.
+          </md>.
           Pertanto, <m>\phi</m> è un omomorfismo.
         </p>
         <p>
@@ -394,9 +394,9 @@
       <proof>
         <p>
           Supponiamo per assurdo che <m>G/\centro(G)</m> sia ciclico, generato da un certo elemento <m>c\centro(G)</m>, e mostriamo che <m>G</m> è abeliano. Per ogni elemento <m>g</m> di <m>G</m>, si ha che <m>g\centro(G)</m> è una potenza di <m>c\centro(G)</m>, cioè esiste un intero <m>n</m> tale che <m>g\centro(G)=c^{n}\centro(G)</m>, vale a dire esiste <m>z\in\centro(G)</m> tale che <m>g=c^{n}z</m>. Se ora <m>h</m> è un altro elemento di <m>G</m>, esiste un intero <m>m</m> e un elemento <m>z'\in\centro(G)</m> tale che <m>h=c^{m}z'</m>. Ma allora
-          <me>
+          <md>
             gh=c^{n}zc^{m}z'=c^{n}c^{m}z'z=c^{m}c^{n}z'z=c^{m}z'c^{n}z=hg
-          </me>,
+          </md>,
           dove abbiamo usato il fatto che <m>z</m> e <m>z'</m> commutano con ogni altro elemento (e, quindi, possono essere spostati in qualunque punto del prodotto) e <m>c^{n}</m> e <m>c^{m}</m> commutano fra loro.
         </p>
       </proof>
@@ -485,9 +485,9 @@
           <solution>
             <p>
               Siano <m>xH</m> e <m>yH</m> due elementi di <m>G/H</m>. Se <m>x</m> appartiene a <m>H</m> allora <m>xH=H</m>, cioè <m>xH</m> è l'unità di <m>G/H</m> e, quindi, commuta con <m>yH</m>. Se <m>x</m> non appartiene a <m>H</m>, sappiamo che esiste <m>u</m> in <m>H</m> tale che <m>x^{y}=x^{u}</m>: ma allora
-              <me>
+              <md>
                 (xH)^{yH}=x^{y}H=x^{u}H=(xH)^{uH}=(xH)^{H}=xH
-              </me>,
+              </md>,
               cioè <m>xH</m> e <m>yH</m> commutano (si noti che abbiamo usato il fatto che <m>uH=H</m> è l'unità di <m>G/H</m>).
             </p>
           </solution>
@@ -530,9 +530,9 @@
       <proof>
         <p>
           Dalla <xref ref="prop-controimmagini_omomorfismo"/>, sappiamo che, dati due elementi <m>x</m> e <m>y</m> in <m>G</m>, risulta <m>x\phi=y\phi</m> se e solo se <m>x\ker\phi=y\ker\phi</m>. Dunque, possiamo definire una funzione <m>\psi\colon G/\ker\phi\to \im\phi</m> ponendo <m>(x\ker\phi)\psi\coloneqq x\phi</m> e questa funzione è iniettiva. Questa funzione è anche, evidentemente, suriettiva. Rimane da mostrare che è un omomorfismo, ma anche questo è immediato, infatti, per ogni <m>x\ker\phi</m> e <m>y\ker\phi</m> in <m>G/\ker\phi</m> risulta
-          <me>
+          <md>
             (x\ker\phi\cdot y\ker\phi)\psi=(xy\ker\phi)\psi=(xy)\phi=x\phi\cdot y\phi =(x\ker\phi)\psi\cdot (y\ker\phi)\psi
-          </me>.
+          </md>.
         </p>
       </proof>
 
@@ -542,29 +542,29 @@
       <statement>
         <p>
           Sia <m>G</m> un gruppo e siano <m>H</m> e <m>N</m> due sottogruppi di <m>G</m>, tali che <m>N</m> è normale in <m>G</m>. Allora <m>H\cap N</m> è normale in <m>H</m> e
-          <me>
+          <md>
             \frac{HN}{N}\simeq\frac{H}{H\cap N}
-          </me>.
+          </md>.
         </p>
       </statement>
 
       <proof>
         <p>
           Per la <xref ref="prop-prodotto_di_normale"/>, <m>HN</m> è un sottogruppo di <m>G</m>: poiché <m>N</m> è normale in <m>G</m>, a maggior ragione è normale in <m>HN</m>. Consideriamo ora l'omomorfismo di inclusione di <m>H</m> in <m>HN</m> e l'omomorfismo canonico da <m>HN</m> su <m>HN/N</m>: la loro composizione è, quindi, l'omomorfismo <m>\phi\colon H\to HN/N</m> così definito
-          <me>
+          <md>
             h\phi\coloneqq hN
-          </me>.
+          </md>.
           Questo omomorfismo è suriettivo: infatti, un elemento generico di <m>HN/N</m> è del tipo <m>hnN</m> con <m>h\in H</m> e <m>n\in N</m>, ma <m>hn\in hN</m>, cioè <m>hnN=hN=h\phi</m>.
         </p>
         <p>
           Il nucleo di <m>\phi</m> è dato dagli elementi <m>h\in H</m> tali che <m>h\phi</m>, cioè <m>hN</m>, è uguale all'elemento neutro di <m>HN/N</m>, cioè <m>N</m>. Dunque
-          <me>
+          <md>
             \ker\phi=\{h\in H\mid hN=N\}=\{h\in H\mid h\in N\}=H\cap N
-          </me>.
+          </md>.
           Per il <xref ref="cor-nucleo_normale"/>, <m>H\cap N\trianglelefteq H</m> e, per il <xref ref="thm-isomorfismo_quoziente_sul_nucleo"/>,
-          <me>
+          <md>
             \frac{H}{H\cap N}=\frac{H}{\ker\phi}\simeq\im\phi=\frac{HN}{N}
-          </me>.
+          </md>.
         </p>
       </proof>
 
@@ -574,9 +574,9 @@
       <statement>
         <p>
           Sia <m>G</m> un gruppo e sia <m>N</m> un suo sottogruppo normale. I sottogruppi di <m>G/N</m> sono i quozienti del tipo <m>H/N</m> con <m>H</m> sottogruppo di <m>G</m> contenente <m>N</m>. Inoltre <m>H/N\le K/N</m> se e solo se <m>H\le K</m> (in particolare, <m>H/N=K/N</m> se e solo se <m>H=K</m>). Un sottogruppo <m>H/N</m> di <m>G/N</m> è normale in <m>G/N</m> se e solo se <m>H\trianglelefteq G</m>: in tal caso
-          <me>
+          <md>
             \frac{G/N}{H/N}\simeq \frac{G}{H}
-          </me>.
+          </md>.
         </p>
       </statement>
 
@@ -586,28 +586,28 @@
         </p>
         <p>
           Consideriamo un sottogruppo <m>H/N</m> di <m>G/N</m>: ora <m>H/N</m> è normale in <m>G/N</m> se e solo se per ogni <m>hN\in H/N</m> e ogni <m>gN\in G/N</m> risulta <m>hN^{gN}\in H/N</m>. Ma
-          <me>
+          <md>
             hN^{gN}=(gN)^{-1}\cdot hN\cdot gN=g^{-1}N\cdot hN\cdot gN=g^{-1}hgN=h^{g}N
-          </me>:
+          </md>:
           dunque, <m>hN^{gN}\in H/N</m> se e solo se <m>h^{g}\in H</m>. Ma allora, <m>H/N\trianglelefteq G/N</m> se e solo se <m>H\trianglelefteq G</m>. In tal caso, definiamo una funzione <m>\psi\colon G/N\to G/H</m> ponendo
-          <me>
+          <md>
             gN\psi\coloneqq gH
-          </me>.
+          </md>.
           Mostriamo innanzitutto che <m>\psi</m> è ben definita: infatti, se <m>gN=g'N</m>, allora <m>g'=gn</m> per qualche <m>n\in N</m>. Ma <m>N\le H</m>, e, dunque, <m>n\in H</m> e <m>g'\in gH</m>, cioè <m>gH=g'H</m>, come richiesto.
         </p>
         <p>
           La funzione <m>\psi</m> è un omomorfismo. Infatti
-          <me>
+          <md>
             (g_{1}N\cdot g_{2}N)\psi=(g_{1}g_{2}N)\psi=g_{1}g_{2}H=g_{1}H\cdot g_{2}H=g_{1}N\psi\cdot g_{2}N\psi
-          </me>.
+          </md>.
           La funzione <m>\psi</m> è evidentemente suriettiva: infatti, se <m>gH</m> è un generico elemento di <m>G/H</m>, per definizione di <m>\psi</m> risulta <m>gN\psi=gH</m>. Il nucleo di <m>\psi</m> è formato dagli elementi <m>gN</m> di <m>G/N</m>, tali che <m>gH</m> è l'elemento neutro di <m>G/H</m>, cioè l'elemento <m>H</m>: dunque
-          <me>
+          <md>
             \ker\psi=\{gN\in G/N\mid gH=H\}=\{gN\in G/N\mid g\in H\}=H/N
-          </me>.
+          </md>.
           Applicando il <xref ref="thm-isomorfismo_quoziente_sul_nucleo"/> otteniamo allora che
-          <me>
+          <md>
             \frac{G/N}{H/N}=\frac{G/N}{\ker\psi}\simeq \im\psi=\frac{G}{H}
-          </me>.
+          </md>.
         </p>
       </proof>
 

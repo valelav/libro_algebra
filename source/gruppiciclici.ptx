@@ -92,9 +92,9 @@
         </p>
         <p>
           Supponiamo, invece, che <m>S</m> contenga almeno un intero <m>s</m> non nullo: ora, <m>g^{-s}=(g^{s})^{-1}</m> e, quindi, <m>g^{-s}</m>, essendo inverso di un elemento di <m>H</m>, appartiene a <m>H</m>. Pertanto, <m>-s\in S</m>: poiché uno tra <m>s</m> e <m>-s</m> è positivo, ciò significa che <m>S</m> contiene interi positivi. Sia <m>d</m> il più piccolo intero positivo contenuto in <m>S</m> e mostriamo che <m>H</m> è ciclico con generatore <m>g^{d}</m>: dobbiamo cioè mostrare che ogni elemento di <m>H</m> è potenza di <m>g^{d}</m>. Un elemento generico di <m>H</m> è del tipo <m>g^{n}</m> per qualche intero <m>n</m>: dividendo <m>n</m> per <m>d</m> otteniamo <m>n=qd+r</m> con <m>q</m> intero e <m>0 \le r \lt d</m>. Allora abbiamo
-          <me>
+          <md>
             g^{r}=g^{n-qd}=g^{n}(g^{d})^{-q}\in H
-          </me>
+          </md>
           dove abbiamo usato il fatto che <m>g^{n}</m> e <m>g^{d}</m> appartengono a <m>H</m>. Dunque, <m>r\in S</m>: poiché <m>d</m> è il minimo intero positivo in <m>S</m> e <m>0 \le r \lt d</m>, otteniamo che <m>r=0</m>. Pertanto, <m>g^{n}=g^{qd}=(g^{d})^{q}</m>, cioè <m>g^{n}</m> è potenza di <m>g^{d}</m>, come richiesto.
         </p>
       </proof>
@@ -109,13 +109,13 @@
     </p>
     <p>
       Consideriamo adesso il caso in cui ci siano almeno due interi diversi <m>r</m> e <m>s</m> tali che <m>g^{r}=g^{s}</m>. Sia, ad esempio, <m>r \gt s</m>: allora <m>r-s \gt 0</m> e
-      <me>
+      <md>
         g^{r-s}=g^{r}(g^{s})^{-1}=g^{r}(g^{r})^{-1}=1
-      </me>,
+      </md>,
       e, dunque, esistono interi positivi <m>t</m> tali che <m>g^{t}=1</m>. Sia <m>n</m> il minimo di tali interi positivi e mostriamo che <m>g^{i}=g^{j}</m> se e solo se <m>i\equiv j\pmod{n}</m>. Dati due interi <m>i</m> e <m>j</m>, dividiamo <m>i-j</m> per <m>n</m> ottenendo così <m>i-j=qn+r</m> con <m>0\le r \lt n</m>. Ora
-      <me>
+      <md>
         g^{i}=g^{j+qn+r}=g^{j}(g^{n})^{q}g^{r}=g^{j}1^{q}g^{r}=g^{j}g^{r}
-      </me>:
+      </md>:
       per le <xref ref="prop-cancellazione_gruppo" text="title"/>, abbiamo allora <m>g^{i}=g^{j}</m> se e solo se <m>g^{r}=1</m>. Poiché <m>0\le r \lt n</m>, la scelta di <m>n</m> implica che ciò avviene se e solo se <m>r=0</m>, cioè se e solo se <m>i\equiv j\pmod{n}</m>, come affermato. Ma allora, le diverse potenze di <m>g</m> sono tante quante le classi di resto modulo <m>n</m>, cioè <m>n</m>, e queste potenze si ripetono ciclicamente ogni <m>n</m>.
     </p>
     <p>
@@ -186,10 +186,10 @@
       <statement>
         <p>
           Determiniamo il periodo di <m>\class[9]{6}</m> e di <m>\class[9]{5}</m> in <m>(\Interi/9,+)</m>. Poiché <m>\Interi/9</m> è finito, i suoi elementi hanno periodo finito. Calcoliamo allora i multipli successivi (siamo in notazione additiva) degli elementi dati finché eventualmente troviamo l'elemento neutro (cioè <m>\class[9]{0}</m>). Abbiamo allora
-          <me>
+          <md>
             1\class[9]{6}=\class[9]{6}\ne\class[9]{0}\qquad 2\class[9]{6}=\class[9]{12}\ne\class[9]{0}\qquad
             3\class[9]{6}=\class[9]{18}=\class[9]{0}
-          </me>.
+          </md>.
           Dunque, il periodo di <m>\class[9]{6}</m> è <m>3</m>.
         </p>
         <p>
@@ -400,13 +400,13 @@
         <solution>
           <p>
             L'operazione <m>\triangledown</m> è associativa. Infatti, dati <m>a</m>, <m>b</m> e <m>c</m> in <m>\Interi</m> si ha:
-            <me>
+            <md>
               (a\triangledown b)\triangledown c = (a+b+1)\triangledown c=(a+b+1)+c+1=a+b+c+2
-            </me>
+            </md>
             e
-            <me>
+            <md>
               a\triangledown (b\triangledown c) = a\triangledown (b+c+1)=a+(b+c+1)+1=a+b+c+2
-            </me>.
+            </md>.
           </p>
 
           <p>
@@ -633,9 +633,9 @@
       <statement>
         <p>
           Per ogni intero positivo <m>n</m> si ha
-          <me>
+          <md>
             \sum_{d\mid n}\euler{d}=n
-          </me>.
+          </md>.
         </p>
       </statement>
 

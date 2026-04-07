@@ -76,31 +76,31 @@
         </p>
         <p>
           Mostriamo che i vettori dati generano <m>R</m> come <m>F</m>-spazio vettoriale. Infatti, dato un elemento <m>v</m> di <m>R</m>, questo può essere espresso come una <m>E</m>-combinazione lineare dei <m>v_{j}</m>:
-          <me>
+          <md>
             v=\sum_{j=1}^{r}b_{j}v_{j}
-          </me>.
+          </md>.
           Ciascun <m>b_{j}</m>, in quanto elemento di <m>E</m>, può essere espresso come <m>F</m>-combinazione lineare degli <m>e_{i}</m>:
-          <me>
+          <md>
             b_{j}=\sum_{i=1}^{s}c_{ij}e_{i}
-          </me>.
+          </md>.
           Combinando le sommatorie date troviamo <m>v</m> come <m>F</m>-combinazione lineare degli <m>e_{i}v_{j}</m>:
-          <me>
+          <md>
             v=\sum_{j=1}^{r}\sum_{i=1}^{s}c_{ij}e_{i}v_{j}
-          </me>.
+          </md>.
         </p>
         <p>
           Mostriamo, infine, che gli <m>e_{i}v_{j}</m> sono <m>F</m>-linearmente indipendenti, ponendo uguale a <m>0</m> una loro <m>F</m>-combinazione lineare:
-          <me>
+          <md>
             \sum_{j=1}^{r}\sum_{i=1}^{s}d_{ij}e_{i}v_{j}=0
-          </me>.
+          </md>.
           Riscrivendola così
-          <me>
+          <md>
             \sum_{j=1}^{r}(\sum_{i=1}^{s}d_{ij}e_{i})v_{j}=0
-          </me>
+          </md>
           possiamo pensare il primo membro come una <m>E</m>-combinazione lineare dei <m>v_{j}</m> e, essendo questi ultimi <m>E</m>-linearmente indipendenti, otteniamo che tutti gli <m>E</m>-coefficienti si annullano, cioè
-          <me>
+          <md>
             \sum_{i=1}^{s}d_{ij}e_{i}=0
-          </me>
+          </md>
           per ogni <m>j</m>. Poiché gli <m>e_{i}</m> sono <m>F</m>-linearmente indipendenti, ciò implica che <m>d_{ij}=0</m> per ogni <m>i</m> e <m>j</m>, come richiesto.
         </p>
       </proof>
@@ -238,17 +238,17 @@
         </p>
         <p>
           Sia ora <m>n</m> il grado di <m>p</m>: sappiamo che un generico elemento di <m>F[u]</m> è del tipo <m>h\phi=h(u)</m> per qualche polinomio <m>h</m> in <m>F[x]</m>. Dividendo <m>h</m> per <m>p</m> otteniamo
-          <me>
+          <md>
             h=pq+r
-          </me>
+          </md>
           dove <m>q</m> e <m>r</m> sono polinomi con <m>\deg r \lt n</m> o <m>r=0</m>: in altri termini, <m>r=r_{0}+r_{1}x+\cdots+r_{n-1}x^{n-1}</m> con gli <m>r_{i}</m> in <m>F</m>. Ma allora
-          <me>
+          <md>
             h(u)=p(u)q(u)+r(u)=0q(u)+r(u)=r(u)=r_{0}+r_{1}u+\cdots+r_{n-1}u^{n-1}
-          </me>,
+          </md>,
           cioè <m>h(u)</m> è <m>F</m>-combinazione lineare di <m>1</m>, <m>u</m>, <m>\ldots</m>, <m>u^{n-1}</m>. D'altra parte, questi elementi sono <m>F</m>-linearmente indipendenti: infatti, presi <m>c_{0}</m>, <m>c_{1}</m>, <m>\ldots</m>, <m>c_{n-1}</m> in <m>F</m> tali che
-          <me>
+          <md>
             c_{0}+c_{1}u+\cdots+c_{n-1}u^{n-1}=0
-          </me>
+          </md>
           si ha che <m>c_{0}+c_{1}x+\cdots+c_{n-1}x^{n-1}</m> è un polinomio che si annulla in <m>u</m>, ed è, quindi, multiplo di <m>p</m>, il che è possibile se e solo se i <m>c_{i}</m> sono tutti nulli. In conclusione, <m>1</m>, <m>u</m>, <m>\ldots</m>, <m>u^{n-1}</m> formano una base per <m>F[u]</m> e, quindi, <m>\dim_{F}F[u]=n</m>.
         </p>
       </proof>
@@ -280,19 +280,19 @@
       <statement>
         <p>
           Consideriamo di nuovo il polinomio <m>x^{2}-2</m> a coefficienti razionali e la sua radice <m>\sqrt{2}</m>: dunque, <m>\sqrt{2}</m> ha grado al più <m>2</m> su <m>\Razionali</m>. D'altra parte, <m>\sqrt{2}\notin\Razionali</m> e, quindi, il suo grado di <m>\sqrt{2}</m>  sui <m>\Razionali</m> non è <m>1</m>. Il grado è allora esattamente <m>2</m> e, di conseguenza, <m>1</m>, <m>\sqrt{2}</m> formano una <m>\Razionali</m>-base di <m>\Razionali(\sqrt{2})</m>, cioè
-          <me>
+          <md>
             \Razionali(\sqrt{2})=\{a+b\sqrt{2}\mid a\in\Razionali,b\in\Razionali\}
-          </me>.
+          </md>.
         </p>
         <p>
           Supponiamo ora di voler calcolare l'inverso di un elemento non nullo di <m>\Razionali(\sqrt{2})</m>, ad esempio, <m>3+2\sqrt{2}</m>. Dobbiamo allora trovare <m>a+b\sqrt{2}</m> con <m>a</m> e <m>b</m> in <m>\Razionali</m> tale che <m>(3+2\sqrt{2})(a+b\sqrt{2})=1</m>. Sviluppando il prodotto, troviamo
-          <me>
+          <md>
             3a+2a\sqrt{2}+3b\sqrt{2}+2b\sqrt{2}\sqrt{2}=1
-          </me>
+          </md>
           cioè
-          <me>
+          <md>
             3a+4b+(2a+3b)\sqrt{2}=1
-          </me>.
+          </md>.
           Poiché <m>1</m> e <m>\sqrt{2}</m> sono <m>\Razionali</m>-linearmente indipendenti, ciò avviene se e solo se <m>3a+4b=1</m> e <m>2a+3b=0</m>. Risolvendo, troviamo <m>a=3</m> e <m>b=-2</m>, cioè l'inverso di <m>3+2\sqrt{2}</m> è <m>3-2\sqrt{2}</m>.
         </p>
       </statement>
@@ -312,9 +312,9 @@
       <proof>
         <p>
           Detto <m>I</m> l'ideale dell'anello <m>F[x]</m> generato da <m>p\coloneqq a_{0}+a_{1}x+\cdots+a_{n}x^{n}</m>, consideriamo il quoziente <m>F[x]/I</m>: questo è un campo per il <xref ref="lem-quoziente_anello_polinomi"/>. La composizione dell'omomorfismo di inclusione di <m>F</m> in <m>F[x]</m> con l'omomorfismo canonico di <m>F[x]</m> su <m>F[x]/I</m>, definisce un omomorfismo da <m>F</m> in <m>F[x]/I</m>: poiché <m>F</m> è un campo, questo omomorfismo è iniettivo e possiamo, dunque, identificare <m>F</m> con un sottocampo di <m>F[x]/I</m>: più precisamente, un elemento <m>a</m> di <m>F</m> viene identificato con il laterale <m>a+I</m>. Con questa identificazione, il polinomio <m>p</m> può, dunque, essere scritto come
-          <me>
+          <md>
             a_{0}+I+(a_{1}+I)x+\cdots+(a_{n}+I)x^{n}.
-          </me>
+          </md>
           Sia ora <m>u</m> l'elemento <m>x+I</m> di <m>F[x]/I</m>: valutando <m>p</m> in <m>u</m> abbiamo allora
           <md>
             <mrow> p(u)\amp =(a_{0}+I)+(a_{1}+I)(x+I)+\cdots+(a_{n}+I)(x+I)^{n}</mrow>
@@ -342,17 +342,17 @@
         </p>
         <p>
           Per quanto riguarda l'inverso di <m>u+1</m>, esprimiamolo come <m>au^{2}+bu+c</m> con <m>a</m>, <m>b</m> e <m>c</m> in <m>\Razionali</m>. Deve allora essere <m>(1+u)(au^{2}+bu+c)=1</m> che, sviluppato, dà
-          <me>
+          <md>
             au^{3}+(a+b)u^{2}+(b+c)u+c-1=0
-          </me>.
+          </md>.
           Poiché <m>u^{3}=-2u-4</m>, l'equazione trovata si può riscrivere come
-          <me>
+          <md>
             (a+b)u^{2}+(b+c-2a)u+c-4a-1=0
-          </me>:
+          </md>:
           poiché <m>1</m>, <m>u</m> e <m>u^{2}</m> sono <m>\Razionali</m>-linearmente indipendenti, ciò avviene se e solo se <m>a+b=b+c-2a=c-4a-1=0</m>. Risolvendo il sistema, si trova <m>a=-1</m>, <m>b=1</m> e <m>c=-3</m> e, quindi
-          <me>
+          <md>
             (1+u)^{-1}=-u^{2}+u-3
-          </me>.
+          </md>.
         </p>
       </statement>
     </example>
@@ -365,29 +365,29 @@
         </p>
         <p>
           Ogni elemento <m>z</m> di <m>\Complessi</m> si può allora scrivere come <m>a+bi</m> per opportuni numeri reali <m>a</m> e <m>b</m>. Se <m>w\coloneqq c+di</m> è un altro elemento di <m>\Complessi</m>, abbiamo allora
-          <me>
+          <md>
             z+w=a+bi+c+di=(a+c)+(b+d)i
-          </me>
+          </md>
           e, dunque, abbiamo già una decomposizione di <m>z+w</m> rispetto alla base scelta. Per quanto riguarda il prodotto abbiamo invece
-          <me>
+          <md>
             zw=(a+bi)(c+di)=ac+(bc+ad)i+bdi^{2}
-          </me>
+          </md>
           e questa non è una decomposizione rispetto alla base scelta. Il prodotto, pensato come elemento del quoziente <m>\Reali[x]/\ideal{p}</m>, è il laterale di <m>\ideal{p}</m> contenente il polinomio
-          <me>
+          <md>
             f\coloneqq ac+(bc+ad)x+bdx^{2}
-          </me>.
+          </md>.
           Dividendo <m>f</m> per <m>p</m>, cioè per <m>x^{2}+1</m>, otteniamo allora
-          <me>
+          <md>
             ac+(bc+ad)x+bdx^{2}=bd(x^{2}+1)+(ac-bd+(bc+ad)x)
-          </me>,
+          </md>,
           e, quindi, il laterale <m>f+\ideal{p}</m> coincide con
-          <me>
+          <md>
             ac-bd+(bc+ad)x+\ideal{p}
-          </me>.
+          </md>.
           Il prodotto di <m>z</m> per <m>w</m> è, dunque
-          <me>
+          <md>
             ac-bd+(bc+ad)i
-          </me>
+          </md>
           cioè l'usuale prodotto tra numeri complessi. Si noti che non dobbiamo adesso verificare che <m>\Complessi</m> con queste operazioni è effettivamente un campo, perché lo sappiamo dal <xref ref="lem-estensione_semplice"/>.
         </p>
       </statement>
@@ -467,20 +467,20 @@
       <statement>
         <p>
           Consideriamo l'estensione <m>\Razionali(\sqrt{2},\sqrt{3})</m> di <m>\Razionali</m>. Sappiamo che <m>\Razionali(\sqrt{2})</m> è un'estensione di grado <m>2</m> di <m>\Razionali</m>. Con un argomento simile a quello dall'<xref ref="exercise-radice_di_due_e_di_tre"/>, si può verificare che <m>\Razionali(\sqrt{2})</m> non contiene <m>\sqrt{3}</m>. Dunque, <m>\sqrt{3}</m> ha grado maggiore di <m>1</m> su <m>\Razionali(\sqrt{2})</m>: d'altra parte <m>x^{2}-3</m> è un polinomio di grado <m>2</m> a coefficienti in <m>\Razionali(\sqrt{2})</m> che ha <m>\sqrt{3}</m> come radice, quindi <m>\sqrt{3}</m> ha grado <m>2</m> su <m>\Razionali(\sqrt{2})</m>. Dalla <xref ref="prop-moltiplicativita_grado"/> abbiamo allora
-          <me>
+          <md>
            \degext{\Razionali(\sqrt{2},\sqrt{3})}{\Razionali}=\degext{\Razionali(\sqrt{2},\sqrt{3})}{\Razionali(\sqrt{2})}\degext{\Razionali(\sqrt{2})}{\Razionali}=2\cdot2=4
-          </me>.
+          </md>.
           Dalla dimostrazione della <xref ref="prop-moltiplicativita_grado"/>, sappiamo inoltre che <m>1</m>, <m>\sqrt{2}</m>, <m>\sqrt{3}</m>, <m>\sqrt{6}</m> formano una <m>\Razionali</m>-base di <m>\Razionali(\sqrt{2},\sqrt{3})</m>.
         </p>
         <p>
           Consideriamo ora l'estensione <m>\Razionali(\sqrt{2}+\sqrt{3})</m>: chiaramente <m>\Razionali(\sqrt{2}+\sqrt{3})\subseteq\Razionali(\sqrt{2},\sqrt{3})</m>. Per la <xref ref="prop-moltiplicativita_grado"/>, il grado di <m>\sqrt{2}+\sqrt{3}</m> è un divisore di <m>4</m>. Se fosse diverso da <m>4</m> dovrebbe essere <m>1</m> o <m>2</m>: esisterebbe allora un polinomio del tipo <m>ax^{2}+bx+c</m> a coefficienti in <m>\Razionali</m> con <m>\sqrt{2}+\sqrt{3}</m> come radice. Risulterebbe allora
-          <me>
+          <md>
             a(2+3+2\sqrt{6})+b(\sqrt{2}+\sqrt{3})+c=0
-          </me>
+          </md>
           cioè
-          <me>
+          <md>
             2a\sqrt{6}+b\sqrt{3}+b\sqrt{2}+(5a+c)=0
-          </me>:
+          </md>:
           poiché <m>1</m>, <m>\sqrt{2}</m>, <m>\sqrt{3}</m>, <m>\sqrt{6}</m> sono <m>\Razionali</m>-linearmente indipendenti, ne segue che <m>2a=0</m>, <m>b=0</m>, <m>5a+c=0</m>, cioè <m>a</m>, <m>b</m> e <m>c</m> sono nulli. Dunque, il polinomio minimo su <m>\Razionali</m> di <m>\sqrt{2}+\sqrt{3}</m> ha grado maggiore di <m>2</m> e, per quanto già osservato, questo grado è uguale a <m>4</m>. Di conseguenza, <m>\Razionali(\sqrt{2}+\sqrt{3})=\Razionali(\sqrt{2},\sqrt{3})</m>.
         </p>
       </statement>
@@ -739,9 +739,9 @@
       <proof>
         <p>
           Consideriamo un insieme <m>X</m> di indeterminate che sia in corrispondenza biiettiva con <m>P</m>: per ogni polinomio <m>f</m> di <m>P</m>, indichiamo con <m>x_{f}</m> l'indeterminata corrispondente. Consideriamo l'ideale <m>I</m> di <m>F[X]</m> generato dagli elementi del tipo <m>f(x_{f})</m> al variare di <m>f</m> in <m>P</m>. Mostriamo che <m>I</m> è un ideale proprio: se così non fosse, <m>1</m> apparterrebbe a <m>I</m> e potrebbe essere espresso da una relazione del tipo
-          <men xml:id="eqn-identita_per_chiusura_algebrica">
+          <md number="yes" xml:id="eqn-identita_per_chiusura_algebrica">
             1=c_{1}f_{1}(x_{f_{1}})+c_{2}f_{2}(x_{f_{2}})+\cdots+c_{r}f_{r}(x_{f_{r}})
-          </men>
+          </md>
           dove i <m>c_{i}</m> sono in <m>F[X]</m> e gli <m>f_{i}</m> in <m>P</m>. Sappiamo che esiste un'estensione <m>E</m> di <m>F</m> in cui <m>f_{1}</m>, <m>\ldots</m>, <m>f_{r}</m> hanno almeno una radice: queste siano, rispettivamente, <m>u_{1}</m>, <m>u_{2}</m>, <m>\ldots</m>, <m>u_{r}</m>. Consideriamo allora l'omomorfismo da <m>F[X]</m> in <m>E</m> che fissa gli elementi di <m>F</m>, manda ciascun <m>x_{f_{i}}</m> in <m>u_{i}</m> e le altre indeterminate in elementi qualunque (ad esempio, tutte a <m>0</m>). Sostituendo nella <xref ref="eqn-identita_per_chiusura_algebrica"/> otterremmo allora <m>1=0</m> in <m>E</m>, il che non può essere. 
         </p>          
         <p>  
@@ -758,9 +758,9 @@
       <statement>
         <p>
           Un polinomio <m>f</m> di grado positivo a coefficienti in un campo <m>F</m> si dice <term>totalmente riducibile</term> (o, equivalentemente, che <m>f</m> si spezza totalmente in <m>F[x]</m>) se <m>f</m> si può fattorizzare come prodotto di polinomi di primo grado, cioè <m>f</m> è uguale a
-          <me>
+          <md>
             f=c(x-u_{1})(x-u_{2})\cdots(x-u_{r})
-          </me>
+          </md>
           con <m>u_{1}</m>, <m>u_{2}</m>, <m>\ldots</m>, <m>u_{r}</m> e <m>c</m> elementi di <m>F</m>.
         </p>
       </statement>
@@ -844,9 +844,9 @@
       <proof>
         <p>
           Siano <m>u_{1}</m>, <m>u_{2}</m>, <m>\ldots</m>, <m>u_{n}</m> gli elementi di <m>K</m>. Consideriamo il polinomio
-          <me>
+          <md>
             f\coloneqq(x-u_{1})(x-u_{2})\cdots(x-u_{n})+1
-          </me>.
+          </md>.
           Allora per ogni <m>u_{i}</m> in <m>K</m> si ha <m>f(u_{i})=0+1\ne0</m> e, dunque, <m>f</m> è un polinomio di grado positivo che non ha alcuna radice in <m>K</m>: pertanto <m>K</m> non è algebricamente chiuso.
         </p>
       </proof>
@@ -888,9 +888,9 @@
       <proof>
         <p>
           Sia <m>P</m> l'insieme di tutti i polinomi di grado positivo a coefficienti in <m>F</m>. Dal <xref ref="lem-aggiunta_infinite_radici"/>, sappiamo che esiste un'estensione algebrica <m>K_{1}</m> di <m>F</m> che contiene almeno una radice di ogni polinomio in <m>P</m>. Possiamo iterare il procedimento e ottenere una sequenza di estensioni
-          <me>
+          <md>
             F\subseteq K_{1}\subseteq K_{2}\subseteq \cdots K_{i}\subseteq \cdots
-          </me>
+          </md>
           tale che ogni termine è un'estensione algebrica del precedente (e, quindi, è un'estensione algebrica di <m>F</m> grazie al <xref ref="cor-estensione_algebrica_di_algebrica"/>) e contiene una radice per ciascun polinomio di grado positivo contenuto nel precedente. Se ora consideriamo l'unione <m>K</m> dei campi <m>K_{i}</m>, si può verificare facilmente che questo è un campo, estensione di <m>F</m>, che è algebrico su <m>F</m> e che ogni polinomio di grado positivo a coefficienti in <m>K</m>, avendo i coefficienti in qualche <m>K_{i}</m> ha una radice in <m>K_{i+1}</m>, cioè in <m>K</m>: in altri termini, <m>K</m> è una chiusura algebrica di <m>F</m>,
         </p>
         <p>

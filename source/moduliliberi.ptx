@@ -65,9 +65,9 @@
       <statement>
         <p>
           Sia data la somma diretta esterna <m>M_{1}\oplus M_{2}\oplus\cdots \oplus M_{r}</m>. Fissato <m>i</m> con <m>1\le i\le n</m>, il sottoinsieme
-          <me>
+          <md>
             N_{i}\coloneqq\{(0_{M_{1}},\ldots,0_{M_{i-1}},x_{i},0_{M_{i+1}},\ldots,0_{M_{r}})\mid x_{i}\in M_{i}\}
-          </me>
+          </md>
           è un sottomodulo isomorfo a <m>M_{i}</m>.
         </p>
       </statement>
@@ -102,9 +102,9 @@
       <proof>
         <p>
           Dato un elemento generico <m>x\coloneqq(x_{1},x_{2},\ldots,x_{r})</m> di <m>M</m> abbiamo
-          <me>
+          <md>
             x=(x_{1},0_{M_{2}},\ldots,0_{M_{r}})+(0_{M_{2}},x_{2},0_{M_{3}}\ldots,0_{M_{r}})+\cdots +(0_{M_{1}},\ldots 0_{M_{r-1}},x_{r})
-          </me>.
+          </md>.
           Abbiamo, dunque, espresso <m>x</m> come somma di elementi in <m>N_{1}</m>, <m>N_{2}</m>, <m>\ldots</m>, <m>N_{r}</m> rispettivamente e il <xref ref="item-M_somma_dei_suoi_addendi"/> è dimostrato.
         </p>
         <p>
@@ -147,9 +147,9 @@
         <p>
           Sia <m>M</m> un <m>R</m>-modulo che sia somma diretta interna dei sottomoduli <m>N_{1}</m>, <m>N_{2}</m>, <m>\ldots</m>, <m>N_{r}</m>.
           Allora <m>M</m> è isomorfo alla somma diretta esterna dei moduli <m>N_{1}</m>, <m>N_{2}</m>, <m>\ldots</m>, <m>N_{r}</m> (pensati come <m>R</m>-moduli indipendenti). Inoltre, ogni elemento <m>x</m> di <m>M</m> si scrive in un unico modo nella forma
-          <men xml:id="eqn-decomposizione_somma_diretta">
+          <md number="yes" xml:id="eqn-decomposizione_somma_diretta">
             x=x_{1}+x_{2}+\cdots +x_{r}
-          </men>
+          </md>
           con <m>x_{i}\in N_{i}</m>.
         </p>
       </statement>
@@ -157,9 +157,9 @@
       <proof>
         <p>
           Sia <m>N\coloneqq N_{1}\oplus N_{2}\oplus\cdots\oplus N_{r}</m> e sia <m>\phi\colon N\to M</m> definita da
-          <me>
+          <md>
             (x_{1},x_{2},\cdots,x_{r})\coloneqq x_{1}+x_{2}+\cdots +x_{r}
-          </me>.
+          </md>.
           Poiché <m>M=N_{1}+N_{2}+\cdots +N_{r}</m>, la funzione <m>\phi</m> è suriettiva.
         </p>
         <p>
@@ -167,9 +167,9 @@
         </p>
         <p>
           Per completare la dimostrazione, basta mostrare che <m>\phi</m> è iniettiva (questo implicherà l'unicità della decomposizione <xref ref="eqn-decomposizione_somma_diretta"/>). Sia allora <m>(x_{1},x_{2},\cdots ,x_{r})</m> un elemento di <m>\ker\phi</m>, cioè <m>x_{1}+x_{2}+\cdots+x_{r}=0</m>. Mostriamo che <m>x_{i}=0</m> per ogni <m>i</m>:
-          <me>
+          <md>
             -x_{i}=x_{1}+\cdots +x_{i-1}+x_{i+1}+\cdots +x_{r}
-          </me>.
+          </md>.
           Ma allora, <m>-x_{i}</m> appartiene a <m>N_{i}</m> e alla somma dei rimanenti ed è, dunque, uguale a <m>0</m>.
         </p>
       </proof>
@@ -241,13 +241,13 @@
       <statement>
         <p>
           Dato un <m>R</m>-modulo <m>M</m> e degli elementi <m>x_{1}</m>, <m>x_{2}</m>, <m>\ldots</m>, <m>x_{r}</m> di <m>M</m>, questi sono detti <term>linearmente dipendenti</term> se esistono <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{r}</m> in <m>R</m> non tutti nulli tali che
-          <me>
+          <md>
             x_{1}a_{1}+x_{2}a_{2}+\cdots+x_{r}a_{r}=0
-          </me>.
+          </md>.
           Sono detti <term>linearmente indipendenti</term> altrimenti, cioè se l'unica possibilità per ottenere <m>0</m> come loro combinazione lineare
-          <me>
+          <md>
             x_{1}a_{1}+x_{2}a_{2}+\cdots+x_{r}a_{r}=0
-          </me>
+          </md>
           è quella di scegliere tutti gli <m>a_{i}</m> uguali a <m>0</m>.
         </p>
       </statement>
@@ -260,9 +260,9 @@
     <note>
       <p>
         In pratica, per stabilire se degli elementi <m>x_{1}</m>, <m>x_{2}</m>, <m>\ldots</m>, <m>x_{r}</m> di un <m>R</m>-modulo <m>M</m> sono linearmente dipendenti o indipendenti si procede così: si pone
-        <me>
+        <md>
           x_{1}a_{1}+x_{2}a_{2}+\cdots+x_{r}a_{r}=0
-        </me>
+        </md>
         e si risolve questa equazione in cui gli <m>a_{i}</m> sono le incognite; se si mostra che l'unica soluzione è quella banale con tutti gli <m>a_{i}</m> nulli, allora gli <m>x_{i}</m> sono linearmente indipendenti mentre se si trova una soluzione non banale sono linearmente dipendenti.
       </p>
     </note>
@@ -270,13 +270,13 @@
     <remark xml:id="rem-sottoinsieme_linearmente_indipendente">
       <p>
         Come avviene per gli spazi vettoriali, se <m>x_{1}</m>, <m>x_{2}</m>, <m>\ldots</m>, <m>x_{r}</m> sono elementi linearmente dipendenti di un <m>R</m>-modulo <m>M</m>, allora <m>x_{1}</m>, <m>x_{2}</m>, <m>\ldots</m>, <m>x_{r}</m>, <m>x_{r+1}</m> sono linearmente dipendenti per ogni <m>x_{r+1}</m> in <m>M</m>. Infatti, se <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{r}</m> in <m>R</m> sono elementi non tutti nulli tali che
-        <me>
+        <md>
           x_{1}a_{1}+x_{2}a_{2}+\cdots+x_{r}a_{r}=0
-        </me>
+        </md>
         allora, ponendo <m>a_{r+1}\coloneqq 0</m>, si ha
-        <me>
+        <md>
           x_{1}a_{1}+x_{2}a_{2}+\cdots+x_{r}a_{r}+x_{r+1}a_{r+1}=0
-        </me>.
+        </md>.
       </p>
     </remark>
 
@@ -309,17 +309,17 @@
         </p>
         <p>
           Viceversa, siano <m>x_{1}</m>, <m>x_{2}</m>, <m>\ldots</m>, <m>x_{r}</m> linearmente indipendenti, e sia <m>x</m> un elemento del sottomodulo generato da essi: dunque, per la <xref ref="prop-elementi_del_sottomodulo_generato"/>, <m>x</m> si può esprimere come
-          <me>
+          <md>
             x=x_{1}a_{1}+x_{2}a_{2}+\cdots +x_{r}a_{r}
-          </me>
+          </md>
           con gli <m>a_{i}</m> in <m>R</m>. Se ora abbiamo un'altra espressione di questo tipo per <m>x</m>
-          <me>
+          <md>
             x=x_{1}b_{1}+x_{2}b_{2}+\cdots +x_{r}b_{r}
-          </me>,
+          </md>,
           sottraendo l'una dall'altra otteniamo
-          <me>
+          <md>
             0=x_{1}(a_{1}-b_{1})+x_{2}(a_{2}-b_{2})+\cdots +x_{r}(a_{r}-b_{r})
-          </me>.
+          </md>.
           Poiché  <m>x_{1}</m>, <m>x_{2}</m>, <m>\ldots</m>, <m>x_{r}</m> sono linearmente indipendenti, i coefficienti devono essere tutti nulli, cioè <m>a_{i}=b_{i}</m> per ogni <m>i</m>.
         </p>
       </proof>
@@ -374,13 +374,13 @@
       <proof>
         <p>
           Per la <xref ref="prop-unica_decomposizione_linearmente_indipendenti"/>, ogni elemento <m>x</m> di <m>M</m> si esprime unicamente come
-          <me>
+          <md>
             x=x_{1}a_{1}+x_{2}a_{2}+\cdots+x_{n}a_{n}
-          </me>.
+          </md>.
           Poniamo allora
-          <me>
+          <md>
             x\phi\coloneqq y_{1}a_{1}+y_{2}a_{2}+\cdots+y_{n}a_{n}
-          </me>.
+          </md>.
           Le verifiche che questo sia un omomorfismo, che mandi ciascun <m>x_{i}</m> nel corrispondente <m>y_{i}</m> e che sia l'unico omomorfismo con queste proprietà sono di routine.
         </p>
       </proof>
@@ -437,36 +437,36 @@
         </p>
         <p>
           Ogni elemento di <m>M</m> è combinazione lineare degli <m>x_{i}</m>: ciò in particolare, è vero per gli <m>y_{j}</m>. Possiamo allora scrivere
-          <me>
+          <md>
             y_{j}=x_{1}a_{1j}+x_{2}a_{2j}+\cdots+x_{m}a_{mj}=\sum_{h=1}^{m}x_{h}a_{hj}
-          </me>
+          </md>
           per opportuni <m>a_{hj}</m> in <m>R</m>. Analogamente, abbiamo
-          <me>
+          <md>
             x_{i}=\sum_{j=1}^{n}y_{j}b_{ji}
-          </me>
+          </md>
           per opportuni <m>b_{ji}</m> in <m>R</m>. Combinando le due espressioni troviamo allora
-          <me>
+          <md>
             x_{i}=\sum_{j=1}^{n}\sum_{h=1}^{m}x_{h}a_{hj}b_{ji}=\sum_{h=1}^{m}x_{h}(\sum_{j=1}^{n}a_{hj}b_{ji})
-          </me>.
+          </md>.
           Per la <xref ref="prop-unica_decomposizione_linearmente_indipendenti"/>, questa decomposizione di <m>x_{i}</m> deve coincidere con quella ovvia
-          <me>
+          <md>
             x_{i}=x_{1}0+\cdots+x_{i-1}0+x_{i}1+x_{i+1}0+\cdots+x_{m}0
-          </me>
+          </md>
           e, quindi
-          <me>
+          <md>
             \sum_{j=1}^{n}a_{hj}b_{ji}=
             \begin{cases}
               1 \amp\text{ se }h=i\\
               0 \amp\text{ se }h\ne i
             \end{cases}
-          </me>
+          </md>
           con <m>h</m> e <m>i</m> nell'intervallo da <m>1</m> a <m>m</m>.
         </p>
         <p>
           Consideriamo allora la matrice <m>A</m> a <m>m</m> righe e <m>n</m> colonne il cui elemento di posto <m>(h,j)</m> è <m>a_{hj}</m> e la matrice <m>B</m> a <m>n</m> righe e <m>m</m> colonne il cui elemento di posto <m>(j,i)</m> è <m>b_{ji}</m>, vediamo che il prodotto <m>AB</m> coincide con la matrice identica di ordine <m>m</m>. Consideriamo ora la matrice quadrata <m>A^{*}</m> di ordine <m>m</m> che si ottiene <q>attaccando</q> ad <m>A</m> delle colonne nulle e la matrice quadrata <m>B^{*}</m> di ordine <m>m</m> che si ottiene <q>attaccando</q> a <m>B</m> delle righe nulle. Formalmente,  poniamo <m>a_{hj}\coloneqq 0</m> per <m>n+1\le j\le m</m> e <m>b_{ji}\coloneqq 0</m> per <m>n+1\le i\le m</m>. Facendo il prodotto <m>A^{*}B^{*}</m> vediamo che il suo elemento di posto <m>(h,i)</m> è
-          <me>
+          <md>
             \sum_{j=1}^{m}a_{hj}b_{ji}=\sum_{j=1}^{n}a_{hj}b_{ji}+\sum_{j=n+1}^{m}a_{hj}b_{ji}=\sum_{j=1}^{n}a_{hj}b_{ji}+0=\sum_{j=1}^{n}a_{hj}b_{ji}
-          </me>
+          </md>
           e, quindi, <m>A^{*}B^{*}=\Id</m>. Per il teorema di Binet (che vale nell'ipotesi che l'anello dei coefficienti sia commutativo), otteniamo allora <m>\det A^{*}\det B^{*}=\det\Id=1</m>, il che è assurdo, perché <m>A^{*}</m>, avendo delle colonne nulle, ha determinante nullo.
         </p>
       </proof>
@@ -508,21 +508,21 @@
         </p>
         <p>
           Consideriamo una loro combinazione lineare uguale a <m>0</m>:
-          <me>
+          <md>
             (x_{1},0)a_{1}+\cdots+(x_{m},0)a_{m}+(0,y_{1})b_{1}+\cdots+(0,y_{n})b_{n}=(0,0)
-          </me>.
+          </md>.
           Con semplici calcoli, otteniamo:
-          <me>
+          <md>
             (x_{1}a_{1}+\cdots+x_{m}a_{m},y_{1}b_{1}+\cdots+y_{n}b_{n})=(0,0)
-          </me>
+          </md>
           da cui segue
-          <me>
+          <md>
             x_{1}a_{1}+\cdots+x_{m}a_{m}=0
-          </me>
+          </md>
           e
-          <me>
+          <md>
             y_{1}b_{1}+\cdots+y_{n}b_{n}=0
-          </me>
+          </md>
           e, essendo gli <m>a_{i}</m> linearmente indipendenti, otteniamo che tutti gli <m>a_{i}</m> sono nulli e, analogamente, per i <m>b_{j}</m>. Dunque, gli <m>m+n</m> elementi dati sono linearmente indipendenti.
         </p>
         <p>

@@ -106,7 +106,7 @@
 
       <p>
         Per descrivere un'operazione, specialmente quando è definita in un insieme finito, può essere utile utilizzare una <term>tabella moltiplicativa</term>, come quelle che abbiamo già usato per le classi di resto
-        <me>
+        <md>
           \begin{array}{c|ccccc}
             \cdot   \amp  a \amp b \amp \dots \amp x \\
             \hline
@@ -115,7 +115,7 @@
             \vdots  \amp  \vdots  \amp \vdots  \amp \ddots \amp \vdots \\
             x       \amp  a       \amp b       \amp \dots  \amp x \\
           \end{array}
-        </me>
+        </md>
         L'intestazione di riga corrisponde al primo argomento e l'intestazione di colonna corrisponde al secondo argomento dell'operazione. Ad esempio, incrociando la riga <m>a</m> con la colonna <m>b</m>, si trova <m>b</m> e, dunque, <m>a\cdot b=b</m>, mentre, incrociando la riga <m>b</m> con la colonna <m>a</m>, si trova <m>d</m> e, dunque, <m>b\cdot a=d</m>. Questo tipo di tabella viene detta <term>tabella di Cayley</term><idx><h>tabella di Cayley</h></idx><idx><h>Cayley, Arthur</h><h>tabella di</h></idx>.<fn><url href="https://it.wikipedia.org/wiki/Arthur_Cayley" visual="">Arthur Cayley</url>, 1821<ndash/>1895.</fn><idx><h>Cayley, Arthur</h></idx>
       </p>
 
@@ -132,9 +132,9 @@
         <statement>
           <p>
             Data un'operazione <m>\cdot</m> definita in un insieme <m>S</m>, diciamo che soddisfa la proprietà <term>associativa</term> (o, più semplicemente, che l'operazione è associativa) se
-            <me>
+            <md>
               a\cdot(b\cdot c)=(a\cdot b)\cdot c
-            </me>
+            </md>
             per ogni <m>a</m>, <m>b</m> e <m>c</m> in <m>S</m>.
           </p>
         </statement>
@@ -154,9 +154,9 @@
         <statement>
           <p>
             Data un'operazione <m>\cdot</m> definita in un insieme <m>S</m>, diciamo che soddisfa la proprietà <term>commutativa</term> (o, più semplicemente, che l'operazione è commutativa) se
-            <me>
+            <md>
               a\cdot b=b\cdot a
-            </me>
+            </md>
             per ogni <m>a</m> e <m>b</m> in <m>S</m>.
           </p>
         </statement>
@@ -189,7 +189,7 @@
 
       <p>
         Il fatto che una certa operazione sia commutativa si verifica immediatamente dalla sua tabella di Cayley: basta controllare se la tabella è simmetrica o meno. Ecco due esempi di operazioni, la prima commutativa e la seconda no, date tramite la loro tabella di Cayley.
-        <me>
+        <md>
           \begin{array}{c|ccc}
             \cdot   \amp  a \amp b \amp c \\
             \hline
@@ -205,7 +205,7 @@
             b  \amp  b \amp a \amp c \\
             c  \amp  b \amp c \amp b \\
           \end{array}
-        </me>
+        </md>
         Anche l'eventuale validità della proprietà associativa, in realtà, potrebbe essere verificata a partire dalla tabella di Cayley, dal momento che la tabella descrive completamente l'operazione, tuttavia la verifica è meno immediata.
       </p>
 
@@ -227,9 +227,9 @@
         <statement>
           <p>
             Data un'operazione <m>\cdot</m> in un insieme <m>S</m>, un elemento <m>e</m> di <m>S</m> è detto elemento <term>neutro</term> se per ogni <m>a\in S</m> si ha
-            <me>
+            <md>
               a\cdot e=e\cdot a=a
-            </me>.
+            </md>.
           </p>
         </statement>
       </definition>
@@ -242,7 +242,7 @@
 
       <p>
         Anche il fatto che un certo elemento sia neutro si può vedere facilmente dalla tabella di Cayley: nell'esempio sottostante, la riga e la colonna corrispondenti a <m>c</m> ripetono la riga e la colonna di intestazione e, quindi, <m>c</m> è elemento neutro.
-        <me>
+        <md>
           \begin{array}{c|cccc}
             \cdot   \amp  a \amp b \amp c \amp d\\
             \hline
@@ -251,7 +251,7 @@
             c  \amp  a \amp b \amp c \amp d \\
             d  \amp  b \amp c \amp d \amp a\\
           \end{array}
-        </me>
+        </md>
       </p>
 
       <proposition xml:id="prop-unicita_neutro">
