@@ -20,62 +20,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "textmacros",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[tex]/textmacros",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="Algebra">
@@ -102,15 +54,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.13.3';
+eBookConfig.runestone_version = '8.0.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.b76b8eace4405b9e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.bbf2283c5c1d4f99.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/prefix-runtime.ce7e0a2163cb330f.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.f4a2ffb04bb978bb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
 </script>
 </head>
@@ -714,7 +666,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-classificazione_moduli_pid"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-classificazione_moduli_pid">
+<h2 class="heading hide-type">
 <span class="type">Paragrafo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">25.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">La classificazione dei moduli finitamente generati su un dominio a ideali principali</span>
 </h2>
 <div class="para" id="sec-classificazione_moduli_pid-2">Ricordiamo che, in tutto questo capitolo, indichiamo con <span class="process-math">\(D\)</span> un dominio a ideali principali.<div class="autopermalink" data-description="Capoverso"><a href="#sec-classificazione_moduli_pid-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
@@ -735,7 +689,11 @@ N\simeq \frac{D}{\ideal{c_{1}}}\oplus\cdots\oplus\frac{D}{\ideal{c_{s}}}\oplus D
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#prop-decomposizione_moduli_ciclici-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposizione 25.4.1"><a href="#prop-decomposizione_moduli_ciclici" title="Copy heading and permalink for Proposizione 25.4.1" aria-label="Copy heading and permalink for Proposizione 25.4.1">🔗</a></div></article><details id="prop-decomposizione_moduli_ciclici-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="prop-decomposizione_moduli_ciclici-2-1">
+<div class="autopermalink" data-description="Proposizione 25.4.1"><a href="#prop-decomposizione_moduli_ciclici" title="Copy heading and permalink for Proposizione 25.4.1" aria-label="Copy heading and permalink for Proposizione 25.4.1">🔗</a></div>
+</article>
+<details id="prop-decomposizione_moduli_ciclici-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="prop-decomposizione_moduli_ciclici-2-1">
 <div class="para">Per il <a href="sec-dipendenza_lineare.html#cor-moduli_fg_quozienti_di_liberi" class="xref" data-knowl="./knowl/xref/cor-moduli_fg_quozienti_di_liberi.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Corollario 24.2.11">Corollario 24.2.11</a>, il modulo <span class="process-math">\(N\)</span> è isomorfo a <span class="process-math">\(M/L\)</span> dove <span class="process-math">\(M\)</span> è un modulo libero e <span class="process-math">\(L\)</span> un sottomodulo. Per il <a href="sec-moduli_liberi.html#thm-basi_compatibili" class="xref" data-knowl="./knowl/xref/thm-basi_compatibili.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 25.3.4">Teorema 25.3.4</a>, esiste una base <span class="process-math">\(x_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(x_{n}\)</span> di <span class="process-math">\(M\)</span> ed elementi <span class="process-math">\(c_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(c_{n}\)</span> in <span class="process-math">\(D\)</span> tali che <span class="process-math">\(x_{1}c_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(x_{n}c_{n}\)</span> generano <span class="process-math">\(L\text{.}\)</span> Considerati i moduli ciclici generati dagli <span class="process-math">\(x_{i}\)</span> e i corrispondenti sottomoduli generati dagli <span class="process-math">\(x_{i}c_{i}\text{,}\)</span> abbiamo che <span class="process-math">\(M=x_{1}D\oplus\cdots\oplus x_{n}D\)</span> e <span class="process-math">\(L=x_{1}c_{1}D\oplus\cdots\oplus x_{n}c_{n}D\text{:}\)</span> per la <a href="sec-somma_diretta_moduli.html#prop-somma_diretta_quozienti" class="xref" data-knowl="./knowl/xref/prop-somma_diretta_quozienti.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 24.1.10">Proposizione 24.1.10</a>, abbiamo allora</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-moduli_fg_quozienti_di_liberi.html ./knowl/xref/thm-basi_compatibili.html ./knowl/xref/prop-somma_diretta_quozienti.html" id="prop-decomposizione_moduli_ciclici-2-1-24">
 \begin{equation*}
@@ -761,14 +719,18 @@ x\coloneqq(x_{1},\ldots,x_{s},y_{1},\ldots,y_{r})
 <div class="para">è un elemento di torsione della somma diretta, cioè esiste <span class="process-math">\(d\)</span> non nullo tale che <span class="process-math">\(xd=0\text{,}\)</span> allora <span class="process-math">\(y_{1}d=\cdots=y_{r}d=0\)</span> che, poiché <span class="process-math">\(D\)</span> è un dominio, implica che <span class="process-math">\(y_{1}=y_{2}=\cdots=y_{r}=0\)</span> e, quindi che il sottomodulo di torsione è contenuto in <span class="process-math">\(\frac{D}{\ideal{c_{1}}}\oplus\cdots\oplus\frac{D}{\ideal{c_{s}}}\text{.}\)</span> Il quoziente di <span class="process-math">\(M/L\)</span> su questo sottomodulo è isomorfo a <span class="process-math">\(D^{r}\text{,}\)</span> grazie alla <a href="sec-somma_diretta_moduli.html#prop-quoziente_somma_diretta" class="xref" data-knowl="./knowl/xref/prop-quoziente_somma_diretta.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 24.1.9">Proposizione 24.1.9</a>.</div>
 <div class="autopermalink" data-description="Capoverso"><a href="#prop-decomposizione_moduli_ciclici-2-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Dimostrazione 25.4.1.1"><a href="#prop-decomposizione_moduli_ciclici-2" title="Copy heading and permalink for Dimostrazione 25.4.1.1" aria-label="Copy heading and permalink for Dimostrazione 25.4.1.1">🔗</a></div></article></details><div class="para" id="sec-classificazione_moduli_pid-5">Notando che nella proposizione precedente <span class="process-math">\(N\)</span> è privo di torsione se e solo se <span class="process-math">\(s=0\text{,}\)</span> otteniamo immediatamente il<div class="autopermalink" data-description="Capoverso"><a href="#sec-classificazione_moduli_pid-5" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Dimostrazione 25.4.1.1"><a href="#prop-decomposizione_moduli_ciclici-2" title="Copy heading and permalink for Dimostrazione 25.4.1.1" aria-label="Copy heading and permalink for Dimostrazione 25.4.1.1">🔗</a></div>
+</article></details>
+<div class="para" id="sec-classificazione_moduli_pid-5">Notando che nella proposizione precedente <span class="process-math">\(N\)</span> è privo di torsione se e solo se <span class="process-math">\(s=0\text{,}\)</span> otteniamo immediatamente il<div class="autopermalink" data-description="Capoverso"><a href="#sec-classificazione_moduli_pid-5" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="corollary theorem-like" id="cor-privo_di_torsione_libero"><h3 class="heading">
 <span class="type">Corollario</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">25.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="cor-privo_di_torsione_libero-1-1">Un <span class="process-math">\(D\)</span>-modulo finitamente generato e privo di torsione è libero.<div class="autopermalink" data-description="Capoverso"><a href="#cor-privo_di_torsione_libero-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollario 25.4.2"><a href="#cor-privo_di_torsione_libero" title="Copy heading and permalink for Corollario 25.4.2" aria-label="Copy heading and permalink for Corollario 25.4.2">🔗</a></div></article><div class="para" id="sec-classificazione_moduli_pid-7">La decomposizione data dalla <a href="sec-classificazione_moduli_pid.html#prop-decomposizione_moduli_ciclici" class="xref" data-knowl="./knowl/xref/prop-decomposizione_moduli_ciclici.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 25.4.1">Proposizione 25.4.1</a> non è unica e non sono nemmeno unici gli ordini dei moduli ciclici coinvolti. Possiamo solo dire che l’intero <span class="process-math">\(r\)</span> è univocamente determinato, essendo il rango del modulo libero <span class="process-math">\(N/\Tor(N)\text{.}\)</span> Imponendo delle condizioni aggiuntive agli ordini dei moduli coinvolti possiamo però ottenere il<div class="autopermalink" data-description="Capoverso"><a href="#sec-classificazione_moduli_pid-7" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Corollario 25.4.2"><a href="#cor-privo_di_torsione_libero" title="Copy heading and permalink for Corollario 25.4.2" aria-label="Copy heading and permalink for Corollario 25.4.2">🔗</a></div>
+</article>
+<div class="para" id="sec-classificazione_moduli_pid-7">La decomposizione data dalla <a href="sec-classificazione_moduli_pid.html#prop-decomposizione_moduli_ciclici" class="xref" data-knowl="./knowl/xref/prop-decomposizione_moduli_ciclici.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 25.4.1">Proposizione 25.4.1</a> non è unica e non sono nemmeno unici gli ordini dei moduli ciclici coinvolti. Possiamo solo dire che l’intero <span class="process-math">\(r\)</span> è univocamente determinato, essendo il rango del modulo libero <span class="process-math">\(N/\Tor(N)\text{.}\)</span> Imponendo delle condizioni aggiuntive agli ordini dei moduli coinvolti possiamo però ottenere il<div class="autopermalink" data-description="Capoverso"><a href="#sec-classificazione_moduli_pid-7" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="thm-decomposizione_primaria"><h3 class="heading">
 <span class="type">Teorema</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">25.4.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -784,7 +746,11 @@ N\simeq \frac{D}{\ideal{p_{1}^{\alpha_{1}}}}\oplus\cdots\oplus\frac{D}{\ideal{p_
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#thm-decomposizione_primaria-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Teorema 25.4.3"><a href="#thm-decomposizione_primaria" title="Copy heading and permalink for Teorema 25.4.3" aria-label="Copy heading and permalink for Teorema 25.4.3">🔗</a></div></article><details id="thm-decomposizione_primaria-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-decomposizione_primaria-2-1">Consideriamo la decomposizione data dalla <a href="sec-classificazione_moduli_pid.html#prop-decomposizione_moduli_ciclici" class="xref" data-knowl="./knowl/xref/prop-decomposizione_moduli_ciclici.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 25.4.1">Proposizione 25.4.1</a> e applichiamo a ciascun addendo di ordine diverso da <span class="process-math">\(0\)</span> la decomposizione data dal <a href="sec-moduli_ciclici.html#cor-ciclici_primari_distinti" class="xref" data-knowl="./knowl/xref/cor-ciclici_primari_distinti.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Corollario 25.1.18">Corollario 25.1.18</a>: otteniamo così la decomposizione data in enunciato.<div class="autopermalink" data-description="Capoverso"><a href="#thm-decomposizione_primaria-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Teorema 25.4.3"><a href="#thm-decomposizione_primaria" title="Copy heading and permalink for Teorema 25.4.3" aria-label="Copy heading and permalink for Teorema 25.4.3">🔗</a></div>
+</article>
+<details id="thm-decomposizione_primaria-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="thm-decomposizione_primaria-2-1">Consideriamo la decomposizione data dalla <a href="sec-classificazione_moduli_pid.html#prop-decomposizione_moduli_ciclici" class="xref" data-knowl="./knowl/xref/prop-decomposizione_moduli_ciclici.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 25.4.1">Proposizione 25.4.1</a> e applichiamo a ciascun addendo di ordine diverso da <span class="process-math">\(0\)</span> la decomposizione data dal <a href="sec-moduli_ciclici.html#cor-ciclici_primari_distinti" class="xref" data-knowl="./knowl/xref/cor-ciclici_primari_distinti.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Corollario 25.1.18">Corollario 25.1.18</a>: otteniamo così la decomposizione data in enunciato.<div class="autopermalink" data-description="Capoverso"><a href="#thm-decomposizione_primaria-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="para logical" id="thm-decomposizione_primaria-2-2">
 <div class="para">Fissato un irriducibile <span class="process-math">\(p\text{,}\)</span> chiaramente gli addendi <span class="process-math">\(D/\ideal{p_{i}^{\alpha_{i}}}\)</span> tali per cui <span class="process-math">\(p_{i}\)</span> è associato a <span class="process-math">\(p\)</span> appartengono alla componente <span class="process-math">\(p\)</span>-primaria. Viceversa, se</div>
@@ -796,12 +762,16 @@ x\coloneqq(x_{1},\ldots,x_{t},y_{1},\ldots,y_{r})
 <div class="para">è un elemento <span class="process-math">\(p\)</span>-primario della somma diretta, cioè esiste <span class="process-math">\(p^{\beta}\)</span> tale che <span class="process-math">\(xp^{\beta}=0\text{,}\)</span> allora ogni <span class="process-math">\(x_{i}\)</span> e ogni <span class="process-math">\(y_{j}\)</span>  è un <span class="process-math">\(p\)</span>-elemento, il che implica che tutti gli <span class="process-math">\(y_{j}\)</span> siano nulli, così come gli <span class="process-math">\(x_{i}\)</span> con <span class="process-math">\(p_{i}\)</span> non associato a <span class="process-math">\(p\text{.}\)</span> Dunque, la componente <span class="process-math">\(p\)</span>-primaria è come in enunciato: per la <a href="sec-moduli_primari.html#prop-ciclici_primari" class="xref" data-knowl="./knowl/xref/prop-ciclici_primari.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 25.2.10">Proposizione 25.2.10</a>, nella decomposizione di un modulo <span class="process-math">\(p\)</span>-primario in somma diretta di ciclici, gli ordini sono univocamente determinati. Avevamo già osservato nella <a href="sec-classificazione_moduli_pid.html#prop-decomposizione_moduli_ciclici" class="xref" data-knowl="./knowl/xref/prop-decomposizione_moduli_ciclici.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 25.4.1">Proposizione 25.4.1</a> che <span class="process-math">\(r\)</span> è univocamente determinato.</div>
 <div class="autopermalink" data-description="Capoverso"><a href="#thm-decomposizione_primaria-2-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Dimostrazione 25.4.3.1"><a href="#thm-decomposizione_primaria-2" title="Copy heading and permalink for Dimostrazione 25.4.3.1" aria-label="Copy heading and permalink for Dimostrazione 25.4.3.1">🔗</a></div></article></details><article class="remark remark-like" id="rem-primaria_massimo_numero_addendi"><h3 class="heading">
+<div class="autopermalink" data-description="Dimostrazione 25.4.3.1"><a href="#thm-decomposizione_primaria-2" title="Copy heading and permalink for Dimostrazione 25.4.3.1" aria-label="Copy heading and permalink for Dimostrazione 25.4.3.1">🔗</a></div>
+</article></details>
+<article class="remark remark-like" id="rem-primaria_massimo_numero_addendi"><h3 class="heading">
 <span class="type">Osservazione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">25.4.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="rem-primaria_massimo_numero_addendi-1">Grazie alla <a href="sec-moduli_ciclici.html#prop-somma_diretta_ciclici" class="xref" data-knowl="./knowl/xref/prop-somma_diretta_ciclici.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 25.1.17">Proposizione 25.1.17</a>, gli addendi ciclici primari nella decomposizione primaria di un modulo non possono ulteriormente “spezzarsi”: quindi questa decomposizione ha il massimo numero possibile di addendi.<div class="autopermalink" data-description="Capoverso"><a href="#rem-primaria_massimo_numero_addendi-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Osservazione 25.4.4"><a href="#rem-primaria_massimo_numero_addendi" title="Copy heading and permalink for Osservazione 25.4.4" aria-label="Copy heading and permalink for Osservazione 25.4.4">🔗</a></div></article><div class="para" id="sec-classificazione_moduli_pid-10">Vediamo ora un’altra decomposizione di un modulo finitamente generato. A differenza di quella primaria, questa avrà il minimo possibile di addendi.<div class="autopermalink" data-description="Capoverso"><a href="#sec-classificazione_moduli_pid-10" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Osservazione 25.4.4"><a href="#rem-primaria_massimo_numero_addendi" title="Copy heading and permalink for Osservazione 25.4.4" aria-label="Copy heading and permalink for Osservazione 25.4.4">🔗</a></div>
+</article>
+<div class="para" id="sec-classificazione_moduli_pid-10">Vediamo ora un’altra decomposizione di un modulo finitamente generato. A differenza di quella primaria, questa avrà il minimo possibile di addendi.<div class="autopermalink" data-description="Capoverso"><a href="#sec-classificazione_moduli_pid-10" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="thm-decomposizione_fattori_invarianti"><h3 class="heading">
 <span class="type">Teorema</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">25.4.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -816,11 +786,17 @@ N\simeq \frac{D}{\ideal{d_{1}}}\oplus\cdots\oplus\frac{D}{\ideal{d_{s}}}\oplus D
 <div class="para">Questa decomposizione, detta <dfn class="terminology">a fattori invarianti</dfn>, non è unica, ma gli ordini degli addendi sono univocamente determinati.</div>
 <div class="autopermalink" data-description="Capoverso"><a href="#thm-decomposizione_fattori_invarianti-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Teorema 25.4.5"><a href="#thm-decomposizione_fattori_invarianti" title="Copy heading and permalink for Teorema 25.4.5" aria-label="Copy heading and permalink for Teorema 25.4.5">🔗</a></div></article><details id="thm-decomposizione_fattori_invarianti-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-decomposizione_fattori_invarianti-2-1">Consideriamo la decomposizione data dal <a href="sec-classificazione_moduli_pid.html#thm-decomposizione_primaria" class="xref" data-knowl="./knowl/xref/thm-decomposizione_primaria.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 25.4.3">Teorema 25.4.3</a>. Per ciascun irriducibile che compare almeno una volta consideriamo un addendo che ha ordine associato a una potenza di quell’irriducibile con esponente massimo possibile. Per il <a href="sec-moduli_ciclici.html#cor-ciclici_primari_distinti" class="xref" data-knowl="./knowl/xref/cor-ciclici_primari_distinti.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Corollario 25.1.18">Corollario 25.1.18</a>, la somma diretta di questi moduli ciclici è a sua volta ciclico di ordine prodotto degli ordini degli addendi: otteniamo così l’ultimo degli addendi di ordine non nullo dato in enunciato. Ripetendo il procedimento con gli addendi rimasti otteniamo un modulo ciclico il cui ordine è un divisore del precedente. Iterando il procedimento otteniamo la decomposizione cercata.<div class="autopermalink" data-description="Capoverso"><a href="#thm-decomposizione_fattori_invarianti-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Teorema 25.4.5"><a href="#thm-decomposizione_fattori_invarianti" title="Copy heading and permalink for Teorema 25.4.5" aria-label="Copy heading and permalink for Teorema 25.4.5">🔗</a></div>
+</article>
+<details id="thm-decomposizione_fattori_invarianti-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="thm-decomposizione_fattori_invarianti-2-1">Consideriamo la decomposizione data dal <a href="sec-classificazione_moduli_pid.html#thm-decomposizione_primaria" class="xref" data-knowl="./knowl/xref/thm-decomposizione_primaria.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 25.4.3">Teorema 25.4.3</a>. Per ciascun irriducibile che compare almeno una volta consideriamo un addendo che ha ordine associato a una potenza di quell’irriducibile con esponente massimo possibile. Per il <a href="sec-moduli_ciclici.html#cor-ciclici_primari_distinti" class="xref" data-knowl="./knowl/xref/cor-ciclici_primari_distinti.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Corollario 25.1.18">Corollario 25.1.18</a>, la somma diretta di questi moduli ciclici è a sua volta ciclico di ordine prodotto degli ordini degli addendi: otteniamo così l’ultimo degli addendi di ordine non nullo dato in enunciato. Ripetendo il procedimento con gli addendi rimasti otteniamo un modulo ciclico il cui ordine è un divisore del precedente. Iterando il procedimento otteniamo la decomposizione cercata.<div class="autopermalink" data-description="Capoverso"><a href="#thm-decomposizione_fattori_invarianti-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="para" id="thm-decomposizione_fattori_invarianti-2-2">L’unicità degli ordini segue dal fatto che possiamo invertire il procedimento e ritrovare la decomposizione primaria.<div class="autopermalink" data-description="Capoverso"><a href="#thm-decomposizione_fattori_invarianti-2-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Dimostrazione 25.4.5.1"><a href="#thm-decomposizione_fattori_invarianti-2" title="Copy heading and permalink for Dimostrazione 25.4.5.1" aria-label="Copy heading and permalink for Dimostrazione 25.4.5.1">🔗</a></div></article></details><article class="example example-like" id="sec-classificazione_moduli_pid-12"><h3 class="heading">
+<div class="autopermalink" data-description="Dimostrazione 25.4.5.1"><a href="#thm-decomposizione_fattori_invarianti-2" title="Copy heading and permalink for Dimostrazione 25.4.5.1" aria-label="Copy heading and permalink for Dimostrazione 25.4.5.1">🔗</a></div>
+</article></details>
+<article class="example example-like" id="sec-classificazione_moduli_pid-12"><h3 class="heading">
 <span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">25.4.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="sec-classificazione_moduli_pid-12-1-1">
@@ -832,7 +808,8 @@ N\simeq \frac{D}{\ideal{d_{1}}}\oplus\cdots\oplus\frac{D}{\ideal{d_{s}}}\oplus D
 </div>
 <div class="para">con <span class="process-math">\(p_{1}\text{,}\)</span> <span class="process-math">\(p_{2}\text{,}\)</span> <span class="process-math">\(p_{3}\)</span> irriducibili a due a due non associati.</div>
 <div class="autopermalink" data-description="Capoverso"><a href="#sec-classificazione_moduli_pid-12-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div> <div class="para logical" id="sec-classificazione_moduli_pid-12-1-2">
+</div> 
+<div class="para logical" id="sec-classificazione_moduli_pid-12-1-2">
 <div class="para">Riordiniamo questa decomposizione raggruppando per ciascun irriducibile coinvolto prima gli addendi il cui ordine è individuato dall’esponente maggiore, poi il secondo più grande esponente e così via:</div>
 <div class="displaymath process-math" id="sec-classificazione_moduli_pid-12-1-2-1">
 \begin{equation*}
@@ -855,7 +832,10 @@ N\simeq \frac{D}{\ideal{d_{1}}}\oplus\cdots\oplus\frac{D}{\ideal{d_{s}}}\oplus D
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#sec-classificazione_moduli_pid-12-1-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Esempio 25.4.6"><a href="#sec-classificazione_moduli_pid-12" title="Copy heading and permalink for Esempio 25.4.6" aria-label="Copy heading and permalink for Esempio 25.4.6">🔗</a></div></article><div class="autopermalink" data-description="Paragrafo 25.4: La classificazione dei moduli finitamente generati su un dominio a ideali principali"><a href="#sec-classificazione_moduli_pid" title="Copy heading and permalink for Paragrafo 25.4: La classificazione dei moduli finitamente generati su un dominio a ideali principali" aria-label="Copy heading and permalink for Paragrafo 25.4: La classificazione dei moduli finitamente generati su un dominio a ideali principali">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Esempio 25.4.6"><a href="#sec-classificazione_moduli_pid-12" title="Copy heading and permalink for Esempio 25.4.6" aria-label="Copy heading and permalink for Esempio 25.4.6">🔗</a></div>
+</article><div class="autopermalink" data-description="Paragrafo 25.4: La classificazione dei moduli finitamente generati su un dominio a ideali principali"><a href="#sec-classificazione_moduli_pid" title="Copy heading and permalink for Paragrafo 25.4: La classificazione dei moduli finitamente generati su un dominio a ideali principali" aria-label="Copy heading and permalink for Paragrafo 25.4: La classificazione dei moduli finitamente generati su un dominio a ideali principali">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-moduli_liberi.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-gruppiabeliani.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

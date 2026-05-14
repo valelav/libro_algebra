@@ -20,62 +20,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "textmacros",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[tex]/textmacros",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="Algebra">
@@ -102,15 +54,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.13.3';
+eBookConfig.runestone_version = '8.0.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.b76b8eace4405b9e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.bbf2283c5c1d4f99.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/prefix-runtime.ce7e0a2163cb330f.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.f4a2ffb04bb978bb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
 </script>
 </head>
@@ -714,7 +666,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-congruenze_con_incognite"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-congruenze_con_incognite">
+<h2 class="heading hide-type">
 <span class="type">Paragrafo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Congruenze con incognite</span>
 </h2>
 <div class="para" id="sec-congruenze_con_incognite-2">Supponiamo di voler determinare tutti gli interi <span class="process-math">\(x\)</span> tali che <span class="process-math">\(ax\equiv b\pmod{n}\text{,}\)</span> dove <span class="process-math">\(n\)</span> è un intero positivo e <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> sono interi fissati. In termini di classi di resto, questo può essere espresso scrivendo <span class="process-math">\(\class[n]{a}\class[n]{x}=\class[n]{b}\text{.}\)</span> Se <span class="process-math">\(\class[n]{a}\)</span> è invertibile, il che avviene se e solo se <span class="process-math">\(a\)</span> è coprimo con <span class="process-math">\(n\)</span> (<a href="sec-operazioniclassiresto.html#prop-caratterizzazione_classe_invertibile" class="xref" data-knowl="./knowl/xref/prop-caratterizzazione_classe_invertibile.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 6.2.14">Proposizione 6.2.14</a>), allora, supponendo che una soluzione esista, moltiplicando ambo i membri dell’equazione per l’inverso di <span class="process-math">\(\class[n]{a}\text{,}\)</span> otteniamo che <span class="process-math">\(\class[n]{x}=\class[n]{a}^{-1}\class[n]{b}\text{.}\)</span> Viceversa, sostituendo la classe <span class="process-math">\(\class[n]{a}^{-1}\class[n]{b}\)</span> nell’equazione, otteniamo un’identità. Abbiamo così provato la<div class="autopermalink" data-description="Capoverso"><a href="#sec-congruenze_con_incognite-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
@@ -724,19 +678,25 @@ eBookConfig.enable_chatcodes =  false;
 </h3>
 <div class="para" id="prop-equazione_lineare_classe_di_resto-1-1">Sia <span class="process-math">\(n\)</span> un intero positivo e siano <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> due interi tali che <span class="process-math">\(\class[n]{a}\)</span> è invertibile. L’equazione <span class="process-math">\(\class[n]{a}\class[n]{x}=\class[n]{b}\)</span> ammette allora un’unica soluzione e cioè <span class="process-math">\(\class[n]{x}=\class[n]{a}^{-1}\class[n]{b}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-equazione_lineare_classe_di_resto-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposizione 6.4.1"><a href="#prop-equazione_lineare_classe_di_resto" title="Copy heading and permalink for Proposizione 6.4.1" aria-label="Copy heading and permalink for Proposizione 6.4.1">🔗</a></div></article><div class="para" id="sec-congruenze_con_incognite-4">La proposizione precedente può essere riespressa in termini di congruenze.<div class="autopermalink" data-description="Capoverso"><a href="#sec-congruenze_con_incognite-4" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Proposizione 6.4.1"><a href="#prop-equazione_lineare_classe_di_resto" title="Copy heading and permalink for Proposizione 6.4.1" aria-label="Copy heading and permalink for Proposizione 6.4.1">🔗</a></div>
+</article>
+<div class="para" id="sec-congruenze_con_incognite-4">La proposizione precedente può essere riespressa in termini di congruenze.<div class="autopermalink" data-description="Capoverso"><a href="#sec-congruenze_con_incognite-4" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="proposition theorem-like" id="prop-equazione_lineare_congruenza_invertibile"><h3 class="heading">
 <span class="type">Proposizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="prop-equazione_lineare_congruenza_invertibile-1-1">Sia <span class="process-math">\(n\)</span> un intero positivo e siano <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> due interi tali che <span class="process-math">\(a\)</span> è coprimo con <span class="process-math">\(n\text{.}\)</span> Allora, gli interi <span class="process-math">\(x\)</span> tali che <span class="process-math">\(ax\equiv b\pmod{n}\)</span> sono tutti e soli quelli tali che <span class="process-math">\(x\equiv ub\pmod{n}\text{,}\)</span> dove <span class="process-math">\(u\)</span> può essere ottenuto da un’identità di Bezout <span class="process-math">\(au+nv=1\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-equazione_lineare_congruenza_invertibile-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposizione 6.4.2"><a href="#prop-equazione_lineare_congruenza_invertibile" title="Copy heading and permalink for Proposizione 6.4.2" aria-label="Copy heading and permalink for Proposizione 6.4.2">🔗</a></div></article><article class="example example-like" id="sec-congruenze_con_incognite-6"><h3 class="heading">
+<div class="autopermalink" data-description="Proposizione 6.4.2"><a href="#prop-equazione_lineare_congruenza_invertibile" title="Copy heading and permalink for Proposizione 6.4.2" aria-label="Copy heading and permalink for Proposizione 6.4.2">🔗</a></div>
+</article>
+<article class="example example-like" id="sec-congruenze_con_incognite-6"><h3 class="heading">
 <span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.4.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="sec-congruenze_con_incognite-6-1-1">Risolviamo la congruenza con incognita <span class="process-math">\(8x\equiv 9\pmod{15}\text{.}\)</span> Poiché <span class="process-math">\(8\)</span> è coprimo con <span class="process-math">\(15\)</span> possiamo usare la proposizione precedente. Un’identità di Bezout tra <span class="process-math">\(8\)</span> e <span class="process-math">\(15\)</span> è, ad esempio, <span class="process-math">\(8\cdot 2+15\cdot(-1)=1\text{:}\)</span> dunque, otteniamo <span class="process-math">\(x\equiv 9\cdot2\pmod{15}\)</span> o, equivalentemente, <span class="process-math">\(x\equiv 3\pmod{15}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-congruenze_con_incognite-6-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Esempio 6.4.3"><a href="#sec-congruenze_con_incognite-6" title="Copy heading and permalink for Esempio 6.4.3" aria-label="Copy heading and permalink for Esempio 6.4.3">🔗</a></div></article><div class="para" id="sec-congruenze_con_incognite-7">Supponiamo ora più in generale di voler affrontare una congruenza con incognite del tipo <span class="process-math">\(ax\equiv b\pmod n\text{,}\)</span> con <span class="process-math">\(n\)</span> intero positivo e <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> interi qualunque. Dobbiamo, quindi, trovare tutti i numeri interi <span class="process-math">\(x\)</span> tali che <span class="process-math">\(ax-b\)</span> è multiplo di <span class="process-math">\(n\text{,}\)</span> cioè per cui esiste un intero <span class="process-math">\(h\)</span> tale che <span class="process-math">\(ax-b=hn\text{.}\)</span> Ma allora questa può essere considerata come l’equazione diofantina lineare <span class="process-math">\(ax-nh=b\)</span> nelle incognite <span class="process-math">\(x\)</span> e <span class="process-math">\(h\)</span> (in cui in realtà non siamo interessati all’incognita <span class="process-math">\(h\)</span>). Per la <a href="sec-equazioni_lineari_diofantine.html#prop-equazione_lineare_diofantina_due_incognite" class="xref" data-knowl="./knowl/xref/prop-equazione_lineare_diofantina_due_incognite.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 5.5.3">Proposizione 5.5.3</a>, questa è risolubile se e solo se <span class="process-math">\((a,n)\)</span> divide <span class="process-math">\(b\text{.}\)</span> Supponendo che questo sia il caso e, posto <span class="process-math">\(a=(a,n)a'\text{,}\)</span> <span class="process-math">\(n=(a,n)n'\)</span> e <span class="process-math">\(b=(a,n)b'\)</span> con <span class="process-math">\(a'\text{,}\)</span> <span class="process-math">\(n'\)</span> e <span class="process-math">\(b'\)</span> interi opportuni, l’equazione diofantina può riscriversi come <span class="process-math">\((a,n)a'x-(a,n)b'=h(a,n)n'\)</span> che, semplificando <span class="process-math">\((a,n)\text{,}\)</span> diviene <span class="process-math">\(a'x-b'=hn'\text{,}\)</span> cioè <span class="process-math">\(a'x\equiv b'\pmod{n'}\text{.}\)</span> Per il <a href="sec-divisibilita_interi.html#cor-diviso_MCD_da_coprimi" class="xref" data-knowl="./knowl/xref/cor-diviso_MCD_da_coprimi.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Corollario 5.3.23">Corollario 5.3.23</a>, <span class="process-math">\(a'\)</span> e <span class="process-math">\(n'\)</span> sono coprimi e, quindi, ci siamo ricondotti al caso precedente. Riassumendo, abbiamo la<div class="autopermalink" data-description="Capoverso"><a href="#sec-congruenze_con_incognite-7" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Esempio 6.4.3"><a href="#sec-congruenze_con_incognite-6" title="Copy heading and permalink for Esempio 6.4.3" aria-label="Copy heading and permalink for Esempio 6.4.3">🔗</a></div>
+</article>
+<div class="para" id="sec-congruenze_con_incognite-7">Supponiamo ora più in generale di voler affrontare una congruenza con incognite del tipo <span class="process-math">\(ax\equiv b\pmod n\text{,}\)</span> con <span class="process-math">\(n\)</span> intero positivo e <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> interi qualunque. Dobbiamo, quindi, trovare tutti i numeri interi <span class="process-math">\(x\)</span> tali che <span class="process-math">\(ax-b\)</span> è multiplo di <span class="process-math">\(n\text{,}\)</span> cioè per cui esiste un intero <span class="process-math">\(h\)</span> tale che <span class="process-math">\(ax-b=hn\text{.}\)</span> Ma allora questa può essere considerata come l’equazione diofantina lineare <span class="process-math">\(ax-nh=b\)</span> nelle incognite <span class="process-math">\(x\)</span> e <span class="process-math">\(h\)</span> (in cui in realtà non siamo interessati all’incognita <span class="process-math">\(h\)</span>). Per la <a href="sec-equazioni_lineari_diofantine.html#prop-equazione_lineare_diofantina_due_incognite" class="xref" data-knowl="./knowl/xref/prop-equazione_lineare_diofantina_due_incognite.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 5.5.3">Proposizione 5.5.3</a>, questa è risolubile se e solo se <span class="process-math">\((a,n)\)</span> divide <span class="process-math">\(b\text{.}\)</span> Supponendo che questo sia il caso e, posto <span class="process-math">\(a=(a,n)a'\text{,}\)</span> <span class="process-math">\(n=(a,n)n'\)</span> e <span class="process-math">\(b=(a,n)b'\)</span> con <span class="process-math">\(a'\text{,}\)</span> <span class="process-math">\(n'\)</span> e <span class="process-math">\(b'\)</span> interi opportuni, l’equazione diofantina può riscriversi come <span class="process-math">\((a,n)a'x-(a,n)b'=h(a,n)n'\)</span> che, semplificando <span class="process-math">\((a,n)\text{,}\)</span> diviene <span class="process-math">\(a'x-b'=hn'\text{,}\)</span> cioè <span class="process-math">\(a'x\equiv b'\pmod{n'}\text{.}\)</span> Per il <a href="sec-divisibilita_interi.html#cor-diviso_MCD_da_coprimi" class="xref" data-knowl="./knowl/xref/cor-diviso_MCD_da_coprimi.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Corollario 5.3.23">Corollario 5.3.23</a>, <span class="process-math">\(a'\)</span> e <span class="process-math">\(n'\)</span> sono coprimi e, quindi, ci siamo ricondotti al caso precedente. Riassumendo, abbiamo la<div class="autopermalink" data-description="Capoverso"><a href="#sec-congruenze_con_incognite-7" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="proposition theorem-like" id="prop-equazione_lineare_congruenza_generale"><h3 class="heading">
 <span class="type">Proposizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.4.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -758,7 +718,9 @@ x\equiv c\pmod{n'}
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#prop-equazione_lineare_congruenza_generale-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposizione 6.4.4"><a href="#prop-equazione_lineare_congruenza_generale" title="Copy heading and permalink for Proposizione 6.4.4" aria-label="Copy heading and permalink for Proposizione 6.4.4">🔗</a></div></article><article class="example example-like" id="sec-congruenze_con_incognite-9"><h3 class="heading">
+<div class="autopermalink" data-description="Proposizione 6.4.4"><a href="#prop-equazione_lineare_congruenza_generale" title="Copy heading and permalink for Proposizione 6.4.4" aria-label="Copy heading and permalink for Proposizione 6.4.4">🔗</a></div>
+</article>
+<article class="example example-like" id="sec-congruenze_con_incognite-9"><h3 class="heading">
 <span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.4.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="sec-congruenze_con_incognite-9-1-1">
@@ -776,7 +738,8 @@ x\equiv c\pmod{n'}
 </div>
 <div class="para">Nel primo caso abbiamo che <span class="process-math">\((6,15)=3\)</span> non divide <span class="process-math">\(10\text{:}\)</span> dunque, la congruenza non ha soluzioni.</div>
 <div class="autopermalink" data-description="Capoverso"><a href="#sec-congruenze_con_incognite-9-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div> <div class="para logical" id="sec-congruenze_con_incognite-9-1-2">
+</div> 
+<div class="para logical" id="sec-congruenze_con_incognite-9-1-2">
 <div class="para">Nel secondo caso <span class="process-math">\((6,15)=3\)</span> divide <span class="process-math">\(9\text{:}\)</span> dunque, la congruenza ha soluzioni e, dividendo per <span class="process-math">\(3\text{,}\)</span> essa è equivalente alla congruenza</div>
 <div class="displaymath process-math" id="sec-congruenze_con_incognite-9-1-2-4">
 \begin{equation*}
@@ -803,7 +766,9 @@ x\equiv 4\pmod{5}\text{.}
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#sec-congruenze_con_incognite-9-1-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Esempio 6.4.5"><a href="#sec-congruenze_con_incognite-9" title="Copy heading and permalink for Esempio 6.4.5" aria-label="Copy heading and permalink for Esempio 6.4.5">🔗</a></div></article><article class="theorem theorem-like" id="thm-cinese_del_resto"><h3 class="heading">
+<div class="autopermalink" data-description="Esempio 6.4.5"><a href="#sec-congruenze_con_incognite-9" title="Copy heading and permalink for Esempio 6.4.5" aria-label="Copy heading and permalink for Esempio 6.4.5">🔗</a></div>
+</article>
+<article class="theorem theorem-like" id="thm-cinese_del_resto"><h3 class="heading">
 <span class="type">Teorema</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.4.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Teorema cinese del resto.</span>
 </h3>
 <div class="para logical" id="thm-cinese_del_resto-2-1">
@@ -829,7 +794,11 @@ x\equiv a\pmod{n}
 <div class="para">dove <span class="process-math">\(n=n_{1}\cdot n_{2}\cdots n_{r}\)</span> e <span class="process-math">\(a\)</span> è un opportuno intero.</div>
 <div class="autopermalink" data-description="Capoverso"><a href="#thm-cinese_del_resto-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Teorema 6.4.6: Teorema cinese del resto"><a href="#thm-cinese_del_resto" title="Copy heading and permalink for Teorema 6.4.6: Teorema cinese del resto" aria-label="Copy heading and permalink for Teorema 6.4.6: Teorema cinese del resto">🔗</a></div></article><details id="thm-cinese_del_resto-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-cinese_del_resto-3-1">Procediamo per induzione su <span class="process-math">\(r\text{,}\)</span> il caso <span class="process-math">\(r=1\)</span> essendo banale.<div class="autopermalink" data-description="Capoverso"><a href="#thm-cinese_del_resto-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Teorema 6.4.6: Teorema cinese del resto"><a href="#thm-cinese_del_resto" title="Copy heading and permalink for Teorema 6.4.6: Teorema cinese del resto" aria-label="Copy heading and permalink for Teorema 6.4.6: Teorema cinese del resto">🔗</a></div>
+</article>
+<details id="thm-cinese_del_resto-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="thm-cinese_del_resto-3-1">Procediamo per induzione su <span class="process-math">\(r\text{,}\)</span> il caso <span class="process-math">\(r=1\)</span> essendo banale.<div class="autopermalink" data-description="Capoverso"><a href="#thm-cinese_del_resto-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="para logical" id="thm-cinese_del_resto-3-2">
 <div class="para">Il caso chiave è <span class="process-math">\(r=2\text{.}\)</span> Un intero <span class="process-math">\(x\)</span> soddisfa entrambe le congruenze se e solo se <span class="process-math">\(x-a_{1}\)</span> è multiplo di <span class="process-math">\(n_{1}\)</span> e <span class="process-math">\(x-a_{2}\)</span> è multiplo di <span class="process-math">\(n_{2}\text{,}\)</span> cioè se e solo se esistono interi <span class="process-math">\(y\)</span> e <span class="process-math">\(z\)</span> tali che <span class="process-math">\(x=a_{1}+n_{1}y\)</span> e <span class="process-math">\(x=a_{2}+n_{2}z\text{.}\)</span> Uguagliando le due espressioni ci riduciamo all’equazione</div>
@@ -870,12 +839,16 @@ x \amp \equiv a_{r} \amp\amp\pmod{n_{r}}
 <div class="para">Poiché <span class="process-math">\(n'\)</span> e <span class="process-math">\(n_{r}\)</span> sono coprimi per la <a href="sec-fattorizzazione_interi.html#prop-coprimo_con_prodotto" class="xref" data-knowl="./knowl/xref/prop-coprimo_con_prodotto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 5.4.8">Proposizione 5.4.8</a>, ci siamo ridotti al caso <span class="process-math">\(r=2\)</span> e la tesi segue immediatamente.</div>
 <div class="autopermalink" data-description="Capoverso"><a href="#thm-cinese_del_resto-3-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Dimostrazione 6.4.6.1"><a href="#thm-cinese_del_resto-3" title="Copy heading and permalink for Dimostrazione 6.4.6.1" aria-label="Copy heading and permalink for Dimostrazione 6.4.6.1">🔗</a></div></article></details><article class="remark remark-like" id="rem-tcr"><h3 class="heading">
+<div class="autopermalink" data-description="Dimostrazione 6.4.6.1"><a href="#thm-cinese_del_resto-3" title="Copy heading and permalink for Dimostrazione 6.4.6.1" aria-label="Copy heading and permalink for Dimostrazione 6.4.6.1">🔗</a></div>
+</article></details>
+<article class="remark remark-like" id="rem-tcr"><h3 class="heading">
 <span class="type">Osservazione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.4.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="rem-tcr-1">Il <a href="sec-congruenze_con_incognite.html#thm-cinese_del_resto" class="xref" data-knowl="./knowl/xref/thm-cinese_del_resto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 6.4.6: Teorema cinese del resto">Teorema 6.4.6</a> può essere enunciato dicendo che esiste un unico intero <span class="process-math">\(a\)</span> con <span class="process-math">\(0\le a \le n-1\)</span> che soddisfa tutte le congruenze e che gli interi che soddisfano tutte le congruenze sono tutti e soli quelli del tipo <span class="process-math">\(a+nh\)</span> al variare di <span class="process-math">\(h\)</span> in <span class="process-math">\(\Interi\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#rem-tcr-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Osservazione 6.4.7"><a href="#rem-tcr" title="Copy heading and permalink for Osservazione 6.4.7" aria-label="Copy heading and permalink for Osservazione 6.4.7">🔗</a></div></article><article class="example example-like" id="sec-congruenze_con_incognite-12"><h3 class="heading">
+<div class="autopermalink" data-description="Osservazione 6.4.7"><a href="#rem-tcr" title="Copy heading and permalink for Osservazione 6.4.7" aria-label="Copy heading and permalink for Osservazione 6.4.7">🔗</a></div>
+</article>
+<article class="example example-like" id="sec-congruenze_con_incognite-12"><h3 class="heading">
 <span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.4.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="sec-congruenze_con_incognite-12-1-1">
@@ -906,7 +879,9 @@ x \amp \equiv 3\amp\amp\pmod{7}
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#sec-congruenze_con_incognite-12-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Esempio 6.4.8"><a href="#sec-congruenze_con_incognite-12" title="Copy heading and permalink for Esempio 6.4.8" aria-label="Copy heading and permalink for Esempio 6.4.8">🔗</a></div></article><div class="para" id="sec-congruenze_con_incognite-13">Vediamo ora come affrontare casi in cui i moduli non sono a due a due coprimi.<div class="autopermalink" data-description="Capoverso"><a href="#sec-congruenze_con_incognite-13" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Esempio 6.4.8"><a href="#sec-congruenze_con_incognite-12" title="Copy heading and permalink for Esempio 6.4.8" aria-label="Copy heading and permalink for Esempio 6.4.8">🔗</a></div>
+</article>
+<div class="para" id="sec-congruenze_con_incognite-13">Vediamo ora come affrontare casi in cui i moduli non sono a due a due coprimi.<div class="autopermalink" data-description="Capoverso"><a href="#sec-congruenze_con_incognite-13" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="example example-like" id="sec-congruenze_con_incognite-14"><h3 class="heading">
 <span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.4.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -964,7 +939,8 @@ x \amp \equiv 3\amp\amp\pmod{5}\\
 </div>
 <div class="para">Ora confrontiamo le congruenze relative alle potenze dello stesso primo. Rispetto a <span class="process-math">\(3\text{,}\)</span> notiamo che <span class="process-math">\(x\equiv 8\pmod{3}\)</span> e <span class="process-math">\(x\equiv 2\pmod{3}\)</span> sono equivalenti (quindi, possiamo scartarne una delle due). Allo stesso modo <span class="process-math">\(x\equiv 8\pmod{5}\)</span> e <span class="process-math">\(x\equiv 3\pmod{5}\text{.}\)</span> E per quanto riguarda <span class="process-math">\(x\equiv 2\pmod{2^{2}}\)</span> e <span class="process-math">\(x\equiv 3\pmod{2}\text{?}\)</span> Se <span class="process-math">\(x\)</span> è un numero tale che <span class="process-math">\(x\equiv 2\pmod{2^{2}}\text{,}\)</span> cioè <span class="process-math">\(x-2\)</span> è multiplo di <span class="process-math">\(2^{2}\text{,}\)</span> a maggior ragione, <span class="process-math">\(x-2\)</span> è multiplo di <span class="process-math">\(2\text{,}\)</span> cioè <span class="process-math">\(x\equiv 2\pmod{2}\text{:}\)</span> ma questa congruenza non è compatibile con la congruenza  <span class="process-math">\(x\equiv 3\pmod{2}\)</span> e, quindi, il sistema non ha soluzione.</div>
 <div class="autopermalink" data-description="Capoverso"><a href="#sec-congruenze_con_incognite-14-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div> <div class="para logical" id="sec-congruenze_con_incognite-14-1-2">
+</div> 
+<div class="para logical" id="sec-congruenze_con_incognite-14-1-2">
 <div class="para">Consideriamo ora il secondo sistema. Con ragionamenti simili al precedente, lo riscriviamo come</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-cinese_del_resto.html" id="sec-congruenze_con_incognite-14-1-2-1">
 \begin{equation*}
@@ -996,16 +972,21 @@ x \amp \equiv 6\amp \amp \pmod{5}
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#sec-congruenze_con_incognite-14-1-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Esempio 6.4.9"><a href="#sec-congruenze_con_incognite-14" title="Copy heading and permalink for Esempio 6.4.9" aria-label="Copy heading and permalink for Esempio 6.4.9">🔗</a></div></article><article class="remark remark-like" id="rem-tcr_da_grande_a_piccolo"><h3 class="heading">
+<div class="autopermalink" data-description="Esempio 6.4.9"><a href="#sec-congruenze_con_incognite-14" title="Copy heading and permalink for Esempio 6.4.9" aria-label="Copy heading and permalink for Esempio 6.4.9">🔗</a></div>
+</article>
+<article class="remark remark-like" id="rem-tcr_da_grande_a_piccolo"><h3 class="heading">
 <span class="type">Osservazione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.4.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="rem-tcr_da_grande_a_piccolo-1">Nel confrontare le congruenze rispetto alle potenze dello stesso primo si deve sempre partire dalla potenza più grande e considerare le sue conseguenze rispetto alle potenze più piccole. Se non sono compatibili il sistema non è risolubile; se sono compatibili, si scartano quelle rispetto alle potenze più piccole e si tiene quella rispetto alla potenza maggiore.<div class="autopermalink" data-description="Capoverso"><a href="#rem-tcr_da_grande_a_piccolo-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Osservazione 6.4.10"><a href="#rem-tcr_da_grande_a_piccolo" title="Copy heading and permalink for Osservazione 6.4.10" aria-label="Copy heading and permalink for Osservazione 6.4.10">🔗</a></div></article><article class="example example-like" id="ex-resto_con_tcr"><h3 class="heading">
+<div class="autopermalink" data-description="Osservazione 6.4.10"><a href="#rem-tcr_da_grande_a_piccolo" title="Copy heading and permalink for Osservazione 6.4.10" aria-label="Copy heading and permalink for Osservazione 6.4.10">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-resto_con_tcr"><h3 class="heading">
 <span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.4.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="ex-resto_con_tcr-1-1">Supponiamo di voler calcolare il resto della divisione di <span class="process-math">\(31^{3215}+14^{2345}\)</span> per <span class="process-math">\(12\text{.}\)</span> Nell’<a href="sec-eulero.html#ex-resto_con_eulero" class="xref" data-knowl="./knowl/xref/ex-resto_con_eulero.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Esempio 6.3.7">Esempio 6.3.7</a> abbiamo visto che <span class="process-math">\(31^{3215}\equiv 7\pmod{12}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#ex-resto_con_tcr-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div> <div class="para logical" id="ex-resto_con_tcr-1-2">
+</div> 
+<div class="para logical" id="ex-resto_con_tcr-1-2">
 <div class="para">Consideriamo ora <span class="process-math">\(14^{2345}\text{:}\)</span> notiamo innanzitutto che <span class="process-math">\(14\equiv 2\pmod{12}\text{.}\)</span> Ora <span class="process-math">\(2\)</span> e <span class="process-math">\(12\)</span> non sono coprimi e, quindi, non possiamo usare il <a href="sec-eulero.html#thm-eulero" class="xref" data-knowl="./knowl/xref/thm-eulero.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 6.3.5: Teorema di Eulero">Teorema di Eulero</a>. Vogliamo trovare un numero <span class="process-math">\(x\)</span> relativamente “piccolo” tale che <span class="process-math">\(x\equiv 2^{2345}\pmod{12}\text{.}\)</span> Per il <a href="sec-congruenze_con_incognite.html#thm-cinese_del_resto" class="xref" data-knowl="./knowl/xref/thm-cinese_del_resto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 6.4.6: Teorema cinese del resto">Teorema cinese del resto</a>, questo è equivalente a</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-eulero.html ./knowl/xref/thm-cinese_del_resto.html ./knowl/xref/thm-eulero.html ./knowl/xref/thm-cinese_del_resto.html" id="ex-resto_con_tcr-1-2-10">
 \begin{equation*}
@@ -1031,9 +1012,12 @@ x \amp \equiv -1\amp \amp \pmod{3}
 <div class="para">Risolvendo con il <a href="sec-congruenze_con_incognite.html#thm-cinese_del_resto" class="xref" data-knowl="./knowl/xref/thm-cinese_del_resto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 6.4.6: Teorema cinese del resto">Teorema cinese del resto</a>, troviamo <span class="process-math">\(x\equiv 8\pmod{12}\text{.}\)</span>
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#ex-resto_con_tcr-1-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div> <div class="para" id="ex-resto_con_tcr-1-3">Riassumendo, <span class="process-math">\(31^{3215}+14^{2345}\equiv 7+8\pmod{12}\equiv 3\pmod{12}\text{.}\)</span> Poiché <span class="process-math">\(0\le 3 \lt 12\text{,}\)</span> il resto della divisione cercata è proprio <span class="process-math">\(3\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#ex-resto_con_tcr-1-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div> 
+<div class="para" id="ex-resto_con_tcr-1-3">Riassumendo, <span class="process-math">\(31^{3215}+14^{2345}\equiv 7+8\pmod{12}\equiv 3\pmod{12}\text{.}\)</span> Poiché <span class="process-math">\(0\le 3 \lt 12\text{,}\)</span> il resto della divisione cercata è proprio <span class="process-math">\(3\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#ex-resto_con_tcr-1-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Esempio 6.4.11"><a href="#ex-resto_con_tcr" title="Copy heading and permalink for Esempio 6.4.11" aria-label="Copy heading and permalink for Esempio 6.4.11">🔗</a></div></article><article class="example example-like" id="sec-congruenze_con_incognite-17"><h3 class="heading">
+<div class="autopermalink" data-description="Esempio 6.4.11"><a href="#ex-resto_con_tcr" title="Copy heading and permalink for Esempio 6.4.11" aria-label="Copy heading and permalink for Esempio 6.4.11">🔗</a></div>
+</article>
+<article class="example example-like" id="sec-congruenze_con_incognite-17"><h3 class="heading">
 <span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.4.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="sec-congruenze_con_incognite-17-1-1">
@@ -1063,14 +1047,20 @@ x \amp \equiv 16\amp \amp \pmod{5^{2}}
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#sec-congruenze_con_incognite-17-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Esempio 6.4.12"><a href="#sec-congruenze_con_incognite-17" title="Copy heading and permalink for Esempio 6.4.12" aria-label="Copy heading and permalink for Esempio 6.4.12">🔗</a></div></article><div class="para" id="sec-congruenze_con_incognite-18">Vediamo ora come può essere usato il <a href="sec-congruenze_con_incognite.html#thm-cinese_del_resto" class="xref" data-knowl="./knowl/xref/thm-cinese_del_resto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 6.4.6: Teorema cinese del resto">Teorema cinese del resto</a> per calcolare la funzione di Eulero di un numero qualsiasi di cui conosciamo la fattorizzazione in primi.<div class="autopermalink" data-description="Capoverso"><a href="#sec-congruenze_con_incognite-18" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Esempio 6.4.12"><a href="#sec-congruenze_con_incognite-17" title="Copy heading and permalink for Esempio 6.4.12" aria-label="Copy heading and permalink for Esempio 6.4.12">🔗</a></div>
+</article>
+<div class="para" id="sec-congruenze_con_incognite-18">Vediamo ora come può essere usato il <a href="sec-congruenze_con_incognite.html#thm-cinese_del_resto" class="xref" data-knowl="./knowl/xref/thm-cinese_del_resto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 6.4.6: Teorema cinese del resto">Teorema cinese del resto</a> per calcolare la funzione di Eulero di un numero qualsiasi di cui conosciamo la fattorizzazione in primi.<div class="autopermalink" data-description="Capoverso"><a href="#sec-congruenze_con_incognite-18" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="lemma theorem-like" id="lem-moltiplicativita_eulero"><h3 class="heading">
 <span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.4.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="lem-moltiplicativita_eulero-1-1">Siano <span class="process-math">\(m\)</span> e <span class="process-math">\(n\)</span> due interi positivi coprimi. Allora <span class="process-math">\(\euler{mn}=\euler{m}\euler{n}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#lem-moltiplicativita_eulero-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Lemma 6.4.13"><a href="#lem-moltiplicativita_eulero" title="Copy heading and permalink for Lemma 6.4.13" aria-label="Copy heading and permalink for Lemma 6.4.13">🔗</a></div></article><details id="lem-moltiplicativita_eulero-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="lem-moltiplicativita_eulero-2-1">Consideriamo la funzione <span class="process-math">\(\tau\colon \Interi/mn\to\Interi/m\times\Interi/n\)</span> definita da <span class="process-math">\(\class[mn]{a}\tau\coloneqq(\class[m]{a},\class[n]{a})\text{.}\)</span> Notiamo innanzitutto che <span class="process-math">\(\tau\)</span> è ben definita: se <span class="process-math">\(\class[mn]{a}=\class[mn]{b}\text{,}\)</span> cioè <span class="process-math">\(b-a\)</span> è multiplo di <span class="process-math">\(mn\text{,}\)</span> allora <span class="process-math">\(b-a\)</span> è multiplo sia di <span class="process-math">\(m\)</span> che di <span class="process-math">\(n\text{,}\)</span> cioè <span class="process-math">\(\class[m]{a}=\class[m]{b}\)</span> e <span class="process-math">\(\class[n]{a}=\class[n]{b}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#lem-moltiplicativita_eulero-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Lemma 6.4.13"><a href="#lem-moltiplicativita_eulero" title="Copy heading and permalink for Lemma 6.4.13" aria-label="Copy heading and permalink for Lemma 6.4.13">🔗</a></div>
+</article>
+<details id="lem-moltiplicativita_eulero-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="lem-moltiplicativita_eulero-2-1">Consideriamo la funzione <span class="process-math">\(\tau\colon \Interi/mn\to\Interi/m\times\Interi/n\)</span> definita da <span class="process-math">\(\class[mn]{a}\tau\coloneqq(\class[m]{a},\class[n]{a})\text{.}\)</span> Notiamo innanzitutto che <span class="process-math">\(\tau\)</span> è ben definita: se <span class="process-math">\(\class[mn]{a}=\class[mn]{b}\text{,}\)</span> cioè <span class="process-math">\(b-a\)</span> è multiplo di <span class="process-math">\(mn\text{,}\)</span> allora <span class="process-math">\(b-a\)</span> è multiplo sia di <span class="process-math">\(m\)</span> che di <span class="process-math">\(n\text{,}\)</span> cioè <span class="process-math">\(\class[m]{a}=\class[m]{b}\)</span> e <span class="process-math">\(\class[n]{a}=\class[n]{b}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#lem-moltiplicativita_eulero-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="para logical" id="lem-moltiplicativita_eulero-2-2">
 <div class="para">Per il <a href="sec-congruenze_con_incognite.html#thm-cinese_del_resto" class="xref" data-knowl="./knowl/xref/thm-cinese_del_resto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 6.4.6: Teorema cinese del resto">Teorema cinese del resto</a>, la funzione <span class="process-math">\(\tau\)</span> è suriettiva. Infatti, data una coppia <span class="process-math">\((\class[m]{c},\class[n]{d})\text{,}\)</span> sappiamo che esiste un intero <span class="process-math">\(a\)</span> tale che <span class="process-math">\(a\equiv c\pmod{m}\)</span> e <span class="process-math">\(a\equiv d\pmod{n}\text{,}\)</span> cioè <span class="process-math">\(\class[m]{a}=\class[m]{c}\)</span> e <span class="process-math">\(\class[n]{a}=\class[n]{d}\text{.}\)</span> Pertanto</div>
@@ -1084,7 +1074,9 @@ x \amp \equiv 16\amp \amp \pmod{5^{2}}
 </div>
 <div class="para" id="lem-moltiplicativita_eulero-2-3">Consideriamo ora i sottoinsiemi <span class="process-math">\(S\text{,}\)</span> <span class="process-math">\(M\)</span> e <span class="process-math">\(N\)</span> rispettivamente di <span class="process-math">\(\Interi/mn\text{,}\)</span> <span class="process-math">\(\Interi/m\)</span> e <span class="process-math">\(\Interi/n\)</span> formati dalle classi invertibili. Per la <a href="sec-fattorizzazione_interi.html#prop-coprimo_con_prodotto" class="xref" data-knowl="./knowl/xref/prop-coprimo_con_prodotto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 5.4.8">Proposizione 5.4.8</a>, un intero <span class="process-math">\(a\)</span> è coprimo con <span class="process-math">\(mn\)</span> se e solo se è coprimo con <span class="process-math">\(m\)</span> e <span class="process-math">\(n\text{.}\)</span> In particolare, <span class="process-math">\(\class[mn]{a}\)</span> è invertibile se e solo se <span class="process-math">\(\class[m]{a}\)</span> e <span class="process-math">\(\class[n]{a}\)</span> sono invertibili. Pertanto, <span class="process-math">\(\tau\)</span> induce una biiezione tra <span class="process-math">\(S\)</span> e <span class="process-math">\(M\times N\text{:}\)</span> poiché <span class="process-math">\(\abs{M}=\euler{m}\text{,}\)</span> <span class="process-math">\(\abs{N}=\euler{n}\)</span> e <span class="process-math">\(\abs{S}=\euler{mn}\text{,}\)</span> il risultato segue.<div class="autopermalink" data-description="Capoverso"><a href="#lem-moltiplicativita_eulero-2-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Dimostrazione 6.4.13.1"><a href="#lem-moltiplicativita_eulero-2" title="Copy heading and permalink for Dimostrazione 6.4.13.1" aria-label="Copy heading and permalink for Dimostrazione 6.4.13.1">🔗</a></div></article></details><article class="proposition theorem-like" id="prop-calcolo_funzione_eulero"><h3 class="heading">
+<div class="autopermalink" data-description="Dimostrazione 6.4.13.1"><a href="#lem-moltiplicativita_eulero-2" title="Copy heading and permalink for Dimostrazione 6.4.13.1" aria-label="Copy heading and permalink for Dimostrazione 6.4.13.1">🔗</a></div>
+</article></details>
+<article class="proposition theorem-like" id="prop-calcolo_funzione_eulero"><h3 class="heading">
 <span class="type">Proposizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.4.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="prop-calcolo_funzione_eulero-1-1">
@@ -1103,95 +1095,143 @@ n=p_{1}^{\alpha_{1}}p_{2}^{\alpha_{2}}\cdots p_{t}^{\alpha_{t}}
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#prop-calcolo_funzione_eulero-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposizione 6.4.14"><a href="#prop-calcolo_funzione_eulero" title="Copy heading and permalink for Proposizione 6.4.14" aria-label="Copy heading and permalink for Proposizione 6.4.14">🔗</a></div></article><details id="prop-calcolo_funzione_eulero-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-calcolo_funzione_eulero-2-1">Per la <a href="sec-eulero.html#prop-funzione_di_eulero_di_potenza_di_primo" class="xref" data-knowl="./knowl/xref/prop-funzione_di_eulero_di_potenza_di_primo.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 6.3.4">Proposizione 6.3.4</a>, sappiamo che <span class="process-math">\(\euler{p_{i}^{\alpha_{i}}}=p_{i}^{\alpha_{i}}-p_{t}^{\alpha_{i}-1}\)</span> per ogni <span class="process-math">\(i\text{.}\)</span> Le formule seguono allora dal <a href="sec-congruenze_con_incognite.html#lem-moltiplicativita_eulero" class="xref" data-knowl="./knowl/xref/lem-moltiplicativita_eulero.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Lemma 6.4.13">Lemma 6.4.13</a> e da semplici calcoli.<div class="autopermalink" data-description="Capoverso"><a href="#prop-calcolo_funzione_eulero-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Proposizione 6.4.14"><a href="#prop-calcolo_funzione_eulero" title="Copy heading and permalink for Proposizione 6.4.14" aria-label="Copy heading and permalink for Proposizione 6.4.14">🔗</a></div>
+</article>
+<details id="prop-calcolo_funzione_eulero-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="prop-calcolo_funzione_eulero-2-1">Per la <a href="sec-eulero.html#prop-funzione_di_eulero_di_potenza_di_primo" class="xref" data-knowl="./knowl/xref/prop-funzione_di_eulero_di_potenza_di_primo.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 6.3.4">Proposizione 6.3.4</a>, sappiamo che <span class="process-math">\(\euler{p_{i}^{\alpha_{i}}}=p_{i}^{\alpha_{i}}-p_{t}^{\alpha_{i}-1}\)</span> per ogni <span class="process-math">\(i\text{.}\)</span> Le formule seguono allora dal <a href="sec-congruenze_con_incognite.html#lem-moltiplicativita_eulero" class="xref" data-knowl="./knowl/xref/lem-moltiplicativita_eulero.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Lemma 6.4.13">Lemma 6.4.13</a> e da semplici calcoli.<div class="autopermalink" data-description="Capoverso"><a href="#prop-calcolo_funzione_eulero-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Dimostrazione 6.4.14.1"><a href="#prop-calcolo_funzione_eulero-2" title="Copy heading and permalink for Dimostrazione 6.4.14.1" aria-label="Copy heading and permalink for Dimostrazione 6.4.14.1">🔗</a></div></article></details><section class="exercises" id="exercises-congruenze_con_incognite"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Dimostrazione 6.4.14.1"><a href="#prop-calcolo_funzione_eulero-2" title="Copy heading and permalink for Dimostrazione 6.4.14.1" aria-label="Copy heading and permalink for Dimostrazione 6.4.14.1">🔗</a></div>
+</article></details>
+<section class="exercises" id="exercises-congruenze_con_incognite">
+<h3 class="heading hide-type">
 <span class="type">Esercizi</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Esercizi</span>
 </h3>
 <div class="exercisegroup" id="exercises-congruenze_con_incognite-1">
 <h4 class="heading"><span class="title">Gruppo di esercizi.</span></h4>
-<div class="introduction" id="exercises-congruenze_con_incognite-1-1"><div class="para" id="exercises-congruenze_con_incognite-1-1-1">Stabilire quali delle seguenti congruenze sono risolubili e in caso affermativo trovarne le soluzioni.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-1-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div></div>
+<div class="introduction" id="exercises-congruenze_con_incognite-1-1">
+<div class="para" id="exercises-congruenze_con_incognite-1-1-1">Stabilire quali delle seguenti congruenze sono risolubili e in caso affermativo trovarne le soluzioni.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-1-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+</div>
 <div class="exercisegroup-exercises cols2 multicolumn">
 <article class="exercise exercise-like" id="exercises-congruenze_con_incognite-1-2"><h5 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-congruenze_con_incognite-1-2-1-1">
 <span class="process-math">\(21x\equiv 14\pmod{35}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-1-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-congruenze_con_incognite-1-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-congruenze_con_incognite-1-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-congruenze_con_incognite-1-2-2-1">
 <span class="process-math">\(x\equiv 4\pmod 5\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-1-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 6.4.1.1"><a href="#exercises-congruenze_con_incognite-1-2-2" title="Copy heading and permalink for Risposta 6.4.1.1" aria-label="Copy heading and permalink for Risposta 6.4.1.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.4.1"><a href="#exercises-congruenze_con_incognite-1-2" title="Copy heading and permalink for Esercizio 6.4.1" aria-label="Copy heading and permalink for Esercizio 6.4.1">🔗</a></div></article><article class="exercise exercise-like" id="exercises-congruenze_con_incognite-1-3"><h5 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.4.1"><a href="#exercises-congruenze_con_incognite-1-2" title="Copy heading and permalink for Esercizio 6.4.1" aria-label="Copy heading and permalink for Esercizio 6.4.1">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-congruenze_con_incognite-1-3"><h5 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-congruenze_con_incognite-1-3-1-1">
 <span class="process-math">\(172x\equiv 15\pmod{24}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-1-3-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-congruenze_con_incognite-1-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-congruenze_con_incognite-1-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-congruenze_con_incognite-1-3-2-1">Non ha soluzione.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-1-3-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 6.4.2.1"><a href="#exercises-congruenze_con_incognite-1-3-2" title="Copy heading and permalink for Risposta 6.4.2.1" aria-label="Copy heading and permalink for Risposta 6.4.2.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.4.2"><a href="#exercises-congruenze_con_incognite-1-3" title="Copy heading and permalink for Esercizio 6.4.2" aria-label="Copy heading and permalink for Esercizio 6.4.2">🔗</a></div></article><article class="exercise exercise-like" id="exercises-congruenze_con_incognite-1-4"><h5 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.4.2"><a href="#exercises-congruenze_con_incognite-1-3" title="Copy heading and permalink for Esercizio 6.4.2" aria-label="Copy heading and permalink for Esercizio 6.4.2">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-congruenze_con_incognite-1-4"><h5 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-congruenze_con_incognite-1-4-1-1">
 <span class="process-math">\(3x\equiv 8\pmod{37}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-1-4-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-congruenze_con_incognite-1-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-congruenze_con_incognite-1-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-congruenze_con_incognite-1-4-2-1">
 <span class="process-math">\(x\equiv 15\pmod{37}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-1-4-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 6.4.3.1"><a href="#exercises-congruenze_con_incognite-1-4-2" title="Copy heading and permalink for Risposta 6.4.3.1" aria-label="Copy heading and permalink for Risposta 6.4.3.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.4.3"><a href="#exercises-congruenze_con_incognite-1-4" title="Copy heading and permalink for Esercizio 6.4.3" aria-label="Copy heading and permalink for Esercizio 6.4.3">🔗</a></div></article><article class="exercise exercise-like" id="exercises-congruenze_con_incognite-1-5"><h5 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.4.3"><a href="#exercises-congruenze_con_incognite-1-4" title="Copy heading and permalink for Esercizio 6.4.3" aria-label="Copy heading and permalink for Esercizio 6.4.3">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-congruenze_con_incognite-1-5"><h5 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-congruenze_con_incognite-1-5-1-1">
 <span class="process-math">\(22x\equiv 5\pmod{35}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-1-5-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-congruenze_con_incognite-1-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-congruenze_con_incognite-1-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-congruenze_con_incognite-1-5-2-1">
 <span class="process-math">\(x\equiv 5\pmod{35}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-1-5-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 6.4.4.1"><a href="#exercises-congruenze_con_incognite-1-5-2" title="Copy heading and permalink for Risposta 6.4.4.1" aria-label="Copy heading and permalink for Risposta 6.4.4.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.4.4"><a href="#exercises-congruenze_con_incognite-1-5" title="Copy heading and permalink for Esercizio 6.4.4" aria-label="Copy heading and permalink for Esercizio 6.4.4">🔗</a></div></article><article class="exercise exercise-like" id="exercises-congruenze_con_incognite-1-6"><h5 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.4.4"><a href="#exercises-congruenze_con_incognite-1-5" title="Copy heading and permalink for Esercizio 6.4.4" aria-label="Copy heading and permalink for Esercizio 6.4.4">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-congruenze_con_incognite-1-6"><h5 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-congruenze_con_incognite-1-6-1-1">
 <span class="process-math">\(15x\equiv 9\pmod{18}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-1-6-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-congruenze_con_incognite-1-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-congruenze_con_incognite-1-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-congruenze_con_incognite-1-6-2-1">
 <span class="process-math">\(x\equiv 3\pmod{6}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-1-6-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 6.4.5.1"><a href="#exercises-congruenze_con_incognite-1-6-2" title="Copy heading and permalink for Risposta 6.4.5.1" aria-label="Copy heading and permalink for Risposta 6.4.5.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.4.5"><a href="#exercises-congruenze_con_incognite-1-6" title="Copy heading and permalink for Esercizio 6.4.5" aria-label="Copy heading and permalink for Esercizio 6.4.5">🔗</a></div></article><article class="exercise exercise-like" id="exercises-congruenze_con_incognite-1-7"><h5 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.4.5"><a href="#exercises-congruenze_con_incognite-1-6" title="Copy heading and permalink for Esercizio 6.4.5" aria-label="Copy heading and permalink for Esercizio 6.4.5">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-congruenze_con_incognite-1-7"><h5 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-congruenze_con_incognite-1-7-1-1">
 <span class="process-math">\(165x\equiv 13\pmod{22}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-1-7-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-congruenze_con_incognite-1-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-congruenze_con_incognite-1-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-congruenze_con_incognite-1-7-2-1">Non ha soluzione.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-1-7-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 6.4.6.1"><a href="#exercises-congruenze_con_incognite-1-7-2" title="Copy heading and permalink for Risposta 6.4.6.1" aria-label="Copy heading and permalink for Risposta 6.4.6.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.4.6"><a href="#exercises-congruenze_con_incognite-1-7" title="Copy heading and permalink for Esercizio 6.4.6" aria-label="Copy heading and permalink for Esercizio 6.4.6">🔗</a></div></article><article class="exercise exercise-like" id="exercises-congruenze_con_incognite-1-8"><h5 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.4.6"><a href="#exercises-congruenze_con_incognite-1-7" title="Copy heading and permalink for Esercizio 6.4.6" aria-label="Copy heading and permalink for Esercizio 6.4.6">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-congruenze_con_incognite-1-8"><h5 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-congruenze_con_incognite-1-8-1-1">
 <span class="process-math">\(25x\equiv 10\pmod{65}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-1-8-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-congruenze_con_incognite-1-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-congruenze_con_incognite-1-8-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-congruenze_con_incognite-1-8-2-1">
 <span class="process-math">\(x\equiv 3\pmod{13}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-1-8-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 6.4.7.1"><a href="#exercises-congruenze_con_incognite-1-8-2" title="Copy heading and permalink for Risposta 6.4.7.1" aria-label="Copy heading and permalink for Risposta 6.4.7.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.4.7"><a href="#exercises-congruenze_con_incognite-1-8" title="Copy heading and permalink for Esercizio 6.4.7" aria-label="Copy heading and permalink for Esercizio 6.4.7">🔗</a></div></article><article class="exercise exercise-like" id="exercises-congruenze_con_incognite-1-9"><h5 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.4.7"><a href="#exercises-congruenze_con_incognite-1-8" title="Copy heading and permalink for Esercizio 6.4.7" aria-label="Copy heading and permalink for Esercizio 6.4.7">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-congruenze_con_incognite-1-9"><h5 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-congruenze_con_incognite-1-9-1-1">
 <span class="process-math">\(18x\equiv 5\pmod{35}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-1-9-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-congruenze_con_incognite-1-9-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-congruenze_con_incognite-1-9-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-congruenze_con_incognite-1-9-2-1">
 <span class="process-math">\(x\equiv 10\pmod{35}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-1-9-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 6.4.8.1"><a href="#exercises-congruenze_con_incognite-1-9-2" title="Copy heading and permalink for Risposta 6.4.8.1" aria-label="Copy heading and permalink for Risposta 6.4.8.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.4.8"><a href="#exercises-congruenze_con_incognite-1-9" title="Copy heading and permalink for Esercizio 6.4.8" aria-label="Copy heading and permalink for Esercizio 6.4.8">🔗</a></div></article>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.4.8"><a href="#exercises-congruenze_con_incognite-1-9" title="Copy heading and permalink for Esercizio 6.4.8" aria-label="Copy heading and permalink for Esercizio 6.4.8">🔗</a></div>
+</article>
 </div>
 <div class="autopermalink" data-description="Gruppo di esercizi 6.4.1–8"><a href="#exercises-congruenze_con_incognite-1" title="Copy heading and permalink for Gruppo di esercizi 6.4.1–8" aria-label="Copy heading and permalink for Gruppo di esercizi 6.4.1–8">🔗</a></div>
 </div>
@@ -1211,7 +1251,9 @@ x \amp \equiv 2\amp \amp \pmod{7}
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-congruenze_con_incognite-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-congruenze_con_incognite-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para logical" id="exercises-congruenze_con_incognite-2-2-1">
 <div class="para">I moduli <span class="process-math">\(4\text{,}\)</span> <span class="process-math">\(15\)</span> e <span class="process-math">\(7\)</span> sono a due a due coprimi, e, quindi, per il <a href="sec-congruenze_con_incognite.html#thm-cinese_del_resto" class="xref" data-knowl="./knowl/xref/thm-cinese_del_resto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 6.4.6: Teorema cinese del resto">Teorema cinese del resto</a>, il sistema è risolubile e le soluzioni formano una classe di resto modulo <span class="process-math">\(4\cdot15\cdot7\text{.}\)</span> Determiniamo prima le soluzioni comuni alle prime due congruenze. Si nota immediatamente che <span class="process-math">\(3\)</span> è soluzione comune alle prime due congruenze: dunque, le prime due congruenze sono equivalenti, sempre per il <a href="sec-congruenze_con_incognite.html#thm-cinese_del_resto" class="xref" data-knowl="./knowl/xref/thm-cinese_del_resto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 6.4.6: Teorema cinese del resto">Teorema cinese del resto</a>, a <span class="process-math">\(x\equiv 3\pmod{60}\text{.}\)</span> Il sistema si riduce allora a</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-cinese_del_resto.html ./knowl/xref/thm-cinese_del_resto.html ./knowl/xref/alg-euclide.html" id="exercises-congruenze_con_incognite-2-2-1-9">
@@ -1229,11 +1271,16 @@ x \amp \equiv 2\amp \amp \pmod{7}
 <div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Soluzione 6.4.9.1"><a href="#exercises-congruenze_con_incognite-2-2" title="Copy heading and permalink for Soluzione 6.4.9.1" aria-label="Copy heading and permalink for Soluzione 6.4.9.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.4.9"><a href="#exercises-congruenze_con_incognite-2" title="Copy heading and permalink for Esercizio 6.4.9" aria-label="Copy heading and permalink for Esercizio 6.4.9">🔗</a></div></article><div class="exercisegroup" id="exercises-congruenze_con_incognite-3">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.4.9"><a href="#exercises-congruenze_con_incognite-2" title="Copy heading and permalink for Esercizio 6.4.9" aria-label="Copy heading and permalink for Esercizio 6.4.9">🔗</a></div>
+</article>
+<div class="exercisegroup" id="exercises-congruenze_con_incognite-3">
 <h4 class="heading"><span class="title">Gruppo di esercizi.</span></h4>
-<div class="introduction" id="exercises-congruenze_con_incognite-3-1"><div class="para" id="exercises-congruenze_con_incognite-3-1-1">Risolvere, se possibile, i seguenti sistemi di congruenze.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-3-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div></div>
+<div class="introduction" id="exercises-congruenze_con_incognite-3-1">
+<div class="para" id="exercises-congruenze_con_incognite-3-1-1">Risolvere, se possibile, i seguenti sistemi di congruenze.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-3-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+</div>
 <div class="exercisegroup-exercises cols2 multicolumn">
 <article class="exercise exercise-like" id="exercises-congruenze_con_incognite-3-2"><h5 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-congruenze_con_incognite-3-2-1-1">
@@ -1245,13 +1292,18 @@ x \amp \equiv 4\amp \amp \pmod{5}
 \end{alignedat}
 \right.\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-3-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-congruenze_con_incognite-3-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-congruenze_con_incognite-3-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-congruenze_con_incognite-3-2-2-1">
 <span class="process-math">\(x\equiv 219\pmod{660}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-3-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 6.4.10.1"><a href="#exercises-congruenze_con_incognite-3-2-2" title="Copy heading and permalink for Risposta 6.4.10.1" aria-label="Copy heading and permalink for Risposta 6.4.10.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.4.10"><a href="#exercises-congruenze_con_incognite-3-2" title="Copy heading and permalink for Esercizio 6.4.10" aria-label="Copy heading and permalink for Esercizio 6.4.10">🔗</a></div></article><article class="exercise exercise-like" id="exercises-congruenze_con_incognite-3-3"><h5 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.4.10"><a href="#exercises-congruenze_con_incognite-3-2" title="Copy heading and permalink for Esercizio 6.4.10" aria-label="Copy heading and permalink for Esercizio 6.4.10">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-congruenze_con_incognite-3-3"><h5 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-congruenze_con_incognite-3-3-1-1">
 <span class="process-math">\(\left\{
 \begin{alignedat}{2}
@@ -1261,13 +1313,18 @@ x \amp \equiv 11\amp \amp \pmod{40}
 \end{alignedat}
 \right.\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-3-3-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-congruenze_con_incognite-3-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-congruenze_con_incognite-3-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-congruenze_con_incognite-3-3-2-1">
 <span class="process-math">\(x\equiv 51\pmod{120}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-3-3-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 6.4.11.1"><a href="#exercises-congruenze_con_incognite-3-3-2" title="Copy heading and permalink for Risposta 6.4.11.1" aria-label="Copy heading and permalink for Risposta 6.4.11.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.4.11"><a href="#exercises-congruenze_con_incognite-3-3" title="Copy heading and permalink for Esercizio 6.4.11" aria-label="Copy heading and permalink for Esercizio 6.4.11">🔗</a></div></article><article class="exercise exercise-like" id="exercises-congruenze_con_incognite-3-4"><h5 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.4.11"><a href="#exercises-congruenze_con_incognite-3-3" title="Copy heading and permalink for Esercizio 6.4.11" aria-label="Copy heading and permalink for Esercizio 6.4.11">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-congruenze_con_incognite-3-4"><h5 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-congruenze_con_incognite-3-4-1-1">
 <span class="process-math">\(\left\{
 \begin{alignedat}{2}
@@ -1277,13 +1334,18 @@ x \amp \equiv 3\amp \amp \pmod{7}
 \end{alignedat}
 \right.\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-3-4-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-congruenze_con_incognite-3-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-congruenze_con_incognite-3-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-congruenze_con_incognite-3-4-2-1">
 <span class="process-math">\(x\equiv 59\pmod{105}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-3-4-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 6.4.12.1"><a href="#exercises-congruenze_con_incognite-3-4-2" title="Copy heading and permalink for Risposta 6.4.12.1" aria-label="Copy heading and permalink for Risposta 6.4.12.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.4.12"><a href="#exercises-congruenze_con_incognite-3-4" title="Copy heading and permalink for Esercizio 6.4.12" aria-label="Copy heading and permalink for Esercizio 6.4.12">🔗</a></div></article><article class="exercise exercise-like" id="exercises-congruenze_con_incognite-3-5"><h5 class="heading"><span class="codenumber">13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.4.12"><a href="#exercises-congruenze_con_incognite-3-4" title="Copy heading and permalink for Esercizio 6.4.12" aria-label="Copy heading and permalink for Esercizio 6.4.12">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-congruenze_con_incognite-3-5"><h5 class="heading"><span class="codenumber">13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-congruenze_con_incognite-3-5-1-1">
 <span class="process-math">\(\left\{
 \begin{alignedat}{2}
@@ -1293,12 +1355,16 @@ x \amp \equiv 2\amp \amp \pmod{15}
 \end{alignedat}
 \right.\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-3-5-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-congruenze_con_incognite-3-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-congruenze_con_incognite-3-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-congruenze_con_incognite-3-5-2-1">Non ha soluzioni.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-3-5-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 6.4.13.1"><a href="#exercises-congruenze_con_incognite-3-5-2" title="Copy heading and permalink for Risposta 6.4.13.1" aria-label="Copy heading and permalink for Risposta 6.4.13.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.4.13"><a href="#exercises-congruenze_con_incognite-3-5" title="Copy heading and permalink for Esercizio 6.4.13" aria-label="Copy heading and permalink for Esercizio 6.4.13">🔗</a></div></article>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.4.13"><a href="#exercises-congruenze_con_incognite-3-5" title="Copy heading and permalink for Esercizio 6.4.13" aria-label="Copy heading and permalink for Esercizio 6.4.13">🔗</a></div>
+</article>
 </div>
 <div class="autopermalink" data-description="Gruppo di esercizi 6.4.10–13"><a href="#exercises-congruenze_con_incognite-3" title="Copy heading and permalink for Gruppo di esercizi 6.4.10–13" aria-label="Copy heading and permalink for Gruppo di esercizi 6.4.10–13">🔗</a></div>
 </div>
@@ -1306,11 +1372,14 @@ x \amp \equiv 2\amp \amp \pmod{15}
 <div class="para" id="exercises-congruenze_con_incognite-4-1-1">Trovare il resto di <span class="process-math">\(23^{31}+31^{23}\)</span> diviso <span class="process-math">\(713\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-4-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="exercises-congruenze_con_incognite-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Suggerimento</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<details id="exercises-congruenze_con_incognite-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Suggerimento</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para" id="exercises-congruenze_con_incognite-4-2-1">Si noti che <span class="process-math">\(713=23\cdot31\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-4-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Suggerimento 6.4.14.1"><a href="#exercises-congruenze_con_incognite-4-2" title="Copy heading and permalink for Suggerimento 6.4.14.1" aria-label="Copy heading and permalink for Suggerimento 6.4.14.1">🔗</a></div>
-</div></details><details id="exercises-congruenze_con_incognite-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+</div></details>
+<details id="exercises-congruenze_con_incognite-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="exercises-congruenze_con_incognite-4-3-1">Calcoliamo <span class="process-math">\(23^{31}+31^{23}\)</span> modulo <span class="process-math">\(23\)</span> e modulo <span class="process-math">\(31\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-4-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="para" id="exercises-congruenze_con_incognite-4-3-2">Chiaramente <span class="process-math">\(23\equiv 0\pmod{23}\)</span> e, di conseguenza, <span class="process-math">\(23^{31}\equiv 0\pmod{23}\text{.}\)</span> Poiché <span class="process-math">\(23\)</span> è primo, per il <a href="sec-eulero.html#cor-piccolo_fermat" class="xref" data-knowl="./knowl/xref/cor-piccolo_fermat.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Corollario 6.3.6: Piccolo teorema di Fermat">Piccolo teorema di Fermat</a> abbiamo che <span class="process-math">\(31^{23}\equiv 31\pmod {23}\text{.}\)</span> Pertanto, <span class="process-math">\(23^{31}+31^{23}\equiv 0+31\pmod{23}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-4-3-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
@@ -1322,10 +1391,14 @@ x \amp \equiv 2\amp \amp \pmod{15}
 <div class="autopermalink" data-description="Soluzione 6.4.14.1"><a href="#exercises-congruenze_con_incognite-4-3" title="Copy heading and permalink for Soluzione 6.4.14.1" aria-label="Copy heading and permalink for Soluzione 6.4.14.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Esercizio 6.4.14"><a href="#exercises-congruenze_con_incognite-4" title="Copy heading and permalink for Esercizio 6.4.14" aria-label="Copy heading and permalink for Esercizio 6.4.14">🔗</a></div></article><article class="exercise exercise-like" id="exercises-congruenze_con_incognite-5"><h4 class="heading"><span class="codenumber">15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="autopermalink" data-description="Esercizio 6.4.14"><a href="#exercises-congruenze_con_incognite-4" title="Copy heading and permalink for Esercizio 6.4.14" aria-label="Copy heading and permalink for Esercizio 6.4.14">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-congruenze_con_incognite-5"><h4 class="heading"><span class="codenumber">15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para" id="exercises-congruenze_con_incognite-5-1-1">Trovare il resto di <span class="process-math">\(23^{8!}+4^{711}\)</span> diviso <span class="process-math">\(33\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-5-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-congruenze_con_incognite-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-congruenze_con_incognite-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="exercises-congruenze_con_incognite-5-2-1">Dobbiamo determinare l’elemento compreso tra <span class="process-math">\(0\)</span> e <span class="process-math">\(32\)</span> nella classe di resto di <span class="process-math">\(23^{8!}+4^{711}\)</span> modulo <span class="process-math">\(33\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-5-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="para" id="exercises-congruenze_con_incognite-5-2-2">Poiché <span class="process-math">\(23\)</span> è coprimo con <span class="process-math">\(33\text{,}\)</span> il <a href="sec-eulero.html#thm-eulero" class="xref" data-knowl="./knowl/xref/thm-eulero.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 6.3.5: Teorema di Eulero">Teorema di Eulero</a> ci dice che <span class="process-math">\(23^{\euler{33}}\equiv 1\pmod{33}\text{.}\)</span> Ora <span class="process-math">\(33=3\cdot 11\)</span> e, quindi, <span class="process-math">\(\euler{33}=\euler{3}\euler{11}=(3-1)(11-1)=20\text{.}\)</span> D’altra parte, <span class="process-math">\(8!\)</span> è multiplo di <span class="process-math">\(20\text{:}\)</span> di conseguenza, <span class="process-math">\(23^{8!}=(23^{20})^{k}\)</span> per qualche <span class="process-math">\(k\)</span> intero e, quindi, <span class="process-math">\(23^{8!}\equiv 1^{k}\pmod{33}\equiv 1 \pmod{33}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-5-2-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
@@ -1335,11 +1408,16 @@ x \amp \equiv 2\amp \amp \pmod{15}
 <div class="para" id="exercises-congruenze_con_incognite-5-2-4">Riassumendo, <span class="process-math">\(23^{8!}+4^{711}\equiv 1 + 4\pmod{33}\equiv 5\pmod{33}\text{:}\)</span> dunque, il resto cercato è <span class="process-math">\(5\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-5-2-4" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Soluzione 6.4.15.1"><a href="#exercises-congruenze_con_incognite-5-2" title="Copy heading and permalink for Soluzione 6.4.15.1" aria-label="Copy heading and permalink for Soluzione 6.4.15.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.4.15"><a href="#exercises-congruenze_con_incognite-5" title="Copy heading and permalink for Esercizio 6.4.15" aria-label="Copy heading and permalink for Esercizio 6.4.15">🔗</a></div></article><article class="exercise exercise-like" id="exercises-congruenze_con_incognite-6"><h4 class="heading"><span class="codenumber">16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.4.15"><a href="#exercises-congruenze_con_incognite-5" title="Copy heading and permalink for Esercizio 6.4.15" aria-label="Copy heading and permalink for Esercizio 6.4.15">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-congruenze_con_incognite-6"><h4 class="heading"><span class="codenumber">16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para" id="exercises-congruenze_con_incognite-6-1-1">Trovare le ultime due cifre (in base <span class="process-math">\(10\)</span>) di <span class="process-math">\(6^{6666}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-6-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-congruenze_con_incognite-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-congruenze_con_incognite-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="exercises-congruenze_con_incognite-6-2-1">Le ultime due cifre in base <span class="process-math">\(10\)</span> corrispondono al resto della divisione di <span class="process-math">\(6^{6666}\)</span> per <span class="process-math">\(100\text{.}\)</span> Espresso <span class="process-math">\(100=4\cdot 25\)</span> come prodotto di numeri coprimi, calcoliamo separatamente <span class="process-math">\(6^{6666}\)</span> modulo <span class="process-math">\(4\)</span> e modulo <span class="process-math">\(25\)</span> e poi applichiamo il <a href="sec-congruenze_con_incognite.html#thm-cinese_del_resto" class="xref" data-knowl="./knowl/xref/thm-cinese_del_resto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 6.4.6: Teorema cinese del resto">Teorema cinese del resto</a>.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-6-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="para logical" id="exercises-congruenze_con_incognite-6-2-2">
@@ -1359,33 +1437,52 @@ x \amp \equiv 6 \amp \amp \pmod{25}
 <div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-6-2-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Soluzione 6.4.16.1"><a href="#exercises-congruenze_con_incognite-6-2" title="Copy heading and permalink for Soluzione 6.4.16.1" aria-label="Copy heading and permalink for Soluzione 6.4.16.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.4.16"><a href="#exercises-congruenze_con_incognite-6" title="Copy heading and permalink for Esercizio 6.4.16" aria-label="Copy heading and permalink for Esercizio 6.4.16">🔗</a></div></article><article class="exercise exercise-like" id="exercises-congruenze_con_incognite-7"><h4 class="heading"><span class="codenumber">17<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
-<div class="introduction" id="exercises-congruenze_con_incognite-7-1"><div class="para" id="exercises-congruenze_con_incognite-7-1-1">Obiettivo di questo esercizio è dare una dimostrazione alternativa, non costruttiva, del <a href="sec-congruenze_con_incognite.html#thm-cinese_del_resto" class="xref" data-knowl="./knowl/xref/thm-cinese_del_resto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 6.4.6: Teorema cinese del resto">Teorema cinese del resto</a>. Siano <span class="process-math">\(a_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(a_{r}\)</span>  interi e <span class="process-math">\(n_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(n_{r}\)</span> interi positivi a due a due coprimi e sia <span class="process-math">\(n=n_{1}\cdots n_{r}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-7-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.4.16"><a href="#exercises-congruenze_con_incognite-6" title="Copy heading and permalink for Esercizio 6.4.16" aria-label="Copy heading and permalink for Esercizio 6.4.16">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-congruenze_con_incognite-7"><h4 class="heading"><span class="codenumber">17<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="introduction" id="exercises-congruenze_con_incognite-7-1">
+<div class="para" id="exercises-congruenze_con_incognite-7-1-1">Obiettivo di questo esercizio è dare una dimostrazione alternativa, non costruttiva, del <a href="sec-congruenze_con_incognite.html#thm-cinese_del_resto" class="xref" data-knowl="./knowl/xref/thm-cinese_del_resto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 6.4.6: Teorema cinese del resto">Teorema cinese del resto</a>. Siano <span class="process-math">\(a_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(a_{r}\)</span>  interi e <span class="process-math">\(n_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(n_{r}\)</span> interi positivi a due a due coprimi e sia <span class="process-math">\(n=n_{1}\cdots n_{r}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-7-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+</div>
 <article class="task exercise-like" id="exercises-congruenze_con_incognite-7-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para" id="exercises-congruenze_con_incognite-7-2-1-1">Dimostrare che la funzione <span class="process-math">\(\tau\colon\Interi/n\to\Interi/n_{1}\times\cdots\times\Interi/n_{r}\)</span> definita da <span class="process-math">\(\class[n]{a}\tau\coloneqq(\class[n_{1}]{a},\ldots,\class[n_{r}]{a})\)</span> è ben definita.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-7-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Compito 6.4.17.a"><a href="#exercises-congruenze_con_incognite-7-2" title="Copy heading and permalink for Compito 6.4.17.a" aria-label="Copy heading and permalink for Compito 6.4.17.a">🔗</a></div></article><article class="task exercise-like" id="exercises-congruenze_con_incognite-7-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="autopermalink" data-description="Compito 6.4.17.a"><a href="#exercises-congruenze_con_incognite-7-2" title="Copy heading and permalink for Compito 6.4.17.a" aria-label="Copy heading and permalink for Compito 6.4.17.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="exercises-congruenze_con_incognite-7-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para" id="exercises-congruenze_con_incognite-7-3-1-1">Dimostrare che la funzione <span class="process-math">\(\tau\)</span> definita al punto precedente è iniettiva.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-7-3-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-congruenze_con_incognite-7-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-congruenze_con_incognite-7-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="exercises-congruenze_con_incognite-7-3-2-1">Se <span class="process-math">\(\class[n]{a}\tau=\class[n]{b}\tau\text{,}\)</span> allora <span class="process-math">\(\class[n_{i}]{a}=\class[n_{i}]{b}\)</span> per ogni <span class="process-math">\(i\text{,}\)</span> cioè <span class="process-math">\(b-a\)</span> è multiplo di ogni <span class="process-math">\(n_{i}\)</span> e, quindi, per l’<a href="sec-fattorizzazione_interi.html#exer-multiplo_di_coprimi" class="xref" data-knowl="./knowl/xref/exer-multiplo_di_coprimi.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Esercizio 5.4.3">Esercizio 5.4.3</a> è multiplo di <span class="process-math">\(n\text{,}\)</span> cioè <span class="process-math">\(\class[n]{a}=\class[n]{b}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-7-3-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Soluzione 6.4.17.b.1"><a href="#exercises-congruenze_con_incognite-7-3-2" title="Copy heading and permalink for Soluzione 6.4.17.b.1" aria-label="Copy heading and permalink for Soluzione 6.4.17.b.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Compito 6.4.17.b"><a href="#exercises-congruenze_con_incognite-7-3" title="Copy heading and permalink for Compito 6.4.17.b" aria-label="Copy heading and permalink for Compito 6.4.17.b">🔗</a></div></article><article class="task exercise-like" id="exercises-congruenze_con_incognite-7-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Compito 6.4.17.b"><a href="#exercises-congruenze_con_incognite-7-3" title="Copy heading and permalink for Compito 6.4.17.b" aria-label="Copy heading and permalink for Compito 6.4.17.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="exercises-congruenze_con_incognite-7-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
 <div class="para" id="exercises-congruenze_con_incognite-7-4-1-1">Dimostrare che <span class="process-math">\(\tau\)</span> è biiettiva.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-7-4-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-congruenze_con_incognite-7-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Suggerimento</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-congruenze_con_incognite-7-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Suggerimento</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para" id="exercises-congruenze_con_incognite-7-4-2-1">Contare gli elementi dell’insieme di partenza e di arrivo.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-7-4-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Suggerimento 6.4.17.c.1"><a href="#exercises-congruenze_con_incognite-7-4-2" title="Copy heading and permalink for Suggerimento 6.4.17.c.1" aria-label="Copy heading and permalink for Suggerimento 6.4.17.c.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Compito 6.4.17.c"><a href="#exercises-congruenze_con_incognite-7-4" title="Copy heading and permalink for Compito 6.4.17.c" aria-label="Copy heading and permalink for Compito 6.4.17.c">🔗</a></div></article><article class="task exercise-like" id="exercises-congruenze_con_incognite-7-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Compito 6.4.17.c"><a href="#exercises-congruenze_con_incognite-7-4" title="Copy heading and permalink for Compito 6.4.17.c" aria-label="Copy heading and permalink for Compito 6.4.17.c">🔗</a></div>
+</article>
+<article class="task exercise-like" id="exercises-congruenze_con_incognite-7-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
 <div class="para" id="exercises-congruenze_con_incognite-7-5-1-1">Dedurre il <a href="sec-congruenze_con_incognite.html#thm-cinese_del_resto" class="xref" data-knowl="./knowl/xref/thm-cinese_del_resto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 6.4.6: Teorema cinese del resto">Teorema cinese del resto</a>.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-7-5-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-congruenze_con_incognite-7-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-congruenze_con_incognite-7-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para logical" id="exercises-congruenze_con_incognite-7-5-2-1">
 <div class="para">Dato il sistema</div>
 <div class="displaymath process-math" id="exercises-congruenze_con_incognite-7-5-2-1-1">
@@ -1405,16 +1502,27 @@ x \amp \equiv a_{r}\amp \amp  \pmod{n_{r}}
 <div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-7-5-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Soluzione 6.4.17.d.1"><a href="#exercises-congruenze_con_incognite-7-5-2" title="Copy heading and permalink for Soluzione 6.4.17.d.1" aria-label="Copy heading and permalink for Soluzione 6.4.17.d.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Compito 6.4.17.d"><a href="#exercises-congruenze_con_incognite-7-5" title="Copy heading and permalink for Compito 6.4.17.d" aria-label="Copy heading and permalink for Compito 6.4.17.d">🔗</a></div></article><div class="autopermalink" data-description="Esercizio 6.4.17"><a href="#exercises-congruenze_con_incognite-7" title="Copy heading and permalink for Esercizio 6.4.17" aria-label="Copy heading and permalink for Esercizio 6.4.17">🔗</a></div></article><article class="exercise exercise-like" id="exercises-congruenze_con_incognite-8"><h4 class="heading"><span class="codenumber">18<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Compito 6.4.17.d"><a href="#exercises-congruenze_con_incognite-7-5" title="Copy heading and permalink for Compito 6.4.17.d" aria-label="Copy heading and permalink for Compito 6.4.17.d">🔗</a></div>
+</article><div class="autopermalink" data-description="Esercizio 6.4.17"><a href="#exercises-congruenze_con_incognite-7" title="Copy heading and permalink for Esercizio 6.4.17" aria-label="Copy heading and permalink for Esercizio 6.4.17">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-congruenze_con_incognite-8"><h4 class="heading"><span class="codenumber">18<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para" id="exercises-congruenze_con_incognite-8-1-1">Dimostrare che <span class="process-math">\(\euler{n}=\frac{n}{2}\)</span> se e solo se <span class="process-math">\(n\)</span> è una potenza di <span class="process-math">\(2\)</span> con esponente positivo.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-8-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-congruenze_con_incognite-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-congruenze_con_incognite-8-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="exercises-congruenze_con_incognite-8-2-1">Poiché <span class="process-math">\(\euler{n}\)</span> è un intero, condizione necessaria affinché sia <span class="process-math">\(\euler{n}=\frac{n}{2}\)</span> è che <span class="process-math">\(n\)</span> sia pari. Sia allora <span class="process-math">\(n=2^{k}t\)</span> con <span class="process-math">\(k\)</span> intero positivo e <span class="process-math">\(t\)</span> dispari. Poiché <span class="process-math">\(2^{k}\)</span> e <span class="process-math">\(t\)</span> sono coprimi, per il <a href="sec-congruenze_con_incognite.html#lem-moltiplicativita_eulero" class="xref" data-knowl="./knowl/xref/lem-moltiplicativita_eulero.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Lemma 6.4.13">Lemma 6.4.13</a> abbiamo che <span class="process-math">\(\euler{n}=\euler{2^{k}}\euler{t}\text{.}\)</span> Ora <span class="process-math">\(\euler{2^{k}}=2^{k}-2^{k-1}=2^{k-1}\text{,}\)</span> cioè <span class="process-math">\(\euler{n}=2^{k-1}\euler{t}\text{.}\)</span> Si ha, dunque, <span class="process-math">\(\euler{n}=\frac{n}{2}\)</span> se e solo se <span class="process-math">\(\euler{t}=t\text{:}\)</span> l’unico intero <span class="process-math">\(t\)</span> per cui ciò avviene è <span class="process-math">\(1\)</span> e, di conseguenza, <span class="process-math">\(\euler{n}=\frac{n}{2}\)</span> se e solo se <span class="process-math">\(n=2^{k}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-congruenze_con_incognite-8-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Soluzione 6.4.18.1"><a href="#exercises-congruenze_con_incognite-8-2" title="Copy heading and permalink for Soluzione 6.4.18.1" aria-label="Copy heading and permalink for Soluzione 6.4.18.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.4.18"><a href="#exercises-congruenze_con_incognite-8" title="Copy heading and permalink for Esercizio 6.4.18" aria-label="Copy heading and permalink for Esercizio 6.4.18">🔗</a></div></article><div class="autopermalink" data-description="Esercizi 6.4"><a href="#exercises-congruenze_con_incognite" title="Copy heading and permalink for Esercizi 6.4" aria-label="Copy heading and permalink for Esercizi 6.4">🔗</a></div></section><div class="autopermalink" data-description="Paragrafo 6.4: Congruenze con incognite"><a href="#sec-congruenze_con_incognite" title="Copy heading and permalink for Paragrafo 6.4: Congruenze con incognite" aria-label="Copy heading and permalink for Paragrafo 6.4: Congruenze con incognite">🔗</a></div></section></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.4.18"><a href="#exercises-congruenze_con_incognite-8" title="Copy heading and permalink for Esercizio 6.4.18" aria-label="Copy heading and permalink for Esercizio 6.4.18">🔗</a></div>
+</article><div class="autopermalink" data-description="Esercizi 6.4"><a href="#exercises-congruenze_con_incognite" title="Copy heading and permalink for Esercizi 6.4" aria-label="Copy heading and permalink for Esercizi 6.4">🔗</a></div>
+</section><div class="autopermalink" data-description="Paragrafo 6.4: Congruenze con incognite"><a href="#sec-congruenze_con_incognite" title="Copy heading and permalink for Paragrafo 6.4: Congruenze con incognite" aria-label="Copy heading and permalink for Paragrafo 6.4: Congruenze con incognite">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-eulero.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="part-gruppi.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

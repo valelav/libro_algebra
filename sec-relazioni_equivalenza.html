@@ -20,62 +20,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "textmacros",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[tex]/textmacros",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="Algebra">
@@ -102,15 +54,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.13.3';
+eBookConfig.runestone_version = '8.0.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.b76b8eace4405b9e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.bbf2283c5c1d4f99.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/prefix-runtime.ce7e0a2163cb330f.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.f4a2ffb04bb978bb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
 </script>
 </head>
@@ -714,7 +666,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-relazioni_equivalenza"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-relazioni_equivalenza">
+<h2 class="heading hide-type">
 <span class="type">Paragrafo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Relazioni di equivalenza</span>
 </h2>
 <article class="definition definition-like" id="def-relazione"><h3 class="heading">
@@ -722,7 +676,9 @@ eBookConfig.enable_chatcodes =  false;
 </h3>
 <div class="para" id="def-relazione-2-1">Una corrispondenza da un insieme <span class="process-math">\(A\)</span> in sé stesso è detta <dfn class="terminology">relazione</dfn> di <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#def-relazione-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definizione 2.2.1"><a href="#def-relazione" title="Copy heading and permalink for Definizione 2.2.1" aria-label="Copy heading and permalink for Definizione 2.2.1">🔗</a></div></article><article class="definition definition-like" id="def-equivalenza"><h3 class="heading">
+<div class="autopermalink" data-description="Definizione 2.2.1"><a href="#def-relazione" title="Copy heading and permalink for Definizione 2.2.1" aria-label="Copy heading and permalink for Definizione 2.2.1">🔗</a></div>
+</article>
+<article class="definition definition-like" id="def-equivalenza"><h3 class="heading">
 <span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="def-equivalenza-3-1">
@@ -748,21 +704,28 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para">Solitamente una relazione di equivalenza è indicata con un simbolo del tipo <span class="process-math">\(\sim\text{,}\)</span> <span class="process-math">\(\simeq\text{,}\)</span> <span class="process-math">\(\equiv\text{,}\)</span> etc.</div>
 <div class="autopermalink" data-description="Capoverso"><a href="#def-equivalenza-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definizione 2.2.2"><a href="#def-equivalenza" title="Copy heading and permalink for Definizione 2.2.2" aria-label="Copy heading and permalink for Definizione 2.2.2">🔗</a></div></article><article class="example example-like" id="ex-equivalenze_banali"><h3 class="heading">
+<div class="autopermalink" data-description="Definizione 2.2.2"><a href="#def-equivalenza" title="Copy heading and permalink for Definizione 2.2.2" aria-label="Copy heading and permalink for Definizione 2.2.2">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-equivalenze_banali"><h3 class="heading">
 <span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="ex-equivalenze_banali-1-1">Dato un insieme <span class="process-math">\(A\text{,}\)</span> la relazione di uguaglianza (quella cioè in cui ogni elemento è in relazione solo con sé stesso) è ovviamente una relazione di equivalenza. All’estremo opposto, la relazione in cui ogni elemento è in relazione con tutti gli altri è, altrettanto ovviamente, una relazione di equivalenza.<div class="autopermalink" data-description="Capoverso"><a href="#ex-equivalenze_banali-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Esempio 2.2.3"><a href="#ex-equivalenze_banali" title="Copy heading and permalink for Esempio 2.2.3" aria-label="Copy heading and permalink for Esempio 2.2.3">🔗</a></div></article><article class="example example-like" id="ex-valore_assoluto"><h3 class="heading">
+<div class="autopermalink" data-description="Esempio 2.2.3"><a href="#ex-equivalenze_banali" title="Copy heading and permalink for Esempio 2.2.3" aria-label="Copy heading and permalink for Esempio 2.2.3">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-valore_assoluto"><h3 class="heading">
 <span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="ex-valore_assoluto-1-1">Nell’insieme dei numeri reali <span class="process-math">\(\Reali\text{,}\)</span> la relazione <span class="process-math">\(\sim\)</span> definita da <span class="process-math">\(a\sim b\)</span> se <span class="process-math">\(\abs{a}=\abs{b}\)</span> è una relazione di equivalenza. Si noti che ogni numero reale è in relazione con sé stesso e il proprio opposto.<div class="autopermalink" data-description="Capoverso"><a href="#ex-valore_assoluto-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Esempio 2.2.4"><a href="#ex-valore_assoluto" title="Copy heading and permalink for Esempio 2.2.4" aria-label="Copy heading and permalink for Esempio 2.2.4">🔗</a></div></article><article class="example example-like" id="ex-costruzione_interi"><h3 class="heading">
+<div class="autopermalink" data-description="Esempio 2.2.4"><a href="#ex-valore_assoluto" title="Copy heading and permalink for Esempio 2.2.4" aria-label="Copy heading and permalink for Esempio 2.2.4">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-costruzione_interi"><h3 class="heading">
 <span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="ex-costruzione_interi-1-1">Consideriamo l’insieme <span class="process-math">\(S\coloneqq \Naturali\times\Naturali\text{.}\)</span> Definiamo in <span class="process-math">\(S\)</span> la relazione <span class="process-math">\(\sim\)</span> tramite <span class="process-math">\((a,b)\sim(c,d)\)</span> se <span class="process-math">\(a+d=b+c\text{.}\)</span> Verifichiamo che è una relazione di equivalenza.<div class="autopermalink" data-description="Capoverso"><a href="#ex-costruzione_interi-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div> <div class="para logical" id="ex-costruzione_interi-1-2">
+</div> 
+<div class="para logical" id="ex-costruzione_interi-1-2">
 <ul class="disc" id="ex-costruzione_interi-1-2-1">
 <li id="ex-costruzione_interi-1-2-1-1">
 <div class="para" id="ex-costruzione_interi-1-2-1-1-1">Proprietà riflessiva. <span class="process-math">\((a,b)\sim(a,b)\)</span> per ogni <span class="process-math">\((a,b)\in S\text{:}\)</span> infatti, <span class="process-math">\(a+b=b+a\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#ex-costruzione_interi-1-2-1-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
@@ -782,13 +745,18 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 <div class="autopermalink" data-description="Capoverso"><a href="#ex-costruzione_interi-1-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Esempio 2.2.5"><a href="#ex-costruzione_interi" title="Copy heading and permalink for Esempio 2.2.5" aria-label="Copy heading and permalink for Esempio 2.2.5">🔗</a></div></article><article class="definition definition-like" id="def-classe"><h3 class="heading">
+<div class="autopermalink" data-description="Esempio 2.2.5"><a href="#ex-costruzione_interi" title="Copy heading and permalink for Esempio 2.2.5" aria-label="Copy heading and permalink for Esempio 2.2.5">🔗</a></div>
+</article>
+<article class="definition definition-like" id="def-classe"><h3 class="heading">
 <span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="def-classe-5-1">Sia <span class="process-math">\(\sim\)</span> una relazione di equivalenza in un insieme <span class="process-math">\(A\text{.}\)</span> Dato un elemento <span class="process-math">\(a\in A\text{,}\)</span> la <dfn class="terminology">classe di equivalenza</dfn> di <span class="process-math">\(a\text{,}\)</span> indicata con il simbolo <span class="process-math">\(\class[\sim]{a}\)</span> è il sottoinsieme di <span class="process-math">\(A\)</span> così definito: <span class="process-math">\(\class[\sim]{a}\coloneqq \{x\in A\mid a\sim x\}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#def-classe-5-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div> <div class="para" id="def-classe-5-2">L’insieme delle classi di equivalenza viene denotato con il simbolo <span class="process-math">\(A/\sim\)</span> e detto <dfn class="terminology">insieme quoziente</dfn> di <span class="process-math">\(A\)</span> rispetto alla relazione <span class="process-math">\(\sim\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#def-classe-5-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div> 
+<div class="para" id="def-classe-5-2">L’insieme delle classi di equivalenza viene denotato con il simbolo <span class="process-math">\(A/\sim\)</span> e detto <dfn class="terminology">insieme quoziente</dfn> di <span class="process-math">\(A\)</span> rispetto alla relazione <span class="process-math">\(\sim\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#def-classe-5-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definizione 2.2.6"><a href="#def-classe" title="Copy heading and permalink for Definizione 2.2.6" aria-label="Copy heading and permalink for Definizione 2.2.6">🔗</a></div></article><article class="proposition theorem-like" id="prop-classe_equivalenza"><h3 class="heading">
+<div class="autopermalink" data-description="Definizione 2.2.6"><a href="#def-classe" title="Copy heading and permalink for Definizione 2.2.6" aria-label="Copy heading and permalink for Definizione 2.2.6">🔗</a></div>
+</article>
+<article class="proposition theorem-like" id="prop-classe_equivalenza"><h3 class="heading">
 <span class="type">Proposizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="prop-classe_equivalenza-1-1">
@@ -812,128 +780,196 @@ eBookConfig.enable_chatcodes =  false;
 </ol>
 <div class="autopermalink" data-description="Capoverso"><a href="#prop-classe_equivalenza-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposizione 2.2.7"><a href="#prop-classe_equivalenza" title="Copy heading and permalink for Proposizione 2.2.7" aria-label="Copy heading and permalink for Proposizione 2.2.7">🔗</a></div></article><details id="prop-classe_equivalenza-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-classe_equivalenza-2-1">Poiché vale la proprietà riflessiva si ha che <span class="process-math">\(a\sim a\)</span> e, dunque, <span class="process-math">\(a\in\class[\sim]{a}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-classe_equivalenza-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Proposizione 2.2.7"><a href="#prop-classe_equivalenza" title="Copy heading and permalink for Proposizione 2.2.7" aria-label="Copy heading and permalink for Proposizione 2.2.7">🔗</a></div>
+</article>
+<details id="prop-classe_equivalenza-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="prop-classe_equivalenza-2-1">Poiché vale la proprietà riflessiva si ha che <span class="process-math">\(a\sim a\)</span> e, dunque, <span class="process-math">\(a\in\class[\sim]{a}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-classe_equivalenza-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="para" id="prop-classe_equivalenza-2-2">Sia ora <span class="process-math">\(b\in\class[\sim]{a}\text{,}\)</span> cioè <span class="process-math">\(a\sim b\text{.}\)</span> Per ogni <span class="process-math">\(c\in\class[\sim]{b}\text{,}\)</span> cioè tale che <span class="process-math">\(b\sim c\text{,}\)</span> la proprietà transitiva implica che <span class="process-math">\(a\sim c\text{,}\)</span> cioè <span class="process-math">\(c\in\class[\sim]{a}\text{:}\)</span> dunque, <span class="process-math">\(\class[\sim]{b}\subseteq\class[\sim]{a}\text{.}\)</span> D’altra parte, per la proprietà simmetrica si ha <span class="process-math">\(b\sim a\)</span> e lo stesso argomento mostra che <span class="process-math">\(\class[\sim]{a}\subseteq\class[\sim]{b}\text{.}\)</span> In conclusione, <span class="process-math">\(\class[\sim]{a}=\class[\sim]{b}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-classe_equivalenza-2-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="para" id="prop-classe_equivalenza-2-3">L’ultima affermazione segue immediatamente dalla precedente se notiamo che, dato <span class="process-math">\(c\in\class[\sim]{a}\cap\class[\sim]{b}\text{,}\)</span> si ha <span class="process-math">\(\class[\sim]{a}=\class[\sim]{c}=\class[\sim]{b}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-classe_equivalenza-2-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Dimostrazione 2.2.7.1"><a href="#prop-classe_equivalenza-2" title="Copy heading and permalink for Dimostrazione 2.2.7.1" aria-label="Copy heading and permalink for Dimostrazione 2.2.7.1">🔗</a></div></article></details><div class="para" id="sec-relazioni_equivalenza-9">In particolare, un qualunque elemento di una classe individua la classe stessa. Ciò motiva la seguente definizione:<div class="autopermalink" data-description="Capoverso"><a href="#sec-relazioni_equivalenza-9" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Dimostrazione 2.2.7.1"><a href="#prop-classe_equivalenza-2" title="Copy heading and permalink for Dimostrazione 2.2.7.1" aria-label="Copy heading and permalink for Dimostrazione 2.2.7.1">🔗</a></div>
+</article></details>
+<div class="para" id="sec-relazioni_equivalenza-9">In particolare, un qualunque elemento di una classe individua la classe stessa. Ciò motiva la seguente definizione:<div class="autopermalink" data-description="Capoverso"><a href="#sec-relazioni_equivalenza-9" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-rappresentante"><h3 class="heading">
 <span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="def-rappresentante-3-1">Data una relazione di equivalenza <span class="process-math">\(\sim\)</span> in un insieme <span class="process-math">\(A\)</span> e una classe di equivalenza <span class="process-math">\(C\)</span> di tale relazione, un qualunque elemento <span class="process-math">\(a\)</span> di <span class="process-math">\(C\)</span> (cioè un elemento per cui si ha <span class="process-math">\(\class[\sim]{a}=C\)</span>) è detto <dfn class="terminology">rappresentante</dfn> della classe <span class="process-math">\(C\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#def-rappresentante-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definizione 2.2.8"><a href="#def-rappresentante" title="Copy heading and permalink for Definizione 2.2.8" aria-label="Copy heading and permalink for Definizione 2.2.8">🔗</a></div></article><article class="definition definition-like" id="def-partizione"><h3 class="heading">
+<div class="autopermalink" data-description="Definizione 2.2.8"><a href="#def-rappresentante" title="Copy heading and permalink for Definizione 2.2.8" aria-label="Copy heading and permalink for Definizione 2.2.8">🔗</a></div>
+</article>
+<article class="definition definition-like" id="def-partizione"><h3 class="heading">
 <span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="def-partizione-3-1">Una <dfn class="terminology">partizione</dfn> di un insieme <span class="process-math">\(A\)</span> è una collezione <span class="process-math">\(\{C_{i}\}_{i\in I}\)</span> di sottoinsiemi non vuoti di <span class="process-math">\(A\)</span> tali che <span class="process-math">\(\bigcup_{i\in I}C_{i}=A\)</span> e <span class="process-math">\(C_{i}\cap C_{j}=\vuoto\)</span> se <span class="process-math">\(i\ne j\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#def-partizione-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definizione 2.2.9"><a href="#def-partizione" title="Copy heading and permalink for Definizione 2.2.9" aria-label="Copy heading and permalink for Definizione 2.2.9">🔗</a></div></article><article class="theorem theorem-like" id="thm-classi_equivalenza"><h3 class="heading">
+<div class="autopermalink" data-description="Definizione 2.2.9"><a href="#def-partizione" title="Copy heading and permalink for Definizione 2.2.9" aria-label="Copy heading and permalink for Definizione 2.2.9">🔗</a></div>
+</article>
+<article class="theorem theorem-like" id="thm-classi_equivalenza"><h3 class="heading">
 <span class="type">Teorema</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="thm-classi_equivalenza-1-1">Data una relazione di equivalenza <span class="process-math">\(\sim\)</span> in un insieme <span class="process-math">\(A\text{,}\)</span> l’insieme delle sue classi di equivalenza forma una partizione di <span class="process-math">\(A\text{.}\)</span> Viceversa, data una partizione <span class="process-math">\(\{C_{i}\}_{i\in I}\)</span> di <span class="process-math">\(A\text{,}\)</span> esiste una relazione di equivalenza le cui classi sono esattamente gli elementi della partizione.<div class="autopermalink" data-description="Capoverso"><a href="#thm-classi_equivalenza-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Teorema 2.2.10"><a href="#thm-classi_equivalenza" title="Copy heading and permalink for Teorema 2.2.10" aria-label="Copy heading and permalink for Teorema 2.2.10">🔗</a></div></article><details id="thm-classi_equivalenza-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-classi_equivalenza-2-1">Dalla <a href="sec-relazioni_equivalenza.html#prop-classe_equivalenza" class="xref" data-knowl="./knowl/xref/prop-classe_equivalenza.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 2.2.7">Proposizione 2.2.7</a>, la classe <span class="process-math">\(\class[\sim]{a}\)</span> contiene l’elemento <span class="process-math">\(a\text{:}\)</span> in particolare, ogni classe è non vuota e ogni elemento di <span class="process-math">\(A\)</span> è contenuto in (almeno) una classe, da cui segue che l’unione delle classi è uguale ad <span class="process-math">\(A\text{.}\)</span> La <a href="sec-relazioni_equivalenza.html#prop-classe_equivalenza" class="xref" data-knowl="./knowl/xref/prop-classe_equivalenza.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 2.2.7">Proposizione 2.2.7</a> afferma inoltre che classi distinte hanno intersezione vuota. Pertanto, le classi formano una partizione.<div class="autopermalink" data-description="Capoverso"><a href="#thm-classi_equivalenza-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Teorema 2.2.10"><a href="#thm-classi_equivalenza" title="Copy heading and permalink for Teorema 2.2.10" aria-label="Copy heading and permalink for Teorema 2.2.10">🔗</a></div>
+</article>
+<details id="thm-classi_equivalenza-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="thm-classi_equivalenza-2-1">Dalla <a href="sec-relazioni_equivalenza.html#prop-classe_equivalenza" class="xref" data-knowl="./knowl/xref/prop-classe_equivalenza.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 2.2.7">Proposizione 2.2.7</a>, la classe <span class="process-math">\(\class[\sim]{a}\)</span> contiene l’elemento <span class="process-math">\(a\text{:}\)</span> in particolare, ogni classe è non vuota e ogni elemento di <span class="process-math">\(A\)</span> è contenuto in (almeno) una classe, da cui segue che l’unione delle classi è uguale ad <span class="process-math">\(A\text{.}\)</span> La <a href="sec-relazioni_equivalenza.html#prop-classe_equivalenza" class="xref" data-knowl="./knowl/xref/prop-classe_equivalenza.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 2.2.7">Proposizione 2.2.7</a> afferma inoltre che classi distinte hanno intersezione vuota. Pertanto, le classi formano una partizione.<div class="autopermalink" data-description="Capoverso"><a href="#thm-classi_equivalenza-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="para" id="thm-classi_equivalenza-2-2">Viceversa, data la partizione <span class="process-math">\(\{C_{i}\}_{i\in I}\text{,}\)</span> definiamo la relazione <span class="process-math">\(\approx\)</span> così: <span class="process-math">\(a\approx b\)</span> se esiste <span class="process-math">\(i\in I\)</span> tale che <span class="process-math">\(a\in C_{i}\)</span> e <span class="process-math">\(b\in C_{i}\text{.}\)</span> La relazione <span class="process-math">\(\approx\)</span> è chiaramente simmetrica. Poiché <span class="process-math">\(\bigcup_{i\in I}C_{i}=A\text{,}\)</span> per ogni <span class="process-math">\(a\in A\)</span> esiste un <span class="process-math">\(i\in I\)</span> tale che <span class="process-math">\(a\in C_{i}\text{:}\)</span> dunque, <span class="process-math">\(\approx\)</span> è riflessiva. Infine, se <span class="process-math">\(a\approx b\)</span> e <span class="process-math">\(b\approx c\text{,}\)</span> allora esistono <span class="process-math">\(i\)</span> e <span class="process-math">\(j\)</span> in <span class="process-math">\(I\)</span> tali che <span class="process-math">\(a\in C_{i}\text{,}\)</span> <span class="process-math">\(b\in C_{i}\text{,}\)</span> <span class="process-math">\(b\in C_{j}\)</span> e <span class="process-math">\(c\in C_{j}\text{.}\)</span> Dunque, <span class="process-math">\(C_{i}\cap C_{j}\)</span> contiene <span class="process-math">\(b\)</span> ed è, quindi, non vuoto: per definizione di partizione, ciò significa che <span class="process-math">\(i=j\)</span> e, di conseguenza, c’è un elemento della partizione che contiene sia <span class="process-math">\(a\)</span> che <span class="process-math">\(c\)</span> e, pertanto, <span class="process-math">\(a\approx c\text{,}\)</span> cioè <span class="process-math">\(\approx\)</span> è transitiva. Dato <span class="process-math">\(a\)</span> in <span class="process-math">\(A\text{,}\)</span> gli elementi a esso equivalenti sono tutti e soli quelli appartenenti all’unico <span class="process-math">\(C_{i}\)</span> contenente <span class="process-math">\(a\text{,}\)</span> cioè la classe di equivalenza di <span class="process-math">\(a\)</span> coincide con <span class="process-math">\(C_{i}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#thm-classi_equivalenza-2-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Dimostrazione 2.2.10.1"><a href="#thm-classi_equivalenza-2" title="Copy heading and permalink for Dimostrazione 2.2.10.1" aria-label="Copy heading and permalink for Dimostrazione 2.2.10.1">🔗</a></div></article></details><div class="para" id="sec-relazioni_equivalenza-13">Il teorema precedente ci dice che una relazione di equivalenza e la partizione ad essa associata sono essenzialmente due modi diversi di presentare le stesse informazioni.<div class="autopermalink" data-description="Capoverso"><a href="#sec-relazioni_equivalenza-13" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Dimostrazione 2.2.10.1"><a href="#thm-classi_equivalenza-2" title="Copy heading and permalink for Dimostrazione 2.2.10.1" aria-label="Copy heading and permalink for Dimostrazione 2.2.10.1">🔗</a></div>
+</article></details>
+<div class="para" id="sec-relazioni_equivalenza-13">Il teorema precedente ci dice che una relazione di equivalenza e la partizione ad essa associata sono essenzialmente due modi diversi di presentare le stesse informazioni.<div class="autopermalink" data-description="Capoverso"><a href="#sec-relazioni_equivalenza-13" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="example example-like" id="sec-relazioni_equivalenza-14"><h3 class="heading">
 <span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="sec-relazioni_equivalenza-14-1-1">Riprendiamo l’<a href="sec-relazioni_equivalenza.html#ex-equivalenze_banali" class="xref" data-knowl="./knowl/xref/ex-equivalenze_banali.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Esempio 2.2.3">Esempio 2.2.3</a>. Rispetto alla relazione di uguaglianza le classi di equivalenza sono esattamente i sottoinsiemi di <span class="process-math">\(A\)</span> formati da singoli elementi. Rispetto alla relazione di equivalenza in cui ogni elemento è in relazione con ogni altro elemento c’è invece un’unica classe e cioè <span class="process-math">\(A\)</span> stesso.<div class="autopermalink" data-description="Capoverso"><a href="#sec-relazioni_equivalenza-14-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Esempio 2.2.11"><a href="#sec-relazioni_equivalenza-14" title="Copy heading and permalink for Esempio 2.2.11" aria-label="Copy heading and permalink for Esempio 2.2.11">🔗</a></div></article><article class="example example-like" id="sec-relazioni_equivalenza-15"><h3 class="heading">
+<div class="autopermalink" data-description="Esempio 2.2.11"><a href="#sec-relazioni_equivalenza-14" title="Copy heading and permalink for Esempio 2.2.11" aria-label="Copy heading and permalink for Esempio 2.2.11">🔗</a></div>
+</article>
+<article class="example example-like" id="sec-relazioni_equivalenza-15"><h3 class="heading">
 <span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="sec-relazioni_equivalenza-15-1-1">Riprendiamo l’<a href="sec-relazioni_equivalenza.html#ex-valore_assoluto" class="xref" data-knowl="./knowl/xref/ex-valore_assoluto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Esempio 2.2.4">Esempio 2.2.4</a>. Ricordando che ciascun numero è in relazione con sé stesso e il proprio opposto, possiamo affermare che c’è una classe di equivalenza formata da unico numero reale, e cioè <span class="process-math">\(0\text{,}\)</span> mentre tutte le altre classi contengono esattamente due elementi.<div class="autopermalink" data-description="Capoverso"><a href="#sec-relazioni_equivalenza-15-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Esempio 2.2.12"><a href="#sec-relazioni_equivalenza-15" title="Copy heading and permalink for Esempio 2.2.12" aria-label="Copy heading and permalink for Esempio 2.2.12">🔗</a></div></article><section class="exercises" id="exercises-relazioni_equivalenza"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Esempio 2.2.12"><a href="#sec-relazioni_equivalenza-15" title="Copy heading and permalink for Esempio 2.2.12" aria-label="Copy heading and permalink for Esempio 2.2.12">🔗</a></div>
+</article>
+<section class="exercises" id="exercises-relazioni_equivalenza">
+<h3 class="heading hide-type">
 <span class="type">Esercizi</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Esercizi</span>
 </h3>
 <article class="exercise exercise-like" id="exercises-relazioni_equivalenza-1"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para" id="exercises-relazioni_equivalenza-1-1-1">Sia <span class="process-math">\(T\)</span> una relazione in un insieme <span class="process-math">\(A\text{.}\)</span> Dimostrare che <span class="process-math">\(T\)</span> è una relazione di equivalenza se e solo se soddisfa la proprietà riflessiva e la proprietà seguente: se <span class="process-math">\(a\mathrel{T}b\)</span> e <span class="process-math">\(a\mathrel{T}c\)</span> allora <span class="process-math">\(b\mathrel{T}c\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-relazioni_equivalenza-1-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Esercizio 2.2.1"><a href="#exercises-relazioni_equivalenza-1" title="Copy heading and permalink for Esercizio 2.2.1" aria-label="Copy heading and permalink for Esercizio 2.2.1">🔗</a></div></article><article class="exercise exercise-like" id="exercises-relazioni_equivalenza-2"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="autopermalink" data-description="Esercizio 2.2.1"><a href="#exercises-relazioni_equivalenza-1" title="Copy heading and permalink for Esercizio 2.2.1" aria-label="Copy heading and permalink for Esercizio 2.2.1">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-relazioni_equivalenza-2"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para" id="exercises-relazioni_equivalenza-2-1-1">In un insieme <span class="process-math">\(A\text{,}\)</span> siano date delle relazioni di equivalenza <span class="process-math">\(\{R_{i}\}_{i\in I}\)</span> pensate come sottoinsiemi di <span class="process-math">\(A\times A\text{.}\)</span> Dimostrare che <span class="process-math">\(\bigcap_{i\in I}R_{i}\)</span> è una relazione di equivalenza.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-relazioni_equivalenza-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Esercizio 2.2.2"><a href="#exercises-relazioni_equivalenza-2" title="Copy heading and permalink for Esercizio 2.2.2" aria-label="Copy heading and permalink for Esercizio 2.2.2">🔗</a></div></article><div class="exercisegroup" id="exercises-relazioni_equivalenza-3">
+<div class="autopermalink" data-description="Esercizio 2.2.2"><a href="#exercises-relazioni_equivalenza-2" title="Copy heading and permalink for Esercizio 2.2.2" aria-label="Copy heading and permalink for Esercizio 2.2.2">🔗</a></div>
+</article>
+<div class="exercisegroup" id="exercises-relazioni_equivalenza-3">
 <h4 class="heading"><span class="title">Gruppo di esercizi.</span></h4>
-<div class="introduction" id="exercises-relazioni_equivalenza-3-1"><div class="para" id="exercises-relazioni_equivalenza-3-1-1">Stabilire se le relazioni date sono di equivalenza e, in caso affermativo, determinare l’insieme quoziente.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-relazioni_equivalenza-3-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div></div>
+<div class="introduction" id="exercises-relazioni_equivalenza-3-1">
+<div class="para" id="exercises-relazioni_equivalenza-3-1-1">Stabilire se le relazioni date sono di equivalenza e, in caso affermativo, determinare l’insieme quoziente.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-relazioni_equivalenza-3-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+</div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercises-relazioni_equivalenza-3-2"><h5 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-relazioni_equivalenza-3-2-1-1">Nell’insieme degli interi <span class="process-math">\(\Interi\)</span> sia definita la relazione <span class="process-math">\(P\)</span> nel modo seguente <span class="process-math">\(a\mathrel{P}b\)</span> se <span class="process-math">\(a+b\)</span> è pari.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-relazioni_equivalenza-3-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-relazioni_equivalenza-3-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-relazioni_equivalenza-3-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-relazioni_equivalenza-3-2-2-1">La relazione <span class="process-math">\(P\)</span> è di equivalenza. L’insieme quoziente è formato da due elementi: la classe che contiene i numeri pari e la classe che contiene i numeri dispari.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-relazioni_equivalenza-3-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 2.2.3.1"><a href="#exercises-relazioni_equivalenza-3-2-2" title="Copy heading and permalink for Risposta 2.2.3.1" aria-label="Copy heading and permalink for Risposta 2.2.3.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 2.2.3"><a href="#exercises-relazioni_equivalenza-3-2" title="Copy heading and permalink for Esercizio 2.2.3" aria-label="Copy heading and permalink for Esercizio 2.2.3">🔗</a></div></article><article class="exercise exercise-like" id="exercises-relazioni_equivalenza-3-3"><h5 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 2.2.3"><a href="#exercises-relazioni_equivalenza-3-2" title="Copy heading and permalink for Esercizio 2.2.3" aria-label="Copy heading and permalink for Esercizio 2.2.3">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-relazioni_equivalenza-3-3"><h5 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-relazioni_equivalenza-3-3-1-1">Nell’insieme degli interi <span class="process-math">\(\Interi\)</span> sia definita la relazione <span class="process-math">\(D\)</span> nel modo seguente <span class="process-math">\(a\mathrel{D}b\)</span> se <span class="process-math">\(a+b\)</span> è dispari.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-relazioni_equivalenza-3-3-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-relazioni_equivalenza-3-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-relazioni_equivalenza-3-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-relazioni_equivalenza-3-3-2-1">La relazione non è di equivalenza: soddisfa solo la relazione simmetrica.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-relazioni_equivalenza-3-3-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 2.2.4.1"><a href="#exercises-relazioni_equivalenza-3-3-2" title="Copy heading and permalink for Risposta 2.2.4.1" aria-label="Copy heading and permalink for Risposta 2.2.4.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 2.2.4"><a href="#exercises-relazioni_equivalenza-3-3" title="Copy heading and permalink for Esercizio 2.2.4" aria-label="Copy heading and permalink for Esercizio 2.2.4">🔗</a></div></article><article class="exercise exercise-like" id="exercises-relazioni_equivalenza-3-4"><h5 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 2.2.4"><a href="#exercises-relazioni_equivalenza-3-3" title="Copy heading and permalink for Esercizio 2.2.4" aria-label="Copy heading and permalink for Esercizio 2.2.4">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-relazioni_equivalenza-3-4"><h5 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-relazioni_equivalenza-3-4-1-1">Nell’insieme degli interi <span class="process-math">\(\Interi\)</span> sia definita la relazione <span class="process-math">\(T\)</span> nel modo seguente <span class="process-math">\(a\mathrel{T}b\)</span> se <span class="process-math">\(a+b\)</span> è multiplo di <span class="process-math">\(3\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-relazioni_equivalenza-3-4-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-relazioni_equivalenza-3-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-relazioni_equivalenza-3-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-relazioni_equivalenza-3-4-2-1">La relazione non è di equivalenza: soddisfa solo la relazione simmetrica.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-relazioni_equivalenza-3-4-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 2.2.5.1"><a href="#exercises-relazioni_equivalenza-3-4-2" title="Copy heading and permalink for Risposta 2.2.5.1" aria-label="Copy heading and permalink for Risposta 2.2.5.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 2.2.5"><a href="#exercises-relazioni_equivalenza-3-4" title="Copy heading and permalink for Esercizio 2.2.5" aria-label="Copy heading and permalink for Esercizio 2.2.5">🔗</a></div></article><article class="exercise exercise-like" id="exercises-relazioni_equivalenza-3-5"><h5 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 2.2.5"><a href="#exercises-relazioni_equivalenza-3-4" title="Copy heading and permalink for Esercizio 2.2.5" aria-label="Copy heading and permalink for Esercizio 2.2.5">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-relazioni_equivalenza-3-5"><h5 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-relazioni_equivalenza-3-5-1-1">Nell’insieme degli interi <span class="process-math">\(\Interi\)</span> sia definita la relazione <span class="process-math">\(U\)</span> nel modo seguente <span class="process-math">\(a\mathrel{U}b\)</span> se <span class="process-math">\(ab\ge 0\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-relazioni_equivalenza-3-5-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-relazioni_equivalenza-3-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-relazioni_equivalenza-3-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-relazioni_equivalenza-3-5-2-1">La relazione non è di equivalenza: è riflessiva e simmetrica, ma non transitiva (<span class="process-math">\(1\)</span> e <span class="process-math">\(-1\)</span> non sono in relazione tra loro, ma sono entrambi in relazione con <span class="process-math">\(0\)</span>).<div class="autopermalink" data-description="Capoverso"><a href="#exercises-relazioni_equivalenza-3-5-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 2.2.6.1"><a href="#exercises-relazioni_equivalenza-3-5-2" title="Copy heading and permalink for Risposta 2.2.6.1" aria-label="Copy heading and permalink for Risposta 2.2.6.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 2.2.6"><a href="#exercises-relazioni_equivalenza-3-5" title="Copy heading and permalink for Esercizio 2.2.6" aria-label="Copy heading and permalink for Esercizio 2.2.6">🔗</a></div></article><article class="exercise exercise-like" id="exercises-relazioni_equivalenza-3-6"><h5 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 2.2.6"><a href="#exercises-relazioni_equivalenza-3-5" title="Copy heading and permalink for Esercizio 2.2.6" aria-label="Copy heading and permalink for Esercizio 2.2.6">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-relazioni_equivalenza-3-6"><h5 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-relazioni_equivalenza-3-6-1-1">Nell’insieme degli interi <span class="process-math">\(\Interi\)</span> sia definita la relazione <span class="process-math">\(V\)</span> nel modo seguente <span class="process-math">\(a\mathrel{V}b\)</span> se <span class="process-math">\(ab\gt 0\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-relazioni_equivalenza-3-6-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-relazioni_equivalenza-3-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-relazioni_equivalenza-3-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-relazioni_equivalenza-3-6-2-1">La relazione non è di equivalenza: è simmetrica e transitiva, ma non riflessiva (<span class="process-math">\(0\)</span> non è in relazione con sé stesso).<div class="autopermalink" data-description="Capoverso"><a href="#exercises-relazioni_equivalenza-3-6-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 2.2.7.1"><a href="#exercises-relazioni_equivalenza-3-6-2" title="Copy heading and permalink for Risposta 2.2.7.1" aria-label="Copy heading and permalink for Risposta 2.2.7.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 2.2.7"><a href="#exercises-relazioni_equivalenza-3-6" title="Copy heading and permalink for Esercizio 2.2.7" aria-label="Copy heading and permalink for Esercizio 2.2.7">🔗</a></div></article><article class="exercise exercise-like" id="exercises-relazioni_equivalenza-3-7"><h5 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 2.2.7"><a href="#exercises-relazioni_equivalenza-3-6" title="Copy heading and permalink for Esercizio 2.2.7" aria-label="Copy heading and permalink for Esercizio 2.2.7">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-relazioni_equivalenza-3-7"><h5 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-relazioni_equivalenza-3-7-1-1">Nell’insieme degli interi non nulli <span class="process-math">\(\Interi\setminus\{0\}\)</span> sia definita la relazione <span class="process-math">\(V\)</span> nel modo seguente <span class="process-math">\(a\mathrel{V}b\)</span> se <span class="process-math">\(ab\gt 0\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-relazioni_equivalenza-3-7-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-relazioni_equivalenza-3-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-relazioni_equivalenza-3-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-relazioni_equivalenza-3-7-2-1">La relazione è di equivalenza. L’insieme quoziente è formato da due elementi: la classe che contiene i numeri positivi e la classe che contiene i numeri negativi.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-relazioni_equivalenza-3-7-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 2.2.8.1"><a href="#exercises-relazioni_equivalenza-3-7-2" title="Copy heading and permalink for Risposta 2.2.8.1" aria-label="Copy heading and permalink for Risposta 2.2.8.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 2.2.8"><a href="#exercises-relazioni_equivalenza-3-7" title="Copy heading and permalink for Esercizio 2.2.8" aria-label="Copy heading and permalink for Esercizio 2.2.8">🔗</a></div></article>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 2.2.8"><a href="#exercises-relazioni_equivalenza-3-7" title="Copy heading and permalink for Esercizio 2.2.8" aria-label="Copy heading and permalink for Esercizio 2.2.8">🔗</a></div>
+</article>
 </div>
 <div class="autopermalink" data-description="Gruppo di esercizi 2.2.3–8"><a href="#exercises-relazioni_equivalenza-3" title="Copy heading and permalink for Gruppo di esercizi 2.2.3–8" aria-label="Copy heading and permalink for Gruppo di esercizi 2.2.3–8">🔗</a></div>
 </div>
 <article class="exercise exercise-like" id="exercises-relazioni_equivalenza-4"><h4 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para" id="exercises-relazioni_equivalenza-4-1-1">Sia data una collezione <span class="process-math">\(\{C_{i}\}_{i\in I}\)</span> di sottoinsiemi non vuoti di un insieme <span class="process-math">\(A\)</span> tali che <span class="process-math">\(\bigcup_{i\in I}C_{i}=A\)</span> e si definisca in <span class="process-math">\(A\)</span> la relazione <span class="process-math">\(\approx\)</span> così: <span class="process-math">\(a\approx b\)</span> se esiste <span class="process-math">\(i\in I\)</span> tale che <span class="process-math">\(a\in C_{i}\)</span> e <span class="process-math">\(b\in C_{i}\text{.}\)</span> Quali proprietà soddisfa questa relazione? Possiamo garantire che la relazione data è di equivalenza?<div class="autopermalink" data-description="Capoverso"><a href="#exercises-relazioni_equivalenza-4-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-relazioni_equivalenza-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-relazioni_equivalenza-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-relazioni_equivalenza-4-2-1">La relazione è riflessiva e simmetrica ma non necessariamente transitiva.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-relazioni_equivalenza-4-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 2.2.9.1"><a href="#exercises-relazioni_equivalenza-4-2" title="Copy heading and permalink for Risposta 2.2.9.1" aria-label="Copy heading and permalink for Risposta 2.2.9.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 2.2.9"><a href="#exercises-relazioni_equivalenza-4" title="Copy heading and permalink for Esercizio 2.2.9" aria-label="Copy heading and permalink for Esercizio 2.2.9">🔗</a></div></article><article class="exercise exercise-like" id="exercises-relazioni_equivalenza-5"><h4 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 2.2.9"><a href="#exercises-relazioni_equivalenza-4" title="Copy heading and permalink for Esercizio 2.2.9" aria-label="Copy heading and permalink for Esercizio 2.2.9">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-relazioni_equivalenza-5"><h4 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para" id="exercises-relazioni_equivalenza-5-1-1">Sia data una collezione <span class="process-math">\(\{C_{i}\}_{i\in I}\)</span> di sottoinsiemi non vuoti di un insieme <span class="process-math">\(A\)</span> tali che <span class="process-math">\(C_{i}\cap C_{j}=\vuoto\)</span> se <span class="process-math">\(i\ne j\)</span> e si definisca in <span class="process-math">\(A\)</span> la relazione <span class="process-math">\(\approx\)</span> così: <span class="process-math">\(a\approx b\)</span> se esiste <span class="process-math">\(i\in I\)</span> tale che <span class="process-math">\(a\in C_{i}\)</span> e <span class="process-math">\(b\in C_{i}\text{.}\)</span> Quali proprietà soddisfa questa relazione? Possiamo garantire che la relazione data è di equivalenza?<div class="autopermalink" data-description="Capoverso"><a href="#exercises-relazioni_equivalenza-5-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-relazioni_equivalenza-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-relazioni_equivalenza-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-relazioni_equivalenza-5-2-1">La relazione è simmetrica e transitiva ma non necessariamente riflessiva.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-relazioni_equivalenza-5-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 2.2.10.1"><a href="#exercises-relazioni_equivalenza-5-2" title="Copy heading and permalink for Risposta 2.2.10.1" aria-label="Copy heading and permalink for Risposta 2.2.10.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 2.2.10"><a href="#exercises-relazioni_equivalenza-5" title="Copy heading and permalink for Esercizio 2.2.10" aria-label="Copy heading and permalink for Esercizio 2.2.10">🔗</a></div></article><div class="autopermalink" data-description="Esercizi 2.2"><a href="#exercises-relazioni_equivalenza" title="Copy heading and permalink for Esercizi 2.2" aria-label="Copy heading and permalink for Esercizi 2.2">🔗</a></div></section><div class="autopermalink" data-description="Paragrafo 2.2: Relazioni di equivalenza"><a href="#sec-relazioni_equivalenza" title="Copy heading and permalink for Paragrafo 2.2: Relazioni di equivalenza" aria-label="Copy heading and permalink for Paragrafo 2.2: Relazioni di equivalenza">🔗</a></div></section></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 2.2.10"><a href="#exercises-relazioni_equivalenza-5" title="Copy heading and permalink for Esercizio 2.2.10" aria-label="Copy heading and permalink for Esercizio 2.2.10">🔗</a></div>
+</article><div class="autopermalink" data-description="Esercizi 2.2"><a href="#exercises-relazioni_equivalenza" title="Copy heading and permalink for Esercizi 2.2" aria-label="Copy heading and permalink for Esercizi 2.2">🔗</a></div>
+</section><div class="autopermalink" data-description="Paragrafo 2.2: Relazioni di equivalenza"><a href="#sec-relazioni_equivalenza" title="Copy heading and permalink for Paragrafo 2.2: Relazioni di equivalenza" aria-label="Copy heading and permalink for Paragrafo 2.2: Relazioni di equivalenza">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-corrispondenze_definizione.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-relazioni_ordine.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

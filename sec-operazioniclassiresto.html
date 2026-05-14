@@ -20,62 +20,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "textmacros",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[tex]/textmacros",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="Algebra">
@@ -102,15 +54,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.13.3';
+eBookConfig.runestone_version = '8.0.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.b76b8eace4405b9e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.bbf2283c5c1d4f99.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/prefix-runtime.ce7e0a2163cb330f.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.f4a2ffb04bb978bb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
 </script>
 </head>
@@ -714,7 +666,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-operazioniclassiresto"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-operazioniclassiresto">
+<h2 class="heading hide-type">
 <span class="type">Paragrafo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Operazioni tra classi di resto</span>
 </h2>
 <div class="para logical" id="sec-operazioniclassiresto-2">
@@ -734,9 +688,15 @@ eBookConfig.enable_chatcodes =  false;
 </h3>
 <div class="para" id="prop-compatibilitacongruenzamodulon-1-1">Sia <span class="process-math">\(n\)</span> un intero positivo fissato. Se <span class="process-math">\(a\equiv a'\pmod{n}\)</span> e <span class="process-math">\(b\equiv b'\pmod{n}\text{,}\)</span> allora <span class="process-math">\(a+b\equiv a'+b'\pmod{n}\)</span> e <span class="process-math">\(ab\equiv a'b'\pmod{n}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-compatibilitacongruenzamodulon-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposizione 6.2.1"><a href="#prop-compatibilitacongruenzamodulon" title="Copy heading and permalink for Proposizione 6.2.1" aria-label="Copy heading and permalink for Proposizione 6.2.1">🔗</a></div></article><details id="prop-compatibilitacongruenzamodulon-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-compatibilitacongruenzamodulon-2-1">Sappiamo che esistono interi <span class="process-math">\(h\)</span> e <span class="process-math">\(k\)</span> tali che <span class="process-math">\(a=a'+hn\)</span> e <span class="process-math">\(b=b'+kn\text{.}\)</span> Ora <span class="process-math">\(a+b=a'+hn+b'+kn=a'+b'+(h+k)n\)</span> e <span class="process-math">\(ab=(a'+hn)(b'+kn)=a'b'+(hb'+ka'+hkn)n\text{,}\)</span> da cui segue la tesi.<div class="autopermalink" data-description="Capoverso"><a href="#prop-compatibilitacongruenzamodulon-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Proposizione 6.2.1"><a href="#prop-compatibilitacongruenzamodulon" title="Copy heading and permalink for Proposizione 6.2.1" aria-label="Copy heading and permalink for Proposizione 6.2.1">🔗</a></div>
+</article>
+<details id="prop-compatibilitacongruenzamodulon-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="prop-compatibilitacongruenzamodulon-2-1">Sappiamo che esistono interi <span class="process-math">\(h\)</span> e <span class="process-math">\(k\)</span> tali che <span class="process-math">\(a=a'+hn\)</span> e <span class="process-math">\(b=b'+kn\text{.}\)</span> Ora <span class="process-math">\(a+b=a'+hn+b'+kn=a'+b'+(h+k)n\)</span> e <span class="process-math">\(ab=(a'+hn)(b'+kn)=a'b'+(hb'+ka'+hkn)n\text{,}\)</span> da cui segue la tesi.<div class="autopermalink" data-description="Capoverso"><a href="#prop-compatibilitacongruenzamodulon-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Dimostrazione 6.2.1.1"><a href="#prop-compatibilitacongruenzamodulon-2" title="Copy heading and permalink for Dimostrazione 6.2.1.1" aria-label="Copy heading and permalink for Dimostrazione 6.2.1.1">🔗</a></div></article></details><div class="para" id="sec-operazioniclassiresto-4">Le operazioni tra classi di resto sono, dunque, ben definite: il risultato non dipende dai rappresentanti scelti.<div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-4" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Dimostrazione 6.2.1.1"><a href="#prop-compatibilitacongruenzamodulon-2" title="Copy heading and permalink for Dimostrazione 6.2.1.1" aria-label="Copy heading and permalink for Dimostrazione 6.2.1.1">🔗</a></div>
+</article></details>
+<div class="para" id="sec-operazioniclassiresto-4">Le operazioni tra classi di resto sono, dunque, ben definite: il risultato non dipende dai rappresentanti scelti.<div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-4" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-operazioniclassiresto"><h3 class="heading">
 <span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -751,12 +711,16 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#def-operazioniclassiresto-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definizione 6.2.2"><a href="#def-operazioniclassiresto" title="Copy heading and permalink for Definizione 6.2.2" aria-label="Copy heading and permalink for Definizione 6.2.2">🔗</a></div></article><article class="note remark-like" id="sec-operazioniclassiresto-6"><h3 class="heading">
+<div class="autopermalink" data-description="Definizione 6.2.2"><a href="#def-operazioniclassiresto" title="Copy heading and permalink for Definizione 6.2.2" aria-label="Copy heading and permalink for Definizione 6.2.2">🔗</a></div>
+</article>
+<article class="note remark-like" id="sec-operazioniclassiresto-6"><h3 class="heading">
 <span class="type">Nota</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="sec-operazioniclassiresto-6-1">Le operazioni sono definite tra classi di resto rispetto a uno stesso intero: non ha senso sommare o moltiplicare <span class="process-math">\(\class[n]{a}\)</span> e <span class="process-math">\(\class[m]{b}\)</span> se <span class="process-math">\(n\)</span> e <span class="process-math">\(m\)</span> sono diversi.<div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-6-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Nota 6.2.3"><a href="#sec-operazioniclassiresto-6" title="Copy heading and permalink for Nota 6.2.3" aria-label="Copy heading and permalink for Nota 6.2.3">🔗</a></div></article><div class="para" id="sec-operazioniclassiresto-7">Come per la moltiplicazione tra interi, indicheremo semplicemente con <span class="process-math">\(\class[n]{a}\class[n]{b}\)</span> il prodotto <span class="process-math">\(\class[n]{a}\cdot\class[n]{b}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-7" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Nota 6.2.3"><a href="#sec-operazioniclassiresto-6" title="Copy heading and permalink for Nota 6.2.3" aria-label="Copy heading and permalink for Nota 6.2.3">🔗</a></div>
+</article>
+<div class="para" id="sec-operazioniclassiresto-7">Come per la moltiplicazione tra interi, indicheremo semplicemente con <span class="process-math">\(\class[n]{a}\class[n]{b}\)</span> il prodotto <span class="process-math">\(\class[n]{a}\cdot\class[n]{b}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-7" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="para" id="sec-operazioniclassiresto-8">Le operazioni tra classi di resto ereditano molte delle proprietà delle operazioni tra interi.<div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-8" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
@@ -764,7 +728,8 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Proposizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="prop-anello_degli_classi_di_resto-1-1">Le operazioni di addizione e moltiplicazione definite nell’insieme delle classi di resto <span class="process-math">\(\Interi/n\)</span> soddisfano le seguenti proprietà:<div class="autopermalink" data-description="Capoverso"><a href="#prop-anello_degli_classi_di_resto-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div> <div class="para logical" id="prop-anello_degli_classi_di_resto-1-2">
+</div> 
+<div class="para logical" id="prop-anello_degli_classi_di_resto-1-2">
 <ol class="decimal" id="prop-anello_degli_classi_di_resto-1-2-1">
 <li id="addizione_classi_di_resto_associativa">
 <div class="para" id="addizione_classi_di_resto_associativa-1">
@@ -816,7 +781,11 @@ eBookConfig.enable_chatcodes =  false;
 </ol>
 <div class="autopermalink" data-description="Capoverso"><a href="#prop-anello_degli_classi_di_resto-1-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposizione 6.2.4"><a href="#prop-anello_degli_classi_di_resto" title="Copy heading and permalink for Proposizione 6.2.4" aria-label="Copy heading and permalink for Proposizione 6.2.4">🔗</a></div></article><details id="prop-anello_degli_classi_di_resto-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="prop-anello_degli_classi_di_resto-2-1">
+<div class="autopermalink" data-description="Proposizione 6.2.4"><a href="#prop-anello_degli_classi_di_resto" title="Copy heading and permalink for Proposizione 6.2.4" aria-label="Copy heading and permalink for Proposizione 6.2.4">🔗</a></div>
+</article>
+<details id="prop-anello_degli_classi_di_resto-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="prop-anello_degli_classi_di_resto-2-1">
 <div class="para">Dimostriamo solo il <a href="sec-operazioniclassiresto.html#addizione_classi_di_resto_associativa" class="xref" data-knowl="./knowl/xref/addizione_classi_di_resto_associativa.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 1">Punto 1</a> e lasciamo il resto per esercizio. Abbiamo</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/addizione_classi_di_resto_associativa.html" id="prop-anello_degli_classi_di_resto-2-1-2">
 \begin{align*}
@@ -829,18 +798,25 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#prop-anello_degli_classi_di_resto-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Dimostrazione 6.2.4.1"><a href="#prop-anello_degli_classi_di_resto-2" title="Copy heading and permalink for Dimostrazione 6.2.4.1" aria-label="Copy heading and permalink for Dimostrazione 6.2.4.1">🔗</a></div></article></details><div class="para" id="sec-operazioniclassiresto-10">La proposizione precedente ci dice, in pratica, che l’insieme delle classi di resto modulo <span class="process-math">\(n\)</span> con le operazioni che abbiamo definito è un anello commutativo (vedi <a href="sec-prime_proprieta_anelli.html#def-anello" class="xref" data-knowl="./knowl/xref/def-anello.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Definizione 18.1.1">Definizione 18.1.1</a>). Come fatto nel <a href="ch-matrici.html" class="internal" title="Capitolo 4: Matrici">Capitolo 4</a>, possiamo quindi considerare le matrici a coefficienti in <span class="process-math">\(\Interi/n\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-10" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Dimostrazione 6.2.4.1"><a href="#prop-anello_degli_classi_di_resto-2" title="Copy heading and permalink for Dimostrazione 6.2.4.1" aria-label="Copy heading and permalink for Dimostrazione 6.2.4.1">🔗</a></div>
+</article></details>
+<div class="para" id="sec-operazioniclassiresto-10">La proposizione precedente ci dice, in pratica, che l’insieme delle classi di resto modulo <span class="process-math">\(n\)</span> con le operazioni che abbiamo definito è un anello commutativo (vedi <a href="sec-prime_proprieta_anelli.html#def-anello" class="xref" data-knowl="./knowl/xref/def-anello.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Definizione 18.1.1">Definizione 18.1.1</a>). Come fatto nel <a href="ch-matrici.html" class="internal" title="Capitolo 4: Matrici">Capitolo 4</a>, possiamo quindi considerare le matrici a coefficienti in <span class="process-math">\(\Interi/n\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-10" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="note remark-like" id="sec-operazioniclassiresto-11"><h3 class="heading">
 <span class="type">Nota</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="sec-operazioniclassiresto-11-1">Il fatto che le operazioni siano associative ci permette di usare scritture del tipo <span class="process-math">\(\class[n]{a}+\class[n]{b}+\class[n]{c}\)</span> e <span class="process-math">\(\class[n]{a}\class[n]{b}\class[n]{c}\)</span> senza ambiguità. Nelle prossime dimostrazioni useremo spesso le proprietà associative senza dichiararlo in maniera esplicita. È però importante sapere quando effettivamente vengono usate.<div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-11-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Nota 6.2.5"><a href="#sec-operazioniclassiresto-11" title="Copy heading and permalink for Nota 6.2.5" aria-label="Copy heading and permalink for Nota 6.2.5">🔗</a></div></article><div class="para" id="sec-operazioniclassiresto-12">Diamo ora le tabelle delle operazioni per le classi di resto modulo <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(3\)</span> e <span class="process-math">\(4\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-12" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Nota 6.2.5"><a href="#sec-operazioniclassiresto-11" title="Copy heading and permalink for Nota 6.2.5" aria-label="Copy heading and permalink for Nota 6.2.5">🔗</a></div>
+</article>
+<div class="para" id="sec-operazioniclassiresto-12">Diamo ora le tabelle delle operazioni per le classi di resto modulo <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(3\)</span> e <span class="process-math">\(4\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-12" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<figure class="figure figure-like" id="tabelle_classi_di_resto"><div class="sbsgroup">
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:50% 50%;column-gap:0%;">
-<div class="sbspanel sbspanel--top top" style=""><div class="para logical" id="tabelle_classi_di_resto-2-1-1">
+<figure class="figure figure-like" id="tabelle_classi_di_resto">
+<div class="sbsgroup">
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:50% 50%;column-gap:0%;">
+<div class="sbspanel sbspanel--top top" style="">
+<div class="para logical" id="tabelle_classi_di_resto-2-1-1">
 <div class="displaymath process-math" id="tabelle_classi_di_resto-2-1-1-1">
 \begin{equation*}
 \begin{array}{c|c}
@@ -851,8 +827,10 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#tabelle_classi_di_resto-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div></div>
-<div class="sbspanel sbspanel--top top" style=""><div class="para logical" id="tabelle_classi_di_resto-2-1-2">
+</div>
+</div>
+<div class="sbspanel sbspanel--top top" style="">
+<div class="para logical" id="tabelle_classi_di_resto-2-1-2">
 <div class="displaymath process-math" id="tabelle_classi_di_resto-2-1-2-1">
 \begin{equation*}
 \begin{array}{c|c}
@@ -863,10 +841,14 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#tabelle_classi_di_resto-2-1-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div></div>
-</div></div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:50% 50%;column-gap:0%;">
-<div class="sbspanel sbspanel--top top" style=""><div class="para logical" id="tabelle_classi_di_resto-2-2-1">
+</div>
+</div>
+</div>
+</div>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:50% 50%;column-gap:0%;">
+<div class="sbspanel sbspanel--top top" style="">
+<div class="para logical" id="tabelle_classi_di_resto-2-2-1">
 <div class="displaymath process-math" id="tabelle_classi_di_resto-2-2-1-1">
 \begin{equation*}
 \begin{array}{c|cc}
@@ -878,8 +860,10 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#tabelle_classi_di_resto-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div></div>
-<div class="sbspanel sbspanel--top top" style=""><div class="para logical" id="tabelle_classi_di_resto-2-2-2">
+</div>
+</div>
+<div class="sbspanel sbspanel--top top" style="">
+<div class="para logical" id="tabelle_classi_di_resto-2-2-2">
 <div class="displaymath process-math" id="tabelle_classi_di_resto-2-2-2-1">
 \begin{equation*}
 \begin{array}{c|cc}
@@ -891,10 +875,14 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#tabelle_classi_di_resto-2-2-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div></div>
-</div></div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:50% 50%;column-gap:0%;">
-<div class="sbspanel sbspanel--top top" style=""><div class="para logical" id="tabelle_classi_di_resto-2-3-1">
+</div>
+</div>
+</div>
+</div>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:50% 50%;column-gap:0%;">
+<div class="sbspanel sbspanel--top top" style="">
+<div class="para logical" id="tabelle_classi_di_resto-2-3-1">
 <div class="displaymath process-math" id="tabelle_classi_di_resto-2-3-1-1">
 \begin{equation*}
 \begin{array}{c|ccc}
@@ -907,8 +895,10 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#tabelle_classi_di_resto-2-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div></div>
-<div class="sbspanel sbspanel--top top" style=""><div class="para logical" id="tabelle_classi_di_resto-2-3-2">
+</div>
+</div>
+<div class="sbspanel sbspanel--top top" style="">
+<div class="para logical" id="tabelle_classi_di_resto-2-3-2">
 <div class="displaymath process-math" id="tabelle_classi_di_resto-2-3-2-1">
 \begin{equation*}
 \begin{array}{c|ccc}
@@ -921,10 +911,14 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#tabelle_classi_di_resto-2-3-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div></div>
-</div></div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:50% 50%;column-gap:0%;">
-<div class="sbspanel sbspanel--top top" style=""><div class="para logical" id="tabelle_classi_di_resto-2-4-1">
+</div>
+</div>
+</div>
+</div>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:50% 50%;column-gap:0%;">
+<div class="sbspanel sbspanel--top top" style="">
+<div class="para logical" id="tabelle_classi_di_resto-2-4-1">
 <div class="displaymath process-math" id="tabelle_classi_di_resto-2-4-1-1">
 \begin{equation*}
 \begin{array}{c|cccc}
@@ -938,8 +932,10 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#tabelle_classi_di_resto-2-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div></div>
-<div class="sbspanel sbspanel--top top" style=""><div class="para logical" id="tabelle_classi_di_resto-2-4-2">
+</div>
+</div>
+<div class="sbspanel sbspanel--top top" style="">
+<div class="para logical" id="tabelle_classi_di_resto-2-4-2">
 <div class="displaymath process-math" id="tabelle_classi_di_resto-2-4-2-1">
 \begin{equation*}
 \begin{array}{c|cccc}
@@ -953,17 +949,25 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#tabelle_classi_di_resto-2-4-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div></div>
-</div></div>
 </div>
-<figcaption><span class="type">Figura</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Tabelle delle operazioni in <span class="process-math">\(\Interi/n\)</span> per <span class="process-math">\(1\le n\le 4\)</span><div class="autopermalink" data-description="Figura 6.2.6"><a href="#tabelle_classi_di_resto" title="Copy heading and permalink for Figura 6.2.6" aria-label="Copy heading and permalink for Figura 6.2.6">🔗</a></div></figcaption></figure><div class="para" id="sec-operazioniclassiresto-14">Le operazioni modulo <span class="process-math">\(1\)</span> non sono molto interessanti: c’è un’unica classe di resto. Ispezionando le varie tabelle notiamo alcuni fatti. Le tabelle rispetto all’addizione riportano in ciascuna riga e in ciascuna colonna tutte le classi di resto: vedremo che questo fatto ha validità generale e ne daremo una spiegazione un po’ più formale (<a href="sec-gruppi.html#rem-tabelle-cayley-gruppi" class="xref" data-knowl="./knowl/xref/rem-tabelle-cayley-gruppi.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Osservazione 8.2.12">Osservazione 8.2.12</a>). Rispetto alla moltiplicazione, notiamo invece che la colonna e la riga corrispondenti alla classe <span class="process-math">\(\class[n]{0}\)</span> contiene tutti <span class="process-math">\(\class[n]{0}\text{:}\)</span> per <span class="process-math">\(n=2\)</span> e <span class="process-math">\(n=3\text{,}\)</span> queste sono le uniche occorrenze di <span class="process-math">\(\class[n]{0}\text{,}\)</span> mentre per <span class="process-math">\(n=4\)</span> c’è un’altra occorrenza. Sempre per <span class="process-math">\(n=4\text{,}\)</span> notiamo inoltre che sulla riga e sulla colonna corrispondenti a <span class="process-math">\(\class[4]{2}\)</span> la classe <span class="process-math">\(\class[4]{2}\)</span> compare due volte. Vediamo a quali proprietà generali corrispondono queste osservazioni.<div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-14" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+</div>
+</div>
+</div>
+<figcaption><span class="type">Figura</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Tabelle delle operazioni in <span class="process-math">\(\Interi/n\)</span> per <span class="process-math">\(1\le n\le 4\)</span><div class="autopermalink" data-description="Figura 6.2.6"><a href="#tabelle_classi_di_resto" title="Copy heading and permalink for Figura 6.2.6" aria-label="Copy heading and permalink for Figura 6.2.6">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="sec-operazioniclassiresto-14">Le operazioni modulo <span class="process-math">\(1\)</span> non sono molto interessanti: c’è un’unica classe di resto. Ispezionando le varie tabelle notiamo alcuni fatti. Le tabelle rispetto all’addizione riportano in ciascuna riga e in ciascuna colonna tutte le classi di resto: vedremo che questo fatto ha validità generale e ne daremo una spiegazione un po’ più formale (<a href="sec-gruppi.html#rem-tabelle-cayley-gruppi" class="xref" data-knowl="./knowl/xref/rem-tabelle-cayley-gruppi.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Osservazione 8.2.12">Osservazione 8.2.12</a>). Rispetto alla moltiplicazione, notiamo invece che la colonna e la riga corrispondenti alla classe <span class="process-math">\(\class[n]{0}\)</span> contiene tutti <span class="process-math">\(\class[n]{0}\text{:}\)</span> per <span class="process-math">\(n=2\)</span> e <span class="process-math">\(n=3\text{,}\)</span> queste sono le uniche occorrenze di <span class="process-math">\(\class[n]{0}\text{,}\)</span> mentre per <span class="process-math">\(n=4\)</span> c’è un’altra occorrenza. Sempre per <span class="process-math">\(n=4\text{,}\)</span> notiamo inoltre che sulla riga e sulla colonna corrispondenti a <span class="process-math">\(\class[4]{2}\)</span> la classe <span class="process-math">\(\class[4]{2}\)</span> compare due volte. Vediamo a quali proprietà generali corrispondono queste osservazioni.<div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-14" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="proposition theorem-like" id="prop-cancellazione_addizione_classi_di_resto"><h3 class="heading">
 <span class="type">Proposizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Legge di cancellazione per l’addizione.</span>
 </h3>
 <div class="para" id="prop-cancellazione_addizione_classi_di_resto-2-1">Sia <span class="process-math">\(n\)</span> un intero positivo. Se <span class="process-math">\(\class[n]{a}\text{,}\)</span> <span class="process-math">\(\class[n]{b}\)</span> e <span class="process-math">\(\class[n]{c}\)</span> sono tre classi tali che <span class="process-math">\(\class[n]{a}+\class[n]{b}=\class[n]{a}+\class[n]{c}\text{,}\)</span> allora <span class="process-math">\(\class[n]{b}=\class[n]{c}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-cancellazione_addizione_classi_di_resto-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposizione 6.2.7: Legge di cancellazione per l’addizione"><a href="#prop-cancellazione_addizione_classi_di_resto" title="Copy heading and permalink for Proposizione 6.2.7: Legge di cancellazione per l’addizione" aria-label="Copy heading and permalink for Proposizione 6.2.7: Legge di cancellazione per l’addizione">🔗</a></div></article><details id="prop-cancellazione_addizione_classi_di_resto-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="prop-cancellazione_addizione_classi_di_resto-3-1">
+<div class="autopermalink" data-description="Proposizione 6.2.7: Legge di cancellazione per l’addizione"><a href="#prop-cancellazione_addizione_classi_di_resto" title="Copy heading and permalink for Proposizione 6.2.7: Legge di cancellazione per l’addizione" aria-label="Copy heading and permalink for Proposizione 6.2.7: Legge di cancellazione per l’addizione">🔗</a></div>
+</article>
+<details id="prop-cancellazione_addizione_classi_di_resto-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="prop-cancellazione_addizione_classi_di_resto-3-1">
 <div class="para">Sappiamo che esiste una classe <span class="process-math">\(\class[n]{d}\)</span> tale che <span class="process-math">\(\class[n]{d}+\class[n]{a}=\class[n]{0}\)</span> con <span class="process-math">\(\class[n]{0}\)</span> elemento neutro. Abbiamo allora</div>
 <div class="displaymath process-math" id="prop-cancellazione_addizione_classi_di_resto-3-1-4">
 \begin{equation*}
@@ -986,16 +990,24 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#prop-cancellazione_addizione_classi_di_resto-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Dimostrazione 6.2.7.1"><a href="#prop-cancellazione_addizione_classi_di_resto-3" title="Copy heading and permalink for Dimostrazione 6.2.7.1" aria-label="Copy heading and permalink for Dimostrazione 6.2.7.1">🔗</a></div></article></details><div class="para" id="sec-operazioniclassiresto-16">Nella proposizione precedente abbiamo usato solo le proprietà formali dell’operazione di addizione. Questa stessa dimostrazione potrà essere utilizzata in un contesto più generale e più astratto (<a href="sec-gruppi.html#prop-cancellazione_gruppo" class="xref" data-knowl="./knowl/xref/prop-cancellazione_gruppo.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 8.2.10: Leggi di cancellazione">Leggi di cancellazione</a>). Un’altra proprietà che può essere dimostrata in maniera astratta è il fatto che <span class="process-math">\(\class[n]{a}\class[n]{0}=\class[n]{0}\text{:}\)</span> ovviamente può essere facilmente verificata in maniera diretta, ma proviamo lo stesso a darne una dimostrazione che, seppur più lunga, è più generale e potrà essere utilizzata in altri contesti.<div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-16" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Dimostrazione 6.2.7.1"><a href="#prop-cancellazione_addizione_classi_di_resto-3" title="Copy heading and permalink for Dimostrazione 6.2.7.1" aria-label="Copy heading and permalink for Dimostrazione 6.2.7.1">🔗</a></div>
+</article></details>
+<div class="para" id="sec-operazioniclassiresto-16">Nella proposizione precedente abbiamo usato solo le proprietà formali dell’operazione di addizione. Questa stessa dimostrazione potrà essere utilizzata in un contesto più generale e più astratto (<a href="sec-gruppi.html#prop-cancellazione_gruppo" class="xref" data-knowl="./knowl/xref/prop-cancellazione_gruppo.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 8.2.10: Leggi di cancellazione">Leggi di cancellazione</a>). Un’altra proprietà che può essere dimostrata in maniera astratta è il fatto che <span class="process-math">\(\class[n]{a}\class[n]{0}=\class[n]{0}\text{:}\)</span> ovviamente può essere facilmente verificata in maniera diretta, ma proviamo lo stesso a darne una dimostrazione che, seppur più lunga, è più generale e potrà essere utilizzata in altri contesti.<div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-16" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="corollary theorem-like" id="cor-classe_zero_assorbente"><h3 class="heading">
 <span class="type">Corollario</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="cor-classe_zero_assorbente-1-1">Sia <span class="process-math">\(n\)</span> un intero positivo. Per ogni <span class="process-math">\(\class[n]{a}\in\Interi/n\)</span> si ha <span class="process-math">\(\class[n]{a}\class[n]{0}=\class[n]{0}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#cor-classe_zero_assorbente-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollario 6.2.8"><a href="#cor-classe_zero_assorbente" title="Copy heading and permalink for Corollario 6.2.8" aria-label="Copy heading and permalink for Corollario 6.2.8">🔗</a></div></article><details id="cor-classe_zero_assorbente-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="cor-classe_zero_assorbente-2-1">Poiché <span class="process-math">\(\class[n]{0}\)</span> è elemento neutro per l’addizione, sappiamo che <span class="process-math">\(\class[n]{0}+\class[n]{0}=\class[n]{0}\text{:}\)</span> moltiplicando ambo i membri per <span class="process-math">\(\class[n]{a}\)</span> otteniamo <span class="process-math">\(\class[n]{a}(\class[n]{0}+\class[n]{0})=\class[n]{a}\class[n]{0}\)</span> che, per la proprietà distributiva dà  <span class="process-math">\(\class[n]{a}\class[n]{0}+\class[n]{a}\class[n]{0}=\class[n]{a}\class[n]{0}\text{.}\)</span> Usando ancora una volta il fatto che <span class="process-math">\(\class[n]{0}\)</span> è elemento neutro, otteniamo <span class="process-math">\(\class[n]{a}\class[n]{0}+\class[n]{a}\class[n]{0}=\class[n]{a}\class[n]{0}+\class[n]{0}\)</span> da cui segue la tesi, grazie alla <a href="sec-operazioniclassiresto.html#prop-cancellazione_addizione_classi_di_resto" class="xref" data-knowl="./knowl/xref/prop-cancellazione_addizione_classi_di_resto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 6.2.7: Legge di cancellazione per l’addizione">Legge di cancellazione per l’addizione</a>.<div class="autopermalink" data-description="Capoverso"><a href="#cor-classe_zero_assorbente-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Corollario 6.2.8"><a href="#cor-classe_zero_assorbente" title="Copy heading and permalink for Corollario 6.2.8" aria-label="Copy heading and permalink for Corollario 6.2.8">🔗</a></div>
+</article>
+<details id="cor-classe_zero_assorbente-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="cor-classe_zero_assorbente-2-1">Poiché <span class="process-math">\(\class[n]{0}\)</span> è elemento neutro per l’addizione, sappiamo che <span class="process-math">\(\class[n]{0}+\class[n]{0}=\class[n]{0}\text{:}\)</span> moltiplicando ambo i membri per <span class="process-math">\(\class[n]{a}\)</span> otteniamo <span class="process-math">\(\class[n]{a}(\class[n]{0}+\class[n]{0})=\class[n]{a}\class[n]{0}\)</span> che, per la proprietà distributiva dà  <span class="process-math">\(\class[n]{a}\class[n]{0}+\class[n]{a}\class[n]{0}=\class[n]{a}\class[n]{0}\text{.}\)</span> Usando ancora una volta il fatto che <span class="process-math">\(\class[n]{0}\)</span> è elemento neutro, otteniamo <span class="process-math">\(\class[n]{a}\class[n]{0}+\class[n]{a}\class[n]{0}=\class[n]{a}\class[n]{0}+\class[n]{0}\)</span> da cui segue la tesi, grazie alla <a href="sec-operazioniclassiresto.html#prop-cancellazione_addizione_classi_di_resto" class="xref" data-knowl="./knowl/xref/prop-cancellazione_addizione_classi_di_resto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 6.2.7: Legge di cancellazione per l’addizione">Legge di cancellazione per l’addizione</a>.<div class="autopermalink" data-description="Capoverso"><a href="#cor-classe_zero_assorbente-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Dimostrazione 6.2.8.1"><a href="#cor-classe_zero_assorbente-2" title="Copy heading and permalink for Dimostrazione 6.2.8.1" aria-label="Copy heading and permalink for Dimostrazione 6.2.8.1">🔗</a></div></article></details><div class="para" id="sec-operazioniclassiresto-18">Notiamo ora che gli elementi del tipo <span class="process-math">\(\class[n]{a}+\class[n]{x}\)</span> al variare di <span class="process-math">\(\class[n]{x}\)</span> in <span class="process-math">\(\Interi/n\)</span> sono quelli che stanno su una riga (e su una colonna) della tabella dell’operazione di addizione. La <a href="sec-operazioniclassiresto.html#prop-cancellazione_addizione_classi_di_resto" class="xref" data-knowl="./knowl/xref/prop-cancellazione_addizione_classi_di_resto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 6.2.7: Legge di cancellazione per l’addizione">Legge di cancellazione per l’addizione</a> ci dice che questi elementi sono tutti diversi e, quindi, che su ciascuna riga (e colonna) non ci sono ripetizioni. Dunque, dato che <span class="process-math">\(\Interi/n\)</span> è un insieme finito, su ciascuna riga e colonna appaiono tutti gli elementi di <span class="process-math">\(\Interi/n\text{,}\)</span> ciascuno esattamente una volta, fatto che avevamo già notato negli esempi ma che ora sappiamo avere validità generale.<div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-18" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Dimostrazione 6.2.8.1"><a href="#cor-classe_zero_assorbente-2" title="Copy heading and permalink for Dimostrazione 6.2.8.1" aria-label="Copy heading and permalink for Dimostrazione 6.2.8.1">🔗</a></div>
+</article></details>
+<div class="para" id="sec-operazioniclassiresto-18">Notiamo ora che gli elementi del tipo <span class="process-math">\(\class[n]{a}+\class[n]{x}\)</span> al variare di <span class="process-math">\(\class[n]{x}\)</span> in <span class="process-math">\(\Interi/n\)</span> sono quelli che stanno su una riga (e su una colonna) della tabella dell’operazione di addizione. La <a href="sec-operazioniclassiresto.html#prop-cancellazione_addizione_classi_di_resto" class="xref" data-knowl="./knowl/xref/prop-cancellazione_addizione_classi_di_resto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 6.2.7: Legge di cancellazione per l’addizione">Legge di cancellazione per l’addizione</a> ci dice che questi elementi sono tutti diversi e, quindi, che su ciascuna riga (e colonna) non ci sono ripetizioni. Dunque, dato che <span class="process-math">\(\Interi/n\)</span> è un insieme finito, su ciascuna riga e colonna appaiono tutti gli elementi di <span class="process-math">\(\Interi/n\text{,}\)</span> ciascuno esattamente una volta, fatto che avevamo già notato negli esempi ma che ora sappiamo avere validità generale.<div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-18" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="para" id="sec-operazioniclassiresto-19">Per quanto riguarda la moltiplicazione ci chiediamo se possiamo dare una legge di cancellazione del tipo: se <span class="process-math">\(\class[n]{a}\class[n]{b}=\class[n]{a}\class[n]{c}\)</span> allora <span class="process-math">\(\class[n]{b}=\class[n]{c}\text{?}\)</span> Dobbiamo innanzitutto supporre che <span class="process-math">\(\class[n]{a}\ne\class[n]{0}\text{:}\)</span> infatti, <span class="process-math">\(\class[n]{0}\class[n]{b}=\class[n]{0}\)</span> per ogni <span class="process-math">\(\class[n]{b}\text{.}\)</span> Ma la tabella rispetto a <span class="process-math">\(n=4\)</span> ci mostra che in generale anche questo non è sufficiente: infatti, <span class="process-math">\(\class[4]{2}\class[4]{1}=\class[4]{2}\class[4]{3}\)</span> e, quindi, non possiamo semplificare <span class="process-math">\(\class[4]{2}\text{.}\)</span> D’altra parte ci sono righe e colonne sulle tabelle rispetto alla moltiplicazione in cui non ci sono ripetizioni e, quindi, possiamo semplificare gli elementi corrispondenti. Per poter studiare questa situazione ci occorre innanzitutto la<div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-19" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
@@ -1004,12 +1016,16 @@ eBookConfig.enable_chatcodes =  false;
 </h3>
 <div class="para" id="def-classe_resto_invertibile-1-1">Sia <span class="process-math">\(n\)</span> un intero positivo. Una classe di resto <span class="process-math">\(\class[n]{a}\)</span> è detta <dfn class="terminology">invertibile</dfn> se esiste una classe di resto <span class="process-math">\(\class[n]{b}\)</span> tale che <span class="process-math">\(\class[n]{a}\class[n]{b}=\class[n]{1}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#def-classe_resto_invertibile-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definizione 6.2.9"><a href="#def-classe_resto_invertibile" title="Copy heading and permalink for Definizione 6.2.9" aria-label="Copy heading and permalink for Definizione 6.2.9">🔗</a></div></article><article class="example example-like" id="sec-operazioniclassiresto-21"><h3 class="heading">
+<div class="autopermalink" data-description="Definizione 6.2.9"><a href="#def-classe_resto_invertibile" title="Copy heading and permalink for Definizione 6.2.9" aria-label="Copy heading and permalink for Definizione 6.2.9">🔗</a></div>
+</article>
+<article class="example example-like" id="sec-operazioniclassiresto-21"><h3 class="heading">
 <span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="sec-operazioniclassiresto-21-1-1">Chiaramente <span class="process-math">\(\class[n]{1}\)</span> è invertibile qualunque sia <span class="process-math">\(n\text{.}\)</span> Esistono però altri casi: ad esempio, <span class="process-math">\(\class[5]{2}\class[5]{3}=\class[5]{1}\text{,}\)</span> oppure <span class="process-math">\(\class[18]{5}\class[18]{11}=\class[18]{1}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-21-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Esempio 6.2.10"><a href="#sec-operazioniclassiresto-21" title="Copy heading and permalink for Esempio 6.2.10" aria-label="Copy heading and permalink for Esempio 6.2.10">🔗</a></div></article><div class="para" id="sec-operazioniclassiresto-22">Prima di caratterizzare le classi invertibili, diamone alcune proprietà.<div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-22" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Esempio 6.2.10"><a href="#sec-operazioniclassiresto-21" title="Copy heading and permalink for Esempio 6.2.10" aria-label="Copy heading and permalink for Esempio 6.2.10">🔗</a></div>
+</article>
+<div class="para" id="sec-operazioniclassiresto-22">Prima di caratterizzare le classi invertibili, diamone alcune proprietà.<div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-22" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="proposition theorem-like" id="prop-classi_resto_invertibili"><h3 class="heading">
 <span class="type">Proposizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -1035,7 +1051,11 @@ eBookConfig.enable_chatcodes =  false;
 </ol>
 <div class="autopermalink" data-description="Capoverso"><a href="#prop-classi_resto_invertibili-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposizione 6.2.11"><a href="#prop-classi_resto_invertibili" title="Copy heading and permalink for Proposizione 6.2.11" aria-label="Copy heading and permalink for Proposizione 6.2.11">🔗</a></div></article><details id="prop-classi_resto_invertibili-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="prop-classi_resto_invertibili-2-1">
+<div class="autopermalink" data-description="Proposizione 6.2.11"><a href="#prop-classi_resto_invertibili" title="Copy heading and permalink for Proposizione 6.2.11" aria-label="Copy heading and permalink for Proposizione 6.2.11">🔗</a></div>
+</article>
+<details id="prop-classi_resto_invertibili-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="prop-classi_resto_invertibili-2-1">
 <div class="para">Se <span class="process-math">\(\class[n]{a}\class[n]{b}=\class[n]{1}\)</span> e <span class="process-math">\(\class[n]{a}\class[n]{c}=\class[n]{1}\text{,}\)</span> allora</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/inversa_classe_unica.html" id="prop-classi_resto_invertibili-2-1-3">
 \begin{equation*}
@@ -1058,41 +1078,60 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para">Questo prova il <a href="sec-operazioniclassiresto.html#inversa_classe_prodotto" class="xref" data-knowl="./knowl/xref/inversa_classe_prodotto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 3">Punto 3</a>.</div>
 <div class="autopermalink" data-description="Capoverso"><a href="#prop-classi_resto_invertibili-2-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Dimostrazione 6.2.11.1"><a href="#prop-classi_resto_invertibili-2" title="Copy heading and permalink for Dimostrazione 6.2.11.1" aria-label="Copy heading and permalink for Dimostrazione 6.2.11.1">🔗</a></div></article></details><article class="note remark-like" id="sec-operazioniclassiresto-24"><h3 class="heading">
+<div class="autopermalink" data-description="Dimostrazione 6.2.11.1"><a href="#prop-classi_resto_invertibili-2" title="Copy heading and permalink for Dimostrazione 6.2.11.1" aria-label="Copy heading and permalink for Dimostrazione 6.2.11.1">🔗</a></div>
+</article></details>
+<article class="note remark-like" id="sec-operazioniclassiresto-24"><h3 class="heading">
 <span class="type">Nota</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="sec-operazioniclassiresto-24-1">Nella proposizione precedente abbiamo dimostrato alcune proprietà delle classi di resto invertibili a partire dalle proprietà formali della moltiplicazione tra classi di resto. La dimostrazione data è essenzialmente la stessa data per le matrici (<a href="sec-operazioni_matrici.html#prop-matrice_invertibile" class="xref" data-knowl="./knowl/xref/prop-matrice_invertibile.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 4.2.18">Proposizione 4.2.18</a>, <a href="sec-operazioni_matrici.html#prop-inversa_matrice_inversa" class="xref" data-knowl="./knowl/xref/prop-inversa_matrice_inversa.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 4.2.19">Proposizione 4.2.19</a> e <a href="sec-operazioni_matrici.html#prop-inversa_prodotto_matrici" class="xref" data-knowl="./knowl/xref/prop-inversa_prodotto_matrici.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 4.2.20">Proposizione 4.2.20</a>) e  che useremo nuovamente in un contesto più generale (<a href="sec-monoidi.html#prop-unicita_inverso" class="xref" data-knowl="./knowl/xref/prop-unicita_inverso.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 8.1.9">Proposizione 8.1.9</a>, <a href="sec-monoidi.html#prop-inverso_inverso" class="xref" data-knowl="./knowl/xref/prop-inverso_inverso.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 8.1.10">Proposizione 8.1.10</a> e <a href="sec-monoidi.html#prop-inverso_prodotto" class="xref" data-knowl="./knowl/xref/prop-inverso_prodotto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 8.1.11">Proposizione 8.1.11</a>). Per questo motivo, abbiamo scritto che l’inversa di <span class="process-math">\(\class[n]{a}\class[n]{b}\)</span> è <span class="process-math">\(\class[n]{b}^{-1}\class[n]{a}^{-1}\text{,}\)</span> anche se, dato che il prodotto in <span class="process-math">\(\Interi/n\)</span> è commutativo, avremmo potuto scrivere <span class="process-math">\(\class[n]{a}^{-1}\class[n]{b}^{-1}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-24-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Nota 6.2.12"><a href="#sec-operazioniclassiresto-24" title="Copy heading and permalink for Nota 6.2.12" aria-label="Copy heading and permalink for Nota 6.2.12">🔗</a></div></article><article class="lemma theorem-like" id="lem-mcd_classi_di_resto"><h3 class="heading">
+<div class="autopermalink" data-description="Nota 6.2.12"><a href="#sec-operazioniclassiresto-24" title="Copy heading and permalink for Nota 6.2.12" aria-label="Copy heading and permalink for Nota 6.2.12">🔗</a></div>
+</article>
+<article class="lemma theorem-like" id="lem-mcd_classi_di_resto"><h3 class="heading">
 <span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="lem-mcd_classi_di_resto-1-1">Sia <span class="process-math">\(n\)</span> un intero positivo. Se <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> sono due interi tali che <span class="process-math">\(a\equiv b\pmod{n}\)</span> allora <span class="process-math">\((a,n)=(b,n)\text{.}\)</span> In particolare, <span class="process-math">\(a\)</span> e <span class="process-math">\(n\)</span> sono coprimi se e solo se <span class="process-math">\(b\)</span> e <span class="process-math">\(n\)</span> sono coprimi.<div class="autopermalink" data-description="Capoverso"><a href="#lem-mcd_classi_di_resto-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Lemma 6.2.13"><a href="#lem-mcd_classi_di_resto" title="Copy heading and permalink for Lemma 6.2.13" aria-label="Copy heading and permalink for Lemma 6.2.13">🔗</a></div></article><details id="lem-mcd_classi_di_resto-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="lem-mcd_classi_di_resto-2-1">Sappiamo che esiste un intero <span class="process-math">\(h\)</span> tale che <span class="process-math">\(b=a+nh\text{.}\)</span> Se <span class="process-math">\(d\)</span> è un divisore comune di <span class="process-math">\(a\)</span> e <span class="process-math">\(n\text{,}\)</span> allora <span class="process-math">\(d\)</span> divide anche <span class="process-math">\(a+nh\text{:}\)</span> dunque, è un divisore comune di <span class="process-math">\(b\)</span> e <span class="process-math">\(n\text{.}\)</span> In maniera analoga si prova che un divisore comune di <span class="process-math">\(b\)</span> e <span class="process-math">\(n\)</span> è anche un divisore comune di <span class="process-math">\(a\)</span> e <span class="process-math">\(n\text{.}\)</span> Riassumendo, i divisori comuni di <span class="process-math">\(a\)</span> e <span class="process-math">\(n\)</span> coincidono con i divisori comuni di <span class="process-math">\(b\)</span> e <span class="process-math">\(n\text{:}\)</span> in particolare, il massimo comun divisore di <span class="process-math">\(a\)</span> e <span class="process-math">\(n\)</span> è uguale al massimo comun divisore di <span class="process-math">\(b\)</span> e <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#lem-mcd_classi_di_resto-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Lemma 6.2.13"><a href="#lem-mcd_classi_di_resto" title="Copy heading and permalink for Lemma 6.2.13" aria-label="Copy heading and permalink for Lemma 6.2.13">🔗</a></div>
+</article>
+<details id="lem-mcd_classi_di_resto-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="lem-mcd_classi_di_resto-2-1">Sappiamo che esiste un intero <span class="process-math">\(h\)</span> tale che <span class="process-math">\(b=a+nh\text{.}\)</span> Se <span class="process-math">\(d\)</span> è un divisore comune di <span class="process-math">\(a\)</span> e <span class="process-math">\(n\text{,}\)</span> allora <span class="process-math">\(d\)</span> divide anche <span class="process-math">\(a+nh\text{:}\)</span> dunque, è un divisore comune di <span class="process-math">\(b\)</span> e <span class="process-math">\(n\text{.}\)</span> In maniera analoga si prova che un divisore comune di <span class="process-math">\(b\)</span> e <span class="process-math">\(n\)</span> è anche un divisore comune di <span class="process-math">\(a\)</span> e <span class="process-math">\(n\text{.}\)</span> Riassumendo, i divisori comuni di <span class="process-math">\(a\)</span> e <span class="process-math">\(n\)</span> coincidono con i divisori comuni di <span class="process-math">\(b\)</span> e <span class="process-math">\(n\text{:}\)</span> in particolare, il massimo comun divisore di <span class="process-math">\(a\)</span> e <span class="process-math">\(n\)</span> è uguale al massimo comun divisore di <span class="process-math">\(b\)</span> e <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#lem-mcd_classi_di_resto-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Dimostrazione 6.2.13.1"><a href="#lem-mcd_classi_di_resto-2" title="Copy heading and permalink for Dimostrazione 6.2.13.1" aria-label="Copy heading and permalink for Dimostrazione 6.2.13.1">🔗</a></div></article></details><article class="proposition theorem-like" id="prop-caratterizzazione_classe_invertibile"><h3 class="heading">
+<div class="autopermalink" data-description="Dimostrazione 6.2.13.1"><a href="#lem-mcd_classi_di_resto-2" title="Copy heading and permalink for Dimostrazione 6.2.13.1" aria-label="Copy heading and permalink for Dimostrazione 6.2.13.1">🔗</a></div>
+</article></details>
+<article class="proposition theorem-like" id="prop-caratterizzazione_classe_invertibile"><h3 class="heading">
 <span class="type">Proposizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="prop-caratterizzazione_classe_invertibile-1-1">Sia <span class="process-math">\(n\)</span> un intero positivo. La classe <span class="process-math">\(\class[n]{a}\)</span> è invertibile se e solo se <span class="process-math">\(a\)</span> è coprimo con <span class="process-math">\(n\text{.}\)</span> In tal caso, presa un’identità di Bezout <span class="process-math">\(au+nv=1\text{,}\)</span> si ha <span class="process-math">\(\class[n]{a}^{-1}=\class[n]{u}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-caratterizzazione_classe_invertibile-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposizione 6.2.14"><a href="#prop-caratterizzazione_classe_invertibile" title="Copy heading and permalink for Proposizione 6.2.14" aria-label="Copy heading and permalink for Proposizione 6.2.14">🔗</a></div></article><details id="prop-caratterizzazione_classe_invertibile-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-caratterizzazione_classe_invertibile-2-1">Supponiamo che <span class="process-math">\(a\)</span> e <span class="process-math">\(n\)</span> siano coprimi e sia <span class="process-math">\(au+nv=1\)</span> un’identità di Bezout. Passando alle classi di resto modulo <span class="process-math">\(n\)</span> otteniamo allora <span class="process-math">\(\class[n]{a}\class[n]{u}+\class[n]{n}\class[n]{v}=\class[n]{1}\text{.}\)</span> Ora <span class="process-math">\(\class[n]{n}=\class[n]{0}\)</span> da cui segue che <span class="process-math">\(\class[n]{a}\class[n]{u}=\class[n]{1}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-caratterizzazione_classe_invertibile-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Proposizione 6.2.14"><a href="#prop-caratterizzazione_classe_invertibile" title="Copy heading and permalink for Proposizione 6.2.14" aria-label="Copy heading and permalink for Proposizione 6.2.14">🔗</a></div>
+</article>
+<details id="prop-caratterizzazione_classe_invertibile-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="prop-caratterizzazione_classe_invertibile-2-1">Supponiamo che <span class="process-math">\(a\)</span> e <span class="process-math">\(n\)</span> siano coprimi e sia <span class="process-math">\(au+nv=1\)</span> un’identità di Bezout. Passando alle classi di resto modulo <span class="process-math">\(n\)</span> otteniamo allora <span class="process-math">\(\class[n]{a}\class[n]{u}+\class[n]{n}\class[n]{v}=\class[n]{1}\text{.}\)</span> Ora <span class="process-math">\(\class[n]{n}=\class[n]{0}\)</span> da cui segue che <span class="process-math">\(\class[n]{a}\class[n]{u}=\class[n]{1}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-caratterizzazione_classe_invertibile-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="para" id="prop-caratterizzazione_classe_invertibile-2-2">Viceversa, sia <span class="process-math">\(\class[n]{a}\)</span> invertibile e sia <span class="process-math">\(\class[n]{b}\)</span> la sua inversa: dunque, <span class="process-math">\(\class[n]{a}\class[n]{b}=\class[n]{1}\text{,}\)</span> cioè <span class="process-math">\(\class[n]{ab}=\class[n]{1}\text{.}\)</span> Di conseguenza, <span class="process-math">\(ab\equiv 1\pmod{n}\text{,}\)</span> cioè esiste un intero <span class="process-math">\(h\)</span> tale che <span class="process-math">\(ab=1+hn\text{:}\)</span> se ora <span class="process-math">\(d\)</span> è il massimo comun divisore di <span class="process-math">\(a\)</span> e <span class="process-math">\(n\text{,}\)</span> abbiamo che <span class="process-math">\(d\)</span> divide anche <span class="process-math">\(1=ab-hn\)</span> e, di conseguenza, <span class="process-math">\(d=1\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-caratterizzazione_classe_invertibile-2-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Dimostrazione 6.2.14.1"><a href="#prop-caratterizzazione_classe_invertibile-2" title="Copy heading and permalink for Dimostrazione 6.2.14.1" aria-label="Copy heading and permalink for Dimostrazione 6.2.14.1">🔗</a></div></article></details><div class="para" id="sec-operazioniclassiresto-27">Nella dimostrazione della proposizione precedente non abbiamo usato il <a href="sec-operazioniclassiresto.html#lem-mcd_classi_di_resto" class="xref" data-knowl="./knowl/xref/lem-mcd_classi_di_resto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Lemma 6.2.13">Lemma 6.2.13</a> (che in effetti avremmo potuto anche evitare di dare), però questo ci aiuta a capire meglio come nella verifica della condizione per l’invertibilità di <span class="process-math">\(\class[n]{a}\)</span> la scelta del rappresentante della classe sia ininfluente.<div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-27" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Dimostrazione 6.2.14.1"><a href="#prop-caratterizzazione_classe_invertibile-2" title="Copy heading and permalink for Dimostrazione 6.2.14.1" aria-label="Copy heading and permalink for Dimostrazione 6.2.14.1">🔗</a></div>
+</article></details>
+<div class="para" id="sec-operazioniclassiresto-27">Nella dimostrazione della proposizione precedente non abbiamo usato il <a href="sec-operazioniclassiresto.html#lem-mcd_classi_di_resto" class="xref" data-knowl="./knowl/xref/lem-mcd_classi_di_resto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Lemma 6.2.13">Lemma 6.2.13</a> (che in effetti avremmo potuto anche evitare di dare), però questo ci aiuta a capire meglio come nella verifica della condizione per l’invertibilità di <span class="process-math">\(\class[n]{a}\)</span> la scelta del rappresentante della classe sia ininfluente.<div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-27" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="corollary theorem-like" id="cor-tutte_invertibili_modulo_primo"><h3 class="heading">
 <span class="type">Corollario</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="cor-tutte_invertibili_modulo_primo-1-1">Se <span class="process-math">\(p\)</span> è un numero primo, allora ogni classe non nulla <span class="process-math">\(\class[p]{a}\)</span> è invertibile.<div class="autopermalink" data-description="Capoverso"><a href="#cor-tutte_invertibili_modulo_primo-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollario 6.2.15"><a href="#cor-tutte_invertibili_modulo_primo" title="Copy heading and permalink for Corollario 6.2.15" aria-label="Copy heading and permalink for Corollario 6.2.15">🔗</a></div></article><div class="para" id="sec-operazioniclassiresto-29">La caratterizzazione data permette, tramite l’algoritmo di Euclide, di verificare effettivamente se una data classe è invertibile e, in caso positivo, di determinarne l’inversa.<div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-29" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Corollario 6.2.15"><a href="#cor-tutte_invertibili_modulo_primo" title="Copy heading and permalink for Corollario 6.2.15" aria-label="Copy heading and permalink for Corollario 6.2.15">🔗</a></div>
+</article>
+<div class="para" id="sec-operazioniclassiresto-29">La caratterizzazione data permette, tramite l’algoritmo di Euclide, di verificare effettivamente se una data classe è invertibile e, in caso positivo, di determinarne l’inversa.<div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-29" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="example example-like" id="ex-inversa_classe_resto"><h3 class="heading">
 <span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="ex-inversa_classe_resto-1-1">Consideriamo la classe di resto <span class="process-math">\(\class[75]{28}\text{.}\)</span> Vogliamo stabilire se è invertibile.<div class="autopermalink" data-description="Capoverso"><a href="#ex-inversa_classe_resto-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div> <div class="para logical" id="ex-inversa_classe_resto-1-2">
+</div> 
+<div class="para logical" id="ex-inversa_classe_resto-1-2">
 <div class="para">Calcoliamo il massimo comun divisore di <span class="process-math">\(28\)</span> e <span class="process-math">\(75\)</span> con l’algoritmo di Euclide. Consideriamo allora le divisioni successive:</div>
 <div class="displaymath process-math" id="ex-inversa_classe_resto-1-2-3">
 \begin{align*}
@@ -1104,7 +1143,8 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para">L’ultimo resto non nullo è <span class="process-math">\(1\)</span> che è, dunque, il massimo comun divisore tra <span class="process-math">\(28\)</span> e <span class="process-math">\(75\text{:}\)</span> pertanto, <span class="process-math">\(28\)</span> e <span class="process-math">\(75\)</span> sono coprimi e <span class="process-math">\(\class[75]{28}\)</span> è invertibile.</div>
 <div class="autopermalink" data-description="Capoverso"><a href="#ex-inversa_classe_resto-1-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div> <div class="para logical" id="ex-inversa_classe_resto-1-3">
+</div> 
+<div class="para logical" id="ex-inversa_classe_resto-1-3">
 <div class="para">Per determinare un’identità di Bezout partiamo dalla penultima divisione e con sostituzioni successive otteniamo</div>
 <div class="displaymath process-math" id="ex-inversa_classe_resto-1-3-1">
 \begin{align*}
@@ -1116,11 +1156,14 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#ex-inversa_classe_resto-1-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Esempio 6.2.16"><a href="#ex-inversa_classe_resto" title="Copy heading and permalink for Esempio 6.2.16" aria-label="Copy heading and permalink for Esempio 6.2.16">🔗</a></div></article><article class="example example-like" id="ex-noinversa_classe_resto"><h3 class="heading">
+<div class="autopermalink" data-description="Esempio 6.2.16"><a href="#ex-inversa_classe_resto" title="Copy heading and permalink for Esempio 6.2.16" aria-label="Copy heading and permalink for Esempio 6.2.16">🔗</a></div>
+</article>
+<article class="example example-like" id="ex-noinversa_classe_resto"><h3 class="heading">
 <span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="ex-noinversa_classe_resto-1-1">Consideriamo la classe di resto <span class="process-math">\(\class[77]{28}\text{.}\)</span> Vogliamo stabilire se è invertibile.<div class="autopermalink" data-description="Capoverso"><a href="#ex-noinversa_classe_resto-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div> <div class="para logical" id="ex-noinversa_classe_resto-1-2">
+</div> 
+<div class="para logical" id="ex-noinversa_classe_resto-1-2">
 <div class="para">Calcoliamo il massimo comun divisore di <span class="process-math">\(28\)</span> e <span class="process-math">\(77\)</span> con l’algoritmo di Euclide. Consideriamo allora le divisioni successive:</div>
 <div class="displaymath process-math" id="ex-noinversa_classe_resto-1-2-3">
 \begin{align*}
@@ -1132,14 +1175,20 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para">L’ultimo resto non nullo è <span class="process-math">\(7\)</span> che è, dunque, il massimo comun divisore tra <span class="process-math">\(28\)</span> e <span class="process-math">\(77\text{:}\)</span> pertanto, <span class="process-math">\(28\)</span> e <span class="process-math">\(77\)</span> non sono coprimi e <span class="process-math">\(\class[77]{28}\)</span> non è invertibile.</div>
 <div class="autopermalink" data-description="Capoverso"><a href="#ex-noinversa_classe_resto-1-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Esempio 6.2.17"><a href="#ex-noinversa_classe_resto" title="Copy heading and permalink for Esempio 6.2.17" aria-label="Copy heading and permalink for Esempio 6.2.17">🔗</a></div></article><div class="para" id="sec-operazioniclassiresto-32">Possiamo ora dare una legge di cancellazione per la moltiplicazione di classi di resto.<div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-32" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Esempio 6.2.17"><a href="#ex-noinversa_classe_resto" title="Copy heading and permalink for Esempio 6.2.17" aria-label="Copy heading and permalink for Esempio 6.2.17">🔗</a></div>
+</article>
+<div class="para" id="sec-operazioniclassiresto-32">Possiamo ora dare una legge di cancellazione per la moltiplicazione di classi di resto.<div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-32" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="proposition theorem-like" id="prop-cancellazione_moltiplicazione_classi_di_resto"><h3 class="heading">
 <span class="type">Proposizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Legge di cancellazione per la moltiplicazione.</span>
 </h3>
 <div class="para" id="prop-cancellazione_moltiplicazione_classi_di_resto-2-1">Sia <span class="process-math">\(n\)</span> un intero positivo. Se <span class="process-math">\(\class[n]{a}\text{,}\)</span> <span class="process-math">\(\class[n]{b}\)</span> e <span class="process-math">\(\class[n]{c}\)</span> sono tre classi tali che <span class="process-math">\(\class[n]{a}\class[n]{b}=\class[n]{a}\class[n]{c}\)</span> e <span class="process-math">\(\class[n]{a}\)</span> è invertibile, allora <span class="process-math">\(\class[n]{b}=\class[n]{c}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-cancellazione_moltiplicazione_classi_di_resto-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposizione 6.2.18: Legge di cancellazione per la moltiplicazione"><a href="#prop-cancellazione_moltiplicazione_classi_di_resto" title="Copy heading and permalink for Proposizione 6.2.18: Legge di cancellazione per la moltiplicazione" aria-label="Copy heading and permalink for Proposizione 6.2.18: Legge di cancellazione per la moltiplicazione">🔗</a></div></article><details id="prop-cancellazione_moltiplicazione_classi_di_resto-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="prop-cancellazione_moltiplicazione_classi_di_resto-3-1">
+<div class="autopermalink" data-description="Proposizione 6.2.18: Legge di cancellazione per la moltiplicazione"><a href="#prop-cancellazione_moltiplicazione_classi_di_resto" title="Copy heading and permalink for Proposizione 6.2.18: Legge di cancellazione per la moltiplicazione" aria-label="Copy heading and permalink for Proposizione 6.2.18: Legge di cancellazione per la moltiplicazione">🔗</a></div>
+</article>
+<details id="prop-cancellazione_moltiplicazione_classi_di_resto-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="prop-cancellazione_moltiplicazione_classi_di_resto-3-1">
 <div class="para">Sappiamo che esiste una <span class="process-math">\(\class[n]{d}\)</span> tale che <span class="process-math">\(\class[n]{d}\class[n]{a}=\class[n]{1}\)</span> con <span class="process-math">\(\class[n]{1}\)</span> elemento neutro. Abbiamo allora</div>
 <div class="displaymath process-math" id="prop-cancellazione_moltiplicazione_classi_di_resto-3-1-4">
 \begin{equation*}
@@ -1162,23 +1211,35 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#prop-cancellazione_moltiplicazione_classi_di_resto-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Dimostrazione 6.2.18.1"><a href="#prop-cancellazione_moltiplicazione_classi_di_resto-3" title="Copy heading and permalink for Dimostrazione 6.2.18.1" aria-label="Copy heading and permalink for Dimostrazione 6.2.18.1">🔗</a></div></article></details><div class="para" id="sec-operazioniclassiresto-34">La proposizione precedente non può essere migliorata.<div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-34" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Dimostrazione 6.2.18.1"><a href="#prop-cancellazione_moltiplicazione_classi_di_resto-3" title="Copy heading and permalink for Dimostrazione 6.2.18.1" aria-label="Copy heading and permalink for Dimostrazione 6.2.18.1">🔗</a></div>
+</article></details>
+<div class="para" id="sec-operazioniclassiresto-34">La proposizione precedente non può essere migliorata.<div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-34" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="proposition theorem-like" id="prop-classe_non_invertibile_non_semplificabile"><h3 class="heading">
 <span class="type">Proposizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="prop-classe_non_invertibile_non_semplificabile-1-1">Sia <span class="process-math">\(n\)</span> un intero positivo. Se <span class="process-math">\(\class[n]{a}\)</span> non è invertibile, allora esistono <span class="process-math">\(\class[n]{b}\)</span> e <span class="process-math">\(\class[n]{c}\)</span> diverse tali che <span class="process-math">\(\class[n]{a}\class[n]{b}=\class[n]{a}\class[n]{c}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-classe_non_invertibile_non_semplificabile-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposizione 6.2.19"><a href="#prop-classe_non_invertibile_non_semplificabile" title="Copy heading and permalink for Proposizione 6.2.19" aria-label="Copy heading and permalink for Proposizione 6.2.19">🔗</a></div></article><details id="prop-classe_non_invertibile_non_semplificabile-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-classe_non_invertibile_non_semplificabile-2-1">Per la <a href="sec-operazioniclassiresto.html#prop-caratterizzazione_classe_invertibile" class="xref" data-knowl="./knowl/xref/prop-caratterizzazione_classe_invertibile.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 6.2.14">Proposizione 6.2.14</a>, il massimo comun divisore <span class="process-math">\(d\)</span> tra <span class="process-math">\(a\)</span> e <span class="process-math">\(n\)</span> è diverso da <span class="process-math">\(1\text{.}\)</span> Sia allora <span class="process-math">\(n=de\text{:}\)</span> pertanto, <span class="process-math">\(0 \lt e \lt n\text{.}\)</span> Preso allora <span class="process-math">\(b\)</span> intero qualunque e <span class="process-math">\(c\coloneqq b+e\text{,}\)</span> si ha che <span class="process-math">\(\class[n]{b}\ne\class[n]{c}\text{.}\)</span> D’altra parte <span class="process-math">\(ac=a(b+e)=ab+ae\text{:}\)</span> poiché <span class="process-math">\(d\)</span> divide <span class="process-math">\(a\text{,}\)</span> abbiamo che <span class="process-math">\(n=de\)</span> divide <span class="process-math">\(ae\)</span> e, quindi, <span class="process-math">\(ac\equiv ab\pmod{n}\text{,}\)</span> cioè <span class="process-math">\(\class[n]{a}\class[n]{c}=\class[n]{a}\class[n]{b}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-classe_non_invertibile_non_semplificabile-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Proposizione 6.2.19"><a href="#prop-classe_non_invertibile_non_semplificabile" title="Copy heading and permalink for Proposizione 6.2.19" aria-label="Copy heading and permalink for Proposizione 6.2.19">🔗</a></div>
+</article>
+<details id="prop-classe_non_invertibile_non_semplificabile-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="prop-classe_non_invertibile_non_semplificabile-2-1">Per la <a href="sec-operazioniclassiresto.html#prop-caratterizzazione_classe_invertibile" class="xref" data-knowl="./knowl/xref/prop-caratterizzazione_classe_invertibile.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 6.2.14">Proposizione 6.2.14</a>, il massimo comun divisore <span class="process-math">\(d\)</span> tra <span class="process-math">\(a\)</span> e <span class="process-math">\(n\)</span> è diverso da <span class="process-math">\(1\text{.}\)</span> Sia allora <span class="process-math">\(n=de\text{:}\)</span> pertanto, <span class="process-math">\(0 \lt e \lt n\text{.}\)</span> Preso allora <span class="process-math">\(b\)</span> intero qualunque e <span class="process-math">\(c\coloneqq b+e\text{,}\)</span> si ha che <span class="process-math">\(\class[n]{b}\ne\class[n]{c}\text{.}\)</span> D’altra parte <span class="process-math">\(ac=a(b+e)=ab+ae\text{:}\)</span> poiché <span class="process-math">\(d\)</span> divide <span class="process-math">\(a\text{,}\)</span> abbiamo che <span class="process-math">\(n=de\)</span> divide <span class="process-math">\(ae\)</span> e, quindi, <span class="process-math">\(ac\equiv ab\pmod{n}\text{,}\)</span> cioè <span class="process-math">\(\class[n]{a}\class[n]{c}=\class[n]{a}\class[n]{b}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-classe_non_invertibile_non_semplificabile-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Dimostrazione 6.2.19.1"><a href="#prop-classe_non_invertibile_non_semplificabile-2" title="Copy heading and permalink for Dimostrazione 6.2.19.1" aria-label="Copy heading and permalink for Dimostrazione 6.2.19.1">🔗</a></div></article></details><div class="para" id="sec-operazioniclassiresto-36">Le proprietà delle operazioni con le classi di resto permettono di dare alcuni criteri di divisibilità per numeri scritti in base <span class="process-math">\(10\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-36" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Dimostrazione 6.2.19.1"><a href="#prop-classe_non_invertibile_non_semplificabile-2" title="Copy heading and permalink for Dimostrazione 6.2.19.1" aria-label="Copy heading and permalink for Dimostrazione 6.2.19.1">🔗</a></div>
+</article></details>
+<div class="para" id="sec-operazioniclassiresto-36">Le proprietà delle operazioni con le classi di resto permettono di dare alcuni criteri di divisibilità per numeri scritti in base <span class="process-math">\(10\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#sec-operazioniclassiresto-36" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="proposition theorem-like" id="prop-divisibilita_3_9"><h3 class="heading">
 <span class="type">Proposizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="prop-divisibilita_3_9-1-1">Sia dato un numero positivo <span class="process-math">\(n\)</span> scritto in base <span class="process-math">\(10\)</span> nel modo seguente <span class="process-math">\(n=a_{r}a_{r-1}\ldots a_{0}\)</span> (dove cioè <span class="process-math">\(a_{0}\)</span> è la cifra delle unità, <span class="process-math">\(a_{1}\)</span> è la cifra delle decine e così via). Allora <span class="process-math">\(n\equiv a_{0}+a_{1}+\cdots+a_{r}\pmod{9}\text{:}\)</span> in particolare, <span class="process-math">\(n\)</span> è divisibile per <span class="process-math">\(9\)</span> se e solo se <span class="process-math">\(a_{0}+a_{1}+\cdots+a_{r}\)</span> è divisibile per <span class="process-math">\(9\text{.}\)</span> Vale inoltre la stessa proprietà rispetto a <span class="process-math">\(3\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-divisibilita_3_9-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposizione 6.2.20"><a href="#prop-divisibilita_3_9" title="Copy heading and permalink for Proposizione 6.2.20" aria-label="Copy heading and permalink for Proposizione 6.2.20">🔗</a></div></article><details id="prop-divisibilita_3_9-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="prop-divisibilita_3_9-2-1">
+<div class="autopermalink" data-description="Proposizione 6.2.20"><a href="#prop-divisibilita_3_9" title="Copy heading and permalink for Proposizione 6.2.20" aria-label="Copy heading and permalink for Proposizione 6.2.20">🔗</a></div>
+</article>
+<details id="prop-divisibilita_3_9-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="prop-divisibilita_3_9-2-1">
 <div class="para">Dalla scrittura di <span class="process-math">\(n\)</span> in base <span class="process-math">\(10\)</span> otteniamo che</div>
 <div class="displaymath process-math" id="prop-divisibilita_3_9-2-1-3">
 \begin{equation*}
@@ -1189,12 +1250,18 @@ n=a_{0}+10a_{1}+10^{2}a_{2}+\ldots+10^{r}a_{r}\text{.}
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#prop-divisibilita_3_9-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Dimostrazione 6.2.20.1"><a href="#prop-divisibilita_3_9-2" title="Copy heading and permalink for Dimostrazione 6.2.20.1" aria-label="Copy heading and permalink for Dimostrazione 6.2.20.1">🔗</a></div></article></details><article class="proposition theorem-like" id="prop-divisibilita_11"><h3 class="heading">
+<div class="autopermalink" data-description="Dimostrazione 6.2.20.1"><a href="#prop-divisibilita_3_9-2" title="Copy heading and permalink for Dimostrazione 6.2.20.1" aria-label="Copy heading and permalink for Dimostrazione 6.2.20.1">🔗</a></div>
+</article></details>
+<article class="proposition theorem-like" id="prop-divisibilita_11"><h3 class="heading">
 <span class="type">Proposizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.21</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="prop-divisibilita_11-1-1">Sia dato un numero positivo <span class="process-math">\(n\)</span> scritto in base <span class="process-math">\(10\)</span> nel modo seguente <span class="process-math">\(n=a_{r}a_{r-1}\cdots a_{0}\)</span> (dove cioè <span class="process-math">\(a_{0}\)</span> è la cifra delle unità, <span class="process-math">\(a_{1}\)</span> è la cifra delle decine e così via). Allora <span class="process-math">\(n\equiv a_{0}-a_{1}+\cdots+(-1)^{r}a_{r}\pmod{11}\text{:}\)</span> in particolare, <span class="process-math">\(n\)</span> è divisibile per <span class="process-math">\(11\)</span> se e solo se <span class="process-math">\(a_{0}-a_{1}+\cdots+(-1)^{r}a_{r}\)</span> è divisibile per <span class="process-math">\(11\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-divisibilita_11-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposizione 6.2.21"><a href="#prop-divisibilita_11" title="Copy heading and permalink for Proposizione 6.2.21" aria-label="Copy heading and permalink for Proposizione 6.2.21">🔗</a></div></article><details id="prop-divisibilita_11-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="prop-divisibilita_11-2-1">
+<div class="autopermalink" data-description="Proposizione 6.2.21"><a href="#prop-divisibilita_11" title="Copy heading and permalink for Proposizione 6.2.21" aria-label="Copy heading and permalink for Proposizione 6.2.21">🔗</a></div>
+</article>
+<details id="prop-divisibilita_11-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="prop-divisibilita_11-2-1">
 <div class="para">Dalla scrittura di <span class="process-math">\(n\)</span> in base <span class="process-math">\(10\)</span> otteniamo che</div>
 <div class="displaymath process-math" id="prop-divisibilita_11-2-1-3">
 \begin{equation*}
@@ -1204,21 +1271,30 @@ n=a_{0}+10a_{1}+10^{2}a_{2}+\cdots+10^{r}a_{r}\text{.}
 <div class="para">Ora <span class="process-math">\(10\equiv -1\pmod{11}\)</span> e, di conseguenza, <span class="process-math">\(10^{i}\equiv(-1)^{i} \pmod{11}\)</span> per ogni <span class="process-math">\(i\text{.}\)</span> La tesi segue allora immediatamente.</div>
 <div class="autopermalink" data-description="Capoverso"><a href="#prop-divisibilita_11-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Dimostrazione 6.2.21.1"><a href="#prop-divisibilita_11-2" title="Copy heading and permalink for Dimostrazione 6.2.21.1" aria-label="Copy heading and permalink for Dimostrazione 6.2.21.1">🔗</a></div></article></details><article class="remark remark-like" id="rem-divisibilita"><h3 class="heading">
+<div class="autopermalink" data-description="Dimostrazione 6.2.21.1"><a href="#prop-divisibilita_11-2" title="Copy heading and permalink for Dimostrazione 6.2.21.1" aria-label="Copy heading and permalink for Dimostrazione 6.2.21.1">🔗</a></div>
+</article></details>
+<article class="remark remark-like" id="rem-divisibilita"><h3 class="heading">
 <span class="type">Osservazione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.22</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="rem-divisibilita-1">Le proposizioni precedente si traducono immediatamente negli usuali criteri per testare la divisibilità per <span class="process-math">\(9\text{,}\)</span> per <span class="process-math">\(3\)</span> e per <span class="process-math">\(11\)</span> di un numero: per <span class="process-math">\(3\)</span> e <span class="process-math">\(9\)</span> basta sommarne le cifre ed eventualmente ripetere il procedimento più volte fino a ottenere un numero relativamente piccolo più facile da trattare rispetto al numero di partenza; per <span class="process-math">\(11\)</span> basta sommare le cifre a segni alterni.<div class="autopermalink" data-description="Capoverso"><a href="#rem-divisibilita-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Osservazione 6.2.22"><a href="#rem-divisibilita" title="Copy heading and permalink for Osservazione 6.2.22" aria-label="Copy heading and permalink for Osservazione 6.2.22">🔗</a></div></article><section class="exercises" id="exercises-operazioniclassiresto"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Osservazione 6.2.22"><a href="#rem-divisibilita" title="Copy heading and permalink for Osservazione 6.2.22" aria-label="Copy heading and permalink for Osservazione 6.2.22">🔗</a></div>
+</article>
+<section class="exercises" id="exercises-operazioniclassiresto">
+<h3 class="heading hide-type">
 <span class="type">Esercizi</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Esercizi</span>
 </h3>
 <article class="exercise exercise-like" id="exercise-divisori_zero_classi_resto"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para" id="exercise-divisori_zero_classi_resto-1-1">Sia <span class="process-math">\(n \gt 1\text{.}\)</span> Mostrare che esistono <span class="process-math">\(\class[n]{a}\)</span> e <span class="process-math">\(\class[n]{b}\)</span> non nulle tali che <span class="process-math">\(\class[n]{a}\class[n]{b}=\class[n]{0}\)</span> se e solo se <span class="process-math">\(n\)</span> non è primo.<div class="autopermalink" data-description="Capoverso"><a href="#exercise-divisori_zero_classi_resto-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Esercizio 6.2.1"><a href="#exercise-divisori_zero_classi_resto" title="Copy heading and permalink for Esercizio 6.2.1" aria-label="Copy heading and permalink for Esercizio 6.2.1">🔗</a></div></article><article class="exercise exercise-like" id="exercises-operazioniclassiresto-2"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="autopermalink" data-description="Esercizio 6.2.1"><a href="#exercise-divisori_zero_classi_resto" title="Copy heading and permalink for Esercizio 6.2.1" aria-label="Copy heading and permalink for Esercizio 6.2.1">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-operazioniclassiresto-2"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para" id="exercises-operazioniclassiresto-2-1-1">Sia <span class="process-math">\(n\)</span> un intero positivo fissato. Data una classe di resto <span class="process-math">\(\class[n]{a}\text{,}\)</span> sia <span class="process-math">\(d\)</span> il massimo comun divisore tra <span class="process-math">\(a\)</span> e <span class="process-math">\(n\)</span> (per il <a href="sec-operazioniclassiresto.html#lem-mcd_classi_di_resto" class="xref" data-knowl="./knowl/xref/lem-mcd_classi_di_resto.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Lemma 6.2.13">Lemma 6.2.13</a>, <span class="process-math">\(d\)</span> non dipende dalla scelta del rappresentante della classe di resto). Mostrare che, per ogni <span class="process-math">\(\class[n]{b}\text{,}\)</span> esistono esattamente <span class="process-math">\(d\)</span> classi <span class="process-math">\(\class[n]{c}\)</span> tali che <span class="process-math">\(\class[n]{a}\class[n]{b}=\class[n]{a}\class[n]{c}\)</span> e dedurre che l’insieme <span class="process-math">\(\{\class[n]{a}\class[n]{x}\mid \class[n]{x}\in\Interi/n\}\)</span> contiene esattamente <span class="process-math">\(\frac{n}{d}\)</span> elementi. In termini della tabella dell’operazione questo equivale a dire che sulla riga (e sulla colonna) corrispondente a <span class="process-math">\(\class[n]{a}\)</span> compaiono esattamente <span class="process-math">\(\frac{n}{d}\)</span> elementi, ciascuno <span class="process-math">\(d\)</span> volte.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-operazioniclassiresto-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-operazioniclassiresto-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para logical" id="exercises-operazioniclassiresto-2-2-1">
 <div class="para">Siano <span class="process-math">\(n=dn'\)</span> e <span class="process-math">\(a=da'\)</span> con <span class="process-math">\(n'\)</span> e <span class="process-math">\(a'\)</span> opportuni interi: poiché <span class="process-math">\(n\ne 0\text{,}\)</span> abbiamo che <span class="process-math">\(d\ne 0\)</span> e, per il <a href="sec-divisibilita_interi.html#cor-diviso_MCD_da_coprimi" class="xref" data-knowl="./knowl/xref/cor-diviso_MCD_da_coprimi.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Corollario 5.3.23">Corollario 5.3.23</a>, che <span class="process-math">\(a'\)</span> e <span class="process-math">\(b'\)</span> sono coprimi. Ora <span class="process-math">\(\class[n]{a}\class[n]{b}=\class[n]{a}\class[n]{c}\)</span> se e solo se <span class="process-math">\(ab-ac\)</span> è multiplo di <span class="process-math">\(n\text{,}\)</span> vale a dire <span class="process-math">\(da'(b-c)\)</span> è multiplo di <span class="process-math">\(dn'\text{:}\)</span> ciò è equivalente a richiedere che <span class="process-math">\(a'(b-c)\)</span> è multiplo di <span class="process-math">\(n'\)</span> che, per il <a href="sec-fattorizzazione_interi.html#lem-divisore_coprimo_con_fattore" class="xref" data-knowl="./knowl/xref/lem-divisore_coprimo_con_fattore.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Lemma 5.4.1">Lemma 5.4.1</a>, avviene se e solo se <span class="process-math">\(b-c\)</span> è multiplo di <span class="process-math">\(n'\text{.}\)</span> Riassumendo, gli interi <span class="process-math">\(c\)</span> tali che <span class="process-math">\(\class[n]{a}\class[n]{b}=\class[n]{a}\class[n]{c}\)</span> sono tutti e soli quelli del tipo <span class="process-math">\(c=b+kn'\)</span> al variare di <span class="process-math">\(k\)</span> in <span class="process-math">\(\Interi\text{.}\)</span> Dato un intero <span class="process-math">\(k\)</span> possiamo dividerlo per <span class="process-math">\(d\)</span> e ottenere <span class="process-math">\(k=dq+r\)</span> con <span class="process-math">\(q\)</span> e <span class="process-math">\(r\)</span> interi tali che <span class="process-math">\(0\le r \lt d\text{:}\)</span> dunque</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-diviso_MCD_da_coprimi.html ./knowl/xref/lem-divisore_coprimo_con_fattore.html" id="exercises-operazioniclassiresto-2-2-1-31">
@@ -1231,71 +1307,105 @@ b+kn'=b+(dq+r)n'=b+dqn'+rn'=b+rn'+nq\equiv b+rn'\pmod{n}\text{.}
 <div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Soluzione 6.2.2.1"><a href="#exercises-operazioniclassiresto-2-2" title="Copy heading and permalink for Soluzione 6.2.2.1" aria-label="Copy heading and permalink for Soluzione 6.2.2.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.2.2"><a href="#exercises-operazioniclassiresto-2" title="Copy heading and permalink for Esercizio 6.2.2" aria-label="Copy heading and permalink for Esercizio 6.2.2">🔗</a></div></article><div class="exercisegroup" id="exercises-operazioniclassiresto-3">
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.2.2"><a href="#exercises-operazioniclassiresto-2" title="Copy heading and permalink for Esercizio 6.2.2" aria-label="Copy heading and permalink for Esercizio 6.2.2">🔗</a></div>
+</article>
+<div class="exercisegroup" id="exercises-operazioniclassiresto-3">
 <h4 class="heading"><span class="title">Gruppo di esercizi.</span></h4>
-<div class="introduction" id="exercises-operazioniclassiresto-3-1"><div class="para" id="exercises-operazioniclassiresto-3-1-1">Determinare se le seguenti classi di resto sono invertibili e, in caso affermativo, determinarne le inverse.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-3-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div></div>
+<div class="introduction" id="exercises-operazioniclassiresto-3-1">
+<div class="para" id="exercises-operazioniclassiresto-3-1-1">Determinare se le seguenti classi di resto sono invertibili e, in caso affermativo, determinarne le inverse.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-3-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+</div>
 <div class="exercisegroup-exercises cols2 multicolumn">
 <article class="exercise exercise-like" id="exercises-operazioniclassiresto-3-2"><h5 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-operazioniclassiresto-3-2-1-1">
 <span class="process-math">\(\class[463]{133}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-3-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-operazioniclassiresto-3-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-operazioniclassiresto-3-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-operazioniclassiresto-3-2-2-1">
 <span class="process-math">\(\class[463]{94}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-3-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 6.2.3.1"><a href="#exercises-operazioniclassiresto-3-2-2" title="Copy heading and permalink for Risposta 6.2.3.1" aria-label="Copy heading and permalink for Risposta 6.2.3.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.2.3"><a href="#exercises-operazioniclassiresto-3-2" title="Copy heading and permalink for Esercizio 6.2.3" aria-label="Copy heading and permalink for Esercizio 6.2.3">🔗</a></div></article><article class="exercise exercise-like" id="exercises-operazioniclassiresto-3-3"><h5 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.2.3"><a href="#exercises-operazioniclassiresto-3-2" title="Copy heading and permalink for Esercizio 6.2.3" aria-label="Copy heading and permalink for Esercizio 6.2.3">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-operazioniclassiresto-3-3"><h5 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-operazioniclassiresto-3-3-1-1">
 <span class="process-math">\(\class[8325]{407}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-3-3-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-operazioniclassiresto-3-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-operazioniclassiresto-3-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-operazioniclassiresto-3-3-2-1">Non è invertibile.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-3-3-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 6.2.4.1"><a href="#exercises-operazioniclassiresto-3-3-2" title="Copy heading and permalink for Risposta 6.2.4.1" aria-label="Copy heading and permalink for Risposta 6.2.4.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.2.4"><a href="#exercises-operazioniclassiresto-3-3" title="Copy heading and permalink for Esercizio 6.2.4" aria-label="Copy heading and permalink for Esercizio 6.2.4">🔗</a></div></article><article class="exercise exercise-like" id="exercises-operazioniclassiresto-3-4"><h5 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.2.4"><a href="#exercises-operazioniclassiresto-3-3" title="Copy heading and permalink for Esercizio 6.2.4" aria-label="Copy heading and permalink for Esercizio 6.2.4">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-operazioniclassiresto-3-4"><h5 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-operazioniclassiresto-3-4-1-1">
 <span class="process-math">\(\class[213]{7}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-3-4-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-operazioniclassiresto-3-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-operazioniclassiresto-3-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-operazioniclassiresto-3-4-2-1">
 <span class="process-math">\(\class[213]{61}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-3-4-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 6.2.5.1"><a href="#exercises-operazioniclassiresto-3-4-2" title="Copy heading and permalink for Risposta 6.2.5.1" aria-label="Copy heading and permalink for Risposta 6.2.5.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.2.5"><a href="#exercises-operazioniclassiresto-3-4" title="Copy heading and permalink for Esercizio 6.2.5" aria-label="Copy heading and permalink for Esercizio 6.2.5">🔗</a></div></article><article class="exercise exercise-like" id="exercises-operazioniclassiresto-3-5"><h5 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.2.5"><a href="#exercises-operazioniclassiresto-3-4" title="Copy heading and permalink for Esercizio 6.2.5" aria-label="Copy heading and permalink for Esercizio 6.2.5">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-operazioniclassiresto-3-5"><h5 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-operazioniclassiresto-3-5-1-1">
 <span class="process-math">\(\class[2261]{816}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-3-5-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-operazioniclassiresto-3-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-operazioniclassiresto-3-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-operazioniclassiresto-3-5-2-1">Non è invertibile.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-3-5-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 6.2.6.1"><a href="#exercises-operazioniclassiresto-3-5-2" title="Copy heading and permalink for Risposta 6.2.6.1" aria-label="Copy heading and permalink for Risposta 6.2.6.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.2.6"><a href="#exercises-operazioniclassiresto-3-5" title="Copy heading and permalink for Esercizio 6.2.6" aria-label="Copy heading and permalink for Esercizio 6.2.6">🔗</a></div></article><article class="exercise exercise-like" id="exercises-operazioniclassiresto-3-6"><h5 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.2.6"><a href="#exercises-operazioniclassiresto-3-5" title="Copy heading and permalink for Esercizio 6.2.6" aria-label="Copy heading and permalink for Esercizio 6.2.6">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-operazioniclassiresto-3-6"><h5 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-operazioniclassiresto-3-6-1-1">
 <span class="process-math">\(\class[874]{33}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-3-6-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-operazioniclassiresto-3-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-operazioniclassiresto-3-6-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-operazioniclassiresto-3-6-2-1">
 <span class="process-math">\(\class[874]{53}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-3-6-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 6.2.7.1"><a href="#exercises-operazioniclassiresto-3-6-2" title="Copy heading and permalink for Risposta 6.2.7.1" aria-label="Copy heading and permalink for Risposta 6.2.7.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.2.7"><a href="#exercises-operazioniclassiresto-3-6" title="Copy heading and permalink for Esercizio 6.2.7" aria-label="Copy heading and permalink for Esercizio 6.2.7">🔗</a></div></article><article class="exercise exercise-like" id="exercises-operazioniclassiresto-3-7"><h5 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.2.7"><a href="#exercises-operazioniclassiresto-3-6" title="Copy heading and permalink for Esercizio 6.2.7" aria-label="Copy heading and permalink for Esercizio 6.2.7">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-operazioniclassiresto-3-7"><h5 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-operazioniclassiresto-3-7-1-1">
 <span class="process-math">\(\class[118]{15}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-3-7-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-operazioniclassiresto-3-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-operazioniclassiresto-3-7-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-operazioniclassiresto-3-7-2-1">
 <span class="process-math">\(\class[118]{63}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-3-7-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 6.2.8.1"><a href="#exercises-operazioniclassiresto-3-7-2" title="Copy heading and permalink for Risposta 6.2.8.1" aria-label="Copy heading and permalink for Risposta 6.2.8.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.2.8"><a href="#exercises-operazioniclassiresto-3-7" title="Copy heading and permalink for Esercizio 6.2.8" aria-label="Copy heading and permalink for Esercizio 6.2.8">🔗</a></div></article>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.2.8"><a href="#exercises-operazioniclassiresto-3-7" title="Copy heading and permalink for Esercizio 6.2.8" aria-label="Copy heading and permalink for Esercizio 6.2.8">🔗</a></div>
+</article>
 </div>
 <div class="autopermalink" data-description="Gruppo di esercizi 6.2.3–8"><a href="#exercises-operazioniclassiresto-3" title="Copy heading and permalink for Gruppo di esercizi 6.2.3–8" aria-label="Copy heading and permalink for Gruppo di esercizi 6.2.3–8">🔗</a></div>
 </div>
@@ -1303,11 +1413,14 @@ b+kn'=b+(dq+r)n'=b+dqn'+rn'=b+rn'+nq\equiv b+rn'\pmod{n}\text{.}
 <div class="para" id="exercises-operazioniclassiresto-4-1-1">Dimostrare che per ogni naturale <span class="process-math">\(n\)</span> si ha che <span class="process-math">\(11^{n+2}+12^{2n+1}\)</span> è multiplo di <span class="process-math">\(133\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-4-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="exercises-operazioniclassiresto-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<details id="exercises-operazioniclassiresto-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="exercises-operazioniclassiresto-4-2-1">Mostriamo per induzione su <span class="process-math">\(n\)</span> che <span class="process-math">\(12^{2n+1}\equiv -11^{n+2}\pmod{133}\text{.}\)</span> Per <span class="process-math">\(n=0\)</span> si ha <span class="process-math">\(12^{2\cdot0+1}=12\)</span> e <span class="process-math">\(-11^{0+2}=-121\)</span> da cui segue <span class="process-math">\(12-(-121)=133\)</span> che è, ovviamente, multiplo di <span class="process-math">\(133\text{.}\)</span> Supponiamo che la proprietà sia vera per un certo <span class="process-math">\(n\)</span> e mostriamo che vale per <span class="process-math">\(n+1\text{:}\)</span> dobbiamo cioè provare che <span class="process-math">\(12^{2(n+1)+1}\equiv -11^{n+1+2}\pmod{133}\text{.}\)</span> Ma <span class="process-math">\(12^{2n+3}=12^2\cdot 12^{2n+1}\equiv 144(-11^{n+2})\pmod{133}\text{.}\)</span> Poiché <span class="process-math">\(144\equiv 11\pmod{133}\)</span> otteniamo immediatamente <span class="process-math">\(12^{2n+3}=(-11^{n+3})\pmod{133}\)</span> come richiesto.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-4-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Soluzione 6.2.9.1"><a href="#exercises-operazioniclassiresto-4-2" title="Copy heading and permalink for Soluzione 6.2.9.1" aria-label="Copy heading and permalink for Soluzione 6.2.9.1">🔗</a></div>
-</div></details><details id="exercises-operazioniclassiresto-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+</div></details>
+<details id="exercises-operazioniclassiresto-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para logical" id="exercises-operazioniclassiresto-4-3-1">
 <div class="para">Notiamo che <span class="process-math">\(12^{2}=144\equiv 11\pmod{133}\)</span> e, quindi,</div>
 <div class="displaymath process-math" id="exercises-operazioniclassiresto-4-3-1-2">
@@ -1322,66 +1435,100 @@ b+kn'=b+(dq+r)n'=b+dqn'+rn'=b+rn'+nq\equiv b+rn'\pmod{n}\text{.}
 <div class="autopermalink" data-description="Soluzione 6.2.9.2"><a href="#exercises-operazioniclassiresto-4-3" title="Copy heading and permalink for Soluzione 6.2.9.2" aria-label="Copy heading and permalink for Soluzione 6.2.9.2">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Esercizio 6.2.9"><a href="#exercises-operazioniclassiresto-4" title="Copy heading and permalink for Esercizio 6.2.9" aria-label="Copy heading and permalink for Esercizio 6.2.9">🔗</a></div></article><article class="exercise exercise-like" id="exercises-operazioniclassiresto-5"><h4 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="autopermalink" data-description="Esercizio 6.2.9"><a href="#exercises-operazioniclassiresto-4" title="Copy heading and permalink for Esercizio 6.2.9" aria-label="Copy heading and permalink for Esercizio 6.2.9">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-operazioniclassiresto-5"><h4 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para" id="exercises-operazioniclassiresto-5-1-1">Trovare il resto di <span class="process-math">\(227^{228^{229}}\)</span> diviso <span class="process-math">\(114\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-5-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-operazioniclassiresto-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-operazioniclassiresto-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="exercises-operazioniclassiresto-5-2-1">Notiamo che <span class="process-math">\(227\equiv -1\pmod{114}\text{:}\)</span> dunque, <span class="process-math">\(227^{228^{229}}\equiv (-1)^{228^{229}}\pmod{114}\text{.}\)</span> Ora <span class="process-math">\(228^{229}\)</span> è potenza a esponente positivo di un numero pari ed è, quindi, pari: di conseguenza, <span class="process-math">\((-1)^{228^{229}}=1\text{.}\)</span> Il resto cercato è, quindi, <span class="process-math">\(1\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-5-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Soluzione 6.2.10.1"><a href="#exercises-operazioniclassiresto-5-2" title="Copy heading and permalink for Soluzione 6.2.10.1" aria-label="Copy heading and permalink for Soluzione 6.2.10.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.2.10"><a href="#exercises-operazioniclassiresto-5" title="Copy heading and permalink for Esercizio 6.2.10" aria-label="Copy heading and permalink for Esercizio 6.2.10">🔗</a></div></article><article class="exercise exercise-like" id="exercises-operazioniclassiresto-6"><h4 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.2.10"><a href="#exercises-operazioniclassiresto-5" title="Copy heading and permalink for Esercizio 6.2.10" aria-label="Copy heading and permalink for Esercizio 6.2.10">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-operazioniclassiresto-6"><h4 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para" id="exercises-operazioniclassiresto-6-1-1">Mostrare che, dati tre interi consecutivi, la somma dei loro cubi è un multiplo di <span class="process-math">\(3\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-6-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-operazioniclassiresto-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-operazioniclassiresto-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="exercises-operazioniclassiresto-6-2-1">Tre interi consecutivi rappresentano le tre classi di resto modulo <span class="process-math">\(3\text{:}\)</span> ora <span class="process-math">\(\class[3]{0}^{3}+\class[3]{1}^{3}+\class[3]{2}^{3}=\class[3]{0}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-6-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Soluzione 6.2.11.1"><a href="#exercises-operazioniclassiresto-6-2" title="Copy heading and permalink for Soluzione 6.2.11.1" aria-label="Copy heading and permalink for Soluzione 6.2.11.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.2.11"><a href="#exercises-operazioniclassiresto-6" title="Copy heading and permalink for Esercizio 6.2.11" aria-label="Copy heading and permalink for Esercizio 6.2.11">🔗</a></div></article><article class="exercise exercise-like" id="exercises-operazioniclassiresto-7"><h4 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.2.11"><a href="#exercises-operazioniclassiresto-6" title="Copy heading and permalink for Esercizio 6.2.11" aria-label="Copy heading and permalink for Esercizio 6.2.11">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-operazioniclassiresto-7"><h4 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para" id="exercises-operazioniclassiresto-7-1-1">Trovare l’ultima cifra (in base <span class="process-math">\(10\)</span>) di <span class="process-math">\(1!+2!+3!+\cdots+100!\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-7-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-operazioniclassiresto-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-operazioniclassiresto-7-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="exercises-operazioniclassiresto-7-2-1">Se <span class="process-math">\(n\ge5\)</span> allora <span class="process-math">\(n!\)</span> è multiplo di <span class="process-math">\(10\text{:}\)</span> infatti, <span class="process-math">\(5!=1\cdot2\cdot3\cdot4\cdot5=120\)</span> e ciascun fattoriale è multiplo del precedente. Per calcolare l’ultima cifra di <span class="process-math">\(1!+2!+3!+\cdots+100!\)</span> è allora sufficiente calcolare l’ultima cifra di <span class="process-math">\(1!+2!+3!+4!\text{,}\)</span> cioè <span class="process-math">\(1+2+6+24=33\text{.}\)</span> L’ultima cifra è, quindi, <span class="process-math">\(3\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-7-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Soluzione 6.2.12.1"><a href="#exercises-operazioniclassiresto-7-2" title="Copy heading and permalink for Soluzione 6.2.12.1" aria-label="Copy heading and permalink for Soluzione 6.2.12.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.2.12"><a href="#exercises-operazioniclassiresto-7" title="Copy heading and permalink for Esercizio 6.2.12" aria-label="Copy heading and permalink for Esercizio 6.2.12">🔗</a></div></article><article class="exercise exercise-like" id="exercises-operazioniclassiresto-8"><h4 class="heading"><span class="codenumber">13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.2.12"><a href="#exercises-operazioniclassiresto-7" title="Copy heading and permalink for Esercizio 6.2.12" aria-label="Copy heading and permalink for Esercizio 6.2.12">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-operazioniclassiresto-8"><h4 class="heading"><span class="codenumber">13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para" id="exercises-operazioniclassiresto-8-1-1">Dimostrare che non esiste nessun intero <span class="process-math">\(n\)</span> tale che <span class="process-math">\(3n^{2}-1\)</span> sia un quadrato perfetto.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-8-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="solutions">
-<details id="exercises-operazioniclassiresto-8-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Suggerimento</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<details id="exercises-operazioniclassiresto-8-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Suggerimento</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para" id="exercises-operazioniclassiresto-8-2-1">Usare le classi di resto modulo <span class="process-math">\(3\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-8-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Suggerimento 6.2.13.1"><a href="#exercises-operazioniclassiresto-8-2" title="Copy heading and permalink for Suggerimento 6.2.13.1" aria-label="Copy heading and permalink for Suggerimento 6.2.13.1">🔗</a></div>
-</div></details><details id="exercises-operazioniclassiresto-8-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+</div></details>
+<details id="exercises-operazioniclassiresto-8-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="exercises-operazioniclassiresto-8-3-1">Supponiamo che esistano interi <span class="process-math">\(n\)</span> e <span class="process-math">\(a\)</span> tali che <span class="process-math">\(3n^{2}-1=a^{2}\text{.}\)</span> Qualunque sia <span class="process-math">\(n\text{,}\)</span> il primo membro è congruo a <span class="process-math">\(2\)</span> modulo <span class="process-math">\(3\text{.}\)</span> Per quanto riguarda il secondo membro consideriamo vari casi: se <span class="process-math">\(a\equiv 0\pmod{3}\text{,}\)</span> allora <span class="process-math">\(a^{2}\equiv 0\pmod{3}\text{,}\)</span> se <span class="process-math">\(a\equiv 1\pmod{3}\text{,}\)</span> allora <span class="process-math">\(a^{2}\equiv 1\pmod{3}\text{,}\)</span> se <span class="process-math">\(a\equiv 2\pmod{3}\)</span> allora <span class="process-math">\(a^{2}\equiv 1\pmod{3}\text{.}\)</span> In nessun caso il secondo membro è congruo a <span class="process-math">\(2\)</span> modulo <span class="process-math">\(3\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-8-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Soluzione 6.2.13.1"><a href="#exercises-operazioniclassiresto-8-3" title="Copy heading and permalink for Soluzione 6.2.13.1" aria-label="Copy heading and permalink for Soluzione 6.2.13.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Esercizio 6.2.13"><a href="#exercises-operazioniclassiresto-8" title="Copy heading and permalink for Esercizio 6.2.13" aria-label="Copy heading and permalink for Esercizio 6.2.13">🔗</a></div></article><article class="exercise exercise-like" id="exercises-operazioniclassiresto-9"><h4 class="heading"><span class="codenumber">14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="autopermalink" data-description="Esercizio 6.2.13"><a href="#exercises-operazioniclassiresto-8" title="Copy heading and permalink for Esercizio 6.2.13" aria-label="Copy heading and permalink for Esercizio 6.2.13">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-operazioniclassiresto-9"><h4 class="heading"><span class="codenumber">14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para" id="exercises-operazioniclassiresto-9-1-1">Siano <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\)</span> e <span class="process-math">\(c\)</span> tre interi tali che <span class="process-math">\(a^{2}+b^{2}=c^{2}\text{.}\)</span> Dimostrare che almeno uno degli interi <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\)</span> e <span class="process-math">\(c\)</span> è multiplo di <span class="process-math">\(5\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-9-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-operazioniclassiresto-9-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-operazioniclassiresto-9-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="exercises-operazioniclassiresto-9-2-1">Consideriamo i possibili quadrati modulo <span class="process-math">\(5\)</span> degli interi: se <span class="process-math">\(x\equiv 0\pmod{5}\text{,}\)</span> allora <span class="process-math">\(x^{2}\equiv 0\pmod{5}\text{,}\)</span> se <span class="process-math">\(x\equiv 1\pmod{5}\)</span> allora <span class="process-math">\(x^{2}\equiv 1\pmod{5}\text{,}\)</span> se <span class="process-math">\(x\equiv 2\pmod{5}\)</span> allora <span class="process-math">\(x^{2}\equiv 4\pmod{5}\text{,}\)</span> se <span class="process-math">\(x\equiv 3\pmod{5}\)</span> allora <span class="process-math">\(x^{2}\equiv 4\pmod{5}\text{,}\)</span> se <span class="process-math">\(x\equiv 4\pmod{5}\)</span> allora <span class="process-math">\(x^{2}\equiv 1\pmod{5}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-9-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="para" id="exercises-operazioniclassiresto-9-2-2">Se almeno uno tra <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> è multiplo di <span class="process-math">\(5\text{,}\)</span> allora abbiamo finito, altrimenti ciò significa che <span class="process-math">\(a^{2}\)</span> e <span class="process-math">\(b^{2}\)</span> possono assumere valore <span class="process-math">\(1\)</span> o <span class="process-math">\(4\)</span> modulo <span class="process-math">\(5\text{.}\)</span> Se <span class="process-math">\(a^{2}\equiv b^{2}\pmod{5}\)</span> abbiamo allora che <span class="process-math">\(c^{2}=a^{2}+b^{2}\equiv 1+1\pmod{5}\equiv 2\pmod{5}\)</span> o <span class="process-math">\(c^{2}=a^{2}+b^{2}\equiv 4+4\pmod{5}\equiv 3\pmod{5}\text{:}\)</span> ma né <span class="process-math">\(2\)</span> né <span class="process-math">\(3\)</span> sono quadrati modulo <span class="process-math">\(5\text{.}\)</span> Pertanto, <span class="process-math">\(a^{2}\)</span> e <span class="process-math">\(b^{2}\)</span> assumono valori diversi modulo <span class="process-math">\(5\)</span> cioè uno dei due (non importa quale) assume valore <span class="process-math">\(1\)</span> modulo <span class="process-math">\(5\)</span> e l’altro assume valore <span class="process-math">\(4\)</span> modulo <span class="process-math">\(5\text{.}\)</span> Dunque, <span class="process-math">\(c^{2}=a^{2}+b^{2}\equiv 1+4\pmod{5}\equiv 0\pmod{5}\)</span> e, quindi, <span class="process-math">\(c\equiv 0\pmod{5}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-9-2-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Soluzione 6.2.14.1"><a href="#exercises-operazioniclassiresto-9-2" title="Copy heading and permalink for Soluzione 6.2.14.1" aria-label="Copy heading and permalink for Soluzione 6.2.14.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.2.14"><a href="#exercises-operazioniclassiresto-9" title="Copy heading and permalink for Esercizio 6.2.14" aria-label="Copy heading and permalink for Esercizio 6.2.14">🔗</a></div></article><article class="exercise exercise-like" id="exercises-operazioniclassiresto-10"><h4 class="heading"><span class="codenumber">15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.2.14"><a href="#exercises-operazioniclassiresto-9" title="Copy heading and permalink for Esercizio 6.2.14" aria-label="Copy heading and permalink for Esercizio 6.2.14">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-operazioniclassiresto-10"><h4 class="heading"><span class="codenumber">15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para" id="exercises-operazioniclassiresto-10-1-1">Sia <span class="process-math">\(a\)</span> un intero dispari. Mostrare che il resto della divisione di <span class="process-math">\(a^{2}\)</span> per <span class="process-math">\(8\)</span> è <span class="process-math">\(1\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-10-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-operazioniclassiresto-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-operazioniclassiresto-10-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="exercises-operazioniclassiresto-10-2-1">Dobbiamo mostrare che <span class="process-math">\(a^{2}\equiv 1\pmod{8}\text{.}\)</span> Sappiamo che <span class="process-math">\(a\)</span> è congruo modulo <span class="process-math">\(8\)</span> a un intero compreso tra <span class="process-math">\(0\)</span> e <span class="process-math">\(7\)</span> inclusi. Tuttavia, poiché <span class="process-math">\(a\)</span> è dispari, ogni intero congruo ad <span class="process-math">\(a\)</span> modulo <span class="process-math">\(8\)</span> è  sua volta dispari (la loro differenza è un multiplo di <span class="process-math">\(8\)</span> e, quindi, di <span class="process-math">\(2\)</span>). In particolare, possiamo dire che <span class="process-math">\(a\)</span> è congruo modulo <span class="process-math">\(8\)</span> a uno tra i numeri <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(3\text{,}\)</span> <span class="process-math">\(5\)</span> e <span class="process-math">\(7\text{.}\)</span> Il quadrato di <span class="process-math">\(a\)</span> modulo <span class="process-math">\(8\)</span> è, quindi, congruo al quadrato di uno di questi numeri. Ma tutti questi numeri hanno quadrato congruo a <span class="process-math">\(1\)</span> modulo <span class="process-math">\(8\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-10-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Soluzione 6.2.15.1"><a href="#exercises-operazioniclassiresto-10-2" title="Copy heading and permalink for Soluzione 6.2.15.1" aria-label="Copy heading and permalink for Soluzione 6.2.15.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.2.15"><a href="#exercises-operazioniclassiresto-10" title="Copy heading and permalink for Esercizio 6.2.15" aria-label="Copy heading and permalink for Esercizio 6.2.15">🔗</a></div></article><article class="exercise exercise-like" id="exercises-operazioniclassiresto-11"><h4 class="heading"><span class="codenumber">16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.2.15"><a href="#exercises-operazioniclassiresto-10" title="Copy heading and permalink for Esercizio 6.2.15" aria-label="Copy heading and permalink for Esercizio 6.2.15">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-operazioniclassiresto-11"><h4 class="heading"><span class="codenumber">16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para" id="exercises-operazioniclassiresto-11-1-1">Sia <span class="process-math">\(a\)</span> un numero dispari e sia <span class="process-math">\(b=a+2\text{.}\)</span> Sapendo che <span class="process-math">\(ab\)</span> non è multiplo di <span class="process-math">\(3\text{,}\)</span> provare che <span class="process-math">\(12\)</span> divide <span class="process-math">\(a+b\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-11-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-operazioniclassiresto-11-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-operazioniclassiresto-11-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="exercises-operazioniclassiresto-11-2-1">Poiché <span class="process-math">\(12=4\cdot 3\)</span> e <span class="process-math">\(4\)</span> e <span class="process-math">\(3\)</span> sono coprimi, per l’<a href="sec-fattorizzazione_interi.html#exer-multiplo_di_coprimi" class="xref" data-knowl="./knowl/xref/exer-multiplo_di_coprimi.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Esercizio 5.4.3">Esercizio 5.4.3</a> è sufficiente provare che <span class="process-math">\(a+b\)</span> è multiplo di <span class="process-math">\(4\)</span> e di <span class="process-math">\(3\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-11-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="para" id="exercises-operazioniclassiresto-11-2-2">Sia <span class="process-math">\(a=1+2k\)</span> per qualche intero <span class="process-math">\(k\text{:}\)</span> allora <span class="process-math">\(b=3+2k\text{.}\)</span> Di conseguenza, <span class="process-math">\(a+b=4+4k\text{;}\)</span> in particolare, <span class="process-math">\(a+b\)</span> è multiplo di <span class="process-math">\(4\)</span> qualunque sia <span class="process-math">\(k\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-11-2-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
@@ -1389,18 +1536,28 @@ b+kn'=b+(dq+r)n'=b+dqn'+rn'=b+rn'+nq\equiv b+rn'\pmod{n}\text{.}
 <div class="para" id="exercises-operazioniclassiresto-11-2-3">Lavoriamo ora modulo <span class="process-math">\(3\text{.}\)</span> Poiché <span class="process-math">\(ab\)</span> non è multiplo di <span class="process-math">\(3\)</span> sappiamo che né <span class="process-math">\(a\)</span> né <span class="process-math">\(b\)</span> sono multipli di <span class="process-math">\(3\text{:}\)</span> in particolare, <span class="process-math">\(a\not\equiv 0\pmod{3}\)</span> e <span class="process-math">\(a+2\not\equiv 3\pmod{3}\text{,}\)</span> cioè <span class="process-math">\(a\not\equiv 1 \pmod{3}\text{.}\)</span> Pertanto, <span class="process-math">\(a\equiv{2}\pmod{3}\)</span> e <span class="process-math">\(b\equiv{2+2}\pmod{3}\text{:}\)</span> quindi, <span class="process-math">\(a+b\equiv 2+4\pmod{3}\)</span> cioè <span class="process-math">\(a+b\)</span> è multiplo di <span class="process-math">\(3\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-11-2-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Soluzione 6.2.16.1"><a href="#exercises-operazioniclassiresto-11-2" title="Copy heading and permalink for Soluzione 6.2.16.1" aria-label="Copy heading and permalink for Soluzione 6.2.16.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.2.16"><a href="#exercises-operazioniclassiresto-11" title="Copy heading and permalink for Esercizio 6.2.16" aria-label="Copy heading and permalink for Esercizio 6.2.16">🔗</a></div></article><article class="exercise exercise-like" id="exercises-operazioniclassiresto-12"><h4 class="heading"><span class="codenumber">17<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.2.16"><a href="#exercises-operazioniclassiresto-11" title="Copy heading and permalink for Esercizio 6.2.16" aria-label="Copy heading and permalink for Esercizio 6.2.16">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-operazioniclassiresto-12"><h4 class="heading"><span class="codenumber">17<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para" id="exercises-operazioniclassiresto-12-1-1">Dato un intero <span class="process-math">\(n\text{,}\)</span> dimostrare che il massimo comun divisore tra <span class="process-math">\(n+1\)</span> e <span class="process-math">\(n^{2}+1\)</span> è <span class="process-math">\(1\)</span> se <span class="process-math">\(n\)</span> è pari ed è <span class="process-math">\(2\)</span> se <span class="process-math">\(n\)</span> è dispari.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-12-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-operazioniclassiresto-12-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-operazioniclassiresto-12-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="exercises-operazioniclassiresto-12-2-1">Sia <span class="process-math">\(d\)</span> il massimo comun divisore tra <span class="process-math">\(n+1\)</span> e <span class="process-math">\(n^{2}+1\text{.}\)</span> Allora <span class="process-math">\(n\equiv -1\pmod{d}\)</span> e <span class="process-math">\(n^{2}\equiv -1 \pmod{d}\text{.}\)</span> Dalla prima congruenza ricaviamo che <span class="process-math">\(n^{2}\equiv (-1)^{2}\pmod{d}\text{:}\)</span> ma allora <span class="process-math">\(1\equiv -1\pmod{d}\)</span> e, dunque, <span class="process-math">\(d\)</span> divide <span class="process-math">\(2\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-12-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="para" id="exercises-operazioniclassiresto-12-2-2">I valori possibili per <span class="process-math">\(d\)</span> sono allora <span class="process-math">\(1\)</span> e <span class="process-math">\(2\text{:}\)</span> se <span class="process-math">\(d=2\text{,}\)</span> allora <span class="process-math">\(n+1\)</span> è multiplo di <span class="process-math">\(2\)</span> e, quindi, <span class="process-math">\(n\)</span> è dispari. Se, viceversa, <span class="process-math">\(n\)</span> è dispari, allora anche <span class="process-math">\(n^{2}\)</span> è dispari e, quindi, <span class="process-math">\(n+1\)</span> e <span class="process-math">\(n^{2}+1\)</span> sono entrambi pari e il loro massimo comun divisore è pari: dato che i valori possibili sono <span class="process-math">\(1\)</span> e <span class="process-math">\(2\text{,}\)</span> ciò significa che <span class="process-math">\(d=2\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-operazioniclassiresto-12-2-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Soluzione 6.2.17.1"><a href="#exercises-operazioniclassiresto-12-2" title="Copy heading and permalink for Soluzione 6.2.17.1" aria-label="Copy heading and permalink for Soluzione 6.2.17.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 6.2.17"><a href="#exercises-operazioniclassiresto-12" title="Copy heading and permalink for Esercizio 6.2.17" aria-label="Copy heading and permalink for Esercizio 6.2.17">🔗</a></div></article><div class="autopermalink" data-description="Esercizi 6.2"><a href="#exercises-operazioniclassiresto" title="Copy heading and permalink for Esercizi 6.2" aria-label="Copy heading and permalink for Esercizi 6.2">🔗</a></div></section><div class="autopermalink" data-description="Paragrafo 6.2: Operazioni tra classi di resto"><a href="#sec-operazioniclassiresto" title="Copy heading and permalink for Paragrafo 6.2: Operazioni tra classi di resto" aria-label="Copy heading and permalink for Paragrafo 6.2: Operazioni tra classi di resto">🔗</a></div></section></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 6.2.17"><a href="#exercises-operazioniclassiresto-12" title="Copy heading and permalink for Esercizio 6.2.17" aria-label="Copy heading and permalink for Esercizio 6.2.17">🔗</a></div>
+</article><div class="autopermalink" data-description="Esercizi 6.2"><a href="#exercises-operazioniclassiresto" title="Copy heading and permalink for Esercizi 6.2" aria-label="Copy heading and permalink for Esercizi 6.2">🔗</a></div>
+</section><div class="autopermalink" data-description="Paragrafo 6.2: Operazioni tra classi di resto"><a href="#sec-operazioniclassiresto" title="Copy heading and permalink for Paragrafo 6.2: Operazioni tra classi di resto" aria-label="Copy heading and permalink for Paragrafo 6.2: Operazioni tra classi di resto">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-congruenzemodulon.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-eulero.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

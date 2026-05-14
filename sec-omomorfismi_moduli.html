@@ -20,62 +20,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "textmacros",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[tex]/textmacros",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="Algebra">
@@ -102,15 +54,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.13.3';
+eBookConfig.runestone_version = '8.0.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.b76b8eace4405b9e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.bbf2283c5c1d4f99.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/prefix-runtime.ce7e0a2163cb330f.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.f4a2ffb04bb978bb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
 </script>
 </head>
@@ -714,7 +666,9 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-omomorfismi_moduli"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-omomorfismi_moduli">
+<h2 class="heading hide-type">
 <span class="type">Paragrafo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">23.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Omomorfismi di moduli</span>
 </h2>
 <article class="definition definition-like" id="def-omomorfismo_moduli"><h3 class="heading">
@@ -738,14 +692,18 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 <div class="autopermalink" data-description="Capoverso"><a href="#def-omomorfismo_moduli-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definizione 23.3.1"><a href="#def-omomorfismo_moduli" title="Copy heading and permalink for Definizione 23.3.1" aria-label="Copy heading and permalink for Definizione 23.3.1">🔗</a></div></article><div class="para" id="sec-omomorfismi_moduli-3">Le definizioni di <dfn class="terminology">isomorfismo</dfn>, <dfn class="terminology">endomorfismo</dfn> e <dfn class="terminology">automorfismo</dfn> sono date in analogia alle corrispondenti nozioni per i gruppi (<a href="sec-definizione_omomorfismo.html#def-isomorfismo" class="xref" data-knowl="./knowl/xref/def-isomorfismo.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Definizione 13.1.12">Definizione 13.1.12</a> e <a href="sec-definizione_omomorfismo.html#def-endomorfismo_automorfismo" class="xref" data-knowl="./knowl/xref/def-endomorfismo_automorfismo.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Definizione 13.1.13">Definizione 13.1.13</a>).<div class="autopermalink" data-description="Capoverso"><a href="#sec-omomorfismi_moduli-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Definizione 23.3.1"><a href="#def-omomorfismo_moduli" title="Copy heading and permalink for Definizione 23.3.1" aria-label="Copy heading and permalink for Definizione 23.3.1">🔗</a></div>
+</article>
+<div class="para" id="sec-omomorfismi_moduli-3">Le definizioni di <dfn class="terminology">isomorfismo</dfn>, <dfn class="terminology">endomorfismo</dfn> e <dfn class="terminology">automorfismo</dfn> sono date in analogia alle corrispondenti nozioni per i gruppi (<a href="sec-definizione_omomorfismo.html#def-isomorfismo" class="xref" data-knowl="./knowl/xref/def-isomorfismo.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Definizione 13.1.12">Definizione 13.1.12</a> e <a href="sec-definizione_omomorfismo.html#def-endomorfismo_automorfismo" class="xref" data-knowl="./knowl/xref/def-endomorfismo_automorfismo.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Definizione 13.1.13">Definizione 13.1.13</a>).<div class="autopermalink" data-description="Capoverso"><a href="#sec-omomorfismi_moduli-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="remark remark-like" id="rem-proprieta_omomorfismi_moduli"><h3 class="heading">
 <span class="type">Osservazione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">23.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="rem-proprieta_omomorfismi_moduli-1">Poiché un omomorfismo di <span class="process-math">\(R\)</span>-moduli <span class="process-math">\(\phi\colon M\to N\)</span> è un omomorfismo di gruppi additivi, valgono tutte le proprietà che abbiamo visto in tale situazione e rimandiamo, pertanto, al <a href="ch-omomorfismi.html" class="internal" title="Capitolo 13: Omomorfismi">Capitolo 13</a>.<div class="autopermalink" data-description="Capoverso"><a href="#rem-proprieta_omomorfismi_moduli-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Osservazione 23.3.2"><a href="#rem-proprieta_omomorfismi_moduli" title="Copy heading and permalink for Osservazione 23.3.2" aria-label="Copy heading and permalink for Osservazione 23.3.2">🔗</a></div></article><article class="remark remark-like" id="rem-omomorfismo_Z_moduli"><h3 class="heading">
+<div class="autopermalink" data-description="Osservazione 23.3.2"><a href="#rem-proprieta_omomorfismi_moduli" title="Copy heading and permalink for Osservazione 23.3.2" aria-label="Copy heading and permalink for Osservazione 23.3.2">🔗</a></div>
+</article>
+<article class="remark remark-like" id="rem-omomorfismo_Z_moduli"><h3 class="heading">
 <span class="type">Osservazione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">23.3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="rem-omomorfismo_Z_moduli-1">Se <span class="process-math">\(G\)</span> e <span class="process-math">\(H\)</span> sono gruppi abeliani, visti come <span class="process-math">\(\Interi\)</span>-moduli e <span class="process-math">\(\phi\colon G\to H\)</span> è un omomorfismo tra <span class="process-math">\(\Interi\)</span>-moduli, allora, per definizione, <span class="process-math">\(\phi\)</span> è un omomorfismo di gruppi.<div class="autopermalink" data-description="Capoverso"><a href="#rem-omomorfismo_Z_moduli-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
@@ -754,7 +712,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="rem-omomorfismo_Z_moduli-3">Dunque, nel caso degli <span class="process-math">\(\Interi\)</span>-moduli, il concetto di omomorfismo di gruppi e il concetto di omomorfismo di moduli coincidono.<div class="autopermalink" data-description="Capoverso"><a href="#rem-omomorfismo_Z_moduli-3" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Osservazione 23.3.3"><a href="#rem-omomorfismo_Z_moduli" title="Copy heading and permalink for Osservazione 23.3.3" aria-label="Copy heading and permalink for Osservazione 23.3.3">🔗</a></div></article><div class="para" id="sec-omomorfismi_moduli-6">Usando un approccio simile a quello della <a href="sec-nucleo_immagine.html#prop-immagine_diretta_inversa_di_sottogruppi" class="xref" data-knowl="./knowl/xref/prop-immagine_diretta_inversa_di_sottogruppi.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 13.2.1">Proposizione 13.2.1</a> si dimostra facilmente la<div class="autopermalink" data-description="Capoverso"><a href="#sec-omomorfismi_moduli-6" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Osservazione 23.3.3"><a href="#rem-omomorfismo_Z_moduli" title="Copy heading and permalink for Osservazione 23.3.3" aria-label="Copy heading and permalink for Osservazione 23.3.3">🔗</a></div>
+</article>
+<div class="para" id="sec-omomorfismi_moduli-6">Usando un approccio simile a quello della <a href="sec-nucleo_immagine.html#prop-immagine_diretta_inversa_di_sottogruppi" class="xref" data-knowl="./knowl/xref/prop-immagine_diretta_inversa_di_sottogruppi.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 13.2.1">Proposizione 13.2.1</a> si dimostra facilmente la<div class="autopermalink" data-description="Capoverso"><a href="#sec-omomorfismi_moduli-6" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="proposition theorem-like" id="prop-immagine_diretta_inversa_di_sottomoduli"><h3 class="heading">
 <span class="type">Proposizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">23.3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -775,7 +735,9 @@ eBookConfig.enable_chatcodes =  false;
 </ol>
 <div class="autopermalink" data-description="Capoverso"><a href="#prop-immagine_diretta_inversa_di_sottomoduli-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposizione 23.3.4"><a href="#prop-immagine_diretta_inversa_di_sottomoduli" title="Copy heading and permalink for Proposizione 23.3.4" aria-label="Copy heading and permalink for Proposizione 23.3.4">🔗</a></div></article><div class="para" id="sec-omomorfismi_moduli-8">Come possiamo stabilire se un certo omomorfismo è iniettivo? Possiamo semplicemente riguardarlo come omomorfismo di gruppi additivi e dare la<div class="autopermalink" data-description="Capoverso"><a href="#sec-omomorfismi_moduli-8" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Proposizione 23.3.4"><a href="#prop-immagine_diretta_inversa_di_sottomoduli" title="Copy heading and permalink for Proposizione 23.3.4" aria-label="Copy heading and permalink for Proposizione 23.3.4">🔗</a></div>
+</article>
+<div class="para" id="sec-omomorfismi_moduli-8">Come possiamo stabilire se un certo omomorfismo è iniettivo? Possiamo semplicemente riguardarlo come omomorfismo di gruppi additivi e dare la<div class="autopermalink" data-description="Capoverso"><a href="#sec-omomorfismi_moduli-8" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-nucleo_omomorfismo_moduli"><h3 class="heading">
 <span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">23.3.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -789,35 +751,48 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#def-nucleo_omomorfismo_moduli-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definizione 23.3.5"><a href="#def-nucleo_omomorfismo_moduli" title="Copy heading and permalink for Definizione 23.3.5" aria-label="Copy heading and permalink for Definizione 23.3.5">🔗</a></div></article><div class="para" id="sec-omomorfismi_moduli-10">Come caso particolare della <a href="sec-omomorfismi_moduli.html#prop-immagine_diretta_inversa_di_sottomoduli" class="xref" data-knowl="./knowl/xref/prop-immagine_diretta_inversa_di_sottomoduli.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 23.3.4">Proposizione 23.3.4</a> abbiamo immediatamente il<div class="autopermalink" data-description="Capoverso"><a href="#sec-omomorfismi_moduli-10" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Definizione 23.3.5"><a href="#def-nucleo_omomorfismo_moduli" title="Copy heading and permalink for Definizione 23.3.5" aria-label="Copy heading and permalink for Definizione 23.3.5">🔗</a></div>
+</article>
+<div class="para" id="sec-omomorfismi_moduli-10">Come caso particolare della <a href="sec-omomorfismi_moduli.html#prop-immagine_diretta_inversa_di_sottomoduli" class="xref" data-knowl="./knowl/xref/prop-immagine_diretta_inversa_di_sottomoduli.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 23.3.4">Proposizione 23.3.4</a> abbiamo immediatamente il<div class="autopermalink" data-description="Capoverso"><a href="#sec-omomorfismi_moduli-10" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="corollary theorem-like" id="cor-nucleo_e_immagine_omomorfismo_moduli"><h3 class="heading">
 <span class="type">Corollario</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">23.3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="cor-nucleo_e_immagine_omomorfismo_moduli-1-1">Sia <span class="process-math">\(\phi\colon M\to N\)</span> un omomorfismo di <span class="process-math">\(R\)</span>-moduli. Il nucleo di <span class="process-math">\(\phi\)</span> è un sottomodulo di <span class="process-math">\(M\text{,}\)</span> mentre l’immagine di <span class="process-math">\(\phi\)</span> è un sottomodulo di <span class="process-math">\(N\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#cor-nucleo_e_immagine_omomorfismo_moduli-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollario 23.3.6"><a href="#cor-nucleo_e_immagine_omomorfismo_moduli" title="Copy heading and permalink for Corollario 23.3.6" aria-label="Copy heading and permalink for Corollario 23.3.6">🔗</a></div></article><div class="para" id="sec-omomorfismi_moduli-12">Ovviamente, possiamo “tradurre” immediatamente il <a href="sec-nucleo_immagine.html#thm-iniettivo_nucleo_banale" class="xref" data-knowl="./knowl/xref/thm-iniettivo_nucleo_banale.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 13.2.8">Teorema 13.2.8</a> e il <a href="sec-nucleo_immagine.html#cor-corrispondenza_immagini_dirette_inverse_sottogruppi" class="xref" data-knowl="./knowl/xref/cor-corrispondenza_immagini_dirette_inverse_sottogruppi.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Corollario 13.2.13">Corollario 13.2.13</a>.<div class="autopermalink" data-description="Capoverso"><a href="#sec-omomorfismi_moduli-12" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Corollario 23.3.6"><a href="#cor-nucleo_e_immagine_omomorfismo_moduli" title="Copy heading and permalink for Corollario 23.3.6" aria-label="Copy heading and permalink for Corollario 23.3.6">🔗</a></div>
+</article>
+<div class="para" id="sec-omomorfismi_moduli-12">Ovviamente, possiamo “tradurre” immediatamente il <a href="sec-nucleo_immagine.html#thm-iniettivo_nucleo_banale" class="xref" data-knowl="./knowl/xref/thm-iniettivo_nucleo_banale.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 13.2.8">Teorema 13.2.8</a> e il <a href="sec-nucleo_immagine.html#cor-corrispondenza_immagini_dirette_inverse_sottogruppi" class="xref" data-knowl="./knowl/xref/cor-corrispondenza_immagini_dirette_inverse_sottogruppi.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Corollario 13.2.13">Corollario 13.2.13</a>.<div class="autopermalink" data-description="Capoverso"><a href="#sec-omomorfismi_moduli-12" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="thm-iniettivo_nucleo_banale_moduli"><h3 class="heading">
 <span class="type">Teorema</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">23.3.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="thm-iniettivo_nucleo_banale_moduli-1-1">Sia <span class="process-math">\(\phi\colon M\to N\)</span> un omomorfismo di <span class="process-math">\(R\)</span>-moduli. Allora <span class="process-math">\(\phi\)</span> è iniettivo se e solo se <span class="process-math">\(\ker\phi=0_{M}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#thm-iniettivo_nucleo_banale_moduli-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Teorema 23.3.7"><a href="#thm-iniettivo_nucleo_banale_moduli" title="Copy heading and permalink for Teorema 23.3.7" aria-label="Copy heading and permalink for Teorema 23.3.7">🔗</a></div></article><article class="corollary theorem-like" id="cor-corrispondenza_immagini_dirette_inverse_sottomoduli"><h3 class="heading">
+<div class="autopermalink" data-description="Teorema 23.3.7"><a href="#thm-iniettivo_nucleo_banale_moduli" title="Copy heading and permalink for Teorema 23.3.7" aria-label="Copy heading and permalink for Teorema 23.3.7">🔗</a></div>
+</article>
+<article class="corollary theorem-like" id="cor-corrispondenza_immagini_dirette_inverse_sottomoduli"><h3 class="heading">
 <span class="type">Corollario</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">23.3.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="cor-corrispondenza_immagini_dirette_inverse_sottomoduli-1-1">Sia <span class="process-math">\(\phi\colon M\to N\)</span> un omomorfismo di <span class="process-math">\(R\)</span>-moduli. Allora, le mappe <span class="process-math">\(T\mapsto T\phi\)</span> e <span class="process-math">\(U\mapsto U\phi^{-1}\)</span> definiscono delle biiezioni, una inversa dell’altra, tra l’insieme dei sottomoduli di <span class="process-math">\(M\)</span> contenenti <span class="process-math">\(\ker\phi\)</span> e l’insieme dei sottomoduli di <span class="process-math">\(N\)</span> contenuti in <span class="process-math">\(\im\phi\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#cor-corrispondenza_immagini_dirette_inverse_sottomoduli-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollario 23.3.8"><a href="#cor-corrispondenza_immagini_dirette_inverse_sottomoduli" title="Copy heading and permalink for Corollario 23.3.8" aria-label="Copy heading and permalink for Corollario 23.3.8">🔗</a></div></article><section class="exercises" id="exercises-omomorfismi_moduli"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Corollario 23.3.8"><a href="#cor-corrispondenza_immagini_dirette_inverse_sottomoduli" title="Copy heading and permalink for Corollario 23.3.8" aria-label="Copy heading and permalink for Corollario 23.3.8">🔗</a></div>
+</article>
+<section class="exercises" id="exercises-omomorfismi_moduli">
+<h3 class="heading hide-type">
 <span class="type">Esercizi</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Esercizi</span>
 </h3>
 <article class="exercise exercise-like" id="exercises-omomorfismi_moduli-1"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para" id="exercises-omomorfismi_moduli-1-1-1">Dimostrare la <a href="sec-omomorfismi_moduli.html#prop-immagine_diretta_inversa_di_sottomoduli" class="xref" data-knowl="./knowl/xref/prop-immagine_diretta_inversa_di_sottomoduli.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 23.3.4">Proposizione 23.3.4</a>.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-omomorfismi_moduli-1-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Esercizio 23.3.1"><a href="#exercises-omomorfismi_moduli-1" title="Copy heading and permalink for Esercizio 23.3.1" aria-label="Copy heading and permalink for Esercizio 23.3.1">🔗</a></div></article><article class="exercise exercise-like" id="exercises-omomorfismi_moduli-2"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="autopermalink" data-description="Esercizio 23.3.1"><a href="#exercises-omomorfismi_moduli-1" title="Copy heading and permalink for Esercizio 23.3.1" aria-label="Copy heading and permalink for Esercizio 23.3.1">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-omomorfismi_moduli-2"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para" id="exercises-omomorfismi_moduli-2-1-1">Sia <span class="process-math">\(M\)</span> un <span class="process-math">\(R\)</span>-modulo con <span class="process-math">\(R\)</span> commutativo e sia <span class="process-math">\(r\)</span> un elemento di <span class="process-math">\(R\)</span> fissato. Dimostrare che la funzione <span class="process-math">\(\phi_{r}\)</span> da <span class="process-math">\(M\)</span> in sé che manda un generico elemento <span class="process-math">\(x\)</span> in <span class="process-math">\(xr\)</span> è un endomorfismo di <span class="process-math">\(R\)</span>-moduli.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-omomorfismi_moduli-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-omomorfismi_moduli-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-omomorfismi_moduli-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para logical" id="exercises-omomorfismi_moduli-2-2-1">
 <div class="para">Dai due elementi <span class="process-math">\(x\)</span> e <span class="process-math">\(y\)</span> in <span class="process-math">\(M\)</span> e un elemento <span class="process-math">\(a\)</span> di <span class="process-math">\(R\)</span> si ha</div>
 <div class="displaymath process-math" id="exercises-omomorfismi_moduli-2-2-1-6">
@@ -829,8 +804,13 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Capoverso"><a href="#exercises-omomorfismi_moduli-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Soluzione 23.3.2.1"><a href="#exercises-omomorfismi_moduli-2-2" title="Copy heading and permalink for Soluzione 23.3.2.1" aria-label="Copy heading and permalink for Soluzione 23.3.2.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 23.3.2"><a href="#exercises-omomorfismi_moduli-2" title="Copy heading and permalink for Esercizio 23.3.2" aria-label="Copy heading and permalink for Esercizio 23.3.2">🔗</a></div></article><div class="autopermalink" data-description="Esercizi 23.3"><a href="#exercises-omomorfismi_moduli" title="Copy heading and permalink for Esercizi 23.3" aria-label="Copy heading and permalink for Esercizi 23.3">🔗</a></div></section><div class="autopermalink" data-description="Paragrafo 23.3: Omomorfismi di moduli"><a href="#sec-omomorfismi_moduli" title="Copy heading and permalink for Paragrafo 23.3: Omomorfismi di moduli" aria-label="Copy heading and permalink for Paragrafo 23.3: Omomorfismi di moduli">🔗</a></div></section></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 23.3.2"><a href="#exercises-omomorfismi_moduli-2" title="Copy heading and permalink for Esercizio 23.3.2" aria-label="Copy heading and permalink for Esercizio 23.3.2">🔗</a></div>
+</article><div class="autopermalink" data-description="Esercizi 23.3"><a href="#exercises-omomorfismi_moduli" title="Copy heading and permalink for Esercizi 23.3" aria-label="Copy heading and permalink for Esercizi 23.3">🔗</a></div>
+</section><div class="autopermalink" data-description="Paragrafo 23.3: Omomorfismi di moduli"><a href="#sec-omomorfismi_moduli" title="Copy heading and permalink for Paragrafo 23.3: Omomorfismi di moduli" aria-label="Copy heading and permalink for Paragrafo 23.3: Omomorfismi di moduli">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-sottomoduli.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-moduli_quoziente.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

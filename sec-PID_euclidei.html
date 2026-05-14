@@ -20,62 +20,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "textmacros",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math"
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[tex]/textmacros",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
 <meta property="book:title" content="Algebra">
@@ -102,15 +54,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.13.3';
+eBookConfig.runestone_version = '8.0.0';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.b76b8eace4405b9e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.bbf2283c5c1d4f99.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/prefix-runtime.ce7e0a2163cb330f.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.f4a2ffb04bb978bb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Calcola (Sage)';
 </script>
 </head>
@@ -714,33 +666,51 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-PID_euclidei"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-PID_euclidei">
+<h2 class="heading hide-type">
 <span class="type">Paragrafo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">21.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Domini a ideali principali e domini euclidei</span>
 </h2>
 <article class="definition definition-like" id="def-PID"><h3 class="heading">
 <span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">21.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="def-PID-1-1">Un dominio in cui tutti gli ideali sono principali è detto <dfn class="terminology">dominio a ideali principali</dfn> (in breve, PID<details class="ptx-footnote" aria-live="polite" id="def-PID-1-1-2"><summary class="ptx-footnote__number" title="Nota a piè di pagina 21.3.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="def-PID-1-1-2">Dall’inglese Principal Ideal Domain.</div></details>).<div class="autopermalink" data-description="Capoverso"><a href="#def-PID-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="para" id="def-PID-1-1">Un dominio in cui tutti gli ideali sono principali è detto <dfn class="terminology">dominio a ideali principali</dfn> (in breve, PID<details class="ptx-footnote" aria-live="polite" id="def-PID-1-1-2"><summary class="ptx-footnote__number" title="Nota a piè di pagina 21.3.1"><sup> 1 </sup></summary>
+<div class="ptx-footnote__contents" id="def-PID-1-1-2">Dall’inglese Principal Ideal Domain.
+</div></details>).<div class="autopermalink" data-description="Capoverso"><a href="#def-PID-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definizione 21.3.1"><a href="#def-PID" title="Copy heading and permalink for Definizione 21.3.1" aria-label="Copy heading and permalink for Definizione 21.3.1">🔗</a></div></article><article class="proposition theorem-like" id="prop-PID_Noetheriani"><h3 class="heading">
+<div class="autopermalink" data-description="Definizione 21.3.1"><a href="#def-PID" title="Copy heading and permalink for Definizione 21.3.1" aria-label="Copy heading and permalink for Definizione 21.3.1">🔗</a></div>
+</article>
+<article class="proposition theorem-like" id="prop-PID_Noetheriani"><h3 class="heading">
 <span class="type">Proposizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">21.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="prop-PID_Noetheriani-1-1">In un dominio a ideali principali <span class="process-math">\(D\text{,}\)</span> ogni famiglia non vuota <span class="process-math">\(\mathcal{F}\)</span> di ideali ammette un elemento massimale.<div class="autopermalink" data-description="Capoverso"><a href="#prop-PID_Noetheriani-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposizione 21.3.2"><a href="#prop-PID_Noetheriani" title="Copy heading and permalink for Proposizione 21.3.2" aria-label="Copy heading and permalink for Proposizione 21.3.2">🔗</a></div></article><details id="prop-PID_Noetheriani-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-PID_Noetheriani-2-1">Sia <span class="process-math">\(I_{1}\)</span> un elemento di <span class="process-math">\(\mathcal{F}\text{:}\)</span> se <span class="process-math">\(I_{1}\)</span> è massimale in <span class="process-math">\(\mathcal{F}\text{,}\)</span> abbiamo finito, altrimenti esiste un elemento <span class="process-math">\(I_{2}\)</span> in <span class="process-math">\(\mathcal{F}\)</span> tale che <span class="process-math">\(I_{1}\subsetneq I_{2}\text{.}\)</span> Procedendo così, costruiamo una catena strettamente ascendente di ideali <span class="process-math">\(I_{1}\subsetneq I_{2}\subsetneq I_{3}\subsetneq \cdots\text{.}\)</span> Se non trovassimo mai un ideale massimale, il procedimento non avrebbe termine: mostriamo quindi che ciò non può avvenire. Posto <span class="process-math">\(I\coloneqq \bigcup_{j}I_{j}\text{,}\)</span> questo è un ideale di <span class="process-math">\(D\text{:}\)</span> infatti, è non vuoto e se <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> sono due elementi di <span class="process-math">\(I\)</span> e <span class="process-math">\(c\)</span> un elemento di <span class="process-math">\(D\text{,}\)</span> sappiamo che <span class="process-math">\(a\in I_{t}\)</span> e <span class="process-math">\(b\in I_{u}\)</span> per qualche <span class="process-math">\(t\)</span> e <span class="process-math">\(u\text{;}\)</span> detto <span class="process-math">\(m\)</span> il massimo di <span class="process-math">\(t\)</span> e <span class="process-math">\(u\)</span> abbiamo che <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> sono elementi di <span class="process-math">\(I_{m}\)</span> e, di conseguenza, <span class="process-math">\(a+b\in I_{m}\subseteq I\)</span> e <span class="process-math">\(ac\in I_{t}\subseteq I\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-PID_Noetheriani-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Proposizione 21.3.2"><a href="#prop-PID_Noetheriani" title="Copy heading and permalink for Proposizione 21.3.2" aria-label="Copy heading and permalink for Proposizione 21.3.2">🔗</a></div>
+</article>
+<details id="prop-PID_Noetheriani-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="prop-PID_Noetheriani-2-1">Sia <span class="process-math">\(I_{1}\)</span> un elemento di <span class="process-math">\(\mathcal{F}\text{:}\)</span> se <span class="process-math">\(I_{1}\)</span> è massimale in <span class="process-math">\(\mathcal{F}\text{,}\)</span> abbiamo finito, altrimenti esiste un elemento <span class="process-math">\(I_{2}\)</span> in <span class="process-math">\(\mathcal{F}\)</span> tale che <span class="process-math">\(I_{1}\subsetneq I_{2}\text{.}\)</span> Procedendo così, costruiamo una catena strettamente ascendente di ideali <span class="process-math">\(I_{1}\subsetneq I_{2}\subsetneq I_{3}\subsetneq \cdots\text{.}\)</span> Se non trovassimo mai un ideale massimale, il procedimento non avrebbe termine: mostriamo quindi che ciò non può avvenire. Posto <span class="process-math">\(I\coloneqq \bigcup_{j}I_{j}\text{,}\)</span> questo è un ideale di <span class="process-math">\(D\text{:}\)</span> infatti, è non vuoto e se <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> sono due elementi di <span class="process-math">\(I\)</span> e <span class="process-math">\(c\)</span> un elemento di <span class="process-math">\(D\text{,}\)</span> sappiamo che <span class="process-math">\(a\in I_{t}\)</span> e <span class="process-math">\(b\in I_{u}\)</span> per qualche <span class="process-math">\(t\)</span> e <span class="process-math">\(u\text{;}\)</span> detto <span class="process-math">\(m\)</span> il massimo di <span class="process-math">\(t\)</span> e <span class="process-math">\(u\)</span> abbiamo che <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> sono elementi di <span class="process-math">\(I_{m}\)</span> e, di conseguenza, <span class="process-math">\(a+b\in I_{m}\subseteq I\)</span> e <span class="process-math">\(ac\in I_{t}\subseteq I\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-PID_Noetheriani-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="para" id="prop-PID_Noetheriani-2-2">Ora <span class="process-math">\(I\)</span> è un ideale principale generato da un suo certo elemento <span class="process-math">\(b\text{.}\)</span> Ma allora <span class="process-math">\(b\in I_{k}\)</span> per qualche <span class="process-math">\(k\text{:}\)</span> pertanto <span class="process-math">\(I=\ideal{b}\subseteq I_{k}\subseteq I_{k+1}\subseteq I\)</span> da cui segue <span class="process-math">\(I_{k}=I_{k+1}\text{,}\)</span> contro il modo in cui abbiamo costruito la sequenza di ideali <span class="process-math">\(I_{j}\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-PID_Noetheriani-2-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Dimostrazione 21.3.2.1"><a href="#prop-PID_Noetheriani-2" title="Copy heading and permalink for Dimostrazione 21.3.2.1" aria-label="Copy heading and permalink for Dimostrazione 21.3.2.1">🔗</a></div></article></details><article class="proposition theorem-like" id="prop-MCD_in_PID"><h3 class="heading">
+<div class="autopermalink" data-description="Dimostrazione 21.3.2.1"><a href="#prop-PID_Noetheriani-2" title="Copy heading and permalink for Dimostrazione 21.3.2.1" aria-label="Copy heading and permalink for Dimostrazione 21.3.2.1">🔗</a></div>
+</article></details>
+<article class="proposition theorem-like" id="prop-MCD_in_PID"><h3 class="heading">
 <span class="type">Proposizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">21.3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="prop-MCD_in_PID-3-1">In un dominio a ideali principali <span class="process-math">\(D\)</span> ogni coppia di elementi <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> ammette massimo comun divisore <span class="process-math">\(d\)</span> ed esistono elementi <span class="process-math">\(u\)</span> e <span class="process-math">\(v\)</span> in <span class="process-math">\(D\)</span> tali che valga un’identità di Bezout: <span class="process-math">\(d=au+bv\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-MCD_in_PID-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposizione 21.3.3"><a href="#prop-MCD_in_PID" title="Copy heading and permalink for Proposizione 21.3.3" aria-label="Copy heading and permalink for Proposizione 21.3.3">🔗</a></div></article><details id="prop-MCD_in_PID-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-MCD_in_PID-4-1">L’ideale generato da <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> è un ideale principale generato da un certo elemento <span class="process-math">\(d\text{:}\)</span> grazie all’<a href="sec-fattorizzazione.html#rem-MCD_ideale" class="xref" data-knowl="./knowl/xref/rem-MCD_ideale.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Osservazione 21.2.14">Osservazione 21.2.14</a> sappiamo che <span class="process-math">\(d\)</span> è massimo comun divisore di <span class="process-math">\(a\)</span> e <span class="process-math">\(b\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-MCD_in_PID-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Proposizione 21.3.3"><a href="#prop-MCD_in_PID" title="Copy heading and permalink for Proposizione 21.3.3" aria-label="Copy heading and permalink for Proposizione 21.3.3">🔗</a></div>
+</article>
+<details id="prop-MCD_in_PID-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="prop-MCD_in_PID-4-1">L’ideale generato da <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> è un ideale principale generato da un certo elemento <span class="process-math">\(d\text{:}\)</span> grazie all’<a href="sec-fattorizzazione.html#rem-MCD_ideale" class="xref" data-knowl="./knowl/xref/rem-MCD_ideale.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Osservazione 21.2.14">Osservazione 21.2.14</a> sappiamo che <span class="process-math">\(d\)</span> è massimo comun divisore di <span class="process-math">\(a\)</span> e <span class="process-math">\(b\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-MCD_in_PID-4-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="para" id="prop-MCD_in_PID-4-2">Per la <a href="sec-anelli_quoziente.html#prop-elementi_ideale_generato_anello_commutativo" class="xref" data-knowl="./knowl/xref/prop-elementi_ideale_generato_anello_commutativo.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 19.2.17">Proposizione 19.2.17</a>, <span class="process-math">\(d\text{,}\)</span> essendo un elemento dell’ideale generato da <span class="process-math">\(a\)</span> e <span class="process-math">\(b\text{,}\)</span> può essere espresso nella forma <span class="process-math">\(d=au+bv\)</span> per opportuni <span class="process-math">\(u\)</span> e <span class="process-math">\(v\)</span> in <span class="process-math">\(D\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-MCD_in_PID-4-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Dimostrazione 21.3.3.1"><a href="#prop-MCD_in_PID-4" title="Copy heading and permalink for Dimostrazione 21.3.3.1" aria-label="Copy heading and permalink for Dimostrazione 21.3.3.1">🔗</a></div></article></details><div class="para" id="sec-PID_euclidei-5">In modo analogo si prova il<div class="autopermalink" data-description="Capoverso"><a href="#sec-PID_euclidei-5" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Dimostrazione 21.3.3.1"><a href="#prop-MCD_in_PID-4" title="Copy heading and permalink for Dimostrazione 21.3.3.1" aria-label="Copy heading and permalink for Dimostrazione 21.3.3.1">🔗</a></div>
+</article></details>
+<div class="para" id="sec-PID_euclidei-5">In modo analogo si prova il<div class="autopermalink" data-description="Capoverso"><a href="#sec-PID_euclidei-5" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="corollary theorem-like" id="cor-multi_bezout"><h3 class="heading">
 <span class="type">Corollario</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">21.3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -756,14 +726,22 @@ d\coloneqq a_{1}u_{1}+a_{2}u_{2}+\cdots+a_{n}u_{n}
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#cor-multi_bezout-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollario 21.3.4"><a href="#cor-multi_bezout" title="Copy heading and permalink for Corollario 21.3.4" aria-label="Copy heading and permalink for Corollario 21.3.4">🔗</a></div></article><article class="theorem theorem-like" id="thm-PID_UFD"><h3 class="heading">
+<div class="autopermalink" data-description="Corollario 21.3.4"><a href="#cor-multi_bezout" title="Copy heading and permalink for Corollario 21.3.4" aria-label="Copy heading and permalink for Corollario 21.3.4">🔗</a></div>
+</article>
+<article class="theorem theorem-like" id="thm-PID_UFD"><h3 class="heading">
 <span class="type">Teorema</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">21.3.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="thm-PID_UFD-1-1">Un dominio a ideali principali <span class="process-math">\(D\)</span> è un dominio a fattorizzazione unica.<div class="autopermalink" data-description="Capoverso"><a href="#thm-PID_UFD-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Teorema 21.3.5"><a href="#thm-PID_UFD" title="Copy heading and permalink for Teorema 21.3.5" aria-label="Copy heading and permalink for Teorema 21.3.5">🔗</a></div></article><details id="thm-PID_UFD-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-PID_UFD-2-1">Grazie al <a href="sec-fattorizzazione.html#thm-caratterizzazione_UFD" class="xref" data-knowl="./knowl/xref/thm-caratterizzazione_UFD.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 21.2.23">Teorema 21.2.23</a> e alla <a href="sec-PID_euclidei.html#prop-MCD_in_PID" class="xref" data-knowl="./knowl/xref/prop-MCD_in_PID.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 21.3.3">Proposizione 21.3.3</a> è sufficiente mostrare che ogni elemento non nullo e non invertibile si esprime come prodotto di irriducibili. Supponiamo, per assurdo, che esista qualche elemento per cui ciò non sia vero e consideriamo la famiglia di ideali generati da tali elementi. Per la <a href="sec-PID_euclidei.html#prop-PID_Noetheriani" class="xref" data-knowl="./knowl/xref/prop-PID_Noetheriani.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 21.3.2">Proposizione 21.3.2</a>, esiste un ideale massimale <span class="process-math">\(\ideal{a}\)</span> in questa famiglia: in particolare, <span class="process-math">\(a\)</span> non è un elemento irriducibile e, quindi, esistono <span class="process-math">\(b\)</span> e <span class="process-math">\(c\)</span> tali che <span class="process-math">\(a=bc\)</span> con <span class="process-math">\(b\)</span> e <span class="process-math">\(c\)</span> non associati ad <span class="process-math">\(a\)</span> e non invertibili. Ciò significa che gli ideali <span class="process-math">\(\ideal{b}\)</span> e <span class="process-math">\(\ideal{c}\)</span> contengono strettamente <span class="process-math">\(\ideal{a}\text{.}\)</span> Per la massimalità di <span class="process-math">\(\ideal{a}\)</span> gli elementi <span class="process-math">\(b\)</span> e <span class="process-math">\(c\)</span> si possono esprimere come prodotto di irriducibili: ma allora <span class="process-math">\(a=bc\)</span> è prodotto di irriducibili.<div class="autopermalink" data-description="Capoverso"><a href="#thm-PID_UFD-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Teorema 21.3.5"><a href="#thm-PID_UFD" title="Copy heading and permalink for Teorema 21.3.5" aria-label="Copy heading and permalink for Teorema 21.3.5">🔗</a></div>
+</article>
+<details id="thm-PID_UFD-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="thm-PID_UFD-2-1">Grazie al <a href="sec-fattorizzazione.html#thm-caratterizzazione_UFD" class="xref" data-knowl="./knowl/xref/thm-caratterizzazione_UFD.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 21.2.23">Teorema 21.2.23</a> e alla <a href="sec-PID_euclidei.html#prop-MCD_in_PID" class="xref" data-knowl="./knowl/xref/prop-MCD_in_PID.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 21.3.3">Proposizione 21.3.3</a> è sufficiente mostrare che ogni elemento non nullo e non invertibile si esprime come prodotto di irriducibili. Supponiamo, per assurdo, che esista qualche elemento per cui ciò non sia vero e consideriamo la famiglia di ideali generati da tali elementi. Per la <a href="sec-PID_euclidei.html#prop-PID_Noetheriani" class="xref" data-knowl="./knowl/xref/prop-PID_Noetheriani.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 21.3.2">Proposizione 21.3.2</a>, esiste un ideale massimale <span class="process-math">\(\ideal{a}\)</span> in questa famiglia: in particolare, <span class="process-math">\(a\)</span> non è un elemento irriducibile e, quindi, esistono <span class="process-math">\(b\)</span> e <span class="process-math">\(c\)</span> tali che <span class="process-math">\(a=bc\)</span> con <span class="process-math">\(b\)</span> e <span class="process-math">\(c\)</span> non associati ad <span class="process-math">\(a\)</span> e non invertibili. Ciò significa che gli ideali <span class="process-math">\(\ideal{b}\)</span> e <span class="process-math">\(\ideal{c}\)</span> contengono strettamente <span class="process-math">\(\ideal{a}\text{.}\)</span> Per la massimalità di <span class="process-math">\(\ideal{a}\)</span> gli elementi <span class="process-math">\(b\)</span> e <span class="process-math">\(c\)</span> si possono esprimere come prodotto di irriducibili: ma allora <span class="process-math">\(a=bc\)</span> è prodotto di irriducibili.<div class="autopermalink" data-description="Capoverso"><a href="#thm-PID_UFD-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Dimostrazione 21.3.5.1"><a href="#thm-PID_UFD-2" title="Copy heading and permalink for Dimostrazione 21.3.5.1" aria-label="Copy heading and permalink for Dimostrazione 21.3.5.1">🔗</a></div></article></details><div class="para" id="sec-PID_euclidei-8">Finora abbiamo visto alcune proprietà dei domini a ideali principali ma non ne abbiamo presentato alcun esempio. Per far ciò, introduciamo una classe di domini i cui membri sono, in particolare, domini a ideali principali.<div class="autopermalink" data-description="Capoverso"><a href="#sec-PID_euclidei-8" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Dimostrazione 21.3.5.1"><a href="#thm-PID_UFD-2" title="Copy heading and permalink for Dimostrazione 21.3.5.1" aria-label="Copy heading and permalink for Dimostrazione 21.3.5.1">🔗</a></div>
+</article></details>
+<div class="para" id="sec-PID_euclidei-8">Finora abbiamo visto alcune proprietà dei domini a ideali principali ma non ne abbiamo presentato alcun esempio. Per far ciò, introduciamo una classe di domini i cui membri sono, in particolare, domini a ideali principali.<div class="autopermalink" data-description="Capoverso"><a href="#sec-PID_euclidei-8" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-dominio_euclideo"><h3 class="heading">
 <span class="type">Definizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">21.3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -779,13 +757,18 @@ a=bq+r
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#def-dominio_euclideo-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definizione 21.3.6"><a href="#def-dominio_euclideo" title="Copy heading and permalink for Definizione 21.3.6" aria-label="Copy heading and permalink for Definizione 21.3.6">🔗</a></div></article><article class="example example-like" id="sec-PID_euclidei-10"><h3 class="heading">
+<div class="autopermalink" data-description="Definizione 21.3.6"><a href="#def-dominio_euclideo" title="Copy heading and permalink for Definizione 21.3.6" aria-label="Copy heading and permalink for Definizione 21.3.6">🔗</a></div>
+</article>
+<article class="example example-like" id="sec-PID_euclidei-10"><h3 class="heading">
 <span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">21.3.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="sec-PID_euclidei-10-1-1">Consideriamo l’anello degli interi <span class="process-math">\(\Interi\)</span> e sia <span class="process-math">\(\euclidean\)</span> la funzione valore assoluto. Siano ora <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> due interi con <span class="process-math">\(b\ne0\text{.}\)</span> Ovviamente, <span class="process-math">\(\abs{b} \gt 0\)</span> e, quindi, considerando l’usuale divisione con resto, troviamo <span class="process-math">\(q'\)</span> e <span class="process-math">\(r\)</span> tali che <span class="process-math">\(a=\abs{b}q'+r\)</span> con <span class="process-math">\(0\le r \lt \abs{b}\text{.}\)</span> Abbiamo allora <span class="process-math">\(a=bq+r\)</span> dove <span class="process-math">\(q=q'\)</span> se <span class="process-math">\(b \gt 0\)</span> e <span class="process-math">\(q=-q'\)</span> se <span class="process-math">\(b \lt 0\text{.}\)</span> Dunque, gli interi sono un dominio euclideo rispetto alla funzione valore assoluto.<div class="autopermalink" data-description="Capoverso"><a href="#sec-PID_euclidei-10-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div> <div class="para" id="sec-PID_euclidei-10-1-2">Notiamo che in generale gli elementi <span class="process-math">\(q\)</span> e <span class="process-math">\(r\)</span> non sono univocamente determinati. Ad esempio, dati <span class="process-math">\(a\coloneqq 5\)</span> e <span class="process-math">\(b\coloneqq 3\)</span> in <span class="process-math">\(\Interi\text{,}\)</span> possiamo scrivere <span class="process-math">\(5=3\cdot 2-1\)</span> e <span class="process-math">\(5=3\cdot 1+2\)</span> (si noti che <span class="process-math">\(\abs{-1} \lt \abs{3}\)</span> e <span class="process-math">\(\abs{2} \lt \abs{3}\)</span>).<div class="autopermalink" data-description="Capoverso"><a href="#sec-PID_euclidei-10-1-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div> 
+<div class="para" id="sec-PID_euclidei-10-1-2">Notiamo che in generale gli elementi <span class="process-math">\(q\)</span> e <span class="process-math">\(r\)</span> non sono univocamente determinati. Ad esempio, dati <span class="process-math">\(a\coloneqq 5\)</span> e <span class="process-math">\(b\coloneqq 3\)</span> in <span class="process-math">\(\Interi\text{,}\)</span> possiamo scrivere <span class="process-math">\(5=3\cdot 2-1\)</span> e <span class="process-math">\(5=3\cdot 1+2\)</span> (si noti che <span class="process-math">\(\abs{-1} \lt \abs{3}\)</span> e <span class="process-math">\(\abs{2} \lt \abs{3}\)</span>).<div class="autopermalink" data-description="Capoverso"><a href="#sec-PID_euclidei-10-1-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Esempio 21.3.7"><a href="#sec-PID_euclidei-10" title="Copy heading and permalink for Esempio 21.3.7" aria-label="Copy heading and permalink for Esempio 21.3.7">🔗</a></div></article><div class="para" id="sec-PID_euclidei-11">Nel <a href="sec-valutazione_polinomi.html#thm-divisione_tra_polinomi" class="xref" data-knowl="./knowl/xref/thm-divisione_tra_polinomi.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 20.2.3: Divisione tra polinomi">Teorema 20.2.3</a> abbiamo descritto la divisione tra polinomi, assumendo che il divisore avesse coefficiente direttivo invertibile. Poiché tutti gli elementi non nulli di un campo sono invertibili, abbiamo immediatamente<div class="autopermalink" data-description="Capoverso"><a href="#sec-PID_euclidei-11" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Esempio 21.3.7"><a href="#sec-PID_euclidei-10" title="Copy heading and permalink for Esempio 21.3.7" aria-label="Copy heading and permalink for Esempio 21.3.7">🔗</a></div>
+</article>
+<div class="para" id="sec-PID_euclidei-11">Nel <a href="sec-valutazione_polinomi.html#thm-divisione_tra_polinomi" class="xref" data-knowl="./knowl/xref/thm-divisione_tra_polinomi.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 20.2.3: Divisione tra polinomi">Teorema 20.2.3</a> abbiamo descritto la divisione tra polinomi, assumendo che il divisore avesse coefficiente direttivo invertibile. Poiché tutti gli elementi non nulli di un campo sono invertibili, abbiamo immediatamente<div class="autopermalink" data-description="Capoverso"><a href="#sec-PID_euclidei-11" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="example example-like" id="ex-kx-euclideo"><h3 class="heading">
 <span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">21.3.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -800,13 +783,16 @@ f=gq+r
 <div class="para">con <span class="process-math">\(\deg r \lt \deg g\)</span> o <span class="process-math">\(r=0\text{.}\)</span> In particolare, <span class="process-math">\(K[x]\text{,}\)</span> è un dominio euclideo rispetto alla funzione grado.</div>
 <div class="autopermalink" data-description="Capoverso"><a href="#ex-kx-euclideo-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Esempio 21.3.8"><a href="#ex-kx-euclideo" title="Copy heading and permalink for Esempio 21.3.8" aria-label="Copy heading and permalink for Esempio 21.3.8">🔗</a></div></article><div class="para" id="sec-PID_euclidei-13">Vediamo ora un esempio meno immediato.<div class="autopermalink" data-description="Capoverso"><a href="#sec-PID_euclidei-13" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Esempio 21.3.8"><a href="#ex-kx-euclideo" title="Copy heading and permalink for Esempio 21.3.8" aria-label="Copy heading and permalink for Esempio 21.3.8">🔗</a></div>
+</article>
+<div class="para" id="sec-PID_euclidei-13">Vediamo ora un esempio meno immediato.<div class="autopermalink" data-description="Capoverso"><a href="#sec-PID_euclidei-13" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="example example-like" id="ex-interi_gaussiani"><h3 class="heading">
 <span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">21.3.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="ex-interi_gaussiani-1-1">Consideriamo il sottoinsieme <span class="process-math">\(\Interi[i]\)</span> di <span class="process-math">\(\Complessi\)</span> dei cosiddetti <dfn class="terminology">interi Gaussiani</dfn>, vale a dire degli elementi del tipo <span class="process-math">\(u+vi\)</span> con <span class="process-math">\(u\)</span> e <span class="process-math">\(v\)</span> interi. È un semplice esercizio verificare che <span class="process-math">\(\Interi[i]\)</span> è un sottoanello di <span class="process-math">\(\Complessi\)</span> il cui campo dei quozienti è <span class="process-math">\(\Razionali[i]\text{,}\)</span> l’insieme degli elementi del tipo <span class="process-math">\(u+vi\)</span> con <span class="process-math">\(u\)</span> e <span class="process-math">\(v\)</span> razionali. Ricordiamo che la norma di un numero complesso <span class="process-math">\(z\coloneqq u+vi\)</span> con <span class="process-math">\(u\)</span> e <span class="process-math">\(v\)</span> reali è definita da <span class="process-math">\(\norm{z}\coloneqq\sqrt{u^{2}+v^{2}}\text{:}\)</span> sappiamo che <span class="process-math">\(\norm{zw}=\norm{z}\norm{w}\)</span> per ogni <span class="process-math">\(z\)</span> e <span class="process-math">\(w\)</span> in <span class="process-math">\(\Complessi\text{.}\)</span> Dato <span class="process-math">\(u+vi\)</span> in <span class="process-math">\(\Razionali[i]\text{,}\)</span> poniamo ora <span class="process-math">\(\euclidean(u+vi)\coloneqq u^{2}+v^{2}\text{:}\)</span> ovviamente <span class="process-math">\(\euclidean(u+vi)=\norm{u+vi}^{2}\)</span> e, dunque, <span class="process-math">\(\euclidean(zw)=\euclidean(z)\euclidean(w)\)</span>  per ogni <span class="process-math">\(z\)</span> e <span class="process-math">\(w\)</span> in <span class="process-math">\(\Complessi\text{.}\)</span> Inoltre la restrizione di <span class="process-math">\(\euclidean\)</span> a <span class="process-math">\(\Interi[i]\)</span> è una funzione a valori interi non negativi.<div class="autopermalink" data-description="Capoverso"><a href="#ex-interi_gaussiani-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div> <div class="para logical" id="ex-interi_gaussiani-1-2">
+</div> 
+<div class="para logical" id="ex-interi_gaussiani-1-2">
 <div class="para">Siano ora <span class="process-math">\(a\coloneqq u_{1}+v_{1}i\)</span> e <span class="process-math">\(b\coloneqq u_{2}+v_{2}i\)</span> due elementi di <span class="process-math">\(\Interi[i]\)</span> con <span class="process-math">\(b\ne0\text{.}\)</span> Vogliamo trovare <span class="process-math">\(q\)</span> e <span class="process-math">\(r\)</span> in <span class="process-math">\(\Interi[i]\)</span> tali che <span class="process-math">\(a=bq+r\)</span> e <span class="process-math">\(\euclidean(r) \lt \euclidean(b)\)</span> o <span class="process-math">\(r=0\text{.}\)</span> Sia allora <span class="process-math">\(q'\coloneqq\frac{a}{b}\text{:}\)</span> questo è un elemento di <span class="process-math">\(\Razionali[i]\)</span> e, quindi, della forma <span class="process-math">\(u_{3}+v_{3}i\)</span> con <span class="process-math">\(u_{3}\)</span> e <span class="process-math">\(v_{3}\)</span> razionali: possiamo allora scegliere <span class="process-math">\(u_{4}\)</span> e <span class="process-math">\(v_{4}\)</span> interi in modo tale che <span class="process-math">\(\abs{u_{3}-u_{4}}\le\frac{1}{2}\)</span> e <span class="process-math">\(\abs{v_{3}-v_{4}}\le\frac{1}{2}\)</span> (La scelta di <span class="process-math">\(u_{4}\)</span> e <span class="process-math">\(v_{4}\)</span> non è necessariamente unica). Poniamo ora <span class="process-math">\(q\coloneqq u_{4}+iv_{4}\)</span> e <span class="process-math">\(r\coloneqq a-bq\text{:}\)</span> ovviamente <span class="process-math">\(q\)</span> e <span class="process-math">\(r\)</span> sono elementi di <span class="process-math">\(\Interi[i]\text{.}\)</span> Inoltre <span class="process-math">\(r=a-bq=bq'-bq=b(q'-q)\)</span> e, quindi,</div>
 <div class="displaymath process-math" id="ex-interi_gaussiani-1-2-28">
 \begin{align*}
@@ -816,21 +802,31 @@ f=gq+r
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#ex-interi_gaussiani-1-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Esempio 21.3.9"><a href="#ex-interi_gaussiani" title="Copy heading and permalink for Esempio 21.3.9" aria-label="Copy heading and permalink for Esempio 21.3.9">🔗</a></div></article><article class="proposition theorem-like" id="prop-euclideo_PID"><h3 class="heading">
+<div class="autopermalink" data-description="Esempio 21.3.9"><a href="#ex-interi_gaussiani" title="Copy heading and permalink for Esempio 21.3.9" aria-label="Copy heading and permalink for Esempio 21.3.9">🔗</a></div>
+</article>
+<article class="proposition theorem-like" id="prop-euclideo_PID"><h3 class="heading">
 <span class="type">Proposizione</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">21.3.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="prop-euclideo_PID-1-1">Un dominio euclideo <span class="process-math">\(D\)</span> è un dominio a ideali principali.<div class="autopermalink" data-description="Capoverso"><a href="#prop-euclideo_PID-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposizione 21.3.10"><a href="#prop-euclideo_PID" title="Copy heading and permalink for Proposizione 21.3.10" aria-label="Copy heading and permalink for Proposizione 21.3.10">🔗</a></div></article><details id="prop-euclideo_PID-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-euclideo_PID-2-1">Sia <span class="process-math">\(I\)</span> un ideale di <span class="process-math">\(D\text{.}\)</span> Se <span class="process-math">\(I=0\text{,}\)</span> l’ideale è ovviamente principale. Se <span class="process-math">\(I\ne0\text{,}\)</span> scegliamo tra gli elementi non nulli di <span class="process-math">\(I\)</span> un elemento <span class="process-math">\(b\)</span> tale che <span class="process-math">\(\euclidean(b)\)</span> sia minimo possibile. Mostriamo che <span class="process-math">\(b\)</span> genera <span class="process-math">\(I\text{.}\)</span> Sia infatti <span class="process-math">\(a\)</span> un elemento di <span class="process-math">\(I\)</span> e siano <span class="process-math">\(q\)</span> e <span class="process-math">\(r\)</span> in <span class="process-math">\(D\)</span> tali che <span class="process-math">\(a=bq+r\)</span> e <span class="process-math">\(\euclidean(r) \lt\euclidean(b)\)</span> o <span class="process-math">\(r=0\text{.}\)</span> Ora <span class="process-math">\(r=a-bq\in I\)</span> quindi, se fosse <span class="process-math">\(r\ne0\text{,}\)</span> avremmo <span class="process-math">\(\euclidean(r) \lt \euclidean(b)\)</span> contro la scelta di <span class="process-math">\(b\text{.}\)</span> Dunque, <span class="process-math">\(r=0\)</span> cioè <span class="process-math">\(a=bq\text{,}\)</span> vale a dire <span class="process-math">\(a\)</span> è multiplo di <span class="process-math">\(b\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-euclideo_PID-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Proposizione 21.3.10"><a href="#prop-euclideo_PID" title="Copy heading and permalink for Proposizione 21.3.10" aria-label="Copy heading and permalink for Proposizione 21.3.10">🔗</a></div>
+</article>
+<details id="prop-euclideo_PID-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Dimostrazione<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="prop-euclideo_PID-2-1">Sia <span class="process-math">\(I\)</span> un ideale di <span class="process-math">\(D\text{.}\)</span> Se <span class="process-math">\(I=0\text{,}\)</span> l’ideale è ovviamente principale. Se <span class="process-math">\(I\ne0\text{,}\)</span> scegliamo tra gli elementi non nulli di <span class="process-math">\(I\)</span> un elemento <span class="process-math">\(b\)</span> tale che <span class="process-math">\(\euclidean(b)\)</span> sia minimo possibile. Mostriamo che <span class="process-math">\(b\)</span> genera <span class="process-math">\(I\text{.}\)</span> Sia infatti <span class="process-math">\(a\)</span> un elemento di <span class="process-math">\(I\)</span> e siano <span class="process-math">\(q\)</span> e <span class="process-math">\(r\)</span> in <span class="process-math">\(D\)</span> tali che <span class="process-math">\(a=bq+r\)</span> e <span class="process-math">\(\euclidean(r) \lt\euclidean(b)\)</span> o <span class="process-math">\(r=0\text{.}\)</span> Ora <span class="process-math">\(r=a-bq\in I\)</span> quindi, se fosse <span class="process-math">\(r\ne0\text{,}\)</span> avremmo <span class="process-math">\(\euclidean(r) \lt \euclidean(b)\)</span> contro la scelta di <span class="process-math">\(b\text{.}\)</span> Dunque, <span class="process-math">\(r=0\)</span> cioè <span class="process-math">\(a=bq\text{,}\)</span> vale a dire <span class="process-math">\(a\)</span> è multiplo di <span class="process-math">\(b\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#prop-euclideo_PID-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Dimostrazione 21.3.10.1"><a href="#prop-euclideo_PID-2" title="Copy heading and permalink for Dimostrazione 21.3.10.1" aria-label="Copy heading and permalink for Dimostrazione 21.3.10.1">🔗</a></div></article></details><div class="para" id="sec-PID_euclidei-16">Tenuto conto del <a href="sec-PID_euclidei.html#thm-PID_UFD" class="xref" data-knowl="./knowl/xref/thm-PID_UFD.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 21.3.5">Teorema 21.3.5</a> segue allora immediatamente il:<div class="autopermalink" data-description="Capoverso"><a href="#sec-PID_euclidei-16" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Dimostrazione 21.3.10.1"><a href="#prop-euclideo_PID-2" title="Copy heading and permalink for Dimostrazione 21.3.10.1" aria-label="Copy heading and permalink for Dimostrazione 21.3.10.1">🔗</a></div>
+</article></details>
+<div class="para" id="sec-PID_euclidei-16">Tenuto conto del <a href="sec-PID_euclidei.html#thm-PID_UFD" class="xref" data-knowl="./knowl/xref/thm-PID_UFD.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 21.3.5">Teorema 21.3.5</a> segue allora immediatamente il:<div class="autopermalink" data-description="Capoverso"><a href="#sec-PID_euclidei-16" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <article class="corollary theorem-like" id="cor-euclideo_UFD"><h3 class="heading">
 <span class="type">Corollario</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">21.3.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="cor-euclideo_UFD-1-1">Un dominio euclideo è un dominio a fattorizzazione unica.<div class="autopermalink" data-description="Capoverso"><a href="#cor-euclideo_UFD-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollario 21.3.11"><a href="#cor-euclideo_UFD" title="Copy heading and permalink for Corollario 21.3.11" aria-label="Copy heading and permalink for Corollario 21.3.11">🔗</a></div></article><div class="para" id="sec-PID_euclidei-18">Gli esempi di domini euclidei che abbiamo elencato, e cioè l’anello degli interi <span class="process-math">\(\Interi\text{,}\)</span> l’anello dei polinomi <span class="process-math">\(K[x]\)</span> a coefficienti in un campo <span class="process-math">\(K\text{,}\)</span> e l’anello degli interi gaussiani <span class="process-math">\(\Interi[i]\)</span> sono, dunque, domini a ideali principali e, di conseguenza, domini a fattorizzazione unica. In particolare, notiamo che se <span class="process-math">\(I\)</span> è un ideale non nullo di <span class="process-math">\(K[x]\)</span> allora <span class="process-math">\(I\)</span> può essere generato da un suo qualsiasi elemento non nullo di grado minimo.<div class="autopermalink" data-description="Capoverso"><a href="#sec-PID_euclidei-18" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Corollario 21.3.11"><a href="#cor-euclideo_UFD" title="Copy heading and permalink for Corollario 21.3.11" aria-label="Copy heading and permalink for Corollario 21.3.11">🔗</a></div>
+</article>
+<div class="para" id="sec-PID_euclidei-18">Gli esempi di domini euclidei che abbiamo elencato, e cioè l’anello degli interi <span class="process-math">\(\Interi\text{,}\)</span> l’anello dei polinomi <span class="process-math">\(K[x]\)</span> a coefficienti in un campo <span class="process-math">\(K\text{,}\)</span> e l’anello degli interi gaussiani <span class="process-math">\(\Interi[i]\)</span> sono, dunque, domini a ideali principali e, di conseguenza, domini a fattorizzazione unica. In particolare, notiamo che se <span class="process-math">\(I\)</span> è un ideale non nullo di <span class="process-math">\(K[x]\)</span> allora <span class="process-math">\(I\)</span> può essere generato da un suo qualsiasi elemento non nullo di grado minimo.<div class="autopermalink" data-description="Capoverso"><a href="#sec-PID_euclidei-18" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="para" id="sec-PID_euclidei-19">Diamo ora un esempio di dominio che non è a ideali principali (e, a maggior ragione, non è euclideo).<div class="autopermalink" data-description="Capoverso"><a href="#sec-PID_euclidei-19" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
@@ -839,7 +835,9 @@ f=gq+r
 </h3>
 <div class="para" id="ex-Zx_non_PID-1-1">Consideriamo l’anello dei polinomi <span class="process-math">\(\Interi[x]\text{.}\)</span> Si verifica facilmente che l’insieme <span class="process-math">\(I\)</span> dei polinomi a termine noto pari è un ideale. Mostriamo che <span class="process-math">\(I\)</span> non è un ideale principale (e, di conseguenza, <span class="process-math">\(\Interi[x]\)</span> non è un dominio a ideali principali). Si verifica facilmente che non c’è nessun polinomio <span class="process-math">\(f\)</span> in <span class="process-math">\(I\)</span> che divide sia <span class="process-math">\(2\)</span> che <span class="process-math">\(x\)</span> (questi due sono elementi di <span class="process-math">\(I\)</span>): dunque non c’è nessun <span class="process-math">\(f\)</span> in <span class="process-math">\(I\)</span> che genera <span class="process-math">\(I\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#ex-Zx_non_PID-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Esempio 21.3.12"><a href="#ex-Zx_non_PID" title="Copy heading and permalink for Esempio 21.3.12" aria-label="Copy heading and permalink for Esempio 21.3.12">🔗</a></div></article><div class="para" id="sec-PID_euclidei-21">Dare invece un esempio di un dominio a ideali principali che non sia euclideo è decisamente più complicato: la costruzione di un tale esempio va però oltre lo scopo di questo libro.<div class="autopermalink" data-description="Capoverso"><a href="#sec-PID_euclidei-21" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+<div class="autopermalink" data-description="Esempio 21.3.12"><a href="#ex-Zx_non_PID" title="Copy heading and permalink for Esempio 21.3.12" aria-label="Copy heading and permalink for Esempio 21.3.12">🔗</a></div>
+</article>
+<div class="para" id="sec-PID_euclidei-21">Dare invece un esempio di un dominio a ideali principali che non sia euclideo è decisamente più complicato: la costruzione di un tale esempio va però oltre lo scopo di questo libro.<div class="autopermalink" data-description="Capoverso"><a href="#sec-PID_euclidei-21" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="para" id="sec-PID_euclidei-22">L’<a href="sec-divisibilita_interi.html#alg-euclide" class="xref" data-knowl="./knowl/xref/alg-euclide.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Algoritmo 5.3.15: Algoritmo di Euclide">Algoritmo 5.3.15</a>, che abbiamo utilizzato per determinare il massimo comun divisore e un’identità di Bezout tra due numeri interi può essere adattato a un dominio euclideo qualunque.<div class="autopermalink" data-description="Capoverso"><a href="#sec-PID_euclidei-22" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
@@ -847,7 +845,8 @@ f=gq+r
 <span class="type">Algoritmo</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">21.3.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Algoritmo di Euclide per i domini euclidei.</span>
 </h3>
 <div class="para" id="alg-euclide_domini-3-1">Sia <span class="process-math">\(D\)</span> un dominio euclideo rispetto alla mappa <span class="process-math">\(\euclidean\)</span> e siano <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> due elementi di <span class="process-math">\(D\text{.}\)</span> Se <span class="process-math">\(b=0\)</span> allora <span class="process-math">\((a,b)\sim 0\)</span> e un’identità di Bezout è banalmente data da <span class="process-math">\(a\cdot0+b\cdot0=0\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#alg-euclide_domini-3-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div> <div class="para logical" id="alg-euclide_domini-3-2">
+</div> 
+<div class="para logical" id="alg-euclide_domini-3-2">
 <div class="para">Se <span class="process-math">\(b\ne0\)</span> consideriamo la successione di divisioni</div>
 <div class="displaymath process-math" id="alg-euclide_domini-3-2-2">
 \begin{align*}
@@ -871,7 +870,9 @@ d=au+bv
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#alg-euclide_domini-3-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Algoritmo 21.3.13: Algoritmo di Euclide per i domini euclidei"><a href="#alg-euclide_domini" title="Copy heading and permalink for Algoritmo 21.3.13: Algoritmo di Euclide per i domini euclidei" aria-label="Copy heading and permalink for Algoritmo 21.3.13: Algoritmo di Euclide per i domini euclidei">🔗</a></div></article><article class="example example-like" id="sec-PID_euclidei-24"><h3 class="heading">
+<div class="autopermalink" data-description="Algoritmo 21.3.13: Algoritmo di Euclide per i domini euclidei"><a href="#alg-euclide_domini" title="Copy heading and permalink for Algoritmo 21.3.13: Algoritmo di Euclide per i domini euclidei" aria-label="Copy heading and permalink for Algoritmo 21.3.13: Algoritmo di Euclide per i domini euclidei">🔗</a></div>
+</article>
+<article class="example example-like" id="sec-PID_euclidei-24"><h3 class="heading">
 <span class="type">Esempio</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">21.3.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="sec-PID_euclidei-24-1-1">
@@ -897,59 +898,82 @@ b \amp =(2x^{3}+x^{2}+x-1)(x-2)-x^{2}-x-1\\
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#sec-PID_euclidei-24-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Esempio 21.3.14"><a href="#sec-PID_euclidei-24" title="Copy heading and permalink for Esempio 21.3.14" aria-label="Copy heading and permalink for Esempio 21.3.14">🔗</a></div></article><section class="exercises" id="exercises-PID_euclidei"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Esempio 21.3.14"><a href="#sec-PID_euclidei-24" title="Copy heading and permalink for Esempio 21.3.14" aria-label="Copy heading and permalink for Esempio 21.3.14">🔗</a></div>
+</article>
+<section class="exercises" id="exercises-PID_euclidei">
+<h3 class="heading hide-type">
 <span class="type">Esercizi</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Esercizi</span>
 </h3>
 <div class="exercisegroup" id="exercises-PID_euclidei-1">
 <h4 class="heading"><span class="title">Gruppo di esercizi.</span></h4>
-<div class="introduction" id="exercises-PID_euclidei-1-1"><div class="para" id="exercises-PID_euclidei-1-1-1">Fattorizzare come prodotto di irriducibili in <span class="process-math">\(\Interi[i]\)</span> i seguenti numeri.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-1-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div></div>
+<div class="introduction" id="exercises-PID_euclidei-1-1">
+<div class="para" id="exercises-PID_euclidei-1-1-1">Fattorizzare come prodotto di irriducibili in <span class="process-math">\(\Interi[i]\)</span> i seguenti numeri.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-1-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+</div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercises-PID_euclidei-1-2"><h5 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-PID_euclidei-1-2-1-1">
 <span class="process-math">\(13\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-1-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-PID_euclidei-1-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-PID_euclidei-1-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="exercises-PID_euclidei-1-2-2-1">Usiamo la funzione <span class="process-math">\(\euclidean\)</span> definita nell’<a href="sec-PID_euclidei.html#ex-interi_gaussiani" class="xref" data-knowl="./knowl/xref/ex-interi_gaussiani.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Esempio 21.3.9">Esempio 21.3.9</a>, rispetto a cui <span class="process-math">\(\Interi[i]\)</span> è un dominio euclideo.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-1-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="para" id="exercises-PID_euclidei-1-2-2-2">Sappiamo che <span class="process-math">\(13\)</span> è irriducibile in <span class="process-math">\(\Interi\text{,}\)</span> ma non è detto che lo sia in <span class="process-math">\(\Interi[i]\text{.}\)</span> Ora <span class="process-math">\(\euclidean(13)=13^{2}+0^{2}=169\)</span> e, dall’<a href="sec-PID_euclidei.html#ex-interi_gaussiani" class="xref" data-knowl="./knowl/xref/ex-interi_gaussiani.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Esempio 21.3.9">Esempio 21.3.9</a> sappiamo che se <span class="process-math">\(13=zw\)</span> per qualche <span class="process-math">\(z\)</span> e <span class="process-math">\(w\)</span> in <span class="process-math">\(\Interi[i]\text{,}\)</span> allora <span class="process-math">\(169=\euclidean(13)=\euclidean(z)\euclidean(w)\text{:}\)</span> le possibilità sono che uno tra <span class="process-math">\(\euclidean(z)\)</span> e <span class="process-math">\(\euclidean(w)\)</span> sia <span class="process-math">\(1\)</span> e l’altro <span class="process-math">\(169\)</span> (cioè che uno sia invertibile e l’altro associato a <span class="process-math">\(13\text{,}\)</span> caso che non ci interessa) o che <span class="process-math">\(\euclidean(z)=\euclidean(w)=13\text{.}\)</span> Sia allora <span class="process-math">\(z=a+ib\)</span> con <span class="process-math">\(a\)</span> e <span class="process-math">\(b\)</span> interi e <span class="process-math">\(a^{2}+b^{2}=13\text{.}\)</span> Le uniche possibilità sono <span class="process-math">\(a=\pm 2\)</span> e <span class="process-math">\(b=\pm 3\)</span> o <span class="process-math">\(a=\pm 3\)</span> e <span class="process-math">\(b=\pm 2\text{.}\)</span> Ci sono allora <span class="process-math">\(8\)</span> numeri che soddisfano le condizioni: non sappiamo però se siano divisori di <span class="process-math">\(13\text{.}\)</span> Per evitare di verificarli tutti a uno a uno, notiamo però che se un numero <span class="process-math">\(z\)</span> è divisore di <span class="process-math">\(13\text{,}\)</span> allora tutti i numeri associati a <span class="process-math">\(z\)</span> sono pure divisori di <span class="process-math">\(13\text{.}\)</span> Poiché in <span class="process-math">\(z\)</span> ho <span class="process-math">\(4\)</span> elementi invertibili, e cioè <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(-1\text{,}\)</span> <span class="process-math">\(i\)</span> e <span class="process-math">\(-i\text{,}\)</span> ogni numero non nullo <span class="process-math">\(z\)</span> ha <span class="process-math">\(4\)</span> associati. In particolare, <span class="process-math">\(2+3i\)</span> è associato a <span class="process-math">\(-2-3i\text{,}\)</span> <span class="process-math">\(-3+2i\)</span> e <span class="process-math">\(3-2i\text{,}\)</span> mentre gli altri quattro sono associati tra loro (uno di essi è <span class="process-math">\(2-3i\)</span>). Abbiamo ridotto i casi da verificare: o <span class="process-math">\(z\)</span> e <span class="process-math">\(w\)</span> sono uno associato a <span class="process-math">\(2+3i\)</span> e l’altro a <span class="process-math">\(2-3i\)</span> o sono associati tra loro e associati a uno di quei due valori. Si vede però che <span class="process-math">\((2+3i)(2-3i)=13\)</span> e questa è una fattorizzazione in irriducibili di <span class="process-math">\(13\text{:}\)</span> infatti, abbiamo già elencato i valori possibili di <span class="process-math">\(\euclidean(z)\)</span> per i divisori <span class="process-math">\(z\)</span> di <span class="process-math">\(13\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-1-2-2-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Soluzione 21.3.1.1"><a href="#exercises-PID_euclidei-1-2-2" title="Copy heading and permalink for Soluzione 21.3.1.1" aria-label="Copy heading and permalink for Soluzione 21.3.1.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 21.3.1"><a href="#exercises-PID_euclidei-1-2" title="Copy heading and permalink for Esercizio 21.3.1" aria-label="Copy heading and permalink for Esercizio 21.3.1">🔗</a></div></article><article class="exercise exercise-like" id="exercises-PID_euclidei-1-3"><h5 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 21.3.1"><a href="#exercises-PID_euclidei-1-2" title="Copy heading and permalink for Esercizio 21.3.1" aria-label="Copy heading and permalink for Esercizio 21.3.1">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-PID_euclidei-1-3"><h5 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-PID_euclidei-1-3-1-1">
 <span class="process-math">\(7+17i\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-1-3-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-PID_euclidei-1-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-PID_euclidei-1-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-PID_euclidei-1-3-2-1">
 <span class="process-math">\(7+17i=(1-i)(2+3i)(2+3i)\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-1-3-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 21.3.2.1"><a href="#exercises-PID_euclidei-1-3-2" title="Copy heading and permalink for Risposta 21.3.2.1" aria-label="Copy heading and permalink for Risposta 21.3.2.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 21.3.2"><a href="#exercises-PID_euclidei-1-3" title="Copy heading and permalink for Esercizio 21.3.2" aria-label="Copy heading and permalink for Esercizio 21.3.2">🔗</a></div></article><article class="exercise exercise-like" id="exercises-PID_euclidei-1-4"><h5 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 21.3.2"><a href="#exercises-PID_euclidei-1-3" title="Copy heading and permalink for Esercizio 21.3.2" aria-label="Copy heading and permalink for Esercizio 21.3.2">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-PID_euclidei-1-4"><h5 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-PID_euclidei-1-4-1-1">
 <span class="process-math">\(-161+14i\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-1-4-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-PID_euclidei-1-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-PID_euclidei-1-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-PID_euclidei-1-4-2-1">
 <span class="process-math">\(7(3+2i)(-5+4i)\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-1-4-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 21.3.3.1"><a href="#exercises-PID_euclidei-1-4-2" title="Copy heading and permalink for Risposta 21.3.3.1" aria-label="Copy heading and permalink for Risposta 21.3.3.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 21.3.3"><a href="#exercises-PID_euclidei-1-4" title="Copy heading and permalink for Esercizio 21.3.3" aria-label="Copy heading and permalink for Esercizio 21.3.3">🔗</a></div></article>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 21.3.3"><a href="#exercises-PID_euclidei-1-4" title="Copy heading and permalink for Esercizio 21.3.3" aria-label="Copy heading and permalink for Esercizio 21.3.3">🔗</a></div>
+</article>
 </div>
 <div class="autopermalink" data-description="Gruppo di esercizi 21.3.1–3"><a href="#exercises-PID_euclidei-1" title="Copy heading and permalink for Gruppo di esercizi 21.3.1–3" aria-label="Copy heading and permalink for Gruppo di esercizi 21.3.1–3">🔗</a></div>
 </div>
 <div class="exercisegroup" id="exercises-PID_euclidei-2">
 <h4 class="heading"><span class="title">Gruppo di esercizi.</span></h4>
-<div class="introduction" id="exercises-PID_euclidei-2-1"><div class="para" id="exercises-PID_euclidei-2-1-1">Trovare il massimo comun divisore in <span class="process-math">\(\Interi[i]\)</span> e un’identità di Bezout per le seguenti coppie di numeri.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div></div>
+<div class="introduction" id="exercises-PID_euclidei-2-1">
+<div class="para" id="exercises-PID_euclidei-2-1-1">Trovare il massimo comun divisore in <span class="process-math">\(\Interi[i]\)</span> e un’identità di Bezout per le seguenti coppie di numeri.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+</div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercises-PID_euclidei-2-2"><h5 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-PID_euclidei-2-2-1-1">
 <span class="process-math">\(7+17i\)</span> e <span class="process-math">\(8-14i\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-2-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-PID_euclidei-2-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-PID_euclidei-2-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="exercises-PID_euclidei-2-2-2-1">Applichiamo l’<a href="sec-PID_euclidei.html#alg-euclide_domini" class="xref" data-knowl="./knowl/xref/alg-euclide_domini.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Algoritmo 21.3.13: Algoritmo di Euclide per i domini euclidei">Algoritmo di Euclide per i domini euclidei</a> usando la funzione <span class="process-math">\(\euclidean\)</span> e la divisione data nell’<a href="sec-PID_euclidei.html#ex-interi_gaussiani" class="xref" data-knowl="./knowl/xref/ex-interi_gaussiani.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Esempio 21.3.9">Esempio 21.3.9</a>.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-2-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="para logical" id="exercises-PID_euclidei-2-2-2-2">
@@ -988,91 +1012,129 @@ b \amp =(2x^{3}+x^{2}+x-1)(x-2)-x^{2}-x-1\\
 <div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-2-2-2-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Soluzione 21.3.4.1"><a href="#exercises-PID_euclidei-2-2-2" title="Copy heading and permalink for Soluzione 21.3.4.1" aria-label="Copy heading and permalink for Soluzione 21.3.4.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 21.3.4"><a href="#exercises-PID_euclidei-2-2" title="Copy heading and permalink for Esercizio 21.3.4" aria-label="Copy heading and permalink for Esercizio 21.3.4">🔗</a></div></article><article class="exercise exercise-like" id="exercises-PID_euclidei-2-3"><h5 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 21.3.4"><a href="#exercises-PID_euclidei-2-2" title="Copy heading and permalink for Esercizio 21.3.4" aria-label="Copy heading and permalink for Esercizio 21.3.4">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-PID_euclidei-2-3"><h5 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-PID_euclidei-2-3-1-1">
 <span class="process-math">\(1+31i\)</span> e <span class="process-math">\(11-10i\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-2-3-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-PID_euclidei-2-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-PID_euclidei-2-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-PID_euclidei-2-3-2-1">
 <span class="process-math">\(2-3i=(1+31i)(1-i)+(11-10i)(-3i)\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-2-3-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 21.3.5.1"><a href="#exercises-PID_euclidei-2-3-2" title="Copy heading and permalink for Risposta 21.3.5.1" aria-label="Copy heading and permalink for Risposta 21.3.5.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 21.3.5"><a href="#exercises-PID_euclidei-2-3" title="Copy heading and permalink for Esercizio 21.3.5" aria-label="Copy heading and permalink for Esercizio 21.3.5">🔗</a></div></article><article class="exercise exercise-like" id="exercises-PID_euclidei-2-4"><h5 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 21.3.5"><a href="#exercises-PID_euclidei-2-3" title="Copy heading and permalink for Esercizio 21.3.5" aria-label="Copy heading and permalink for Esercizio 21.3.5">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-PID_euclidei-2-4"><h5 class="heading"><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-PID_euclidei-2-4-1-1">
 <span class="process-math">\(12+5i\)</span> e <span class="process-math">\(8-3i\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-2-4-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-PID_euclidei-2-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-PID_euclidei-2-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-PID_euclidei-2-4-2-1">
 <span class="process-math">\(1=(12+5i)\cdot1+(8-3i)(-1-i)\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-2-4-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 21.3.6.1"><a href="#exercises-PID_euclidei-2-4-2" title="Copy heading and permalink for Risposta 21.3.6.1" aria-label="Copy heading and permalink for Risposta 21.3.6.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 21.3.6"><a href="#exercises-PID_euclidei-2-4" title="Copy heading and permalink for Esercizio 21.3.6" aria-label="Copy heading and permalink for Esercizio 21.3.6">🔗</a></div></article><article class="exercise exercise-like" id="exercises-PID_euclidei-2-5"><h5 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 21.3.6"><a href="#exercises-PID_euclidei-2-4" title="Copy heading and permalink for Esercizio 21.3.6" aria-label="Copy heading and permalink for Esercizio 21.3.6">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-PID_euclidei-2-5"><h5 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-PID_euclidei-2-5-1-1">
 <span class="process-math">\(41-i\)</span> e <span class="process-math">\(-25+19i\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-2-5-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-PID_euclidei-2-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-PID_euclidei-2-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-PID_euclidei-2-5-2-1">
 <span class="process-math">\(3+7i=(41-i)(-1)+(-25+19i)(-1-i)\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-2-5-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 21.3.7.1"><a href="#exercises-PID_euclidei-2-5-2" title="Copy heading and permalink for Risposta 21.3.7.1" aria-label="Copy heading and permalink for Risposta 21.3.7.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 21.3.7"><a href="#exercises-PID_euclidei-2-5" title="Copy heading and permalink for Esercizio 21.3.7" aria-label="Copy heading and permalink for Esercizio 21.3.7">🔗</a></div></article>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 21.3.7"><a href="#exercises-PID_euclidei-2-5" title="Copy heading and permalink for Esercizio 21.3.7" aria-label="Copy heading and permalink for Esercizio 21.3.7">🔗</a></div>
+</article>
 </div>
 <div class="autopermalink" data-description="Gruppo di esercizi 21.3.4–7"><a href="#exercises-PID_euclidei-2" title="Copy heading and permalink for Gruppo di esercizi 21.3.4–7" aria-label="Copy heading and permalink for Gruppo di esercizi 21.3.4–7">🔗</a></div>
 </div>
 <div class="exercisegroup" id="exercises-PID_euclidei-3">
 <h4 class="heading"><span class="title">Gruppo di esercizi.</span></h4>
-<div class="introduction" id="exercises-PID_euclidei-3-1"><div class="para" id="exercises-PID_euclidei-3-1-1">Trovare il massimo comun divisore in <span class="process-math">\(\Razionali[x]\)</span> e un’identità di Bezout per le seguenti coppie di polinomi a coefficienti nel campo dei razionali.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-3-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
-</div></div>
+<div class="introduction" id="exercises-PID_euclidei-3-1">
+<div class="para" id="exercises-PID_euclidei-3-1-1">Trovare il massimo comun divisore in <span class="process-math">\(\Razionali[x]\)</span> e un’identità di Bezout per le seguenti coppie di polinomi a coefficienti nel campo dei razionali.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-3-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
+</div>
+</div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercises-PID_euclidei-3-2"><h5 class="heading"><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-PID_euclidei-3-2-1-1">
 <span class="process-math">\(x^{2}-3x+2\)</span> e <span class="process-math">\(x^{3}+x^{2}-x-1\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-3-2-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-PID_euclidei-3-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-PID_euclidei-3-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-PID_euclidei-3-2-2-1">
 <span class="process-math">\(x-1=(x^{2}-3x+2)(-\frac{1}{9}x-\frac{4}{9})+(x^{3}+x^{2}-x-1)\frac{1}{9}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-3-2-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 21.3.8.1"><a href="#exercises-PID_euclidei-3-2-2" title="Copy heading and permalink for Risposta 21.3.8.1" aria-label="Copy heading and permalink for Risposta 21.3.8.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 21.3.8"><a href="#exercises-PID_euclidei-3-2" title="Copy heading and permalink for Esercizio 21.3.8" aria-label="Copy heading and permalink for Esercizio 21.3.8">🔗</a></div></article><article class="exercise exercise-like" id="exercises-PID_euclidei-3-3"><h5 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 21.3.8"><a href="#exercises-PID_euclidei-3-2" title="Copy heading and permalink for Esercizio 21.3.8" aria-label="Copy heading and permalink for Esercizio 21.3.8">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-PID_euclidei-3-3"><h5 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-PID_euclidei-3-3-1-1">
 <span class="process-math">\(3x^{3}-2x+1\)</span> e <span class="process-math">\(x^{4}+x^{2}-x\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-3-3-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-PID_euclidei-3-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-PID_euclidei-3-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-PID_euclidei-3-3-2-1">
 <span class="process-math">\(1=(3x^{3}-2x+1)(\frac{2}{39}x^{3}+\frac{25}{39}x^{2}+\frac{22}{39}x+1)+(x^{4}+x^{2}-x)(-\frac{2}{13}x^{2}-\frac{25}{13}x-\frac{56}{39})\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-3-3-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 21.3.9.1"><a href="#exercises-PID_euclidei-3-3-2" title="Copy heading and permalink for Risposta 21.3.9.1" aria-label="Copy heading and permalink for Risposta 21.3.9.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 21.3.9"><a href="#exercises-PID_euclidei-3-3" title="Copy heading and permalink for Esercizio 21.3.9" aria-label="Copy heading and permalink for Esercizio 21.3.9">🔗</a></div></article><article class="exercise exercise-like" id="exercises-PID_euclidei-3-4"><h5 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 21.3.9"><a href="#exercises-PID_euclidei-3-3" title="Copy heading and permalink for Esercizio 21.3.9" aria-label="Copy heading and permalink for Esercizio 21.3.9">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-PID_euclidei-3-4"><h5 class="heading"><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercises-PID_euclidei-3-4-1-1">
 <span class="process-math">\(3x^{4}+3x^{3}+2x^{2}-x-1\)</span> e <span class="process-math">\(6x^{5}-9x^{2}-2x^{3}+3\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-3-4-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-PID_euclidei-3-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-PID_euclidei-3-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Risposta</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para" id="exercises-PID_euclidei-3-4-2-1">
 <span class="process-math">\(x^{2}-\frac{1}{3}=(3x^{4}+3x^{3}+2x^{2}-x-1)(\frac{2}{3}x-\frac{2}{3})+(6x^{5}-9x^{2}-2x^{3}+3)(-\frac{1}{3})\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-3-4-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Risposta 21.3.10.1"><a href="#exercises-PID_euclidei-3-4-2" title="Copy heading and permalink for Risposta 21.3.10.1" aria-label="Copy heading and permalink for Risposta 21.3.10.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 21.3.10"><a href="#exercises-PID_euclidei-3-4" title="Copy heading and permalink for Esercizio 21.3.10" aria-label="Copy heading and permalink for Esercizio 21.3.10">🔗</a></div></article>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 21.3.10"><a href="#exercises-PID_euclidei-3-4" title="Copy heading and permalink for Esercizio 21.3.10" aria-label="Copy heading and permalink for Esercizio 21.3.10">🔗</a></div>
+</article>
 </div>
 <div class="autopermalink" data-description="Gruppo di esercizi 21.3.8–10"><a href="#exercises-PID_euclidei-3" title="Copy heading and permalink for Gruppo di esercizi 21.3.8–10" aria-label="Copy heading and permalink for Gruppo di esercizi 21.3.8–10">🔗</a></div>
 </div>
 <article class="exercise exercise-like" id="exercise-quoziente_PID"><h4 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para" id="exercise-quoziente_PID-1-1">Sia <span class="process-math">\(a\)</span> un elemento non nullo e non invertibile di un dominio a ideali principali <span class="process-math">\(D\)</span> e sia <span class="process-math">\(I\)</span> l’ideale generato da <span class="process-math">\(a\text{.}\)</span> Dimostrare che se <span class="process-math">\(a\)</span> è irriducibile allora <span class="process-math">\(D/I\)</span> è un campo, altrimenti non è un dominio.<div class="autopermalink" data-description="Capoverso"><a href="#exercise-quoziente_PID-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercise-quoziente_PID-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="exercise-quoziente_PID-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="exercise-quoziente_PID-2-1">Supponiamo che <span class="process-math">\(a\)</span> non sia irriducibile, ed esistano allora <span class="process-math">\(b\)</span> e <span class="process-math">\(c\)</span> non associati ad <span class="process-math">\(a\)</span> tali che <span class="process-math">\(a=bc\text{:}\)</span> in particolare, <span class="process-math">\(b\)</span> e <span class="process-math">\(c\)</span> non appartengono a <span class="process-math">\(I\text{,}\)</span> cioè <span class="process-math">\(b+I\)</span> e <span class="process-math">\(c+I\)</span> sono elementi non nulli di <span class="process-math">\(D/I\text{.}\)</span> D’altra parte <span class="process-math">\((b+I)(c+I)=bc+I=a+I\)</span> è lo zero di <span class="process-math">\(D/I\)</span> che, quindi, non è un dominio.<div class="autopermalink" data-description="Capoverso"><a href="#exercise-quoziente_PID-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="para" id="exercise-quoziente_PID-2-2">Sia ora <span class="process-math">\(s\)</span> irriducibile. Per il <a href="sec-anelli_quoziente.html#thm-sottoanelli_quoziente" class="xref" data-knowl="./knowl/xref/thm-sottoanelli_quoziente.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Teorema 19.2.22">Teorema 19.2.22</a>, gli ideali di <span class="process-math">\(D/I\)</span> sono del tipo <span class="process-math">\(J/I\)</span> con <span class="process-math">\(J\)</span> ideale di <span class="process-math">\(D\)</span> contenente <span class="process-math">\(I\text{:}\)</span> poiché <span class="process-math">\(D\)</span> è un dominio a ideali principali, <span class="process-math">\(J=\ideal{h}\)</span> con <span class="process-math">\(h\)</span> divisore di <span class="process-math">\(a\)</span> e, essendo <span class="process-math">\(a\)</span> irriducibile, ciò può avvenire se e solo se <span class="process-math">\(h\)</span> è invertibile, cioè <span class="process-math">\(\ideal{h}=D\text{,}\)</span> o se <span class="process-math">\(h\)</span> è associato ad <span class="process-math">\(a\text{,}\)</span> cioè <span class="process-math">\(\ideal{h}=I\text{.}\)</span> Dunque, gli unici ideali di <span class="process-math">\(D/I\)</span> sono <span class="process-math">\(D/I\)</span> e <span class="process-math">\(I/I\)</span>  (cioè l’ideale nullo): pertanto, per la <a href="sec-anelli_quoziente.html#prop-anello_commutativo_senza_ideali_campo" class="xref" data-knowl="./knowl/xref/prop-anello_commutativo_senza_ideali_campo.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 19.2.18">Proposizione 19.2.18</a>, <span class="process-math">\(D/I\)</span> è un campo.<div class="autopermalink" data-description="Capoverso"><a href="#exercise-quoziente_PID-2-2" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Soluzione 21.3.11.1"><a href="#exercise-quoziente_PID-2" title="Copy heading and permalink for Soluzione 21.3.11.1" aria-label="Copy heading and permalink for Soluzione 21.3.11.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 21.3.11"><a href="#exercise-quoziente_PID" title="Copy heading and permalink for Esercizio 21.3.11" aria-label="Copy heading and permalink for Esercizio 21.3.11">🔗</a></div></article><article class="exercise exercise-like" id="exercises-PID_euclidei-5"><h4 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 21.3.11"><a href="#exercise-quoziente_PID" title="Copy heading and permalink for Esercizio 21.3.11" aria-label="Copy heading and permalink for Esercizio 21.3.11">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercises-PID_euclidei-5"><h4 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <div class="para logical" id="exercises-PID_euclidei-5-1-1">
 <div class="para">Sia <span class="process-math">\(R\)</span> un anello commutativo. Mostrare che le seguenti condizioni sono equivalenti</div>
 <ol class="lower-alpha lower-alpha-level-1" id="exercises-PID_euclidei-5-1-1-2">
@@ -1092,12 +1154,16 @@ b \amp =(2x^{3}+x^{2}+x-1)(x-2)-x^{2}-x-1\\
 <div class="autopermalink" data-description="Punto 21.3.12.c"><a href="#item-ideale_massimale" title="Copy heading and permalink for Punto 21.3.12.c" aria-label="Copy heading and permalink for Punto 21.3.12.c">🔗</a></div>
 </li>
 </ol>
-<div class="para">Un anello che soddisfa queste condizioni è detto <dfn class="terminology">noetheriano</dfn>.<details class="ptx-footnote" aria-live="polite" id="exercises-PID_euclidei-5-1-1-4"><summary class="ptx-footnote__number" title="Nota a piè di pagina 21.3.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="exercises-PID_euclidei-5-1-1-4">
-<a class="external" href="https://it.wikipedia.org/wiki/Emmy_Noether" target="_blank">Emmy Noether</a>, 1882–1935.</div></details>
+<div class="para">Un anello che soddisfa queste condizioni è detto <dfn class="terminology">noetheriano</dfn>.<details class="ptx-footnote" aria-live="polite" id="exercises-PID_euclidei-5-1-1-4"><summary class="ptx-footnote__number" title="Nota a piè di pagina 21.3.2"><sup> 2 </sup></summary>
+<div class="ptx-footnote__contents" id="exercises-PID_euclidei-5-1-1-4">
+<a class="external" href="https://it.wikipedia.org/wiki/Emmy_Noether" target="_blank">Emmy Noether</a>, 1882–1935.
+</div></details>
 </div>
 <div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-5-1-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
-<div class="solutions"><details id="exercises-PID_euclidei-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="solutions">
+<details id="exercises-PID_euclidei-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Soluzione</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
 <div class="para" id="exercises-PID_euclidei-5-2-1">Supponiamo che valga la <a href="sec-PID_euclidei.html#item-ideali_finitamente_generati" class="xref" data-knowl="./knowl/xref/item-ideali_finitamente_generati.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 21.3.12.a">Condizione 21.3.12.a</a> e mostriamo che vale la <a href="sec-PID_euclidei.html#item-cca" class="xref" data-knowl="./knowl/xref/item-cca.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 21.3.12.b">Condizione 21.3.12.b</a>. Data una catena <span class="process-math">\(I_{1}\subseteq I_{2}\subseteq \cdots\subseteq I_{j}\subseteq\cdots\)</span> ascendente di ideali, la loro unione è un ideale <span class="process-math">\(I\)</span> come nella <a href="sec-PID_euclidei.html#prop-PID_Noetheriani" class="xref" data-knowl="./knowl/xref/prop-PID_Noetheriani.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Proposizione 21.3.2">Proposizione 21.3.2</a>. Poiché <span class="process-math">\(I\)</span> è finitamente generato, da certi elementi <span class="process-math">\(x_{1}\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(x_{r}\text{,}\)</span> e ciascuno di essi è contenuto in un termine della catena, pur di prendere il più grande di questi termini, esiste un indice <span class="process-math">\(n\)</span> tale che questi elementi sono tutti contenuti in <span class="process-math">\(I_{n}\)</span> e, di conseguenza, <span class="process-math">\(I\subseteq I_{n}\text{:}\)</span> ciò implica che <span class="process-math">\(I_{n+k}=I_{n}\)</span> per ogni naturale <span class="process-math">\(k\text{.}\)</span><div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-5-2-1" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="para logical" id="exercises-PID_euclidei-5-2-2">
@@ -1123,8 +1189,13 @@ I_{1}\subsetneq I_{2}\subsetneq\cdots\subsetneq I_{k}\subsetneq\cdots
 <div class="para" id="exercises-PID_euclidei-5-2-4">Infine, supponiamo ora che valga la <a href="sec-PID_euclidei.html#item-ideale_massimale" class="xref" data-knowl="./knowl/xref/item-ideale_massimale.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 21.3.12.c">Condizione 21.3.12.c</a> e mostriamo che vale la <a href="sec-PID_euclidei.html#item-cca" class="xref" data-knowl="./knowl/xref/item-cca.html" data-reveal-label="Mostra" data-close-label="Chiudi" title="Punto 21.3.12.b">Condizione 21.3.12.b</a>. Data una successione ascendente di ideali <span class="process-math">\(I_{1}\subseteq I_{2}\subseteq \cdots\subseteq I_{j}\subseteq\cdots\)</span> questa ammette un elemento massimale e, di conseguenza, la successione si stabilizza.<div class="autopermalink" data-description="Capoverso"><a href="#exercises-PID_euclidei-5-2-4" title="Copy heading and permalink for Capoverso" aria-label="Copy heading and permalink for Capoverso">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Soluzione 21.3.12.1"><a href="#exercises-PID_euclidei-5-2" title="Copy heading and permalink for Soluzione 21.3.12.1" aria-label="Copy heading and permalink for Soluzione 21.3.12.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Esercizio 21.3.12"><a href="#exercises-PID_euclidei-5" title="Copy heading and permalink for Esercizio 21.3.12" aria-label="Copy heading and permalink for Esercizio 21.3.12">🔗</a></div></article><div class="autopermalink" data-description="Esercizi 21.3"><a href="#exercises-PID_euclidei" title="Copy heading and permalink for Esercizi 21.3" aria-label="Copy heading and permalink for Esercizi 21.3">🔗</a></div></section><div class="autopermalink" data-description="Paragrafo 21.3: Domini a ideali principali e domini euclidei"><a href="#sec-PID_euclidei" title="Copy heading and permalink for Paragrafo 21.3: Domini a ideali principali e domini euclidei" aria-label="Copy heading and permalink for Paragrafo 21.3: Domini a ideali principali e domini euclidei">🔗</a></div></section></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Esercizio 21.3.12"><a href="#exercises-PID_euclidei-5" title="Copy heading and permalink for Esercizio 21.3.12" aria-label="Copy heading and permalink for Esercizio 21.3.12">🔗</a></div>
+</article><div class="autopermalink" data-description="Esercizi 21.3"><a href="#exercises-PID_euclidei" title="Copy heading and permalink for Esercizi 21.3" aria-label="Copy heading and permalink for Esercizi 21.3">🔗</a></div>
+</section><div class="autopermalink" data-description="Paragrafo 21.3: Domini a ideali principali e domini euclidei"><a href="#sec-PID_euclidei" title="Copy heading and permalink for Paragrafo 21.3: Domini a ideali principali e domini euclidei" aria-label="Copy heading and permalink for Paragrafo 21.3: Domini a ideali principali e domini euclidei">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-fattorizzazione.html" title="Precedente"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prec</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-fattorizzazione_polinomi.html" title="Successivo"><span class="name">Succ</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
