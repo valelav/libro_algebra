@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-modulisupid">
+  <title>Moduli finitamente generati su domini a ideali principali</title>
+  <shorttitle>Moduli finitamente generati su PID</shorttitle>
+
+  <introduction>
+    <p>
+      In matematica siamo spesso interessati in risultati di classificazione, vale a dire <q>elenchi</q> (eventualmente infiniti) che contengono tutti gli oggetti di un certo tipo a meno di equivalenze (in algebra si parla solitamente di isomorfismi). I differenti oggetti nella lista vengono di solito distinti per mezzo di opportuni invarianti. Ad esempio, ogni spazio vettoriale ammette una base la cui cardinalità (possibilmente infinita) è detta dimensione dello spazio vettoriale. Due spazi vettoriali sono isomorfi se e solo se hanno la stessa dimensione e, quindi, la dimensione è l'unico invariante che ci serve per classificare gli spazi vettoriali. Abbiamo visto che per gli <m>R</m>-moduli le cose sono più complicate: non tutti hanno una base. Se però facciamo delle ipotesi aggiuntive su <m>R</m> (pur senza richiedere che sia un campo come nel caso degli spazi vettoriali) possiamo dare dei risultati di classificazione. Daremo qui la classificazione dei moduli finitamente generati su un dominio a ideali principali <m>D</m> e vedremo poi delle applicazioni di tale classificazione.
+    </p>
+    <p>
+      In tutto questo capitolo, quindi, indicheremo con <m>D</m> un dominio a ideali principali.
+    </p>
+  </introduction>
+
+  <section xml:id="sec-moduli_ciclici">
+    <title>Moduli ciclici</title>
+
+    <p>
+      Ricordiamo che, in tutto questo capitolo, indichiamo con <m>D</m> un dominio a ideali principali.
+    </p>
+
+    <p>
+      Volendo classificare i <m>D</m>-moduli finitamente generati, cominciamo dal caso più semplice; cioè quello in cui abbiamo moduli generati da un singolo elemento. Utilizzeremo, con qualche adattamento, la terminologia utilizzata per i gruppi ciclici.
+    </p>
+
+
+    <definition xml:id="def-ordine_elemento_modulo_su_PID">
+      <statement>
+        <p>
+          Se <m>x</m> è un elemento di un <m>D</m>-modulo, chiamiamo <term>ordine</term> di <m>x</m> un qualunque generatore di <m>\ann{x}</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <note>
+      <p>
+        Due elementi di <m>D</m> generano lo stesso ideale principale se e solo se sono associati. In particolare, dato un elemento <m>x</m> di un <m>D</m>-modulo, l'ideale <m>\ann{x}</m> è generato da un elemento <m>d</m> o da un qualsiasi elemento a esso associato: anche se <m>d</m> non è, in genere, univocamente determinato, diremo, con un abuso di linguaggio, che <m>d</m> è l'ordine dell'elemento <m>x</m>. Più precisamente, dovremmo dire che <m>\ann{x}</m> è l'<term>ideale ordine</term> di <m>x</m>.
+      </p>
+    </note>
+
+    <remark xml:id="rem-ordine_1_e_0">
+      <p>
+         Un elemento <m>x</m> di un <m>D</m>-modulo ha ordine <m>1</m> se e solo se <m>x=0</m>. Un elemento ha ordine <m>0</m> se e solo se <m>\ann{x}=0</m>, cioè <m>x</m> non è un elemento di torsione.
+      </p>
+    </remark>
+
+    <remark xml:id="rem-ordine_Z_moduli">
+      <p>
+        Sia <m>G</m> un gruppo abeliano, visto come <m>\Interi</m>-modulo. Se <m>x</m> è un elemento di <m>G</m> di periodo finito <m>d</m>, allora l'elemento <m>x</m> ha ordine <m>d</m> nello <m>\Interi</m>-modulo. Se, invece, <m>x</m> ha periodo infinito, il suo ordine nello <m>\Interi</m>-modulo è <m>0</m>.
+      </p>
+    </remark>
+
+    <definition xml:id="def-moduli_ciclici">
+      <statement>
+        <p>
+          Un <m>D</m>-modulo <m>M</m> è detto <term>ciclico</term> se è generato da un singolo elemento.
+        </p>
+      </statement>
+    </definition>
+
+    <note>
+      <p>
+        Dalla <xref ref="prop-annullatore_ideale"/> sappiamo che il <m>D</m>-modulo ciclico <m>xD</m> generato da un elemento <m>x</m> è isomorfo al quoziente <m>D_{D}/\ann{x}</m>: abbiamo, dunque, <m>xD\simeq D_{D}/\ideal{d}</m> dove <m>d</m> è l'ordine di <m>x</m>, e, per alleggerire la notazione, scriveremo semplicemente <m>xD\simeq D/\ideal{d}</m>.
+      </p>
+    </note>
+
+    <p>
+      In analogia al <xref ref="thm-sottogruppo_di_ciclico_ciclico"/> abbiamo la
+    </p>
+
+    <proposition xml:id="prop-sottomodulo_di_ciclico_ciclico">
+      <statement>
+        <p>
+          Ogni sottomodulo di un modulo ciclico è ciclico.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Un modulo ciclico è isomorfo a un quoziente <m>D/\ideal{d}</m> per qualche <m>d</m> in <m>D</m>. Per il <xref ref="thm-sottomoduli_quoziente"/>, i sottomoduli di <m>D/\ideal{d}</m> sono del tipo <m>L/\ideal{d}</m> dove <m>L</m> è un sottomodulo di <m>D_{D}</m> contenente <m>\ideal{d}</m>, ovvero un ideale di <m>D</m> contenente <m>\ideal{d}</m>: poiché <m>D</m> è un domino a ideali principali, <m>L</m> è generato come ideale (e, quindi, come modulo) da un singolo elemento <m>x</m>. Pertanto, il quoziente <m>L/\ideal{d}</m> è generato dal laterale <m>\ideal{d}+x</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <proposition xml:id="prop-lagrange_moduli">
+      <statement>
+        <p>
+          Se <m>x</m> è un elemento di ordine <m>d</m>, gli elementi del modulo ciclico generato da <m>x</m> hanno ordine che divide <m>d</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+           Se <m>y</m> è un elemento di <m>xD</m>, allora <m>y=xr</m> per qualche <m>r</m> in <m>D</m> e, dunque, <m>yd=(xr)d=x(rd)=x(dr)=(xd)r=0r=0</m>. Ma allora, <m>\ann{y}</m> contiene <m>d</m> e, detto <m>e</m> un qualsiasi generatore di <m>\ann{y}</m>, abbiamo che <m>e</m> divide <m>d</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      La proposizione precedente ci dice, in particolare, che se <m>x</m> e <m>y</m> sono elementi che generano lo stesso modulo ciclico, allora l'ordine di <m>x</m> e l'ordine di <m>y</m> si dividono reciprocamente: usando la convenzione che abbiamo posto di non distinguere tra elementi associati quando parliamo di ordine di un elemento, possiamo dire che gli elementi <m>x</m> e <m>y</m> hanno lo stesso ordine. Ciò giustifica la
+    </p>
+
+    <definition xml:id="def-ordine_modulo_ciclico">
+      <statement>
+        <p>
+          Dato un <m>D</m>-modulo ciclico <m>M</m>, il suo <term>ordine</term> <m>d</m> è l'ordine di un qualsiasi elemento che genera <m>M</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <remark xml:id="rem-ordine_non_numero">
+      <p>
+         L'ordine di un <m>D</m>-modulo ciclico non è (in generale) un numero e non va quindi interpretato come il numero degli elementi del modulo. In particolare, dire che l'ordine è <m>0</m> significa che è generato da un elemento il cui annullatore è banale e, pertanto, il modulo è isomorfo a <m>D_{D}</m>: dunque, <m>\Interi</m> pensato come <m>\Interi</m>-modulo su sé stesso ha, in questa terminologia, ordine <m>0</m> (mentre, nella tipica terminologia gruppale in cui l'ordine indica il numero degli elementi, <m>\Interi</m> ha ordine infinito).
+      </p>
+    </remark>
+
+    <p>
+      In analogia al <xref ref="thm-unicita_gruppo_ciclico"/>, abbiamo la
+    </p>
+
+    <proposition xml:id="prop-moduli_ciclici_stesso_ordine">
+      <statement>
+        <p>
+          Due moduli ciclici sono isomorfi se e solo se hanno lo stesso ordine.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Se <m>M</m> e <m>N</m> sono isomorfi è facile vedere che hanno lo stesso ordine (<xref ref="exercise-ordine_immagine"/>). Viceversa, se due moduli ciclici hanno ordine <m>d</m>, allora sono entrambi isomorfi a <m>D/\ideal{d}</m> e sono, dunque, isomorfi tra loro.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <remark xml:id="rem-ordine_somma_diretta">
+      <p>
+        Sia <m>M=M_{1}\oplus\cdots\oplus M_{r}</m> una somma diretta di <m>D</m>-moduli e sia <m>x\coloneqq(x_{1},\ldots,x_{r})</m> un elemento di <m>M</m>. Un elemento <m>a</m> di <m>D</m> annulla <m>x</m> se e solo se annulla tutti gli <m>x_{i}</m>; dunque, l'ordine di <m>x</m> è il minimo comune multiplo degli ordini degli elementi <m>x_{i}</m>. In particolare, <m>x</m> è di torsione se e solo se tutti gli <m>x_{i}</m> sono di torsione.
+      </p>
+    </remark>
+
+    <p>
+      Abbiamo visto che ogni elemento di un modulo ciclico ha ordine che divide l'ordine del modulo. Ma come possiamo determinare l'ordine di tale elemento? Distinguiamo i casi in cui il modulo abbia ordine <m>0</m> da quello in cui ha ordine diverso da <m>0</m>. Nel primo caso abbiamo un risultato che ricalca il fatto che i sottogruppi non banali di un gruppo ciclico infinito sono anch'essi infiniti (<xref ref="prop-periodo_di_potenze_di_elemento_di_periodo_infinito"/>).
+    </p>
+
+    <proposition xml:id="prop-sottomoduli_ordine_0">
+      <statement>
+        <p>
+          Sia <m>M</m> un modulo ciclico di ordine <m>0</m>. Allora ogni elemento non nullo di <m>M</m> ha ordine <m>0</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sia <m>x</m> un generatore di <m>M</m> e sia <m>y</m> un elemento non nullo di <m>M</m>: dunque, <m>y=xa</m> per qualche elemento non nullo <m>a</m> di <m>D</m>. Se <m>b\in\ann{y}</m>, abbiamo <m>0=(xa)b=x(ab)</m>, cioè <m>ab\in\ann{x}</m>. Poiché <m>x</m> ha ordine <m>0</m>, ciò implica che <m>ab=0</m> e, essendo <m>a\ne0</m>, otteniamo <m>b=0</m>: quindi, <m>y</m> ha ordine <m>0</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      Nel caso in cui l'ordine del modulo sia diverso da <m>0</m>, abbiamo una formula che rispecchia l'analoga formula per l'ordine degli elementi di un gruppo ciclico finito (<xref ref="prop-periodo_di_potenze_di_elemento_di_periodo_finito"/>).
+    </p>
+
+    <proposition xml:id="prop-ordine_sottomodulo_modulo_ciclico">
+      <statement>
+        <p>
+          Sia <m>M</m> un <m>D</m>-modulo ciclico generato da un elemento <m>x</m> di ordine <m>d</m> con <m>d\ne0</m>. Se <m>y=xr</m> con <m>r\in D</m> e <m>e</m> è il massimo comun divisore di <m>d</m> e <m>r</m>, allora <m>y</m> ha ordine <m>f</m> dove <m>f</m> è l'elemento di <m>D</m> tale che <m>d=ef</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sia <m>r=es</m>: dunque, <m>f</m> e <m>s</m> sono elementi coprimi di <m>D</m> (<xref ref="exercise-raccoglimento_MCD"/>). Dato <m>a\in D</m>, si ha <m>ya=(xr)a=x(ra)</m>, e, dunque, <m>a\in\ann{y}</m> se e solo se <m>ra\in\ann{x}</m>, cioè se e solo se <m>d</m> divide <m>ra</m>, vale a dire <m>ef\mid esa</m>. Ma <m>e\ne0</m> (altrimenti <m>d=ef=0</m>) e, dunque, ciò è equivalente a <m>f\mid sa</m>: poiché <m>s</m> e <m>f</m> sono coprimi, ciò avviene se e solo se <m>a</m> è multiplo di <m>f</m> (<xref ref="exercise-divisore_coprimo_con_fattore"/>). Abbiamo, dunque, mostrato che l'annullatore di <m>y</m> è formato da tutti e soli i multipli di <m>f</m> che è, dunque, l'ordine di <m>y</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <lemma xml:id="lem-sottomodulo_stesso_ordine">
+      <statement>
+        <p>
+          Sia <m>M</m> un modulo ciclico di ordine <m>d</m> con <m>d\ne0</m>. Se <m>N</m> è un sottomodulo di <m>M</m> di ordine <m>d</m>, allora <m>M=N</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Sia <m>x</m> un generatore di <m>M</m> e sia <m>y</m> un generatore di <m>N</m>. Dunque, <m>y=xt</m> per qualche <m>t</m> in <m>D</m> e dobbiamo mostrare che <m>x</m> è multiplo di <m>y</m>. Se <m>e</m> è il massimo comune divisore tra <m>d</m> e <m>t</m>, abbiamo che <m>d=ed'</m> e <m>t=et'</m> per qualche <m>d'</m> e <m>t'</m> in <m>D</m>. Inoltre, per la <xref ref="prop-MCD_in_PID"/>, esistono <m>u</m> e <m>v</m> in <m>D</m> tali che <m>e=du+tv</m>. Abbiamo allora <m>yd'=xtd'=xet'd'=xed't'=xdt'=0t'=0</m>: dunque, <m>d'</m> è multiplo dell'ordine di <m>y</m>, cioè <m>d</m> e, d'altra parte, essendo <m>d=ed'</m>, ne segue che <m>d</m> e <m>d'</m> sono associati. Poiché <m>d\ne0</m>, ciò significa che <m>e</m> è invertibile. Ma allora <m>x\sim xe=x(du+tv)=xdu+xtv=0+yv=yv</m>, cioè <m>x</m> è multiplo di <m>y</m>.
+        </p>
+      </proof>
+    </lemma>
+
+    <p>
+      In analogia a quanto avviene per i gruppi ciclici finiti (<xref ref="thm-sottogruppi_di_gruppo_ciclico_finito"/>), abbiamo una descrizione dei sottomoduli di un modulo ciclico di ordine non nullo.
+    </p>
+
+    <proposition xml:id="prop-unico_sottomodulo">
+      <statement>
+        <p>
+          Sia <m>M</m> un modulo ciclico di ordine <m>d</m> con <m>d\ne0</m>. Per ogni
+          divisore <m>f</m> di <m>d</m> esiste esattamente un sottomodulo <m>N</m> di <m>M</m> di ordine <m>f</m> e il quoziente <m>M/N</m> è ciclico di ordine <m>e</m> dove <m>e</m> è tale che <m>ef=d</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Sia <m>e</m> tale che <m>d=ef</m>. Detto <m>x</m> un generatore di <m>M</m>, per la <xref ref="prop-ordine_sottomodulo_modulo_ciclico"/> gli elementi di <m>M</m> di ordine <m>f</m> sono quelli del tipo <m>xr</m> con <m>r</m> elemento di <m>D</m> tale che <m>(d,r)\sim e</m>. Dunque, <m>w\coloneqq xe</m> genera un sottomodulo <m>N</m> di ordine <m>f</m>. Preso un altro sottomodulo <m>L</m> di ordine <m>f</m>, generato da un certo <m>y\coloneqq xr</m>, abbiamo che <m>r</m> è multiplo di <m>e</m>, e, di conseguenza, <m>y</m> è multiplo di <m>w</m>. Dunque, <m>L</m> è contenuto in <m>N</m>, ed entrambi hanno ordine <m>f</m>: per il <xref ref="lem-sottomodulo_stesso_ordine"/> coincidono.
+        </p>
+        <p>
+          Consideriamo ora il quoziente <m>M/N</m>: esso è generato dal laterale <m>x+N</m>. Dato <m>a\in D</m>, si ha che <m>(x+N)a=0</m> se e solo se <m>xa\in N</m>: poiché <m>N</m> è generato da <m>xe</m>, per mostrare che <m>x+N</m> ha ordine <m>e</m> dobbiamo provare che <m>xa\in N</m> se e solo se <m>a</m> è multiplo di <m>e</m>. Se <m>a</m> è multiplo di <m>e</m>, allora <m>xa</m> è multiplo di <m>xe</m> e, quindi, appartiene a <m>N</m>. Viceversa, se <m>xa</m> appartiene a <m>N</m>, allora esiste <m>t\in D</m> tale che <m>xa=(xe)t</m>, cioè <m>x(a-et)=0</m>. Poiché <m>x</m> ha ordine <m>d=ef</m>, abbiamo che <m>a-et</m> è multiplo di <m>d</m> e, quindi, di <m>e</m> e, di conseguenza, anche <m>a=(a-et)+et</m> è multiplo di <m>e</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      Il prodotto diretto di due gruppi ciclici non banali è un gruppo ciclico se e solo se i due gruppi sono finiti di ordine coprimo (<xref ref="prop-prodotto_diretto_di_ciclici"/>). Analogamente, abbiamo la
+    </p>
+
+    <proposition xml:id="prop-somma_diretta_ciclici">
+      <statement>
+        <p>
+          Siano <m>M</m> e <m>N</m> due moduli ciclici di ordine rispettivamente <m>e</m> e <m>f</m> entrambi diversi da <m>1</m> (cioè <m>M</m> e <m>N</m> sono entrambi non banali). Il modulo <m>M\oplus N</m> è ciclico se e solo se <m>e</m> e <m>f</m> sono entrambi non nulli e coprimi: in tal caso <m>M\oplus N</m> ha ordine <m>ef</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Siano <m>x</m> un generatore di <m>M</m> e <m>y</m> un generatore di <m>N</m>.
+        </p>
+        <p>
+          Supponiamo che <m>e</m> e <m>f</m> siano entrambi non nulli e coprimi e sia <m>z\coloneqq (x,y)</m> che, grazie all'<xref ref="rem-ordine_somma_diretta"/>, ha ordine <m>ef</m>. Mostriamo che <m>M\oplus N</m> è generato da <m>z</m>. Poiché il massimo comun divisore tra <m>e</m> e <m>f</m> è <m>1</m>, per la <xref ref="prop-MCD_in_PID"/>, esistono <m>u</m> e <m>v</m> in <m>D</m> tali che <m>1=eu+fv</m>. Ora <m>zeu=(xeu,yeu)=(0,y(1-fv))=(0,y-yfv)=(0,y)</m>: pertanto, <m>(0,y)</m> appartiene al sottomodulo generato da <m>z</m>. Analogamente, <m>(x,0)</m> appartiene al sottomodulo generato da <m>z</m>. Poiché <m>M\oplus N</m> è generato da <m>(x,0)</m> e <m>(0,y)</m>, il sottomodulo generato da <m>z</m> coincide con <m>M\oplus N</m>.
+        </p>
+
+        <p>
+          Viceversa, supponiamo che <m>M\oplus N</m> sia ciclico, generato da un suo elemento <m>w</m>. In particolare, esistono <m>a</m> e <m>b</m> in <m>D</m> tali che <m>(x,0)=wa</m> e <m>(0,y)=wb</m>: si noti che <m>a</m> e <m>b</m> sono non nulli perché <m>x\ne0</m> e <m>y\ne0</m>. Ora <m>(wa)b=(x,0)b=(xb,0)</m> e <m>(wb)a=(0,y)a=(0,ya)</m>: d'altra parte <m>(wa)b=w(ab)=w(ba)=(wb)a</m> e, pertanto, <m>(xb,0)=(0,ya)</m>. Ma allora <m>xb=0</m> e <m>ya=0</m>: dunque, sia <m>x</m> che <m>y</m> hanno annullatore non nullo. Sia ora <m>d</m> il massimo comun divisore di <m>e</m> e <m>f</m>. Per la <xref ref="prop-unico_sottomodulo"/>, <m>M</m> contiene un sottomodulo di ordine <m>d</m> come pure <m>N</m>: essendo <m>M\oplus N</m> ciclico, un ulteriore utilizzo della <xref ref="prop-unico_sottomodulo"/> implica che tali sottomoduli devono coincidere ed essere quindi contenuti in <m>M\cap N</m>. Ma <m>M\cap N=0</m>, cioè
+          l'ordine di <m>M\cap N</m> è <m>1</m> e, quindi, <m>d</m> divide <m>1</m> cioè <m>d\sim1</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      Applicando ripetutamente la proposizione precedente, otteniamo il:
+    </p>
+
+    <corollary xml:id="cor-ciclici_primari_distinti">
+      <statement>
+        <p>
+          Sia <m>d</m> un elemento di <m>D</m> con <m>d\ne0</m> e <m>d</m> non invertibile. Posto <m>d\sim p_{1}^{\alpha_{1}}\cdots p_{r}^{\alpha_{r}}</m> con <m>p_{1}</m>, <m>\ldots</m>, <m>p_{r}</m> irriducibili a due a due non associati e <m>\alpha_{1}</m>, <m>\ldots</m>, <m>\alpha_{r}</m> interi positivi, si ha
+          <md>
+            \frac{D}{\ideal{d}}\simeq \frac{D}{\ideal{p_{1}^{\alpha_{1}}}}\oplus\cdots\oplus\frac{D}{\ideal{p_{r}^{\alpha_{r}}}}
+          </md>
+        </p>
+      </statement>
+    </corollary>
+
+
+
+    <exercises xml:id="exercises-moduli_ciclici">
+
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare che se <m>x</m> è un elemento di un <m>D</m>-modulo e <m>a</m> è un elemento di <m>R</m>, allora <m>xa=0</m> se e solo se l'ordine di <m>x</m> divide <m>a</m>. In particolare, se <m>a</m> è irriducibile. allora <m>x</m> ha ordine <m>0</m> oppure <m>a</m>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Dire che <m>xa=0</m> è equivalente a dire che <m>a\in\ann{x}</m>, cioè all'ideale principale generato dall'ordine <m>d</m> di <m>x</m>. Otteniamo, dunque, subito la tesi.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise xml:id="exercise-ordine_immagine">
+        <statement>
+          <p>
+            Sia <m>\phi\colon M\to N</m> un omomorfismo tra <m>D</m>-moduli e sia <m>x</m> un elemento di <m>M</m>. Mostrare che l'ordine di <m>x\phi</m> divide l'ordine di <m>x</m> e che se <m>\phi</m> è iniettivo, allora l'ordine di <m>x\phi</m> è uguale all'ordine di <m>x</m>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+             Sia <m>d</m> l'ordine di <m>x</m>: allora <m>(x\phi)d=(xd)\phi=0\phi=0</m>: poiché <m>d</m> annulla <m>x\phi</m> l'ordine di <m>x\phi</m> è un divisore di <m>d</m>. Supponiamo ora che <m>\phi</m> sia iniettivo e che <m>e</m> sia l'ordine di <m>x\phi</m>: abbiamo allora <m>(xe)\phi=(x\phi)e=0</m> e, poiché <m>\phi</m> è iniettivo abbiamo che <m>xe=0</m> cioè <m>e</m> annulla <m>x</m>. L'ordine di <m>x</m> divide allora l'ordine di <m>x</m> e, poiché l'ordine di <m>x</m> e l'ordine di <m>x\phi</m> si dividono reciprocamente sono, dunque, associati) cioè <m>x</m> e <m>x\phi</m> hanno lo stesso ordine).
+          </p>
+        </solution>
+      </exercise>
+
+    </exercises>
+
+  </section>
+
+  <section xml:id="sec-moduli_primari">
+    <title>Moduli primari</title>
+
+    <p>
+      Ricordiamo che, in tutto questo capitolo, indichiamo con <m>D</m> un dominio a ideali principali.
+    </p>
+
+
+    <definition xml:id="def-elemento_primario_in_modulo">
+      <statement>
+        <p>
+          Dato un elemento irriducibile <m>p</m> di <m>D</m>, un elemento di un <m>D</m>-modulo è detto <term><m>p</m>-elemento</term> se ha ordine una potenza di <m>p</m>. Un <m>D</m>-modulo si dice <term><m>p</m>-primario</term> se tutti i suoi elementi sono <m>p</m>-elementi. Un <m>D</m>-modulo è detto <term>primario</term> se è <m>p</m>-primario per qualche irriducibile <m>p</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <remark xml:id="rem-elemento_p_primario_se_annulato_da_potenza_di_p">
+      <p>
+        Per verificare che un elemento <m>x</m> è un <m>p</m>-elemento è sufficiente trovare una potenza <m>p^{i}</m> di <m>p</m> che annulli <m>x</m> perché in tal caso il suo ordine è un divisore di <m>p^{i}</m>, cioè a sua volta una potenza di <m>p</m>.
+      </p>
+    </remark>
+
+    <remark xml:id="rem-decomposizione_ciclico_in_p_primari">
+      <p>
+        Grazie alla <xref ref="prop-lagrange_moduli"/>, un modulo ciclico è <m>p</m>-primario se e solo se ha ordine una potenza di <m>p</m>. Pertanto, il <xref ref="cor-ciclici_primari_distinti"/> dice che ogni modulo ciclico di ordine diverso da <m>0</m> e da <m>1</m> si esprime come somma diretta di ciclici primari relativi a irriducibili a due a due non associati.
+      </p>
+    </remark>
+
+    <proposition xml:id="prop-primari_sottomodulo">
+      <statement>
+        <p>
+          Il sottoinsieme <m>M_{p}</m> formato dai <m>p</m>-elementi di un <m>D</m>-modulo <m>M</m> è un sottomodulo di <m>M</m> contenuto in <m>\Tor(M)</m>: esso è il più grande sottomodulo <m>p</m>-primario di <m>M</m> ed è detto <term>componente <m>p</m>-primaria</term> di <m>M</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Poiché <m>0\in M_{p}</m> si ha <m>M_{p}\ne\vuoto</m>. Siano <m>x</m> e <m>y</m> due elementi di <m>M_{p}</m> di ordini <m>p^{i}</m> e <m>p^{j}</m> rispettivamente. Detto <m>l=\max(i,j)</m>, abbiamo <m>(x+y)p^{l}=xp^{l}+yp^{l}=xp^{i}p^{l-i}+yp^{j}p^{l-j}=0p^{l-i}+0p^{l-j}=0</m>; inoltre, per ogni <m>a</m> in <m>D</m> si ha <m>(xa)p^{i}=(xp^{i})a=0a=0</m>;, dunque, <m>x+y</m> e <m>xa</m> appartengono a <m>M_{p}</m>, cioè <m>M_{p}</m> è un sottomodulo. Poiché <m>M_{p}</m> è formato esattamente da tutti i <m>p</m>-elementi di <m>M</m>, è il più grande sottomodulo <m>p</m>-primario di <m>M</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <example>
+      <statement>
+        <p>
+          Questo risultato, applicato agli <m>\Interi</m>-moduli, cioè ai gruppi abeliani, ci dice che l'insieme dei <m>p</m>-elementi è un sottogruppo (più precisamente è l'unico <m>p</m>-sottogruppo di Sylow). Ciò non è però in generale vero per gruppi non abeliani: ad esempio gli scambi <m>(1\;2)</m> e <m>(2\;3)</m> in <m>\Sym{3}</m> sono <m>2</m>-elementi (hanno ordine <m>2</m>) mentre il loro prodotto
+          <m>(1\;2)(2\;3)=(1\;3\;2)</m> non è un <m>2</m>-elemento (ha ordine <m>3</m>).
+        </p>
+      </statement>
+    </example>
+
+    <definition xml:id="def-zoccolo">
+
+      <notation>
+        <usage><m>\Soc(M)</m></usage>
+        <description>zoccolo di un modulo primario <m>M</m></description>
+      </notation>
+      <statement>
+        <p>
+          Lo <term>zoccolo</term> <m>\Soc(M)</m> di un <m>D</m>-modulo <m>p</m>-primario <m>M</m> è il sottoinsieme di <m>M</m> formato dagli elementi <m>x</m> tali che <m>xp=0</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <lemma xml:id="lem-quoziente_su_irriducibile">
+      <statement>
+        <p>
+          Se <m>p</m> è un elemento irriducibile di <m>D</m>, allora l'anello quoziente <m>D/\ideal{p}</m> è un campo.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Poiché <m>D/\ideal{p}</m> è un anello commutativo, per la <xref ref="prop-anello_commutativo_senza_ideali_campo"/> è sufficiente mostrare che non ha ideali propri e non banali. Per il <xref ref="thm-sottoanelli_quoziente"/>, un ideale di <m>D/\ideal{p}</m> è della forma <m>I/\ideal{p}</m> dove <m>I</m> è un ideale di <m>D</m> contenente <m>\ideal{p}</m>. Se <m>d</m> genera <m>I</m>, allora <m>d</m> divide <m>p</m>: quindi, o <m>d</m> è invertibile, nel qual caso <m>I=D</m> e <m>I/\ideal{p}=D/\ideal{p}</m>, o <m>d</m> è associato a <m>p</m>, nel qual caso <m>I=\ideal{d}=\ideal{p}</m> e <m>I/\ideal{p}=0</m>.
+        </p>
+      </proof>
+
+    </lemma>
+
+    <proposition xml:id="prop-soccolo_spazio_vettoriale">
+      <statement>
+        <p>
+          Lo zoccolo di un modulo <m>p</m>-primario <m>M</m> è un sottomodulo di <m>M</m> che può essere visto come <m>D/\ideal{p}</m>-spazio vettoriale. Inoltre, un insieme di elementi genera <m>\Soc{M}</m> come <m>D</m>-modulo se e solo se lo genera come <m>D/\ideal{p}</m>-spazio vettoriale.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Chiaramente <m>0</m> appartiene a <m>\Soc(M)</m> che è, dunque, non vuoto. Se <m>x</m> e <m>y</m> appartengono a <m>\Soc(M)</m> e <m>a\in D</m> allora <m>(x+y)p=xp+yp=0+0</m> e <m>(xa)p=x(ap)=x(pa)=(xp)a=0a=0</m>, cioè <m>x+y</m> e <m>xa</m> appartengono a <m>\Soc(M)</m> che è, dunque, un sottomodulo di <m>M</m>.
+        </p>
+        <p>
+          Se <m>x</m> appartiene a <m>\Soc(M)</m> e <m>\ideal{p}+a</m> è un elemento di <m>D/\ideal{p}</m>, poniamo <m>x(\ideal{p}+a)\coloneqq xa</m>. Questa moltiplicazione è ben definita: se, infatti, <m>a'</m> è un elemento di <m>D</m> tale che <m>\ideal{p}+a'=\ideal{p}+a</m>, cioè <m>a'=pb+a</m> per qualche <m>b</m> in <m>D</m>, allora <m>xa'=x(pb+a)=xpb+xa=0+xa=xa</m>. È immediato poi mostrare che con questa moltiplicazione <m>\Soc(M)</m> risulta essere un <m>D/\ideal{p}</m>-spazio vettoriale e che <m>D</m>-generatori e <m>D/\ideal{p}</m>-generatori sono la stessa cosa.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <lemma xml:id="lem-zoccolo_di_ciclico_primario">
+      <statement>
+        <p>
+          Sia <m>M</m> un <m>D</m>-modulo ciclico di ordine <m>p^{\alpha}</m> con <m>p</m> irriducibile e <m>\alpha \gt 0</m>. Allora <m>\Soc(M)</m> è ciclico di ordine <m>p</m> e <m>M/\Soc(M)</m>  è ciclico di ordine <m>p^{\alpha-1}</m>. In particolare, <m>\Soc(M)</m> ha dimensione <m>1</m> come <m>D/\ideal{p}</m>-spazio vettoriale.
+         </p>
+      </statement>
+
+      <proof>
+        <p>
+          Per la <xref ref="prop-unico_sottomodulo"/>, sappiamo che <m>M</m> ha un unico sottomodulo ciclico di ordine <m>p</m> e che il quoziente di <m>M</m> su questo sottomodulo ha ordine <m>p^{\alpha-1}</m>. Poiché gli elementi dello zoccolo hanno ordine che divide <m>p</m>, questo sottomodulo coincide con lo zoccolo. Dalla <xref ref="prop-soccolo_spazio_vettoriale"/>, segue immediatamente che la dimensione di <m>\Soc{M}</m> come <m>D/\ideal{p}</m>-spazio vettoriale è <m>1</m>.
+        </p>
+      </proof>
+
+    </lemma>
+
+    <proposition xml:id="prop-ciclici_primari">
+      <statement>
+        <p>
+          Sia <m>p</m> un elemento irriducibile di <m>D</m> e sia <m>M\coloneqq\frac{D}{\ideal{p^{\alpha_{1}}}}\oplus\cdots\oplus\frac{D}{\ideal{p^{\alpha_{r}}}}</m> somma diretta di <m>D</m>-moduli ciclici <m>p</m>-primari (con ciascun <m>\alpha_{j} \gt 0</m>). Posto <m>M^{1}\coloneqq M</m> e <m>M^{i}\coloneqq M^{i-1}/\Soc(M^{i-1})</m> per <m>i>1</m>, la dimensione di <m>\Soc(M^{i})</m> come <m>D/\ideal{p}</m>-spazio vettoriale è uguale al numero degli <m>\alpha_{j}</m> tali che <m>\alpha_{j}\ge i</m>. In particolare, <m>\Soc(M)</m> ha dimensione <m>r</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sia <m>x\coloneqq(x_{1},\ldots,x_{r})</m> un elemento di <m>M</m>. Dal momento che <m>xp=(x_{1}p,\ldots,x_{r}p)</m>, si ha che <m>x\in\Soc(M)</m> se e solo se <m>x_{j}\in\Soc\left(D/\ideal{p^{\alpha_{j}}}\right)</m> per ogni <m>j</m>: dunque, <m>\Soc(M)=\Soc\left(D/\ideal{p^{\alpha_{1}}}\right)\oplus\cdots\oplus\Soc\left(D/\ideal{p^{\alpha_{r}}}\right)</m>. Per il <xref ref="lem-zoccolo_di_ciclico_primario"/>, segue che <m>\Soc{M}</m> ha dimensione <m>r</m> come <m>D/\ideal{p}</m>-spazio vettoriale e che il quoziente sul proprio zoccolo di un addendo di ordine <m>p^{\alpha_{j}}</m> ha ordine <m>p^{\alpha_{j}-1}</m>: dunque, per la <xref ref="prop-somma_diretta_quozienti"/>, abbiamo che <m>M^{2}=M/\Soc(M)\simeq\frac{D}{\ideal{p^{\alpha_{1}-1}}}\oplus\cdots\oplus\frac{D}{\ideal{p^{\alpha_{r}-1}}}</m>.
+          Il numero di addendi non banali in questa decomposizione è uguale al numero degli <m>\alpha_{j}</m> maggiori di <m>1</m>: ripetendo il ragionamento precedente questo numero è uguale alla dimensione di <m>\Soc(M^{2})</m>. Iterando il procedimento e, notando che a ogni passo l'ordine di ciascun addendo diretto viene diviso per <m>p</m>, otteniamo la tesi.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <remark xml:id="rem-successione_dimensioni_decrescente">
+      <p>
+        La proposizione precedente ci dice che, data una decomposizione di un modulo <m>p</m>-primario <m>M</m> come somma diretta di un numero finito di moduli ciclici, è possibile ottenere gli ordini di questi addendi calcolando le dimensioni degli zoccoli dei quozienti successivi <m>M^{i}</m>: a ogni passo <q>scompaiono</q> gli addendi di un dato ordine e <q>sopravvivono</q> quelli di ordine maggiore. Più precisamente, il numero di addendi di ordine <m>p^{i}</m> è uguale a <m>\dim\Soc(M^{i})-\dim\Soc(M^{i+1})</m>. In particolare, se lo stesso modulo può essere decomposto in più di un modo, gli ordini degli addendi nelle diverse decomposizioni coincidono.
+      </p>
+    </remark>
+
+    <example>
+      <statement>
+        <p>
+          Supponiamo di avere un modulo <m>p</m>-primario <m>M</m> somma diretta di due moduli ciclici di ordine <m>p^{6}</m>, due di ordine <m>p^{4}</m> e uno di ordine <m>p</m>. Usiamo una rappresentazione grafica di questo tipo per aiutarci nella visualizzazione: a ogni colonna corrisponde uno degli addendi diretti.
+        </p>
+        <image xml:id="image-colonne_modulo_primario">
+          <shortdescription>Righe di quadrati sovrapposte lunghe 5, 4, 4, 4, 2 e 2</shortdescription>
+          <latex-image>
+            \YoungTableau{5,4,4,4,2,2}
+          </latex-image>
+        </image>
+        <p>
+          Lo zoccolo è rappresentato dall'ultima riga e, quindi, ha dimensione <m>5</m>. Quozientare <m>M</m> su <m>\Soc(M)</m> corrisponde a cancellare l'ultima riga. Lo zoccolo di <m>M^{2}</m> ha così dimensione <m>4</m>. Cancellando una riga a ogni passo troviamo così le dimensioni degli zoccoli: <m>\dim\Soc(M^{1})=5</m>, <m>\dim\Soc(M^{2})=\dim\Soc(M^{3})=\dim\Soc(M^{4})=4</m>, <m>\dim\Soc(M^{5})=\dim\Soc(M^{6})=2</m> e <m>\dim\Soc(M^{7})=0</m>.
+        </p>
+        <p>
+          Viceversa, supponiamo di conoscere questa successione di dimensioni. Possiamo allora ricostruire il disegno dato sopra: tracciamo prima una riga con <m>5</m> blocchi, poi le disponiamo sopra una riga con <m>4</m>, un'altra con <m>4</m> blocchi, un'altra con <m>4</m> blocchi, poi una con <m>2</m> blocchi e un'ultima con <m>2</m> blocchi. Dunque, la decomposizione di <m>M</m> che sarà formata da <m>5</m> addendi: <m>5-4=1</m> di ordine <m>p</m>, <m>4-4=0</m> di ordine <m>p^{2}</m>, <m>4-4=0</m> di ordine <m>p^{3}</m>, <m>4-2=2</m> di ordine <m>p^{4}</m>, <m>2-2=0</m> di ordine <m>p^{5}</m> e <m>2-0=2</m> di ordine <m>p^{6}</m>. Ovviamente, il disegno non è necessario: è solo un aiuto alla comprensione.
+        </p>
+      </statement>
+
+    </example>
+
+    <exercises xml:id="exercises-moduli_primari">
+
+      <exercise>
+        <statement>
+          <p>
+            Completare la dimostrazione della <xref ref="prop-soccolo_spazio_vettoriale"/>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Sia <m>M</m> un <m>D</m>-modulo <m>p</m>-primario per un certo irriducibile <m>p</m>. La successione delle dimensioni degli zoccoli sia <m>8</m>, <m>6</m>, <m>6</m>, <m>5</m>, <m>1</m>, <m>1</m>, <m>1</m>, <m>0</m>. Esprimere <m>M</m> come somma diretta di moduli ciclici.
+          </p>
+        </statement>
+
+        <answer>
+          <p>
+            <m>M\simeq \frac{D}{\ideal{p}}\oplus\frac{D}{\ideal{p}}\oplus\frac{D}{\ideal{p^{3}}}\oplus\frac{D}{\ideal{p^{4}}}\oplus\frac{D}{\ideal{p^{4}}}\oplus\frac{D}{\ideal{p^{4}}}\oplus\frac{D}{\ideal{p^{4}}}\oplus\frac{D}{\ideal{p^{7}}}</m>.
+          </p>
+        </answer>
+      </exercise>
+
+    </exercises>
+
+  </section>
+
+  <section xml:id="sec-moduli_liberi">
+    <title>Moduli liberi</title>
+
+    <p>
+      Ricordiamo che, in tutto questo capitolo, indichiamo con <m>D</m> un dominio a ideali principali.
+    </p>
+
+    <lemma xml:id="lem-omomorfismo_in_D">
+      <statement>
+        <p>
+         Sia <m>\phi\colon M\to D</m> un omomorfismo di <m>D</m>-moduli non banale. Scelto <m>x</m> in <m>M</m> tale che <m>x\phi</m> genera
+        <m>\im\phi</m> allora <m>M=xD\oplus\ker\phi</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sia <m>z\in xD\cap\ker\phi</m>. Dunque, <m>z=xa</m> per qualche <m>a</m> in <m>D</m> e <m>z\phi=0</m>. Ma allora <m>0=z\phi=(xa)\phi=(x\phi)a</m>. Poiché <m>x\phi\ne0</m>, (in quanto generatore di <m>\im\phi</m>) si ha che <m>a=0</m>. Pertanto, <m>z=x0=0</m>, cioè <m>xD\cap\ker\phi=0</m>.
+        </p>
+
+        <p>
+          Sia ora <m>y</m> un elemento di <m>M</m>: <m>y\phi</m> è multiplo di <m>x\phi</m>, cioè esiste <m>b</m> in <m>D</m> tale che <m>y\phi=x\phi b</m>, da cui segue facilmente che <m>(y-xb)\phi=0</m>, cioè <m>y-xb\in\ker\phi</m>. Pertanto, <m>y=xb+(y-xb)</m>, cioè <m>y\in xD+\ker\phi</m>.
+        </p>
+      </proof>
+
+    </lemma>
+
+    <proposition xml:id="prop-sottomodulo_di_libero_libero">
+      <statement>
+        <p>
+          Sia <m>M</m> un <m>D</m>-modulo libero di rango <m>n</m>. Allora
+          ogni sottomodulo <m>N</m> di <m>M</m> è libero di rango al più <m>n</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Procediamo per induzione su <m>n</m>, notando che il caso <m>n=0</m> è banale. Sia allora <m>n>0</m> e identifichiamo <m>M</m> con <m>D^{n}</m>. Sia <m>T\coloneqq\{(a_{1},\ldots,a_{n})\in D^{n}\mid a_{n}=0\}</m>. Poiché <m>T</m> è libero di rango <m>n-1</m>, per ipotesi induttiva <m>N\cap T</m> è libero di rango al più <m>n-1</m>. Se <m>N\subseteq T</m> abbiamo finito, altrimenti consideriamo l'omomorfismo di proiezione <m>\pi\colon D^{n}\to D</m> che manda <m>(a_{1},\ldots,a_{n})</m> in <m>a_{n}</m>: il nucleo di <m>\pi</m> è ovviamente <m>T</m> e, pertanto, <m>N\pi</m> è un sottomodulo di <m>D</m> non nullo, cioè un ideale non nullo di <m>D</m>.
+          Se <m>x</m> è un elemento di <m>N</m> tale che <m>x\pi</m> genera <m>N\pi</m>, applicando il <xref ref="lem-omomorfismo_in_D"/> alla restrizione di <m>\pi</m> a <m>N</m>, abbiamo che <m>N=xD\oplus(N\cap T)</m>. Poiché <m>xD</m> è libero di rango <m>1</m>, dalla <xref ref="prop-somma_diretta_di_liberi"/> segue che <m>L</m> è libero di rango al più <m>n</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <!--<p>
+      Il risultato della proposizione precedente può essere meglio precisato. Diamo però prima un
+    </p>-->
+
+    <lemma xml:id="lem-MCD_e_immagini">
+      <statement>
+        <p>
+          Sia <m>M</m> un <m>D</m>-modulo libero di base <m>x_{1}</m>,
+          <m>\ldots</m>, <m>x_{n}</m>. Sia <m>x\coloneqq x_{1}a_{1}+\cdots+x_{n}a_{n}</m> un elemento di <m>M</m> e sia <m>c</m> il massimo comun divisore di <m>a_{1}</m>, <m>\ldots</m>, <m>a_{n}</m>. Allora:
+          <ul>
+            <li>
+              <p>
+                per ogni omomorfismo <m>\phi\colon M\to D</m> si ha che <m>c</m> divide <m>x\phi</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                esiste un omomorfismo <m>\psi\colon M\to D</m> tale che <m>x\psi=c</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Abbiamo <m>x\phi=(x_{1}a_{1}+\cdots+x_{n}a_{n})\phi=(x_{1}\phi)a_{1}+\cdots+(x_{n}\phi)a_{n}</m>: poiché <m>c</m> divide tutti gli <m>a_{i}</m> segue immediatamente che <m>c</m> divide <m>x\phi</m>.
+        </p>
+        <p>
+          Poiché <m>c</m> è il massimo comun divisore di <m>a_{1}</m>, <m>\ldots</m>, <m>a_{n}</m> e <m>D</m> è un dominio a ideali principali, per il <xref ref="cor-multi_bezout"/> esistono <m>u_{1}</m>, <m>\ldots</m>, <m>u_{n}</m> in <m>D</m> tali che <m>c=u_{1}a_{1}+\cdots+u_{n}a_{n}</m>. Per la <xref ref="prop-modulo_libero_e_libero"/>, esiste un omomorfismo <m>\psi\colon M \to D</m> che manda <m>x_{i}</m> in <m>u_{i}</m> per ogni <m>i</m>: si ha allora
+          <md>
+            x\psi=(x_{1}a_{1}+\cdots+x_{n}a_{n})\psi=x_{1}\psi a_{1}+\cdots+x_{n}\psi a_{n}=u_{1}a_{1}+\cdots+u_{n}a_{n}=c
+          </md>,
+          come richiesto.
+        </p>
+      </proof>
+
+    </lemma>
+
+    <p>
+      Siamo ora pronti a dimostrare il
+    </p>
+
+<!--    <theorem xml:id="thm-basi_compatibili">
+      <statement>
+        <p>
+          Sia <m>L</m> un sottomodulo di un <m>D</m>-modulo libero <m>M</m> di rango finito <m>n</m>. Allora esiste una base <m>x_{1}</m>, <m>\ldots</m>, <m>x_{n}</m> di <m>M</m> ed elementi non nulli <m>d_{1}\mid d_{2}\mid\cdots\mid d_{r}</m> con <m>r\le n</m> tali che <m>x_{1}d_{1}</m>, <m>\ldots</m>, <m>x_{r}d_{r}</m> è una base di <m>L</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Procediamo per induzione sul rango di <m>M</m>, notando che il caso in cui <m>M</m> ha rango <m>0</m> è banale, così come il caso in cui <m>L=0</m>. Sia allora <m>L\ne0</m>. Data una base <m>e_{1}</m>, <m>\ldots</m>, <m>e_{n}</m> di <m>M</m>, scegliamo <m>z=e_{1}a_{1}+\cdots+e_{n}a_{n}</m> non nullo in <m>L</m> tale che il massimo comun divisore <m>d_{1}</m> di <m>a_{1}</m>, <m>\ldots</m>, <m>a_{n}</m> sia di lunghezza minima possibile. Sia ora <m>x_{1}</m> in <m>M</m> tale che <m>z=x_{1}d_{1}</m>. Per il <xref ref="lem-MCD_e_immagini"/>, esiste un omomorfismo <m>\psi\colon M\to D</m> tale che <m>z\psi=d_{1}</m>: di conseguenza, <m>d_{1}=z\psi=(x_{1}d_{1})\psi=x_{1}\psi d_{1}</m> e, essendo <m>d_{1}\ne0</m>, abbiamo <m>x_{1}\psi=1</m>.
+          Ciò comporta che <m>x_{1}\psi</m> genera <m>D</m> che, pertanto, coincide con <m>\im\psi</m>. Per il <xref ref="lem-omomorfismo_in_D"/> abbiamo allora che <m>M= x_{1}D\oplus\ker\psi</m>. La <xref ref="prop-sottomodulo_di_libero_libero"/> implica che <m>x_{1}D</m> e <m>\ker\psi</m> sono liberi. Poiché <m>x_{1}D</m> ha, evidentemente, rango <m>1</m>, dalla <xref ref="prop-somma_diretta_di_liberi"/> segue che <m>\ker\psi</m> ha rango <m>n-1</m>. Per ipotesi induttiva possiamo allora dire che esiste una base <m>x_{2}</m>, <m>\ldots</m>, <m>x_{n}</m> di <m>\ker\psi</m> ed elementi non nulli <m>d_{2}\mid d_{3}\mid\cdots\mid d_{r}</m> con <m>r\le n</m> tali che <m>x_{2}d_{2}</m>, <m>\ldots</m>, <m>x_{r}d_{r}</m> è una base di <m>\ker\psi\cap L</m>. Notiamo che <m>x_{1}</m>, <m>\ldots</m>, <m>x_{n}</m> è una base di <m>M</m>.
+        </p>
+
+        <p>
+          Se ora <m>x=e_{1}b_{1}+\cdots+e_{n}b_{n}</m> è un elemento generico di <m>L</m>, sempre il <xref ref="lem-MCD_e_immagini"/> ci garantisce che il massimo comun divisore <m>c</m> di <m>b_{1}</m>, <m>\ldots</m>, <m>b_{n}</m> divide <m>x\psi</m>: dunque, <m>\len{x\psi}\ge\len{c}\ge\len{d_{1}}</m> per la scelta di <m>z</m>. Pertanto <m>d_{1}=z\psi</m> è un elemento non nullo di <m>L\psi</m> di
+          lunghezza minima e ne è, dunque, un generatore: applicando il <xref ref="lem-omomorfismo_in_D"/> alla restrizione di <m>\psi</m> a <m>L</m> otteniamo allora che <m>L=zD\oplus(\ker\psi\cap L)</m>: poiché <m>z=x_{1}d_{1}</m>, si ha che <m>x_{1}d_{1}</m>, <m>\ldots</m>, <m>x_{r}d_{r}</m> è una base di <m>L</m>. Rimane allora solo da mostrare che <m>d_{1}</m> divide <m>d_{2}</m>.
+        </p>
+
+        <p>
+          Consideriamo l'elemento <m>y\coloneqq x_{1}d_{1}+x_{2}d_{2}</m>: questo appartiene a <m>L</m> e, applicando il <xref ref="lem-MCD_e_immagini"/> a <m>y</m> rispetto alla base <m>x_{1}</m>, <m>\ldots</m> <m>x_{n}</m>, sappiamo che esiste un omomorfismo <m>\theta</m> da <m>M</m> in <m>D</m> tale che <m>y\theta=d</m> con <m>d</m> massimo comun divisore di <m>d_{1}</m> e <m>d_{2}</m>. Se ora <m>y=e_{1}y_{1}+\cdots+e_{n}y_{n}</m>, nuovamente il <xref ref="lem-MCD_e_immagini"/>, stavolta rispetto alla base <m>e_{1}</m>, <m>\ldots</m>, <m>e_{n}</m>, ci dice che <m>v\theta</m> ha lunghezza maggiore o uguale del massimo comun divisore di
+          <m>y_{1}</m>, <m>\ldots</m>, <m>y_{n}</m>. Tale massimo comun divisore ha lunghezza maggiore o uguale del massimo comun divisore di <m>x_{1}</m>, <m>\ldots</m>, <m>x_{n}</m>, cioè di <m>d_{1}</m>. Dunque, <m>d</m>, massimo comun divisore di <m>d_{1}</m> e <m>d_{2}</m> ha lunghezza maggiore o uguale di <m>d_{1}</m>: pertanto <m>d</m> è associato a <m>d_{1}</m>, cioè <m>d_{1}</m> divide <m>d_{2}</m>.
+        </p>
+
+      </proof>
+    </theorem> -->
+
+    <theorem xml:id="thm-basi_compatibili">
+      <statement>
+        <p>
+          Sia <m>L</m> un sottomodulo di un <m>D</m>-modulo libero <m>M</m>. Allora esiste una base <m>x_{1}</m>, <m>\ldots</m>, <m>x_{n}</m> di <m>M</m> ed elementi <m>c_{1}</m>, <m>\ldots</m>, <m>c_{n}</m> in <m>D</m> tali che <m>x_{1}c_{1}</m>, <m>\ldots</m>, <m>x_{n}c_{n}</m> generano <m>L</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Procediamo per induzione sul rango di <m>M</m>, notando che il caso in cui <m>M</m> ha rango <m>0</m> è banale, così come il caso in cui <m>L=0</m> (basta scegliere tutti i <m>c_{i}</m> nulli). Sia allora <m>L\ne0</m>. Data una base <m>e_{1}</m>, <m>\ldots</m>, <m>e_{n}</m> di <m>M</m>, scegliamo <m>z=e_{1}a_{1}+\cdots+e_{n}a_{n}</m> non nullo in <m>L</m> tale che il massimo comun divisore <m>c_{1}</m> di <m>a_{1}</m>, <m>\ldots</m>, <m>a_{n}</m> sia di lunghezza minima possibile.
+          Indicato con <m>x=e_{1}b_{1}+\cdots+e_{n}b_{n}</m> un elemento generico di <m>L</m> e con <m>c</m> il massimo comun divisore di <m>b_{1}</m>, <m>\ldots</m>, <m>b_{n}</m>, per il <xref ref="lem-MCD_e_immagini"/>, esiste un omomorfismo <m>\psi\colon M\to D</m> tale che <m>z\psi=c_{1}</m> e <m>c</m> divide <m>x\psi</m>: dunque, <m>x\psi=0</m> o <m>\len{x\psi}\ge\len{c}\ge\len{c_{1}}</m>.
+          Pertanto, <m>c_{1}</m> ha lunghezza minima tra gli elementi non nulli di <m>L\psi</m> e ne è, dunque, un generatore. Raccogliendo <m>c_{1}</m> nell'espressione di <m>z</m>, otteniamo <m>z=x_{1}c_{1}</m> per un certo <m>x_{1}</m> in <m>M</m>: di conseguenza, <m>c_{1}=z\psi=(x_{1}c_{1})\psi=x_{1}\psi c_{1}</m> e, essendo <m>c_{1}\ne0</m>, abbiamo <m>x_{1}\psi=1</m>. Ciò comporta che <m>x_{1}\psi</m> genera <m>D</m> che, pertanto, coincide con <m>\im\psi</m>.
+        </p>
+
+        <p>
+          Applicando il <xref ref="lem-omomorfismo_in_D"/> a <m>\psi</m> e alla sua restrizione a <m>L</m>, otteniamo allora che <m>M= x_{1}D\oplus\ker\psi</m> e che <m>L=zD\oplus(\ker\psi\cap L)</m>. La <xref ref="prop-sottomodulo_di_libero_libero"/> implica che <m>x_{1}D</m> e <m>\ker\psi</m> sono liberi.
+          Poiché <m>x_{1}D</m> ha, evidentemente, rango <m>1</m>, dalla <xref ref="prop-somma_diretta_di_liberi"/> segue che <m>\ker\psi</m> ha rango <m>n-1</m>. Per ipotesi induttiva possiamo allora dire che esiste una base <m>x_{2}</m>, <m>\ldots</m>, <m>x_{n}</m> di <m>\ker\psi</m> ed elementi <m>c_{2}</m>, <m>\ldots</m>, <m>c_{n}</m> tali che <m>x_{2}c_{2}</m>, <m>\ldots</m>, <m>x_{n}c_{n}</m> generano <m>\ker\psi\cap L</m>. Notiamo che <m>x_{1}</m>, <m>\ldots</m>, <m>x_{n}</m> è una base di <m>M</m>: poiché <m>z=x_{1}c_{1}</m>, si ha che <m>x_{1}c_{1}</m>, <m>\ldots</m>, <m>x_{n}c_{n}</m> generano <m>L</m>.
+        </p>
+
+      </proof>
+
+    </theorem>
+
+    <remark xml:id="rem-basi">
+      <p>
+        Non è difficile verificare che se scartiamo gli elementi nulli dalla lista degli <m>x_{i}c_{i}</m> dati dal <xref ref="thm-basi_compatibili"/> otteniamo una base di <m>L</m>.
+      </p>
+    </remark>
+
+    <exercises xml:id="exercises-moduli_liberi">
+
+      <exercise>
+        <statement>
+          <p>
+            Sia <m>M</m> un modulo libero e siano <m>x_{1}</m>, <m>\ldots</m>, <m>x_{n}</m> e <m>y_{1}</m>, <m>\ldots</m>, <m>y_{n}</m> due basi di <m>M</m>. Dato un elemento <m>x</m> di <m>M</m>, espresso come <m>x=x_{1}a_{1}+\cdots+x_{n}a_{n}=y_{1}b_{1}+\cdots+y_{n}b_{n}</m>, mostrare che il massimo comun divisore degli <m>a_{i}</m> e il massimo comun divisore dei <m>b_{i}</m> sono associati.
+          </p>
+        </statement>
+      </exercise>
+
+    </exercises>
+
+  </section>
+
+  <section xml:id="sec-classificazione_moduli_pid">
+    <title>La classificazione dei moduli finitamente generati su un dominio a ideali principali</title>
+
+    <p>
+      Ricordiamo che, in tutto questo capitolo, indichiamo con <m>D</m> un dominio a ideali principali.
+    </p>
+
+    <p>
+      Siamo ora pronti a dimostrare i teoremi di classificazione dei moduli finitamente generati su un dominio a ideali principali. Cominciamo con un risultato parziale.
+    </p>
+
+    <proposition xml:id="prop-decomposizione_moduli_ciclici">
+      <statement>
+        <p>
+          Sia <m>N</m> un <m>D</m>-modulo finitamente generato. Allora
+          <md>
+            N\simeq \frac{D}{\ideal{c_{1}}}\oplus\cdots\oplus\frac{D}{\ideal{c_{s}}}\oplus D^{r}
+          </md>
+          con <m>s</m> e <m>r</m> naturali e <m>c_{1}</m>, <m>\ldots</m>, <m>c_{s}</m> elementi non nulli e non invertibili di <m>D</m>. Inoltre. <m>\Tor(N)\simeq \frac{D}{\ideal{c_{1}}}\oplus\cdots\oplus\frac{D}{\ideal{c_{s}}}</m> e <m>N/\Tor(N)</m> è libero di rango <m>r</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Per il <xref ref="cor-moduli_fg_quozienti_di_liberi"/>, il modulo <m>N</m> è isomorfo a <m>M/L</m> dove <m>M</m> è un modulo libero e <m>L</m> un sottomodulo. Per il <xref ref="thm-basi_compatibili"/>, esiste una base <m>x_{1}</m>, <m>\ldots</m>, <m>x_{n}</m> di <m>M</m> ed elementi <m>c_{1}</m>, <m>\ldots</m>, <m>c_{n}</m> in <m>D</m> tali che <m>x_{1}c_{1}</m>, <m>\ldots</m>, <m>x_{n}c_{n}</m> generano <m>L</m>. Considerati i moduli ciclici generati dagli <m>x_{i}</m> e i corrispondenti sottomoduli generati dagli <m>x_{i}c_{i}</m>, abbiamo che <m>M=x_{1}D\oplus\cdots\oplus x_{n}D</m> e <m>L=x_{1}c_{1}D\oplus\cdots\oplus x_{n}c_{n}D</m>: per la <xref ref="prop-somma_diretta_quozienti"/>, abbiamo allora
+          <md>
+            N\simeq \frac{D}{\ideal{c_{1}}}\oplus\cdots\oplus\frac{D}{\ideal{c_{n}}}
+          </md>.
+          Gli addendi <m>D/\ideal{c_{i}}</m> per cui <m>c_{i}</m> è invertibile sono moduli nulli e possiamo scartarli dalla decomposizione, mentre gli addendi <m>D/\ideal{c_{i}}</m> per cui <m>c_{i}</m> è nullo sono isomorfi a <m>D</m>. Pur di rietichettare gli addendi abbiamo allora una decomposizione come quella in enunciato:
+          <md>
+            M/L\simeq \frac{D}{\ideal{c_{1}}}\oplus\cdots\oplus\frac{D}{\ideal{c_{s}}}\oplus D^{r}
+          </md>
+          con i <m>c_{i}</m> non invertibili e non nulli.
+        </p>
+        <p>
+          Chiaramente, gli addendi <m>D/\ideal{c_{i}}</m> sono contenuti nel sottomodulo di torsione. Viceversa, se
+          <md>
+            x\coloneqq(x_{1},\ldots,x_{s},y_{1},\ldots,y_{r})
+          </md>
+          è un elemento di torsione della somma diretta, cioè esiste <m>d</m> non nullo tale che <m>xd=0</m>, allora <m>y_{1}d=\cdots=y_{r}d=0</m> che, poiché <m>D</m> è un dominio, implica che <m>y_{1}=y_{2}=\cdots=y_{r}=0</m> e, quindi che il sottomodulo di torsione è contenuto in <m>\frac{D}{\ideal{c_{1}}}\oplus\cdots\oplus\frac{D}{\ideal{c_{s}}}</m>. Il quoziente di <m>M/L</m> su questo sottomodulo è isomorfo a <m>D^{r}</m>, grazie alla <xref ref="prop-quoziente_somma_diretta"/>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      Notando che nella proposizione precedente <m>N</m> è privo di torsione se e solo se <m>s=0</m>, otteniamo immediatamente il
+    </p>
+
+    <corollary xml:id="cor-privo_di_torsione_libero">
+      <statement>
+        <p>
+          Un <m>D</m>-modulo finitamente generato e privo di torsione è libero.
+        </p>
+      </statement>
+    </corollary>
+
+
+    <p>
+      La decomposizione data dalla <xref ref="prop-decomposizione_moduli_ciclici"/> non è unica e non sono nemmeno unici gli ordini dei moduli ciclici coinvolti. Possiamo solo dire che l'intero <m>r</m> è univocamente determinato, essendo il rango del modulo libero <m>N/\Tor(N)</m>. Imponendo delle condizioni aggiuntive agli ordini dei moduli coinvolti possiamo però ottenere il
+    </p>
+
+    <theorem xml:id="thm-decomposizione_primaria">
+      <statement>
+        <p>
+          Sia <m>N</m> un <m>D</m>-modulo finitamente generato. Allora esistono irriducibili <m>p_{1}</m>, <m>\ldots</m>, <m>p_{t}</m> (non necessariamente non associati), interi positivi <m>\alpha_{1}</m>, <m>\ldots</m>, <m>\alpha_{t}</m> e un naturale <m>r</m> tali che
+          <md>
+            N\simeq \frac{D}{\ideal{p_{1}^{\alpha_{1}}}}\oplus\cdots\oplus\frac{D}{\ideal{p_{t}^{\alpha_{t}}}}\oplus D^{r}
+          </md>.
+          Questa decomposizione, detta <term>primaria</term>, non è unica, ma <m>r</m> e gli ordini degli addendi sono univocamente determinati a meno dell'ordinamento. Inoltre, dato un irriducibile <m>p</m> in <m>D</m>, la componente <m>p</m>-primaria di <m>N</m> è data dalla somma di quegli addendi <m>D/\ideal{p_{i}^{\alpha_{i}}}</m> tali per cui <m>p_{i}</m> è associato a <m>p</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Consideriamo la decomposizione data dalla <xref ref="prop-decomposizione_moduli_ciclici"/> e applichiamo a ciascun addendo di ordine diverso da <m>0</m> la decomposizione data dal <xref ref="cor-ciclici_primari_distinti"/>: otteniamo così la decomposizione data in enunciato.
+        </p>
+        <p>
+          Fissato un irriducibile <m>p</m>, chiaramente gli addendi <m>D/\ideal{p_{i}^{\alpha_{i}}}</m> tali per cui <m>p_{i}</m> è associato a <m>p</m> appartengono alla componente <m>p</m>-primaria. Viceversa, se
+          <md>
+            x\coloneqq(x_{1},\ldots,x_{t},y_{1},\ldots,y_{r})
+          </md>
+          è un elemento <m>p</m>-primario della somma diretta, cioè esiste <m>p^{\beta}</m> tale che <m>xp^{\beta}=0</m>, allora ogni <m>x_{i}</m> e ogni <m>y_{j}</m>  è un <m>p</m>-elemento, il che implica che tutti gli <m>y_{j}</m> siano nulli, così come gli <m>x_{i}</m> con <m>p_{i}</m> non associato a <m>p</m>. Dunque, la componente <m>p</m>-primaria è come in enunciato: per la <xref ref="prop-ciclici_primari"/>, nella decomposizione di un modulo <m>p</m>-primario in somma diretta di ciclici, gli ordini sono univocamente determinati. Avevamo già osservato nella <xref ref="prop-decomposizione_moduli_ciclici"/> che <m>r</m> è univocamente determinato.
+        </p>
+      </proof>
+
+    </theorem>
+
+    <remark xml:id="rem-primaria_massimo_numero_addendi">
+      <p>
+        Grazie alla <xref ref="prop-somma_diretta_ciclici"/>, gli addendi ciclici primari nella decomposizione primaria di un modulo non possono ulteriormente <q>spezzarsi</q>: quindi questa decomposizione ha il massimo numero possibile di addendi.
+      </p>
+    </remark>
+
+    <p>
+      Vediamo ora un'altra decomposizione di un modulo finitamente generato. A differenza di quella primaria, questa avrà il minimo possibile di addendi.
+    </p>
+
+
+    <theorem xml:id="thm-decomposizione_fattori_invarianti">
+      <statement>
+        <p>
+          Sia <m>N</m> un <m>D</m>-modulo finitamente generato. Allora esistono elementi non nulli e non invertibili <m>d_{1}</m>, <m>\ldots</m>, <m>d_{s}</m> con <m>d_{1}\mid d_{2}\mid\cdots\mid d_{s}</m> e un naturale <m>r</m> tali che
+          <md>
+            N\simeq \frac{D}{\ideal{d_{1}}}\oplus\cdots\oplus\frac{D}{\ideal{d_{s}}}\oplus D^{r}
+          </md>.
+          Questa decomposizione, detta <term>a fattori invarianti</term>, non è unica, ma gli ordini degli addendi sono univocamente determinati.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Consideriamo la decomposizione data dal <xref ref="thm-decomposizione_primaria"/>. Per ciascun irriducibile che compare almeno una volta consideriamo un addendo che ha ordine associato a una potenza di quell'irriducibile con esponente massimo possibile. Per il <xref ref="cor-ciclici_primari_distinti"/>, la somma diretta di questi moduli ciclici è a sua volta ciclico di ordine prodotto degli ordini degli addendi: otteniamo così l'ultimo degli addendi di ordine non nullo dato in enunciato. Ripetendo il procedimento con gli addendi rimasti otteniamo un modulo ciclico il cui ordine è un divisore del precedente. Iterando il procedimento otteniamo la decomposizione cercata.
+        </p>
+        <p>
+          L'unicità degli ordini segue dal fatto che possiamo invertire il procedimento e ritrovare la decomposizione primaria.
+        </p>
+      </proof>
+
+    </theorem>
+
+    <example>
+      <statement>
+        <p>
+          Supponiamo che un <m>D</m>-modulo <m>N</m> abbia come decomposizione primaria
+          <md>
+            \frac{D}{\ideal{p_{1}^{3}}}\oplus\frac{D}{\ideal{p_{1}^{3}}}\oplus\frac{D}{\ideal{p_{1}}}\oplus\frac{D}{\ideal{p_{1}}}\oplus \frac{D}{\ideal{p_{2}^{2}}}\oplus\frac{D}{\ideal{p_{2}^{2}}}\oplus\frac{D}{\ideal{p_{2}}}\oplus \frac{D}{\ideal{p_{3}^{4}}}\oplus D^{5}
+          </md>
+          con <m>p_{1}</m>, <m>p_{2}</m>, <m>p_{3}</m> irriducibili a due a due non associati.
+        </p>
+
+        <p>
+          Riordiniamo questa decomposizione raggruppando per ciascun irriducibile coinvolto prima gli addendi il cui ordine è individuato dall'esponente maggiore, poi il secondo più grande esponente e così via:
+          <md>
+            \left(\frac{D}{\ideal{p_{1}^{3}}}\oplus\frac{D}{\ideal{p_{2}^{2}}}\oplus\frac{D}{\ideal{p_{3}^{4}}}\right)\oplus \left(\frac{D}{\ideal{p_{1}^{3}}}\oplus\frac{D}{\ideal{p_{2}^{2}}}\right)\oplus \left(\frac{D}{\ideal{p_{1}}}\oplus\frac{D}{\ideal{p_{2}}}\right)\oplus \left(\frac{D}{\ideal{p_{1}}}\right)\oplus D^{5}
+          </md>.
+          In ciascun raggruppamento appaiono moduli ciclici a ordini a due a due a coprimi e, quindi, la loro somma diretta è ciclica di ordine il prodotto degli ordini cioè
+          <md>
+            \frac{D}{\ideal{p_{1}^{3}p_{2}^{2}p_{3}^{4}}} \oplus\frac{D}{\ideal{p_{1}^{3}p_{2}^{2}}} \oplus\frac{D}{\ideal{p_{1}p_{2}}} \oplus\frac{D}{\ideal{p_{1}}}\oplus D^{5}
+          </md>
+          che possiamo riscrivere come
+          <md>
+            \frac{D}{\ideal{d_{4}}}\oplus\frac{D}{\ideal{d_{3}}} \oplus\frac{D}{\ideal{d_{2}}}\oplus\frac{D}{\ideal{d_{1}}}\oplus D^{5}
+          </md>
+          dove <m>d_{1}\coloneqq p_{1}</m>, <m>d_{2}\coloneqq p_{1}p_{2}</m>, <m>d_{3}\coloneqq p_{1}^{3}p_{2}^{2}</m> e <m>d_{4}\coloneqq p_{1}^{3}p_{2}^{2}p_{3}^{4}</m> con <m>d_{1}\mid d_{2}\mid d_{3}\mid d_{4}</m>.
+        </p>
+      </statement>
+    </example>
+
+  </section>
+
+</chapter>

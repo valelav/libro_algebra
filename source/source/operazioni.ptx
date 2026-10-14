@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+  <chapter xml:id="ch-operazioni">
+    <title>Operazioni</title>
+
+    <introduction>
+      <p>
+        Abbiamo studiato con un certo dettaglio le operazioni tra numeri interi, matrici e classi di resto e abbiamo visto che queste operazioni presentano analogie ma anche differenze. Ci proponiamo ora di studiare più in astratto il concetto di operazione in un insieme e le conseguenze derivanti dalle proprietà che essa soddisfa.
+      </p>
+    </introduction>
+
+    <section xml:id="sec-operazioni_definizioni">
+      <title>Definizioni ed esempi</title>
+
+      <definition xml:id="def-operazione">
+        <statement>
+          <p>
+            Dato un insieme <m>S</m>, un'<term>operazione binaria interna</term> o, più semplicemente, un'<term>operazione</term>, è una funzione da <m>S\times S</m> in <m>S</m>. L'elemento associato tramite tale funzione alla coppia ordinata <m>(a,b)</m> viene denotato con un simbolo del tipo <m>a\cdot b</m>, <m>a+b</m>, <m>a\ast b</m>, <m>ab</m>, <etc />: tale elemento viene detto <term>risultato</term> dell'operazione.
+          </p>
+        </statement>
+      </definition>
+
+      <convention xml:id="conv-notazioni-operazioni">
+        <p>
+          Quando indichiamo con <m>a\cdot b</m> o <m>ab</m> il risultato di un'operazione tra due elementi <m>a</m> e <m>b</m>, diciamo che l'operazione è scritta in <term>notazione moltiplicativa</term>. In tal caso il risultato dell'operazione è detto <term>prodotto</term>.
+        </p>
+        <p>
+          Quando, invece, indichiamo con <m>a+b</m> il risultato di un'operazione tra due elementi <m>a</m> e <m>b</m>, diciamo che l'operazione è scritta in <term>notazione additiva</term>. In tal caso il risultato dell'operazione è detto <term>somma</term>.
+        </p>
+        <p>
+          Questi termini si usano anche per operazioni che non hanno nulla a che fare con le usuali operazioni di moltiplicazione e di addizione tra numeri.
+        </p>
+        <p>
+          Se non specificato esplicitamente, intenderemo che stiamo usando la notazione moltiplicativa. Quando possibile, scriveremo semplicemente <m>ab</m> per indicare il prodotto di <m>a</m> e <m>b</m>.
+        </p>
+      </convention>
+
+      <example>
+        <statement>
+          <p>
+            L'usuale addizione è un'operazione in <m>\Naturali</m>, <m>\Interi</m>, <m>\Razionali</m>, <m>\Reali</m>, <m>\Complessi</m>: più precisamente in ciascuno di questi insiemi è definita la corrispondente operazione, ciascuna <q>estensione</q> della precedente, e vanno, quindi, considerate operazioni diverse.
+          </p>
+        </statement>
+      </example>
+
+      <example>
+        <statement>
+          <p>
+            L'usuale moltiplicazione è un'operazione in <m>\Naturali</m>, <m>\Interi</m>, <m>\Razionali</m>, <m>\Reali</m>, <m>\Complessi</m>: come per l'addizione, si tratta più precisamente di operazioni distinte.
+          </p>
+        </statement>
+      </example>
+
+      <example>
+        <statement>
+          <p>
+            L'usuale sottrazione non è invece un'operazione in <m>\Naturali</m>, perché <m>a-b</m> non è definito per ogni possibile scelta di <m>a</m> e <m>b</m> naturali. Una tale situazione viene descritta dicendo che la sottrazione in <m>\Naturali</m> è un'<term>operazione parziale</term>, nozione che però non approfondiremo ulteriormente.
+          </p>
+          <p>
+            La sottrazione definisce invece un'operazione in <m>\Interi</m>, <m>\Razionali</m>, <m>\Reali</m>, <m>\Complessi</m>: come nel caso dell'addizione queste sono in realtà operazioni distinte.
+          </p>
+        </statement>
+      </example>
+
+      <example>
+        <statement>
+          <p>
+            Anche la divisione in <m>\Naturali</m>, <m>\Interi</m>, <m>\Razionali</m>, <m>\Reali</m> e <m>\Complessi</m> è un'operazione parziale perché non è definita per ogni coppia di numeri in ciascuno di questi insiemi.
+          </p>
+          <p>
+            Se invece consideriamo i sottoinsiemi formati dagli elementi non nulli degli insiemi <m>\Razionali</m>, <m>\Reali</m> e <m>\Complessi</m>, allora la divisione definisce un'operazione in ciascuno di essi.
+          </p>
+          <p>
+            La divisione non definisce un'operazione nemmeno nel sottoinsieme degli interi non nulli: infatti, se <m>a</m> e <m>b</m> sono interi non nulli, non è detto che <m>\frac{a}{b}</m> sia un intero. Analogamente per il sottoinsieme dei naturali non nulli.
+          </p>
+        </statement>
+      </example>
+
+      <example>
+        <statement>
+          <p>
+            L'addizione e la moltiplicazione in <m>\Interi/n</m>, introdotte nel <xref ref="sec-operazioniclassiresto"/> costituiscono delle operazioni.
+          </p>
+        </statement>
+      </example>
+
+      <example>
+        <statement>
+          <p>
+             L'usuale addizione costituisce un'operazione nell'insieme delle matrici <m>\matt{m}{n}{R}</m> a <m>m</m> righe e <m>n</m> colonne a coefficienti in un anello commutativo <m>R</m>. La moltiplicazione righe per colonne costituisce invece un'operazione nell'insieme <m>\mat{n}{R}</m> delle matrici quadrate di ordine <m>n</m> a coefficienti in <m>R</m>.
+          </p>
+        </statement>
+      </example>
+
+      <example>
+        <statement>
+          <p>
+            <notation>
+              <usage><m>X^{X}</m></usage>
+              <description>insieme delle funzioni da <m>X</m> in sé</description>
+            </notation>
+            Sia <m>S\coloneqq X^{X}</m> l'insieme delle funzioni da un insieme <m>X</m> in sé. La composizione di due funzioni di <m>S</m> è una funzione di <m>S</m>: dunque, la composizione definisce un'operazione in <m>S</m> (attenzione: è un'operazione di <m>S</m>, non di <m>X</m>).
+          </p>
+        </statement>
+      </example>
+
+      <p>
+        Per descrivere un'operazione, specialmente quando è definita in un insieme finito, può essere utile utilizzare una <term>tabella moltiplicativa</term>, come quelle che abbiamo già usato per le classi di resto
+        <md>
+          \begin{array}{c|ccccc}
+            \cdot   \amp  a \amp b \amp \dots \amp x \\
+            \hline
+            a       \amp  c       \amp b       \amp \dots  \amp c \\
+            b       \amp  d       \amp x       \amp \dots  \amp x \\
+            \vdots  \amp  \vdots  \amp \vdots  \amp \ddots \amp \vdots \\
+            x       \amp  a       \amp b       \amp \dots  \amp x \\
+          \end{array}
+        </md>
+        L'intestazione di riga corrisponde al primo argomento e l'intestazione di colonna corrisponde al secondo argomento dell'operazione. Ad esempio, incrociando la riga <m>a</m> con la colonna <m>b</m>, si trova <m>b</m> e, dunque, <m>a\cdot b=b</m>, mentre, incrociando la riga <m>b</m> con la colonna <m>a</m>, si trova <m>d</m> e, dunque, <m>b\cdot a=d</m>. Questo tipo di tabella viene detta <term>tabella di Cayley</term><idx><h>tabella di Cayley</h></idx><idx><h>Cayley, Arthur</h><h>tabella di</h></idx>.<fn><url href="https://it.wikipedia.org/wiki/Arthur_Cayley" visual="">Arthur Cayley</url>, 1821<ndash/>1895.</fn><idx><h>Cayley, Arthur</h></idx>
+      </p>
+
+    </section>
+
+    <section xml:id="sec-proprieta_operazioni">
+      <title>Proprietà delle operazioni</title>
+
+      <p>
+        Tra le proprietà che una data operazione può soddisfare, quella forse più importante è la proprietà associativa.
+      </p>
+
+      <definition xml:id="def-associativa">
+        <statement>
+          <p>
+            Data un'operazione <m>\cdot</m> definita in un insieme <m>S</m>, diciamo che soddisfa la proprietà <term>associativa</term> (o, più semplicemente, che l'operazione è associativa) se
+            <md>
+              a\cdot(b\cdot c)=(a\cdot b)\cdot c
+            </md>
+            per ogni <m>a</m>, <m>b</m> e <m>c</m> in <m>S</m>.
+          </p>
+        </statement>
+      </definition>
+
+      <note>
+        <p>
+          Se un'operazione <m>\cdot</m> è associativa, possiamo scrivere <m>a\cdot b\cdot c</m> senza ambiguità. Più in generale, possiamo scrivere <m>a_{1}\cdot a_{2}\cdot\cdots\cdot a_{r}</m> in maniera non ambigua.
+        </p>
+      </note>
+
+      <p>
+        Le operazioni di addizione e moltiplicazione in <m>\Naturali</m>, <m>\Interi</m>, <m>\Razionali</m>, <m>\Reali</m>, <m>\Complessi</m> e <m>\Interi/n</m> sono associative. Lo stesso vale per l'addizione in <m>\matt{m}{n}{R}</m> e la moltiplicazione in <m>\mat{n}{R}</m>. Anche la composizione di funzioni in <m>X^{X}</m> è associativa (<xref ref="prop-composizione_associativa"/>). Al contrario, la sottrazione in <m>\Interi</m>, <m>\Razionali</m>, <m>\Reali</m>, <m>\Complessi</m> non è associativa: infatti, <m>a-(b-c)=(a-b)-c</m> se e solo se <m>c=0</m>.
+      </p>
+
+      <definition xml:id="def-commutativa">
+        <statement>
+          <p>
+            Data un'operazione <m>\cdot</m> definita in un insieme <m>S</m>, diciamo che soddisfa la proprietà <term>commutativa</term> (o, più semplicemente, che l'operazione è commutativa) se
+            <md>
+              a\cdot b=b\cdot a
+            </md>
+            per ogni <m>a</m> e <m>b</m> in <m>S</m>.
+          </p>
+        </statement>
+      </definition>
+
+      <p>
+        Molte delle operazioni che abbiamo visto negli esempi precedenti sono commutative. Esempi di operazioni non commutative sono la sottrazione in <m>\Interi</m>, <m>\Razionali</m>, <m>\Reali</m>, <m>\Complessi</m>. Vediamo altri esempi.
+      </p>
+
+      <example xml:id="ex-composizione_insieme_due_elementi_non_commutativa">
+        <statement>
+          <p>
+            Dato un insieme <m>X</m> con almeno due elementi distinti <m>a</m> e <m>b</m>, consideriamo l'insieme <m>X^{X}</m> delle funzioni dall'insieme <m>X</m> in sé. Siano allora <m>f</m> la funzione di <m>X^{X}</m> che manda ogni elemento in <m>a</m> e <m>g</m> la funzione di <m>X^{X}</m> che manda ogni elemento in <m>b</m>. Calcoliamo la composizione <m>fg</m>: per ogni <m>x\in X</m> abbiamo <m>xfg=ag=b</m>. Pertanto, <m>fg</m> manda ogni elemento in <m>b</m> e, dunque, coincide con la funzione <m>g</m>. Analogamente, <m>gf</m> è uguale a <m>f</m>: in particolare, <m>fg\ne gf</m>. Pertanto, la composizione non è un'operazione commutativa.
+          </p>
+        </statement>
+      </example>
+
+      <p>
+        Nell <xref ref="ex-matrici_non_commutabili"/>, abbiamo mostrato che la moltiplicazione riga per colonna di matrici non è commutativa.
+      </p>
+
+      <remark xml:id="rem-associativa_commutativa_verifica">
+        <p>
+          Per mostrare che una certa operazione è associativa o commutativa, occorre verificare che la corrispondente identità è soddisfatta per <alert>ogni</alert> scelta degli elementi nell'insieme.
+        </p>
+        <p>
+          Per mostrare che un'operazione non è associativa o commutativa, è invece sufficiente esibire <alert>almeno</alert> un caso in cui la corrispondente identità non è soddisfatta, come abbiamo fatto nell'<xref ref="ex-composizione_insieme_due_elementi_non_commutativa"/> e nell'<xref ref="ex-matrici_non_commutabili"/>.
+        </p>
+      </remark>
+
+      <p>
+        Il fatto che una certa operazione sia commutativa si verifica immediatamente dalla sua tabella di Cayley: basta controllare se la tabella è simmetrica o meno. Ecco due esempi di operazioni, la prima commutativa e la seconda no, date tramite la loro tabella di Cayley.
+        <md>
+          \begin{array}{c|ccc}
+            \cdot   \amp  a \amp b \amp c \\
+            \hline
+            a  \amp  c \amp b \amp b \\
+            b  \amp  b \amp a \amp c \\
+            c  \amp  b \amp c \amp b \\
+          \end{array}
+          \qquad
+          \begin{array}{c|ccc}
+            \cdot   \amp  a \amp b \amp c \\
+            \hline
+            a  \amp  c \amp b \amp a \\
+            b  \amp  b \amp a \amp c \\
+            c  \amp  b \amp c \amp b \\
+          \end{array}
+        </md>
+        Anche l'eventuale validità della proprietà associativa, in realtà, potrebbe essere verificata a partire dalla tabella di Cayley, dal momento che la tabella descrive completamente l'operazione, tuttavia la verifica è meno immediata.
+      </p>
+
+      <definition xml:id="def-elementi_commutabili">
+        <statement>
+          <p>
+            Data un'operazione <m>\cdot</m> in un insieme <m>S</m>, diciamo che due elementi <m>a</m> e <m>b</m> di <m>S</m> <term>commutano</term> o sono <term>commutabili</term> se <m>a\cdot b=b\cdot a</m>.
+          </p>
+        </statement>
+      </definition>
+
+      <remark xml:id="rem-elementi_commutabili">
+        <p>
+          Dire che un'operazione è commutativa equivale a dire che ogni elemento commuta con ogni altro elemento.
+        </p>
+      </remark>
+
+      <definition xml:id="def-elemento_neutro">
+        <statement>
+          <p>
+            Data un'operazione <m>\cdot</m> in un insieme <m>S</m>, un elemento <m>e</m> di <m>S</m> è detto elemento <term>neutro</term> se per ogni <m>a\in S</m> si ha
+            <md>
+              a\cdot e=e\cdot a=a
+            </md>.
+          </p>
+        </statement>
+      </definition>
+
+      <remark xml:id="rem-elemento_neutro_commuta">
+        <p>
+          Per definizione, un eventuale elemento neutro commuta con ogni altro elemento.
+        </p>
+      </remark>
+
+      <p>
+        Anche il fatto che un certo elemento sia neutro si può vedere facilmente dalla tabella di Cayley: nell'esempio sottostante, la riga e la colonna corrispondenti a <m>c</m> ripetono la riga e la colonna di intestazione e, quindi, <m>c</m> è elemento neutro.
+        <md>
+          \begin{array}{c|cccc}
+            \cdot   \amp  a \amp b \amp c \amp d\\
+            \hline
+            a  \amp  c \amp b \amp a \amp c\\
+            b  \amp  b \amp a \amp b \amp c\\
+            c  \amp  a \amp b \amp c \amp d \\
+            d  \amp  b \amp c \amp d \amp a\\
+          \end{array}
+        </md>
+      </p>
+
+      <proposition xml:id="prop-unicita_neutro">
+        <statement>
+          <p>
+            Se un'operazione definita in un insieme <m>S</m> possiede un elemento neutro, questo è unico. In notazione moltiplicativa esso viene denotato con <m>1</m>, mentre in notazione additiva esso viene denotato con <m>0</m>.
+          </p>
+        </statement>
+
+        <proof>
+          <p>
+            Supponiamo che <m>e</m> e <m>f</m> siano elementi neutri. Calcoliamo allora <m>e\cdot f</m>: poiché <m>e</m> è elemento neutro, si ha <m>e\cdot f=f</m>; poiché <m>f</m> è elemento neutro, si ha <m>e\cdot f=e</m>. Dunque, <m>e=f</m>.
+          </p>
+        </proof>
+
+      </proposition>
+
+      <example>
+        <statement>
+          <p>
+            Il numero <m>0</m> è elemento neutro per l'addizione in <m>\Naturali</m>, <m>\Interi</m>, <m>\Razionali</m>, <m>\Reali</m> e <m>\Complessi</m>.
+          </p>
+          <p>
+            Il numero <m>1</m> è elemento neutro per la moltiplicazione in <m>\Naturali</m>, <m>\Interi</m>, <m>\Razionali</m>, <m>\Reali</m> e <m>\Complessi</m>.
+          </p>
+          <p>
+            La classe <m>\class[n]{0}</m> è elemento neutro per l'addizione in <m>\Interi/n</m>, mentre la classe <m>\class[n]{1}</m> è elemento neutro per la moltiplicazione in <m>\Interi/n</m>.
+          </p>
+          <p>
+            La matrice nulla è elemento neutro per l'addizione in <m>\matt{m}{n}{R}</m>, mentre la matrice identica è elemento neutro per la moltiplicazione in <m>\mat{n}{R}</m>.
+          </p>
+          <p>
+            Dato un insieme <m>X</m>, la funzione <m>\Id_{X}</m> definita da <m>x\Id_{X}\coloneqq x</m> per ogni <m>x\in X</m>, è elemento neutro per la composizione in <m>X^{X}</m>.
+          </p>
+        </statement>
+      </example>
+
+      <exercises xml:id="exercises-proprieta_operazioni">
+
+        <exercisegroup>
+          <introduction>
+            <p>
+              Date le seguenti operazioni, stabilire se sono associative, commutative e ammettono elemento neutro.
+            </p>
+          </introduction>
+
+          <exercise>
+            <statement>
+              <p>
+                Nell'insieme dei naturali <m>\Naturali</m>, l'operazione che associa alla coppia <m>(m,n)</m> il loro massimo <m>\max(m,n)</m>.
+              </p>
+            </statement>
+
+            <answer>
+              <p>
+                È associativa, commutativa, e ha elemento neutro <m>0</m>.
+              </p>
+            </answer>
+          </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                Nell'insieme degli interi <m>\Interi</m>, l'operazione che associa alla coppia <m>(m,n)</m> il loro massimo <m>\max(m,n)</m>.
+              </p>
+            </statement>
+
+            <answer>
+              <p>
+                È associativa, commutativa, ma non ha elemento neutro.
+              </p>
+            </answer>
+          </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                Nell'insieme dei naturali <m>\Naturali</m>, l'operazione che associa alla coppia <m>(m,n)</m> il loro massimo comun divisore <m>(m,n)</m>.
+              </p>
+            </statement>
+
+            <answer>
+              <p>
+                È associativa, commutativa, e ha elemento neutro <m>0</m>.
+              </p>
+            </answer>
+          </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                Nell'insieme dei naturali <m>\Naturali</m>, l'operazione che associa alla coppia <m>(m,n)</m> il numero <m>n</m>.
+              </p>
+            </statement>
+
+            <answer>
+              <p>
+                È associativa, ma non è commutativa e non ha elemento neutro.
+              </p>
+            </answer>
+          </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                Nel booleano <m>\parti{X}</m> di un insieme <m>X</m>, l'operazione che associa alla coppia <m>(A,B)</m> la loro unione <m>A\cup B</m>.
+              </p>
+            </statement>
+
+            <answer>
+              <p>
+                È associativa, commutativa e ha elemento neutro <m>\vuoto</m>.
+              </p>
+            </answer>
+          </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                Nel booleano <m>\parti{X}</m> di un insieme <m>X</m>, l'operazione che associa alla coppia <m>(A,B)</m> la loro intersezione <m>A\cap B</m>.
+              </p>
+            </statement>
+
+            <answer>
+              <p>
+                È associativa, commutativa e ha elemento neutro <m>X</m>.
+              </p>
+            </answer>
+          </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                Nel booleano <m>\parti{X}</m> di un insieme <m>X</m>, l'operazione che associa alla coppia <m>(A,B)</m> la differenza <m>A\setminus B</m>.
+              </p>
+            </statement>
+
+            <hint>
+              <p>
+                Distinguere i casi in cui <m>X=\vuoto</m> e <m>X\ne\vuoto</m>.
+              </p>
+            </hint>
+
+            <answer>
+              <p>
+                Se <m>X=\vuoto</m>, l'operazione è associativa, commutativa e ha elemento neutro <m>\vuoto</m>.
+              </p>
+              <p>
+                Se <m>X\ne\vuoto</m>, l'operazione non è associativa, non è commutativa e non ha elemento neutro.
+              </p>
+            </answer>
+          </exercise>
+
+        </exercisegroup>
+
+        <exercise>
+          <introduction>
+            <p>
+              In un insieme <m>S</m>, dotato di un'operazione <m>\cdot</m>, un elemento <m>e</m> tale che <m>e\cdot a=a</m> per ogni <m>a</m> in <m>S</m> è detto elemento <term>neutro sinistro</term>. Analogamente, un elemento <m>f</m> tale che <m>a\cdot f=a</m> per ogni <m>a</m> in <m>S</m> è detto elemento <term>neutro destro</term>.
+            </p>
+          </introduction>
+
+          <task>
+            <statement>
+              <p>
+                Mostrare che se esistono un elemento neutro sinistro e uno destro, questi devono coincidere (ed essere, quindi, l'elemento neutro a tutti gli effetti).
+              </p>
+            </statement>
+
+            <hint>
+              <p>
+                Adattare la <xref ref="prop-unicita_neutro"/>.
+              </p>
+            </hint>
+          </task>
+
+          <task>
+            <statement>
+              <p>
+                Dato un insieme <m>S</m> con più di due elementi, definire in esso un'operazione <m>\cdot</m> ponendo <m>a\cdot b\coloneqq b</m>. Mostrare che l'operazione è associativa e che ogni elemento di <m>S</m> è elemento neutro sinistro ma non c'è alcun elemento che sia neutro destro.
+              </p>
+            </statement>
+          </task>
+
+        </exercise>
+
+      </exercises>
+
+    </section>
+
+  </chapter>

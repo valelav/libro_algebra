@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-omomorfismiideali">
+  <title>Omomorfismi e ideali</title>
+
+  <introduction>
+    <p>
+      Proseguendo nello studio degli anelli e delle nozioni corrispondenti a quelle viste nello studio dei gruppi, introduciamo ora gli omomorfismi di anelli e gli anelli quoziente: questo ci condurrà alla nozione di ideale che può essere visto come il corrispondente della nozione di sottogruppo normale.
+    </p>
+  </introduction>
+
+  <section xml:id="sec-omomorfismi_anelli">
+    <title>Omomorfismi di anelli</title>
+
+    <definition xml:id="def-omomorfismo_anelli">
+      <statement>
+        <p>
+          Dati due anelli <m>R</m> e <m>S</m>, un <term>omomorfismo</term> di anelli da <m>R</m> in <m>S</m> è una funzione <m>\phi\colon R\to S</m> che è omomorfismo di gruppi da <m>(R,+)</m> in <m>(S,+)</m> e omomorfismo di monoidi da <m>(R,\cdot)</m> in <m>(S,\cdot)</m>. Esplicitamente, <m>\phi</m> deve essere tale che
+          <ul>
+            <li>
+              <p>
+                <m>(a+b)\phi=a\phi+b\phi</m> per ogni <m>a</m> e <m>b</m> in <m>R</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>1_{R}\phi =1_{S}</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>(a\cdot b)\phi=a\phi\cdot b\phi</m> per ogni <m>a</m> e <m>b</m> in <m>R</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Le definizioni di <term>isomorfismo</term>, <term>endomorfismo</term> e <term>automorfismo</term> sono date in analogia alle corrispondenti nozioni per i gruppi (<xref ref="def-isomorfismo"/> e <xref ref="def-endomorfismo_automorfismo"/>).
+    </p>
+
+    <remark xml:id="rem-proprieta_omomorfismi_anelli">
+      <p>
+        Poiché un omomorfismo di anelli <m>\phi\colon R\to S</m> è un omomorfismo di gruppi additivi e di monoidi moltiplicativi, valgono tutte le proprietà che abbiamo visto in tale situazione e rimandiamo, pertanto, al <xref ref="ch-omomorfismi"/>. Notiamo solo che le proprietà riguardanti i gruppi additivi vanno eventualmente riscritte in notazione additiva: ad esempio, <m>0_{R}\phi=0_{S}</m>, <m>(na)\phi=n(a\phi)</m> per ogni <m>n</m> in <m>\Interi</m> e <m>a</m> in <m>R</m> e così via.
+      </p>
+    </remark>
+
+    <p>
+      Usando un approccio simile a quello della <xref ref="prop-immagine_diretta_inversa_di_sottogruppi"/> si dimostra facilmente la
+    </p>
+
+    <proposition xml:id="prop-immagine_diretta_inversa_di_sottoanelli">
+
+      <statement>
+        <p>
+          Sia <m>\phi\colon R\to S</m> un omomorfismo di anelli. Allora
+          <ol>
+            <li xml:id="item-immagine_diretta_di_sottoanello">
+              <p>
+                se <m>T</m> è un sottoanello di <m>R</m>, allora <m>T\phi</m> è un sottoanello di <m>S</m>;
+              </p>
+            </li>
+            <li xml:id="item-immagine_inversa_di_sottoanello">
+              <p>
+                se <m>U</m> è un sottoanello di <m>S</m>, allora <m>U\phi^{-1}</m> è un sottoanello di <m>R</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </proposition>
+
+    <p>
+      Come possiamo stabilire se un certo omomorfismo è iniettivo? Possiamo semplicemente riguardarlo come omomorfismo di gruppi additivi e dare la
+    </p>
+
+    <definition xml:id="def-nucleo_omomorfismo_anelli">
+
+      <statement>
+        <p>
+          Sia <m>\phi\colon R\to S</m> un omomorfismo di anelli. Il <term>nucleo</term> di <m>\phi</m>, denotato con <m>\ker\phi</m>, è così definito
+          <md>
+            \ker\phi\coloneqq\{x\in R\mid x\phi=0_{S}\}
+          </md>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Ci chiediamo se il nucleo di un omomorfismo <m>\phi\colon R\to S</m> di anelli sia un sottoanello. Per il <xref ref="cor-nucleo_sottogruppo"/>, il nucleo è ovviamente un sottogruppo del gruppo additivo. Tuttavia, <m>1_{R}\phi=1_{S}</m> e, salvo il caso in cui <m>S</m> sia l'anello banale, <m>1_{S}\ne 0_{S}</m>, cioè <m>1_{R}</m> non appartiene a <m>\ker\phi</m> che, pertanto, non è un sottoanello.
+    </p>
+
+    <p>
+      Ovviamente, possiamo <q>tradurre</q> immediatamente il <xref ref="thm-iniettivo_nucleo_banale"/> e il <xref ref="cor-corrispondenza_immagini_dirette_inverse_sottogruppi"/>.
+    </p>
+
+    <theorem xml:id="thm-iniettivo_nucleo_banale_anelli">
+      <statement>
+        <p>
+          Sia <m>\phi\colon R\to S</m> un omomorfismo di anelli. Allora <m>\phi</m> è iniettivo se e solo se <m>\ker\phi=0_{R}</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <corollary xml:id="cor-corrispondenza_immagini_dirette_inverse_sottoanelli">
+
+      <statement>
+        <p>
+          Sia <m>\phi\colon R\to S</m> un omomorfismo di anelli. Allora, le mappe <m>T\mapsto T\phi</m> e <m>U\mapsto U\phi^{-1}</m> definiscono delle biiezioni, una inversa dell'altra, tra l'insieme dei sottoanelli di <m>R</m> contenenti <m>\ker\phi</m> e l'insieme dei sottoanelli di <m>S</m> contenuti in <m>\im\phi</m>.
+        </p>
+      </statement>
+
+    </corollary>
+
+    <proposition xml:id="prop-omomorfismi_caratteristica">
+      <statement>
+        <p>
+          Se <m>\phi\colon R\to S</m> è un omomorfismo di anelli allora <m>\car S</m> divide <m>\car R</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Se <m>\car R=0</m>, allora banalmente la caratteristica di <m>S</m> divide la caratteristica <m>R</m>.
+        </p>
+        <p>
+          Se <m>\car R=n\ne 0</m>, allora, visto che <m>n</m> è il periodo additivo di <m>1_{R}</m> e <m>1_{R}\phi=1_{S}</m>, per il <xref ref="cor-periodo_immagine"/> il periodo additivo di <m>1_{S}</m> divide <m>n</m>, cioè la caratteristica di <m>S</m> divide <m>n</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <remark xml:id="rem-omomorfismo_non_esiste">
+      <p>
+      La <xref ref="prop-omomorfismi_caratteristica"/> implica che se <m>R</m> e <m>S</m> sono due anelli e la caratteristica di <m>R</m> non divide la caratteristica di <m>S</m>, allora non esiste nessun omomorfismo di anelli da <m>R</m> a <m>S</m>. Ricordiamo invece che, dati due gruppi <m>G</m> e <m>H</m> esiste sempre almeno un omomorfismo di gruppi da <m>G</m> in <m>H</m>: quello banale (<xref ref="rem-omomorfismo_banale"/>).
+      </p>
+    </remark>
+
+    <exercises xml:id="exercises-omomorfismi_anelli">
+
+      <exercisegroup cols="2">
+        <introduction>
+          <p>
+            Stabilire quali delle funzioni date sono omomorfismi di anelli.
+          </p>
+        </introduction>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>\phi\colon\mat{2}{\Razionali}\to \Razionali</m> data da <m>\begin{psmallmatrix}
+              a \amp b\\
+              c \amp d
+              \end{psmallmatrix}\phi\coloneqq a
+              </m>
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              No, non rispetta la moltiplicazione.
+            </p>
+          </answer>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>\phi\colon\mat{2}{\Razionali}\to \Razionali</m> data da <m>\begin{psmallmatrix}
+              a \amp b\\
+              c \amp d
+              \end{psmallmatrix}\phi\coloneqq a+d
+              </m>
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              No, non rispetta la moltiplicazione.
+            </p>
+          </answer>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Detto <m>T</m> l'anello della matrici triangolari superiori a coefficienti in <m>\Razionali</m>, la funzione
+              <m>\phi\colon T\to \Razionali</m> data da <m>\begin{psmallmatrix}
+              a \amp 0\\
+              c \amp d
+              \end{psmallmatrix}\phi\coloneqq a
+              </m>
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              Sì.
+            </p>
+          </answer>
+        </exercise>
+
+      </exercisegroup>
+
+      <exercise xml:id="exercise-radice_di_due_e_di_tre">
+        <statement>
+          <p>
+            Dopo aver verificato che <m>R\coloneqq\{a+b\sqrt{2}\mid a\in\Interi, b\in\Interi\}</m> e <m>S\coloneqq\{a+b\sqrt{3}\mid a\in\Interi, b\in\Interi\}</m> sono sottoanelli di <m>\Reali</m>, stabilire se esiste un omomorfismo da <m>R</m> in <m>S</m>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            La verifica che <m>R</m> e <m>S</m> sono sottoanelli di <m>\Reali</m> è immediata. Supponiamo che esista un omomorfismo <m>\phi\colon R\to S</m>. Poiché <m>2=1+1</m> e <m>2=(\sqrt{2})^{2}</m>, dovrebbe essere <m>2\phi=1\phi+1\phi=1+1=2</m> e, di conseguenza, <m>2=2\phi=(\sqrt{2}^{2})\phi=(\sqrt{2}\phi)^{2}</m>, cioè dovrebbe esistere un elemento in <m>S</m> il cui quadrato è <m>2</m>. Ma, preso un elemento generico <m>z\coloneqq a+b\sqrt{3}</m> in <m>S</m>, il suo quadrato è <m>a^{2}+3b^{2}+2ab\sqrt{3}</m>: se fosse uguale a <m>2</m>, dovrebbe essere <m>2ab\sqrt{3}=2-a^{2}-3b^{2}\in\Interi</m>. Ma <m>2ab\sqrt{3}</m> è un intero se e solo se <m>a=0</m> o <m>b=0</m>. Ma se <m>a=0</m>, allora <m>z=b\sqrt{3}</m> e <m>z^{2}=3b^{2}</m> che è diverso da <m>2</m> qualunque sia l'intero <m>b</m>, mentre se <m>b=0</m>, allora <m>z=a</m> e <m>z^{2}=a^{2}</m> che è diverso da <m>2</m> qualunque sia l'intero <m>a</m>.
+          </p>
+          <p>
+            Pertanto, non esiste alcun omomorfismo di anelli da <m>R</m> a <m>S</m>.
+          </p>
+        </solution>
+      </exercise>
+
+    </exercises>
+
+  </section>
+
+  <section xml:id="sec-anelli_quoziente">
+    <title>Anelli quoziente e ideali</title>
+
+    <p>
+      Nel <xref ref="ch-quozienti"/>, abbiamo introdotto il concetto di congruenza per le operazioni. Vediamo come applicarlo agli anelli.
+    </p>
+
+    <definition xml:id="def-congruenza_anello">
+      <statement>
+        <p>
+          Una <term>congruenza</term> in un anello <m>R</m> è una relazione di equivalenza <m>\sim</m> che è una congruenza sia rispetto all'operazione di addizione che all'operazione di moltiplicazione.
+        </p>
+      </statement>
+    </definition>
+
+    <proposition xml:id="prop-anello_quoziente">
+      <statement>
+        <p>
+          Se <m>\sim</m> è una congruenza in un anello <m>R</m>, allora nell'insieme quoziente <m>R/\sim</m> è possibile definire due operazioni ponendo
+          <md>
+            <mrow> \class[\sim]{a}+\class[\sim]{b}\amp \coloneqq\class[\sim]{a+b}</mrow>
+            <mrow> \class[\sim]{a}\class[\sim]{b}\amp \coloneqq\class[\sim]{ab}</mrow>
+          </md>
+          e, rispetto a tali operazioni, <m>R/\sim</m> è un anello, detto <term>anello quoziente</term>. Se <m>R</m> è commutativo, allora <m>R/\sim</m> è commutativo.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Per il <xref ref="cor-gruppo_quoziente"/>, <m>R/\sim</m> è un gruppo abeliano rispetto all'addizione, mentre per il <xref ref="cor-monoide_quoziente"/> è un monoide rispetto alla moltiplicazione. La verifica che valgono le proprietà distributive è immediata.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      Vogliamo ora descrivere un anello quoziente in altro modo, così come abbiamo fatto per i gruppi quoziente. Se consideriamo solo la struttura additiva di un anello <m>R</m> dotato di una congruenza <m>\sim</m>, applicando il <xref ref="thm-quozienti_su_normali"/> vediamo che <m>\class[\sim]{0_{R}}</m> è un sottogruppo (normale) <m>I</m> di <m>(R,+)</m> (il fatto che sia normale è irrilevante, visto che, essendo <m>(R,+)</m> abeliano, ogni suo sottogruppo è normale). Inoltre le classi equivalenza sono i laterali <m>I+a</m> di <m>I</m> in <m>R</m>. Ci chiediamo se possiamo caratterizzare in qualche modo i sottogruppi <m>I</m> di <m>(R,+)</m> i cui i laterali sono le classi di equivalenza di una congruenza. Siano allora <m>I+a=I+a'</m> e <m>I+b=I+b'</m>: vogliamo che <m>I+ab=I+a'b'</m>. Sappiamo che esistono <m>i</m> e <m>j</m> in <m>I</m> tali che <m>a'=i+a</m> e <m>b'=j+b</m>. Pertanto
+      <md>
+        a'b'=(i+a)(j+b)=ij+ib+aj+ab
+      </md>.
+      Abbiamo allora che <m>I+a'b'=I+ab</m> se e solo se
+      <md>
+        ij+ib+aj\in I
+      </md>
+      per ogni scelta di <m>i</m> e <m>j</m> in <m>I</m> e ogni scelta di <m>a</m> e <m>b</m> in <m>R</m>. In particolare, scegliendo <m>i=0</m>, abbiamo che <m>aj</m> deve appartenere a <m>I</m> per ogni <m>a</m> in <m>R</m> e ogni <m>j</m> in <m>I</m>; scegliendo invece <m>j=0</m>, abbiamo che <m>ib</m> deve appartenere a <m>I</m> per ogni <m>b</m> in <m>R</m> e ogni <m>i</m> in <m>I</m>. Riassumendo, il prodotto di due elementi di cui almeno uno in <m>I</m> deve appartenere a <m>I</m>. Viceversa, se questa condizione è soddisfatta allora <m>ij</m>, <m>ib</m> e <m>aj</m> appartengono a <m>I</m> per ogni possibile scelta e, quindi, la loro somma appartiene a <m>I</m>, visto che <m>I</m> è un sottogruppo del gruppo additivo. Ciò suggerisce la
+    </p>
+    <definition xml:id="def-ideale">
+      <idx><h>ideale</h></idx>
+      <idx><h>ideale</h><h>bilatero</h></idx>
+    
+      <statement>
+        <p>
+          Sia <m>R</m> un anello. Un sottoinsieme non vuoto <m>I</m> di <m>R</m> è detto <term>ideale bilatero</term> o semplicemente <term>ideale</term> se
+          <ul>
+            <li>
+              <p>
+                <m>i+j\in I</m> per ogni <m>i</m> e <m>j</m> in <m>I</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>ia\in I</m> e <m>ai\in I</m> per ogni <m>i</m> in <m>I</m> e <m>a</m> in <m>R</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </definition>
+
+    <remark xml:id="rem-ideale_sottogruppo">
+      <p>
+        Nella definizione precedente sembra che abbiamo dimenticato di chiedere che <m>I</m> contenga gli opposti dei propri elementi. Tuttavia, se <m>i</m> è un elemento di <m>I</m> abbiamo che <m>-i=i(-1)</m> appartiene a <m>I</m>. Dunque, un ideale è un sottogruppo del gruppo additivo dell'anello.
+      </p>
+    </remark>
+
+    <p>
+      Possiamo riassumere la discussione precedente nel
+    </p>
+
+    <theorem xml:id="thm-quozienti_su_ideali">
+      <statement>
+        <p>
+          Se <m>R</m> è un anello e <m>\sim</m> una congruenza in <m>R</m>, allora <m>\class[\sim]{0}</m> è un ideale di <m>R</m> e le classi di equivalenza rispetto a <m>\sim</m> sono i laterali di <m>\class[\sim]{0}</m>.
+        </p>
+        <p>
+          <notation>
+            <usage><m>R/I</m></usage>
+            <description>anello quoziente di <m>R</m> su un ideale <m>I</m></description>
+          </notation>
+          Viceversa, se <m>I</m> è un ideale di un anello <m>R</m>, la relazione di equivalenza le cui classi sono i laterali <m>I+a</m> di <m>I</m> in <m>R</m> è una congruenza. Indicheremo, pertanto, con <m>R/I</m> l'anello quoziente rispetto a tale congruenza.
+        </p>
+      </statement>
+
+    </theorem>
+
+    <remark xml:id="rem-ideali_banali">
+      <p>
+        Dato un anello <m>R</m>, il sottoinsieme <m>\{0\}</m> e il sottoinsieme <m>R</m> sono ideali di <m>R</m>.
+      </p>
+    </remark>
+
+    <p>
+      Come si comportano gli ideali rispetto agli omomorfismi di anelli? In modo del tutto analogo ai sottogruppi normali rispetto agli omomorfismi di gruppi. Lasciamo per esercizio il completamento delle dimostrazioni di questi risultati.
+    </p>
+
+    <proposition xml:id="prop-immagine_diretta_inversa_di_ideali">
+      <statement>
+        <p>
+          Sia <m>\phi\colon R\to S</m> un omomorfismo di anelli. Allora
+          <ol>
+            <li xml:id="item-immagine_diretta_di_ideale">
+              <p>
+                se <m>I</m> è un ideale di <m>R</m> allora <m>I\phi</m> è un ideale di <m>\im\phi</m>;
+              </p>
+            </li>
+            <li xml:id="item-immagine_inversa_di_ideale">
+              <p>
+                se <m>J</m> è un ideale di <m>S</m> allora <m>J\phi^{-1}</m> è un ideale di <m>R</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+
+    </proposition>
+
+    <corollary xml:id="cor-nucleo_ideale">
+      <statement>
+        <p>
+          Se <m>\phi\colon R\to S</m> è un omomorfismo di anelli, allora <m>\ker\phi</m> è un ideale di <m>R</m>.
+        </p>
+      </statement>
+    </corollary>
+
+    <proposition xml:id="prop-omomorfismo_canonico_anelli">
+      <statement>
+        <p>
+          Dato un anello <m>R</m> e un ideale <m>I</m>, la funzione <m>\phi\colon R\to R/I</m> data da <m>a\phi\coloneqq I+a</m> è un omomorfismo suriettivo con nucleo <m>I</m>, detto <term>omomorfismo canonico</term>.
+        </p>
+      </statement>
+
+    </proposition>
+
+    <example>
+      <statement>
+        <p>
+          Se consideriamo l'anello <m>\Interi</m> e scegliamo un numero naturale <m>n</m>, il sottoinsieme <m>n\Interi</m> è, come è facile verificare, un ideale di <m>\Interi</m>. Se <m>n</m> è positivo, si verifica facilmente che <m>\Interi/n\Interi</m> non è altri che l'anello <m>\Interi/n</m> delle classi di resto modulo <m>n</m>.
+        </p>
+      </statement>
+    </example>
+
+    <remark xml:id="rem-ideali_non_sottoanelli">
+      <p>
+        Se <m>I</m> è un ideale di un anello <m>R</m> e <m>1</m> appartiene a <m>I</m>, allora, per ogni <m>a</m> in <m>R</m>, si ha che <m>a=a1</m> appartiene a <m>I</m>, cioè <m>I=R</m>. Dunque, l'unico ideale di <m>R</m> che contiene <m>1</m> è <m>R</m> stesso: in particolare, <m>R</m> è l'unico ideale di <m>R</m> a essere al tempo stesso un sottoanello.
+      </p>
+    </remark>
+
+    <p>
+      Più in generale, abbiamo la
+    </p>
+
+    <proposition xml:id="prop-ideali_non_invertibili">
+      <statement>
+        <p>
+          Se <m>I</m> è un ideale proprio di un anello <m>R</m> allora <m>I</m> non contiene elementi invertibili.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Supponiamo che <m>I</m> contenga un elemento invertibile <m>a</m>: allora <m>I</m> contiene <m>1=aa^{-1}</m> e, quindi, per l'<xref ref="rem-ideali_non_sottoanelli"/>, <m>I</m> coincide con <m>R</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      Poiché in un corpo tutti gli elementi non nulli sono invertibili, abbiamo immediatamente il
+    </p>
+
+    <corollary xml:id="cor-ideali_corpo">
+      <statement>
+        <p>
+          se <m>K</m> è un corpo, i suoi unici ideali sono <m>0</m> e <m>K</m> stesso.
+        </p>
+      </statement>
+    </corollary>
+
+    <corollary xml:id="cor-omomorfismo_da_corpi">
+      <statement>
+        <p>
+          Se <m>\phi\colon K\to R</m> è un omomorfismo di anelli e <m>K</m> è un corpo allora <m>\phi</m> è iniettivo. In particolare, <m>\car K=\car R</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Per il <xref ref="cor-nucleo_ideale"/>, il nucleo di <m>\phi</m> è un ideale di <m>K</m>. Non può essere <m>K</m>, perché altrimenti <m>1</m> non andrebbe in <m>1</m> ma in <m>0</m>. Dunque, <m>\ker\phi=0</m> e, quindi, <m>\phi</m> è iniettivo.
+        </p>
+      </proof>
+
+    </corollary>
+
+    <p>
+      Sappiamo che l'intersezione di sottoanelli è un sottoanello e questo ci ha permesso di definire il sottoanello generato da un sottoinsieme. Considerando gli ideali abbiamo la
+    </p>
+
+    <proposition xml:id="prop-intersezione_di_ideali">
+      <idx><h>intersezione</h><h>di ideali</h></idx>
+      <idx><h>ideale</h><h>intersezione</h></idx>
+      <statement>
+        <p>
+          Se <m>R</m> è un anello e <m>\{I_{i}\}_{i\in \Omega}</m> è una famiglia di ideali di <m>R</m> (indicizzata da un insieme di indici <m>\Omega</m>), allora
+          <md>
+            \bigcap_{i\in \Omega}I_{i}
+          </md>
+          è un ideale di <m>S</m>.
+        </p>
+      </statement>
+    </proposition>
+
+    <definition xml:id="def-ideale_generato">
+
+      <idx><h>ideale</h><h>generato da un sottoinsieme</h></idx>
+
+      <notation>
+        <usage><m>\ideal{X}</m></usage>
+        <description>ideale generato da un sottoinsieme <m>X</m></description>
+      </notation>
+
+      <statement>
+        <p>
+          Dato un sottoinsieme <m>X</m> di un anello <m>R</m>, l' <term>ideale generato</term> da <m>X</m> è l'intersezione di tutti gli ideali di <m>R</m> contenenti <m>X</m>, denotata con <m>\ideal{X}</m>. Nel caso in cui <m>X\coloneqq\{x_{1},\ldots,x_{r}\}</m> sia un insieme finito, scriveremo semplicemente <m>\ideal{x_{1},\ldots,x_{r}}</m>. Un ideale generato da un singolo elemento è detto <term>principale</term>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Si può dare una descrizione esplicita degli elementi dell'ideale generato da un sottoinsieme. Diamo qui il caso commutativo, lasciando il caso generale all'<xref ref="exercise-ideale_generato"/>.
+    </p>
+
+    <proposition xml:id="prop-elementi_ideale_generato_anello_commutativo">
+      <statement>
+        <p>
+          Dato un sottoinsieme <m>X</m> di un anello commutativo <m>R</m>, l'ideale <m>\ideal{X}</m> è uguale a <m>0</m> se <m>X=\vuoto</m>, altrimenti è l'insieme degli elementi del tipo
+          <md>
+            a_{1}c_{1}+a_{2}c_{2}+\cdots+a_{r}c_{r}
+          </md>
+          dove <m>r</m> è un intero positivo, ciascun <m>a_{i}</m> appartiene a <m>X</m> e ciascun <m>c_{i}</m> appartiene a <m>R</m>. In particolare, se <m>X</m> è formato da un singolo elemento <m>a</m>, allora l'ideale principale <m>\ideal{a}</m> è formato dagli elementi del tipo <m>ac</m> al variare di <m>c</m> in <m>R</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Se <m>X=\vuoto</m>, ovviamente <m>\ideal{X}=0</m>.
+        </p>
+        <p>
+          Supponiamo, dunque, che <m>X</m> non sia vuoto e sia <m>S</m> l'insieme degli elementi dati in enunciato. Gli elementi di <m>X</m> appartengono a <m>\ideal{X}</m> e, di conseguenza, gli elementi del tipo <m>ac</m> con <m>a</m> in <m>X</m> e <m>c</m> in <m>R</m> appartengono a <m>\ideal{X}</m>. Pertanto, tutti gli elementi di <m>S</m>, essendo somma di elementi di <m>\ideal{X}</m>, appartengono a <m>\ideal{X}</m>. D'altra parte, ogni elemento <m>a</m> di <m>X</m> appartiene a <m>S</m>, perché può essere scritto come <m>a\cdot 1</m>.
+        </p>
+        <p>
+          Riassumendo, <m>X\subseteq S\subseteq\ideal{X}</m>: basta allora provare che <m>S</m> è un ideale. Chiaramente <m>S</m>, contenendo <m>X</m>, è non vuoto. La somma di due elementi di <m>S</m> è ancora un elemento di <m>S</m>. Se <m>b\coloneqq a_{1}c_{1}+a_{2}c_{2}+\cdots+a_{r}c_{r}</m> è un elemento di <m>S</m> e <m>d</m> è un elemento di <m>R</m>, allora <m>bd=a_{1}c_{1}d+a_{2}c_{2}d+\cdots+a_{r}c_{r}d</m> è ancora un elemento di <m>S</m>: dal momento che <m>R</m> è commutativo, anche <m>db</m> appartiene a <m>S</m>. Dunque, <m>S</m> è un ideale, come richiesto.
+        </p>
+        <p>
+          Nel caso <m>X</m> sia formato da un singolo elemento <m>a</m>, abbiamo
+          <md>
+            ac_{1}+ac_{2}+\cdots+ac_{r}=a(c_{1}+c_{2}+\cdots c_{r})=ac
+          </md>
+          con <m>c=c_{1}+c_{2}+\cdots+c_{r}</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      Nel caso commutativo, il <xref ref="cor-ideali_corpo"/> si può invertire.
+    </p>
+
+    <proposition xml:id="prop-anello_commutativo_senza_ideali_campo">
+      <statement>
+        <p>
+          Sia <m>R</m> un anello commutativo i cui unici ideali sono <m>0</m> e <m>R</m> stesso. Allora <m>R</m> è un campo.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sia <m>a</m> un elemento non nullo di <m>R</m>: l'ideale principale generato da <m>a</m> deve quindi coincidere con <m>R</m> e, quindi, contenere <m>1</m>. Per la <xref ref="prop-elementi_ideale_generato_anello_commutativo"/>, l'ideale principale generato da <m>a</m> è formato dagli elementi del tipo <m>ac</m> con <m>c</m> in <m>R</m>: dunque, esiste un elemento <m>c</m> tale che <m>ac=1</m>, cioè <m>a</m> è invertibile.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      Il risultato precedente non si può estendere al caso in cui l'anello non sia commutativo: si veda l'<xref ref="exercise-anello_semplice"/>.
+    </p>
+
+    <p>
+      Abbiamo visto (<xref ref="ex-somma_non_sottoanello"/>) che sommando due sottoanelli di un anello non sempre otteniamo un sottoanello. Ma cosa succede se sommiamo due ideali? o un sottoanello e un ideale?
+    </p>
+
+    <proposition xml:id="prop-somma_ideali_sottoanelli">
+      <statement>
+        <p>
+          Sia <m>R</m> un anello, <m>S</m> un sottoanello di <m>R</m> e <m>I</m> e <m>J</m> ideali di <m>R</m>. Allora <m>S+I</m> è un sottoanello di <m>R</m> e <m>I+J</m> è un ideale di <m>R</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Le verifiche sono immediate. Notiamo che sia <m>S+I</m> che <m>I+J</m> sono sottogruppi additivi di <m>(R,+)</m>. Inoltre <m>S+I</m> contiene <m>S</m> e, quindi, contiene <m>1</m>.
+        </p>
+
+        <p>
+          Due elementi di <m>S+I</m> sono del tipo <m>a+i</m> e <m>b+j</m> con <m>a</m> e <m>b</m> in <m>S</m> e <m>i</m> e <m>j</m> in <m>I</m>. Abbiamo allora
+          <md>
+            (a+i)(b+j)=ab+aj+ib+ij
+          </md>:
+          ora <m>ab</m> appartiene a <m>S</m> per definizione di sottoanello, mentre gli altri tre addendi appartengono a <m>I</m> per definizione di ideale e, quindi, la loro somma appartiene a <m>I</m>. Pertanto <m>(a+i)(b+j)</m> appartiene a <m>S+I</m>.
+        </p>
+        <p>
+          Infine, due elementi di <m>I+J</m> sono del tipo <m>i_{1}+j_{1}</m> e <m>i_{2}+j_{2}</m> con <m>i_{1}</m> e <m>i_{2}</m> in <m>I</m> e <m>j_{1}</m> e <m>j_{2}</m> in <m>J</m>. Abbiamo allora
+          <md>
+            (i_{1}+j_{1})(i_{2}+j_{2})=i_{1}i_{2}+i_{1}j_{2}+j_{1}i_{2}+j_{1}j_{2}
+          </md>:
+          ciascun addendo appartiene a <m>I</m> o <m>J</m> (o a entrambi) e, quindi, la loro somma appartiene a <m>I+J</m>.
+        </p>
+      </proof>
+    </proposition>
+
+    <p>
+      Possiamo ora enunciare la versione per anelli dei teoremi di isomorfismo
+    </p>
+
+    <theorem xml:id="thm-isomorfismo_quoziente_sul_nucleo_anelli">
+      <statement>
+        <p>
+          Sia <m>\phi\colon R\to S</m> un omomorfismo di anelli. Allora <m>\im\phi\simeq R/\ker\phi</m>.
+        </p>
+      </statement>
+
+    </theorem>
+
+    <theorem xml:id="thm-quoziente_su_intersezione_anelli">
+      <statement>
+        <p>
+          Sia <m>R</m> un anello, <m>S</m> un sottoanello e <m>I</m> un ideale di <m>R</m>. Allora <m>S\cap I</m> è un ideale di <m>S</m> e
+          <md>
+            \frac{S+I}{I}\simeq\frac{S}{S\cap I}
+          </md>.
+        </p>
+      </statement>
+
+    </theorem>
+
+    <theorem xml:id="thm-sottoanelli_quoziente">
+      <statement>
+        <p>
+          Sia <m>R</m> un anello e sia <m>I</m> un suo ideale. I sottoanelli di <m>R/I</m> sono i quozienti del tipo <m>S/I</m> con <m>S</m> sottoanello di <m>R</m> contenente <m>I</m>, mentre gli ideali di <m>R/I</m> sono i quozienti del tipo <m>J/I</m> con <m>J</m> ideale di <m>R</m> contenente <m>I</m>. Dato un ideale <m>J/I</m> di <m>R/I</m> si ha
+          <md>
+            \frac{R/I}{J/I}\simeq \frac{R}{J}
+          </md>.
+        </p>
+      </statement>
+
+    </theorem>
+
+    <definition xml:id="def-ideale_massimale">
+      <idx><h>ideale massimale</h></idx>
+      <statement>
+        <p>
+          Sia <m>R</m> un anello. Un ideale <m>I</m> di <m>R</m> è detto <term>massimale</term> se è massimale rispetto all'inclusione tra gli ideali propri di <m>R</m>, cioè se <m>I</m> è un ideale proprio e non esiste nessun ideale <m>J</m> tale che <m>I\subsetneq J\subsetneq R</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <proposition xml:id="prop-quoziente_su_massimale_campo">
+      <statement>
+        <p>
+          Sia <m>I</m> un ideale proprio di un anello commutativo <m>R</m>. Il quoziente <m>R/I</m> è un campo se e solo se <m>I</m> è un ideale massimale.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Gli ideali di <m>R/I</m> sono del tipo <m>J/I</m> con <m>J</m> ideale di <m>R</m> tale che <m>I\subseteq J\subseteq R</m> (<xref ref="thm-sottoanelli_quoziente"/>). La tesi segue allora dal <xref ref="cor-ideali_corpo"/> e dalla <xref ref="prop-anello_commutativo_senza_ideali_campo"/>.
+        </p>
+      </proof>
+    </proposition>
+
+    <p>
+      Applichiamo ora il <xref ref="thm-isomorfismo_quoziente_sul_nucleo_anelli"/> per dare una descrizione più precisa del sottoanello minimo di un anello <m>R</m>. Se consideriamo la funzione <m>\phi\colon\Interi\to S</m> definita da <m>n\phi\coloneqq n1_{R}</m>, dalla <xref ref="prop-multipli_potenze_anello"/> e <xref ref="prop-multiplo_di_prodotti"/> segue immediatamente che <m>\phi</m> è un omomorfismo di anelli. Per la <xref ref="prop-sottoanello_minimo"/>, l'immagine di <m>\phi</m> non è altro che il sottoanello minimo di <m>R</m>. Abbiamo allora che il sottoanello minimo è isomorfo a <m>\Interi/\ker\phi</m>. Dobbiamo, quindi, descrivere <m>\ker\phi</m>: se <m>\car R=0</m>, allora <m>\ker\phi=0</m>, mentre se <m>\car R=n</m> con <m>n\ne 0</m> allora <m>\ker\phi=n\Interi</m>. Riassumiamo nella
+    </p>
+
+    <proposition xml:id="prop-sottoanello_minimo_caratteristica">
+      <statement>
+        <p>
+          Sia <m>R</m> un anello. Se <m>\car R=0</m>, allora il sottoanello minimo di <m>R</m> è isomorfo a <m>\Interi</m>. Se <m>\car R=n\ne0</m>, allora il sottoanello minimo di <m>R</m> è isomorfo a <m>\Interi/n</m>.
+        </p>
+      </statement>
+    </proposition>
+
+    <exercises xml:id="exercises-anelli_quoziente">
+
+      <exercise>
+        <statement>
+          <p>
+            Completare la dimostrazione della <xref ref="prop-anello_quoziente"/>, verificando le proprietà distributive.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare la <xref ref="prop-intersezione_di_ideali"/>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="exercise-ideale_generato">
+        <statement>
+          <p>
+            Sia <m>X</m> un sottoinsieme di un anello <m>R</m>. Mostrare che  l'ideale <m>\ideal{X}</m> è uguale a <m>0</m> se <m>X=\vuoto</m>, altrimenti è l'insieme degli elementi del tipo
+            <md>
+              b_{1}a_{1}c_{1}+b_{2}a_{2}c_{2}+\cdots+b_{r}a_{r}c_{r}
+            </md>
+            dove <m>r</m> è un intero positivo, ciascun <m>a_{i}</m> appartiene a <m>X</m> e ciascun <m>b_{i}</m> e <m>c_{i}</m> appartengono a <m>R</m>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="exercise-anello_semplice">
+        <introduction>
+          <p>
+            Vogliamo descrivere un anello non commutativo senza ideali propri e non banali che non sia un corpo. Consideriamo l'anello <m>\mat{n}{K}</m> delle matrici di ordine <m>n \gt 1</m> a coefficienti in un campo <m>K</m>.
+          </p>
+        </introduction>
+
+        <task>
+          <statement>
+            <p>
+              Indichiamo con <m>E_{ij}</m> la matrice elementare la cui entrata di posto <m>(i,j)</m> è <m>1</m> e le cui altre entrate sono <m>0</m>. Mostrare che <m>E_{ij}E_{jk}=E_{ik}</m> e che <m>E_{ij}E_{hk}=0</m> se <m>j\ne h</m>.
+            </p>
+          </statement>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Mostrare che se <m>A</m> è una qualsiasi matrice, allora <m>E_{ij}AE_{hi}=aE_{ii}</m> dove <m>a</m> è l'entrata di posto <m>(j,h)</m> di <m>A</m>.
+            </p>
+          </statement>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Mostrare che se <m>I</m> è un ideale non nullo di <m>\mat{n}{K}</m> allora esiste <m>a</m> non nullo tale che <m>aE_{ii}</m> appartiene a <m>I</m> per ogni <m>i</m>.
+            </p>
+          </statement>
+          <hint>
+            <p>
+              Considerare un'entrata non nulla <m>a</m> di una matrice non nulla di <m>I</m> e applicare il punto precedente.
+            </p>
+          </hint>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Mostrare che se <m>I</m> è un ideale non nullo di <m>\mat{n}{K}</m> allora <m>I</m> contiene una matrice invertibile e, quindi, coincide con <m>\mat{n}{K}</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Basta prendere la somma delle matrici <m>aE_{ii}</m> trovate al punto precedente.
+            </p>
+          </solution>
+        </task>
+      </exercise>
+
+    </exercises>
+
+  </section>
+
+  <section xml:id="sec-campo_dei_quozienti">
+    <title>Campo dei quozienti di un dominio</title>
+
+    <p>
+      Supponiamo di avere un dominio <m>D</m> e di voler costruire un campo che contenga <m>D</m> e che sia il più <q>piccolo</q> possibile. Ad esempio sappiamo che il dominio <m>\Interi</m> può essere pensato come un sottoanello di <m>\Razionali</m> ma anche di <m>\Reali</m> o anche di <m>\Complessi</m> (e anche, a dire il vero, di qualche altro campo intermedio), ma, in un certo senso, <m>\Reali</m> e <m>\Complessi</m> sono troppo <q>grandi</q>, mentre <m>\Razionali</m> contiene esattamente quanto basta. Costruiremo ora un campo <m>Q</m> a partire da <m>D</m> replicando la costruzione di <m>\Razionali</m> a partire da <m>\Interi</m>. Gli elementi di <m>\Razionali</m> sono frazioni del tipo <m>\frac{m}{n}</m> con <m>m</m> e <m>n</m> interi e <m>n\ne 0</m>: sappiamo però che lo stesso numero razionale può essere rappresentato in modi diversi. Ad esempio <m>\frac{2}{3}</m> è anche uguale a <m>\frac{4}{6}</m>, a <m>\frac{-6}{-9}</m>, <etc />
+    </p>
+    <p>
+      Cominciamo allora considerando il sottoinsieme <m>S</m> di <m>D\times D</m>, così definito
+      <md>
+        S\coloneqq\{(a,b)\in D\times D\mid b\ne 0\}
+      </md>.
+      Definiamo ora in <m>S</m> una relazione <m>\sim</m> ponendo <m>(a,b)\sim(c,d)</m> se <m>ad=bc</m>. Mostriamo che è una relazione di equivalenza: è, ovviamente, riflessiva e simmetrica. Per quanto riguarda la transitività, supponiamo che <m>(a,b)\sim(c,d)\sim(e,f)</m>, cioè <m>ad=bc</m> e <m>cf=de</m>. Abbiamo allora
+      <md>
+        adf=bcf=bde
+      </md>,
+      che, riordinando, dà <m>afd=bed</m> e, essendo <m>d\ne0</m>, dall'<xref ref="rem-anello_intero_cancellazione"/> segue che <m>af=be</m>, cioè <m>(a,b)\sim(e,f)</m>. Indicheremo con <m>Q</m> l'insieme quoziente delle classi di equivalenza, che chiameremo <term>frazioni</term>, e indicheremo con <m>\frac{a}{b}</m> la classe di equivalenza di <m>(a,b)</m>. Notiamo allora che <m>\frac{a}{b}=\frac{c}{d}</m> se e solo se <m>ad=bc</m>, cioè i cosiddetti <q>prodotti in croce</q> coincidono.
+    </p>
+    <p>
+      Si verifica facilmente che gli elementi del tipo <m>(0,b)</m> al variare di <m>b</m> in <m>D\setminus \{0\}</m> formano una classe di equivalenza, cioè la frazione <m>\frac{0}{1}</m>, e che gli elementi del tipo <m>(a,a)</m> al variare di <m>a</m> in <m>D\setminus \{0\}</m> formano una classe di equivalenza, cioè la frazione <m>\frac{1}{1}</m> (<xref ref="exercise-classi_0_e_1"/>).
+    </p>
+    <p>
+      Definiamo ora in <m>S</m> due operazioni ponendo
+      <md>
+        <mrow>(a,b) + (c,d) \amp \coloneqq (ad+bc,bd) </mrow>
+        <mrow>(a,b)(c,d)    \amp \coloneqq (ac,bd)    </mrow>
+      </md>
+      Mostriamo che queste operazioni sono compatibili con la relazione di equivalenza. Siano allora <m>(a,b)\sim(a',b')</m> e <m>(c,d)\sim(c',d')</m>, cioè <m>ab'=ba'</m> e <m>cd'=dc'</m>. Abbiamo allora
+      <md>
+        (ad+bc)b'd'=ab'dd'+cd'bb'=ba'dd'+dc'bb'=(a'd'+b'c')bd
+      </md>
+      cioè <m>(ad+bc,bd)\sim(a'd'+b'c',b'd')</m> e
+      <md>
+        acb'd'=ab'cd'=ba'dc'=bda'c'
+      </md>
+      cioè <m>(ac,bd)\sim(a'c',b'd')</m>. Poiché queste operazioni sono compatibili con la relazione di equivalenza, le seguenti operazioni in <m>Q</m> sono ben definite
+      <md>
+        <mrow>\frac{a}{b}+\frac{c}{d} \amp \coloneqq \frac{ad+bc}{bd}</mrow>
+        <mrow>\frac{a}{b}\frac{c}{d} \amp \coloneqq \frac{ac}{bd}</mrow>
+      </md>
+      Si verifica immediatamente che queste operazioni sono commutative. Verifichiamo che sono entrambe associative:
+      <md>
+        \left(\frac{a}{b}+\frac{c}{d}\right)+\frac{e}{f}=\frac{ad+bc}{bd}+\frac{e}{f}=\frac{(ad+bc)f+bde}{bdf}=\frac{adf+bcf+bde}{bdf}
+      </md>
+      e
+      <md>
+        \frac{a}{b}+\left(\frac{c}{d}+\frac{e}{f}\right)=\frac{a}{b}+\frac{cf+de}{df}=\frac{adf+b(cf+de)}{bdf}=\frac{adf+bcf+bde}{bdf}
+      </md>.
+      L'addizione è, dunque, associativa. Per quanto riguarda la moltiplicazione abbiamo
+      <md>
+        \left(\frac{a}{b}\frac{c}{d}\right)\frac{e}{f}=\frac{ac}{bd}\frac{e}{f}=\frac{ace}{bdf}=\frac{a}{b}\frac{ce}{df}=\frac{a}{b}\left(\frac{c}{d}\frac{e}{f}\right)
+      </md>
+      e anche questa risulta associativa.
+    </p>
+    <p>
+      L'addizione ha elemento neutro <m>\frac{0}{1}</m> e la moltiplicazione ha elemento neutro <m>\frac{1}{1}</m>. Infatti, per ogni <m>\frac{a}{b}</m> risulta
+      <md>
+        \frac{a}{b}+\frac{0}{1}=\frac{a1+0b}{b1}=\frac{a}{b}
+      </md>
+      e
+      <md>
+        \frac{a}{b}\frac{1}{1}=\frac{a1}{b1}=\frac{a}{b}
+      </md>.
+    </p>
+    <p>
+      Ogni elemento <m>\frac{a}{b}</m> ha opposto <m>\frac{-a}{b}</m> e, se <m>\frac{a}{b}\ne\frac{0}{1}</m>, cioè, <m>a\ne0</m>, allora <m>\frac{a}{b}</m> ha inverso <m>\frac{b}{a}</m>:
+      <md>
+        \frac{a}{b}+\frac{-a}{b}=\frac{ab-ab}{bb}=\frac{0}{bb}=\frac{0}{1}
+      </md>
+      e
+      <md>
+        \frac{a}{b}\frac{b}{a}=\frac{ab}{ba}=\frac{1}{1}
+      </md>.
+    </p>
+    <p>
+      Per la proprietà distributiva abbiamo (possiamo limitarci a verificarne solo una perché abbiamo già osservato la commutatività della moltiplicazione)
+      <md>
+        \left(\frac{a}{b}+\frac{c}{d}\right)\frac{e}{f}=\frac{ad+bc}{bd}\frac{e}{f}=\frac{ade+bce}{bdf}
+      </md>
+      e
+      <md>
+        \frac{a}{b}\frac{e}{f}+\frac{c}{d}\frac{e}{f}=\frac{ae}{bf}+\frac{ce}{df}=\frac{aedf+bfce}{bfdf}=\frac{ade+bce}{bdf}\frac{f}{f}=\frac{ade+bce}{bdf}
+      </md>.
+    </p>
+    <p>
+      Abbiamo così mostrato che <m>Q</m> è un campo. Definiamo ora una funzione <m>\phi\colon D\to Q</m> ponendo <m>a\phi\coloneqq \frac{a}{1}</m>. Questa funzione è ovviamente un omomorfismo dal momento che
+      <md>
+        <mrow> 1\phi \amp =\frac{1}{1}=1_{Q}</mrow>
+        <mrow> a\phi+b\phi \amp=\frac{a}{1}+\frac{b}{1}=\frac{a1+1b}{1}=\frac{a+b}{1}=(a+b)\phi </mrow>
+        <mrow> a\phi\cdot b\phi \amp=\frac{a}{1}\frac{b}{1}=\frac{ab}{1}=(ab)\phi </mrow>
+      </md>
+      Inoltre <m>\phi</m> è iniettivo: se <m>a\in\ker\phi</m>, allora <m>\frac{a}{1}=\frac{0}{1}</m> il che avviene se e solo se <m>a=0</m>.
+    </p>
+    <p>
+      Abbiamo così costruito un campo <m>Q</m> e un omomorfismo iniettivo <m>\phi\colon D\to Q</m>: possiamo quindi identificare <m>D</m> con un sottoanello di <m>Q</m>, cioè considerare <m>Q</m> come un campo contenente <m>D</m>. Mostriamo che <m>Q</m> è <q>piccolo</q> o più precisamente, che soddisfa la seguente proprietà universale.
+    </p>
+
+    <theorem xml:id="thm-campo_dei_quozienti">
+      <statement>
+        <p>
+          Sia <m>D</m> un dominio d'integrità. Allora esiste un campo <m>Q</m> e un omomorfismo iniettivo <m>\phi\colon D\to Q</m> tale che, per ogni omomorfismo iniettivo <m>\psi\colon D\to K</m> con <m>K</m> campo, esiste un unico omomorfismo <m>\theta\colon Q\to K</m> tale che <m>\phi\theta=\psi</m>.
+        </p>
+        <image xml:id="image-universale_campo_quozienti">
+          <shortdescription>Diagramma commutativo che rappresenta la proprietà universale del campo dei quozienti</shortdescription>
+          <description>
+            <p>
+              Diagramma commutativo con rappresentati un dominio <m>D</m>, il suo campo dei quozienti <m>D</m>, una freccia da <m>D</m> a <m>Q</m> che rappresenta l'omomorfismo <m>\phi</m>, un altro campo <m>K</m> e una freccia da <m>D</m> a <m>K</m> che rappresenta un omomorfismo iniettivo <m>\psi</m>. Infine una freccia (tratteggiata, a indicare il fatto che non fa parte dei dati iniziali) da <m>Q</m> a <m>D</m> che rappresenta l'unico omomorfismo <m>\theta\colon Q\to K</m> tale che <m>\phi\theta=\psi</m>.
+            </p>
+          </description>
+          <latex-image>
+            \begin{tikzpicture}[keepsize]
+              \matrix [matrix of math nodes, row sep = 1cm, column sep = 1cm]
+                {
+                  |(D)| D \amp |(Q)| Q \\
+                          \amp |(K)| K \\
+                };
+                \draw[->] (D)-- node[midway,auto] {$\phi$} (Q);
+                \draw[->] (D)-- node[midway,below] {$\psi$} (K);
+                \draw[->,dashed] (Q)--node[midway,auto] {$\theta$}(K);
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </statement>
+
+      <proof>
+        <p>
+          Abbiamo descritto la costruzione del campo dei quozienti <m>Q</m> e l'omomorfismo <m>\phi</m>. Mostriamo l'esistenza e l'unicità dell'omomorfismo <m>\theta</m>.
+        </p>
+        <p>
+          Dato un elemento <m>\frac{a}{b}</m> di <m>Q</m>, sappiamo che <m>b\ne 0</m> e, poiché <m>\psi</m> è iniettivo, <m>b\psi</m> è un elemento non nullo del campo <m>K</m> ed è quindi invertibile. Poniamo allora
+          <md>
+            \frac{a}{b}\theta\coloneqq a\psi(b\psi)^{-1}
+          </md>.
+          Dobbiamo innanzitutto verificare che <m>\theta</m> sia ben definita: infatti, <m>\frac{a}{b}</m> è la classe di equivalenza della coppia <m>(a,b)</m> ma la classe di equivalenza contiene altri elementi. Sia, allora, <m>(c,d)</m> uno di tali elementi, cioè sia <m>ad=bc</m>: poiché <m>\psi</m> è un omomorfismo, abbiamo
+          <md>
+            a\psi\cdot d\psi=(ad)\psi=(bc)\psi=b\psi\cdot c\psi
+          </md>.
+          Moltiplicando ambo i membri per <m>(d\psi)^{-1}(b\psi)^{-1}</m> otteniamo
+          <md>
+            a\psi(b\psi)^{-1}=c\psi(d\psi)^{-1}
+          </md>,
+          e, dunque, <m>\theta</m> è ben definita.
+        </p>
+        <p>
+          Verifichiamo che <m>\theta</m> è un omomorfismo. Abbiamo infatti
+          <md>
+            <mrow> \left(\frac{a}{b}+\frac{c}{d}\right)\theta \amp =\frac{ad+bc}{bd}\theta=(ad+bc)\psi((bd)\psi)^{-1}</mrow>
+            <mrow>  \amp =(a\psi\cdot d\psi+b\psi\cdot c\psi)(b\psi\cdot d\psi)^{-1} </mrow>
+            <mrow> \amp = a\psi\cdot d\psi (b\psi)^{-1}(d\psi)^{-1}+b\psi\cdot c\psi(b\psi)^{-1}(d\psi)^{-1}</mrow>
+            <mrow>  \amp =a\psi(b\psi)^{-1}+c\psi(d\psi)^{-1}=\frac{a}{b}\theta+\frac{c}{d}\theta</mrow>
+          </md>
+          e
+          <md>
+            \left(\frac{a}{b}\frac{c}{d}\right)\theta=\frac{ac}{bd}\theta=(ac)\psi((bd)\psi)^{-1}=a\psi\cdot c\psi(b\psi)^{-1}(d\psi)^{-1}=\frac{a}{b}\theta\cdot \frac{c}{d}\theta
+          </md>
+          e
+          <md>
+            1_{Q}\theta=\frac{1}{1}\theta=(1\psi)(1\psi)^{-1}=1_{K}1_{K}^{-1}=1_{K}
+          </md>.
+          Ora, preso <m>a</m> in <m>D</m>, abbiamo
+          <md>
+            a\phi\theta=\frac{a}{1}\theta=a\psi(1\psi)^{-1}=a\psi(1_{K})^{-1}=a\psi
+          </md>
+          cioè <m>\phi\theta=\psi</m>.
+        </p>
+        <p>
+          Supponiamo ora che esista un omomorfismo <m>\eta\colon Q\to K</m> tale che <m>\phi\eta=\psi</m>. Abbiamo allora
+          <md>
+            <mrow> \frac{a}{b}\eta \amp =\left(\frac{a}{1}\frac{1}{b}\right)\eta=\frac{a}{1}\eta\frac{1}{b}\eta=\frac{a}{1}\eta\left(\frac{b}{1}\right)^{-1}\eta</mrow>
+            <mrow> \amp =\frac{a}{1}\eta\left(\frac{b}{1}\eta\right)^{-1}=a\phi\eta(b\phi\eta)^{-1}=a\psi(b\psi)^{-1}=\frac{a}{b}\theta</mrow>
+          </md>
+        </p>
+      </proof>
+
+    </theorem>
+
+    <p>
+      La proprietà universale descritta dal <xref ref="thm-campo_dei_quozienti"/> definisce il campo dei quozienti, nel senso che il campo dei quozienti è indipendente dalla costruzione che abbiamo dato: se lo avessimo costruito in modo diverso e avessimo ottenuto un campo soddisfacente la proprietà universale, avremmo ottenuto essenzialmente lo stesso campo, sia pure descritto in modo diverso. Più precisamente abbiamo il
+    </p>
+
+    <corollary xml:id="cor-unicita_campo_dei_quozienti">
+      <statement>
+        <p>
+          Sia <m>D</m> un dominio e siano <m>Q</m> e <m>Q'</m> due campi e <m>\phi\colon D\to Q</m> e <m>\phi'\colon D\to Q'</m> due omomorfismi tali che entrambi soddisfano la proprietà universale data nel <xref ref="thm-campo_dei_quozienti"/>. Allora esiste un unico isomorfismo <m>\theta\colon Q\to Q'</m> tale che <m>\phi\theta=\phi'</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Per ipotesi esiste un unico omomorfismo <m>\theta\colon Q\to Q'</m> tale che <m>\phi\theta=\phi'</m>: dobbiamo provare che <m>\theta</m> è un isomorfismo. Sempre per ipotesi, esiste un unico omomorfismo <m>\theta'\colon Q'\to Q</m> tale che <m>\phi'\theta'=\phi</m>. Ma allora <m>\theta\theta'\colon Q\to Q</m> è un endomorfismo di <m>Q</m> tale che <m>\phi\theta\theta'=\phi'\theta'=\phi</m>. D'altra parte <m>\Id_{Q}</m> è un endomorfismo di <m>Q</m> tale che <m>\phi\Id_{Q}=\phi</m>: per l'unicità dell'omomorfismo dato dalla proprietà universale, abbiamo che <m>\Id_{Q}=\theta\theta'</m>. Analogamente, <m>\Id_{Q'}=\theta'\theta</m>, cioè <m>\theta</m> e <m>\theta'</m> sono uno inverso dell'altro e sono quindi isomorfismi.
+        </p>
+      </proof>
+
+    </corollary>
+
+    <remark xml:id="rem-theta_iniettivo">
+      <p>
+        Per il <xref ref="cor-omomorfismo_da_corpi"/>, l'omomorfismo <m>\theta</m> definito dal <xref ref="thm-campo_dei_quozienti"/> è, a sua volta, iniettivo.
+      </p>
+    </remark>
+
+    <remark xml:id="rem-campo_quozienti_contenuto">
+      <p>
+        Interpretiamo in altro modo il <xref ref="thm-campo_dei_quozienti"/>: sia dato un dominio <m>D</m> contenuto in un campo <m>K</m>. Consideriamo l'intersezione di tutti i sottocampi di <m>K</m> contenenti <m>D</m> (almeno uno ce n'è: <m>K</m> stesso). Otteniamo allora un sottocampo <m>F</m> contenente <m>D</m>. Consideriamo poi l'omomorfismo di inclusione <m>i\colon D\to F</m>: esiste allora un unico omomorfismo <m>\theta</m> dal campo dei quozienti <m>Q</m> di <m>D</m> in <m>F</m> tale che <m>\phi\theta=i</m>. Dunque, se <m>a</m> è un elemento di <m>D</m>, abbiamo <m>a=ai=a\phi\theta\in\im\theta</m>, cioè <m>D\subseteq\im\theta</m>: dall'<xref ref="rem-theta_iniettivo"/> sappiamo che <m>\theta</m> è iniettivo e, quindi, l'immagine di <m>\theta</m> è isomorfa a <m>Q</m>. In particolare, l'immagine di <m>\theta</m> è un sottocampo di <m>F</m> contenente <m>D</m>: per costruzione coincide con <m>F</m>, cioè <m>\theta</m> è anche suriettivo. In conclusione <m>Q</m> è isomorfo a <m>F</m> e, possiamo, anzi, identificare <m>Q</m> con <m>F</m>.
+      </p>
+      <p>
+        Riassumendo: se un campo <m>K</m> contiene un dominio <m>D</m>, allora <m>K</m> contiene il campo dei quozienti <m>Q</m> di <m>D</m>, e questo è il più piccolo sottocampo di <m>K</m> contenente <m>D</m>. In particolare, se <m>D</m> è esso stesso un campo, allora coincide con il proprio campo dei quozienti.
+      </p>
+    </remark>
+
+    <p>
+      Abbiamo mostrato nella <xref ref="prop-sottocampo_minimo"/> che il sottocampo minimo di un campo contiene il sottoanello minimo. Possiamo ora descrivere meglio il legame tra questi oggetti.
+    </p>
+
+    <proposition xml:id="prop-sottocampo_sottoanello_minimo">
+
+      <statement>
+        <p>
+          Dato un campo <m>K</m>, il suo sottocampo minimo <m>F</m> è il campo dei quozienti del suo sottoanello minimo <m>S</m>.
+        </p>
+        <p>
+          Se <m>\car K=0</m>, allora <m>F</m> contiene strettamente <m>S</m> ed è isomorfo a <m>\Razionali</m>, mentre se <m>\car K=p</m> con <m>p</m> primo, allora <m>F=S</m> e <m>F</m> è isomorfo a <m>\Interi/p</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sappiamo che <m>F</m> contiene <m>S</m> e, quindi, per l'<xref ref="rem-campo_quozienti_contenuto"/> contiene il campo dei quozienti di <m>S</m>. Poiché <m>F</m> è contenuto in ogni sottocampo di <m>K</m>, il sottocampo <m>F</m> coincide esattamente con il campo dei quozienti di <m>S</m>,
+        </p>
+        <p>
+          Per la <xref ref="prop-sottoanello_minimo_caratteristica"/>, sappiamo che se <m>\car K=0</m>, allora <m>S</m> è isomorfo a <m>\Interi</m> e, quindi, <m>F</m> è isomorfo a <m>\Razionali</m> (in particolare, <m>S</m> è contenuto strettamente in <m>F</m>); se, invece <m>\car K=p</m> con <m>p</m> primo, allora <m>S</m> è isomorfo a <m>\Interi/p</m>, che, essendo un campo, coincide con il proprio campo dei quozienti.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <exercises xml:id="exercises-campo_dei_quozienti">
+
+      <exercise xml:id="exercise-classi_0_e_1">
+        <statement>
+          <p>
+            Mostrare che gli elementi di <m>T</m> del tipo <m>(0,b)</m> al variare di <m>b</m> in <m>D\setminus \{0\}</m> formano una classe di equivalenza e che gli elementi del tipo <m>(a,a)</m> al variare di <m>a</m> in <m>D\setminus \{0\}</m> formano una classe di equivalenza.
+          </p>
+        </statement>
+      </exercise>
+
+    </exercises>
+
+  </section>
+
+</chapter>
