@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-gruppi_ciclici">
+  <title>Gruppi ciclici</title>
+
+  <introduction>
+    <p>
+      Nel <xref ref="sec-prime_proprieta_sottogruppi"/> abbiamo introdotto la nozione di un sottogruppo generato da un sottoinsieme <m>X</m> di un gruppo <m>G</m>. Vogliamo ora studiare il caso particolare in cui <m>X</m> sia formato da un singolo elemento. Questi sono i cosiddetti gruppi ciclici.
+    </p>
+    <p>
+      Abbiamo già incontrato alcuni esempi di questi gruppi (anche se non li abbiamo chiamati così): i gruppi <m>\Interi</m> e <m>\Interi/n</m> rispetto all'addizione.
+    </p>
+  </introduction>
+
+  <section xml:id="sec-definizione_gruppi_ciclici">
+    <title>Definizioni e prime proprietà</title>
+
+    <definition xml:id="def-gruppo_ciclico">
+
+      <idx><h>gruppo</h><h>ciclico</h></idx>
+      <idx><h>sottogruppo</h><h>ciclico</h></idx>
+
+      <statement>
+        <p>
+          Dato un elemento <m>g</m> di un gruppo <m>G</m>, il sottogruppo <m>\grgen{g}</m> di <m>G</m> generato da <m>g</m> è detto sottogruppo <term>ciclico</term> generato da <m>g</m>.
+        </p>
+      </statement>
+    </definition>
+
+
+    <proposition xml:id="prop-gruppo_ciclico_potenze">
+      <statement>
+        <p>
+          Gli elementi del sottogruppo ciclico generato da un elemento <m>g</m> sono esattamente le potenze <m>g^{t}</m> di <m>g</m> al variare di <m>t</m> in <m>\Interi</m> (se stiamo usando la notazione additiva, gli elementi sono i multipli <m>tg</m>).
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Per la <xref ref="prop-elementi_del_sottogruppo_generato"/>, sappiamo che gli elementi di <m>\grgen{g}</m> sono gli elementi del tipo <m>x_{1}x_{2}\cdots x_{r}</m> dove ciascun <m>x_{i}</m> appartiene a <m>X</m> (cioè, nel nostro caso, è uguale a <m>g=g^{1}</m>) o è l'inverso di un elemento di <m>X</m> (cioè, nel nostro caso, è uguale a <m>g^{-1}</m>). Dunque, ciascun <m>x_{i}</m> è una potenza di <m>g</m> (con esponente <m>1</m> o <m>-1</m>) e, di conseguenza, il prodotto <m>x_{1}x_{2}\cdots x_{r}</m> è, a sua volta, una potenza di <m>g</m>. Viceversa, si prova facilmente che ciascuna potenza di <m>g</m> appartiene al gruppo <m>\grgen{g}</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      Poiché le potenze di un elemento commutano fra loro (<xref ref="cor-potenze_di_un_elemento_commutano"/>) abbiamo immediatamente il
+    </p>
+
+    <corollary xml:id="cor-gruppi_ciclici_sono_abeliani">
+      <statement>
+        <p>
+          Un gruppo ciclico è abeliano.
+        </p>
+      </statement>
+    </corollary>
+
+    <remark xml:id="rem-abeliani_non_ciclici">
+      <p>
+        Abbiamo mostrato che ogni gruppo ciclico è abeliano, ma il viceversa in genere non vale. Esistono, cioè, gruppi abeliani che non sono ciclici. Un semplice esempio è dato dal gruppo trirettangolo: se prendiamo un qualsiasi suo elemento e ne consideriamo le potenze vediamo che queste non esauriscono il gruppo stesso.
+      </p>
+    </remark>
+
+    <p>
+      Possiamo ora fornire esempi di gruppi ciclici di ordine infinito e finito.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Gli interi <m>\Interi</m> sono un gruppo ciclico rispetto all'addizione, generato da <m>1</m>: infatti, ogni intero è un multiplo intero di <m>1</m> (ricordiamo che in notazione additiva gli elementi di un gruppo ciclico sono i multipli interi di un generatore).
+        </p>
+        <p>
+          Preso un intero positivo <m>n</m>, le classi di resto <m>\Interi/n</m> modulo <m>n</m> sono un gruppo ciclico rispetto all'addizione, generato da <m>\class[n]{1}</m>: infatti, per ogni intero <m>t</m> si verifica facilmente che <m>t\class[n]{1}=\class[n]{t}</m> e, quindi, ciascun elemento di <m>\Interi/n</m> è un multiplo intero di <m>\class[n]{1}</m>.
+        </p>
+      </statement>
+    </example>
+
+    <theorem xml:id="thm-sottogruppo_di_ciclico_ciclico">
+
+      <idx><h>sottogruppo</h><h>di un gruppo ciclico</h></idx>
+
+      <statement>
+        <p>
+          Ogni sottogruppo di un gruppo ciclico <m>G\coloneqq\grgen{g}</m> è ciclico.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sia <m>H</m> un sottogruppo di <m>G</m>. Consideriamo l'insieme <m>S\coloneqq\{s\in\Interi\mid g^{s}\in H\}</m>: poiché gli elementi di <m>G</m> sono le potenze di <m>g</m>, gli elementi di <m>H</m> sono (alcune) potenze di <m>g</m> e, dunque, <m>S\ne\vuoto</m>. Se <m>S=\{0\}</m>, ciò significa che <m>H=\{g^{0}\}</m> è il sottogruppo banale ed è, dunque, ciclico generato da <m>1</m>.
+        </p>
+        <p>
+          Supponiamo, invece, che <m>S</m> contenga almeno un intero <m>s</m> non nullo: ora, <m>g^{-s}=(g^{s})^{-1}</m> e, quindi, <m>g^{-s}</m>, essendo inverso di un elemento di <m>H</m>, appartiene a <m>H</m>. Pertanto, <m>-s\in S</m>: poiché uno tra <m>s</m> e <m>-s</m> è positivo, ciò significa che <m>S</m> contiene interi positivi. Sia <m>d</m> il più piccolo intero positivo contenuto in <m>S</m> e mostriamo che <m>H</m> è ciclico con generatore <m>g^{d}</m>: dobbiamo cioè mostrare che ogni elemento di <m>H</m> è potenza di <m>g^{d}</m>. Un elemento generico di <m>H</m> è del tipo <m>g^{n}</m> per qualche intero <m>n</m>: dividendo <m>n</m> per <m>d</m> otteniamo <m>n=qd+r</m> con <m>q</m> intero e <m>0 \le r \lt d</m>. Allora abbiamo
+          <md>
+            g^{r}=g^{n-qd}=g^{n}(g^{d})^{-q}\in H
+          </md>
+          dove abbiamo usato il fatto che <m>g^{n}</m> e <m>g^{d}</m> appartengono a <m>H</m>. Dunque, <m>r\in S</m>: poiché <m>d</m> è il minimo intero positivo in <m>S</m> e <m>0 \le r \lt d</m>, otteniamo che <m>r=0</m>. Pertanto, <m>g^{n}=g^{qd}=(g^{d})^{q}</m>, cioè <m>g^{n}</m> è potenza di <m>g^{d}</m>, come richiesto.
+        </p>
+      </proof>
+
+    </theorem>
+
+    <p>
+      Abbiamo visto che gli elementi di un gruppo ciclico sono le potenze di un suo generatore: in generale però non è detto che a esponenti diversi corrispondano elementi diversi. Questa semplice osservazione ci permette di descrivere più in dettaglio i gruppi ciclici.
+    </p>
+    <p>
+      Sia <m>G\coloneqq\grgen{g}</m> un gruppo ciclico generato da un suo elemento <m>g</m>. Se a esponenti diversi corrispondono potenze diverse di <m>g</m>, cioè se <m>g^{r}\ne g^{s}</m> ogni qual volta scegliamo due interi diversi <m>r</m> e <m>s</m>, allora <m>G</m> è ovviamente infinito.
+    </p>
+    <p>
+      Consideriamo adesso il caso in cui ci siano almeno due interi diversi <m>r</m> e <m>s</m> tali che <m>g^{r}=g^{s}</m>. Sia, ad esempio, <m>r \gt s</m>: allora <m>r-s \gt 0</m> e
+      <md>
+        g^{r-s}=g^{r}(g^{s})^{-1}=g^{r}(g^{r})^{-1}=1
+      </md>,
+      e, dunque, esistono interi positivi <m>t</m> tali che <m>g^{t}=1</m>. Sia <m>n</m> il minimo di tali interi positivi e mostriamo che <m>g^{i}=g^{j}</m> se e solo se <m>i\equiv j\pmod{n}</m>. Dati due interi <m>i</m> e <m>j</m>, dividiamo <m>i-j</m> per <m>n</m> ottenendo così <m>i-j=qn+r</m> con <m>0\le r \lt n</m>. Ora
+      <md>
+        g^{i}=g^{j+qn+r}=g^{j}(g^{n})^{q}g^{r}=g^{j}1^{q}g^{r}=g^{j}g^{r}
+      </md>:
+      per le <xref ref="prop-cancellazione_gruppo" text="title"/>, abbiamo allora <m>g^{i}=g^{j}</m> se e solo se <m>g^{r}=1</m>. Poiché <m>0\le r \lt n</m>, la scelta di <m>n</m> implica che ciò avviene se e solo se <m>r=0</m>, cioè se e solo se <m>i\equiv j\pmod{n}</m>, come affermato. Ma allora, le diverse potenze di <m>g</m> sono tante quante le classi di resto modulo <m>n</m>, cioè <m>n</m>, e queste potenze si ripetono ciclicamente ogni <m>n</m>.
+    </p>
+    <p>
+      Diamo ora la
+    </p>
+    <definition xml:id="def-periodo_elemento">
+
+      <idx><h>periodo di un elemento</h></idx>
+      <idx><h>ordine di un elemento</h></idx>
+      <idx><h>elemento</h><h>periodo</h></idx>
+      <idx><h>elemento</h><h>ordine</h></idx>
+
+      <notation>
+        <usage><m>\abs{g}</m></usage>
+        <description>periodo o ordine di un elemento <m>g</m></description>
+      </notation>
+
+      <statement>
+        <p>
+          Sia dato un elemento <m>g</m> di un gruppo <m>G</m>. Se esistono interi <m>r</m> non nulli tali che <m>g^{r}=1</m>, allora il <term>periodo</term> o <term>ordine</term> di <m>g</m>, denotato con <m>\abs{g}</m>, è il più piccolo tra gli interi positivi <m>t</m> tali che <m>g^{t}=1</m>. Se l'unico intero <m>r</m> per cui si ha <m>g^{r}=1</m> è <m>r=0</m>, poniamo <m>\abs{g}\coloneqq\infty</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <remark xml:id="rem-1_ha_periodo_1">
+      <p>
+        Dalla definizione di periodo, segue immediatamente che in un gruppo <m>G</m> l'unico elemento di periodo <m>1</m> è l'elemento neutro <m>1</m>.
+      </p>
+    </remark>
+
+    <remark xml:id="rem-gruppi_finiti_hanno_elementi_periodo_finito">
+      <p>
+        Gli elementi di un gruppo finito hanno tutti periodo finito. Gli elementi di un gruppo infinito possono avere periodo sia finito che infinito.
+      </p>
+    </remark>
+
+    <p>
+      Riassumiamo quanto detto in precedenza con il
+    </p>
+
+    <theorem xml:id="thm-gruppi_ciclici_finiti_infiniti">
+      <statement>
+        <p>
+          Dato un gruppo ciclico <m>G</m> generato da <m>g</m>, si ha che l'ordine di <m>G</m> è uguale al periodo di <m>g</m>. Distinguiamo poi due casi:
+          <ul>
+            <li>
+              <p>
+                se <m>\abs{g}=\infty</m> allora <m>g^{i}\ne g^{j}</m> per ogni scelta di <m>i</m> e <m>j</m> interi diversi;
+              </p>
+            </li>
+            <li>
+              <p>
+                se <m>\abs{g}=n</m> finito allora <m>g^{i}=g^{j}</m> se e solo se <m>i\equiv j\pmod{n}</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </theorem>
+
+    <remark xml:id="rem-potenze_uguali_a_1">
+      <p>
+        Come caso particolare del teorema precedente, abbiamo che se <m>g</m> è un elemento di un gruppo <m>G</m> e <m>t</m> è un intero non nullo tale che <m>g^{t}=1</m>, allora <m>g</m> ha periodo finito e il suo periodo è un divisore di <m>t</m>.
+      </p>
+    </remark>
+
+    <example xml:id="ex-periodo_di_alcune_classi_di_resto">
+      <statement>
+        <p>
+          Determiniamo il periodo di <m>\class[9]{6}</m> e di <m>\class[9]{5}</m> in <m>(\Interi/9,+)</m>. Poiché <m>\Interi/9</m> è finito, i suoi elementi hanno periodo finito. Calcoliamo allora i multipli successivi (siamo in notazione additiva) degli elementi dati finché eventualmente troviamo l'elemento neutro (cioè <m>\class[9]{0}</m>). Abbiamo allora
+          <md>
+            1\class[9]{6}=\class[9]{6}\ne\class[9]{0}\qquad 2\class[9]{6}=\class[9]{12}\ne\class[9]{0}\qquad
+            3\class[9]{6}=\class[9]{18}=\class[9]{0}
+          </md>.
+          Dunque, il periodo di <m>\class[9]{6}</m> è <m>3</m>.
+        </p>
+        <p>
+          Se ora facciamo la stessa cosa per <m>\class[9]{5}</m>, vediamo che dobbiamo fare <m>9</m> prodotti prima di ottenere <m>\class[9]{0}</m> e, quindi, il periodo di <m>\class[9]{5}</m> è <m>9</m> (in particolare, il sottogruppo ciclico generato da <m>\class[9]{5}</m> coincide con <m>\Interi/9</m>). Questo approccio però richiede parecchi calcoli e non è ottimale.
+        </p>
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          Determiniamo il periodo di <m>A\coloneqq
+          \begin{psmallmatrix}
+            1 \amp 1 \\
+            0 \amp 1
+          \end{psmallmatrix}</m> in <m>\GL{2}{\Interi}</m>. Calcoliamo le prime potenze di <m>A</m>. Ovviamente, <m>A^{1}=A</m>. Per le potenze successive si ottiene <m>A^{2}=
+          \begin{psmallmatrix}
+            1 \amp 2 \\
+            0 \amp 1
+          \end{psmallmatrix}</m>, <m>A^{3}=
+          \begin{psmallmatrix}
+            1 \amp 3 \\
+            0 \amp 1
+          \end{psmallmatrix}</m> e così via. Possiamo allora congetturare che <m>A^{n}=
+          \begin{psmallmatrix}
+            1 \amp n \\
+            0 \amp 1
+          \end{psmallmatrix}</m> per ogni naturale <m>n</m>. In effetti è così e si può dimostrarlo per induzione (e, in realtà, l'identità vale anche per <m>n</m> negativo). Ma allora, non esiste nessun intero positivo <m>n</m> tale che <m>A^{n}=\Id</m>: dunque, <m>\abs{A}=\infty</m>.
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id="ex-periodi_in_diedrale">
+      <statement>
+        <p>
+          Riprendiamo il gruppo diedrale <m>D_{2n}</m> introdotto con la <xref ref="def-gruppo_diedrale"/>. Sappiamo che è formato da <m>n</m> riflessioni e <m>n</m> rotazioni. Le riflessioni hanno ovviamente periodo <m>2</m>, mentre le rotazioni hanno periodi diversi tra loro. Si verifica facilmente che le rotazioni formano un sottogruppo ciclico di <m>D_{2n}</m> di ordine <m>n</m>, generato dalla rotazione di angolo <m>\frac{2\pi}{n}</m>.
+        </p>
+      </statement>
+    </example>
+
+    <exercises xml:id="exercises-definizione_gruppi_ciclici">
+
+      <exercisegroup cols="2">
+        <introduction>
+          <p>
+            Determinare i periodi dei seguenti elementi.
+          </p>
+        </introduction>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>\class[12]{8}</m> in <m>(\Interi/12,+)</m>
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              <m>3</m>
+            </p>
+          </answer>
+
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>
+              \begin{pmatrix}
+                1 \amp 0 \\
+                0 \amp -1
+              \end{pmatrix}
+              </m>
+              in <m>\GL{2}{\Interi}</m>
+            </p>
+          </statement>
+          <answer>
+            <p>
+              <m>2</m>
+            </p>
+          </answer>
+        </exercise>
+
+
+        <exercise>
+          <statement>
+            <p>
+              <m>\class[15]{8}</m> in <m>\Inv(\Interi/15,\cdot)</m>
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              <m>4</m>
+            </p>
+          </answer>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>
+              \begin{pmatrix}
+                1 \amp 2 \\
+                1 \amp 3
+              \end{pmatrix}
+              </m>
+              in <m>\GL{2}{\Interi}</m>
+            </p>
+          </statement>
+          <answer>
+            <p>
+              <m>\infty</m>
+            </p>
+          </answer>
+        </exercise>
+
+      </exercisegroup>
+
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare che <m>(\Razionali,+)</m> non è ciclico.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Sia <m>\frac{m}{n}</m> un qualunque numero razionale con <m>m</m> e <m>n</m> interi e <m>n\ne0</m>. Il sottogruppo ciclico <m>H</m> generato da <m>\frac{m}{n}</m> è formato dagli elementi del tipo <m>\frac{tm}{n}</m> al variare di <m>t</m> in <m>\Interi</m>. Preso un primo <m>p</m> che non divide <m>n</m>, vediamo subito che <m>\frac{1}{p}</m> non appartiene a <m>H</m>: infatti, se fosse <m>\frac{1}{p}=\frac{tm}{n}</m> per qualche intero <m>t</m>, dovrebbe essere <m>p\cdot tm=1\cdot n</m>, cioè <m>p</m> dovrebbe dividere <m>n</m>.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise xml:id="exercise-quaternioni_come_matrici">
+        <introduction>
+          <p>
+            Nel gruppo moltiplicativo <m>\GL{2}{\Complessi}</m> delle matrici invertibili di ordine <m>2</m> a coefficienti complessi, si considerino le matrici <m>A\coloneqq
+            \begin{psmallmatrix}
+              0 \amp 1\\
+              -1 \amp 0
+            \end{psmallmatrix}
+            </m> e <m>B\coloneqq
+            \begin{psmallmatrix}
+              0 \amp i\\
+              i \amp 0
+            \end{psmallmatrix}
+            </m>.
+          </p>
+        </introduction>
+
+        <task>
+          <statement>
+            <p>
+              Determinare il periodo di <m>A</m> e di <m>B</m>.
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              <m>A</m> e <m>B</m> hanno entrambe periodo <m>4</m>.
+            </p>
+          </answer>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Dopo aver osservato che <m>BA=A^{3}B</m>, mostrare che il sottoinsieme <m>Q</m> delle matrici del tipo <m>A^{r}B^{s}</m> con <m>0\le r\le3</m> e <m>0\le s\le 1</m> è il sottogruppo generato da <m>A</m> e <m>B</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              L'uguaglianza <m>BA=A^{3}B</m> si verifica direttamente.
+            </p>
+            <p>
+              Il sottogruppo generato da <m>A</m> e <m>B</m> contiene tutti gli elementi di <m>Q</m>: inoltre, <m>Q</m> contiene <m>A</m> e <m>B</m>, se proviamo che <m>Q</m> è un sottogruppo avremo allora <m>Q=\grgen{A,B}</m>.
+            </p>
+            <p>
+              Poiché <m>Q</m> è finito, per la <xref ref="prop-sottogruppi_finiti"/> basta mostrare che è chiuso rispetto al  prodotto. Il prodotto di due elementi di <m>Q</m> è un prodotto di occorrenze di <m>A</m> e di <m>B</m>: usando l'uguaglianza <m>BA=A^{3}B</m> possiamo portare in fondo tutte le occorrenze di <m>B</m> e avere una matrice del tipo <m>A^{t}B^{u}</m> per opportuni naturali <m>t</m> e <m>u</m>. Ora <m>A^{2}=B^{2}</m>: quindi, possiamo riscrivere <m>A^{t}B^{u}</m> come <m>A^{r}B^{s}</m> dove <m>s=0</m> o <m>s=1</m> e, poiché <m>A</m> ha periodo <m>4</m>, riducendo <m>r</m> modulo <m>4</m> otteniamo un elemento nella forma cercata.
+            </p>
+          </solution>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Dimostrare che <m>Q</m> non è abeliano.
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              Basta mostrare che i generatori <m>A</m> e <m>B</m> non commutano.
+            </p>
+          </answer>
+        </task>
+
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Nell'insieme <m>\Interi</m> dei numeri interi sia definita l'operazione <m>\triangledown</m> nel modo seguente <m>a\triangledown b\coloneqq a+b+1</m>. Dimostrare che <m>\Interi</m> è un gruppo ciclico rispetto a questa operazione, di generatore <m>0</m>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            L'operazione <m>\triangledown</m> è associativa. Infatti, dati <m>a</m>, <m>b</m> e <m>c</m> in <m>\Interi</m> si ha:
+            <md>
+              (a\triangledown b)\triangledown c = (a+b+1)\triangledown c=(a+b+1)+c+1=a+b+c+2
+            </md>
+            e
+            <md>
+              a\triangledown (b\triangledown c) = a\triangledown (b+c+1)=a+(b+c+1)+1=a+b+c+2
+            </md>.
+          </p>
+
+          <p>
+            Il numero <m>-1</m> è elemento neutro rispetto all'operazione: infatti, per ogni <m>a\in\Interi</m> si ha <m>a\triangledown(-1)=a+(-1)+1=a</m> e <m>-1\triangledown a=-1+a+1=a</m>.
+          </p>
+
+          <p>
+            Dato un elemento <m>a</m> in <m>\Interi</m> il numero <m>-a-2</m> costituisce inverso di <m>a</m> rispetto all'operazione <m>\triangledown</m>: infatti, si ha <m>a\triangledown(-a-2)=a+(-a-2)+1=-1</m> e <m>(-a-2)\triangledown a=-a-2+a+1=-1</m>.
+          </p>
+          <p>
+            Indichiamo con <m>x^{\triangledown n}</m> la potenza <m>n</m>-esima di un elemento <m>x</m> rispetto all'operazione <m>\triangledown</m>. Mostriamo che per ogni <m>n</m> intero si ha <m>0^{\triangledown n}=n-1</m>. Infatti, per <m>n=0</m> la potenza <m>0^{\triangledown 0}</m> è l'elemento neutro, cioè <m>-1</m>. Per <m>n \gt 0</m> procediamo ora per induzione: supponendo che <m>0^{\triangledown n-1}=n-2</m> otteniamo <m>0^{\triangledown n}=0^{\triangledown n-1}\triangledown 0=n-2+0+1=n-1</m> come richiesto. Infine per <m>n</m> negativo, notiamo che <m>0^{\triangledown n}</m> è l'inverso di <m>0^{\triangledown(-n)}</m>. Poiché <m>-n</m> è positivo sappiamo che <m>0^{\triangledown(-n)}</m> è <m>-n-1</m>: per il punto precedente sappiamo che l'inverso di tale elemento è <m>-(-n-1)-2</m> cioè <m>n-1</m>, come richiesto.
+          </p>
+
+          <p>
+            L'insieme delle potenze di <m>0</m> è, dunque, l'insieme dei numeri <m>n-1</m> al variare di <m>n</m> in <m>\Interi</m>. Ma tale insieme è l'insieme di tutti i numeri interi e, dunque, <m>0</m> genera <m>\Interi</m>.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Sia <m>G</m> un gruppo generato da due elementi <m>a</m> e <m>b</m> tali che <m>\abs{a}=4</m> e <m>b^{2}=a^{3}</m>. Dimostrare che <m>G</m> è abeliano.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Ovviamente <m>b</m> commuta con <m>b^{2}</m>, cioè con <m>a^{3}</m>. Poiché <m>a</m> ha periodo <m>4</m>, <m>a=(a^{3})^{-1}</m>: dunque, per la <xref ref="prop-potenze_di_commutabili"/>, <m>b</m> commuta con <m>a</m>. Per la <xref ref="prop-elementi_che_commutano_generano_sottogruppo_abeliano"/>, <m>G</m> è abeliano.
+          </p>
+        </solution>
+
+      </exercise>
+
+    </exercises>
+
+  </section>
+
+  <section xml:id="sec-sottogruppi_di_ciclici">
+    <title>Sottogruppi di gruppi ciclici</title>
+
+    <p>
+      Abbiamo visto nel <xref ref="thm-sottogruppo_di_ciclico_ciclico"/> che ogni sottogruppo di un gruppo ciclico è ciclico. Vogliamo ora studiare più in dettaglio la situazione.
+    </p>
+
+    <proposition xml:id="prop-periodo_di_potenze_di_elemento_di_periodo_infinito">
+      <statement>
+        <p>
+          Sia <m>g</m> un elemento di periodo infinito di un gruppo e sia <m>n</m> un intero. Allora <m>\abs{g^{n}}=1</m> se <m>n=0</m> e <m>\abs{g^{n}}=\infty</m> se <m>n\ne 0</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Se <m>n=0</m>, allora <m>g^{n}=1</m> e, ovviamente, <m>\abs{g^{n}}=1</m>.
+        </p>
+        <p>
+          Se <m>n\ne 0</m>, allora, preso un intero <m>t</m>, si ha <m>(g^{n})^{t}=g^{nt}</m>: poiché <m>g</m> ha periodo infinito, risulta allora <m>(g^{n})^{t}=1</m> se e solo se <m>nt=0</m>. Poiché <m>n\ne 0</m>, ciò avviene se e solo se <m>t=0</m> e, dunque, <m>g^{n}</m> ha periodo infinito.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      Dunque, tutti i sottogruppi non banali di un gruppo ciclico infinito sono a loro volta ciclici infiniti. Ci chiediamo ora come sono posti reciprocamente questi sottogruppi, cioè quando si contengono l'un l'altro.
+    </p>
+
+    <proposition xml:id="prop-sottogruppi_di_ciclico_infinito">
+      <statement>
+        <p>
+          Sia <m>G\coloneqq\grgen{g}</m> un gruppo ciclico infinito. Dati i sottogruppi <m>H\coloneqq\grgen{g^{r}}</m> e <m>K\coloneqq\grgen{g^{s}}</m>, si ha <m>H\le K</m> se e solo se <m>s\mid r</m>. In particolare, <m>H=K</m> se e solo se <m>r=s</m> o <m>r=-s</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Il sottogruppo <m>H</m> è contenuto in <m>K</m> se e solo se il suo generatore <m>g^{r}</m> appartiene a <m>K</m>. Gli elementi di <m>K</m> sono le potenze di <m>g^{s}</m> e, quindi, <m>H\le K</m> se e solo se <m>g^{r}=(g^{s})^{t}=g^{st}</m> per qualche intero <m>t</m>. Per il <xref ref="thm-gruppi_ciclici_finiti_infiniti"/>, ciò avviene se e solo se <m>r=st</m>, cioè <m>s\mid r</m>. In particolare, <m>H=K</m> se e solo se <m>r</m> e <m>s</m> si dividono reciprocamente il che avviene se e solo se <m>r</m> e <m>s</m> sono uguali o opposti.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <corollary xml:id="cor-intersezione_sottogruppi_ciclico_infinito">
+      <statement>
+        <p>
+          Due sottogruppi non banali di un gruppo ciclico infinito hanno intersezione non banale.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sia <m>G\coloneqq\grgen{g}</m> un gruppo ciclico infinito e siano <m>H\coloneqq\grgen{g^{r}}</m> e <m>K\coloneqq\grgen{g^{s}}</m> due sottogruppi non banali: pertanto, <m>r</m> e <m>s</m> sono non nulli e, detto <m>m</m> il minimo comune multiplo di <m>r</m> e <m>s</m>, per la <xref ref="prop-sottogruppi_di_ciclico_infinito"/> <m>H\cap K=\grgen{g^{m}}</m>. Per la <xref ref="prop-periodo_di_potenze_di_elemento_di_periodo_infinito"/>, <m>H\cap K</m> è, dunque, non banale.
+        </p>
+      </proof>
+
+    </corollary>
+
+    <example xml:id="ex-reticolo_parziale_sottogruppi_ciclico_infinito">
+      <statement>
+        <p>
+          Vogliamo descrivere alcuni dei sottogruppi di un gruppo ciclico infinito <m>G\coloneqq\grgen{g}</m> e le loro reciproche inclusioni. Siccome abbiamo infiniti sottogruppi, consideriamo solo quelli che contengono il sottogruppo <m>\grgen{g^{30}}</m>. Grazie alla <xref ref="prop-sottogruppi_di_ciclico_infinito"/>, sappiamo che questi sono del tipo <m>\grgen{g^{r}}</m> con <m>r</m> divisore di <m>30</m>. Sempre dalla <xref ref="prop-sottogruppi_di_ciclico_infinito"/>, sappiamo che possiamo considerare solo i divisori positivi di <m>30</m> (perché <m>g^{r}</m> e <m>g^{-r}</m> generano lo stesso sottogruppo). I sottogruppi cercati corrispondono allora agli interi <m>1</m>, <m>2</m>, <m>3</m>, <m>5</m>, <m>6</m>, <m>10</m>, <m>15</m> e <m>30</m>. Le loro reciproche inclusioni sono meglio descritte dal seguente diagramma:
+        </p>
+
+        <figure>
+          <caption>Alcuni sottogruppi di un gruppo ciclico infinito</caption>
+          <image xml:id="image-reticolo_parziale_sottogruppi_ciclico_infinito">
+            <shortdescription>Reticolo dei sottogruppi di un gruppo ciclico infinito contenenti la trentesima potenza del generatore.</shortdescription>
+            <description>
+              <p>
+                Diagramma dei sottogruppi di un gruppo ciclico infinito <m>G</m> di generatore <m>g</m> e loro rispettive inclusioni. Sono rappresentati solo i sottogruppi che contengono <m>g^{30}</m>. I sottogruppi generati da <m>g^{2}</m>, <m>g^{3}</m> e <m>g^{5}</m> sono contenuti in <m>G</m> e non si contengono l'un l'altro. Abbiamo poi il sottogruppo generato da <m>g^{6}</m> contenuto in quelli generati da <m>g^{2}</m> e <m>g^{3}</m>, il sottogruppo generato da <m>g^{10}</m> contenuto in quelli generati da <m>g^{2}</m> e <m>g^{5}</m> e il sottogruppo generato da <m>g^{15}</m> contenuto in quelli generati da <m>g^{3}</m> e <m>g^{5}</m>. Infine, il sottogruppo generato da <m>g^{30}</m> contenuto in quelli precedenti.
+              </p>
+            </description>
+            <latex-image>
+              \begin{tikzpicture}[keepsize]
+              \matrix [matrix of math nodes, row sep = 0.8cm]
+                  {
+                                        \amp |(1)| {G}               \amp  \\
+                  |(2)| {\grgen{g^{2}}} \amp |(3)| {\grgen{g^{3}}}   \amp |(5)|  {\grgen{g^{5}}} \\
+                  |(6)| {\grgen{g^{6}}} \amp |(10)| {\grgen{g^{10}}} \amp |(15)| {\grgen{g^{15}}} \\
+                                        \amp |(30)| {\grgen{g^{30}}} \amp  \\
+                  };
+                  \draw[right hook-latex] (2)--(1);
+                  \draw[right hook-latex] (3)--(1);
+                  \draw[right hook-latex] (5)--(1);
+
+                  \draw[right hook-latex] (6)--(2);
+                  \draw[right hook-latex] (10)--(2);
+
+                  \draw[right hook-latex] (6)--(3);
+                  \draw[right hook-latex] (15)--(3);
+
+                  \draw[right hook-latex] (10)--(5);
+                  \draw[right hook-latex] (15)--(5);
+
+                  \draw[right hook-latex] (30)--(6);
+                  \draw[right hook-latex] (30)--(10);
+                  \draw[right hook-latex] (30)--(15);
+
+              \end{tikzpicture}
+            </latex-image>
+
+          </image>
+
+        </figure>
+      </statement>
+    </example>
+
+    <p>
+      Consideriamo ora i sottogruppi di un gruppo ciclico finito.
+    </p>
+
+    <proposition xml:id="prop-periodo_di_potenze_di_elemento_di_periodo_finito">
+      <statement>
+        <p>
+          Sia <m>g</m> un elemento di periodo finito <m>n</m> di un gruppo <m>G</m>. Dato un intero <m>r</m>, il periodo di <m>g^{r}</m> è uguale a <m>\frac{n}{(n,r)}</m>. In particolare, <m>g^{r}</m> ha periodo <m>n</m> se e solo se <m>n</m> e <m>r</m> sono coprimi.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Consideriamo le potenze di <m>g^{r}</m>: dato un intero <m>t</m>, si ha <m>(g^{r})^{t}=g^{rt}</m>. Per il <xref ref="thm-gruppi_ciclici_finiti_infiniti"/>, si ha, dunque, <m>(g^{r})^{t}=1</m> se e solo se <m>n\mid rt</m>, cioè se e solo se esiste un intero <m>s</m> tale che <m>ns=rt</m>. Ora, posto <m>n'\coloneqq\frac{n}{(n,r)}</m> e <m>r'\coloneqq\frac{r}{(n,r)}</m>, ciò avviene se e solo se <m>(n,r)n's=(n,r)r't</m>: poiché <m>(n,r)\ne 0</m> in quanto divisore di <m>n</m>, ciò avviene se e solo se <m>n's=r't</m>. Per il <xref ref="cor-diviso_MCD_da_coprimi"/>, <m>n'</m> e <m>r'</m> sono coprimi: quindi, per il <xref ref="lem-divisore_coprimo_con_fattore"/>, ciò avviene se e solo se <m>n'\mid t</m>.
+        </p>
+        <p>
+          Riassumendo, <m>(g^{r})^{t}=1</m> se e solo se <m>n'\mid t</m>. Dunque, il più piccolo tra gli interi positivi <m>t</m> per cui <m>(g^{r})^{t}=1</m> è proprio <m>n'=\frac{n}{(n,r)}</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      Possiamo ora applicare la <xref ref="prop-periodo_di_potenze_di_elemento_di_periodo_finito"/> all'<xref ref="ex-periodo_di_alcune_classi_di_resto"/> per calcolare in maniera più efficiente il periodo di alcuni elementi.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Calcoliamo il periodo di <m>\class[9]{6}</m> e di <m>\class[9]{5}</m> in <m>(\Interi/9,+)</m>. Siamo in notazione additiva: poiché <m>\class[9]{6}=6\class[9]{1}</m>, abbiamo <m>\abs{\class[9]{6}}=\frac{9}{(9,6)}=\frac{9}{3}=3</m>. Analogamente, <m>\abs{\class[9]{5}}=9</m>, poiché <m>9</m> e <m>5</m> sono coprimi.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Possiamo ora descrivere i sottogruppi di un gruppo ciclico finito e la loro reciproca posizione.
+    </p>
+
+    <theorem xml:id="thm-sottogruppi_di_gruppo_ciclico_finito">
+      <statement>
+        <p>
+          Sia <m>G\coloneqq\grgen{g}</m> un gruppo ciclico finito di ordine <m>n</m>. Allora ogni elemento di <m>G</m> ha periodo un divisore di <m>n</m> e ogni sottogruppo di <m>G</m> ha ordine un divisore di <m>n</m>.
+        </p>
+        <p>
+          Dato un divisore <m>d</m> di <m>n</m>, esistono un unico sottogruppo di ordine <m>d</m> ed esattamente <m>\euler{d}</m> elementi di periodo <m>d</m>. In particolare, esistono esattamente <m>\euler{n}</m> elementi che generano <m>G</m>.
+        </p>
+        <p>
+          Se <m>H</m> e <m>K</m> sono sottogruppi di <m>G</m>, si ha <m>H\le K</m> se e solo se <m>\abs{H}</m> divide <m>\abs{K}</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Per la <xref ref="prop-periodo_di_potenze_di_elemento_di_periodo_finito"/>, un elemento <m>g^{r}</m> ha periodo <m>n</m> se e solo se <m>r</m> e <m>n</m> sono coprimi. Poiché gli elementi distinti di <m>G</m> sono quelli del tipo <m>g^{r}</m> con <m>0\le r\le n-1</m>, per definizione di funzione di Eulero (<xref ref="def-funzione_di_eulero"/>) il numero di elementi di <m>G</m> di periodo <m>n</m> è esattamente <m>\euler{n}</m>.
+        </p>
+        <p>
+          Un'ulteriore applicazione della <xref ref="prop-periodo_di_potenze_di_elemento_di_periodo_finito"/>, mostra che ogni elemento di <m>G</m> ha periodo che divide <m>n</m>: per il <xref ref="thm-sottogruppo_di_ciclico_ciclico"/>, i sottogruppi di <m>G</m> sono ciclici e hanno, quindi, ordine uguale al periodo di un proprio generatore che, abbiamo appena visto, ha ordine un divisore di <m>n</m>.
+        </p>
+        <p>
+          Sia ora <m>d</m> un divisore di <m>n</m>. Ogni elemento di periodo <m>d</m> genera un sottogruppo di ordine <m>d</m> e, per quanto detto in precedenza, ciascuno di questi sottogruppi contiene <m>\euler{d}</m> elementi di ordine <m>d</m>: la dimostrazione sarà quindi completa se mostreremo che c'è esattamente un sottogruppo di ordine <m>d</m>. Per la <xref ref="prop-periodo_di_potenze_di_elemento_di_periodo_finito"/>, gli elementi di periodo <m>d</m> sono quelli del tipo <m>g^{r}</m> dove <m>r</m> è un intero tale che <m>(n,r)=\frac{n}{d}</m>. Di interi di questo tipo ce ne è almeno uno: <m>\frac{n}{d}</m>. Pertanto, <m>g^{\frac{n}{d}}</m> genera un sottogruppo <m>H</m> di ordine <m>d</m>. Inoltre, gli interi <m>r</m> tali che <m>(n,r)=\frac{n}{d}</m> sono multipli di <m>\frac{n}{d}</m> e, quindi, gli elementi di periodo <m>d</m> sono potenza di <m>g^{\frac{n}{d}}</m> e appartengono, dunque, a <m>H</m>: ciò implica che <m>H</m> è l'unico sottogruppo di <m>G</m> di ordine <m>d</m>.
+        </p>
+        <p>
+          Siano ora <m>H</m> e <m>K</m> due sottogruppi di <m>G</m>. Se <m>H\le K</m>, per quanto detto sopra l'ordine di <m>H</m> divide l'ordine del gruppo ciclico finito <m>K</m>. Viceversa, se <m>\abs{H}</m> divide <m>\abs{K}</m>, abbiamo dimostrato che <m>K</m> contiene un sottogruppo, sia <m>H'</m>, di ordine <m>\abs{H}</m>: ma <m>G</m> contiene un unico sottogruppo di ordine <m>\abs{H}</m> e cioè <m>H</m> stesso. Di conseguenza, <m>H=H'</m>, cioè <m>H\le K</m>.
+        </p>
+      </proof>
+
+    </theorem>
+
+    <remark xml:id="rem-significato_funzione_di_eulero">
+      <p>
+        La funzione di Eulero di un numero positivo <m>n</m> è uguale, oltre che al numero di interi <m>k</m> tali che <m>0\le k\le n-1</m> e <m>k</m> è coprimo con <m>n</m> (<xref ref="def-funzione_di_eulero"/>), al numero delle classi di resto invertibili di <m>\Interi/n</m> (<xref ref="prop-caratterizzazione_classe_invertibile"/>) e al numero degli elementi di periodo esattamente <m>n</m> in un gruppo ciclico di ordine <m>n</m> (cioè il numero dei possibili generatori).
+
+      </p>
+    </remark>
+
+    <corollary xml:id="cor-sommatoria_eulero">
+      <statement>
+        <p>
+          Per ogni intero positivo <m>n</m> si ha
+          <md>
+            \sum_{d\mid n}\euler{d}=n
+          </md>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Consideriamo un gruppo ciclico <m>G</m> di ordine <m>n</m>. Per il <xref ref="thm-sottogruppi_di_gruppo_ciclico_finito"/>, gli elementi di <m>G</m> hanno ciascuno periodo un divisore di <m>n</m> e, per ciascun divisore <m>d</m> di <m>n</m>, ce ne sono esattamente <m>\euler{d}</m> di periodo <m>d</m>. Sommando questi numeri, otteniamo il numero totale degli elementi di <m>G</m>, cioè <m>n</m>.
+        </p>
+      </proof>
+
+    </corollary>
+
+    <example xml:id="ex-reticolo_sottogruppo_finito">
+      <statement>
+        <p>
+          Vogliamo descrivere i sottogruppi di un gruppo ciclico finito <m>G\coloneqq\grgen{g}</m> di ordine <m>24</m> e le loro reciproche inclusioni. Per il <xref ref="thm-sottogruppi_di_gruppo_ciclico_finito"/>, per ciascun divisore di <m>24</m> c'è esattamente un sottogruppo avente quell'ordine. I sottogruppi cercati corrispondono allora agli interi <m>1</m>, <m>2</m>, <m>3</m>, <m>4</m>, <m>6</m>, <m>8</m>, <m>12</m> e <m>24</m>. Notiamo che il sottogruppo di ordine <m>d</m> può essere generato da <m>g^{\frac{24}{d}}</m>. Le reciproche inclusioni dei sottogruppi sono meglio descritte dal seguente diagramma:
+        </p>
+
+        <figure>
+          <caption>Sottogruppi di un gruppo ciclico di ordine <m>24</m></caption>
+          <image xml:id="image-reticolo_sottogruppi_ciclico_finito_24">
+            <shortdescription>Reticolo dei sottogruppi di un gruppo ciclico di ordine 24</shortdescription>
+            <description>
+              <p>
+                Reticolo dei sottogruppi di un gruppo ciclico <m>G</m> di ordine <m>24</m> di generatore <m>g</m> e loro rispettive inclusioni. I sottogruppi generati da <m>g^{2}</m>, <m>g^{3}</m> e <m>g^{5}</m> sono contenuti in <m>G</m> e non si contengono l'un l'altro. Abbiamo poi il sottogruppo generato da <m>g^{6}</m> contenuto in quelli generati da <m>g^{2}</m> e <m>g^{3}</m>, il sottogruppo generato da <m>g^{10}</m> contenuto in quelli generati da <m>g^{2}</m> e <m>g^{5}</m> e il sottogruppo generato da <m>g^{15}</m> contenuto in quelli generati da <m>g^{3}</m> e <m>g^{5}</m>. Infine, il sottogruppo banale contenuto in quelli precedenti.
+              </p>
+            </description> 
+            <latex-image>
+              \begin{tikzpicture}[keepsize]
+              \matrix [matrix of math nodes, row sep = 0.8cm]
+                  {
+                                         \amp |(24)| {G} \amp  \\
+                  |(12)| {\grgen{g^{2}}} \amp \amp |(8)| {\grgen{g^{3}}}  \\
+                  |(6)| {\grgen{g^{4}}}  \amp \amp |(4)| {\grgen{g^{6}}}  \\
+                  |(3)| {\grgen{g^{8}}}  \amp \amp |(2)| {\grgen{g^{12}}} \\
+                                         \amp |(1)| {\grgen{g^{24}}} \amp\\
+                  };
+                  \draw[right hook-latex] (12)--(24);
+                  \draw[right hook-latex] (8)--(24);
+
+                  \draw[right hook-latex] (6)--(12);
+                  \draw[right hook-latex] (4)--(8);
+                  \draw[right hook-latex] (4)--(12);
+
+                  \draw[right hook-latex] (3)--(6);
+                  \draw[right hook-latex] (2)--(6);
+                  \draw[right hook-latex] (2)--(4);
+
+                  \draw[right hook-latex] (1)--(3);
+                  \draw[right hook-latex] (1)--(2);
+
+              \end{tikzpicture}
+            </latex-image>
+
+          </image>
+
+        </figure>
+      </statement>
+    </example>
+
+    <exercises xml:id="exercises-sottogruppi_di_ciclici">
+
+      <exercisegroup cols="2">
+        <introduction>
+          <p>
+            Determinare i periodi dei seguenti elementi.
+          </p>
+        </introduction>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>\class[15]{9}</m> in <m>(\Interi/15,+)</m>
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              <m>5</m>
+            </p>
+          </answer>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>\class[14]{8}</m> in <m>(\Interi/14,+)</m>
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              <m>7</m>
+            </p>
+          </answer>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>g^{6}</m> sapendo che <m>\abs{g}=27</m>
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              <m>9</m>
+            </p>
+          </answer>
+        </exercise>
+
+
+        <exercise>
+          <statement>
+            <p>
+              <m>g^{6}</m> sapendo che <m>\abs{g}=22</m>
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              <m>11</m>
+            </p>
+          </answer>
+        </exercise>
+
+
+      </exercisegroup>
+
+      <exercisegroup cols="2">
+        <introduction>
+          <p>
+            Dato un gruppo ciclico <m>G\coloneqq\grgen{g}</m> di ordine <m>n</m>, determinare tutti i suoi generatori nei seguenti casi:
+          </p>
+        </introduction>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>n=4</m>.
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              <m>g</m>, <m>g^{3}</m>.
+            </p>
+          </answer>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>n=5</m>.
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              <m>g</m>, <m>g^{2}</m>, <m>g^{3}</m>, <m>g^{4}</m>.
+            </p>
+          </answer>
+
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>n=24</m>.
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              <m>g</m>, <m>g^{5}</m>, <m>g^{7}</m>, <m>g^{11}</m>, <m>g^{13}</m>, <m>g^{17}</m>, <m>g^{19}</m>, <m>g^{23}</m>.
+            </p>
+          </answer>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>n=16</m>.
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              <m>g</m>, <m>g^{3}</m>, <m>g^{5}</m>, <m>g^{7}</m>, <m>g^{9}</m>, <m>g^{11}</m>, <m>g^{13}</m>, <m>g^{15}</m>.
+            </p>
+          </answer>
+        </exercise>
+
+      </exercisegroup>
+
+      <exercisegroup>
+        <introduction>
+          <p>
+            Dato un gruppo ciclico <m>G\coloneqq\grgen{g}</m> di ordine <m>n</m>, determinare tutti i suoi sottogruppi e disegnare il diagramma delle reciproche inclusioni nei seguenti casi:
+          </p>
+        </introduction>
+        <exercise>
+          <statement>
+            <p>
+              <m>n=5</m>.
+            </p>
+          </statement>
+
+          <answer>
+            <figure>
+              <caption>Sottogruppi di un gruppo ciclico di ordine <m>5</m></caption>
+              <image xml:id="image-reticolo_sottogruppi_ciclico_finito_5">
+                <shortdescription>Reticolo dei sottogruppi di un gruppo ciclico di ordine 5</shortdescription>
+                <description>
+                  <p>
+                    Reticolo dei sottogruppi di un gruppo ciclico <m>G</m> di ordine <m>5</m> di generatore <m>g</m> e loro rispettive inclusioni. Ci sono solo due sottogruppi: <m>G</m> stesso e il sottogruppo banale.
+                  </p>
+                </description> 
+                <latex-image>
+                  \begin{tikzpicture}[keepsize]
+                  \matrix [matrix of math nodes, row sep = 0.8cm]
+                      {
+                      |(5)| {G} \\
+                      |(1)| {\grgen{g^{5}}} \\
+                      };
+                      \draw[right hook-latex] (1)--(5);
+
+                  \end{tikzpicture}
+                </latex-image>
+
+              </image>
+
+            </figure>
+          </answer>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>n=6</m>.
+            </p>
+          </statement>
+          <answer>
+            <figure>
+              <caption>Sottogruppi di un gruppo ciclico di ordine <m>6</m></caption>
+              <image xml:id="image-reticolo_sottogruppi_ciclico_finito_6">
+                <shortdescription>Reticolo dei sottogruppi di un gruppo ciclico di ordine 6</shortdescription>
+                <description>
+                  <p>
+                    Reticolo dei sottogruppi di un gruppo ciclico <m>G</m> di ordine <m>6</m> di generatore <m>g</m> e loro rispettive inclusioni. Oltre a <m>G</m> e il sottogruppo banale ci sono solo due altri sottogruppi: quello generato da <m>g^{2}</m> e quello generato da <m>g^{3}</m>. Questi ultimi due sottogruppi non si contengono reciprocamente.
+                  </p>
+                </description> 
+                <latex-image>
+                  \begin{tikzpicture}[keepsize]
+                  \matrix [matrix of math nodes, row sep = 0.8cm]
+                      {
+                                             \amp |(6)| {G} \amp  \\
+                      |(3)| {\grgen{g^{2}}} \amp \amp |(2)| {\grgen{g^{3}}}  \\
+                                             \amp |(1)| {\grgen{g^{6}}} \amp\\
+                      };
+                      \draw[right hook-latex] (3)--(6);
+                      \draw[right hook-latex] (2)--(6);
+
+                      \draw[right hook-latex] (1)--(3);
+                      \draw[right hook-latex] (1)--(2);
+
+                  \end{tikzpicture}
+                </latex-image>
+
+              </image>
+
+            </figure>
+          </answer>
+
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>n=36</m>.
+            </p>
+          </statement>
+
+          <answer>
+            <figure>
+              <caption>Sottogruppi di un gruppo ciclico di ordine <m>36</m></caption>
+              <image xml:id="image-reticolo_sottogruppi_ciclico_finito_36">
+                <shortdescription>Reticolo dei sottogruppi di un gruppo ciclico di ordine 36</shortdescription>
+                <description>
+                  <p>
+                    Reticolo dei sottogruppi di un gruppo ciclico <m>G</m> di ordine <m>36</m> di generatore <m>g</m> e loro rispettive inclusioni. I sottogruppi generati da <m>g^{2}</m> e <m>g^{3}</m> sono contenuti in <m>G</m> e non si contengono l'un l'altro. Abbiamo poi il sottogruppo generato da <m>g^{6}</m> contenuto in quelli generati da <m>g^{2}</m> e <m>g^{3}</m>, il sottogruppo generato da <m>g^{4}</m> contenuto in quello generato da <m>g^{2}</m> e il sottogruppo generato da <m>g^{9}</m> contenuto in quello generato da <m>g^{3}</m>. Successivamente abbiamo il sottogruppo generato da <m>g^{12}</m> contenuto in quelli generati da <m>g^{2}</m> e <m>g^{3}</m>, e il sottogruppo generato da <m>g^{18}</m> contenuto in quelli generati da <m>g^{2}</m> e <m>g^{9}</m>. Infine, il sottogruppo banale contenuto in quelli precedenti.
+                  </p>
+                </description>
+                <latex-image>
+                  \begin{tikzpicture}[keepsize]
+                  \matrix [matrix of math nodes, row sep = 0.8cm]
+                      {
+                                             \amp |(36)| {G} \amp  \\
+                      |(18)| {\grgen{g^{2}}} \amp \amp |(12)| {\grgen{g^{3}}}  \\
+                      |(9)| {\grgen{g^{4}}}  \amp  |(6)| {\grgen{g^{6}}} \amp |(4)| {\grgen{g^{9}}}\\
+                      |(3)| {\grgen{g^{12}}}  \amp \amp |(2)| {\grgen{g^{18}}} \\
+                                             \amp |(1)| {\grgen{g^{36}}} \amp\\
+                      };
+                      \draw[right hook-latex] (18)--(36);
+                      \draw[right hook-latex] (12)--(36);
+
+                      \draw[right hook-latex] (9)--(18);
+                      \draw[right hook-latex] (6)--(18);
+                      \draw[right hook-latex] (6)--(12);
+                      \draw[right hook-latex] (4)--(12);
+
+                      \draw[right hook-latex] (3)--(9);
+                      \draw[right hook-latex] (3)--(6);
+                      \draw[right hook-latex] (2)--(6);
+                      \draw[right hook-latex] (2)--(4);
+
+                      \draw[right hook-latex] (1)--(3);
+                      \draw[right hook-latex] (1)--(2);
+
+                  \end{tikzpicture}
+                </latex-image>
+
+              </image>
+
+            </figure>
+          </answer>
+
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>n=p^{4}</m> con <m>p</m> primo.
+            </p>
+          </statement>
+
+          <answer>
+            <figure>
+              <caption>Sottogruppi di un gruppo ciclico di ordine <m>p^{4}</m></caption>
+              <image xml:id="image-reticolo_sottogruppi_ciclico_finito_p4">
+                <shortdescription>Reticolo dei sottogruppi di un gruppo ciclico di ordine quarta potenza di un primo</shortdescription>
+                <description>
+                  <p>
+                    Reticolo dei sottogruppi di un gruppo ciclico <m>G</m> di ordine <m>p^{4}</m> (con <m>p</m> primo) e di generatore <m>g</m> e loro rispettive inclusioni. Abbiamo <m>G</m>, il sottogruppo generato da <m>g^{p}</m>, quello generato da <m>g^{p^{2}}</m>, quello generato da <m>g^{p^{3}}</m> e il sottogruppo banale, ognuno contenuto nel precedente.
+                  </p>
+                </description>
+                <latex-image>
+                  \begin{tikzpicture}[keepsize]
+                  \matrix [matrix of math nodes, row sep = 0.8cm]
+                      {
+                      |(p4)| {G} \\
+                      |(p3)| {\grgen{g^{p}}} \\
+                      |(p2)| {\grgen{g^{p^{2}}}} \\
+                      |(p1)| {\grgen{g^{p^{3}}}} \\
+                      |(1)|  {\grgen{g^{p^{4}}}} \amp\\
+                      };
+
+                      \draw[right hook-latex] (p3)--(p4);
+
+                      \draw[right hook-latex] (p2)--(p3);
+
+                      \draw[right hook-latex] (p1)--(p2);
+
+                      \draw[right hook-latex] (1)--(p1);
+                  \end{tikzpicture}
+                </latex-image>
+
+              </image>
+
+            </figure>
+          </answer>
+
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>n=pq</m> con <m>p</m> e <m>q</m> primi distinti.
+            </p>
+          </statement>
+
+          <answer>
+            <figure>
+              <caption>Sottogruppi di un gruppo ciclico di ordine <m>pq</m></caption>
+              <image xml:id="image-reticolo_sottogruppi_ciclico_finito_pq">
+                <shortdescription>Reticolo dei sottogruppi di un gruppo ciclico di ordine prodotto di due primi distinti</shortdescription>
+                <description>
+                  <p>
+                    Reticolo dei sottogruppi di un gruppo ciclico <m>G</m> di ordine <m>pq</m> (con <m>p</m> e <m>q</m> primi distinti) e di generatore <m>g</m> e loro rispettive inclusioni. Oltre a <m>G</m> e il sottogruppo banale ci sono solo due altri sottogruppi: quello generato da <m>g^{p}</m> e quello generato da <m>g^{q}</m>. Questi ultimi due sottogruppi non si contengono reciprocamente.
+                  </p>
+                </description>                
+                <latex-image>
+                  \begin{tikzpicture}[keepsize]
+                  \matrix [matrix of math nodes, row sep = 0.8cm]
+                      {
+                                             \amp |(pq)| {G} \amp  \\
+                      |(p)| {\grgen{g^{q}}} \amp \amp |(q)| {\grgen{g^{p}}}  \\
+                                             \amp |(1)| {\grgen{g^{pq}}} \amp\\
+                      };
+                      \draw[right hook-latex] (p)--(pq);
+                      \draw[right hook-latex] (q)--(pq);
+
+                      \draw[right hook-latex] (1)--(p);
+                      \draw[right hook-latex] (1)--(q);
+
+                  \end{tikzpicture}
+                </latex-image>
+
+              </image>
+
+            </figure>
+          </answer>
+
+        </exercise>
+
+      </exercisegroup>
+
+      <exercise>
+        <statement>
+          <p>
+            Sia <m>a</m> un elemento di periodo finito <m>n</m> di un gruppo <m>G</m> (non necessariamente finito) e sia <m>H</m> un sottogruppo di <m>G</m>. Detto <m>m</m> il minimo intero positivo tale che <m>a^{m}\in H</m>, dimostrare che <m>m</m> divide <m>n</m>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Se dividiamo <m>n</m> per <m>m</m> otteniamo <m>n=mq+r</m> con <m>0\le r \lt m</m>. Dunque, <m>a^{r}=a^{n-mq}=a^{n}(a^{m})^{-q}=(a^{m})^{-q}\in H</m> dal momento che <m>a^{m}</m> appartiene ad <m>H</m>. Per la scelta di <m>m</m> abbiamo, dunque, che <m>r=0</m>, cioè <m>m</m> divide <m>n</m> come richiesto.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare che un gruppo infinito <m>G</m> ha infiniti sottogruppi.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Considerare i suoi sottogruppi ciclici.
+          </p>
+        </hint>
+        <solution>
+          <p>
+            Ogni elemento <m>g</m> di <m>G</m> è contenuto in almeno un sottogruppo ciclico: quello generato da <m>g</m> stesso. Dunque, <m>G</m> è unione dei propri sottogruppi ciclici. Se questi sottogruppi ciclici sono tutti finiti allora il loro numero è necessariamente infinito e abbiamo il risultato. Se almeno uno di essi è infinito, allora per la <xref ref="prop-sottogruppi_di_ciclico_infinito"/> esso contiene infiniti sottogruppi e, a maggior ragione, anche <m>G</m> contiene infiniti sottogruppi.
+          </p>
+        </solution>
+      </exercise>
+
+    </exercises>
+
+  </section>
+
+</chapter>

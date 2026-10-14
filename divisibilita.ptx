@@ -1,0 +1,1328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-divisibilita">
+  <title>Divisibilità nei domini</title>
+
+  <introduction>
+    <p>
+      Il <xref ref="thm-teorema_fondamentale_aritmetica" text="title"/> afferma che ogni numero intero maggiore di <m>1</m> si può scrivere come prodotto di numeri primi in maniera unica a meno dell'ordinamento: ad esempio <m>12=2\cdot2\cdot3=2\cdot3\cdot2=3\cdot2\cdot2</m>. Se ci poniamo in <m>\Interi</m>, possiamo ricavare anche altre fattorizzazioni, ad esempio <m>12=2\cdot(-2)\cdot(-3)</m>. Queste fattorizzazioni possono essere considerate essenzialmente la stessa perché possiamo ricavare facilmente una dall'altra: sappiamo che tutte le fattorizzazioni di <m>12</m> come prodotto di numeri primi sono di questo tipo. In questo capitolo introdurremo dei domini in cui vale qualcosa di simile. Per far ciò dobbiamo studiare in generale la nozione di divisibilità nei domini.
+    </p>
+  </introduction>
+
+  <section xml:id="sec-divisibilita">
+    <title>Relazione di divisibilità</title>
+
+    <definition xml:id="def-divisibilita">
+      <statement>
+        <p>
+          Dati due elementi <m>a</m> e <m>b</m> in un dominio <m>D</m>, diciamo che <m>a</m> <term>divide</term> <m>b</m> e scriviamo <m>a\mid b</m> se esiste un elemento <m>c</m> di <m>D</m> tale che <m>b=ac</m>. Diremo anche che <m>a</m> è un <term>divisore</term> di <m>b</m> o che <m>b</m> è un <term>multiplo</term> di <m>a</m>. Useremo il simbolo <m>a\nmid b</m> per dire che <m>a</m> non divide <m>b</m>.
+        </p>
+      </statement>
+    </definition>
+    <remark xml:id="rem-divisibilita_ideale">
+      <p>
+        Dato un elemento <m>a</m> di un dominio, dalla <xref ref="prop-elementi_ideale_generato_anello_commutativo"/> sappiamo che gli elementi dell'ideale principale <m>\ideal{a}</m> sono gli elementi del tipo <m>ac</m> al variare di <m>c</m> in <m>D</m>, e cioè esattamente i multipli di <m>a</m>: pertanto, possiamo dire che <m>a\mid b</m> se e solo se <m>b\in\ideal{a}</m> o, equivalentemente, <m>\ideal{b}\subseteq\ideal{a}</m>.
+      </p>
+    </remark>
+
+    <p>
+      Usando questa interpretazione della relazione di divisibilità e notando che l'ideale principale generato da un elemento è <m>D</m> se e solo se l'elemento è invertibile, abbiamo immediatamente la
+    </p>
+
+    <proposition xml:id="prop-proprieta_divisibilita">
+      <statement>
+        <p>
+          Siano <m>a</m>, <m>b</m> e <m>c</m> elementi di un dominio <m>D</m>. Sia <m>u</m> un elemento invertibile di <m>D</m>. Allora
+          <ol>
+            <li>
+              <p>
+                <m>a\mid a</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                se <m>a\mid b</m> e <m>b\mid c</m> allora <m>a\mid c</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>a\mid 0</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>0\mid a</m> se e solo se <m>a=0</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>u\mid a</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>a\mid u</m> se e solo se <m>a</m> è invertibile.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </proposition>
+
+    <p>
+      In particolare, questa proposizione ci dice che la relazione di divisibilità soddisfa sia la proprietà riflessiva che la proprietà transitiva. La proprietà simmetrica non è però soddisfatta (infatti, <m>1\mid 0</m> ma <m>0\nmid 1</m>) quindi la divisibilità non è una relazione di equivalenza. Salvo casi particolari (<xref ref="exercise-unico_invertibile"/>), nemmeno la proprietà antisimmetrica è soddisfatta (si pensi agli interi relativi in cui ciascun numero e il proprio opposto si dividono reciprocamente senza essere uguali): quindi, la divisibilità non è una relazione d'ordine.<fn>Una relazione che soddisfa la proprietà riflessiva e la proprietà transitiva è detta <term>preordine</term>.</fn>
+    </p>
+    <p>
+      Una semplice proprietà che utilizzeremo spesso senza ulteriore avviso è data dal
+    </p>
+    <lemma xml:id="lem-semplificazione_divisibilita">
+      <statement>
+        <p>
+          Siano <m>a</m>, <m>b</m> e <m>c</m> elementi di un dominio con <m>c\ne0</m>. Allora <m>a</m> divide <m>b</m> se e solo se <m>ca</m> divide <m>cb</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Se <m>a\mid b</m>, cioè esiste <m>d</m> tale che <m>ad=b</m>, allora <m>cad=cb</m>, e, dunque, <m>ca\mid cb</m>. Viceversa, se <m>ca\mid cb</m>, cioè esiste <m>d</m> tale che <m>cad=cb</m>, allora, per l'<xref ref="rem-anello_intero_cancellazione"/>, si ha <m>ad=b</m> e, dunque, <m>a\mid b</m>.
+        </p>
+      </proof>
+    </lemma>
+
+    <p>
+      Il lemma precedente ci dice, in pratica, che se <m>ca\mid cb</m> e <m>c\ne 0</m>, possiamo semplificare per <m>c</m> e ottenere <m>a\mid b</m>.
+    </p>
+
+    <p>
+      È possibile introdurre una relazione di equivalenza a partire dalla relazione di divisibilità, così come fatto nell'<xref ref="exercise-preordine"/>.
+    </p>
+
+    <definition xml:id="def-elementi_associati">
+      <statement>
+        <p>
+          Due elementi <m>a</m> e <m>b</m> di un dominio si dicono <term>associati</term> e scriviamo <m>a\sim b</m> se <m>a\mid b</m> e <m>b\mid a</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Il fatto che questa sia una relazione di equivalenza segue immediatamente dal fatto che due elementi sono associati se e solo se gli ideali che essi generano si contengono reciprocamente, cioè sono uguali: non è comunque difficile dimostrarlo direttamente.
+    </p>
+
+    <p>
+      Grazie alla <xref ref="prop-proprieta_divisibilita"/> otteniamo immediatamente
+    </p>
+
+    <remark xml:id="rem-associati_0_1">
+      <p>
+        L'elemento <m>0</m> è associato solo a sé stesso e forma quindi una classe di equivalenza. L'elemento <m>1</m> è associato a tutti e soli gli elementi invertibili, che formano quindi una classe di equivalenza.
+      </p>
+    </remark>
+
+    <proposition xml:id="prop-divisibilita_assocaiti">
+      <statement>
+        <p>
+          Siano <m>a</m>, <m>b</m>, <m>a'</m> e <m>b'</m> elementi di un dominio tali che <m>a\sim a'</m> e <m>b\sim b'</m>. Allora <m>a\mid b</m> se e solo se <m>a'\mid b'</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          La proprietà è immediata se ragioniamo in termini di ideali principali: infatti, <m>\ideal{a}=\ideal{a'}</m> e <m>\ideal{b}=\ideal{b'}</m> e, pertanto, <m>\ideal{a}\supseteq\ideal{b}</m> se e solo se <m>\ideal{a'}\supseteq\ideal{b'}</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      La proposizione precedente ci dice che, nel considerare definizioni e risultati concernenti la divisibilità, possiamo sostituire agli elementi coinvolti elementi ad essi associati.
+    </p>
+
+    <definition xml:id="def-divisibilita_stretta">
+      <statement>
+        <p>
+          Dati due elementi <m>a</m> e <m>b</m> diciamo che <m>a</m> divide <m>b</m> <term>strettamente</term> se <m>a</m> divide <m>b</m> ma <m>b</m> non divide <m>a</m>: in altri termini, <m>\ideal{a}\supsetneq\ideal{b}</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <proposition xml:id="prop-associati_differiscono_invertibile">
+      <statement>
+        <p>
+          Due elementi <m>a</m> e <m>b</m> sono associati se e solo se esiste <m>u</m> invertibile tale che <m>a=ub</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Se <m>a=ub</m> con <m>u</m> invertibile allora <m>b\mid a</m>; inoltre <m>b=u^{-1}a</m> e pertanto <m>a\mid b</m>: dunque, <m>a\sim b</m>.
+        </p>
+
+        <p>
+          Viceversa sia <m>a\sim b</m>. Se <m>a=0</m> allora <m>b=0</m>: di conseguenza, <m>a=1b</m> con <m>1</m> invertibile. Se invece <m>a\ne0</m>, sappiamo che esistono <m>u</m> e <m>v</m> tali che <m>a=ub</m> e <m>b=va</m>: ma allora <m>a=uva</m> e, per l'<xref ref="rem-anello_intero_cancellazione"/>, abbiamo <m>uv=1</m> da cui otteniamo che <m>u</m> è invertibile.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      Ogni elemento <m>a</m> ha come suoi divisori per lo meno gli elementi invertibili e gli elementi associati ad <m>a</m>. Ciò suggerisce la
+    </p>
+
+    <definition xml:id="def-irriducibile">
+      <statement>
+        <p>
+          Un elemento <m>p</m> di un dominio è detto <term>irriducibile</term> o <term>atomo</term> se <m>p\ne0</m>, <m>p</m> non è invertibile e i suoi unici divisori sono gli elementi invertibili e gli elementi associati a <m>p</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Chiaramente ogni elemento associato a un elemento irriducibile è a sua volta irriducibile. La condizione di irriducibilità può essere espressa in modi equivalenti: lasciamo per esercizio la dimostrazione di questo fatto (<xref ref="exercise-irriducibile"/>).
+    </p>
+
+    <proposition xml:id="prop-irriducibile">
+      <statement>
+        <p>
+          Sia <m>p</m> un elemento non nullo e non invertibile di un dominio <m>D</m>. Le seguenti proprietà sono
+          equivalenti:
+          <ol>
+            <li xml:id="item-p_irriducibile">
+              <p>
+                <m>p</m> è irriducibile;
+              </p>
+            </li>
+            <li xml:id="item-divisore_irriducibile_associato">
+              <p>
+                 ogni volta che si ha <m>p=ab</m> per qualche <m>a</m> e <m>b</m> in <m>D</m> allora o <m>a</m> o <m>b</m> è associato a <m>p</m>;
+              </p>
+            </li>
+            <li xml:id="item-divisore_irriducibile_invertibile">
+              <p>
+                ogni volta che si ha <m>p=ab</m> per qualche <m>a</m> e <m>b</m> in <m>D</m> allora o <m>a</m> o <m>b</m> è invertibile.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </proposition>
+
+    <definition xml:id="def-primo">
+      <statement>
+        <p>
+          Un elemento <m>p</m> di un dominio <m>D</m> è detto <term>primo</term> se <m>p\ne0</m>, <m>p</m> non è invertibile e, ogni volta che <m>p\mid ab</m> per qualche <m>a</m> e <m>b</m> in <m>D</m>, allora <m>p\mid a</m> o <m>p\mid b</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Chiaramente ogni elemento associato a un elemento primo è a sua volta primo.
+    </p>
+
+    <remark xml:id="rem-primi_naturali">
+      <p>
+        Quando si studia l'aritmetica elementare dei naturali si definisce come numero primo un numero naturale diverso da <m>1</m> i cui unici divisori sono <m>1</m> e sé stesso (<xref ref="def-numeri_primi"/>). I naturali non sono però un dominio: se consideriamo il dominio degli interi relativi, dal momento che gli elementi invertibili di questo dominio sono <m>1</m> e <m>-1</m>, abbiamo che ogni numero è associato solo al proprio opposto (oltre che a sé stesso). Di conseguenza, se <m>p</m> è un numero primo nel senso elementare del termine, allora i suoi divisori sono <m>1</m>, <m>-1</m>, <m>p</m> e <m>-p</m>, cioè sono invertibili o associati a <m>p</m>: dunque, <m>p</m> (e, analogamente, <m>-p</m>) è, nella terminologia appena introdotta, un elemento irriducibile. Come vedremo però, nel caso degli interi (e anche in altri casi significativi) la nozione di primo e di irriducibile sono equivalenti. In generale ciò non è vero, come mostra l'<xref ref="ex-irriducibile_non_primo"/>.
+      </p>
+    </remark>
+
+    <proposition xml:id="prop-primo_e_irriducibile">
+      <statement>
+        <p>
+          Ogni elemento primo è irriducibile.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sia <m>p</m> primo (in particolare, <m>p\ne0</m> e <m>p</m> non è invertibile). Grazie alla <xref ref="prop-irriducibile"/>, per mostrare che <m>p</m> è irriducibile dobbiamo provare che, ogni volta che si ha <m>p=ab</m>, uno tra <m>a</m> e <m>b</m> è associato a <m>p</m>. Poiché <m>p=ab</m>, a maggior ragione <m>p\mid ab</m>: dalla definizione di primo segue che <m>p</m> divide almeno uno fra <m>a</m> e <m>b</m>, ad esempio <m>a</m>. D'altra parte <m>a</m> divide <m>p</m> e, quindi <m>a</m> e <m>p</m> sono associati.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <example xml:id="ex-irriducibile_non_primo">
+      <statement>
+        <p>
+          Consideriamo il sottoinsieme <m>\Interi[\sqrt{5}i]</m> dei numeri complessi formato dagli elementi del tipo <m>a+b\sqrt{5}i</m> con <m>a</m> e <m>b</m> interi. Non è difficile mostrare che <m>\Interi[\sqrt{5}i]</m> è un sottoanello di <m>\Complessi</m> ed è, quindi, un dominio. Definiamo una mappa <m>N</m> da <m>\Interi[\sqrt{5}i]</m> in <m>\Naturali</m> nel modo seguente <m>N(a+b\sqrt{5}i)\coloneqq a^{2}+5b^{2}</m>: in altri termini, <m>N</m> è il quadrato dell'usuale norma complessa. Di conseguenza, se <m>z_{1}</m> e <m>z_{2}</m> sono elementi di <m>\Interi[\sqrt{5}i]</m> si ha <m>N(z_{1}z_{2})=N(z_{1})N(z_{2})</m>. Ciò implica che, se <m>z</m> divide <m>w</m> in <m>\Interi[\sqrt{5}i]</m>, allora <m>N(z)</m> divide <m>N(w)</m> in <m>\Naturali</m>.
+          In particolare, se <m>z</m> è un elemento invertibile in <m>\Interi[\sqrt{5}i]</m>, cioè un divisore di <m>1</m>, allora <m>N(z)=1</m>. Viceversa, posto <m>a^{2}+5b^{2}=1</m>, si vede facilmente che gli unici elementi <m>z</m> per cui si ha <m>N(z)=1</m> sono <m>1</m> e <m>-1</m>, che sono effettivamente invertibili e sono, dunque, gli unici elementi invertibili di <m>\Interi[\sqrt{5}i]</m>.
+        </p>
+
+        <p>
+          Mostriamo ora che se <m>z</m> è un elemento di <m>\Interi[\sqrt{5}i]</m> tale per cui <m>N(z)=9</m>, allora <m>z</m> è irriducibile. Ovviamente, <m>z\ne 0</m> e <m>z</m> non è invertibile. Se <m>w</m> è un divisore di <m>z</m> allora <m>N(w)</m> divide <m>N(z)</m> e, quindi, <m>N(w)</m> può assumere i valori <m>9</m>, <m>3</m> e <m>1</m>. Se <m>N(w)=9</m> allora <m>z=wd</m> con <m>N(d)=1</m> , cioè <m>d</m> è invertibile e <m>w</m> è associato a <m>z</m>; se <m>N(w)=1</m> allora <m>w</m> è invertibile; infine, l'equazione <m>a^{2}+5b^{2}=3</m> non ha soluzioni intere e, quindi, non può essere <m>N(w)=3</m>: abbiamo così mostrato che un divisore di <m>z</m> è associato a <m>z</m> o invertibile.
+        </p>
+
+        <p>
+          Consideriamo ora l'uguaglianza <m>3\cdot 3=(2+\sqrt{5}i)(2-\sqrt{5}i)</m>. Notiamo che <m>N(3)=N(2+\sqrt{5}i)=N(2-\sqrt{5}i)=9</m> e, pertanto, <m>3</m>, <m>2+\sqrt{5}i</m> e <m>2-\sqrt{5}i</m> sono irriducibili: ora <m>3</m> divide <m>(2+\sqrt{5}i)(2-\sqrt{5}i)</m> ma non divide nessuno dei due fattori e non è quindi primo. Abbiamo così mostrato che esistono elementi irriducibili che non sono primi.
+        </p>
+
+      </statement>
+    </example>
+
+    <exercises xml:id="exercises-divisibilita">
+
+      <exercise xml:id="exercise-unico_invertibile">
+        <statement>
+          <p>
+            Dimostrare che la relazione di divisibilità in un dominio <m>D</m> è una relazione d'ordine se e solo se <m>1</m> è l'unico elemento invertibile di <m>D</m>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Supponiamo che <m>1</m> sia l'unico invertibile di <m>D</m> e siano <m>a</m> e <m>b</m> due elementi di <m>D</m> tali che <m>a\mid b</m> e <m>b\mid a</m>: ma allora <m>a</m> e <m>b</m> sono associati ed esiste un invertibile <m>u</m> tale che <m>a=ub</m>. Poiché l'unico invertibile è <m>1</m>, si ha <m>u=1</m> e <m>a=1b=b</m>. Vale, dunque, la proprietà antisimmetrica.
+          </p>
+
+          <p>
+            Viceversa supponiamo che valga la proprietà antisimmetrica e sia <m>u</m> un elemento invertibile di <m>D</m>. Poiché gli elementi invertibili si dividono reciprocamente, abbiamo che <m>u\mid 1</m> e <m>1\mid u</m>: per la proprietà antisimmetrica abbiamo che <m>u=1</m>, cioè <m>1</m> è l'unico invertibile.
+          </p>
+        </solution>
+
+      </exercise>
+
+      <exercise xml:id="exercise-irriducibile">
+        <statement>
+          <p>
+            Dimostrare la <xref ref="prop-irriducibile"/>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Dimostriamo che la <xref ref="item-p_irriducibile">Condizione</xref> implica la <xref ref="item-divisore_irriducibile_associato">Condizione</xref>. Sia allora <m>p=ab</m>, e, dunque, <m>a</m> e <m>b</m> sono divisori di <m>p</m>: per la <xref ref="item-p_irriducibile">Condizione</xref> sono invertibili o associati a <m>p</m>. Gli elementi <m>a</m> e <m>b</m> non possono essere entrambi invertibili perché altrimenti anche il loro prodotto <m>ab</m> lo sarebbe. Dunque, almeno uno tra essi è associato a <m>p</m>.
+          </p>
+
+          <p>
+            Dimostriamo che la <xref ref="item-divisore_irriducibile_associato">Condizione</xref> implica la <xref ref="item-divisore_irriducibile_invertibile">Condizione</xref>. Sia allora <m>p=ab</m>: sappiamo che almeno uno tra <m>a</m> e <m>b</m> è associato a <m>p</m>, ad esempio sia <m>a</m> associato a <m>p</m>. Per la <xref ref="prop-associati_differiscono_invertibile"/>, abbiamo che <m>p=au</m> per qualche invertibile <m>u</m>: ma allora <m>au=ab</m> e, essendo <m>a\ne0</m> (altrimenti <m>p=au=0</m>), per l'<xref ref="rem-anello_intero_cancellazione"/> abbiamo <m>u=b</m>, cioè <m>b</m> è invertibile.
+          </p>
+
+          <p>
+            Dimostriamo che la <xref ref="item-divisore_irriducibile_invertibile">Condizione</xref> implica la <xref ref="item-p_irriducibile">Condizione</xref>. Sia allora <m>a</m> un divisore di <m>p</m>: dobbiamo mostrare che <m>a</m> è invertibile o associato a <m>p</m>. Sappiamo che esiste <m>b</m> tale che <m>p=ab</m>. Poiché vale la <xref ref="item-divisore_irriducibile_invertibile">Condizione</xref> almeno uno tra <m>a</m> e <m>b</m> è invertibile: nel primo caso <m>a</m> è, per l'appunto, invertibile, nel secondo caso è associato a <m>p</m>.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Verificare che <m>\Interi[\sqrt{5}i]</m> come nell'<xref ref="ex-irriducibile_non_primo"/> è un sottoanello di <m>\Complessi</m>.
+          </p>
+        </statement>
+      </exercise>
+
+    </exercises>
+
+  </section>
+
+  <section xml:id="sec-fattorizzazione">
+    <title>Fattorizzazione</title>
+
+    <p>
+      Siamo ora pronti a introdurre dei domini in cui vale una proprietà simile al <xref ref="thm-teorema_fondamentale_aritmetica" text="title"/>.
+    </p>
+
+    <definition xml:id="def-UFD">
+      <statement>
+        <p>
+          Un dominio <m>D</m> è detto a <term>fattorizzazione unica</term> (in breve, UFD<fn>Dall'inglese Unique Factorization Domain.</fn>) se ogni elemento <m>a</m> con <m>a\ne 0</m> e non invertibile si scrive come prodotto di irriducibili in maniera essenzialmente unica, vale a dire che se <m>a=p_{1}p_{2}\cdots p_{r}</m> e <m>a=q_{1}q_{2}\cdots q_{s}</m> sono due fattorizzazioni di <m>a</m> in irriducibili allora <m>r=s</m> e, pur di riordinare i <m>q_{i}</m>, si ha <m>p_{1}\sim q_{1}</m>, <m>\ldots</m>, <m>p_{r}\sim q_{r}</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <example>
+      <statement>
+        <p>
+          Il primo esempio di dominio a fattorizzazione unica è, dunque, <m>\Interi</m>. Banalmente ogni campo può essere visto come un dominio a fattorizzazione unica: non ci sono infatti elementi diversi da <m>0</m> e non invertibili da fattorizzare (in particolare, non ci sono elementi irriducibili).
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Per dare esempi più significativi avremo bisogno di qualche caratterizzazione dei domini a fattorizzazione unica.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Nell'<xref ref="ex-irriducibile_non_primo"/> abbiamo fattorizzato <m>9</m> come prodotto di irriducibili in due modi essenzialmente diversi e, pertanto, <m>\Interi[\sqrt{5}i]</m> non è un dominio a fattorizzazione unica anche se, usando la mappa <m>N</m>, non è difficile mostrare che ogni elemento non nullo e non invertibile si fattorizza come prodotto di irriducibili (si veda <xref ref="exercise-norma"/>).
+        </p>
+      </statement>
+    </example>
+
+    <definition xml:id="def-lunghezza">
+      <statement>
+        <p>
+          Sia <m>a=p_{1}p_{2}\cdots p_{r}</m> un elemento non nullo e non invertibile di un dominio a fattorizzazione unica <m>D</m>, scritto come prodotto di irriducibili <m>p_{i}</m>. Chiamiamo <term>lunghezza</term> di <m>a</m> il numero <m>\len{a}\coloneqq r</m>. Per completezza poniamo poi <m>\len{a}\coloneqq 0</m> per <m>a</m> invertibile, mentre non è definita la lunghezza di <m>0</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      La definizione appena data è ben posta perché due differenti fattorizzazioni in fattori irriducibili dello stesso elemento in un dominio a fattorizzazione unica contengono lo stesso numero di fattori.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          In <m>\Interi</m>, si ha, <m>\len{1}=\len{-1}=0</m>, <m>\len{12}=3</m> (perché <m>12=2\cdot2\cdot3</m>) e <m>\len{16}=4</m> (perché <m>16=2\cdot2\cdot2\cdot2</m>).
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Raccogliamo le principali proprietà della lunghezza, lasciandone la dimostrazione per esercizio (<xref ref="exercise-lunghezza"/>).
+    </p>
+
+    <proposition xml:id="prop-lunghezza">
+      <statement>
+        <p>
+          Siano <m>a</m> e <m>b</m> elementi non nulli di un dominio a fattorizzazione unica.
+          <ol>
+            <li>
+              <p>
+                <m>a</m> è irriducibile se e solo se <m>\len{a}=1</m>;
+              </p>
+            </li>
+            <li xml:id="item-lunghezza_additiva">
+              <p>
+                <m>\len{ab}=\len{a}+\len{b}</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                se <m>a</m> divide <m>b</m> allora <m>\len{a}\le\len{b}</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                se <m>a</m> e <m>b</m> sono associati allora <m>\len{a}=\len{b}</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                se <m>a</m> divide <m>b</m> strettamente allora <m>\len{a} \lt\len{b}</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </proposition>
+
+    <p>
+      Quando scriviamo la fattorizzazione di un numero intero, possiamo raccogliere le diverse occorrenze dello stesso primo. Ad esempio, data la fattorizzazione <m>360=5\cdot2\cdot3\cdot2\cdot3\cdot2</m>, la riscriviamo semplicemente come <m>360=2^{3}3^{2}5</m>. Possiamo fare qualcosa di analogo nei domini a fattorizzazione unica: se <m>a=p_{1}p_{2}\cdots p_{r}</m>, possiamo innanzitutto cercare tutte le occorrenze di irriducibili associati a <m>p_{1}</m>, rimpiazzarle con <m>p_{1}</m> (ottenendo un elemento associato ad <m>a</m>) e raccogliendone l'opportuna potenza, poi fare lo stesso con gli altri
+      irriducibili fino ad arrivare a una scrittura del tipo <m>a'=p_{1}^{\alpha_{1}}p_{2}^{\alpha_{2}}\cdots p_{t}^{\alpha_{t}}</m> con <m>p_{1}</m>, <m>p_{2}</m>, <m>\ldots</m>, <m>p_{t}</m> irriducibili a due a due non associati e <m>a'</m> associato ad <m>a</m>. Permettendo inoltre di assegnare valore <m>0</m> agli esponenti <m>\alpha_{i}</m> possiamo dire che ogni elemento non nullo del dominio è associato a un elemento di questo tipo (ponendo tutti gli <m>\alpha_{i}</m> uguali a <m>0</m> si ottiene <m>1</m>, associato a tutti gli elementi invertibili). Notiamo inoltre che la lunghezza di <m>a'</m> (e, quindi, di <m>a</m>) è uguale a <m>\alpha_{1}+\alpha_{2}+\cdots+\alpha_{t}</m>.
+    </p>
+
+    <p>
+      Vogliamo ora mostrare come in un dominio a fattorizzazione unica sia possibile descrivere tutti i divisori di un elemento qualsiasi. Iniziamo con il
+    </p>
+
+    <lemma xml:id="lem-divisori_primi_in_UFD">
+      <statement>
+        <p>
+          Sia <m>a</m> un elemento non nullo e non invertibile di un dominio a fattorizzazione unica <m>D</m> e sia <m>a=p_{1}p_{2}\cdots p_{r}</m> una sua fattorizzazione in irriducibili. Un elemento irriducibile <m>p</m> divide <m>a</m> se e solo se è associato a uno dei <m>p_{i}</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Se <m>p</m> è associato a uno dei <m>p_{i}</m> chiaramente divide <m>a</m>.
+        </p>
+
+        <p>
+          Viceversa, se <m>p</m> divide <m>a</m>, abbiamo che <m>a=pb</m> per qualche <m>b</m> non nullo in <m>D</m>. Se <m>b</m> è invertibile, allora <m>a</m> è associato a <m>p</m> e, pertanto, <m>a</m> è irriducibile, cioè <m>a=p_{1}</m>. Se invece <m>b</m> non è invertibile, allora, scritto <m>b=q_{1}q_{2}\cdots q_{s}</m> come prodotto di irriducibili, abbiamo che <m>pq_{1}q_{2}\cdots q_{s}</m> è un'altra fattorizzazione in irriducibili di <m>a</m>. Pertanto <m>p</m> è associato a uno dei <m>p_{i}</m>.
+        </p>
+      </proof>
+
+    </lemma>
+
+    <proposition xml:id="prop-divisori_UFD">
+      <statement>
+        <p>
+          Sia <m>a</m> un elemento non nullo di un dominio a fattorizzazione unica <m>D</m> e sia <m>a'=p_{1}^{\alpha_{1}}\cdots p_{t}^{\alpha_{t}}</m> un elemento di <m>D</m> associato ad <m>a</m> con <m>p_{1}</m>, <m>\ldots</m>, <m>p_{t}</m> elementi irriducibili a due a due non associati e <m>\alpha_{1}</m>, <m>\ldots</m>, <m>\alpha_{t}</m> interi non negativi. I divisori di <m>a</m> sono tutti e soli quelli associati agli elementi del tipo <m>p_{1}^{\beta_{1}}\cdots p_{t}^{\beta_{t}}</m> con <m>\beta_{i}\le\alpha_{i}</m> per ogni <m>i</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          I divisori di <m>a</m> e <m>a'</m> sono gli stessi e, quindi, possiamo ragionare direttamente su <m>a'</m>. Chiaramente gli elementi del tipo <m>p_{1}^{\beta_{1}}\cdots p_{t}^{\beta_{t}}</m> con <m>\beta_{i}\le\alpha_{i}</m> per ogni <m>i</m> e i loro associati sono divisori di <m>a'</m>.
+        </p>
+
+        <p>
+          Viceversa, sia <m>d</m> un divisore di <m>a'</m>. Chiaramente <m>d\ne0</m>. Procediamo per induzione sulla lunghezza di <m>d</m>. Se <m>\len{d}=0</m>, cioè <m>d</m> è invertibile, allora è associato a <m>p_{1}^{0}\cdots p_{t}^{0}</m>. Sia allora <m>\len{d}>0</m> e sia <m>p</m> un divisore irriducibile di <m>d</m> (e, quindi, di <m>a'</m>). Per il <xref ref="lem-divisori_primi_in_UFD"/>, l'elemento <m>p</m> è associato a uno dei <m>p_{i}</m> il cui esponente <m>\alpha_{i}</m> è diverso da <m>0</m>, ad esempio sia <m>p\sim p_{1}</m>. Allora <m>p_{1}</m> divide <m>d</m>, cioè <m>d=p_{1}d'</m> con <m>\len{d'}=\len{d}-1</m>.
+          Poiché <m>d'</m> divide <m>p_{1}^{\alpha_{1}-1}p_{2}^{\alpha_{2}}\cdots p_{t}^{\alpha_{t}}</m>, per ipotesi induttiva <m>d'</m> è associato a <m>p_{1}^{\beta_{1}}\cdots p_{t}^{\beta_{t}}</m> con <m>\beta_{1}\le\alpha_{1}-1</m> e <m>\beta_{i}\le\alpha_{i}</m> per <m>2\le i\le t</m>. Ma allora <m>d=p_{1}d'</m> è associato a <m>p_{1}^{\beta_{1}+1}p_{2}^{\beta_{2}}\cdots p_{t}^{\beta_{t}}</m> e <m>\beta_{1}+1\le\alpha_{1}</m> e <m>\beta_{i}\le\alpha_{i}</m> per <m>2\le i\le t</m>.
+        </p>
+      </proof>
+    </proposition>
+
+    <p>
+      Il massimo comun divisore tra due numeri interi <m>a</m> e <m>b</m> è definito elementarmente come il più grande <m>d</m> tra i numeri che dividono sia <m>a</m> che <m>b</m>. Questa definizione non si può estendere a un dominio qualunque perché, in generale, non ha senso dire che un elemento è più grande di un altro. Abbiamo però visto che si può definire il massimo comun divisore coinvolgendo solo la divisibilità (<xref ref="def-massimo_comun_divisore_anche_per_0"/>).
+    </p>
+
+    <definition xml:id="def-massimo_comun_divisore_in_dominio">
+      <statement>
+        <p>
+          Dati due elementi <m>a</m> e <m>b</m> in un dominio <m>D</m>, un elemento <m>d</m> è detto <term>massimo comun divisore</term> di <m>a</m> e <m>b</m> se:
+          <ul>
+            <li>
+              <p>
+                <m>d\mid a</m> e <m>d\mid b</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                se <m>c</m> è un elemento di <m>D</m> tale che <m>c\mid a</m> e <m>c\mid b</m>, allora <m>c\mid d</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      La definizione appena data non ci garantisce né l'esistenza né l'unicità di un massimo comun divisore. Abbiamo però la seguente proposizione, la cui dimostrazione lasciamo per esercizio.
+    </p>
+
+    <proposition xml:id="prop-essenziale_unicita_MCD">
+      <statement>
+        <p>
+          Se <m>d</m> e <m>d'</m> sono entrambi massimo comun divisore di <m>a</m> e <m>b</m> allora <m>d</m> e <m>d'</m> sono associati.  Viceversa, se <m>d</m> è massimo comun divisore di <m>a</m> e <m>b</m> e <m>d'</m> è associato a <m>d</m> allora <m>d'</m> è pure massimo comun divisore di <m>a</m> e <m>b</m>.
+        </p>
+
+        <p>
+          <notation>
+            <usage><m>(a,b)</m></usage>
+            <description>massimo comun divisore di <m>a</m> e <m>b</m></description>
+          </notation>
+          Nel caso in cui due elementi <m>a</m> e <m>b</m> abbiano un massimo comun divisore <m>d</m>, useremo il simbolo <m>(a,b)</m> per indicare un tale elemento. Useremo la notazione <m>d\sim(a,b)</m> per enfatizzare il fatto che un massimo comun divisore è determinato a meno di associati: con abuso di linguaggio diremo che <m>d</m> è <q>il</q> massimo comun divisore.
+        </p>
+      </statement>
+    </proposition>
+
+    <p>
+      Come già fatto per gli interi, possiamo poi definire il massimo comun divisore di un numero qualunque di elementi. Anch'esso, se esiste, sarà determinato a meno di associati.
+    </p>
+
+    <definition xml:id="def-massimo_comun_divisore_in_dominio_piu_elementi">
+      <statement>
+        <p>
+          Dati <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n}</m> in un dominio <m>D</m>, un elemento <m>d</m> è detto massimo comun divisore di <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n}</m> se:
+          <ul>
+            <li>
+              <p>
+                <m>d\mid a_{i}</m> per ogni <m>i</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                se <m>c</m> è un elemento di <m>D</m> tale che <m>c\mid a_{i}</m> per ogni <m>i</m>, allora <m>c\mid d</m>.
+              </p>
+            </li>
+          </ul>
+          Scriveremo allora <m>d\sim(a_{1},\ldots,a_{n})</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <proposition xml:id="prop-MCD_molti_elementi">
+      <statement>
+        <p>
+          Sia <m>D</m> un dominio in cui ogni coppia di elementi sia dotata di massimo comun divisore. Dati <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n}</m> in <m>D</m>, esiste il loro massimo comun divisore.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Procediamo per induzione su <m>n</m>. Ovviamente, la proprietà è vera per <m>n=1</m> e <m>n=2</m>.
+        </p>
+          
+        <p>
+          Sia allora <m>n \gt 2</m>. Per ipotesi induttiva <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n-1}</m> hanno un massimo comun divisore, sia <m>e</m>. Consideriamo allora il massimo comun divisore <m>d</m> di <m>e</m> e <m>a_{n}</m> e dimostriamo che  è massimo comun divisore di <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n}</m>. Poiché <m>d</m> divide <m>e</m> abbiamo che <m>d</m> divide <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n-1}</m>. D'altra parte <m>d</m> divide <m>a_{n}</m> e, quindi, <m>d</m> divide ciascun <m>a_{i}</m>. Se ora <m>c</m> è un elemento che divide tutti gli <m>a_{i}</m>, in particolare, divide <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n-1}</m> e, quindi, divide il loro massimo comun divisore <m>e</m>: dunque, <m>c</m> divide <m>e</m> e <m>a_{n}</m> e, quindi, il loro massimo comun divisore <m>d</m>.
+        </p>
+      </proof>
+    </proposition>
+
+
+    <definition xml:id="def-coprimi_in_dominio">
+      <statement>
+        <p>
+          Due elementi <m>a</m> e <m>b</m> in un dominio si dicono <term>coprimi</term> se i loro divisori comuni sono tutti e soli gli elementi invertibili, cioè se <m>(a,b)</m> esiste e <m>(a,b)\sim 1</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Abbiamo detto che le nozioni riguardanti la divisibilità possono essere riformulate in termini di ideali principali. Ciò vale anche per il massimo comun divisore
+    </p>
+
+    <remark xml:id="rem-MCD_ideale">
+      <p>
+        Due elementi <m>a</m> e <m>b</m> hanno massimo comun divisore <m>d</m> se e solo se l'ideale <m>\ideal{d}</m> è il più piccolo ideale principale contenente <m>a</m> e <m>b</m>. In particolare, se l'ideale generato da <m>a</m> e <m>b</m> è principale, un suo generatore è massimo comun divisore di <m>a</m> e <m>b</m>.
+      </p>
+    </remark>
+
+    <p>
+      Ci sono alcuni casi in cui possiamo garantire che due elementi abbiano massimo comun divisore.
+    </p>
+
+    <remark xml:id="rem-MCD_divisore">
+      <p>
+        Se <m>a\mid b</m> allora <m>(a,b)\sim a</m>. In particolare, <m>(a,0)\sim a</m> e <m>(a,u)\sim u</m> per ogni <m>u</m> invertibile. Viceversa, se <m>(a,b)</m> esiste e <m>(a,b)\sim a</m> allora <m>a\mid b</m>.
+      </p>
+    </remark>
+
+    <proposition xml:id="prop-MCD_con_irriducibile">
+      <statement>
+        <p>
+          Sia <m>p</m> irriducibile. Allora <m>(p,a)</m> esiste per ogni <m>a</m> e <m>(p,a)\sim p</m> se <m>p\mid a</m> e <m>(p,a)\sim 1</m> altrimenti.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Se <m>p\mid a</m> sappiamo già che <m>(p,a)\sim p</m>. Supponiamo allora che <m>p\nmid a</m>: i divisori di <m>p</m> sono gli elementi associati a <m>p</m> (che non dividono <m>a</m>) e gli elementi invertibili (che dividono <m>a</m>). I divisori comuni a <m>p</m> e <m>a</m> sono allora tutti e soli gli elementi invertibili e, dunque, uno qualsiasi di essi (ad esempio <m>1</m>) è multiplo di tutti gli altri.
+        </p>
+      </proof>
+    </proposition>
+
+    <p>
+      La proposizione seguente elenca alcune proprietà del massimo comun divisore nell'ipotesi che ogni coppia di elementi del dominio abbia massimo comun divisore (anche se alcune delle proprietà valgono anche con ipotesi più deboli).
+    </p>
+
+    <proposition xml:id="prop-MCD_esiste_sempre">
+      <statement>
+        <p>
+          Siano <m>a</m>, <m>b</m> e <m>c</m> elementi di un dominio <m>D</m> in cui ogni coppia di elementi sia dotata di massimo comun divisore. Allora:
+          <ol>
+            <li>
+              <p>
+                <m>(a,b)\sim(b,a)</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>((a,b),c)\sim(a,(b,c))</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>(ac,bc)\sim (a,b)c</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Le prime due sono immediate. Proviamo allora la terza, notando che il caso in cui <m>c=0</m> segue facilmente dall'<xref ref="rem-MCD_divisore"/>. Supponiamo allora che <m>c\ne0</m> e sia <m>d\sim(a,b)</m>. Ora <m>dc\mid ac</m> e <m>dc\mid bc</m>, cosicché, posto <m>e\sim(ac,bc)</m>, si ha <m>dc\mid e</m>. Sia allora <m>e=fdc</m> per qualche <m>f</m> in <m>D</m>. Dunque, <m>fdc</m> divide <m>ac</m> e poiché <m>c\ne0</m> ciò significa che <m>fd</m> divide <m>a</m>; analogamente, <m>fd</m> divide <m>b</m>. Pertanto <m>fd</m> divide <m>d</m> e, quindi, <m>e=fdc</m> divide <m>dc</m>: sapevamo già che <m>dc</m> divide <m>e</m> e, quindi <m>e\sim dc</m> come richiesto.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <theorem xml:id="thm-in_UFD_MCD">
+      <statement>
+        <p>
+          In un dominio a fattorizzazione unica <m>D</m> ogni coppia di elementi <m>a</m> e <m>b</m> ha massimo comun divisore.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sappiamo già che se uno tra <m>a</m> o <m>b</m> è nullo, il massimo comun divisore esiste.
+        </p>
+        <p>
+          Siano allora che <m>a\ne0</m> e <m>b\ne0</m> e consideriamo due elementi <m>a'\coloneqq p_{1}^{\alpha_{1}}\cdots p_{t}^{\alpha_{t}}</m> e <m>b'\coloneqq p_{1}^{\beta_{1}}\cdots p_{t}^{\beta_{t}}</m> associati ad <m>a</m> e <m>b</m> rispettivamente, con <m>p_{1}</m>, <m>\ldots</m>, <m>p_{t}</m> elementi irriducibili a due a due non associati e gli <m>\alpha_{i}</m> e i <m>\beta_{i}</m> interi non negativi: per ottenere tali espressioni agiamo come nel caso di un singolo elemento con l'avvertenza che se un irriducibile compare nella fattorizzazione di uno ma non dell'altro elemento aggiungiamo un fattore del tipo <m>p_{i}^{0}</m>.
+        </p>
+        <p>
+          I divisori comuni di <m>a</m> e <m>b</m> sono gli stessi dei divisori comuni di <m>a'</m> e <m>b'</m>: per la <xref ref="prop-divisori_UFD"/> sono allora gli elementi associati a <m>p_{1}^{\gamma_{1}}\cdots p_{t}^{\gamma_{t}}</m> con <m>\gamma_{i}\le\alpha_{i}</m> e <m>\gamma_{i}\le\beta_{i}</m> per ogni <m>i</m>. Ma allora, posto <m>\delta_{i}\coloneqq\min(\alpha_{i},\beta_{i})</m> abbiamo che <m>p_{1}^{\delta_{1}}\cdots p_{t}^{\delta_{t}}</m> è un divisore comune ed è multiplo di tutti i divisori comuni, cioè è un massimo comun divisore.
+        </p>
+      </proof>
+
+    </theorem>
+
+    <p>
+      La dimostrazione precedente ricalca il modo in cui spesso si calcola il massimo comun divisore tra numeri interi. Come abbiamo già notato, per trovare il massimo comun divisore tra due interi l'algoritmo di Euclide è decisamente più efficiente.
+    </p>
+
+    <p>
+      Come immediata applicazione della <xref ref="prop-MCD_molti_elementi"/> abbiamo il
+    </p>
+
+    <corollary xml:id="cor-in_UFD_MCD_molti_elementi">
+      <statement>
+        <p>
+          Dati <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n}</m> in un dominio a fattorizzazione unica <m>D</m>, esiste il loro massimo comun divisore.
+        </p>
+      </statement>
+
+    </corollary>
+
+    <example xml:id="ex-dominio_senza_MCD">
+      <statement>
+        <p>
+          Riprendiamo il dominio <m>\Interi[\sqrt{5}i]</m> dell'<xref ref="ex-irriducibile_non_primo"/>. Supponiamo di avere un elemento <m>a</m> tale per cui si abbia <m>N(a)=81</m> e sia <m>a=cd</m> per qualche <m>c</m> e <m>d</m> in <m>\Interi[\sqrt{5}i]</m>. Sappiamo che <m>81=N(c)N(d)</m> e che non ci sono elementi <m>z</m> per cui si ha <m>N(z)=3</m>: le possibilità sono allora che <m>N(c)=N(d)=9</m> o che <m>N(c)=1</m> e <m>N(d)=81</m> (o viceversa). Dal momento che gli unici elementi <m>c</m> per cui si ha <m>N(c)=1</m> sono <m>1</m> e <m>-1</m>, in questo secondo caso avremmo <m>d=a</m> o <m>d=-a</m>.
+        </p>
+
+        <p>
+          Consideriamo ora gli elementi <m>a\coloneqq 9</m> e <m>b\coloneqq 6+3\sqrt{5}i</m>. Abbiamo <m>N(a)=N(b)=81</m>. Per quanto detto in precedenza, se <m>e</m> è un divisore comune di <m>a</m> e <m>b</m> allora <m>N(e)</m> può valere <m>1</m>, <m>9</m> o <m>81</m>: in quest'ultimo caso, tuttavia, dovrebbe essere <m>e=\pm a</m> e <m>e=\pm b</m>, il che non può essere. Notiamo ora che <m>3</m> e <m>2+\sqrt{5}i</m> sono divisori comuni di <m>a</m> e <m>b</m>: infatti, <m>9=3\cdot 3=(2+\sqrt{5}i)(2-\sqrt{5}i)</m> e <m>6+3\sqrt{5}i=3(2+\sqrt{5}i)</m>. Inoltre <m>N(3)=N(2+\sqrt{5}i)=9</m>: l'eventuale massimo comun divisore <m>d</m> di <m>a</m> e <m>b</m> dovrebbe essere loro multiplo ed essere quindi tale che <m>N(d)=9</m>. Ma allora sia <m>3</m> che <m>2+\sqrt{5}i</m> dovrebbero essere associati a <m>d</m> e, quindi, associati fra loro. Di conseguenza, <m>a</m> e <m>b</m> non hanno massimo comun divisore.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      In maniera analoga al massimo comun divisore si può definire il minimo comune multiplo di due elementi.
+    </p>
+
+    <definition xml:id="def-mcm_in_dominio">
+      <statement>
+        <p>
+          Dati due elementi <m>a</m> e <m>b</m> in un dominio <m>D</m>, un elemento <m>m</m> è detto <term>minimo comune multiplo</term> di <m>a</m> e <m>b</m> se:
+          <ul>
+            <li>
+              <p>
+                <m>a\mid m</m> e <m>b\mid m</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                se <m>c</m> è un elemento di <m>D</m> tale che <m>a\mid c</m> e <m>b\mid c</m> allora <m>m\mid c</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Come per il massimo comun divisore, si può mostrare che il minimo comune multiplo di due elementi (se esiste) è determinato a meno di associati. Sostituendo il minimo degli esponenti con il massimo degli esponenti nella dimostrazione del <xref ref="thm-in_UFD_MCD"/> possiamo facilmente provare la
+    </p>
+
+    <proposition xml:id="prop-in_UFD_mcm">
+      <statement>
+        <p>
+          In un dominio a fattorizzazione unica <m>D</m> ogni coppia di elementi <m>a</m> e <m>b</m> ha minimo comune multiplo <m>m</m>. Inoltre, se <m>d</m> è massimo comun divisore di <m>a</m> e <m>b</m> si ha <m>dm\sim ab</m> (in particolare, se <m>a</m> e <m>b</m> sono coprimi si ha <m>m\sim ab</m>).
+        </p>
+      </statement>
+    </proposition>
+
+    <p>
+      Siamo ora pronti a dare un'importante caratterizzazione dei domini a fattorizzazione unica.
+    </p>
+
+    <theorem xml:id="thm-caratterizzazione_UFD">
+      <statement>
+        <p>
+          Sia <m>D</m> un dominio in cui ogni elemento non nullo e non invertibile si scrive come prodotto di irriducibili. Sono equivalenti le condizioni:
+          <ol>
+            <li xml:id="item-UFD">
+              <p>
+                <m>D</m> è un dominio a fattorizzazione unica;
+              </p>
+            </li>
+            <li xml:id="item-MCD">
+              <p>
+                ogni coppia di elementi ha massimo comun divisore;
+              </p>
+            </li>
+            <li xml:id="item-irriducibile_primo">
+              <p>
+                ogni irriducibile è primo.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Per il <xref ref="thm-in_UFD_MCD"/>, la <xref ref="item-UFD">Condizione</xref> implica la <xref ref="item-MCD">Condizione</xref>.
+        </p>
+
+        <p>
+          Supponiamo che valga la <xref ref="item-MCD">Condizione</xref> e mostriamo che vale la <xref ref="item-irriducibile_primo">Condizione</xref>. Sia allora <m>p</m> un elemento irriducibile: per provare che <m>p</m> è primo, dobbiamo mostrare che se <m>a</m> e <m>b</m> sono due elementi tali che <m>p\nmid a</m> e <m>p\nmid b</m> allora <m>p\nmid ab</m>. Per la <xref ref="prop-MCD_con_irriducibile"/>, ciò è equivalente a mostrare che se <m>(p,a)\sim 1</m> e <m>(p,b)\sim 1</m> allora <m>(p,ab)\sim 1</m>. Usando ripetutamente le proprietà del massimo comun divisore (<xref ref="prop-MCD_esiste_sempre"/>):
+          <md>
+            (p,ab)\sim((p,pb),ab)\sim(p,(pb,ab))\sim(p,(p,a)b)\sim(p,1b)\sim(p,b)\sim 1
+          </md>.
+          Infine, supponiamo che valga la <xref ref="item-irriducibile_primo">Condizione</xref> e proviamo che vale la <xref ref="item-UFD">Condizione</xref>. Siano allora <m>a=p_{1}p_{2}\cdots p_{r}</m> e <m>a=q_{1}q_{2}\cdots q_{s}</m> due fattorizzazioni in irriducibili dello stesso elemento <m>a</m>. Sia <m>r\le s</m> e procediamo per induzione su <m>r</m>. Se <m>r=1</m> allora <m>a=p_{1}</m> è irriducibile e, di conseguenza, la seconda fattorizzazione deve avere un unico fattore anch'essa e <m>p_{1}=q_{1}</m>. Se <m>r>1</m>, abbiamo che <m>p_{1}</m> divide <m>q_{1}q_{2}\cdots q_{s}</m>: poiché <m>p_{1}</m> è irriducibile e, quindi, primo, abbiamo che <m>p_{1}</m> divide uno dei fattori <m>q_{1}</m>, <m>\ldots</m>, <m>q_{s}</m>.
+          Pur di riordinare possiamo supporre che <m>p_{1}</m> divida <m>q_{1}</m> e, essendo <m>p_{1}</m> e <m>q_{1}</m> irriducibili, ciò implica che <m>p_{1}\sim q_{1}</m>. Esiste allora <m>u</m> invertibile tale che <m>p_{1}u=q_{1}</m>. Abbiamo così <m>p_{1}p_{2}\cdots p_{r}=p_{1}uq_{2}\cdots q_{s}</m> e, semplificando, otteniamo <m>p_{2}\cdots p_{r}=uq_{2}\cdots q_{s}</m> che possiamo riscrivere come <m>p_{2}\cdots p_{r}=q_{2}'\cdots q_{s}</m> dove <m>q_{2}'\coloneqq uq_{2}</m> è associato a <m>q_{2}</m> e, quindi, irriducibile.
+          Per ipotesi induttiva abbiamo allora <m>r-1=s-1</m> (da cui segue <m>r=s</m>) e, pur di riordinare, che <m>p_{2}\sim q_{2}'</m>, <m>\ldots</m>, <m>p_{r}\sim q_{r}</m>: ricordando che abbiamo già mostrato che <m>p_{1}\sim q_{1}</m> e che <m>p_{2}\sim q_{2}'\sim q_{2}</m> abbiamo la tesi.
+        </p>
+      </proof>
+
+    </theorem>
+
+    <remark xml:id="rem-esempio_non_UDF">
+      <p>
+        Riprendiamo ancora una volta il dominio <m>\Interi[\sqrt{5}i]</m>. Per l'<xref ref="exercise-norma"/>, ogni elemento non nullo e non invertibile si fattorizza come prodotto di irriducibili. Nell'<xref ref="ex-irriducibile_non_primo"/> abbiamo mostrato che esistono irriducibili non primi e abbiamo esibito due fattorizzazioni in primi essenzialmente diverse di <m>9</m>. Infine, nell'<xref ref="ex-dominio_senza_MCD"/> abbiamo mostrato che ci sono coppie di elementi che non hanno massimo comun divisore. Pertanto abbiamo mostrato esplicitamente che questo dominio non soddisfa nessuna delle proprietà date dal teorema precedente.
+      </p>
+    </remark>
+
+    <exercises xml:id="exercises-fattorizzazione">
+
+      <exercise xml:id="exercise-norma">
+        <statement>
+          <p>
+            Mostrare che in <m>\Interi[\sqrt{5}i]</m> ogni elemento diverso da <m>0</m> e non invertibile si fattorizza come prodotto di irriducibili.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Sia <m>z</m> un elemento diverso da <m>0</m> e non invertibile: se <m>z</m> è irriducibile abbiamo finito, altrimenti esistono <m>z_{1}</m> e <m>z_{2}</m> non invertibili tali che <m>z=z_{1}z_{2}</m>. Poiché <m>z_{1}</m> e <m>z_{2}</m> non sono invertibili abbiamo <m>N(z_{1}) \gt 1</m> e <m>N(z_{2}) \gt 1</m>: pertanto <m>N(z_{1}) \lt N(z)</m> e <m>N(z_{2}) \lt N(z)</m> e, per induzione su <m>N(z)</m>, possiamo affermare che <m>z_{1}</m> e <m>z_{2}</m> sono prodotto di irriducibili e quindi anche <m>z</m> è prodotto di irriducibili.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise xml:id="exercise-lunghezza">
+        <statement>
+          <p>
+            Dimostrare la <xref ref="prop-lunghezza"/>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Dalla definizione segue immediatamente che un elemento è irriducibile se e solo se ha lunghezza <m>1</m>.
+          </p>
+
+          <p>
+            Per provare il <xref ref="item-lunghezza_additiva"/>, da cui poi seguono tutti gli altri, consideriamo vari casi: se <m>a</m> e <m>b</m> non sono invertibili, allora, scritti <m>a</m> e <m>b</m> come prodotto di irriducibili <m>a=p_{1}p_{2}\cdots p_{r}</m> e <m>b=q_{1}q_{2}\cdots q_{s}</m> si ha <m>ab=p_{1}p_{2}\cdots p_{r}q_{1}q_{2}\cdots q_{s}</m> e, dunque, <m>\len{a}=r</m>, <m>\len{b}=s</m> e <m>\len{ab}=r+s</m>, come richiesto. Se <m>a</m> e <m>b</m> sono entrambi invertibili, allora anche <m>ab</m> è invertibile e, dunque, si ha <m>\len{a}=\len{b}=\len{ab}=0</m>. Se uno dei due è invertibile, ad esempio <m>a</m> e l'altro no, allora, scritto <m>b</m> come prodotto di irriducibili <m>b=q_{1}q_{2}\cdots q_{r}</m>, si ha che <m>ab</m> può essere scritto come prodotto di irriducibili nel modo seguente <m>ab=q_{1}'q_{2}\cdots q_{r}</m> dove <m>q_{1}'=aq_{1}</m> è irriducibile perché associato a <m>q_{1}</m>: dunque, <m>\len{a}=0</m> e <m>\len{b}=\len{ab}=r</m>.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise xml:id="exercise-raccoglimento_MCD">
+        <statement>
+          <p>
+            Siano <m>a</m> e <m>b</m> due elementi di un dominio <m>D</m> che hanno un massimo comun divisore <m>d</m> con <m>d\ne0</m>. Mostrare che se <m>a'</m> e <m>b'</m> sono elementi di <m>D</m> tali che <m>a=da'</m> e <m>b=db'</m> allora <m>a'</m> e <m>b'</m> sono coprimi.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="exercise-divisore_coprimo_con_fattore">
+        <statement>
+          <p>
+            Siano <m>a</m>, <m>b</m> e <m>c</m> elementi in dominio a fattorizzazione unica <m>D</m> tali che <m>a</m> e <m>b</m> sono coprimi e <m>a\mid bc</m>. Mostrare che <m>a\mid c</m>.
+          </p>
+        </statement>
+
+        <hint>
+          <p>
+            Distinguere i casi in cui <m>a=0</m> e <m>a\ne 0</m>: se <m>a\ne 0</m> procedere per induzione sulla lunghezza di <m>a</m>.
+          </p>
+        </hint>
+      </exercise>
+
+    </exercises>
+
+  </section>
+
+  <section xml:id="sec-PID_euclidei">
+    <title>Domini a ideali principali e domini euclidei</title>
+
+    <definition xml:id="def-PID">
+      <statement>
+        <p>
+          Un dominio in cui tutti gli ideali sono principali è detto <term>dominio a ideali principali</term> (in breve, PID<fn>Dall'inglese Principal Ideal Domain.</fn>).
+        </p>
+      </statement>
+    </definition>
+
+    <proposition xml:id="prop-PID_Noetheriani">
+      <statement>
+        <p>
+          In un dominio a ideali principali <m>D</m>, ogni famiglia non vuota <m>\mathcal{F}</m> di ideali ammette un elemento massimale.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sia <m>I_{1}</m> un elemento di <m>\mathcal{F}</m>: se <m>I_{1}</m> è massimale in <m>\mathcal{F}</m>, abbiamo finito, altrimenti esiste un elemento <m>I_{2}</m> in <m>\mathcal{F}</m> tale che <m>I_{1}\subsetneq I_{2}</m>. Procedendo così, costruiamo una catena strettamente ascendente di ideali <m>I_{1}\subsetneq I_{2}\subsetneq I_{3}\subsetneq \cdots</m>. Se non trovassimo mai un ideale massimale, il procedimento non avrebbe termine: mostriamo quindi che ciò non può avvenire. Posto <m>I\coloneqq \bigcup_{j}I_{j}</m>, questo è un ideale di <m>D</m>: infatti, è non vuoto e se <m>a</m> e <m>b</m> sono due elementi di <m>I</m> e <m>c</m> un elemento di <m>D</m>, sappiamo che <m>a\in I_{t}</m> e <m>b\in I_{u}</m> per qualche <m>t</m> e <m>u</m>; detto <m>m</m> il massimo di <m>t</m> e <m>u</m> abbiamo che <m>a</m> e <m>b</m> sono elementi di <m>I_{m}</m> e, di conseguenza, <m>a+b\in I_{m}\subseteq I</m> e <m>ac\in I_{t}\subseteq I</m>.
+        </p>
+
+        <p>
+          Ora <m>I</m> è un ideale principale generato da un suo certo elemento <m>b</m>. Ma allora <m>b\in I_{k}</m> per qualche <m>k</m>: pertanto <m>I=\ideal{b}\subseteq I_{k}\subseteq I_{k+1}\subseteq I</m> da
+          cui segue <m>I_{k}=I_{k+1}</m>, contro il modo in cui abbiamo costruito la sequenza di ideali <m>I_{j}</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <proposition xml:id="prop-MCD_in_PID">
+
+      <idx><h>Bezout</h><h>identità di</h></idx>
+      <idx><h>Identità di Bezout</h><h>in un PID</h></idx>
+
+      <statement>
+        <p>
+          In un dominio a ideali principali <m>D</m> ogni coppia di elementi <m>a</m> e <m>b</m> ammette massimo comun divisore <m>d</m> ed esistono elementi <m>u</m> e <m>v</m> in <m>D</m> tali che valga un'identità di Bezout: <m>d=au+bv</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          L'ideale generato da <m>a</m> e <m>b</m> è un ideale principale generato da un certo elemento <m>d</m>: grazie all'<xref ref="rem-MCD_ideale"/> sappiamo che <m>d</m> è massimo comun divisore di <m>a</m> e <m>b</m>.
+        </p>
+
+        <p>
+          Per la <xref ref="prop-elementi_ideale_generato_anello_commutativo"/>, <m>d</m>, essendo un elemento dell'ideale generato da <m>a</m> e <m>b</m>, può essere espresso nella forma <m>d=au+bv</m> per opportuni <m>u</m> e <m>v</m> in <m>D</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      In modo analogo si prova il
+    </p>
+
+    <corollary xml:id="cor-multi_bezout">
+      <statement>
+        <p>
+          Dati <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n}</m> in un dominio a ideali principali <m>D</m>, il loro massimo comun divisore <m>d</m> esiste e può essere espresso nella forma
+          <md>
+            d\coloneqq a_{1}u_{1}+a_{2}u_{2}+\cdots+a_{n}u_{n}
+          </md>
+          per opportuni <m>u_{1}</m>, <m>u_{2}</m>, <m>\ldots</m>, <m>u_{n}</m> in <m>D</m>.
+        </p>
+      </statement>
+    </corollary>
+
+    <theorem xml:id="thm-PID_UFD">
+      <statement>
+        <p>
+          Un dominio a ideali principali <m>D</m> è un dominio a fattorizzazione unica.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Grazie al <xref ref="thm-caratterizzazione_UFD"/> e alla <xref ref="prop-MCD_in_PID"/> è sufficiente mostrare che ogni elemento non nullo e non invertibile si esprime come prodotto di irriducibili. Supponiamo, per assurdo, che esista qualche elemento per cui ciò non sia vero e consideriamo la famiglia di ideali generati da tali elementi. Per la <xref ref="prop-PID_Noetheriani"/>, esiste un ideale massimale <m>\ideal{a}</m> in questa famiglia: in particolare, <m>a</m> non è un elemento irriducibile e, quindi, esistono <m>b</m> e <m>c</m> tali che <m>a=bc</m> con <m>b</m> e <m>c</m> non associati ad <m>a</m> e non invertibili. Ciò significa che gli ideali <m>\ideal{b}</m> e <m>\ideal{c}</m> contengono strettamente <m>\ideal{a}</m>. Per la massimalità di <m>\ideal{a}</m> gli elementi <m>b</m> e <m>c</m> si possono esprimere come prodotto di irriducibili: ma allora <m>a=bc</m> è prodotto di irriducibili.
+        </p>
+      </proof>
+
+    </theorem>
+
+    <p>
+      Finora abbiamo visto alcune proprietà dei domini a ideali principali ma non ne abbiamo presentato alcun esempio. Per far ciò, introduciamo una classe di domini i cui membri sono, in particolare, domini a ideali principali.
+    </p>
+
+    <definition xml:id="def-dominio_euclideo">
+      <statement>
+        <p>
+          Un dominio <m>D</m> è detto <term>euclideo</term> se esiste una funzione <m>\euclidean\colon D\setminus\{0\}\to\Naturali</m> tale che per ogni <m>a</m> e <m>b</m> in <m>D</m> con <m>b\ne0</m> esistono <m>q</m> e <m>r</m> in <m>D</m> tali che
+          <md>
+            a=bq+r
+          </md>
+          e <m>\euclidean(r) \lt \euclidean(b)</m> o <m>r=0</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <example>
+      <statement>
+        <p>
+          Consideriamo l'anello degli interi <m>\Interi</m> e sia <m>\euclidean</m> la funzione valore assoluto. Siano ora <m>a</m> e <m>b</m> due interi con <m>b\ne0</m>. Ovviamente, <m>\abs{b} \gt 0</m> e, quindi, considerando l'usuale divisione con resto, troviamo <m>q'</m> e <m>r</m> tali che <m>a=\abs{b}q'+r</m> con <m>0\le r \lt \abs{b}</m>. Abbiamo allora <m>a=bq+r</m> dove <m>q=q'</m> se <m>b \gt 0</m> e <m>q=-q'</m> se <m>b \lt 0</m>. Dunque, gli interi sono un dominio euclideo rispetto alla funzione valore assoluto.
+        </p>
+        <p>
+          Notiamo che in generale gli elementi <m>q</m> e <m>r</m> non sono univocamente determinati. Ad esempio, dati <m>a\coloneqq 5</m> e <m>b\coloneqq 3</m> in <m>\Interi</m>, possiamo scrivere <m>5=3\cdot 2-1</m> e <m>5=3\cdot 1+2</m> (si noti che <m>\abs{-1} \lt \abs{3}</m> e <m>\abs{2} \lt \abs{3}</m>).
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Nel <xref ref="thm-divisione_tra_polinomi"/> abbiamo descritto la divisione tra polinomi, assumendo che il divisore avesse coefficiente direttivo invertibile. Poiché tutti gli elementi non nulli di un campo sono invertibili, abbiamo immediatamente
+    </p>
+
+    <example xml:id="ex-kx-euclideo">
+      <statement>
+        <p>
+          Sia <m>K</m> un campo e siano <m>f</m> e <m>g</m> due polinomi in <m>K[x]</m> con <m>g</m> diverso da <m>0</m>. Allora esistono e sono univocamente determinati <m>q</m> e <m>r</m> in <m>K[x]</m> tali che
+          <md>
+            f=gq+r
+          </md>
+          con <m>\deg r \lt \deg g</m> o <m>r=0</m>. In particolare, <m>K[x]</m>, è un dominio euclideo rispetto alla funzione grado.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Vediamo ora un esempio meno immediato.
+    </p>
+
+    <example xml:id="ex-interi_gaussiani">
+      <statement>
+        <p>
+          Consideriamo il sottoinsieme <m>\Interi[i]</m> di <m>\Complessi</m> dei cosiddetti <term>interi Gaussiani</term>, vale a dire degli elementi del tipo <m>u+vi</m> con <m>u</m> e <m>v</m> interi. È un semplice esercizio verificare che <m>\Interi[i]</m> è un sottoanello di <m>\Complessi</m> il cui campo dei quozienti è <m>\Razionali[i]</m>, l'insieme degli elementi del tipo <m>u+vi</m> con <m>u</m> e <m>v</m> razionali. Ricordiamo che la norma di un numero complesso <m>z\coloneqq u+vi</m> con <m>u</m> e <m>v</m> reali è definita da <m>\norm{z}\coloneqq\sqrt{u^{2}+v^{2}}</m>: sappiamo che <m>\norm{zw}=\norm{z}\norm{w}</m> per ogni <m>z</m> e <m>w</m> in <m>\Complessi</m>. Dato <m>u+vi</m> in <m>\Razionali[i]</m>, poniamo ora <m>\euclidean(u+vi)\coloneqq u^{2}+v^{2}</m>: ovviamente <m>\euclidean(u+vi)=\norm{u+vi}^{2}</m> e, dunque, <m>\euclidean(zw)=\euclidean(z)\euclidean(w)</m>  per ogni <m>z</m> e <m>w</m> in <m>\Complessi</m>. Inoltre la restrizione di <m>\euclidean</m> a <m>\Interi[i]</m> è una funzione a valori interi non negativi.
+        </p>
+        <p>
+          Siano ora <m>a\coloneqq u_{1}+v_{1}i</m> e <m>b\coloneqq u_{2}+v_{2}i</m> due elementi di <m>\Interi[i]</m> con <m>b\ne0</m>. Vogliamo trovare <m>q</m> e <m>r</m> in <m>\Interi[i]</m> tali che <m>a=bq+r</m> e <m>\euclidean(r) \lt \euclidean(b)</m> o <m>r=0</m>. Sia allora <m>q'\coloneqq\frac{a}{b}</m>: questo è un elemento di <m>\Razionali[i]</m> e, quindi, della forma <m>u_{3}+v_{3}i</m> con <m>u_{3}</m> e <m>v_{3}</m> razionali: possiamo allora scegliere <m>u_{4}</m> e <m>v_{4}</m> interi in modo tale che <m>\abs{u_{3}-u_{4}}\le\frac{1}{2}</m> e <m>\abs{v_{3}-v_{4}}\le\frac{1}{2}</m> (La scelta di <m>u_{4}</m> e <m>v_{4}</m> non è necessariamente unica).
+          Poniamo ora <m>q\coloneqq u_{4}+iv_{4}</m> e <m>r\coloneqq a-bq</m>: ovviamente <m>q</m> e <m>r</m> sono elementi di <m>\Interi[i]</m>. Inoltre <m>r=a-bq=bq'-bq=b(q'-q)</m> e, quindi,
+          <md>
+            <mrow>\euclidean(r) \amp =\euclidean(b)\euclidean(q'-q)=\euclidean(b)((u_{3}-u_{4})^{2}+(v_{3}-v_{4})^{2}) </mrow>
+            <mrow> \amp \le\euclidean(b)((1/2)^{2}+(1/2)^{2}) \lt \euclidean(b) </mrow>
+          </md>
+        </p>
+      </statement>
+    </example>
+
+    <proposition xml:id="prop-euclideo_PID">
+      <statement>
+        <p>
+          Un dominio euclideo <m>D</m> è un dominio a ideali principali.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sia <m>I</m> un ideale di <m>D</m>. Se <m>I=0</m>, l'ideale è ovviamente principale. Se <m>I\ne0</m>, scegliamo tra gli elementi non nulli di <m>I</m> un elemento <m>b</m> tale che <m>\euclidean(b)</m> sia minimo possibile. Mostriamo che <m>b</m> genera <m>I</m>. Sia infatti <m>a</m> un elemento di <m>I</m> e siano <m>q</m> e <m>r</m> in <m>D</m> tali che <m>a=bq+r</m> e <m>\euclidean(r) \lt\euclidean(b)</m> o <m>r=0</m>. Ora <m>r=a-bq\in I</m> quindi, se fosse <m>r\ne0</m>, avremmo <m>\euclidean(r) \lt \euclidean(b)</m> contro la scelta di <m>b</m>. Dunque, <m>r=0</m> cioè <m>a=bq</m>, vale a dire <m>a</m> è multiplo di <m>b</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      Tenuto conto del <xref ref="thm-PID_UFD"/> segue allora immediatamente il:
+    </p>
+
+    <corollary xml:id="cor-euclideo_UFD">
+      <statement>
+        <p>
+          Un dominio euclideo è un dominio a fattorizzazione unica.
+        </p>
+      </statement>
+    </corollary>
+
+    <p>
+      Gli esempi di domini euclidei che abbiamo elencato, e cioè l'anello degli interi <m>\Interi</m>, l'anello dei polinomi <m>K[x]</m> a coefficienti in un campo <m>K</m>, e l'anello degli interi gaussiani <m>\Interi[i]</m> sono, dunque, domini a ideali principali e, di conseguenza, domini a fattorizzazione unica. In particolare, notiamo che se <m>I</m> è un ideale non nullo di <m>K[x]</m> allora <m>I</m> può essere generato da un suo qualsiasi elemento non nullo di grado minimo.
+    </p>
+
+    <p>
+      Diamo ora un esempio di dominio che non è a ideali principali (e, a maggior ragione, non è euclideo).
+    </p>
+
+    <example xml:id="ex-Zx_non_PID">
+      <statement>
+        <p>
+          Consideriamo l'anello dei polinomi <m>\Interi[x]</m>. Si verifica facilmente che l'insieme <m>I</m> dei polinomi a termine noto pari è un ideale. Mostriamo che <m>I</m> non è un ideale principale (e, di conseguenza, <m>\Interi[x]</m> non è un dominio a ideali principali). Si verifica facilmente che non c'è nessun polinomio <m>f</m> in <m>I</m> che divide sia <m>2</m> che <m>x</m> (questi due sono elementi di <m>I</m>): dunque non c'è nessun <m>f</m> in <m>I</m> che genera <m>I</m>.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Dare invece un esempio di un dominio a ideali principali che non sia euclideo è decisamente più complicato: la costruzione di un tale esempio va però oltre lo scopo di questo libro.
+    </p>
+
+    <p>
+      L'<xref ref="alg-euclide"/>, che abbiamo utilizzato per determinare il massimo comun divisore e un'identità di Bezout tra due numeri interi può essere adattato a un dominio euclideo qualunque.
+    </p>
+
+    <algorithm xml:id="alg-euclide_domini">
+      <title>Algoritmo di Euclide per i domini euclidei</title>
+      <idx><h>algoritmo di Euclide</h><h>in un dominio Euclideo</h></idx>
+      <statement>
+        <p>
+          Sia <m>D</m> un dominio euclideo rispetto alla mappa <m>\euclidean</m> e siano <m>a</m> e <m>b</m> due elementi di <m>D</m>. Se <m>b=0</m> allora <m>(a,b)\sim 0</m> e un'identità di Bezout è banalmente data da <m>a\cdot0+b\cdot0=0</m>.
+        </p>
+        <p>
+          Se <m>b\ne0</m> consideriamo la successione di divisioni
+          <md>
+            <mrow>a       \amp = bq+r                   \amp \amp \euclidean(r) \lt \euclidean(b)              </mrow>
+            <mrow>b       \amp = rq_{1}+r_{1}           \amp \amp \euclidean(r_{1}) \lt \euclidean(r)           </mrow>
+            <mrow>r       \amp = r_{1}q_{2}+r_{2}       \amp \amp \euclidean(r_{2}) \lt \euclidean(r_{1})       </mrow>
+            <mrow>        \amp \vdotswithin{=}          \amp \amp                             </mrow>
+            <mrow>r_{k}   \amp = r_{k+1}q_{k+2}+r_{k+2} \amp \amp \euclidean(r_{k+2}) \lt \euclidean(r_{k+1})     </mrow>
+            <mrow>        \amp \vdotswithin{=}          \amp \amp                             </mrow>
+            <mrow>r_{n}   \amp = r_{n+1}q_{n+2}+r_{n+2} \amp \amp \euclidean(r_{n+2}) \lt \euclidean(r_{n+1})   </mrow>
+            <mrow>r_{n+1} \amp = r_{n+2}q_{n+3}+0                                          </mrow>
+          </md>
+          I valori <m>\euclidean(r_{k})</m> formano una catena strettamente decrescente di numeri naturali. Poiché questa successione deve avere termine, ciò significa che dobbiamo arrivare a un resto nullo. L'ultimo resto non nullo <m>r_{n+2}</m> è allora il massimo comun divisore di <m>a</m> e <m>b</m>. Inoltre, dalla successione di equazioni è possibile ottenere un'identità, cosiddetta di Bezout, del tipo
+          <md>
+            d=au+bv
+          </md>
+          per opportuni elementi <m>u</m> e <m>v</m> di <m>D</m>.
+        </p>
+      </statement>
+    </algorithm>
+
+    <example>
+      <statement>
+        <p>
+          Applichiamo l'<xref ref="alg-euclide_domini"/> per trovare il massimo comun divisore tra i polinomi <m>a\coloneqq 4x^{5}-8x^{4}+x^{3}-5x^{2}+7x-2</m> e <m>b\coloneqq 2x^{4}-3x^{3}-2x^{2}-4x+1</m> a coefficienti in <m>\Razionali</m>. Dividendo <m>a</m> per <m>b</m> troviamo
+          <md>
+            a=b(2x-1)+2x^{3}+x^{2}+x-1
+          </md>.
+          Procediamo con le altre divisioni:
+          <md>
+            <mrow> b \amp =(2x^{3}+x^{2}+x-1)(x-2)-x^{2}-x-1</mrow>
+            <mrow> 2x^{3}+x^{2}+x-1 \amp =(-x^{2}-x-1)(-2x+1)+0</mrow>
+          </md>
+          L'ultimo resto non nullo è <m>-x^{2}-x-1</m> che è, dunque, il massimo comun divisore di <m>a</m> e <m>b</m>. Per ottenere un'identità di Bezout procediamo così:
+          <md>
+            <mrow> -x^{2}-x-1 \amp =b-(2x^{3}+x^{2}+x-1)(x-2)</mrow>
+            <mrow> \amp =b-(a-b(2x-1))(x-2)=a(2-x)+b(2x^{2}-5x+3) </mrow>
+          </md>
+        </p>
+      </statement>
+    </example>
+
+    <exercises xml:id="exercises-PID_euclidei">
+
+      <exercisegroup>
+        <introduction>
+          <p>
+            Fattorizzare come prodotto di irriducibili in <m>\Interi[i]</m> i seguenti numeri.
+          </p>
+        </introduction>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>13</m>
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Usiamo la funzione <m>\euclidean</m> definita nell'<xref ref="ex-interi_gaussiani"/>, rispetto a cui <m>\Interi[i]</m> è un dominio euclideo.
+            </p>
+            <p>
+              Sappiamo che <m>13</m> è irriducibile in <m>\Interi</m>, ma non è detto che lo sia in <m>\Interi[i]</m>. Ora <m>\euclidean(13)=13^{2}+0^{2}=169</m> e, dall'<xref ref="ex-interi_gaussiani"/> sappiamo che se <m>13=zw</m> per qualche <m>z</m> e <m>w</m> in <m>\Interi[i]</m>, allora <m>169=\euclidean(13)=\euclidean(z)\euclidean(w)</m>: le possibilità sono che uno tra <m>\euclidean(z)</m> e <m>\euclidean(w)</m> sia <m>1</m> e l'altro <m>169</m> (cioè che uno sia invertibile e l'altro associato a <m>13</m>, caso che non ci interessa) o che <m>\euclidean(z)=\euclidean(w)=13</m>.
+              Sia allora <m>z=a+ib</m> con <m>a</m> e <m>b</m> interi e <m>a^{2}+b^{2}=13</m>. Le uniche possibilità sono <m>a=\pm 2</m> e <m>b=\pm 3</m> o <m>a=\pm 3</m> e <m>b=\pm 2</m>. Ci sono allora <m>8</m> numeri che soddisfano le condizioni: non sappiamo però se siano divisori di <m>13</m>. Per evitare di verificarli tutti a uno a uno, notiamo però che se un numero <m>z</m> è divisore di <m>13</m>, allora tutti i numeri associati a <m>z</m> sono pure divisori di <m>13</m>. Poiché in <m>z</m> ho <m>4</m> elementi invertibili, e cioè <m>1</m>, <m>-1</m>, <m>i</m> e <m>-i</m>, ogni numero non nullo <m>z</m> ha <m>4</m> associati. In particolare, <m>2+3i</m> è associato a <m>-2-3i</m>, <m>-3+2i</m> e <m>3-2i</m>, mentre gli altri quattro sono associati tra loro (uno di essi è <m>2-3i</m>). Abbiamo ridotto i casi da verificare: o <m>z</m> e <m>w</m> sono uno associato a <m>2+3i</m> e l'altro a <m>2-3i</m> o sono associati tra loro e associati a uno di quei due valori.
+              Si vede però che <m>(2+3i)(2-3i)=13</m> e questa è una fattorizzazione in irriducibili di <m>13</m>: infatti, abbiamo già elencato i valori possibili di <m>\euclidean(z)</m> per i divisori <m>z</m> di <m>13</m>.
+            </p>
+          </solution>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>7+17i</m>
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              <m>7+17i=(1-i)(2+3i)(2+3i)</m>
+            </p>
+          </answer>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>-161+14i</m>
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              <m>7(3+2i)(-5+4i)</m>
+            </p>
+          </answer>
+        </exercise>
+
+      </exercisegroup>
+
+      <exercisegroup>
+        <introduction>
+          <p>
+            Trovare il massimo comun divisore in <m>\Interi[i]</m> e un'identità di Bezout per le seguenti coppie di numeri.
+          </p>
+        </introduction>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>7+17i</m> e <m>8-14i</m>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Applichiamo l'<xref ref="alg-euclide_domini" text="title"/> usando la funzione <m>\euclidean</m> e la divisione data nell'<xref ref="ex-interi_gaussiani"/>.
+            </p>
+            <p>
+              Abbiamo <m>\euclidean(7+17i)=7^{2}+17^{2}=338</m> e <m>\euclidean(8-14i)=8^{2}+(-14)^{2}=260</m>. Dividiamo, dunque, <m>7+17i</m> per <m>8-14i</m> in <m>\Razionali[i]</m> e approssimiamo poi il quoziente in <m>\Interi[i]</m>.
+              <md>
+                \frac{7+17i}{8-14i}=\frac{7+17i}{8-14i}\frac{8-14i}{8+14i}=-\frac{182}{260}+\frac{234}{260}i
+              </md>.
+              Approssimiamo questo quoziente con <m>-1+i\coloneqq q</m>. Troviamo allora
+              <md>
+                7+17i=(8-14i)(-1+i)+r
+              </md>-
+              Svolgendo i calcoli troviamo che <m>r=1-5i</m>. Dividiamo ora <m>8-14i</m> per <m>1-5i</m>:
+              <md>
+                \frac{8-14i}{1-5i}=\frac{8-14i}{1-5i}\frac{1+5i}{1+5i}=3+i
+              </md>.
+              Abbiamo dunque
+              <md>
+                8-14i=(1-5i)(3+i)
+              </md>.
+              L'ultimo resto cercato è <m>1-5i</m> che è, dunque, il massimo comun divisore. Possiamo poi scrivere facilmente un'identità di Bezout
+              <md>
+                1+5i=(7+17i)\cdot1+(8-14i)(1-i)
+              </md>.
+            </p>
+          </solution>
+
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>1+31i</m> e <m>11-10i</m>
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              <m>2-3i=(1+31i)(1-i)+(11-10i)(-3i)</m>
+            </p>
+          </answer>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>12+5i</m> e <m>8-3i</m>
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              <m>1=(12+5i)\cdot1+(8-3i)(-1-i)</m>
+            </p>
+          </answer>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>41-i</m> e <m>-25+19i</m>
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              <m>3+7i=(41-i)(-1)+(-25+19i)(-1-i)</m>
+            </p>
+          </answer>
+        </exercise>
+      </exercisegroup>
+
+      <exercisegroup>
+        <introduction>
+          <p>
+            Trovare il massimo comun divisore in <m>\Razionali[x]</m> e un'identità di Bezout per le seguenti coppie di polinomi a coefficienti nel campo dei razionali.
+          </p>
+        </introduction>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>x^{2}-3x+2</m> e <m>x^{3}+x^{2}-x-1</m>
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              <m>x-1=(x^{2}-3x+2)(-\frac{1}{9}x-\frac{4}{9})+(x^{3}+x^{2}-x-1)\frac{1}{9}</m>
+            </p>
+          </answer>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>3x^{3}-2x+1</m> e <m>x^{4}+x^{2}-x</m>
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              <m>1=(3x^{3}-2x+1)(\frac{2}{39}x^{3}+\frac{25}{39}x^{2}+\frac{22}{39}x+1)+(x^{4}+x^{2}-x)(-\frac{2}{13}x^{2}-\frac{25}{13}x-\frac{56}{39})</m>
+            </p>
+          </answer>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>3x^{4}+3x^{3}+2x^{2}-x-1</m> e <m>6x^{5}-9x^{2}-2x^{3}+3</m>
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              <m>x^{2}-\frac{1}{3}=(3x^{4}+3x^{3}+2x^{2}-x-1)(\frac{2}{3}x-\frac{2}{3})+(6x^{5}-9x^{2}-2x^{3}+3)(-\frac{1}{3})</m>
+            </p>
+          </answer>
+        </exercise>
+
+      </exercisegroup>
+
+      <exercise xml:id="exercise-quoziente_PID">
+        <statement>
+          <p>
+            Sia <m>a</m> un elemento non nullo e non invertibile di un dominio a ideali principali <m>D</m> e sia <m>I</m> l'ideale generato da <m>a</m>. Dimostrare che se <m>a</m> è irriducibile allora <m>D/I</m> è un campo, altrimenti non è un dominio.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Supponiamo che <m>a</m> non sia irriducibile, ed esistano allora <m>b</m> e <m>c</m> non associati ad <m>a</m> tali che <m>a=bc</m>: in particolare, <m>b</m> e <m>c</m> non appartengono a <m>I</m>, cioè <m>b+I</m> e <m>c+I</m> sono elementi non nulli di <m>D/I</m>. D'altra parte <m>(b+I)(c+I)=bc+I=a+I</m> è lo zero di <m>D/I</m> che, quindi, non è un dominio.
+          </p>
+          <p>
+            Sia ora <m>s</m> irriducibile. Per il <xref ref="thm-sottoanelli_quoziente"/>, gli ideali di <m>D/I</m> sono del tipo <m>J/I</m> con <m>J</m> ideale di <m>D</m> contenente <m>I</m>: poiché <m>D</m> è un dominio a ideali principali, <m>J=\ideal{h}</m> con <m>h</m> divisore di <m>a</m> e, essendo <m>a</m> irriducibile, ciò può avvenire se e solo se <m>h</m> è invertibile, cioè <m>\ideal{h}=D</m>, o se <m>h</m> è associato ad <m>a</m>, cioè <m>\ideal{h}=I</m>. Dunque, gli unici ideali di <m>D/I</m> sono <m>D/I</m> e <m>I/I</m>  (cioè l'ideale nullo): pertanto, per la <xref ref="prop-anello_commutativo_senza_ideali_campo"/>, <m>D/I</m> è un campo.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Sia <m>R</m> un anello commutativo. Mostrare che le seguenti condizioni sono equivalenti
+            <ol>
+              <li xml:id="item-ideali_finitamente_generati">
+                <p>
+                  ogni ideale di <m>R</m> è finitamente generato;
+                </p>
+              </li>
+              <li xml:id="item-cca">
+                <p>
+                  se <m>I_{1}\subseteq I_{2}\subseteq \cdots\subseteq I_{j}\subseteq\cdots</m> è una successione ascendente di ideali, allora esiste un indice <m>n</m> tale che <m>I_{n}=I_{n+1}=\cdots=I_{n+k}=\cdots</m>;
+                </p>
+              </li>
+              <li xml:id="item-ideale_massimale">
+                <p>
+                  ogni famiglia non vuota <m>\mathcal{F}</m> di ideali ammette un elemento massimale.
+                </p>
+              </li>
+            </ol>
+            Un anello che soddisfa queste condizioni è detto <term>noetheriano</term>.<fn><url href="https://it.wikipedia.org/wiki/Emmy_Noether" visual="">Emmy Noether</url>, 1882<ndash/>1935.</fn><idx><h>Noether, Emmy</h></idx>
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Supponiamo che valga la <xref ref="item-ideali_finitamente_generati">Condizione</xref> e mostriamo che vale la <xref ref="item-cca">Condizione</xref>. Data una catena <m>I_{1}\subseteq I_{2}\subseteq \cdots\subseteq I_{j}\subseteq\cdots</m> ascendente di ideali, la loro unione è un ideale <m>I</m> come nella <xref ref="prop-PID_Noetheriani"/>. Poiché <m>I</m> è finitamente generato, da certi elementi <m>x_{1}</m>, <m>\ldots</m>, <m>x_{r}</m>, e ciascuno di essi è contenuto in un termine della catena, pur di prendere il più grande di questi termini, esiste un indice <m>n</m> tale che questi elementi sono tutti contenuti in <m>I_{n}</m> e, di conseguenza, <m>I\subseteq I_{n}</m>: ciò implica che <m>I_{n+k}=I_{n}</m> per ogni naturale <m>k</m>.
+          </p>
+          <p>
+            Supponiamo che valga la <xref ref="item-cca">Condizione</xref> e mostriamo che vale la <xref ref="item-ideali_finitamente_generati">Condizione</xref>. Sia <m>I</m> un ideale e sia <m>a_{1}</m> un elemento di <m>I</m>. Se <m>I=\ideal{a_{1}}</m> abbiamo finito, altrimenti esiste <m>a_{2}\in I\setminus\ideal{a_{1}}</m>. Se <m>I=\ideal{a_{1},a_{2}}</m> abbiamo finito, altrimenti proseguiamo il procedimento costruendo una successione strettamente crescente di ideali
+            <md>
+              \ideal{a_{1}}\subsetneq\ideal{a_{1},a_{2}}\subsetneq\cdots\subsetneq\ideal{a_{1},\ldots,a_{k}}\subsetneq\cdots
+            </md>
+            Questo procedimento deve avere termine e, quindi, <m>I</m> è finitamente generato.
+          </p>
+          <p>
+            Supponiamo ora che valga la <xref ref="item-cca">Condizione</xref> e mostriamo che vale la <xref ref="item-ideale_massimale">Condizione</xref>. Sia <m>\mathcal{F}</m> una famiglia non vuota di ideali. Scegliamo <m>I_{1}</m> in <m>\mathcal{F}</m>: se è massimale in <m>\mathcal{F}</m>, abbiamo finito, altrimenti esiste <m>I_{2}</m> in <m>\mathcal{F}</m> tale che <m>I_{1}\subsetneq I_{2}</m>. Proseguendo così creiamo una successione strettamente crescente di ideali
+            <md>
+              I_{1}\subsetneq I_{2}\subsetneq\cdots\subsetneq I_{k}\subsetneq\cdots
+            </md>
+            Questo procedimento deve avere termine e, quindi, <m>\mathcal{F}</m> ha un elemento massimale.
+          </p>
+          <p>
+            Infine, supponiamo ora che valga la <xref ref="item-ideale_massimale">Condizione</xref> e mostriamo che vale la <xref ref="item-cca">Condizione</xref>. Data una successione ascendente di ideali <m>I_{1}\subseteq I_{2}\subseteq \cdots\subseteq I_{j}\subseteq\cdots</m> questa ammette un elemento massimale e, di conseguenza, la successione si stabilizza.
+          </p>
+        </solution>
+      </exercise>
+
+    </exercises>
+
+  </section>
+
+</chapter>

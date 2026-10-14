@@ -1,0 +1,2028 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="ch-azioni">
+
+  <title>Azioni di gruppi su insiemi</title>
+
+  <introduction>
+    <p>
+      Tra i vari esempi di gruppi, abbiamo visto i gruppi di trasformazioni del piano: ad esempio, le isometrie, le traslazioni, <etc /> Dato un punto <m>P</m> del piano e un elemento <m>\sigma</m> del gruppo di trasformazioni che stiamo considerando, applicando la trasformazione al punto, otteniamo un punto <m>P\sigma</m> del piano (eventualmente coincidente con <m>P</m> stesso). Abbiamo così associato a una coppia <m>(P,\sigma)</m>, cioè a un elemento del prodotto cartesiano del piano con il gruppo, un elemento del piano. Ciò suggerisce di definire un concetto astratto, quello di azione di un gruppo su un insieme, che, oltre a costituire uno degli strumenti usati nella moderna interpretazione della geometria, permette di dimostrare risultati strettamente algebrici.
+    </p>
+  </introduction>
+
+  <section xml:id="sec-azioni_definizioni">
+    <title>Definizioni e prime proprietà</title>
+
+    <definition xml:id="def-azione">
+      <statement>
+        <p>
+          Dato un insieme (non vuoto) <m>X</m> e un gruppo <m>G</m>, un'<term>azione destra</term> di <m>G</m> su <m>X</m> è una funzione <m>X\times G\to X</m>, denotata con <m>(x,g)\mapsto xg</m>, tale che
+          <ul>
+            <li>
+              <p>
+                <m>x1_{G}=x</m> per ogni <m>x\in X</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>x(gh)=(xg)h</m> per ogni <m>x\in X</m>, e ogni <m>g\in G</m> e <m>h\in G</m>.
+              </p>
+            </li>
+          </ul>
+          Diremo allora che <m>G</m> agisce sull'insieme <m>X</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <note>
+      <p>
+        La scrittura <m>xg</m> è solo una notazione, non è detto sia un prodotto all'interno di un insieme dotato di un'operazione. In particolare, la seconda proprietà non è la proprietà associativa: a primo membro abbiamo una moltiplicazione di un elemento dell'insieme per un elemento del gruppo e una moltiplicazione tra elementi del gruppo, mentre a secondo membro abbiamo due moltiplicazioni tra elementi dell'insieme e elementi del gruppo.
+      </p>
+    </note>
+
+    <p>
+      Così come abbiamo definito la nozione di azione destra, si può analogamente definire un'azione sinistra. Gli assiomi vanno adattati di conseguenza.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Un gruppo <m>G</m> di trasformazioni del piano <m>\Pi</m> quali le isometrie, le traslazioni, <etc /> agisce a destra sul piano <m>\Pi</m>.
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id="ex-azione_banale">
+      <statement>
+        <p>
+          Dati un insieme <m>X</m> e un gruppo <m>G</m> qualsiasi, possiamo porre <m>xg\coloneqq x</m> per ogni <m>x\in X</m> e ogni <m>g\in G</m>. Si verifica facilmente che gli assiomi sono soddisfatti: questa azione è detta <term>banale</term>.
+        </p>
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          Sia <m>X</m> un insieme qualunque e sia <m>G</m> il gruppo simmetrico di <m>X</m>. Allora la funzione <m>X\times G\to X</m> che manda la coppia <m>(x,\sigma)</m> nell'immagine di <m>x</m> tramite <m>\sigma</m> è un'azione destra.
+        </p>
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          Dato un gruppo <m>G</m>, possiamo farlo agire su sé stesso usando la moltiplicazione definita in <m>G</m>, cioè mandando la coppia <m>(h,g)</m> nel prodotto <m>hg</m>. In questo caso, il primo fattore è un elemento di <m>G</m> pensato come insieme e il secondo fattore è un elemento di <m>G</m> pensato come gruppo. Questa azione viene detta <term>azione regolare destra</term>.
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id="ex-coniugio">
+      <statement>
+        <p>
+          <notation>
+            <usage><m>h^{g}</m></usage>
+            <description>coniugato di <m>h</m> tramite <m>g</m></description>
+          </notation>
+          Dato un gruppo <m>G</m> possiamo farlo agire su sé stesso anche in un altro modo, cioè mandando la coppia <m>(h,g)</m> nel cosiddetto <term>coniugato</term> di <m>h</m> tramite <m>g</m> e cioè l'elemento <m>g^{-1}hg</m>, che denotiamo con il simbolo <m>h^{g}</m>.
+        </p>
+        <p>
+          Notiamo che <m>h^{1_{G}}=1_{G}^{-1}h1_{G}=h</m> per ogni <m>h</m> in <m>G</m> e che
+          <md>
+            h^{gk}=(gk)^{-1}h(gk)=k^{-1}g^{-1}hgk=k^{-1}(h^{g})k=(h^{g})^{k}
+          </md>
+          per ogni <m>h</m>, <m>k</m> e <m>g</m> in <m>G</m> e, quindi, abbiamo effettivamente un'azione (in questo caso abbiamo usato una notazione esponenziale invece che una notazione moltiplicativa per l'azione ma il concetto rimane lo stesso).
+        </p>
+      </statement>
+    </example>
+
+    <remark xml:id="rem-sottogruppo_agisce">
+      <p>
+        Se <m>G</m> è un gruppo che agisce su un insieme <m>X</m> e <m>H</m> è un sottogruppo di <m>G</m>, allora si può definire un'azione di <m>H</m> su <m>X</m> in maniera ovvia: si verifica facilmente che le proprietà sono soddisfatte.
+      </p>
+      <p>
+        Invece, se <m>Y</m> è un sottoinsieme di <m>X</m>, non è detto che si possa definire un'azione di <m>G</m> su <m>Y</m> a partire dall'azione di <m>G</m> su <m>X</m>: infatti, dato <m>x\in Y</m> e <m>g\in G</m>, non è detto che l'elemento <m>xg</m> appartenga a <m>Y</m>.
+      </p>
+    </remark>
+
+    <proposition xml:id="prop-azione_definisce_biiezioni">
+      <statement>
+        <p>
+          Dato un gruppo <m>G</m> che agisce su un insieme <m>X</m> e fissato un elemento <m>g\in G</m>, la funzione <m>\phi_{g}</m> da <m>X</m> in sé definita da <m>x\phi_{g}\coloneqq xg</m> è biiettiva.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Basta mostrare che la funzione <m>\phi_{g}</m> e la funzione <m>\phi_{g^{-1}}</m> sono una inversa dell'altra. Infatti, per ogni <m>x</m> in <m>X</m>, si ha
+          <md>
+            x(\phi_{g}\phi_{g^{-1}})=(x\phi_{g})\phi_{g^{-1}}=(xg)g^{-1}=x(gg^{-1})=x1_{G}=x
+          </md>,
+          dove abbiamo usato le due proprietà che definiscono un'azione. Analogamente, si vede che <m>x(\phi_{g^{-1}}\phi_{g})=x</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <example xml:id="ex-azioni_su_di_se_omomorfismi">
+      <p>
+        Dato un gruppo <m>G</m>, abbiamo definito due azioni di <m>G</m> su di sé: l'azione regolare destra e l'azione per coniugio. Fissato allora un elemento <m>g</m> di <m>G</m>, grazie alla <xref ref="prop-azione_definisce_biiezioni"/>, sono definite due funzioni biiettive di <m>G</m> in sé: la prima che manda un elemento <m>h</m> in <m>hg</m> e la seconda che manda <m>h</m> in <m>h^{g}</m>. Ci chiediamo se queste funzioni biiettive siano automorfismi di <m>G</m>.
+      </p>
+      <p>
+        Se <m>g=1</m>, la prima funzione è, ovviamente, l'identità ed è, pertanto, un automorfismo, mentre se <m>g\ne 1</m>, questa funzione manda <m>1</m> in <m>g</m> e, quindi, non è un automorfismo.
+      </p>
+      <p>
+        La seconda funzione è invece un automorfismo qualunque sia <m>g</m> in <m>G</m>: infatti, dati <m>h</m> e <m>k</m> in <m>G</m>, abbiamo
+        <md>
+          (hk)^{g}=g^{-1}hkg=g^{-1}hgg^{-1}kg=h^{g}k^{g}
+        </md>.
+        Come conseguenza, abbiamo che per ogni <m>n</m> intero risulta <m>(h^{n})^{g}=(h^{g})^{n}</m>: in particolare, <m>(h^{-1})^{g}=(h^{g})^{-1}</m>.
+      </p>
+    </example>
+
+    <exercises xml:id="exercises-azioni_definizioni">
+
+      <exercise xml:id="exercise-azione_omomorfismo_simmetrico">
+        <task>
+          <statement>
+            <p>
+              Data un'azione di un gruppo <m>G</m> su insieme <m>X</m>, consideriamo la funzione <m>\phi</m> che associa a ogni elemento <m>g</m> di <m>G</m> la funzione biiettiva <m>\phi_{g}</m> di <m>X</m>, come nella <xref ref="prop-azione_definisce_biiezioni"/>. Mostrare che <m>\phi</m> è un omomorfismo da <m>G</m> in <m>\Sym(X)</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Per definizione <m>x\phi_{g}=xg</m> per ogni <m>x</m> in <m>X</m> e ogni <m>g</m> in <m>G</m>. Dalla definizione di azione, segue che <m>x(gh)=(xg)h</m>, cioè <m>x\phi_{gh}=x\phi_{g}\phi_{h}</m>: pertanto, <m>\phi_{gh}=\phi_{g}\phi_{h}</m>, cioè <m>\phi</m> è omomorfismo.
+            </p>
+          </solution>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Se <m>\phi</m> è un omomorfismo da un gruppo <m>G</m> nel gruppo <m>\Sym(X)</m>, dove <m>X</m> è un insieme non vuoto, denotiamo con <m>\phi_{g}</m> l'elemento <m>g\phi</m>. Mostrare che ponendo <m>xg\coloneqq x\phi_{g}</m>, si definisce un'azione destra di <m>G</m> su <m>X</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Poiché <m>\phi</m> è un omomorfismo di gruppi, manda <m>1_{G}</m> in <m>\Id</m>. Dunque, <m>x1_{G}=x\Id=x</m> per ogni <m>x</m> in <m>X</m>. Inoltre <m>\phi_{gh}=\phi_{g}\phi_{h}</m> per ogni <m>g</m> e <m>h</m> in <m>G</m>: quindi,
+              <md>
+                x(gh)=x\phi_{gh}=x\phi_{g}\phi_{h}=(xg)h
+              </md>
+              per ogni <m>x</m> in <m>X</m>.
+            </p>
+          </solution>
+        </task>
+
+      </exercise>
+
+      <exercise xml:id="exercise-coniugati_stesso_periodo">
+        <statement>
+          <p>
+            Mostrare che elementi coniugati di un gruppo hanno lo stesso periodo.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Dati due elementi <m>g</m> e <m>h</m> di un gruppo <m>G</m> mostrare che <m>gh</m> e <m>hg</m> hanno lo stesso periodo.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Basta notare che <m>hg=(gh)^{g}</m> e poi usare l'<xref ref="exercise-coniugati_stesso_periodo"/>.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Sia <m>G</m> un gruppo che agisce su insieme <m>X</m>. Per ogni sottoinsieme <m>A</m> di <m>X</m> e ogni <m>g</m> in <m>G</m>, si ponga <m>Ag\coloneqq\{xg\mid x\in A\}</m>. Dimostrare che in questo modo è definita un'azione di <m>G</m> sul booleano <m>\parti{X}</m>.
+          </p>
+        </statement>
+      </exercise>
+    </exercises>
+
+  </section>
+
+  <section xml:id="sec-orbite_stabilizzatori">
+    <title>Orbite e stabilizzatori</title>
+
+    <example xml:id="orbite_rotazioni">
+      <statement>
+        <p>
+          Consideriamo il gruppo <m>G</m> delle rotazioni del piano <m>\Pi</m> aventi centro fissato in un punto <m>C</m>. Dato un punto <m>P</m> del piano e una rotazione <m>\rho</m> di <m>G</m>, il punto <m>P\rho</m> appartiene alla circonferenza di centro <m>C</m> e passante per <m>P</m> (circonferenza degenere di raggio <m>0</m>, nel caso in cui <m>P</m> sia proprio il punto <m>C</m>). Viceversa, dato un punto <m>Q</m> su tale circonferenza, c'è una rotazione che applicata a <m>P</m> dà come risultato il punto <m>Q</m>. Possiamo interpretare ciò dicendo che il gruppo <m>G</m> suddivide il piano in circonferenze centrate in <m>C</m>.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      L'esempio precedente si può generalizzare nel caso di un'azione qualunque.
+    </p>
+
+    <proposition xml:id="prop-azione_partizione">
+      <statement>
+        <p>
+          Sia <m>G</m> un gruppo che agisce su un insieme <m>X</m>. La relazione <m>\sim_{G}</m> in <m>X</m> definita da <m>x\sim_{G}y</m> se esiste <m>g\in G</m> tale che <m>y=xg</m> è una relazione di equivalenza.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Preso <m>x\in X</m>, si ha che <m>x1_{G}=x</m>: dunque, <m>\sim_{G}</m> soddisfa la proprietà riflessiva.
+        </p>
+        <p>
+          Se <m>x\sim_{G}y</m>, allora esiste <m>g\in G</m> tale che <m>y=xg</m>: applicando <m>g^{-1}</m> a entrambi i membri di questa uguaglianza e usando le proprietà che definiscono un'azione otteniamo
+          <md>
+            yg^{-1}=(xg)g^{-1}=x(gg^{-1})=x1_{G}=x
+          </md>.
+          Dunque, <m>\sim_{G}</m> soddisfa la proprietà simmetrica.
+        </p>
+        <p>
+          Infine, se <m>x\sim_{G}y</m> e <m>y\sim_{G}z</m>, allora esistono <m>g</m> e <m>h</m> in <m>G</m> tali che <m>y=xg</m> e <m>z=yh</m>. Applicando le proprietà che definiscono un'azione otteniamo
+          <md>
+            z=yh=(xg)h=x(gh)
+          </md>.
+          Dunque, l'elemento <m>gh</m> di <m>G</m> manda <m>x</m> in <m>z</m> e, pertanto, <m>\sim_{G}</m> soddisfa la proprietà transitiva.
+        </p>
+      </proof>
+    </proposition>
+
+    <definition xml:id="def-orbita">
+      <notation>
+        <usage><m>xG</m></usage>
+        <description>orbita di <m>x</m> sotto l'azione di un gruppo <m>G</m></description>
+      </notation>
+      <statement>
+        <p>
+          Dato un gruppo <m>G</m> che agisce su un insieme <m>X</m>, le classi di equivalenza della relazione <m>\sim_{G}</m> definita nella <xref ref="prop-azione_partizione"/> sono dette <term>orbite</term>. Dato un elemento <m>x</m> in <m>X</m>, l'orbita contenente <m>x</m> è denotata con <m>xG</m> ed è precisamente
+          <md>
+            xG\coloneqq\{xg\mid g\in G\}
+          </md>.
+        </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-classe_coniugio">
+      <notation>
+        <usage><m>h^{G}</m></usage>
+        <description>classe di coniugio di <m>h</m> in <m>G</m></description>
+      </notation>
+      <statement>
+        <p>
+          Nel caso particolare in cui consideriamo l'azione di un gruppo <m>G</m> su sé stesso per coniugio, l'orbita contenente un certo elemento <m>h</m> è detta <term>classe di coniugio</term> e denotata con il simbolo <m>h^{G}</m>. Esplicitamente
+          <md>
+            h^{G}\coloneqq\{h^{g}\mid g\in G\}
+          </md>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Che informazioni possiamo ottenere sulle varie orbite (e, viceversa, quali informazioni potremo ottenere dalla conoscenza delle orbite)? Iniziamo con la
+    </p>
+
+    <definition xml:id="def-stabilizzatore">
+      <statement>
+        <p>
+          Dato un gruppo <m>G</m> che agisce su un insieme <m>X</m> e un elemento <m>x\in X</m>, lo <term>stabilizzatore</term> di <m>x</m> in <m>G</m> è il sottoinsieme <m>\stab{G}{x}</m> di <m>G</m> così definito
+          <md>
+            \stab{G}{x}\coloneqq\{g\in G\mid xg=x\}
+          </md>.
+        </p>
+      </statement>
+    </definition>
+
+    <proposition xml:id="prop-stabilizzatore_sottogruppo">
+      <statement>
+        <p>
+          Sia <m>G</m> un gruppo che agisce su un insieme <m>X</m> e sia <m>x</m> un elemento di <m>X</m>. Allora lo stabilizzatore <m>\stab{G}{x}</m> è un sottogruppo di <m>G</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Poiché <m>x1_{G}=x</m>, il sottoinsieme <m>\stab{G}{x}</m> è non vuoto.
+        </p>
+        <p>
+          Siano ora <m>g</m> e <m>h</m> elementi di <m>\stab{G}{x}</m>: dunque, <m>xg=x</m> e <m>xh=x</m>. Pertanto, <m>x(gh)=(xg)h=xh=</m>, cioè <m>gh\in \stab{G}{x}</m>. Inoltre, applicando <m>g^{-1}</m> ad ambo i membri di <m>x=xg</m>, otteniamo
+          <md>
+            xg^{-1}=(xg)g^{-1}=x(gg^{-1})=x1_{G}=x
+          </md>.
+          Dunque, <m>g^{-1}\in\stab{G}{x}</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      Il legame tra stabilizzatore e orbite è dato dal
+    </p>
+
+
+    <theorem xml:id="thm-stabilizzatore_orbita">
+      <statement>
+        <p>
+          Sia <m>G</m> un gruppo che agisce su un insieme <m>X</m> e sia <m>x</m> un elemento di <m>X</m>. Presi due elementi <m>g</m> e <m>h</m> di <m>G</m>, si ha che <m>xg=xh</m> se e solo se <m>\stab{G}{x}g=\stab{G}{x}h</m>. In particolare, <m>\abs{xG}=\ind{G}{\stab{G}{x}}</m>.
+         </p>
+      </statement>
+
+      <proof>
+        <p>
+          Supponiamo prima che <m>\stab{G}{x}g=\stab{G}{x}h</m>: dunque, esiste <m>s\in\stab{G}{x}</m> tale che <m>g=sh</m>. Ma allora
+          <md>
+            xg=x(sh)=(xs)h=xh
+          </md>.
+        </p>
+        <p>
+          Viceversa, sia <m>xg=xh</m>: applicando <m>h^{-1}</m> a entrambi i membri, troviamo
+          <md>
+            xgh^{-1}=xhh^{-1}=x1_{G}=x
+          </md>.
+          Dunque, <m>gh^{-1}</m> è un elemento di <m>\stab{G}{x}</m>: ma allora <m>g=(gh^{-1})h\in\stab{G}{x}h</m>.
+        </p>
+      </proof>
+
+    </theorem>
+
+    <corollary xml:id="cor-ordine_orbita_divide_ordine-gruppo">
+      <statement>
+        <p>
+          Se <m>G</m> è un gruppo finito che agisce su un insieme <m>X</m>, allora ogni orbita ha cardinalità che è un divisore dell'ordine di <m>G</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Dal <xref ref="thm-stabilizzatore_orbita"/>, sappiamo che la cardinalità dell'orbita di un elemento <m>x</m> di <m>X</m> è uguale all'indice in <m>G</m> dello stabilizzatore di <m>x</m>: in un gruppo finito, i sottogruppi hanno indice che divide l'ordine del gruppo, grazie al <xref ref="thm-lagrange" text="title"/>.
+        </p>
+      </proof>
+
+    </corollary>
+
+    <p>
+      Vediamo ora in dettaglio come applicare questi risultati all'azione di coniugio di un gruppo su di sé.
+    </p>
+
+    <proposition xml:id="prop-coniugato_fisso_commuta">
+      <statement>
+        <p>
+          Dati due elementi <m>g</m> e <m>h</m> di un gruppo, si ha <m>h^{g}=h</m> se e solo se <m>g</m> e <m>h</m> commutano. In particolare, lo stabilizzatore di <m>h</m> in <m>G</m> rispetto all'azione di coniugio coincide con il centralizzante di <m>h</m> in <m>G</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Se <m>g</m> e <m>h</m> commutano, allora <m>h^{g}=g^{-1}hg=g^{-1}gh=1h=h</m>.
+        </p>
+        <p>
+          Viceversa, se <m>h=h^{g}</m>, cioè <m>h=g^{-1}hg</m>, allora, moltiplicando a sinistra ambo i membri per <m>g</m>, otteniamo
+          <md>
+            gh=gg^{-1}hg=hg
+          </md>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <corollary xml:id="cor-ordine_classe_coniugio">
+      <statement>
+        <p>
+          Dato un elemento <m>h</m> di un gruppo <m>G</m>, la cardinalità della classe di coniugio <m>h^{G}</m> è uguale all'indice in <m>G</m> del centralizzante di <m>h</m> in <m>G</m>. In formule
+          <md>
+            \abs{h^{G}}=\ind{G}{\cent{G}{h}}
+          </md>.
+          In particolare, se <m>G</m> è finito, allora <m>\abs{h^{G}}</m> divide <m>\abs{G}</m>.
+        </p>
+      </statement>
+    </corollary>
+
+    <remark xml:id="rem-centro_classe_di_coniugio">
+      <p>
+        Dalla <xref ref="prop-coniugato_fisso_commuta"/> segue immediatamente che la classe di coniugio di un elemento <m>g</m> di un gruppo è formata dal solo elemento <m>g</m> se e solo se <m>g</m> appartiene al centro <m>\centro(G)</m> di <m>G</m>.
+      </p>
+    </remark>
+
+    <proposition xml:id="prop-equazione_delle_classi">
+      <title>Equazione delle classi</title>
+      <statement>
+        <p>
+          Dato un gruppo finito <m>G</m>, possiamo scrivere
+          <md>
+            \abs{G}=\abs{\centro(G)}+c_{1}+c_{2}+\cdots+c_{r}
+          </md>
+          dove <m>c_{1}</m>, <m>\ldots</m>, <m>c_{r}</m> sono divisori di <m>\abs{G}</m> e, precisamente, sono le cardinalità delle classi di coniugio di <m>G</m> che contengono più di un elemento. L'equazione è detta <term>equazione delle classi</term>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          La dimostrazione segue immediatamente dal fatto che le classi di coniugio formano una partizione (<xref ref="prop-azione_partizione"/>), che ciascuna di esse ha cardinalità che divide l'ordine del gruppo (<xref ref="cor-ordine_classe_coniugio"/>) e che ci sono tante classi di cardinalità <m>1</m> quanto l'ordine del centro di <m>G</m> (<xref ref="rem-centro_classe_di_coniugio"/>).
+        </p>
+      </proof>
+
+    </proposition>
+
+    <remark xml:id="rem-equazioni_classi_gruppo_abeliano">
+      <p>
+        Se <m>G</m> è un gruppo finito abeliano, l'<xref ref="prop-equazione_delle_classi" text="title"/> si riduce semplicemente a <m>\abs{G}=\abs{Z(G)}</m> e non è, quindi, molto significativa.
+      </p>
+    </remark>
+
+    <p>
+      Per dare un'applicazione dell'<xref ref="prop-equazione_delle_classi" text="title"/> ci serve la
+    </p>
+
+    <definition xml:id="def-p_gruppo">
+      <statement>
+        <p>
+          Dato un primo <m>p</m>, un <term><m>p</m>-gruppo finito</term> è un gruppo di ordine una potenza di <m>p</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <proposition xml:id="prop-centro_p_gruppo">
+      <statement>
+        <p>
+          Se <m>G</m> è un <m>p</m>-gruppo finito non banale, allora <m>\centro(G)</m> è non banale.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sia <m>\abs{G}=p^{n}</m> con <m>n \gt 0</m>. L'equazione delle classi di <m>G</m> è allora
+          <md>
+            p^{n}=\abs{\centro(G)}+c_{1}+c_{2}+\cdots+c_{r}
+          </md>
+          dove i <m>c_{i}</m> sono divisori di <m>p^{n}</m> maggiori di <m>1</m>. Poiché <m>p</m> è primo, i divisori di <m>p^{n}</m> sono i numeri del tipo <m>p^{t}</m> con <m>0\le t\le n</m>: in particolare, i divisori di <m>p^{n}</m> maggiori di <m>1</m> sono multipli di <m>p</m>. Ma allora
+          <md>
+            \abs{\centro(G)}=p^{n}-c_{1}-c_{2}-\cdots-c_{r}
+          </md>
+          è somma di multipli di <m>p</m> ed è, quindi, a sua volta un multiplo di <m>p</m>. In particolare, <m>\centro(G)\ne 1</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <exercises xml:id="exercises-orbite_stabilizzatori">
+
+      <exercise>
+        <statement>
+          <p>
+            Sia data un'azione di un gruppo <m>G</m> su un insieme <m>X</m>. Sia <m>\phi\colon G\to\Sym(X)</m> l'omomorfismo associato all'azione come nell'<xref ref="exercise-azione_omomorfismo_simmetrico"/>. Dimostrare che <m>\ker\phi=\bigcap_{x\in X}\stab{G}{x}</m>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Sia <m>H</m> un sottogruppo di un gruppo <m>G</m> e si consideri l'azione di <m>H</m> su <m>G</m> indotta dall'azione regolare destra di <m>G</m> su sé stesso. Dimostrare che le orbite dell'azione indotta sono i laterali sinistri di <m>H</m> in <m>G</m>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <introduction>
+          <p>
+            Sia data l'azione di <m>S\coloneqq\Sym_{3}</m> su
+            <md>
+              X\coloneqq\{(i,j)\in\Interi\times\Interi\mid 1\le i\le 3,1\le j\le 3\}
+            </md>
+            definita da <m>(i,j)\sigma\coloneqq(i\sigma,j\sigma)</m>.
+          </p>
+        </introduction>
+
+        <task>
+          <statement>
+            <p>
+               Determinare lo stabilizzatore di <m>(1,1)</m> e lo stabilizzatore di <m>(1,2)</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Una permutazione <m>\sigma</m> appartiene a <m>\stab{S}{(1,1)}</m> se e solo se <m>(1,1)\sigma=(1,1)</m>, cioè <m>(1\sigma,1\sigma)=(1,1)</m> il che avviene se e solo se <m>1\sigma=1</m>. Le permutazioni che fissano <m>1</m> sono l'identità e lo scambio <m>(2\;3)</m>. Dunque, lo stabilizzatore <m>\stab{S}{(1,1)}</m> è il gruppo ciclico <m>\grgen{(2\;3)}</m>.
+            </p>
+
+            <p>
+              Analogamente, una permutazione <m>\sigma</m> appartiene a <m>\stab{S}{(1,2)}</m> se e solo se <m>(1,2)\sigma=(1,2)</m>, cioè <m>(1\sigma,2\sigma)=(1,2)</m> il che avviene se e solo se <m>1\sigma=1</m> e <m>2\sigma=2</m>. Una permutazione che fissa <m>1</m> e <m>2</m> deve necessariamente fissare anche <m>3</m>. Dunque, lo stabilizzatore <m>\stab{S}{(1,2)}</m> è il sottogruppo banale <m>\{\Id\}</m>.
+            </p>
+          </solution>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Determinare tutte le orbite dell'azione.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+               Dal punto precedente sappiamo che <m>\abs{\stab{S}{(1,1)}}=2</m> e, dunque, l'orbita di <m>(1,1)</m> contiene <m>\ind{S}{\stab{S}{(1,1)}}=3</m> elementi. Se applichiamo una permutazione <m>\sigma</m> a <m>(1,1)</m>, otteniamo una coppia i cui elementi sono uguali fra loro: poiché esistono esattamente <m>3</m> elementi di questo tipo, e cioè <m>(1,1)</m>, <m>(2,2)</m> e <m>(3,3)</m> questi elementi formano un'orbita.
+            </p>
+
+            <p>
+              Sappiamo poi che <m>\abs{\stab{S}{(1,2)}}=1</m> e, dunque, l'orbita di <m>(1,2)</m> contiene <m>\ind{S}{\stab{S}{(1,2)}}=6</m> elementi. Poiché <m>X</m> contiene <m>9</m> elementi e l'orbita di <m>(1,1)</m> è formata da <m>3</m> elementi, l'orbita di <m>(1,2)</m> deve contenere i rimanenti <m>6</m> elementi, cioè le coppie <m>(i,j)</m> con <m>i\ne j</m>.
+            </p>
+          </solution>
+        </task>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Sia data l'azione di <m>S\coloneqq\Sym_{3}</m> su
+            <md>
+              X\coloneqq\{(i,j,k)\in\Interi\times\Interi\times\Interi\mid 1\le i\le 3,1\le j\le 3,1\le k\le 3\}
+            </md>
+            definita da <m>(i,j,k)\sigma\coloneqq(i\sigma,j\sigma,k\sigma)</m>, determinare tutte le orbite di quest'azione.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Consideriamo l'elemento <m>(1,1,1)</m>. Una permutazione <m>\sigma</m> stabilizza <m>(1,1,1)</m> se e solo se <m>(1,1,1)\sigma=(1,1,1)</m> cioè <m>(1\sigma,1\sigma,1\sigma)=(1,1,1)</m> il che avviene se e solo se <m>1\sigma=1</m>. Le permutazioni che fissano <m>1</m> sono l'identità e lo scambio <m>(2\;3)</m> e, dunque, lo stabilizzatore <m>\stab{S}{(1,1,1)}</m> è il gruppo ciclico <m>\grgen{(2\;3)}</m>. L'orbita di <m>(1,1,1)</m> contiene <m>\ind{S}{\stab{S}{(1,1,1)}}=3</m> elementi. Se applichiamo una permutazione <m>\sigma</m> a <m>(1,1,1)</m> otteniamo una terna i cui elementi sono uguali fra loro: poiché esistono esattamente <m>3</m> elementi di questo tipo (e cioè <m>(1,1,1)</m>, <m>(2,2,2)</m> e <m>(3,3,3)</m>) questi elementi formano un'orbita.
+          </p>
+          <p>
+            Consideriamo ora l'elemento <m>(1,1,2)</m>. Una permutazione <m>\sigma</m> appartiene a <m>\stab{S}{(1,1,2)}</m> se e solo se <m>(1,1,2)\sigma=(1,1,2)</m> cioè <m>(1\sigma,1\sigma,2\sigma)=(1,1,2)</m> il che avviene se e solo se <m>1\sigma=1</m> e <m>2\sigma=2</m>. Una permutazione che fissa <m>1</m> e <m>2</m> deve necessariamente fissare anche <m>3</m>. Dunque, lo stabilizzatore <m>\stab{S}{(1,1,2)}</m> è il sottogruppo banale <m>\{\Id\}</m>. L'orbita di <m>(1,1,2)</m> contiene <m>\ind{S}{\stab{S}{(1,1,2)}}=6</m> elementi. Se applichiamo una permutazione <m>\sigma</m> a <m>(1,1,2)</m> otteniamo una terna i cui primi due elementi sono uguali fra loro e il terzo è diverso dai primi <m>2</m>: poiché esistono esattamente <m>6</m> elementi di questo tipo(e cioè <m>(1,1,2)</m>, <m>(1,1,3)</m>, <m>(2,2,1)</m>, <m>(2,2,3)</m>, <m>(3,3,1)</m> e <m>(3,3,2)</m>) questi elementi formano un'orbita.
+          </p>
+
+          <p>
+            In maniera analoga si dimostra che le <m>6</m> terne il cui primo e terzo elemento sono uguali tra loro e il secondo elemento è diverso dagli altri <m>2</m> formano un'orbita e le <m>6</m> terne il cui secondo e terzo elemento sono uguali tra loro e il primo elemento è diverso dagli altri <m>2</m> formano un'altra orbita.
+          </p>
+
+          <p>
+            Consideriamo infine l'elemento <m>(1,2,3)</m>. Una permutazione <m>\sigma</m> appartiene allo stabilizzatore <m>\stab{S}{(1,2,3)}</m> se e solo se <m>(1,2,3)\sigma=(1,2,3)</m> cioè <m>(1\sigma,2\sigma,3\sigma)=(1,2,3)</m> il che avviene se e solo se <m>1\sigma=1</m>, <m>2\sigma=2</m> e <m>3\sigma=3</m>. Dunque, lo stabilizzatore <m>\stab{S}{(1,2,3)}</m> è il sottogruppo banale <m>\{\Id\}</m>. L'orbita di <m>(1,2,3)</m> contiene <m>\ind{S}{\stab{S}{(1,2,3)}}=6</m> elementi: questi sono le <m>6</m> terne restanti, cioè quelle che hanno i <m>3</m> elementi diversi fra loro.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Mostrare che l'unico gruppo finito (a meno di isomorfismi) ad avere esattamente due classi di coniugio è il gruppo ciclico di ordine <m>2</m>.
+          </p>
+        </statement>
+      </exercise>
+
+    </exercises>
+
+  </section>
+
+  <section xml:id="sec-sottogruppi_normali">
+    <title>Sottogruppi normali</title>
+
+    <p>
+      Abbiamo visto nell'<xref ref="ex-azioni_su_di_se_omomorfismi"/> che, se <m>g</m> è un elemento di un gruppo <m>G</m>, la funzione da <m>G</m> in sé che manda un elemento <m>h</m> in <m>h^{g}</m> è un automorfismo di <m>G</m>. Abbiamo, pertanto, la
+    </p>
+
+    <proposition xml:id="prop-coniugato_isomorfo">
+      <statement>
+        <p>
+          <notation>
+            <usage><m>H^{g}</m></usage>
+            <description>coniugato di un sottogruppo <m>H</m> tramite un elemento <m>g</m></description>
+          </notation>
+          Dato un gruppo <m>G</m>, un suo sottogruppo <m>H</m> e un elemento <m>g</m> di <m>G</m>, il sottoinsieme
+          <md>
+            H^{g}\coloneqq\{h^{g}\mid h\in H\}
+          </md>
+          è un sottogruppo di <m>G</m> isomorfo a <m>H</m>. Tale sottogruppo è detto <term>coniugato</term> di <m>H</m> tramite <m>G</m>.
+        </p>
+      </statement>
+    </proposition>
+
+    <definition xml:id="def-sottogruppo_normale">
+      <notation>
+        <usage><m>H\trianglelefteq G</m></usage>
+        <description><m>H</m> è normale in <m>G</m></description>
+      </notation>
+      <statement>
+        <p>
+          Un sottogruppo <m>H</m> di un gruppo <m>G</m> è detto <term>normale</term> in <m>G</m>, indicato con il simbolo <m>H\trianglelefteq G</m>, se per ogni <m>h\in H</m> e ogni <m>g\in G</m>, si ha <m>h^{g}\in H</m> (cioè <m>H</m> contiene le classi di coniugio in <m>G</m> di tutti i propri elementi).
+        </p>
+      </statement>
+    </definition>
+
+    <remark xml:id="rem-1_e_G_normali">
+      <p>
+        Dalla definizione segue immediatamente che ogni gruppo contiene come sottogruppi normali per lo meno sé stesso e il sottogruppo banale.
+      </p>
+    </remark>
+
+    <example xml:id="ex-speciale_lineare">
+      <statement>
+        <p>
+          Consideriamo il gruppo lineare generale <m>\GL{n}{\Razionali}</m> delle matrici invertibili di ordine <m>n</m> a coefficienti in <m>\Razionali</m>. Consideriamo il sottoinsieme <m>\SL{n}{\Razionali}</m> delle matrici aventi determinante <m>1</m>. Si verifica facilmente, usando il teorema di Binet, che <m>\SL{n}{\Razionali}</m> è un sottogruppo di <m>\GL{n}{\Razionali}</m>, detto <term>gruppo speciale lineare</term>. Inoltre se <m>A\in\SL{n}{\Razionali}</m> e <m>B\in\GL{n}{\Razionali}</m>, abbiamo
+          <md>
+            \det(A^{B})=(\det B)^{-1}\det A\det B=(\det B)^{-1}\cdot 1\cdot \det B=(\det B)^{-1}\det B=1
+          </md>
+          cioè <m>A^{B}\in\SL{n}{\Razionali}</m>. Dunque, <m>\SL{n}{\Razionali}\trianglelefteq\GL{n}{\Razionali}</m>.
+        </p>
+      </statement>
+    </example>
+
+
+    <proposition xml:id="prop-sottogruppi_centro_normali">
+      <statement>
+        <p>
+          Se <m>H</m> è un sottogruppo di <m>G</m> e <m>H\le\centro(G)</m> allora <m>H\trianglelefteq G</m>. In particolare, <m>\centro(G)\trianglelefteq G</m>.
+        </p>
+        <p>
+          Se <m>G</m> è abeliano, ogni sottogruppo di <m>G</m> è normale in <m>G</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+        Ogni <m>h</m> in <m>H</m> è contenuto nel centro di <m>G</m> e, quindi, commuta con ogni elemento <m>g</m> di <m>G</m>: dunque, <m>h^{g}=h\in H</m> per ogni <m>h\in H</m> e ogni <m>g\in G</m>.
+        </p>
+        <p>
+          Se <m>G</m> è abeliano, allora coincide con il proprio centro e, quindi, ogni suo sottogruppo è normale.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      Nell'<xref ref="ex-speciale_lineare"/>, abbiamo mostrato un sottogruppo normale che non è contenuto nel centro del gruppo.
+    </p>
+
+    <example xml:id="ex-sottogruppo_non_normale">
+      <statement>
+        <p>
+          Consideriamo il  gruppo <m>\Sym_{3}</m> e il sottogruppo <m>H\coloneqq\grgen{(1\;2)}</m>. Notiamo che <m>(1\;2)^{(1\;3)}=(1\;3)(1\;2)(1\;3)=(2\;3)\notin H</m>. Non abbiamo bisogno di fare altre verifiche: abbiamo trovato un elemento in <m>H</m> che ha almeno un coniugato che non sta in <m>H</m>. Dunque, <m>H</m> non è normale in <m>\Sym_{3}</m>.
+        </p>
+      </statement>
+    </example>
+
+    <theorem xml:id="thm-caratterizzazione_sottogruppi_normali">
+      <statement>
+        <p>
+          Dato un sottogruppo <m>H</m> di un gruppo <m>G</m>, sono equivalenti le condizioni:
+          <ol>
+            <li xml:id="item-H_normale">
+              <p>
+                <m>H\trianglelefteq G</m>
+              </p>
+            </li>
+            <li xml:id="item-coniugati-contenuto">
+              <p>
+                <m>H^{g}\le H</m> per ogni <m>g\in G</m>
+              </p>
+            </li>
+            <li xml:id="item-coniugati_uguali">
+              <p>
+                <m>H^{g}=H</m> per ogni <m>g\in G</m>
+              </p>
+            </li>
+            <li xml:id="item-laterali_contenuti">
+              <p>
+                <m>Hg\subseteq gH</m> per ogni <m>g\in G</m>
+              </p>
+            </li>
+            <li xml:id="item-laterali_uguali">
+              <p>
+                <m>Hg=gH</m> per ogni <m>g\in G</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Se vale il <xref ref="item-H_normale"/>, banalmente vale il <xref ref="item-coniugati-contenuto"/>: infatti, <m>H^{g}</m> è l'insieme degli elementi del tipo <m>h^{g}</m> con <m>h\in H</m> e questi appartengono tutti a <m>H</m> per ipotesi.
+        </p>
+        <p>
+          Supponiamo ora che valga il <xref ref="item-coniugati-contenuto"/> e proviamo che vale il <xref ref="item-coniugati_uguali"/>. Basta evidentemente mostrare che <m>H\le H^{g}</m> per ogni <m>g\in G</m>. Per ipotesi, sappiamo che <m>H^{g^{-1}}\le H</m>: coniugando per <m>g</m> ambo i membri di questa inclusione, otteniamo la tesi.
+        </p>
+        <p>
+          Supponiamo ora che valga il <xref ref="item-coniugati_uguali"/> e mostriamo che vale il <xref ref="item-laterali_uguali"/>: per questo, basta moltiplicare a sinistra per <m>g</m> l'uguaglianza <m>g^{-1}Hg=H</m>.
+        </p>
+        <p>
+          Ovviamente, se vale il <xref ref="item-laterali_uguali"/>, allora vale il <xref ref="item-laterali_contenuti"/>.
+        </p>
+        <p>
+          Infine, supponiamo che valga il <xref ref="item-laterali_contenuti"/> e mostriamo che vale il <xref ref="item-H_normale"/>. Sia allora, <m>h\in H</m> e <m>g\in G</m>. Ora <m>hg\in Hg\subseteq gH</m> e, pertanto, <m>hg=gh'</m> per qualche <m>h'\in H</m>: ma allora <m>h^{g}=g^{-1}hg=g^{-1}gh'=h'\in H</m>, come richiesto.
+        </p>
+      </proof>
+
+    </theorem>
+
+    <p>
+      Il teorema precedente ci dice tra l'altro che un sottogruppo è normale se e solo se i suoi laterali destri coincidono con i laterali sinistri.
+    </p>
+
+    <remark xml:id="rem-normalita_non_transitiva">
+      <p>
+        Se <m>K\trianglelefteq H\trianglelefteq G</m>, non è detto che <m>K\trianglelefteq G</m>, come vedremo nell'<xref ref="ex-normalita_non_transitiva"/>.
+      </p>
+    </remark>
+
+    <corollary xml:id="cor-indice_2_normale">
+      <statement>
+        <p>
+          Se <m>H</m> è un sottogruppo di indice <m>2</m> di un gruppo <m>G</m>, allora <m>H\trianglelefteq G</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Il sottogruppo <m>H</m> è sia laterale destro che sinistro di <m>H</m> in <m>G</m>. Poiché <m>H</m> ha due laterali destri in <m>G</m>, l'altro laterale destro è <m>G\setminus H</m>. Analogamente, l'altro laterale sinistro è <m>G\setminus H</m>. Dunque, <m>H</m> e <m>G\setminus H</m> sono i laterali sia destri che sinistri.
+        </p>
+      </proof>
+
+    </corollary>
+
+    <p>
+      Come caso particolare abbiamo
+    </p>
+
+    <corollary xml:id="cor-alterno_normale">
+      <statement>
+        <p>
+          Il sottogruppo alterno <m>A_{n}</m> è normale in <m>\Sym_{n}</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Per <m>n=1</m>, l'alterno coincide con il simmetrico ed è, dunque, normale. Per <m>n\ge 2</m>, l'alterno ha indice <m>2</m> nel simmetrico (<xref ref="thm-sottogruppo_alterno"/>).
+        </p>
+      </proof>
+
+    </corollary>
+
+
+
+    <corollary xml:id="cor-nucleo_normale">
+      <statement>
+        <p>
+          Il nucleo <m>\ker\phi</m> di un omomorfismo di gruppi <m>\phi\colon G\to H</m> è un sottogruppo normale di <m>G</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Segue immediatamente dalla <xref ref="prop-controimmagini_omomorfismo"/>, in cui è mostrato che i laterali destri e sinistri del nucleo di un omomorfismo coincidono.
+        </p>
+      </proof>
+
+    </corollary>
+
+    <p>
+      Dato un gruppo <m>G</m>, indichiamo con <m>X</m> l'insieme dei suoi sottogruppi. Se <m>H</m> è un elemento di <m>X</m>, cioè un sottogruppo di <m>G</m>, allora, la <xref ref="prop-coniugato_isomorfo"/> implica che <m>H^{g}\in X</m> per ogni <m>g\in G</m>. Non è difficile verificare che <m>H^{1}=H</m> e <m>H^{g_{1}g_{2}}=(H^{g_{1}})^{g_{2}}</m> per ogni <m>g_{1}</m> e <m>g_{2}</m> in <m>G</m>. Pertanto, è così definita un'azione di <m>G</m> su <m>X</m>. Dato <m>H</m> in <m>X</m>, l'orbita di <m>H</m> è l'insieme dei suoi coniugati, mentre lo stabilizzatore di <m>H</m> è formato dagli elementi di <m>G</m> tali che <m>H^{g}=H</m>. Introduciamo allora la
+    </p>
+
+    <definition xml:id="def-normalizzante">
+      <notation>
+        <usage><m>\nrm{G}{H}</m></usage>
+        <description>normalizzante di <m>H</m> in <m>G</m></description>
+      </notation>
+      <statement>
+        <p>
+          Se <m>H</m> è un sottogruppo di un gruppo <m>G</m>, allora il sottoinsieme di <m>G</m> così definito
+          <md>
+            \nrm{G}{H}\coloneqq\{g\in G\mid H^{g}=H\}
+          </md>
+          è detto <term>normalizzante</term> di <m>H</m> in <m>G</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Raccogliamo le principali proprietà del normalizzante di un sottogruppo.
+    </p>
+
+    <theorem xml:id="thm-normalizzante">
+      <statement>
+        <p>
+          Sia <m>H</m> un sottogruppo di un gruppo <m>G</m>. Allora
+          <ol>
+            <li xml:id="item-normalizzante_sottogruppo">
+              <p>
+                <m>\nrm{G}{H}</m> è un sottogruppo di <m>G</m> contenente <m>H</m>;
+              </p>
+            </li>
+            <li xml:id="item-centralizzante_in_normalizzante">
+              <p>
+                <m>\cent{G}{H}\le\nrm{G}{H}</m>;
+              </p>
+            </li>
+            <li xml:id="item-normale_in_normalizzante">
+              <p>
+                dato un sottogruppo <m>K</m> di <m>G</m> contenente <m>H</m>, si ha che <m>H\trianglelefteq K</m> se e solo se <m>K\le\nrm{G}{H}</m> (in particolare, <m>H\trianglelefteq\nrm{G}{H}</m>);
+              </p>
+            </li>
+            <li xml:id="item-normale_se_normalizzante_G">
+              <p>
+                <m>H\trianglelefteq G</m> se e solo se <m>\nrm{G}{H}=G</m>;
+              </p>
+            </li>
+            <li xml:id="item-coniugati_indice">
+              <p>
+                la cardinalità dell'insieme dei coniugati di <m>H</m> è uguale a <m>\ind{G}{\nrm{G}{H}}</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Chiaramente <m>H</m> è contenuto in <m>\nrm{G}{H}</m>. Poiché <m>\nrm{G}{H}</m> è uno stabilizzatore per una particolare azione, la <xref ref="prop-stabilizzatore_sottogruppo"/> implica il <xref ref="item-normalizzante_sottogruppo"/>.
+        </p>
+        <p>
+          Se <m>g\in\cent{G}{H}</m>, allora <m>h^{g}=h</m> per ogni <m>h\in H</m>: si ha, dunque, <m>H^{g}=H</m> e questo prova il <xref ref="item-centralizzante_in_normalizzante"/>.
+        </p>
+        <p>
+          Il <xref ref="item-normale_in_normalizzante"/> segue immediatamente dalle definizioni di normalizzante e di sottogruppo normale. Il
+          <xref ref="item-normale_se_normalizzante_G"/> è un caso particolare di questo.
+        </p>
+        <p>
+          Il <xref ref="item-coniugati_indice"/> non è altro che l'applicazione del <xref ref="thm-stabilizzatore_orbita"/> all'azione di <m>G</m> per coniugio sull'insieme dei sottogruppi di <m>G</m>.
+        </p>
+      </proof>
+
+    </theorem>
+
+    <corollary xml:id="cor-coniugati_indice_finito">
+      <statement>
+        <p>
+          Se <m>H</m> è un sottogruppo di indice finito di un gruppo <m>G</m>. allora <m>H</m> ha un numero finito di coniugati e il loro numero è un divisore di <m>\ind{G}{H}</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Dalla <xref ref="prop-moltiplicativita_indice"/>, sappiamo che <m>\ind{G}{\nrm{G}{H}}</m> è finito e divide <m>\ind{G}{H}</m>. Per il <xref ref="thm-normalizzante"/>, il numero dei coniugati di <m>H</m> è uguale a <m>\ind{G}{\nrm{G}{H}}</m>.
+        </p>
+      </proof>
+
+    </corollary>
+
+    <p>
+      Sappiamo che immagini dirette e inverse di sottogruppi tramite un omomorfismo sono sottogruppi (<xref ref="prop-immagine_diretta_inversa_di_sottogruppi"/>). Cosa possiamo dire dei sottogruppi normali? Vediamo innanzitutto come si comporta il coniugio rispetto agli omomorfismi.
+    </p>
+
+    <proposition xml:id="prop-coniugio_omomorfismo">
+      <statement>
+        <p>
+          Sia <m>\phi\colon G\to H</m> un omomorfismo tra gruppi. Allora per ogni <m>l</m> e <m>g</m> in <m>G</m> si ha <m>(l^{g})\phi=(l\phi)^{g\phi}</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Abbiamo
+          <md>
+            (l^{g})\phi=(g^{-1}lg)\phi=(g\phi)^{-1}\cdot l\phi\cdot g\phi=(l\phi)^{g\phi}
+          </md>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <proposition xml:id="prop-immagine_diretta_inversa_di_sottogruppi_normali">
+      <statement>
+        <p>
+          Sia <m>\phi\colon G\to H</m> un omomorfismo di gruppi. Allora
+          <ol>
+            <li xml:id="item-immagine_diretta_di_sottogruppo_normale">
+              <p>
+                se <m>L\trianglelefteq G</m>, allora <m>L\phi\trianglelefteq \im\phi</m>;
+              </p>
+            </li>
+            <li xml:id="item-immagine_inversa_di_sottogruppo_normale">
+              <p>
+                se <m>K\trianglelefteq H</m>, allora <m>K\phi^{-1}\trianglelefteq G</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sia <m>l'</m> un elemento di <m>L\phi</m> e <m>g'</m> un elemento di <m>\im\phi</m>: dunque, esistono <m>l</m> in <m>L</m> e <m>g</m> in <m>G</m> tali che <m>l'=l\phi</m> e <m>g'=g\phi</m>. Poiché <m>L</m> è normale in <m>G</m>, abbiamo che <m>l^{g}</m> appartiene a <m>L</m> e, quindi, <m>(l^{g})\phi</m> appartiene a <m>L\phi</m>: ma, grazie alla <xref ref="prop-coniugio_omomorfismo"/>, <m>(l^{g})\phi=(l^{\phi})^{g\phi}=(l')^{g'}</m> e questo prova il <xref ref="item-immagine_diretta_di_sottogruppo_normale"/>.
+        </p>
+        <p>
+          Sia ora <m>x</m> un elemento di <m>K\phi^{-1}</m>, cioè <m>x\phi\in K</m>, e sia <m>g</m> un elemento di <m>G</m>: poiché <m>K</m> è normale in <m>H</m>, abbiamo che <m>(x\phi)^{g\phi}</m> appartiene a <m>K</m>. Ma <m>(x\phi)^{g\phi}=(x^{g})\phi</m> per la <xref ref="prop-coniugio_omomorfismo"/> e, quindi, <m>(x^{g})\phi</m> appartiene a <m>K</m>, cioè <m>x^{g}</m> appartiene a <m>K\phi^{-1}</m>, il che prova il <xref ref="item-immagine_inversa_di_sottogruppo_normale"/>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      La <xref ref="prop-immagine_diretta_inversa_di_sottogruppi_normali"/> ci dice che l'immagine di un sottogruppo normale è normale nell'immagine. In generale non possiamo dire che l'immagine di un sottogruppo normale sia normale nel gruppo di arrivo.
+    </p>
+
+    <example xml:id="ex-immagine_di_normale_non_normale">
+      <statement>
+        <p>
+          Una permutazione di <m>\Sym_{3}</m> può essere pensata come una permutazione di <m>\Sym_{4}</m> che fissa il punto <m>4</m>. Questo definisce un omomorfismo <m>\phi\colon\Sym_{3}\to\Sym_{4}</m>. Il sottogruppo alterno <m>A_{3}</m> è normale in <m>\Sym_{3}</m>, ma la sua immagine tramite <m>\phi</m> non è normale in <m>\Sym_{4}</m>. Infatti, <m>(1\;2\;3)</m> appartiene all'immagine di <m>A_{3}</m>, mentre <m>(1\;2\;3)^{(3\;4)}=(1\;2\;4)</m> no.
+        </p>
+      </statement>
+    </example>
+
+
+    <p>
+      Ricordiamo che il prodotto di due sottogruppi non è necessariamente un sottogruppo. Abbiamo però la
+    </p>
+
+    <proposition xml:id="prop-prodotto_di_normale">
+      <statement>
+        <p>
+          Siano <m>H</m> e <m>K</m> sottogruppi di un gruppo <m>G</m>. Se uno dei due sottogruppi è normale allora <m>HK</m> è un sottogruppo di <m>G</m> e se <m>H</m> e <m>K</m> sono entrambi normali, allora <m>HK</m> è un sottogruppo normale di <m>G</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Supponiamo che <m>H</m> sia normale in <m>G</m>. Per definizione di prodotto, abbiamo che <m>HK=\{hk\mid h\in H,k\in K\}</m>. Possiamo allora riesprimere questo prodotto così <m>HK=\cup_{k\in K}Hk</m> e, analogamente, <m>KH=\cup_{k\in K}kH</m>. Per il <xref ref="thm-caratterizzazione_sottogruppi_normali"/>, <m>Hk=kH</m> per ogni <m>k\in G</m>: in particolare, ciò vale se <m>k\in K</m> e, quindi, <m>HK=KH</m>. Per il <xref ref="thm-prodotto_sottogruppo"/>, <m>HK</m> è un sottogruppo di <m>G</m>.
+        </p>
+        <p>
+          Supponiamo ora che sia <m>H</m> che <m>K</m> siano normali in <m>G</m>: l'elemento generico di <m>HK</m> è del tipo <m>hk</m> con <m>h\in H</m> e <m>k\in K</m>. Dato <m>g\in G</m>, si ha <m>(hk)^{g}=h^{g}k^{g}\in HK</m> poiché <m>h^{g}\in H</m> e <m>k^{g}\in K</m>. Pertanto, <m>HK</m> è normale in <m>G</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      Procedendo per induzione, si dimostra immediatamente il seguente corollario.
+    </p>
+
+    <corollary xml:id="cor-prodotto_di_piu_normali">
+      <statement>
+        <p>
+          Se <m>N_{1}</m>, <m>N_{2}</m>, <m>\ldots</m>, <m>N_{r}</m> sono sottogruppi normali di un gruppo <m>G</m>, allora <m>N_{1}N_{2}\cdots N_{r}</m> è un sottogruppo normale di <m>G</m>.
+        </p>
+      </statement>
+    </corollary>
+
+    <p>
+      Abbiamo visto nell'<xref ref="ex-azioni_su_di_se_omomorfismi"/> che, dato un elemento <m>g</m> di un gruppo <m>G</m>, il coniugio tramite <m>g</m> è un automorfismo di <m>G</m>. Possiamo però dire qualcosa di più. Se <m>N</m> è un sottogruppo normale di <m>G</m>, allora, per il <xref ref="thm-caratterizzazione_sottogruppi_normali"/>, sappiamo che <m>N^{g}=N</m> e, quindi, il coniugio tramite <m>g</m> definisce un automorfismo di <m>N</m>. Se denotiamo con <m>\phi_{g}</m> questo automorfismo di <m>N</m> e componiamo due di questi automorfismi <m>\phi_{g}</m> e <m>\phi_{h}</m> otteniamo
+      <md>
+        n\phi_{g}\phi_{h}=(g^{-1}ng)\phi_{h}=h^{-1}g^{-1}ngh=(gh)^{-1}ngh=n\phi_{gh}
+      </md>
+      cioè <m>\phi{g}\phi_{h}=\phi_{gh}</m>. possiamo riassumere tutto ciò nella
+    </p>
+
+    <proposition xml:id="prop-automorfismi_interni">
+      <statement>
+        <p>
+          Sia <m>G</m> un gruppo e sia <m>N</m> un sottogruppo normale di <m>G</m>. Dato <m>g</m> in <m>G</m>, la funzione da <m>N</m> in sé che manda <m>n\in N</m> in <m>n^{g}</m> è un automorfismo <m>\phi_{g}</m> di <m>N</m>. La funzione <m>\phi\colon G\to\Aut(N)</m> che manda <m>g</m> in <m>\phi_{g}</m> è un omomorfismo di gruppi.
+        </p>
+      </statement>
+
+    </proposition>
+
+    <exercises xml:id="exercises-sottogruppi_normali">
+
+      <exercise>
+        <statement>
+          <p>
+            Mostrare che, se <m>N</m> è un sottogruppo normale non banale di un <m>p</m>-gruppo finito <m>G</m>, allora <m>\centro(G)\cap N</m> è non banale.
+          </p>
+        </statement>
+
+        <hint>
+          <p>
+            Adattare la dimostrazione della <xref ref="prop-centro_p_gruppo"/>.
+          </p>
+        </hint>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Sia <m>H</m> un sottogruppo proprio di un gruppo finito <m>G</m>. Mostrare che <m>G\ne\bigcup_{g\in G}H^{g}</m>.
+          </p>
+        </statement>
+
+        <hint>
+          <p>
+            Contare gli elementi diversi da <m>1</m> nei coniugati di <m>H</m>.
+          </p>
+        </hint>
+
+        <solution>
+          <p>
+            Sia <m>n\coloneqq\abs{G}</m> e <m>m\coloneqq\abs{H}</m>. Ciascun coniugato di <m>H</m> contiene allora <m>m-1</m> elementi diversi da <m>1</m>. I coniugati di <m>H</m> sono <m>\ind{G}{\nrm{G}{H}}</m> che è un divisore di <m>\ind{G}{H}</m>. Gli elementi diversi da <m>1</m> nei coniugati di <m>H</m> sono allora al più <m>(m-1)\frac{n}{m}</m>: se contiamo anche <m>1</m> vediamo che nell'unione dei coniugati di <m>H</m> ci sono al più <m>(m-1)\frac{n}{m}+1</m> elementi e, poiché <m>m \lt n</m>, questo numero è minore di <m>n</m>.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <introduction>
+          <p>
+            Un sottogruppo <m>H</m> di un gruppo <m>G</m> è detto <term>caratteristico</term> se, per ogni automorfismo <m>\phi</m> di <m>G</m>, si ha <m>H\phi\le H</m>.
+          </p>
+        </introduction>
+        <task>
+          <statement>
+            <p>
+              Mostrare che un sottogruppo caratteristico di <m>G</m> è normale in <m>G</m>.
+            </p>
+          </statement>
+          <hint>
+            <p>
+              Usare l'<xref ref="ex-azioni_su_di_se_omomorfismi"/>
+            </p>
+          </hint>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Mostrare che, se <m>H</m> è caratteristico in <m>G</m>, allora <m>H\phi=H</m> per ogni automorfismo <m>\phi</m> di <m>G</m>. Dedurre che un automorfismo <m>\phi</m> di <m>G</m> induce un automorfismo <m>\phi_{H}</m> in <m>H</m>.
+            </p>
+          </statement>
+          <hint>
+            <p>
+              L'inverso di un automorfismo è un automorfismo.
+            </p>
+          </hint>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Mostrare che se <m>K</m> è un sottogruppo caratteristico in <m>H</m> e <m>H</m> è un sottogruppo caratteristico di <m>G</m> allora <m>K</m> è caratteristico in <m>G</m>.
+            </p>
+          </statement>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Mostrare che se <m>K</m> è un sottogruppo caratteristico in <m>H</m> e <m>H</m> è un sottogruppo normale di <m>G</m> allora <m>K</m> è normale in <m>G</m>.
+            </p>
+          </statement>
+        </task>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Sia <m>X</m> un sottoinsieme di un gruppo <m>G</m> e sia <m>H</m> il sottogruppo di <m>G</m> generato da <m>X</m>. Dato un elemento <m>g</m> di <m>G</m>, dimostrare che <m>g\in\nrm{G}{H}</m> se e solo se <m>x^{g}\in H</m> per ogni <m>x\in X</m>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Se <m>g\in\nrm{G}{H}</m>, ovviamente <m>x^{g}\in H</m> per ogni <m>x\in X</m>.
+          </p>
+          <p>
+            Per il viceversa, consideriamo l'automorfismo <m>\phi</m> di <m>G</m> dato dal coniugio tramite <m>g</m>. L'immagine di <m>H</m> tramite <m>\phi</m> (cioè <m>H^{g}</m>) è generata da <m>X\phi</m>, per la <xref ref="prop-immagine_sottogruppo_generato"/>. Ma <m>X\phi\subseteq H</m> per ipotesi e, dunque, <m>H^{g}\le H</m>, cioè <m>g\in\nrm{G}{H}</m>.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise xml:id="exercise-stabilizzatori_coniugati">
+        <statement>
+          <p>
+            Sia data un'azione di un gruppo <m>G</m> su un insieme <m>X</m>. Dato <m>x</m> in <m>X</m> e <m>g</m> in <m>G</m>, si ponga <m>y\coloneqq xg</m>. Mostrare che <m>\stab{G}{y}=\stab{G}{x}^{g}</m>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Sia <m>h</m> un elemento di <m>\stab{G}{x}</m>. Abbiamo allora
+            <md>
+              yh^{g}=(xg)(g^{-1}hg)=xhg=xg=y
+            </md>:
+            dunque,  <m>\stab{G}{y}\ge\stab{G}{x}^{g}</m>. Poiché <m>x=yg^{-1}</m>, abbiamo, analogamente, <m>\stab{G}{x}\ge\stab{G}{y}^{g^{-1}}</m> e, coniugando per <m>g</m>, otteniamo <m>\stab{G}{x}^{g}\ge\stab{G}{y}</m>.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Un'azione di un gruppo <m>G</m> su un insieme <m>X</m> è detta <term>transitiva</term> se, per ogni <m>x</m> e <m>y</m> in <m>X</m>, esiste un <m>g</m> in <m>G</m> tale che <m>y=xg</m>, vale a dire l'azione ha un'unica orbita.
+          </p>
+          <p>
+            Siano dati un'azione transitiva di un gruppo <m>G</m> su un insieme <m>X</m>, un elemento <m>x</m> di <m>X</m> e un sottogruppo normale <m>H</m> di <m>G</m> contenuto in <m>\stab{G}{x}</m>. Dimostrare che <m>yh=y</m> per ogni <m>y</m> in <m>X</m> e ogni <m>h</m> in <m>H</m>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Dato <m>y</m> in <m>X</m>, esiste <m>g</m> in <m>G</m> tale che <m>y=xg</m>. Per ipotesi <m>H\le\stab{G}{x}</m> e, quindi, <m>H^{g}\le\stab{G}{x}^{g}=\stab{G}{y}</m>, grazie all'<xref ref="exercise-stabilizzatori_coniugati"/>. Poiché <m>H</m> è normale, <m>H^{g}=H</m> e la tesi segue.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+
+        <introduction>
+          <p>
+            Sia <m>G</m> un gruppo finito e siano <m>H</m> e <m>K</m> due sottogruppi di <m>G</m> tali che <m>\abs{H}</m> e <m>\ind{G}{K}</m> siano coprimi.
+          </p>
+        </introduction>
+
+        <task>
+          <statement>
+            <p>
+              Mostrare che, se almeno uno tra <m>H</m> e <m>K</m> è normale in <m>G</m>, allora <m>H\le K</m>.
+            </p>
+          </statement>
+          <hint>
+            <p>
+              Considerare il prodotto <m>HK</m> e ragionare su <m>\frac{\abs{HK}}{\abs{K}}</m>.
+            </p>
+          </hint>
+          <solution>
+            <p>
+              L'ordine del prodotto di <m>H</m> e <m>K</m> soddisfa la relazione <m>\abs{HK}=\frac{\abs{H}\abs{K}}{\abs{H\cap K}}</m>. Poniamo allora <m>d\coloneqq\frac{\abs{HK}}{\abs{K}}=\frac{\abs{H}}{\abs{H\cap K}}</m>: poiché <m>H\cap K</m> è un sottogruppo di <m>H</m>, per il <xref ref="thm-lagrange" text="title"/>, <m>d</m> è un intero. 
+              Se almeno uno tra <m>H</m> e <m>K</m> è normale in <m>G</m>, allora il prodotto <m>HK</m> è un sottogruppo di <m>G</m>. Ora <m>\ind{G}{K}=\ind{G}{HK}\ind{HK}{K}</m> e, quindi, <m>d=\ind{HK}{K}</m> divide <m>\ind{G}{K}</m>. D'altra parte, <m>d=\frac{\abs{H}}{\abs{H\cap K}}</m> divide <m>\abs{H}</m>. Poiché <m>\abs{H}</m> e <m>\ind{G}{K}</m> sono coprimi, otteniamo che <m>d=1</m>: ciò significa che <m>HK=K</m> e, poiché <m>H\le HK</m>, abbiamo la tesi.
+            </p>
+          </solution>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Mostrare con un esempio che senza l'ipotesi che <m>H</m> o <m>K</m> sono normali in <m>G</m> non è detto che <m>H\le K</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Siano <m>G\coloneqq\Sym_{3}</m>, <m>H\coloneqq\grgen{(1\;2)}</m> e <m>K\coloneqq\grgen{(1\;3)}</m>. Ora <m>\abs{H}=2</m> e <m>\ind{G}{K}=3</m> sono coprimi, ma <m>H</m> non è contenuto in <m>K</m>.
+            </p>
+          </solution>
+        </task>
+
+      </exercise>
+
+      <exercise>
+
+        <introduction>
+          <p>
+            Sia <m>H</m> un sottogruppo di un gruppo <m>H</m>. Dato un elemento <m>g</m> di <m>G</m> si ponga <m>F(g)\coloneqq\{x\in G\mid g^{x}\in H\}</m>.
+          </p>
+        </introduction>
+
+        <task xml:id="item-F_unione_laterali_sinistri">
+          <statement>
+            <p>
+              Mostrare che <m>F(g)</m> è unione di laterali sinistri di <m>H</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Dobbiamo mostrare che, per ogni <m>x</m> appartenente a <m>F(g)</m>, l'intero laterale sinistro <m>xH</m> è contenuto in <m>F(g)</m>. Gli elementi di <m>xH</m> sono del tipo <m>xh</m> con <m>h\in H</m>. Abbiamo allora <m>g^{xh}=(g^{x})^{h}</m>: ora <m>g^{x}</m> appartiene a <m>H</m> poiché <m>x</m> appartiene a <m>F(g)</m> e, pertanto, <m>(g^{x})^{h}</m> appartiene ad <m>H</m>. Dunque, <m>g^{xh}</m> appartiene a <m>H</m>, cioè <m>xh</m> appartiene a <m>F(g)</m>.
+            </p>
+          </solution>
+        </task>
+
+        <task xml:id="item-F_unione_laterali_destri">
+          <statement>
+            <p>
+              Mostrare che <m>F(g)</m> è unione di laterali destri di <m>\cent{G}{g}</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Dobbiamo mostrare che, per ogni <m>x</m> appartenente a <m>F(g)</m>, l'intero laterale destro <m>\cent{G}{g}x</m> è contenuto in <m>F(g)</m>. Gli elementi di <m>\cent{G}{g}x</m> sono del tipo <m>cx</m> con <m>c\in\cent{G}{g}</m>. Abbiamo allora <m>g^{cx}=(g^{c})^{x}=g^{x}\in H</m>, dove abbiamo usato il fatto che <m>g^{c}=g</m> e che <m>g^{x}</m> appartiene ad <m>H</m>. Dunque, <m>cx</m> appartiene a <m>F(g)</m>.
+            </p>
+          </solution>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Mostrare che <m>H</m> è normale in <m>G</m> se e solo se per ogni <m>g\notin H</m> si ha <m>F(g)=\vuoto</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+            Supponiamo che <m>H</m> sia normale in <m>G</m> e <m>g\notin H</m>. I coniugati di elementi di <m>H</m> appartengono ad <m>H</m> e, dunque, un elemento in <m>H</m> e uno non in <m>H</m> non possono essere coniugati: in particolare, <m>g^{x}\notin H</m> per ogni <m>x</m> in <m>G</m>, cioè <m>F(g)</m> è vuoto.
+            </p>
+
+            <p>
+              Viceversa, supponiamo che <m>F(g)=\vuoto</m> per ogni <m>g\notin H</m>. Sia <m>h</m> un elemento di <m>H</m> e sia <m>x</m> un elemento di <m>G</m>. Ora, <m>(h^{x})^{x^{-1}}=h^{xx^{-1}}=h^{1}=h\in H</m>, e, dunque, <m>x^{-1}\in F(h^{x})</m>. In particolare, <m>F(h^{x})\ne\vuoto</m> e, quindi, <m>h^{x}\in H</m>, cioè <m>H</m> è normale in <m>G</m>.
+            </p>
+          </solution>
+        </task>
+
+
+        <task>
+          <statement>
+            <p>
+              Se <m>G</m> è finito, mostrare che <m>\abs{F(g)}=\abs{\cent{G}{g}}\abs{g^{G}\cap H}</m>. Dedurre che <m>\frac{\abs{\cent{G}{g}}\abs{g^{G}\cap H}}{\abs{H}}</m> è un intero.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Dal <xref ref="item-F_unione_laterali_destri">Punto</xref> sappiamo che <m>F(g)</m> è unione di laterali destri di <m>\cent{G}{g}</m>: dunque, <m>\abs{F(g)}=r\abs{\cent{G}{g}}</m> dove <m>r</m> è il numero di laterali destri di <m>\cent{G}{g}</m> contenuti in <m>F(g)</m>. Dati due elementi <m>x_{1}</m> e <m>x_{2}</m> di <m>G</m> si ha <m>g^{x_{1}}=g^{x_{2}}</m> se e solo se <m>x_{1}</m> e <m>x_{2}</m> appartengono allo stesso laterale destro di <m>\cent{G}{g}</m>. C'è, dunque, una corrispondenza biunivoca tra laterali destri di <m>\cent{G}{g}</m> e coniugati di <m>g</m>: dato un coniugato di <m>g</m>, il corrispondente laterale destro di <m>\cent{G}{g}</m> è contenuto in <m>F(g)</m> se e solo se il coniugato appartiene a <m>H</m>. Pertanto, il numero di laterali di <m>\cent{G}{g}</m> contenuti in <m>F(g)</m> è uguale al numero di coniugati di <m>g</m> appartenenti a <m>H</m>, cioè <m>r=\abs{g^{G}\cap H}</m> e, quindi, <m>\abs{F(g)}=\abs{\cent{G}{g}}\abs{g^{G}\cap H}</m>.
+              Per il <xref ref="item-F_unione_laterali_sinistri">Punto</xref>, <m>F(g)</m> è anche unione di laterali sinistri di <m>H</m>: dunque, il suo ordine è multiplo di <m>\abs{H}</m> e, pertanto, <m>\frac{\abs{\cent{G}{g}}\abs{g^{G}\cap H}}{\abs{H}}</m> è un intero.
+            </p>
+          </solution>
+        </task>
+      </exercise>
+
+      <exercisegroup cols="2">
+        <introduction>
+          <p>
+            Dato il gruppo <m>G</m> formato dagli elementi del tipo <m>(a,b,c)</m> con <m>a</m>, <m>b</m> e <m>c</m> in <m>\Interi</m> dotato dell'operazione <m>\diamond</m> definita da
+            <md>
+              (a_{1},b_{1},c_{1})\diamond(a_{2},b_{2},c_{2})\coloneqq
+              (a_{1}+a_{2},b_{1}+b_{2},c_{1}+c_{2}+a_{1}b_{2})
+            </md>
+            come nell'<xref ref="exercise-triangolari_nascoste"/> per ciascuno dei sottoinsiemi definiti dalle condizioni sulle terne <m>(a,b,c)</m> stabilire se sono sottogruppi e, in caso affermativo, se sono normali in <m>G</m>.
+          </p>
+        </introduction>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>(a,b,c)</m> con <m>a</m> multiplo di <m>2</m>.
+            </p>
+          </statement>
+          <answer>
+            <p>
+              È sottogruppo normale di <m>G</m>.
+            </p>
+          </answer>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>(a,b,c)</m> con <m>b</m> multiplo di <m>2</m>.
+            </p>
+          </statement>
+          <answer>
+            <p>
+              È sottogruppo normale di <m>G</m>.
+            </p>
+          </answer>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>(a,b,c)</m> con <m>c</m> multiplo di <m>2</m>.
+            </p>
+          </statement>
+          <answer>
+            <p>
+              Non è sottogruppo di <m>G</m>.
+            </p>
+          </answer>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>(a,b,c)</m> con <m>a</m> e <m>b</m> multipli di <m>2</m> e <m>c</m> multiplo di <m>4</m>.
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              È sottogruppo non normale di <m>G</m>.
+            </p>
+          </answer>
+        </exercise>
+
+      </exercisegroup>
+
+      <exercise>
+        <introduction>
+          <p>
+            Sia <m>G</m> un gruppo e sia <m>H</m> un sottogruppo di <m>G</m>.
+          </p>
+        </introduction>
+
+        <task>
+          <statement>
+            <p>
+              Dimostrare che <m>H_{G}\coloneqq \bigcap_{g\in G}H^{g}</m> è un sottogruppo normale di <m>G</m> contenuto in <m>H</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Per ogni elemento <m>g</m> in <m>G</m> il coniugato <m>H^{g}</m> è un sottogruppo di <m>G</m>. Dunque, <m>H_{G}</m>, essendo intersezione di sottogruppi, è sottogruppo di <m>G</m>. In particolare, <m>H^{1}=H</m> e, dunque, <m>\bigcap_{g\in G}H^{g}\le H^{1}=H</m>.
+            </p>
+
+            <p>
+              Per mostrare che <m>H_{G}</m> è normale in <m>G</m>, dobbiamo mostrare che per ogni <m>g'\in G</m> si ha <m>H_{G}^{g'}=H_{G}</m>. Ora <m>H_{G}^{g'}=(\bigcap_{g\in G}H^{g})^{g'}=\bigcap_{g\in G}(H^{g})^{g'}=\bigcap_{g\in G}H^{gg'}</m>. Al variare di <m>g</m> in <m>G</m>, gli elementi <m>gg'</m> sono tutti e soli gli elementi di <m>G</m>. Dunque, <m>\bigcap_{g\in G}H^{gg'}=H_{G}</m>, cioè <m>(H_{G})^{g'}=H_{G}</m>, come richiesto.
+            </p>
+          </solution>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Dimostrare che se <m>N</m> è un sottogruppo normale di <m>G</m> contenuto in <m>H</m> allora <m>N\le H_{G}</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Sappiamo che <m>N=N^{g}</m> per ogni <m>g</m> in <m>G</m>. Poiché <m>N\le H</m>, abbiamo che <m>N^{g}\le H^{g}</m> per ogni <m>g</m> in <m>G</m>, cioè <m>N\le H^{g}</m> per ogni <m>g</m> in <m>G</m>. Di conseguenza, <m>N\le\bigcap_{g\in G}H^{g}=H_{G}</m>, come richiesto.
+            </p>
+          </solution>
+        </task>
+
+
+        <task>
+          <statement>
+            <p>
+              Dimostrare che <m>H^{G}\coloneqq \grgen{H^{g}}_{g\in G}</m> è un sottogruppo normale di <m>G</m> contenente <m>H</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Poiché <m>H^{1}=H</m>, ovviamente <m>H^{G}</m> contiene <m>H</m>.
+            </p>
+
+            <p>
+              Per mostrare che <m>H^{G}</m> è normale in <m>G</m>, dobbiamo mostrare che per ogni <m>g'\in G</m> si ha <m>(H^{G})^{g'}\le H_{G}</m>. Il coniugio tramite <m>g'</m> è un omomorfismo di gruppi (anzi, è un automorfismo di <m>G</m>). Dunque, per la <xref ref="prop-immagine_sottogruppo_generato"/>, <m>(H^{G})^{g'}</m> è generato da <m>(H^{g})^{g'}=H^{gg'}</m> al variare di <m>g</m> in <m>G</m>. Ma ciascun <m>H^{gg'}</m> è un coniugato di <m>H</m> e, per definizione di <m>H^{G}</m>, è contenuto in <m>H^{G}</m>. Di conseguenza, <m>(H^{G})^{g'}\le H^{G}</m>, come richiesto.
+            </p>
+          </solution>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Dimostrare che se <m>N</m> è un sottogruppo normale di <m>G</m> contenente <m>H</m> allora <m>N\ge H^{G}</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Sappiamo che <m>N=N^{g}</m> per ogni <m>g</m> in <m>G</m>. Poiché <m>N\ge H</m> abbiamo che <m>N^{g}\ge H^{g}</m> per ogni <m>g</m> in <m>G</m>. Di conseguenza, <m>N\ge H^{G}</m>, come richiesto.
+            </p>
+          </solution>
+        </task>
+
+      </exercise>
+
+    </exercises>
+
+  </section>
+
+  <section xml:id="sec-coniugati_simmetrico_alterno">
+    <title>Classi di coniugio nel gruppo simmetrico e nel gruppo alterno</title>
+
+    <p>
+      Data una permutazione <m>\sigma</m> di <m>\Sym_{n}</m>, scritta come prodotto di cicli disgiunti <m>\sigma=\gamma_{1}\gamma_{2}\cdots\gamma_{t}</m>, vogliamo calcolare il coniugato di <m>\sigma</m> tramite una permutazione <m>\tau</m>. Poiché <m>\sigma^{\tau}=\gamma_{1}^{\tau}\gamma_{2}^{\tau}\cdots\gamma_{t}^{\tau}</m>, cominciamo a considerare i coniugati di cicli.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Supponiamo di voler fare il coniugato del ciclo <m>\sigma\coloneqq(1\;3\;5)</m> tramite la permutazione <m>\tau\coloneqq(1\;2)(3\;4\;6)</m> (siamo in <m>\Sym_{n}</m> con <m>n\ge 6</m>). Abbiamo allora
+          <md>
+            \sigma^{\tau}=\tau^{-1}\sigma\tau=(6\;4\;3)(1\;2)(1\;3\;5)(1\;2)(3\;4\;6)=(2\;4\;5)
+          </md>.
+          Notiamo che il coniugato del <m>3</m>-ciclo <m>\sigma</m> è ancora un <m>3</m>-ciclo. Non solo: <m>1\tau=2</m>, <m>3\tau=4</m> e <m>5\tau=5</m>, e, dunque, abbiamo che <m>(1\;3\;5)^{\tau}=(1\tau\;3\tau\;5\tau)</m>.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Quanto visto nell'esempio precedente ha validità generale. Abbiamo, infatti, il
+    </p>
+
+    <lemma xml:id="lem-coniugato_ciclo">
+      <statement>
+        <p>
+          Dato un <m>r</m>-ciclo <m>\gamma\coloneqq(a_{1}\;a_{2}\;\ldots\;a_{r})</m> e una permutazione <m>\tau</m> in <m>\Sym_{n}</m>, risulta <m>\gamma^{\tau}=(a_{1}\tau\;a_{2}\tau\;\ldots\;a_{r}\tau)</m>. In particolare, il coniugato di un <m>r</m>-ciclo è un <m>r</m>-ciclo. Inoltre, tutti gli <m>r</m>-cicli sono coniugati fra loro e formano, dunque, una classe di coniugio.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sia <m>\gamma'\coloneqq (a_{1}\tau\;a_{2}\tau\;\ldots\;a_{r}\tau)</m>. Mostrare che <m>\gamma^{\tau}=\gamma'</m>, cioè che <m>\tau^{-1}\gamma\tau=\gamma'</m>, è lo stesso che provare che <m>\gamma\tau=\tau\gamma'</m>. Per far ciò, mostriamo che, per ogni <m>i\in\{1,2,\ldots,n\}</m>, si ha <m>i\gamma\tau=i\tau\gamma'</m>.
+        </p>
+        <p>
+          Consideriamo prima il caso in cui <m>i=a_{j}</m> per qualche <m>j=1</m>, <m>\ldots</m>, <m>r</m>: senza perdere in generalità possiamo supporre che <m>i=a_{r}</m>. Ma allora <m>a_{r}\tau\gamma'=a_{1}\tau</m> e <m>a_{r}\gamma\tau=a_{1}\tau</m>.
+        </p>
+        <p>
+          Consideriamo ora il caso in cui <m>i\ne a_{j}</m> per ogni <m>j=1</m>, <m>\ldots</m>, <m>r</m>: dunque, <m>i\gamma=i</m> e <m>i\gamma\tau=i\tau</m>. Inoltre, per l'iniettività di <m>\tau</m>, abbiamo che <m>i\tau\ne a_{j}\tau</m> per ogni <m>j=1</m>, <m>\ldots</m>, <m>r</m> e, quindi, <m>i\tau\gamma'=i\tau</m>.
+        </p>
+        <p>
+          Sia ora <m>(b_{1}\;b_{2}\;\ldots\;b_{r})</m> un <m>r</m>-ciclo qualsiasi. Definiamo una permutazione <m>\rho</m> tale che <m>(a_{1}\;a_{2}\;\ldots\;a_{r})^{\rho}=(b_{1}\;b_{2}\;\ldots\;b_{r})</m>, ponendo <m>a_{j}\rho\coloneqq b_{j}</m> per <m>j=1</m>, <m>\ldots</m>, <m>r</m> e estendendola arbitrariamente agli elementi diversi dagli <m>a_{j}</m>.
+        </p>
+      </proof>
+
+    </lemma>
+
+    <theorem xml:id="thm-classi_coniugio_simmetrico">
+      <statement>
+        <p>
+          Due permutazioni di <m>\Sym_{n}</m> sono coniugate se e solo se hanno lo stesso tipo.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sia <m>\sigma</m> una permutazione di tipo <m>(r_{1},r_{2},\ldots,r_{t})</m> con <m>r_{1}\ge r_{2}\ge\cdots\ge r_{t}\gt 1</m>. Dunque,
+          <md>
+            \sigma=(a_{1,1}\;\ldots\;a_{1r_{1}})\cdots(a_{t1}\;\ldots\;a_{tr_{t}})
+          </md>
+          con gli <m>a_{ij}</m> tutti distinti. Se <m>\tau</m> è un elemento qualunque di <m>\Sym_{n}</m>, per il <xref ref="lem-coniugato_ciclo"/> abbiamo allora
+          <md>
+            \sigma^{\tau}=(a_{1,1}\;\ldots\;a_{1r_{1}})^{\tau}\cdots(a_{t1}\;\ldots\;a_{tr_{t}})^{\tau}=  (a_{1,1}\tau\;\ldots\;a_{1r_{1}}\tau)\cdots(a_{t1}\tau\;\ldots\;a_{tr_{t}}\tau)
+          </md>.
+          Per l'iniettività di <m>\tau</m>, gli <m>a_{ij}\tau</m> sono tutti distinti e, quindi, i cicli che appaiono in questa espressione di <m>\sigma^{\tau}</m> sono disgiunti: pertanto, <m>\sigma^{\tau}</m> ha lo stesso tipo di <m>\sigma</m>.
+        </p>
+        <p>
+          Viceversa, sia
+          <md>
+            \sigma'=(b_{1,1}\;\ldots\;b_{1r_{1}})\cdots(b_{t1}\;\ldots\;b_{tr_{t}})
+          </md>
+          con i <m>b_{ij}</m> tutti distinti: definita una permutazione <m>\rho</m> ponendo <m>a_{ij}\rho\coloneqq b_{ij}</m> per ogni <m>i</m> e <m>j</m> e estendendola arbitrariamente agli elementi diversi dagli <m>a_{j}</m>, un'ulteriore applicazione del <xref ref="lem-coniugato_ciclo"/> mostra che <m>\sigma^{\rho}=\sigma'</m>, come richiesto
+        </p>
+      </proof>
+
+    </theorem>
+
+    <example>
+      <statement>
+        <p>
+          Date due permutazioni <m>\sigma</m> e <m>\sigma'</m> dello stesso tipo, non c'è un'unica permutazione <m>\rho</m> tale che <m>\sigma^{\rho}=\sigma'</m>. Ad esempio in <m>\Sym_{5}</m> abbiamo <m>(1\;2\;3)^{(1\;3)}=(3\;2\;1)</m> e <m>(1\;2\;3)^{(2\;3)(4\;5)}=(1\;3\;2)</m> (notiamo che <m>(3\;2\;1)=(1\;3\;2)</m>).
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id="ex-classi_coniugio_simmetrico">
+      <statement>
+        <p>
+          Nell'<xref ref="ex-permutazioni_per_tipo"/> abbiamo contato quante permutazioni per tipo ci sono in <m>\Sym_{n}</m> con <m>n\le 5</m>: ora sappiamo che ogni tipo corrisponde a una classe di coniugio. Possiamo allora reinterpretare quelle tabelle e, inoltre, poiché dal <xref ref="cor-ordine_classe_coniugio"/> sappiamo che la cardinalità di una classe di coniugio è uguale all'indice del centralizzante di un qualunque elemento della classe, possiamo calcolare l'ordine del centralizzante di ciascun elemento di ogni classe e aggiungere altre informazioni alle tabelle date.
+        </p>
+        <p>
+          In <m>\Sym_{3}</m>:
+          <md>
+            \begin{array}{cccc}
+              \sigma    \amp \abs{\sigma^{S}} \amp \abs{\sigma} \amp\abs{\cent{S}{\sigma}}\\
+              \hline
+              \Id       \amp 1                \amp 1            \amp 6\\
+              (1\;2)    \amp 3                \amp 2            \amp 2\\
+              (1\;2\;3) \amp 2                \amp 3            \amp 3\\
+            \end{array}
+          </md>
+        </p>
+        <p>
+          In <m>\Sym_{4}</m>:
+          <md>
+            \begin{array}{cccc}
+              \sigma       \amp \abs{\sigma^{S}} \amp \abs{\sigma} \amp\abs{\cent{S}{\sigma}}\\
+              \hline
+              \Id          \amp 1                \amp 1            \amp 24\\
+              (1\;2)       \amp 6                \amp 2            \amp  4\\
+              (1\;2\;3)    \amp 8                \amp 3            \amp  3\\
+              (1\;2\;3\;4) \amp 6                \amp 4            \amp  4\\
+              (1\;2)(3\;4) \amp 3                \amp 2            \amp  8\\
+            \end{array}
+          </md>
+        </p>
+        <p>
+          In <m>\Sym_{5}</m>:
+          <md>
+            \begin{array}{cccc}
+              \sigma          \amp \abs{\sigma^{S}} \amp \abs{\sigma} \amp\abs{\cent{S}{\sigma}}\\
+              \hline
+              \Id             \amp 1                \amp 1            \amp 120\\
+              (1\;2)          \amp 10               \amp 2            \amp 12\\
+              (1\;2\;3)       \amp 20               \amp 3            \amp 6\\
+              (1\;2\;3\;4)    \amp 30               \amp 4            \amp 4\\
+              (1\;2\;3\;4\;5) \amp 24               \amp 5            \amp 5\\
+              (1\;2)(3\;4)    \amp 15               \amp 2            \amp 8\\
+              (1\;2\;3)(4\;5) \amp 20               \amp 6            \amp 6\\
+            \end{array}
+          </md>
+        </p>
+        <p>
+          Ricordiamo ora che il centralizzante di un elemento <m>g</m> di un gruppo <m>G</m> contiene il sottogruppo ciclico <m>\grgen{g}</m>. In alcuni casi, questa inclusione può essere un'uguaglianza. Nelle tabelle suesposte, possiamo confrontare il periodo di un elemento (cioè l'ordine del gruppo ciclico da esso generato) con l'ordine del suo centralizzante, per notare, ad esempio, che in <m>\Sym_{5}</m> si ha <m>\cent{\Sym_{5}}{(1\;2\;3)}\ne\grgen{(1\;2\;3)}</m>, mentre  <m>\cent{\Sym_{5}}{(1\;2\;3\;4)}=\grgen{(1\;2\;3\;4)}</m>.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Dalle tabelle precedenti possiamo ricavare tutti i sottogruppi normali dei gruppi simmetrici studiati. Un sottogruppo normale, infatti, è unione di classi di coniugio.
+    </p>
+
+    <example xml:id="ex-sottogruppi_normali_simmetrico">
+      <statement>
+        <p>
+          Determiniamo i sottogruppi normali di <m>\Sym_{n}</m> per <m>3\le n\le 5</m>. Sappiamo già che il sottogruppo alterno è normale in <m>\Sym_{n}</m> (<xref ref="cor-alterno_normale"/>).
+        </p>
+        <p>
+          Iniziamo a considerare il caso <m>n=3</m>. Come detto, un sottogruppo normale deve essere unione di classi di coniugio e tra esse ci deve essere la classe di <m>\Id</m>. Combiniamo le classi di <m>\Sym_{3}</m> in tutti i modi possibili (sempre includendo la classe di <m>\Id</m>): Se prendiamo la sola classe di <m>\Id</m> otteniamo il sottogruppo banale, se prendiamo tutte le classi otteniamo tutto il gruppo simmetrico, se prendiamo la classe di <m>\Id</m> e la classe di <m>(1\;2\;3)</m> otteniamo il sottogruppo alterno. L'unica possibilità che rimane da analizzare è il sottoinsieme unione della classe di <m>\Id</m> e di <m>(1\;2)</m>: ma questo sottoinsieme contiene <m>4</m> elementi e, per il <xref ref="thm-lagrange" text="title"/>, non può essere un sottogruppo di <m>\Sym_{3}</m>. Pertanto, <m>\Sym_{3}</m> ha <m>3</m> sottogruppi normali: <m>\Id</m>, <m>A_{3}</m> e <m>\Sym_{3}</m>.
+        </p>
+        <p>
+          Consideriamo ora il caso <m>n=4</m>. Consideriamo tutte le possibili unioni di classi di coniugio (includendo <m>\Id</m>) e contiamo quanti elementi contiene ciascuna di queste unioni: se il numero che otteniamo non è un divisore dell'ordine del gruppo, allora sicuramente il sottoinsieme considerato non è un sottogruppo e possiamo scartarlo, altrimenti dobbiamo verificare se è un sottogruppo. Facendo tutti i calcoli, vediamo che, oltre a <m>\Id</m>, <m>A_{4}</m> e <m>\Sym_{4}</m>, l'unica possibilità da considerare è il sottoinsieme <m>T</m> unione della classe di <m>\Id</m> e della classe di <m>(1\;2)(3\;4)</m>: il sottoinsieme <m>T</m> ha <m>4</m> elementi e, quindi, potrebbe essere un sottogruppo di <m>\Sym_{4}</m>. Facendo le verifiche, vediamo che è effettivamente così e, quindi, è un sottogruppo (necessariamente normale) di <m>\Sym_{4}</m>.
+        </p>
+        <p>
+          Il caso <m>n=5</m> si tratta in maniera analoga. Consideriamo tutte le possibili unioni di classi di coniugio (includendo <m>\Id</m>) e cerchiamo quelle formate da un numero di elementi che sia un divisore dell'ordine di <m>\Sym_{5}</m> (cioè di <m>5!=120</m>). Oltre a quelle che danno il sottogruppo banale, il sottogruppo alterno e il gruppo simmetrico stesso, abbiamo due casi da considerare:
+          <ul>
+            <li>
+              <p>
+                l'unione delle classi di <m>\Id</m>, di <m>(1\;2\;3\;4\;5)</m> e di <m>(1\;2)(3\;4)</m> che contiene <m>40</m> elementi
+              </p>
+            </li>
+            <li>
+              <p>
+                l'unione delle classi di <m>\Id</m>, di <m>(1\;2\;3\;4\;5)</m>, di <m>(1\;2)(3\;4)</m> e di <m>(1\;2\;3)(4\;5)</m> che contiene <m>60</m> elementi
+              </p>
+            </li>
+          </ul>
+          Né l'una ne l'altra sono sottogruppi del simmetrico: infatti, entrambe contengono gli elementi <m>(1\;2)(3\;4)</m> e <m>(1\;2)(3\;5)</m> ma non il loro prodotto e cioè <m>(3\;4\;5)</m>. Dunque, gli unici sottogruppi normali di <m>\Sym_{5}</m> sono <m>\Id</m>, <m>A_{5}</m> e <m>\Sym_{5}</m>.
+        </p>
+      </statement>
+    </example>
+
+    <remark xml:id="rem-conteggio_elementi_classi_coniugio">
+      <p>
+        Ovviamente, il metodo di cercare i sottogruppi normali del gruppo simmetrico contando il numero di elementi nell'unione di classi di coniugio non è molto efficiente in generale. Già per <m>n=5</m> i casi da considerare sono parecchi e a mano a mano che <m>n</m> cresce questo metodo diventa improponibile. Si potrebbe però dimostrare (con altri metodi, sempre relativamente elementari) che gli unici sottogruppi normali di <m>\Sym_{n}</m> per <m>n\ne 4</m>, sono <m>\Id</m>, <m>A_{n}</m> e <m>\Sym_{n}</m> stesso.
+      </p>
+    </remark>
+
+    <example xml:id="ex-normalita_non_transitiva">
+      <statement>
+        <p>
+          Nell'<xref ref="ex-sottogruppi_normali_simmetrico"/> abbiamo determinato i sottogruppi normali di <m>\Sym_{4}</m>. In particolare, abbiamo trovato un sottogruppo normale <m>T</m> di ordine <m>4</m>: per l'<xref ref="rem-gruppi_di_ordine_4_abeliani"/>, <m>T</m> è abeliano e i suoi sottogruppi sono normali in esso. In particolare, posto <m>C\coloneqq\grgen{(1\;2)(3\;4)}</m>, abbiamo che <m>C\trianglelefteq T\trianglelefteq \Sym_{4}</m> ma <m>C</m> non è normale in <m>\Sym_{4}</m>. Questo mostra che la relazione di normalità non è transitiva.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Ci chiediamo ora cosa possiamo dire delle classi di coniugio dell'alterno. Avendo indice <m>2</m> nel simmetrico, il sottogruppo alterno è normale nel simmetrico (<xref ref="cor-indice_2_normale"/>). Dunque, se <m>\sigma</m> è una permutazione contenuta nell'alterno, la sua classe di coniugio è contenuta nell'alterno: tuttavia, ciò non significa che questa sia anche la sua classe di coniugio nell'alterno.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          In <m>\Sym_{3}</m>, l'elemento <m>\sigma\coloneqq(1\;2\;3)</m> ha classe di coniugio contenente <m>2</m> elementi e cioè <m>(1\;2\;3)</m> e <m>(1\;3\;2)</m>. Poiché <m>\sigma</m> è una permutazione pari, questa classe di coniugio è contenuta interamente nell'alterno. Tuttavia, <m>A_{3}</m>, avendo ordine <m>3</m>, è ciclico (quindi, abeliano) e, di conseguenza, le sue classi di coniugio hanno cardinalità <m>1</m>. Dunque, <m>(1\;2\;3)</m> non è coniugato a <m>(1\;3\;2)</m> nell'alterno.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Per descrivere le classi dell'alterno ci servono alcuni risultati.
+    </p>
+
+    <lemma xml:id="lem-indice_intersezione">
+      <statement>
+        <p>
+          Se <m>H</m> è un sottogruppo di indice finito di un gruppo <m>G</m> e <m>K</m> è un sottogruppo di <m>G</m>, allora <m>H\cap K</m> ha indice finito in <m>K</m> e <m>\ind{K}{H\cap K}\le\ind{G}{H}</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Siano <m>(H\cap K)k_{1}</m> e <m>(H\cap K)k_{2}</m> due laterali destri di <m>H\cap K</m> in <m>K</m>. Se i laterali destri <m>Hk_{1}</m> e <m>Hk_{2}</m> coincidono, allora esiste un elemento <m>h</m> in <m>H</m> tale che <m>k_{1}=hk_{2}</m>. Ma <m>h=k_{1}k_{2}^{-1}</m> è un elemento di <m>K</m> e, quindi, di <m>H\cap K</m>: dunque, <m>k_{1}=hk_{2}\in (H\cap K)k_{2}</m>, cioè <m>(H\cap K)k_{1}=(H\cap K)k_{2}</m>. Di conseguenza, se <m>r \gt \ind{G}{H}</m>, allora <m>(H\cap K)k_{1}</m>, <m>\ldots</m>, <m>(H\cap K)k_{r}</m> non possono essere laterali destri tutti distinti di <m>H\cap K</m> in <m>K</m> poiché, altrimenti, i laterali <m>Hk_{1}</m>, <m>\ldots</m>, <m>Hk_{r}</m> sarebbero laterali tutti distinti di <m>H</m> in <m>G</m>. Pertanto, <m>H\cap K</m> ha al più <m>\ind{G}{H}</m> laterali distinti in <m>K</m>.
+        </p>
+      </proof>
+
+    </lemma>
+
+    <p>
+      Consideriamo ora il caso delle classi di coniugio di un sottogruppo di indice <m>2</m>.
+    </p>
+
+    <proposition xml:id="prop-classi_coniugio_indice_2">
+      <statement>
+        <p>
+          Sia <m>G</m> un gruppo finito e sia <m>H</m> un suo sottogruppo di indice <m>2</m>. Preso un elemento <m>h\in H</m> si verifica uno e uno solo dei seguenti casi
+          <ul>
+            <li>
+              <p>
+                <m>h^{H}=h^{G}</m> e <m>\abs{\cent{H}{h}}=\frac{1}{2}\abs{\cent{G}{h}}</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                preso un qualunque <m>g\in G\setminus H</m> e posto <m>h'\coloneqq h^{g}</m>, la classe <m>h^{G}</m> è unione disgiunta di <m>h^{H}</m> e <m>h'^{H}</m> con <m>\abs{h^{H}}=\abs{h'^{H}}=\frac{1}{2}\abs{h^{G}}</m> e <m>\cent{G}{h}=\cent{H}{h}</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sappiamo che <m>H</m> è normale in <m>G</m> per il <xref ref="cor-indice_2_normale"/>: dunque, <m>h^{G}</m> è contenuta in <m>H</m>.
+        </p>
+        <p>
+          Dalla <xref ref="prop-moltiplicativita_indice"/>  e dal <xref ref="cor-ordine_classe_coniugio"/> segue che
+          <md>
+            <mrow> 2\abs{h^{H}} \amp =2\ind{H}{\cent{H}{h}}=\ind{G}{H}\ind{H}{\cent{H}{h}}= \ind{G}{\cent{H}{h}}</mrow>
+            <mrow> \amp   =\ind{G}{\cent{G}{h}}\ind{\cent{G}{h}}{\cent{H}{h}}= \abs{h^{G}}\ind{\cent{G}{h}}{\cent{H}{h}}</mrow>
+          </md>
+          Poiché <m>\cent{G}{h}\cap H=\cent{H}{h}</m>, dal <xref ref="lem-indice_intersezione"/> segue che <m>\ind{\cent{G}{h}}{\cent{H}{h}}\le\ind{G}{H}=2</m>. Abbiamo, quindi, due casi da considerare.
+        </p>
+        <p>
+          Se <m>\ind{\cent{G}{h}}{\cent{H}{h}}=2</m>, cioè <m>\abs{\cent{H}{h}}=\frac{1}{2}\abs{\cent{G}{h}}</m>, allora <m>\abs{h^{H}}=\abs{h^{G}}</m>, da cui segue <m>h^{H}=h^{G}</m>.
+        </p>
+        <p>
+          Se <m>\ind{\cent{G}{h}}{\cent{H}{h}}=1</m>, cioè <m>\cent{H}{h}=\cent{G}{h}</m>, allora <m>2\abs{h^{H}}=\abs{h^{G}}</m>. Siano ora <m>g\in G\setminus H</m> e <m>h'\coloneqq h^{g}</m> come in enunciato: applicando il <xref ref="thm-stabilizzatore_orbita"/> all'azione per coniugio, abbiamo che gli elementi <m>k</m> di <m>G</m> tali che <m>h^{k}=h^{g}</m> sono tutti e soli quelli del tipo <m>cg</m> per qualche <m>c\in\cent{G}{h}</m>. Poiché <m>\cent{G}{h}\le H</m>, nessuno di questi elementi appartiene a <m>H</m>, altrimenti <m>g=c^{-1}(cg)</m> apparterrebbe a <m>H</m>. Pertanto, <m>h</m> e <m>h'</m> non sono coniugati in <m>H</m>. Dunque, <m>h^{G}</m> è unione disgiunta delle classi <m>h^{H}</m> e <m>h'^{H}</m> entrambe di cardinalità <m>\frac{\abs{h^{G}}}{2}</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <remark xml:id="rem-classe_o_centralizzante_pari">
+      <p>
+        Nelle stesse ipotesi della <xref ref="prop-classi_coniugio_indice_2"/>, se <m>\abs{h^{G}}</m> è dispari siamo sicuramente nel primo caso e se <m>\abs{\cent{G}{h}}</m> è dispari siamo sicuramente nel secondo caso. Se né <m>\abs{h^{G}}</m> né <m>\abs{\cent{G}{h}}</m> sono dispari, occorre un'analisi più dettagliata per capire se siamo nel primo o nel secondo caso.
+      </p>
+    </remark>
+
+    <p>
+      Applichiamo ora tutto ciò alle classi di coniugio del gruppo alterno <m>A_{n}</m> per valori piccoli di <m>n</m>.
+    </p>
+
+    <example xml:id="ex-classi_coniugio_alterno">
+      <statement>
+        <p>
+          Riprendiamo le tabelle date nell'<xref ref="ex-classi_coniugio_simmetrico"/> e consideriamo le classi in <m>\Sym_{n}</m> di permutazioni pari: quelle di cardinalità dispari, sono anche classi di coniugio nell'alterno; quelle che sono formate da elementi il cui centralizzante ha ordine dispari, si <q>spezzano</q> in due classi nell'alterno di cardinalità uguale e per le altre vediamo caso per caso.
+        </p>
+        <p>
+          In <m>\Sym_{3}</m> abbiamo
+          <ul>
+            <li>
+              <p>
+                la classe di <m>\Id</m> che ha un solo elemento ed è, quindi, una classe anche in <m>A_{3}</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                la classe di <m>(1\;2\;3)</m> che ha cardinalità <m>2</m> e i cui elementi hanno centralizzante di ordine <m>3</m> e, dunque, si spezza in due classi di cardinalità <m>1</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+        <p>
+          In <m>\Sym_{4}</m> abbiamo
+          <ul>
+            <li>
+              <p>
+                la classe di <m>\Id</m> che ha un solo elemento ed è, quindi, una classe anche in <m>A_{4}</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                la classe di <m>(1\;2\;3)</m> che ha cardinalità <m>8</m> e i cui elementi hanno centralizzante di ordine <m>3</m> e, dunque, si spezza in due classi di cardinalità <m>4</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                la classe di <m>(1\;2)(3\;4)</m> che ha cardinalità <m>3</m> ed è, quindi, una classe anche in <m>A_{4}</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+        <p>
+          In <m>\Sym_{5}</m> abbiamo
+          <ul>
+            <li>
+              <p>
+                la classe di <m>\Id</m> che ha un solo elemento ed è, quindi, una classe anche in <m>A_{5}</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                la classe di <m>(1\;2\;3)</m> che ha cardinalità <m>20</m> e i cui elementi hanno centralizzante di ordine <m>6</m> e, dunque, non possiamo analizzarla semplicemente guardando alle parità. Notiamo però che <m>(4\;5)</m> appartiene al centralizzante di <m>(1\;2\;3)</m> ma non sta nel sottogruppo alterno. Di conseguenza, il centralizzante nel simmetrico e nell'alterno di <m>(1\;2\;3)</m> non coincidono. Dunque, la classe di <m>(1\;2\;3)</m> nel simmetrico è una classe anche nell'alterno;
+              </p>
+            </li>
+            <li>
+              <p>
+                la classe di <m>(1\;2\;3\;4\;5)</m> che ha cardinalità <m>24</m> e i cui elementi hanno centralizzante di ordine <m>5</m> e, dunque, si spezza in due classi di cardinalità <m>12</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                la classe di <m>(1\;2)(3\;4)</m> che ha cardinalità <m>15</m> ed è, quindi, una classe anche in <m>A_{5}</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </example>
+
+    <exercises xml:id="exercises-coniugati_simmetrico_alterno">
+
+      <exercise>
+        <introduction>
+          <p>
+            Sia <m>S\coloneqq\Sym_{n}</m> il gruppo simmetrico su <m>n</m> lettere e sia <m>\sigma</m> un <m>r</m>-ciclo (dove, ovviamente, <m>r\le n</m>).
+          </p>
+        </introduction>
+        <task>
+          <statement>
+            <p>
+              Determinare la cardinalità della classe di coniugio di <m>\sigma</m> in <m>S</m>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Gli elementi coniugati di <m>\sigma</m> sono gli <m>r</m>-cicli. Per determinare un <m>r</m>-ciclo <m>(a_{1}\;a_{2}\;\ldots\;a_{r})</m> possiamo scegliere <m>a_{1}</m> in <m>n</m> modi diversi, poi <m>a_{2}</m> in <m>n-1</m> modi diversi e così via fino a <m>a_{r}</m> che può essere scelto in <m>n-r+1</m> modi diversi. In questo modo lo stesso ciclo appare però <m>r</m> volte, quindi la classe di coniugio di <m>\sigma</m> è formata da <m>\frac{n\cdot(n-1)\cdots(n-r+1)}{r}</m> elementi.
+            </p>
+          </solution>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Determinare i valori di <m>r</m> per cui <m>\cent{S}{\sigma}=\grgen{\sigma}</m>.
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Sappiamo che <m>\abs{\sigma^{S}}\abs{\cent{S}{\sigma}}=\abs{S}</m>. Poiché <m>\abs{S}=n!</m> e <m>\abs{\sigma^{S}}=\frac{n\cdot(n-1)\cdots(n-r+1)}{r}</m> dal punto precedente, ne consegue che <m>\abs{\cent{S}{\sigma}}=r(n-r)!</m>. Il centralizzante di <m>\sigma</m> contiene tutte le potenze di <m>\sigma</m> e, dunque, contiene <m>\grgen{\sigma}</m>. Poiché <m>\sigma</m> ha periodo <m>r</m>, possiamo, dunque, affermare che <m>\cent{S}{\sigma}=\grgen{\sigma}</m> se e solo se <m>r(n-r)!=r</m> il che avviene se e solo se <m>(n-r)!=1</m>: questo si verifica se e solo se <m>n-r=0</m> oppure <m>n-r=1</m>, cioè <m>r=n</m> o <m>r=n-1</m>.
+            </p>
+          </solution>
+        </task>
+      </exercise>
+
+      <exercise>
+        <introduction>
+          <p>
+            Sia <m>S\coloneqq\Sym_{8}</m> il gruppo simmetrico su <m>8</m> lettere.
+          </p>
+        </introduction>
+        <task>
+          <statement>
+            <p>
+              Determinare la cardinalità di tutte le classi di coniugio di <m>S</m> formate da elementi di periodo <m>4</m>.
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Due permutazioni sono coniugate se e solo se si scrivono come prodotti di cicli disgiunti aventi le stesse lunghezze. Una permutazione <m>\sigma</m> scritta come prodotto di cicli disgiunti ha periodo che è il minimo comune multiplo delle lunghezze dei cicli. Affinché il periodo di <m>\sigma</m> sia <m>4</m> i cicli coinvolti devono avere quindi lunghezza che divide <m>4</m> (cioè <m>1</m>, <m>2</m> o <m>4</m>) e ci deve essere almeno un ciclo di lunghezza <m>4</m>.
+            </p>
+            <p>
+              Consideriamo le varie possibilità per la scrittura di <m>\sigma</m> come prodotto di cicli disgiunti. Poiché siamo in <m>\Sym_{8}</m> ci possono essere al più <m>2</m> cicli di lunghezza <m>4</m> e in tal caso non ci possono essere altri cicli. Si ottiene così la classe di coniugio delle permutazioni del tipo <m>(a_{1}\;a_{2}\;a_{3}\;a_{4})(a_{5}\;a_{6}\;a_{7}\;a_{8})</m>, con tutti gli <m>a_{i}</m> distinti. Per determinare il numero di elementi di questa classe di coniugio, notiamo che <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{8}</m> possono essere scelti in <m>8!</m> modi. Tuttavia non tutte queste scelte portano a permutazioni diverse: ciascuno dei due cicli coinvolti può essere scritto in <m>4</m> modi diversi (a seconda della lettera iniziale). Inoltre i due cicli possono essere scambiati fra loro. Dunque, abbiamo <m>\frac{8!}{4\cdot4\cdot2}</m> elementi nella classe.
+            </p>
+            <p>
+              Consideriamo ora i casi in cui c'è esattamente un ciclo di lunghezza <m>4</m>: possono essere allora esserci nessuno, uno o due cicli di lunghezza <m>2</m>. Abbiamo, dunque, la classe di coniugio degli elementi del tipo <m>(a_{1}\;a_{2}\;a_{3}\;a_{4})</m>: possiamo scegliere le lettere <m>a_{1}</m>, <m>\ldots</m>, <m>a_{4}</m> in <m>8\cdot7\cdot6\cdot5</m> modi diversi. Come prima però, ciascun ciclo può essere scritto in <m>4</m> modi diversi. Ci sono così <m>\frac{8\cdot7\cdot6\cdot5}{4}</m> elementi in questa classe.
+            </p>
+            <p>
+              Abbiamo poi la classe di coniugio degli elementi del tipo
+              <md>
+                (a_{1}\;a_{2}\;a_{3}\;a_{4})(a_{5}\;a_{6})
+              </md>: possiamo scegliere le lettere <m>a_{1}</m>, <m>\ldots</m>, <m>a_{6}</m> in <m>8\cdot7\cdot6\cdot5\cdot4\cdot3</m> modi diversi. Il ciclo di lunghezza <m>4</m> può essere scritto in <m>4</m> modi diversi, mentre il ciclo di lunghezza <m>2</m> può essere scritto in <m>2</m> modi diversi. Ci sono così <m>\frac{8\cdot7\cdot6\cdot5\cdot4\cdot3}{4\cdot2}</m> elementi in questa classe.
+            </p>
+            <p>
+              Infine abbiamo la classe di coniugio degli elementi del tipo
+              <md>
+                (a_{1}\;a_{2}\;a_{3}\;a_{4})(a_{5}\;a_{6})(a_{7}\;a_{8})
+              </md>:
+              possiamo scegliere le lettere <m>a_{1}</m>, <m>\ldots</m>, <m>a_{8}</m> in <m>8!</m> modi diversi. Il ciclo di lunghezza <m>4</m> può essere scritto in <m>4</m> modi diversi, mentre ciascun ciclo di lunghezza <m>2</m> può essere scritto in <m>2</m> modi diversi. Inoltre, possiamo scambiare tra loro i cicli di lunghezza <m>2</m>. Ci sono così <m>\frac{8!}{4\cdot2\cdot2\cdot2}</m> elementi in questa classe.
+            </p>
+          </solution>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+               Stabilire se esiste un elemento <m>\sigma</m> di periodo <m>4</m> in <m>S</m> tale che <m>\cent{S}{\sigma}=\grgen{\sigma}</m>.
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Sappiamo che <m>\abs{\sigma^{S}}\abs{\cent{S}{\sigma}}=\abs{S}</m>. Poiché <m>\abs{S}=8!</m> e <m>\abs{\grgen{\sigma}}=4</m>, affinché si abbia <m>\cent{S}{\sigma}=\grgen{\sigma}</m> dovrebbe essere <m>\abs{\sigma^{S}}=\frac{8!}{4}</m>. Nessuna delle classi di coniugio degli elementi di periodo <m>4</m> determinate al punto precedente ha tale cardinalità e, dunque, non esiste alcun elemento di periodo <m>4</m> per cui si abbia <m>\cent{S}{\sigma}=\grgen{\sigma}</m>.
+            </p>
+          </solution>
+        </task>
+      </exercise>
+
+      <exercise>
+        <introduction>
+          <p>
+            Si consideri il gruppo simmetrico <m>S\coloneqq\Sym_{5}</m> su <m>5</m> lettere e gli elementi <m>\sigma\coloneqq(1\;2)(3\;4)</m> e <m>\tau\coloneqq(1\;2\;3)</m>.
+          </p>
+        </introduction>
+
+        <task>
+          <statement>
+            <p>
+              Quanti elementi di <m>S</m> commutano con <m>\sigma</m>? Quanti di questi sono permutazioni pari?
+            </p>
+          </statement>
+          <solution>
+            <p>
+              L'indice del centralizzante di <m>\sigma</m> in <m>S</m> è uguale alla cardinalità della classe di <m>\sigma</m>. Gli elementi coniugati di <m>\sigma</m> sono tutti e soli quelli del tipo <m>(a\;b)(c\;d)</m> con <m>a</m>, <m>b</m>, <m>c</m> e <m>d</m> numeri distinti compresi tra <m>1</m> e <m>5</m>. Abbiamo <m>5</m> scelte per <m>a</m>, <m>4</m> scelte per <m>b</m>, <m>3</m> scelte per <m>c</m> e <m>2</m> scelte per <m>d</m>: in tutto <m>5\cdot4\cdot3\cdot2=120</m> scelte. Tutte queste scelte non corrispondono però a elementi distinti. Infatti, possiamo scambiare tra loro <m>a</m> e <m>b</m> (e dobbiamo, dunque, dividere il numero delle scelte per <m>2</m>), scambiare fra loro <m>c</m> e <m>d</m> (e dobbiamo, dunque, dividere ancora per <m>2</m>), e scambiare tra loro i cicli <m>(a\;b)</m> e <m>(c\;d)</m> (e dividere ulteriormente per <m>2</m>). Pertanto, la classe di coniugio di <m>\sigma</m> contiene <m>\frac{120}{2\cdot2\cdot2}=15</m> elementi. Poiché <m>S</m> ha ordine <m>5!=120</m>, il centralizzante di <m>\sigma</m> contiene <m>\frac{120}{15}=8</m> elementi.
+            </p>
+            <p>
+              Dobbiamo ora trovare l'ordine di <m>\cent{S}{\sigma}\cap A_{5}</m>. Per il <xref ref="lem-indice_intersezione"/>, <m>\ind{\cent{S}{\sigma}}{\cent{S}{\sigma}\cap A_{5}}\le\ind{S}{A_{5}}=2</m>, cioè <m>\cent{S}{\sigma}\cap A_{5}</m> ha ordine <m>8</m> o <m>4</m>. Notiamo che <m>\cent{S}{\sigma}</m> contiene <m>(1\;2)</m> che non appartiene ad <m>A_{5}</m>: pertanto, <m>\cent{S}{\sigma}\cap A_{5}\ne\cent{S}{\sigma}</m> e, quindi, <m>\cent{S}{\sigma}\cap A_{5}</m> ha ordine <m>4</m>.
+            </p>
+          </solution>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Quanti elementi di <m>S</m> commutano con <m>\tau</m>? Quanti di questi sono permutazioni pari?
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Come prima calcoliamo la cardinalità della classe di coniugio di <m>\tau</m>: questa è formata dagli elementi del tipo <m>(a\;b\;c)</m> con <m>a</m>, <m>b</m> e <m>c</m> diversi. Abbiamo <m>5</m> scelte per <m>a</m>, <m>4</m> scelte per <m>b</m> e <m>3</m> scelte per <m>c</m>: a <m>3</m> a <m>3</m> queste scelte danno però lo stesso elemento. Dunque, la classe di coniugio di <m>\tau</m> contiene <m>\frac{5\cdot4\cdot3}{3}=20</m> elementi e il suo centralizzante ne contiene <m>\frac{120}{20}=6</m>.
+            </p>
+            <p>
+              Analogamente al caso precedente possiamo dire che <m>\cent{S}{\tau}\cap A_{5}</m> può avere ordine <m>3</m> o <m>6</m>. Poiché <m>(45)</m> appartiene a <m>\cent{S}{\tau}</m> ma non a <m>A_{5}</m>, possiamo concludere che <m>\cent{S}{\tau}\cap A_{5}\ne\cent{S}{\tau}</m> e, quindi, <m>\cent{S}{\tau}\cap A_{5}</m> ha ordine <m>3</m>.
+            </p>
+          </solution>
+        </task>
+      </exercise>
+
+      <exercise>
+        <introduction>
+          <p>
+            Si consideri in <m>\Sym_{7}</m> la permutazione <m>\sigma\coloneqq(1\;2\;3\;4)(5\;6)</m>.
+          </p>
+        </introduction>
+
+        <task>
+          <statement>
+            <p>
+              Determinare l'ordine della classe di coniugio e l'ordine del centralizzante di <m>\sigma</m> in <m>\Sym_{7}</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              la classe di coniugio di <m>\sigma</m> è formata dalle permutazioni del tipo <m>(a\;b\;c\;d)(e\;f)</m> con <m>a</m>, <m>b</m>, <m>c</m>, <m>d</m>, <m>e</m> ed <m>f</m> interi distinti compresi tra <m>1</m> e <m>7</m>. Possiamo scegliere <m>a</m> in <m>7</m> modi, poi <m>b</m> in <m>6</m> modi, <m>c</m> in <m>5</m> modi e così via fino a <m>2</m> scelte per <m>f</m>. Tuttavia queste <m>7\cdot6\cdot5\cdot4\cdot3\cdot2=7!</m> scelte non danno origine a permutazioni distinte. Infatti, scambiando fra loro <m>e</m> e <m>f</m> otteniamo la stessa permutazione, e, allo stesso modo, <m>(a\;b\;c\;d)</m> può essere scritto in <m>4</m> modi distinti. Dunque, il numero di elementi nella classe di <m>\sigma</m> è uguale a <m>\frac{7!}{4\cdot2}</m>: questo numero è uguale all'indice in <m>\Sym_{7}</m> di <m>\cent{\Sym_{7}}{\sigma}</m>. Poiché <m>\abs{\Sym_{7}}=7!</m>, il centralizzante di <m>\sigma</m> contiene <m>8</m> elementi.
+            </p>
+          </solution>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Determinare l'ordine della classe di coniugio di <m>\sigma</m> in <m>A_{7}</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Notiamo che <m>\sigma</m> commuta con <m>(5\;6)</m> e, di conseguenza, il centralizzante di <m>\sigma</m> non è contenuto nell'alterno. Per la <xref ref="prop-classi_coniugio_indice_2"/>, la classe di coniugio di <m>\sigma</m> nell'alterno coincide con la sua classe nel simmetrico e ha quindi ordine <m>\frac{7!}{4\cdot2}</m>.
+            </p>
+          </solution>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Dimostrare che il centralizzante di <m>\sigma</m> nell'alterno è ciclico.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Per la <xref ref="prop-classi_coniugio_indice_2"/>, il centralizzante di <m>\sigma</m> nell'alterno ha ordine <m>\frac{8}{2}=4</m>. Il centralizzante contiene perlomeno il sottogruppo ciclico generato da <m>\sigma</m>: poiché il periodo di <m>\sigma</m> è il minimo comune multiplo delle lunghezze dei cicli disgiunti che lo compongono, cioè <m>4</m>, il sottogruppo ciclico generato da <m>\sigma</m> coincide con il centralizzante di <m>\sigma</m> nell'alterno.
+            </p>
+          </solution>
+        </task>
+
+      </exercise>
+
+      <exercise>
+        <introduction>
+          <p>
+            Si consideri il gruppo <m>\Sym_{n}</m>.
+          </p>
+        </introduction>
+
+        <task>
+          <statement>
+            <p>
+              Dimostrare che se <m>n\le 11</m> in <m>\Sym_{n}</m> non ci sono elementi di periodo <m>35</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Una permutazione scritta come prodotto di cicli disgiunti ha periodo che è uguale al minimo comune multiplo delle lunghezze dei cicli. Affinché questo minimo comune multiplo sia <m>35</m> ci dovrebbe essere almeno un ciclo di lunghezza <m>35</m> (il che è impossibile perché <m>n\le11</m>) oppure almeno un ciclo di lunghezza <m>7</m> e uno di lunghezza <m>5</m> (il che è pure impossibile perché <m>7+5=12>11</m>).
+            </p>
+          </solution>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Dimostrare che in <m>\Sym_{12}</m> ci sono elementi di periodo <m>35</m> e contare il loro numero.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Ripetendo lo stesso ragionamento fatto in precedenza vediamo che in <m>\Sym_{12}</m> non ci sono cicli di ordine <m>35</m>, ma possiamo determinare un ciclo di ordine <m>7</m> e un ciclo di ordine <m>5</m> disgiunti: preso il prodotto di due cicli siffatti, dal momento che <m>7+5=12</m>, nello sviluppo della permutazione come prodotto di cicli disgiunti non possiamo aggiungere altri cicli. Le permutazioni di <m>\Sym_{12}</m> di periodo <m>12</m> sono allora tutte del tipo <m>(a_{1}\;\ldots \;a_{7})(a_{8}\;\ldots\;a_{12})</m>. Possiamo allora scegliere <m>a_{1}</m> in <m>12</m> modi, <m>a_{2}</m> in <m>11</m> modi e così via fino ad <m>a_{12}</m> in un modo, per un totale di <m>12!</m> scelte, che però non corrispondono a differenti permutazioni: il <m>7</m>-ciclo può essere riscritto in <m>7</m> modi diversi e il <m>5</m>-ciclo può essere riscritto in <m>5</m> modi diversi. Dunque, abbiamo <m>\frac{12!}{35}</m> permutazioni di periodo <m>35</m>.
+            </p>
+          </solution>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Dato un elemento <m>\sigma</m> di periodo <m>35</m> in <m>\Sym_{12}</m> determinare quanti elementi di <m>\Sym_{12}</m> commutano con <m>\sigma</m> e quanti elementi di <m>A_{12}</m> commutano con <m>\sigma</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Al punto precedente abbiamo mostrato che le permutazioni di periodo <m>35</m> sono tutte dello stesso tipo e sono, dunque, coniugate tra loro in <m>\Sym_{12}</m>: la cardinalità della classe di coniugio è uguale all'indice in <m>\Sym_{12}</m> del centralizzante di una qualsiasi di esse. Poiché <m>\Sym_{12}</m> ha ordine <m>12!</m> e la classe di coniugio ha cardinalità <m>\frac{12!}{35}</m> ne consegue che il centralizzante in <m>\Sym_{12}</m> ha ordine <m>35</m>.
+            </p>
+            <p>
+              Il centralizzante <m>\cent{\Sym_{12}}{\sigma}</m> contiene perlomeno il sottogruppo ciclico generato da <m>\sigma</m>: poiché <m>\sigma</m> ha periodo <m>35</m> e il centralizzante ha pure ordine <m>35</m>, ne consegue che <m>\cent{\Sym_{12}}{\sigma}=\grgen{\sigma}</m>. Notiamo ora che la permutazione <m>\sigma</m> è pari e appartiene quindi ad <m>A_{12}</m>: pertanto, tutto il gruppo ciclico generato da <m>\sigma</m> è contenuto in <m>A_{12}</m> e, quindi,
+              <md>
+                \cent{A_{12}}{\sigma}=\cent{\Sym_{12}}{\sigma}\cap A_{12}=\grgen{\sigma}
+              </md>:
+              dunque, <m>\cent{A_{12}}{\sigma}</m> contiene <m>35</m> elementi.
+            </p>
+          </solution>
+        </task>
+
+      </exercise>
+
+      <exercise>
+
+        <introduction>
+          <p>
+            Si consideri in <m>\Sym_{8}</m> la permutazione <m>\sigma\coloneqq(1\;2\;3\;4)(5\;6)</m>.
+          </p>
+        </introduction>
+
+        <task>
+          <statement>
+            <p>
+              Determinare il numero di elementi di <m>\Sym_{8}</m> che commutano con <m>\sigma</m>.
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              <m>16</m>
+            </p>
+          </answer>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Determinare il numero di elementi di <m>A_{8}</m> che commutano con <m>\sigma</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Dal <xref ref="lem-indice_intersezione"/> segue che
+              <md>
+                \ind{\cent{\Sym_{8}}{\sigma}}{\cent{A_{8}}{\sigma}}\le\ind{\Sym_{8}}{A_{8}}=2
+              </md>.
+              Notiamo che <m>(7\;8)\in\cent{\Sym_{8}}{\sigma}\setminus A_{8}</m> e, dunque, <m>\cent{\Sym_{8}}{\sigma}\nleq
+              A_{8}</m>. Quindi, <m>\ind{\cent{\Sym_{8}}{\sigma}}{\cent{A_{8}}{\sigma}} \gt 1</m>. Di conseguenza, <m>\ind{\cent{\Sym_{8}}{\sigma}}{\cent{A_{8}}{\sigma}}=2</m> e <m>\abs{\cent{A_{8}}{\sigma}}=\abs{\cent{\Sym_{8}}{\sigma}}/2=8</m>.
+            </p>
+          </solution>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Stabilire se esiste in <m>\Sym_{8}</m> una permutazione <m>\tau</m> tale che <m>\tau^{2}=\sigma</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              La permutazione <m>\sigma</m> è scritta come prodotto di cicli disgiunti: il periodo di <m>\sigma</m> è il minimo comune multiplo della lunghezza di tali cicli, cioè <m>\abs{\sigma}=4</m>. Se esistesse <m>\tau</m> tale che <m>\tau^{2}=\sigma</m>,
+              allora avremmo che <m>\tau^{8}=(\tau^{2})^{4}=\sigma^{4}=\Id</m>, cioè il periodo di <m>\tau</m> dovrebbe essere un divisore di <m>2^{3}</m>, cioè essere del tipo <m>2^{k}</m> per qualche
+              <m>k\le3</m>. Ma il periodo di <m>\sigma=\tau^{2}</m> è uguale a
+              <m>\frac{2^{k}}{(2^{k},2)}=2^{k-1}</m>: poiché <m>\sigma</m> ha periodo <m>4</m> ciò significa che <m>k=3</m>, cioè <m>\tau</m> ha periodo esattamente <m>8</m>. Scritta allora <m>\sigma</m> come prodotto di cicli disgiunti ci dovrebbe allora essere almeno un ciclo di lunghezza <m>8</m>. Poiché siamo in <m>\Sym_{8}</m> l'unica possibilità è che <m>\tau</m> sia esattamente un ciclo di lunghezza <m>8</m>, cioè del tipo <m>(a_{1}\;a_{2}\;a_{3}\;a_{4}\;a_{5}\;a_{6}\;a_{7}\;a_{8})</m>, il cui quadrato è però <m>(a_{1}\;a_{3}\;a_{5}\;a_{7})(a_{2}\;a_{4}\;a_{6}\;a_{8})</m> e, quindi non può coincidere con <m>\sigma</m>.
+            </p>
+          </solution>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Stabilire se esiste in <m>\Sym_{8}</m> una permutazione <m>\nu</m> tale che <m>\nu^{3}=\sigma</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Abbiamo già notato che <m>\sigma</m> ha periodo <m>4</m>. Ma allora, posto <m>\nu\coloneqq\sigma^{3}</m> abbiamo <m>\nu^{3}=\sigma^{9}=\sigma</m>, come richiesto.
+            </p>
+          </solution>
+        </task>
+
+      </exercise>
+
+    </exercises>
+
+  </section>
+
+</chapter>
