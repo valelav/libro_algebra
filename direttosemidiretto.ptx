@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-direttosemidiretto">
+
+  <title>Prodotto diretto e semidiretto</title>
+
+  <introduction>
+    <p>
+      Abbiamo visto finora diversi esempi di gruppi: gruppi di matrici, gruppi di permutazioni, classi di resto. Vediamo ora come sia possibile costruire gruppi a partire da altri gruppi: questo ci permetterà di ampliare il nostro catalogo di gruppi.
+    </p>
+  </introduction>
+
+  <section xml:id="sec-prodotto_diretto_esterno">
+    <title>Prodotto diretto esterno</title>
+
+    <definition xml:id="def-prodotto_diretto_esterno">
+      <notation>
+        <usage><m>G_{1}\times G_{2}\times \cdots \times G_{r}</m></usage>
+        <description>prodotto diretto dei gruppi <m>G_{1}</m>, <m>G_{2}</m>, <m>\ldots</m>, <m>G_{r}</m></description>
+      </notation>
+      <statement>
+        <p>
+          Siano <m>G_{1}</m>, <m>G_{2}</m>, <m>\ldots</m>, <m>G_{r}</m> gruppi. Il loro prodotto cartesiano <m>G_{1}\times G_{2}\times \cdots \times G_{r}</m> dotato dell'operazione così definita
+          <md>
+            (g_{1},g_{2},\ldots,g_{r})(h_{1},h_{2},\ldots,h_{r})\coloneqq (g_{1}h_{1},g_{2}h_{2},\ldots,g_{r}h_{r})
+          </md>
+          è detto <term>prodotto diretto (esterno)</term> dei gruppi <m>G_{1}</m>, <m>G_{2}</m>, <m>\ldots</m>, <m>G_{r}</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      La dimostrazione della proposizione seguente consiste di semplici verifiche, che lasciamo per esercizio.
+    </p>
+
+    <proposition xml:id="prop-prodotto_diretto_esterno_sottogruppo">
+      <statement>
+        <p>
+          Il prodotto diretto esterno dei gruppi <m>G_{1}</m>, <m>\ldots</m>, <m>G_{r}</m> è un gruppo. L'elemento neutro è <m>(1_{G_{1}},\ldots,1_{G_{r}})</m>. L'inverso di un elemento <m>(g_{1},\ldots,g_{r})</m> è <m>(g_{1}^{-1},\ldots,g_{r}^{-1})</m>.
+        </p>
+      </statement>
+    </proposition>
+
+    <p>
+      Dal momento che il prodotto di due elementi del prodotto diretto si ottiene facendo indipendentemente il prodotto componente per componente, si verificano, altrettanto facilmente, le due prossime proposizioni.
+    </p>
+
+    <proposition xml:id="prop-prodotto_diretto_di_abeliani">
+      <statement>
+        <p>
+          Il prodotto diretto esterno <m>G\coloneqq G_{1}\times\cdots\times G_{r}</m> è abeliano se e solo se ogni <m>G_{i}</m> è abeliano.
+        </p>
+      </statement>
+    </proposition>
+
+    <proposition xml:id="prop-potenze_coniugati_prodotto_diretto">
+      <statement>
+        <p>
+          Dato un elemento <m>(g_{1},\ldots,g_{r})</m> nel prodotto diretto esterno <m>G_{1}\times G_{2}\times \cdots \times G_{r}</m> e un numero intero <m>n</m>, si ha
+          <md>
+            (g_{1},\ldots,g_{r})^{n}=(g_{1}^{n},\ldots,g_{r}^{n})
+          </md>.
+          Dato un altro elemento <m>(h_{1},\ldots,h_{r})</m> si ha
+          <md>
+            (g_{1},\ldots,g_{r})^{(h_{1},\ldots,h_{r})}=(g_{1}^{h_{1}},\ldots,g_{r}^{h_{r}})
+          </md>.
+        </p>
+      </statement>
+    </proposition>
+
+    <corollary xml:id="cor-periodo_nel_prodotto_diretto">
+      <statement>
+        <p>
+          Un elemento <m>g\coloneqq(g_{1},\ldots,g_{r})</m> nel prodotto diretto esterno <m>G\coloneqq G_{1}\times\cdots\times G_{r}</m> ha periodo finito se e solo se ogni <m>g_{i}</m> ha periodo finito: quando ciò avviene, il periodo di <m>g</m> è il minimo comune multiplo dei periodi degli elementi <m>g_{i}</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Se <m>g</m> ha periodo finito <m>n</m>, allora <m>g^{n}=1_{G}=(1_{G_{1}},\ldots,1_{G_{r}})</m>. D'altra parte, <m>g^{n}=(g_{1}^{n},\ldots,g_{r}^{n})</m> e, dunque, <m>g_{1}^{n}=1_{G_{1}}</m>, <m>\ldots</m>, <m>g_{r}^{n}=1_{G_{r}}</m>: pertanto, ogni <m>g_{i}</m> ha periodo finito che divide <m>n</m> e, di conseguenza, <m>n</m> è multiplo del minimo comune multiplo dei periodi dei <m>g_{i}</m>.
+        </p>
+        <p>
+          Viceversa, supponiamo che ciascun <m>g_{i}</m> abbia periodo finito e sia <m>m</m> il minimo comune multiplo dei loro periodi. Allora
+          <md>
+            g^{m}=(g_{1}^{m},\ldots,g_{r}^{m})=(1_{G_{1}},\ldots,1_{G_{r}})=1_{G}
+          </md>.
+          Dunque, <m>g</m> ha periodo finito e il suo periodo è un divisore di <m>m</m>: d'altra parte abbiamo già mostrato che se <m>g</m> ha periodo finito, il suo periodo è un multiplo del minimo comune multiplo dei periodi dei <m>g_{i}</m> e, quindi, il periodo di <m>g</m> è esattamente <m>m</m>.
+        </p>
+      </proof>
+
+    </corollary>
+
+    <p>
+      Mostriamo ora che il prodotto diretto esterno di gruppi non dipende dall'ordinamento in cui prendiamo i gruppi stessi. Più precisamente
+    </p>
+
+    <proposition xml:id="prop-riordinamento_fattori_prodotto_diretto">
+      <statement>
+        <p>
+          Siano <m>G_{1}</m>, <m>G_{2}</m>, <m>\ldots</m>, <m>G_{r}</m> gruppi e sia <m>\sigma</m> un elemento di <m>\Sym_{r}</m>. Allora <m>G_{1}\times G_{2}\times \cdots \times G_{r}</m> e <m>G_{1\sigma}\times G_{2\sigma}\times \cdots \times G_{r\sigma}</m> sono isomorfi.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          La dimostrazione è immediata: la funzione che manda l'elemento <m>(g_{1},g_{2},\ldots,g_{r})</m> nell'elemento <m>(g_{1\sigma},g_{2\sigma},\ldots,g_{r\sigma})</m> realizza l'isomorfismo cercato.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      Possiamo dire che il prodotto diretto esterno è <q>associativo</q>.
+    </p>
+
+    <proposition xml:id="prop-prodotto_diretto_associativo">
+      <statement>
+        <p>
+          Siano <m>G_{1}</m>, <m>G_{2}</m>, <m>\ldots</m>, <m>G_{r}</m> gruppi e sia <m>i</m> con <m>1\le i\le r-1</m>. Allora
+          <md>
+            (G_{1}\times \cdots \times G_{i})\times(G_{i+1}\times \cdots \times G_{r})
+          </md>
+          è isomorfo a <m>G_{1}\times \cdots \times G_{r}</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Un generico elemento di
+          <md>
+            (G_{1}\times \cdots \times G_{i})\times(G_{i+1}\times \cdots \times G_{r})
+          </md>
+          è una coppia del tipo
+          <md>
+            ((g_{1},\ldots,g_{i}),(g_{i+1},\ldots,g_{r}))
+          </md>
+          con <m>g_{j}</m> in <m>G_{j}</m> per ogni <m>j</m>. La funzione che manda l'elemento generico di cui sopra nella <m>r</m>-upla <m>(g_{1},\ldots, g_{r})</m> realizza un isomorfismo, come è facile verificare.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      In un certo senso, il prodotto diretto esterno <q>contiene</q> i gruppi utilizzati per costruirlo. Più precisamente abbiamo la
+    </p>
+
+    <proposition xml:id="prop-sottogruppi_prodotto_diretto_isomorfi_fattori">
+      <statement>
+        <p>
+          Sia dato il prodotto diretto esterno <m>G_{1}\times G_{2}\times \cdots \times G_{r}</m>. Fissato <m>i</m> con <m>1\le i\le n</m>, il sottoinsieme
+          <md>
+            H_{i}\coloneqq\{(1_{G_{1}},\ldots,1_{G_{i-1}},x_{i},1_{G_{i+1}},\ldots,1_{G_{r}})\mid x_{i}\in G_{i}\}
+          </md>
+          è un sottogruppo normale di <m>G_{1}\times G_{2}\times \cdots \times G_{r}</m> isomorfo a <m>G_{i}</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Consideriamo la funzione <m>\phi\colon G_{i}\to G_{1}\times \cdots \times G_{r}</m> definita da <m>x_{i}\phi\coloneqq (1_{G_{1}},\ldots,1_{G_{i-1}},x_{i},1_{G_{i+1}},\ldots,1_{G_{r}})</m>. Si verifica immediatamente che è un omomorfismo iniettivo la cui immagine è esattamente <m>H_{i}</m> e, pertanto, <m>H_{i}</m> è un sottogruppo isomorfo a <m>G_{i}</m>. Per quanto riguarda la normalità, questa segue dalla <xref ref="prop-potenze_coniugati_prodotto_diretto"/>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <remark xml:id="rem-prodotto_diretto_con_fattore_non_ciclico">
+      <p>
+        Sia <m>G\coloneqq G_{1}\times \cdots\times G_{r}</m> prodotto diretto esterno di gruppi. Se almeno uno dei fattori <m>G_{i}</m> non è ciclico, allora <m>G</m>, per la <xref ref="prop-sottogruppi_prodotto_diretto_isomorfi_fattori"/>, contiene un sottogruppo non ciclico e, di conseguenza, per il <xref ref="thm-sottogruppo_di_ciclico_ciclico"/>, <m>G</m> non è ciclico.
+      </p>
+    </remark>
+
+    <p>
+      Ci chiediamo allora quando il prodotto diretto esterno di gruppi ciclici è ciclico. Abbiamo la
+    </p>
+
+    <proposition xml:id="prop-prodotto_diretto_di_ciclici">
+      <statement>
+        <p>
+          Sia <m>G\coloneqq G_{1}\times\cdots\times G_{r}</m> prodotto diretto esterno di gruppi ciclici non banali con <m>r\ge 2</m>. Allora <m>G</m> è ciclico se e solo se <m>G_{1}</m>, <m>G_{2}</m>, <m>\ldots</m>, <m>G_{r}</m> sono ciclici finiti aventi a due a due ordine coprimo.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Se almeno uno dei fattori è infinito, allora <m>G</m> è infinito e, se fosse ciclico, per il <xref ref="cor-intersezione_sottogruppi_ciclico_infinito"/>, l'intersezione di due suoi sottogruppi non banali dovrebbe essere non banale: ma <m>H_{1}</m> e <m>H_{2}</m>, definiti come nella <xref ref="prop-sottogruppi_prodotto_diretto_isomorfi_fattori"/>, sono due sottogruppi non banali con intersezione banale e, quindi, <m>G</m> non è ciclico.
+        </p>
+        <p>
+          Se i fattori sono tutti finiti, ma due di essi, siano <m>G_{i}</m> e <m>G_{j}</m>, hanno ordine non coprimo, allora, per la <xref ref="prop-sottogruppi_prodotto_diretto_isomorfi_fattori"/>, <m>G</m> contiene due sottogruppi ciclici <m>H_{i}</m> e <m>H_{j}</m> con intersezione banale e ordine non coprimo. Detto <m>d</m> il massimo comun divisore di <m>\abs{H_{i}}</m> e <m>\abs{H_{j}}</m>, il <xref ref="thm-sottogruppi_di_gruppo_ciclico_finito"/> implica che essi contengono ciascuno un sottogruppo di ordine <m>d</m>: questi due sottogruppi di ordine <m>d</m> sono diversi perché contenuti in sottogruppi aventi intersezione banale e, <m>G</m>, avendo due sottogruppi dello stesso ordine non è ciclico, sempre per il <xref ref="thm-sottogruppi_di_gruppo_ciclico_finito"/>.
+        </p>
+        <p>
+          Infine, supponiamo che i fattori siano finiti di ordini a due a due coprimi. Preso un generatore <m>g_{i}</m> per ciascun <m>G_{i}</m>, grazie al <xref ref="cor-periodo_nel_prodotto_diretto"/> l'elemento <m>g\coloneqq(g_{1},\ldots,g_{r})</m> ha periodo uguale al prodotto degli ordini dei <m>G_{i}</m>. Poiché l'ordine di <m>G</m> è uguale al prodotto degli ordini dei <m>G_{i}</m>, ne segue che <m>g</m> genera <m>G</m> che è, dunque, ciclico.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <exercises xml:id="exercises-prodotto_diretto_esterno">
+
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare la <xref ref="prop-prodotto_diretto_esterno_sottogruppo"/>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare la <xref ref="prop-prodotto_diretto_di_abeliani"/>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare la <xref ref="prop-potenze_coniugati_prodotto_diretto"/>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+
+        <introduction>
+          <p>
+            Si consideri il gruppo <m>G\coloneqq C_{16}\times C_{4}\times C_{3}</m>.
+          </p>
+        </introduction>
+
+        <task>
+          <statement>
+            <p>
+               Il gruppo <m>G</m> è ciclico?
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              No: è prodotto diretto di ciclici di ordini non coprimi.
+            </p>
+          </solution>
+
+        </task>
+
+        <task>
+          <statement>
+            <p>
+               Dimostrare che <m>G\simeq C_{48}\times C_{4}\simeq C_{16}\times C_{12}</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Sappiamo che in un prodotto diretto se cambiamo l'ordine dei fattori o se associamo tra loro alcuni fattori otteniamo un gruppo isomorfo all'originale. Dunque
+              <md>
+                C_{16}\times C_{4}\times C_{3}\simeq C_{16}\times C_{3}\times C_{4}\simeq(C_{16}\times C_{3})\times C_{4}\simeq C_{48}\times C_{4}
+              </md>
+              poiché <m>16</m> e <m>3</m> sono coprimi.
+            </p>
+
+            <p>
+              Analogamente
+              <md>
+                C_{16}\times C_{4}\times C_{3}\simeq C_{16}\times(C_{4}\times C_{3})\simeq C_{16}\times C_{12}
+              </md>
+              poiché <m>4</m> e <m>3</m> sono coprimi.
+            </p>
+          </solution>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Determinare quanti elementi ci sono in <m>G</m> di ordine <m>96</m> e quanti di ordine <m>24</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+               Possiamo utilizzare una qualsiasi delle diverse espressioni di <m>G</m>: quella originale o quelle che abbiamo trovato al punto precedente. Se scriviamo <m>G</m> come <m>C_{48}\times C_{4}</m>, possiamo rappresentare i suoi elementi come coppie del tipo <m>(a,b)</m> con <m>a\in C_{48}</m> e <m>b\in C_{4}</m>. Il periodo di <m>(a,b)</m> è il minimo comune multiplo dei periodi di <m>a</m> e di <m>b</m>. Sappiamo che <m>\abs{a}</m> divide <m>48=2^{4}3</m> e <m>\abs{b}</m> divide <m>4=2^{2}</m>. Dunque, <m>\abs{a}=2^{h}3^{k}</m> e <m>\abs{b}=2^{l}</m> con <m>0\le h\le 4</m>, <m>0\le k\le 1</m> e <m>0\le l\le 2</m>.
+               Il minimo comune multiplo di <m>\abs{a}</m> e <m>\abs{b}</m> è allora <m>2^{m}3^{k}</m> con <m>m\coloneqq\max(h,l)</m>: non possiamo, dunque, ottenere <m>96=2^{5}3</m>, mentre otteniamo <m>24=2^{3}3</m> se e solo se <m>h=3</m>, <m>k=1</m> e <m>l</m> qualunque. Pertanto, non ci sono elementi di ordine <m>96</m> e otteniamo un elemento di ordine <m>24</m> se e solo se <m>a</m> ha ordine <m>24</m> e <m>b</m> ha ordine qualunque. Abbiamo allora <m>\phi(24)</m> scelte per <m>a</m> e <m>4</m> scelte per <m>b</m> (sappiamo che in un gruppo ciclico di ordine <m>n</m>, se <m>d</m> è un divisore di <m>n</m>, allora ci sono <m>\phi(d)</m> elementi di ordine <m>d</m>). Dunque, ci sono <m>\phi(24)\cdot4</m> elementi di  periodo <m>24</m>. Poiché <m>24=2^{3}3</m> si ha <m>\phi(24)=\phi(2^{3})\phi(3)=(2^{3}-2^{2})(3^{1}-3^{0})=8</m>. Abbiamo quindi <m>8\cdot4=32</m> elementi di periodo <m>24</m>.
+            </p>
+          </solution>
+        </task>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare che se <m>G\coloneqq G_{1}\times G_{2}\times \cdots \times G_{r}</m>, allora <m>\centro(G)=\centro(G_{1})\times \centro(G_{2})\times \cdots \times\centro(G_{r})</m>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Sia <m>G\coloneqq G_{1}\times G_{2}\times \cdots \times G_{r}</m>. Per ogni <m>i</m> con <m>1\le i\le r</m>, sia <m>N_{i}</m> un sottogruppo normale di <m>G_{i}</m> e sia <m>N\coloneqq N_{1}\times N_{2}\times \cdots \times N_{r}</m>. Dimostrare che <m>N</m> è un sottogruppo normale di <m>G</m> e che <m>\frac{G}{N}</m> è isomorfo a <m>\frac{G_{1}}{N_{1}}\times\frac{G_{2}}{N_{2}}\times \cdots \times \frac{G_{r}}{N_{r}}</m>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Basta mostrare che la funzione da <m>G</m> in <m>\frac{G_{1}}{N_{1}}\times\frac{G_{2}}{N_{2}}\times \cdots \times \frac{G_{r}}{N_{r}}</m> che manda <m>(g_{1},g_{2},\ldots,g_{r})</m> in <m>(N_{1}g_{1},N_{2}g_{2},\ldots,N_{r}g_{r})</m> è un omomorfismo suriettivo il cui nucleo è esattamente <m>N</m>.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <introduction>
+          <p>
+            Dato un gruppo <m>G</m>, si consideri il prodotto diretto <m>G\times G</m> di <m>G</m> con sé stesso. Sia <m>D</m> il sottoinsieme di <m>G\times G</m> così definito <m>D\coloneqq\{(g,g)\mid g\in G\}</m>.
+          </p>
+        </introduction>
+
+        <task>
+          <statement>
+            <p>
+              Dimostrare che <m>D</m> è un sottogruppo di <m>G\times G</m> isomorfo a <m>G</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Consideriamo la mappa <m>\phi\colon G\to G\times G</m> definita da <m>g\phi\coloneqq(g,g)</m>. È facile vedere che <m>\phi</m> è un omomorfismo di gruppi: infatti, se <m>g</m> e <m>h</m> sono elementi di <m>G</m>, si ha <m>g\phi=(g,g)</m>, <m>h\phi=(h,h)</m> e <m>(gh)\phi=(gh,gh)</m>. Ora <m>g\phi\cdot h\phi=(g,g)(h,h)=(gh,gh)=(gh)\phi</m>. Ovviamente, l'immagine di <m>\phi</m> coincide con <m>D</m> che risulta quindi essere un sottogruppo di <m>G\times G</m>. Inoltre <m>g\in\ker\phi</m> se e solo se <m>(g,g)</m> coincide con l'identità di <m>G\times G</m> che è <m>(1,1)</m>: ciò avviene se e solo se <m>g=1</m>. Dunque, <m>\ker\phi=1</m>, cioè <m>\phi</m> è iniettivo: ma allora <m>G\simeq\im\phi=D</m>, come richiesto.
+            </p>
+          </solution>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Mostrare che <m>D</m> è normale in <m>G\times G</m> se e solo se <m>G</m> è abeliano.
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Se <m>G</m> è abeliano, allora <m>G\times G</m>, essendo prodotto diretto di due gruppi abeliani, è abeliano. Ogni sottogruppo di un gruppo abeliano è normale in esso: in particolare, <m>D</m> è normale in <m>G\times G</m>.
+            </p>
+
+            <p>
+              Viceversa, supponiamo che <m>D</m> sia normale in <m>G\times G</m>. Presi <m>g</m> e <m>h</m> in <m>G</m>, consideriamo l'elemento <m>(g,g)</m> di <m>D</m> e l'elemento <m>(1,h)</m> di <m>G\times G</m>. Abbiamo allora <m>(g,g)^{(1,h)}=(g^{1},g^{h})=(g,g^{h})\in D</m>, cioè <m>g=g^{h}</m>: pertanto, <m>g</m> e <m>h</m> commutano.
+            </p>
+          </solution>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Mostrare che se <m>G</m> è abeliano allora <m>\frac{G\times G}{D}\simeq G</m>.
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Consideriamo la mappa <m>\psi\colon G\times G\to G</m> definita da <m>(g,h)\psi=gh^{-1}</m>. Questa mappa è un omomorfismo di gruppi: infatti, se <m>(g_{1},h_{1})</m> e <m>(g_{2},h_{2})</m> sono elementi di <m>G\times G</m> abbiamo <m>(g_{1},h_{1})\psi= g_{1}h_{1}^{-1}</m> e <m>(g_{2},h_{2})\psi=g_{2}h_{2}^{-1}</m> e
+              <md>
+                <mrow> ((g_{1},h_{1})(g_{2},h_{2}))\psi \amp =(g_{1}g_{2},h_{1}h_{2})\psi=g_{1}g_{2}(h_{1}h_{2})^{-1}=
+                g_{1}g_{2}h_{2}^{-1}h_{1}^{-1}</mrow>
+                <mrow> \amp =g_{1}h_{1}^{-1}g_{2}h_{2}^{-1}=
+                (g_{1},h_{1})\psi\cdot(g_{2},h_{2})\psi</mrow>
+              </md>
+              dove abbiamo usato il fatto che <m>G</m> è abeliano. Ora <m>\psi</m> è suriettivo: infatti, dato <m>g</m> in <m>G</m>, si ha <m>g=(g,1)\psi</m>. Il nucleo di <m>\psi</m> coincide invece con <m>D</m>: infatti, <m>(g,h)</m> appartiene al nucleo di <m>\psi</m> se e solo se <m>gh^{-1}=1</m>, il che avviene se e solo se <m>g=h</m>, in altri termini se e solo se <m>(g,h)</m> appartiene a <m>D</m>. Per il <xref ref="thm-isomorfismo_quoziente_sul_nucleo"/> abbiamo allora <m>G=\im\psi\simeq\frac{G\times G}{\ker\psi}=\frac{G\times G}{D}</m>.
+            </p>
+          </solution>
+        </task>
+
+      </exercise>
+
+
+    </exercises>
+
+  </section>
+
+  <section xml:id="sec-prodotto_diretto_interno">
+    <title>Prodotto diretto interno</title>
+
+    <p>
+      Nella <xref ref="prop-sottogruppi_prodotto_diretto_isomorfi_fattori"/>,  abbiamo visto che se <m>G\coloneqq G_{1}\times\cdots\times G_{r}</m> è prodotto diretto esterno di gruppi, allora <m>G</m> contiene, come propri sottogruppi normali, dei sottogruppi <m>H_{1}</m>, <m>\ldots</m>, <m>H_{r}</m> isomorfi a <m>G_{1}</m>, <m>\ldots</m>, <m>G_{r}</m> rispettivamente. Viceversa, dato un gruppo qualunque e dei suoi sottogruppi normali, ci chiediamo quali condizioni debbano essere soddisfatte affinché il gruppo sia isomorfo al prodotto diretto esterno di questi sottogruppi, pensati come gruppi indipendenti. Vediamo innanzitutto alcune proprietà dei sottogruppi <m>H_{i}</m>.
+    </p>
+
+    <proposition xml:id="prop-proprieta_fattori_prodotto_diretto">
+      <statement>
+        <p>
+          Sia <m>G\coloneqq G_{1}\times\cdots\times G_{r}</m> un prodotto diretto esterno di gruppi e siano <m>H_{1}</m>, <m>\ldots</m>, <m>H_{r}</m> i sottogruppi normali isomorfi a <m>G_{1}</m>, <m>\ldots</m>, <m>G_{r}</m> rispettivamente, definiti come nella <xref ref="prop-sottogruppi_prodotto_diretto_isomorfi_fattori"/>. Allora
+          <ol>
+            <li xml:id="item-G_prodotto_dei_suoi_fattori">
+              <p>
+                <m>G=H_{1}H_{2}\cdots H_{r}</m>;
+              </p>
+            </li>
+            <li xml:id="item-intersezione_coi_rimanenti">
+              <p>
+                ciascun <m>H_{i}</m> ha intersezione banale con il prodotto dei rimanenti (in particolare, <m>H_{i}\cap H_{j}=1</m> se <m>i\ne j</m>).
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Dato un elemento generico <m>g\coloneqq(g_{1},g_{2},\ldots,g_{r})</m> di <m>G</m> abbiamo
+          <md>
+            g=(g_{1},1_{G_{2}},\ldots,1_{G_{r}})(1_{G_{2}},g_{2},1_{G_{3}}\ldots,1_{G_{r}})\cdots(1_{G_{1}},\ldots 1_{G_{r-1}},g_{r})
+          </md>.
+          Abbiamo, dunque, espresso <m>g</m> come prodotto di elementi in <m>H_{1}</m>, <m>H_{2}</m>, <m>\ldots</m>, <m>H_{r}</m> rispettivamente e il <xref ref="item-G_prodotto_dei_suoi_fattori"/> è dimostrato.
+        </p>
+        <p>
+          Fissato ora un indice <m>i</m>, notiamo che ogni elemento di <m>H_{j}</m> con <m>j\ne i</m> è una <m>r</m>-upla la cui componente di posto <m>i</m> è <m>1_{G_{i}}</m> e, di conseguenza, gli elementi del prodotto degli <m>H_{j}</m> con <m>i\ne j</m> sono <m>r</m>-uple la cui componente di posto <m>i</m> è <m>1_{G_{i}}</m>. D'altra parte, <m>H_{i}</m> è formato dalle <m>r</m>-uple le cui componenti di posto <m>j</m> diverso da <m>i</m> sono uguali a <m>1_{G_{j}}</m>. In conclusione, l'unico elemento che appartiene a <m>H_{i}</m> e al prodotto dei rimanenti è <m>(1_{G_{1}},\ldots,1_{G_{r}})</m>. Questo prova il <xref ref="item-intersezione_coi_rimanenti"/>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <definition xml:id="def-prodotto_diretto_interno">
+      <statement>
+        <p>
+          Sia <m>G</m> un gruppo e siano <m>H_{1}</m>, <m>H_{2}</m>, <m>\ldots</m>, <m>H_{r}</m> suoi sottogruppi normali tali che:
+          <ul>
+            <li>
+              <p>
+                <m>G=H_{1}H_{2}\cdots H_{r}</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                ciascun <m>H_{i}</m> ha intersezione banale con il prodotto dei rimanenti.
+              </p>
+            </li>
+          </ul>
+          Diciamo allora che <m>G</m> è il <term>prodotto diretto (interno)</term> dei sottogruppi <m>H_{1}</m>, <m>H_{2}</m>, <m>\ldots</m>, <m>H_{r}</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <remark xml:id="rem-prodotto_diretto_interno_di_due_fattori">
+      <p>
+        Nel caso in cui <m>G</m> sia prodotto diretto interno di due suoi sottogruppi <m>H</m> e <m>K</m>, la condizione che ciascuno di essi abbia intersezione banale con il prodotto dei rimanenti può essere semplicemente formulata dicendo che <m>H\cap K=1</m>.
+      </p>
+    </remark>
+
+    <p>
+      La <xref ref="prop-proprieta_fattori_prodotto_diretto"/> può essere allora riformulata dicendo che se un gruppo è prodotto diretto esterno di certi gruppi, allora è prodotto diretto interno di suoi sottogruppi isomorfi ai gruppi dati. Viceversa, mostreremo che se un gruppo <m>G</m> è prodotto diretto interno di suoi sottogruppi, allora è isomorfo al prodotto diretto esterno degli stessi, pensati come gruppi indipendenti. Prima di mostrare ciò ci serve un lemma.
+    </p>
+
+    <lemma xml:id="lem-elementi_in_normali_intersezione_banale_commutano">
+      <statement>
+        <p>
+          Sia <m>G</m> un gruppo e siano <m>H</m> e <m>K</m> sottogruppi normali di <m>G</m> tali che <m>H\cap K=1</m>. Allora, per ogni <m>h\in H</m> e <m>k\in K</m>, si ha <m>hk=kh</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Consideriamo l'elemento <m>c\coloneqq h^{-1}k^{-1}hk</m>: allora <m>hk=khc</m> e, per ottenere la tesi, basterà mostrare che <m>c=1</m>.
+        </p>
+        <p>
+          Ora <m>c=h^{-1}h^{k}</m> e, poiché <m>h</m> è un elemento del sottogruppo normale <m>H</m>, abbiamo che <m>h^{-1}</m> e <m>h^{k}</m> appartengono a <m>H</m> e, di conseguenza, <m>c\in H</m>. D'altra parte <m>c=(k^{-1})^{h}k</m> e, con un ragionamento analogo, vediamo che <m>c\in K</m>. Dunque, <m>c\in H\cap K=1</m>, come richiesto.
+        </p>
+      </proof>
+
+    </lemma>
+
+    <proposition xml:id="prop-prodotto_diretto_interno">
+      <statement>
+        <p>
+          Sia <m>G</m> un gruppo che sia prodotto diretto interno dei sottogruppi <m>H_{1}</m>, <m>H_{2}</m>, <m>\ldots</m>, <m>H_{r}</m>.
+          Allora <m>G</m> è isomorfo al prodotto diretto esterno dei gruppi <m>H_{1}</m>, <m>H_{2}</m>, <m>\ldots</m>, <m>H_{r}</m> (pensati come gruppi indipendenti). Inoltre, per <m>i\ne j</m>, ogni elemento di <m>H_{i}</m> commuta con ogni elemento di <m>H_{j}</m>. Si ha poi che ogni elemento <m>g</m> di <m>G</m> si scrive in un unico modo nella forma
+          <md number="yes" xml:id="eqn-decomposizione_prodotto_diretto">
+            g=g_{1}g_{2}\cdots g_{r}
+          </md>
+          con <m>g_{i}\in H_{i}</m> e, scritto un altro elemento <m>h</m> di <m>G</m> nella forma
+          <md>
+            h=h_{1}h_{2}\cdots h_{r}
+          </md>
+          con <m>h_{i}\in H_{i}</m>, risulta
+          <md>
+            gh=g_{1}h_{1}g_{2}h_{2}\cdots g_{r}h_{r}
+          </md>. 
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sia <m>H\coloneqq H_{1}\times H_{2}\times\cdots\times H_{r}</m> e sia <m>\phi\colon H\to G</m> definita da
+          <md>
+            (g_{1},g_{2},\ldots,g_{r})\coloneqq g_{1}g_{2}\cdots g_{r}
+          </md>.
+          Poiché <m>G=H_{1}H_{2}\cdots H_{r}</m>, la funzione <m>\phi</m> è suriettiva.
+        </p>
+        <p>
+          Dati due elementi <m>g\coloneqq g_{1}\cdots g_{r}</m> e <m>h\coloneqq h_{1}\cdots h_{r}</m> con <m>g_{i}\in H_{i}</m> e <m>h_{i}\in H_{i}</m>, per il <xref ref="lem-elementi_in_normali_intersezione_banale_commutano"/> sappiamo che elementi in <m>H_{i}</m> commutano con elementi in <m>H_{j}</m> se <m>i\ne j</m> (infatti, <m>H_{i}</m> ha intersezione banale con il prodotto dei rimanenti e, a maggior ragione, con <m>H_{j}</m> per <m>i\ne j</m>). Pertanto,
+          <md>
+            gh=(g_{1}\cdots g_{r})(h_{1}\cdots h_{r})=g_{1}h_{1}g_{2}h_{2}\cdots g_{r}h_{r}
+          </md>:
+          questo prova che <m>\phi</m> è un omomorfismo e l'ultima affermazione in enunciato.
+        </p>
+        <p>
+          Per completare la dimostrazione, basta mostrare che <m>\phi</m> è iniettiva (questo implicherà l'unicità della decomposizione <xref ref="eqn-decomposizione_prodotto_diretto"/>). Sia allora <m>(g_{1},g_{2},\cdots ,g_{r})</m> un elemento di <m>\ker\phi</m>, cioè <m>g_{1}g_{2}\cdots g_{r}=1</m>. Mostriamo che <m>g_{i}=1</m> per ogni <m>i</m>: poiché <m>g_{i}</m> commuta con <m>g_{j}</m> per <m>i\ne j</m>, si ha allora
+          <md>
+            g_{i}^{-1}=g_{1}\cdots g_{i-1}g_{i+1}\cdots g_{r}
+          </md>.
+          Ma allora, <m>g_{i}^{-1}</m> appartiene a <m>G_{i}</m> e al prodotto dei rimanenti ed è, dunque, uguale a <m>1</m> e, quindi, <m>g_{i}=1</m>, come richiesto.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      Grazie alla <xref ref="prop-proprieta_fattori_prodotto_diretto"/> e alla <xref ref="prop-prodotto_diretto_interno"/>, sappiamo ora che prodotto diretto esterno e interno sono due modi diversi di presentare lo stesso concetto. Dunque, parleremo semplicemente di prodotto diretto e useremo il simbolo <m>H_{1}\times H_{2}\times\cdots\times H_{r}</m>, senza ulteriori specificazioni.
+    </p>
+
+    <proposition xml:id="prop-quoziente_prodotto_diretto">
+      <statement>
+        <p>
+          Sia <m>G</m> prodotto diretto di due suoi sottogruppi <m>H</m> e <m>K</m>. Allora <m>\frac{G}{H}\simeq K</m> e <m>\frac{G}{K}\simeq H</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Dalla <xref ref="prop-prodotto_diretto_interno"/>, sappiamo che ogni elemento <m>g</m> di <m>G</m> si scrive in maniera unica come <m>g=hk</m> con <m>h</m> in <m>H</m> e <m>k</m> in <m>K</m> e che se <m>g'=h'k'</m> è un altro elemento di <m>G</m> con <m>h'</m> in <m>H</m> e <m>k'</m> in <m>K</m>, allora <m>gg'=hh'kk'</m>.
+        </p>
+        <p>
+          Pertanto, la funzione <m>\phi\colon G \to K</m> che manda <m>g=hk</m> con <m>h</m> in <m>H</m> e <m>k</m> in <m>K</m> nell'elemento <m>k</m> è ben definita ed è un omomorfismo di gruppi. Questo omomorfismo è suriettivo: infatti, se <m>k</m> è un qualunque elemento di <m>K</m>, allora <m>k</m> è immagine degli elementi del tipo <m>hk</m> con <m>h</m> in <m>H</m>. Il nucleo di <m>\phi</m> è invece <m>H</m>: infatti, <m>g=hk</m> con <m>h</m> in <m>H</m> e <m>k</m> in <m>K</m> appartiene a <m>\ker\phi</m> se e solo se <m>k=1</m>, cioè <m>g=h</m> è un elemento di <m>H</m>. Per il <xref ref="thm-isomorfismo_quoziente_sul_nucleo"/>, segue allora che <m>G/H\simeq K</m>. Analogamente, <m>G/K\simeq H</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      Come semplice applicazione, siamo ora in grado di classificare i gruppi di ordine quadrato di un primo.
+    </p>
+
+    <theorem xml:id="thm-classificazione_gruppi_di_ordine_quadrato_di_un_primo">
+      <statement>
+        <p>
+          Sia <m>G</m> un gruppo di ordine <m>p^{2}</m> con <m>p</m> primo. Allora <m>G</m> è isomorfo a <m>C_{p^{2}}</m> o a <m>C_{p}\times C_{p}</m>
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Se <m>G</m> contiene un elemento di periodo <m>p^{2}</m>, allora è ciclico.
+        </p>
+        <p>
+          Se <m>G</m> non contiene elementi di periodo <m>p^{2}</m>, allora tutti i suoi elementi non banali hanno periodo <m>p</m>, per il <xref ref="cor-periodo_elemento_divide_ordine"/>. Sia allora <m>g</m> un elemento non banale di <m>G</m> e sia <m>h</m> un elemento di <m>G\setminus\grgen{g}</m>. Dunque, <m>g</m> e <m>h</m> hanno entrambi periodo <m>p</m> ed entrambi generano un sottogruppo ciclico di ordine <m>p</m>. Per il <xref ref="thm-lagrange" text="title"/>, l'intersezione di <m>\grgen{g}</m> e <m>\grgen{h}</m> ha ordine che divide <m>p</m>, ma, essendo <m>\grgen{g}\ne\grgen{h}</m>, ne segue che <m>\grgen{g}\cap\grgen{h}=1</m>.
+          Di conseguenza, per la <xref ref="prop-diverse_espressioni-prodotto"/>, il prodotto <m>\grgen{g}\grgen{h}</m> ha ordine <m>p^{2}</m>, cioè coincide con <m>G</m>. Per il <xref ref="cor-ordine_quadrato_di_primo_implica_abeliano"/>, <m>G</m> è abeliano e, quindi, <m>\grgen{g}</m> e <m>\grgen{h}</m> sono normali in <m>G</m>. Riassumendo, <m>G</m> è il prodotto diretto dei gruppi ciclici <m>\grgen{g}</m> e <m>\grgen{h}</m>, entrambi di ordine <m>p</m>, cioè <m>G\simeq C_{p}\times C_{p}</m>.
+        </p>
+      </proof>
+
+    </theorem>
+
+    <exercises xml:id="exercises-prodotto_diretto_interno">
+
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare che un gruppo non abeliano di ordine <m>p^{3}</m> con <m>p</m> primo non può essere espresso come prodotto diretto di due sottogruppi propri.
+          </p>
+        </statement>
+
+      </exercise>
+
+
+
+      <exercise>
+        <introduction>
+          <p>
+            Sia <m>p</m> un primo e sia <m>G</m> il gruppo <m>C_{p^{2}}\times C_{p}</m>.
+          </p>
+        </introduction>
+
+        <task>
+          <statement>
+            <p>
+              Stabilire quanti sottogruppi di ordine <m>p</m> ha <m>G</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Un gruppo di ordine primo è necessariamente ciclico: dobbiamo allora trovare gli elementi di <m>G</m> di ordine <m>p</m>. Il periodo di <m>(a,b)</m> di <m>G</m> è il minimo comune multiplo dei periodi <m>a</m> e <m>b</m>: affinché tale periodo sia <m>p</m> è, dunque, necessario che sia <m>a</m> che <m>b</m> abbiano periodo che divide <m>p</m> e che almeno uno tra essi abbia periodo esattamente <m>p</m>. Gli elementi di <m>C_{p}</m> hanno tutti ordine che divide <m>p</m>, mentre in <m>C_{p^{2}}</m> c'è un unico sottogruppo di ordine <m>p</m> che contiene tutti e soli gli elementi di <m>C_{p^{2}}</m> di ordine che divide <m>p</m>. Le coppie formate da elementi aventi periodo che divide <m>p</m> sono allora <m>p^{2}</m>: dobbiamo però scartare la coppia <m>(1,1)</m> in cui entrambi gli elementi hanno periodo <m>1</m>. In <m>G</m> ci sono, dunque, <m>p^{2}-1</m> elementi di periodo <m>p</m>. Ciascuno di questi genera un sottogruppo di ordine
+              <m>p</m>. Tali sottogruppi non sono però tutti distinti: ogni gruppo di ordine <m>p</m> può essere infatti generato uno dei suoi <m>p-1</m> elementi diversi dall'identità. Dividendo <m>p^{2}-1</m> per <m>p-1</m> troviamo che <m>G</m> ha <m>p+1</m> sottogruppi di ordine <m>p</m>.
+            </p>
+          </solution>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Determinare se esiste un sottogruppo <m>H</m> di <m>G</m> avente ordine <m>p</m> e tale che <m>G/H</m> sia ciclico.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Il fattore <m>C_{p}</m> del prodotto diretto ha ordine <m>p</m> e, per la <xref ref="prop-quoziente_prodotto_diretto"/>, il quoziente <m>G/C_{p}</m> è isomorfo a <m>C_{p^{2}}</m> ed è quindi ciclico.
+            </p>
+          </solution>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Determinare se esiste un sottogruppo <m>K</m> di <m>G</m> avente ordine <m>p</m> e tale che <m>G/K</m> non sia ciclico.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Sia <m>D</m> il sottogruppo di ordine <m>p</m> contenuto nel primo fattore <m>C_{p^{2}}</m> del prodotto diretto. Per ogni elemento <m>(a,b)</m> di <m>G</m> si ha <m>(a,b)^{p}=(a^{p},b^{p})=(a^{p},1)</m>, inoltre <m>a^{p}</m> appartiene a <m>D</m>. Dunque, gli elementi di <m>G/D</m> hanno tutti ordine che divide <m>p</m>: non essendoci nessun elemento di periodo <m>p^{2}</m> il quoziente non è ciclico.
+            </p>
+          </solution>
+        </task>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Siano <m>M</m> e <m>N</m> sottogruppi normali di un gruppo <m>G</m> tali che <m>G=MN</m>. Dimostrare che il quoziente <m>G/(M\cap N)</m> è isomorfo al prodotto diretto <m>\frac{G}{N}\times\frac{G}{M}</m>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Per il <xref ref="thm-sottogruppi_quoziente"/>, i sottogruppi <m>\bar{M}=M/(M\cap N)</m> e <m>\bar{N}=N/(M\cap N)</m> sono normali in <m>G/(M\cap N)</m>. Sia <m>g(M\cap N)</m> un elemento generico di <m>G/(M\cap N)</m>: per ipotesi sappiamo che esistono <m>m\in M</m> e <m>n\in N</m> tali che <m>g=mn</m>. Pertanto, <m>g(M\cap N)=m(M\cap N)\cdot n(M\cap N)</m>: poiché <m>m(M\cap N)\in\bar{M}</m> e <m>n(M\cap N)\in\bar{N}</m> ne consegue che ogni elemento di <m>G/(M\cap N)</m> può essere espresso come prodotto di un elemento di <m>\bar{M}</m> e di un elemento di <m>\bar{N}</m>, cioè <m>G/(M\cap N)=\bar{M}\bar{N}</m>.
+            Se <m>x(M\cap N)\in\bar{M}\cap\bar{N}</m>, allora <m>x\in M</m> e <m>x\in N</m>: cioè <m>x(M\cap N)</m> è l'elemento neutro di <m>G/(M\cap N)</m>. Riassumendo, <m>G/(M\cap N)</m> è il prodotto dei due suoi sottogruppi normali <m>\bar{M}</m> e <m>\bar{N}</m> la cui intersezione è banale. In altri termini, <m>\bar{G}</m> è il prodotto diretto (interno) di <m>\bar{M}</m> e <m>\bar{N}</m>. Ora <m>\bar{M}=M/(M\cap N)</m> è isomorfo, per il <xref ref="thm-quoziente_su_intersezione"/>, a <m>MN/N</m>, cioè a <m>G/N</m>, dato che per ipotesi <m>G=MN</m>. Analogamente, <m>\bar{N}</m> è isomorfo a <m>G/M</m>.
+          </p>
+          <p>
+            Riassumendo
+            <md>
+              \frac{G}{M\cap N}=\bar{M}\times\bar{N}\simeq \frac{G}{N}\times\frac{G}{M}
+            </md>
+            come richiesto.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <introduction>
+          <p>
+            Sia <m>G</m> un gruppo ciclico di ordine <m>60</m>, generato da un suo elemento <m>a</m>.
+          </p>
+        </introduction>
+
+        <task>
+          <statement>
+            <p>
+              Dato il sottogruppo <m>H\coloneqq\grgen{a^{21}}</m>, stabilire se esiste un sottogruppo <m>L</m> di <m>G</m> tale che <m>G=H\times L</m> e, in caso affermativo, esibirne un generatore.
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Per la <xref ref="prop-periodo_di_potenze_di_elemento_di_periodo_finito"/>, abbiamo
+              <m>\abs{H}=\abs{a^{21}}=\frac{60}{(60,21)}=\frac{60}{3}=20</m>.  Poiché <m>G</m> ha ordine <m>60</m> e <m>H</m> ha ordine <m>20</m>, l'ordine di <m>L</m> dovrebbe essere <m>3</m>. Per il <xref ref="thm-sottogruppi_di_gruppo_ciclico_finito"/>, <m>G</m> ha esattamente un sottogruppo <m>L</m> di ordine <m>3</m> generato, ad esempio, da <m>a^{\frac{60}{3}}=a^{20}</m>. L'intersezione tra <m>H</m> e <m>L</m> ha ordine che, per il <xref ref="thm-lagrange" text="title"/>, deve dividere sia <m>20</m> che <m>3</m>. Pertanto l'ordine di <m>H\cap L</m> è esattamente <m>1</m>. Il prodotto di <m>H</m> e <m>L</m> è, dunque, diretto
+              (siamo in un gruppo abeliano e, quindi, tutti i sottogruppi sono normali) e, dato che il suo ordine è <m>60</m>, coincide con <m>G</m>.
+            </p>
+          </solution>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Dato il sottogruppo <m>K\coloneqq\grgen{a^{30}}</m>, stabilire se esiste un sottogruppo <m>M</m> di <m>G</m> tale che <m>G=K\times M</m> e, in caso affermativo, esibirne un generatore.
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Per la <xref ref="prop-periodo_di_potenze_di_elemento_di_periodo_finito"/>, abbiamo
+              <m>\abs{K}=\abs{a^{30}}=\frac{60}{(60,30)}=\frac{60}{30}=2</m>.  Poiché <m>G</m> ha ordine <m>60</m> e <m>K</m> ha ordine <m>2</m>, l'ordine di <m>M</m> dovrebbe essere <m>30</m>. Per il <xref ref="thm-sottogruppi_di_gruppo_ciclico_finito"/>, <m>G</m> ha esattamente un sottogruppo <m>M</m> di ordine <m>30</m> e questo contiene <m>K</m>: il loro prodotto non è, quindi, diretto.
+            </p>
+          </solution>
+        </task>
+
+      </exercise>
+
+      <exercise xml:id="exercise-prodotto_sottogruppi_ordine_coprimo">
+        <statement>
+          <p>
+            Sia <m>G</m> un gruppo e siano <m>H_{1}</m>, <m>H_{2}</m>, <m>\ldots</m>, <m>H_{r}</m> suoi sottogruppi normali finiti di ordini a due a due coprimi. Mostrare che il prodotto <m>H_{1}H_{2}\cdots H_{r}</m> è diretto e ha ordine il prodotto degli ordini degli <m>H_{i}</m>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Mostriamo per induzione su <m>r</m>, che l'ordine di <m>H_{1}H_{2}\cdots H_{r}</m> è <m>\abs{H_{1}}\abs{H_{2}}\cdots\abs{H_{r}}</m>, il caso <m>r=1</m> essendo banale.
+          </p>
+          <p>
+            Sia allora <m>r \gt 1</m>. Per ipotesi induttiva <m>H_{1}\cdots H_{r-1}</m> ha ordine <m>\abs{H_{1}}\cdots\abs{H_{r-1}}</m> e, quindi, per il <xref ref="thm-lagrange" text="title"/>, <m>H_{1}H_{2}\cdots H_{r-1}</m> ha intersezione banale con <m>H_{r}</m>. Per la <xref ref="prop-diverse_espressioni-prodotto"/> otteniamo la tesi.
+          </p>
+          <p>
+            Per mostrare che il prodotto <m>H_{1}H_{2}\cdots H_{r}</m> è diretto, basta notare che analogamente a quanto visto in precedenza, ciascun <m>H_{i}</m> ha intersezione banale con il prodotto dei rimanenti.
+          </p>
+        </solution>
+      </exercise>
+
+    </exercises>
+
+  </section>
+
+  <section xml:id="sec-prodotto_semidiretto">
+    <title>Prodotto semidiretto</title>
+
+    <p>
+      Abbiamo visto che se un gruppo <m>G</m> è prodotto di due suoi sottogruppi normali con intersezione banale, allora la struttura del gruppo può essere facilmente ricavata a partire da quella dei sottogruppi. Possiamo dire qualcosa sapendo che uno dei due sottogruppi è normale e l'altro no (o, quantomeno, non necessariamente)?
+    </p>
+
+    <definition xml:id="def-prodotto_semidiretto_interno">
+      <notation>
+        <usage><m>G=H\ltimes N</m></usage>
+        <description>prodotto semidiretto di <m>H</m> e <m>N</m></description>
+      </notation>
+      <statement>
+        <p>
+          Sia <m>G</m> un gruppo e siano <m>H</m> e <m>N</m> due suoi sottogruppi tali che:
+          <ul>
+            <li>
+              <p>
+                <m>N</m> è normale in <m>G</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>G=HN</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>H\cap N=1</m>.
+              </p>
+            </li>
+          </ul>
+          Diciamo allora che <m>G</m> è il <term>prodotto semidiretto (interno)</term> dei sottogruppi <m>H</m> e <m>N</m> e scriviamo <m>G=H\ltimes N</m> o <m>G=N\rtimes H</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <example xml:id="ex-simmetrico_semidiretto">
+      <statement>
+        <p>
+          Consideriamo il gruppo simmetrico <m>\Sym_{n}</m> con <m>n\ge 2</m>. Sappiamo che il sottogruppo alterno <m>A_{n}</m> ha indice <m>2</m> in <m>\Sym_{n}</m> ed è quindi normale in <m>G</m>. Il sottogruppo <m>H</m> generato da <m>\sigma\coloneqq(1\;2)</m> ha ordine <m>2</m> e ha intersezione banale con <m>A_{n}</m>. Dunque, il prodotto <m>HA_{n}</m> ha ordine uguale a <m>2\abs{A_{n}}</m>, cioè uguale a <m>\abs{\Sym_{n}}</m>. Pertanto <m>HA_{n}</m> coincide con <m>\Sym_{n}</m>, e, dunque, <m>\Sym_{n}=H\ltimes A_{n}</m>.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Per la <xref ref="prop-diverse_espressioni-prodotto"/>, ogni elemento <m>G</m> del prodotto semidiretto <m>G=H\ltimes N</m> si può scrivere in maniera unica come <m>hn</m> con <m>h\in H</m> e <m>n\in N</m>: tuttavia non si può esprimere il prodotto di due elementi scritti in questo modo in maniera così semplice come nel prodotto diretto.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Riprendiamo il prodotto semidiretto <m>\Sym_{3}=H\ltimes A_{3}</m> dato nell'<xref ref="ex-simmetrico_semidiretto"/>. Consideriamo gli elementi <m>(1\;3)</m> e <m>(2\;3)</m> ed esprimiamoli come prodotti di un elemento di <m>H</m> per un elemento di <m>A_{3}</m>. Con semplici calcoli otteniamo allora
+          <md>
+            <mrow>(1\;3) \amp =(1\;2)(1\;2\;3)</mrow>
+            <mrow>(2\;3) \amp =(1\;2)(1\;3\;2)</mrow>
+          </md>
+          Calcoliamo ora il prodotto di questi due elementi, e decomponiamolo come prodotto di un elemento di <m>H</m> per un elemento di <m>A_{3}</m>:
+          <md>
+            (1\;3)(2\;3)=(1\;2\;3)=\Id (1\;2\;3)
+          </md>.
+          Notiamo ora che se facciamo il prodotto degli elementi di <m>H</m> dati dalla decomposizione dei fattori otteniamo <m>(1\;2)(1\;2)=\Id</m>, cioè l'elemento di <m>H</m> della decomposizione di <m>(1\;3)(2\;3)</m>,
+          mentre il prodotto degli elementi di <m>A_{3}</m> dati dalla decomposizione dei fattori è uguale a <m>(1\;2\;3)(1\;3\;2)=\Id</m> che non coincide con l'elemento di <m>A_{3}</m> della decomposizione di <m>(1\;3)(2\;3)</m>.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Dall'esempio precedente vediamo che la conoscenza di <m>H</m> e di <m>N</m> non è sufficiente a descrivere <m>G=H\ltimes N</m>. Vediamo che altre informazioni ci servono. Siano allora <m>g_{1}=h_{1}n_{1}</m> e <m>g_{2}=h_{2}n_{2}</m> due elementi di <m>G</m>, con <m>h_{1}</m> e <m>h_{2}</m> in <m>H</m> e <m>n_{1}</m> e <m>n_{2}</m> in <m>N</m>. Vogliamo esprimere il prodotto <m>g_{1}g_{2}</m> nella forma <m>h_{3}n_{3}</m> con <m>h_{3}</m> in <m>H</m> e <m>n_{3}</m> in <m>N</m>. Possiamo procedere così:
+      <md>
+        g_{1}g_{2}=h_{1}n_{1}h_{2}n_{2}=h_{1}h_{2}h_{2}^{-1}n_{1}h_{2}n_{2}=h_{1}h_{2}n_{1}^{h_{2}}n_{2}
+      </md>.
+      Vediamo allora che possiamo porre <m>h_{3}\coloneqq h_{1}h_{2}</m> e <m>n_{3}\coloneqq n_{1}^{h_{2}}n_{2}</m> (poiché <m>N</m> è normale in <m>G</m>, abbiamo che <m>n_{1}^{h_{2}}</m> appartiene a <m>N</m>). Dunque, per poter calcolare il prodotto di due elementi del prodotto semidiretto ci serve conoscere il prodotto in <m>H</m>, il prodotto in <m>N</m> e il coniugio di elementi di <m>N</m> tramite elementi di <m>H</m>. Se volessimo invertire il procedimento, cioè, analogamente a quanto fatto con il prodotto diretto esterno, costruire <m>G</m> a partire da due gruppi qualunque <m>H</m> e <m>N</m>, come possiamo procedere? Conosciamo <m>H</m>, conosciamo <m>N</m>, ma cosa significa conoscere i coniugati di elementi di <m>N</m> tramite elementi di <m>H</m>? A priori, <m>H</m> e <m>N</m> non sono sottogruppi di uno stesso gruppo.
+    </p>
+    <p>
+      Ricordiamo però che, per la <xref ref="prop-automorfismi_interni"/>, sappiamo che la funzione da <m>G</m> in <m>\Aut(N)</m> che associa a un elemento <m>g</m> di <m>G</m> il coniugio tramite <m>g</m> è un omomorfismo di gruppi: la restrizione di questo omomorfismo a <m>H</m> definisce allora un omomorfismo da <m>H</m> in <m>\Aut(N)</m>. Se, per semplificare la notazione, scriviamo <m>\phi_{h}</m> per indicare l'automorfismo di <m>N</m> associato al coniugio tramite l'elemento <m>h</m> di <m>H</m>, possiamo riassumere la discussione precedente nella
+    </p>
+
+    <proposition xml:id="prop-caratterizzazione_prodotto_semidiretto_interno">
+      <statement>
+        <p>
+          Sia <m>G=H\ltimes N</m> prodotto semidiretto dei suoi sottogruppi <m>H</m> e <m>N</m>. Allora, per ogni <m>h\in H</m>, il coniugio tramite <m>h</m> definisce un automorfismo <m>\phi_{h}</m> di <m>N</m> e la mappa <m>\phi</m> che associa a <m>h</m> questo automorfismo è un omomorfismo da <m>H</m> in <m>\Aut{N}</m>. Se <m>g_{1}=h_{1}n_{1}</m> e <m>g_{2}=h_{2}n_{2}</m> sono due elementi di <m>G</m>, con <m>h_{1}</m> e <m>h_{2}</m> in <m>H</m> e <m>n_{1}</m> e <m>n_{2}</m> in <m>N</m>, allora <m>g_{1}g_{2}=h_{3}n_{3}</m> dove <m>h_{3}=h_{1}h_{2}\in H</m> e <m>n_{3}=n_{1}^{h_{2}}n_{2}=n_{1}\phi_{h_{2}}\cdot n_{2}\in N</m>.
+        </p>
+      </statement>
+
+    </proposition>
+
+    <p>
+      Il risultato precedente ci suggerisce un modo per invertire il procedimento.
+    </p>
+
+    <theorem xml:id="thm-prodotto_semidiretto_esterno">
+      <statement>
+        <p>
+          <notation>
+            <usage><m>H\ltimes_{\phi}N</m></usage>
+            <description>prodotto semidiretto esterno di <m>H</m> e <m>N</m> rispetto a <m>\phi</m></description>
+          </notation>
+          Siano dati due gruppi <m>H</m> e <m>N</m> e un omomorfismo <m>\phi\colon H\to\Aut{N}</m>. Denotato con <m>\phi_{h}</m> l'omomorfismo <m>h\phi</m>, sia definita nel prodotto cartesiano <m>H\times N</m> un'operazione nel modo seguente
+          <md>
+            (h_{1},n_{1})(h_{2},n_{2})\coloneqq(h_{1}h_{2},n_{1}\phi_{h_{2}}\cdot n_{2})
+          </md>.
+          Rispetto a questa operazione il prodotto cartesiano è un gruppo detto <term>prodotto semidiretto (esterno)</term> e denotato con <m>H\ltimes_{\phi}N</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Mostriamo che vale la proprietà associativa. Abbiamo allora
+          <md>
+            <mrow> ((h_{1},n_{1})(h_{2},n_{2}))(h_{3},n_{3}) \amp = (h_{1}h_{2},n_{1}\phi_{h_{2}}\cdot n_{2})(h_{3},n_{3})  \amp \text{definizione}</mrow>
+            <mrow> \amp = (h_{1}h_{2}h_{3},(n_{1}\phi_{h_{2}}\cdot  n_{2})\phi_{h_{3}}\cdot n_{3}) \amp \text{definizione}</mrow>
+            <mrow>  \amp = (h_{1}h_{2}h_{3},n_{1}\phi_{h_{2}}\phi_{h_{3}}\cdot  n_{2}\phi_{h_{3}}\cdot n_{3}) \amp \phi_{h_{3}}\in\Aut{N}</mrow>
+            <mrow>  \amp = (h_{1}h_{2}h_{3},n_{1}\phi_{h_{2}h_{3}}\cdot   n_{2}\phi_{h_{3}}\cdot n_{3})\amp \phi\text{ è omomorfismo} </mrow>
+            <mrow>  \amp = (h_{1},n_{1})(h_{2}h_{3},  n_{2}\phi_{h_{3}}\cdot n_{3})\amp \text{definizione} </mrow>
+            <mrow>  \amp = (h_{1},n_{1})((h_{2},n_{2})(h_{3},n_{3}))\amp \text{definizione} </mrow>
+          </md>
+        </p>
+        <p>
+          Mostriamo ora che <m>(1_{H},1_{N})</m> è elemento neutro. Infatti, per ogni <m>(h,n)\in H\ltimes_{\phi} N</m> si ha
+          <md>
+            (h,n)(1_{H},1_{N})=(h1_{H},n\phi_{1_{H}}\cdot 1_{N})=(h,n\Id_{N}\cdot 1_{N})=(h,n\cdot 1_{N})=(h,n)
+          </md>
+          e
+          <md>
+            (1_{H},1_{N})(h,n)=(1_{H}h,1_{N}\phi_{h}\cdot n)=(h,1_{N}\cdot n)=(h,n)
+          </md>.
+        </p>
+        <p>
+          Infine mostriamo che ogni elemento <m>(h,n)</m> ha come inverso <m>(h^{-1},n^{-1}\phi_{h^{-1}})</m>. Infatti
+          <md>
+            <mrow> (h,n)(h^{-1},n^{-1}\phi_{h^{-1}}) \amp =(hh^{-1},n\phi_{h^{-1}}\cdot n^{-1}\phi_{h^{-1}})</mrow>
+            <mrow> \amp =(1_{H},(nn^{-1})\phi_{h^{-1}})=(1_{H},1_{N}\phi_{h^{-1}})=(1_{H},1_{N})</mrow>
+          </md>
+          e
+          <md>
+            <mrow> (h^{-1},n^{-1}\phi_{h^{-1}})(h,n) \amp =(h^{-1}h,n^{-1}\phi_{h^{-1}}\phi_{h}\cdot n)=(1_{H},n^{-1}\phi_{h^{-1}h}\cdot n)</mrow>
+            <mrow> \amp =(1_{H},n^{-1}\phi_{1}\cdot n)=(1_{H},n^{-1}\Id_{N}\cdot n)</mrow>
+            <mrow>  \amp =(1_{H},n^{-1}n)=(1_{H},1_{N})</mrow>
+          </md>.
+        </p>
+      </proof>
+
+    </theorem>
+
+    <remark xml:id="rem-prodotto_diretto_come_prodotto_semidiretto_esterno">
+      <p>
+        Nel caso in cui l'omomorfismo <m>\phi</m> sia banale, cioè mandi ciascun elemento di <m>H</m> nell'automorfismo identico di <m>N</m>, allora il prodotto semidiretto <m>H\ltimes_{\phi}N</m> si riduce al prodotto diretto.
+      </p>
+    </remark>
+
+    <remark xml:id="rem-prodotto_semidiretto_non_abeliano">
+      <p>
+        Se l'omomorfismo <m>\phi</m> non è banale, allora il prodotto semidiretto <m>H\ltimes_{\phi}N</m> non è abeliano, nemmeno se <m>H</m> e <m>N</m> sono abeliani. Infatti, sia <m>h</m> un elemento di <m>H</m> tale che <m>\phi_{h}</m> non sia l'automorfismo banale di <m>N</m>. Dunque, esiste un elemento <m>n</m> di <m>N</m> tale che <m>n\phi_{h}\ne n</m>. Consideriamo allora i due elementi <m>(h,1_{N})</m> e <m>(1_{H},n)</m>. Abbiamo allora
+        <md>
+          (h,1_{N})(1_{H},n)=(h1_{H},1_{N}\phi_{1_{H}}\cdot n)=(h,1_{N}\cdot n)=(h,n)
+        </md>
+        e
+        <md>
+          (1_{H},n)(h,1_{N})=(1_{H}h,n\phi_{h}\cdot 1_{N})=(h,n\phi_{h})
+        </md>:
+        questi due prodotti sono diversi.
+      </p>
+    </remark>
+
+    <p>
+      La <xref ref="prop-caratterizzazione_prodotto_semidiretto_interno"/> ci dice che se <m>G=H\ltimes N</m> è prodotto semidiretto interno di due suoi sottogruppi <m>H</m> e <m>N</m>, allora <m>G</m> è isomorfo al prodotto semidiretto esterno di <m>H</m> e <m>N</m> rispetto all'omomorfismo da <m>H</m> a <m>\Aut{N}</m> dato dal coniugio. Viceversa, abbiamo il
+    </p>
+
+    <theorem xml:id="thm-prodotto_semidiretto_esterno_come_interno">
+      <statement>
+        <p>
+          Siano dati due gruppi <m>H</m> e <m>N</m> e un omomorfismo <m>\phi\colon H\to\Aut{N}</m> e sia <m>G\coloneqq H\ltimes_{\phi}N</m>. Allora <m>G</m> possiede un sottogruppo <m>\bar{H}</m> isomorfo a <m>H</m> e un sottogruppo normale <m>\bar{N}</m> isomorfo a <m>N</m> tali che <m>G=\bar{H}\ltimes\bar{N}</m> e il coniugio di elementi di <m>\bar{N}</m> tramite elementi di <m>\bar{H}</m> è indotto dall'omomorfismo <m>\phi</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Definiamo <m>\eta\colon H\to G</m> ponendo <m>h\eta\coloneqq(h,1_{N})</m> e <m>\nu\colon N\to G</m> ponendo <m>n\nu\coloneqq(1_{H},n)</m>. Dalla definizione del prodotto nel prodotto semidiretto esterno si vede facilmente che <m>\eta</m> e <m>\nu</m> sono omomorfismi iniettivi le cui immagini, denotate rispettivamente con <m>\bar{H}</m> e <m>\bar{N}</m>, sono sottogruppi di <m>G</m> isomorfi a <m>H</m> e <m>N</m> rispettivamente. Le altre affermazioni del teorema sono verifiche di routine.
+        </p>
+      </proof>
+
+    </theorem>
+
+    <p>
+      Al variare dell'omomorfismo <m>\phi</m> da <m>H</m> in <m>\Aut(N)</m> otteniamo diversi prodotti semidiretti tra <m>H</m> e <m>N</m>. Non è detto però che a omomorfismi diversi corrispondano gruppi non isomorfi. In generale non è semplice stabilire se due di tali prodotti semidiretti siano isomorfi o meno. Ci limitiamo a dare una condizione sufficiente, che ci sarà utile più avanti (<xref ref="thm-classificazione_gruppi_prodotto_pq"/>), perché ciò accada.
+    </p>
+
+    <proposition xml:id="prop-semidiretti_isomorfi">
+      <statement>
+        <p>
+          Siano dati due gruppi <m>H</m> e <m>N</m> e un omomorfismo <m>\phi\colon H\to \Aut(N)</m>. Sia <m>\theta</m> un automorfismo di <m>H</m> e sia <m>\psi\colon H\to \Aut(N)</m> definito da <m>\psi\coloneqq\theta\phi</m>. Allora <m>H\ltimes_{\phi}N\simeq H\ltimes_{\psi}N</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Definiamo una funzione <m>\tau\colon H\ltimes_{\psi}N\to H\ltimes_{\phi}N</m> ponendo
+          <md>
+            (h,n)\tau\coloneqq(h\theta,n)
+          </md>.
+          Questa funzione è chiaramente biiettiva. Mostriamo che è un omomorfismo: dal momento che come insiemi <m>H\ltimes_{\phi}N</m> e <m>H\ltimes_{\psi}N</m> coincidono, denotiamo con <m>\ast</m> l'operazione in <m>H\ltimes_{\phi}N</m> e con <m>\circ</m> l'operazione in <m>H\ltimes_{\psi}N</m>. Abbiamo allora
+          <md>
+            <mrow>(h_{1},n_{1})\tau\ast(h_{2},n_{2})\tau \amp =(h_{1}\theta,n_{1})\ast(h_{2}\theta,n_{2}) = (h_{1}\theta\cdot h_{2}\theta,n_{1}(h_{2}\theta\phi)\cdot n_{2}) </mrow>
+            <mrow>  \amp = ((h_{1}h_{2})\theta,n_{1}(h_{2}\psi)\cdot n_{2})=(h_{1}h_{2},n_{1}(h_{2}\psi)\cdot n_{2})\tau   </mrow>
+            <mrow>  \amp = ((h_{1},n_{1})\circ(h_{2},n_{2}))\tau </mrow>
+          </md>
+        </p>
+      </proof>
+
+    </proposition>
+
+    <exercises xml:id="exercises--prodotto_semidiretto">
+
+      <exercise>
+        <statement>
+          <p>
+            Siano dati due gruppi <m>H</m> e <m>N</m> e un omomorfismo <m>\phi\colon H\to\Aut(N)</m>. Sia poi <m>\theta</m> un automorfismo di <m>N</m> e sia <m>\psi\colon H\to\Aut(N)</m> l'omomorfismo che manda <m>h</m> in <m>(h\phi)^{\theta}</m>. Dimostrare che <m>H\ltimes_{\phi}N</m> e <m>H\ltimes_{\psi}N</m> sono isomorfi.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Definiamo una funzione <m>\tau\colon H\ltimes_{\phi}N\to H\ltimes_{\psi}N</m> ponendo
+            <md>
+              (h,n)\tau\coloneqq(h,n\theta)
+            </md>.
+            Questa funzione è chiaramente biiettiva. Mostriamo che è un omomorfismo: dal momento che come insiemi <m>H\ltimes_{\phi}N</m> e <m>H\ltimes_{\psi}N</m> coincidono, denotiamo con <m>\ast</m> l'operazione in <m>H\ltimes_{\phi}N</m> e con <m>\circ</m> l'operazione in <m>H\ltimes_{\psi}N</m>. Abbiamo allora
+            <md>
+              <mrow>(h_{1},n_{1})\tau\circ(h_{2},n_{2})\tau \amp =(h_{1},n_{1}\theta)\circ(h_{2},n_{2}\theta) = (h_{1}h_{2},n_{1}\theta(h_{2}\psi)\cdot n_{2}\theta) </mrow>
+              <mrow>  \amp = (h_{1}h_{2},n_{1}\theta\theta^{-1}(h_{2}\phi)\theta\cdot n_{2}\theta)= (h_{1}h_{2},n_{1}(h_{2}\phi)\theta\cdot n_{2}\theta)</mrow>
+              <mrow>  \amp =(h_{1}h_{2},(n_{1}(h_{2}\phi)\cdot n_{2})\theta)=(h_{1}h_{2},(n_{1}(h_{2}\phi)\cdot n_{2}))\tau</mrow>
+              <mrow>  \amp = ((h_{1},n_{1})\ast(h_{2},n_{2}))\tau </mrow>
+            </md>
+          </p>
+        </solution>
+      </exercise>
+
+    </exercises>
+
+  </section>
+
+</chapter>

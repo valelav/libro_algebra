@@ -1,0 +1,2103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+  <chapter xml:id="ch-classidiresto">
+    <title>Classi di resto</title>
+
+    <introduction>
+      <p>
+        L'aritmetica modulare, introdotta da Gauss<fn><url href="https://it.wikipedia.org/wiki/Carl_Friedrich_Gauss" visual="">Carl Friedrich Gauss</url>, 1777<ndash/>1855.</fn><idx><h>Gauss, Carl Friedrich</h></idx> nel 1801, costituisce un utile strumento per la descrizione e dimostrazione di proprietà aritmetiche. Oltre a ciò, ci permette di familiarizzare con insiemi numerici e operazioni diversi da quelli usuali e può essere, quindi, un primo passo per inquadrare le proprietà delle operazioni in un contesto più generale.
+      </p>
+    </introduction>
+
+    <section xml:id="sec-congruenzemodulon">
+      <title>Congruenze modulo un intero</title>
+
+      <p>
+        Dati due interi, sappiamo che la loro somma è pari se sono entrambi pari o entrambi dispari, ed è dispari se sono uno pari e l'altro dispari. Allo stesso modo, il loro prodotto è pari se almeno uno di essi è pari ed è dispari se sono entrambi dispari. Questo permette di definire delle operazioni nell'insieme quoziente <m>\{P,D\}</m> degli interi (dove indichiamo con <m>P</m> l'insieme dei numeri pari e con <m>D</m> l'insieme dei numeri dispari). Ad esempio la somma <m>P+D</m> si definisce prendendo un numero <m>a</m> in <m>P</m>, un numero <m>b</m> in <m>D</m>, e considerandone la somma <m>a+b</m>: poiché <m>a+b</m> appartiene a <m>D</m> per qualunque scelta di <m>a</m> e <m>b</m>, possiamo porre <m>P+D\coloneqq D</m>. Ciò si può riassumere per mezzo delle tabelle delle operazioni sottostanti.
+      </p>
+      <sidebyside>
+        <p>
+          <md>
+            \begin{array}{c|cc}
+              + \amp P \amp D \\
+              \hline
+              P \amp P \amp D \\
+              D \amp D \amp P \\
+            \end{array}
+          </md>
+        </p>
+        <p>
+          <md>
+            \begin{array}{c|cc}
+              \cdot \amp P \amp D \\
+              \hline
+              P \amp P \amp P \\
+              D \amp P \amp D \\
+            \end{array}
+          </md>
+        </p>
+      </sidebyside>
+
+      <p>
+        Consideriamo ora la partizione di <m>\Interi</m> formata dall'insieme <m>T</m> dei multipli di <m>3</m> e dell'insieme <m>S</m> degli interi che non sono multipli di <m>3</m>. In questo caso riusciamo a definire la moltiplicazione come sopra, ma l'addizione non è ben definita: se scegliamo due numeri in <m>S</m>, la loro somma può essere un multiplo di <m>3</m> (ad esempio, <m>1+2</m>), oppure no (ad esempio, <m>2+5</m>). Non possiamo, dunque, definire senza ambiguità la somma <m>S+S</m>.
+      </p>
+
+      <sidebyside>
+        <p>
+          <md>
+            \begin{array}{c|cc}
+              + \amp T \amp S \\
+              \hline
+              T \amp T \amp S \\
+              S \amp S \amp ? \\
+            \end{array}
+          </md>
+        </p>
+        <p>
+          <md>
+            \begin{array}{c|cc}
+              \cdot \amp T \amp S \\
+              \hline
+              T \amp T \amp T \\
+              S \amp T \amp S \\
+            \end{array}
+          </md>
+        </p>
+      </sidebyside>
+
+      <p>
+        Se poi provassimo a ripetere il discorso anche con i multipli di <m>4</m>, vedremmo facilmente che anche la moltiplicazione non è ben definita (<xref ref="exer-multipli4"/>).
+      </p>
+      <p>
+        Per capire cosa differenzi il caso dei multipli di <m>2</m> da quello dei multipli di <m>3</m>, consideriamo le sequenze dei numeri pari e dei numeri dispari
+        <md>
+          <mrow>\ldots,-4,-2,0,2,4,\ldots </mrow>
+          <mrow>\ldots, -3,-1,1,3,5,\ldots </mrow>
+        </md>
+        e notiamo che in ciascuna di esse la differenza tra un numero e il precedente è uguale a <m>2</m>, mentre se consideriamo le sequenze dei multipli di <m>3</m> e dei non multipli di <m>3</m>
+        <md>
+          <mrow>\ldots,-6,-3,0,3,6,\ldots </mrow>
+          <mrow>\ldots,-4,-2,-1,1,2,4,\ldots </mrow>
+        </md>
+        vediamo che nella prima sequenza la differenza tra un numero e il precedente è uguale a <m>3</m>, e nella seconda sequenza la differenza è alternativamente <m>1</m> e <m>2</m>. Ciò suggerisce di dividere gli interi in <m>3</m> sequenze in ciascuna delle quali la differenza tra un numero e il precedente sia <m>3</m>. Più in generale possiamo dare la
+      </p>
+      <definition xml:id="def-congruenzamodulon">
+        <notation>
+          <usage><m>a\equiv b\pmod{n}</m></usage>
+          <description><m>a</m> congruo a <m>b</m> modulo <m>n</m></description>
+        </notation>
+        <statement>
+          <p>
+            Sia <m>n</m> un intero positivo. Dati due interi <m>a</m> e <m>b</m>, diciamo che <m>a</m> è <term>congruo</term> a <m>b</m> modulo <m>n</m> e scriviamo <m>a\equiv b\pmod{n}</m> se <m>a-b</m> è multiplo di <m>n</m>.
+          </p>
+        </statement>
+      </definition>
+
+      <remark xml:id="rem-congruenzamodulo1">
+        <p>
+          Dati due numeri interi qualsiasi <m>a</m> e <m>b</m>, si ha banalmente che <m>a\equiv b\pmod{1}</m>.
+        </p>
+      </remark>
+
+      <proposition xml:id="prop-congruenzaequivalenza">
+        <statement>
+          <p>
+            La relazione di congruenza modulo <m>n</m> è una relazione di equivalenza.
+          </p>
+        </statement>
+        <proof>
+          <p>
+            Per ogni intero <m>a</m>, si ha che <m>a-a=0</m> è multiplo di <m>n</m>: pertanto, <m>a\equiv a\pmod{n}</m> e la relazione è riflessiva.
+          </p>
+          <p>
+            Se <m>a\equiv b\pmod{n}</m>, allora <m>a-b</m> è multiplo di <m>n</m>, cioè esiste un intero <m>k</m> tale che <m>a-b=kn</m>. Pertanto, <m>b-a=-kn</m>, cioè <m>b-a</m> è multiplo di <m>n</m>, vale a dire <m>b\equiv a\pmod{n}</m>. Dunque, la relazione è simmetrica.
+          </p>
+          <p>
+            Se <m>a\equiv b\pmod{n}</m> e <m>b\equiv c\pmod{n}</m>, allora <m>a-b</m> e <m>b-c</m> sono multipli di <m>n</m>, cioè esistono interi <m>h</m> e <m>k</m> tali che <m>a-b=hn</m> e <m>b-c=kn</m>. Ma allora <m>a-c=a-b+b-c=hn+kn=(h+k)n</m>: pertanto, <m>a-c</m> è multiplo di <m>n</m>, cioè <m>a\equiv c\pmod{n}</m> e la relazione è transitiva.
+          </p>
+        </proof>
+
+      </proposition>
+
+      <definition xml:id="def-classe_resto">
+        <notation>
+          <usage><m>\class[n]{a}</m></usage>
+          <description>classe di resto di <m>a</m> modulo <m>n</m></description>
+        </notation>
+        <notation>
+          <usage><m>\Interi/n</m></usage>
+          <description>Insieme delle classi di resto modulo <m>n</m></description>
+        </notation>
+
+        <statement>
+          <p>
+            La classe di equivalenza di un numero <m>a</m> rispetto alla congruenza modulo <m>n</m> è detta <term>classe di resto</term> modulo <m>n</m> e denotata con <m>\class[n]{a}</m>. L'insieme quoziente, cioè l'insieme delle classi di resto modulo <m>n</m> è denotato con <m>\Interi/n</m>.
+          </p>
+        </statement>
+      </definition>
+
+      <remark xml:id="rem-classe_resto_esplicita">
+        <p>
+          Dalla definizione della relazione di congruenza modulo <m>n</m>, segue immediatamente che <m>\class[n]{a}=\{a+kn\mid k\in\Interi\}</m>.
+        </p>
+      </remark>
+
+      <p>
+        Il nome classe di resto è motivato dalla proposizione seguente.
+      </p>
+
+      <proposition xml:id="prop-congruiserestouguale">
+        <statement>
+          <p>
+            Dato un intero positivo <m>n</m>, due numeri interi <m>a</m> e <m>b</m> sono congrui modulo <m>n</m> se e solo se la divisione di <m>a</m> e <m>b</m> per <m>n</m> dà lo stesso resto. In particolare, <m>\Interi/n</m> ha <m>n</m> elementi cioè <m>\class[n]{0}</m>, <m>\class[n]{1}</m>, <m>\ldots</m>, <m>\class[n]{n-1}</m>.
+          </p>
+        </statement>
+
+        <proof>
+          <p>
+            Sappiamo che esistono interi <m>q_{1}</m>, <m>r_{1}</m>, <m>q_{2}</m> e <m>r_{2}</m> tali che <m>a=nq_{1}+r_{1}</m> e <m>b=nq_{2}+r_{2}</m> con <m>0\le r_{1} \lt n</m> e <m>0\le r_{2} \lt n</m>: abbiamo allora <m>a-b=n(q_{1}-q_{2})+(r_{1}-r_{2})</m> e, pertanto, <m>a-b</m> è multiplo di <m>n</m> se e solo se <m>r_{1}-r_{2}</m> è multiplo di <m>n</m>. Senza perdere in generalità possiamo supporre che <m>r_{1}\ge r_{2}</m>, da cui <m>0\le r_{1}-r_{2} \lt n</m>: dunque, <m>r_{1}-r_{2}</m> è multiplo di <m>n</m> se e solo se <m>r_{1}=r_{2}</m>.
+          </p>
+        </proof>
+
+      </proposition>
+
+      <remark xml:id="rem-congruenzemultipli">
+        <p>
+          Notiamo che <m>\class[n]{0}</m> è formata da tutti e soli gli interi che divisi per <m>n</m> danno resto <m>0</m>, vale a dire i multipli di <m>n</m>. In particolare, quando <m>n=2</m>, la classe <m>\class[2]{0}</m> è formata esattamente dai numeri pari, mentre la classe <m>\class[2]{1}</m> è formata dai numeri rimanenti, vale a dire i numeri dispari. Recuperiamo, quindi, la partizione degli interi in numeri pari e numeri dispari vista all'inizio del capitolo. Quando invece <m>n \gt 2</m>, i numeri che non sono multipli di <m>n</m> non formano un'unica classe ma si distribuiscono in <m>n-1</m> classi.
+        </p>
+      </remark>
+
+      <exercises xml:id="exercises-congruenzemodulon">
+
+        <exercise xml:id="exer-multipli4">
+          <statement>
+            <p>
+              Consideriamo la partizione degli interi <m>\Interi</m> formata dall'insieme <m>Q</m> dei multipli di <m>4</m> e dall'insieme <m>R</m> degli interi che non sono multipli di <m>4</m>. Mostrare che le operazioni di addizione e moltiplicazione in <m>\Interi</m> non inducono delle operazioni nell'insieme quoziente <m>\{Q,R\}</m>.
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Notiamo che <m>1</m>, <m>2</m> e <m>3</m> sono elementi di <m>R</m>. Ora <m>1+2\in R</m> mentre <m>1+3\in Q</m>: dunque, <m>R+R</m> non è definita. Analogamente, <m>1\cdot 2\in R</m>, mentre <m>2\cdot 2\in Q</m>: dunque, <m>R\cdot R</m> non è definito.
+            </p>
+          </solution>
+        </exercise>
+
+        <exercise>
+          <introduction>
+            <p>
+              Siano <m>m</m> e <m>n</m> interi positivi con <m>m</m> divisore di <m>n</m>.
+            </p>
+          </introduction>
+          <task>
+            <statement>
+              <p>
+                Dimostrare che se <m>a</m> e <m>b</m> sono due interi tali che <m>a\equiv b\pmod{n}</m>, allora <m>a\equiv b\pmod{m}</m>.
+              </p>
+            </statement>
+          </task>
+          <task>
+            <statement>
+              <p>
+                Dimostrare che una classe di resto modulo <m>m</m> è unione di esattamente <m>\frac{n}{m}</m> classi di resto modulo <m>n</m>.
+              </p>
+            </statement>
+          </task>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Se nella <xref ref="def-congruenzamodulon"/> ammettessimo la possibilità che <m>n=0</m>, otterremmo comunque una relazione di equivalenza? E se sì, quali sarebbero le sue classi?
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              È una relazione di equivalenza: ogni numero è equivalente solo a sé stesso.
+            </p>
+          </answer>
+        </exercise>
+
+      </exercises>
+
+    </section>
+
+    <section xml:id="sec-operazioniclassiresto">
+      <title>Operazioni tra classi di resto</title>
+
+      <p>
+        Dopo avere introdotto le classi di resto modulo un intero positivo <m>n</m>, vorremmo definire delle operazioni tra esse. Verrebbe spontaneo porre semplicemente
+        <md>
+          <mrow>\class[n]{a}+\class[n]{b}     \amp \coloneqq\class[n]{a+b} </mrow>
+          <mrow>\class[n]{a}\cdot\class[n]{b} \amp \coloneqq\class[n]{a\cdot b} </mrow>
+        </md>
+        ma siamo sicuri di poterlo fare? Ricordiamo che ciascuna classe di resto è un sottoinsieme dell'insieme degli interi e, quindi, data la classe <m>\class[n]{a}</m>, il numero <m>a</m> è uno degli elementi di questa classe, ma non è l'unico. Possiamo rappresentare la stessa classe in infiniti modi diversi. Ad esempio <m>\class[5]{3}=\class[5]{8}=\class[5]{-2}=\cdots</m>. Per poter definire, ad esempio, la somma <m>\class[5]{3}+\class[5]{4}</m> dobbiamo accertarci che la classe di <m>3+4</m> sia uguale alla classe di <m>8+14</m>, di <m>-2+4</m> e così via. Più in generale, quando proviamo a definire le operazioni come sopra, dobbiamo, quindi, assicurarci che, prendendo un qualunque rappresentante <m>a'</m> di <m>\class[n]{a}</m> e un qualunque rappresentante <m>b'</m> di <m>\class[n]{b}</m>, la classe <m>\class[n]{a'+b'}</m> coincide con la classe <m>\class[n]{a+b}</m> e la classe <m>\class[n]{a'\cdot b'}</m> coincide con la classe <m>\class[n]{a\cdot b}</m>.
+      </p>
+
+      <proposition xml:id="prop-compatibilitacongruenzamodulon">
+        <statement>
+          <p>
+            Sia <m>n</m> un intero positivo fissato. Se <m>a\equiv a'\pmod{n}</m> e <m>b\equiv b'\pmod{n}</m>, allora <m>a+b\equiv a'+b'\pmod{n}</m> e <m>ab\equiv a'b'\pmod{n}</m>.
+          </p>
+        </statement>
+
+        <proof>
+          <p>
+            Sappiamo che esistono interi <m>h</m> e <m>k</m> tali che <m>a=a'+hn</m> e <m>b=b'+kn</m>. Ora <m>a+b=a'+hn+b'+kn=a'+b'+(h+k)n</m> e <m>ab=(a'+hn)(b'+kn)=a'b'+(hb'+ka'+hkn)n</m>, da cui segue la tesi.
+          </p>
+        </proof>
+
+      </proposition>
+
+      <p>
+        Le operazioni tra classi di resto sono, dunque, ben definite: il risultato non dipende dai rappresentanti scelti.
+      </p>
+
+      <definition xml:id="def-operazioniclassiresto">
+        <statement>
+          <p>
+            Fissato un intero positivo <m>n</m>, sono definite in <m>\Interi/n</m> due operazioni <m>+</m> e <m>\cdot</m> nel modo seguente:
+            <md>
+              <mrow>\class[n]{a}+\class[n]{b}     \amp \coloneqq\class[n]{a+b} </mrow>
+              <mrow>\class[n]{a}\cdot\class[n]{b} \amp \coloneqq\class[n]{a\cdot b} </mrow>
+            </md>
+          </p>
+        </statement>
+      </definition>
+
+      <note>
+        <p>
+          Le operazioni sono definite tra classi di resto rispetto a uno stesso intero: non ha senso sommare o moltiplicare <m>\class[n]{a}</m> e <m>\class[m]{b}</m> se <m>n</m> e <m>m</m> sono diversi.
+        </p>
+      </note>
+
+      <p>
+        Come per la moltiplicazione tra interi, indicheremo semplicemente con <m>\class[n]{a}\class[n]{b}</m> il prodotto <m>\class[n]{a}\cdot\class[n]{b}</m>.
+      </p>
+
+      <p>
+        Le operazioni tra classi di resto ereditano molte delle proprietà delle operazioni tra interi.
+      </p>
+
+      <proposition xml:id="prop-anello_degli_classi_di_resto">
+        <statement>
+          <p>
+            Le operazioni di addizione e moltiplicazione definite nell'insieme delle classi di resto <m>\Interi/n</m> soddisfano le seguenti proprietà:
+          </p>
+          <p>
+            <ol>
+              <li xml:id="addizione_classi_di_resto_associativa">
+                <p>
+                  <m>\class[n]{a}+(\class[n]{b}+\class[n]{c})=(\class[n]{a}+\class[n]{b})+\class[n]{c}</m> per ogni <m>\class[n]{a}</m>, <m>\class[n]{b}</m> e <m>\class[n]{c}</m> in <m>\Interi/n</m> (l'addizione è associativa);
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\class[n]{a}+\class[n]{0}=\class[n]{0}+\class[n]{a}=\class[n]{a}</m> per ogni <m>\class[n]{a}</m> in <m>\Interi/n</m> (<m>\class[n]{0}</m> è elemento neutro per l'addizione);
+                </p>
+              </li>
+              <li>
+                <p>
+                  per ogni classe <m>\class[n]{a}</m> esiste una classe, denotata con <m>-\class[n]{a}</m> tale che <m>\class[n]{a}+(-\class[n]{a})=(-\class[n]{a})+\class[n]{a}=\class[n]{0}</m> (esistenza opposto);
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\class[n]{a}+\class[n]{b}=\class[n]{b}+\class[n]{a}</m> per ogni <m>\class[n]{a}</m> e <m>\class[n]{b}</m> in <m>\Interi/n</m> (l'addizione è commutativa);
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\class[n]{a}(\class[n]{b}\class[n]{c})=(\class[n]{a}\class[n]{b})\class[n]{c}</m> per ogni <m>\class[n]{a}</m>, <m>\class[n]{b}</m> e <m>\class[n]{c}</m> in <m>\Interi/n</m> (la moltiplicazione è associativa);
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\class[n]{a}\class[n]{1}=\class[n]{1}\class[n]{a}=\class[n]{a}</m> per ogni <m>\class[n]{a}</m> in <m>\Interi/n</m> (<m>\class[n]{1}</m> è elemento neutro per la moltiplicazione);
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\class[n]{a}\class[n]{b}=\class[n]{b}\class[n]{a}</m> per ogni <m>\class[n]{a}</m> e <m>\class[n]{b}</m> in <m>\Interi/n</m> (la moltiplicazione è commutativa);
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>(\class[n]{a}+\class[n]{b})\class[n]{c}=\class[n]{a}\class[n]{c}+\class[n]{b}\class[n]{c}</m> per ogni <m>\class[n]{a}</m>, <m>\class[n]{b}</m> e <m>\class[n]{c}</m> in <m>\Interi/n</m> (proprietà distributiva).
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+
+        <proof>
+          <p>
+            Dimostriamo solo il <xref ref="addizione_classi_di_resto_associativa"/> e lasciamo il resto per esercizio. Abbiamo
+            <md>
+              <mrow> \class[n]{a}+(\class[n]{b}+\class[n]{c}) \amp = \class[n]{a}+\class[n]{b+c} \amp \text{definizione di addizione} </mrow>
+              <mrow> \amp = \class[n]{a+(b+c)} \amp \text{definizione di addizione} </mrow>
+              <mrow> \amp = \class[n]{(a+b)+c} \amp \text{associatività dell'addizione in }\Interi </mrow>
+              <mrow> \amp = \class[n]{a+b}+\class[n]{c} \amp \text{definizione di addizione} </mrow>
+              <mrow> \amp = (\class[n]{a}+\class[n]{b})+\class[n]{c} \amp \text{definizione di addizione} </mrow>
+            </md>
+          </p>
+        </proof>
+
+      </proposition>
+
+      <p>
+        La proposizione precedente ci dice, in pratica, che l'insieme delle classi di resto modulo <m>n</m> con le operazioni che abbiamo definito è un anello commutativo (vedi <xref ref="def-anello" />). Come fatto nel <xref ref="ch-matrici"/>, possiamo quindi considerare le matrici a coefficienti in <m>\Interi/n</m>.
+      </p>
+
+      <note>
+        <p>
+          Il fatto che le operazioni siano associative ci permette di usare scritture del tipo <m>\class[n]{a}+\class[n]{b}+\class[n]{c}</m> e <m>\class[n]{a}\class[n]{b}\class[n]{c}</m> senza ambiguità. Nelle prossime dimostrazioni useremo spesso le proprietà associative senza dichiararlo in maniera esplicita. È però importante sapere quando effettivamente vengono usate.
+        </p>
+      </note>
+
+      <p>
+        Diamo ora le tabelle delle operazioni per le classi di resto modulo <m>1</m>, <m>2</m>, <m>3</m> e <m>4</m>.
+      </p>
+
+      <figure xml:id="tabelle_classi_di_resto">
+        <caption>Tabelle delle operazioni in <m>\Interi/n</m> per <m>1\le n\le 4</m></caption>
+      <sbsgroup>
+        <sidebyside>
+          <p>
+            <md>
+              \begin{array}{c|c}
+                + \amp \class[1]{0} \\
+                \hline
+                \class[1]{0} \amp \class[1]{0}
+              \end{array}
+            </md>
+          </p>
+          <p>
+            <md>
+              \begin{array}{c|c}
+                \cdot \amp \class[1]{0} \\
+                \hline
+                \class[1]{0} \amp \class[1]{0}
+              \end{array}
+            </md>
+          </p>
+        </sidebyside>
+
+        <sidebyside>
+          <p>
+            <md>
+              \begin{array}{c|cc}
+                + \amp \class[2]{0} \amp \class[2]{1} \\
+                \hline
+                \class[2]{0} \amp \class[2]{0} \amp \class[2]{1}\\
+                \class[2]{1} \amp \class[2]{1} \amp \class[2]{0}
+              \end{array}
+            </md>
+          </p>
+          <p>
+            <md>
+              \begin{array}{c|cc}
+                \cdot \amp \class[2]{0} \amp \class[2]{1} \\
+                \hline
+                \class[2]{0} \amp \class[2]{0} \amp \class[2]{0}\\
+                \class[2]{1} \amp \class[2]{0} \amp \class[2]{1}
+              \end{array}
+            </md>
+          </p>
+        </sidebyside>
+
+        <sidebyside>
+          <p>
+            <md>
+              \begin{array}{c|ccc}
+                + \amp \class[3]{0} \amp \class[3]{1} \amp \class[3]{2} \\
+                \hline
+                \class[3]{0} \amp \class[3]{0} \amp \class[3]{1} \amp \class[3]{2} \\
+                \class[3]{1} \amp \class[3]{1} \amp \class[3]{2} \amp \class[3]{0} \\
+                \class[3]{2} \amp \class[3]{2} \amp \class[3]{0} \amp \class[3]{1} \\
+              \end{array}
+            </md>
+          </p>
+          <p>
+            <md>
+              \begin{array}{c|ccc}
+                \cdot \amp \class[3]{0} \amp \class[3]{1} \amp \class[3]{2} \\
+                \hline
+                \class[3]{0} \amp \class[3]{0} \amp \class[3]{0} \amp \class[3]{0} \\
+                \class[3]{1} \amp \class[3]{0} \amp \class[3]{1} \amp \class[3]{2} \\
+                \class[3]{2} \amp \class[3]{0} \amp \class[3]{2} \amp \class[3]{1} \\
+              \end{array}
+            </md>
+          </p>
+        </sidebyside>
+
+        <sidebyside>
+          <p>
+            <md>
+              \begin{array}{c|cccc}
+              + \amp \class[4]{0} \amp \class[4]{1} \amp \class[4]{2} \amp \class[4]{3} \\
+              \hline
+              \class[4]{0} \amp \class[4]{0} \amp \class[4]{1} \amp \class[4]{2} \amp \class[4]{3} \\
+              \class[4]{1} \amp \class[4]{1} \amp \class[4]{2} \amp \class[4]{3} \amp \class[4]{0} \\
+              \class[4]{2} \amp \class[4]{2} \amp \class[4]{3} \amp \class[4]{0} \amp \class[4]{1} \\
+              \class[4]{3} \amp \class[4]{3} \amp \class[4]{0} \amp \class[4]{1} \amp \class[4]{2} \\
+            \end{array}
+            </md>
+          </p>
+          <p>
+            <md>
+              \begin{array}{c|cccc}
+                \cdot \amp \class[4]{0} \amp \class[4]{1} \amp \class[4]{2} \amp \class[4]{3} \\
+                \hline
+                \class[4]{0} \amp \class[4]{0} \amp \class[4]{0} \amp \class[4]{0} \amp \class[4]{0} \\
+                \class[4]{1} \amp \class[4]{0} \amp \class[4]{1} \amp \class[4]{2} \amp \class[4]{3} \\
+                \class[4]{2} \amp \class[4]{0} \amp \class[4]{2} \amp \class[4]{0} \amp \class[4]{2} \\
+                \class[4]{3} \amp \class[4]{0} \amp \class[4]{3} \amp \class[4]{2} \amp \class[4]{1} \\
+              \end{array}
+            </md>
+          </p>
+        </sidebyside>
+      </sbsgroup>
+      </figure>
+
+      <p>
+        Le operazioni modulo <m>1</m> non sono molto interessanti: c'è un'unica classe di resto. Ispezionando le varie tabelle notiamo alcuni fatti. Le tabelle rispetto all'addizione riportano in ciascuna riga e in ciascuna colonna tutte le classi di resto: vedremo che questo fatto ha validità generale e ne daremo una spiegazione un po' più formale (<xref ref="rem-tabelle-cayley-gruppi"/>). Rispetto alla moltiplicazione, notiamo invece che la colonna e la riga corrispondenti alla classe <m>\class[n]{0}</m> contiene tutti <m>\class[n]{0}</m>: per <m>n=2</m> e <m>n=3</m>, queste sono le uniche occorrenze di <m>\class[n]{0}</m>, mentre per <m>n=4</m> c'è un'altra occorrenza. Sempre per <m>n=4</m>, notiamo inoltre che sulla riga e sulla colonna corrispondenti a <m>\class[4]{2}</m> la classe <m>\class[4]{2}</m> compare due volte. Vediamo a quali proprietà generali corrispondono queste osservazioni.
+      </p>
+
+      <proposition xml:id="prop-cancellazione_addizione_classi_di_resto">
+        <title>Legge di cancellazione per l'addizione</title>
+        <statement>
+          <p>
+            Sia <m>n</m> un intero positivo. Se <m>\class[n]{a}</m>, <m>\class[n]{b}</m> e <m>\class[n]{c}</m> sono tre classi tali che <m>\class[n]{a}+\class[n]{b}=\class[n]{a}+\class[n]{c}</m>, allora <m>\class[n]{b}=\class[n]{c}</m>.
+          </p>
+        </statement>
+
+        <proof>
+          <p>
+            Sappiamo che esiste una classe <m>\class[n]{d}</m> tale che <m>\class[n]{d}+\class[n]{a}=\class[n]{0}</m> con <m>\class[n]{0}</m> elemento neutro. Abbiamo allora
+            <md>
+              \class[n]{d}+(\class[n]{a}+\class[n]{b})=\class[n]{d}+(\class[n]{a}+\class[n]{c})
+            </md>
+            Per la proprietà associativa abbiamo
+            <md>
+              (\class[n]{d}+\class[n]{a})+\class[n]{b}=(\class[n]{d}+\class[n]{a})+\class[n]{c}
+            </md>
+            da cui segue
+            <md>
+              \class[n]{0}+\class[n]{b}=\class[n]{0}+\class[n]{c}
+            </md>
+            e, quindi, <m>\class[n]{b}=\class[n]{c}</m>.
+          </p>
+        </proof>
+
+      </proposition>
+
+      <p>
+        Nella proposizione precedente abbiamo usato solo le proprietà formali dell'operazione di addizione. Questa stessa dimostrazione potrà essere utilizzata in un contesto più generale e più astratto (<xref ref="prop-cancellazione_gruppo" text="title"/>). Un'altra proprietà che può essere dimostrata in maniera astratta è il fatto che <m>\class[n]{a}\class[n]{0}=\class[n]{0}</m>: ovviamente può essere facilmente verificata in maniera diretta, ma proviamo lo stesso a darne una dimostrazione che, seppur più lunga, è più generale e potrà essere utilizzata in altri contesti.
+      </p>
+
+      <corollary xml:id="cor-classe_zero_assorbente">
+        <statement>
+          <p>
+            Sia <m>n</m> un intero positivo. Per ogni <m>\class[n]{a}\in\Interi/n</m> si ha <m>\class[n]{a}\class[n]{0}=\class[n]{0}</m>.
+          </p>
+        </statement>
+
+        <proof>
+          <p>
+            Poiché <m>\class[n]{0}</m> è elemento neutro per l'addizione, sappiamo che <m>\class[n]{0}+\class[n]{0}=\class[n]{0}</m>: moltiplicando ambo i membri per <m>\class[n]{a}</m> otteniamo <m>\class[n]{a}(\class[n]{0}+\class[n]{0})=\class[n]{a}\class[n]{0}</m> che, per la proprietà distributiva dà  <m>\class[n]{a}\class[n]{0}+\class[n]{a}\class[n]{0}=\class[n]{a}\class[n]{0}</m>. Usando ancora una volta il fatto che <m>\class[n]{0}</m> è elemento neutro, otteniamo <m>\class[n]{a}\class[n]{0}+\class[n]{a}\class[n]{0}=\class[n]{a}\class[n]{0}+\class[n]{0}</m> da cui segue la tesi, grazie alla <xref ref="prop-cancellazione_addizione_classi_di_resto" text="title"/>.
+          </p>
+        </proof>
+
+      </corollary>
+
+      <p>
+        Notiamo ora che gli elementi del tipo <m>\class[n]{a}+\class[n]{x}</m> al variare di <m>\class[n]{x}</m> in <m>\Interi/n</m> sono quelli che stanno su una riga (e su una colonna) della tabella dell'operazione di addizione. La <xref ref="prop-cancellazione_addizione_classi_di_resto" text="title"/> ci dice che questi elementi sono tutti diversi e, quindi, che su ciascuna riga (e colonna) non ci sono ripetizioni. Dunque, dato che <m>\Interi/n</m> è un insieme finito, su ciascuna riga e colonna appaiono tutti gli elementi di <m>\Interi/n</m>, ciascuno esattamente una volta, fatto che avevamo già notato negli esempi ma che ora sappiamo avere validità generale.
+      </p>
+      <p>
+        Per quanto riguarda la moltiplicazione ci chiediamo se possiamo dare una legge di cancellazione del tipo: se <m>\class[n]{a}\class[n]{b}=\class[n]{a}\class[n]{c}</m> allora <m>\class[n]{b}=\class[n]{c}</m>? Dobbiamo innanzitutto supporre che <m>\class[n]{a}\ne\class[n]{0}</m>: infatti, <m>\class[n]{0}\class[n]{b}=\class[n]{0}</m> per ogni <m>\class[n]{b}</m>. Ma la tabella rispetto a <m>n=4</m> ci mostra che in generale anche questo non è sufficiente: infatti, <m>\class[4]{2}\class[4]{1}=\class[4]{2}\class[4]{3}</m> e, quindi, non possiamo semplificare <m>\class[4]{2}</m>. D'altra parte ci sono righe e colonne sulle tabelle rispetto alla moltiplicazione in cui non ci sono ripetizioni e, quindi, possiamo semplificare gli elementi corrispondenti. Per poter studiare questa situazione ci occorre innanzitutto la
+      </p>
+      <definition xml:id="def-classe_resto_invertibile">
+        <statement>
+          <p>
+            Sia <m>n</m> un intero positivo. Una classe di resto <m>\class[n]{a}</m> è detta <term>invertibile</term> se esiste una classe di resto <m>\class[n]{b}</m> tale che <m>\class[n]{a}\class[n]{b}=\class[n]{1}</m>.
+          </p>
+        </statement>
+      </definition>
+      <example>
+        <statement>
+          <p>
+            Chiaramente <m>\class[n]{1}</m> è invertibile qualunque sia <m>n</m>. Esistono però altri casi: ad esempio, <m>\class[5]{2}\class[5]{3}=\class[5]{1}</m>, oppure <m>\class[18]{5}\class[18]{11}=\class[18]{1}</m>.
+          </p>
+        </statement>
+      </example>
+      <p>
+      Prima di caratterizzare le classi invertibili, diamone alcune proprietà.
+      </p>
+      <proposition xml:id="prop-classi_resto_invertibili">
+        <statement>
+          <p>
+            <notation>
+              <usage><m>\class[n]{a}^{-1}</m></usage>
+              <description>inversa della classe <m>\class[n]{a}</m></description>
+            </notation>
+            Sia <m>n</m> un intero positivo.
+            <ol>
+              <li xml:id="inversa_classe_unica">
+                <p>
+                  Se <m>\class[n]{a}</m> è una classe invertibile, allora la classe <m>\class[n]{b}</m> tale che <m>\class[n]{a}\class[n]{b}=\class[n]{1}</m> è univocamente determinata: viene detta <term>inversa</term> di <m>\class[n]{a}</m> e denotata con <m>\class[n]{a}^{-1}</m>.
+                </p>
+              </li>
+              <li xml:id="inversa_classe_inversa">
+                <p>
+                  Se <m>\class[n]{a}</m> è invertibile, anche <m>\class[n]{a}^{-1}</m> è invertibile e <m>(\class[n]{a}^{-1})^{-1}=\class[n]{a}</m>.
+                </p>
+              </li>
+              <li xml:id="inversa_classe_prodotto">
+                <p>
+                  Se <m>\class[n]{a}</m> e <m>\class[n]{b}</m> sono invertibili, anche <m>\class[n]{a}\class[n]{b}</m> è invertibile e <m>(\class[n]{a}\class[n]{b})^{-1}=\class[n]{b}^{-1}\class[n]{a}^{-1}</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+
+        <proof>
+          <p>
+            Se <m>\class[n]{a}\class[n]{b}=\class[n]{1}</m> e <m>\class[n]{a}\class[n]{c}=\class[n]{1}</m>, allora
+            <md>
+              \class[n]{c}=\class[n]{c}\class[n]{1}=\class[n]{c}(\class[n]{a}\class[n]{b})=(\class[n]{c}\class[n]{a})\class[n]{b}=\class[n]{1}\class[n]{b}=\class[n]{b}
+            </md>.
+            Questo prova il <xref ref="inversa_classe_unica"/>.
+          </p>
+          <p>
+            Poiché <m>\class[n]{a}\class[n]{a}^{-1}=\class[n]{1}</m>, le classi <m>\class[n]{a}</m> e <m>\class[n]{a}^{-1}</m> sono una l'inversa dell'altra. Questo prova il <xref ref="inversa_classe_inversa"/>.
+          </p>
+          <p>
+            Abbiamo
+            <md>
+              <mrow>(\class[n]{a}\class[n]{b})(\class[n]{b}^{-1}\class[n]{a}^{-1}) \amp = \class[n]{a}(\class[n]{b}(\class[n]{b}^{-1}\class[n]{a}^{-1}))= \class[n]{a}((\class[n]{b}\class[n]{b}^{-1})\class[n]{a}^{-1})</mrow>
+              <mrow> \amp = \class[n]{a}(\class[n]{1}\class[n]{a}^{-1})= \class[n]{a}\class[n]{a}^{-1}=\class[n]{1}</mrow>
+            </md>.
+            Questo prova il <xref ref="inversa_classe_prodotto"/>.
+          </p>
+        </proof>
+
+      </proposition>
+
+      <note>
+        <p>
+          Nella proposizione precedente abbiamo dimostrato alcune proprietà delle classi di resto invertibili a partire dalle proprietà formali della moltiplicazione tra classi di resto. La dimostrazione data è essenzialmente la stessa data per le matrici (<xref ref="prop-matrice_invertibile"/>, <xref ref="prop-inversa_matrice_inversa"/> e <xref ref="prop-inversa_prodotto_matrici"/>) e  che useremo nuovamente in un contesto più generale (<xref ref="prop-unicita_inverso"/>, <xref ref="prop-inverso_inverso"/> e <xref ref="prop-inverso_prodotto"/>). Per questo motivo, abbiamo scritto che l'inversa di <m>\class[n]{a}\class[n]{b}</m> è <m>\class[n]{b}^{-1}\class[n]{a}^{-1}</m>, anche se, dato che il prodotto in <m>\Interi/n</m> è commutativo, avremmo potuto scrivere <m>\class[n]{a}^{-1}\class[n]{b}^{-1}</m>.
+        </p>
+      </note>
+
+      <lemma xml:id="lem-mcd_classi_di_resto">
+        <statement>
+          <p>
+            Sia <m>n</m> un intero positivo. Se <m>a</m> e <m>b</m> sono due interi tali che <m>a\equiv b\pmod{n}</m> allora <m>(a,n)=(b,n)</m>. In particolare, <m>a</m> e <m>n</m> sono coprimi se e solo se <m>b</m> e <m>n</m> sono coprimi.
+          </p>
+        </statement>
+
+        <proof>
+          <p>
+            Sappiamo che esiste un intero <m>h</m> tale che <m>b=a+nh</m>. Se <m>d</m> è un divisore comune di <m>a</m> e <m>n</m>, allora <m>d</m> divide anche <m>a+nh</m>: dunque, è un divisore comune di <m>b</m> e <m>n</m>. In maniera analoga si prova che un divisore comune di <m>b</m> e <m>n</m> è anche un divisore comune di <m>a</m> e <m>n</m>. Riassumendo, i divisori comuni di <m>a</m> e <m>n</m> coincidono con i divisori comuni di <m>b</m> e <m>n</m>: in particolare, il massimo comun divisore di <m>a</m> e <m>n</m> è uguale al massimo comun divisore di <m>b</m> e <m>n</m>.
+          </p>
+        </proof>
+
+      </lemma>
+
+      <proposition xml:id="prop-caratterizzazione_classe_invertibile">
+        <statement>
+          <p>
+            Sia <m>n</m> un intero positivo. La classe <m>\class[n]{a}</m> è invertibile se e solo se <m>a</m> è coprimo con <m>n</m>. In tal caso, presa un'identità di Bezout <m>au+nv=1</m>, si ha <m>\class[n]{a}^{-1}=\class[n]{u}</m>.
+          </p>
+        </statement>
+
+        <proof>
+          <p>
+            Supponiamo che <m>a</m> e <m>n</m> siano coprimi e sia <m>au+nv=1</m> un'identità di Bezout. Passando alle classi di resto modulo <m>n</m> otteniamo allora <m>\class[n]{a}\class[n]{u}+\class[n]{n}\class[n]{v}=\class[n]{1}</m>. Ora <m>\class[n]{n}=\class[n]{0}</m> da cui segue che <m>\class[n]{a}\class[n]{u}=\class[n]{1}</m>.
+          </p>
+          <p>
+            Viceversa, sia <m>\class[n]{a}</m> invertibile e sia <m>\class[n]{b}</m> la sua inversa: dunque, <m>\class[n]{a}\class[n]{b}=\class[n]{1}</m>, cioè <m>\class[n]{ab}=\class[n]{1}</m>. Di conseguenza, <m>ab\equiv 1\pmod{n}</m>, cioè esiste un intero <m>h</m> tale che <m>ab=1+hn</m>: se ora <m>d</m> è il massimo comun divisore di <m>a</m> e <m>n</m>, abbiamo che <m>d</m> divide anche <m>1=ab-hn</m> e, di conseguenza, <m>d=1</m>.
+          </p>
+        </proof>
+
+      </proposition>
+
+      <p>
+        Nella dimostrazione della proposizione precedente non abbiamo usato il <xref ref="lem-mcd_classi_di_resto"/> (che in effetti avremmo potuto anche evitare di dare), però questo ci aiuta a capire meglio come nella verifica della condizione per l'invertibilità di <m>\class[n]{a}</m> la scelta del rappresentante della classe sia ininfluente.
+      </p>
+
+      <corollary xml:id="cor-tutte_invertibili_modulo_primo">
+        <statement>
+          <p>
+            Se <m>p</m> è un numero primo, allora ogni classe non nulla <m>\class[p]{a}</m> è invertibile.
+          </p>
+        </statement>
+      </corollary>
+
+      <p>
+        La caratterizzazione data permette, tramite l'algoritmo di Euclide, di verificare effettivamente se una data classe è invertibile e, in caso positivo, di determinarne l'inversa.
+      </p>
+
+      <example xml:id="ex-inversa_classe_resto">
+        <statement>
+          <p>
+            Consideriamo la classe di resto <m>\class[75]{28}</m>. Vogliamo stabilire se è invertibile.
+          </p>
+          <p>
+            Calcoliamo il massimo comun divisore di <m>28</m> e <m>75</m> con l'algoritmo di Euclide. Consideriamo allora le divisioni successive:
+            <md>
+              <mrow> 75 \amp = 28\cdot  2 + 19</mrow>
+              <mrow> 28 \amp = 19 \cdot 1 + 9</mrow>
+              <mrow> 19 \amp = 9 \cdot  2 + 1</mrow>
+              <mrow> 9  \amp = 1 \cdot  9 + 0</mrow>
+            </md>
+            L'ultimo resto non nullo è <m>1</m> che è, dunque, il massimo comun divisore tra <m>28</m> e <m>75</m>: pertanto, <m>28</m> e <m>75</m> sono coprimi e <m>\class[75]{28}</m> è invertibile.
+          </p>
+
+          <p>
+            Per determinare un'identità di Bezout partiamo dalla penultima divisione e con sostituzioni successive otteniamo
+            <md>
+              <mrow> 1 \amp = 19-9\cdot 2 = 19-(28-19)\cdot 2=-28\cdot2+19\cdot3</mrow>
+              <mrow> \amp =  -28\cdot2+(75-28\cdot2)\cdot3=75\cdot 3-28\cdot 8</mrow>
+            </md>.
+            Passando alle classi modulo <m>75</m>, otteniamo <m>\class[75]{75}\class[75]{3}+\class[75]{28}\class[75]{-8}=\class[75]{1}</m>, da cui segue <m>\class[75]{28}\class[75]{-8}=\class[75]{1}</m> e, dunque, l'inversa di <m>\class[75]{28}</m> è <m>\class[75]{-8}</m> vale a dire <m>\class[75]{67}</m>.
+          </p>
+        </statement>
+      </example>
+
+      <example xml:id="ex-noinversa_classe_resto">
+        <statement>
+          <p>
+            Consideriamo la classe di resto <m>\class[77]{28}</m>. Vogliamo stabilire se è invertibile.
+          </p>
+          <p>
+            Calcoliamo il massimo comun divisore di <m>28</m> e <m>77</m> con l'algoritmo di Euclide. Consideriamo allora le divisioni successive:
+            <md>
+              <mrow> 77 \amp = 28\cdot  2 + 21</mrow>
+              <mrow> 28 \amp = 21 \cdot 1 + 7</mrow>
+              <mrow> 21 \amp = 7 \cdot  3 + 0</mrow>
+            </md>
+            L'ultimo resto non nullo è <m>7</m> che è, dunque, il massimo comun divisore tra <m>28</m> e <m>77</m>: pertanto, <m>28</m> e <m>77</m> non sono coprimi e <m>\class[77]{28}</m> non è invertibile.
+          </p>
+        </statement>
+      </example>
+
+      <p>
+        Possiamo ora dare una legge di cancellazione per la moltiplicazione di classi di resto.
+      </p>
+
+      <proposition xml:id="prop-cancellazione_moltiplicazione_classi_di_resto">
+        <title>Legge di cancellazione per la moltiplicazione</title>
+
+        <statement>
+          <p>
+            Sia <m>n</m> un intero positivo. Se <m>\class[n]{a}</m>, <m>\class[n]{b}</m> e <m>\class[n]{c}</m> sono tre classi tali che <m>\class[n]{a}\class[n]{b}=\class[n]{a}\class[n]{c}</m> e <m>\class[n]{a}</m> è invertibile, allora <m>\class[n]{b}=\class[n]{c}</m>.
+          </p>
+        </statement>
+
+        <proof>
+          <p>
+            Sappiamo che esiste una <m>\class[n]{d}</m> tale che <m>\class[n]{d}\class[n]{a}=\class[n]{1}</m> con <m>\class[n]{1}</m> elemento neutro. Abbiamo allora
+            <md>
+              \class[n]{d}(\class[n]{a}\class[n]{b})=\class[n]{d}(\class[n]{a}\class[n]{c})
+            </md>
+            Per la proprietà associativa abbiamo
+            <md>
+              (\class[n]{d}\class[n]{a})\class[n]{b}=(\class[n]{d}\class[n]{a})\class[n]{c}
+            </md>
+            da cui segue
+            <md>
+              \class[n]{1}\class[n]{b}=\class[n]{1}\class[n]{c}
+            </md>
+            e, quindi, <m>\class[n]{b}=\class[n]{c}</m>.
+          </p>
+        </proof>
+
+      </proposition>
+
+      <p>
+        La proposizione precedente non può essere migliorata.
+      </p>
+
+      <proposition xml:id="prop-classe_non_invertibile_non_semplificabile">
+        <statement>
+          <p>
+            Sia <m>n</m> un intero positivo. Se <m>\class[n]{a}</m> non è invertibile, allora esistono <m>\class[n]{b}</m> e <m>\class[n]{c}</m> diverse tali che <m>\class[n]{a}\class[n]{b}=\class[n]{a}\class[n]{c}</m>.
+          </p>
+        </statement>
+
+        <proof>
+          <p>
+            Per la <xref ref="prop-caratterizzazione_classe_invertibile"/>, il massimo comun divisore <m>d</m> tra <m>a</m> e <m>n</m> è diverso da <m>1</m>. Sia allora <m>n=de</m>: pertanto, <m>0 \lt e \lt n</m>. Preso allora <m>b</m> intero qualunque e <m>c\coloneqq b+e</m>, si ha che <m>\class[n]{b}\ne\class[n]{c}</m>. D'altra parte <m>ac=a(b+e)=ab+ae</m>: poiché <m>d</m> divide <m>a</m>, abbiamo che <m>n=de</m> divide <m>ae</m> e, quindi, <m>ac\equiv ab\pmod{n}</m>, cioè <m>\class[n]{a}\class[n]{c}=\class[n]{a}\class[n]{b}</m>.
+          </p>
+        </proof>
+
+      </proposition>
+
+      <p>
+        Le proprietà delle operazioni con le classi di resto permettono di dare alcuni criteri di divisibilità per numeri scritti in base <m>10</m>.
+      </p>
+
+      <proposition xml:id="prop-divisibilita_3_9">
+        <statement>
+          <p>
+            Sia dato un numero positivo <m>n</m> scritto in base <m>10</m> nel modo seguente <m>n=a_{r}a_{r-1}\ldots a_{0}</m> (dove cioè <m>a_{0}</m> è la cifra delle unità, <m>a_{1}</m> è la cifra delle decine e così via). Allora <m>n\equiv a_{0}+a_{1}+\cdots+a_{r}\pmod{9}</m>: in particolare, <m>n</m> è divisibile per <m>9</m> se e solo se <m>a_{0}+a_{1}+\cdots+a_{r}</m> è divisibile per <m>9</m>. Vale inoltre la stessa proprietà rispetto a <m>3</m>.
+          </p>
+        </statement>
+
+        <proof>
+          <p>
+            Dalla scrittura di <m>n</m> in base <m>10</m> otteniamo che
+            <md>
+              n=a_{0}+10a_{1}+10^{2}a_{2}+\ldots+10^{r}a_{r}
+            </md>.
+            Ora <m>10\equiv 1\pmod{9}</m> e, di conseguenza, <m>10^{i}\equiv 1\pmod{9}</m> per ogni <m>i</m>. La tesi segue allora immediatamente. Per quanto riguarda <m>3</m>, basta notare che se <m>n\equiv a_{0}+a_{1}+\cdots+a_{r}\pmod{9}</m>, a maggior ragione <m>n\equiv a_{0}+a_{1}+\cdots+a_{r}\pmod{3}</m>.
+          </p>
+        </proof>
+
+      </proposition>
+
+      <proposition xml:id="prop-divisibilita_11">
+        <statement>
+          <p>
+            Sia dato un numero positivo <m>n</m> scritto in base <m>10</m> nel modo seguente <m>n=a_{r}a_{r-1}\cdots a_{0}</m> (dove cioè <m>a_{0}</m> è la cifra delle unità, <m>a_{1}</m> è la cifra delle decine e così via). Allora <m>n\equiv a_{0}-a_{1}+\cdots+(-1)^{r}a_{r}\pmod{11}</m>: in particolare, <m>n</m> è divisibile per <m>11</m> se e solo se <m>a_{0}-a_{1}+\cdots+(-1)^{r}a_{r}</m> è divisibile per <m>11</m>.
+          </p>
+        </statement>
+
+        <proof>
+          <p>
+            Dalla scrittura di <m>n</m> in base <m>10</m> otteniamo che
+            <md>
+              n=a_{0}+10a_{1}+10^{2}a_{2}+\cdots+10^{r}a_{r}
+            </md>.
+            Ora <m>10\equiv -1\pmod{11}</m> e, di conseguenza, <m>10^{i}\equiv(-1)^{i} \pmod{11}</m> per ogni <m>i</m>. La tesi segue allora immediatamente.
+          </p>
+        </proof>
+
+      </proposition>
+
+      <remark xml:id="rem-divisibilita">
+        <p>
+          Le proposizioni precedente si traducono immediatamente negli usuali criteri per testare la divisibilità per <m>9</m>, per <m>3</m> e per <m>11</m> di un numero: per <m>3</m> e <m>9</m> basta sommarne le cifre ed eventualmente ripetere il procedimento più volte fino a ottenere un numero relativamente piccolo più facile da trattare rispetto al numero di partenza; per <m>11</m> basta sommare le cifre a segni alterni.
+        </p>
+      </remark>
+
+
+      <exercises xml:id="exercises-operazioniclassiresto">
+
+        <exercise xml:id="exercise-divisori_zero_classi_resto">
+          <statement>
+            <p>
+              Sia <m>n \gt 1</m>. Mostrare che esistono <m>\class[n]{a}</m> e <m>\class[n]{b}</m> non nulle tali che <m>\class[n]{a}\class[n]{b}=\class[n]{0}</m> se e solo se <m>n</m> non è primo.
+            </p>
+          </statement>
+        </exercise>
+
+
+
+        <exercise>
+          <statement>
+            <p>
+              Sia <m>n</m> un intero positivo fissato. Data una classe di resto <m>\class[n]{a}</m>, sia <m>d</m> il massimo comun divisore tra <m>a</m> e <m>n</m> (per il <xref ref="lem-mcd_classi_di_resto"/>, <m>d</m> non dipende dalla scelta del rappresentante della classe di resto). Mostrare che, per ogni <m>\class[n]{b}</m>, esistono esattamente <m>d</m> classi <m>\class[n]{c}</m> tali che <m>\class[n]{a}\class[n]{b}=\class[n]{a}\class[n]{c}</m> e dedurre che l'insieme <m>\{\class[n]{a}\class[n]{x}\mid \class[n]{x}\in\Interi/n\}</m> contiene esattamente <m>\frac{n}{d}</m> elementi. In termini della tabella dell'operazione questo equivale a dire che sulla riga (e sulla colonna) corrispondente a <m>\class[n]{a}</m> compaiono esattamente <m>\frac{n}{d}</m> elementi, ciascuno <m>d</m> volte.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Siano <m>n=dn'</m> e <m>a=da'</m> con <m>n'</m> e <m>a'</m> opportuni interi: poiché <m>n\ne 0</m>, abbiamo che <m>d\ne 0</m> e, per il <xref ref="cor-diviso_MCD_da_coprimi"/>, che <m>a'</m> e <m>b'</m> sono coprimi. Ora <m>\class[n]{a}\class[n]{b}=\class[n]{a}\class[n]{c}</m> se e solo se <m>ab-ac</m> è multiplo di <m>n</m>, vale a dire <m>da'(b-c)</m> è multiplo di <m>dn'</m>: ciò è equivalente a richiedere che <m>a'(b-c)</m> è multiplo di <m>n'</m> che, per il <xref ref="lem-divisore_coprimo_con_fattore"/>, avviene se e solo se <m>b-c</m> è multiplo di <m>n'</m>. Riassumendo, gli interi <m>c</m> tali che <m>\class[n]{a}\class[n]{b}=\class[n]{a}\class[n]{c}</m> sono tutti e soli quelli del tipo <m>c=b+kn'</m> al variare di <m>k</m> in <m>\Interi</m>. Dato un intero <m>k</m> possiamo dividerlo per <m>d</m> e ottenere <m>k=dq+r</m> con <m>q</m> e <m>r</m> interi tali che <m>0\le r \lt d</m>: dunque
+              <md>
+                b+kn'=b+(dq+r)n'=b+dqn'+rn'=b+rn'+nq\equiv b+rn'\pmod{n}
+              </md>.
+              Dunque, le classi <m>\class[n]{c}</m> tali che <m>\class[n]{a}\class[n]{b}=\class[n]{a}\class[n]{c}</m> sono tutte e sole quelle del tipo <m>\class[n]{b+rn'}</m> con <m>0\le r \lt d</m>. Queste <m>d</m> classi sono tutte diverse: infatti, se <m>r</m> e <m>s</m> sono due interi tali che <m>0\le r \lt s \lt d</m>, allora <m>b+sn'-(b+rn')=(s-r)n'</m> e <m>0 \lt (s-r)n' \lt dn'=n</m>.
+            </p>
+          </solution>
+
+        </exercise>
+
+        <exercisegroup cols="2">
+          <introduction>
+            <p>
+              Determinare se le seguenti classi di resto sono invertibili e, in caso affermativo, determinarne le inverse.
+            </p>
+          </introduction>
+            <exercise>
+              <statement>
+                <p>
+                  <m>\class[463]{133}</m>
+                </p>
+              </statement>
+              <answer>
+                <p>
+                  <m>\class[463]{94}</m>
+                </p>
+              </answer>
+            </exercise>
+
+            <exercise>
+              <statement>
+                <p>
+                  <m>\class[8325]{407}</m>
+                </p>
+              </statement>
+              <answer>
+                <p>
+                  Non è invertibile.
+                </p>
+              </answer>
+            </exercise>
+
+            <exercise>
+              <statement>
+                <p>
+                  <m>\class[213]{7}</m>
+                </p>
+              </statement>
+              <answer>
+                <p>
+                  <m>\class[213]{61}</m>
+                </p>
+              </answer>
+            </exercise>
+
+            <exercise>
+              <statement>
+                <p>
+                  <m>\class[2261]{816}</m>
+                </p>
+              </statement>
+              <answer>
+                <p>
+                  Non è invertibile.
+                </p>
+              </answer>
+            </exercise>
+
+            <exercise>
+              <statement>
+                <p>
+                  <m>\class[874]{33}</m>
+                </p>
+              </statement>
+              <answer>
+                <p>
+                  <m>\class[874]{53}</m>
+                </p>
+              </answer>
+            </exercise>
+
+            <exercise>
+              <statement>
+                <p>
+                  <m>\class[118]{15}</m>
+                </p>
+              </statement>
+              <answer>
+                <p>
+                  <m>\class[118]{63}</m>
+                </p>
+              </answer>
+            </exercise>
+        </exercisegroup>
+
+        <exercise>
+          <statement>
+            <p>
+              Dimostrare che per ogni naturale <m>n</m> si ha che <m>11^{n+2}+12^{2n+1}</m> è multiplo di <m>133</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Mostriamo per induzione su <m>n</m> che <m>12^{2n+1}\equiv -11^{n+2}\pmod{133}</m>. Per <m>n=0</m> si ha <m>12^{2\cdot0+1}=12</m> e <m>-11^{0+2}=-121</m> da cui segue <m>12-(-121)=133</m> che è, ovviamente, multiplo di <m>133</m>. Supponiamo che la proprietà sia vera per un certo <m>n</m> e mostriamo che vale per <m>n+1</m>: dobbiamo cioè provare che <m>12^{2(n+1)+1}\equiv -11^{n+1+2}\pmod{133}</m>. Ma <m>12^{2n+3}=12^2\cdot 12^{2n+1}\equiv 144(-11^{n+2})\pmod{133}</m>. Poiché <m>144\equiv 11\pmod{133}</m> otteniamo immediatamente <m>12^{2n+3}=(-11^{n+3})\pmod{133}</m> come richiesto.
+            </p>
+          </solution>
+
+          <solution>
+            <p>
+              Notiamo che <m>12^{2}=144\equiv 11\pmod{133}</m> e, quindi,
+              <md>
+                <mrow> 11^{n+2}+12^{2n+1}\amp \equiv 11^{n+2}+11^{n}\cdot12\pmod{133}</mrow>
+                <mrow>  \amp \equiv 11^{n}(11^{2}+12)\pmod{133}</mrow>
+                <mrow> \amp \equiv 11^{n}\cdot133\pmod{133}\equiv0\pmod{133}</mrow>
+              </md>
+            </p>
+          </solution>
+
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Trovare il resto di <m>227^{228^{229}}</m> diviso <m>114</m>.
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Notiamo che <m>227\equiv -1\pmod{114}</m>: dunque, <m>227^{228^{229}}\equiv (-1)^{228^{229}}\pmod{114}</m>. Ora <m>228^{229}</m> è potenza a esponente positivo di un numero pari ed è, quindi, pari: di conseguenza, <m>(-1)^{228^{229}}=1</m>. Il resto cercato è, quindi,
+              <m>1</m>.
+            </p>
+          </solution>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Mostrare che, dati tre interi consecutivi, la somma dei loro cubi è un multiplo di <m>3</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Tre interi consecutivi rappresentano le tre classi di resto modulo <m>3</m>: ora <m>\class[3]{0}^{3}+\class[3]{1}^{3}+\class[3]{2}^{3}=\class[3]{0}</m>.
+            </p>
+          </solution>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Trovare l'ultima cifra (in base <m>10</m>) di <m>1!+2!+3!+\cdots+100!</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Se <m>n\ge5</m> allora <m>n!</m> è multiplo di <m>10</m>: infatti, <m>5!=1\cdot2\cdot3\cdot4\cdot5=120</m> e ciascun fattoriale è multiplo del precedente. Per calcolare l'ultima cifra di <m>1!+2!+3!+\cdots+100!</m> è allora sufficiente calcolare l'ultima cifra di <m>1!+2!+3!+4!</m>, cioè <m>1+2+6+24=33</m>. L'ultima cifra è, quindi, <m>3</m>.
+            </p>
+          </solution>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Dimostrare che non esiste nessun intero <m>n</m> tale che <m>3n^{2}-1</m> sia un quadrato perfetto.
+            </p>
+          </statement>
+
+          <hint>
+            <p>
+              Usare le classi di resto modulo <m>3</m>.
+            </p>
+          </hint>
+
+          <solution>
+            <p>
+              Supponiamo che esistano interi <m>n</m> e <m>a</m> tali che <m>3n^{2}-1=a^{2}</m>. Qualunque sia <m>n</m>, il primo membro è congruo a <m>2</m> modulo <m>3</m>. Per quanto riguarda il secondo membro consideriamo vari casi: se <m>a\equiv 0\pmod{3}</m>, allora <m>a^{2}\equiv 0\pmod{3}</m>, se <m>a\equiv 1\pmod{3}</m>, allora <m>a^{2}\equiv 1\pmod{3}</m>, se <m>a\equiv 2\pmod{3}</m> allora <m>a^{2}\equiv 1\pmod{3}</m>. In nessun caso il secondo membro è congruo a <m>2</m> modulo <m>3</m>.
+            </p>
+          </solution>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Siano <m>a</m>, <m>b</m> e <m>c</m> tre interi tali che <m>a^{2}+b^{2}=c^{2}</m>. Dimostrare che almeno uno degli interi <m>a</m>, <m>b</m> e <m>c</m> è multiplo di <m>5</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Consideriamo i possibili quadrati modulo <m>5</m> degli interi: se <m>x\equiv 0\pmod{5}</m>, allora <m>x^{2}\equiv 0\pmod{5}</m>, se <m>x\equiv 1\pmod{5}</m> allora <m>x^{2}\equiv 1\pmod{5}</m>, se <m>x\equiv 2\pmod{5}</m> allora <m>x^{2}\equiv 4\pmod{5}</m>, se <m>x\equiv 3\pmod{5}</m> allora <m>x^{2}\equiv 4\pmod{5}</m>, se <m>x\equiv 4\pmod{5}</m> allora <m>x^{2}\equiv 1\pmod{5}</m>.
+            </p>
+            <p>
+              Se almeno uno tra <m>a</m> e <m>b</m> è multiplo di <m>5</m>, allora abbiamo finito, altrimenti ciò significa che <m>a^{2}</m> e <m>b^{2}</m> possono assumere valore <m>1</m> o <m>4</m> modulo <m>5</m>. Se <m>a^{2}\equiv b^{2}\pmod{5}</m> abbiamo allora che <m>c^{2}=a^{2}+b^{2}\equiv 1+1\pmod{5}\equiv 2\pmod{5}</m> o <m>c^{2}=a^{2}+b^{2}\equiv 4+4\pmod{5}\equiv 3\pmod{5}</m>: ma né <m>2</m> né <m>3</m> sono quadrati modulo <m>5</m>. Pertanto, <m>a^{2}</m> e <m>b^{2}</m> assumono valori diversi modulo <m>5</m> cioè uno dei due (non importa quale) assume valore <m>1</m> modulo <m>5</m> e l'altro assume valore <m>4</m> modulo <m>5</m>. Dunque, <m>c^{2}=a^{2}+b^{2}\equiv 1+4\pmod{5}\equiv 0\pmod{5}</m> e, quindi, <m>c\equiv 0\pmod{5}</m>.
+            </p>
+          </solution>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Sia <m>a</m> un intero dispari. Mostrare che il resto della divisione di <m>a^{2}</m> per <m>8</m> è <m>1</m>.
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Dobbiamo mostrare che <m>a^{2}\equiv 1\pmod{8}</m>. Sappiamo che <m>a</m> è congruo modulo <m>8</m> a un intero compreso tra <m>0</m> e <m>7</m> inclusi. Tuttavia, poiché <m>a</m> è dispari, ogni intero congruo ad <m>a</m> modulo <m>8</m> è  sua volta dispari (la loro differenza è un multiplo di <m>8</m> e, quindi, di <m>2</m>). In particolare, possiamo dire che <m>a</m> è congruo modulo <m>8</m> a uno tra i numeri <m>1</m>, <m>3</m>, <m>5</m> e <m>7</m>. Il quadrato di <m>a</m> modulo <m>8</m> è, quindi, congruo al quadrato di uno di questi numeri. Ma tutti questi numeri hanno quadrato congruo a <m>1</m> modulo <m>8</m>.
+            </p>
+          </solution>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Sia <m>a</m> un numero dispari e sia <m>b=a+2</m>. Sapendo che <m>ab</m> non è multiplo di <m>3</m>, provare che <m>12</m> divide <m>a+b</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Poiché <m>12=4\cdot 3</m> e <m>4</m> e <m>3</m> sono coprimi, per l'<xref ref="exer-multiplo_di_coprimi"/> è sufficiente provare che <m>a+b</m> è multiplo di <m>4</m> e di <m>3</m>.
+            </p>
+            <p>
+              Sia <m>a=1+2k</m> per qualche intero <m>k</m>: allora <m>b=3+2k</m>. Di conseguenza, <m>a+b=4+4k</m>; in particolare, <m>a+b</m> è multiplo di <m>4</m> qualunque sia <m>k</m>.
+            </p>
+            <p>
+              Lavoriamo ora modulo <m>3</m>. Poiché <m>ab</m> non è multiplo di <m>3</m> sappiamo che né <m>a</m> né <m>b</m> sono multipli di <m>3</m>: in particolare, <m>a\not\equiv 0\pmod{3}</m> e <m>a+2\not\equiv 3\pmod{3}</m>, cioè <m>a\not\equiv 1 \pmod{3}</m>. Pertanto, <m>a\equiv{2}\pmod{3}</m> e <m>b\equiv{2+2}\pmod{3}</m>: quindi, <m>a+b\equiv 2+4\pmod{3}</m> cioè <m>a+b</m> è multiplo di <m>3</m>.
+            </p>
+          </solution>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Dato un intero <m>n</m>, dimostrare che il massimo comun divisore tra <m>n+1</m> e <m>n^{2}+1</m> è <m>1</m> se <m>n</m> è pari ed è <m>2</m> se <m>n</m> è dispari.
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Sia <m>d</m> il massimo comun divisore tra <m>n+1</m> e <m>n^{2}+1</m>. Allora <m>n\equiv -1\pmod{d}</m> e <m>n^{2}\equiv -1 \pmod{d}</m>. Dalla prima congruenza ricaviamo che <m>n^{2}\equiv (-1)^{2}\pmod{d}</m>: ma allora <m>1\equiv -1\pmod{d}</m> e, dunque, <m>d</m> divide <m>2</m>.
+           </p>
+            <p>
+              I valori possibili per <m>d</m> sono allora <m>1</m> e <m>2</m>: se <m>d=2</m>, allora <m>n+1</m> è multiplo di <m>2</m> e, quindi, <m>n</m> è dispari. Se, viceversa, <m>n</m> è dispari, allora anche <m>n^{2}</m> è dispari e, quindi, <m>n+1</m> e <m>n^{2}+1</m> sono entrambi pari e il loro massimo comun divisore è pari: dato che i valori possibili sono <m>1</m> e <m>2</m>, ciò significa che <m>d=2</m>.
+            </p>
+          </solution>
+
+
+        </exercise>
+
+      </exercises>
+
+    </section>
+
+    <section xml:id="sec-eulero">
+      <title>Il teorema di Eulero</title>
+
+      <p>
+        Nel <xref ref="sec-operazioniclassiresto"/> abbiamo mostrato come caratterizzare le classi di resto invertibili. Questo ci fornisce anche un metodo per contare le classi di resto invertibili modulo un intero positivo fissato <m>n</m>. Più precisamente, dato che le diverse classi di resto modulo <m>n</m> sono <m>\class[n]{0}</m>, <m>\class[n]{1}</m>, <m>\ldots</m>, <m>\class[n]{n-1}</m> (si veda <xref ref="prop-congruiserestouguale"/>) e che <m>\class[n]{a}</m> è invertibile se e solo se <m>a</m> e <m>n</m> sono coprimi (si veda <xref ref="prop-caratterizzazione_classe_invertibile"/>) abbiamo che il numero di classi invertibili modulo <m>n</m> è uguale al numero di interi compresi tra <m>0</m> e <m>n-1</m> inclusi che sono coprimi con <m>n</m>. Ciò suggerisce la
+      </p>
+
+      <definition xml:id="def-funzione_di_eulero">
+
+        <notation>
+          <usage><m>\euler{n}</m></usage>
+          <description>funzione di Eulero di <m>n</m></description>
+        </notation>
+
+        <statement>
+          <p>
+            Dato un intero positivo <m>n</m>, la <term>funzione di Eulero</term> di <m>n</m>, denotata con <m>\euler{n}</m>, è il numero degli interi <m>k</m> tali che <m>0\le k\le n-1</m> e <m>k</m> è coprimo con <m>n</m>.
+          </p>
+        </statement>
+      </definition>
+
+      <example>
+        <statement>
+          <p>
+            Calcoliamo la funzione di Eulero per i primi valori. Su ciascuna riga riportiamo i valori da <m>0</m> a <m>n-1</m>, cancelliamo quelli non coprimi con <m>n</m> e contiamo i rimanenti
+          </p>
+
+          <table>
+            <title>Valori della funzione di Eulero</title>
+
+            <tabular>
+              <row bottom="minor">
+                <cell><m>n</m></cell>
+                <cell>Naturali tra <m>0</m> e <m>n-1</m></cell>
+                <cell><m>\euler{n}</m></cell>
+              </row>
+              <row>
+                <cell><m>1</m></cell>
+                <cell><m>0</m></cell>
+                <cell><m>1</m></cell>
+              </row>
+              <row>
+                <cell><m>2</m></cell>
+                <cell><m>\cancel{0}</m>, <m>1</m></cell>
+                <cell><m>1</m></cell>
+              </row>
+              <row>
+                <cell><m>3</m></cell>
+                <cell><m>\cancel{0}</m>, <m>1</m>, <m>2</m></cell>
+                <cell><m>2</m></cell>
+              </row>
+              <row>
+                <cell><m>4</m></cell>
+                <cell><m>\cancel{0}</m>, <m>1</m>, <m>\cancel{2}</m>, <m>3</m></cell>
+                <cell><m>2</m></cell>
+              </row>
+              <row>
+                <cell><m>5</m></cell>
+                <cell><m>\cancel{0}</m>, <m>1</m>, <m>2</m>, <m>3</m>, <m>4</m></cell>
+                <cell><m>4</m></cell>
+              </row>
+              <row>
+                <cell><m>6</m></cell>
+                <cell><m>\cancel{0}</m>, <m>1</m>, <m>\cancel{2}</m>, <m>\cancel{3}</m>, <m>\cancel{4}</m>, <m>5</m></cell>
+                <cell><m>2</m></cell>
+              </row>
+              <row>
+                <cell><m>7</m></cell>
+                <cell><m>\cancel{0}</m>, <m>1</m>, <m>2</m>, <m>3</m>, <m>4</m>, <m>5</m>, <m>6</m></cell>
+                <cell><m>6</m></cell>
+              </row>
+              <row>
+                <cell><m>8</m></cell>
+                <cell><m>\cancel{0}</m>, <m>1</m>, <m>\cancel{2}</m>, <m>3</m>, <m>\cancel{4}</m>, <m>5</m>, <m>\cancel{6}</m>, <m>7</m></cell>
+                <cell><m>4</m></cell>
+              </row>
+              <row>
+                <cell><m>9</m></cell>
+                <cell><m>\cancel{0}</m>, <m>1</m>, <m>2</m>, <m>\cancel{3}</m>, <m>4</m>, <m>5</m>, <m>\cancel{6}</m>, <m>7</m>, <m>8</m></cell>
+                <cell><m>6</m></cell>
+              </row>
+              <row>
+                <cell><m>10</m></cell>
+                <cell><m>\cancel{0}</m>, <m>1</m>, <m>\cancel{2}</m>, <m>3</m>, <m>\cancel{4}</m>, <m>\cancel{5}</m>, <m>\cancel{6}</m>, <m>7</m>, <m>\cancel{8}</m>, <m>9</m></cell>
+                <cell><m>4</m></cell>
+              </row>
+            </tabular>
+          </table>
+        </statement>
+      </example>
+
+      <p>
+        Dal calcolo dei primi valori della funzione di Eulero non appare evidente come possa essere calcolata. Vediamo però immediatamente che se <m>n</m> è un numero primo, allora l'unico numero naturale compreso tra <m>0</m> e <m>n-1</m> che non è coprimo con <m>n</m> è <m>0</m> e, dunque, <m>\euler{n}=n-1</m>. Più in generale, se <m>n=p^{\alpha}</m> è una potenza di un primo <m>p</m> con esponente positivo <m>\alpha</m>, i numeri non coprimi con <m>n</m> sono esattamente i multipli di <m>p</m>: tra i <m>p^{\alpha}</m> numeri naturali compresi tra <m>0</m> e <m>p^{\alpha}-1</m> i multipli di <m>p</m> sono uno ogni <m>p</m> e i rimanenti, il cui numero è <m>p^{\alpha}-\frac{p^{\alpha}}{p}</m>, sono coprimi con <m>p</m>. Riassumendo, abbiamo:
+      </p>
+
+      <proposition xml:id="prop-funzione_di_eulero_di_potenza_di_primo">
+        <statement>
+          <p>
+            Se <m>p</m> è un primo e <m>\alpha</m> un intero positivo, si ha <m>\euler{p^{\alpha}}=p^{\alpha}-p^{\alpha-1}</m>.
+          </p>
+        </statement>
+      </proposition>
+
+      <p>
+        Al momento non sappiamo come calcolare la funzione di Eulero per un numero che non sia una potenza di un primo. Vedremo più avanti come fare.
+      </p>
+
+      <p>
+        Abbiamo introdotto la funzione di Eulero come un metodo per contare le classi di resto che sono invertibili. Usando questo semplice fatto possiamo allora dimostrare il
+      </p>
+      <theorem xml:id="thm-eulero">
+        <title>Teorema di Eulero</title>
+        <statement>
+          <p>
+            Sia <m>n</m> un intero positivo e <m>a</m> un intero coprimo con <m>n</m>. Allora <m>a^{\euler{n}}\equiv 1\pmod{n}</m>.
+          </p>
+        </statement>
+
+        <proof>
+          <p>
+            Consideriamo le classi di resto invertibili <m>\class[n]{c_{1}}</m>, <m>\class[n]{c_{2}}</m>, <m>\ldots</m>, <m>\class[n]{c_{\euler{n}}}</m> (poiché <m>a</m> è coprimo con <m>n</m> tra esse c'è ovviamente anche <m>\class[n]{a}</m>). Moltiplichiamole tutte per <m>\class[n]{a}</m>, ottenendo <m>\class[n]{a}\class[n]{c_{1}}</m>, <m>\class[n]{a}\class[n]{c_{2}}</m>, <m>\ldots</m>, <m>\class[n]{a}\class[n]{c_{\euler{n}}}</m>: queste sono tutte diverse per la <xref ref="prop-cancellazione_moltiplicazione_classi_di_resto"/> e sono tutte invertibili per la <xref ref="prop-classi_resto_invertibili"/>. Ma allora sono tutte le classi invertibili, semplicemente in un ordine diverso. Facendo il prodotto di tutte nella prima elencazione e nella seconda otteniamo allora lo stesso risultato
+            <md>
+              \class[n]{c_{1}}\class[n]{c_{2}}\cdots\class[n]{c_{\euler{n}}}=
+              \class[n]{a}\class[n]{c_{1}}\class[n]{a}\class[n]{c_{2}}\cdots\class[n]{a}\class[n]{c_{\euler{n}}}
+            </md>.
+            Riordinando, otteniamo:
+            <md>
+              \class[n]{c_{1}}\class[n]{c_{2}}\cdots\class[n]{c_{\euler{n}}}=\class[n]{c_{1}}\class[n]{c_{2}}\cdots\class[n]{c_{\euler{n}}}\class[n]{a^{\euler{n}}}
+            </md>.
+            Applicando ora la <xref ref="prop-cancellazione_moltiplicazione_classi_di_resto"/>, otteniamo allora <m>\class[n]{1}=\class[n]{a^{\euler{n}}}</m>, cioè la tesi.
+          </p>
+        </proof>
+
+      </theorem>
+
+      <p>
+        Come caso particolare abbiamo il
+      </p>
+
+      <corollary xml:id="cor-piccolo_fermat">
+        <title>Piccolo teorema di Fermat</title>
+
+        <statement>
+          <p>
+              Dato un primo <m>p</m> e un intero <m>a</m>, risulta <m>a^{p}\equiv a\pmod{p}</m>.
+          </p>
+        </statement>
+
+        <proof>
+          <p>
+            Se <m>a</m> non è coprimo con <m>p</m>, cioè è multiplo di <m>p</m>, allora <m>a\equiv 0\pmod{p}</m> e anche <m>a^{p}\equiv 0\pmod{p}</m>.
+          </p>
+          <p>
+            Se <m>a</m> è coprimo con <m>p</m>, dalla <xref ref="prop-funzione_di_eulero_di_potenza_di_primo"/> sappiamo che <m>\euler{p}=p-1</m> e, dunque, per il <xref ref="thm-eulero" text="title"/> abbiamo allora che <m>a^{p-1}\equiv 1\pmod{p}</m>: moltiplicando ambo i membri per <m>a</m> otteniamo la tesi.
+          </p>
+
+        </proof>
+
+      </corollary>
+
+      <example xml:id="ex-resto_con_eulero">
+        <statement>
+          <p>
+            Supponiamo di voler determinare il resto della divisione di <m>31^{3215}+23^{2347}</m> per <m>12</m>. In altri termini, dobbiamo cercare un intero compreso tra <m>0</m> e <m>11</m> congruo a <m>31^{3215}+23^{2347}</m> modulo <m>12</m>. Consideriamo prima <m>31^{3215}</m>: notiamo innanzitutto che <m>31\equiv 7\pmod{12}</m> e, quindi, <m>31^{3215}\equiv 7^{3215}\pmod{12}</m>. Poiché <m>7</m> è coprimo con <m>12</m>, il <xref ref="thm-eulero" text="title"/> ci dice che <m>7^{\euler{12}}\equiv 1\pmod{12}</m>: si vede facilmente che <m>\euler{12}=4</m>. Ora <m>3215\equiv 3\pmod{4}</m>, cioè <m>3125=4h+3</m> per qualche naturale <m>h</m>: dunque
+            <md>
+              7^{3215}=7^{4h+3}=(7^{4})^{h}7^{3}\equiv 1^{h}7^{3}\pmod{12}\equiv 7^{3}\pmod{12}
+            </md>
+            Calcoliamo allora <m>7^{3}</m> modulo <m>12</m>: notiamo che <m>7^{2}=49\equiv 1\pmod{12}</m> e, quindi, <m>7^{3}\equiv 7\pmod{12}</m>.
+          </p>
+          <p>
+            Consideriamo ora <m>23^{2347}</m>: notiamo innanzitutto che <m>23\equiv 11\pmod{12}</m>. Potremmo ora procedere come sopra, però notiamo che <m>23\equiv -1\pmod{12}</m>: questo permette di semplificare i calcoli. Infatti, senza bisogno di invocare il <xref ref="thm-eulero" text="title"/>, abbiamo che <m>23^{2347}\equiv(-1)^{2347}\pmod{12}</m>. Poiché <m>2347</m> è dispari,  <m>-1^{2347}=-1</m> e, dunque, <m>23^{2347}\equiv -1\pmod{12}</m>.
+          </p>
+          <p>
+            Riassumendo, <m>31^{3215}+23^{2347}\equiv 7-1\pmod{12}\equiv 6\pmod{12}</m>. Poiché <m>0\le 6 \lt 12</m>, il resto della divisione cercata è proprio <m>6</m>.
+          </p>
+        </statement>
+      </example>
+
+      <p>
+        Nell'esempio precedente abbiamo potuto usare il <xref ref="thm-eulero" text="title"/>, perché <m>7</m> e <m>11</m> sono coprimi con <m>12</m>, altrimenti non avremmo saputo come procedere. Vedremo come affrontare il caso in cui ciò non avviene nell'<xref ref="ex-resto_con_tcr"/>.
+      </p>
+
+      <exercises xml:id="exercises-eulero">
+
+        <exercise>
+          <statement>
+            <p>
+              Dimostrare che <m>\euler{n}</m> è pari per ogni intero <m>n\ge 3</m>.
+            </p>
+          </statement>
+
+          <hint>
+            <p>
+              Notare che <m>a</m> è coprimo con <m>n</m> se e solo se <m>n-a</m> è coprimo con <m>n</m> e usare questo fatto per accoppiare fra loro i numeri coprimi con <m>n</m> e compresi tra <m>0</m> e <m>n-1</m>, facendo attenzione al caso in cui <m>a=n-a</m>.
+            </p>
+          </hint>
+
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Trovare il resto di <m>23^{18!}</m> diviso <m>19</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Poiché <m>23</m> è coprimo con <m>19</m> e <m>19</m> è primo, per il <xref ref="thm-eulero" text="title"/> abbiamo che <m>23^{18}\equiv 1\pmod{19}</m>. Pertanto, <m>23^{18!}=(23^{18})^{17!}\equiv 1^{17!}\pmod{19}\equiv 1\pmod{19}</m>. Il resto cercato è, dunque, <m>1</m>.
+            </p>
+          </solution>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Trovare il resto di <m>37^{100}</m> diviso <m>29</m>.
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Il resto cercato è congruo a <m>37^{100}</m> modulo <m>29</m>. Svolgiamo, dunque, i calcoli modulo <m>29</m>. Notiamo anzitutto che <m>37\equiv 8\pmod{29}</m> e, quindi, <m>37^{100}\equiv 8^{100}\pmod{29}</m>. Inoltre <m>8=2^{3}</m> e, quindi, <m>37^{100}\equiv 2^{300}\pmod{29}</m>. Poiché <m>2</m> è coprimo con <m>29</m> e <m>\euler{29}=28</m>, visto che <m>29</m> è primo,
+              il <xref ref="thm-eulero" text="title"/> ci dice che <m>2^{28}\equiv 1\pmod{29}</m>. Ma <m>2^{300}=(2^{28})^{10}\cdot 2^{20}</m> e, quindi, <m>37^{100}\equiv 2^{20}\pmod{29}</m>. Per ridurre ulteriormente <m>2^{20}</m> modulo <m>29</m>, osserviamo che <m>2^{5}=32\equiv 3\pmod{29}</m> e, dunque, <m>2^{20}=(2^{5})^{4}\equiv 3^{4}\pmod{29}</m>. Poiché <m>3^{4}=81</m>, possiamo ora considerare il resto della divisione di <m>81</m> per <m>29</m> che è <m>23</m>.
+            </p>
+          </solution>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Trovare la cifra dell'unità (in base <m>10</m>) di <m>1033^{150}+11^{14}+18</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Poiché <m>1033\equiv 3\pmod{10}</m>, abbiamo <m>1033^{150}\equiv3^{150}\pmod{10}</m>. Poiché <m>3</m> è coprimo con <m>10</m>, per il <xref ref="thm-eulero" text="title"/> abbiamo <m>3^{\euler{10}}\equiv 1\pmod{10}</m>. Ora <m>\euler{10}=4</m>. Poiché <m>150\equiv 2\pmod{4}</m>, abbiamo <m>3^{150}\equiv 3^{2}\pmod{10}</m>, cioè <m>3^{150}\equiv 9\pmod{10}</m>. Abbiamo poi <m>11\equiv 1\pmod{10}</m> e, di conseguenza, <m>11^{14}\equiv1\pmod{10}</m>, Infine <m>18\equiv 8\pmod{10}</m>. Riassumendo, <m>1033^{150}+11^{14}+18\equiv 9+1+8\pmod{10}\equiv 8\pmod{10}</m>. L'ultima cifra è, dunque, <m>8</m>.
+            </p>
+          </solution>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Dimostrare che <m>m^{5}-m</m> è divisibile per <m>30</m> qualunque sia l'intero <m>m</m>.
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Poiché <m>30=2\cdot 3\cdot 5</m> e <m>2</m>, <m>3</m> e <m>5</m> sono a due a due coprimi, grazie all'<xref ref="exer-multiplo_di_coprimi"/> basta mostrare che <m>m^{5}-m</m> è divisibile per questi numeri. Poiché <m>2</m>, <m>3</m> e <m>5</m> sono primi, il <xref ref="cor-piccolo_fermat" text="title"/> ci dice che <m>m^{2}\equiv m\pmod{2}</m>, <m>m^{3}\equiv m\pmod{3}</m> e <m>m^{5}\equiv m\pmod{5}</m>. Dalla prima congruenza ricaviamo per induzione che tutte le potenze di <m>m</m> sono congrue tra loro modulo <m>2</m>: in particolare, <m>m^{5}\equiv m\pmod{2}</m>; dalla seconda otteniamo che <m>m^{5}=m^{3}m^{2}\equiv mm^{2}\pmod{3}\equiv m^{3}\pmod{3}\equiv m\pmod{3}</m>. Riassumendo, <m>m^{5}</m> e <m>m</m> sono congrui tra loro modulo <m>2</m>, <m>3</m> e <m>5</m>, come richiesto.
+            </p>
+          </solution>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Siano <m>a</m> e <m>b</m> due interi positivi coprimi. Dimostrare che <m>a^{\euler{b}}+b^{\euler{a}}\equiv 1\pmod{ab}</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Poiché <m>a</m> è coprimo con <m>b</m>, per il <xref ref="thm-eulero" text="title"/> abbiamo <m>a^{\euler{b}}\equiv 1\pmod{b}</m>. D'altra parte <m>b\equiv 0\pmod{b}</m> e pertanto, si ha <m>b^{\euler{a}}\equiv 0\pmod{b}</m>. Di conseguenza, <m>a^{\euler{b}}+b^{\euler{a}}\equiv 1\pmod{b}</m>. Analogamente, <m>a^{\euler{b}}+b^{\euler{a}}\equiv 1\pmod{a}</m>. Poiché <m>a</m> e <m>b</m> sono coprimi, per l'<xref ref="exer-multiplo_di_coprimi"/> otteniamo che <m>a^{\euler{b}}+b^{\euler{a}}\equiv 1\pmod{ab}</m>.
+            </p>
+          </solution>
+        </exercise>
+
+      </exercises>
+
+    </section>
+
+    <section xml:id="sec-congruenze_con_incognite">
+      <title>Congruenze con incognite</title>
+      <p>
+        Supponiamo di voler determinare tutti gli interi <m>x</m> tali che <m>ax\equiv b\pmod{n}</m>, dove <m>n</m> è un intero positivo e <m>a</m> e <m>b</m> sono interi fissati. In termini di classi di resto, questo può essere espresso scrivendo <m>\class[n]{a}\class[n]{x}=\class[n]{b}</m>. Se <m>\class[n]{a}</m> è invertibile, il che avviene se e solo se <m>a</m> è coprimo con <m>n</m> (<xref ref="prop-caratterizzazione_classe_invertibile"/>), allora, supponendo che una soluzione esista, moltiplicando ambo i membri dell'equazione per l'inverso di <m>\class[n]{a}</m>, otteniamo che <m>\class[n]{x}=\class[n]{a}^{-1}\class[n]{b}</m>. Viceversa, sostituendo la classe <m>\class[n]{a}^{-1}\class[n]{b}</m> nell'equazione, otteniamo un'identità. Abbiamo così provato la
+      </p>
+      <proposition xml:id="prop-equazione_lineare_classe_di_resto">
+        <statement>
+          <p>
+            Sia <m>n</m> un intero positivo e siano <m>a</m> e <m>b</m> due interi tali che <m>\class[n]{a}</m> è invertibile. L'equazione <m>\class[n]{a}\class[n]{x}=\class[n]{b}</m> ammette allora un'unica soluzione e cioè <m>\class[n]{x}=\class[n]{a}^{-1}\class[n]{b}</m>.
+          </p>
+        </statement>
+      </proposition>
+
+      <p>
+        La proposizione precedente può essere riespressa in termini di congruenze.
+      </p>
+
+      <proposition xml:id="prop-equazione_lineare_congruenza_invertibile">
+        <statement>
+          <p>
+            Sia <m>n</m> un intero positivo e siano <m>a</m> e <m>b</m> due interi tali che <m>a</m> è coprimo con <m>n</m>. Allora, gli interi <m>x</m> tali che <m>ax\equiv b\pmod{n}</m> sono tutti e soli quelli tali che <m>x\equiv ub\pmod{n}</m>, dove <m>u</m> può essere ottenuto da un'identità di Bezout <m>au+nv=1</m>.
+          </p>
+        </statement>
+      </proposition>
+
+      <example>
+        <statement>
+          <p>
+            Risolviamo la congruenza con incognita <m>8x\equiv 9\pmod{15}</m>. Poiché <m>8</m> è coprimo con <m>15</m> possiamo usare la proposizione precedente. Un'identità di Bezout tra <m>8</m> e <m>15</m> è, ad esempio, <m>8\cdot 2+15\cdot(-1)=1</m>: dunque, otteniamo <m>x\equiv 9\cdot2\pmod{15}</m> o, equivalentemente, <m>x\equiv 3\pmod{15}</m>.
+          </p>
+        </statement>
+      </example>
+
+      <p>
+        Supponiamo ora più in generale di voler affrontare una congruenza con incognite del tipo <m>ax\equiv b\pmod n</m>, con <m>n</m> intero positivo e <m>a</m> e <m>b</m> interi qualunque. Dobbiamo, quindi, trovare tutti i numeri interi <m>x</m> tali che <m>ax-b</m> è multiplo di <m>n</m>, cioè per cui esiste un intero <m>h</m> tale che <m>ax-b=hn</m>. Ma allora questa può essere considerata come l'equazione diofantina lineare <m>ax-nh=b</m> nelle incognite <m>x</m> e <m>h</m> (in cui in realtà non siamo interessati all'incognita <m>h</m>). Per la <xref ref="prop-equazione_lineare_diofantina_due_incognite"/>, questa è risolubile se e solo se <m>(a,n)</m> divide <m>b</m>. Supponendo che questo sia il caso e, posto <m>a=(a,n)a'</m>, <m>n=(a,n)n'</m> e <m>b=(a,n)b'</m> con <m>a'</m>, <m>n'</m> e <m>b'</m> interi opportuni, l'equazione diofantina può riscriversi come <m>(a,n)a'x-(a,n)b'=h(a,n)n'</m> che, semplificando <m>(a,n)</m>, diviene <m>a'x-b'=hn'</m>, cioè <m>a'x\equiv b'\pmod{n'}</m>. Per il <xref ref="cor-diviso_MCD_da_coprimi"/>, <m>a'</m> e <m>n'</m> sono coprimi e, quindi, ci siamo ricondotti al caso precedente. Riassumendo, abbiamo la
+      </p>
+
+      <proposition xml:id="prop-equazione_lineare_congruenza_generale">
+        <statement>
+          <p>
+            Sia <m>n</m> un intero positivo e siano <m>a</m> e <m>b</m> due interi. La congruenza con incognite
+            <md>
+              ax\equiv b\pmod{n}
+            </md>
+            ha soluzioni se e solo se <m>(a,n)</m> divide <m>b</m>: in tal caso, se <m>n=(a,n)n'</m> la congruenza è equivalente a una congruenza del tipo
+            <md>
+              x\equiv c\pmod{n'}
+            </md>
+            per un opportuno intero <m>c</m>.
+          </p>
+        </statement>
+      </proposition>
+
+      <example>
+        <statement>
+          <p>
+            Vogliamo risolvere le congruenze con incognite
+            <md>
+              6x\equiv 10\pmod{15}
+            </md>
+            e
+            <md>
+              6x\equiv 9\pmod{15}
+            </md>.
+            Nel primo caso abbiamo che <m>(6,15)=3</m> non divide <m>10</m>: dunque, la congruenza non ha soluzioni.
+          </p>
+          <p>
+            Nel secondo caso <m>(6,15)=3</m> divide <m>9</m>: dunque, la congruenza ha soluzioni e, dividendo per <m>3</m>, essa è equivalente alla congruenza
+            <md>
+              2x\equiv 3\pmod{5}
+            </md>.
+            L'inverso di <m>2</m> modulo <m>5</m> è <m>3</m> (determinato con un'opportuna identità di Bezout). Abbiamo, dunque:
+            <md>
+              3\cdot 2x\equiv 3\cdot3\pmod{5}
+            </md>
+            cioè
+            <md>
+              x\equiv 9\pmod{5}
+            </md>
+            o, se si preferisce,
+            <md>
+              x\equiv 4\pmod{5}
+            </md>.
+          </p>
+        </statement>
+      </example>
+
+      <theorem xml:id="thm-cinese_del_resto">
+        <title>Teorema cinese del resto</title>
+        <statement>
+          <p>
+            Sia dato un sistema di congruenze del tipo
+            <md>
+              \left\{
+              \begin{alignedat}{2}
+                x \amp \equiv a_{1} \amp \amp \pmod{n_{1}}\\
+                x \amp \equiv a_{2} \amp \amp \pmod{n_{2}}\\
+                  \amp \vdotswithin{\equiv} \amp           \\
+                x \amp \equiv a_{r} \amp \amp \pmod{n_{r}}
+              \end{alignedat}
+              \right.
+            </md>
+            dove <m>a_{1}</m>, <m>\ldots</m>, <m>a_{r}</m> sono interi e <m>n_{1}</m>, <m>\ldots</m>, <m>n_{r}</m> sono interi positivi a due a due coprimi. Allora il sistema è risolubile ed è equivalente a una congruenza del tipo
+            <md>
+              x\equiv a\pmod{n}
+            </md>
+            dove <m>n=n_{1}\cdot n_{2}\cdots n_{r}</m> e <m>a</m> è un opportuno intero.
+          </p>
+        </statement>
+
+        <proof>
+          <p>
+            Procediamo per induzione su <m>r</m>, il caso <m>r=1</m> essendo banale.
+          </p>
+          <p>
+            Il caso chiave è <m>r=2</m>. Un intero <m>x</m> soddisfa entrambe le congruenze se e solo se <m>x-a_{1}</m> è multiplo di <m>n_{1}</m> e <m>x-a_{2}</m> è multiplo di <m>n_{2}</m>, cioè se e solo se esistono interi <m>y</m> e <m>z</m> tali che <m>x=a_{1}+n_{1}y</m> e <m>x=a_{2}+n_{2}z</m>. Uguagliando le due espressioni ci riduciamo all'equazione
+            <md>
+              n_{1}y-n_{2}z=a_{2}-a_{1}
+            </md>.
+            Questa può essere considerata come un'equazione lineare diofantina nelle incognite <m>y</m> e <m>z</m>. Poiché <m>n_{1}</m> e <m>n_{2}</m> sono coprimi, per la <xref ref="prop-equazione_lineare_diofantina_risolubile"/> l'equazione è risolubile e, data una soluzione particolare <m>y=\bar{y}</m>, <m>z=\bar{z}</m>, le soluzioni sono del tipo
+            <md>
+              <mrow> y \amp = \bar{y} + n_{2}h</mrow>
+              <mrow> z \amp = \bar{z} + n_{1}h</mrow>
+            </md>
+            al variare di <m>h</m> in <m>\Interi</m>. Prendendo una delle due espressioni e sostituendola nella corrispondente espressione di <m>x</m> troviamo
+            <md>
+              x=a_{1}+n_{1}y=a_{1}+n_{1}(\bar{y}+n_{2}h)=a_{1}+n_{1}\bar{y}+n_{1}n_{2}h
+            </md>
+            che può essere riscritta come <m>x=a+nh</m>, cioè <m>x\equiv a \pmod{n}</m> con <m>a=a_{1}+n_{1}\bar{y}</m> e <m>n=n_{1}n_{2}</m>.
+          </p>
+          <p>
+            Consideriamo ora il caso in cui <m>r\ge 3</m>: per ipotesi induttiva le prime <m>r-1</m> congruenze sono equivalenti a una congruenza del tipo <m>x\equiv a' \pmod{n'}</m> per un opportuno intero <m>a'</m> e <m>n'=n_{1}\cdot n_{2}\cdots n_{r-1}</m>. Il sistema diventa, dunque:
+            <md>
+              \left\{
+              \begin{alignedat}{2}
+                x \amp \equiv a'    \amp\amp\pmod{n'}\\
+                x \amp \equiv a_{r} \amp\amp\pmod{n_{r}}
+              \end{alignedat}
+              \right.
+            </md>
+            Poiché <m>n'</m> e <m>n_{r}</m> sono coprimi per la <xref ref="prop-coprimo_con_prodotto"/>, ci siamo ridotti al caso <m>r=2</m> e la tesi segue immediatamente.
+          </p>
+        </proof>
+
+      </theorem>
+
+      <remark xml:id="rem-tcr">
+        <p>
+          Il <xref ref="thm-cinese_del_resto"/> può essere enunciato dicendo che esiste un unico intero <m>a</m> con <m>0\le a \le n-1</m> che soddisfa tutte le congruenze e che gli interi che soddisfano tutte le congruenze sono tutti e soli quelli del tipo <m>a+nh</m> al variare di <m>h</m> in <m>\Interi</m>.
+        </p>
+      </remark>
+
+      <example>
+        <statement>
+          <p>
+            Supponiamo di voler risolvere il sistema di congruenze
+            <md>
+              \left\{
+              \begin{alignedat}{2}
+                x \amp \equiv  2 \amp \amp \pmod{4}\\
+                x \amp \equiv  7 \amp \amp \pmod{15}\\
+                x \amp \equiv  3 \amp \amp \pmod{7}
+              \end{alignedat}
+              \right.
+            </md>
+            Poiché <m>4</m>, <m>15</m> e <m>7</m> sono a due a due coprimi siamo nelle condizioni di applicare il <xref ref="thm-cinese_del_resto" text="title"/>. Iniziamo a considerare le prime due equazioni: gli interi <m>x</m> cercati devono soddisfare <m>x=2+4y</m> e <m>x=7+15z</m> per opportuni interi <m>y</m> e <m>z</m>. Uguagliando, con semplici passaggi otteniamo: <m>4y-15z=5</m>. Un'identità di Bezout tra <m>4</m> e <m>-15</m> è, ad esempio, <m>4\cdot4+(-15)\cdot1=1</m> e moltiplicando tutto per <m>5</m> troviamo: <m>4\cdot 20-15\cdot 5=5</m>, cioè una soluzione particolare è <m>y=20</m>, <m>z=5</m>. Sostituendo uno di questi valori nella corrispondente espressione di <m>x</m> troviamo <m>x=2+4\cdot20=82</m> che è una soluzione particolare per le prime due congruenze (si può verificarlo per sicurezza) che sono, dunque, equivalenti a <m>x\equiv 82\pmod{4\cdot 15}</m>, cioè <m>x\equiv 82\pmod{60}</m> o, se si preferisce, <m>x\equiv 22\pmod{60}</m>. Il sistema si riduce, quindi, a
+            <md>
+              \left\{
+              \begin{alignedat}{2}
+                x \amp \equiv 22\amp\amp\pmod{60}\\
+                x \amp \equiv 3\amp\amp\pmod{7}
+              \end{alignedat}
+              \right.
+            </md>
+            Ripetiamo ora il ragionamento. Gli interi <m>x</m> cercati devono soddisfare <m>x=22+60y</m> e <m>x=3+7z</m> per opportuni interi <m>y</m> e <m>z</m> (per semplificare la notazione, usiamo ancora le lettere <m>y</m> e <m>z</m> per le incognite ausiliarie, anche se sono diverse da quelle precedenti). Uguagliando, con semplici passaggi otteniamo: <m>60y-7z=-19</m>. Un'identità di Bezout tra <m>60</m> e <m>-7</m> è, ad esempio, <m>60\cdot2+(-7)\cdot17=1</m> (per trovarla si può usare l'<xref ref="alg-euclide" text="title"/>) e moltiplicando tutto per <m>-19</m> troviamo: <m>60\cdot2(-19)-7\cdot17\cdot(-19)=-19</m>, cioè una soluzione particolare è <m>y=2(-19)</m>, <m>z=17(-19)</m>. Sostituendo uno di questi valori nella corrispondente espressione di <m>x</m> troviamo <m>x=22+60\cdot(-38)=-2258</m> che è una soluzione particolare per il sistema (si può verificarlo per sicurezza) che è, dunque, equivalente a <m>x\equiv -2258\pmod{60\cdot7}</m>, cioè <m>x\equiv -2258\pmod{420}</m> o, se si preferisce, <m>x\equiv 262\pmod{420}</m>.
+          </p>
+        </statement>
+      </example>
+      <p>
+        Vediamo ora come affrontare casi in cui i moduli non sono a due a due coprimi.
+      </p>
+      <example>
+        <statement>
+          <p>
+            Consideriamo i sistemi di congruenze
+            <md>
+              \left\{
+              \begin{alignedat}{2}
+                x \amp \equiv 2\amp \amp \pmod{12}\\
+                x \amp \equiv 8\amp \amp \pmod{15}\\
+                x \amp \equiv 3\amp \amp \pmod{10}
+              \end{alignedat}
+              \right.
+            </md>
+            e
+            <md>
+              \left\{
+              \begin{alignedat}{2}
+                x \amp \equiv 9\amp \amp \pmod{12}\\
+                x \amp \equiv 6\amp \amp \pmod{15}\\
+                x \amp \equiv 1\amp \amp \pmod{10}
+              \end{alignedat}
+              \right.
+            </md>
+            Consideriamo il primo sistema. Non possiamo applicare il <xref ref="thm-cinese_del_resto" text="title"/> direttamente. Possiamo però applicarlo <q>al contrario</q>. Usando la fattorizzazione <m>12=2^{2}\cdot3</m> come prodotto di potenze di primi, vediamo che la prima congruenza <m>x\equiv 2\pmod{12}</m> è equivalente al sistema
+            <md>
+              \left\{
+              \begin{alignedat}{2}
+                x \amp \equiv 2\amp \amp \pmod{2^{2}}\\
+                x \amp \equiv 2\amp \amp \pmod{3}
+              \end{alignedat}
+              \right.
+            </md>
+            Facendo lo stesso con le altre congruenze, il sistema diventa equivalente a
+            <md>
+              \left\{
+              \begin{alignedat}{2}
+                x \amp \equiv 2\amp\amp\pmod{2^{2}}\\
+                x \amp \equiv 2\amp\amp\pmod{3}\\
+                x \amp \equiv 8\amp\amp\pmod{3}\\
+                x \amp \equiv 8\amp\amp\pmod{5}\\
+                x \amp \equiv 3\amp\amp\pmod{2}\\
+                x \amp \equiv 3\amp\amp\pmod{5}\\
+              \end{alignedat}
+              \right.
+            </md>
+            Ora confrontiamo le congruenze relative alle potenze dello stesso primo. Rispetto a <m>3</m>, notiamo che <m>x\equiv 8\pmod{3}</m> e <m>x\equiv 2\pmod{3}</m> sono equivalenti (quindi, possiamo scartarne una delle due). Allo stesso modo <m>x\equiv 8\pmod{5}</m> e <m>x\equiv 3\pmod{5}</m>. E per quanto riguarda <m>x\equiv 2\pmod{2^{2}}</m> e <m>x\equiv 3\pmod{2}</m>? Se <m>x</m> è un numero tale che <m>x\equiv 2\pmod{2^{2}}</m>, cioè <m>x-2</m> è multiplo di <m>2^{2}</m>, a maggior ragione, <m>x-2</m> è multiplo di <m>2</m>, cioè <m>x\equiv 2\pmod{2}</m>: ma questa congruenza non è compatibile con la congruenza  <m>x\equiv 3\pmod{2}</m> e, quindi, il sistema non ha soluzione.
+          </p>
+          <p>
+            Consideriamo ora il secondo sistema. Con ragionamenti simili al precedente, lo riscriviamo come
+            <md>
+              \left\{
+              \begin{alignedat}{2}
+                x \amp \equiv 9\amp \amp \pmod{2^{2}}\\
+                x \amp \equiv 9\amp \amp \pmod{3}\\
+                x \amp \equiv 6\amp \amp \pmod{3}\\
+                x \amp \equiv 6\amp \amp \pmod{5}\\
+                x \amp \equiv 1\amp \amp \pmod{2}\\
+                x \amp \equiv 1\amp \amp \pmod{5}\\
+              \end{alignedat}
+              \right.
+            </md>
+            Ora confrontiamo le congruenze relative alle potenze dello stesso primo. Rispetto a <m>3</m> notiamo che <m>x\equiv 9\pmod{3}</m> e <m>x\equiv 6\pmod{3}</m> sono equivalenti (quindi, possiamo scartarne una delle due). Allo stesso modo <m>x\equiv 6\pmod{5}</m> e <m>x\equiv 1\pmod{5}</m>. Infine, <m>x\equiv 9\pmod{2^{2}}</m> implica <m>x\equiv 9\pmod{2}</m> che è equivalente a <m>x\equiv 1\pmod{2}</m>: possiamo, dunque, scartare quest'ultima. Il sistema è allora equivalente a
+            <md>
+              \left\{
+              \begin{alignedat}{2}
+                x \amp \equiv 9\amp \amp \pmod{2^{2}}\\
+                x \amp \equiv 9\amp \amp \pmod{3}\\
+                x \amp \equiv 6\amp \amp \pmod{5}
+              \end{alignedat}
+              \right.
+            </md>
+            che ora può essere risolto con il <xref ref="thm-cinese_del_resto" text="title"/>. Facendo i calcoli otteniamo la congruenza equivalente <m>x\equiv 21\pmod{60}</m>.
+          </p>
+        </statement>
+      </example>
+
+      <remark xml:id="rem-tcr_da_grande_a_piccolo">
+        <p>
+          Nel confrontare le congruenze rispetto alle potenze dello stesso primo si deve sempre partire dalla potenza più grande e considerare le sue conseguenze rispetto alle potenze più piccole. Se non sono compatibili il sistema non è risolubile; se sono compatibili, si scartano quelle rispetto alle potenze più piccole e si tiene quella rispetto alla potenza maggiore.
+        </p>
+      </remark>
+
+      <example xml:id="ex-resto_con_tcr">
+        <statement>
+          <p>
+            Supponiamo di voler calcolare il resto della divisione di <m>31^{3215}+14^{2345}</m> per <m>12</m>. Nell'<xref ref="ex-resto_con_eulero"/> abbiamo visto che <m>31^{3215}\equiv 7\pmod{12}</m>.
+          </p>
+          <p>
+            Consideriamo ora <m>14^{2345}</m>: notiamo innanzitutto che <m>14\equiv 2\pmod{12}</m>. Ora <m>2</m> e <m>12</m> non sono coprimi e, quindi, non possiamo usare il <xref ref="thm-eulero" text="title"/>. Vogliamo trovare un numero <m>x</m> relativamente <q>piccolo</q> tale che <m>x\equiv 2^{2345}\pmod{12}</m>. Per il <xref ref="thm-cinese_del_resto" text="title"/>, questo è equivalente a
+            <md>
+              \left\{
+              \begin{alignedat}{2}
+                x \amp \equiv 2^{2345}\amp \amp \pmod{2^{2}}\\
+                x \amp \equiv 2^{2345}\amp \amp \pmod{3}
+              \end{alignedat}
+              \right.
+            </md>
+            Ora <m>2^{2345}</m> è multiplo di <m>2^{2}</m> e, quindi, <m>2^{2345}\equiv 0\pmod{2^{2}}</m>. Invece <m>2</m> è coprimo con <m>3</m> e, quindi, possiamo applicare il <xref ref="thm-eulero" text="title"/> alla seconda congruenza. Più semplicemente, però, possiamo notare che <m>2\equiv -1\pmod{3}</m> e, quindi, <m>2^{2345}\equiv (-1)^{2345}\pmod{3}\equiv -1\pmod{3}</m>. Dunque, il sistema si riduce a:
+            <md>
+              \left\{
+              \begin{alignedat}{2}
+                x \amp \equiv 0\amp \amp \pmod{2^{2}}\\
+                x \amp \equiv -1\amp \amp \pmod{3}
+              \end{alignedat}
+              \right.
+            </md>
+            Risolvendo con il <xref ref="thm-cinese_del_resto" text="title"/>, troviamo <m>x\equiv 8\pmod{12}</m>.
+          </p>
+          <p>
+            Riassumendo, <m>31^{3215}+14^{2345}\equiv 7+8\pmod{12}\equiv 3\pmod{12}</m>. Poiché <m>0\le 3 \lt 12</m>, il resto della divisione cercata è proprio <m>3</m>.
+          </p>
+        </statement>
+      </example>
+
+      <example>
+        <statement>
+          <p>
+            Supponiamo di voler calcolare le ultime <m>2</m> cifre (in base <m>10</m>) di <m>6^{2023}</m>. Dobbiamo cioè trovare il resto della divisione di <m>6^{2023}</m> per <m>100</m>. Poiché <m>6</m> e <m>100</m> non sono coprimi, non possiamo applicare il <xref ref="thm-eulero" text="title"/>. Tuttavia <m>100=2^{2}\cdot 5^{2}</m> e, dunque, la congruenza con incognita <m>x\equiv 6^{2023}\pmod{100}</m> è equivalente a
+            <md>
+              \left\{
+              \begin{alignedat}{2}
+                x \amp \equiv 6^{2023}\amp \amp \pmod{2^{2}}\\
+                x \amp \equiv 6^{2023}\amp \amp \pmod{5^{2}}
+              \end{alignedat}
+              \right.
+            </md>
+            Ora <m>6</m> è multiplo di <m>2</m> e, quindi, tutte le sue potenze con esponente almeno <m>2</m> sono multiple di <m>2^{2}</m>. Pertanto, la prima congruenza è equivalente a <m>x\equiv 0\pmod{2^{2}}</m>. Per quanto riguarda la seconda congruenza, <m>6</m> è coprimo con <m>5^{2}</m>. Dunque, per il <xref ref="thm-eulero" text="title"/>, si ha <m>6^{\euler{5^{2}}}\equiv 1\pmod{5^{2}}</m>. Ora <m>\euler{5^{2}}=5^{2}-5=20</m>. Poiché <m>2023\equiv 3\pmod{20}</m>, abbiamo che <m>6^{2023}\equiv 6^{3}</m>. Facendo le potenze successive troviamo <m>6^{2}=36\equiv 11\pmod{25}</m> e <m>6^{3}\equiv 11\cdot 6\pmod{25}=16\pmod{25}</m>. Dunque, il sistema è equivalente a
+            <md>
+              \left\{
+              \begin{alignedat}{2}
+                x \amp \equiv 0\amp \amp \pmod{2^{2}}\\
+                x \amp \equiv 16\amp \amp \pmod{5^{2}}
+              \end{alignedat}
+              \right.
+            </md>
+            Questo può essere risolto con il <xref ref="thm-cinese_del_resto" text="title"/>, ottenendo <m>x\equiv 16\pmod{100}</m>: le ultime due cifre di <m>6^{2023}</m> sono allora <m>16</m>.
+          </p>
+        </statement>
+      </example>
+
+      <p>
+        Vediamo ora come può essere usato il <xref ref="thm-cinese_del_resto" text="title"/> per calcolare la funzione di Eulero di un numero qualsiasi di cui conosciamo la fattorizzazione in primi.
+      </p>
+      <lemma xml:id="lem-moltiplicativita_eulero">
+        <statement>
+          <p>
+            Siano <m>m</m> e <m>n</m> due interi positivi coprimi. Allora <m>\euler{mn}=\euler{m}\euler{n}</m>.
+          </p>
+        </statement>
+
+        <proof>
+          <p>
+            Consideriamo la funzione <m>\tau\colon \Interi/mn\to\Interi/m\times\Interi/n</m> definita da <m>\class[mn]{a}\tau\coloneqq(\class[m]{a},\class[n]{a})</m>. Notiamo innanzitutto che <m>\tau</m> è ben definita: se <m>\class[mn]{a}=\class[mn]{b}</m>, cioè <m>b-a</m> è multiplo di <m>mn</m>, allora <m>b-a</m> è multiplo sia di <m>m</m> che di <m>n</m>, cioè <m>\class[m]{a}=\class[m]{b}</m> e <m>\class[n]{a}=\class[n]{b}</m>.
+          </p>
+          <p>
+            Per il <xref ref="thm-cinese_del_resto" text="title"/>, la funzione <m>\tau</m> è suriettiva. Infatti, data una coppia <m>(\class[m]{c},\class[n]{d})</m>, sappiamo che esiste un intero <m>a</m> tale che <m>a\equiv c\pmod{m}</m> e <m>a\equiv d\pmod{n}</m>, cioè <m>\class[m]{a}=\class[m]{c}</m> e <m>\class[n]{a}=\class[n]{d}</m>. Pertanto
+            <md>
+              \class[mn]{a}\tau=(\class[m]{a},\class[n]{a})=(\class[m]{c},\class[n]{d}).
+            </md>
+            Dal momento che <m>\abs{\Interi/mn}=mn=\abs{\Interi/m\times\Interi/n}</m>, la funzione <m>\tau</m> è, quindi, biiettiva.
+          </p>
+          <p>
+            Consideriamo ora i sottoinsiemi <m>S</m>, <m>M</m> e <m>N</m> rispettivamente di <m>\Interi/mn</m>, <m>\Interi/m</m> e <m>\Interi/n</m> formati dalle classi invertibili. Per la <xref ref="prop-coprimo_con_prodotto"/>, un intero <m>a</m> è coprimo con <m>mn</m> se e solo se è coprimo con <m>m</m> e <m>n</m>. In particolare, <m>\class[mn]{a}</m> è invertibile se e solo se <m>\class[m]{a}</m> e <m>\class[n]{a}</m> sono invertibili. Pertanto, <m>\tau</m> induce una biiezione tra <m>S</m> e <m>M\times N</m>: poiché <m>\abs{M}=\euler{m}</m>, <m>\abs{N}=\euler{n}</m> e <m>\abs{S}=\euler{mn}</m>, il risultato segue.
+          </p>
+        </proof>
+
+      </lemma>
+
+      <proposition xml:id="prop-calcolo_funzione_eulero">
+        <statement>
+          <p>
+            Sia <m>n</m> un intero maggiore di <m>1</m>, scritto come
+            <md>
+              n=p_{1}^{\alpha_{1}}p_{2}^{\alpha_{2}}\cdots p_{t}^{\alpha_{t}}
+            </md>
+            con <m>p_{1}</m>, <m>p_{2}</m>, <m>\ldots</m>, <m>p_{t}</m> primi distinti e <m>\alpha_{1}</m>, <m>\alpha_{2}</m>, <m>\ldots</m>, <m>\alpha_{t}</m> interi positivi. Risulta allora
+            <md>
+              <mrow> \euler{n} \amp = (p_{1}^{\alpha_{1}}-p_{1}^{\alpha_{1}-1})(p_{2}^{\alpha_{2}}-p_{2}^{\alpha_{2}-1})\cdots (p_{t}^{\alpha_{t}}-p_{t}^{\alpha_{t}-1})</mrow>
+              <mrow> \amp =n\left(1-\frac{1}{p_{1}}\right)\left(1-\frac{1}{p_{2}}\right)\cdots\left(1-\frac{1}{p_{t}}\right)</mrow>
+            </md>.
+          </p>
+        </statement>
+
+        <proof>
+          <p>
+            Per la <xref ref="prop-funzione_di_eulero_di_potenza_di_primo"/>, sappiamo che <m>\euler{p_{i}^{\alpha_{i}}}=p_{i}^{\alpha_{i}}-p_{t}^{\alpha_{i}-1}</m> per ogni <m>i</m>. Le formule seguono allora dal <xref ref="lem-moltiplicativita_eulero"/> e da semplici calcoli.
+          </p>
+        </proof>
+
+      </proposition>
+
+      <exercises xml:id="exercises-congruenze_con_incognite">
+
+        <exercisegroup cols="2">
+          <introduction>
+            <p>
+              Stabilire quali delle seguenti congruenze sono risolubili e in caso affermativo trovarne le soluzioni.
+            </p>
+          </introduction>
+
+          <exercise>
+            <statement>
+              <p>
+                <m>21x\equiv 14\pmod{35}</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>x\equiv 4\pmod 5</m>
+              </p>
+            </answer>
+          </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                <m>172x\equiv 15\pmod{24}</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                Non ha soluzione.
+              </p>
+            </answer>
+          </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                <m>3x\equiv 8\pmod{37}</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>x\equiv 15\pmod{37}</m>
+              </p>
+            </answer>
+          </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                <m>22x\equiv 5\pmod{35}</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>x\equiv 5\pmod{35}</m>
+              </p>
+            </answer>
+          </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                <m>15x\equiv 9\pmod{18}</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>x\equiv 3\pmod{6}</m>
+              </p>
+            </answer>
+          </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                <m>165x\equiv 13\pmod{22}</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                Non ha soluzione.
+              </p>
+            </answer>
+          </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                <m>25x\equiv 10\pmod{65}</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>x\equiv 3\pmod{13}</m>
+              </p>
+            </answer>
+          </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                <m>18x\equiv 5\pmod{35}</m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>x\equiv 10\pmod{35}</m>
+              </p>
+            </answer>
+          </exercise>
+
+        </exercisegroup>
+
+        <exercise>
+          <statement>
+            <p>Risolvere, se possibile, il sistema:
+              <md>
+                \left\{
+                  \begin{alignedat}{2}
+                    x \amp \equiv 3\amp \amp \pmod{4}\\
+                    x \amp \equiv 3\amp \amp \pmod{15}\\
+                    x \amp \equiv 2\amp \amp \pmod{7}
+                  \end{alignedat}
+                \right.
+              </md>
+            </p>
+          </statement>
+          <solution>
+            <p>
+              I moduli <m>4</m>, <m>15</m> e <m>7</m> sono a due a due coprimi, e, quindi, per il <xref ref="thm-cinese_del_resto" text="title"/>, il sistema è risolubile e le soluzioni formano una classe di resto modulo <m>4\cdot15\cdot7</m>. Determiniamo prima le soluzioni comuni alle prime due congruenze. Si nota immediatamente che <m>3</m> è soluzione comune alle prime due congruenze: dunque, le prime due congruenze sono equivalenti, sempre per il <xref ref="thm-cinese_del_resto" text="title"/>, a <m>x\equiv 3\pmod{60}</m>. Il sistema si riduce allora a
+            <md>
+              \left\{
+                \begin{alignedat}{2}
+                  x \amp \equiv 3\amp \amp \pmod{60}\\
+                  x \amp \equiv 2\amp \amp \pmod{7}
+                \end{alignedat}
+              \right.
+            </md>
+            Ora deve essere <m>x=3+60h</m> per qualche <m>h</m> e <m>x=2+7k</m> per qualche <m>k</m>: uguagliando otteniamo <m>3+60h=2+7k</m> da cui segue <m>7k-60h=1</m>. Un'identità di Bezout tra <m>7</m> e <m>60</m> (che può essere determinata tramite l'<xref ref="alg-euclide" text="title"/>) è, ad esempio, <m>1=60\cdot2-7\cdot17</m>. Possiamo allora scegliere <m>k=-17</m> e <m>h=-2</m> e trovare una soluzione particolare del sistema <m>x=3+60(-2)=-117</m>. Il sistema ha allora soluzioni <m>x\equiv -117\pmod{420}</m>.
+            </p>
+          </solution>
+        </exercise>
+
+        <exercisegroup cols="2">
+          <introduction>
+            <p>
+              Risolvere, se possibile, i seguenti sistemi di congruenze.
+            </p>
+          </introduction>
+
+          <exercise>
+            <statement>
+              <p>
+                <m>
+                \left\{
+                \begin{alignedat}{2}
+                  x \amp \equiv 3\amp \amp \pmod{12}\\
+                  x \amp \equiv 10\amp \amp \pmod{11}\\
+                  x \amp \equiv 4\amp \amp \pmod{5}
+                \end{alignedat}
+                \right.
+                </m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>x\equiv 219\pmod{660}</m>
+              </p>
+            </answer>
+          </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                <m>
+                \left\{
+                \begin{alignedat}{2}
+                  x \amp \equiv 3\amp \amp \pmod{12}\\
+                  x \amp \equiv 6\amp \amp \pmod{15}\\
+                  x \amp \equiv 11\amp \amp \pmod{40}
+                \end{alignedat}
+                \right.
+                </m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>x\equiv 51\pmod{120}</m>
+              </p>
+            </answer>
+          </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                <m>
+                \left\{
+                \begin{alignedat}{2}
+                  2x \amp \equiv 3\amp \amp \pmod{5}\\
+                  2x \amp \equiv 4\amp \amp \pmod{3}\\
+                  x \amp \equiv 3\amp \amp \pmod{7}
+                \end{alignedat}
+                \right.
+                </m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                <m>x\equiv 59\pmod{105}</m>
+              </p>
+            </answer>
+          </exercise>
+
+          <exercise>
+            <statement>
+              <p>
+                <m>
+                \left\{
+                \begin{alignedat}{2}
+                  x \amp \equiv 5\amp \amp \pmod{12}\\
+                  x \amp \equiv 4\amp \amp \pmod{10}\\
+                  x \amp \equiv 2\amp \amp \pmod{15}
+                \end{alignedat}
+                \right.
+                </m>
+              </p>
+            </statement>
+            <answer>
+              <p>
+                Non ha soluzioni.
+              </p>
+            </answer>
+          </exercise>
+
+        </exercisegroup>
+
+        <exercise>
+          <statement>
+            <p>
+              Trovare il resto di <m>23^{31}+31^{23}</m> diviso <m>713</m>.
+            </p>
+          </statement>
+
+          <hint>
+            <p>
+               Si noti che <m>713=23\cdot31</m>.
+            </p>
+          </hint>
+
+          <solution>
+            <p>
+              Calcoliamo <m>23^{31}+31^{23}</m> modulo <m>23</m> e modulo <m>31</m>.
+            </p>
+            <p>
+              Chiaramente <m>23\equiv 0\pmod{23}</m> e, di conseguenza, <m>23^{31}\equiv 0\pmod{23}</m>. Poiché <m>23</m> è primo, per il <xref ref="cor-piccolo_fermat" text="title"/> abbiamo che <m>31^{23}\equiv 31\pmod {23}</m>. Pertanto, <m>23^{31}+31^{23}\equiv 0+31\pmod{23}</m>.
+            </p>
+            <p>
+              Abbiamo poi che <m>31\equiv 0\pmod{31}</m> e, di conseguenza, <m>31^{23}\equiv 0\pmod{31}</m>. Poiché <m>31</m> è primo, per il <xref ref="cor-piccolo_fermat" text="title"/> abbiamo che <m>23^{31}\equiv 23\pmod {31}</m>. Pertanto, <m>23^{31}+31^{23}\equiv 23+0\pmod{31}</m>.
+            </p>
+            <p>
+              Potremmo ora determinare <m>23^{31}+31^{23}</m> modulo <m>713</m> usando il <xref ref="thm-cinese_del_resto" text="title"/>, oppure notare che <m>23+31\equiv 31\pmod{23}</m> e <m>23+31\equiv 23\pmod{31}</m>: dunque, <m>23^{31}+31^{23}\equiv 23+31\pmod{23\cdot 31}\equiv 54\pmod{23\cdot 31}</m>. Poiché <m>0\le 54 \lt 23\cdot 31</m>, il resto cercato è <m>54</m>.
+            </p>
+          </solution>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Trovare il resto di <m>23^{8!}+4^{711}</m> diviso <m>33</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Dobbiamo determinare l'elemento compreso tra <m>0</m> e <m>32</m> nella classe di resto di <m>23^{8!}+4^{711}</m> modulo <m>33</m>.
+            </p>
+            <p>
+              Poiché <m>23</m> è coprimo con <m>33</m>, il <xref ref="thm-eulero" text="title"/> ci dice che <m>23^{\euler{33}}\equiv 1\pmod{33}</m>. Ora <m>33=3\cdot 11</m> e, quindi, <m>\euler{33}=\euler{3}\euler{11}=(3-1)(11-1)=20</m>. D'altra parte, <m>8!</m> è multiplo di <m>20</m>: di conseguenza, <m>23^{8!}=(23^{20})^{k}</m> per qualche <m>k</m> intero e, quindi, <m>23^{8!}\equiv 1^{k}\pmod{33}\equiv 1 \pmod{33}</m>.
+            </p>
+            <p>
+              Per quanto riguarda <m>4^{711}</m> osserviamo innanzitutto che è uguale a <m>2^{1422}</m>. Anche <m>2</m> è coprimo con <m>33</m>: quindi, come prima, <m>2^{20}\equiv 1\pmod{33}</m>. D'altra parte, <m>1422\equiv 2\pmod{20}</m> e, quindi, analogamente a prima, <m>2^{1422}\equiv 2^{2}\pmod{33}</m>.
+            </p>
+            <p>
+              Riassumendo, <m>23^{8!}+4^{711}\equiv 1 + 4\pmod{33}\equiv 5\pmod{33}</m>: dunque, il resto cercato è <m>5</m>.
+            </p>
+          </solution>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Trovare le ultime due cifre (in base <m>10</m>) di <m>6^{6666}</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Le ultime due cifre in base <m>10</m> corrispondono al resto della divisione di <m>6^{6666}</m> per <m>100</m>. Espresso <m>100=4\cdot 25</m> come prodotto di numeri coprimi, calcoliamo separatamente <m>6^{6666}</m> modulo <m>4</m> e modulo <m>25</m> e poi applichiamo il <xref ref="thm-cinese_del_resto" text="title"/>.
+            </p>
+            <p>
+              Poiché <m>6</m> è multiplo di <m>2</m>, tutte le sue potenze di esponente almeno <m>2</m> sono multiple di <m>4</m>. Per calcolare <m>6^{6666}</m> modulo <m>25</m>, notiamo che <m>6</m> è coprimo con <m>25</m> e, quindi, per il <xref ref="thm-eulero" text="title"/>, si ha <m>6^{\euler{25}}\equiv 1\pmod{25}</m>. Poiché <m>\euler{25}=5^{2}-5=20</m> e <m>6666\equiv 6\pmod{20}</m>, possiamo concludere che <m>6^{6666}\equiv 6^{6}\pmod{25}</m>. Ora <m>6^{2}=36\equiv{11}\pmod{25}</m>,  e <m>6^{4}\equiv{11\cdot11}\pmod{25}\equiv{21}\pmod{25}</m> e quindi, <m>6^{6}\equiv 11\cdot 21\pmod{25}\equiv 6\pmod{25}</m>. Riassumendo, <m>6^{6666}\equiv 0\pmod{4}</m> e <m>6^{6666}\equiv 6\pmod{25}</m>. Dobbiamo allora trovare il numero compreso tra <m>0</m> e <m>99</m> che soddisfa il sistema di congruenze
+              <md>
+               \left\{
+                \begin{alignedat}{2}
+                  x \amp \equiv 0 \amp \amp \pmod{4}\\
+                  x \amp \equiv 6 \amp \amp \pmod{25}
+                \end{alignedat}
+              \right.
+              </md>
+              Ora <m>x=4h=6+25k</m> per opportuni <m>h</m> e <m>k</m> interi da cui, data l'identità di Bezout <m>4\cdot(-6)+25\cdot1=1</m> tra <m>4</m> e <m>25</m>, otteniamo una soluzione particolare <m>4\cdot(-36)=6 -25\cdot 6</m> che ci dà la congruenza <m>x\equiv -144\pmod{100}</m> che può essere riscritta come <m>x\equiv 56\pmod{100}</m>. Le ultime due cifre sono per l'appunto <m>56</m>.
+            </p>
+          </solution>
+        </exercise>
+
+        <exercise>
+          <introduction>
+            <p>
+              Obiettivo di questo esercizio è dare una dimostrazione alternativa, non costruttiva, del <xref ref="thm-cinese_del_resto" text="title"/>. Siano <m>a_{1}</m>, <m>\ldots</m>, <m>a_{r}</m>  interi e <m>n_{1}</m>, <m>\ldots</m>, <m>n_{r}</m> interi positivi a due a due coprimi e sia <m>n=n_{1}\cdots n_{r}</m>.
+            </p>
+          </introduction>
+          <task>
+            <statement>
+              <p>
+                Dimostrare che la funzione <m>\tau\colon\Interi/n\to\Interi/n_{1}\times\cdots\times\Interi/n_{r}</m> definita da <m>\class[n]{a}\tau\coloneqq(\class[n_{1}]{a},\ldots,\class[n_{r}]{a})</m> è ben definita.
+              </p>
+            </statement>
+          </task>
+          <task>
+            <statement>
+              <p>
+                Dimostrare che la funzione <m>\tau</m> definita al punto precedente è iniettiva.
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Se <m>\class[n]{a}\tau=\class[n]{b}\tau</m>, allora <m>\class[n_{i}]{a}=\class[n_{i}]{b}</m> per ogni <m>i</m>, cioè <m>b-a</m> è multiplo di ogni <m>n_{i}</m> e, quindi, per l'<xref ref="exer-multiplo_di_coprimi"/> è multiplo di <m>n</m>, cioè <m>\class[n]{a}=\class[n]{b}</m>.
+              </p>
+            </solution>
+          </task>
+          <task>
+            <statement>
+              <p>
+                Dimostrare che <m>\tau</m> è biiettiva.
+              </p>
+            </statement>
+            <hint>
+              <p>
+                Contare gli elementi dell'insieme di partenza e di arrivo.
+              </p>
+            </hint>
+          </task>
+          <task>
+            <statement>
+              <p>
+                Dedurre il <xref ref="thm-cinese_del_resto" text="title"/>.
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Dato il sistema
+                <md>
+                  \left\{
+                  \begin{alignedat}{2}
+                    x \amp \equiv a_{1}\amp \amp \pmod{n_{1}}\\
+                    x \amp \equiv a_{2}\amp \amp \pmod{n_{2}}\\
+                      \amp \vdotswithin{\equiv} \amp           \\
+                    x \amp \equiv a_{r}\amp \amp  \pmod{n_{r}}
+                  \end{alignedat}
+                  \right.
+                </md>
+                dove <m>a_{1}</m>, <m>\ldots</m>, <m>a_{r}</m> sono interi e <m>n_{1}</m>, <m>\ldots</m>, <m>n_{r}</m> sono interi positivi a due a due coprimi, consideriamo l'elemento <m>(\class[n_{1}]{a_{1}},\ldots,\class[n_{r}]{a_{r}})</m> in <m>\Interi/n_{1}\times\cdots\times\Interi/n_{r}</m>. Esiste allora un'unica classe <m>\class[n]{a}</m> in <m>\Interi/n</m> tale che <m>\class[n]{a}\tau=(\class[n_{1}]{a_{1}},\ldots,\class[n_{r}]{a_{r}})</m>, Per definizione di <m>\tau</m>, ciò significa che <m>a\equiv a_{i}\pmod{n_{i}}</m> per ogni <m>i</m> e che gli interi che soddisfano il sistema sono tutti e soli quelli che appartengono alla classe <m>\class[n]{a}</m>.
+              </p>
+            </solution>
+          </task>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Dimostrare che <m>\euler{n}=\frac{n}{2}</m> se e solo se <m>n</m> è una potenza di <m>2</m> con esponente positivo.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Poiché <m>\euler{n}</m> è un intero, condizione necessaria affinché sia <m>\euler{n}=\frac{n}{2}</m> è che <m>n</m> sia pari. Sia allora <m>n=2^{k}t</m> con <m>k</m> intero positivo e <m>t</m> dispari. Poiché <m>2^{k}</m> e <m>t</m> sono coprimi, per il <xref ref="lem-moltiplicativita_eulero"/> abbiamo che <m>\euler{n}=\euler{2^{k}}\euler{t}</m>. Ora <m>\euler{2^{k}}=2^{k}-2^{k-1}=2^{k-1}</m>, cioè <m>\euler{n}=2^{k-1}\euler{t}</m>. Si ha, dunque, <m>\euler{n}=\frac{n}{2}</m> se e solo se <m>\euler{t}=t</m>: l'unico intero <m>t</m> per cui ciò avviene è <m>1</m> e, di conseguenza, <m>\euler{n}=\frac{n}{2}</m> se e solo se <m>n=2^{k}</m>.
+            </p>
+          </solution>
+        </exercise>
+
+      </exercises>
+    </section>
+
+  </chapter>

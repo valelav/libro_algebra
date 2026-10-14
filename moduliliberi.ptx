@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-moduli_liberi">
+  <title>Moduli liberi</title>
+
+  <introduction>
+    <p>
+      Nello studio degli spazi vettoriali si definisce l'indipendenza lineare di vettori che permette poi di introdurre il concetto di base, di dimensione e così via. In particolare, ogni spazio vettoriale è dotato di una base. Queste definizioni si possono estendere in maniera immediata agli <m>R</m>-moduli, tuttavia l'esistenza di una base non è sempre garantita. I moduli per cui ciò è possibile sono detti moduli liberi.
+    </p>
+  </introduction>
+
+  <section xml:id="sec-somma_diretta_moduli">
+    <title>Somma diretta di moduli</title>
+
+    <p>
+      Nel <xref ref="ch-direttosemidiretto"/> abbiamo descritto il prodotto diretto esterno e interno di gruppi (mostrando come si possa passare da uno all'altro). Introduciamo ora, in maniera del tutto analoga, la somma diretta di <m>R</m>-moduli.
+    </p>
+
+    <definition xml:id="def-somma_diretta_esterna_moduli">
+      <notation>
+        <usage><m>M_{1}\oplus M_{2}\oplus \cdots \oplus M_{r}</m></usage>
+        <description>somma diretta dei moduli <m>M_{1}</m>, <m>M_{2}</m>, <m>\ldots</m>, <m>m_{r}</m></description>
+      </notation>
+      <statement>
+        <p>
+          Siano <m>M_{1}</m>, <m>M_{2}</m>, <m>\ldots</m>, <m>M_{r}</m> degli <m>R</m>-moduli. Il loro prodotto cartesiano <m>M_{1}\times M_{2}\times \cdots \times M_{r}</m> dotato delle operazioni così definite
+          <md>
+            <mrow>(x_{1},x_{2},\ldots,x_{r})+(y_{1},y_{2},\ldots,y_{r}) \amp \coloneqq (x_{1}+y_{1},x_{2}+y_{2},\ldots,x_{r}+y_{r})</mrow>
+            <mrow> (x_{1},x_{2},\ldots,x_{r})a \amp \coloneqq(x_{1}a,x_{2}a,\ldots,x_{r}a) </mrow>
+          </md>
+          con <m>a</m> in <m>R</m>, è detto <term>somma diretta (esterna)</term> dei moduli <m>M_{1}</m>, <m>M_{2}</m>, <m>\ldots</m>, <m>M_{r}</m> e denotata con <m>M_{1}\oplus M_{2}\oplus \cdots \oplus M_{r}</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      La dimostrazione della proposizione seguente consiste di semplici verifiche, che lasciamo per esercizio.
+    </p>
+
+    <proposition xml:id="prop-somma_diretta_esterna_moduli">
+      <statement>
+        <p>
+          La somma diretta degli <m>R</m>-moduli <m>M_{1}</m>, <m>\ldots</m>, <m>M_{r}</m> è un <m>R</m>-modulo.
+        </p>
+      </statement>
+    </proposition>
+
+    <example>
+      <statement>
+        <p>
+          <notation>
+            <usage><m>R^{n}</m></usage>
+            <description>somma diretta di <m>n</m> copie di <m>R_{R}</m></description>
+          </notation>
+          Se <m>R</m> è un anello, possiamo fare la somma diretta di <m>n</m> copie del modulo <m>R_{R}</m>, che indicheremo, quindi con <m>R_{R}^{n}</m> o, più semplicemente, con <m>R^{n}</m>.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Come nel caso dei gruppi, nella somma diretta di moduli possiamo trovare sottomoduli isomorfi ai moduli usati per costruirlo.
+    </p>
+
+    <proposition xml:id="prop-sottomoduli_somma_diretta_isomorfi_addendi">
+      <statement>
+        <p>
+          Sia data la somma diretta esterna <m>M_{1}\oplus M_{2}\oplus\cdots \oplus M_{r}</m>. Fissato <m>i</m> con <m>1\le i\le n</m>, il sottoinsieme
+          <md>
+            N_{i}\coloneqq\{(0_{M_{1}},\ldots,0_{M_{i-1}},x_{i},0_{M_{i+1}},\ldots,0_{M_{r}})\mid x_{i}\in M_{i}\}
+          </md>
+          è un sottomodulo isomorfo a <m>M_{i}</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Consideriamo la funzione <m>\phi\colon M_{i}\to M_{1}\oplus M_{2}\oplus\cdots \oplus M_{r}</m> definita da <m>x_{i}\phi\coloneqq (0_{M_{1}},\ldots,0_{M_{i-1}},x_{i},0_{M_{i+1}},\ldots,0_{M_{r}})</m>. Si verifica immediatamente che è un omomorfismo iniettivo la cui immagine è esattamente <m>N_{i}</m> e, pertanto, <m>N_{i}</m> è un sottomodulo isomorfo a <m>M_{i}</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <proposition xml:id="prop-proprieta_addendi_somma_diretta">
+      <statement>
+        <p>
+          Sia <m>M\coloneqq M_{1}\oplus\cdots\oplus M_{r}</m> una somma diretta esterna di <m>R</m>-moduli e siano <m>N_{1}</m>, <m>\ldots</m>, <m>N_{r}</m> i sottomoduli isomorfi a <m>M_{1}</m>, <m>\ldots</m>, <m>M_{r}</m> rispettivamente, definiti come nella <xref ref="prop-sottomoduli_somma_diretta_isomorfi_addendi"/>. Allora
+          <ol>
+            <li xml:id="item-M_somma_dei_suoi_addendi">
+              <p>
+                <m>M=N_{1}+N_{2}+\cdots+N_{r}</m>;
+              </p>
+            </li>
+            <li xml:id="item-intersezione_coi_rimanenti_moduli">
+              <p>
+                ciascun <m>N_{i}</m> ha intersezione banale con la somma dei rimanenti (in particolare, <m>N_{i}\cap N_{j}=1</m> se <m>i\ne j</m>).
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Dato un elemento generico <m>x\coloneqq(x_{1},x_{2},\ldots,x_{r})</m> di <m>M</m> abbiamo
+          <md>
+            x=(x_{1},0_{M_{2}},\ldots,0_{M_{r}})+(0_{M_{2}},x_{2},0_{M_{3}}\ldots,0_{M_{r}})+\cdots +(0_{M_{1}},\ldots 0_{M_{r-1}},x_{r})
+          </md>.
+          Abbiamo, dunque, espresso <m>x</m> come somma di elementi in <m>N_{1}</m>, <m>N_{2}</m>, <m>\ldots</m>, <m>N_{r}</m> rispettivamente e il <xref ref="item-M_somma_dei_suoi_addendi"/> è dimostrato.
+        </p>
+        <p>
+          Fissato ora un indice <m>i</m>, notiamo che ogni elemento di <m>N_{j}</m> con <m>j\ne i</m> è una <m>r</m>-upla la cui componente di posto <m>i</m> è <m>0_{M_{i}}</m> e, di conseguenza, gli elementi della somma degli <m>N_{j}</m> con <m>i\ne j</m> sono <m>r</m>-uple la cui componente di posto <m>i</m> è <m>0_{M_{i}}</m>. D'altra parte, <m>N_{i}</m> è formato dalle <m>r</m>-uple le cui componenti di posto <m>j</m> diverso da <m>i</m> sono uguali a <m>0_{M_{j}}</m>. In conclusione, l'unico elemento che appartiene a <m>N_{i}</m> e alla somma dei rimanenti è <m>(0_{M_{1}},\ldots,0_{M_{r}})</m>. Questo prova il <xref ref="item-intersezione_coi_rimanenti_moduli"/>.
+        </p>
+      </proof>
+
+    </proposition>
+
+
+    <definition xml:id="def-somma_diretta_interna">
+      <statement>
+        <p>
+          Sia <m>M</m> un <m>R</m>-modulo e siano <m>N_{1}</m>, <m>N_{2}</m>, <m>\ldots</m>, <m>N_{r}</m> suoi sottomoduli tali che:
+          <ul>
+            <li>
+              <p>
+                <m>M=N_{1}+N_{2}+\cdots +N_{r}</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                ciascun <m>N_{i}</m> ha intersezione banale con la somma dei rimanenti.
+              </p>
+            </li>
+          </ul>
+          Diciamo allora che <m>M</m> è la <term>somma diretta (interna)</term> dei sottomoduli <m>N_{1}</m>, <m>N_{2}</m>, <m>\ldots</m>, <m>N_{r}</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <remark xml:id="rem-somma_diretta_interna_di_due_addendi">
+      <p>
+        Nel caso in cui <m>M</m> sia somma diretta interna di due suoi sottomoduli <m>N</m> e <m>L</m>, la condizione che ciascuno di essi abbia intersezione banale con la somma dei rimanenti può essere semplicemente formulata dicendo che <m>N\cap L=0</m>.
+      </p>
+    </remark>
+
+    <proposition xml:id="prop-somma_diretta_interna">
+      <statement>
+        <p>
+          Sia <m>M</m> un <m>R</m>-modulo che sia somma diretta interna dei sottomoduli <m>N_{1}</m>, <m>N_{2}</m>, <m>\ldots</m>, <m>N_{r}</m>.
+          Allora <m>M</m> è isomorfo alla somma diretta esterna dei moduli <m>N_{1}</m>, <m>N_{2}</m>, <m>\ldots</m>, <m>N_{r}</m> (pensati come <m>R</m>-moduli indipendenti). Inoltre, ogni elemento <m>x</m> di <m>M</m> si scrive in un unico modo nella forma
+          <md number="yes" xml:id="eqn-decomposizione_somma_diretta">
+            x=x_{1}+x_{2}+\cdots +x_{r}
+          </md>
+          con <m>x_{i}\in N_{i}</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sia <m>N\coloneqq N_{1}\oplus N_{2}\oplus\cdots\oplus N_{r}</m> e sia <m>\phi\colon N\to M</m> definita da
+          <md>
+            (x_{1},x_{2},\cdots,x_{r})\coloneqq x_{1}+x_{2}+\cdots +x_{r}
+          </md>.
+          Poiché <m>M=N_{1}+N_{2}+\cdots +N_{r}</m>, la funzione <m>\phi</m> è suriettiva.
+        </p>
+        <p>
+          La verifica che <m>\phi</m> sia un omomorfismo è immediata.
+        </p>
+        <p>
+          Per completare la dimostrazione, basta mostrare che <m>\phi</m> è iniettiva (questo implicherà l'unicità della decomposizione <xref ref="eqn-decomposizione_somma_diretta"/>). Sia allora <m>(x_{1},x_{2},\cdots ,x_{r})</m> un elemento di <m>\ker\phi</m>, cioè <m>x_{1}+x_{2}+\cdots+x_{r}=0</m>. Mostriamo che <m>x_{i}=0</m> per ogni <m>i</m>:
+          <md>
+            -x_{i}=x_{1}+\cdots +x_{i-1}+x_{i+1}+\cdots +x_{r}
+          </md>.
+          Ma allora, <m>-x_{i}</m> appartiene a <m>N_{i}</m> e alla somma dei rimanenti ed è, dunque, uguale a <m>0</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      Grazie alla <xref ref="prop-proprieta_addendi_somma_diretta"/> e alla <xref ref="prop-somma_diretta_interna"/>, sappiamo ora che somma diretta esterna e interna sono due modi diversi di presentare lo stesso concetto. Dunque, parleremo semplicemente di somma diretta, senza ulteriori specificazioni.
+    </p>
+
+    <proposition xml:id="prop-quoziente_somma_diretta">
+      <statement>
+        <p>
+          Sia <m>M</m> somma diretta di due suoi sottomoduli <m>N</m> e <m>L</m>. Allora <m>\frac{M}{N}\simeq L</m> e <m>\frac{M}{L}\simeq N</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Dalla <xref ref="prop-somma_diretta_interna"/>, sappiamo che ogni elemento <m>x</m> di <m>M</m> si scrive in maniera unica come <m>x=n+l</m> con <m>n</m> in <m>N</m> e <m>l</m> in <m>L</m>.
+        </p>
+        <p>
+          Pertanto, la funzione <m>\phi\colon M \to L</m> che manda <m>x=n+l</m> con <m>n</m> in <m>N</m> e <m>l</m> in <m>L</m> nell'elemento <m>l</m> è ben definita e si verifica facilmente che è un omomorfismo di moduli. Questo omomorfismo è suriettivo: infatti, se <m>l</m> è un qualunque elemento di <m>L</m>, allora <m>l</m> è immagine degli elementi del tipo <m>n+l</m> con <m>n</m> in <m>N</m>. Il nucleo di <m>\phi</m> è invece <m>N</m>: infatti, <m>x=n+l</m> con <m>n</m> in <m>N</m> e <m>l</m> in <m>L</m> appartiene a <m>\ker\phi</m> se e solo se <m>l=0</m>, cioè <m>x=n</m> è un elemento di <m>N</m>. Per il <xref ref="thm-isomorfismo_quoziente_sul_nucleo_moduli"/>, segue allora che <m>M/N\simeq L</m>. Analogamente, <m>M/L\simeq N</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <proposition xml:id="prop-somma_diretta_quozienti">
+      <statement>
+        <p>
+          Sia <m>M\coloneqq M_{1}\oplus\cdots\oplus M_{r}</m> un <m>R</m>-modulo e siano <m>N_{1}</m>, <m>\ldots</m>, <m>N_{r}</m> sottomoduli di <m>M_{1}</m>, <m>\ldots</m>, <m>M_{n}</m> rispettivamente. Posto allora <m>N\coloneqq N_{1}\oplus\cdots\oplus N_{n}</m> si ha <m>M/N\simeq M_{1}/N_{1}\oplus\cdots\oplus M_{n}/N_{n}</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sia <m>\phi</m> la mappa che manda l'elemento <m>(x_{1},\ldots,x_{r})</m> di <m>M</m> nell'elemento <m>(N_{1}+x_{1},\ldots,N_{r}+x_{r})</m> di <m>M_{1}/N_{1}\oplus\cdots\oplus M_{r}/N_{r}</m>. È immediato
+          verificare che <m>\phi</m> è un omomorfismo suriettivo di moduli. Grazie al <xref ref="thm-isomorfismo_quoziente_sul_nucleo_moduli"/>, basta allora mostrare che <m>\ker\phi=N</m>: un elemento <m>(x_{1},\ldots,x_{r})</m> appartiene a <m>\ker\phi</m> se e solo se <m>N_{i}+x_{i}=N_{i}</m> per ogni <m>i</m>, cioè <m>x_{i}\in N_{i}</m> per ogni <m>i</m>, vale a dire se e solo se <m>(x_{1},\ldots,x_{r})</m> appartiene a <m>N</m> come richiesto.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <note>
+      <p>
+        Quando abbiamo parlato di gruppi abbiamo usato il termine di prodotto diretto, mentre per i moduli abbiamo usato il termine di somma diretta. Si potrebbe pensare che ciò dipenda dal fatto che scriviamo preferibilmente i gruppi in notazione moltiplicativa mentre usiamo la notazione additiva per i moduli. In parte è così, soprattutto per ragioni storiche, tuttavia potremmo usare il termine somma diretta per i gruppi (anche se non li scriviamo additivamente) e il termine prodotto diretto per i moduli (anche se non li scriviamo moltiplicativamente). Non entriamo nel dettaglio della definizione generale di somma diretta e di prodotto diretto (che in generale non coincidono): ci basti solo sapere che nei casi che abbiamo considerato le due nozioni sono intercambiabili.
+      </p>
+    </note>
+
+    <exercises xml:id="exercises-somma_diretta_moduli">
+
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare la <xref ref="prop-somma_diretta_esterna_moduli"/>.
+          </p>
+        </statement>
+      </exercise>
+
+    </exercises>
+
+  </section>
+
+  <section xml:id="sec-dipendenza_lineare">
+    <title>Dipendenza e indipendenza lineare</title>
+
+    <definition xml:id="def-dipendenza_indipendenza_lineare">
+      <statement>
+        <p>
+          Dato un <m>R</m>-modulo <m>M</m> e degli elementi <m>x_{1}</m>, <m>x_{2}</m>, <m>\ldots</m>, <m>x_{r}</m> di <m>M</m>, questi sono detti <term>linearmente dipendenti</term> se esistono <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{r}</m> in <m>R</m> non tutti nulli tali che
+          <md>
+            x_{1}a_{1}+x_{2}a_{2}+\cdots+x_{r}a_{r}=0
+          </md>.
+          Sono detti <term>linearmente indipendenti</term> altrimenti, cioè se l'unica possibilità per ottenere <m>0</m> come loro combinazione lineare
+          <md>
+            x_{1}a_{1}+x_{2}a_{2}+\cdots+x_{r}a_{r}=0
+          </md>
+          è quella di scegliere tutti gli <m>a_{i}</m> uguali a <m>0</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Come nel caso degli spazi vettoriali, la proprietà di essere o meno linearmente indipendenti, non è una proprietà dei singoli elementi ma una proprietà della lista di elementi considerati.
+    </p>
+
+    <note>
+      <p>
+        In pratica, per stabilire se degli elementi <m>x_{1}</m>, <m>x_{2}</m>, <m>\ldots</m>, <m>x_{r}</m> di un <m>R</m>-modulo <m>M</m> sono linearmente dipendenti o indipendenti si procede così: si pone
+        <md>
+          x_{1}a_{1}+x_{2}a_{2}+\cdots+x_{r}a_{r}=0
+        </md>
+        e si risolve questa equazione in cui gli <m>a_{i}</m> sono le incognite; se si mostra che l'unica soluzione è quella banale con tutti gli <m>a_{i}</m> nulli, allora gli <m>x_{i}</m> sono linearmente indipendenti mentre se si trova una soluzione non banale sono linearmente dipendenti.
+      </p>
+    </note>
+
+    <remark xml:id="rem-sottoinsieme_linearmente_indipendente">
+      <p>
+        Come avviene per gli spazi vettoriali, se <m>x_{1}</m>, <m>x_{2}</m>, <m>\ldots</m>, <m>x_{r}</m> sono elementi linearmente dipendenti di un <m>R</m>-modulo <m>M</m>, allora <m>x_{1}</m>, <m>x_{2}</m>, <m>\ldots</m>, <m>x_{r}</m>, <m>x_{r+1}</m> sono linearmente dipendenti per ogni <m>x_{r+1}</m> in <m>M</m>. Infatti, se <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{r}</m> in <m>R</m> sono elementi non tutti nulli tali che
+        <md>
+          x_{1}a_{1}+x_{2}a_{2}+\cdots+x_{r}a_{r}=0
+        </md>
+        allora, ponendo <m>a_{r+1}\coloneqq 0</m>, si ha
+        <md>
+          x_{1}a_{1}+x_{2}a_{2}+\cdots+x_{r}a_{r}+x_{r+1}a_{r+1}=0
+        </md>.
+      </p>
+    </remark>
+
+    <p>
+      Vediamo subito una proprietà che vale per gli spazi vettoriali e che non si generalizza a <m>R</m>-moduli qualunque. Sappiamo che quando la lista di vettori considerati è formata da un singolo vettore, essere linearmente indipendente è equivalente a essere diverso da <m>0</m>. Ciò non è detto per gli <m>R</m>-moduli qualunque.
+    </p>
+
+    <example xml:id="ex-periodo_finito_non_indipendente">
+      <statement>
+        <p>
+          Sia <m>G</m> un gruppo abeliano, pensato come uno <m>\Interi</m>-modulo e sia <m>x</m> un elemento non nullo di <m>G</m> di periodo additivo <m>d</m>, allora <m>x</m> non è linearmente indipendente: esiste una combinazione lineare non banale di <m>x</m> che dà come risultato <m>0</m>, e cioè <m>xd=0</m>.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Come nel caso degli spazi vettoriali abbiamo la
+    </p>
+
+    <proposition xml:id="prop-unica_decomposizione_linearmente_indipendenti">
+      <statement>
+        <p>
+          Dato un <m>R</m>-modulo <m>M</m> e degli elementi <m>x_{1}</m>, <m>x_{2}</m>, <m>\ldots</m>, <m>x_{r}</m> di <m>M</m>, questi sono linearmente indipendenti se e solo se ogni elemento del sottomodulo generato da <m>x_{1}</m>, <m>x_{2}</m>, <m>\ldots</m>, <m>x_{r}</m> si esprime in maniera unica come loro combinazione lineare.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Supponiamo che ogni elemento del sottomodulo generato da <m>x_{1}</m>, <m>x_{2}</m>, <m>\ldots</m>, <m>x_{r}</m> si esprima in maniera unica come loro combinazione lineare: in particolare, ciò vale per l'elemento nullo che, quindi, si può esprimere come loro combinazione lineare solo nel modo banale e, dunque, gli elementi <m>x_{1}</m>, <m>x_{2}</m>, <m>\ldots</m>, <m>x_{r}</m> sono linearmente indipendenti.
+        </p>
+        <p>
+          Viceversa, siano <m>x_{1}</m>, <m>x_{2}</m>, <m>\ldots</m>, <m>x_{r}</m> linearmente indipendenti, e sia <m>x</m> un elemento del sottomodulo generato da essi: dunque, per la <xref ref="prop-elementi_del_sottomodulo_generato"/>, <m>x</m> si può esprimere come
+          <md>
+            x=x_{1}a_{1}+x_{2}a_{2}+\cdots +x_{r}a_{r}
+          </md>
+          con gli <m>a_{i}</m> in <m>R</m>. Se ora abbiamo un'altra espressione di questo tipo per <m>x</m>
+          <md>
+            x=x_{1}b_{1}+x_{2}b_{2}+\cdots +x_{r}b_{r}
+          </md>,
+          sottraendo l'una dall'altra otteniamo
+          <md>
+            0=x_{1}(a_{1}-b_{1})+x_{2}(a_{2}-b_{2})+\cdots +x_{r}(a_{r}-b_{r})
+          </md>.
+          Poiché  <m>x_{1}</m>, <m>x_{2}</m>, <m>\ldots</m>, <m>x_{r}</m> sono linearmente indipendenti, i coefficienti devono essere tutti nulli, cioè <m>a_{i}=b_{i}</m> per ogni <m>i</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      Possiamo ora introdurre il concetto di base.
+    </p>
+
+    <definition xml:id="def-base_modulo_libero">
+      <statement>
+        <p>
+          Gli elementi <m>x_{1}</m>, <m>x_{2}</m>, <m>\ldots</m>, <m>x_{n}</m> di un <m>R</m>-modulo <m>M</m> formano una <term>base</term> se
+          <ul>
+            <li>
+              <p>
+                generano <m>M</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                sono linearmente indipendenti.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </definition>
+
+    <remark xml:id="rem-non_base">
+      <p>
+        Non tutti i moduli, anche se possono essere generati da un numero finito di elementi, ammettono una base. Ad esempio, in un gruppo abeliano finito <m>G</m>, pensato come <m>\Interi</m>-modulo, abbiamo osservato nell'<xref ref="ex-periodo_finito_non_indipendente"/> che nessun elemento singolarmente preso è linearmente indipendente. A maggior ragione, presi comunque dei generatori di <m>G</m>, questi non formano una base.
+      </p>
+    </remark>
+
+    <definition xml:id="def-modulo_libero">
+      <statement>
+        <p>
+          Un <m>R</m>-modulo <m>M</m> che ammette una base è detto modulo <term>libero</term>.
+        </p>
+      </statement>
+    </definition>
+
+    <proposition xml:id="prop-modulo_libero_e_libero">
+      <statement>
+        <p>
+          Sia <m>M</m> un <m>R</m>-modulo libero con una base <m>x_{1}</m>, <m>x_{2}</m>, <m>\ldots</m>, <m>x_{n}</m>. Sia <m>N</m> un <m>R</m>-modulo e siano <m>y_{1}</m>, <m>y_{2}</m>, <m>\ldots</m>, <m>y_{n}</m> elementi di <m>N</m> (non necessariamente diversi). Allora esiste un unico omomorfismo <m>\phi\colon M\to N</m> tale che <m>x_{i}\phi=y_{i}</m> per ogni <m>i</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Per la <xref ref="prop-unica_decomposizione_linearmente_indipendenti"/>, ogni elemento <m>x</m> di <m>M</m> si esprime unicamente come
+          <md>
+            x=x_{1}a_{1}+x_{2}a_{2}+\cdots+x_{n}a_{n}
+          </md>.
+          Poniamo allora
+          <md>
+            x\phi\coloneqq y_{1}a_{1}+y_{2}a_{2}+\cdots+y_{n}a_{n}
+          </md>.
+          Le verifiche che questo sia un omomorfismo, che mandi ciascun <m>x_{i}</m> nel corrispondente <m>y_{i}</m> e che sia l'unico omomorfismo con queste proprietà sono di routine.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <proposition xml:id="prop-moduli_liberi_n_uple">
+      <statement>
+        <p>
+          Un <m>R</m>-modulo è libero se e solo se è isomorfo a <m>R^{n}</m> per qualche naturale <m>n</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Dimostriamo innanzitutto che <m>R^{n}</m> è libero esibendone esplicitamente una base. Basta prendere, come nel caso degli spazi vettoriali, <m>e_{1}\coloneqq(1,0,\ldots,0)</m>, <m>e_{2}\coloneqq(0,1,0,\ldots,0)</m>, <m>\ldots</m>, <m>e_{n}\coloneqq(0,\ldots,0,1)</m>: si verifica facilmente che questi elementi generano <m>R^{n}</m> e sono linearmente indipendenti.
+        </p>
+        <p>
+          Sia ora <m>M</m> un modulo libero avente una base <m>x_{1}</m>, <m>x_{2}</m>, <m>\ldots</m>, <m>x_{n}</m>. Per la <xref ref="prop-modulo_libero_e_libero"/>, esiste un unico omomorfismo <m>\phi\colon M\to R^{n}</m> che manda ciascun <m>x_{i}</m> in <m>e_{i}</m>. Si verifica facilmente che questo omomorfismo è un isomorfismo.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <corollary xml:id="cor-moduli_fg_quozienti_di_liberi">
+      <statement>
+        <p>
+          Ogni <m>R</m>-modulo finitamente generato <m>N</m> è quoziente di un modulo libero.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Supponiamo che <m>N</m> sia generato dagli <m>n</m> elementi <m>y_{1}</m>, <m>y_{2}</m>, <m>\ldots</m>, <m>y_{n}</m>. Prendiamo un modulo libero <m>M</m> con una base formata da <m>n</m> elementi (grazie alla <xref ref="prop-moduli_liberi_n_uple"/>, un modulo libero siffatto esiste, ad esempio <m>R^{n}</m>) e, consideriamo l'omomorfismo, dato dalla <xref ref="prop-modulo_libero_e_libero"/>, che manda gli elementi della base scelta di <m>M</m> negli <m>y_{i}</m>. Tale omomorfismo è ovviamente suriettivo (l'immagine contiene i generatori di <m>N</m>) e, quindi, per il <xref ref="thm-isomorfismo_quoziente_sul_nucleo_moduli"/>, <m>N</m> è isomorfo a un quoziente di <m>M</m>.
+        </p>
+      </proof>
+
+    </corollary>
+
+    <p>
+      A differenza di quanto avviene per gli spazi vettoriali, non è detto che tutte le basi di un <m>R</m>-modulo libero siano formate dallo stesso numero di elementi. Dare un esempio in cui ci siano basi con un numero differente di elementi non è però semplicissimo ed esula dagli scopi di questo libro. Abbiamo tuttavia il
+    </p>
+
+    <theorem xml:id="thm-commutativo_IBN">
+      <statement>
+        <p>
+          Sia <m>R</m> un anello commutativo e sia <m>M</m> un <m>R</m>-modulo libero. Allora, tutte le basi di <m>M</m> sono formate dallo stesso numero di elementi.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Siano <m>x_{1}</m>, <m>x_{2}</m>, <m>\ldots</m>, <m>x_{m}</m> e <m>y_{1}</m>, <m>y_{2}</m>, <m>\ldots</m>, <m>y_{n}</m> basi di <m>M</m>. Dobbiamo mostrare che <m>m=n</m>. Supponiamo, per assurdo, che <m>m \gt n</m>.
+        </p>
+        <p>
+          Ogni elemento di <m>M</m> è combinazione lineare degli <m>x_{i}</m>: ciò in particolare, è vero per gli <m>y_{j}</m>. Possiamo allora scrivere
+          <md>
+            y_{j}=x_{1}a_{1j}+x_{2}a_{2j}+\cdots+x_{m}a_{mj}=\sum_{h=1}^{m}x_{h}a_{hj}
+          </md>
+          per opportuni <m>a_{hj}</m> in <m>R</m>. Analogamente, abbiamo
+          <md>
+            x_{i}=\sum_{j=1}^{n}y_{j}b_{ji}
+          </md>
+          per opportuni <m>b_{ji}</m> in <m>R</m>. Combinando le due espressioni troviamo allora
+          <md>
+            x_{i}=\sum_{j=1}^{n}\sum_{h=1}^{m}x_{h}a_{hj}b_{ji}=\sum_{h=1}^{m}x_{h}(\sum_{j=1}^{n}a_{hj}b_{ji})
+          </md>.
+          Per la <xref ref="prop-unica_decomposizione_linearmente_indipendenti"/>, questa decomposizione di <m>x_{i}</m> deve coincidere con quella ovvia
+          <md>
+            x_{i}=x_{1}0+\cdots+x_{i-1}0+x_{i}1+x_{i+1}0+\cdots+x_{m}0
+          </md>
+          e, quindi
+          <md>
+            \sum_{j=1}^{n}a_{hj}b_{ji}=
+            \begin{cases}
+              1 \amp\text{ se }h=i\\
+              0 \amp\text{ se }h\ne i
+            \end{cases}
+          </md>
+          con <m>h</m> e <m>i</m> nell'intervallo da <m>1</m> a <m>m</m>.
+        </p>
+        <p>
+          Consideriamo allora la matrice <m>A</m> a <m>m</m> righe e <m>n</m> colonne il cui elemento di posto <m>(h,j)</m> è <m>a_{hj}</m> e la matrice <m>B</m> a <m>n</m> righe e <m>m</m> colonne il cui elemento di posto <m>(j,i)</m> è <m>b_{ji}</m>, vediamo che il prodotto <m>AB</m> coincide con la matrice identica di ordine <m>m</m>. Consideriamo ora la matrice quadrata <m>A^{*}</m> di ordine <m>m</m> che si ottiene <q>attaccando</q> ad <m>A</m> delle colonne nulle e la matrice quadrata <m>B^{*}</m> di ordine <m>m</m> che si ottiene <q>attaccando</q> a <m>B</m> delle righe nulle. Formalmente,  poniamo <m>a_{hj}\coloneqq 0</m> per <m>n+1\le j\le m</m> e <m>b_{ji}\coloneqq 0</m> per <m>n+1\le i\le m</m>. Facendo il prodotto <m>A^{*}B^{*}</m> vediamo che il suo elemento di posto <m>(h,i)</m> è
+          <md>
+            \sum_{j=1}^{m}a_{hj}b_{ji}=\sum_{j=1}^{n}a_{hj}b_{ji}+\sum_{j=n+1}^{m}a_{hj}b_{ji}=\sum_{j=1}^{n}a_{hj}b_{ji}+0=\sum_{j=1}^{n}a_{hj}b_{ji}
+          </md>
+          e, quindi, <m>A^{*}B^{*}=\Id</m>. Per il teorema di Binet (che vale nell'ipotesi che l'anello dei coefficienti sia commutativo), otteniamo allora <m>\det A^{*}\det B^{*}=\det\Id=1</m>, il che è assurdo, perché <m>A^{*}</m>, avendo delle colonne nulle, ha determinante nullo.
+        </p>
+      </proof>
+
+    </theorem>
+
+    <p>
+      Il teorema precedente ci permette di dare la
+    </p>
+
+    <definition xml:id="def-rango_modulo_libero">
+
+      <notation>
+        <usage><m>\rk M</m></usage>
+        <description>rango del modulo libero <m>M</m></description>
+      </notation>
+
+
+      <statement>
+        <p>
+          Dato un <m>R</m>-modulo libero <m>M</m> con <m>R</m> anello commutativo, definiamo <term>rango</term> di <m>M</m>, denotato con <m>\rk M</m>, il numero di elementi di una sua qualsiasi base.
+        </p>
+      </statement>
+    </definition>
+
+    <proposition xml:id="prop-somma_diretta_di_liberi">
+      <statement>
+        <p>
+          Siano <m>M_{1}</m>, <m>M_{2}</m>, <m>\ldots</m>, <m>M_{r}</m> degli <m>R</m>-moduli liberi. Allora <m>M_{1}\oplus M_{2}\oplus\cdots\oplus M_{r}</m> è libero di rango <m>\rk M_{1}+\rk M_{2}+\cdots+\rk M_{r}</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Dimostriamo il caso in cui <m>r=2</m>, lasciando il caso generale per esercizio.
+        </p>
+        <p>
+          Sia allora <m>r=2</m>. Sia <m>x_{1}</m>, <m>x_{2}</m>, <m>\ldots</m>, <m>x_{m}</m> una base di <m>M_{1}</m> e sia <m>y_{1}</m>, <m>y_{2}</m>, <m>\ldots</m>, <m>y_{n}</m> una base di <m>M_{2}</m>. Consideriamo allora in <m>M_{1}\oplus M_{2}</m> gli <m>m+n</m> elementi <m>(x_{1},0)</m>, <m>\ldots</m>,  <m>(x_{m},0)</m>, <m>(0,y_{1})</m>, <m>\ldots</m>, <m>(0,y_{n})</m> e mostriamo che formano una base.
+        </p>
+        <p>
+          Consideriamo una loro combinazione lineare uguale a <m>0</m>:
+          <md>
+            (x_{1},0)a_{1}+\cdots+(x_{m},0)a_{m}+(0,y_{1})b_{1}+\cdots+(0,y_{n})b_{n}=(0,0)
+          </md>.
+          Con semplici calcoli, otteniamo:
+          <md>
+            (x_{1}a_{1}+\cdots+x_{m}a_{m},y_{1}b_{1}+\cdots+y_{n}b_{n})=(0,0)
+          </md>
+          da cui segue
+          <md>
+            x_{1}a_{1}+\cdots+x_{m}a_{m}=0
+          </md>
+          e
+          <md>
+            y_{1}b_{1}+\cdots+y_{n}b_{n}=0
+          </md>
+          e, essendo gli <m>a_{i}</m> linearmente indipendenti, otteniamo che tutti gli <m>a_{i}</m> sono nulli e, analogamente, per i <m>b_{j}</m>. Dunque, gli <m>m+n</m> elementi dati sono linearmente indipendenti.
+        </p>
+        <p>
+          Sia ora <m>(x,y)</m> un generico elemento di <m>M_{1}\oplus M_{2}</m>. Allora <m>x</m> è combinazione lineare degli <m>x_{i}</m> e <m>y</m> è combinazione lineare degli <m>y_{j}</m>. Ma allora si vede immediatamente che <m>(x,0)</m> è combinazione lineare degli elementi <m>(x_{i},0)</m> e <m>(0,y)</m> è combinazione lineare degli elementi <m>(0,y_{j})</m>. Ma allora, <m>(x,y)=(x,0)+(0,y)</m> è combinazione lineare degli <m>m+n</m> elementi dati che sono, quindi, generatori di <m>M_{1}\oplus M_{2}</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <note>
+      <p>
+        La nozione di elementi dipendenti, indipendenti e di base che abbiamo dato coinvolgono un numero finito di elementi. Si potrebbero però introdurre questi concetti per una cardinalità qualunque di elementi, anche infinita.
+      </p>
+
+    </note>
+
+    <exercises xml:id="exercises-dipendenza_lineare">
+
+      <exercise>
+        <statement>
+          <p>
+            Completare la dimostrazione della <xref ref="prop-modulo_libero_e_libero"/>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Completare la dimostrazione della <xref ref="prop-moduli_liberi_n_uple"/>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare il caso generale della <xref ref="prop-somma_diretta_di_liberi"/>.
+          </p>
+        </statement>
+      </exercise>
+
+    </exercises>
+
+  </section>
+
+  <section xml:id="sec-elementi_di_torsione">
+    <title>Elementi di torsione</title>
+
+    <p>
+      Abbiamo visto nell'<xref ref="ex-periodo_finito_non_indipendente"/> che, per un elemento di un <m>R</m>-modulo, essere linearmente indipendente non è, in generale, equivalente a essere non nullo. Ciò suggerisce la
+    </p>
+
+    <definition xml:id="def-annullatore">
+
+      <notation>
+        <usage><m>\ann{x}</m></usage>
+        <description>annullatore di <m>x</m></description>
+      </notation>
+      <statement>
+        <p>
+          Dato un elemento <m>x</m> di un <m>R</m>-modulo <m>M</m>, l'<term>annullatore</term> di <m>x</m>, denotato <m>\ann{x}</m>, è l'insieme degli elementi <m>a</m> di <m>R</m> tali che <m>xa=0</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <proposition xml:id="prop-annullatore_ideale">
+      <statement>
+        <p>
+          Dato un elemento <m>x</m> di un <m>R</m>-modulo <m>M</m>, l'annullatore di <m>x</m> è un ideale destro di <m>R</m>. L'elemento <m>x</m> è linearmente indipendente se e solo se <m>\ann{x}=0</m>. Inoltre, il sottomodulo generato da <m>x</m> è isomorfo a <m>R_{R}/\ann{x}</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Il fatto che <m>x</m> sia linearmente indipendente se e solo se <m>\ann{x}=0</m> segue immediatamente dalla definizione.
+        </p>
+        <p>
+          Consideriamo la funzione <m>\phi\colon R_{R}\to M</m> che manda <m>a</m> in <m>xa</m>. Si verifica facilmente che <m>\phi</m> è un omomorfismo di <m>R</m>-moduli il cui nucleo è <m>\ann{x}</m>. Grazie alla <xref ref="prop-elementi_del_sottomodulo_generato"/>, l'immagine di <m>\phi</m> è il sottomodulo <m>xR</m> generato da <m>x</m>: per il <xref ref="thm-isomorfismo_quoziente_sul_nucleo_moduli"/>, <m>xR\simeq R_{R}/\ann{x}</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <definition xml:id="def-elemento_di_torsione">
+      <statement>
+        <p>
+          Se <m>M</m> è un <m>D</m>-modulo su un dominio di integrità <m>D</m>, un elemento <m>x\in M</m> si dice di <term>torsione</term> se <m>\ann{x}</m> è non banale. Il modulo <m>M</m> è detto <term>di torsione</term> se ogni suo elemento è di torsione.
+        </p>
+      </statement>
+    </definition>
+
+    <proposition xml:id="prop-torsione_sottomodulo">
+      <statement>
+        <p>
+          <notation>
+            <usage><m>\Tor(M)</m></usage>
+            <description>torsione del modulo <m>M</m></description>
+          </notation>
+          Sia <m>M</m> un <m>D</m>-modulo su un dominio di integrità <m>D</m>. Allora il sottoinsieme <m>\Tor(M)</m> formato dagli elementi di torsione di <m>M</m> è un sottomodulo detto <term>sottomodulo di torsione</term>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Chiaramente <m>\Tor(M)\ne\vuoto</m> perché <m>0</m> è di torsione. Se <m>x</m> e <m>y</m> sono elementi di <m>\Tor(M)</m> allora in <m>D</m> esistono <m>a</m> e <m>b</m> non nulli tali che <m>xa=0</m> e <m>yb=0</m>.
+          Dunque, <m>(x+y)(ab)=xab+yab=xab+yba=0</m>, cioè <m>x+y\in\Tor(M)</m>, poiché <m>ab\ne0</m> essendo <m>D</m> un dominio. Inoltre, per ogni <m>r\in D</m>, si ha <m>(xr)a=(xa)r=0</m> e, quindi, <m>xr\in\Tor(M)</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <remark xml:id="rem-tutto_torsione">
+      <p>
+        Possiamo dire che un <m>D</m>-modulo <m>M</m> su un dominio di integrità <m>D</m> è di torsione se e solo se <m>\Tor(M)=M</m>.
+      </p>
+    </remark>
+
+    <remark xml:id="rem-torsione_non_dominio">
+      <p>
+        Nella <xref ref="prop-torsione_sottomodulo"/>, l'ipotesi che <m>D</m> sia un dominio (cioè un anello commutativo intero) non può essere tralasciata (vedi <xref ref="exercise-torsione_non_dominio"/>). Per questo motivo, anche se di per sé si potrebbe dare la definizione di elemento di torsione per un <m>R</m>-modulo con <m>R</m> anello qualunque, abbiamo preferito limitare questa definizione al solo caso in cui l'anello sia un dominio.
+      </p>
+    </remark>
+
+    <definition xml:id="def-privo_di_torsione">
+      <statement>
+        <p>
+          Un <m>D</m>-modulo <m>M</m> su un dominio di integrità <m>D</m> si dice <term>privo di torsione</term> se <m>\Tor(M)=0</m>, vale a dire se tutti gli elementi non nulli hanno annullatore banale.
+        </p>
+      </statement>
+    </definition>
+
+    <proposition xml:id="prop-libero_privo_di_torsione">
+      <statement>
+        <p>
+          Un <m>D</m>-modulo libero <m>M</m> su un dominio di integrità <m>D</m> è privo di torsione.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Per la <xref ref="prop-moduli_liberi_n_uple"/>, è sufficiente verificarlo nel caso in cui <m>M=D^{n}</m> per qualche <m>n</m>. Sia
+          <m>x\coloneqq(x_{1},\ldots,x_{n})</m> un elemento non nullo di <m>M</m>: ciò significa che esiste <m>i</m> tale che <m>x_{i}\ne0</m>. Se <m>a</m> è nell'annullatore di <m>x</m> si ha allora <m>0=xa=(x_{1}a,\ldots,x_{n}a)</m>. In particolare, <m>x_{i}a=0</m>: dal momento che <m>D</m> è un dominio e <m>x_{i}\ne0</m> ne segue che <m>a=0</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <proposition xml:id="prop-quoziente_su_torsione">
+      <statement>
+        <p>
+          Se <m>M</m> è un <m>D</m>-modulo su un dominio di integrità <m>D</m>, allora il modulo quoziente <m>M/\Tor(M)</m> è privo di torsione.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sia <m>\Tor(M)+x</m> un elemento di torsione di <m>M/\Tor(M)</m>: dunque, esiste <m>a</m> in <m>D</m> non nullo tale che <m>(\Tor(M)+x)a=\Tor(M)</m>, cioè <m>xa\in\Tor(M)</m>. Ma allora esiste <m>b</m> in <m>D</m> non nullo tale che <m>(xa)b=0</m>, cioè <m>x(ab)=0</m>. Poiché <m>D</m> è un dominio, si ha <m>ab\ne0</m> e, di conseguenza, <m>x\in\Tor(M)</m>, cioè <m>\Tor(M)+x</m> è lo zero di <m>M/\Tor(M)</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <exercises xml:id="exercises-elementi_di_torsione">
+
+      <exercise xml:id="exercise-torsione_non_dominio">
+        <statement>
+          <p>
+            Calcolare l'annullatore di ogni elemento di <m>\Interi/6</m> pensato come modulo destro su sé stesso. Verificare che l'insieme degli elementi con annullatore non banale non è un sottomodulo.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Si ha <m>\ann{\class[6]{0}}=\Interi/6</m>, <m>\ann{\class[6]{1}}=(0)</m>, <m>\ann{\class[6]{2}}=\ideal{\class[6]{3}}</m>, <m>\ann{\class[6]{3}}=\ideal{\class[6]{2}}</m>, <m>\ann{\class[6]{4}}=\ideal{\class[6]{3}}</m>, <m>\ann{\class[6]{5}}=(0)</m>. Gli elementi <m>\class[6]{2}</m> e <m>\class[6]{3}</m> hanno annullatore non banale, ma <m>\class[6]{2}+\class[6]{3}=\class[6]{5}</m> no e, dunque, gli elementi con annullatore non banale non formano un sottomodulo.
+          </p>
+        </solution>
+      </exercise>
+
+    </exercises>
+
+
+  </section>
+
+</chapter>

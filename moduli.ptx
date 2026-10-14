@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-moduli">
+  <title>Moduli</title>
+
+  <introduction>
+    <p>
+      Anche se non li abbiamo mai introdotti formalmente, abbiamo utilizzato più volte esempi e risultati riguardanti spazi vettoriali a coefficienti in un campo. Ricordiamo che uno spazio vettoriale <m>V</m> su un campo <m>K</m> è un gruppo abeliano dotato di un'ulteriore operazione <term>esterna</term> che associa a un elemento di <m>V</m> e un elemento del campo <m>K</m> un elemento di <m>V</m>: ovviamente questa operazione deve soddisfare una serie di proprietà per poter parlare di uno spazio vettoriale. Vogliamo ora introdurre una nozione simile, ma più generale, in cui, invece di considerare un campo <m>K</m> prendiamo un anello qualunque. Questa maggiore generalità comporta però un prezzo da pagare: poiché un anello qualunque potrebbe non essere commutativo e non tutti gli elementi non nulli avere inverso, alcuni risultati sugli spazi vettoriali non valgono o valgono in una forma modificata, più debole.
+    </p>
+  </introduction>
+
+  <section xml:id="sec-definizione_di_moduli">
+    <title>Definizione di modulo</title>
+
+    <definition xml:id="def-modulo_destro">
+      <idx><h>modulo su un anello</h></idx>
+      <statement>
+        <p>
+          Sia <m>M</m> un gruppo abeliano scritto in notazione additiva e sia <m>R</m> un anello. Sia definita un'operazione <term>esterna</term> <m>M\times R\to M</m> che manda la coppia <m>(x,a)</m> in un elemento denotato con <m>xa</m> tale che
+          <ul>
+            <li>
+              <p>
+                <m>x1_{R}=x</m> per ogni <m>x</m> in <m>M</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>x(ab)=(xa)b</m> per ogni <m>x</m> in  <m>M</m> e <m>a</m> e <m>b</m> in <m>R</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>x(a+b)=xa+xb</m> per ogni <m>x</m> in  <m>M</m> e <m>a</m> e <m>b</m> in <m>R</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>(x+y)a=xa+ya</m> per ogni <m>x</m> e <m>y</m> in  <m>M</m> e <m>a</m> in <m>R</m>.
+              </p>
+            </li>
+          </ul>
+          Diciamo allora che <m>M</m> è un <term><m>R</m>-modulo (destro)</term> o, anche, che è un modulo (destro) su <m>R</m> o, semplicemente, che è un modulo se l'anello <m>R</m> è chiaro dal contesto.
+        </p>
+      </statement>
+    </definition>
+
+    <remark xml:id="rem-modulo_sinistro">
+      <p>
+        In maniera del tutto analoga si definisce la nozione di <m>R</m>-modulo sinistro. Ogni risultato che dimostreremo per i moduli destri avrà un corrispondente per i moduli sinistri. Occorre fare attenzione che, dato un modulo destro, non lo si può in generale considerare come modulo sinistro. Infatti, la proprietà
+        <md>
+          x(ab)=(xa)b
+        </md>
+        viene sostituita da
+        <md>
+          (ab)x=a(bx)
+        </md>
+        e, dunque, la moltiplicazione per <m>ab</m> in un caso corrisponde a moltiplicare <m>x</m> prima per <m>a</m> e poi il risultato per <m>b</m>, mentre nell'altro caso è il contrario. Ovviamente, se l'anello è commutativo, la differenza è irrilevante.
+      </p>
+
+    </remark>
+
+    <note>
+      <p>
+        Salvo diversa indicazione esplicita, quando scriveremo <m>R</m>-modulo intenderemo un <m>R</m>-modulo destro.
+      </p>
+    </note>
+
+    <remark xml:id="rem-spazi_vettoriali">
+      <p>
+        Quando l'anello <m>R</m> considerato è un campo, abbiamo la usuale definizione di spazio vettoriale. Dal momento che un campo è un anello commutativo, in questo caso vederlo come modulo destro o sinistro è indifferente.
+      </p>
+    </remark>
+
+    <example xml:id="ex-modulo_su_di_se">
+      <statement>
+        <p>
+      <notation>
+        <usage><m>R_{R}</m></usage>
+        <description>modulo destro di un anello <m>R</m> su sé stesso</description>
+      </notation>
+
+      <notation>
+        <usage><m>_{R}R</m></usage>
+        <description>modulo sinistro di un anello <m>R</m> su sé stesso</description>
+      </notation>
+
+          Un anello <m>R</m> può essere visto come <m>R</m>-modulo destro semplicemente prendendo la somma in <m>R</m> e come prodotto di un elemento di <m>R</m> (pensato come modulo) e di un elemento di <m>R</m> (pensato come anello dei coefficienti) il prodotto in <m>R</m>. La verifica che le proprietà sono soddisfatte è molto semplice. Denotiamo questo modulo con <m>R_{R}</m>. Analogamente, <m>R</m> può assumere la struttura di <m>R</m>-modulo sinistro, denotato con <m>_{R}R</m>.
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id="ex-Z_modulo">
+      <statement>
+        <p>
+          Sia <m>G</m> un gruppo abeliano, scritto in notazione additiva. Dato un elemento <m>x</m> di <m>G</m> e un intero <m>n</m>, possiamo definire <m>xn</m> semplicemente come l'usuale multiplo (quello che scriviamo solitamente come <m>nx</m>). Dalla <xref ref="prop-proprieta_potenze_elemento_invertibile"/> e <xref ref="prop-potenza_del_prodotto_di_commutabili"/>, tradotte in notazione additiva, segue facilmente che <m>G</m> è uno <m>\Interi</m>-modulo.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Se in un <m>R</m>-modulo consideriamo solo l'operazione di addizione, ovviamente abbiamo tutte le proprietà che abbiamo dimostrato per i gruppi abeliani e non c'è bisogno di dimostrarle nuovamente. Vediamo adesso alcune proprietà che coinvolgono la moltiplicazione.
+    </p>
+
+    <proposition xml:id="prop-moltiplicazione_per_0">
+      <statement>
+        <p>
+          Sia <m>M</m> un <m>R</m>-modulo. Allora
+          <ol>
+            <li>
+              <p>
+                <m>x0_{R}=0_{M}</m> per ogni <m>x</m> in <m>M</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>0_{M}a=0_{M}</m> per ogni <m>a</m> in <m>R</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Queste due proprietà si dimostrano in maniera molto simile (ma non sono una conseguenza dell'altra) e ricalcano la dimostrazione dell'analoga proprietà per gli anelli (<xref ref="prop-zero_assorbente"/>). Dimostriamo la prima e lasciamo l'altra per esercizio.
+        </p>
+        <p>
+          Poiché <m>0_{R}</m> è elemento neutro per l'addizione, sappiamo che <m>0_{R}+0_{R}=0_{R}</m>: moltiplicando <m>x</m> per ambo i membri otteniamo <m>x(0_{R}+0_{R})=x0_{R}</m> da cui segue <m>x0_{R}+x0_{R}=x0_{R}</m>. Usando il fatto che <m>0_{M}</m> è elemento neutro per l'addizione in <m>M</m>, otteniamo <m>x0_{R}+x0_{R}=x0_{R}+0_{M}</m> da cui segue la tesi, grazie alle <xref ref="prop-cancellazione_gruppo" text="title"/>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <remark xml:id="rem-no_annulamento_in_modulo">
+      <p>
+        Nella <xref ref="prop-moltiplicazione_per_0"/>, abbiamo mostrato che, in un <m>R</m>-modulo <m>M</m>, il prodotto <m>xa</m> con <m>x</m> in <m>M</m> e <m>a</m> in <m>R</m> si annulla se <m>x=0_{M}</m> o <m>a=0_{R}</m>. Nel caso in cui <m>R</m> sia un campo, cioè <m>M</m> sia uno spazio vettoriale, ciò può avvenire solo in questi casi: questo semplice fatto, probabilmente una delle prime proprietà che si incontrano quando si studiano gli spazi vettoriali, è alla base di molti dei risultati più significativi della teoria degli spazi vettoriali, quali, ad esempio, l'esistenza di una base.
+      </p>
+      <p>
+        Per anelli qualunque, questo principio di annullamento non vale, anche se l'anello è un dominio. Si consideri, ad esempio, il gruppo additivo <m>\Interi/6</m>. Per quanto detto nell'<xref ref="ex-Z_modulo"/>, questo è uno <m>\Interi</m>-modulo. Abbiamo allora
+        <md>
+          \class[6]{2}3=\class[6]{6}=\class[6]{0}
+        </md>.
+        Più in generale, se <m>x</m> è un elemento non nullo di un gruppo abeliano <m>G</m> avente periodo additivo finito <m>d</m>, allora, pensato <m>G</m> come <m>\Interi</m>-modulo, si ha <m>xd=0</m> con <m>x\ne 0</m> e <m>d\ne 0</m>.
+      </p>
+    </remark>
+
+    <proposition xml:id="prop-multiplo_per_opposto">
+      <statement>
+        <p>
+          Sia <m>M</m> un <m>R</m>-modulo. Allora, per ogni <m>x</m> in <m>M</m> e <m>a</m> in <m>R</m> si ha
+          <md>
+            x(-a)=(-x)a=-(xa)
+          </md>.
+          Potremo allora scrivere semplicemente <m>-xa</m> senza ambiguità.
+          In particolare, risulta
+          <md>
+            x(-1)=-x
+          </md>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Dimostriamo solo l'uguaglianza <m>x(-a)=-(xa)</m>, lasciando per esercizio l'altra uguaglianza. Abbiamo allora
+          <md>
+            x(-a)+xa=x(-a+a)=x0_{R}=0_{M}
+          </md>,
+          dove abbiamo usato la <xref ref="prop-moltiplicazione_per_0"/>: dunque, <m>x(-a)</m> e <m>xa</m> sono opposti, cioè <m>x(-a)=-(xa)</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+
+    <exercises xml:id="exercises-definizione_modulo">
+
+      <exercise>
+        <statement>
+          <p>
+            Mostrare che <m>R_{R}</m> e <m>_{R}R</m> come definiti nell'<xref ref="ex-modulo_su_di_se"/> sono rispettivamente un <m>R</m>-modulo destro e sinistro.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Sia <m>M</m> un <m>R</m>-modulo e sia <m>G</m> il gruppo degli elementi invertibili di <m>R</m>. Dimostrare che la struttura di <m>R</m>-modulo definisce un'azione di <m>G</m> su <m>M</m>.
+          </p>
+        </statement>
+      </exercise>
+
+    </exercises>
+
+  </section>
+
+  <section xml:id="sec-sottomoduli">
+    <title>Sottomoduli</title>
+
+    <p>
+      Cosi come abbiamo introdotto i concetti di sottomonoide, sottogruppo, sottoanello, possiamo introdurre la nozione di sottomodulo.
+    </p>
+
+    <definition xml:id="def-sottomodulo">
+      <idx><h>sottomodulo</h></idx>
+      <statement>
+        <p>
+          Dato un <m>R</m>-modulo <m>M</m>, un suo sottoinsieme non vuoto <m>N</m> è detto <term>sottomodulo</term> di <m>M</m> se
+          <ul>
+            <li>
+              <p>
+                <m>x+y</m> appartiene a <m>N</m> per ogni <m>x</m> e <m>y</m> in <m>N</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>xa</m> appartiene a <m>N</m> per ogni <m>x</m> in <m>N</m> e ogni <m>a</m> in <m>R</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </definition>
+
+    <remark xml:id="rem-sottomodulo_sottogruppo">
+      <p>
+        Nel riportare le proprietà da verificare per stabilire che <m>N</m> è un sottomodulo di un <m>R</m>-modulo <m>M</m>, non abbiamo posto esplicitamente la richiesta che <m>N</m> contenga l'opposto di ciascun suo elemento e, quindi, sembra che <m>N</m> potrebbe non essere sottogruppo del gruppo additivo di <m>M</m>. Tuttavia, se <m>x</m> appartiene a <m>N</m>, allora, per la <xref ref="prop-multiplo_per_opposto"/>, <m>x(-1)=-x</m> appartiene a <m>N</m> che, dunque, risulta essere un sottogruppo del gruppo additivo.
+      </p>
+    </remark>
+
+    <remark xml:id="rem-sottomodulo_Z_modulo">
+      <p>
+        Nel caso in cui <m>G</m> sia un gruppo abeliano, visto come <m>\Interi</m>-modulo, allora, grazie all'<xref ref="rem-sottomodulo_sottogruppo"/>, sappiamo che i sottomoduli sono sottogruppi del gruppo <m>G</m>. Viceversa, dato un sottogruppo di <m>G</m>, questo contiene le somme di tutti i propri elementi e i multipli interi dei propri elementi. Pertanto è un sottomodulo.
+      </p>
+      <p>
+        Dunque, nel caso degli <m>\Interi</m>-moduli, che abbiamo già visto essere semplicemente i gruppi abeliani, il concetto di sottogruppo e di sottomodulo coincidono.
+      </p>
+    </remark>
+
+    <remark xml:id="rem-sottomodulo_non_proprio">
+
+      <idx><h>sottomodulo</h><h>proprio</h></idx>
+
+      <p>
+        Ovviamente, un <m>R</m>-modulo <m>M</m> è un sottomodulo di sé stesso. I sottomoduli di <m>M</m> diversi da <m>M</m> sono detti sottomoduli <term>propri</term>. Il sottoinsieme formato solo da <m>0</m> è pure un sottomodulo, detto <term>banale</term>.
+      </p>
+    </remark>
+
+    <p>
+      Analogamente a quanto visto per sottomonoidi, sottogruppi e sottoanelli abbiamo immediatamente la
+    </p>
+
+    <proposition xml:id="prop-sottomodulo_e_modulo">
+
+      <statement>
+        <p>
+          Se <m>N</m> è un sottomodulo di un <m>R</m>-modulo <m>M</m>, allora <m>N</m> è un <m>R</m>-modulo rispetto alle operazioni indotte.
+        </p>
+      </statement>
+
+    </proposition>
+
+    <proposition xml:id="prop-transitivita_sottomoduli">
+      <statement>
+        <p>
+          Se <m>M</m> è un <m>R</m>-modulo, <m>N</m> è un sottomodulo di <m>M</m> e <m>L</m> è un sottomodulo di <m>N</m>, allora <m>L</m> è un sottomodulo di <m>M</m>.
+        </p>
+      </statement>
+    </proposition>
+
+    <p>
+      Abbiamo visto che un anello <m>R</m>, ammette una struttura di <m>R</m>-modulo destro e una struttura di <m>R</m>-modulo sinistro. Chi sono in questo caso i sottomoduli? Un sottoinsieme non vuoto <m>I</m> di un anello <m>R</m> è un sottomodulo di <m>R_{R}</m> se è chiuso rispetto all'addizione e se <m>ia</m> appartiene a <m>I</m> per ogni <m>i</m> in <m>I</m> e ogni <m>a</m> in <m>R</m>. Confrontando queste proprietà con la <xref ref="def-ideale"/> vediamo che sono simili. Ciò conduce alla
+    </p>
+
+    <definition xml:id="def-ideale_destro_sinistro">
+      <idx><h>ideale</h><h>destro</h></idx>
+      <idx><h>ideale</h><h>sinistro</h></idx>
+      <statement>
+        <p>
+          Sia <m>R</m> un anello. Un sottoinsieme non vuoto <m>I</m> di <m>R</m> è detto <term>ideale destro</term> se
+          <ul>
+            <li>
+              <p>
+                <m>i+j\in I</m> per ogni <m>i</m> e <m>j</m> in <m>I</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>ia\in I</m> per ogni <m>i</m> in <m>I</m> e <m>a</m> in <m>R</m>.
+              </p>
+            </li>
+          </ul>
+          È detto, invece, <term>ideale sinistro</term> se
+          <ul>
+            <li>
+              <p>
+                <m>i+j\in I</m> per ogni <m>i</m> e <m>j</m> in <m>I</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>ai\in I</m> per ogni <m>i</m> in <m>I</m> e <m>a</m> in <m>R</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </definition>
+
+    <remark xml:id="rem-destro_sinistro_bilatero">
+      <p>
+        Ovviamente, un sottoinsieme di un anello è un ideale bilatero se e solo se è sia ideale destro che sinistro.
+      </p>
+    </remark>
+
+    <p>
+      Analogamente alla <xref ref="prop-intersezione_di_sottogruppi"/> e <xref ref="prop-intersezione_di_sottoanelli"/> abbiamo la
+    </p>
+
+    <proposition xml:id="prop-intersezione_di_sottomoduli">
+      
+      <idx><h>intersezione</h><h>di sottomoduli</h></idx>
+      <idx><h>sottomodulo</h><h>intersezione</h></idx>
+
+      <statement>
+        <p>
+          Se <m>M</m> è un <m>R</m>-modulo e <m>\{N_{i}\}_{i\in I}</m> è una famiglia di sottomoduli di <m>M</m> (indicizzata da un insieme di indici <m>\Omega</m>), allora
+          <md>
+            \bigcap_{i\in \Omega}N_{i}
+          </md>
+          è un sottomodulo di <m>M</m>.
+        </p>
+      </statement>
+    </proposition>
+
+    <definition xml:id="def-sottomodulo_generato">
+
+      <idx><h>sottomodulo</h><h>generato da un sottoinsieme</h></idx>
+
+      <notation>
+        <usage><m>XR</m></usage>
+        <description><m>R</m>-sottomodulo generato da <m>X</m></description>
+      </notation>
+
+      <statement>
+        <p>
+          Dato un sottoinsieme <m>X</m> di un <m>R</m>-modulo <m>M</m>, il <term>sottomodulo generato</term> da <m>X</m> è l'intersezione di tutti i sottomoduli di <m>M</m> contenenti <m>X</m>, denotata con <m>XR</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Possiamo descrivere esplicitamente gli elementi del sottomodulo generato da <m>X</m>.
+    </p>
+
+    <proposition xml:id="prop-elementi_del_sottomodulo_generato">
+      <statement>
+        <p>
+          Dato un sottoinsieme <m>X</m> di un <m>R</m>-modulo <m>M</m>, il sottomodulo <m>XR</m> è uguale a <m>0</m> se <m>X=\vuoto</m>, altrimenti è l'insieme delle <term>combinazioni lineari</term> del tipo
+          <md>
+            x_{1}a_{1}+x_{2}a_{2}+\cdots +x_{r}a_{r}
+          </md>
+          dove <m>r</m> è un intero positivo, ciascun <m>x_{i}</m> appartiene a <m>X</m> e ciascun <m>a_{i}</m> appartiene a <m>R</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Se <m>X=\vuoto</m>, ovviamente <m>XR=0</m>.
+        </p>
+        <p>
+          Supponiamo, dunque, che <m>X</m> non sia vuoto e sia <m>L</m> l'insieme delle combinazioni lineari date in enunciato. Gli elementi di <m>X</m>, i loro multipli per elementi di <m>R</m> e le somme di questi elementi appartengono a <m>XR</m> e, quindi <m>L\subseteq XR</m>. Inoltre, ogni elemento <m>x</m> di <m>X</m> appartiene a <m>L</m>, perché può essere espresso come <m>x1</m>.
+        </p>
+        <p>
+          Riassumendo, <m>X\subseteq L\subseteq XR</m>: basta allora provare che <m>L</m> è un sottomodulo. Chiaramente <m>L</m>, contenendo <m>X</m>, è non vuoto. La somma di due elementi di <m>L</m> è ancora un elemento di <m>L</m>. Se <m>l\coloneqq x_{1}a_{1}+x_{2}a_{2}+\cdots +x_{r}a_{r}</m> è un elemento di <m>L</m> e <m>b</m> è un elemento di <m>R</m>, allora
+          <md>
+            lb=(x_{1}a_{1}+x_{2}a_{2}+\cdots +x_{r}a_{r})b= x_{1}a_{1}b+x_{2}a_{2}b+\cdots +x_{r}a_{r}b
+          </md>
+          che, quindi, appartiene a <m>L</m>. Dunque, <m>L</m> è un sottomodulo, come richiesto.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <remark xml:id="rem-espressione_elemento_sottomodulo_generato_non_unica">
+      <p>
+        L'espressione per un elemento di <m>XR</m> data dalla <xref ref="prop-elementi_del_sottomodulo_generato"/> non è in generale unica.
+      </p>
+    </remark>
+
+    <proposition xml:id="prop-somma_sottomoduli">
+      <statement>
+        <p>
+          Dati due sottomoduli <m>N</m> e <m>L</m> di un <m>R</m>-modulo <m>M</m>, la loro somma <m>N+L\coloneqq\{n+l\mid n\in N, l\in L\}</m> è un sottomodulo di <m>M</m>. Più in generale, dati <m>N_{1}</m>, <m>N_{2}</m>, <m>\ldots</m>, <m>N_{r}</m> sottomoduli di <m>M</m> la loro somma
+          <md>
+            N_{1}+N_{2}+\cdots+N_{r}\coloneqq\{n_{1}+n_{2}+\cdots+n_{r}\mid n_{i}\in N_{i}\}
+          </md>
+          è un sottomodulo di <m>M</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Consideriamo il caso di due sottomoduli, lasciando il caso generale per esercizio.
+        </p>
+        <p>
+          Grazie all'<xref ref="rem-prodotto_sottogruppi_abeliano"/> sappiamo che la somma <m>N+L</m> è un sottogruppo del gruppo additivo di <m>M</m>. Dato un elemento <m>m=n+l</m> con <m>n</m> in <m>N</m> e <m>l</m> in <m>L</m> e un elemento <m>a</m> di <m>R</m>, abbiamo
+          <md>
+            (n+l)a=na+la
+          </md>:
+          ora <m>na</m> appartiene a <m>N</m> e <m>la</m> appartiene a <m>L</m> e, quindi, <m>(n+l)a</m> appartiene a <m>N+L</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <exercises xml:id="exercises-sottomoduli">
+
+      <exercise>
+        <statement>
+          <p>
+            Si consideri l'anello delle matrici <m>\mat{n}{R}</m> a coefficienti in un anello <m>R</m> con <m>n\gt 1</m>. Dato il sottoinsieme <m>T</m>, formato dalle matrici la cui prima riga è nulla, stabilire se <m>T</m> è un ideale destro e se è un ideale sinistro.
+          </p>
+        </statement>
+
+        <answer>
+          <p>
+            Il sottoinsieme <m>T</m> è un ideale destro ma non sinistro.
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Sia <m>M</m> un <m>R</m>-modulo e sia <m>a</m> un elemento del centro di <m>R</m>. Mostrare che il sottoinsieme <m>N\coloneqq\{xa\mid x\in M\}</m> è un sottomodulo di <m>M</m>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare la <xref ref="prop-sottomodulo_e_modulo"/>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare la <xref ref="prop-intersezione_di_sottomoduli"/>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare il caso generale della <xref ref="prop-somma_sottomoduli"/>
+          </p>
+        </statement>
+      </exercise>
+
+    </exercises>
+
+  </section>
+
+  <section xml:id="sec-omomorfismi_moduli">
+    <title>Omomorfismi di moduli</title>
+
+    <definition xml:id="def-omomorfismo_moduli">
+      <statement>
+        <p>
+          Dati due <m>R</m>-moduli e <m>M</m> e <m>N</m>, un <term>omomorfismo</term> di <m>R</m>-moduli da <m>M</m> in <m>N</m> è una funzione <m>\phi\colon M\to N</m> tale che
+          <ul>
+            <li>
+              <p>
+                <m>(x+y)\phi=x\phi+y\phi</m> per ogni <m>x</m> e <m>y</m> in <m>M</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>(xa)\phi=x\phi\cdot a</m> per ogni <m>x</m> in <m>M</m> e <m>a</m> in <m>R</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Le definizioni di <term>isomorfismo</term>, <term>endomorfismo</term> e <term>automorfismo</term> sono date in analogia alle corrispondenti nozioni per i gruppi (<xref ref="def-isomorfismo"/> e <xref ref="def-endomorfismo_automorfismo"/>).
+    </p>
+
+    <remark xml:id="rem-proprieta_omomorfismi_moduli">
+      <p>
+        Poiché un omomorfismo di <m>R</m>-moduli <m>\phi\colon M\to N</m> è un omomorfismo di gruppi additivi, valgono tutte le proprietà che abbiamo visto in tale situazione e rimandiamo, pertanto, al <xref ref="ch-omomorfismi"/>.
+      </p>
+    </remark>
+
+    <remark xml:id="rem-omomorfismo_Z_moduli">
+      <p>
+        Se <m>G</m> e <m>H</m> sono gruppi abeliani, visti come <m>\Interi</m>-moduli e <m>\phi\colon G\to H</m> è un omomorfismo tra <m>\Interi</m>-moduli, allora, per definizione, <m>\phi</m> è un omomorfismo di gruppi.
+      </p>
+      <p>
+        Viceversa, se <m>\phi\colon G\to H</m> è un omomorfismo di gruppi, allora, per la <xref ref="prop-immagini_di_potenze"/> riscritta in notazione additiva, vediamo che <m>\phi</m> è un omomorfismo di <m>\Interi</m>-moduli.
+      </p>
+      <p>
+        Dunque, nel caso degli <m>\Interi</m>-moduli, il concetto di omomorfismo di gruppi e il concetto di omomorfismo di moduli coincidono.
+      </p>
+    </remark>
+
+    <p>
+      Usando un approccio simile a quello della <xref ref="prop-immagine_diretta_inversa_di_sottogruppi"/> si dimostra facilmente la
+    </p>
+
+    <proposition xml:id="prop-immagine_diretta_inversa_di_sottomoduli">
+
+      <statement>
+        <p>
+          Sia <m>\phi\colon M\to N</m> un omomorfismo di <m>R</m>-moduli. Allora
+          <ol>
+            <li xml:id="item-immagine_diretta_di_sottomodullo">
+              <p>
+                se <m>L</m> è un sottomodulo di <m>M</m>, allora <m>L\phi</m> è un sottomodulo di <m>N</m>;
+              </p>
+            </li>
+            <li xml:id="item-immagine_inversa_di_sottomodulo">
+              <p>
+                se <m>J</m> è un sottomodulo di <m>N</m>, allora <m>J\phi^{-1}</m> è un sottomodulo di <m>M</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </proposition>
+
+    <p>
+      Come possiamo stabilire se un certo omomorfismo è iniettivo? Possiamo semplicemente riguardarlo come omomorfismo di gruppi additivi e dare la
+    </p>
+
+    <definition xml:id="def-nucleo_omomorfismo_moduli">
+
+      <statement>
+        <p>
+          Sia <m>\phi\colon M\to N</m> un omomorfismo di <m>R</m>-moduli. Il <term>nucleo</term> di <m>\phi</m>, denotato con <m>\ker\phi</m>, è così definito
+          <md>
+            \ker\phi\coloneqq\{x\in M\mid x\phi=0_{N}\}
+          </md>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Come caso particolare della <xref ref="prop-immagine_diretta_inversa_di_sottomoduli"/> abbiamo immediatamente il
+    </p>
+
+    <corollary xml:id="cor-nucleo_e_immagine_omomorfismo_moduli">
+      <statement>
+        <p>
+          Sia <m>\phi\colon M\to N</m> un omomorfismo di <m>R</m>-moduli. Il nucleo di <m>\phi</m> è un sottomodulo di <m>M</m>, mentre l'immagine di <m>\phi</m> è un sottomodulo di <m>N</m>.
+        </p>
+      </statement>
+    </corollary>
+
+    <p>
+      Ovviamente, possiamo <q>tradurre</q> immediatamente il <xref ref="thm-iniettivo_nucleo_banale"/> e il <xref ref="cor-corrispondenza_immagini_dirette_inverse_sottogruppi"/>.
+    </p>
+
+    <theorem xml:id="thm-iniettivo_nucleo_banale_moduli">
+      <statement>
+        <p>
+          Sia <m>\phi\colon M\to N</m> un omomorfismo di <m>R</m>-moduli. Allora <m>\phi</m> è iniettivo se e solo se <m>\ker\phi=0_{M}</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <corollary xml:id="cor-corrispondenza_immagini_dirette_inverse_sottomoduli">
+
+      <statement>
+        <p>
+          Sia <m>\phi\colon M\to N</m> un omomorfismo di <m>R</m>-moduli. Allora, le mappe <m>T\mapsto T\phi</m> e <m>U\mapsto U\phi^{-1}</m> definiscono delle biiezioni, una inversa dell'altra, tra l'insieme dei sottomoduli di <m>M</m> contenenti <m>\ker\phi</m> e l'insieme dei sottomoduli di <m>N</m> contenuti in <m>\im\phi</m>.
+        </p>
+      </statement>
+
+    </corollary>
+
+    <exercises xml:id="exercises-omomorfismi_moduli">
+
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare la <xref ref="prop-immagine_diretta_inversa_di_sottomoduli"/>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Sia <m>M</m> un <m>R</m>-modulo con <m>R</m> commutativo e sia <m>r</m> un elemento di <m>R</m> fissato. Dimostrare che la funzione <m>\phi_{r}</m> da <m>M</m> in sé che manda un generico elemento <m>x</m> in <m>xr</m> è un endomorfismo di <m>R</m>-moduli.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Dai due elementi <m>x</m> e <m>y</m> in <m>M</m> e un elemento <m>a</m> di <m>R</m> si ha
+            <md>
+              <mrow>(x+y)\phi_{r} \amp = (x+y)r=xr+yr=x\phi_{r}+y\phi_{r}</mrow>
+              <mrow> (xa)\phi_{r} \amp = (xa)r=x(ar)=x(ra)=(xr)a=x\phi_{r}\cdot a</mrow>
+            </md>
+          </p>
+        </solution>
+      </exercise>
+
+
+    </exercises>
+
+  </section>
+
+  <section xml:id="sec-moduli_quoziente">
+    <title>Moduli quoziente</title>
+
+    <p>
+      Nel <xref ref="ch-quozienti"/>, abbiamo introdotto il concetto di congruenza per le operazioni. Non possiamo applicarlo direttamente ai moduli perché in questo caso abbiamo un'operazione esterna. Basta però un semplice adattamento.
+     </p>
+
+    <definition xml:id="def-congruenza_modulo">
+      <statement>
+        <p>
+          Una <term>congruenza</term> in un <m>R</m>-modulo <m>M</m> è una relazione di equivalenza <m>\sim</m> che è una congruenza rispetto all'operazione di addizione e tale che se <m>x</m> e <m>x'</m> sono due elementi di <m>M</m> per cui si ha <m>x\sim x'</m>, allora risulta <m>xa\sim x'a</m> per ogni <m>a</m> in <m>R</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <proposition xml:id="prop-modulo_quoziente">
+      <statement>
+        <p>
+          Se <m>\sim</m> è una congruenza in un <m>R</m>-modulo <m>M</m>, allora nell'insieme quoziente <m>M/\sim</m> è possibile definire due operazioni ponendo
+          <md>
+            <mrow> \class[\sim]{x}+\class[\sim]{y}\amp \coloneqq\class[\sim]{x+y}</mrow>
+            <mrow> \class[\sim]{x}a\amp \coloneqq\class[\sim]{xa}</mrow>
+          </md>
+          e, rispetto a tali operazioni, <m>M/\sim</m> è un <m>R</m>-modulo, detto <term>modulo quoziente</term>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Per il <xref ref="cor-gruppo_quoziente"/>, <m>M/\sim</m> è un gruppo abeliano rispetto all'addizione. Le verifiche che la moltiplicazione di un elemento di <m>M/\sim</m> per un elemento di <m>R</m> è ben definita e soddisfa le proprietà richieste sono immediate.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      Vogliamo ora descrivere un modulo quoziente in altro modo, così come abbiamo fatto per i gruppi quoziente e gli anelli quoziente. Se consideriamo solo la struttura additiva di un <m>R</m>-modulo <m>M</m> dotato di una congruenza <m>\sim</m>, applicando il <xref ref="thm-quozienti_su_normali"/> vediamo che <m>\class[\sim]{0_{M}}</m> è un sottogruppo (normale) <m>N</m> di <m>(M,+)</m> (il fatto che sia normale è irrilevante, visto che, essendo <m>(M,+)</m> abeliano, ogni suo sottogruppo è normale). Inoltre, le classi equivalenza sono i laterali <m>N+x</m> di <m>N</m> in <m>M</m>. Vogliamo caratterizzare i sottogruppi <m>N</m> di <m>(M,+)</m> rispetto a cui i laterali di <m>N</m> sono le classi di equivalenza di una congruenza. Sia allora <m>N+x=N+x'</m> e sia <m>a</m> un elemento di <m>R</m>: vogliamo che <m>N+xa=N+x'a</m>. Sappiamo che esiste <m>n</m> in <m>N</m> tale che <m>x'=n+x</m>. Pertanto
+      <md>
+        x'a=na+xa
+      </md>.
+      Abbiamo allora che <m>N+xa=N+x'a</m> se e solo se
+      <md>
+        na\in N
+      </md>
+      per ogni scelta di <m>n</m> in <m>N</m> e ogni scelta di <m>a</m> in <m>R</m>. Ma allora stiamo semplicemente richiedendo che <m>N</m> sia un sottomodulo. Le cose sono, in un certo senso, più semplici rispetto al caso dei gruppi e degli anelli. Non dobbiamo, come nel caso dei gruppi, richiedere la proprietà addizionale della normalità o, come nel caso degli anelli, distinguere tra sottoanelli e ideali.
+    </p>
+
+    <theorem xml:id="thm-quozienti_su_sottomoduli">
+      <statement>
+        <p>
+          Se <m>M</m> è un <m>R</m>-modulo e <m>\sim</m> una congruenza in <m>M</m>, allora <m>\class[\sim]{0}</m> è un sottomodulo di <m>M</m> e le classi di equivalenza rispetto a <m>\sim</m> sono i laterali di <m>\class[\sim]{0}</m>.
+        </p>
+        <p>
+          <notation>
+            <usage><m>M/N</m></usage>
+            <description>modulo quoziente di <m>M</m> su un sottomodulo <m>N</m></description>
+          </notation>
+          Viceversa, se <m>N</m> è un sottomodulo di un <m>R</m>-modulo <m>M</m>, la relazione di equivalenza le cui classi sono i laterali <m>N+x</m> di <m>N</m> in <m>M</m> è una congruenza. Indicheremo, pertanto, con <m>M/N</m> l'<m>R</m>-modulo quoziente rispetto a tale congruenza.
+        </p>
+      </statement>
+
+    </theorem>
+
+    <remark xml:id="rem-quozienti_su_ideali_destri">
+      <p>
+        Abbiamo visto che se <m>R</m> è un anello, per poter fare il suo quoziente abbiamo bisogno di un ideale bilatero <m>I</m> (<xref ref="thm-quozienti_su_ideali"/>). Ora però vediamo che se <m>I</m> è un ideale destro (non necessariamente sinistro), allora <m>I</m> è un sottomodulo di <m>R_{R}</m> e possiamo fare il quoziente su di esso. Questi dati non sono in contraddizione: se <m>I</m> è un ideale destro, il quoziente <m>R_{R}/I</m> assume la struttura di <m>R</m>-modulo ma, a meno che <m>I</m> sia anche ideale sinistro, non è un anello.
+      </p>
+    </remark>
+
+    <proposition xml:id="prop-omomorfismo_canonico_moduli">
+      <statement>
+        <p>
+          Dato un <m>R</m>.modulo <m>M</m> e un sottomodulo <m>N</m>, la funzione <m>\phi\colon M\to M/N</m> data da <m>x\phi\coloneqq N+x</m> è un omomorfismo suriettivo con nucleo <m>N</m>, detto <term>omomorfismo canonico</term>.
+        </p>
+      </statement>
+
+    </proposition>
+
+    <p>
+      Possiamo ora enunciare la versione per moduli dei teoremi di isomorfismo
+    </p>
+
+    <theorem xml:id="thm-isomorfismo_quoziente_sul_nucleo_moduli">
+      <statement>
+        <p>
+          Sia <m>\phi\colon M\to N</m> un omomorfismo di <m>R</m>-moduli. Allora <m>\im\phi\simeq M/\ker\phi</m>.
+        </p>
+      </statement>
+
+    </theorem>
+
+    <theorem xml:id="thm-quoziente_su_intersezione_moduli">
+      <statement>
+        <p>
+          Sia <m>M</m> un <m>R</m>-modulo e siano <m>L</m> e <m>N</m> sottomoduli di <m>M</m>. Allora
+          <md>
+            \frac{L+N}{N}\simeq\frac{L}{L\cap N}
+          </md>.
+        </p>
+      </statement>
+
+    </theorem>
+
+    <theorem xml:id="thm-sottomoduli_quoziente">
+      <statement>
+        <p>
+          Sia <m>M</m> un <m>R</m>-modulo e sia <m>N</m> un suo sottomodulo. I sottomoduli di <m>M/N</m> sono i quozienti del tipo <m>L/N</m> con <m>L</m> sottomodulo di <m>M</m> contenente <m>N</m>. Dato un sottomodulo <m>L/N</m> di <m>M/N</m> si ha
+          <md>
+            \frac{M/N}{L/N}\simeq \frac{M}{L}
+          </md>.
+        </p>
+      </statement>
+
+    </theorem>
+
+    <exercises xml:id="exercises-moduli_quoziente">
+
+      <exercise>
+        <statement>
+          <p>
+            Completare le verifiche della dimostrazione della <xref ref="prop-modulo_quoziente"/>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare il <xref ref="thm-isomorfismo_quoziente_sul_nucleo_moduli"/>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare il <xref ref="thm-quoziente_su_intersezione_moduli"/>.
+          </p>
+        </statement>
+      </exercise>
+
+
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare il <xref ref="thm-sottomoduli_quoziente"/>.
+          </p>
+        </statement>
+      </exercise>
+
+    </exercises>
+
+  </section>
+
+</chapter>

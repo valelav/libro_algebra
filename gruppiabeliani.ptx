@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="ch-gruppiabeliani">
+  <title>Gruppi abeliani finitamente generati</title>
+  <introduction>
+    <p>
+      Abbiamo già osservato che gli <m>\Interi</m>-moduli non sono altro che i gruppi abeliani (<xref ref="ex-Z_modulo"/>). Possiamo, dunque, applicare immediatamente i risultati del <xref ref="ch-modulisupid"/> ai gruppi abeliani finitamente generati
+    </p>
+  </introduction>
+  <section xml:id="sec-gruppiabeliani">
+    <title>Classificazione dei gruppi abeliani finitamente generati</title>
+
+    <p>
+      Il <xref ref="thm-decomposizione_primaria"/> ha una traduzione immediata nella terminologia dei gruppi abeliani.
+    </p>
+
+    <theorem xml:id="thm-decomposizione_primaria_gruppi_abeliani">
+      <statement>
+        <p>
+          Un gruppo abeliano finitamente generato <m>G</m> può esprimersi come prodotto diretto di gruppi ciclici infiniti e di gruppi ciclici di ordine potenza di primi: <m>G\simeq C_{p_{1}^{\alpha_{1}}}\times\dots\times C_{p_{t}^{\alpha_{t}}}\times C_{\infty}^{s}</m> con <m>\alpha_{i}>0</m>. I fattori in questa decomposizione non sono univocamente determinati ma l'intero <m>s</m> e gli ordini <m>p_{i}^{\alpha_{i}}</m> sì (a meno dell'ordinamento in cui scriviamo i fattori).
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      In particolare, per i gruppi abeliani finiti, abbiamo il
+    </p>
+    <corollary xml:id="cor-gruppi_abeliani_finiti">
+      <statement>
+        <p>
+          Un gruppo abeliano finito è prodotto diretto di un numero finito di gruppi ciclici di ordine potenza di primi. Gli ordini dei fattori diretti in questa decomposizione sono univocamente determinati (a meno dell'ordinamento in cui scriviamo i fattori).
+        </p>
+      </statement>
+    </corollary>
+    <remark xml:id="rem-gruppi_abeliani_ordine_fissato">
+      <p>
+        Data una decomposizione di un gruppo abeliano finito come prodotto diretto di ciclici primari, l'ordine del gruppo è uguale al prodotto degli ordini dei fattori diretti: ciò permette di determinare tutti i gruppi abeliani di un dato ordine finito (a meno di isomorfismi).
+      </p>
+    </remark>
+    <example>
+      <statement>
+        <p>
+          Vogliamo determinare tutti i gruppi abeliani di ordine <m>324</m>. Esprimiamo tale ordine come prodotto di primi: <m>324=2^{2}\cdot 3^{4}</m>. Nella decomposizione di tali gruppi come prodotto diretto di ciclici primari avremo quindi <m>2</m>-gruppi e <m>3</m>-gruppi.
+        </p>
+        <p>
+          Poiché <m>2</m> compare con esponente <m>2</m> potremo avere un gruppo ciclico di ordine <m>2^{2}</m> oppure <m>2</m> gruppi ciclici di ordine <m>2</m>. Poiché <m>3</m> appare con esponente <m>4</m> potremo avere un gruppo ciclico di ordine <m>3^{4}</m> oppure uno di ordine <m>3^{3}</m> e uno di ordine <m>3</m> oppure <m>2</m> gruppi ciclici di ordine <m>3^{2}</m> oppure un gruppo ciclico di ordine <m>3^{2}</m> e due di ordine <m>3</m> o, infine, <m>4</m> gruppi ciclici di ordine <m>3</m>. Combinando le varie possibilità possiamo, dunque, elencare tutti i gruppi abeliani di ordine <m>324</m> a meno di isomorfismi.
+          <ul cols="2">
+            <li>
+              <p>
+                <m>C_{4}\times C_{81}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>C_{2}\times C_{2}\times C_{81}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>C_{4}\times C_{27}\times C_{3}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>C_{2}\times C_{2}\times C_{27}\times C_{3}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>C_{4}\times C_{9}\times C_{9}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>C_{2}\times C_{2}\times C_{9}\times C_{9}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>C_{4}\times C_{9}\times C_{3}\times C_{3}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>C_{2}\times C_{2}\times C_{9}\times C_{3}\times C_{3}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>C_{4}\times C_{3}\times C_{3}\times C_{3}\times C_{3}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>C_{2}\times C_{2}\times C_{3}\times C_{3}\times C_{3}\times C_{3}</m>
+              </p>
+            </li>
+          </ul>
+        </p>
+        <p>
+          Possiamo ora anche determinare in ciascuno di questi gruppi il numero di elementi di un dato ordine. Ad esempio, supponiamo di voler trovare il numero di elementi di ordine <m>54=2\cdot 3^{3}</m>. Poiché l'ordine di un elemento di un prodotto diretto è il minimo comune multiplo degli ordini delle sue componenti (<xref ref="cor-periodo_nel_prodotto_diretto"/>), affinché ci sia almeno un elemento di ordine <m>54</m> è necessario che nella decomposizione appaia almeno un fattore di ordine <m>3^{k}</m> con <m>k\ge 3</m>. Negli ultimi <m>6</m> gruppi della lista non ci sono, dunque, elementi di ordine <m>54</m>. Consideriamo i primi <m>4</m> gruppi.
+        </p>
+        <p>
+          Ricordiamo che un gruppo ciclico finito di ordine <m>n</m> contiene esattamente <m>\phi(d)</m> elementi di ordine <m>d</m> per ogni divisore <m>d</m> di <m>n</m> (<xref ref="thm-sottogruppi_di_gruppo_ciclico_finito"/>). In particolare, un gruppo ciclico di ordine <m>p^{n}</m> con <m>p</m> primo contiene <m>\phi(p^{m})=p^{m}-p^{m-1}</m> elementi di ordine <m>p^{m}</m> se <m>m\le n</m>.
+        </p>
+        <p>
+          Un elemento di <m>C_{4}\times C_{81}</m> si scrive nella forma <m>(x,y)</m> con <m>x</m> in <m>C_{4}</m> e <m>y</m> in <m>C_{81}</m>. L'ordine di <m>(x,y)</m> è <m>54</m> se <m>x</m> ha ordine <m>2</m> e <m>y</m> ha ordine <m>27</m>. Poiché <m>C_{4}</m> contiene <m>1</m> elemento di ordine <m>2</m> e <m>C_{81}</m> contiene <m>27-9=18</m> elementi di ordine <m>27</m> abbiamo <m>1\cdot 18=18</m> elementi di ordine <m>54</m>.
+        </p>
+        <p>
+          Un elemento di <m>C_{2}\times C_{2}\times C_{81}</m> si scrive nella forma <m>(x,y,z)</m> con <m>x</m> e <m>y</m> in <m>C_{2}</m> e <m>z</m> in <m>C_{81}</m>. L'ordine è <m>54</m> se almeno uno tra <m>x</m> e <m>y</m> ha ordine <m>2</m> e <m>z</m> ha ordine <m>27</m>. Poiché <m>C_{2}</m> contiene un elemento di ordine <m>1</m> e uno di ordine <m>2</m>, abbiamo che almeno uno tra <m>x</m> e <m>y</m> ha ordine <m>2</m> in <m>3</m> casi. Abbiamo, dunque, <m>3\cdot 18=54</m> elementi di ordine <m>54</m>.
+        </p>
+        <p>
+          Un elemento di <m>C_{4}\times C_{27}\times C_{3}</m> si scrive come <m>(x,y,z)</m> con <m>x</m> in <m>C_{4}</m>, <m>y</m> in <m>C_{27}</m> e <m>z\in C_{3}</m>. Abbiamo ordine <m>54</m> se e solo se <m>x</m> ha ordine <m>2</m>, <m>y</m> ha ordine <m>27</m> e <m>z</m> ha ordine qualunque. Abbiamo, dunque, <m>1\cdot 18\cdot 3=54</m> elementi di ordine <m>54</m>.
+        </p>
+        <p>
+          Infine, un elemento di <m>C_{2}\times C_{2}\times C_{27}\times C_{3}</m> scritto come <m>(x,y,z,w)</m> con <m>x</m> in <m>C_{2}</m>, <m>y</m> in <m>C_{2}</m>, <m>z</m> in <m>C_{27}</m> e <m>w\in C_{3}</m> ha ordine <m>54</m> se e solo se almeno uno tra <m>x</m> e <m>y</m> ha ordine <m>2</m> (e, come prima, abbiamo <m>3</m> scelte per la coppia <m>(x,y)</m>), <m>z</m> ha ordine <m>27</m> e <m>w</m> ha ordine qualunque. Dunque, abbiamo <m>3\cdot 18\cdot 3=162</m> elementi di ordine <m>54</m>.
+        </p>
+      </statement>
+    </example>
+
+    <exercises xml:id="exercises-gruppiabeliani">
+
+      <exercise>
+        <task>
+          <statement>
+            <p>
+              Determinare tutti i gruppi abeliani di ordine <m>400</m> (a meno di isomorfismi).
+            </p>
+          </statement>
+          <answer>
+            <p>
+              <ul cols="2">
+                <li>
+                  <p>
+                    <m>C_{16}\times C_{25}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>C_{16}\times C_{5}\times C_{5}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>C_{8}\times C_{2}\times C_{25}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>C_{8}\times C_{2}\times C_{5}\times C_{5}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>C_{4}\times C_{4}\times C_{25}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>C_{4}\times C_{4}\times C_{5}\times C_{5}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>C_{4}\times C_{2}\times C_{2}\times C_{25}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>C_{4}\times C_{2}\times C_{2}\times C_{5}\times C_{5}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>C_{2}\times C_{2}\times C_{2}\times C_{2}\times C_{25}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>C_{2}\times C_{2}\times C_{2}\times C_{2}\times C_{5}\times C_{5}</m>
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </answer>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Determinare quali dei gruppi trovati al punto precedente contengono elementi di ordine <m>200</m> e, per ciascuno di essi, determinare quanti sono tali elementi.
+            </p>
+          </statement>
+          <solution>
+            <p>
+              L'ordine di un elemento appartenente al prodotto diretto di gruppi è uguale al minimo comune multiplo degli ordini delle sue componenti. Poiché <m>200=2^{3}5^{2}</m> nella decomposizione del gruppo come prodotto diretto di ciclici primari deve comparire un gruppo ciclico <m>2</m>-primario di ordine almeno <m>8</m> e un gruppo ciclico <m>5</m>-primario di ordine almeno <m>25</m>. Nella lista precedente i gruppi compatibili con questa condizione sono <m>C_{16}\times C_{25}</m> e <m>C_{8}\times C_{2}\times C_{25}</m>. Se <m>(x,y)</m> è un elemento del primo gruppo, con <m>x\in C_{16}</m> e <m>y\in C_{25}</m>, affinché l'ordine di <m>(x,y)</m> sia <m>200</m>, deve essere <m>x</m> di ordine <m>8</m> e <m>y</m> di ordine <m>25</m>. Il gruppo <m>C_{16}</m> contiene <m>\euler{8}=8-4=4</m> elementi di ordine <m>8</m>, mentre <m>C_{25}</m> contiene <m>\euler{25}=25-5=20</m> elementi di ordine <m>25</m>. In conclusione <m>C_{16}\times C_{25}</m> contiene <m>4\cdot 20=80</m> elementi di ordine <m>200</m>.
+            </p>
+            <p>
+              Per quanto riguarda <m>C_{8}\times C_{2}\times C_{25}</m>, sia <m>(x,y,z)</m> un suo generico elemento con <m>x\in C_{8}</m>, <m>y\in C_{2}</m> e <m>z\in C_{25}</m>. L'ordine di <m>x</m> divide <m>8</m>, l'ordine di <m>y</m> divide <m>2</m> e l'ordine di <m>z</m> divide <m>25</m>: affinché il minimo comune multiplo di questi ordini sia <m>200</m> è necessario e sufficiente che l'ordine di <m>x</m> sia esattamente <m>8</m> e l'ordine di <m>z</m> sia esattamente <m>25</m> (l'ordine di <m>y</m> può essere indifferentemente <m>1</m> o <m>2</m>). Il gruppo <m>C_{8}</m> contiene <m>\euler{8}=8-4=4</m> scelte per <m>x</m>. L'elemento <m>y</m> può essere scelto in <m>2</m> modi e l'elemento <m>z</m> può essere scelto in <m>20</m> modi (abbiamo già calcolato in precedenza il numero di elementi di ordine <m>25</m> di <m>C_{25}</m>). Dunque, abbiamo <m>4\cdot 2\cdot 20=160</m> elementi di ordine <m>200</m>.
+            </p>
+          </solution>
+        </task>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Dati i prodotti diretti
+            <ol>
+              <li>
+                <p>
+                  <m>C_{12}\times C_{12}\times C_{6}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>C_{9}\times C_{6}\times C_{4}\times C_{4}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>C_{3}\times C_{3}\times C_{3}\times C_{4}\times C_{4}\times C_{2}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>C_{8}\times C_{2}\times C_{27}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>C_{36}\times C_{12}\times C_{2}</m>
+                </p>
+              </li>
+            </ol>
+            stabilire quali sono isomorfi fra loro. Per ciascuno di essi calcolare poi il numero di elementi di ordine <m>2</m>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Riscriviamo i gruppi assegnati come prodotti diretti di ciclici primari, ricordando che un gruppo ciclico finito può essere espresso come prodotto diretto di ciclici i cui ordini sono i fattori primari del suo ordine. Abbiamo, dunque, i gruppi:
+            <ol>
+              <li>
+                <p>
+                  <m>C_{4}\times C_{3}\times C_{4}\times C_{3}\times C_{2}\times C_{3}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>C_{9}\times C_{2}\times C_{3}\times  C_{4}\times C_{4}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>C_{3}\times C_{3}\times C_{3}\times C_{4}\times C_{4}\times C_{2}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>C_{8}\times C_{2}\times C_{27}</m>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>C_{4}\times C_{9}\times C_{3}\times C_{4}\times C_{2}</m>
+                </p>
+              </li>
+            </ol>
+            Confrontando i fattori che appaiono in ciascuna decomposizione (trascurando l'ordinamento), vediamo che il primo e il terzo gruppo sono isomorfi tra loro, così come il secondo e il quinto.
+          </p>
+          <p>
+            Dato un elemento <m>(x,y,z)</m> del gruppo <m>C_{12}\times C_{12}\times C_{6}</m> affinché il suo ordine sia <m>2</m> gli elementi <m>x</m>, <m>y</m> e <m>z</m> devono avere ordine <m>1</m> o <m>2</m> e almeno uno di essi deve avere ordine <m>2</m>. Poiché <m>2</m> divide l'ordine di <m>C_{12}</m>, questo gruppo contiene esattamente un sottogruppo ciclico di ordine <m>2</m>, formato dagli elementi il cui periodo divide <m>2</m>. Allo stesso modo anche in <m>C_{6}</m> abbiamo <m>2</m> elementi il cui periodo divide <m>2</m>. Pertanto abbiamo esattamente <m>2\cdot 2\cdot 2=8</m> terne <m>(x,y,z)</m> tali che gli elementi <m>x</m>, <m>y</m> e <m>z</m> abbiano ordine <m>1</m> o <m>2</m>. Dobbiamo però scartare la terna in cui tutti gli elementi hanno periodo <m>1</m> (perché essa ha periodo <m>1</m> a sua volta). Abbiamo, dunque, <m>7</m> elementi di periodo <m>2</m>.
+          </p>
+
+          <p>
+            Per quanto riguarda <m>C_{9}\times C_{2}\times C_{3}\times C_{4}\times C_{4}</m> in maniera analoga abbiamo <m>1\cdot 2\cdot 1\cdot 2\cdot 2=8</m> cinquine le cui componenti hanno periodo <m>1</m> o <m>2</m>. Scartando di nuovo la cinquina le cui componenti hanno tutte periodo <m>1</m> rimangono <m>7</m> elementi di periodo <m>2</m>.
+          </p>
+
+          <p>
+            Infine <m>C_{8}\times C_{2}\times C_{27}</m> possiede <m>2\cdot 2\cdot 1=4</m> terne le cui componenti hanno periodo <m>1</m> o <m>2</m>. Scartando di nuovo la terna le cui componenti hanno tutte periodo <m>1</m> rimangono <m>3</m> elementi di periodo <m>2</m>.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Siano <m>G</m> e <m>H</m> due gruppi abeliani di ordine <m>24</m>. Dimostrare che <m>G</m> e <m>H</m> sono isomorfi se e solo se contengono lo stesso numero di elementi di periodo <m>2</m>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Ovviamente se <m>G</m> e <m>H</m> sono isomorfi hanno lo stesso numero di elementi di periodo <m>2</m>.
+          </p>
+
+          <p>
+            Per mostrare il viceversa consideriamo i diversi tipi di isomorfismo dei gruppi abeliani di ordine <m>24</m>. I possibili tipi di isomorfismo di un gruppo abeliano di ordine <m>24</m> sono <m>A_{1}\coloneqq C_{2}\times C_{2}\times C_{2}\times C_{3}</m>, <m>A_{2}\coloneqq C_{4}\times C_{2}\times C_{3}</m> e <m>A_{3}\coloneqq C_{8}\times C_{3}</m>. Per ottenere la tesi basta mostrare che questi gruppi hanno un numero di elementi di periodo <m>2</m> diverso tra loro.
+          </p>
+
+          <p>
+            Gli elementi di <m>A_{1}</m> sono del tipo <m>(a,b,c,d)</m> con <m>a</m>, <m>b</m> e <m>c</m> in <m>C_{2}</m> e <m>d</m> in <m>C_{4}</m>. Il periodo di <m>(a,b,c,d)</m> è il minimo comune multiplo dei periodi di <m>a</m>, <m>b</m>, <m>c</m> e <m>d</m>. Poiché il periodo di <m>a</m>, <m>b</m> e <m>c</m> divide <m>2</m> mentre il periodo di <m>d</m> divide <m>3</m>, l'elemento <m>(a,b,c,d)</m> ha periodo <m>2</m> se e solo se almeno uno tra <m>a</m>, <m>b</m> e <m>c</m> ha periodo <m>2</m> e <m>d</m> ha periodo <m>1</m>. Deve, dunque, essere <m>d=1</m>, mentre <m>a</m>, <m>b</m> e <m>c</m> possono essere elementi qualunque di <m>C_{2}</m> non tutti <m>1</m>. Poiché possiamo scegliere ciascuno degli elementi <m>a</m>, <m>b</m> e <m>c</m> in due modi diversi, mentre <m>d</m> può essere scelto in unico modo abbiamo <m>2\cdot2\cdot2\cdot1=8</m> possibilità, da cui però dobbiamo scartare la scelta <m>a=b=c=1</m>. Rimangono, dunque, <m>7</m> elementi di periodo <m>2</m>.
+          </p>
+
+          <p>
+            Gli elementi di <m>A_{2}</m> sono del tipo <m>(a,b,c)</m> con <m>a</m> in <m>C_{4}</m>, <m>b</m> in <m>C_{2}</m> e <m>c</m> in <m>C_{4}</m>. Con ragionamento analogo al precedente abbiamo che <m>a</m> e <m>b</m> devono avere periodo <m>1</m> o <m>2</m> (ma non contemporaneamente <m>1</m>) mentre <m>c</m> deve avere periodo <m>1</m>. In <m>C_{4}</m> gli elementi che hanno periodo che divide <m>2</m> sono quelli contenuti nell'unico sottogruppo di ordine <m>2</m> e il loro numero è, dunque, <m>2</m>: possiamo scegliere <m>a</m> in <m>2</m> modi diversi. Gli elementi di <m>C_{2}</m> hanno tutti periodo che divide <m>2</m>: possiamo scegliere <m>b</m> in <m>2</m> modi diversi. Possiamo poi scegliere <m>c</m> in un unico modo. Di queste <m>2\cdot2\cdot1=4</m> possibilità dobbiamo però scartare quella per cui <m>a</m> e <m>b</m> hanno entrambi periodo <m>1</m>. Abbiamo, dunque, <m>3</m> elementi di periodo <m>2</m>.
+          </p>
+
+          <p>
+            Infine gli elementi di <m>A_{3}</m> sono del tipo <m>(a,b)</m> con <m>a</m> in <m>C_{8}</m> e <m>b</m> in <m>C_{4}</m>. Con ragionamento analogo al precedente abbiamo che <m>a</m> deve avere periodo <m>2</m> mentre <m>b</m> deve avere periodo <m>1</m>. In <m>C_{8}</m> gli elementi che hanno periodo <m>2</m> sono quelli contenuti nell'unico sottogruppo di ordine <m>2</m> e il loro numero è, dunque, <m>1</m>. Poiché anche <m>b</m> può essere scelto in un unico modo abbiamo <m>1</m> elemento di periodo <m>2</m>.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Determinare (a meno di isomorfismi) tutti i gruppi abeliani di ordine <m>108</m> che contengono almeno un elemento di ordine <m>9</m> e nessun elemento di ordine <m>12</m>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Poiché <m>108=2^{2}3^{3}</m> potremo scrivere i gruppi cercati nella forma <m>G_{2}\times G_{3}</m> dove <m>G_{2}</m> è il sottogruppo formato dagli elementi di periodo una potenza di <m>2</m> e <m>G_{3}</m> è il sottogruppo formato dagli elementi di periodo una potenza di <m>3</m>. Il sottogruppo <m>G_{2}</m>, avendo ordine <m>2^{2}</m>, è isomorfo a <m>C_{4}</m> o a <m>C_{2}\times C_{2}</m>, mentre <m>G_{3}</m>, avendo ordine <m>3^{3}</m>, è isomorfo a <m>C_{27}</m>, a <m>C_{9}\times C_{3}</m> o a <m>C_{3}\times C_{3}\times C_{3}</m>. Combinando queste possibilità otteniamo tutti i gruppi abeliani di ordine <m>108</m>. Dobbiamo considerare quelli che soddisfano le ulteriori condizioni sui periodi degli elementi.
+          </p>
+
+          <p>
+            Se <m>G_{3}\simeq C_{3}\times C_{3}\times C_{3}</m>, non abbiamo elementi di periodo <m>9</m>, mentre nei casi <m>C_{27}</m> e <m>C_{9}\times C_{3}</m> abbiamo elementi di periodo <m>9</m>.
+            Si ottiene un elemento di periodo <m>12</m>, prendendo un elemento di periodo <m>4</m> in <m>G_{2}</m> e un elemento di periodo <m>3</m> in <m>G_{3}</m>: un elemento di periodo <m>3</m> in <m>G_{3}</m> c'è sempre, mentre un elemento di periodo <m>4</m> in <m>G_{2}</m> c'è solo nel caso in cui <m>G_{4}\simeq C_{4}</m>. Dobbiamo quindi escludere questo caso. Dunque, deve necessariamente essere <m>G_{2}\simeq C_{2}\times C_{2}</m> mentre <m>G_{3}\simeq C_{27}</m> o <m>G_{3}\simeq C_{9}\times C_{3}</m>. I gruppi cercati sono allora <m>C_{2}\times C_{2}\times C_{27}</m> e <m>C_{2}\times C_{2}\times C_{9}\times C_{3}</m>.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Determinare (a meno di isomorfismi) tutti i gruppi abeliani <m>G</m> tali che <m>30\lt\abs{G}\lt 60</m> e che per ogni elemento <m>x\in G</m> si abbia <m>x^{108}=1</m>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Se <m>x^{108}=1</m> per ogni elemento del gruppo significa che ogni elemento ha periodo che divide <m>108</m>. Affinché ogni elemento abbia periodo che divide <m>108=2^{2}3^{3}</m>, è necessario e sufficiente che i fattori diretti nella decomposizione di <m>G</m> come prodotto di ciclici primari abbiano ordine <m>2</m>, <m>4</m>, <m>3</m>, <m>9</m> e <m>27</m>. L'ordine del gruppo è quindi un prodotto di una potenza di <m>2</m> per una potenza di <m>3</m>. Gli unici numeri compresi tra <m>30</m> e <m>60</m> che soddisfano questa condizione sono <m>32</m>, <m>36</m>, <m>48</m> e <m>54</m>.
+          </p>
+
+          <p>
+            Per l'ordine <m>32</m> le possibilità sono <m>C_{2}\times C_{2}\times C_{2}\times C_{2}\times C_{2}</m>, <m>C_{2}\times C_{2}\times C_{2}\times C_{4}</m> e <m>C_{2}\times C_{4}\times C_{4}</m>, per l'ordine <m>36</m> le possibilità sono <m>C_{2}\times C_{2}\times C_{3}\times C_{3}</m>, <m>C_{4}\times C_{3}\times C_{3}</m>, <m>C_{2}\times C_{2}\times C_{9}</m> e <m>C_{4}\times C_{9}</m>, per l'ordine <m>48</m> le possibilità sono <m>C_{2}\times C_{2}\times C_{2}\times C_{2}\times C_{3}</m>, <m>C_{4}\times C_{2}\times C_{2}\times C_{3}</m> e <m>C_{4}\times C_{4}\times C_{3}</m>, mentre per l'ordine <m>54</m> le possibilità sono <m>C_{2}\times C_{3}\times C_{3}\times C_{3}</m>, <m>C_{2}\times C_{9}\times C_{3}</m> e <m>C_{2}\times C_{27}</m>.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Determinare tutti i gruppi abeliani di ordine <m>500</m> che non hanno elementi di ordine <m>100</m>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Poiché <m>500=2^{2}5^{3}</m> potremo scrivere i gruppi cercati nella forma <m>G_{2}\times G_{5}</m> dove <m>G_{2}</m> è il sottogruppo formato dagli elementi di periodo una potenza di <m>2</m> e <m>G_{5}</m> è il sottogruppo formato dagli elementi di periodo una potenza di <m>5</m>. Il sottogruppo <m>G_{2}</m>, avendo ordine <m>2^{2}</m>, è isomorfo a <m>C_{4}</m> o a <m>C_{2}\times C_{2}</m> mentre <m>G_{5}</m>, avendo ordine <m>5^{3}</m>,  è isomorfo a <m>C_{125}</m>, a <m>C_{25}\times C_{5}</m> o a <m>C_{5}\times C_{5}\times C_{5}</m>. Combinando queste possibilità otteniamo tutti i gruppi abeliani di ordine <m>500</m> (ne abbiamo <m>6</m>). Dobbiamo considerare quelli che non contengono elementi di ordine <m>100</m>. Otteniamo elementi di quest'ordine se in <m>G_{2}</m> ci sono elementi di ordine <m>4</m> (il che avviene se <m>G_{2}</m> è <m>C_{4}</m>) e in <m>G_{5}</m> ci sono elementi di ordine <m>25</m> (il che avviene se <m>G_{5}</m> è <m>C_{125}</m> o <m>C_{25}\times C_{5}</m>). Dobbiamo quindi escludere i gruppi in cui queste condizioni sono entrambe soddisfatte. Rimangono, dunque, queste possibilità: <m>C_{4}\times C_{5}\times C_{5}\times C_{5}</m>, <m>C_{2}\times C_{2}\times C_{125}</m>, <m>C_{2}\times C_{2}\times C_{25}\times C_{5}</m> e <m>C_{2}\times C_{2}\times C_{5}\times C_{5}\times C_{5}</m>.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <introduction>
+          <p>
+            Si considerino i gruppi abeliani non ciclici di ordine <m>3^{3}\cdot 5^{2}</m>.
+          </p>
+        </introduction>
+
+        <task>
+          <statement>
+            <p>
+              Tra tutti i gruppi dati si trovino quelli (o quello) che contengono elementi di periodo massimo possibile.
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Nella decomposizione dei gruppi dati, i fattori <m>3</m>-primari possibili sono allora <m>C_{27}</m>, <m>C_{9}\times C_{3}</m> e <m>C_{3}\times C_{3}\times C_{3}</m>, mentre i fattori <m>5</m>-primari possibili sono <m>C_{25}</m> e <m>C_{5}\times C_{5}</m>. Combinando questi fattori in tutti i modi possibili otteniamo i gruppi abeliani di ordine <m>3^{3}\cdot 5^{2}</m> non isomorfi tra loro:
+              <ul cols="2">
+                <li>
+                  <p>
+                    <m>C_{27}\times C_{25}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>C_{27}\times C_{5}\times C_{5}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>C_{9}\times C_{3}\times C_{25}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>C_{9}\times C_{3}\times C_{5}\times C_{5}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>C_{3}\times C_{3}\times C_{3}\times C_{25}</m>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <m>C_{3}\times C_{3}\times C_{3}\times C_{5}\times C_{5}</m>
+                  </p>
+                </li>
+              </ul>
+              Tra questi, quello ciclico è il primo: infatti, è prodotto diretto di ciclici di ordini coprimi. Escludendo il primo, possiamo cercare per ciascuno di essi l'elemento di periodo massimo. Tenuto conto che in un gruppo ciclico finito ogni elemento ha periodo che divide il periodo di un generatore e che il periodo di un elemento del prodotto diretto è il minimo comune multiplo dei periodi delle componenti otteniamo, come massimo periodo degli elementi nei gruppi dati, <m>27\cdot 5</m>, <m>9\cdot 25</m>, <m>9\cdot 5</m>, <m>3\cdot 25</m> e <m>3\cdot 5</m>. Il gruppo in cui ci sono elementi di massimo periodo possibile è <m>C_{9}\times C_{3}\times C_{25}</m> che ha elementi di ordine <m>9\cdot 25</m>.
+            </p>
+          </solution>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Per ciascuno dei gruppi trovati al punto precedente contare quanti elementi ci sono di periodo massimo.
+            </p>
+          </statement>
+          <solution>
+            <p>
+              Detto <m>(a,b,c)</m> un elemento di <m>C_{9}\times C_{3}\times C_{25}</m> affinché esso abbia periodo <m>9\cdot 25</m> deve essere <m>a</m> di periodo <m>9</m>, <m>b</m> di periodo qualunque e <m>c</m> di periodo <m>25</m>. In <m>C_{9}</m> ci sono <m>\phi(9)=9-3=6</m> elementi di periodo <m>9</m>, mentre in <m>C_{25}</m> ci sono <m>\phi(25)=25-5=20</m> elementi di periodo <m>25</m>. Infine <m>C_{3}</m> ha <m>3</m> elementi. Dunque, abbiamo <m>6\cdot3\cdot20=360</m> elementi di periodo massimo.
+            </p>
+          </solution>
+        </task>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Determinare (a meno di isomorfismi) tutti i gruppi abeliani di ordine <m>72</m> che hanno <m>n</m> elementi di ordine <m>6</m> con <m>10\le n\le 30</m>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Detta <m>G_{2}</m> la parte <m>2</m>-primaria, poiché la massima potenza di <m>2</m> che divide <m>72</m> è <m>2^{3}</m>, abbiamo queste possibilità per <m>G_{2}</m>: <m>C_{8}</m>, <m>C_{4}\times C_{2}</m> e <m>C_{2}\times C_{2}\times C_{2}</m>. Detta <m>G_{3}</m> la parte <m>3</m>-primaria, poiché la massima potenza di <m>3</m> che divide <m>72</m> è <m>3^{2}</m>, abbiamo queste possibilità per <m>G_{3}</m>: <m>C_{9}</m> e <m>C_{3}\times C_{3}</m>.
+          </p>
+
+          <p>
+            Se <m>(x,y)\in G_{2}\times G_{3}</m>, abbiamo che il periodo di <m>(x,y)</m> è il minimo comune multiplo dei periodi di <m>x</m> e di <m>y</m>: affinché <m>(x,y)</m> abbia periodo <m>6</m> deve allora essere <m>x</m> di periodo <m>2</m> e <m>y</m> di periodo <m>3</m>. In <m>C_{8}</m> c'è un unico elemento di periodo <m>2</m>, in <m>C_{4}\times C_{2}</m> ce ne sono <m>3</m> e in <m>C_{2}\times C_{2}\times C_{2}</m> ce ne sono <m>7</m>; in <m>C_{9}</m> ci sono <m>2</m> elementi di periodo <m>3</m>, mentre in <m>C_{3}\times C_{3}</m> ce ne sono <m>8</m>. Moltiplicando il numero di elementi di periodo <m>2</m> per il numero di quelli di periodo <m>3</m> troviamo il numero <m>n</m> di elementi di periodo <m>6</m>. Le possibilità affinché <m>10\le n\le 30</m> sono <m>7\cdot 2</m> che corrisponde a <m>C_{2}\times C_{2}\times C_{2}\times C_{9}</m> e <m>3\cdot 8</m> che corrisponde a <m>C_{4}\times C_{2}\times C_{3}\times C_{3}</m>.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Siano <m>p_{1}</m>, <m>p_{2}</m>, <m>\ldots</m>, <m>p_{n}</m> primi distinti. Determinare quanti gruppi abeliani esistono (a meno di isomorfismi) di ordine <m>p_{1}^{4}p_{2}^{4}\dots p_{n}^{4}</m>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Per ciascun primo <m>p</m> coinvolto abbiamo fattori diretti il cui prodotto degli ordini è uguale a <m>p^{4}</m>. Abbiamo, dunque, <m>5</m> possibilità: <m>C_{p^{4}}</m>, <m>C_{p^{3}}\times C_{p}</m>, <m>C_{p^{2}}\times C_{p^{2}}</m>, <m>C_{p^{2}}\times C_{p}\times C_{p}</m> e <m>C_{p}\times C_ {p}\times C_{p}\times C_{p}</m>. Combinando queste scelte per tutti gli <m>n</m> primi coinvolti otteniamo quindi <m>5^{n}</m> gruppi abeliani dell'ordine indicato.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Sia <m>G</m> un gruppo abeliano di ordine <m>16</m>. In <m>G</m> esistano due elementi <m>x</m> e <m>y</m> di periodo <m>4</m> tali che <m>x^{2}\ne y^{2}</m>. Elencare tutti i possibili tipi di isomorfismo di <m>G</m>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Se <m>x</m> ha periodo <m>4</m> il suo quadrato <m>x^{2}</m> ha periodo <m>2</m>. Un gruppo ciclico di ordine <m>4</m> contiene <m>\euler{2}=1</m> elemento di periodo <m>2</m> e questo genera l'unico sottogruppo di ordine <m>2</m>: poiché i sottogruppi di un gruppo ciclico di ordine <m>4</m> sono il gruppo stesso, l'unico sottogruppo di ordine <m>2</m> e l'identità, possiamo affermare che tutti i sottogruppi non banali di un gruppo ciclico di ordine <m>4</m> contengono l'unico elemento di periodo <m>2</m>. Pertanto se l'intersezione <m>\grgen{x}\cap\grgen{y}</m> fosse non banale, essa dovrebbe contenere l'unico elemento di periodo <m>2</m> di <m>\grgen{x}</m>, cioè <m>x^{2}</m>, e l'unico elemento di periodo <m>2</m> di <m>\grgen{y}</m>, cioè <m>y^{2}</m>. In altri termini, dovremmo avere <m>x^{2}=y^{2}</m>, contro la richiesta. Pertanto, <m>\grgen{x}\cap\grgen{y}=1</m> e il prodotto <m>\grgen{x}\grgen{y}</m> ha ordine uguale al prodotto degli ordini, cioè <m>16</m>, e coincide, quindi, con <m>G</m>. Dunque, <m>G</m> è prodotto di due gruppi ciclici di ordine <m>4</m>, necessariamente normali perché <m>G</m> è abeliano, e aventi intersezione banale: pertanto, <m>G=C_{4}\times C_{4}</m>.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Determinare (a meno di isomorfismi) tutti i gruppi abeliani di ordine <m>72</m> che hanno esattamente <m>3</m> sottogruppi di ordine <m>2</m>.
+          </p>
+
+        </statement>
+
+        <solution>
+          <p>
+            Poiché <m>72=2^{3}3^{2}</m> potremo scrivere i gruppi cercati nella forma <m>G_{2}\times G_{3}</m> dove <m>G_{2}</m> è il sottogruppo formato dagli elementi di periodo una potenza di <m>2</m> e <m>G_{3}</m> è il sottogruppo formato dagli elementi di periodo una potenza di <m>3</m>. Il sottogruppo <m>G_{2}</m>, avendo ordine <m>2^{3}</m>, è isomorfo a <m>C_{8}</m>, a <m>C_{4}\times C_{2}</m> o a <m>C_{2}\times C_{2}\times C_{2}</m> mentre <m>G_{3}</m>, avendo ordine <m>3^{2}</m>, è isomorfo a <m>C_{9}</m> o a <m>C_{3}\times C_{3}</m>. Combinando queste possibilità otteniamo tutti i gruppi abeliani di ordine <m>72</m>.
+          </p>
+          <p>
+            Dobbiamo considerare quelli che soddisfano l'ulteriore condizione sul numero dei sottogruppi di ordine <m>2</m>: questi sono contenuti in <m>G_{2}</m>. Se <m>G_{2}</m> è ciclico contiene un unico sottogruppo di ordine <m>2</m>, se <m>G_{2}\simeq C_{2}\times C_{2}\times C_{2}</m> tutti i suoi elementi non banali hanno ordine <m>2</m> e abbiamo, dunque, <m>7</m> elementi di ordine <m>2</m>, ciascuno dei quali genera un differente sottogruppo di ordine <m>2</m> (un gruppo di ordine <m>2</m> contiene un solo elemento di ordine <m>2</m>). Se, infine, <m>G_{2}\simeq C_{4}\times C_{2}</m>, un elemento <m>(a,b)</m> con <m>a\in C_{4}</m> e <m>b\in C_{2}</m> ha periodo <m>2</m> se e solo se il minimo comune multiplo dei periodi di <m>a</m> e <m>b</m> è <m>2</m>. Sia in <m>C_{4}</m> che in <m>C_{2}</m> ci sono due elementi il cui periodo divide <m>2</m>. Di queste <m>4=2\cdot2</m> possibilità dobbiamo però scartare quella in cui sia <m>a</m> che <m>b</m> hanno periodo <m>1</m>. Dunque, abbiamo esattamente <m>3</m> elementi di periodo <m>2</m> e, quindi, <m>3</m> sottogruppi di ordine <m>2</m> come richiesto. Dunque, deve necessariamente essere <m>G_{2}\simeq C_{4}\times C_{2}</m>. Combinando con le varie possibilità per <m>G_{3}</m> abbiamo che <m>G</m> è uno dei seguenti gruppi: <m>C_{4}\times C_{2}\times C_{9}</m> o <m>C_{4}\times C_{2}\times C_{3}\times C_{3}</m>.
+          </p>
+
+        </solution>
+      </exercise>
+
+
+
+    </exercises>
+  </section>
+
+</chapter>

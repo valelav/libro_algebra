@@ -1,0 +1,1187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-funzioni">
+  <title>Funzioni</title>
+
+  <introduction>
+    <p>
+      Una funzione può essere descritta come una <q>legge</q> che, a partire da un elemento, permette di calcolare un ben determinato elemento. Introduciamo qui le funzioni come particolari corrispondenze tra insiemi e ne studiamo le principali proprietà. Daremo, anche, qualche cenno su come le funzioni possano essere usate per <q>contare</q> gli elementi di un insieme infinito.
+    </p>
+  </introduction>
+
+  <section xml:id="sec-funzioni_definizione">
+    <title>Definizioni di base</title>
+
+    <definition xml:id="def-funzione">
+
+      <idx><h>funzione</h></idx>
+      <idx><h>mappa</h><see>funzione</see></idx>
+      <idx><h>applicazione</h><see>funzione</see></idx>
+      <idx><h>funzione</h><h>immagine di un elemento</h></idx>
+      <idx><h>funzione</h><h>insieme di partenza</h></idx>
+      <idx><h>insieme</h><h>di partenza di una funzione</h></idx>
+      <idx><h>funzione</h><h>insieme di arrivo</h></idx>
+      <idx><h>insieme</h><h>di arrivo di una funzione</h></idx>
+      <idx><h>dominio (di una funzione)</h><see>insieme di partenza di una funzione</see></idx>
+      <idx><h>codominio (di una funzione)</h><see>insieme di arrivo di una funzione</see></idx>
+
+      <notation>
+        <usage><m>af\text{, }a^{f}\text{, }f(a)</m></usage>
+        <description>immagine di <m>a</m> tramite <m>f</m></description>
+      </notation>
+
+      <notation>
+        <usage><m>f\colon A\to B</m></usage>
+        <description>funzione da <m>A</m> a <m>B</m></description>
+      </notation>
+
+      <notation>
+        <usage><m>f\colon a\mapsto b</m></usage>
+        <description><m>f</m> manda <m>a</m> in <m>b</m></description>
+      </notation>
+
+      <statement>
+        <p>
+          Una corrispondenza <m>f</m> da un insieme <m>A</m> a un insieme <m>B</m> è detta <term>funzione</term> o <term>applicazione</term> o <term>mappa</term> se, per ogni <m>a\in A</m>, esiste un unico <m>b\in B</m> tale che <m>(a,b)\in f</m>. L'unico elemento <m>b</m> siffatto è detto <term>immagine</term> di <m>a</m> tramite <m>f</m> e denotato con il simbolo <m>af</m> o <m>a^{f}</m> o <m>f(a)</m>. Noi useremo principalmente il simbolo <m>af</m>. Gli insiemi <m>A</m> e <m>B</m> sono detti, rispettivamente, <term>insieme di partenza</term> e <term>insieme di arrivo</term> della funzione <m>f</m>.<fn>Alcuni autori usano i termini <term>dominio</term> e <term>codominio</term>.</fn>
+        </p>
+        <p>
+          Per indicare il fatto che <m>f</m> è una funzione da <m>A</m> a <m>B</m> si usa il simbolo <m>f\colon A\to B</m> e per indicare che <m>f</m> manda un certo elemento <m>a</m> in <m>b</m> si scrive <m>f\colon a\mapsto b</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <example xml:id="ex-funzioni_venn">
+      <statement>
+        <p>
+          Consideriamo alcune corrispondenze tra gli insiemi <m>A\coloneqq \{1,2,3,4\}</m> e <m>B\coloneqq \{a,b,c\}</m> e vediamo quali di esse sono funzioni.
+        </p>
+        <p>
+          La corrispondenza descritta dal grafico seguente non è una funzione perché all'elemento <m>4</m> dell'insieme <m>A</m> non corrisponde alcun elemento di <m>B</m>.
+        </p>
+        <figure>
+          <caption>Non è funzione perché non è definita dappertutto</caption>
+          <image xml:id="image-funzione_non_definita_dappertutto">
+            <shortdescription>Diagrammi di Venn di due insiemi con frecce dal primo al secondo. C'è un elemento del primo da cui non parte alcuna freccia.</shortdescription>
+            <description>
+              <p>
+                Sono rappresentati gli insiemi <m>A\coloneqq\{1,2,3,4\}</m> e <m>B\coloneqq\{a,b,c\}</m> tramite diagrammi di Venn, con frecce che vanno da elementi del primo insieme a elementi del secondo. Da <m>1</m> parte una freccia verso <m>a</m>, da <m>2</m> parte una freccia verso <m>b</m>, da <m>3</m> parte una freccia verso <m>b</m> e da <m>4</m> non parte nessuna freccia: questa non è, dunque, una funzione perché a <m>4</m> non corrisponde alcun elemento.
+              </p>
+            </description>
+            <latex-image>
+              \begin{tikzpicture}[keepsize]
+                \node[label={left:$1$}] (1) at (1.5,1) {};
+                \node[label={left:$2$}] (2) at (2,2) {};
+                \node[label={right:$3$}] (3) at (1,3) {};
+                \node[label={right:$4$}] (4) at (3,2.5) {};
+                \node [fit=(1) (2) (3) (4),label=above left:$A$,draw,ellipse] {};
+
+                \node[label={right:$a$}] (a) at (6,2) {};
+                \node[label={left:$b$}] (b) at (8,3) {};
+                \node[label={right:$c$}] (c) at (7.5,1.5) {};
+                \node [fit=(a) (b) (c),label=above right:$B$,draw,ellipse] {};
+
+                \foreach \point in {1,2,3,4,a,b,c}
+                 \fill (\point) circle (2pt);
+                \draw (1) edge [bend right=45,-Latex] (a);
+                \draw (2) edge [bend right=45,-Latex] (b);
+                \draw (3) edge [bend left=45,-Latex] (b);
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+
+        </figure>
+
+        <p>
+          Anche il grafico seguente non rappresenta una funzione: infatti, all'elemento <m>3</m> di <m>A</m> corrispondono due elementi di <m>B</m> e cioè <m>a</m> e <m>b</m>.
+        </p>
+
+        <figure>
+          <caption>Non è una funzione perché non è ben definita</caption>
+          <image xml:id="image-funzione_non_ben_definita">
+            <shortdescription>Diagrammi di Venn di due insiemi con frecce dal primo al secondo insieme con un elemento del primo da cui partono più frecce.</shortdescription>
+            <description>
+              <p>
+                Sono rappresentati gli insiemi <m>A\coloneqq\{1,2,3,4\}</m> e <m>B\coloneqq\{a,b,c\}</m> tramite diagrammi di Venn, con frecce che vanno da elementi del primo insieme a elementi del secondo. Da <m>1</m> parte una freccia verso <m>a</m>, da <m>2</m> parte una freccia verso <m>b</m>, da <m>3</m> partono una freccia verso <m>b</m> e una verso <m>a</m> e da <m>4</m> parte una freccia verso <m>b</m>: questa non è, dunque, una funzione perché a <m>3</m> corrispondono più di un elemento.
+              </p>
+            </description>
+            <latex-image>
+              \begin{tikzpicture}[keepsize]
+                \node[label={left:$1$}] (1) at (1.5,1) {};
+                \node[label={left:$2$}] (2) at (2,2) {};
+                \node[label={right:$3$}] (3) at (1,3) {};
+                \node[label={right:$4$}] (4) at (3,2.5) {};
+                \node [fit=(1) (2) (3) (4),label=above left:$A$,draw,ellipse] {};
+
+                \node[label={right:$a$}] (a) at (6,2) {};
+                \node[label={left:$b$}] (b) at (8,3) {};
+                \node[label={right:$c$}] (c) at (7.5,1.5) {};
+                \node [fit=(a) (b) (c),label=above right:$B$,draw,ellipse] {};
+
+                \foreach \point in {1,2,3,4,a,b,c}
+                 \fill (\point) circle (2pt);
+                \draw (1) edge [bend right=45,-Latex] (a);
+                \draw (2) edge [bend right=45,-Latex] (b);
+                \draw (3) edge [bend left=45,-Latex] (b);
+                \draw (3) edge [bend left=45,-Latex] (a);
+                \draw (4) edge [bend left=45,-Latex] (b);
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+
+        </figure>
+
+        <p>
+          Il prossimo diagramma rappresenta invece una funzione: a ogni elemento di <m>A</m> corrisponde un unico elemento di <m>B</m>. Detta <m>f</m> questa funzione, abbiamo <m>1f=a</m>, <m>2f=b</m>, <m>3f=b</m>, <m>4f=b</m>. Il fatto che ci siano elementi di <m>B</m> a cui corrispondono più di uno o nessun elemento di <m>A</m> non è un problema.
+        </p>
+
+        <figure>
+          <caption>Questa è una funzione</caption>
+          <image xml:id="image-funzione_ben_definita">
+            <shortdescription>Diagrammi di Venn di due insiemi con frecce dal primo al secondo: da ogni elemento del primo parte esattamente una freccia.</shortdescription>
+            <description>
+              <p>
+                Sono rappresentati gli insiemi <m>A\coloneqq\{1,2,3,4\}</m> e <m>B\coloneqq\{a,b,c\}</m> tramite diagrammi di Venn, con frecce che vanno da elementi del primo insieme a elementi del secondo. Da <m>1</m> parte una freccia verso <m>a</m>, da <m>2</m> parte una freccia verso <m>b</m>, da <m>3</m> parte una freccia verso <m>b</m> e da <m>4</m> parte una freccia verso <m>b</m>: questa è, dunque, una funzione perché a ogni elemento del primo insieme corrisponde esattamente un elemento del secondo insieme. L'elemento <m>b</m> di <m>B</m> è raggiunto da più frecce e l'elemento <m>c</m> di <m>B</m> non è raggiunto da alcuna freccia, ma questo non importa rispetto alla definizione di funzione.
+              </p>
+            </description>
+            <latex-image>
+              \begin{tikzpicture}[keepsize]
+                \node[label={left:$1$}] (1) at (1.5,1) {};
+                \node[label={left:$2$}] (2) at (2,2) {};
+                \node[label={right:$3$}] (3) at (1,3) {};
+                \node[label={right:$4$}] (4) at (3,2.5) {};
+                \node [fit=(1) (2) (3) (4),label=above left:$A$,draw,ellipse] {};
+
+                \node[label={right:$a$}] (a) at (6,2) {};
+                \node[label={left:$b$}] (b) at (8,3) {};
+                \node[label={right:$c$}] (c) at (7.5,1.5) {};
+                \node [fit=(a) (b) (c),label=above right:$B$,draw,ellipse] {};
+
+                \foreach \point in {1,2,3,4,a,b,c}
+                 \fill (\point) circle (2pt);
+                \draw (1) edge [bend right=45,-Latex] (a);
+                \draw (2) edge [bend right=45,-Latex] (b);
+                \draw (3) edge [bend left=45,-Latex] (b);
+                \draw (4) edge [bend left=45,-Latex] (b);
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+
+        </figure>
+
+      </statement>
+    </example>
+
+    <definition xml:id="def-funzione_identica">
+
+      <idx><h>funzione</h><h>identica</h></idx>
+
+      <notation>
+        <usage><m>\Id_{A}</m></usage>
+        <description>funzione identica di <m>A</m></description>
+      </notation>
+
+      <statement>
+        <p>
+          Dato un insieme <m>A</m>, la funzione <term>identica</term> di <m>A</m>, denotata con <m>\Id_{A}</m> o semplicemente con <m>\Id</m> quando <m>A</m> è chiaro dal contesto, è la funzione <m>\Id_{A}\colon A\to A</m> così definita: <m>a\Id_{A}\coloneqq a</m> per ogni <m>a\in A</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-funzione_composta">
+
+      <idx><h>composizione</h><h>di funzioni</h></idx>
+      <idx><h>funzione</h><h>composizione</h></idx>
+
+      <statement>
+        <p>
+          Data una funzione <m>f\colon A\to B</m> e una funzione <m>g\colon B\to C</m>, la <term>funzione composta</term> <m>fg\colon A\to C</m> è così definita: <m>a(fg)\coloneqq (af)g</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <figure>
+      <caption>Composizione di funzioni</caption>
+      <image xml:id="image-composizione_funzioni">
+        <shortdescription>Diagrammi di Venn che descrivono la composizione di funzioni.</shortdescription>
+        <description>
+          <p>
+            Tre diagrammi di Venn per  gli insiemi <m>A\coloneqq\{1,2,3,4\}</m>, <m>B\coloneqq\{a,b,c\}</m> e <m>C\coloneqq\{t,u,v\}</m> e frecce che descrivono una funzione <m>f</m> da <m>A</m> a <m>B</m> e una funzione <m>g</m> da <m>B</m> a <m>C</m>. Successivamente due diagrammi di Venn per gli insiemi <m>A</m> e <m>B</m> e frecce che descrivono la funzione composta <m>fg</m> da <m>A</m> a <m>C</m>.
+          </p>
+        </description>
+        <latex-image>
+          \begin{tikzpicture}[keepsize]
+            \node[label={left:$1$}] (1) at (1.5,5) {};
+            \node[label={left:$2$}] (2) at (1.5,6) {};
+            \node[label={right:$3$}] (3) at (1,7) {};
+            \node[label={right:$4$}] (4) at (2,6.5) {};
+            \node [fit=(1) (2) (3) (4),label=above left:$A$,draw,ellipse] {};
+
+            \node[label={right:$a$}] (a) at (5,6.5) {};
+            \node[label={left:$b$}] (b) at (6,7) {};
+            \node[label={right:$c$}] (c) at (5.5,5.5) {};
+            \node [fit=(a) (b) (c),label=above right:$B$,draw,ellipse] {};
+
+            \node[label={right:$t$}] (t) at (9,6) {};
+            \node[label={left:$u$}] (u) at (9.5,7) {};
+            \node[label={left:$v$}] (v) at (10,5.5) {};
+            \node [fit=(t) (u) (v),label=above right:$C$,draw,ellipse] {};
+
+            \node[label={above:$f$}] (f) at (3.5,6) {};
+            \node[label={above:$g$}] (g) at (7.5,6) {};
+
+            \foreach \point in {1,2,3,4,a,b,c,t,u,v}
+             \fill (\point) circle (2pt);
+            \draw (1) edge [bend right=45,-Latex] (a);
+            \draw (2) edge [bend right=45,-Latex] (b);
+            \draw (3) edge [bend left=45,-Latex] (b);
+            \draw (4) edge [bend left=45,-Latex] (b);
+
+            \draw (a) edge [bend right=45,-Latex] (t);
+            \draw (b) edge [bend left=45,-Latex] (u);
+            \draw (c) edge [bend right=45,-Latex] (t);
+
+
+            \node[label={left:$1$}] (1a) at (1.5,1) {};
+            \node[label={left:$2$}] (2a) at (1.5,2) {};
+            \node[label={right:$3$}] (3a) at (1,3) {};
+            \node[label={right:$4$}] (4a) at (2,2.5) {};
+            \node [fit=(1a) (2a) (3a) (4a),label=above left:$A$,draw,ellipse] {};
+
+            \node[label={right:$t$}] (ta) at (9,2) {};
+            \node[label={left:$u$}] (ua) at (9.5,3) {};
+            \node[label={left:$v$}] (va) at (10,1.5) {};
+            \node [fit=(ta) (ua) (va),label=above right:$C$,draw,ellipse] {};
+
+            \node[label={above:$fg$}] (fg) at (5.5,2) {};
+
+            \foreach \point in {1a,2a,3a,4a,ta,ua,va}
+             \fill (\point) circle (2pt);
+            \draw (1a) edge [bend right=25,-Latex] (ta);
+            \draw (2a) edge [bend right=25,-Latex] (ua);
+            \draw (3a) edge [bend left=25,-Latex] (ua);
+            \draw (4a) edge [bend left=25,-Latex] (ua);
+
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+
+    </figure>
+
+    <note>
+      <p>
+        La scrittura <m>fg</m> adottata nella definizione precedente va, dunque, intesa come <q>prima <m>f</m> poi <m>g</m></q>. Nel caso in cui si utilizzi la convenzione di scrivere <m>f(a)</m> per indicare l'immagine dell'elemento <m>a</m> tramite <m>f</m>, la composizione si indicherà con il simbolo <m>g\circ f</m>, in modo da definire <m>(g\circ f)(a)=g(f(a))</m>.
+      </p>
+    </note>
+
+    <proposition xml:id="prop-composizione_associativa">
+      <statement>
+        <p>
+          Siano <m>f\colon A\to B</m>, <m>g\colon B\to C</m> e <m>h\colon C\to D</m> funzioni. Allora <m>(fg)h=f(gh)</m>. Potremo allora scrivere semplicemente <m>fgh</m> per indicare ambo i membri dell'uguaglianza senza ambiguità.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Basta notare che ambo i membri dell'uguaglianza data sono funzioni che hanno come insieme di partenza <m>A</m> e come insieme di arrivo <m>D</m> e che, applicando la definizione di composizione di funzioni, un qualunque elemento dell'insieme di partenza ha la stessa immagine tramite la funzione a primo membro e la funzione a secondo membro.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      Anche la proposizione seguente si verifica facilmente e la lasciamo, quindi, per esercizio al lettore.
+    </p>
+
+    <proposition xml:id="prop-composizione_identica">
+      <statement>
+        <p>
+          Sia <m>f\colon A\to B</m>. Allora <m>\Id_{A}f=f</m> e <m>f\Id_{B}=f</m>.
+        </p>
+      </statement>
+    </proposition>
+
+    <p>
+      Date due funzioni <m>f\colon A\to B</m> e <m>g\colon B\to C</m> non ha senso, in generale, chiedersi se <m>fg=gf</m>. Infatti, <m>gf</m> è definita solo nel caso in cui <m>C=A</m>. Anche nel caso in cui ciò avvenga, la funzione <m>fg</m> ha <m>A</m> come insieme di partenza e di arrivo, mentre la funzione <m>gf</m> ha <m>B</m> come insieme di partenza e di arrivo. La domanda ha, quindi, senso solo se <m>f\colon A\to A</m> e <m>g\colon A\to A</m>: anche in tal caso però l'uguaglianza non è garantita.
+    </p>
+
+    <example xml:id="ex-composizione_non_commutativa">
+      <statement>
+        <p>
+          Siano <m>f\colon\Reali\to\Reali</m> e <m>g\colon\Reali\to\Reali</m> così definite: <m>xf\coloneqq x+1</m> e <m>xg\coloneqq x^{2}</m>. Allora <m>xfg=(xf)g=(x+1)g=(x+1)^{2}</m> e <m>xgf=(xg)f=x^{2}f=x^{2}+1</m>: le due funzioni sono, dunque, diverse perché l'uguaglianza <m>(x+1)^{2}=x^{2}+1</m> non è soddisfatta per tutti i numeri reali <m>x</m> (anzi, in questo caso si può verificare facilmente che è soddisfatta solo se <m>x=0</m>).
+        </p>
+      </statement>
+    </example>
+
+    <definition xml:id="def-immagine_diretta_inversa_sottoinsiemi">
+
+      <idx><h>funzione</h><h>immagine</h></idx>
+      <idx><h>immagine (di una funzione)</h></idx>
+      <idx><h>funzione</h><h>immagine inversa</h></idx>
+      <idx><h>immagine inversa (di una funzione)</h></idx>
+      <idx><h>controimmagine</h><see>immagine inversa</see></idx>
+
+      <notation>
+        <usage><m>Cf</m></usage>
+        <description>immagine di <m>C</m> tramite <m>f</m></description>
+      </notation>
+
+      <notation>
+        <usage><m>\im f</m></usage>
+        <description>immagine di <m>f</m></description>
+      </notation>
+
+      <notation>
+        <usage><m>Df^{-1}</m></usage>
+        <description>immagine inversa di <m>D</m> tramite <m>f</m></description>
+      </notation>
+      <statement>
+        <p>
+          Sia data una funzione <m>f\colon A\to B</m>. Se <m>C</m> è un sottoinsieme di <m>A</m>, l'<term>immagine</term> di <m>C</m> tramite <m>f</m> è il sottoinsieme <m>Cf</m> di <m>B</m> formato dalle immagini degli elementi di <m>C</m> tramite <m>f</m>, cioè
+          <md>
+            Cf\coloneqq \{b\in B\mid b=af\text{ per qualche }a\in C\}
+          </md>.
+          In particolare, se <m>C=A</m>, il sottoinsieme <m>Af</m> è detto <term>immagine</term> di <m>f</m> e denotato con il simbolo <m>\im f</m>.
+        </p>
+        <p>
+          Se <m>D</m> è un sottoinsieme di <m>B</m>, l'<term>immagine inversa</term> o <term>controimmagine</term> di <m>D</m> è il sottoinsieme <m>Df^{-1}</m> di <m>A</m> formato dagli elementi la cui immagine tramite <m>f</m> appartiene a <m>D</m>, cioè
+          <md>
+            Df^{-1}\coloneqq \{a\in A\mid af\in D\}
+          </md>.
+          Se <m>D</m> è formato da un singolo elemento <m>b</m>, scriveremo semplicemente <m>bf^{-1}</m> invece di <m>\{b\}f^{-1}</m>, e, dunque,
+          <md>
+            bf^{-1}=\{a\in A\mid af=b\}
+          </md>.
+        </p>
+      </statement>
+    </definition>
+
+    <example xml:id="ex-immagine_diretta_inversa">
+      <statement>
+        <p>
+          Sia <m>f\colon\Interi\to\Naturali</m> definita da <m>n\mapsto n^{2}</m>. Dato il sottoinsieme <m>A\coloneqq \{1,2,-2\}</m> di <m>\Interi</m>, si ha <m>Af=\{1^{2},2^{2},(-2)^{2}\}=\{1,4\}</m>. Dato il sottoinsieme <m>B\coloneqq \{1,3,4\}</m> di <m>\Naturali</m>, si ha <m>Bf^{-1}=\{1,-1,2,-2\}</m>. Dato il sottoinsieme <m>C\coloneqq \{2,3\}</m> di <m>\Naturali</m>, si ha <m>Cf^{-1}=\vuoto</m> perché non c'è nessun intero il cui quadrato sia <m>2</m> o <m>3</m>.
+        </p>
+      </statement>
+    </example>
+
+    <proposition xml:id="prop-inclusione_immagini_dirette_inverse">
+      <statement>
+        <p>
+          Sia <m>f\colon A\to B</m> una funzione. Se <m>C\subseteq D</m> sono sottoinsiemi di <m>A</m> si ha <m>Cf\subseteq Df</m>. Se <m>E\subseteq F</m> sono sottoinsiemi di <m>B</m> si ha <m>Ef^{-1}\subseteq Ff^{-1}</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sia <m>x</m> un elemento di <m>Cf</m>: allora esiste <m>c\in C</m> tale che <m>x=cf</m>. Ora, <m>c</m> appartiene anche a <m>D</m>, e, dunque, <m>cf</m>, cioè <m>x</m>, appartiene a <m>Df</m>, come richiesto.
+        </p>
+        <p>
+          Sia ora <m>z</m> un elemento di <m>Ef^{-1}</m>, cioè <m>zf\in E</m>: ma allora <m>zf\in F</m>, cioè <m>z\in Ff^{-1}</m>, come richiesto.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      Nella <xref ref="prop-inclusione_immagini_dirette_inverse"/> non è detto che a inclusione stretta corrisponda un'inclusione stretta, come si vede nell'esempio seguente.
+    </p>
+
+    <example xml:id="ex-immagine_controimmagine_inclusione_non_stretta">
+      <statement>
+        <p>
+          Riprendiamo la funzione <m>f</m> definita nell'<xref ref="ex-immagine_diretta_inversa"/>. Se prendiamo i sottoinsiemi <m>A\coloneqq \{1,2\}</m> e <m>B\coloneqq \{1,2,-2\}</m> di <m>\Interi</m>, vediamo che <m>A\subsetneq B</m> ma <m>Af=Bf=\{1,4\}</m>. Se ora prendiamo i sottoinsiemi <m>C\coloneqq \{1,2\}</m> e <m>D\coloneqq \{1,2,3\}</m> di <m>\Naturali</m>, vediamo che <m>C\subsetneq D</m> ma <m>Cf^{-1}=Df^{-1}=\{1,-1\}</m>.
+        </p>
+      </statement>
+    </example>
+
+    <proposition xml:id="prop-avanti_indietro">
+      <statement>
+        <p>
+          Sia <m>f\colon A\to B</m> una funzione e siano <m>C</m> un sottoinsieme di <m>A</m> e <m>D</m> un sottoinsieme di <m>B</m>. Allora <m>Cff^{-1}\supseteq C</m> e <m>Df^{-1}f\subseteq D</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Se <m>c</m> è un elemento di <m>C</m> allora <m>cf\in Cf</m>: ricordando che un elemento <m>x</m> di <m>A</m> appartiene a <m>Cff^{-1}</m> se e solo se <m>xf\in Cf</m>, ne segue che <m>c\in Cff^{-1}</m>. Questo prova che <m>Cff^{-1}\supseteq C</m>.
+        </p>
+        <p>
+          Sia ora <m>d</m> un elemento di <m>Df^{-1}f</m>: ciò significa che <m>d=xf</m> per qualche elemento <m>x</m> in <m>Df^{-1}</m>: ricordando che un elemento appartiene a <m>Df^{-1}</m> se e solo se la sua immagine tramite <m>f</m> appartiene a <m>D</m>, ne segue che <m>xf\in D</m>, cioè <m>d\in D</m>. Questo prova che <m>Df^{-1}f\subseteq D</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      Nella <xref ref="prop-avanti_indietro"/> le inclusioni possono essere strette o no, come si vede nell'esempio seguente.
+    </p>
+
+    <example xml:id="ex-avanti_indietro_stretto">
+      <statement>
+        <p>
+          Consideriamo ancora la funzione <m>f</m> definita nell'<xref ref="ex-immagine_diretta_inversa"/>.
+          <ul>
+            <li>
+              <p>
+                Dato <m>C\coloneqq \{2,-2\}\subseteq\Interi</m> si ha <m>Cf=\{4\}</m> e <m>Cff^{-1}=\{2,-2\}=C</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                 Dato <m>C'\coloneqq \{1,-2\}\subseteq\Interi</m> si ha <m>C'f=\{1,4\}</m> e <m>C'ff^{-1}=\{1,-1,2,-2\}\supsetneq C'</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Dato <m>D\coloneqq \{1,4\}\subseteq\Naturali</m> si ha <m>Df^{-1}=\{1,-1,2,-2\}</m> e <m>Df^{-1}f=\{1,4\}=D</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Dato <m>D'\coloneqq \{3,4\}\subseteq\Naturali</m> si ha <m>D'f^{-1}=\{2,-2\}</m> e <m>D'f^{-1}f=\{4\}\subsetneq D'</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </example>
+
+    <definition xml:id="def-restrizione">
+      
+      <idx><h>funzione</h><h>restrizione</h></idx>
+      <idx><h>restrizione (di una funzione)</h></idx>
+
+      <notation>
+        <usage><m>\restrizione{f}{S}</m></usage>
+        <description>restrizione di una funzione <m>f</m> a un sottoinsieme <m>S</m></description>
+      </notation>
+      <statement>
+        <p>
+          Data una funzione <m>f\colon A\to B</m> e un sottoinsieme <m>S</m> di <m>A</m> la <term>restrizione</term> <m>\restrizione{f}{S}</m> di <m>f</m> a <m>S</m> è la funzione <m>\restrizione{f}{S}\colon S \to B</m> definita semplicemente da <m>\restrizione{f}{S}\coloneqq af</m> per ogni <m>a</m> in <m>S</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <exercises xml:id="exercises-funzioni_definizione">
+
+      <exercise xml:id="exer-caratterizzazione_identita">
+        <statement>
+          <p>
+            Sia <m>f\colon A\to A</m> una funzione tale che <m>fg=g</m> per ogni insieme <m>B</m> e ogni funzione <m>g\colon A\to B</m>. Dimostrare che <m>f=\Id_{A}</m>.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Prendiamo come insieme <m>B</m> proprio <m>A</m> e come funzione da <m>A</m> in sé proprio <m>\Id_{A}</m>: per ipotesi abbiamo allora che <m>f\Id_{A}=\Id_{A}</m>. D'altra parte per la <xref ref="prop-composizione_identica"/> si ha <m>f\Id_{A}=f</m>, da cui segue il risultato.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Sia <m>f\colon A\to A</m> una funzione tale che <m>gf=g</m> per ogni insieme <m>B</m> e ogni funzione <m>g\colon B\to A</m>. Dimostrare che <m>f=\Id_{A}</m>.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Si procede analogamente all'<xref ref="exer-caratterizzazione_identita"/>.
+          </p>
+        </hint>
+      </exercise>
+
+      <exercise xml:id="exer-caratterizzazione_avanti_indietro">
+        <introduction>
+          <p>
+            Sia <m>f\colon A\to B</m> una funzione.
+          </p>
+        </introduction>
+
+        <task>
+          <statement>
+            <p>
+              Dimostrare che la relazione in <m>A</m> data da <m>x\sim_{f}y</m> se <m>xf=yf</m> è una relazione di equivalenza.
+            </p>
+          </statement>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Dato un sottoinsieme <m>C</m> di <m>A</m>, mostrare che <m>Cff^{-1}=C</m> se e solo se per ogni elemento <m>x</m> di <m>C</m> si ha che <m>\class[\sim_{f}]{x}</m> è contenuto in <m>C</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Supponiamo che <m>Cff^{-1}=C</m> e sia <m>x</m> un elemento di <m>C</m>: dunque, <m>xf\in Cf</m>. Se <m>y\in\class[\sim_{f}]{x}</m>, allora <m>yf=xf\in Cf</m>: pertanto, <m>y\in Cff^{-1}=C</m>, come richiesto.
+            </p>
+            <p>
+              Viceversa, supponiamo che <m>C</m> contenga le classi di equivalenza di tutti i suoi elementi. Dalla prima parte della <xref ref="prop-avanti_indietro"/>, sappiamo che <m>Cff^{-1}\supseteq C</m>: dobbiamo provare l'inclusione opposta. Sia allora <m>y</m> un elemento di <m>Cff^{-1}</m>: per definizione ciò significa che <m>yf\in Cf</m>, cioè esiste un elemento <m>x</m> in <m>C</m> tale che <m>xf=yf</m>, vale a dire <m>y\in\class[\sim_{f}]{x}</m>. Dall'ipotesi segue allora immediatamente che <m>y\in C</m>, come richiesto.
+            </p>
+          </solution>
+        </task>
+      </exercise>
+
+      <exercise xml:id="exer-caratterizzazione_indietro_avanti">
+        <statement>
+          <p>
+            Sia <m>f\colon A\to B</m> una funzione e sia <m>D</m> un sottoinsieme di <m>B</m>. Mostrare che <m>Df^{-1}f=D</m> se e solo se <m>D\subseteq \im f</m>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Se <m>D=Df^{-1}f</m> abbiamo ovviamente che <m>D\subseteq\im f</m>.
+          </p>
+          <p>
+            Viceversa supponiamo che <m>D\subseteq\im f</m>. Dalla seconda parte della <xref ref="prop-avanti_indietro"/>, sappiamo che <m>Df^{-1}f\subseteq D</m>: dobbiamo provare l'inclusione opposta. Sia allora <m>y</m> un elemento di <m>D</m>: per ipotesi, esiste <m>a\in A</m> tale che <m>af=y</m>: in particolare, <m>a\in Df^{-1}</m> e, di conseguenza, <m>af</m>, cioè <m>y</m>, appartiene a <m>Df^{-1}f</m>, come richiesto.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise xml:id="exer-avanti_indietro_avanti">
+        <statement>
+          <p>
+            Sia <m>f\colon A\to B</m> e sia <m>C</m> un sottoinsieme di <m>A</m>. Mostrare che <m>Cff^{-1}f=Cf</m>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            La <xref ref="prop-avanti_indietro"/> implica che <m>(Cf)f^{-1}f\subseteq Cf</m> e <m>Cff^{-1}\supseteq C</m>: per la <xref ref="prop-inclusione_immagini_dirette_inverse"/> abbiamo allora <m>(Cff^{-1})f\supseteq Cf</m>.
+          </p>
+        </solution>
+
+      </exercise>
+
+      <exercise xml:id="exer-indietro_avanti_indietro">
+        <statement>
+          <p>
+            Sia <m>f\colon A\to B</m> e sia <m>D</m> un sottoinsieme di <m>B</m>. Mostrare che <m>Df^{-1}ff^{-1}=Df^{-1}</m>.
+          </p>
+        </statement>
+
+
+        <solution>
+          <p>
+            La <xref ref="prop-avanti_indietro"/> implica che <m>(Df^{-1})ff^{-1}\supseteq Df^{-1}</m> e <m>Df^{-1}f\subseteq D</m>: per la <xref ref="prop-inclusione_immagini_dirette_inverse"/> abbiamo allora <m>(Df^{-1}f)f^{-1}\subseteq Df^{-1}</m>.
+          </p>
+        </solution>
+
+      </exercise>
+
+    </exercises>
+
+  </section>
+
+  <section xml:id="sec-funzioni_iniettive_suriettive">
+    <title>Funzioni iniettive, suriettive e biiettive</title>
+
+    <p>
+      Abbiamo visto vari esempi di funzioni e, per alcune di esse, abbiamo notato che elementi diversi dell'insieme di partenza possono avere la stessa immagine.
+    </p>
+
+    <definition xml:id="def-funzione_iniettiva">
+
+      <idx><h>funzione</h><h>iniettiva</h></idx>
+      <idx><h>iniettiva (funzione)</h></idx>
+
+      <statement>
+        <p>
+          Una funzione <m>f\colon A\to B</m> è detta <term>iniettiva</term> se manda elementi diversi in elementi diversi, cioè se, comunque scelti <m>a_{1}</m> e <m>a_{2}</m> in <m>A</m> con <m>a_{1}\ne a_{2}</m>, si ha <m>a_{1}f\ne a_{2}f</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <example xml:id="ex-funzione_iniettiva_e_no">
+      <statement>
+        <p>
+          Se consideriamo la funzione descritta dall'immagine seguente, vediamo facilmente che non è iniettiva: infatti, esistono elementi diversi (ad esempio, <m>2</m> e <m>3</m>) che hanno la stessa immagine.
+        </p>
+
+        <figure>
+          <caption>Una funzione non iniettiva</caption>
+          <image xml:id="image-funzione_non_iniettiva">
+            <shortdescription>Diagrammi di Venn e frecce che descrivono una funzione non iniettiva.</shortdescription>
+            <description>
+              <p>
+                Diagrammi di Venn per gli insiemi <m>A\coloneqq\{1,2,3,4\}</m> e <m>B\coloneqq\{a,b,c\}</m> e frecce da <m>A</m> a <m>B</m> che mandano <m>1</m> in <m>a</m> e <m>2</m>, <m>3</m> e <m>4</m> in <m>b</m>.
+              </p>
+            </description>
+            <latex-image>
+              \begin{tikzpicture}[keepsize]
+                \node[label={left:$1$}] (1) at (1.5,1) {};
+                \node[label={left:$2$}] (2) at (2,2) {};
+                \node[label={right:$3$}] (3) at (1,3) {};
+                \node[label={right:$4$}] (4) at (3,2.5) {};
+                \node [fit=(1) (2) (3) (4),label=above left:$A$,draw,ellipse] {};
+
+                \node[label={right:$a$}] (a) at (6,2) {};
+                \node[label={left:$b$}] (b) at (8,3) {};
+                \node[label={right:$c$}] (c) at (7.5,1.5) {};
+                \node [fit=(a) (b) (c),label=above right:$B$,draw,ellipse] {};
+
+                \foreach \point in {1,2,3,4,a,b,c}
+                 \fill (\point) circle (2pt);
+                \draw (1) edge [bend right=45,-Latex] (a);
+                \draw (2) edge [bend right=45,-Latex] (b);
+                \draw (3) edge [bend left=45,-Latex] (b);
+                \draw (4) edge [bend left=45,-Latex] (b);
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+        </figure>
+
+
+        <p>
+          L'immagine successiva descrive invece una funzione iniettiva: a elementi diversi dell'insieme di partenza corrispondono elementi diversi dell'insieme di arrivo.
+        </p>
+        <figure>
+          <caption>Una funzione iniettiva</caption>
+          <image xml:id="image-funzione_iniettiva">
+            <shortdescription>Diagrammi di Venn e frecce che descrivono una funzione iniettiva.</shortdescription>
+            <description>
+              <p>
+                Diagrammi di Venn per gli insiemi <m>A\coloneqq\{1,2,3\}</m> e <m>B\coloneqq\{a,b,c,d\}</m> e frecce da <m>A</m> a <m>B</m> che mandano <m>1</m> in <m>a</m>, <m>2</m> in <m>d</m> e <m>3</m> in <m>b</m>.
+              </p>
+            </description>
+            <latex-image>
+              \begin{tikzpicture}[keepsize]
+                \node[label={left:$1$}] (1) at (1.5,1) {};
+                \node[label={left:$2$}] (2) at (2,2) {};
+                \node[label={right:$3$}] (3) at (1,3) {};
+                \node [fit=(1) (2) (3) ,label=above left:$A$,draw,ellipse] {};
+
+                \node[label={right:$a$}] (a) at (6,2) {};
+                \node[label={left:$b$}] (b) at (8,3) {};
+                \node[label={right:$c$}] (c) at (7.5,1.5) {};
+                \node[label={right:$d$}] (d) at (6.5,1.5) {};
+                \node [fit=(a) (b) (c) (d),label=above right:$B$,draw,ellipse] {};
+
+                \foreach \point in {1,2,3,a,b,c,d}
+                 \fill (\point) circle (2pt);
+                \draw (1) edge [bend right=45,-Latex] (a);
+                \draw (2) edge [bend right=45,-Latex] (d);
+                \draw (3) edge [bend left=45,-Latex] (b);
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+
+        </figure>
+
+      </statement>
+    </example>
+
+    <p>
+      L'esempio precedente suggerisce che una funzione è iniettiva se e solo se ogni elemento dell'insieme di arrivo viene <q>raggiunto</q> al massimo da una freccia. Questo in realtà può essere espresso più rigorosamente dall'osservazione seguente.
+     </p>
+
+     <remark xml:id="rem-iniettiva_controimmagine">
+       <p>
+         Una funzione <m>f\colon A\to B</m> è iniettiva se e solo se per ogni <m>b\in B</m> si ha che <m>bf^{-1}</m> contiene al più un elemento.
+       </p>
+     </remark>
+
+    <p>
+      In pratica, per verificare che una funzione <m>f\colon A\to B</m> è iniettiva, si considerano due elementi generici <m>a_{1}</m> e <m>a_{2}</m> di <m>A</m> e si cerca di dimostrare una delle seguenti implicazioni equivalenti:
+      <ul>
+        <li>
+          <p>
+            si suppone che <m>a_{1}\ne a_{2}</m> e si prova che <m>a_{1}f\ne a_{2}f</m>;
+          </p>
+        </li>
+        <li>
+          <p>
+            si suppone che <m>a_{1}f=a_{2}f</m> e si prova che <m>a_{1}=a_{2}</m>.
+          </p>
+        </li>
+      </ul>
+      Se si riesce a dimostrare una delle implicazioni, allora la funzione è iniettiva. Se si trovano due elementi diversi aventi la stessa immagine, allora la funzione non è iniettiva.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Riprendiamo ancora una volta la funzione <m>f\colon\Interi\to\Naturali</m> data da <m>nf\coloneqq n^{2}</m>. Prendiamo ora <m>n_{1}</m> e <m>n_{2}</m> interi tali che <m>n_{1}f=n_{2}f</m>, cioè <m>n_{1}^{2}=n_{2}^{2}</m>: ciò può avvenire anche se <m>n_{1}\ne n_{2}</m>, ad esempio, se <m>n_{1}=1</m> e <m>n_{2}=-1</m>. Dunque, <m>f</m> non è iniettiva.
+        </p>
+        <p>
+          Se invece consideriamo la funzione <m>g\colon\Naturali\to\Naturali</m> data da <m>ng\coloneqq n^{2}</m>, e ripetiamo il ragionamento precedente, vediamo che <m>n_{1}^{2}=n_{2}^{2}</m> implica che <m>n_{1}=n_{2}</m> e, di conseguenza, <m>g</m> è iniettiva.
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id="ex-inclusione">
+      <statement>
+        <p>
+          Sia <m>A</m> un sottoinsieme di un insieme <m>B</m> e sia <m>i\colon A\to B</m> definita ponendo <m>ai\coloneqq a</m> (tale funzione è detta <term>inclusione</term>). Si verifica facilmente che <m>i</m> è iniettiva.
+        </p>
+      </statement>
+    </example>
+
+    <definition xml:id="def-funzione_suriettiva">
+
+      <idx><h>funzione</h><h>suriettiva</h></idx>
+      <idx><h>suriettiva (funzione)</h></idx>
+
+
+      <statement>
+        <p>
+          Una funzione <m>f\colon A\to B</m> è detta <term>suriettiva</term> se <m>\im f=B</m>, cioè se per ogni <m>b\in B</m> esiste almeno un <m>a\in A</m> tale che <m>af=b</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <example xml:id="ex-funzione_suriettiva_e_no">
+      <statement>
+        <p>
+          Se consideriamo la funzione descritta dall'immagine seguente, vediamo facilmente che non è suriettiva: infatti, esistono elementi dell'insieme di arrivo (in questo caso <m>b</m>) che non hanno alcuna controimmagine.
+        </p>
+        <figure>
+          <caption>Una funzione non suriettiva</caption>
+          <image xml:id="image-funzione_non_suriettiva">
+            <shortdescription>Diagrammi di Venn e frecce che descrivono una funzione non suriettiva.</shortdescription>
+            <description>
+              <p>
+                Diagrammi di Venn per gli insiemi <m>A\coloneqq\{1,2,3\}</m> e <m>B\coloneqq\{a,b,c,d\}</m> e frecce da <m>A</m> a <m>B</m> che mandano <m>1</m> e <m>2</m> in <m>a</m> e <m>3</m> in <m>c</m>.
+              </p>
+            </description>
+            <latex-image>
+              \begin{tikzpicture}[keepsize]
+                \node[label={left:$1$}] (1) at (1.5,1) {};
+                \node[label={left:$2$}] (2) at (2,2) {};
+                \node[label={right:$3$}] (3) at (1,3) {};
+                \node [fit=(1) (2) (3) ,label=above left:$A$,draw,ellipse] {};
+
+                \node[label={right:$a$}] (a) at (6,2) {};
+                \node[label={left:$b$}] (b) at (8,3) {};
+                \node[label={right:$c$}] (c) at (7.5,1.5) {};
+                \node [fit=(a) (b) (c),label=above right:$B$,draw,ellipse] {};
+
+                \foreach \point in {1,2,3,a,b,c}
+                  \fill (\point) circle (2pt);
+                \draw (1) edge [bend right=45,-Latex] (a);
+                \draw (2) edge [bend right=45,-Latex] (a);
+                \draw (3) edge [bend left=45,-Latex] (c);
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+
+        </figure>
+
+      <p>
+          L'immagine successiva descrive invece una funzione suriettiva: ogni elemento dell'insieme di arrivo ha almeno una controimmagine.
+        </p>
+        <figure>
+          <caption>Una funzione suriettiva</caption>
+          <image xml:id="image-funzione_suriettiva">
+            <shortdescription>Diagrammi di Venn e frecce che descrivono una funzione suriettiva.</shortdescription>
+            <description>
+              <p>
+                Diagrammi di Venn per gli insiemi <m>A\coloneqq\{1,2,3,4\}</m> e <m>B\coloneqq\{a,b.c\}</m> e frecce da <m>A</m> a <m>B</m> che mandano <m>1</m> in <m>a</m>, <m>2</m> e <m>3</m> in <m>b</m> e <m>4</m> in <m>c</m>.
+              </p>
+            </description>
+            <latex-image>
+              \begin{tikzpicture}[keepsize]
+                \node[label={left:$1$}] (1) at (1.5,1) {};
+                \node[label={left:$2$}] (2) at (2,2) {};
+                \node[label={right:$3$}] (3) at (1,3) {};
+                \node[label={right:$4$}] (4) at (3,2.5) {};
+                \node [fit=(1) (2) (3) (4),label=above left:$A$,draw,ellipse] {};
+
+                \node[label={right:$a$}] (a) at (6,2) {};
+                \node[label={left:$b$}] (b) at (8,3) {};
+                \node[label={right:$c$}] (c) at (7.5,1.5) {};
+                \node [fit=(a) (b) (c),label=above right:$B$,draw,ellipse] {};
+
+                \foreach \point in {1,2,3,4,a,b,c}
+                  \fill (\point) circle (2pt);
+                \draw (1) edge [bend right=45,-Latex] (a);
+                \draw (2) edge [bend right=45,-Latex] (b);
+                \draw (3) edge [bend left=45,-Latex] (b);
+                \draw (4) edge [bend left=45,-Latex] (c);
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+
+        </figure>
+
+      </statement>
+    </example>
+
+    <p>
+      L'esempio precedente suggerisce che una funzione è suriettiva se e solo se ogni elemento dell'insieme di arrivo viene <q>raggiunto</q> da almeno una freccia. Questo in realtà può essere espresso più rigorosamente dall'osservazione seguente.
+    </p>
+
+    <remark xml:id="rem-suriettiva_controimmagine">
+      <p>
+        Una funzione <m>f\colon A\to B</m> è suriettiva se e solo se per ogni <m>b\in B</m> si ha che <m>bf^{-1}\ne\vuoto</m>.
+      </p>
+    </remark>
+
+    <p>
+      In pratica, per verificare che una funzione <m>f\colon A\to B</m> è suriettiva, si considera un elemento generico <m>b</m> di <m>B</m> e si cerca un elemento <m>a</m> di <m>A</m> tale che <m>af=b</m>: se, qualunque sia <m>b</m>, si trova un tale elemento allora la funzione è suriettiva; se, per qualche <m>b</m>, non esiste alcun <m>a</m> con questa proprietà, allora la funzione non è suriettiva.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Consideriamo la funzione <m>f\colon\Reali\to\Reali</m> data da <m>xf\coloneqq x^{2}</m>. Sia <m>b</m> un numero reale qualunque (pensato come elemento dell'insieme di arrivo): dobbiamo vedere se esiste un numero reale <m>a</m> tale che <m>af=b</m>, cioè <m>a^{2}=b</m>. Ciò è possibile se <m>b\ge 0</m>, ma se <m>b \lt 0</m> non esiste alcun numero reale il cui quadrato è <m>b</m>: dunque, <m>f</m> non è suriettiva.
+        </p>
+        <p>
+          Consideriamo invece la funzione <m>g\colon\Reali\to\Reali^{\ge0}\coloneqq \{x\in\Reali\mid x\ge 0\}</m> data da <m>xg\coloneqq x^{2}</m>. Sia <m>b</m> un numero reale non negativo qualunque (pensato come elemento dell'insieme di arrivo): dobbiamo vedere se esiste un numero reale <m>a</m> tale che <m>af=b</m>, cioè <m>a^{2}=b</m>. Esiste almeno un numero reale che soddisfa tale uguaglianza e, quindi, <m>g</m> è suriettiva.
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id="ex-canonico_quoziente">
+      <statement>
+        <p>
+          Sia <m>A</m> un insieme dotato di una relazione di equivalenza <m>\sim</m> e sia <m>B\coloneqq A/\sim</m> l'insieme quoziente rispetto a questa relazione. Consideriamo la funzione <m>f\colon A\to B</m> definita da <m>af\coloneqq \class[\sim]{a}</m>. Questa funzione è chiaramente suriettiva: data infatti una qualsiasi classe di equivalenza, essa è immagine di tutti i propri elementi.
+        </p>
+        <p>
+          Notiamo che non è possibile definire una funzione <m>g\colon B\to A</m> ponendo <m>\class[\sim]{a}\coloneqq a</m>: infatti, la stessa classe può essere rappresentata tramite elementi diversi.
+        </p>
+      </statement>
+    </example>
+
+    <definition xml:id="def-funzione_biiettiva">
+
+      <idx><h>funzione</h><h>biiettiva</h></idx>
+      <idx><h>biiettiva (funzione)</h></idx>
+
+      <statement>
+        <p>
+          Una funzione <m>f\colon A\to B</m> è detta <term>biiettiva</term> o <term>biiezione</term> se è suriettiva e iniettiva.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Combinando l'<xref ref="rem-iniettiva_controimmagine"/> con l'<xref ref="rem-suriettiva_controimmagine"/> otteniamo immediatamente la
+    </p>
+
+    <proposition xml:id="prop-iniettiva_suriettiva_biiettiva_controimmagine">
+      <statement>
+        <p>
+          Sia <m>f\colon A\to B</m> una funzione. Allora:
+          <ol>
+            <li>
+              <p>
+                <m>f</m> è iniettiva se e solo se per ogni <m>b\in B</m> si ha che <m>bf^{-1}</m> contiene al più un elemento;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f</m> è suriettiva se e solo se per ogni <m>b\in B</m> si ha che <m>bf^{-1}</m> contiene almeno un elemento;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f</m> è biiettiva se e solo se per ogni <m>b\in B</m> si ha che <m>bf^{-1}</m> contiene esattamente un elemento.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </proposition>
+
+    <p>
+      Vediamo ora come si comportano le proprietà di iniettività, suriettività e biiettività rispetto alla composizione di funzioni.
+    </p>
+
+    <remark>
+      <p>
+        Dato un insieme <m>A</m> la funzione identica <m>\Id_{A}</m> è biiettiva: infatti, dato un qualunque elemento <m>a</m> di <m>A</m> (pensato come insieme di arrivo) esiste un unico elemento di <m>A</m> (pensato come insieme di partenza) la cui immagine è <m>a</m> e cioè, ovviamente, <m>a</m> stesso.
+      </p>
+    </remark>
+
+    <proposition xml:id="prop-composizione_iniettive_suriettive">
+
+      <statement>
+        <p>
+          Siano <m>f\colon A\to B</m> e <m>g\colon B\to C</m> funzioni.
+          <ol>
+            <li xml:id="item-iniettive">
+              <p>
+                Se <m>f</m> e <m>g</m> sono iniettive, allora <m>fg</m> è iniettiva.
+              </p>
+            </li>
+            <li xml:id="item-suriettive">
+              <p>
+                Se <m>f</m> e <m>g</m> sono suriettive, allora <m>fg</m> è suriettiva.
+              </p>
+            </li>
+            <li xml:id="item-biiettive">
+              <p>
+                Se <m>f</m> e <m>g</m> sono biiettive, allora <m>fg</m> è biiettiva.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Siano <m>f</m> e <m>g</m> iniettive e siano <m>a_{1}</m> e <m>a_{2}</m> elementi di <m>A</m> tali che <m>a_{1}fg=a_{2}fg</m>: poiché <m>g</m> è iniettiva, abbiamo che <m>a_{1}f=a_{2}f</m> che, dato che <m>f</m> è iniettiva, implica che <m>a_{1}=a_{2}</m>. Questo prova il <xref ref="item-iniettive"/>.
+        </p>
+        <p>
+          Siano ora <m>f</m> e <m>g</m> suriettive e sia <m>c</m> un elemento di <m>C</m>: poiché <m>g</m> è suriettiva, esiste <m>b\in B</m> tale che <m>c=bg</m> e, poiché <m>f</m> è suriettiva, esiste <m>a\in A</m> tale che <m>af=b</m>. Dunque, <m>c=afg</m>. Questo prova il <xref ref="item-suriettive"/>.
+        </p>
+        <p>
+          Il <xref ref="item-biiettive"/> segue immediatamente dal <xref ref="item-iniettive"/> e dal <xref ref="item-suriettive"/>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      La composizione di due funzioni può essere iniettiva (o suriettiva) anche senza che entrambe le funzioni considerate siano iniettive (o suriettive).
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Sia <m>f\colon\Naturali\to\Interi</m> data da <m>n\mapsto n+1</m> e sia <m>g\colon\Interi\to\Interi</m> data da <m>n\mapsto n^{2}</m>. La composizione <m>fg</m> è allora la funzione che manda <m>n</m> in <m>(n+1)^2</m>. Questa funzione è iniettiva, mentre la funzione <m>g</m> non è iniettiva (ad esempio, <m>1</m> e <m>-1</m> sono mandati entrambi in <m>1</m> da <m>g</m>).
+        </p>
+
+        <p>
+          Sia ora <m>h\colon\Reali\to\Reali</m> definita da <m>x\mapsto\abs{x+1}</m> e sia <m>l\colon\Reali\to\Reali^{\ge0}</m> definita da <m>x\mapsto x^{2}</m>. La composizione <m>hl</m> è allora la funzione che manda <m>x</m> in <m>\abs{x+1}^{2}</m>, cioè in <m>(x+1)^{2}</m>. Questa funzione è suriettiva: infatti, dato un numero reale non negativo <m>r</m> esiste sempre un numero reale <m>s</m> tale che <m>s^{2}=r</m> e, di conseguenza,
+          <md>
+            (s-1)hl=\abs{s-1+1}l=\abs{s}l=\abs{s}^{2}=s^{2}=r
+          </md>.
+          La funzione <m>h</m> non è però suriettiva: dato un numero reale negativo <m>t</m> non c'è alcun numero reale <m>u</m> tale che <m>\abs{u+1}=t</m>.
+        </p>
+      </statement>
+    </example>
+
+    <proposition xml:id="prop-prima_iniettiva">
+      <statement>
+        <p>
+          Siano <m>f\colon A\to B</m> e <m>g\colon B\to C</m> funzioni tali che <m>fg</m> è iniettiva. Allora <m>f</m> è iniettiva.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Siano <m>a_{1}</m> e <m>a_{2}</m> elementi di <m>A</m> tali che <m>a_{1}f=a_{2}f</m>: dobbiamo provare che <m>a_{1}=a_{2}</m>. Chiaramente <m>a_{1}fg=a_{2}fg</m> e l'iniettività di <m>fg</m> implica che <m>a_{1}=a_{2}</m>, come richiesto.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <proposition xml:id="prop-seconda_suriettiva">
+      <statement>
+        <p>
+          Siano <m>f\colon A\to B</m> e <m>g\colon B\to C</m> funzioni tali che <m>fg</m> è suriettiva. Allora <m>g</m> è suriettiva.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sia <m>c</m> un elemento di <m>C</m>: dobbiamo provare che esiste <m>b\in B</m> tale che <m>bg=c</m>. Poiché <m>fg</m> è suriettiva, esiste <m>a\in A</m> tale che <m>afg=c</m>: ma allora, posto <m>b\coloneqq af</m>, abbiamo <m>bg=c</m>, come richiesto.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <definition xml:id="def-funzione_invertibile">
+
+      <idx><h>funzione</h><h>invertibile</h></idx>
+      <idx><h>invertibile (funzione)</h></idx>
+
+      <statement>
+        <p>
+          Una funzione <m>f\colon A\to B</m> è detta <term>invertibile</term>, se esiste una funzione <m>g\colon B\to A</m> tale che <m>fg=\Id_{A}</m> e <m>gf=\Id_{B}</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <proposition xml:id="prop-funzioni_invertibili">
+
+      <idx><h>funzione</h><h>inversa</h></idx>
+      <idx><h>inversa (funzione)</h></idx>
+
+      <statement>
+        <p>
+          <notation>
+            <usage><m>f^{-1}</m></usage>
+            <description>inversa della funzione <m>f</m></description>
+          </notation>
+          Sia <m>f\colon A\to B</m> una funzione invertibile. Allora esiste un'unica funzione <m>g\colon B\to A</m> tale che <m>fg=\Id_{A}</m> e <m>gf=\Id_{B}</m>. Tale funzione è, quindi, detta <term>inversa</term> di <m>f</m> e denotata con il simbolo <m>f^{-1}</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sia <m>h\colon B\to A</m> tale che <m>fh=\Id_{A}</m> e <m>hf=\Id_{B}</m>. Allora
+            <md>
+              g=g\Id_{A}=g(fh)=(gf)h=\Id_{B}h=h
+            </md>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <proposition xml:id="prop-proprieta_invertibili">
+      <statement>
+        <p>
+          Se <m>f\colon A\to B</m> è una funzione invertibile, allora <m>f^{-1}</m> è invertibile e <m>(f^{-1})^{-1}=f</m>.
+        </p>
+        <p>
+          Se <m>g\colon B\to C</m> è una funzione invertibile, allora <m>fg</m> è invertibile e <m>(fg)^{-1}=g^{-1}f^{-1}</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Per mostrare che <m>f^{-1}</m> è invertibile, basta esibire una funzione <m>h\colon A\to B</m> tale che <m>f^{-1}h=\Id_{B}</m> e <m>hf^{-1}=\Id_{A}</m>: la funzione <m>f</m> soddisfa le proprietà richieste ed è, quindi, l'inversa di <m>f^{-1}</m>.
+        </p>
+        <p>
+          Notiamo ora che <m>f^{-1}\colon B\to A</m> e <m>g^{-1}\colon C\to B</m>: dunque, la composizione <m>g^{-1}f^{-1}</m> esiste ed è una funzione da <m>C</m> ad <m>A</m>. Ora
+          <md>
+            (fg)(g^{-1}f^{-1})=f(gg^{-1})f^{-1}=f\Id_{B}f^{-1}=ff^{-1}=\Id_{A}
+          </md>
+          e, analogamente, <m>(g^{-1}f^{-1})(fg)=\Id_{C}</m>. Dunque, <m>fg</m> è invertibile con inversa <m>(g^{-1}f^{-1})</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <theorem xml:id="thm-caratterizzazione_invertibile">
+      <statement>
+        <p>
+          Una funzione <m>f\colon A\to B</m> è invertibile se e solo se è biiettiva.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Supponiamo che <m>f</m> sia invertibile. In particolare, <m>ff^{-1}=\Id_{A}</m> è biiettiva (e, a maggior ragione, iniettiva) e, per la <xref ref="prop-prima_iniettiva"/>, otteniamo che <m>f</m> è iniettiva. D'altra parte, <m>f^{-1}f=\Id_{B}</m> è biiettiva (e, a maggior ragione, suriettiva) e, per la <xref ref="prop-seconda_suriettiva"/>, otteniamo che <m>f</m> è suriettiva. Dunque, <m>f</m> è biiettiva.
+        </p>
+        <p>
+          Viceversa, sia <m>f</m> biiettiva. Per la <xref ref="prop-iniettiva_suriettiva_biiettiva_controimmagine"/>, per ogni <m>b\in B</m> esiste allora un unico <m>a\in A</m> tale che <m>b=af</m>. Poniamo allora <m>bg\coloneqq a</m>: abbiamo così definito una funzione <m>g\colon B\to A</m>. Si verifica immediatamente che <m>fg=\Id_{A}</m> e <m>gf=\Id_{B}</m>, cioè <m>f</m> è invertibile e <m>g</m> è la sua inversa.
+        </p>
+      </proof>
+
+    </theorem>
+
+    <example>
+      <statement>
+        <p>
+          Siano <m>f\colon\Naturali\to\Interi</m> e <m>g\colon\Interi\to\Naturali</m> definite da <m>nf\coloneqq n</m> e <m>ng\coloneqq\abs{n}</m>. Chiaramente <m>fg=\Id_{\Naturali}</m>, tuttavia <m>f</m> e <m>g</m> non sono invertibili: infatti, <m>f</m> non è suriettiva (quindi, non è biiettiva) e <m>g</m> non è iniettiva (quindi, non è biiettiva).
+
+        </p>
+      </statement>
+    </example>
+
+    <exercises xml:id="exercises-funzioni_iniettive_suriettive">
+
+      <exercise xml:id="exer-scambio">
+        <statement>
+          <p>
+            Siano <m>a_{1}</m> e <m>a_{2}</m> due elementi diversi di un insieme <m>A</m>. Sia data la funzione <m>g\colon A\to A</m> così definita:
+              <md>
+                xg\coloneqq
+                \begin{cases}
+                  a_{2} \amp\text{ se }x=a_{1}\\
+                  a_{1} \amp\text{ se }x=a_{2}\\
+                  x \amp\text{ se }x\ne a_{1}\text{ e }x\ne a_{2}
+                \end{cases}
+              </md>
+              Mostrare che <m>gg=\Id_{A}</m> e dedurre che <m>g</m> è biiettiva.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="exer-scambio_immagine">
+        <statement>
+          <p>
+            Sia <m>f\colon A\to B</m> una funzione tra due insiemi non vuoti. Siano <m>a\in A</m> e <m>b\in B</m>. Mostrare che esiste una funzione biiettiva <m>g\colon B\to B</m> tale che <m>afg=b</m>.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            Se <m>af=b</m>, si prende <m>\Id_{B}</m>, altrimenti si prende <m>g</m> che scambia <m>af</m> e <m>b</m> come nell'<xref ref="exer-scambio"/>.
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare che <m>f\colon A\to B</m> è iniettiva se e solo se per ogni sottoinsieme <m>C</m> di <m>A</m> si ha <m>Cff^{-1}=C</m>.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Si veda <xref ref="exer-caratterizzazione_avanti_indietro"/>.
+          </p>
+        </hint>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare che <m>f\colon A\to B</m> è suriettiva se e solo se per ogni sottoinsieme <m>D</m> di <m>B</m> si ha <m>Df^{-1}f=D</m>.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Si veda <xref ref="exer-caratterizzazione_indietro_avanti"/>.
+          </p>
+        </hint>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Siano <m>f\colon A\to B</m>, <m>g\colon B\to A</m> e <m>h\colon B\to A</m> tali che <m>gf=\Id_{B}</m> e <m>fh=\Id_{A}</m>. Mostrare che <m>g=h</m> e, quindi, <m>f</m> è invertibile.
+          </p>
+        </statement>
+      </exercise>
+
+    </exercises>
+
+  </section>
+
+  <section xml:id="sec-cardinalita">
+    <title>Cenni sulla cardinalità</title>
+
+    <p>
+      Nel <xref ref="sec-insiemi"/> abbiamo introdotto informalmente la cardinalità di un insieme finito. Una definizione più accurata di un insieme finito e della sua cardinalità può essere trovata nel <xref ref="sec-insiemi_finiti_infiniti"/>.
+    </p>
+    <definition xml:id="def-stessa_cardinalita">
+
+      <idx><h>cardinalità</h><h>di un insieme</h></idx>
+      <idx><h>insieme</h><h>cardinalità</h></idx>
+
+      <statement>
+        <p>
+          Dati due insiemi <m>A</m> e <m>B</m>, diciamo che <m>A</m> ha la stessa cardinalità di <m>B</m> e scriviamo <m>\abs{A}=\abs{B}</m> se esiste una funzione biiettiva <m>f\colon A\to B</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <remark xml:id="rem-stessa_cardinalita">
+      <p>
+        Un insieme <m>A</m> ha la stessa cardinalità di sé stesso. Basta prendere la funzione identica di <m>A</m>.
+      </p>
+      <p>
+        Se <m>A</m> ha la stessa cardinalità di <m>B</m> allora <m>B</m> ha la stessa cardinalità di <m>A</m>: data una funzione biiettiva <m>f\colon A\to B</m>, la funzione inversa <m>f^{-1}</m> è una funzione biiettiva da <m>B</m> in <m>A</m>.
+      </p>
+      <p>
+        Se <m>A</m> ha la stessa cardinalità di <m>B</m> e <m>B</m> ha la stessa cardinalità di <m>C</m>, allora <m>A</m> ha la stessa cardinalità di <m>C</m>: data una funzione biiettiva da <m>A</m> in <m>B</m> e una funzione biiettiva da <m>B</m> in <m>C</m> la loro composizione è una funzione biiettiva da <m>A</m> in <m>C</m>.
+      </p>
+    </remark>
+
+    <p>
+      Grazie all'<xref ref="rem-stessa_cardinalita"/>, verrebbe spontaneo dire che avere la stessa cardinalità è una relazione di equivalenza, ma abbiamo dato la definizione di relazione solo in un insieme (<xref ref="def-relazione"/>), e questa relazione dovrebbe essere definita nell'insieme di tutti gli insiemi che però non può essere considerato un insieme (<xref ref="sec-Russell"/>).
+    </p>
+
+    <p>
+      Come già accennato, non tutti gli insiemi infiniti hanno la stessa cardinalità, cioè dati due insiemi infiniti <m>A</m> e <m>B</m> non è detto esista una funzione biiettiva da <m>A</m> e <m>B</m>. Cantor<fn><url href="https://it.wikipedia.org/wiki/Georg_Cantor" visual="">Georg Cantor</url>, 1845<ndash/>1918.</fn><idx><h>Cantor, Georg</h></idx> ha dimostrato che un insieme e il suo booleano hanno cardinalità diverse: in particolare, un insieme infinito e il suo booleano (che è ovviamente pure infinito) hanno cardinalità diverse.
+    </p>
+
+  </section>
+
+</chapter>

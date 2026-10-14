@@ -1,0 +1,1682 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="ch-formecanoniche">
+  <title>Forme canoniche di matrici</title>
+
+  <introduction>
+    <p>
+      La seconda applicazione della classificazione dei moduli finitamente generati su un dominio a ideali principali (<xref ref="ch-modulisupid"/>) è molto meno immediata della classificazione dei gruppi abeliani finitamente generati, data nel <xref ref="ch-gruppiabeliani"/>. Dallo studio dell'algebra lineare, la cui conoscenza è richiesta per affrontare il presente capitolo, sappiamo come stabilire se una matrice quadrata è simile a una matrice diagonale (il che permette di effettuare alcuni calcoli in maniera semplificata). Data una matrice quadrata qualunque, ci proponiamo di trovare una matrice ad essa simile di forma abbastanza semplice, anche nel caso in cui le condizioni per la diagonalizzazione non siano soddisfatte.
+    </p>
+  </introduction>
+
+  <section xml:id="sec-kx_moduli">
+    <title>Spazi vettoriali con endomorfismi visti come moduli</title>
+    <p>
+      Dato un campo <m>K</m>, sappiamo che l'anello dei polinomi <m>K[x]</m> a coefficienti in <m>K</m> è un dominio euclideo (<xref ref="ex-kx-euclideo"/>) e, quindi, un dominio a ideali principali (<xref ref="prop-euclideo_PID"/>): possiamo quindi applicare i risultati del <xref ref="ch-modulisupid"/>. Ma come possiamo descrivere un <m>K[x]</m>-modulo <m>V</m> e i suoi sottomoduli?
+    </p>
+    <p>
+      Dalla <xref ref="def-modulo_destro"/>, sappiamo che in <m>V</m> è definita un'operazione di addizione rispetto a cui <m>V</m> è un gruppo abeliano ed è inoltre definita una moltiplicazione <m>V\times K[x]\to V</m> tale che
+      <ul>
+        <li>
+          <p>
+            <m>\vect{v}1=\vect{v}</m> per ogni <m>\vect{v}</m> in <m>V</m>;
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\vect{v}(fg)=(\vect{v}f)g</m> per ogni <m>\vect{v}</m> in  <m>V</m> e <m>f</m> e <m>g</m> in <m>K[x]</m>;
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\vect{v}(f+g)=\vect{v}f+\vect{v}g</m> per ogni <m>\vect{v}</m> in <m>V</m> e <m>f</m> e <m>g</m> in <m>K[x]</m>;
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>(\vect{u}+\vect{v})f=\vect{u}f+\vect{v}f</m> per ogni <m>\vect{u}</m> e <m>\vect{v}</m> in <m>V</m> e <m>f</m> in <m>K[x]</m>.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      Siccome <m>K[x]</m> contiene <m>K</m>, le proprietà suesposte implicano che <m>V</m> sia un <m>K</m>-spazio vettoriale. Inoltre, il caso particolare in cui <m>f=x</m> e <m>g</m> è un elemento di <m>K</m> dà le uguaglianze
+      <ul>
+        <li>
+          <p>
+            <m>(\vect{u}+\vect{v})x=\vect{u}x+\vect{v}x</m> per ogni <m>\vect{u}</m> e <m>\vect{v}</m> in <m>V</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>(\vect{v}x)g=\vect{v}(xg)=\vect{v}(gx)=(\vect{v}g)x</m> per ogni <m>\vect{v}</m> in <m>V</m> e <m>g</m> in <m>K</m> (dove abbiamo usato il fatto che <m>K[x]</m> è commutativo).
+          </p>
+        </li>
+      </ul>
+      Dunque, la moltiplicazione per <m>x</m> definisce un endomorfismo del <m>K</m>-spazio vettoriale <m>V</m>.
+    </p>
+
+    <p>
+      Viceversa, se <m>V</m> è un <m>K</m>-spazio vettoriale e <m>\theta</m> è un endomorfismo di <m>V</m>, possiamo dare a <m>V</m> una struttura di <m>K[x]</m>-modulo, ponendo <m>\vect{v}x\coloneqq \vect{v}\theta</m> per ogni <m>\vect{v}</m> in <m>V</m> ed estendendo poi questa definizione al prodotto di un vettore <m>\vect{v}</m> per un polinomio. Dobbiamo però descrivere in dettaglio questa estensione e verificare che otteniamo così un <m>K[x]</m>-modulo.
+    </p>
+
+    <p>
+      Cominciamo allora con il notare che <m>\End_{K}(V)</m>, l'insieme degli endomorfismi del <m>K</m>-spazio vettoriale <m>V</m>, ha una struttura di anello la cui addizione è definita ponendo <m>\vect{v}(\eta+\theta)\coloneqq\vect{v}\eta+\vect{v}\theta</m> e la cui moltiplicazione è la composizione: le verifiche che così facendo si ottiene effettivamente un anello sono di routine (<xref ref="exercise-Endanello"/>).
+    </p>
+
+    <p>
+      Consideriamo ora la funzione <m>\phi\colon K\to\End_{K}(V)</m> che manda un elemento <m>k</m> nell'endomorfismo <m>k\Id</m> (vale a dire l'endomorfismo che manda <m>\vect{v}</m> in <m>\vect{v}k</m>): si verifica facilmente che <m>\phi</m> è un omomorfismo di anelli. Scelto un endomorfismo <m>\theta</m> di <m>V</m>, potremmo allora mandare <m>x</m> in <m>\theta</m> ed estendere così <m>\phi</m> a un omomorfismo da <m>K[x]</m> in <m>\End_{K}(V)</m>. C'è però un problema: l'ipotesi che l'anello di arrivo <m>\End_{K}(V)</m> sia commutativo, condizione richiesta dal <xref ref="thm-proprieta_universale_polinomi"/>,  non è, in generale, soddisfatta. Tuttavia, se consideriamo l'insieme <m>X</m> formato dall'endomorfismo <m>\theta</m> e dall'immagine di <m>\phi</m>, cioè dagli endomorfismi del tipo <m>k\Id</m> al variare di <m>k</m> in <m>K</m>, notiamo che gli elementi di <m>X</m> a due a due commutano e, per la <xref ref="prop-elementi_che_commutano_generano_sottoanello_commutativo"/>, <m>X</m> genera un sottoanello commutativo <m>S</m> di <m>\End_{K}(V)</m>.
+      Possiamo allora applicare il <xref ref="thm-proprieta_universale_polinomi"/> considerando <m>S</m> come anello di arrivo. Notiamo che non abbiamo bisogno di determinare ogni volta esplicitamente il sottoanello <m>S</m>: esso ci è servito solo per dimostrare che è possibile estendere <m>\phi</m>. Pertanto, dato un polinomio <m>f\coloneqq a_{0}+a_{1}x+\dots+a_{s}x^{s}</m>, l'estensione di <m>\phi</m> manda <m>f</m> nell'endomorfismo <m>f(\theta)\coloneqq a_{0}\Id+a_{1}\theta+\dots+a_{s}\theta^{s}</m>, e ha senso, quindi, porre
+      <md>
+        \vect{v}f\coloneqq\vect{v}f(\theta)=
+        \vect{v}a_{0}+\vect{v}a_{1}\theta+\dots+\vect{v}a_{s}\theta^{s}=\sum_{i=0}^{s}\vect{v}a_{i}\theta^{i}
+      </md>.
+      Lasciamo per esercizio la verifica che abbiamo così dotato <m>V</m> di una struttura di <m>K[x]</m>-modulo e che la moltiplicazione per <m>x</m> dà l'endomorfismo <m>\theta</m> (<xref ref="exercise-moltiplicazionethetax"/>).
+    </p>
+
+    <p>
+      Possiamo riassumere tutto ciò nella
+    </p>
+
+    <proposition xml:id="prop-caratterizzazioneKxmoduli">
+      <statement>
+        <p>
+          Dato un <m>K[x]</m>-modulo <m>V</m>, questo è un <m>K</m>-spazio vettoriale e la moltiplicazione per <m>x</m> è un endomorfismo di <m>V</m> come <m>K</m>-spazio vettoriale.
+        </p>
+        <p>
+          Viceversa, se <m>\theta</m> è un endomorfismo di un <m>K</m>-spazio vettoriale <m>V</m>, è possibile dotare <m>V</m> di una struttura di <m>K[x]</m>-modulo in modo tale che <m>\theta</m> sia uguale alla moltiplicazione per <m>x</m>.
+        </p>
+      </statement>
+    </proposition>
+
+    <remark xml:id="rem-strutturadipendedatheta">
+      <p>
+        La struttura di <m>K[x]</m>-modulo descritta nella <xref ref="prop-caratterizzazioneKxmoduli"/> dipende dall'endomorfismo considerato: preso un altro endomorfismo dello stesso spazio vettoriale, si ottiene una struttura di <m>K[x]</m>-modulo differente.
+      </p>
+    </remark>
+
+    <p>
+      Dato un <m>K[x]</m>-modulo <m>V</m>, cioè un <m>K</m>-spazio vettoriale <m>V</m>, dotato di un endomorfismo <m>\theta</m>, ci chiediamo chi siano i <m>K[x]</m>-sottomoduli di <m>V</m>. Un sottoinsieme non vuoto <m>U</m> è un <m>K[x]</m>-sottomodulo se
+      <ul>
+        <li>
+          <p>
+            <m>\vect{u}+\vect{v}</m> appartiene a <m>U</m> per ogni <m>\vect{u}</m> e <m>\vect{v}</m> in <m>U</m>;
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\vect{u}f</m> appartiene a <m>U</m> per ogni <m>\vect{u}</m> in <m>U</m> e ogni <m>f</m> in <m>K[x]</m>.
+          </p>
+        </li>
+      </ul>
+      Queste due condizioni, scegliendo <m>f</m> in <m>K</m> nella seconda, implicano che <m>U</m> è un <m>K</m>-sottospazio vettoriale di <m>V</m>. Inoltre, scegliendo <m>f=x</m> nella seconda, vediamo che <m>\vect{u}\theta</m> appartiene a <m>U</m> per ogni <m>\vect{u}</m> in <m>U</m>. Ciò suggerisce la
+    </p>
+
+    <definition xml:id="def-sottospazi_stabili">
+      <statement>
+        <p>
+          Dato un endomorfismo <m>\theta</m> di uno spazio vettoriale <m>V</m>, un sottospazio vettoriale <m>U</m> di <m>V</m> si dice <m>\theta</m>-<term>stabile</term> se <m>\vect{u}\theta\in U</m> per ogni <m>\vect{u}\in U</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Abbiamo allora immediatamente la
+    </p>
+
+    <proposition xml:id="prop-sottospazi_stabili_sottomoduli">
+      <statement>
+        <p>
+          Dato un <m>K</m>-spazio vettoriale <m>V</m>, dotato di un endomorfismo <m>\theta</m>, i sottomoduli di <m>V</m> rispetto alla struttura di <m>K[x]</m>-modulo indotta da <m>\theta</m> sono i sottospazi <m>\theta</m>-stabili.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Lasciamo i dettagli per esercizio (<xref ref="exercise-thetastabilesottomodulo"/>).
+        </p>
+      </proof>
+
+    </proposition>
+
+    <remark xml:id="rem-autospazi_theta_stabili">
+      <p>
+        I sottospazi <m>\theta</m>-stabili possono essere visti come una generalizzazione degli autospazi: infatti, se <m>\lambda</m> è un autovalore di un endomorfismo <m>\theta</m> di un <m>K</m>-spazio vettoriale <m>V</m>, allora l'autospazio di <m>\theta</m> relativo a <m>\lambda</m> è definito come l'insieme <m>U</m> dei vettori <m>\vect{v}</m> di <m>V</m> tali che <m>\vect{v}\theta=\vect{v}\lambda</m>: in particolare, <m>\vect{v}\theta</m>, essendo un multiplo di <m>\vect{v}</m>, appartiene ancora a <m>U</m>, che è, dunque, <m>\theta</m>-stabile. Più in generale, ogni sottospazio vettoriale di un autospazio di <m>\theta</m> è <m>\theta</m>-stabile.
+      </p>
+    </remark>
+
+    <exercises xml:id="exercises-kx_moduli">
+      <exercise xml:id="exercise-Endanello">
+        <statement>
+          <p>
+            Verificare che se <m>V</m> è uno <m>K</m>-spazio vettoriale, allora <m>\End_{K}(V)</m> è un anello rispetto all'addizione definita ponendo <m>\vect{v}(\eta+\theta)\coloneqq\vect{v}\eta+\vect{v}\theta</m> e alla moltiplicazione data dalla composizione.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="exercise-moltiplicazionethetax">
+        <statement>
+          <p>
+            Dato un <m>K</m>-spazio vettoriale <m>V</m> e un endomorfismo <m>\theta</m>, verificare che, identificando la moltiplicazione per <m>x</m> con <m>\theta</m>, <m>V</m> ottiene una struttura di <m>K[x]</m>-modulo.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Dato un polinomio <m>f\coloneqq a_{0}+a_{1}x+\dots+a_{s}x^{s}</m>, ricordiamo che
+            <md>
+              \vect{v}f=\vect{v}f(\theta)=
+              \vect{v}a_{0}+\vect{v}a_{1}\theta+\dots+\vect{v}a_{s}\theta^{s}=\sum_{i=0}^{s}\vect{v}a_{i}\theta^{i}
+            </md>.
+            Se <m>\vect{v}</m> è un elemento di <m>V</m> e <m>1</m> è il polinomio costante uguale a <m>1</m>, per definizione abbiamo <m>\vect{v}1=\vect{v}</m> (si noti che in questo caso <m>a_{0}=1</m> e <m>a_{i}=0</m> per <m>i>0</m>). Siano ora <m>\vect{u}</m> e <m>\vect{v}</m> due elementi di <m>V</m> e sia <m>f</m> un polinomio come sopra. Abbiamo allora
+            <md>
+              (\vect{u}+\vect{v})f=(\vect{u}+\vect{v})f(\theta)=
+              \vect{u}f(\theta)+\vect{v}f(\theta)=\vect{u}f+\vect{v}f
+            </md>
+            dove abbiamo usato il fatto che <m>f(\theta)</m> è un endomorfismo. Sia dato ora un vettore <m>\vect{v}</m> e due polinomi <m>f</m> e <m>g</m>. Dal momento che la valutazione in <m>\theta</m> è un omomorfismo di anelli da <m>K[x]</m> in <m>\End_{K}(V)</m> abbiamo allora che <m>(f+g)(\theta)=f(\theta)+g(\theta)</m> e <m>(fg)(\theta)=f(\theta)g(\theta)</m>: di conseguenza,
+            <md>
+              \vect{v}(f+g)=\vect{v}((f+g)(\theta))=\vect{v}(f(\theta)+g(\theta))=
+              \vect{v}f(\theta)+\vect{v}g(\theta)=\vect{v}f+\vect{v}g
+            </md>
+            e
+            <md>
+              \vect{v}(fg)=\vect{v}((fg)(\theta))=\vect{v}(f(\theta)g(\theta))=
+              (\vect{v}f(\theta))g(\theta)=(\vect{v}f)g
+            </md>.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Dato un <m>K</m>-spazio vettoriale <m>V</m>, consideriamo due diverse strutture di <m>K[x]</m>-modulo su di esso: quelle associate, rispettivamente, all'endomorfismo nullo (cioè quello che manda tutti i vettori in <m>0</m>) e all'endomorfismo <m>\Id</m>. In ciascuno di questi casi, determinare i <m>K[x]</m>-sottomoduli di <m>V</m>.
+          </p>
+        </statement>
+
+        <answer>
+          <p>
+            In entrambi i casi, ogni <m>K</m>-sottospazio vettoriale di <m>V</m> è un <m>K[x]</m>-sottomodulo.
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise xml:id="exercise-thetastabilesottomodulo">
+        <statement>
+          <p>
+            Sia <m>V</m> un <m>K</m>-spazio vettoriale dotato di un endomorfismo <m>\theta</m>. Mostrare che <m>U</m> è un <m>K[x]</m>-sottomodulo rispetto alla struttura indotta da <m>\theta</m> se e solo se è un sottospazio <m>\theta</m>-stabile.
+          </p>
+        </statement>
+      </exercise>
+    </exercises>
+
+  </section>
+
+  <section xml:id="sec-matrici_rappresentative">
+    <title>Matrici rappresentative</title>
+
+    <p>
+      Fissata una base <m>\vect{v}_{1}</m>, <m>\dots</m>, <m>\vect{v}_{n}</m> di un <m>K</m>-spazio vettoriale <m>V</m> di dimensione finita, ricordiamo che la <term>matrice rappresentativa</term> di un endomorfismo <m>\theta</m> rispetto alla base assegnata è la matrice a coefficienti in <m>K</m>
+      <md>
+        A\coloneqq
+        \begin{pmatrix}
+          a_{11} \amp a_{12} \amp \dots \amp a_{1n}\\
+          a_{21} \amp a_{22} \amp \dots \amp a_{2n}\\
+          \vdots \amp \vdots \amp \ddots\amp \vdots\\
+          a_{n1} \amp a_{n2} \amp \dots \amp a_{nn}
+        \end{pmatrix}
+      </md>
+      definita da <m>\vect{v}_{i}\theta=\vect{v}_{1}a_{i1}+\dots+\vect{v}_{n}a_{in}</m>. In altri termini, la <m>i</m>-esima riga di <m>A</m> dà le componenti di <m>\vect{v}_{i}\theta</m> rispetto alla base assegnata<fn>Si noti che alcuni testi usano una convenzione diversa, in cui la matrice rappresentativa è la trasposta della matrice da noi usata.</fn>. Viceversa, data una matrice <m>A</m>, le formule soprastanti definiscono un endomorfismo <m>\theta</m> detto <term>endomorfismo associato</term> ad <m>A</m> rispetto alla base assegnata. Abbiamo così una corrispondenza biiettiva tra <m>\End_{K}(V)</m> e <m>\mat{n}{K}</m> e si vede facilmente che questa corrispondenza è un isomorfismo di anelli. Questo isomorfismo dipende dalla base scelta per <m>V</m>: in particolare, dato un certo endomorfismo <m>\theta</m>, le matrici che rappresentano <m>\theta</m> al variare della base sono tutte e sole le matrici del tipo <m>M^{-1}AM</m> dove <m>M</m> è una matrice invertibile, vale a dire sono le matrici <term>simili</term> ad <m>A</m>.
+    </p>
+
+    <p>
+      Supponiamo ora che <m>V</m> sia somma diretta di suoi sottospazi <m>U</m> e <m>W</m>. <q>Unendo</q><fn>Il termine corretto sarebbe <q>giustapponendo</q>.</fn> una base <m>\vect{v}_{1}</m>, <m>\dots</m>, <m>\vect{v}_{r}</m> di <m>U</m> a una base <m>\vect{v}_{r+1}</m>, <m>\dots</m>, <m>\vect{v}_{n}</m> di <m>W</m>, otteniamo una base di <m>V</m>. Possiamo allora rappresentare un endomorfismo <m>\theta</m> di <m>V</m> rispetto a questa base, evidenziando i blocchi
+      <md>
+        A\coloneqq
+        \begin{pmatrix}
+          B_{1} \amp B_{2}\\
+          B_{3} \amp B_{4}
+        \end{pmatrix}
+      </md>
+      dove <m>B_{1}</m> e <m>B_{4}</m> sono matrici quadrate di ordine, rispettivamente, <m>r</m> e <m>n-r</m>. Preso allora un vettore <m>\vect{v}_{i}</m> con <m>1\le i\le r</m>, abbiamo
+      <md>
+        \vect{v}_{i}\theta=\vect{v}_{1}a_{i1}+\cdots+\vect{v}_{r}a_{ir}+\vect{v}_{r+1}a_{i,r+1}+\cdots+\vect{v}_{n}a_{in}
+      </md>
+      con i primi <m>r</m> addendi in <m>U</m> e gli altri <m>n-r</m> addendi in <m>W</m>: i corrispondenti coefficienti <m>a_{ij}</m> stanno, rispettivamente, in <m>B_{1}</m> e in <m>B_{2}</m>. Vediamo allora che <m>\vect{v}_{i}\theta</m> appartiene a <m>U</m> se e solo se <m>a_{ij}=0</m> per <m>r+1\le j\le n</m>. Pertanto, <m>B_{2}</m> è la matrice nulla se e solo se <m>\vect{v}_{i}\theta</m> appartiene a <m>U</m> per ogni <m>i</m>, con <m>1\le i\le r</m>: poiché <m>\vect{v}_{1}</m>, <m>\ldots</m>, <m>\vect{v}_r</m> formano una base di <m>U</m>, ciò è equivalente a dire che <m>U</m> è un sottospazio <m>\theta</m>-stabile. Analogamente, <m>B_{3}</m> è la matrice nulla se e solo se <m>W</m> è <m>\theta</m>-stabile.
+    </p>
+
+    <p>
+      Dunque, se <m>U</m> e <m>W</m> sono sottospazi <m>\theta</m>-stabili, la matrice rappresentativa rispetto alla base scelta come sopra (cioè unendo una base di <m>U</m> a una base di <m>W</m>) è del tipo
+      <md>
+        A\coloneqq
+        \begin{pmatrix}
+          B_{1} \amp 0\\
+          0 \amp B_{4}
+        \end{pmatrix}
+      </md>
+      dove <m>B_{1}</m> e <m>B_{4}</m> sono le matrici quadrate che rappresentano l'endomorfismo indotto da <m>\theta</m> in <m>U</m> e, rispettivamente, in <m>W</m> rispetto alle basi scelte. Più in generale abbiamo la
+    </p>
+
+    <proposition xml:id="prop-diagonale_a_blocchi">
+      <statement>
+        <p>
+          Sia <m>V</m> un <m>K</m>-spazio vettoriale di dimensione finita e dotato di un endomorfismo <m>\theta</m>. Siano <m>V_{1}</m>, <m>V_{2}</m>, <m>\ldots</m>, <m>V_{r}</m> sottospazi <m>\theta</m>-stabili di <m>V</m> tali che <m>V=V_{1}\oplus V_{2}\oplus\cdots\oplus V_{r}</m>. Fissata una base per ciascuno dei <m>V_{i}</m>, sia <m>B_{i}</m> la matrice rappresentativa rispetto a tale base dell'endomorfismo di <m>V_{i}</m> indotto da <m>\theta</m>. Allora, la matrice rappresentativa di <m>\theta</m> rispetto alla base di <m>V</m> formata dall'unione delle basi scelte dei sottospazi <m>V_{i}</m> è la <term>matrice diagonale a blocchi</term>:
+          <md>
+            \begin{pmatrix}
+              B_{1}  \amp 0      \amp \dots  \amp 0 \\
+              0      \amp B_{2}  \amp \dots  \amp 0 \\
+              \vdots \amp \vdots \amp \ddots \amp \vdots\\
+              0      \amp 0      \amp \dots  \amp B_{s}
+            \end{pmatrix}
+          </md>.
+        </p>
+      </statement>
+    </proposition>
+
+    <p>
+      Il calcolo con le matrici diagonali a blocchi è particolarmente comodo. Richiamiamo alcuni risultati che possono essere agevolmente dimostrati:
+    </p>
+    <proposition xml:id="prop-diagonali_blocchi">
+      <statement>
+        <p>
+          Sia <m>B\coloneqq
+          \begin{psmallmatrix}
+            B_{1}  \amp 0      \amp \dots  \amp 0 \\
+            0      \amp B_{2}  \amp \dots  \amp 0 \\
+            \vdots \amp \vdots \amp \ddots \amp \vdots\\
+            0      \amp 0      \amp \dots  \amp B_{s}
+          \end{psmallmatrix}</m> una matrice diagonale a blocchi. Allora
+          <ol>
+            <li>
+              <p>
+                <m>\det B=\det B_{1}\det B_{2}\cdots\det B_{s}</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\rk B=\rk B_{1}+\rk B_{2}+\dots+\rk B_{s}</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>B^{t}=\begin{psmallmatrix}
+                B_{1}^{t}  \amp 0      \amp \dots  \amp 0 \\
+                0      \amp B_{2}^{t}  \amp \dots  \amp 0 \\
+                \vdots \amp \vdots \amp \ddots \amp \vdots\\
+                0      \amp 0      \amp \dots  \amp B_{s}^{t}
+              \end{psmallmatrix}</m> per ogni <m>t>0</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </proposition>
+
+    <exercises xml:id="exercises-matrici_rappresentative">
+
+      <exercise>
+        <statement>
+          <p>
+            Dato un endomorfismo <m>\theta</m> di uno spazio vettoriale <m>V</m> di dimensione finita, dimostrare che <m>V</m> è somma diretta di sottospazi <m>\theta</m>-stabili di dimensione <m>1</m> se e solo se <m>\theta</m> è diagonalizzabile.
+          </p>
+        </statement>
+      </exercise>
+
+    </exercises>
+
+  </section>
+
+  <section xml:id="sec-matrici_compagne">
+    <title>Matrici compagne</title>
+
+    <p>
+      Sia dato ancora una volta un <m>K</m>-spazio vettoriale <m>V</m> di dimensione finita <m>n</m>, un suo endomorfismo <m>\theta</m> e la struttura di <m>K[x]</m>-modulo indotta su <m>V</m> da <m>\theta</m>. Dal risultati del <xref ref="ch-modulisupid"/>, sappiamo che ogni modulo finitamente generato su un dominio a ideali principali è somma diretta di moduli ciclici e tali moduli ciclici, grazie alla <xref ref="prop-annullatore_ideale"/>, possono essere descritti se conosciamo l'annullatore di un loro generatore. Vogliamo allora descrivere l'annullatore di un vettore <m>\vect{v}</m> di <m>V</m> (pensato come <m>K[x]</m>-modulo) e la struttura del <m>K[x]</m>-modulo ciclico generato da <m>\vect{v}</m>.
+    </p>
+
+    <p>
+      Consideriamo i vettori <m>\vect{v}</m>, <m>\vect{v}\theta</m>, <m>\vect{v}\theta^{2}</m>, <m>\ldots</m> vale a dire i vettori che si ottengono applicando ripetutamente <m>\theta</m> a <m>\vect{v}</m>. Poiché <m>V</m> ha dimensione finita <m>n</m>, questi vettori non possono esser linearmente indipendenti (anzi, possiamo dire che i primi <m>n+1</m> vettori sono linearmente dipendenti). Esisteranno allora <m>a_{0}</m>, <m>a_{1}</m>, <m>\dots</m>, <m>a_{s}</m> in <m>K</m> non tutti nulli tali che <m>\vect{v}a_{0}+\vect{v}\theta a_{1}+\dots+\vect{v}\theta^{s}a_{s}=\vect{0}</m>, vale a dire <m>\vect{v}(a_{0}+a_{1}x+\dots+a_{s}x^{s})=\vect{0}</m>.
+    </p>
+
+    <p>
+      Dunque, esiste un polinomio non banale che annulla <m>\vect{v}</m>: poiché ciò è vero per ogni vettore di <m>V</m>, possiamo concludere che <m>V</m> è un <m>K[x]</m>-modulo di torsione. Se <m>\vect{v}=\vect{0}</m> il suo annullatore è, ovviamente, tutto <m>K[x]</m>, altrimenti è un ideale principale generato da un certo polinomio non nullo <m>p</m>. Il grado <m>s</m> di <m>p</m> è almeno <m>1</m>, altrimenti sarebbe una costante non nulla e non potrebbe annullare il vettore non nullo <m>\vect{v}</m>. Pur di dividere eventualmente per il suo coefficiente direttivo, possiamo supporre che <m>p</m> sia un polinomio monico: <m>p=a_{0}+a_{1}x+\dots+x^{s}</m>.
+    </p>
+
+    <p>
+      Dimostriamo ora che il <m>K[x]</m>-sottomodulo <m>\vect{v}K[x]</m> generato da <m>\vect{v}</m> ha, come <m>K</m>-sottospazio vettoriale, dimensione <m>s</m> e una sua base è formata dai vettori <m>\vect{v}</m>, <m>\vect{v}\theta</m>, <m>\dots</m>, <m>\vect{v}\theta^{s-1}</m>. Questi vettori generano <m>\vect{v}K[x]</m>: infatti, se <m>f</m> è un polinomio qualunque, possiamo eseguire la divisione per <m>p</m> e ottenere <m>f=pq+r</m> dove <m>r\coloneqq b_{0}+b_{1}x+\dots+b_{s-1}x^{s-1}</m>. Ma allora
+      <md>
+        <mrow> \vect{v}f \amp =\vect{v}(pq+r)=\vect{v}pq+\vect{v}r=\vect{v}r=\vect{v}(b_{0}+b_{1}x+\dots+b_{s-1}x^{s-1})</mrow>
+        <mrow> \amp =\vect{v}b_{0}+\vect{v}\theta b_{1}+\dots+\vect{v}\theta^{s-1}b_{s-1}</mrow>
+      </md>
+      e, dunque, ogni vettore di <m>\vect{v}K[x]</m> è <m>K</m>-combinazione lineare di <m>\vect{v}</m>, <m>\vect{v}\theta</m>, <m>\dots</m>, <m>\vect{v}\theta^{s-1}</m>.
+    </p>
+
+    <p>
+      Questi vettori sono anche <m>K</m>-linearmente indipendenti: se infatti
+     <m>\vect{v}b_{0}+\vect{v}\theta b_{1}+\dots+\vect{v}\theta^{s-1}b_{s-1}=\vect{0}</m> è una loro combinazione lineare che dà come risultato il vettore nullo, allora <m>b_{0}+b_{1}x+\dots+b_{s-1}x^{s-1}</m> annulla <m>\vect{v}</m> ed è, quindi, un multiplo del polinomio <m>p</m>. Poiché <m>p</m> ha grado <m>s</m>, ciò può avvenire se e solo se <m>b_{0}=b_{1}=\dots=b_{s-1}=0</m>. Riassumiamo quanto visto nella
+    </p>
+
+    <proposition xml:id="prop-torsione">
+      <statement>
+        <p>
+          Sia <m>V</m> uno spazio vettoriale di dimensione finita <m>n</m> su un campo <m>K</m> e sia <m>\theta</m> un endomorfismo di <m>V</m>. Allora <m>V</m>, considerato come <m>K[x]</m>-modulo rispetto alla struttura indotta da <m>\theta</m>, è di torsione. Se <m>\vect{v}</m> è un vettore non nullo, l'annullatore di <m>\vect{v}</m> è generato da un polinomio monico di grado <m>s</m> con <m>1\le s\le n</m> e il <m>K[x]</m>-sottomodulo ciclico generato da <m>\vect{v}</m> è un sottospazio vettoriale <m>\theta</m>-stabile di dimensione <m>s</m> e di base <m>\vect{v}</m>, <m>\vect{v}\theta</m>, <m>\dots</m>, <m>\vect{v}\theta^{s-1}</m>.
+        </p>
+      </statement>
+    </proposition>
+
+    <p>
+      Vediamo ora come tutto ciò ci permetta, prima in un caso particolare, di rappresentare un endomorfismo per mezzo di una matrice particolarmente semplice.
+    </p>
+
+    <proposition xml:id="prop-compagna">
+      <statement>
+        <p>
+          <idx><h>matrice</h><h>compagna di un polinomio</h></idx>
+          <notation>
+            <usage><m>C(p)</m></usage>
+            <description>matrice compagna del polinomio monico <m>p</m></description>
+          </notation>
+          Sia <m>V</m> uno spazio vettoriale di dimensione finita <m>n</m> su un campo <m>K</m> e sia <m>\theta</m> un endomorfismo di <m>V</m>. Supponiamo che <m>V</m>, con la struttura di <m>K[x]</m>-modulo indotta da <m>\theta</m>, sia ciclico di generatore <m>\vect{v}</m>. Se <m>p\coloneqq a_{0}+a_{1}x+\dots+x^{n}</m> è il polinomio monico che genera l'annullatore di <m>\vect{v}</m> allora <m>\theta</m>, rispetto alla base di <m>V</m> formata dai vettori <m>\vect{v}_{1}\coloneqq\vect{v}</m>, <m>\vect{v}_{2}\coloneqq\vect{v}\theta</m>, <m>\dots</m>, <m>\vect{v}_{n}\coloneqq\vect{v}\theta^{n-1}</m>, si rappresenta con la matrice
+          <md>
+              C(p)\coloneqq
+              \begin{pmatrix}
+                0      \amp 1      \amp 0      \amp \dots  \amp 0\\
+                0      \amp 0      \amp 1      \amp \dots  \amp 0\\
+                \vdots \amp \vdots \amp \vdots \amp \ddots \amp \vdots\\
+                0      \amp 0      \amp 0      \amp \dots  \amp 1\\
+                -a_{0} \amp -a_{1} \amp -a_{2} \amp \dots  \amp -a_{n-1}
+              \end{pmatrix}
+          </md>
+          detta <term>matrice compagna</term> del polinomio monico <m>p</m>. Il polinomio caratteristico <m>\det(x\Idmatrix-C(p))</m> della matrice <m>C(p)</m> è esattamente <m>p</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Determiniamo la matrice rappresentativa di <m>\theta</m> rispetto alla base prescelta. Osserviamo che, per <m>1\le i\le n-1</m>, si ha <m>\vect{v}_{i}\theta=\vect{v}_{i+1}</m>. In particolare, <m>\vect{v}_{1}\theta= \vect{v}_{1}\cdot 0+\vect{v}_{2}\cdot 1+\vect{v}_{3}\cdot 0+\cdots+\vect{v}_{n}\cdot 0</m>: quindi, i coefficienti sulla prima riga della matrice rappresentativa di <m>\theta</m> sono <m>(0,1,0,\dots,0)</m>.
+          In maniera analoga determiniamo le righe della matrice fino alla <m>n-1</m>-esima. Per determinare l'ultima riga, osserviamo che <m>\vect{v}p=\vect{0}</m>, cioè <m>\vect{v}a_{0}+\vect{v}\theta a_{1}+\dots+\vect{v}\theta^{n}=\vect{0}</m> vale a dire <m>\vect{v}\theta^{n}=-\vect{v}a_{0}-\vect{v}\theta a_{1}+\dots-\vect{v}\theta^{n-1}a_{n-1}</m>. Ma allora
+          <md>
+            \vect{v}_{n}\theta=\vect{v}\theta^{n-1}\theta=\vect{v}\theta^{n}=
+            -\vect{v}_{1}a_{0}-\vect{v}_{2}a_{1}-\cdots-\vect{v}_{n}a_{n-1}
+          </md>.
+        </p>
+        <p>
+          Per mostrare che il polinomio caratteristico di <m>C(p)</m> è <m>p</m>, procediamo per induzione su <m>n</m>. Se <m>n=1</m> (e, quindi, <m>p=a_{0}+x</m>), la matrice compagna di <m>p</m> è <m>\begin{psmallmatrix} -a_{0} \end{psmallmatrix}</m> e il polinomio caratteristico di questa matrice è, ovviamente, <m>a_{0}+x</m>. Se <m>n>1</m>, il polinomio caratteristico di <m>C(p)</m> è
+          <md>
+            \det(x\Idmatrix-C(p))=
+            \begin{vmatrix}
+              x      \amp -1     \amp 0      \amp \dots  \amp 0\\
+              0      \amp x      \amp -1     \amp \dots  \amp 0\\
+              \vdots \amp \vdots \amp \vdots \amp \ddots \amp \vdots\\
+              0      \amp 0      \amp 0      \amp \dots  \amp -1\\
+              a_{0}  \amp a_{1}  \amp a_{2}  \amp \dots  \amp x+a_{n-1}
+            \end{vmatrix}
+          </md>
+          Se ora utilizziamo lo sviluppo di Laplace<fn><url href="https://it.wikipedia.org/wiki/Pierre_Simon_Laplace" visual="">Pierre Simon Laplace</url>, 1749<ndash/>1827.</fn><idx><h>Laplace, Pierre Simon</h></idx> rispetto alla prima colonna otteniamo:
+          <md>
+            \det(x\Idmatrix-C(p))=x
+            \begin{vmatrix}
+              x      \amp -1     \amp \dots  \amp 0\\
+              \vdots \amp \vdots \amp \ddots \amp \vdots\\
+              0      \amp 0      \amp \dots  \amp -1\\
+              a_{1}  \amp a_{2}  \amp \dots  \amp x+a_{n-1}
+            \end{vmatrix}+(-1)^{n+1}a_{0}
+            \begin{vmatrix}
+              -1     \amp 0      \amp \dots  \amp 0\\
+              x      \amp -1     \amp \dots  \amp 0\\
+              \vdots \amp \vdots \amp \ddots \amp \vdots\\
+              0      \amp 0      \amp \dots  \amp -1
+            \end{vmatrix}
+          </md>
+          Il primo determinante che appare in questo sviluppo non è altri che il polinomio caratteristico della matrice compagna del polinomio <m>a_{1}+a_{2}x+\dots+x^{n-1}</m> e, per ipotesi induttiva, coincide con questo polinomio. Il secondo determinante è il determinante di una matrice triangolare inferiore ed è, dunque, il prodotto degli elementi sulla diagonale principale, vale a dire <m>(-1)^{n-1}</m>. Dunque
+          <md>
+            \det(x\Idmatrix-C(p))=x(a_{1}+a_{2}x+\dots+x^{n-1})+(-1)^{n+1}a_{0}(-1)^{n-1}=p
+          </md>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <note>
+      <p>
+        La matrice compagna è definita solo per polinomi monici.
+      </p>
+    </note>
+
+    <p>
+      Possiamo ora dare il
+    </p>
+
+    <theorem xml:id="thm-forma_canonica_primaria_endomorfismo">
+      <statement>
+        <p>
+          Sia <m>V</m> uno spazio vettoriale di dimensione <m>n</m> su un campo <m>K</m> e sia <m>\theta</m> un endomorfismo di <m>V</m>. Esistono allora polinomi irriducibili monici <m>p_{1}</m>, <m>p_{2}</m>, <m>\ldots</m>, <m>p_{t}</m> (non necessariamente distinti) e interi positivi <m>\alpha_{1}</m>, <m>\alpha_{2}</m>, <m>\ldots</m>, <m>\alpha_{t}</m> e una base di <m>V</m> rispetto a cui <m>\theta</m> si rappresenta con la matrice diagonale a blocchi
+          <md>
+            C\coloneqq
+            \begin{pmatrix}
+              C_{1}  \amp 0      \amp \dots  \amp 0 \\
+              0      \amp C_{2}  \amp \dots  \amp 0 \\
+              \vdots \amp \vdots \amp \ddots \amp \vdots\\
+              0      \amp 0      \amp \dots  \amp C_{t}
+            \end{pmatrix}
+          </md>
+          dove ciascun <m>C_{i}</m> è la matrice compagna del polinomio <m>p_{i}^{\alpha_{i}}</m>. La matrice <m>C</m> è univocamente determinata a meno dell'ordinamento dei blocchi <m>C_{i}</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Basta reinterpretare risultati già visti. L'endomorfismo <m>\theta</m> induce su <m>V</m> una struttura di <m>K[x]</m>-modulo: poiché <m>V</m> è finitamente generato come <m>K</m>-spazio vettoriale, a maggior ragione è finitamente generato come <m>K[x]</m>-modulo. Inoltre <m>V</m> è un <m>K[x]</m>-modulo di torsione per la <xref ref="prop-torsione"/>: quindi, grazie al <xref ref="thm-decomposizione_primaria"/>, possiamo esprimere <m>V</m> come somma diretta di un numero finito di moduli ciclici di ordine polinomi <m>p_{1}^{\alpha_{1}}</m>, <m>p_{2}^{\alpha_{2}}</m>, <m>\ldots</m>, <m>p_{t}^{\alpha_{t}}</m> con i <m>p_{i}</m> irriducibili e monici (pur di dividere per il loro coefficiente direttivo), e tali ordini sono unici a meno dell'ordinamento. Scegliendo per ciascuno di questi sottomoduli una <m>K</m>-base come nella <xref ref="prop-compagna"/>, e rappresentando <m>\theta</m> rispetto alla base che si ottiene unendo queste basi come nella <xref ref="prop-diagonale_a_blocchi"/>, otteniamo esattamente la matrice <m>C</m>.
+        </p>
+      </proof>
+
+    </theorem>
+
+    <p>
+      Questo risultato può essere espresso direttamente in termini di matrici:
+    </p>
+
+    <theorem xml:id="thm-forma_canonica_primaria_matrice">
+      <statement>
+        <p>
+          Sia <m>A</m> una matrice quadrata di ordine <m>n</m> a coefficienti in un campo <m>K</m>. Esistono allora polinomi irriducibili monici <m>p_{1}</m>, <m>p_{2}</m>, <m>\ldots</m>, <m>p_{t}</m> (non necessariamente distinti) e interi positivi <m>\alpha_{1}</m>, <m>\alpha_{2}</m>, <m>\ldots</m>, <m>\alpha_{t}</m> tali che <m>A</m> è simile alla matrice diagonale a blocchi
+          <md>
+            C\coloneqq
+            \begin{pmatrix}
+              C_{1}  \amp 0      \amp \dots  \amp 0 \\
+              0      \amp C_{2}  \amp \dots  \amp 0 \\
+              \vdots \amp \vdots \amp \ddots \amp \vdots\\
+              0      \amp 0      \amp \dots  \amp C_{t}
+            \end{pmatrix}
+          </md>
+          dove ciascun <m>C_{i}</m> è la matrice compagna di <m>p_{i}^{\alpha_{i}}</m>. Inoltre, il polinomio caratteristico di <m>A</m> è <m>p_{1}^{\alpha_{1}}\cdots p_{t}^{\alpha_{t}}</m>. La matrice <m>C</m> è univocamente determinata a meno dell'ordinamento dei blocchi ed è detta <term>forma canonica primaria</term> di <m>A</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Questo teorema è semplicemente la traduzione in termini matriciali del precedente. Notiamo solo che il determinante di una matrice diagonale a blocchi è il prodotto dei determinanti dei blocchi (<xref ref="prop-diagonali_blocchi"/>) e, di conseguenza, il polinomio caratteristico di <m>C</m> (e, quindi di <m>A</m>) è il prodotto dei polinomi caratteristici dei singoli blocchi, che, per la <xref ref="prop-compagna"/> sono esattamente i <m>p_{i}^{\alpha_{i}}</m>.
+        </p>
+      </proof>
+
+    </theorem>
+
+    <note>
+      <p>
+        Sarebbe più corretto parlare di <term>forma normale primaria</term> invece che di forma canonica primaria, perché tale forma non è univocamente determinata (i blocchi possono essere riordinati arbitrariamente). Tuttavia è ormai invalso l'uso del termine canonica e pertanto lo useremo anche noi.
+      </p>
+    </note>
+
+    <theorem xml:id="thm-forma_canonica_razionale_endomorfismo">
+      <statement>
+        <p>
+          Sia <m>V</m> uno spazio vettoriale di dimensione <m>n</m> su un campo <m>K</m> e sia <m>\theta</m> un endomorfismo di <m>V</m>. Esistono allora polinomi monici <m>f_{1}\mid f_{2}\mid\dots\mid f_{s}</m> e una base di <m>V</m> rispetto a cui <m>\theta</m> si rappresenta con la matrice diagonale a blocchi
+          <md>
+            C\coloneqq
+            \begin{pmatrix}
+              C_{1}  \amp 0      \amp \dots  \amp 0 \\
+              0      \amp C_{2}  \amp \dots  \amp 0 \\
+              \vdots \amp \vdots \amp \ddots \amp \vdots\\
+              0      \amp 0      \amp \dots  \amp C_{s}
+            \end{pmatrix}
+          </md>
+          dove ciascun <m>C_{i}</m> è la matrice compagna del polinomio <m>f_{i}</m>. La matrice <m>C</m> è univocamente determinata.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Basta reinterpretare risultati già visti. L'endomorfismo <m>\theta</m> induce su <m>V</m> una struttura di <m>K[x]</m>-modulo: poiché <m>V</m> è finitamente generato come <m>K</m>-spazio vettoriale, a maggior ragione è finitamente generato come <m>K[x]</m>-modulo. Inoltre <m>V</m> è un <m>K[x]</m>-modulo di torsione per la <xref ref="prop-torsione"/>: quindi, grazie al <xref ref="thm-decomposizione_fattori_invarianti"/>, possiamo esprimere <m>V</m> come somma diretta di un numero finito di moduli ciclici di ordine polinomi <m>f_{1}\mid f_{2}\mid\dots\mid f_{s}</m>, che
+          possiamo supporre monici pur di dividere per il loro coefficiente direttivo, e tali ordini sono unici. Scegliendo per ciascuno di questi sottomoduli una <m>K</m>-base come nella <xref ref="prop-compagna"/>, e rappresentando <m>\theta</m> rispetto alla base che si ottiene unendo queste basi come nella <xref ref="prop-diagonale_a_blocchi"/>, otteniamo esattamente la matrice <m>C</m>.
+        </p>
+      </proof>
+
+    </theorem>
+
+    <p>
+      Anche questo risultato può essere espresso direttamente in termini di matrici:
+    </p>
+
+    <theorem xml:id="thm-forma_canonica_razionale_matrice">
+      <statement>
+        <p>
+          Sia <m>A</m> una matrice quadrata di ordine <m>n</m> a coefficienti in un campo <m>K</m>. Allora esistono polinomi monici <m>f_{1}\mid f_{2}\mid\dots\mid f_{s}</m> tali che <m>A</m> è simile alla matrice diagonale a blocchi
+          <md>
+            C\coloneqq
+            \begin{pmatrix}
+              C_{1}  \amp 0      \amp \dots  \amp 0 \\
+              0      \amp C_{2}  \amp \dots  \amp 0 \\
+              \vdots \amp \vdots \amp \ddots \amp \vdots\\
+              0      \amp 0      \amp \dots  \amp C_{s}
+            \end{pmatrix}
+          </md>
+          dove ciascun <m>C_{i}</m> è la matrice compagna di <m>f_{i}</m>. Inoltre il polinomio caratteristico di <m>A</m> è <m>f_{1}\cdots f_{s}</m>. La matrice <m>C</m> è univocamente determinata ed è detta <term>forma canonica razionale</term> di <m>A</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Questo teorema è semplicemente la traduzione in termini matriciali del precedente. Notiamo solo che il determinante di una matrice diagonale a blocchi è il prodotto dei determinanti dei blocchi (<xref ref="prop-diagonali_blocchi"/>) e, di conseguenza, il polinomio caratteristico di <m>C</m> (e, quindi di <m>A</m>) è il prodotto dei polinomi caratteristici dei singoli blocchi, che, per la <xref ref="prop-compagna"/> sono esattamente i polinomi, che, per la <xref ref="prop-compagna"/> sono esattamente gli <m>f_{i}</m>.
+        </p>
+      </proof>
+
+    </theorem>
+
+    <note>
+      <p>
+        In questo caso è corretto usare il termine <q>canonica</q> perché tale matrice è univocamente determinata.
+      </p>
+
+    </note>
+
+    <corollary xml:id="cor-matrici_simili">
+      <statement>
+        <p>
+          Due matrici quadrate <m>A</m> e <m>B</m> dello stesso ordine sono simili se e solo se hanno la stessa forma canonica razionale.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Sia <m>C</m> la forma canonica di <m>A</m> (cioè sia <m>A</m> simile a <m>C</m>). Se <m>B</m> è simile ad <m>A</m> allora è simile anche a <m>C</m>. Viceversa se <m>B</m> ha <m>C</m> come sua forma canonica (cioè se <m>B</m> è simile a <m>C</m>) allora <m>A</m> e <m>B</m>, essendo simili a <m>C</m> sono simili fra loro.
+        </p>
+      </proof>
+
+    </corollary>
+
+    <remark xml:id="rem-da_primaria_a_razionale_e_viceversa">
+      <p>
+        Si può facilmente passare dalla forma canonica razionale a quella primaria e viceversa usando le tecniche che abbiamo descritto per passare dalla decomposizione a fattori invarianti a quella primaria di un modulo sopra un dominio a ideali principali.
+      </p>
+    </remark>
+
+    <p>
+      I risultati dati finora ci dicono che, data una matrice <m>A</m>, essa ha una forma canonica razionale e una forma canonica primaria ma non ci danno indicazioni su come determinarle. La conoscenza del polinomio caratteristico di <m>A</m> ci dà qualche informazione sui blocchi ma in generale non è sufficiente.
+    </p>
+
+    <p>
+      Se il polinomio caratteristico di <m>A</m> è il prodotto <m>p_{1}p_{2}\cdots p_{s}</m> di polinomi irriducibili monici distinti, allora la forma canonica razionale è la matrice compagna di <m>p_{1}p_{2}\cdots p_{s}</m> mentre la forma canonica primaria è la matrice diagonale a  blocchi i cui blocchi sono le matrici compagne dei polinomi <m>p_{1}</m>, <m>p_{2}</m>, <m>\dots</m>, <m>p_{s}</m>. Se però nella fattorizzazione del polinomio caratteristico di <m>A</m> lo stesso polinomio irriducibile monico appare più volte allora abbiamo bisogno di qualche informazione in più.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Consideriamo le matrici a coefficienti reali
+          <md>
+            A\coloneqq
+            \begin{pmatrix}
+              0  \amp 1 \amp  0 \amp 0 \\
+              -1 \amp 0 \amp  0 \amp 0 \\
+              0  \amp 0 \amp  0 \amp 1 \\
+              0  \amp 0 \amp -1 \amp 0
+            \end{pmatrix}
+          </md>
+          e
+          <md>
+            B\coloneqq
+              \begin{pmatrix}
+              0  \amp 1 \amp  0 \amp 0 \\
+              0  \amp 0 \amp  1 \amp 0 \\
+              0  \amp 0 \amp  0 \amp 1 \\
+              -1 \amp 0 \amp -2 \amp 0
+            \end{pmatrix}
+          </md>.
+          La matrice <m>A</m> è una matrice diagonale a <m>2</m> blocchi di ordine <m>2</m>: ciascun blocco è la matrice compagna del polinomio irriducibile <m>x^{2}+1</m>. La matrice <m>B</m> è la matrice compagna del polinomio <m>(x^{2}+1)^{2}</m>. Entrambe le matrici sono già in forma canonica (in questo caso particolare la forma canonica razionale e quella primaria coincidono) e hanno lo stesso polinomio caratteristico <m>(x^{2}+1)^{2}</m>, tuttavia non sono simili tra loro.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Ovviamente ci sono dei metodi per determinare le forme canoniche a partire dalla matrice <m>A</m>. Non approfondiamo però quest'aspetto nella sua generalità: ci limiteremo a considerare il caso particolare in cui il polinomio caratteristico di <m>A</m> si fattorizzi come prodotto di polinomi di primo grado. Sceglieremo però in quest'ipotesi delle basi per i sottomoduli ciclici che porteranno una rappresentazione diversa da quella tramite matrici compagne di polinomi monici.
+    </p>
+
+  </section>
+
+  <section xml:id="sec-jordan">
+    <title>Forma canonica di Jordan</title>
+
+    <proposition xml:id="prop-blocco_jordan">
+      <statement>
+        <p>
+
+          <notation>
+            <usage><m>J_{n}(\lambda)</m></usage>
+            <description>blocco di Jordan di ordine <m>n</m> relativo all'autovalore <m>\lambda</m></description>
+          </notation>
+          Sia <m>V</m> uno spazio vettoriale di dimensione finita <m>n</m> su un campo <m>K</m> e sia <m>\theta</m> un endomorfismo di <m>V</m>. Supponiamo che <m>V</m>, con la struttura di <m>K[x]</m>-modulo indotta da <m>\theta</m>, sia ciclico di generatore <m>\vect{v}</m> e che l'annullatore di <m>\vect{v}</m> sia generato dal polinomio <m>(x-\lambda)^{n}</m>. I vettori <m>\vect{v}_{1}\coloneqq \vect{v}</m>,
+          <m>\vect{v}_{2}\coloneqq \vect{v}(\theta-\lambda\Id)</m>, <m>\dots</m>, <m>\vect{v}_{n}\coloneqq\vect{v}(\theta-\lambda\Id)^{n-1}</m> formano allora una base di <m>V</m> rispetto a cui <m>\theta</m> si rappresenta con la matrice
+          <md>
+            J_{n}(\lambda)\coloneqq
+            \begin{pmatrix}
+              \lambda \amp 1       \amp 0      \amp \dots   \amp \dots   \amp 0\\
+              0       \amp \lambda \amp 1      \amp \dots   \amp \dots   \amp 0\\
+              \vdots  \amp \vdots  \amp \ddots \amp \ddots  \amp \dots   \amp \vdots\\
+              0       \amp \dots   \amp \dots  \amp \lambda \amp 1       \amp 0      \\
+              0       \amp \dots   \amp \dots  \amp 0       \amp \lambda \amp 1\\
+              0       \amp \dots   \amp \dots  \amp 0       \amp 0       \amp \lambda
+            \end{pmatrix}
+          </md>
+          detta <term>blocco di Jordan</term><fn><url href="https://en.wikipedia.org/wiki/Camille_Jordan" visual="">Camille Jordan</url>, 1838<ndash/>1922.</fn><idx><h>Jordan, Camille</h></idx> di ordine <m>n</m> relativo all'autovalore <m>\lambda</m>. Il polinomio caratteristico <m>\det(x\Idmatrix-J_{n}(\lambda))</m> della matrice <m>J_{n}(\lambda)</m> è esattamente <m>(x-\lambda)^{n}</m>. L'endomorfismo <m>\theta</m> ha come unico autovalore <m>\lambda</m> di molteplicità algebrica <m>n</m> e molteplicità geometrica <m>1</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Mostriamo che gli <m>n</m> vettori <m>\vect{v}_{1}</m>, <m>\dots</m>, <m>\vect{v}_{n}</m> sono linearmente indipendenti e sono quindi una base per <m>V</m>, che sappiamo avere dimensione uguale al grado del polinomio ordine di <m>\vect{v}</m>. Siano allora <m>b_{1}</m>, <m>\dots</m>, <m>b_{n}</m> elementi di <m>K</m> tali che <m>\vect{v}_{1}b_{1}+\dots+\vect{v}_{n}b_{n}=\vect{0}</m>, vale a dire <m>\vect{v}b_{1}+\vect{v}(\theta-\lambda\Id)b_{2}+\dots+\vect{v}(\theta-\lambda\Id)^{n-1}b_{n}=\vect{0}</m>, cioè <m>\vect{v}(b_{1}+b_{2}(x-\lambda)+\dots+b_{n}(x-\lambda)^{n-1})=\vect{0}</m>.
+          Poiché l'annullatore di <m>\vect{v}</m> è generato da un polinomio di grado <m>n</m> ciò comporta che <m>b_{1}+b_{2}(x-\lambda)+\dots+b_{n}(x-\lambda)^{n-1}</m> è uguale a <m>0</m>. Se espandiamo questo polinomio notiamo che il coefficiente di <m>x^{n-1}</m> è <m>b_{n}</m> e, dunque, <m>b_{n}=0</m>. Una volta posto <m>b_{n}=0</m>, il coefficiente di <m>x^{n-2}</m> è <m>b_{n-1}</m> e, dunque, <m>b_{n-1}=0</m> e così via.
+        </p>
+
+        <p>
+          Mostriamo ora che la matrice rappresentativa di <m>\theta</m> rispetto a questa base è la matrice <m>J_{n}(\lambda)</m> data in enunciato. Per <m>1\le j\le n-1</m> si ha <m>\vect{v}_{j}(\theta-\lambda\Id)=\vect{v}_{j+1}</m> e, pertanto, <m>\vect{v}_{j}\theta=\vect{v}_{j}\lambda+\vect{v}_{j+1}</m>. Ciò permette di determinare i coefficienti della riga <m>j</m>-esima. Per determinare l'ultima riga della matrice notiamo che <m>\vect{v}_{n}(\theta-\lambda\Id)=\vect{v}(\theta-\lambda\Id)^{n-1}(\theta-\lambda\Id)= \vect{v}(\theta-\lambda\Id)^{n}=\vect{0}</m>. Pertanto <m>\vect{v}_{n}\theta=\vect{v}_{n}\lambda</m> da cui ricaviamo i coefficienti dell'ultima riga della matrice.
+        </p>
+
+        <p>
+          La matrice <m>J_{n}(\lambda)</m>  è triangolare, quindi si calcola immediatamente il suo polinomio caratteristico <m>(x-\lambda)^{n}</m> e, pertanto, l'unico autovalore è <m>\lambda</m> di molteplicità
+          algebrica <m>n</m>. La molteplicità geometrica di <m>\lambda</m> è uguale a <m>n-\rk(\lambda\Idmatrix-J_{n}(\lambda))</m>. Ora
+          <md>
+            \lambda\Idmatrix-J_{n}(\lambda)=
+            \begin{pmatrix}
+              0       \amp -1       \amp 0      \amp \dots   \amp \dots   \amp 0\\
+              0       \amp 0 \amp -1   \amp \dots   \amp \dots   \amp 0\\
+              \vdots  \amp \vdots  \amp \ddots \amp \ddots  \amp \dots   \amp \vdots\\
+              0       \amp \dots   \amp \dots  \amp 0 \amp -1       \amp 0      \\
+              0       \amp \dots   \amp \dots  \amp 0       \amp 0 \amp -1\\
+              0       \amp \dots   \amp \dots  \amp 0       \amp 0       \amp 0
+            \end{pmatrix}
+          </md>
+          ha, ovviamente, rango <m>n-1</m> e, dunque, la molteplicità geometrica di <m>\lambda</m> è uguale a <m>1</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      Partendo dalla forma canonica primaria e applicando blocco a blocco la scelta di base data dalla proposizione precedente, otteniamo il
+    </p>
+
+    <theorem xml:id="thm-forma_canonica_jordan_endomorfismo">
+      <statement>
+        <p>
+          Sia <m>V</m> uno spazio vettoriale di dimensione <m>n</m> su un campo <m>K</m> e sia <m>\theta</m> un endomorfismo di <m>V</m>, il cui polinomio caratteristico sia totalmente riducibile (ciò avviene
+          sempre se <m>K</m> è algebricamente chiuso). Esiste allora una base di <m>V</m> rispetto a cui <m>\theta</m> si rappresenta con una matrice diagonale a blocchi del tipo
+          <md>
+            \begin{pmatrix}
+              J_{n_{1}}(\lambda_{1})  \amp 0      \amp \dots  \amp 0 \\
+              0      \amp J_{n_{2}}(\lambda_{2})  \amp \dots  \amp 0 \\
+              \vdots \amp \vdots \amp \ddots \amp \vdots\\
+              0      \amp 0      \amp \dots  \amp J_{n_{s}}(\lambda_{s})
+            \end{pmatrix}
+          </md>
+          dove ciascun <m>J_{n_{i}}(\lambda_{i})</m> è un blocco di Jordan. La matrice <m>J</m>, detta <term>matrice di Jordan</term>, è univocamente determinata a meno dell'ordinamento in cui sono riportati i blocchi.
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      Anche questo risultato ha un corrispettivo matriciale:
+    </p>
+
+    <theorem xml:id="thm-forma_canonica_jordan_matrice">
+      <statement>
+        <p>
+          Sia <m>A</m> una matrice quadrata di ordine <m>n</m> a coefficienti in un campo <m>K</m>. Se il polinomio caratteristico di <m>A</m> è totalmente riducibile (ciò avviene sempre se <m>K</m> è algebricamente chiuso) allora <m>A</m> è simile a una matrice diagonale a blocchi del tipo
+          <md>
+            J\coloneqq
+            \begin{pmatrix}
+              J_{n_{1}}(\lambda_{1})  \amp 0      \amp \dots  \amp 0 \\
+              0      \amp J_{n_{2}}(\lambda_{2})  \amp \dots  \amp 0 \\
+              \vdots \amp \vdots \amp \ddots \amp \vdots\\
+              0      \amp 0      \amp \dots  \amp J_{n_{s}}(\lambda_{s})
+            \end{pmatrix}
+          </md>
+          dove ciascun <m>J_{n_{i}}(\lambda_{i})</m> è un blocco di Jordan. Inoltre il polinomio caratteristico di <m>A</m> è <m>(x-\lambda_{1})^{n_{1}}\cdots (x-\lambda_{s})^{n_{s}}</m>. La matrice <m>J</m> è univocamente determinata a meno dell'ordinamento in cui sono riportati i blocchi e viene detta <term>forma canonica di Jordan</term> della matrice <m>A</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <note>
+      <p>
+        Anche in questo caso sarebbe più corretto parlare di forma normale di Jordan.
+      </p>
+    </note>
+
+    <remark xml:id="rem-autovalori_non_distinti">
+      <p>
+        Notiamo che nella matrice di Jordan data dai teoremi precedenti non è detto che gli autovalori <m>\lambda_{1}</m>, <m>\dots</m>, <m>\lambda_{s}</m> siano tutti diversi.
+      </p>
+    </remark>
+
+    <corollary xml:id="cor-simili_se_jordan_uguale">
+      <statement>
+        <p>
+          Due matrici quadrate <m>A</m> e <m>B</m> dello stesso ordine aventi polinomio caratteristico totalmente riducibile sono simili se e solo se hanno la stessa forma canonica di Jordan (a meno eventualmente dell'ordine dei blocchi).
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sia <m>J</m> la forma canonica di Jordan di <m>A</m> (cioè sia <m>A</m> simile a <m>J</m>). Se <m>B</m> è simile ad <m>A</m> allora è simile anche a <m>J</m>. Viceversa se <m>B</m> ha <m>J</m> come sua forma canonica di Jordan (cioè se <m>B</m> è simile a <m>J</m>) allora <m>A</m> e <m>B</m>, essendo simili a <m>J</m> sono simili fra loro.
+        </p>
+      </proof>
+
+    </corollary>
+
+    <remark xml:id="rem-blocchi_ordine_1_diagonalizzabile">
+      <p>
+        Nel caso in cui i blocchi di Jordan abbiano tutti ordine <m>1</m> otteniamo una usuale matrice diagonale.
+      </p>
+    </remark>
+
+    <p>
+      Data una matrice <m>A</m> il cui polinomio caratteristico è totalmente riducibile, viene allora naturale chiedersi come sia possibile determinare una matrice di Jordan a essa simile. Uno dei metodi per far questo è quello di cercare degli <term>invarianti</term> per similitudine. Più precisamente, data una matrice quadrata <m>A</m>, ci chiediamo che cosa hanno in comune le matrici simili ad <m>A</m>. Sappiamo già, ad esempio, che matrici simili hanno lo stesso determinante, lo stesso rango e lo stesso polinomio caratteristico. Diamo allora il
+    </p>
+
+    <lemma xml:id="lem-invarianti_di_simili">
+      <statement>
+        <p>
+          Se <m>A</m> e <m>B</m> sono matrici quadrate simili tra loro allora le matrici <m>(A-k\Idmatrix)^{t}</m> e <m>(B-k\Idmatrix)^{t}</m> sono simili fra loro per ogni <m>k\in K</m> e  ogni <m>t>0</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Esiste una matrice invertibile <m>M</m> tale che <m>M^{-1}AM=B</m>. Ma allora <m>M^{-1}(A-k\Idmatrix)M=M^{-1}AM-kM^{-1}\Idmatrix M=B-k\Idmatrix</m>. Dunque, l'enunciato è vero per <m>t=1</m>. Procediamo per induzione su <m>t</m>: per <m>t\gt 1</m> abbiamo allora
+          <md>
+            <mrow> M^{-1}(A-k\Idmatrix)^{t}M\amp =M^{-1}(A-k\Idmatrix)^{t-1}(A-k\Idmatrix)M</mrow>
+            <mrow> \amp =M^{-1}(A-k\Idmatrix)^{t-1}MM^{-1}(A-k\Idmatrix)M</mrow>
+            <mrow>  \amp =(B-k\Idmatrix)^{t-1}(B-k\Idmatrix)=(B-k\Idmatrix)^{t}</mrow>
+          </md>
+        </p>
+      </proof>
+
+    </lemma>
+
+    <lemma xml:id="lem-rango_blocco">
+      <statement>
+        <p>
+          Dato un blocco di Jordan <m>J_{n}(\lambda)</m> si ha <m>\rk(J_{n}(\lambda)-\lambda\Idmatrix)^{t}=n-t</m> per <m>t\le n</m> e <m>\rk(J_{n}(\lambda)-\lambda\Idmatrix)^{t}=0</m> per <m>t>n</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          La matrice <m>J_{n}(\lambda)-\lambda\Idmatrix</m> è la matrice
+          <md>
+          \begin{pmatrix}
+            0       \amp 1       \amp 0      \amp \dots   \amp \dots  \amp 0\\
+            0       \amp 0       \amp 1      \amp \dots   \amp \dots  \amp 0\\
+            \vdots  \amp \vdots  \amp \ddots \amp \ddots  \amp \dots  \amp \vdots\\
+            0       \amp \dots   \amp \dots  \amp 0       \amp 1      \amp 0      \\
+            0       \amp \dots   \amp \dots  \amp 0       \amp 0      \amp 1\\
+            0       \amp \dots   \amp \dots  \amp 0       \amp 0      \amp 0
+          \end{pmatrix}
+          </md>
+          il cui rango è <m>n-1</m>. Calcolando le potenze successive di <m>J_{n}(\lambda)-\lambda\Idmatrix</m> si trovano le matrici
+          <md>
+          \begin{pmatrix}
+            0       \amp  0       \amp 1       \amp 0      \amp \dots   \amp \dots  \amp 0\\
+            0       \amp  0       \amp 0       \amp 1      \amp \dots   \amp \dots  \amp 0\\
+            \vdots  \amp  \vdots  \amp \vdots  \amp \ddots \amp \ddots  \amp \dots  \amp \vdots\\
+            0       \amp  0       \amp \dots   \amp \dots  \amp 0       \amp 1      \amp 0      \\
+            0       \amp  0       \amp \dots   \amp \dots  \amp 0       \amp 0      \amp 1\\
+            0       \amp  0       \amp \dots   \amp \dots  \amp 0       \amp 0      \amp 0\\
+            0       \amp  0       \amp \dots   \amp \dots  \amp 0       \amp 0      \amp 0
+          \end{pmatrix}\qquad
+          \begin{pmatrix}
+            0       \amp0       \amp  0       \amp 1       \amp 0      \amp \dots   \amp \dots  \amp 0\\
+            0       \amp0       \amp  0       \amp 0       \amp 1      \amp \dots   \amp \dots  \amp 0\\
+            \vdots  \amp\vdots  \amp  \vdots  \amp \vdots  \amp \ddots \amp \ddots  \amp \dots  \amp \vdots\\
+            0       \amp0       \amp  0       \amp \dots   \amp \dots  \amp 0       \amp 1      \amp 0      \\
+            0       \amp0       \amp  0       \amp \dots   \amp \dots  \amp 0       \amp 0      \amp 1\\
+            0       \amp0       \amp  0       \amp \dots   \amp \dots  \amp 0       \amp 0      \amp 0\\
+            0       \amp0       \amp  0       \amp \dots   \amp \dots  \amp 0       \amp 0      \amp 0\\
+            0       \amp0       \amp  0       \amp \dots   \amp \dots  \amp 0       \amp 0      \amp 0
+          \end{pmatrix}
+          </md>
+          e così via. A ogni passo il rango decresce di <m>1</m> fino ad azzerarsi.
+        </p>
+      </proof>
+
+    </lemma>
+
+    <p>
+      Sia allora <m>A</m> una matrice quadrata il cui polinomio caratteristico è totalmente riducibile. Sappiamo che <m>A</m> è simile a una matrice di Jordan
+      <md>
+        J\coloneqq
+        \begin{pmatrix}
+          J_{n_{1}}(\lambda_{1})  \amp 0      \amp \dots  \amp 0 \\
+          0      \amp J_{n_{2}}(\lambda_{2})  \amp \dots  \amp 0 \\
+          \vdots \amp \vdots \amp \ddots \amp \vdots\\
+          0      \amp 0      \amp \dots  \amp J_{n_{s}}(\lambda_{s})
+        \end{pmatrix}
+      </md>
+      dove <m>\lambda_{1}</m>, <m>\dots</m>, <m>\lambda_{s}</m> sono gli autovalori (non necessariamente distinti) di <m>A</m>. Sia <m>\lambda</m> uno degli autovalori di <m>A</m>. La matrice <m>J-\lambda\Idmatrix</m> è ovviamente la matrice
+      <md>
+        \begin{pmatrix}
+          J_{n_{1}}(\lambda_{1})-\lambda\Idmatrix  \amp 0      \amp \dots  \amp 0 \\
+          0      \amp J_{n_{2}}(\lambda_{2})-\lambda\Idmatrix  \amp \dots  \amp 0 \\
+          \vdots \amp \vdots \amp \ddots \amp \vdots\\
+          0      \amp 0      \amp \dots  \amp J_{n_{s}}(\lambda_{s})-\lambda\Idmatrix
+        \end{pmatrix}
+      </md>
+      e, per la <xref ref="prop-diagonali_blocchi"/> si ha che <m>(J-\lambda\Idmatrix)^{t}</m> è la matrice
+      <md>
+        \begin{pmatrix}
+          (J_{n_{1}}(\lambda_{1})-\lambda\Idmatrix)^{t}  \amp 0      \amp \dots  \amp 0 \\
+          0      \amp (J_{n_{2}}(\lambda_{2})-\lambda\Idmatrix)^{t}  \amp \dots  \amp 0 \\
+          \vdots \amp \vdots \amp \ddots \amp \vdots\\
+          0      \amp 0      \amp \dots  \amp (J_{n_{s}}(\lambda_{s})-\lambda\Idmatrix)^{t}
+        \end{pmatrix}
+      </md>.
+      Ora se <m>\lambda</m> è diverso da <m>\lambda_{i}</m> il blocco <m>J_{n_{i}}(\lambda_{i})-\lambda\Idmatrix</m> è una matrice triangolare i cui elementi lungo la diagonale sono tutti uguali a <m>\lambda_{i}-\lambda</m> e sono, dunque, non nulli: ciò implica che <m>J_{n_{i}}(\lambda_{i})-\lambda\Idmatrix</m> è invertibile così come tutte le potenze <m>(J_{n_{i}}(\lambda_{i})-\lambda\Idmatrix)^{t}</m> e, pertanto, questo blocco ha rango <m>n_{i}</m>. Se invece <m>\lambda</m> è uguale a <m>\lambda_{i}</m>, grazie al <xref ref="lem-rango_blocco"/> sappiamo che il rango di <m>(J_{n_{i}}(\lambda_{i})-\lambda\Idmatrix)^{t}</m> decresce a ogni passo di <m>1</m> fino ad azzerarsi. Per la <xref ref="prop-diagonali_blocchi"/> sappiamo che il rango di <m>(J-\lambda\Idmatrix)^{t}</m> è uguale alla somma dei ranghi dei blocchi <m>(J_{n_{i}}(\lambda_{i})-\lambda\Idmatrix)^{t}</m>.
+      Dunque, se <m>n</m> è l'ordine della matrice <m>A</m> e consideriamo la sequenza <m>n</m>, <m>\rk(J-\lambda\Idmatrix)</m>, <m>\rk((J-\lambda\Idmatrix)^{2})</m>, <m>\dots</m>, abbiamo che al primo passo questa sequenza decresce di un numero uguale al numero di blocchi di Jordan relativi all'autovalore <m>\lambda</m>, al secondo passo decresce di un numero uguale al numero di blocchi di Jordan relativi all'autovalore <m>\lambda</m> di ordine almeno <m>2</m> e così via. Dunque, la conoscenza dei ranghi delle matrici <m>(J-\lambda\Idmatrix)^{t}</m> ci permette di determinare il numero di blocchi di Jordan relativi a <m>\lambda</m> e i loro ordini e, quindi, utilizzando lo stesso argomento per ciascun autovalore, di determinare <m>J</m> stessa. Si potrebbe pensare che ciò non sia di grande aiuto, visto che per calcolare il rango di <m>(J-\lambda\Idmatrix)^{t}</m> dobbiamo conoscere <m>J</m>: tuttavia il <xref ref="lem-invarianti_di_simili"/> ci dice che <m>(J-\lambda\Idmatrix)^{t}</m> e <m>(A-\lambda\Idmatrix)^{t}</m> sono simili per ogni <m>t</m> e, in particolare, hanno lo stesso rango. Possiamo allora delineare un procedimento per determinare <m>J</m> a partire da <m>A</m>.
+    </p>
+
+    <algorithm xml:id="alg-jordan">
+      <statement>
+        <p>
+          Sia <m>A</m> una matrice quadrata di ordine <m>n</m>. Vogliamo determinare, se esiste, una matrice di Jordan a essa
+          simile.
+          <ul>
+            <li>
+              <p>
+                Calcoliamo il polinomio caratteristico <m>\det(x\Idmatrix-A)</m> di <m>A</m>. Se il polinomio caratteristico non è totalmente riducibile allora <m>A</m> non è simile a una matrice di Jordan e non possiamo proseguire oltre. Se invece il polinomio caratteristico è totalmente riducibile lo scriviamo nella forma <m>(x-\lambda_{1})^{d_{1}}\cdots(x-\lambda_{s})^{d_{s}}</m> dove <m>\lambda_{1}</m>, <m>\dots</m>, <m>\lambda_{s}</m> sono gli autovalori distinti di <m>A</m> e <m>d_{1}</m>, <m>\dots</m>, <m>d_{s}</m> sono le corrispondenti molteplicità algebriche.
+              </p>
+            </li>
+            <li>
+              <p>
+                Per ciascun autovalore <m>\lambda_{i}</m> consideriamo la sequenza di numeri <m>n</m>, <m>\rk(A-\lambda_{i}\Idmatrix)</m>, <m>\rk((A-\lambda_{i}\Idmatrix)^{2})</m>, <m>\dots</m> (si noti <m>n</m> come primo termine). Questi numeri formano una successione che decresce strettamente fin quando non raggiunge <m>n-d_{i}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Il numero <m>n-\rk(A-\lambda_{i}\Idmatrix)</m> dà il numero di blocchi di Jordan relativi a <m>\lambda_{i}</m>, il numero <m>\rk(A-\lambda_{i}\Idmatrix)-\rk((A-\lambda_{i}\Idmatrix)^{2})</m> dà il numero di blocchi di Jordan relativi a <m>\lambda_{i}</m> di ordine almeno <m>2</m> e così via. Determiniamo così il numero di blocchi di Jordan relativi a <m>\lambda_{i}</m> e i loro ordini.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </algorithm>
+
+    <remark xml:id="rem-matrice_passaggio_jordan">
+      <p>
+        Il procedimento precedente ci dice come determinare una matrice di Jordan <m>J</m> simile a una matrice quadrata <m>A</m> assegnata, ma non ci dice come determinare una matrice <m>M</m> invertibile tale che <m>M^{-1}AM=J</m>: ovviamente esiste un metodo anche per determinare una tale matrice <m>M</m> ma non lo trattiamo qui.
+      </p>
+    </remark>
+
+    <p>
+      Per poter determinare più facilmente il numero di blocchi di Jordan di un dato ordine a partire dalla sequenza di interi <m>n</m>, <m>\rk(A-\lambda_{i}\Idmatrix)</m>, <m>\rk((A-\lambda_{i}\Idmatrix)^{2})</m>, <m>\dots</m> possiamo utilizzare un grafico di questo tipo. Innanzitutto consideriamo la differenza tra il primo e il secondo termine della sequenza <m>n-\rk(A-\lambda_{i}\Idmatrix)</m> e disegniamo una riga contenente dei simboli (ad esempio, dei quadrati) in tal numero:
+    </p>
+    <image xml:id="image-esempio_jordan_prima_riga">
+      <shortdescription>Riga con 8 quadrati.</shortdescription>
+      <latex-image>
+        \YoungTableau{8}
+      </latex-image>
+    </image>
+    <p>
+      Ora consideriamo la differenza tra il secondo e il terzo termine della sequenza <m>\rk(A-\lambda_{i}\Idmatrix)-\rk((A-\lambda_{i}\Idmatrix)^{2})</m>: questo è il numero di blocchi di Jordan di ordine almeno <m>2</m>. Riportiamo questo numero di simboli in riga sopra la precedente (a partire da sinistra):
+    </p>
+    <image xml:id="image-esempio_jordan_seconda_riga">
+      <shortdescription>Due righe di quadrati sovrapposte lunghe 8 e 6</shortdescription>
+      <latex-image>
+        \YoungTableau{8,6}
+      </latex-image>
+    </image>
+    <p>
+      Procediamo così disegnando una terza riga, poi una quarta e così via: al termine avremo un grafico di questo tipo:
+    </p>
+
+    <image xml:id="image-esempio_jordan_completa">
+      <shortdescription>Righe di quadrati sovrapposte lunghe 8, 6, 6, 3, 3 e 1</shortdescription>
+      <latex-image>
+        \YoungTableau{8,6,6,3,3,1}
+      </latex-image>
+    </image>
+    <p>
+      Le colonne (e le rispettive altezze) corrispondono ora ai blocchi di Jordan relativi a <m>\lambda_{i}</m> (nel grafico in esempio avremmo un blocco di ordine <m>5</m>, <m>2</m> di ordine <m>4</m>, <m>3</m> di ordine <m>3</m> e <m>2</m> di ordine <m>1</m>).
+    </p>
+
+    <example xml:id="ex-matrice_jordan">
+      <statement>
+        <p>
+          Si consideri la matrice
+          <md>
+          A\coloneqq
+          \begin{pmatrix}
+            2\amp0\amp0\amp0\amp0\amp0\amp0\amp0\\
+            0\amp2\amp0\amp0\amp0\amp0\amp0\amp0\\
+            0\amp3\amp1\amp0\amp1\amp0\amp0\amp0\\
+            4\amp0\amp0\amp2\amp0\amp1\amp0\amp1\\
+            0\amp0\amp0\amp0\amp1\amp2\amp0\amp0\\
+            0\amp0\amp0\amp0\amp0\amp1\amp0\amp1\\
+            0\amp0\amp0\amp0\amp0\amp0\amp2\amp0\\
+            0\amp0\amp0\amp0\amp0\amp0\amp1\amp2
+          \end{pmatrix}
+          </md>
+          È facile calcolare il polinomio caratteristico di questa matrice (utilizzando a ogni passo opportuni sviluppi secondo Lagrange): si ottiene <m>\det(x\Idmatrix-A)=(x-1)^{3}(x-2)^{5}</m>. Gli autovalori sono quindi <m>1</m>, di molteplicità algebrica <m>3</m> e <m>2</m> di molteplicità algebrica <m>5</m>. Si noti che in generale non è detto che gli autovalori di una matrice siano gli elementi della diagonale. Avremo, dunque, blocchi di Jordan relativi a <m>1</m> di ordine totale <m>3</m> e blocchi di Jordan relativi a <m>2</m> di ordine totale <m>5</m>.
+        </p>
+        <p>
+          Consideriamo l'autovalore <m>1</m>: costruiamo la sequenza dei ranghi associata a <m>1</m>: il primo numero è <m>8</m>, il secondo è <m>\rk(A-\Idmatrix)=7</m>, il terzo è <m>\rk((A-\Idmatrix)^{2})=6</m>, il quarto è <m>\rk((A-\Idmatrix)^{3})=5</m> e qui ci fermiamo perché <m>5=8-3</m> (ovviamente qui non sono riportati, per brevità, i calcoli necessari). Ora disegniamo il grafico come in precedenza:
+        </p>
+        <image xml:id="image-esempio_jordan_autovalore_1">  
+        <shortdescription>Righe di quadrati sovrapposte lunghe 1, 1 e 1</shortdescription>
+          <latex-image>
+            \YoungTableau{1,1,1}
+          </latex-image>
+        </image>
+        <p>
+          Abbiamo una prima riga lunga <m>1=8-7</m>, una seconda riga lunga <m>1=7-6</m> e una terza riga lunga pure <m>1=6-5</m>. Dunque, un'unica colonna alta <m>3</m>: c'è un unico blocco di Jordan relativo a <m>1</m> di ordine <m>3</m>. Notiamo però che avremmo potuto risparmiarci qualche calcolo: dopo aver calcolato il rango di <m>A-\Idmatrix</m> avremmo potuto notare che la riga inferiore del nostro grafico contiene un unico elemento e, pertanto, che le righe successive avrebbero dovuto avere lunghezza <m>1</m>.
+        </p>
+        <p>
+          Passiamo ora all'autovalore <m>2</m>. Anche qui diamo, senza esplicitare i calcoli, la sequenza dei ranghi associati: otteniamo <m>8</m>, <m>5</m>, <m>4</m>, <m>3</m>, e qui ci fermiamo perché <m>3=8-5</m>. Il grafico in questo caso è il seguente:
+        </p>
+        <image xml:id="image-esempio_jordan_autovalore_2">       
+        <shortdescription>Righe di quadrati sovrapposte lunghe 3, 1 e 1</shortdescription>
+          <latex-image>
+            \YoungTableau{3,1,1}
+          </latex-image>
+        </image>
+        <p>
+          Abbiamo una prima riga lunga <m>3=8-5</m>, una seconda riga lunga <m>1=5-4</m> e una terza riga lunga pure <m>1=4-3</m>. Anche qui, una volta visto che la seconda riga ha lunghezza <m>1</m> avremmo potuto desumere che la terza riga ha pure lunghezza <m>1</m>: si noti inoltre che il numero totale di quadretti deve essere uguale a <m>5</m>. Guardando le colonne possiamo ricavare che ci deve essere un blocco di ordine <m>3</m> e <m>2</m> blocchi di ordine <m>1</m>.
+        </p>
+        <p>
+          Riassumendo, la matrice <m>A</m> è simile alla matrice di Jordan:
+          <md>
+          J\coloneqq
+          \begin{pmatrix}
+          1\amp1\amp0\amp0\amp0\amp0\amp0\amp0\\
+          0\amp1\amp1\amp0\amp0\amp0\amp0\amp0\\
+          0\amp0\amp1\amp0\amp0\amp0\amp0\amp0\\
+          0\amp0\amp0\amp2\amp1\amp0\amp0\amp0\\
+          0\amp0\amp0\amp0\amp2\amp1\amp0\amp0\\
+          0\amp0\amp0\amp0\amp0\amp2\amp0\amp0\\
+          0\amp0\amp0\amp0\amp0\amp0\amp2\amp0\\
+          0\amp0\amp0\amp0\amp0\amp0\amp0\amp2
+          \end{pmatrix}
+          </md>.
+          Ovviamente i blocchi possono essere disposti in qualsiasi ordine. Ad esempio anche la matrice
+          <md>
+          \begin{pmatrix}
+          2\amp0\amp0\amp0\amp0\amp0\amp0\amp0\\
+          0\amp1\amp1\amp0\amp0\amp0\amp0\amp0\\
+          0\amp0\amp1\amp1\amp0\amp0\amp0\amp0\\
+          0\amp0\amp0\amp1\amp0\amp0\amp0\amp0\\
+          0\amp0\amp0\amp0\amp2\amp0\amp0\amp0\\
+          0\amp0\amp0\amp0\amp0\amp2\amp1\amp0\\
+          0\amp0\amp0\amp0\amp0\amp0\amp2\amp1\\
+          0\amp0\amp0\amp0\amp0\amp0\amp0\amp2
+          \end{pmatrix}
+          </md>
+          è simile alla matrice <m>A</m>.
+        </p>
+        <p>
+          Supponiamo ora di voler trovare la forma canonica primaria di <m>A</m>. Ricordiamo che abbiamo ottenuto la forma canonica di Jordan a partire da una tale forma agendo blocco per blocco: precisamente il blocco matrice compagna del polinomio <m>(x-\lambda)^{n}</m> è stato sostituito a un blocco di Jordan relativo all'autovalore <m>\lambda</m>. Consideriamo allora <m>J</m>. Dobbiamo sostituire al blocco di Jordan di ordine <m>3</m> relativo a <m>1</m> la matrice compagna del polinomio <m>(x-1)^{3}</m>, che espanso dà <m>x^{3}-3x^{2}+3x-1</m>: la matrice compagna di questo polinomio è
+          <md>
+          \begin{pmatrix}
+            0 \amp 1  \amp 0 \\
+            0 \amp 0  \amp 1 \\
+            1 \amp -3 \amp 3
+          \end{pmatrix}
+          </md>.
+          Si noti che gli elementi dell'ultima riga sono i coefficienti cambiati di segno del polinomio a partire dal termine noto e di grado crescente (tranne il coefficiente direttivo).
+        </p>
+        <p>
+          Al blocco di Jordan di ordine <m>3</m> relativo a <m>2</m> sostituiamo la matrice compagna del polinomio <m>(x-2)^{3}=x^{3}-2x^{2}+4x-8</m> cioè:
+          <md>
+          \begin{pmatrix}
+            0 \amp 1  \amp 0 \\
+            0 \amp 0  \amp 1 \\
+            8 \amp -4 \amp 2
+          \end{pmatrix}
+          </md>.
+          Infine i due blocchi di Jordan di ordine <m>1</m> sono anche matrici compagne di polinomi di primo
+          grado e non necessitano quindi di modifica. Abbiamo così la matrice:
+          <md>
+          C\coloneqq
+          \begin{pmatrix}
+          0\amp1\amp0\amp0\amp0\amp0\amp0\amp0\\
+          0\amp0\amp1\amp0\amp0\amp0\amp0\amp0\\
+          1\amp-3\amp3\amp0\amp0\amp0\amp0\amp0\\
+          0\amp0\amp0\amp0\amp1\amp0\amp0\amp0\\
+          0\amp0\amp0\amp0\amp0\amp1\amp0\amp0\\
+          0\amp0\amp0\amp8\amp-4\amp2\amp0\amp0\\
+          0\amp0\amp0\amp0\amp0\amp0\amp2\amp0\\
+          0\amp0\amp0\amp0\amp0\amp0\amp0\amp2
+          \end{pmatrix}
+          </md>.
+        </p>
+      </statement>
+    </example>
+
+    <exercises xml:id="exercises-jordan">
+
+      <exercise xml:id="exercise-jordan_ordine_6">
+        <introduction>
+          <p>
+            Sia data la matrice a coefficienti reali
+            <md>
+              A\coloneqq
+              \begin{pmatrix}
+                2 \amp 0 \amp 0 \amp 0 \amp 0 \amp 2 \\
+                0 \amp 2 \amp 1 \amp 1 \amp 2 \amp 0 \\
+                0 \amp 0 \amp 2 \amp 2 \amp 0 \amp 0 \\
+                0 \amp 0 \amp 0 \amp 2 \amp 0 \amp 0 \\
+                0 \amp 0 \amp 0 \amp 1 \amp 2 \amp 0 \\
+                0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 2
+              \end{pmatrix}
+            </md>.
+          </p>
+        </introduction>
+        <task>
+          <statement>
+            <p>
+              Determinare (se esiste) una matrice di Jordan <m>J</m> simile ad <m>A</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Il polinomio caratteristico di <m>A</m> può essere calcolato facilmente: si ha <m>\det(x\Idmatrix-A)=(x-2)^{6}</m>. Il polinomio caratteristico è totalmente riducibile e la matrice <m>A</m> ha come unico autovalore <m>2</m> di molteplicità algebrica <m>6</m>. Dunque, la matrice è simile a una matrice di Jordan in cui avremo blocchi di Jordan di ordine complessivo <m>6</m>. Calcoliamo la successione dei ranghi associati all'autovalore <m>6</m> partendo, come sempre, dall'ordine della matrice che in questo caso è <m>6</m>. Consideriamo ora il rango della matrice <m>A-2\Idmatrix</m>, vale a dire la matrice
+              <md>
+                \begin{pmatrix}
+                  0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 2 \\
+                  0 \amp 0 \amp 1 \amp 1 \amp 2 \amp 0 \\
+                  0 \amp 0 \amp 0 \amp 2 \amp 0 \amp 0 \\
+                  0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \\
+                  0 \amp 0 \amp 0 \amp 1 \amp 0 \amp 0 \\
+                  0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 0
+                \end{pmatrix}
+              </md>.
+              Si vede facilmente che il rango di questa matrice è <m>4</m>. Pertanto abbiamo <m>6-4=2</m> blocchi di Jordan relativi a <m>2</m>.
+            </p>
+
+            <p>
+              Iniziamo a costruire il solito schema
+            </p>
+            <image xml:id="image-esercizio_jordan_prima_riga">  
+            <shortdescription>Riga con 2 quadrati.</shortdescription> 
+              <latex-image>
+                \YoungTableau{2}
+              </latex-image>
+            </image>
+            <p>
+              Ovviamente dobbiamo proseguire: sappiamo che ci sono due blocchi ma non abbiamo ancora idea del loro ordine. Prendiamo allora la matrice <m>(A-2\Idmatrix)^{2}</m>, cioè la matrice
+              <md>
+                \begin{pmatrix}
+                  0 \amp 0 \amp 0 \amp 0 \amp 2 \amp 0 \\
+                  0 \amp 0 \amp 0 \amp 4 \amp 0 \amp 0 \\
+                  0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \\
+                  0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \\
+                  0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \\
+                  0 \amp 0 \amp 0 \amp 1 \amp 0 \amp 0
+                \end{pmatrix}
+              </md>.
+              Il rango di questa matrice è <m>2</m>: dunque, nella successione dei ranghi siamo scesi di <m>4-2</m>. Abbiamo pertanto <m>2</m> blocchi di ordine almeno <m>2</m>. Ecco il nostro schema aggiornato:
+            </p>
+            <image xml:id="image-esercizio_jordan_seconda_riga">
+              <shortdescription>Due righe di quadrati sovrapposte lunghe 2 e 2</shortdescription>
+              <latex-image>
+                \YoungTableau{2,2}
+              </latex-image>
+            </image>
+            <p>
+              Purtroppo dobbiamo proseguire: dobbiamo piazzare ancora due simboli e non sappiamo come fare. Calcoliamo allora  <m>(A-2\Idmatrix)^{3}</m>, cioè la matrice
+              <md>
+                \begin{pmatrix}
+                  0 \amp 0 \amp 0 \amp 2 \amp 0 \amp 0 \\
+                  0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \\
+                  0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \\
+                  0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \\
+                  0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \\
+                  0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0
+                \end{pmatrix}
+              </md>.
+              Questa matrice ha rango <m>1</m>: nella successione dei ranghi siamo scesi di <m>2-1=1</m>. Abbiamo così un blocco di ordine almeno <m>3</m>. Aggiorniamo ancora il nostro schema
+            </p>
+            <image xml:id="image-esercizio_jordan_terza_riga">
+              <shortdescription>Tre righe di quadrati sovrapposte lunghe 2, 2 e 1</shortdescription>
+              <latex-image>
+                \YoungTableau{2,2,1}
+              </latex-image>
+            </image>
+            <p>
+              Dobbiamo piazzare ancora un altro simbolo nel nostro grafico. È inutile calcolare il rango di <m>(A-2\Idmatrix)^{4}</m>: l'unica possibilità per il nostro grafico è che sia
+            </p>
+            <image xml:id="image-esercizio_jordan_quarta_riga">
+              <shortdescription>Righe di quadrati sovrapposte lunghe 2, 2, 1 e 1</shortdescription>
+              <latex-image>
+                \YoungTableau{2,2,1,1}
+              </latex-image>
+            </image>
+            <p>
+              Abbiamo una colonna di altezza <m>4</m> e una di altezza <m>2</m>. La nostra matrice <m>A</m> è allora simile alla matrice di Jordan
+              <md>
+                \begin{pmatrix}
+                  2 \amp 1 \amp 0 \amp 0 \amp 0 \amp 0 \\
+                  0 \amp 2 \amp 1 \amp 0 \amp 0 \amp 0 \\
+                  0 \amp 0 \amp 2 \amp 1 \amp 0 \amp 0 \\
+                  0 \amp 0 \amp 0 \amp 2 \amp 0 \amp 0 \\
+                  0 \amp 0 \amp 0 \amp 0 \amp 2 \amp 1 \\
+                  0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 2
+                \end{pmatrix}
+              </md>.
+            </p>
+          </solution>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Determinare poi la forma canonica primaria e la forma canonica razionale di <m>A</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Per trovare la forma canonica primaria di <m>A</m> basta sostituire il blocco di Jordan di ordine <m>4</m> relativo a <m>2</m> con la matrice compagna del polinomio <m>(x-2)^{4}=x^{4}-8x^{3}+24x^{2}-32x+16</m> e il blocco di Jordan di ordine <m>2</m> relativo a <m>2</m> con la matrice compagna del polinomio <m>(x-2)^{2}=x^{2}-4x+4</m> ottenendo così la matrice
+              <md>
+                \begin{pmatrix}
+                  0 \amp 1 \amp 0 \amp 0 \amp 0 \amp 0 \\
+                  0 \amp 0 \amp 1 \amp 0 \amp 0 \amp 0 \\
+                  0 \amp 0 \amp 0 \amp 1 \amp 0 \amp 0 \\
+                  -16 \amp 32 \amp -24 \amp 8 \amp 0 \amp 0 \\
+                  0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 1 \\
+                  0 \amp 0 \amp 0 \amp 0 \amp -4 \amp 4
+                \end{pmatrix}
+              </md>.
+              Poiché <m>(x-2)^{2}</m> divide <m>(x-2)^{4}</m> per ottenere la forma canonica razionale basta ordinare in maniera opportuna questi blocchi
+              <md>
+                \begin{pmatrix}
+                  0  \amp 1  \amp 0 \amp 0 \amp 0 \amp 0 \\
+                  -4 \amp 4  \amp 0 \amp 0 \amp 0 \amp 0 \\
+                   0 \amp 0  \amp 0 \amp 1 \amp 0 \amp 0 \\
+                   0 \amp 0\amp0 \amp 0 \amp 1 \amp 0 \amp \\
+                   0 \amp 0\amp0 \amp 0 \amp 0 \amp 1 \amp \\
+                   0 \amp 0 \amp-16 \amp 32 \amp -24 \amp 8
+                \end{pmatrix}
+              </md>.
+            </p>
+          </solution>
+        </task>
+
+      </exercise>
+
+      <exercise>
+        <introduction>
+          <p>
+             Si consideri la matrice <m>A\coloneqq
+             \begin{psmallmatrix}
+               1 \amp  2 \amp 3 \\
+               0 \amp -1 \amp 4 \\
+               0 \amp  0 \amp 3
+            \end{psmallmatrix}</m> dove i coefficienti sono elementi di un campo <m>F</m>.
+          </p>
+        </introduction>
+
+        <task>
+          <statement>
+            <p>
+              Determinare una matrice di Jordan simile ad <m>A</m> nel caso in cui <m>F=\Razionali</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              La matrice <m>A</m> è triangolare, quindi i suoi autovalori sono <m>1</m>, <m>-1</m> e <m>3</m> qualunque sia il campo <m>F</m> e  il polinomio caratteristico di <m>A</m> è sempre totalmente riducibile. Poiché <m>F=\Razionali</m>, gli autovalori sono distinti e hanno tutti molteplicità algebrica <m>1</m>. Per ciascun autovalore esiste, dunque, un unico blocco di Jordan ad esso relativo e tale blocco ha ordine <m>1</m>. In altri termini, <m>A</m> è diagonalizzabile e simile alla matrice <m>
+              \begin{psmallmatrix}
+                1 \amp  0 \amp 0 \\
+                0 \amp -1 \amp 0 \\
+                0 \amp  0 \amp 3
+              \end{psmallmatrix}</m>.
+            </p>
+          </solution>
+        </task>
+        <task>
+          <statement>
+            <p>
+              Determinare una matrice di Jordan simile ad <m>A</m> nel caso in cui <m>F=\Interi/p</m> con <m>p</m> numero primo.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Possiamo riprendere i calcoli del punto precedente. Poiché <m>F=\Interi/p</m> dobbiamo stabilire, in dipendenza da <m>p</m>, se gli autovalori sono distinti o meno. Gli autovalori <m>1</m> e <m>-1</m> coincidono se e solo se la loro differenza <m>1-(-1)</m> è multipla di <m>p</m>, cioè se e solo se <m>p=2</m>. Analogamente <m>1</m> e <m>3</m> coincidono se e solo se <m>3-1</m> è multiplo di <m>p</m>, il che avviene se e solo se <m>p=2</m>. Infine <m>-1</m> e <m>3</m> coincidono se e solo se <m>3-(-1)</m> è multiplo di <m>2</m> il che avviene, ancora una volta, se e solo se <m>p=2</m>. Riassumendo: se <m>p\ne2</m> la matrice <m>A</m> ha tre autovalori aventi molteplicità algebrica <m>1</m> e, quindi, come nel caso <m>F=\Razionali</m> la matrice è simile alla matrice diagonale <m>
+              \begin{psmallmatrix}
+                1 \amp  0 \amp 0 \\
+                0 \amp -1 \amp 0 \\
+                0 \amp  0 \amp 3
+              \end{psmallmatrix}</m>. Se, invece <m>p=2</m>, la matrice <m>A</m> ha un unico autovalore <m>1</m> di molteplicità algebrica <m>3</m>. Consideriamo la solita successione dei ranghi partendo da <m>3</m>, ordine di <m>A</m>. Consideriamo ora la matrice <m>A-\Idmatrix=
+              \begin{psmallmatrix}
+                0 \amp  0 \amp 1 \\
+                0 \amp  0 \amp 0 \\
+                0 \amp  0 \amp 0
+              \end{psmallmatrix}</m> (si noti che in questo campo <m>2=0</m>). La matrice <m>A-\Idmatrix</m> ha rango <m>1</m>: dall'intero <m>3</m> siamo scesi di <m>2</m> e, quindi ci sono due blocchi relativi a <m>1</m>. Non abbiamo bisogno di proseguire oltre: ci deve necessariamente essere un blocco di ordine <m>2</m> e un blocco di ordine <m>1</m> e, dunque, <m>A</m> è simile alla matrice <m>
+              \begin{psmallmatrix}
+                1 \amp  1 \amp 0 \\
+                0 \amp  1 \amp 0 \\
+                0 \amp  0 \amp 1
+                \end{psmallmatrix}</m>.
+            </p>
+          </solution>
+        </task>
+      </exercise>
+
+      <exercisegroup>
+        <introduction>
+          <p>
+            Per ciascuna delle seguenti coppie di matrici a coefficienti in <m>\Razionali</m> stabilire se sono simili tra loro.
+          </p>
+        </introduction>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>A\coloneqq
+              \begin{psmallmatrix}
+                3 \amp 0 \amp 2 \\
+                0 \amp 3 \amp 1 \\
+                0 \amp 0 \amp 1
+              \end{psmallmatrix}</m> e <m>B\coloneqq
+              \begin{psmallmatrix}
+                1 \amp 4 \amp 0 \\
+                1 \amp 3 \amp 2 \\
+                1 \amp -2 \amp 3
+              \end{psmallmatrix}</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              La matrice <m>A</m> è triangolare, quindi i suoi autovalori sono gli elementi lungo la diagonale. Dunque, <m>A</m> ha come autovalori <m>3</m> di molteplicità algebrica <m>2</m> e
+              <m>1</m> di molteplicità algebrica <m>1</m>. Il polinomio caratteristico di <m>A</m> è <m>(x-3)^{2}(x-1)</m>.
+            </p>
+
+            <p>
+              Il polinomio caratteristico di <m>B</m> è <m>\det(x\Idmatrix-A)</m> cioè <m>
+              \begin{vsmallmatrix}
+              x-1 \amp -4 \amp 0 \\
+              -1 \amp x-3 \amp -2 \\
+              -1 \amp   2 \amp x-3
+             \end{vsmallmatrix}=x^{3}-7x^{2}+15x-9</m>. Espandendo il polinomio caratteristico di <m>A</m> troviamo lo stesso polinomio: dunque, <m>B</m> e <m>A</m> hanno lo stesso polinomio caratteristico e questo è totalmente riducibile. Calcoliamo la forma canonica di Jordan per <m>A</m> e <m>B</m>. Poiché <m>1</m> ha molteplicità algebrica <m>1</m>, per entrambe le matrici c'è un unico blocco di Jordan di ordine relativo a <m>1</m>. Consideriamo l'autovalore <m>3</m> e calcoliamo la successione dei ranghi associati a <m>3</m>, partendo, come sempre, dall'ordine della matrice, cioè <m>3</m>. La matrice <m>A-3\Idmatrix</m>, cioè la matrice <m>
+              \begin{psmallmatrix}
+                0 \amp 0 \amp 2 \\
+                0 \amp 0 \amp 1 \\
+                0 \amp 0 \amp -2
+              \end{psmallmatrix}</m>, ha rango <m>1</m>. Il rango è sceso di <m>3-1=2</m>: avremo, quindi, <m>2</m> blocchi di Jordan relativi a <m>3</m>. Consideriamo ora la successione dei ranghi per la matrice <m>B</m>: La matrice <m>B-3\Id</m>, cioè la matrice <m>
+              \begin{psmallmatrix}
+                -2 \amp 4  \amp 0 \\
+                1  \amp 0  \amp 2 \\
+                1  \amp -2 \amp 0
+              \end{psmallmatrix}</m>, ha rango <m>2</m>. Il rango è sceso di <m>3-2=1</m>: avremo, quindi, un unico blocco di Jordan relativo a <m>3</m>. Le due matrici non sono, dunque, simili.
+            </p>
+          </solution>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>A\coloneqq
+              \begin{psmallmatrix}
+                1 \amp 3 \amp 1 \\
+                1 \amp 2 \amp 1 \\
+                0 \amp 0 \amp 1
+              \end{psmallmatrix}</m> e <m>B\coloneqq
+              \begin{psmallmatrix}
+                1 \amp 1 \amp 0 \\
+                1 \amp 2 \amp 1 \\
+                0 \amp 1 \amp 1
+              \end{psmallmatrix}</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              La matrice <m>A</m> ha polinomio caratteristico <m>(x-1)(x^{2}-3x-1)</m>. La matrice <m>B</m> ha polinomio caratteristico <m>x^{3}-4x^{2}+3x</m>. Espandendo il polinomio caratteristico di <m>A</m> troviamo il polinomio <m>x^{3}-4x^{2}+2x+1</m>. Le matrici hanno polinomio caratteristico differente, quindi non sono simili. Non è necessario calcolare gli autovalori delle due matrici né, tantomeno, la loro (eventuale) forma canonica di Jordan.
+            </p>
+          </solution>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>A\coloneqq
+            \begin{psmallmatrix}
+              2 \amp -1 \amp 1 \\
+              1 \amp 0 \amp 2 \\
+              0 \amp 0 \amp 1
+            \end{psmallmatrix}</m> e <m>B\coloneqq
+            \begin{psmallmatrix}
+              -1 \amp -2 \amp 2 \\
+              1 \amp 2 \amp -1 \\
+              0 \amp 1 \amp 2
+            \end{psmallmatrix}</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              La matrice <m>A</m> ha polinomio caratteristico <m>(x-1)(x^{2}-2x+1)</m> e la matrice <m>B</m> ha polinomio caratteristico <m>x^{3}-3x^{2}+3x-1</m>. Espandendo il polinomio caratteristico di <m>A</m> troviamo lo stesso polinomio. Fattorizzando questo polinomio, troviamo <m>(x-1)^{3}</m>, che è totalmente riducibile e, quindi, possiamo determinare la forma canonica di Jordan per entrambe le matrici. Entrambe hanno <m>1</m> come unico autovalore di molteplicità algebrica <m>3</m>. Consideriamo allora le successioni dei ranghi associate a questo autovalore, partendo dall'ordine delle matrici, cioè <m>3</m>. La matrice <m>A-\Idmatrix</m> cioè la matrice <m>
+                  \begin{psmallmatrix}
+                    1 \amp -1 \amp 1 \\
+                    1 \amp -1 \amp 2 \\
+                    0 \amp 0 \amp 0
+                  \end{psmallmatrix}</m> ha rango <m>2</m>. Analogamente la matrice <m>B-\Idmatrix</m> cioè la matrice <m>
+                  \begin{psmallmatrix}
+                    -2 \amp -2 \amp 2 \\
+                    1 \amp 1 \amp -1 \\
+                    0 \amp 1 \amp 1
+                  \end{psmallmatrix}</m> ha rango <m>2</m>. In entrambi i casi siamo scesi di <m>3-2=1</m>: pertanto sia la forma canonica di Jordan di <m>A</m> che la forma canonica di Jordan di
+                  <m>B</m> contengono un unico blocco di Jordan relativo a <m>1</m> di ordine <m>3</m>. Le due matrici <m>A</m> e <m>B</m> sono entrambe simili alla matrice <m>
+                  \begin{psmallmatrix}
+                    1 \amp 1 \amp 0 \\
+                    0 \amp 1 \amp 1 \\
+                    0 \amp 0 \amp 1
+                  \end{psmallmatrix}</m> e sono, pertanto, simili tra loro.
+            </p>
+          </solution>
+
+        </exercise>
+
+      </exercisegroup>
+
+    </exercises>
+
+  </section>
+
+  <section xml:id="sec-polinomio_minimo_matrici">
+    <title>Polinomio minimo di matrici</title>
+    <p>
+      Nel <xref ref="sec-kx_moduli"/> abbiamo dato un significato alla valutazione di un polinomio <m>f</m> a coefficienti in un campo <m>K</m> in un endomorfismo di uno spazio vettoriale <m>V</m> su <m>K</m>, anche se <m>\End_{K}(V)</m> non è un anello commutativo. Analogamente, data una matrice quadrata <m>A</m> a coefficienti in un campo <m>K</m>, possiamo definire un omomorfismo da <m>K[x]</m> in <m>\mat{n}{K}</m> che manda un elemento <m>k</m> di <m>K</m> nella matrice <m>k\Idmatrix</m> e manda <m>x</m> in <m>A</m>. Esplicitamente, se <m>f\coloneqq a_{0}+a_{1}x+\dots+a_{s}x^{s}</m> è un polinomio in <m>K[x]</m>, poniamo <m>f(A)\coloneqq a_{0}\Idmatrix +a_{1}A+\dots+a_{s}A^{s}</m>.
+    </p>
+
+    <p>
+      L'insieme dei polinomi che si annullano in <m>A</m> è il nucleo dell'omomorfismo di valutazione e costituisce quindi un ideale di <m>K[x]</m>. Al momento non sappiamo però se ci siano polinomi che si annullano in <m>A</m> oltre a quello banale. Si potrebbe ragionare sulle dimensioni di opportuni spazi vettoriali e dimostrare l'esistenza di un tale polinomio. Possiamo però esibire esplicitamente un polinomio non nullo che si annulla in <m>A</m>: precisamente il suo polinomio caratteristico. Abbiamo, infatti, il <xref ref="thm-cayley_hamilton" text="title"/><fn><url href="https://it.wikipedia.org/wiki/William_Rowan_Hamilton" visual="">William Rowan Hamilton</url>, 1805<ndash/>1865.</fn> (che vale nell'ipotesi più generale di coefficienti presi in un anello commutativo).
+    </p>
+
+    <theorem xml:id="thm-cayley_hamilton">
+      <title>Teorema di Cayley-Hamilton</title>
+      <statement>
+        <p>
+          Sia <m>A</m> una matrice quadrata di ordine <m>n</m> a coefficienti in un anello commutativo <m>R</m> e sia
+          <md>
+            p_{A}\coloneqq \det(x\Idmatrix-A)=x^{n}+a_{n-1}x^{n-1}+\dots+a_{0}
+          </md>
+          il polinomio caratteristico di <m>A</m>. Allora <m>p_{A}(A)=0</m>, cioè
+          <md>
+            A^{n}+a_{n-1}A^{n-1}+\dots+a_{0}\Idmatrix=0
+          </md>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Consideriamo la matrice <m>x\Idmatrix-A</m> e indichiamo con <m>B</m> la sua matrice aggiunta: sappiamo che <m>(x\Idmatrix-A)B=\det(x\Idmatrix-A)\Idmatrix</m>. Poiché i coefficienti di <m>x\Idmatrix-A</m> sono polinomi in <m>x</m> di grado minore o uguale a <m>1</m>, i coefficienti di <m>B</m> sono polinomi in <m>x</m> di grado al più <m>n-1</m> (infatti, i coefficienti della matrice aggiunta sono, a meno del segno, determinanti di matrici di ordine <m>n-1</m> estratti dalla matrice). Raccogliendo le varie potenze di <m>x</m>
+          possiamo allora scrivere
+          <md>
+            B=x^{n-1}B_{n-1}+x^{n-2}B_{n-2}+\dots+B_{0}
+          </md>
+          per opportune matrici <m>B_{i}</m>. Abbiamo allora
+          <md>
+            (x\Idmatrix-A)(x^{n-1}B_{n-1}+x^{n-2}B_{n-2}+\dots+B_{0})=\det(x\Idmatrix-A)\Idmatrix
+          </md>
+          ovvero
+          <md>
+            (x\Idmatrix-A)(x^{n-1}B_{n-1}+x^{n-2}B_{n-2}+\dots+B_{0})=x^{n}\Idmatrix+a_{n-1}x^{n-1}\Idmatrix+\dots+a_{0}\Idmatrix
+          </md>.
+          Sviluppiamo ora il membro a sinistra e uguagliando le matrici coefficienti delle rispettive
+          potenze di <m>x</m> troviamo allora:
+          <md>
+            \begin{aligned}
+            B_{n-1}\amp=\Idmatrix\\
+            B_{n-2}-AB_{n-1}\amp=a_{n-1}\Idmatrix\\
+            B_{n-3}-AB_{n-2}\amp=a_{n-2}\Idmatrix\\
+            \amp\vdotswithin{=}\\
+            B_{0}-AB_{1}\amp=a_{1}\Idmatrix\\
+            -AB_{0}\amp=a_{0}\Idmatrix
+          \end{aligned}
+          </md>
+          Moltiplichiamo ora a sinistra la prima di queste uguaglianze per <m>A^{n}</m>, la seconda per <m>A^{n-1}</m> e così via:
+          <md>
+            \begin{aligned}
+            A^{n}B_{n-1}\amp=A^{n}\\
+            A^{n-1}B_{n-2}-A^{n}B_{n-1}\amp=a_{n-1}A^{n-1}\\
+            A^{n-2}B_{n-3}-A^{n-1}B_{n-2}\amp=a_{n-2}A^{n-1}\\
+            \amp\vdotswithin{=}\\
+            AB_{0}-A^{2}B_{1}\amp=a_{1}A\\
+            -AB_{0}\amp=a_{0}\Idmatrix
+          \end{aligned}
+          </md>
+          Se ora sommiamo membro a membro tutte queste uguaglianze, troviamo:
+          <md>
+            0=A^{n}+a_{n-1}A^{n-1}+\dots+a_{0}\Idmatrix
+          </md>.
+        </p>
+      </proof>
+
+    </theorem>
+
+    <remark xml:id="rem-cayley_hamilton">
+      <p>
+        Potrebbe sembrare che questo teorema abbia una dimostrazione più semplice. Abbiamo, infatti, <m>p_{A}(x)=\det(x\Idmatrix-A)</m>. Si ha allora <m>p_{A}(A)=\det(A\Idmatrix-A)=\det(A-A)=\det 0=0</m>. Tuttavia questa <q>dimostrazione</q> non funziona. Infatti, <m>p_{A}(A)</m> è una matrice, mentre <m>\det(A-\Idmatrix A)</m> è un elemento di <m>R</m>.
+      </p>
+    </remark>
+
+    <p>
+      Mettiamoci ora nel caso particolare in cui l'anello dei coefficienti sia un campo <m>K</m>. Sappiamo allora che <m>K[x]</m> è un dominio a ideali principali e, pertanto, ogni ideale non banale <m>I</m> è formato dai multipli di un polinomio non nullo: questo polinomio non è univocamente determinato, ma se poniamo la condizione ulteriore che sia monico allora lo è. Possiamo allora dare la
+    </p>
+
+    <definition xml:id="def-polinomio_minimo_matrici">
+      <statement>
+        <p>
+          Sia <m>A</m> una matrice quadrata di ordine <m>n</m> a coefficienti in un campo <m>K</m>. Il <term>polinomio minimo</term> di <m>A</m> è il polinomio monico <m>m_{A}</m> di grado minimo che si annulla in <m>A</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Grazie al <xref ref="thm-cayley_hamilton" text="title"/> il polinomio minimo di una matrice quadrata <m>A</m> è un divisore del suo polinomio caratteristico: in particolare, il suo grado è minore o uguale dell'ordine della matrice. Supponiamo ora che <m>A</m> e <m>B</m> siano matrici quadrate simili a coefficienti in un campo <m>K</m> (e, dunque, esista una matrice invertibile <m>M</m> tale che <m>B=M^{-1}AM</m>) e sia <m>p\coloneqq a_{0}+a_{1}x+\dots+a_{t}x^{t}</m> un polinomio a coefficienti in <m>K</m>. Allora
+      <md>
+        <mrow> p(B) \amp =a_{0}\Idmatrix+a_{1}B+\dots+a_{t}B^{t} </mrow>
+        <mrow> \amp =a_{0}M^{-1}\Idmatrix M+a_{1}M^{-1}AM+\dots+a_{t}(M^{-1}AM)^{t}</mrow>
+        <mrow>  \amp =a_{0}M^{-1}\Idmatrix M+a_{1}M^{-1}AM+\dots+a_{t}M^{-1}A^{t}M</mrow>
+        <mrow>  \amp =M^{-1}(a_{0}\Idmatrix+a_{1}B+\dots+a_{t}B^{t})M=M^{-1}p(A)M</mrow>
+      </md>.
+      In particolare, il polinomio <m>p</m> si annulla in <m>A</m> se e solo se si annulla in <m>B</m>. Abbiamo, dunque, la
+    </p>
+
+    <proposition xml:id="prop-polinomio_minimo_simili">
+      <statement>
+        <p>
+          Se <m>A</m> e <m>B</m> sono matrici quadrate simili a coefficienti in un campo <m>K</m>, allora il polinomio minimo di <m>A</m> e quello di <m>B</m> coincidono.
+        </p>
+      </statement>
+    </proposition>
+
+    <p>
+      Vogliamo ora determinare il polinomio minimo di una matrice di cui conosciamo una forma canonica diagonale a blocchi (con i blocchi matrici compagne di polinomi o blocchi di Jordan). Cominciamo a considerare un singolo blocco:
+    </p>
+
+    <proposition xml:id="prop-polinomio_minimo_di_ciclico">
+      <statement>
+        <p>
+          Sia <m>V</m> uno spazio vettoriale di dimensione finita <m>n</m> su un campo <m>K</m> e sia <m>\theta</m> un endomorfismo di <m>V</m>. Supponiamo che <m>V</m>, con la struttura di <m>K[x]</m>-modulo indotta da <m>\theta</m>, sia ciclico di generatore <m>\vect{v}</m> e sia <m>p</m> il polinomio monico che genera l'annullatore di <m>\vect{v}</m>.
+        </p>
+
+        <p>
+          Se <m>A</m> è la matrice che rappresenta <m>\theta</m> rispetto a una base qualunque allora il polinomio minimo e il polinomio caratteristico di <m>A</m> coincidono con <m>p</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Possiamo scegliere una base qualunque per rappresentare <m>\theta</m>, tanto sappiamo che il polinomio minimo e caratteristico della matrice sarà lo stesso. In particolare, possiamo scegliere una base rispetto a cui la matrice rappresentativa <m>A</m> è la matrice compagna del polinomio <m>p</m>: la <xref ref="prop-compagna"/> ci dice allora che il polinomio caratteristico di <m>A</m> è <m>p</m>.
+        </p>
+
+        <p>
+          Se <m>f</m> è un polinomio di grado minore di <m>p</m>, per ipotesi sappiamo che <m>\vect{v}f\ne\vect{0}</m>. Inoltre sappiamo che <m>\vect{w}p=0</m> per ogni vettore <m>\vect{w}</m> di <m>V</m>. Ciò significa che <m>f(A)\ne 0</m> se <m>f</m> ha grado minore di <m>p</m> e che <m>p(A)=0</m>. Dunque, il polinomio minimo di <m>A</m> è esattamente <m>p</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <corollary xml:id="cor-polinomio_minimo_compagna">
+      <statement>
+        <p>
+          Se <m>C</m> è la matrice compagna di un polinomio <m>p</m>, il suo polinomio minimo coincide con il suo polinomio caratteristico ed è <m>p</m>.
+        </p>
+      </statement>
+    </corollary>
+
+    <corollary xml:id="cor-polinomio_minimo_blocco_jordan">
+      <statement>
+        <p>
+          Dato un blocco di Jordan <m>J_{n}(\lambda)</m>, il suo polinomio minimo coincide con il suo polinomio caratteristico ed è <m>(x-\lambda)^{n}</m>.
+        </p>
+      </statement>
+    </corollary>
+
+    <p>
+      Siamo ora in grado di determinare il polinomio minimo di una matrice a partire da una sua forma canonica diagonale a blocchi, sia che i blocchi siano matrici compagne di polinomi, sia che i blocchi siano di Jordan. Come immediata conseguenza della <xref ref="prop-diagonali_blocchi"/> abbiamo la
+    </p>
+    <proposition xml:id="prop-polinomio_minimo_matrice_digonale_blocchi">
+      <statement>
+        <p>
+          Sia <m>B\coloneqq
+          \begin{psmallmatrix}
+            B_{1}  \amp 0      \amp \dots  \amp 0 \\
+            0      \amp B_{2}  \amp \dots  \amp 0 \\
+            \vdots \amp \vdots \amp \ddots \amp \vdots\\
+            0      \amp 0      \amp \dots  \amp B_{s}
+          \end{psmallmatrix}</m> una matrice diagonale a blocchi e sia <m>f</m> un polinomio a coefficienti in <m>K</m>.
+          Allora <m>f(B)=
+          \begin{psmallmatrix}
+            f(B_{1})  \amp 0      \amp \dots  \amp 0 \\
+            0      \amp f(B_{2})  \amp \dots  \amp 0 \\
+            \vdots \amp \vdots \amp \ddots \amp \vdots\\
+            0      \amp 0      \amp \dots  \amp f(B_{s})
+          \end{psmallmatrix}</m>. In particolare, <m>f(B)=0</m> se e solo se <m>f(B_{1})=0</m>,  <m>\ldots</m>, <m>f(B_{s})=0</m> e il polinomio minimo di <m>B</m> è, dunque, il minimo comune multiplo dei polinomi minimi di <m>B_{1}</m>, <m>\dots</m>, <m>B_{s}</m>.
+        </p>
+      </statement>
+    </proposition>
+
+    <p>
+      Sia ora <m>A</m> una matrice quadrata di ordine <m>n</m> a coefficienti in un campo <m>K</m> e sia <m>C</m> la sua forma canonica razionale:
+      <md>
+        C\coloneqq
+        \begin{pmatrix}
+          C_{1}  \amp 0      \amp \dots  \amp 0 \\
+          0      \amp C_{2}  \amp \dots  \amp 0 \\
+          \vdots \amp \vdots \amp \ddots \amp \vdots\\
+          0      \amp 0      \amp \dots  \amp C_{s}
+        \end{pmatrix}
+      </md>
+      con <m>C_{i}</m> matrice compagna di un polinomio monico <m>f_{i}</m> e <m>f_{1}\mid f_{2}\mid\dots\mid f_{s}</m>. Il polinomio minimo di <m>A</m> è allora il minimo comune multiplo degli <m>f_{i}</m> cioè è <m>f_{s}</m>. Poiché il polinomio caratteristico di <m>A</m> è <m>f_{1}f_{2}\dots f_{s}</m> abbiamo immediatamente il
+    </p>
+
+    <corollary xml:id="cor-fattori_irriducibili_polinomi_minimo">
+      <statement>
+        <p>
+          Ogni fattore irriducibile del polinomio caratteristico di una matrice <m>A</m> divide anche il polinomio minimo di <m>A</m>. In particolare, le radici del polinomio caratteristico sono anche radici del polinomio minimo e il polinomio minimo è totalmente riducibile se e solo se il polinomio caratteristico è totalmente riducibile.
+        </p>
+      </statement>
+    </corollary>
+
+    <theorem xml:id="thm-polinomio_minimo_jordanizzabile">
+      <statement>
+        <p>
+          Sia <m>A</m> una matrice quadrata di ordine <m>n</m> a coefficienti in un campo <m>K</m>, il cui polinomio caratteristico sia totalmente riducibile. Allora il polinomio minimo di <m>A</m> è <m>(x-\lambda_{1})^{r_{1}}\cdots (x-\lambda_{s})^{r_{s}}</m> dove <m>\lambda_{1}</m>, <m>\dots</m>, <m>\lambda_{s}</m> sono gli autovalori distinti di <m>A</m> e, per ciascun <m>i</m>, l'intero positivo <m>r_{i}</m> è il massimo ordine tra i blocchi di Jordan relativi a <m>\lambda_{i}</m> presenti nella forma canonica di Jordan di <m>A</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Per la <xref ref="prop-polinomio_minimo_simili"/> il polinomio minimo di <m>A</m> e quello della sua forma canonica di Jordan <m>J</m> coincidono. Per la <xref ref="prop-polinomio_minimo_matrice_digonale_blocchi"/>, il polinomio minimo di <m>J</m> è il minimo comune multiplo dei polinomi minimi dei suoi blocchi di Jordan. La tesi segue immediatamente allora dal <xref ref="cor-polinomio_minimo_blocco_jordan"/>.
+        </p>
+      </proof>
+
+    </theorem>
+
+    <example>
+      <statement>
+        <p>
+          Se riprendiamo la matrice dell'<xref ref="ex-matrice_jordan"/> i cui autovalori sono <m>1</m> e <m>2</m> vediamo che il massimo ordine dei blocchi di Jordan relativi a <m>1</m> è <m>3</m> e il massimo ordine dei blocchi di Jordan relativi a <m>2</m> è <m>3</m>: pertanto il suo polinomio minimo è <m>(x-1)^{3}(x-2)^{3}</m>.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Abbiamo inoltre l'immediato
+    </p>
+
+    <corollary xml:id="cor-diagonalizzabile_se_polinomio_minimo_fattori_lineari_distinti">
+      <statement>
+        <p>
+          Una matrice quadrata <m>A</m> è diagonalizzabile se e solo se il polinomio minimo di <m>A</m> è prodotto di fattori lineari distinti.
+        </p>
+      </statement>
+    </corollary>
+
+    <exercises xml:id="exercises-polinomio_minimo_matrici">
+
+      <exercise>
+        <statement>
+          <p>
+            Determinare il polinomio minimo della matrice <m>A</m> dell'<xref ref="exercise-jordan_ordine_6"/>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Poiché l'unico autovalore è <m>2</m> e il massimo ordine dei blocchi di Jordan relativi a <m>2</m> è <m>4</m> il polinomio minimo è <m>(x-2)^{4}</m>.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Determinare le forme canoniche di Jordan di matrici a coefficienti razionali il cui polinomio caratteristico è <m>(x+4)^{6}</m> e il cui polinomio minimo è <m>(x+4)^{3}</m>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Poiché il polinomio caratteristico ha grado <m>6</m>, le matrici cercate hanno ordine <m>6</m>. Tutti i blocchi di Jordan sono relativi all'unico autovalore <m>-4</m>. Poiché il polinomio minimo è <m>(x+4)^{3}</m>, nella forma canonica di Jordan deve esserci un blocco di ordine <m>3</m> e altri blocchi di ordine minore o uguale a <m>3</m>. Considerando che l'ordine complessivo dei blocchi deve essere <m>6</m> possiamo avere <m>2</m> blocchi di ordine <m>3</m>
+            <md>
+              \begin{pmatrix}
+                -4 \amp 1  \amp 0  \amp 0  \amp 0  \amp 0 \\
+                0  \amp -4 \amp 1  \amp 0  \amp 0  \amp 0 \\
+                0  \amp 0  \amp -4 \amp 0  \amp 0  \amp 0 \\
+                0  \amp 0  \amp 0  \amp -4 \amp 1  \amp 0 \\
+                0  \amp 0  \amp 0  \amp 0  \amp -4 \amp 1 \\
+                0  \amp 0  \amp 0  \amp 0  \amp 0  \amp -4
+              \end{pmatrix}
+            </md>
+            oppure un blocco di ordine <m>3</m>, uno di ordine <m>2</m> e uno di ordine <m>1</m>
+            <md>
+              \begin{pmatrix}
+                -4 \amp 1  \amp 0  \amp 0  \amp 0  \amp 0 \\
+                0  \amp -4 \amp 1  \amp 0  \amp 0  \amp 0 \\
+                0  \amp 0  \amp -4 \amp 0  \amp 0  \amp 0 \\
+                0  \amp 0  \amp 0  \amp -4 \amp 1  \amp 0 \\
+                0  \amp 0  \amp 0  \amp 0  \amp -4 \amp 0 \\
+                0  \amp 0  \amp 0  \amp 0  \amp 0  \amp -4
+              \end{pmatrix}
+            </md>
+            oppure un blocco di ordine <m>3</m> e <m>3</m> di ordine <m>1</m>
+            <md>
+              \begin{pmatrix}
+                -4 \amp 1  \amp 0  \amp 0  \amp 0  \amp 0 \\
+                0  \amp -4 \amp 1  \amp 0  \amp 0  \amp 0 \\
+                0  \amp 0  \amp -4 \amp 0  \amp 0  \amp 0 \\
+                0  \amp 0  \amp 0  \amp -4 \amp 0  \amp 0 \\
+                0  \amp 0  \amp 0  \amp 0  \amp -4 \amp 0 \\
+                0  \amp 0  \amp 0  \amp 0  \amp 0  \amp -4
+              \end{pmatrix}
+            </md>.
+          </p>
+        </solution>
+      </exercise>
+
+    </exercises>
+
+  </section>
+
+</chapter>

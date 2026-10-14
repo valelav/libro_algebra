@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-laterali">
+  <title>Laterali e teorema di Lagrange</title>
+
+  <introduction>
+    <p>
+      Finora abbiamo relativamente poche informazioni sui sottogruppi. A dispetto della sua semplicità, il teorema di Lagrange,<fn><url href="https://it.wikipedia.org/wiki/Joseph-Louis_Lagrange" visual="">Joseph-Louis Lagrange</url>, 1736<ndash/>1813.</fn> che afferma che l'ordine di un sottogruppo di un gruppo finito divide l'ordine del gruppo stesso, si rivela un potente strumento nello studio dei gruppi finiti.
+    </p>
+  </introduction>
+
+  <section xml:id="sec-prodotto_sottoinsiemi">
+    <title>Prodotto di sottoinsiemi</title>
+
+    <definition xml:id="def-prodotto_sottoinsiemi">
+      <notation>
+        <usage><m>ST</m></usage>
+        <description>prodotto dei sottoinsiemi <m>S</m> e <m>T</m> di un gruppo</description>
+      </notation>
+      <statement>
+        <p>
+          In un gruppo <m>G</m>, scritto in notazione moltiplicativa, siano dati due sottoinsiemi non vuoti <m>S</m> e <m>T</m>. Il <term>prodotto</term> di <m>S</m> e <m>T</m>, indicato con <m>ST</m> è l'insieme dei prodotti <m>st</m> al variare di <m>s</m> in <m>S</m> e <m>t</m> in <m>T</m>. In simboli
+          <md>
+            ST\coloneqq\{st\mid s\in S, t\in T\}
+          </md>.
+          Più in generale, se <m>S_{1}</m>, <m>S_{2}</m>, <m>\ldots</m>, <m>S_{r}</m> sono sottoinsiemi di <m>G</m>, il loro prodotto è così definito
+          <md>
+            S_{1}S_{2}\cdots S_{r}\coloneqq\{s_{1}s_{2}\cdots s_{r}\mid s_{i}\in S_{i}, 1\le i\le r\}
+          </md>.
+        </p>
+      </statement>
+    </definition>
+
+    <example>
+      <statement>
+        <p>
+          Consideriamo i sottoinsiemi <m>S\coloneqq\{(1\;2),(1\;2\;3)\}</m> e <m>T\coloneqq\{(2\;3),(1\;2\;3)\}</m> di <m>\Sym_{3}</m>. Per trovare <m>ST</m> dobbiamo fare <m>4</m> prodotti:
+          <md>
+            <mrow>(1\;2)(2\;3)    \amp = (1\;3\;2) \amp (1\;2\;3)(2\;3)    \amp = (1\;3)    </mrow>
+            <mrow>(1\;2)(1\;2\;3) \amp = (1\;3)    \amp (1\;2\;3)(1\;2\;3) \amp = (1\;3\;2) </mrow>
+          </md>.
+          Notiamo allora che <m>ST=\{(1\;3\;2),(1\;3)\}</m>. Se invece facciamo il prodotto <m>TS</m> troviamo
+          <md>
+            <mrow>(2\;3)(1\;2)    \amp = (1\;2\;3) \amp (2\;3)(1\;2\;3)    \amp = (1\;2)    </mrow>
+            <mrow>(1\;2\;3)(1\;2) \amp = (2\;3)    \amp (1\;2\;3)(1\;2\;3) \amp = (1\;3\;2) </mrow>
+          </md>
+          e, quindi, <m>TS=\{(1\;2\;3),(1\;2),(2\;3),(1\;3\;2)\}</m>.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Non ci interessa in realtà studiare il prodotto di sottoinsiemi qualunque, ma solo alcuni casi particolari.
+    </p>
+
+    <definition xml:id="def-laterali">
+      <notation>
+        <usage><m>Hg</m></usage>
+        <description>laterale destro di <m>H</m> in <m>G</m> contenente <m>g</m></description>
+      </notation>
+      <notation>
+        <usage><m>gH</m></usage>
+        <description>laterale sinistro di <m>H</m> in <m>G</m> contenente <m>g</m></description>
+      </notation>
+      <statement>
+        <p>
+          Dato un gruppo <m>G</m>, un suo sottogruppo <m>H</m> e un elemento <m>g\in G</m>, chiamiamo <term>laterale destro</term> di <m>H</m> in <m>G</m> contenente <m>g</m> il prodotto <m>H\{g\}</m> che, per semplificare la notazione, indicheremo con <m>Hg</m>. In simboli
+          <md>
+            Hg\coloneqq\{hg\mid h\in H\}
+          </md>.
+          Analogamente, il <term>laterale sinistro</term> di <m>H</m> in <m>G</m> contenente <m>g</m> è il sottoinsieme <m>gH</m> così definito
+          <md>
+            gH\coloneqq\{gh\mid h\in H\}
+          </md>.
+          Se il gruppo <m>G</m> è scritto in notazione additiva, scriveremo <m>H+g</m> e <m>g+H</m> per indicare i laterali.
+        </p>
+      </statement>
+    </definition>
+
+    <remark xml:id="rem-H_laterale_destro_sinistro">
+      <p>
+        Notiamo che <m>H1=\{h1\mid h\in H\}=\{h\mid h\in H\}=H</m>. Dunque, tra i vari laterali destri di <m>H</m> in <m>G</m> c'è <m>H</m> stesso. Allo stesso modo, <m>H</m> è anche un laterale sinistro di sé stesso.
+      </p>
+    </remark>
+
+    <example xml:id="ex-classe_di_resto_laterale">
+      <statement>
+        <p>
+          Nel gruppo <m>\Interi</m> rispetto all'addizione, consideriamo il sottogruppo <m>n\Interi</m> formato dai multipli del numero positivo <m>n</m>. Dato un numero intero <m>a</m> abbiamo allora
+          <md>
+            n\Interi+a=\{h+a\mid h\in n\Interi\}=\{nt+a\mid t\in\Interi\}
+          </md>.
+          Notiamo che <m>n\Interi+a</m> non è altro che la classe di resto <m>\class[n]{a}</m>. Poiché <m>\Interi</m> è commutativo, il laterale sinistro <m>a+n\Interi</m> coincide con il laterale destro <m>n\Interi+a</m>.
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id="ex-laterale_in_sym3">
+      <statement>
+        <p>
+          In <m>\Sym_{3}</m>, consideriamo il sottogruppo <m>H\coloneqq\grgen{(1\;2)}</m> e l'elemento <m>(1\;3)</m>. Ora <m>H=\{\Id,(1\;2)\}</m>. Dunque
+          <md>
+            H(1\;3)=\{\Id(1\;3),(1\;2)(1\;3)\}=\{(1\;3),(1\;2\;3)\}
+          </md>
+          e
+          <md>
+            (1\;3)H=\{(1\;3)\Id,(1\;3)(1\;2)\}=\{(1\;3),(1\;3\;2)\}
+          </md>.
+        </p>
+      </statement>
+    </example>
+
+    <remark xml:id="rem-laterale_destro_sinistro_diversi">
+      <p>
+        Dall'esempio precedente vediamo che in generale <m>Hg</m> e <m>gH</m> non sono uguali. Come vedremo, in alcuni casi possono coincidere (ovviamente se <m>G</m> è abeliano, ma non solo in questo caso).
+      </p>
+    </remark>
+
+    <p>
+      Diamo ora le prime proprietà dei laterali.
+    </p>
+
+    <proposition xml:id="prop-cardinalita_laterali">
+      <statement>
+        <p>
+          Se <m>H</m> è un sottogruppo di un gruppo <m>G</m> e <m>g</m> è un elemento di <m>G</m>, allora <m>\abs{Hg}=\abs{gH}=\abs{H}</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Consideriamo la funzione da <m>H</m> in <m>Hg</m> che manda <m>h</m> in <m>hg</m>: per definizione questa funzione è suriettiva; inoltre, se <m>h_{1}</m> e <m>h_{2}</m> sono elementi di <m>H</m> tali che <m>h_{1}g=h_{2}g</m>, per le <xref ref="prop-cancellazione_gruppo" text="title"/>, risulta <m>h_{1}=h_{2}</m>, cioè la funzione è anche iniettiva. Pertanto, esiste una funzione biiettiva da <m>H</m> in <m>Hg</m> e, quindi, <m>\abs{H}=\abs{Hg}</m>. La dimostrazione che <m>\abs{H}=\abs{gH}</m> è analoga.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <proposition xml:id="prop-laterali_partizione">
+      <statement>
+        <p>
+          Sia <m>G</m> un gruppo e <m>H</m> un sottogruppo di <m>G</m>. Allora:
+          <ol>
+            <li xml:id="item-g_in_laterale_Hg">
+              <p>
+                <m>g\in Hg</m> per ogni <m>g\in G</m>;
+              </p>
+            </li>
+            <li xml:id="item-laterale_rappresentante">
+              <p>
+                se <m>l\in Hg</m>, allora <m>Hl=Hg</m>
+              </p>
+            </li>
+            <li xml:id="item-laterali_distinti_disgiunti">
+              <p>
+                se <m>g</m> e <m>k</m> sono elementi di <m>G</m> tali che <m>Hg\cap Hk\ne\vuoto</m>, allora <m>Hg=Hk</m>.
+              </p>
+            </li>
+          </ol>
+          In particolare, i laterali destri di <m>H</m> in <m>G</m> formano una partizione di <m>G</m>. Analoghe proprietà valgono per i laterali sinistri.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Per il <xref ref="item-g_in_laterale_Hg"/>, basta notare che <m>g=1g</m> e <m>1\in H</m>.
+        </p>
+
+        <p>
+          Per quanto riguarda il <xref ref="item-laterale_rappresentante"/>, sia <m>l=\bar{h}g</m> con <m>\bar{h}\in H</m>. Gli elementi di <m>Hl</m> sono allora gli elementi del tipo <m>h\bar{h}g</m> al variare di <m>h</m> in <m>H</m>: poiché <m>h</m> e <m>\bar{h}</m> appartengono al sottogruppo <m>H</m>, anche <m>h\bar{h}</m> appartiene a <m>H</m> e, quindi, gli elementi <m>h\bar{h}g</m> appartengono a <m>Hg</m>, cioè <m>Hl\subseteq Hg</m>. D'altra parte, <m>g=\bar{h}^{-1}l</m> e, poiché <m>\bar{h}^{-1}</m> appartiene a <m>H</m>, in quanto inverso di un elemento di <m>H</m>, abbiamo che <m>g\in Hl</m>: lo stesso ragionamento precedente ci dice che <m>Hg\subseteq Hl</m>.
+        </p>
+
+        <p>
+          Se <m>l</m> è un elemento che sta in <m>Hg\cap Hk</m>, il <xref ref="item-laterale_rappresentante"/> implica che <m>Hg=Hl</m> e <m>Hk=Hl</m>: il <xref ref="item-laterali_distinti_disgiunti"/> segue immediatamente.
+        </p>
+
+        <p>
+          Notiamo, infine, che il <xref ref="item-g_in_laterale_Hg"/> dice che i laterali destri sono non vuoti, e che ogni elemento di <m>G</m> sta in almeno un laterale destro (dunque, l'unione dei laterali destri è tutto <m>G</m>) mentre il <xref ref="item-laterali_distinti_disgiunti"/> dice che laterali destri diversi sono disgiunti: in conclusione, i laterali destri formano una partizione di <m>G</m>.
+         </p>
+      </proof>
+
+    </proposition>
+
+    <remark xml:id="rem-solo_un_laterale_sottogruppo">
+      <p>
+        Poiché i laterali destri di <m>H</m> in <m>G</m> formano una partizione di <m>G</m>, solo uno di essi contiene <m>1</m> e cioè <m>H</m> stesso. In particolare, nessuno dei laterali destri di <m>H</m> in <m>G</m> diversi da <m>H</m> è un sottogruppo di <m>G</m>. Analogamente per i laterali sinistri.
+      </p>
+    </remark>
+
+    <example xml:id="ex-laterali_in_sym3">
+      <statement>
+        <p>
+          Riprendiamo il sottogruppo <m>H=\grgen{(1\;2)}</m> di <m>\Sym_{3}</m> considerato nell'<xref ref="ex-laterale_in_sym3"/>. Abbiamo già determinato il laterale destro <m>H(1\;3)=\{(1\;3),(1\;2\;3)\}</m>. Sappiamo poi che <m>H=\{\Id,(1\;2)\}</m> è esso stesso un laterale destro. Grazie alla <xref ref="prop-cardinalita_laterali"/>, sappiamo che tutti i laterali contengono lo stesso numero di elementi: per esclusione, il terzo e ultimo laterale destro è <m>\{(2\;3),(1\;3\;2)\}</m>. Analogamente, i laterali sinistri di <m>H</m> sono <m>\{\Id,(1\;2)\}</m>, <m>\{(1\;3),(1\;3\;2)\}</m> e <m>\{(2\;3),(1\;2\;3)\}</m>.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Se vogliamo stabilire se due elementi appartengono allo stesso laterale destro (o sinistro) di un sottogruppo dato, apparentemente occorre calcolare il laterale che contiene uno dei due e vedere se contiene anche l'altro. Fortunatamente, c'è un metodo che in taluni casi può rivelarsi più rapido.
+    </p>
+
+    <proposition xml:id="prop-criterio_laterali">
+      <statement>
+        <p>
+          Sia <m>G</m> un gruppo e sia <m>H</m> un suo sottogruppo. Dati due elementi <m>g_{1}</m> e <m>g_{2}</m> di <m>G</m>, si ha <m>Hg_{1}=Hg_{2}</m> se e solo se <m>g_{1}g_{2}^{-1}\in H</m>. Analogamente, <m>g_{1}H=g_{2}H</m> se e solo se <m>g_{2}^{-1}g_{1}\in H</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Proviamo solo la prima affermazione, lasciando per esercizio l'analoga dimostrazione della seconda.
+        </p>
+        <p>
+          Supponiamo allora che <m>Hg_{1}=Hg_{2}</m>: dunque, <m>g_{1}\in Hg_{2}</m>, cioè esiste <m>h\in H</m> tale che <m>g_{1}=hg_{2}</m>. Ma allora <m>g_{1}g_{2}^{-1}=h\in H</m>.
+        </p>
+        <p>
+          Viceversa, se <m>g_{1}g_{2}^{-1}\in H</m>, allora <m>g_{1}=(g_{1}g_{2}^{-1})g_{2}\in Hg_{2}</m>, cioè <m>Hg_{1}=Hg_{2}</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <exercises xml:id="exercises-prodotto_sottoinsiemi">
+
+      <exercisegroup cols="2">
+        <introduction>
+          <p>
+            Determinare i laterali destri e sinistri dei seguenti sottogruppi di un gruppo.
+          </p>
+        </introduction>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>H\coloneqq\grgen{(1\;2\;3)}</m> in <m>\Sym_{4}</m>.
+            </p>
+          </statement>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>A_{n}</m> in <m>\Sym_{n}</m>.
+            </p>
+          </statement>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>D_{4}</m> in <m>\Sym_{4}</m> (con l'identificazione data nell'<xref ref="ex-diedrale_sottogruppo_simmetrico"/>).
+            </p>
+          </statement>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Il gruppo trirettangolo <m>T</m> in <m>\Sym_{4}</m> (con l'identificazione data nell'<xref ref="ex-trirettangolo_sottogruppo_simmetrico"/>).
+            </p>
+          </statement>
+        </exercise>
+
+      </exercisegroup>
+
+      <exercise>
+        <statement>
+          <p>
+            Siano <m>H</m> e <m>K</m> due sottogruppi di un gruppo <m>G</m>. Dimostrare che l'intersezione di un laterale destro di <m>H</m> con un laterale destro di <m>K</m> è vuota oppure è un laterale destro di <m>H\cap K</m>.
+          </p>
+        </statement>
+
+        <hint>
+          <p>
+            Se l'intersezione è non vuota, prendere un elemento <m>g</m> nell'intersezione e mostrare che l'intersezione dei laterali è il laterale di <m>H\cap K</m> contenente <m>g</m>.
+          </p>
+        </hint>
+      </exercise>
+
+    </exercises>
+
+  </section>
+
+  <section xml:id="sec-teorema_di_lagrange">
+    <title>Teorema di Lagrange</title>
+
+    <p>
+      Nell'<xref ref="ex-laterali_in_sym3"/>, abbiamo considerato un sottogruppo che ha <m>3</m> laterali sinistri e <m>3</m> laterali destri. Il fatto che il numero di laterali destri e sinistri sia uguale (o, per meglio dire, il fatto che l'insieme dei laterali destri e l'insieme dei laterali sinistri abbiano la stessa cardinalità) ha validità generale.
+    </p>
+
+    <proposition xml:id="prop-laterali_destri_sinistri_stessa_cardinalita">
+      <statement>
+        <p>
+          Sia <m>G</m> un gruppo e sia <m>H</m> un sottogruppo. L'insieme dei laterali destri di <m>H</m> in <m>G</m> e l'insieme dei laterali sinistri di <m>H</m> in <m>G</m> hanno la stessa cardinalità.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sia <m>D</m> l'insieme dei laterali destri e sia <m>S</m> l'insieme dei laterali sinistri di <m>H</m> in <m>G</m>. Definiamo una funzione da <m>D</m> in <m>S</m> ponendo <m>Hg\mapsto g^{-1}H</m>. Occorre innanzitutto verificare che questa funzione sia ben definita: infatti, lo stesso laterale <m>Hg</m> può essere rappresentato da un qualsiasi suo elemento. Sia allora <m>Hg_{1}=Hg_{2}</m>: dunque, esiste <m>h\in H</m> tale che <m>g_{1}=hg_{2}</m>. Prendendo gli inversi abbiamo <m>g_{1}^{-1}=g_{2}^{-1}h^{-1}\in g_{2}^{-1}H</m>: pertanto, <m>g_{1}^{-1}H=g_{2}^{-1}H</m> e la funzione è ben definita. Allo stesso modo possiamo verificare che ponendo <m>gH\mapsto Hg^{-1}</m> otteniamo una funzione ben definita da <m>S</m> in <m>D</m>. Si verifica poi immediatamente che queste due funzioni sono una l'inversa dell'altra e otteniamo, quindi, il risultato cercato.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <remark xml:id="rem-biiezione_mal_definita">
+      <p>
+        Se nella dimostrazione della proposizione precedente avessimo posto <m>Hg\mapsto gH</m>, non avremmo avuto, in generale, una funzione ben definita. Prendendo, come nell'<xref ref="ex-laterali_in_sym3"/>, il sottogruppo <m>H=\grgen{(1\;2)}</m> di <m>\Sym_{3}</m>, abbiamo <m>H(1\;3)=H(1\;2\;3)</m>, ma <m>(1\;3)H\ne(1\;2\;3)H</m>.
+      </p>
+    </remark>
+
+    <p>
+      Possiamo ora dare la
+    </p>
+    <definition xml:id="def-indice_di_sottogruppo">
+
+      <notation>
+        <usage><m>\ind{G}{H}</m></usage>
+        <description>indice di un sottogruppo <m>H</m> in un gruppo <m>G</m></description>
+      </notation>
+
+      <statement>
+        <p>
+          Dato un sottogruppo <m>H</m> di un gruppo <m>G</m>, l'<term>indice</term> di <m>H</m> in <m>G</m>, denotato con <m>\ind{G}{H}</m> è la cardinalità dell'insieme dei laterali destri di <m>H</m> in <m>G</m> (o, equivalentemente, dell'insieme dei laterali sinistri di <m>H</m> in <m>G</m>).
+        </p>
+      </statement>
+    </definition>
+
+    <example xml:id="ex-indice_nZ">
+      <statement>
+        <p>
+          Abbiamo già visto (<xref ref="ex-classe_di_resto_laterale"/>) che i laterali (destri o sinistri), di <m>n\Interi</m> in <m>\Interi</m> non sono altro che le classi di resto modulo <m>n</m>. Sappiamo già che ci sono esattamente <m>n</m> classi di resto modulo <m>n</m>, e, dunque, <m>\ind{\Interi}{n\Interi}=n</m>.
+        </p>
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          Il sottogruppo <m>\grgen{(1\;2)}</m> di <m>\Sym_{3}</m> ha <m>3</m> laterali destri (e <m>3</m> laterali sinistri): si veda l'<xref ref="ex-laterali_in_sym3"/>. Dunque, <m>\ind{\Sym_{3}}{\grgen{(1\;2)}}=2</m>.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Veniamo ora al risultato principale.
+    </p>
+
+    <theorem xml:id="thm-lagrange">
+      <title>Teorema di Lagrange</title>
+      <idx><h>Lagrange, Joseph-Louis</h></idx>
+      <statement>
+        <p>
+          Sia <m>H</m> un sottogruppo di un gruppo finito <m>G</m>. Allora <m>\abs{G}=\ind{G}{H}\abs{H}</m>. In particolare, <m>\abs{H}</m> divide <m>\abs{G}</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          I laterali destri di <m>H</m> in <m>G</m> formano una partizione di <m>G</m> (<xref ref="prop-laterali_partizione"/>). Ciascun elemento della partizione contiene <m>\abs{H}</m> elementi (<xref ref="prop-cardinalita_laterali"/>). La tesi segue immediatamente.
+        </p>
+      </proof>
+
+    </theorem>
+
+    <p>
+      Poiché il periodo di un elemento di un gruppo è uguale all'ordine del sottogruppo che esso genera, abbiamo immediatamente il
+    </p>
+
+    <corollary xml:id="cor-periodo_elemento_divide_ordine">
+      <statement>
+        <p>
+          Se <m>G</m> è un gruppo finito di ordine <m>n</m>, allora ogni elemento <m>g</m> in <m>G</m> ha periodo che divide <m>n</m>. Di conseguenza, <m>g^{n}=1</m>.
+        </p>
+      </statement>
+    </corollary>
+
+    <corollary xml:id="cor-ordine_primo_ciclico">
+      <statement>
+        <p>
+          Se <m>G</m> è un gruppo di ordine primo allora <m>G</m> è ciclico.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sia <m>\abs{G}=p</m> e sia <m>g</m> un elemento di <m>G</m> diverso da <m>1</m>. Per il <xref ref="cor-periodo_elemento_divide_ordine"/>, il periodo di <m>g</m> divide <m>p</m> e, quindi, è uguale a <m>1</m> o <m>p</m>: ma <m>g\ne 1</m> e, quindi, <m>\abs{g}=p</m>. Il sottogruppo generato da <m>g</m> ha, quindi, ordine <m>p</m> e, pertanto, coincide con <m>G</m>.
+        </p>
+      </proof>
+
+    </corollary>
+
+    <proposition xml:id="prop-moltiplicativita_indice">
+      <statement>
+        <p>
+          Siano <m>G</m> un gruppo, <m>H</m> un sottogruppo di <m>G</m> e <m>K</m> un sottogruppo di <m>H</m>. Allora <m>\ind{G}{K}</m> è finito se e solo se <m>\ind{G}{H}</m> e <m>\ind{H}{K}</m> sono finiti: in tal caso <m>\ind{G}{K}=\ind{G}{H}\ind{H}{K}</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Nel caso in cui <m>G</m> sia finito l'uguaglianza è banale. Infatti, per il <xref ref="thm-lagrange" text="title"/>,
+          <md>
+            \ind{G}{H}\ind{H}{K}=\frac{\abs{G}}{\abs{H}}\frac{\abs{H}}{\abs{K}}=
+            \frac{\abs{G}}{\abs{K}}=\ind{G}{K}
+          </md>.
+          Dimostriamo il risultato in generale.
+        </p>
+        <p>
+          Supponiamo che <m>H</m> abbia in <m>G </m> almeno <m>r</m> laterali destri diversi <m>Hg_{1}</m>, <m>Hg_{2}</m>, <m>\ldots</m>, <m>Hg_{r}</m> e che <m>K</m> abbia in <m>H</m> almeno <m>s</m> laterali destri diversi <m>Kh_{1}</m>, <m>Kh_{2}</m>, <m>\ldots</m>, <m>Kh_{s}</m>. Se mostriamo che i laterali destri di <m>K</m> in <m>G</m> del tipo <m>Kh_{i}g_{j}</m> con <m>1\le i\le s</m> e <m>1\le j\le r</m> sono diversi, allora avremo provato che <m>K</m> in <m>G</m> ha almeno <m>rs</m> laterali destri diversi: in particolare, questo prova che se <m>\ind{G}{K}</m> è finito, allora <m>\ind{G}{H}</m> e <m>\ind{H}{K}</m> sono finiti.
+        </p>
+        <p>
+          Sia, allora, <m>Kh_{i}g_{j}=Kh_{u}g_{v}</m>: dunque, <m>h_{i}g_{j}=kh_{u}g_{v}</m> per qualche <m>k\in K</m>. Poiché <m>K\le H</m> e <m>H</m> è un sottogruppo, abbiamo che <m>kh_{u}\in H</m> e <m>kh_{u}g_{v}\in Hg_{v}</m>; d'altra parte, <m>h_{i}g_{j}\in Hg_{j}</m> e, pertanto, <m>Hg_{v}=Hg_{j}</m>, cioè <m>g_{v}=g_{j}</m>. Per le <xref ref="prop-cancellazione_gruppo" text="title"/>, abbiamo allora <m>h_{i}=kh_{u}</m>: dunque, <m>h_{i}\in Kh_{u}</m> e, pertanto, <m>h_{i}=h_{u}</m>, come affermato.
+        </p>
+        <p>
+          Supponiamo ora che <m>\ind{G}{H}=r</m> e <m>\ind{H}{K}=s</m> siano finiti e che, quindi, i laterali destri di <m>H</m> in <m>G</m> e i laterali destri di <m>K</m> in <m>H</m> elencati in precedenza siano tutti i laterali. Per concludere la dimostrazione, basta mostrare che ogni elemento <m>g</m> di <m>G</m> appartiene a un laterale del tipo <m>Kh_{i}g_{j}</m>: per ipotesi <m>g\in Hg_{j}</m> per qualche <m>1\le j\le r</m>, cioè esiste <m>h\in H</m> tale che <m>g=hg_{j}</m>; inoltre <m>h\in Kh_{i}</m> per qualche <m>1\le i \le s</m>. Dunque, <m>g\in Kh_{i}g_{j}</m>.
+         </p>
+      </proof>
+
+    </proposition>
+
+    <exercises xml:id="exercises-teorema_di_lagrange">
+
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare che <m>(\Interi,+)</m> ha indice infinito in <m>(\Razionali,+)</m>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Notiamo innanzitutto che, poiché <m>\Razionali</m> è abeliano, i laterali destri e sinistri coincidono. Supponiamo allora di avere un numero finito di laterali <m>\Interi+\frac{m_{1}}{n_{1}}</m>, <m>\ldots</m>, <m>\Interi+\frac{m_{r}}{n_{r}}</m> di <m>\Interi</m> in <m>\Razionali</m> e mostriamo che possiamo trovare un altro laterale non compreso tra questi. Sia allora <m>n</m> un intero non nullo che non divide nessuno degli <m>n_{i}</m> (basta prendere <m>n</m> intero positivo maggiore di <m>\abs{n_{i}}</m> per ogni <m>i</m>), e consideriamo il laterale <m>\Interi+\frac{1}{n}</m>. Se fosse <m>\Interi+\frac{1}{n}=\Interi+\frac{m_{i}}{n_{i}}</m> per qualche <m>i</m>, allora dovrebbe esistere un intero <m>z</m> tale che <m>\frac{1}{n}=\frac{m_{i}}{n_{i}}+z</m>, cioè <m>\frac{1}{n}=\frac{m_{i}+zn_{i}}{n_{i}}</m>. Ma allora avremmo che <m>n_{i}=n(m_{i}+zn_{i})</m> e, quindi, <m>n</m> dividerebbe <m>n_{i}</m>.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare che se <m>H</m> e <m>K</m> sono dei sottogruppi finiti di un gruppo e gli ordini di <m>H</m> e <m>K</m> sono relativamente primi allora <m>H\cap K=1</m>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare che se <m>H</m> e <m>K</m> sono sottogruppi di indice finito in un gruppo <m>G</m> (non necessariamente finito) allora <m>H\cap K</m> ha indice finito in <m>G</m> e <m>\ind{G}{H\cap K}\le\ind{G}{H}\ind{G}{K}</m>.
+          </p>
+        </statement>
+
+        <hint>
+          <p>
+            Mostrare che <m>\ind{H}{H\cap K}\le\ind{G}{K}</m>.
+          </p>
+        </hint>
+
+        <solution>
+          <p>
+            Sia <m>n=\ind{G}{K}</m>: mostriamo che se prendiamo <m>n+1</m> laterali destri <m>(H\cap K)h_{1}</m>, <m>\ldots</m>, <m>(H\cap K)h_{n+1}</m> di <m>H\cap K</m> in <m>H</m>, questi non sono tutti distinti e, dunque, <m>\ind{H}{H\cap K}\le\ind{G}{K}</m>. I laterali <m>Kh_{1}</m>, <m>\ldots</m>, <m>Kh_{n+1}</m> di <m>K</m> in <m>G</m> non sono tutti distinti: dunque, <m>Kh_{i}=Kh_{j}</m> per qualche <m>i</m> e <m>j</m> distinti. Ma allora, <m>h_{i}h_{j}^{-1}\in K</m>: d'altra parte <m>h_{i}h_{j}^{-1}\in H</m> e, di conseguenza, <m>h_{i}h_{j}^{-1}\in H\cap K</m>, cioè  <m>(H\cap K)h_{i}=(H\cap K)h_{j}</m>, come richiesto.
+          </p>
+          <p>
+            Ora basta osservare che per la <xref ref="prop-moltiplicativita_indice"/>,
+            <md>
+              \ind{G}{H\cap K}=\ind{G}{H}\ind{H}{H\cap K}\le \ind{G}{H}\ind{G}{K}
+            </md>.
+          </p>
+        </solution>
+
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare che se <m>H</m> è un sottogruppo avente indice primo in <m>G</m> e <m>H\le K\le G</m> allora <m>K=H</m> o <m>K=G</m>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Sia <m>G</m> un gruppo abeliano finito di ordine dispari. Dimostrare che il prodotto di tutti gli elementi di <m>G</m> è uguale a <m>1</m>.
+          </p>
+        </statement>
+
+        <hint>
+          <p>
+            Quanti elementi di <m>G</m> coincidono con il proprio inverso?
+          </p>
+        </hint>
+
+        <solution>
+          <p>
+            Sia <m>x</m> un elemento di <m>G</m> che coincide con il proprio inverso: dunque, <m>xx=1</m>, cioè <m>x^{2}=1</m>. Pertanto <m>\abs{x}</m> divide <m>2</m>. D'altra parte, per il <xref ref="cor-periodo_elemento_divide_ordine"/>, il periodo di <m>x</m> divide <m>\abs{G}</m> ed è, quindi, dispari. Ma allora, <m>x</m> ha periodo <m>1</m>, cioè <m>x=1</m>. Dunque, ogni elemento diverso da <m>1</m> non coincide con il proprio inverso. Nel prodotto di tutti gli elementi di <m>G</m>, ogni elemento diverso da <m>1</m> si semplifica con il proprio inverso e rimane, quindi, il solo elemento <m>1</m>.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Nel gruppo moltiplicativo <m>\GL{2}{\Complessi}</m> delle matrici invertibili di ordine <m>2</m> a coefficienti complessi, sia <m>Q</m> il sottogruppo generato dalle matrici <m>A\coloneqq
+            \begin{psmallmatrix}
+              0 \amp 1\\
+              -1 \amp 0
+            \end{psmallmatrix}
+            </m> e <m>B\coloneqq
+            \begin{psmallmatrix}
+              0 \amp i\\
+              i \amp 0
+            \end{psmallmatrix}
+            </m> come nell'<xref ref="exercise-quaternioni_come_matrici"/>. Determinare l'ordine di <m>Q</m>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Dall'<xref ref="exercise-quaternioni_come_matrici"/>, sappiamo che <m>Q</m> non è abeliano, che <m>A</m> e <m>B</m> hanno periodo <m>4</m> e che ogni elemento di <m>Q</m> è del tipo  <m>A^{r}B^{s}</m> con <m>0\le r\le3</m> e <m>0\le s\le 1</m>: dunque, <m>Q</m> ha al più <m>8</m> elementi. D'altra parte, l'ordine di <m>Q</m> è un multiplo del periodo di <m>A</m>, grazie al <xref ref="cor-periodo_elemento_divide_ordine"/>, e, dunque, <m>Q</m> può avere ordine <m>4</m> o <m>8</m>. Ma <m>Q</m> non è abeliano, e tutti i gruppi di ordine <m>4</m> sono abeliani: pertanto <m>Q</m> ha ordine <m>8</m>.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <introduction>
+          <p>
+            Nell'insieme <m>S\coloneqq\{(a,b)\in\Razionali\times\Razionali\mid a\ne0\}</m> si definisca un'operazione nel modo seguente:
+            <md>
+              (a_{1},b_{1})\ast (a_{2},b_{2})\coloneqq(a_{1}a_{2},a_{1}b_{2}+a_{2}b_{1})
+            </md>.
+          </p>
+        </introduction>
+
+        <task>
+          <statement>
+            <p>
+              Dimostrare che <m>S</m> con questa operazione è un gruppo abeliano.
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              L'elemento neutro è <m>(1,0)</m>. L'inverso di <m>(a,b)</m> è <m>(a^{-1},-a^{-2}b)</m>.
+            </p>
+          </answer>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Stabilire quali dei sottoinsiemi <m>T\coloneqq\{(a,b)\in S\mid a=1\}</m>, <m>U\coloneqq\{(a,b)\in S\mid b\ne0\}</m>, <m>V\coloneqq\{(a,b)\in S\mid a \gt 0\}</m> sono sottogruppi di <m>S</m>.
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              <m>T</m> e <m>V</m> sono sottogruppi di <m>S</m>, mentre <m>U</m> no.
+            </p>
+          </answer>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Per ciascuno dei sottogruppi trovati al punto precedente, calcolarne l'indice in <m>S</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Consideriamo due elementi <m>(a_{1},b_{1})</m> e <m>(a_{2},b_{2})</m> di <m>S</m>. Per la <xref ref="prop-criterio_laterali"/>, stanno nello stesso laterale destro di un dato sottogruppo <m>H</m> se e solo se <m>(a_{1},b_{1})\ast(a_{2},b_{2})^{-1}\in H</m>.
+            </p>
+            <p>
+              Ora <m>(a_{1},b_{1})\ast(a_{2},b_{2})^{-1}=(a_{1}a_{2}^{-1},b_{3})</m> dove <m>b_{3}</m> è un numero razionale che non ci interessa calcolare esplicitamente perché la condizione di appartenenza a <m>T</m> e <m>V</m> coinvolge solo la prima componente della coppia.
+            </p>
+            <p>
+              I due elementi <m>(a_{1},b_{1})</m> e <m>(a_{2},b_{2})</m> appartengono allo stesso laterale destro di <m>T</m> se e solo se <m>a_{1}a_{2}^{-1}=1</m>, cioè se e solo se <m>a_{1}=a_{2}</m>. Poiché la prima componente di <m>(a,b)</m> può assumere infiniti valori, abbiamo allora infiniti laterali di <m>T</m> in <m>S</m>.
+            </p>
+            <p>
+              I due elementi <m>(a_{1},b_{1})</m> e <m>(a_{2},b_{2})</m> appartengono allo stesso laterale destro di <m>V</m> se e solo se <m>a_{1}a_{2}^{-1} \gt 0</m>, cioè se e solo se <m>a_{1}</m> e <m>a_{2}</m> sono concordi. Abbiamo quindi due laterali di <m>V</m> in <m>S</m>: uno di essi è <m>V</m> stesso, mentre l'altro è
+              quello formato dalle coppie <m>(a,b)</m> con <m>a \lt 0</m>.
+            </p>
+          </solution>
+        </task>
+      </exercise>
+
+    </exercises>
+
+  </section>
+
+  <section xml:id="sec-prodotto_sottogruppi">
+    <title>Prodotto di sottogruppi</title>
+
+    <p>
+      Un altro caso di prodotto di sottoinsiemi che vogliamo studiare è il caso in cui i sottoinsiemi coinvolti siano sottogruppi. In generale, non è detto che il prodotto di sottogruppi sia un sottogruppo.
+    </p>
+
+    <example xml:id="ex-prodotto_sottogruppi_non_sottogruppo">
+      <statement>
+        <p>
+          Consideriamo i sottogruppo <m>H\coloneqq\grgen{(1\;2)}</m> e <m>K\coloneqq\grgen{(1\;3)}</m> di <m>\Sym_{3}</m> e calcoliamo il prodotto <m>HK</m>. Ora <m>H=\{\Id,(1\;2)\}</m> e <m>K=\{\Id,(1\;3)\}</m>. Quindi
+          <md>
+            HK=\{\Id\Id,\Id (1\;3),(1\;2)\Id,(1\;2)(1\;3)\}=\{\Id, (1\;3),(1\;2),(1\;2\;3)\}
+          </md>.
+          Possiamo concludere subito, senza fare troppe verifiche, che <m>HK</m> non è un sottogruppo. Infatti, <m>HK</m> ha ordine <m>4</m> e, se fosse un sottogruppo di <m>\Sym_{3}</m>, per il <xref ref="thm-lagrange" text="title"/>, il suo ordine dovrebbe dividere l'ordine di <m>\Sym_{3}</m> che è <m>6</m>.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Vediamo alcune proprietà del prodotto di sottogruppi, prima di caratterizzare il caso in cui il prodotto di due sottogruppi sia un sottogruppo.
+    </p>
+
+    <proposition xml:id="prop-prodotto_contiene_sottogruppi">
+      <statement>
+        <p>
+          Se <m>H</m> e <m>K</m> sono sottogruppi di un gruppo <m>G</m>, allora
+          <md>
+            H\cup K\subseteq HK \subseteq\grgen{H\cup K}
+          </md>.
+          Più in generale, se <m>H_{1}</m>, <m>H_{2}</m>, <m>\ldots</m>, <m>H_{r}</m> sono sottogruppi di <m>G</m>, allora
+          <md>
+            H_{1}\cup \cdots\cup H_{r}\subseteq H_{1}\cdots H_{r}\subseteq\grgen{H_{1}\cup \cdots\cup H_{r}}
+          </md>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Proviamo il caso di due sottogruppi <m>H</m> e <m>K</m>, lasciando il caso generale per esercizio.
+        </p>
+        <p>
+          Sia <m>h\in H</m>. Allora <m>h=h\cdot 1\in HK</m>, dal momento che <m>1\in K</m>; dunque, <m>H\subseteq HK</m>. Analogamente, <m>K\subseteq HK</m>. Pertanto, <m>H\cup K\subseteq HK</m>.
+        </p>
+        <p>
+          Il sottogruppo <m>\grgen{H\cup K}</m> contiene ogni elemento <m>h\in H</m> e ogni elemento <m>k\in K</m> e, quindi, contiene il loro prodotto <m>hk</m>: dunque, <m>HK \subseteq\grgen{H\cup K}</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <p>
+      Nell'<xref ref="ex-prodotto_sottogruppi_non_sottogruppo"/>, abbiamo calcolato <m>4</m> prodotti, ottenendo <m>4</m> risultati diversi. In generale però non è detto che tutti i prodotti siano diversi tra loro.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Consideriamo in <m>\Sym_{4}</m> i sottogruppi <m>H\coloneqq\grgen{(1\;2),(1\;2\;3)}</m> e <m>K\coloneqq\grgen{(1\;3),(1\;3\;4)}</m>. Ora, anche senza determinare tutti gli elementi di <m>H</m> e <m>K</m>, notiamo che l'elemento <m>(1\;2\;3)</m> si può ottenere come prodotto di un elemento di <m>H</m> per un elemento di <m>K</m> in (almeno) due modi diversi:
+          <md>
+            (1\;2\;3)=(1\;2)(1\;3)=(1\;2\;3)\Id
+          </md>.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Vediamo ora come determinare i modi diversi in cui un elemento del prodotto <m>HK</m> si può scrivere come prodotto di un elemento di <m>H</m> per un elemento di <m>K</m>.
+    </p>
+
+    <proposition xml:id="prop-diverse_espressioni-prodotto">
+      <statement>
+        <p>
+          Sia <m>G</m> un gruppo e siano <m>H</m> e <m>K</m> due sottogruppi di <m>G</m>. Siano dati <m>h</m> in <m>H</m> e <m>k</m> in <m>K</m>. Le differenti scritture di <m>hk</m> come prodotto di un elemento di <m>H</m> e di un elemento di <m>K</m> sono tutte e sole quelle del tipo <m>h'k'</m> con <m>h'=hx</m> e <m>k'=x^{-1}k</m> al variare di <m>x\in H\cap K</m>. In particolare, se <m>H</m> e <m>K</m> sono finiti, si ha <m>\abs{HK}=\frac{\abs{H}\abs{K}}{\abs{H\cap K}}</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sia <m>x</m> un elemento di <m>H\cap K</m>. Allora <m>hx\in H</m> e <m>x^{-1}k\in K</m>. Inoltre <m>(hx)(x^{-1}k)=hk</m>.
+        </p>
+        <p>
+          Viceversa, siano <m>h'\in H</m> e <m>k'\in K</m>, tali che <m>hk=h'k'</m>. Moltiplicando a sinistra per <m>h^{-1}</m> e a destra per <m>(k')^{-1}</m>, otteniamo <m>k(k')^{-1}=h^{-1}h'</m>: detto <m>x</m> questo elemento, si ha immediatamente che <m>x\in H\cap K</m> e che <m>h'=hx</m> e <m>k'=x^{-1}k</m>.
+        </p>
+        <p>
+          Nel caso i cui <m>H</m> e <m>K</m> siano finiti, ovviamente anche <m>H\cap K</m> è finito: siano allora <m>x_{1}</m>, <m>\ldots</m>, <m>x_{r}</m> gli elementi di <m>H\cap K</m>. Per elencare gli elementi di <m>HK</m> dobbiamo effettuare <m>\abs{H}\abs{K}</m> moltiplicazioni di un elemento di <m>H</m> per un elemento di <m>K</m>: uno per ciascuna coppia <m>(h,k)</m> con <m>h\in H</m> e <m>k\in K</m>. Lo stesso prodotto <m>hk</m> si ottiene con le <m>r</m> coppie <m>(hx_{1},x_{1}^{-1}k)</m>, <m>\ldots</m>, <m>(hx_{r},x_{r}^{-1}k)</m>. Per le <xref ref="prop-cancellazione_gruppo" text="title"/>, queste coppie sono tutte diverse e, quindi, ciascun prodotto appare esattamente <m>r</m> volte: dunque, <m>\abs{HK}=\frac{\abs{H}\abs{K}}{\abs{H\cap K}}</m>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <theorem xml:id="thm-prodotto_sottogruppo">
+      <statement>
+        <p>
+          Dati due sottogruppi <m>H</m> e <m>K</m> di un gruppo <m>G</m>, sono equivalenti le condizioni:
+          <ol>
+            <li xml:id="item-HKsottogruppo">
+              <p>
+                <m>HK</m> è un sottogruppo;
+              </p>
+            </li>
+            <li xml:id="item-HKcontieneKH">
+              <p>
+                <m>HK\supseteq KH</m>;
+              </p>
+            </li>
+            <li xml:id="item-HKugualeKH">
+              <p>
+                <m>HK=KH</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Supponiamo valga il <xref ref="item-HKsottogruppo"/> e mostriamo che vale il <xref ref="item-HKcontieneKH"/>. Presi due elementi <m>h\in H</m> e <m>k\in K</m>, questi appartengono a <m>H\cup K</m> e, per la <xref ref="prop-prodotto_contiene_sottogruppi"/>, a <m>HK</m>. Poiché <m>HK</m> è un sottogruppo, esso contiene i prodotti dei propri elementi: in particolare, contiene <m>kh</m>, come richiesto.
+        </p>
+        <p>
+          Supponiamo valga il <xref ref="item-HKcontieneKH"/> e mostriamo che vale il <xref ref="item-HKugualeKH"/>: basta provare che, presi <m>h\in H</m> e <m>k\in K</m>, si ha <m>hk\in KH</m>. Ora <m>hk=(k^{-1}h^{-1})^{-1}</m>: per ipotesi <m>k^{-1}h^{-1}\in KH\subseteq HK</m>. Dunque, <m>k^{-1}h^{-1}=\bar{h}\bar{k}</m> per opportuni <m>\bar{h}\in H</m> e <m>\bar{k}\in K</m>. Pertanto, <m>hk=(\bar{h}\bar{k})^{-1}=\bar{k}^{-1}\bar{h}^{-1}\in KH</m>.
+        </p>
+        <p>
+          Supponiamo valga il <xref ref="item-HKugualeKH"/> e mostriamo che vale il <xref ref="item-HKsottogruppo"/>. Ovviamente, <m>HK</m> è non vuoto. Presi due elementi in <m>HK</m>, questi sono del tipo <m>h_{1}k_{1}</m> e <m>h_{2}k_{2}</m> con <m>h_{1}</m> e <m>h_{2}</m> in <m>H</m> e <m>k_{1}</m> e <m>k_{2}</m> in <m>K</m>. Allora
+          <md>
+            h_{1}k_{1}(h_{2}k_{2})^{-1}=h_{1}k_{1}k_{2}^{-1}h_{2}^{-1}
+          </md>:
+          ora <m>k_{1}k_{2}^{-1}\in K</m> e, quindi, <m>k_{1}k_{2}^{-1}h_{2}^{-1}\in KH=HK</m>. Pertanto, esistono <m>\bar{h}\in H</m> e <m>\bar{k}\in K</m> tali che <m>k_{1}k_{2}^{-1}h_{2}^{-1}=\bar{h}\bar{k}</m>. Quindi,
+          <md>
+            h_{1}k_{1}(h_{2}k_{2})^{-1}=h_{1}\bar{h}\bar{k}\in HK
+          </md>,
+          come richiesto.
+        </p>
+      </proof>
+
+    </theorem>
+
+    <remark xml:id="rem-prodotto_sottogruppi_abeliano">
+      <p>
+        Le condizioni del teorema precedente sono ovviamente soddisfatte se il gruppo <m>G</m> è abeliano o se uno dei due sottogruppi è contenuto nel centro di <m>G</m>.
+      </p>
+    </remark>
+
+    <example xml:id="ex-sottogruppi_commutano_non_elemento_per_elemento">
+      <statement>
+        <p>
+          Dati due sottogruppi <m>H</m> e <m>K</m> di un gruppo <m>G</m>, dire che <m>HK=KH</m> non significa che <m>hk=kh</m> per ogni <m>h</m> in <m>H</m> e <m>k</m> in <m>K</m>. Ad esempio, se prendiamo i sottogruppi <m>H\coloneqq\grgen{(1\;2)}</m> e <m>A_{3}</m> di <m>\Sym_{3}</m>, vediamo che <m>H\cap A_{3}</m> è il sottogruppo banale e, per la <xref ref="prop-diverse_espressioni-prodotto"/>, <m>HA_{3}</m> ha ordine <m>2\cdot 3=6</m> e coincide, pertanto, con <m>\Sym_{3}</m>. Analogamente, <m>A_{3}H=\Sym_{3}</m>. Se ora prendiamo <m>(1\;2)</m> in <m>H</m> e <m>(1\;2\;3)</m> in <m>A_{3}</m>, vediamo che <m>(1\;2)(1\;2\;3)\ne(1\;2\;3)(1\;2)</m>.
+        </p>
+      </statement>
+    </example>
+
+
+    <exercises xml:id="exercises-prodotto_sottogruppi">
+
+      <exercise xml:id="exercise-prodotto_sottogruppi_inclusi">
+        <statement>
+          <p>
+            Dati due sottogruppi <m>H</m> e <m>K</m> di un gruppo, mostrare che <m>HK=H</m> se e solo se <m>H\ge K</m>. In particolare, <m>HH=H</m>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Dalla <xref ref="prop-prodotto_contiene_sottogruppi"/> sappiamo che <m>HK</m> contiene sia <m>H</m> che <m>K</m>: dunque, se <m>HK=H</m>, allora <m>K\le H</m>.
+          </p>
+          <p>
+            Viceversa, poiché <m>HK</m> è formato dai prodotti del tipo <m>hk</m> con <m>h\in H</m> e <m>k\in K</m>, se <m>K\le H</m>, allora questi prodotti sono prodotti di elementi di <m>H</m> e, quindi, appartengono a <m>H</m>. Pertanto, <m>HK\subseteq H</m>; ma <m>H\subseteq HK</m> per la <xref ref="prop-prodotto_contiene_sottogruppi"/>.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercisegroup cols="2">
+        <introduction>
+          <p>
+            In ciascuno degli esercizi seguenti, sono dati due sottogruppi di un gruppo finito. Calcolare la cardinalità del loro prodotto e stabilire se è un sottogruppo del gruppo.
+          </p>
+        </introduction>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>H\coloneqq\grgen{(1\;2\;3)}</m> e <m>K\coloneqq\{\sigma\in\Sym_{4}\mid 3\sigma=3\}</m> in <m>\Sym_{4}</m>
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              <m>HK</m> ha cardinalità <m>18</m> e non è un sottogruppo.
+            </p>
+          </answer>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>H\coloneqq\grgen{(1\;2\;3)(4\;5)}</m> e <m>K\coloneqq\{\sigma\in\Sym_{5}\mid 3\sigma=3\}</m> in <m>\Sym_{5}</m>
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              <m>HK</m> ha cardinalità <m>72</m> e non è un sottogruppo.
+            </p>
+          </answer>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>H\coloneqq\grgen{(1\;2\;3)(4\;5)}</m> e <m>K\coloneqq\{\sigma\in\Sym_{5}\mid 4\sigma=4,5\sigma=5\}</m> in <m>\Sym_{5}</m>
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              <m>HK</m> ha cardinalità <m>12</m> ed è un sottogruppo.
+            </p>
+          </answer>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              <m>H\coloneqq\grgen{(1\;2\;3)(4\;5)}</m> e <m>K\coloneqq\grgen{(1\;2\;3)(5\;6)}</m> in <m>\Sym_{6}</m>
+            </p>
+          </statement>
+
+          <answer>
+            <p>
+              <m>HK</m> ha cardinalità <m>12</m> e non è un sottogruppo.
+            </p>
+          </answer>
+        </exercise>
+
+        <conclusion>
+          <p>
+            Notiamo che se <m>\abs{HK}</m> non divide l'ordine del gruppo, allora sicuramente <m>HK</m> non è un sottogruppo, ma se <m>\abs{HK}</m> divide l'ordine del gruppo, allora bisogna vedere caso per caso se <m>HK</m> è un sottogruppo o meno.
+          </p>
+        </conclusion>
+
+      </exercisegroup>
+
+      <exercise>
+        <statement>
+          <p>
+            Sia <m>G</m> un gruppo finito di ordine <m>p^{n}r</m> dove <m>p</m> è un primo,  <m>n</m> è un intero positivo e <m>r</m> è un intero positivo tale che <m>r \lt p</m>. Allora <m>G</m> ha al massimo un sottogruppo di ordine <m>p^{n}</m>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Siano <m>H</m> e <m>K</m> due sottogruppi di <m>G</m> di ordine <m>p^{n}</m>: dobbiamo mostrare che <m>H=K</m>. Per il <xref ref="thm-lagrange" text="title"/>, <m>H\cap K</m> ha ordine <m>p^{m}</m> con <m>0 \le m\le n</m>. Per la <xref ref="prop-diverse_espressioni-prodotto"/>, <m>HK</m> ha cardinalità <m>p^{2n-m}</m>: poiché <m>HK</m> è un sottoinsieme di <m>G</m>, abbiamo allora <m>p^{2n-m}\le p^{n}r</m>, cioè <m>p^{n-m}\le r</m>. Poiché <m>r \lt p</m>, ciò può avvenire solo se <m>n=m</m>. Ma allora <m>H\cap K</m> ha ordine uguale a <m>H</m> e a <m>K</m>, cioè <m>H=K</m>.
+          </p>
+        </solution>
+      </exercise>
+
+    </exercises>
+
+
+  </section>
+
+</chapter>

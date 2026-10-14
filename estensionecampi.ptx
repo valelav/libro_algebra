@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-estensione_campi">
+  <title>Estensioni di campi</title>
+
+  <introduction>
+    <p>
+      Abbiamo visto che un polinomio a coefficienti in un campo ha una radice se e solo se ha un fattore di primo grado. Non sempre ciò avviene: ad esempio, il polinomio <m>x^{2}-2</m> non ha radici razionali, ma, se pensato come polinomio a coefficienti reali, ammette le due radici <m>\sqrt{2}</m> e <m>-\sqrt{2}</m> e può, quindi, essere fattorizzato come <m>(x-\sqrt{2})(x+\sqrt{2})</m>. Ci chiediamo se un procedimento simile sia sempre possibile, cioè se, dato un qualsiasi polinomio a coefficienti in un campo, questo abbia delle radici in un campo sufficientemente grande.
+    </p>
+  </introduction>
+
+  <section xml:id="sec-elementi_algebrici_e_trascendenti">
+    <title>Elementi algebrici e trascendenti</title>
+    <p>
+      Se <m>R</m> è un anello contenente un campo <m>F</m>, allora possiamo considerare <m>R</m> come uno spazio vettoriale su <m>F</m> in maniera ovvia, prendendo come addizione l'addizione in <m>R</m> e come moltiplicazione di uno scalare (cioè un elemento di <m>F</m>) per un vettore (cioè un elemento di <m>R</m>) la moltiplicazione di questi elementi in <m>R</m>. Le verifiche che così facendo si ottiene effettivamente un <m>F</m>-spazio vettoriale sono molto semplici e le lasciamo per esercizio. Nel caso in cui anche l'anello che contiene <m>F</m> sia esso stesso un campo <m>E</m>, diciamo che <m>E</m> è un'<term>estensione</term> di <m>F</m> e diamo la
+    </p>
+    <definition xml:id="def-grado_estensione">
+      <notation>
+        <usage><m>\degext{E}{F}</m></usage>
+        <description>grado di un'estensione <m>E</m> di <m>F</m></description>
+      </notation>
+      <statement>
+        <p>
+          Se <m>E</m> è un'estensione di <m>F</m>, il <term>grado</term> di <m>E</m> su <m>F</m>, denotato con <m>\degext{E}{F}</m> è la dimensione (eventualmente infinita) di <m>E</m> come <m>F</m>-spazio vettoriale. Nel caso in cui <m>\degext{E}{F}</m> sia finito, diremo che <m>E</m> è un'estensione <term>finita</term> di <m>F</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <example>
+      <statement>
+        <p>
+          Il campo dei complessi <m>\Complessi</m> ha grado <m>2</m> su <m>\Reali</m>.
+        </p>
+      </statement>
+    </example>
+
+    <proposition xml:id="prop-ordine_campo_finito">
+      <statement>
+        <p>
+          Un campo finito ha ordine potenza di un primo.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Un campo finito <m>E</m> ha caratteristica un primo <m>p</m> (<xref ref="rem-anelli_finiti"/> e <xref ref="prop-caratteristica_anello_intero"/>). Per la <xref ref="prop-sottocampo_minimo"/>, il sottocampo minimo <m>F</m> di <m>E</m> ha allora ordine <m>p</m>. Ora <m>E</m> è, ovviamente, un'estensione finita di <m>F</m>, di grado, diciamo, <m>n</m>. Come <m>F</m>-spazio vettoriale <m>E</m> è allora isomorfo a <m>F^{n}</m>, lo spazio delle <m>n</m>-uple a coefficienti in <m>F</m>, che contiene esattamente <m>p^{n}</m> elementi.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <proposition xml:id="prop-moltiplicativita_grado">
+      <statement>
+        <p>
+          Sia <m>E</m> un'estensione di un campo <m>F</m> e sia <m>R</m> un anello contenente <m>E</m>. Allora <m>R</m> ha dimensione finita come <m>F</m>-spazio vettoriale se e solo se <m>R</m> ha dimensione finita come <m>E</m>-spazio vettoriale e <m>\degext{E}{F}</m> è finito: in tal caso <m>\dim_{F}R=\dim_{E}R\cdot\degext{E}{F}</m> (in particolare, se <m>R</m> è anch'esso un campo, risulta <m>\degext{R}{F}=\degext{R}{E}\degext{E}{F}</m>).
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Supponiamo che <m>\dim_{F}R</m> sia finita. Allora <m>E</m>, essendo contenuto in <m>R</m>, può essere visto come un <m>F</m>-sottospazio vettoriale di <m>R</m> e, quindi, ha <m>F</m>-dimensione finita. Inoltre, presi i vettori di una <m>F</m>-base di <m>R</m>, questi sono anche <m>E</m>-generatori di <m>R</m> e, quindi, <m>R</m> ha <m>E</m>-dimensione finita.
+        </p>
+        <p>
+          Viceversa, supponiamo che <m>\dim_{E}R</m> e <m>\degext{E}{F}</m> siano finiti. Sia allora <m>v_{1}</m>, <m>v_{2}</m>, <m>\ldots</m>, <m>v_{r}</m> una <m>E</m>-base di <m>R</m> e sia <m>e_{1}</m>, <m>e_{2}</m>, <m>\ldots</m>, <m>e_{s}</m> una <m>F</m>-base di <m>E</m>. Se mostriamo che <m>e_{i}v_{j}</m> con <m>1\le i\le s</m> e <m>1\le j\le r</m> formano una <m>F</m>-base di <m>R</m>, otteniamo che <m>\dim_{F}R</m> è finita ed è esattamente uguale a <m>\dim_{E}R\cdot\degext{E}{F}</m>.
+        </p>
+        <p>
+          Mostriamo che i vettori dati generano <m>R</m> come <m>F</m>-spazio vettoriale. Infatti, dato un elemento <m>v</m> di <m>R</m>, questo può essere espresso come una <m>E</m>-combinazione lineare dei <m>v_{j}</m>:
+          <me>
+            v=\sum_{j=1}^{r}b_{j}v_{j}
+          </me>.
+          Ciascun <m>b_{j}</m>, in quanto elemento di <m>E</m>, può essere espresso come <m>F</m>-combinazione lineare degli <m>e_{i}</m>:
+          <me>
+            b_{j}=\sum_{i=1}^{s}c_{ij}e_{i}
+          </me>.
+          Combinando le sommatorie date troviamo <m>v</m> come <m>F</m>-combinazione lineare degli <m>e_{i}v_{j}</m>:
+          <me>
+            v=\sum_{j=1}^{r}\sum_{i=1}^{s}c_{ij}e_{i}v_{j}
+          </me>.
+        </p>
+        <p>
+          Mostriamo, infine, che gli <m>e_{i}v_{j}</m> sono <m>F</m>-linearmente indipendenti, ponendo uguale a <m>0</m> una loro <m>F</m>-combinazione lineare:
+          <me>
+            \sum_{j=1}^{r}\sum_{i=1}^{s}d_{ij}e_{i}v_{j}=0
+          </me>.
+          Riscrivendola così
+          <me>
+            \sum_{j=1}^{r}(\sum_{i=1}^{s}d_{ij}e_{i})v_{j}=0
+          </me>
+          possiamo pensare il primo membro come una <m>E</m>-combinazione lineare dei <m>v_{j}</m> e, essendo questi ultimi <m>E</m>-linearmente indipendenti, otteniamo che tutti gli <m>E</m>-coefficienti si annullano, cioè
+          <me>
+            \sum_{i=1}^{s}d_{ij}e_{i}=0
+          </me>
+          per ogni <m>j</m>. Poiché gli <m>e_{i}</m> sono <m>F</m>-linearmente indipendenti, ciò implica che <m>d_{ij}=0</m> per ogni <m>i</m> e <m>j</m>, come richiesto.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <definition xml:id="def-algebrici_trascendenti">
+      <statement>
+        <p>
+          Sia <m>E</m> un'estensione di un campo <m>F</m> e sia <m>\alpha</m> un elemento di <m>E</m>. Diciamo che <m>\alpha</m> è <term>algebrico</term> su <m>F</m> se <m>\alpha</m> è radice di un polinomio non nullo a coefficienti in <m>F</m>; altrimenti, cioè se l'unico polinomio a coefficienti in <m>F</m> di cui <m>\alpha</m> è radice è il polinomio nullo, diciamo che <m>\alpha</m> è <term>trascendente</term> su <m>F</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <remark xml:id="rem-Falgebrico_su_F">
+      <p>
+        Se <m>E</m> è un'estensione di un campo <m>F</m>, allora ogni elemento <m>\alpha</m> di <m>F</m> è, banalmente, algebrico su <m>F</m> in quanto radice del polinomio <m>x-\alpha</m> a coefficienti in <m>F</m>
+      </p>
+    </remark>
+
+    <example>
+      <statement>
+        <p>
+          Consideriamo il campo <m>\Razionali</m> e la sua estensione <m>\Reali</m>. Allora <m>\sqrt{2}</m> è algebrico su <m>\Razionali</m> in quanto radice di <m>x^{2}-2</m> a coefficienti in <m>\Razionali</m>. D'altra parte, Lindemann<fn><url href="https://it.wikipedia.org/wiki/Ferdinand_von_Lindemann" visual="">Ferdinand von Lindemann</url>, 1852<ndash/>1939.</fn><idx><h>Lindemann, Ferdinand von</h></idx> nel 1882 ha dimostrato che <m>\pi</m> è trascendente su <m>\Razionali</m>.
+        </p>
+      </statement>
+    </example>
+
+    <definition xml:id="def-estensione_con_elementi">
+      <notation>
+        <usage><m>F(\alpha_{1},\ldots,\alpha_{r})</m></usage>
+        <description>sottocampo generato da <m>F</m> e <m>\alpha_{1}</m>, <m>\ldots</m>, <m>\alpha_{r}</m></description>
+      </notation>
+      <notation>
+        <usage><m>F[\alpha_{1},\ldots,\alpha_{r}]</m></usage>
+        <description>sottoanello generato da <m>F</m> e <m>\alpha_{1}</m>, <m>\ldots</m>, <m>\alpha_{r}</m></description>
+      </notation>
+      <statement>
+        <p>
+          Dati un'estensione <m>E</m> di un campo <m>F</m> ed elementi <m>\alpha_{1}</m>, <m>\ldots</m>, <m>\alpha_{r}</m> di <m>E</m>, indichiamo con <m>F(\alpha_{1},\ldots,\alpha_{r})</m> il sottocampo di <m>E</m> generato da <m>F</m> e <m>\alpha_{1}</m>, <m>\ldots</m>, <m>\alpha_{r}</m> e con <m>F[\alpha_{1},\ldots,\alpha_{r}]</m> il sottoanello di <m>E</m> generato da <m>F</m> e <m>\alpha_{1}</m>, <m>\ldots</m>, <m>\alpha_{r}</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <proposition xml:id="prop-sottocampo_generato_sottoanello_generato">
+      <statement>
+        <p>
+          Sia <m>E</m> un'estensione di un campo <m>F</m> e siano <m>\alpha_{1}</m>, <m>\ldots</m>, <m>\alpha_{r}</m> elementi di <m>E</m>: allora <m>F(\alpha_{1},\ldots,\alpha_{r})</m> contiene <m>F[\alpha_{1},\ldots,\alpha_{r}]</m> e <m>F(\alpha_{1},\ldots,\alpha_{r})</m> è il campo dei quozienti di <m>F[\alpha_{1},\ldots,\alpha_{r}]</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Per definizione, <m>F[\alpha_{1},\ldots,\alpha_{r}]</m> è contenuto in tutti i sottoanelli di <m>E</m> contenenti <m>F</m> e <m>\alpha_{1}</m>, <m>\ldots</m>, <m>\alpha_{r}</m>: in particolare, <m>F(\alpha_{1},\ldots,\alpha_{r})</m> è un sottoanello che soddisfa queste proprietà e, quindi, contiene <m>F[\alpha_{1},\ldots,\alpha_{r}]</m>. Il fatto che <m>F(\alpha_{1},\ldots,\alpha_{r})</m> sia il campo dei quozienti di <m>F[\alpha_{1},\ldots,\alpha_{r}]</m> segue dall'<xref ref="rem-campo_quozienti_contenuto"/>.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <lemma xml:id="lem-quoziente_anello_polinomi">
+      <statement>
+        <p>
+          Sia <m>F</m> un campo e sia <m>p</m> un polinomio di grado positivo a coefficienti in <m>F</m>. Se <m>p</m> è irriducibile, allora <m>F[x]/\ideal{p}</m> è un campo, altrimenti <m>F[x]/\ideal{p}</m> non è un dominio.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Supponiamo che <m>p</m> non sia irriducibile, ed esistano allora <m>f</m> e <m>g</m> di grado minore di <m>\deg p</m> tali che <m>p=fg</m>: in particolare, <m>f</m> e <m>g</m> non appartengono a <m>\ideal{p}</m>, cioè <m>f+\ideal{p}</m> e <m>g+\ideal{p}</m> sono elementi non nulli di <m>F[x]/\ideal{p}</m>. D'altra parte <m>(f+\ideal{p})(g+\ideal{p})=fg+\ideal{p}=p+\ideal{p}</m> è lo zero di <m>F[x]/\ideal{p}</m> che, quindi, non è un dominio.
+        </p>
+        <p>
+          Sia ora <m>p</m> irriducibile. Per il <xref ref="thm-sottoanelli_quoziente"/>, gli ideali di <m>F[x]/\ideal{p}</m> sono del tipo <m>J/\ideal{p}</m> con <m>J</m> ideale di <m>F[x]</m> contenente <m>\ideal{p}</m>: poiché <m>F[x]</m> è un dominio a ideali principali, <m>J=\ideal{h}</m> con <m>h</m> polinomio di <m>F[x]</m> che divide <m>p</m> e, essendo <m>p</m> irriducibile, ciò può avvenire se e solo se <m>h</m> è invertibile, cioè <m>\ideal{h}=F[x]</m>, o se <m>h</m> è associato a <m>p</m>, cioè <m>\ideal{h}=\ideal{p}</m>. Dunque, gli unici ideali di <m>F[x]/\ideal{p}</m> sono <m>F[x]/F[x]</m>, cioè l'ideale nullo e <m>F[x]/\ideal{p}</m> stesso: pertanto, per la <xref ref="prop-anello_commutativo_senza_ideali_campo"/>, <m>F[x]/\ideal{p}</m> è un campo.
+        </p>
+      </proof>
+
+    </lemma>
+
+    <theorem xml:id="thm-caratterizzazione_algebrici_trascendenti">
+      <statement>
+        <p>
+          Sia <m>E</m> un'estensione di un campo <m>F</m> e sia <m>\alpha</m> un elemento di <m>E</m>. Sia <m>\phi</m> l'omomorfismo di anelli da <m>F[x]</m> in <m>E</m> dato dalla valutazione di polinomi in <m>\alpha</m>. Allora <m>\im\phi=F[\alpha]</m> e si verifica uno e uno solo dei due casi
+          <ul>
+            <li>
+              <p>
+                <m>\alpha</m> è trascendente su <m>F</m>, <m>\ker\phi=0</m>, <m>F[\alpha]\simeq F[x]</m>, <m>\dim_{F}F[\alpha]=\infty</m> e <m>F[\alpha]\subsetneq F(\alpha)</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\alpha</m> è algebrico su <m>F</m>, <m>\ker\phi</m> è generato da un polinomio monico irriducibile <m>p</m> detto <term>polinomio minimo</term> di <m>\alpha</m> su <m>F</m>, <m>F[\alpha]=F(\alpha)</m>, <m>\dim_{F}F[\alpha]=\degext{F(\alpha)}{F}=\deg p</m> e una <m>F</m>-base di <m>F(\alpha)</m> è data da <m>1</m>, <m>\alpha</m>, <m>\ldots</m>, <m>\alpha^{n-1}</m> con <m>n=\deg p</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Se <m>f\coloneqq a_{0}+a_{1}x+\cdots+a_{n}x^{n}</m> è un polinomio a coefficienti in <m>F</m>, allora, per definizione <m>f\phi=f(\alpha)=a_{0}+a_{1}\alpha+\cdots+a_{n}\alpha^{n}</m>: poiché gli <m>a_{i}</m> e <m>\alpha</m> appartengono a <m>F[\alpha]</m> anche <m>f\phi</m> appartiene a <m>F[\alpha]</m>. Dunque, <m>\im\phi\subseteq F[\alpha]</m>. D'altra parte, <m>F</m> è contenuto in <m>\im\phi</m> (ogni elemento di <m>F</m> è immagine tramite <m>\phi</m> di sé stesso pensato come polinomio costante) e <m>\alpha=x\phi</m> appartiene all'immagine di <m>\phi</m>: quindi, <m>F[\alpha]\subseteq\im\phi</m>.
+        </p>
+        <p>
+          Il nucleo di <m>\phi</m> è, evidentemente, l'insieme dei polinomi di <m>F[x]</m> che si annullano in <m>\alpha</m> e, quindi, <m>\alpha</m> è trascendente se e solo se <m>\ker\phi=0</m>.
+        </p>
+        <p>
+          Consideriamo prima il caso in cui <m>\alpha</m> è trascendente su <m>F</m>: <m>\phi</m> è allora iniettivo e <m>F[\alpha]\simeq F[x]</m>. Inoltre, per il <xref ref="cor-anello_dei_polinomi_non_corpo"/>, <m>F[\alpha]</m> non è un campo e, quindi, è contenuto strettamente in <m>F(\alpha)</m>. Infine, le potenze <m>1</m>, <m>\alpha</m>, <m>\alpha^{2}</m>, <m>\ldots</m> sono <m>F</m>-linearmente indipendenti, altrimenti esisterebbero <m>a_{0}</m>, <m>a_{1}</m>, <m>\ldots</m>, <m>a_{n}</m> in <m>F</m> non tutti nulli tali che <m>a_{0}1+a_{1}\alpha+\cdots+a_{n}\alpha^{n}=0</m>, cioè esisterebbe un polinomio non banale a coefficienti in <m>F</m> che si annulla in <m>\alpha</m>.
+        </p>
+        <p>
+          Consideriamo ora il caso in cui <m>\alpha</m> sia algebrico su <m>F</m>: poiché <m>F[x]</m> è un dominio a ideali principali, <m>\ker\phi</m> è generato da un polinomio non nullo <m>p</m> che, pur di eventualmente dividerlo per il suo coefficiente direttivo, possiamo assumere sia monico. Per il <xref ref="thm-isomorfismo_quoziente_sul_nucleo_anelli"/>, sappiamo che <m>F[\alpha]=\im\phi\simeq F[x]/\ker\phi=F[x]/\ideal{p}</m>: poiché <m>F[\alpha]</m> è un dominio, il <xref ref="lem-quoziente_anello_polinomi"/> implica che <m>p</m> sia irriducibile e che <m>F[\alpha]</m> sia un campo e, per la <xref ref="prop-sottocampo_generato_sottoanello_generato"/>, ne segue che <m>F[\alpha]=F(\alpha)</m>.
+        </p>
+        <p>
+          Sia ora <m>n</m> il grado di <m>p</m>: sappiamo che un generico elemento di <m>F[\alpha]</m> è del tipo <m>h\phi=h(\alpha)</m> per qualche polinomio <m>h</m> in <m>F[x]</m>. Dividendo <m>h</m> per <m>p</m> otteniamo
+          <me>
+            h=pq+r
+          </me>
+          dove <m>q</m> e <m>r</m> sono polinomi con <m>\deg r \lt n</m> o <m>r=0</m>: in altri termini, <m>r=r_{0}+r_{1}x+\cdots r_{n-1}x^{n-1}</m> con gli <m>r_{i}</m> in <m>F</m>. Ma allora
+          <me>
+            h(\alpha)=p(\alpha)q(\alpha)+r(\alpha)=0q(\alpha)+r(\alpha)=r(\alpha)=r_{0}+r_{1}\alpha+\cdots r_{n-1}\alpha^{n-1}
+          </me>,
+          cioè <m>h(\alpha)</m> è <m>F</m>-combinazione lineare di <m>1</m>, <m>\alpha</m>, <m>\ldots</m>, <m>\alpha^{n-1}</m>. D'altra parte, questi elementi sono <m>F</m>-linearmente indipendenti: infatti presi <m>c_{0}</m>, <m>c_{1}</m>, <m>\ldots</m>, <m>c_{n-1}</m> in <m>F</m> tali che
+          <me>
+            c_{0}+c_{1}\alpha+\cdots+c_{n-1}\alpha^{n-1}=0
+          </me>
+          si ha che <m>c_{0}+c_{1}x+\cdots+c_{n-1}x^{n-1}</m> è un polinomio che si annulla in <m>\alpha</m>, ed è, quindi, multiplo di <m>p</m>, il che è possibile se e solo se i <m>c_{i}</m> sono tutti nulli. In conclusione, <m>1</m>, <m>\alpha</m>, <m>\ldots</m>, <m>\alpha^{n-1}</m> formano una base per <m>F[\alpha]</m> e, quindi, <m>\dim_{F}F[\alpha]=n</m>.
+        </p>
+      </proof>
+
+    </theorem>
+
+    <definition xml:id="def-grado_di_un_elemento">
+      <statement>
+        <p>
+          Dato un elemento <m>\alpha</m> di un campo <m>E</m>, algebrico su un sottocampo <m>F</m>, il <term>grado</term> di <m>\alpha</m> su <m>F</m> è il grado del polinomio minimo di <m>\alpha</m> su <m>F</m>, cioè il grado <m>\degext{F(\alpha)}{F}</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <remark xml:id="rem-algebrici_grado_1">
+      <p>
+        Un elemento <m>\alpha</m> di un'estensione <m>E</m> di un campo <m>F</m> è algebrico di grado <m>1</m> se e solo se appartiene a <m>F</m>.
+      </p>
+    </remark>
+
+    <example xml:id="ex-radice_di_due">
+      <statement>
+        <p>
+          Consideriamo di nuovo il polinomio <m>x^{2}-2</m> a coefficienti razionali e la sua radice <m>\sqrt{2}</m>. Poiché <m>\sqrt{2}\notin\Razionali</m>. Il grado di <m>\sqrt{2}</m> su <m>\Razionali</m> è <m>2</m> e, di conseguenza
+          <me>
+            \Razionali(\sqrt{2})=\{a+b\sqrt{2}\mid a\in\Razionali,b\in\Razionali\}
+          </me>.
+        </p>
+      </statement>
+    </example>
+
+    <definition xml:id="def-estensione_algebrica">
+      <statement>
+        <p>
+          Un'estensione <m>E</m> di un campo <m>F</m> è detta <term>algebrica</term> su <m>F</m> se ogni elemento di <m>E</m> è algebrico su <m>F</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <corollary xml:id="cor-estensione_finita_algebrica">
+      <statement>
+        <p>
+          Se <m>E</m> è un'estensione finita di <m>F</m>, allora <m>E</m> è un'estensione algebrica di <m>F</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Grazie alla <xref ref="prop-moltiplicativita_grado"/>, sappiamo che <m>\degext{F(\alpha)}{F}</m> è finito per ogni <m>\alpha</m> in <m>E</m> e, quindi, per il <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>, abbiamo che <m>\alpha</m> è algebrico su <m>F</m>.
+        </p>
+      </proof>
+
+    </corollary>
+
+    <p>
+      Ci chiediamo se, dati due elementi algebrici su un campo <m>F</m>, la loro somma e il loro prodotto siano, a loro volta, algebrici. Se applicassimo direttamente la definizione di elemento algebrico, la conoscenza di polinomi non banali che si annullano su tali elementi non ci permette di stabilire facilmente se esistano polinomi non banali che si annullano sulla somma o sul prodotto. Abbiamo però la
+    </p>
+
+    <proposition xml:id="prop-elementi_algebrici_sottocampo">
+      <statement>
+        <p>
+          Sia <m>E</m> un'estensione di un campo <m>F</m>, Il sottoinsieme <m>A</m> di <m>E</m> formato dagli elementi algebrici su <m>F</m> è un sottocampo contenente <m>F</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sappiamo già che gli elementi di <m>F</m> sono algebrici su <m>F</m> (<xref ref="rem-Falgebrico_su_F"/>): in particolare, <m>F</m> è non vuoto e contiene <m>1</m>. Dobbiamo allora provare che, per ogni  <m>\alpha</m> e <m>\beta</m> in <m>A</m>, si ha che <m>\alpha+\beta</m>, <m>\alpha\beta</m>, <m>-\alpha</m> e <m>\alpha^{-1}</m> (quest'ultimo nel caso in cui <m>\alpha\ne 0</m>) appartengono tutti a <m>A</m>.
+        </p>
+        <p>
+          Abbiamo, dunque, <m>F\subseteq F(\alpha)\subseteq F(\alpha,\beta)=F(\alpha)(\beta)</m>. Ora <m>\beta</m>, essendo algebrico su <m>F</m>, a maggior ragione è algebrico su <m>F(\alpha)</m>. Per il <xref ref="thm-caratterizzazione_algebrici_trascendenti"/> abbiamo allora che <m>\degext{F(\alpha)}{F}</m> e <m>\degext{F(\alpha,\beta)}{F(\alpha)}</m> sono finiti e, per la <xref ref="prop-moltiplicativita_grado"/>, <m>F(\alpha,\beta)</m> è un'estensione finita di <m>F</m>. Per il <xref ref="cor-estensione_finita_algebrica"/>, <m>F(\alpha,\beta)</m> è un'estensione algebrica di <m>F</m>, e, dunque, <m>F(\alpha,\beta)\subseteq A</m>. Poiché <m>F(\alpha,\beta)</m> è un campo, abbiamo che contiene <m>\alpha+\beta</m>, <m>\alpha\beta</m>, <m>-\alpha</m> e <m>\alpha^{-1}</m> che sono, quindi, elementi di <m>A</m>, come richiesto.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <corollary xml:id="cor-estensione_con_algebrici">
+      <statement>
+        <p>
+          Sia <m>E</m> un'estensione di un campo <m>F</m> e siano <m>\alpha_{1}</m>, <m>\ldots</m>, <m>\alpha_{r}</m> elementi di <m>F</m> algebrici su <m>F</m>. Allora <m>F(\alpha_{1},\ldots,\alpha_{r})</m> è un'estensione algebrica di <m>F</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Dalla <xref ref="prop-elementi_algebrici_sottocampo"/>, sappiamo che l'insieme <m>A</m> degli elementi di <m>E</m> algebrici su <m>F</m> è un sottocampo di <m>F</m>: poiché <m>A</m> contiene <m>F</m> e tutti gli <m>\alpha_{i}</m>, contiene anche il sottocampo generato da essi.
+        </p>
+      </proof>
+
+    </corollary>
+
+    <example>
+      <statement>
+        <p>
+          Consideriamo l'estensione <m>\Razionali(\sqrt{2},\sqrt{3})</m> di <m>\Razionali</m>. Sappiamo che <m>\Razionali(\sqrt{2})</m> è un'estensione di grado <m>2</m> di <m>\Razionali</m> e, dall'<xref ref="exercise-radice_di_due_e_di_tre"/>, che <m>\Razionali(\sqrt{2})</m> non contiene <m>\sqrt{3}</m>. Dunque, <m>\sqrt{3}</m> ha grado maggiore di <m>1</m> su <m>\Razionali(\sqrt{2})</m>: d'altra parte <m>x^{2}-3</m> è un polinomio di grado <m>2</m> a coefficienti in <m>\Razionali(\sqrt{2})</m> che ha <m>\sqrt{3}</m> come radice, quindi <m>\sqrt{3}</m> ha grado <m>2</m> su <m>\Razionali(\sqrt{2})</m>. Dalla <xref ref="prop-moltiplicativita_grado"/> abbiamo allora
+          <me>
+           \degext{\Razionali(\sqrt{2},\sqrt{3})}{\Razionali}=\degext{\Razionali(\sqrt{2},\sqrt{3})}{\Razionali(\sqrt{2})}\degext{\Razionali(\sqrt{2})}{\Razionali}=2\cdot2=4
+          </me>.
+          Dalla dimostrazione della <xref ref="prop-moltiplicativita_grado"/>, sappiamo inoltre che <m>1</m>, <m>\sqrt{2}</m>, <m>\sqrt{3}</m>, <m>\sqrt{6}</m> formano una <m>\Razionali</m>-base di <m>\Razionali(\sqrt{2},\sqrt{6})</m>.
+        </p>
+        <p>
+          Consideriamo ora l'estensione <m>\Razionali(\sqrt{2}+\sqrt{3})</m>: chiaramente <m>\Razionali(\sqrt{2}+\sqrt{3})\subseteq\Razionali(\sqrt{2},\sqrt{3})</m>. Per la <xref ref="prop-moltiplicativita_grado"/> il grado di <m>\sqrt{2}+\sqrt{3}</m> è un divisore di <m>4</m>. Se fosse diverso da <m>4</m> dovrebbe essere <m>1</m> o <m>2</m>: consideriamo allora un polinomio del tipo <m>ax^{2}+bx+c</m> a coefficienti in <m>\Razionali</m> che ha <m>\sqrt{2}+\sqrt{3}</m> come radice. Risulta allora
+          <me>
+            a(2+3+2\sqrt{6})+b(\sqrt{2}+\sqrt{3})+c=0
+          </me>
+          cioè
+          <me>
+            2a\sqrt{6}+b\sqrt{3}+b\sqrt{2}+(5a+c)=0
+          </me>:
+          poiché <m>1</m>, <m>\sqrt{2}</m>, <m>\sqrt{3}</m>, <m>\sqrt{6}</m> sono <m>\Razionali</m>-linearmente indipendenti, ne segue che <m>2a=0</m>, <m>b=0</m>, <m>5a+c=0</m>, cioè <m>a</m>, <m>b</m> e <m>c</m> sono nulli. Dunque, il polinomio minimo su <m>\Razionali</m> di <m>\sqrt{2}+\sqrt{3}</m> ha grado maggiore di <m>2</m> e, per quanto già osservato, è uguale a <m>4</m>. Di conseguenza <m>\Razionali(\sqrt{2}+\sqrt{3})=\Razionali(\sqrt{2},\sqrt{3})</m>.
+        </p>
+      </statement>
+
+    </example>
+
+    <exercises xml:id="exercises-elementi_algebrici_e_trascendenti">
+
+      <exercise>
+        <statement>
+          <p>
+            Verificare che se <m>R</m> è un anello contenente un campo <m>F</m>, allora <m>R</m> è un <m>F</m>-spazio vettoriale rispetto alle operazioni che abbiamo definito.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Mostrare che se <m>E</m> è un'estensione algebrica di un campo <m>F</m> e se <m>K</m> è un'estensione algebrica di <m>E</m>, allora <m>K</m> è un'estensione algebrica di <m>F</m>.
+          </p>
+        </statement>
+      </exercise>
+
+
+    </exercises>
+  </section>
+
+  <section xml:id="sec-campo_di_spezzamento">
+    <title>Campi di spezzamento</title>
+
+    <definition xml:id="def-polinomio_totalmente_riducibile">
+      <statement>
+        <p>
+          Un polinomio <m>f</m> di grado positivo a coefficienti in un campo <m>F</m> si dice <term>totalmente riducibile</term> se <m>f</m> si può fattorizzare come prodotto di polinomi di primo grado, cioè <m>f</m> è uguale a
+          <me>
+            f=c(x-\alpha_{1})(x-\alpha_{2})\cdots(x-\alpha_{r})
+          </me>
+          con <m>\alpha_{1}</m>, <m>\alpha_{2}</m>, <m>\ldots</m>, <m>\alpha_{r}</m> radici (non necessariamente distinte) di <m>f</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <example>
+      <statement>
+        <p>
+          Il polinomio <m>x^{2}+1</m> a coefficienti in <m>\Razionali</m> non è totalmente riducibile. Lo stesso polinomio, pensato come polinomio a coefficienti in <m>\Complessi</m> si può esprimere come <m>(x+i)(x-i)</m> ed è, quindi, totalmente riducibile.
+        </p>
+      </statement>
+    </example>
+
+    <definition xml:id="def-campo_di_spezzamento">
+      <statement>
+        <p>
+          Dato un polinomio <m>f</m> di grado positivo a coefficienti in un campo <m>F</m>, un <term>campo di spezzamento</term> è un'estensione <m>E</m> di <m>F</m> tale che <m>f</m> sia totalmente riducibile in <m>E</m>
+          <me>
+            f=c(x-\alpha_{1})(x-\alpha_{2})\cdots(x-\alpha_{r})
+          </me>
+          con <m>\alpha_{1}</m>, <m>\alpha_{2}</m>, <m>\ldots</m>, <m>\alpha_{r}</m> in <m>E</m> e <m>E=F(\alpha_{1},\ldots,\alpha_{r})</m>.
+         </p>
+      </statement>
+    </definition>
+
+    <p>
+      La definizione ci dice cosa sia un campo di spezzamento, ma al momento non sappiamo se un campo di spezzamento esiste. Nel <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>, abbiamo visto che, se <m>\alpha</m> è un elemento algebrico su un campo <m>F</m>, l'estensione <m>F(\alpha)</m> può essere descritta a partire dall'anello <m>F[x]</m> e dal polinomio minimo di <m>\alpha</m> su <m>F</m>. Questo suggerisce un metodo per <q>aggiungere</q> a un campo le radici di un polinomio.
+    </p>
+
+    <lemma xml:id="lem-estensione_semplice">
+      <statement>
+        <p>
+          Sia <m>F</m> un campo e sia <m>p</m> un polinomio irriducibile di grado <m>n</m> con <m>n\gt0</m>. Allora esiste un'estensione <m>F(\alpha)</m> di <m>F</m> con <m>\alpha</m> radice di <m>p</m>. Inoltre <m>\degext{F(\alpha)}{F}=n</m> e una <m>F</m>-base di <m>F(\alpha)</m> è data da <m>1</m>, <m>\alpha</m>, <m>\ldots</m>, <m>\alpha^{n-1}</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Dal <xref ref="lem-quoziente_anello_polinomi"/>, sappiamo che <m>F[x]/\ideal{p}</m> è un campo. La composizione dell'omomorfismo di inclusione di <m>F</m> in <m>F[x]</m> con l'omomorfismo canonico di <m>F[x]</m> su <m>F[x]/\ideal{p}</m>, definisce un omomorfismo da <m>F</m> in <m>F[x]/\ideal{p}</m>: poiché <m>F</m> è un campo, questo omomorfismo è iniettivo e possiamo, dunque, identificare <m>F</m> con un sottocampo di <m>F[x]/\ideal{p}</m>: più precisamente, un elemento <m>a</m> di <m>F</m> viene identificato con il laterale <m>a+\ideal{p}</m>. Sia ora <m>\alpha</m> l'elemento <m>x+\ideal{p}</m> di <m>F[x]/\ideal{p}</m> e sia <m>p\coloneqq a_{0}+a_{1}x+\cdots+a_{n}x^{n}</m>: abbiamo allora
+          <md>
+            <mrow> p(\alpha)\amp =(a_{0}+\ideal{p})+(a_{1}+\ideal{p})(x+\ideal{p})+\cdots+(a_{n}+\ideal{p})(x^{n}+\ideal{p})</mrow>
+            <mrow>  \amp =a_{0}+a_{1}x+\cdots+a_{n}x^{n}+\ideal{p}=p+\ideal{p}=0</mrow>
+          </md>
+          Dunque <m>\alpha</m> è radice di <m>p</m>. Sappiamo che <m>F[x]</m> è generato da <m>F</m> e da <m>x</m> e, quindi, <m>F[x]/\ideal{p}</m>, in quanto quoziente di <m>F[x]</m>, è generato dalle immagini di questi generatori tramite l'omomorfismo canonico, e cioè da <m>F</m> stesso e da <m>x+\ideal{p}</m>, cioè da <m>\alpha</m>: quindi <m>F[x]/\ideal{p}=F(\alpha)</m>. Poiché <m>\alpha</m> annulla il polinomio <m>p</m> a coefficienti in <m>F</m>, il polinomio minimo di <m>\alpha</m> su <m>F</m> è un divisore irriducibile di <m>p</m>, ma, essendo <m>p</m> a sua volta irriducibile, il polinomio minimo di <m>\alpha</m> su <m>F</m> è associato a <m>p</m>: dunque, il polinomio minimo non è altri che il polinomio monico che si ottiene dividendo <m>p</m> per il proprio coefficiente direttivo. Per il <xref ref="thm-caratterizzazione_algebrici_trascendenti"/>, <m>\degext{F(\alpha)}{F}=n</m> e una <m>F</m>-base per <m>F(\alpha)</m> è quella data in enunciato.
+        </p>
+      </proof>
+
+    </lemma>
+
+    <example>
+      <statement>
+        <p>
+          Consideriamo il polinomio <m>p\coloneqq x^{3}+2x+4</m> a coefficienti in <m>\Razionali</m>. Mostriamo che <m>p</m> è irriducibile: per la <xref ref="prop-irriducibilita_e_radici"/>, basta mostrare che non ha radici in <m>\Razionali</m>. Per la <xref ref="prop-radici_razionali_intere_polinomio"/> un'eventuale radice razionale di <m>p</m> è del tipo <m>\frac{a}{b}</m> con <m>a</m> che divide <m>4</m> e <m>b</m> che divide <m>1</m>. Le possibili radici sono allora <m>1</m>, <m>-1</m>, <m>2</m>, <m>-2</m>, <m>4</m> e <m>-4</m>: sostituendo in <m>p</m>, vediamo che nessuna di esse è radice di <m>p</m>, che è, pertanto irriducibile.
+        </p>
+        <p>
+          Consideriamo ora un'estensione <m>\Razionali(\alpha)</m> dove <m>\alpha</m> è una radice di <m>p</m>. Per il <xref ref="lem-estensione_semplice"/>, <m>\Razionali(\alpha)</m> ha grado <m>3</m> su <m>\Razionali</m> e una <m>\Razionali</m>-base di <m>\Razionali(\alpha)</m> è <m>1</m>, <m>\alpha</m>, <m>\alpha^{2}</m>. Supponiamo di voler esprimere l'inverso di <m>\alpha</m> e l'inverso di <m>1+\alpha</m> come combinazione lineare degli elementi di questa base.
+        </p>
+        <p>
+          Per quanto riguarda <m>\alpha^{-1}</m>, basta notare che <m>\alpha^{3}+2\alpha+4=0</m> da cui segue che <m>\alpha(\alpha^{2}+2)=-4</m>. Pertanto, l'inverso di <m>\alpha</m> è <m>-\frac{1}{4}\alpha^{2}+0\alpha-\frac{1}{2}\cdot 1</m>.
+        </p>
+        <p>
+          Per quanto riguarda l'inverso di <m>\alpha+1</m>, esprimiamolo come <m>a\alpha^{2}+b\alpha+c</m> con <m>a</m>, <m>b</m> e <m>c</m> in <m>\Razionali</m>. Deve allora essere <m>(1+\alpha)(a\alpha^{2}+b\alpha+c)=1</m> che, sviluppato, dà
+          <me>
+            a\alpha^{3}+(a+b)\alpha^{2}+(b+c)\alpha+c-1=0
+          </me>.
+          Poiché <m>\alpha^{3}=-2\alpha-4</m>, l'equazione trovata si può riscrivere come
+          <me>
+            (a+b)\alpha^{2}+(b+c-2a)\alpha+c-4a-1=0
+          </me>:
+          poiché <m>1</m>, <m>\alpha</m> e <m>\alpha^{2}</m> sono <m>\Razionali</m>-linearmente indipendenti, ciò avviene se e solo se <m>a+b=b+c-2a=c-4a-1=0</m>. Risolvendo il sistema, si trova <m>a=-1</m>, <m>b=1</m> e <m>c=-3</m> e, quindi
+          <me>
+            (1+\alpha)^{-1}=-\alpha^{2}+\alpha-3
+          </me>.
+        </p>
+      </statement>
+    </example>
+
+    <example>
+      <title>Costruzione dei complessi</title>
+      <statement>
+        <p>
+          Consideriamo il polinomio <m>p\coloneqq x^{2}+1</m> a coefficienti in <m>\Reali</m>: questo non ha radici in <m>\Reali</m> e, per la <xref ref="prop-irriducibilita_e_radici"/> è irriducibile in <m>\Reali[x]</m>. Per il <xref ref="lem-estensione_semplice"/>, <m>\Complessi\coloneqq\Reali[x]/\ideal{p}</m> è un campo di grado <m>2</m> su <m>\Reali</m> e una <m>\Reali</m>-base per <m>\Complessi</m> è data da <m>1</m> e <m>i</m> dove denotiamo con <m>i</m> l'elemento <m>x+\ideal{p}</m>.
+        </p>
+        <p>
+          Ogni elemento <m>z</m> di <m>\Complessi</m> si può allora scrivere come <m>a+bi</m> per opportuni numeri reali <m>a</m> e <m>b</m>. Se <m>w\coloneqq c+di</m> è un altro elemento di <m>\Complessi</m>, abbiamo allora
+          <me>
+            z+w=a+bi+c+di=(a+c)+(b+d)i
+          </me>
+          e, dunque, abbiamo già una decomposizione di <m>z+w</m> rispetto alla base scelta. Per quanto riguarda il prodotto abbiamo invece
+          <me>
+            zw=(a+bi)(c+di)=ac+(bc+ad)i+bdi^{2}
+          </me>
+          e questa non è una decomposizione rispetto alla base scelta. Il prodotto, pensato come elemento del quoziente <m>\Reali[x]/\ideal{p}</m>, è il laterale di <m>\ideal{p}</m> contenente il polinomio
+          <me>
+            f\coloneqq ac+(bc+ad)x+bdx^{2}
+          </me>.
+          Dividendo <m>f</m> per <m>p</m>, cioè per <m>x^{2}+1</m>, otteniamo allora
+          <me>
+            ac+(bc+ad)x+bdx^{2}=bd(x^{2}+1)+(ac-bd+(bc+ad)x)
+          </me>,
+          e, quindi, il laterale <m>f+\ideal{p}</m> coincide con
+          <me>
+            ac-bd+(bc+ad)x+\ideal{p}
+          </me>.
+          Il prodotto di <m>z</m> per <m>w</m> è, dunque
+          <me>
+            ac-bd+(bc+ad)i
+          </me>
+          cioè l'usuale prodotto tra numeri complessi. Si noti che non dobbiamo adesso verificare che <m>\Complessi</m> con queste operazioni è effettivamente un campo, perché lo sappiamo dal <xref ref="lem-estensione_semplice"/>.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Mostriamo ora l'esistenza di un campo di spezzamento per un qualsiasi polinomio.
+    </p>
+
+    <theorem xml:id="thm-campo_spezzamento">
+      <statement>
+        <p>
+          Dato un polinomio <m>f</m> di grado positivo a coefficienti in un campo <m>F</m>, esiste un campo di spezzamento <m>E</m> di <m>f</m> su <m>F</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Basta ragionare per induzione sul grado di <m>f</m>. Se <m>\deg f=1</m>, allora <m>f</m> è totalmente riducibile già in <m>F</m> e, quindi, <m>F</m> stesso è campo di spezzamento di <m>f</m> su <m>F</m>. Se <m>\deg f \gt 1</m>, sia <m>p</m> un divisore irriducibile di <m>f</m>. Per il <xref ref="lem-estensione_semplice"/>, esiste un'estensione <m>F(\alpha)</m> di <m>F</m> con una radice <m>\alpha</m> di <m>p</m>: ora <m>\alpha</m> è radice anche di <m>f</m> e, pertanto, per il  <xref ref="thm-del_resto" text="title"/>, abbiamo che <m>f=(x-\alpha)f'</m> con <m>f'</m> polinomio di grado <m>\deg f-1</m> a coefficienti in <m>F(\alpha)</m>. Per ipotesi induttiva, esiste un campo di spezzamento <m>E</m> di <m>f'</m> su <m>F(\alpha)</m>: ma allora questo è campo di spezzamento di <m>f</m> su <m>F</m>.
+        </p>
+      </proof>
+
+    </theorem>
+
+    <p>
+      Si potrebbe dimostrare che il campo di spezzamento di un polinomio è unico a meno di isomorfismi, cioè che se <m>E</m> e <m>E'</m> sono campi di spezzamento di <m>f</m> su un campo <m>F</m>, allora esiste un isomorfismo da <m>E</m> in <m>E'</m> la cui restrizione a <m>F</m> è l'identità. Pertanto anche se possiamo aggiungere a <m>F</m> radici di <m>f</m> in modo diverso, alla fine il risultato che otteniamo è essenzialmente lo stesso.
+    </p>
+
+    <exercises xml:id="exercises-campo_di_spezzamento">
+
+      <exercise>
+        <statement>
+          <p>
+            Utilizzare la dimostrazione del <xref ref="thm-campo_spezzamento"/> per mostrare che se <m>f</m> è un polinomio di grado <m>n</m> a coefficienti in un campo <m>F</m>, allora il campo di spezzamento <m>E</m> di <m>f</m> su <m>F</m> è un'estensione finita di grado al più <m>n!</m>.
+          </p>
+        </statement>
+      </exercise>
+
+    </exercises>
+
+  </section>
+
+  <section xml:id="sec-chiusure_algebriche">
+    <title>Cenni su campi algebricamente chiusi</title>
+
+    <theorem xml:id="thm-caratterizzazione_algebricamente_chiuso">
+      <statement>
+        <p>
+          Sia <m>K</m> un campo. Sono equivalenti le condizioni:
+          <ol>
+            <li xml:id="item-no_estensioni_algebriche_proprie">
+              <p>
+                ogni elemento <m>\alpha</m> che appartiene a un'estensione di <m>K</m> ed è algebrico su <m>K</m> appartiene a <m>K</m>.
+              </p>
+            </li>
+            <li xml:id="item-polinomi_irriducibili_grado_1">
+              <p>
+                i polinomi irriducibili in <m>K[x]</m> hanno tutti grado <m>1</m>;
+              </p>
+            </li>
+            <li xml:id="item-ogni_polinomio_totalmente_riducibile">
+              <p>
+                ogni polinomio in <m>K[x]</m> di grado positivo è totalmente riducibile;
+              </p>
+            </li>
+            <li xml:id="item-ogni_polinomio_ha_radice">
+              <p>
+                ogni polinomio <m>f</m> in <m>K[x]</m> di grado positivo ha almeno una radice in <m>K</m>;
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Supponiamo che valga la <xref ref="item-no_estensioni_algebriche_proprie">condizione</xref> e mostriamo che vale la <xref ref="item-polinomi_irriducibili_grado_1">condizione</xref>. Sia allora <m>p</m> un polinomio irriducibile (quindi <m>p</m> ha grado positivo perché gli elementi di grado <m>0</m> sono invertibili). Per il <xref ref="lem-estensione_semplice"/>, esiste un'estensione di <m>K</m> che contiene una radice <m>\alpha</m> di <m>p</m>: per la <xref ref="item-no_estensioni_algebriche_proprie">condizione</xref>, <m>\alpha</m> appartiene a <m>K</m> e per il <xref ref="thm-del_resto" text="title"/>, <m>x-\alpha</m> divide <m>p</m> in <m>K[x]</m>: poiché <m>p</m> è irriducibile, segue che <m>x-\alpha</m> è associato a <m>p</m> che ha, quindi, grado <m>1</m>.
+        </p>
+        <p>
+          Se vale la <xref ref="item-polinomi_irriducibili_grado_1">condizione</xref>, allora la fattorizzazione in irriducibili di un qualsiasi polinomio a coefficienti in <m>K</m> è costituita da polinomi di primo grado e, dunque, vale la <xref ref="item-ogni_polinomio_totalmente_riducibile">condizione</xref>.
+        </p>
+        <p>
+          Se vale la <xref ref="item-ogni_polinomio_totalmente_riducibile">condizione</xref> allora, preso un polinomio <m>f</m> di grado positivo a coefficienti in <m>K</m>, questo si scrive come prodotto di polinomi di primo grado in <m>K[x]</m>: ognuno di essi ha, quindi, una radice in <m>K</m> e, di conseguenza, <m>f</m> ha una radice in <m>K</m>, cioè vale la <xref ref="item-ogni_polinomio_ha_radice">condizione</xref>.
+        </p>
+        <p>
+          Infine, supponiamo che valga la <xref ref="item-ogni_polinomio_ha_radice">condizione</xref> e mostriamo che vale la <xref ref="item-no_estensioni_algebriche_proprie">condizione</xref>. Sia allora <m>\alpha</m> un elemento di un'estensione di <m>K</m> che sia algebrico su <m>K</m> e sia <m>p</m> il suo polinomio minimo su <m>F</m>. Poiché vale la <xref ref="item-ogni_polinomio_ha_radice">condizione</xref>, <m>p</m> ha una radice, sia <m>\beta</m>, in <m>K</m>: per il <xref ref="thm-del_resto" text="title"/>, <m>x-\beta</m> divide <m>p</m> in <m>K[x]</m>. Per il <xref ref="thm-caratterizzazione_algebrici_trascendenti"/> il polinomio <m>p</m> è monico e irriducibile in <m>K[x]</m>: dunque, <m>p=x-\beta</m> e <m>0=p(\alpha)=\alpha-\beta</m>, cioè <m>\alpha=\beta\in K</m>. Pertanto, vale la <xref ref="item-no_estensioni_algebriche_proprie">condizione</xref>.
+        </p>
+      </proof>
+
+    </theorem>
+
+    <definition xml:id="def-algebricamente_chiuso">
+      <statement>
+        <p>
+          Un campo <m>K</m> che soddisfa una (e, quindi, tutte) le condizioni del <xref ref="thm-caratterizzazione_algebricamente_chiuso"/> è detto <term>algebricamente chiuso</term>.
+        </p>
+      </statement>
+    </definition>
+
+    <proposition xml:id="prop-campi_finiti_non_algebricamente_chiuso">
+      <statement>
+        <p>
+          Sia <m>K</m> un campo finito. Allora <m>K</m> non è algebricamente chiuso.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Siano <m>\alpha_{1}</m>, <m>\alpha_{2}</m>, <m>\ldots</m>, <m>\alpha_{n}</m> gli elementi di <m>K</m>. Consideriamo il polinomio
+          <me>
+            f\coloneqq(x-\alpha_{1})(x-\alpha_{2})\cdots(x-\alpha_{n})+1
+          </me>.
+          Allora per ogni <m>\alpha_{i}</m> in <m>K</m> si ha <m>f(\alpha_{i})=0+1\ne0</m> e, dunque, <m>f</m> è un polinomio di grado positivo che non ha alcuna radice in <m>K</m>: pertanto <m>K</m> non è algebricamente chiuso.
+        </p>
+      </proof>
+
+    </proposition>
+
+    <definition xml:id="def-chiusura_algebrica">
+      <statement>
+        <p>
+          Dato un campo <m>F</m> una sua estensione <m>K</m> è detta <term>chiusura algebrica</term> di <m>F</m> se
+          <ul>
+            <li>
+              <p>
+                <m>K</m> è un'estensione algebrica di <m>F</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>K</m> è algebricamente chiuso.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </definition>
+
+    <remark xml:id="rem-chiusura_di_algebricamente_chiuso">
+      <p>
+        Ovviamente, se <m>K</m> è algebricamente chiuso, allora <m>K</m> è chiusura algebrica di sé stesso.
+      </p>
+    </remark>
+
+    <p>
+      Diamo ora, senza dimostrazione, alcuni risultati sui campi algebricamente chiusi.
+    </p>
+
+    <theorem xml:id="thm-fondamentale_dell_algebra">
+      <title>Teorema fondamentale dell'algebra</title>
+      <statement>
+        <p>
+          Il campo <m>\Complessi</m> dei complessi è la chiusura algebrica del campo <m>\Reali</m> dei reali.
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      A dispetto del nome, le varie dimostrazioni del teorema fondamentale dell'algebra richiedono considerazioni di tipo analitico o topologico. Inoltre, anche se mantiene storicamente questo nome, non è di così fondamentale importanza dal punto di vista algebrico. Più interessante da questo punto di vista è il
+    </p>
+
+    <theorem xml:id="thm-esistenza_chiusura_algebrica">
+      <statement>
+        <p>
+          Dato un qualsiasi campo <m>F</m> esiste una sua chiusura algebrica <m>K</m>. Inoltre <m>K</m> è univocamente determinato a meno di isomorfismi, vale a dire che se <m>K'</m> è un'altra chiusura algebrica di <m>F</m> allora esiste un isomorfismo <m>\theta\colon K\to K'</m> la cui restrizione a <m>F</m> è l'identità.
+        </p>
+      </statement>
+    </theorem>
+
+    <remark xml:id="rem-non_unicita_chiusura_algebrica">
+      <p>
+        L'isomorfismo <m>\theta</m> dato dal teorema <xref ref="thm-esistenza_chiusura_algebrica"/> non è unico e, quindi, non possiamo individuare gli elementi della chiusura algebrica di un campo <m>F</m> <q>intrinsecamente</q> a partire dagli elementi di <m>F</m>. Ad esempio, se prendiamo <m>\Complessi</m> come chiusura algebrica di <m>\Reali</m>, abbiamo due automorfismi di <m>\Complessi</m> che ristretti a <m>\Reali</m> sono l'identità: la funzione identica di <m>\Complessi</m> e la funzione che manda un complesso nel suo complesso coniugato. Da questo punto di vista <m>i</m> e <m>-i</m>, le due radici di <m>x^{2}+1</m>, sono indistinguibili.
+      </p>
+    </remark>
+
+  </section>
+
+</chapter>
