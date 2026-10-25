@@ -5,7 +5,10 @@
 
   <introduction>
     <p>
-      Nei capitoli precedenti abbiamo già più volte utilizzato esempi che coinvolgono i numeri naturali e i numeri interi e le operazioni definite in questi insiemi. Ne esaminiamo ora più in dettaglio le principali proprietà.
+      Nei capitoli precedenti abbiamo già più volte utilizzato esempi che
+      coinvolgono i numeri naturali e i numeri interi e le operazioni definite
+      in questi insiemi.
+      Ne esaminiamo ora più in dettaglio le principali proprietà.
     </p>
   </introduction>
 
@@ -13,34 +16,40 @@
     <title>I numeri naturali e i numeri interi</title>
 
     <p>
-      I numeri naturali possono essere introdotti formalmente per mezzo dei cosiddetti assiomi di Peano.<fn><url href="https://it.wikipedia.org/wiki/Giuseppe_Peano" visual="">Giuseppe Peano</url>, 1858<ndash/>1932.</fn>
-      <idx><h>Peano, Giuseppe</h></idx>
-      Più precisamente:
+      I numeri naturali possono essere introdotti formalmente per mezzo dei
+      cosiddetti assiomi di Peano.
+      <fn><url href="https://it.wikipedia.org/wiki/Giuseppe_Peano" visual="">Giuseppe Peano</url>, 1858<ndash/>1932.</fn>
+      <idx><h>Peano, Giuseppe</h></idx> Più precisamente:
     </p>
-    <definition xml:id="def-numeri_naturali_peano">
 
+    <definition xml:id="def-numeri_naturali_peano">
       <idx><h>Peano</h><h>assiomi di</h></idx>
       <idx><h>assiomi di Peano</h></idx>
       <idx><h>numeri</h><h>naturali</h></idx>
       <idx><h>naturali (numeri)</h></idx>
-
       <statement>
         <p>
-          I <term>numeri naturali</term> sono un insieme <m>\Naturali</m> dotati di una funzione <m>s\colon\Naturali\to\Naturali</m> detta <term>successore</term> e di un elemento fissato di <m>\Naturali</m> che denotiamo con il simbolo <m>0</m> tali che:
+          I <term>numeri naturali</term> sono un insieme <m>\Naturali</m> dotati
+          di una funzione <m>s\colon\Naturali\to\Naturali</m> detta
+          <term>successore</term> e di un elemento fissato di <m>\Naturali</m>
+          che denotiamo con il simbolo <m>0</m> tali che:
           <ol>
             <li>
               <p>
                 <m>s</m> è iniettiva
               </p>
             </li>
+
             <li>
               <p>
                 <m>0\notin\im s</m>
               </p>
             </li>
+
             <li xml:id="item-assioma_induzione">
               <p>
-                se <m>A</m> è un sottoinsieme di <m>\Naturali</m> tale che <m>0\in A</m> e <m>As\subseteq A</m>, allora <m>A=\Naturali</m>
+                se <m>A</m> è un sottoinsieme di <m>\Naturali</m> tale che
+                <m>0\in A</m> e <m>As\subseteq A</m>, allora <m>A=\Naturali</m>
               </p>
             </li>
           </ol>
@@ -49,62 +58,99 @@
     </definition>
 
     <p>
-      Questa definizione non dice cosa sia l'insieme dei naturali, ma solo quali proprietà tale insieme deve soddisfare. Non sappiamo nemmeno se un tale insieme esista e, ammesso che esista, se è unico (o, più propriamente, se tutti gli insiemi che soddisfano tali proprietà siano, in un certo senso, <q>equivalenti</q>). L'esistenza di un tale insieme è in effetti garantita dagli assiomi della teoria degli insiemi, ma la discussione in dettaglio di ciò esula dagli obiettivi di questo libro. A partire dagli assiomi di Peano, si possono definire le usuali operazioni di addizione e moltiplicazione dei numeri naturali, nonché l'ordinamento e provarne le varie proprietà. Si possono poi costruire gli interi come estensione dei naturali. I dettagli di queste costruzioni richiedono però un livello di astrazione probabilmente poco familiare a chi affronta per la prima volta un corso di algebra e, per questo motivo, li rimandiamo all'<xref ref="appendix-peano"/>.
+      Questa definizione non dice cosa sia l'insieme dei naturali, ma solo quali
+      proprietà tale insieme deve soddisfare.
+      Non sappiamo nemmeno se un tale insieme esista e, ammesso che esista, se è
+      unico (o, più propriamente, se tutti gli insiemi che soddisfano tali
+      proprietà siano, in un certo senso, <q>equivalenti</q> ).
+      L'esistenza di un tale insieme è in effetti garantita dagli assiomi della
+      teoria degli insiemi, ma la discussione in dettaglio di ciò esula dagli
+      obiettivi di questo libro.
+      A partire dagli assiomi di Peano, si possono definire le usuali operazioni
+      di addizione e moltiplicazione dei numeri naturali, nonché l'ordinamento e
+      provarne le varie proprietà.
+      Si possono poi costruire gli interi come estensione dei naturali.
+      I dettagli di queste costruzioni richiedono però un livello di astrazione
+      probabilmente poco familiare a chi affronta per la prima volta un corso di
+      algebra e, per questo motivo, li rimandiamo all'
+      <xref ref="appendix-peano"/>.
     </p>
 
     <p>
-      Una volta definite le operazioni e indicato con <m>1</m> l'elemento <m>0s</m>, la funzione successore risulterà essere semplicemente quella che manda il numero <m>n</m> nel numero <m>n+1</m>.
+      Una volta definite le operazioni e indicato con <m>1</m> l'elemento
+      <m>0s</m>, la funzione successore risulterà essere semplicemente quella
+      che manda il numero <m>n</m> nel numero <m>n+1</m>.
     </p>
 
     <p>
-      Dati due interi <m>m</m> e <m>n</m>, spesso indicheremo il loro prodotto semplicemente con <m>mn</m> invece che con <m>m\cdot n</m> (ovviamente purché ciò non crei ambiguità: per indicare il prodotto di <m>2</m> per <m>3</m> scriveremo <m>2\cdot 3</m> e non <m>23</m>).
+      Dati due interi <m>m</m> e <m>n</m>, spesso indicheremo il loro prodotto
+      semplicemente con <m>mn</m> invece che con <m>m\cdot n</m> (ovviamente
+      purché ciò non crei ambiguità: per indicare il prodotto di <m>2</m> per
+      <m>3</m> scriveremo <m>2\cdot 3</m> e non <m>23</m> ).
     </p>
 
     <proposition xml:id="prop-anello_degli_interi">
       <statement>
         <p>
-          Le operazioni di addizione e moltiplicazione definite nell'insieme dei numeri interi <m>\Interi</m> soddisfano le seguenti proprietà:
+          Le operazioni di addizione e moltiplicazione definite nell'insieme dei
+          numeri interi <m>\Interi</m> soddisfano le seguenti proprietà:
         </p>
+
         <p>
           <ol>
             <li>
               <p>
-                <m>l+(m+n)=(l+m)+n</m> per ogni <m>l</m>, <m>m</m> e <m>n</m> in <m>\Interi</m> (l'addizione è associativa);
+                <m>l+(m+n)=(l+m)+n</m> per ogni <m>l</m>, <m>m</m> e <m>n</m> in
+                <m>\Interi</m> (l'addizione è associativa);
               </p>
             </li>
+
             <li>
               <p>
-                <m>n+0=0+n=n</m> per ogni <m>n</m> in <m>\Interi</m> (<m>0</m> è elemento neutro per l'addizione);
+                <m>n+0=0+n=n</m> per ogni <m>n</m> in <m>\Interi</m> ( <m>0</m>
+                è elemento neutro per l'addizione);
               </p>
             </li>
+
             <li>
               <p>
-                per ogni intero <m>n</m> esiste un intero, denotato con <m>-n</m>, tale che <m>n+(-n)=(-n)+n=0</m> (esistenza opposto);
+                per ogni intero <m>n</m> esiste un intero, denotato con
+                <m>-n</m>, tale che <m>n+(-n)=(-n)+n=0</m> (esistenza opposto);
               </p>
             </li>
+
             <li>
               <p>
-                <m>m+n=n+m</m> per ogni <m>m</m> e <m>n</m> in <m>\Interi</m> (l'addizione è commutativa);
+                <m>m+n=n+m</m> per ogni <m>m</m> e <m>n</m> in <m>\Interi</m>
+                (l'addizione è commutativa);
               </p>
             </li>
+
             <li>
               <p>
-                <m>l(mn)=(lm)n</m> per ogni <m>l</m>, <m>m</m> e <m>n</m> in <m>\Interi</m> (la moltiplicazione è associativa);
+                <m>l(mn)=(lm)n</m> per ogni <m>l</m>, <m>m</m> e <m>n</m> in
+                <m>\Interi</m> (la moltiplicazione è associativa);
               </p>
             </li>
+
             <li>
               <p>
-                <m>n\cdot 1=1\cdot n=n</m> per ogni <m>n</m> in <m>\Interi</m> (<m>1</m> è elemento neutro per la moltiplicazione);
+                <m>n\cdot 1=1\cdot n=n</m> per ogni <m>n</m> in <m>\Interi</m> (
+                <m>1</m> è elemento neutro per la moltiplicazione);
               </p>
             </li>
+
             <li>
               <p>
-                <m>mn=nm</m> per ogni <m>m</m> e <m>n</m> in <m>\Interi</m> (la moltiplicazione è commutativa);
+                <m>mn=nm</m> per ogni <m>m</m> e <m>n</m> in <m>\Interi</m> (la
+                moltiplicazione è commutativa);
               </p>
             </li>
+
             <li>
               <p>
-                <m>(l+m)n=ln+mn</m> per ogni <m>l</m>, <m>m</m> e <m>n</m> in <m>\Interi</m> (proprietà distributiva).
+                <m>(l+m)n=ln+mn</m> per ogni <m>l</m>, <m>m</m> e <m>n</m> in
+                <m>\Interi</m> (proprietà distributiva).
               </p>
             </li>
           </ol>
@@ -113,28 +159,42 @@
     </proposition>
 
     <p>
-      Le proprietà date dalla <xref ref="prop-anello_degli_interi"/> si esprimono dicendo che le operazioni di addizione e di moltiplicazione danno a <m>\Interi</m> la struttura di un <term>anello commutativo</term>: vedremo più avanti la definizione generale (<xref ref="def-anello"/>). Alcune proprietà di <m>\Interi</m> possono essere ottenute come conseguenza della <xref ref="prop-anello_degli_interi"/> oppure essere anche dimostrate direttamente dalla definizione delle operazioni.
+      Le proprietà date dalla <xref ref="prop-anello_degli_interi"/> si
+      esprimono dicendo che le operazioni di addizione e di moltiplicazione
+      danno a <m>\Interi</m> la struttura di un <term>anello commutativo</term>:
+      vedremo più avanti la definizione generale ( <xref ref="def-anello"/> ).
+      Alcune proprietà di <m>\Interi</m> possono essere ottenute come
+      conseguenza della <xref ref="prop-anello_degli_interi"/> oppure essere
+      anche dimostrate direttamente dalla definizione delle operazioni.
     </p>
 
     <corollary xml:id="cor-proprieta_interi">
       <statement>
         <p>
-          Per ogni intero <m>n</m>, si ha <m>n\cdot 0=0</m> e <m>n\cdot (-1)=-n</m>.
+          Per ogni intero <m>n</m>, si ha <m>n\cdot 0=0</m> e
+          <m>n\cdot (-1)=-n</m>.
         </p>
       </statement>
     </corollary>
 
     <proposition>
       <title>Legge di cancellazione per l'addizione</title>
+
       <statement>
         <p>
-          Se <m>m</m>, <m>n</m> e <m>l</m> sono tre interi tali che <m>m+l=n+l</m> allora <m>m=n</m>.
+          Se <m>m</m>, <m>n</m> e <m>l</m> sono tre interi tali che
+          <m>m+l=n+l</m> allora <m>m=n</m>.
         </p>
       </statement>
     </proposition>
 
     <p>
-      Esistono invece proprietà che non possono essere dedotte dalla <xref ref="prop-anello_degli_interi"/> (nel senso che saranno valide per alcuni anelli commutativi ma non per tutti) e che devono essere dimostrate direttamente a partire dalla definizione delle operazioni in <m>\Interi</m>. Tra queste abbiamo la
+      Esistono invece proprietà che non possono essere dedotte dalla
+      <xref ref="prop-anello_degli_interi"/> (nel senso che saranno valide per
+      alcuni anelli commutativi ma non per tutti) e che devono essere dimostrate
+      direttamente a partire dalla definizione delle operazioni in
+      <m>\Interi</m>.
+      Tra queste abbiamo la
     </p>
 
     <proposition xml:id="prop-annullamento_prodotto_interi">
@@ -142,16 +202,19 @@
 
       <statement>
         <p>
-          Dati due interi <m>m</m> e <m>n</m>, si ha <m>mn=0</m> se e solo se <m>m=0</m> o <m>n=0</m>.
+          Dati due interi <m>m</m> e <m>n</m>, si ha <m>mn=0</m> se e solo se
+          <m>m=0</m> o <m>n=0</m>.
         </p>
       </statement>
     </proposition>
 
     <proposition xml:id="prop-cancellazione_moltiplicazione_interi_senza_dimostrazione">
       <title>Legge di cancellazione per la moltiplicazione</title>
+
       <statement>
         <p>
-          Se <m>m</m>, <m>n</m> e <m>l</m> sono tre interi tali che <m>ml=nl</m> e <m>l\ne 0</m> allora <m>m=n</m>.
+          Se <m>m</m>, <m>n</m> e <m>l</m> sono tre interi tali che <m>ml=nl</m>
+          e <m>l\ne 0</m> allora <m>m=n</m>.
         </p>
       </statement>
     </proposition>
@@ -163,18 +226,24 @@
     <proposition xml:id="prop-ordine_interi">
       <statement>
         <p>
-          Negli interi è definita una relazione d'ordine totale <m>\le</m> che soddisfa le seguenti proprietà:
+          Negli interi è definita una relazione d'ordine totale <m>\le</m> che
+          soddisfa le seguenti proprietà:
         </p>
+
         <p>
           <ol>
             <li>
               <p>
-                Dati gli interi <m>m</m>, <m>n</m> e <m>l</m>, si ha <m>m\le n</m> se e solo se <m>m+l\le n+l</m>.
+                Dati gli interi <m>m</m>, <m>n</m> e <m>l</m>, si ha
+                <m>m\le n</m> se e solo se <m>m+l\le n+l</m>.
               </p>
             </li>
+
             <li>
               <p>
-                Dati gli interi <m>m</m>, <m>n</m> e <m>l</m> con <m>l \gt 0</m>, si ha <m>m\le n</m> se e solo se <m>ml\le nl</m>.
+                Dati gli interi <m>m</m>, <m>n</m> e <m>l</m> con
+                <m>l \gt 0</m>, si ha <m>m\le n</m> se e solo se
+                <m>ml\le nl</m>.
               </p>
             </li>
           </ol>
@@ -183,10 +252,8 @@
     </proposition>
 
     <definition>
-
       <idx><h>interi</h><h>valore assoluto</h></idx>
       <idx><h>valore assoluto</h></idx>
-
       <notation>
         <usage><m>\abs{n}</m></usage>
         <description>valore assoluto di <m>n</m></description>
@@ -194,7 +261,9 @@
 
       <statement>
         <p>
-          Dato un intero <m>n</m>, il <term>valore assoluto</term> di <m>n</m>, denotato con <m>\abs{n}</m>, è <m>n</m> se <m>n\ge 0</m> ed è <m>-n</m> se <m>n \lt 0</m>.
+          Dato un intero <m>n</m>, il <term>valore assoluto</term> di <m>n</m>,
+          denotato con <m>\abs{n}</m>, è <m>n</m> se <m>n\ge 0</m> ed è
+          <m>-n</m> se <m>n \lt 0</m>.
         </p>
       </statement>
     </definition>
@@ -208,40 +277,51 @@
     </proposition>
 
     <proposition xml:id="prop-valore_assoluto_somma_prodotto">
-
       <statement>
         <p>
-          Dati due interi <m>m</m> e <m>n</m> si ha <m>\abs{m+n}\le\abs{m}+\abs{n}</m> e <m>\abs{mn}=\abs{m}\abs{n}</m>.
+          Dati due interi <m>m</m> e <m>n</m> si ha
+          <m>\abs{m+n}\le\abs{m}+\abs{n}</m> e <m>\abs{mn}=\abs{m}\abs{n}</m>.
         </p>
       </statement>
-
     </proposition>
-
   </section>
 
   <section xml:id="sec-induzione_ricorrenza">
     <title>Dimostrazioni per induzione e definizioni per ricorrenza</title>
 
     <p>
-      Supponiamo di voler dimostrare una proprietà che dipenda dai numeri naturali: ad esempio, il fatto che, per ogni naturale <m>n</m>, la somma dei numeri naturali da <m>0</m> a <m>n</m> è uguale a <m>\frac{n(n+1)}{2}</m>. Questa (e altre) proprietà possono essere dimostrate usando la tecnica per <term>induzione</term> che consiste nel dimostrare la proprietà per il valore iniziale <m>n=0</m> (questa è la cosiddetta <term>base induttiva</term>) e, supponendo che valga per un certo naturale generico <m>k</m>, mostrare che vale per il naturale successivo <m>k+1</m> (questo è il cosiddetto <term>passo induttivo</term>). Più precisamente:
+      Supponiamo di voler dimostrare una proprietà che dipenda dai numeri
+      naturali: ad esempio, il fatto che, per ogni naturale <m>n</m>, la somma
+      dei numeri naturali da <m>0</m> a <m>n</m> è uguale a
+      <m>\frac{n(n+1)}{2}</m>.
+      Questa (e altre) proprietà possono essere dimostrate usando la tecnica per
+      <term>induzione</term> che consiste nel dimostrare la proprietà per il
+      valore iniziale <m>n=0</m> (questa è la cosiddetta
+      <term>base induttiva</term> ) e, supponendo che valga per un certo
+      naturale generico <m>k</m>, mostrare che vale per il naturale successivo
+      <m>k+1</m> (questo è il cosiddetto <term>passo induttivo</term> ).
+      Più precisamente:
     </p>
+
     <theorem xml:id="principle-induzione">
       <title>Principio di induzione</title>
 
       <idx><h>induzione</h></idx>
-
       <statement>
         <p>
-          Per ciascun naturale <m>n</m> sia data una proposizione <m>P_{n}</m>. Si supponga che:
+          Per ciascun naturale <m>n</m> sia data una proposizione <m>P_{n}</m>.
+          Si supponga che:
           <ul>
             <li>
               <p>
                 <m>P_{0}</m> sia vera;
               </p>
             </li>
+
             <li>
               <p>
-                per ogni naturale <m>k</m> tale che <m>P_{k}</m> è vera si ha che anche <m>P_{k+1}</m> è vera.
+                per ogni naturale <m>k</m> tale che <m>P_{k}</m> è vera si ha
+                che anche <m>P_{k+1}</m> è vera.
               </p>
             </li>
           </ul>
@@ -251,25 +331,35 @@
 
       <proof>
         <p>
-          Se <m>A</m> è il sottoinsieme di <m>\Naturali</m> formato dai numeri <m>n</m> tali che <m>P_{n}</m> è vera, per ipotesi sappiamo che <m>0\in A</m> e che per ogni <m>k\in A</m> si ha <m>k+1\in A</m>: dunque, <m>A=\Naturali</m> per l'<xref ref="item-assioma_induzione">Assioma</xref> della <xref ref="def-numeri_naturali_peano"/>.
+          Se <m>A</m> è il sottoinsieme di <m>\Naturali</m> formato dai numeri
+          <m>n</m> tali che <m>P_{n}</m> è vera, per ipotesi sappiamo che
+          <m>0\in A</m> e che per ogni <m>k\in A</m> si ha <m>k+1\in A</m>:
+          dunque, <m>A=\Naturali</m> per l'
+          <xref ref="item-assioma_induzione">Assioma</xref> della
+          <xref ref="def-numeri_naturali_peano"/>.
         </p>
       </proof>
-
     </theorem>
 
     <example xml:id="ex-somma_primi_naturali">
       <statement>
         <p>
-          Vogliamo mostrare che la somma dei naturali da <m>0</m> a <m>n</m> è uguale a <m>\frac{n(n+1)}{2}</m>. In simboli, <m>\sum_{i=0}^{n}i=\frac{n(n+1)}{2}</m>.
+          Vogliamo mostrare che la somma dei naturali da <m>0</m> a <m>n</m> è
+          uguale a <m>\frac{n(n+1)}{2}</m>.
+          In simboli, <m>\sum_{i=0}^{n}i=\frac{n(n+1)}{2}</m>.
           <ul>
             <li>
               <p>
-                Se <m>n=0</m>, la somma dei numeri da <m>0</m> a <m>0</m> è, ovviamente, <m>0</m> e <m>\frac{0(0+1)}{2}=0</m>. Dunque, la proprietà vale per <m>n=0</m>.
+                Se <m>n=0</m>, la somma dei numeri da <m>0</m> a <m>0</m> è,
+                ovviamente, <m>0</m> e <m>\frac{0(0+1)}{2}=0</m>.
+                Dunque, la proprietà vale per <m>n=0</m>.
               </p>
             </li>
+
             <li>
               <p>
-                Sia <m>k</m> un intero tale per cui <m>\sum_{i=0}^{k}i=\frac{k(k+1)}{2}</m>: allora
+                Sia <m>k</m> un intero tale per cui
+                <m>\sum_{i=0}^{k}i=\frac{k(k+1)}{2}</m>: allora
                 <md>
                   <mrow> \sum_{i=0}^{k+1}i\amp=\sum_{i=0}^{k}i+(k+1)=\frac{k(k+1)}{2}+(k+1)</mrow>
                   <mrow> \amp=\frac{k(k+1)+2(k+1)}{2}=\frac{(k+1)(k+2)}{2}</mrow>
@@ -282,7 +372,9 @@
     </example>
 
     <p>
-      Un altro modo di utilizzare la tecnica di dimostrazione per induzione discende dal cosiddetto <term>buon ordinamento</term> dei naturali. Più precisamente dal
+      Un altro modo di utilizzare la tecnica di dimostrazione per induzione
+      discende dal cosiddetto <term>buon ordinamento</term> dei naturali.
+      Più precisamente dal
     </p>
 
     <theorem xml:id="thm-buon_ordinamento_capitolo_interi">
@@ -303,30 +395,61 @@
       <idx><h>induzione completa</h></idx>
       <statement>
         <p>
-          Per ciascun naturale <m>n</m> sia data una proposizione <m>P_{n}</m>. Se, per ogni naturale <m>m</m>, si può provare che <m>P_{m}</m> è vera supposto che <m>P_{k}</m> sia vera per ogni <m>k \lt m</m>, allora <m>P_{n}</m> è vera per ogni naturale <m>n</m>.
+          Per ciascun naturale <m>n</m> sia data una proposizione <m>P_{n}</m>.
+          Se, per ogni naturale <m>m</m>, si può provare che <m>P_{m}</m> è vera
+          supposto che <m>P_{k}</m> sia vera per ogni <m>k \lt m</m>, allora
+          <m>P_{n}</m> è vera per ogni naturale <m>n</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Indichiamo con <m>B</m> il sottoinsieme di <m>\Naturali</m> formato dai numeri <m>n</m> per cui <m>P_{n}</m> è falsa. Per mostrare che <m>P_{n}</m> è vera per ogni <m>n</m>, basta allora provare che <m>B</m> è vuoto. Se <m>B</m> non fosse vuoto, dovrebbe avere un minimo <m>m</m>, cioè <m>P_{m}</m> dovrebbe essere falsa e <m>P_{k}</m> dovrebbe essere vera per ogni <m>k \lt m</m>, contro l'ipotesi. Dunque, <m>B</m> è vuoto, cioè <m>P_{n}</m> è vera per ogni <m>n</m>.
+          Indichiamo con <m>B</m> il sottoinsieme di <m>\Naturali</m> formato
+          dai numeri <m>n</m> per cui <m>P_{n}</m> è falsa.
+          Per mostrare che <m>P_{n}</m> è vera per ogni <m>n</m>, basta allora
+          provare che <m>B</m> è vuoto.
+          Se <m>B</m> non fosse vuoto, dovrebbe avere un minimo <m>m</m>, cioè
+          <m>P_{m}</m> dovrebbe essere falsa e <m>P_{k}</m> dovrebbe essere vera
+          per ogni <m>k \lt m</m>, contro l'ipotesi.
+          Dunque, <m>B</m> è vuoto, cioè <m>P_{n}</m> è vera per ogni <m>n</m>.
         </p>
       </proof>
-
     </theorem>
 
     <remark>
       <p>
-        Nella prima forma dell'induzione occorre provare che <m>P_{n+1}</m> è vera assumendo che sia vera <m>P_{n}</m>, cioè la proposizione immediatamente precedente. Nella seconda forma di induzione occorre provare che una certa <m>P_{m}</m> è vera assumendo che sia vera per tutti i naturali precedenti e, quindi, con una assunzione più forte che in molti casi è di aiuto. Apparentemente nella seconda forma dell'induzione non c'è la base induttiva, ma, per l'appunto, è solo un'apparenza: quando <m>m=0</m>, dobbiamo provare che <m>P_{0}</m> è vera assumendo che sia vera <m>P_{k}</m> per tutti i naturali <m>k</m> minori di <m>0</m>, cioè senza di fatto fare alcuna assunzione. Nella pratica, anche nell'induzione completa è spesso necessario provare la base induttiva separatamente.
+        Nella prima forma dell'induzione occorre provare che <m>P_{n+1}</m> è
+        vera assumendo che sia vera <m>P_{n}</m>, cioè la proposizione
+        immediatamente precedente.
+        Nella seconda forma di induzione occorre provare che una certa
+        <m>P_{m}</m> è vera assumendo che sia vera per tutti i naturali
+        precedenti e, quindi, con una assunzione più forte che in molti casi è
+        di aiuto.
+        Apparentemente nella seconda forma dell'induzione non c'è la base
+        induttiva, ma, per l'appunto, è solo un'apparenza: quando <m>m=0</m>,
+        dobbiamo provare che <m>P_{0}</m> è vera assumendo che sia vera
+        <m>P_{k}</m> per tutti i naturali <m>k</m> minori di <m>0</m>, cioè
+        senza di fatto fare alcuna assunzione.
+        Nella pratica, anche nell'induzione completa è spesso necessario provare
+        la base induttiva separatamente.
       </p>
     </remark>
 
     <p>
-      Daremo più avanti un esempio di induzione completa, precisamente nella dimostrazione del <xref ref="thm-teorema_fondamentale_aritmetica" text="title"/>.
+      Daremo più avanti un esempio di induzione completa, precisamente nella
+      dimostrazione del
+      <xref ref="thm-teorema_fondamentale_aritmetica" text="title"/>.
     </p>
 
     <p>
-      Oltre a dimostrare proprietà per induzione, gli assiomi di Peano ci permettono di definire successioni di oggetti (numeri, funzioni, insiemi, qualunque cosa) <m>x_{n}</m> indicizzate dai naturali. Un modo per far ciò è definire esplicitamente <m>x_{0}</m> e poi definire il generico <m>x_{n}</m> in termini di <m>x_{k}</m> per <m>k \lt n</m> e del numero <m>n</m> stesso. Ad esempio, il fattoriale <m>n!</m> di un numero naturale <m>n</m> è così definito:
+      Oltre a dimostrare proprietà per induzione, gli assiomi di Peano ci
+      permettono di definire successioni di oggetti (numeri, funzioni, insiemi,
+      qualunque cosa) <m>x_{n}</m> indicizzate dai naturali.
+      Un modo per far ciò è definire esplicitamente <m>x_{0}</m> e poi definire
+      il generico <m>x_{n}</m> in termini di <m>x_{k}</m> per <m>k \lt n</m> e
+      del numero <m>n</m> stesso.
+      Ad esempio, il fattoriale <m>n!</m> di un numero naturale <m>n</m> è così
+      definito:
       <md>
         n!\coloneqq
         \begin{cases}
@@ -334,50 +457,66 @@
           (n-1)!n \amp \text{se }n \gt 0
         \end{cases}
       </md>
-      Una definizione di questo tipo è detta per <term>ricorrenza</term>: intuitivamente è chiaro perché sia accettabile, ma il fatto che la successione di oggetti introdotta in questo modo esista e sia ben definita va dimostrato a partire dalle proprietà dei numeri naturali (si veda la <xref ref="prop-definizione_ricorrenza"/>).
+      Una definizione di questo tipo è detta per <term>ricorrenza</term>:
+      intuitivamente è chiaro perché sia accettabile, ma il fatto che la
+      successione di oggetti introdotta in questo modo esista e sia ben definita
+      va dimostrato a partire dalle proprietà dei numeri naturali (si veda la
+      <xref ref="prop-definizione_ricorrenza"/> ).
     </p>
 
     <p>
-      Notiamo infine che sia la dimostrazione per induzione che la definizione per ricorrenza possono avere come base non solo il caso <m>n=0</m> ma un qualsiasi numero naturale <m>n_{0}</m>. Vediamo un esempio.
+      Notiamo infine che sia la dimostrazione per induzione che la definizione
+      per ricorrenza possono avere come base non solo il caso <m>n=0</m> ma un
+      qualsiasi numero naturale <m>n_{0}</m>.
+      Vediamo un esempio.
     </p>
 
     <example xml:id="ex-base_induttiva_non_zero">
       <statement>
         <p>
-          Proviamo che per ogni intero <m>n\ge 8</m> esistono naturali <m>u</m> e <m>v</m> tali che <m>n=3u+5v</m>.
+          Proviamo che per ogni intero <m>n\ge 8</m> esistono naturali <m>u</m>
+          e <m>v</m> tali che <m>n=3u+5v</m>.
         </p>
+
         <p>
           Possiamo allora procedere per induzione in questo modo:
-         <ul>
-           <li>
-             <p>
-               Chiaramente <m>8=3\cdot 1 +5\cdot 1</m>: questa è la base induttiva.
-             </p>
-           </li>
-           <li>
-             <p>
-               Per il passo induttivo, sia vera la proprietà per un certo <m>k\ge 8</m> e proviamo che è vera per <m>k+1</m>: sia allora <m>k=3u+5v</m> per opportuni naturali <m>u</m> e <m>v</m>. Distinguiamo ora due casi:
-               <ul>
-                 <li>
-                   <p>
-                     se <m>v \gt 0</m>, allora <m>k+1=3(u+2)+5(v-1)</m>;
-                   </p>
-                 </li>
-                 <li>
-                   <p>
-                     se <m>v=0</m>, allora <m>u\ge 3</m>, altrimenti <m>k\le 3\cdot 2=6</m>. Dunque, <m>k+1=3(u-3)+5\cdot2</m>.
-                   </p>
-                 </li>
-               </ul>
-             </p>
-           </li>
-         </ul>
+          <ul>
+            <li>
+              <p>
+                Chiaramente <m>8=3\cdot 1 +5\cdot 1</m>: questa è la base
+                induttiva.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Per il passo induttivo, sia vera la proprietà per un certo
+                <m>k\ge 8</m> e proviamo che è vera per <m>k+1</m>: sia allora
+                <m>k=3u+5v</m> per opportuni naturali <m>u</m> e <m>v</m>.
+                Distinguiamo ora due casi:
+                <ul>
+                  <li>
+                    <p>
+                      se <m>v \gt 0</m>, allora <m>k+1=3(u+2)+5(v-1)</m>;
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      se <m>v=0</m>, allora <m>u\ge 3</m>, altrimenti
+                      <m>k\le 3\cdot 2=6</m>.
+                      Dunque, <m>k+1=3(u-3)+5\cdot2</m>.
+                    </p>
+                  </li>
+                </ul>
+              </p>
+            </li>
+          </ul>
         </p>
       </statement>
     </example>
 
     <exercises xml:id="exercises-induzione">
-
       <exercisegroup>
         <introduction>
           <p>
@@ -388,20 +527,27 @@
         <exercise>
           <statement>
             <p>
-              <m>\sum_{i=0}^{n}i^{2}=\frac{n(n+1)(2n+1)}{6}</m> per ogni <m>n\ge 0</m>.
+              <m>\sum_{i=0}^{n}i^{2}=\frac{n(n+1)(2n+1)}{6}</m> per ogni
+              <m>n\ge 0</m>.
             </p>
           </statement>
+
           <solution>
             <p>
               <ul>
                 <li>
                   <p>
-                    Per <m>n=0</m> abbiamo <m>\sum_{i=0}^{0}i^{2}=0</m> e <m>\frac{0(0+1)(2\cdot 0+1)}{6}=0</m>: questa è la base induttiva.
+                    Per <m>n=0</m> abbiamo <m>\sum_{i=0}^{0}i^{2}=0</m> e
+                    <m>\frac{0(0+1)(2\cdot 0+1)}{6}=0</m>: questa è la base
+                    induttiva.
                   </p>
                 </li>
+
                 <li>
                   <p>
-                    Sia <m>k</m> un intero per cui la proprietà sia vera, cioè sia <m>\sum_{i=0}^{k}i^{2}=\frac{k(k+1)(2k+1)}{6}</m>. Allora
+                    Sia <m>k</m> un intero per cui la proprietà sia vera, cioè
+                    sia <m>\sum_{i=0}^{k}i^{2}=\frac{k(k+1)(2k+1)}{6}</m>.
+                    Allora
                     <md>
                       <mrow> \sum_{i=0}^{k+1}i^{2}\amp = \sum_{i=0}^{k}i^{2}+(k+1)^{2}=\frac{k(k+1)(2k+1)}{6}+(k+1)^{2}</mrow>
                       <mrow> \amp = \frac{k(k+1)(2k+1)+6(k+1)^{2}}{6}</mrow>
@@ -426,7 +572,8 @@
         <exercise>
           <statement>
             <p>
-              <m>\sum_{i=0}^{n}i^{3}=\left(\frac{n(n+1)}{2}\right)^{2}</m> per ogni <m>n\ge 0</m>.
+              <m>\sum_{i=0}^{n}i^{3}=\left(\frac{n(n+1)}{2}\right)^{2}</m> per
+              ogni <m>n\ge 0</m>.
             </p>
           </statement>
         </exercise>
@@ -434,7 +581,8 @@
         <exercise>
           <statement>
             <p>
-              <m>\sum_{i=0}^{n}i(i+1)=\frac{n(n+1)(n+2)}{3}</m> per ogni <m>n\ge 0</m>.
+              <m>\sum_{i=0}^{n}i(i+1)=\frac{n(n+1)(n+2)}{3}</m> per ogni
+              <m>n\ge 0</m>.
             </p>
           </statement>
         </exercise>
@@ -446,7 +594,6 @@
             </p>
           </statement>
         </exercise>
-
       </exercisegroup>
 
       <exercise>
@@ -458,20 +605,20 @@
 
         <solution>
           <p>
-            La base induttiva si stabilisce facilmente: <m>4^{2}=16</m> e <m>4!=24</m>.
+            La base induttiva si stabilisce facilmente: <m>4^{2}=16</m> e
+            <m>4!=24</m>.
           </p>
+
           <p>
-            Sia ora <m>k\ge 4</m> un intero tale per cui <m>k^{2}\le k!</m>: abbiamo allora
+            Sia ora <m>k\ge 4</m> un intero tale per cui <m>k^{2}\le k!</m>:
+            abbiamo allora
             <md>
               (k+1)^{2}=k^{2}+2k+1\le k!+2k+1\le k!+2k!+k!\le 4\cdot k!\le (k+1)k!=(k+1)!
             </md>.
           </p>
         </solution>
       </exercise>
-
-
     </exercises>
-
   </section>
 
   <section xml:id="sec-divisibilita_interi">
@@ -482,9 +629,14 @@
         <usage><m>m\mid n</m></usage>
         <description><m>m</m> divide <m>n</m></description>
       </notation>
+
       <statement>
         <p>
-          Dati due interi <m>m</m> e <m>n</m>, diciamo che <m>m</m> <term>divide</term> <m>n</m> e scriviamo <m>m \mid n</m> se esiste un intero <m>a</m> tale che <m>ma=n</m>. Diremo anche che <m>m</m> è un <term>divisore</term> di <m>n</m> o che <m>n</m> è un <term>multiplo</term> di <m>m</m>.
+          Dati due interi <m>m</m> e <m>n</m>, diciamo che <m>m</m>
+          <term>divide</term> <m>n</m> e scriviamo <m>m \mid n</m> se esiste un
+          intero <m>a</m> tale che <m>ma=n</m>.
+          Diremo anche che <m>m</m> è un <term>divisore</term> di <m>n</m> o che
+          <m>n</m> è un <term>multiplo</term> di <m>m</m>.
         </p>
       </statement>
     </definition>
@@ -492,62 +644,93 @@
     <proposition xml:id="prop-divisori_di_opposti">
       <statement>
         <p>
-          Dati due numeri interi <m>m</m> e <m>n</m>, si ha che <m>m\mid n</m> se e solo se <m>-m\mid n</m> se e solo se <m>m\mid -n</m>. In particolare, un numero e il proprio opposto hanno gli stessi divisori e gli stessi multipli.
+          Dati due numeri interi <m>m</m> e <m>n</m>, si ha che <m>m\mid n</m>
+          se e solo se <m>-m\mid n</m> se e solo se <m>m\mid -n</m>.
+          In particolare, un numero e il proprio opposto hanno gli stessi
+          divisori e gli stessi multipli.
         </p>
       </statement>
 
       <proof>
         <p>
-          Se <m>ma=n</m> allora <m>-m(-a)=n</m> e <m>m(-a)=-n</m>. Il viceversa è analogo.
+          Se <m>ma=n</m> allora <m>-m(-a)=n</m> e <m>m(-a)=-n</m>.
+          Il viceversa è analogo.
         </p>
       </proof>
-
     </proposition>
 
     <proposition xml:id="prop-divisori_finiti">
       <statement>
         <p>
-          Se <m>m\mid n</m> e <m>n\ne 0</m>, allora <m>\abs{m}\le\abs{n}</m>. In particolare, ogni numero intero diverso da <m>0</m> ha un numero finito di divisori.
+          Se <m>m\mid n</m> e <m>n\ne 0</m>, allora <m>\abs{m}\le\abs{n}</m>.
+          In particolare, ogni numero intero diverso da <m>0</m> ha un numero
+          finito di divisori.
         </p>
       </statement>
 
       <proof>
         <p>
-          Sia <m>n=ma</m>. Poiché <m>n\ne 0</m>, anche <m>a\ne 0</m> e, dunque, <m>\abs{a}\ge 1</m>. Pertanto, <m>\abs{m}=\abs{m}\cdot 1\le \abs{m}\abs{a}=\abs{n}</m>, dove l'ultima uguaglianza segue dalla <xref ref="prop-valore_assoluto_somma_prodotto"/>.
+          Sia <m>n=ma</m>.
+          Poiché <m>n\ne 0</m>, anche <m>a\ne 0</m> e, dunque,
+          <m>\abs{a}\ge 1</m>.
+          Pertanto, <m>\abs{m}=\abs{m}\cdot 1\le \abs{m}\abs{a}=\abs{n}</m>,
+          dove l'ultima uguaglianza segue dalla
+          <xref ref="prop-valore_assoluto_somma_prodotto"/>.
         </p>
       </proof>
-
     </proposition>
 
     <remark>
       <p>
-        L'unico numero intero che è multiplo di tutti gli altri è <m>0</m>. Gli unici numeri interi che sono divisori di tutti gli altri sono <m>1</m> e <m>-1</m>.
+        L'unico numero intero che è multiplo di tutti gli altri è <m>0</m>.
+        Gli unici numeri interi che sono divisori di tutti gli altri sono
+        <m>1</m> e <m>-1</m>.
       </p>
     </remark>
 
     <proposition xml:id="prop-divisibilita_preordine">
       <statement>
         <p>
-          La relazione di divisibilità negli interi soddisfa la proprietà riflessiva e la proprietà transitiva ma non la proprietà antisimmetrica: più precisamente <m>m\mid n</m> e <m>n\mid m</m> se e solo se <m>m=n</m> o <m>m=-n</m>.
+          La relazione di divisibilità negli interi soddisfa la proprietà
+          riflessiva e la proprietà transitiva ma non la proprietà
+          antisimmetrica: più precisamente <m>m\mid n</m> e <m>n\mid m</m> se e
+          solo se <m>m=n</m> o <m>m=-n</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Dato un intero <m>m</m>, si ha che <m>m\cdot 1=m</m>: dunque, <m>\mid</m> è riflessiva.
+          Dato un intero <m>m</m>, si ha che <m>m\cdot 1=m</m>: dunque,
+          <m>\mid</m> è riflessiva.
         </p>
+
         <p>
-          Se <m>l\mid m</m> e <m>m\mid n</m>, allora esistono interi <m>a</m> e <m>b</m> tali che <m>m=la</m> e <m>n=mb</m>: dunque, <m>n=mb=lab</m>, cioè <m>l\mid n</m>.
+          Se <m>l\mid m</m> e <m>m\mid n</m>, allora esistono interi <m>a</m> e
+          <m>b</m> tali che <m>m=la</m> e <m>n=mb</m>: dunque, <m>n=mb=lab</m>,
+          cioè <m>l\mid n</m>.
         </p>
+
         <p>
-          Sappiamo già che ogni intero <m>m</m> divide sé stesso e che <m>m</m> e <m>-m</m> si dividono l'un l'altro (infatti, <m>-m=m(-1)</m> e <m>m=-m(-1)</m>). Viceversa, siano <m>m</m> e <m>n</m> due interi che si dividono l'un l'altro: allora esistono interi <m>a</m> e <m>b</m> tali che <m>m=na</m> e <m>n=mb</m>. Di conseguenza, si ha <m>n=nab</m>: se <m>n=0</m>, allora <m>m=0\cdot a=0</m>; altrimenti, per la <xref ref="prop-cancellazione_moltiplicazione_interi_senza_dimostrazione"/>, si ha <m>ab=1</m>. Poiché gli unici elementi invertibili di <m>\Interi</m> sono <m>1</m> e <m>-1</m>, ne consegue che <m>n=m\cdot 1=m</m> o <m>n=m\cdot(-1)=-m</m>.
+          Sappiamo già che ogni intero <m>m</m> divide sé stesso e che <m>m</m>
+          e <m>-m</m> si dividono l'un l'altro (infatti, <m>-m=m(-1)</m> e
+          <m>m=-m(-1)</m> ).
+          Viceversa, siano <m>m</m> e <m>n</m> due interi che si dividono l'un
+          l'altro: allora esistono interi <m>a</m> e <m>b</m> tali che
+          <m>m=na</m> e <m>n=mb</m>.
+          Di conseguenza, si ha <m>n=nab</m>: se <m>n=0</m>, allora
+          <m>m=0\cdot a=0</m>; altrimenti, per la
+          <xref ref="prop-cancellazione_moltiplicazione_interi_senza_dimostrazione"/>,
+          si ha <m>ab=1</m>.
+          Poiché gli unici elementi invertibili di <m>\Interi</m> sono <m>1</m>
+          e <m>-1</m>, ne consegue che <m>n=m\cdot 1=m</m> o
+          <m>n=m\cdot(-1)=-m</m>.
         </p>
       </proof>
-
     </proposition>
 
     <p>
-      Diamo ora qualche lemma immediato la cui dimostrazione lasciamo per esercizio e che useremo ripetutamente senza esplicita menzione.
+      Diamo ora qualche lemma immediato la cui dimostrazione lasciamo per
+      esercizio e che useremo ripetutamente senza esplicita menzione.
     </p>
 
     <lemma xml:id="lem-divisibilita_prodotto">
@@ -561,7 +744,9 @@
     <lemma xml:id="lem-divisibilita_somma">
       <statement>
         <p>
-          Se <m>l\mid m</m> e <m>l\mid n</m>, allora <m>l\mid m+n</m>. Più in generale se <m>l\mid m_{i}</m> per <m>i=1,\ldots,r</m>, allora <m>l\mid m_{1}+\cdots+m_{r}</m>.
+          Se <m>l\mid m</m> e <m>l\mid n</m>, allora <m>l\mid m+n</m>.
+          Più in generale se <m>l\mid m_{i}</m> per <m>i=1,\ldots,r</m>, allora
+          <m>l\mid m_{1}+\cdots+m_{r}</m>.
         </p>
       </statement>
     </lemma>
@@ -571,44 +756,83 @@
 
       <statement>
         <p>
-          Dati due interi <m>a</m> e <m>b</m> con <m>b>0</m>, esistono e sono unici due interi <m>q</m> e <m>r</m> (detti rispettivamente <term>quoziente</term> e <term>resto</term>) tali che <m>a=bq+r</m> e <m>0\le r \lt b</m>.
+          Dati due interi <m>a</m> e <m>b</m> con <m>b&gt;0</m>, esistono e sono
+          unici due interi <m>q</m> e <m>r</m> (detti rispettivamente
+          <term>quoziente</term> e <term>resto</term> ) tali che <m>a=bq+r</m> e
+          <m>0\le r \lt b</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Consideriamo l'insieme <m>R\coloneqq \{a-bx\mid x\in\Interi\}\cap\Naturali</m>. L'insieme <m>R</m> è non vuoto: infatti, scelto <m>x\coloneqq -\abs{a}</m>, risulta <m>a-b(-\abs{a})=a+b\abs{a}\ge a+\abs{a}\ge 0</m>. Pertanto, <m>R</m> ha un minimo, sia <m>r</m>: dunque, esiste un intero <m>q</m> tale che <m>a-bq=r</m>. Se fosse <m>r\ge b</m>, avremmo che <m>r-b\ge 0</m> e <m>r-b=a-b(q+1)</m>, cioè <m>r-b</m> sarebbe un elemento di <m>R</m>: d'altra parte, <m>r-b \lt r</m>, contro la scelta di <m>r</m> come elemento minimo di <m>R</m>. Dunque, <m>0\le r \lt b</m> e <m>a=bq+r</m>: questo prova l'esistenza di <m>q</m> e <m>r</m> secondo le richieste.
+          Consideriamo l'insieme
+          <m>R\coloneqq \{a-bx\mid x\in\Interi\}\cap\Naturali</m>.
+          L'insieme <m>R</m> è non vuoto: infatti, scelto
+          <m>x\coloneqq -\abs{a}</m>, risulta
+          <m>a-b(-\abs{a})=a+b\abs{a}\ge a+\abs{a}\ge 0</m>.
+          Pertanto, <m>R</m> ha un minimo, sia <m>r</m>: dunque, esiste un
+          intero <m>q</m> tale che <m>a-bq=r</m>.
+          Se fosse <m>r\ge b</m>, avremmo che <m>r-b\ge 0</m> e
+          <m>r-b=a-b(q+1)</m>, cioè <m>r-b</m> sarebbe un elemento di <m>R</m>:
+          d'altra parte, <m>r-b \lt r</m>, contro la scelta di <m>r</m> come
+          elemento minimo di <m>R</m>.
+          Dunque, <m>0\le r \lt b</m> e <m>a=bq+r</m>: questo prova l'esistenza
+          di <m>q</m> e <m>r</m> secondo le richieste.
         </p>
+
         <p>
-          Per quanto riguarda l'unicità, siano <m>q'</m> e <m>r'</m> interi tali che <m>a=bq'+r'</m> con <m>0\le r' \lt b</m>. Dunque, <m>bq+r=bq'+r'</m>, da cui segue <m>b(q-q')=r'-r</m>. Se fosse <m>q-q'\ne 0</m>, pur di eventualmente scambiare i ruoli, potremmo supporre che <m>q-q' \gt 0</m> e, quindi, avremmo <m>b(q-q')\ge b</m> cioè <m>r'-r\ge b</m>: ma <m>r'-r\le r' \lt b</m>. Pertanto, <m>q-q'=0</m> e <m>r'-r=b(q-q')=0</m>, cioè <m>q=q'</m> e <m>r=r'</m>.
+          Per quanto riguarda l'unicità, siano <m>q'</m> e <m>r'</m> interi tali
+          che <m>a=bq'+r'</m> con <m>0\le r' \lt b</m>.
+          Dunque, <m>bq+r=bq'+r'</m>, da cui segue <m>b(q-q')=r'-r</m>.
+          Se fosse <m>q-q'\ne 0</m>, pur di eventualmente scambiare i ruoli,
+          potremmo supporre che <m>q-q' \gt 0</m> e, quindi, avremmo
+          <m>b(q-q')\ge b</m> cioè <m>r'-r\ge b</m>: ma <m>r'-r\le r' \lt b</m>.
+          Pertanto, <m>q-q'=0</m> e <m>r'-r=b(q-q')=0</m>, cioè <m>q=q'</m> e
+          <m>r=r'</m>.
         </p>
       </proof>
-
     </proposition>
 
     <example>
       <statement>
         <p>
-          Se facciamo la divisione con resto di <m>32</m> per <m>6</m> otteniamo <m>32=6\cdot 5+2</m>, cioè quoziente <m>5</m> e resto <m>2</m>. Se facciamo la divisione con resto di <m>-32</m> per <m>6</m> otteniamo <m>-32=6\cdot (-6)+4</m>, cioè quoziente <m>-6</m> e resto <m>4</m>. Se facciamo la divisione con resto di <m>-30</m> per <m>6</m> otteniamo <m>-30=6\cdot(-5)</m>, cioè quoziente <m>-5</m> e resto <m>0</m>.
+          Se facciamo la divisione con resto di <m>32</m> per <m>6</m> otteniamo
+          <m>32=6\cdot 5+2</m>, cioè quoziente <m>5</m> e resto <m>2</m>.
+          Se facciamo la divisione con resto di <m>-32</m> per <m>6</m>
+          otteniamo <m>-32=6\cdot (-6)+4</m>, cioè quoziente <m>-6</m> e resto
+          <m>4</m>.
+          Se facciamo la divisione con resto di <m>-30</m> per <m>6</m>
+          otteniamo <m>-30=6\cdot(-5)</m>, cioè quoziente <m>-5</m> e resto
+          <m>0</m>.
         </p>
       </statement>
     </example>
 
     <p>
-      I <term>divisori comuni</term> di due interi <m>a</m> e <m>b</m> sono gli interi <m>d</m> tali che <m>d\mid a</m> e <m>d\mid b</m>. Per la <xref ref="prop-divisori_finiti"/>, se almeno uno dei due numeri <m>a</m> e <m>b</m> è diverso da <m>0</m>, allora i loro divisori comuni sono in numero finito. Ciò giustifica la
+      I <term>divisori comuni</term> di due interi <m>a</m> e <m>b</m> sono gli
+      interi <m>d</m> tali che <m>d\mid a</m> e <m>d\mid b</m>.
+      Per la <xref ref="prop-divisori_finiti"/>, se almeno uno dei due numeri
+      <m>a</m> e <m>b</m> è diverso da <m>0</m>, allora i loro divisori comuni
+      sono in numero finito.
+      Ciò giustifica la
     </p>
 
     <definition xml:id="def-massimo_comun_divisore">
-
       <idx><h>massimo comun divisore</h><h>di interi</h></idx>
-
       <notation>
         <usage><m>(a,b)</m></usage>
         <description>massimo comun divisore di <m>a</m> e <m>b</m></description>
       </notation>
+
       <statement>
         <p>
-          Dati due interi <m>a</m> e <m>b</m> non entrambi nulli, il loro <term>massimo comun divisore</term>, denotato con <m>(a,b)</m>, è il massimo tra i divisori comuni di <m>a</m> e <m>b</m>. Più in generale, dati un numero qualunque di interi <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n}</m> non tutti nulli, il loro massimo comun divisore <m>(a_{1},\ldots,a_{n})</m> è il massimo tra i numeri che dividono tutti gli <m>a_{i}</m>.
+          Dati due interi <m>a</m> e <m>b</m> non entrambi nulli, il loro
+          <term>massimo comun divisore</term>, denotato con <m>(a,b)</m>, è il
+          massimo tra i divisori comuni di <m>a</m> e <m>b</m>.
+          Più in generale, dati un numero qualunque di interi <m>a_{1}</m>,
+          <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n}</m> non tutti nulli, il loro
+          massimo comun divisore <m>(a_{1},\ldots,a_{n})</m> è il massimo tra i
+          numeri che dividono tutti gli <m>a_{i}</m>.
         </p>
       </statement>
     </definition>
@@ -616,19 +840,36 @@
     <example xml:id="ex-massimo_comun_divisore">
       <statement>
         <p>
-          Consideriamo gli interi <m>a=36</m> e <m>b=60</m>. Possiamo elencare i loro divisori comuni: <m>1</m>, <m>2</m>, <m>3</m>, <m>4</m>, <m>6</m>, <m>12</m> e i loro opposti. Dunque, il massimo comun divisore è <m>12</m>. Notiamo che <m>12</m> non è solo il più grande tra i divisori comuni ma ha una proprietà interessante (che condivide con il suo opposto <m>-12</m>): è multiplo di tutti gli altri divisori comuni.
+          Consideriamo gli interi <m>a=36</m> e <m>b=60</m>.
+          Possiamo elencare i loro divisori comuni: <m>1</m>, <m>2</m>,
+          <m>3</m>, <m>4</m>, <m>6</m>, <m>12</m> e i loro opposti.
+          Dunque, il massimo comun divisore è <m>12</m>.
+          Notiamo che <m>12</m> non è solo il più grande tra i divisori comuni
+          ma ha una proprietà interessante (che condivide con il suo opposto
+          <m>-12</m> ): è multiplo di tutti gli altri divisori comuni.
         </p>
       </statement>
     </example>
 
     <p>
-      La proprietà vista nell'esempio precedente ha validità generale. Per dimostrare questo fatto abbiamo bisogno di qualche risultato preliminare: nel farlo, vedremo anche come estendere la definizione di massimo comun divisore al caso di due (o più) numeri tutti nulli. Il prossimo lemma è di immediata dimostrazione.
+      La proprietà vista nell'esempio precedente ha validità generale.
+      Per dimostrare questo fatto abbiamo bisogno di qualche risultato
+      preliminare: nel farlo, vedremo anche come estendere la definizione di
+      massimo comun divisore al caso di due (o più) numeri tutti nulli.
+      Il prossimo lemma è di immediata dimostrazione.
     </p>
 
     <lemma xml:id="lem-mcd_tra_divisori">
       <statement>
         <p>
-          Siano <m>a</m> e <m>b</m> due interi tali che <m>b\mid a</m>. Allora ogni divisore di <m>b</m> è anche un divisore di <m>a</m>. Dunque, i divisori comuni di <m>a</m> e <m>b</m> sono esattamente i divisori di <m>b</m>: di conseguenza, <m>b</m> e <m>-b</m> sono divisori comuni di <m>a</m> e <m>b</m> e sono multipli di tutti i divisori comuni di <m>a</m> e <m>b</m>. In particolare, se <m>b\ne 0</m>, il massimo comun divisore di <m>a</m> e <m>b</m> è <m>\abs{b}</m>.
+          Siano <m>a</m> e <m>b</m> due interi tali che <m>b\mid a</m>.
+          Allora ogni divisore di <m>b</m> è anche un divisore di <m>a</m>.
+          Dunque, i divisori comuni di <m>a</m> e <m>b</m> sono esattamente i
+          divisori di <m>b</m>: di conseguenza, <m>b</m> e <m>-b</m> sono
+          divisori comuni di <m>a</m> e <m>b</m> e sono multipli di tutti i
+          divisori comuni di <m>a</m> e <m>b</m>.
+          In particolare, se <m>b\ne 0</m>, il massimo comun divisore di
+          <m>a</m> e <m>b</m> è <m>\abs{b}</m>.
         </p>
       </statement>
     </lemma>
@@ -636,38 +877,69 @@
     <lemma xml:id="lem-divisori_comuni_quoziente_resto">
       <statement>
         <p>
-          Siano <m>a</m> e <m>b</m> due interi con <m>b \gt 0</m>. Siano <m>q</m> e <m>r</m> il quoziente e il resto della divisione di <m>a</m> per <m>b</m>, cioè sia <m>a=bq+r</m> con <m>q</m> e <m>r</m> interi e <m>0\le r \lt b</m>. Allora, i divisori comuni di <m>a</m> e <m>b</m> sono tutti e soli i divisori comuni di <m>b</m> e <m>r</m>.
+          Siano <m>a</m> e <m>b</m> due interi con <m>b \gt 0</m>.
+          Siano <m>q</m> e <m>r</m> il quoziente e il resto della divisione di
+          <m>a</m> per <m>b</m>, cioè sia <m>a=bq+r</m> con <m>q</m> e <m>r</m>
+          interi e <m>0\le r \lt b</m>.
+          Allora, i divisori comuni di <m>a</m> e <m>b</m> sono tutti e soli i
+          divisori comuni di <m>b</m> e <m>r</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Sia <m>d</m> un divisore comune di <m>a</m> e <m>b</m>. Per il <xref ref="lem-divisibilita_prodotto"/> e il <xref ref="lem-divisibilita_somma"/>, abbiamo che <m>d\mid a-bq=r</m> e, dunque, <m>d</m> è un divisore comune di <m>b</m> e <m>r</m>. Analogamente, se <m>d</m> divide <m>b</m> e <m>r</m> allora <m>d\mid bq+r=a</m>.
+          Sia <m>d</m> un divisore comune di <m>a</m> e <m>b</m>.
+          Per il <xref ref="lem-divisibilita_prodotto"/> e il
+          <xref ref="lem-divisibilita_somma"/>, abbiamo che <m>d\mid a-bq=r</m>
+          e, dunque, <m>d</m> è un divisore comune di <m>b</m> e <m>r</m>.
+          Analogamente, se <m>d</m> divide <m>b</m> e <m>r</m> allora
+          <m>d\mid bq+r=a</m>.
         </p>
       </proof>
-
     </lemma>
 
     <remark>
       <p>
-        Nella dimostrazione del lemma precedente non abbiamo usato il fatto che <m>0\le r \lt b</m>.
+        Nella dimostrazione del lemma precedente non abbiamo usato il fatto che
+        <m>0\le r \lt b</m>.
       </p>
     </remark>
 
     <p>
-      Dati due interi <m>a</m> e <m>b</m>, vogliamo ora descrivere un metodo efficiente per il calcolo del loro massimo comun divisore. Questo algoritmo ci permetterà inoltre di mostrare che il massimo comun divisore è multiplo di tutti gli altri divisori comuni.
+      Dati due interi <m>a</m> e <m>b</m>, vogliamo ora descrivere un metodo
+      efficiente per il calcolo del loro massimo comun divisore.
+      Questo algoritmo ci permetterà inoltre di mostrare che il massimo comun
+      divisore è multiplo di tutti gli altri divisori comuni.
     </p>
 
     <p>
-      Ricordiamo che per definire il massimo comun divisore, abbiamo richiesto (almeno per il momento) che <m>a</m> e <m>b</m> non siano entrambi nulli: ad esempio, sia <m>b\ne 0</m>. Per la <xref ref="prop-divisori_di_opposti"/>, i divisori comuni di <m>a</m> e <m>b</m> coincidono con i divisori comuni di <m>a</m> e <m>\abs{b}</m>. Non c'è, dunque, perdita di generalità se assumiamo che <m>b \gt 0</m>. Dividiamo ora <m>a</m> per <m>b</m>. Otteniamo
+      Ricordiamo che per definire il massimo comun divisore, abbiamo richiesto
+      (almeno per il momento) che <m>a</m> e <m>b</m> non siano entrambi nulli:
+      ad esempio, sia <m>b\ne 0</m>.
+      Per la <xref ref="prop-divisori_di_opposti"/>, i divisori comuni di
+      <m>a</m> e <m>b</m> coincidono con i divisori comuni di <m>a</m> e
+      <m>\abs{b}</m>.
+      Non c'è, dunque, perdita di generalità se assumiamo che <m>b \gt 0</m>.
+      Dividiamo ora <m>a</m> per <m>b</m>.
+      Otteniamo
       <md>
         a=bq+r
       </md>
-      con <m>q</m> e <m>r</m> interi tali che <m>0\le r \lt b</m>. Se <m>r=0</m>, allora <m>b\mid a</m> e, per il <xref ref="lem-mcd_tra_divisori"/>, il massimo comun divisore tra <m>a</m> e <m>b</m> è esattamente <m>b</m> che, quindi, è multiplo di tutti i divisori comuni tra <m>a</m> e <m>b</m>. Se <m>r\ne 0</m>, dal <xref ref="lem-divisori_comuni_quoziente_resto"/> sappiamo che i divisori comuni tra <m>a</m> e <m>b</m> coincidono con i divisori comuni tra <m>b</m> e <m>r</m>. Possiamo allora ragionare come sopra e dividere <m>b</m> per <m>r</m>, ottenendo
+      con <m>q</m> e <m>r</m> interi tali che <m>0\le r \lt b</m>.
+      Se <m>r=0</m>, allora <m>b\mid a</m> e, per il
+      <xref ref="lem-mcd_tra_divisori"/>, il massimo comun divisore tra <m>a</m>
+      e <m>b</m> è esattamente <m>b</m> che, quindi, è multiplo di tutti i
+      divisori comuni tra <m>a</m> e <m>b</m>.
+      Se <m>r\ne 0</m>, dal <xref ref="lem-divisori_comuni_quoziente_resto"/>
+      sappiamo che i divisori comuni tra <m>a</m> e <m>b</m> coincidono con i
+      divisori comuni tra <m>b</m> e <m>r</m>.
+      Possiamo allora ragionare come sopra e dividere <m>b</m> per <m>r</m>,
+      ottenendo
       <md>
         b=rq_{1}+r_{1}
       </md>
-      con <m>q_{1}</m> e <m>r_{1}</m> interi tali che <m>0\le r_{1} \lt r</m>. Iterando il procedimento troviamo una successione di divisioni
+      con <m>q_{1}</m> e <m>r_{1}</m> interi tali che <m>0\le r_{1} \lt r</m>.
+      Iterando il procedimento troviamo una successione di divisioni
       <md>
         <mrow>a     \amp = bq+r                   \amp \amp 0\le r \lt b             </mrow>
         <mrow>b     \amp = rq_{1}+r_{1}           \amp \amp 0\le r_{1} \lt r         </mrow>
@@ -676,28 +948,50 @@
         <mrow>r_{k} \amp = r_{k+1}q_{k+2}+r_{k+2} \amp \amp 0\le r_{k+2} \lt r_{k+1} </mrow>
         <mrow>      \amp \vdotswithin{=}          \amp \amp                           </mrow>
       </md>
-      Notiamo che otteniamo una successione strettamente decrescente di numeri naturali <m>b \gt r \gt r_{1} \gt \cdots \gt r_{k} \gt \cdots</m>. Questa successione prosegue fintantoché troviamo resti non nulli, ma, essendo strettamente decrescente, deve avere termine. Deve, quindi, esistere un passo <m>n</m> tale che
+      Notiamo che otteniamo una successione strettamente decrescente di numeri
+      naturali <m>b \gt r \gt r_{1} \gt \cdots \gt r_{k} \gt \cdots</m>.
+      Questa successione prosegue fintantoché troviamo resti non nulli, ma,
+      essendo strettamente decrescente, deve avere termine.
+      Deve, quindi, esistere un passo <m>n</m> tale che
       <md>
         <mrow>r_{n} \amp = r_{n+1}q_{n+2}+r_{n+2} \amp \amp 0 \lt r_{n+2} \lt r_{n+1}</mrow>
         <mrow>r_{n+1} \amp = r_{n+2}q_{n+3}+0 </mrow>
       </md>
-      Siamo allora partiti dalla coppia formata da <m>a</m> e da <m>b</m>, per poi rimpiazzarla con la coppia formata da <m>b</m> e <m>r</m>, poi con la coppia formata da <m>r</m> e <m>r_{1}</m> e così via, fino ad arrivare alla coppia formata da <m>r_{n+1}</m> e <m>r_{n+2}</m>. Ciascuna coppia ha gli stessi divisori comuni della precedente; in particolare, <m>r_{n+1}</m> e <m>r_{n+2}</m> hanno gli stessi divisori comuni di <m>a</m> e <m>b</m> e, poiché <m>r_{n+2}\mid r_{n+1}</m>, per il <xref ref="lem-mcd_tra_divisori"/> abbiamo che il massimo comun divisore tra <m>a</m> e <m>b</m> è <m>r_{n+2}</m>, cioè l'ultimo resto non nullo, e inoltre <m>r_{n+2}</m> è multiplo di tutti i divisori comuni.
+      Siamo allora partiti dalla coppia formata da <m>a</m> e da <m>b</m>, per
+      poi rimpiazzarla con la coppia formata da <m>b</m> e <m>r</m>, poi con la
+      coppia formata da <m>r</m> e <m>r_{1}</m> e così via, fino ad arrivare
+      alla coppia formata da <m>r_{n+1}</m> e <m>r_{n+2}</m>.
+      Ciascuna coppia ha gli stessi divisori comuni della precedente; in
+      particolare, <m>r_{n+1}</m> e <m>r_{n+2}</m> hanno gli stessi divisori
+      comuni di <m>a</m> e <m>b</m> e, poiché <m>r_{n+2}\mid r_{n+1}</m>, per il
+      <xref ref="lem-mcd_tra_divisori"/> abbiamo che il massimo comun divisore
+      tra <m>a</m> e <m>b</m> è <m>r_{n+2}</m>, cioè l'ultimo resto non nullo, e
+      inoltre <m>r_{n+2}</m> è multiplo di tutti i divisori comuni.
     </p>
+
     <p>
-      Possiamo ora riguardare la catena di uguaglianze data dalle divisioni successive per ottenere qualcosa di più. Detto <m>d\coloneqq r_{n+2}</m> il massimo comun divisore di <m>a</m> e <m>b</m>, abbiamo
+      Possiamo ora riguardare la catena di uguaglianze data dalle divisioni
+      successive per ottenere qualcosa di più.
+      Detto <m>d\coloneqq r_{n+2}</m> il massimo comun divisore di <m>a</m> e
+      <m>b</m>, abbiamo
       <md>
         d=r_{n}-r_{n+1}q_{n+2}
       </md>.
-      Sostituendo poi l'espressione del resto <m>r_{n+1}</m> data dalle precedente divisione, otteniamo
+      Sostituendo poi l'espressione del resto <m>r_{n+1}</m> data dalle
+      precedente divisione, otteniamo
       <md>
         d=r_{n}-r_{n+1}q_{n+2}=r_{n}-(r_{n-1}-r_{n}q_{n+1})q_{n+2}=r_{n}(1+q_{n+1}q_{n+2})+r_{n-1}(-q_{n+2})
       </md>.
-      Proseguendo così e sostituendo via via tutti i resti arriviamo a un'identità del tipo:
+      Proseguendo così e sostituendo via via tutti i resti arriviamo a
+      un'identità del tipo:
       <md>
         d=au+bv
       </md>
-      per opportuni interi <m>u</m> e <m>v</m>. Questa è detta <term>identità di Bezout</term>.<fn><url href="https://it.wikipedia.org/wiki/%C3%89tienne_B%C3%A9zout" visual="">Étienne Bézout</url>, 1730<ndash/>1783.</fn>
+      per opportuni interi <m>u</m> e <m>v</m>.
+      Questa è detta <term>identità di Bezout</term>.
+      <fn><url href="https://it.wikipedia.org/wiki/%C3%89tienne_B%C3%A9zout" visual="">Étienne Bézout</url>, 1730<ndash/>1783.</fn>
     </p>
+
     <p>
       Possiamo riassumere tutto ciò:
     </p>
@@ -709,11 +1003,12 @@
       <idx><h>algoritmo di Euclide</h><h>per gli interi</h></idx>
       <idx><h>Bezout</h><h>identità di</h></idx>
       <idx><h>Identità di Bezout</h><h>per gli interi</h></idx>
-
-
       <statement>
         <p>
-          Dati due interi <m>a</m> e <m>b</m> di cui almeno uno, sia <m>b</m>, non nullo e supposto che <m>b \gt0</m> (eventualmente rimpiazzando, se necessario, <m>b</m> con <m>\abs{b}</m>) si consideri la successione di divisioni con resto:
+          Dati due interi <m>a</m> e <m>b</m> di cui almeno uno, sia <m>b</m>,
+          non nullo e supposto che <m>b \gt0</m> (eventualmente rimpiazzando, se
+          necessario, <m>b</m> con <m>\abs{b}</m> ) si consideri la successione
+          di divisioni con resto:
           <md>
             <mrow>a       \amp = bq+r                   \amp \amp 0\le r \lt b               </mrow>
             <mrow>b       \amp = rq_{1}+r_{1}           \amp \amp 0\le r_{1} \lt r           </mrow>
@@ -724,7 +1019,13 @@
             <mrow>r_{n}   \amp = r_{n+1}q_{n+2}+r_{n+2} \amp \amp 0 \lt r_{n+2} \lt r_{n+1} </mrow>
             <mrow>r_{n+1} \amp = r_{n+2}q_{n+3}+0                                             </mrow>
           </md>
-          I resti di queste divisioni formano una catena strettamente decrescente di numeri naturali che deve terminare con un resto nullo. L'ultimo resto non nullo <m>r_{n+2}</m> è allora il massimo comun divisore di <m>a</m> e <m>b</m> e ha la proprietà di essere un multiplo di tutti gli altri divisori comuni di <m>a</m> e <m>b</m>. Inoltre, dalla successione di equazioni è possibile ottenere un'identità, cosiddetta di Bezout, del tipo
+          I resti di queste divisioni formano una catena strettamente
+          decrescente di numeri naturali che deve terminare con un resto nullo.
+          L'ultimo resto non nullo <m>r_{n+2}</m> è allora il massimo comun
+          divisore di <m>a</m> e <m>b</m> e ha la proprietà di essere un
+          multiplo di tutti gli altri divisori comuni di <m>a</m> e <m>b</m>.
+          Inoltre, dalla successione di equazioni è possibile ottenere
+          un'identità, cosiddetta di Bezout, del tipo
           <md>
             d=au+bv
           </md>
@@ -734,14 +1035,18 @@
     </algorithm>
 
     <p>
-      Non bisogna spaventarsi per i molti indici che compaiono nella descrizione di questo algoritmo. In pratica, è molto più semplice di quanto sembri.
+      Non bisogna spaventarsi per i molti indici che compaiono nella descrizione
+      di questo algoritmo.
+      In pratica, è molto più semplice di quanto sembri.
     </p>
 
     <example>
       <statement>
         <p>
-          Vogliamo determinare il massimo comun divisore di <m>a\coloneqq 1350</m> e <m>b\coloneqq 156</m>.
+          Vogliamo determinare il massimo comun divisore di
+          <m>a\coloneqq 1350</m> e <m>b\coloneqq 156</m>.
         </p>
+
         <p>
           Consideriamo allora le divisioni successive:
           <md>
@@ -751,10 +1056,13 @@
             <mrow> 54 \amp = 48 \cdot 1 + 6</mrow>
             <mrow> 48 \amp = 6 \cdot 8 + 0</mrow>
           </md>
-          L'ultimo resto non nullo è <m>6</m> che è, dunque, il massimo comun divisore tra <m>1350</m> e <m>156</m>.
+          L'ultimo resto non nullo è <m>6</m> che è, dunque, il massimo comun
+          divisore tra <m>1350</m> e <m>156</m>.
         </p>
+
         <p>
-          Per determinare un'identità di Bezout, partiamo dalla penultima divisione e con sostituzioni successive otteniamo
+          Per determinare un'identità di Bezout, partiamo dalla penultima
+          divisione e con sostituzioni successive otteniamo
           <md>
             <mrow> 6 \amp = 54-48 = 54-(102-54)=102(-1)+54\cdot2</mrow>
             <mrow> \amp = 102(-1)+(156-102)\cdot2=156\cdot 2+102(-3) </mrow>
@@ -765,93 +1073,143 @@
             1350(-3)+156\cdot 26=6
           </md>.
         </p>
+
         <p>
-          Se avessimo scambiato i ruoli di <m>a</m> e <m>b</m> e avessimo diviso <m>156</m> per <m>1350</m>, la prima divisione sarebbe stata
+          Se avessimo scambiato i ruoli di <m>a</m> e <m>b</m> e avessimo diviso
+          <m>156</m> per <m>1350</m>, la prima divisione sarebbe stata
           <md>
             156=1350\cdot0 +156
           </md>
-          e, avremmo poi comunque dovuto dividere <m>1350</m> per il resto di questa prima divisione, cioè <m>156</m>. In pratica avremmo fatto una divisione in più (sia pur banale): conviene, dunque, dividere il più grande per il più piccolo.
+          e, avremmo poi comunque dovuto dividere <m>1350</m> per il resto di
+          questa prima divisione, cioè <m>156</m>.
+          In pratica avremmo fatto una divisione in più (sia pur banale):
+          conviene, dunque, dividere il più grande per il più piccolo.
         </p>
       </statement>
-
     </example>
 
     <remark xml:id="rem-molti_bezout">
       <p>
-        L'identità di Bezout che si ottiene dall'algoritmo di Euclide non è l'unica possibile. In realtà ce ne sono infinite altre e non ce ne è una privilegiata rispetto alle altre. Vedremo meglio questo fatto nel <xref ref="sec-equazioni_lineari_diofantine"/>.
+        L'identità di Bezout che si ottiene dall'algoritmo di Euclide non è
+        l'unica possibile.
+        In realtà ce ne sono infinite altre e non ce ne è una privilegiata
+        rispetto alle altre.
+        Vedremo meglio questo fatto nel
+        <xref ref="sec-equazioni_lineari_diofantine"/>.
       </p>
     </remark>
 
     <p>
-      Il fatto che il massimo comun divisore di due numeri sia multiplo di ogni comune, permette di ridefinire il massimo comun divisore, rimuovendo la limitazione che i numeri non siano entrambi nulli.
+      Il fatto che il massimo comun divisore di due numeri sia multiplo di ogni
+      comune, permette di ridefinire il massimo comun divisore, rimuovendo la
+      limitazione che i numeri non siano entrambi nulli.
     </p>
 
     <definition xml:id="def-massimo_comun_divisore_anche_per_0">
-
       <idx><h>massimo comun divisore</h><h>di interi</h></idx>
-
       <statement>
-
         <p>
-          Dati gli interi <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n}</m>, il loro <term>massimo comun divisore</term>, denotato con <m>(a_{1},\ldots,a_{n})</m>, è un naturale che è un divisore comune di <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n}</m> ed è multiplo di ogni altro divisore comune di <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n}</m>.
+          Dati gli interi <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>,
+          <m>a_{n}</m>, il loro <term>massimo comun divisore</term>, denotato
+          con <m>(a_{1},\ldots,a_{n})</m>, è un naturale che è un divisore
+          comune di <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n}</m> ed è
+          multiplo di ogni altro divisore comune di <m>a_{1}</m>, <m>a_{2}</m>,
+          <m>\ldots</m>, <m>a_{n}</m>.
         </p>
       </statement>
     </definition>
 
     <remark xml:id="rem-massimo_comun_divisore_nulli">
       <p>
-        Se <m>a_{1}=a_{2}=\cdots=a_{n}=0</m>, i divisori comuni sono tutti gli interi. Il numero <m>0</m> è, ovviamente, un divisore comune multiplo di tutti gli altri divisori comuni. Dunque, <m>(0,\ldots,0)</m> esiste ed è proprio <m>0</m>.
+        Se <m>a_{1}=a_{2}=\cdots=a_{n}=0</m>, i divisori comuni sono tutti gli
+        interi.
+        Il numero <m>0</m> è, ovviamente, un divisore comune multiplo di tutti
+        gli altri divisori comuni.
+        Dunque, <m>(0,\ldots,0)</m> esiste ed è proprio <m>0</m>.
       </p>
     </remark>
 
     <p>
-      Abbiamo così introdotto il massimo comun divisore non solo per due interi, ma per un numero qualsiasi di essi. Dobbiamo allora dimostrare che un numero che soddisfa tale proprietà esiste ed è unico.
+      Abbiamo così introdotto il massimo comun divisore non solo per due interi,
+      ma per un numero qualsiasi di essi.
+      Dobbiamo allora dimostrare che un numero che soddisfa tale proprietà
+      esiste ed è unico.
     </p>
 
     <proposition xml:id="prop-massimo_comun_divisore_molti">
       <statement>
         <p>
-          Dati gli interi <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n}</m> il loro massimo comun divisore esiste ed è unico. Inoltre, esistono interi <m>u_{1}</m>, <m>u_{2}</m>, <m>\ldots</m>, <m>u_{n}</m> tali che
+          Dati gli interi <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>,
+          <m>a_{n}</m> il loro massimo comun divisore esiste ed è unico.
+          Inoltre, esistono interi <m>u_{1}</m>, <m>u_{2}</m>, <m>\ldots</m>,
+          <m>u_{n}</m> tali che
           <md>
             a_{1}u_{1}+\cdots+a_{n}u_{n}=(a_{1},\ldots,a_{n})
           </md>.
-          Infine, per <m>n\ge 2</m>, si ha <m>((a_{1},\ldots,a_{n-1}),a_{n})=(a_{1},\ldots,a_{n})</m>.
+          Infine, per <m>n\ge 2</m>, si ha
+          <m>((a_{1},\ldots,a_{n-1}),a_{n})=(a_{1},\ldots,a_{n})</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Due naturali con le proprietà cercate devono dividersi reciprocamente e devono essere, quindi, uguali. Una volta mostrata l'esistenza di un naturale siffatto, l'unicità seguirà immediatamente.
+          Due naturali con le proprietà cercate devono dividersi reciprocamente
+          e devono essere, quindi, uguali.
+          Una volta mostrata l'esistenza di un naturale siffatto, l'unicità
+          seguirà immediatamente.
         </p>
+
         <p>
           Procediamo ora per induzione su <m>n</m>: il caso <m>n=1</m> è banale.
         </p>
+
         <p>
-          Sia allora <m>n \gt 1</m>. Per ipotesi induttiva il massimo comun divisore <m>c</m> tra <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n-1}</m> esiste e, per opportuni interi <m>v_{1}</m>, <m>\ldots</m>, <m>v_{n_{1}}</m> si ha
+          Sia allora <m>n \gt 1</m>.
+          Per ipotesi induttiva il massimo comun divisore <m>c</m> tra
+          <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n-1}</m> esiste e,
+          per opportuni interi <m>v_{1}</m>, <m>\ldots</m>, <m>v_{n_{1}}</m> si
+          ha
           <md>
             a_{1}v_{1}+\cdots+a_{n-1}v_{n-1}=c
           </md>.
-          Per l'<xref ref="alg-euclide" text="title"/> esiste <m>d\coloneqq (c,a_{n})</m> e <m>d=cu+a_{n}u_{n}</m> per opportuni interi <m>v</m> e <m>u_{n}</m>. Dunque, abbiamo
+          Per l' <xref ref="alg-euclide" text="title"/> esiste
+          <m>d\coloneqq (c,a_{n})</m> e <m>d=cu+a_{n}u_{n}</m> per opportuni
+          interi <m>v</m> e <m>u_{n}</m>.
+          Dunque, abbiamo
           <md>
             d=cu+a_{n}u_{n}=(a_{1}v_{1}+\cdots+a_{n-1}v_{n-1})u+a_{n}u_{n}=a_{1}u_{1}+\cdots+a_{n}u_{n}
           </md>
-          dove abbiamo posto <m>u_{i}\coloneqq v_{i}u</m> per <m>1\le i\le n-1</m>.
-          Per completare la dimostrazione dobbiamo provare che <m>d</m> è massimo comun divisore di <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n}</m>.
+          dove abbiamo posto <m>u_{i}\coloneqq v_{i}u</m> per
+          <m>1\le i\le n-1</m>.
+          Per completare la dimostrazione dobbiamo provare che <m>d</m> è
+          massimo comun divisore di <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>,
+          <m>a_{n}</m>.
         </p>
+
         <p>
-          Per definizione, <m>d</m> divide <m>c</m> e, quindi, divide <m>a_{1}</m>, <m>\ldots</m>, <m>a_{n-1}</m>; d'altra parte, <m>d</m> divide <m>a_{n}</m> e, quindi, <m>d</m> divide <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n}</m>.
+          Per definizione, <m>d</m> divide <m>c</m> e, quindi, divide
+          <m>a_{1}</m>, <m>\ldots</m>, <m>a_{n-1}</m>; d'altra parte, <m>d</m>
+          divide <m>a_{n}</m> e, quindi, <m>d</m> divide <m>a_{1}</m>,
+          <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n}</m>.
         </p>
+
         <p>
-          Sia ora <m>f</m> un intero che divide ogni <m>a_{i}</m>: in particolare, divide quelli per <m>i</m> compreso tra <m>1</m> e <m>n-1</m> e, quindi, per definizione, divide il loro massimo comun divisore <m>c</m>. Poiché <m>f</m> divide <m>a_{n}</m>, divide il massimo comun divisore <m>d</m> tra <m>c</m> e <m>a_{n}</m>.
+          Sia ora <m>f</m> un intero che divide ogni <m>a_{i}</m>: in
+          particolare, divide quelli per <m>i</m> compreso tra <m>1</m> e
+          <m>n-1</m> e, quindi, per definizione, divide il loro massimo comun
+          divisore <m>c</m>.
+          Poiché <m>f</m> divide <m>a_{n}</m>, divide il massimo comun divisore
+          <m>d</m> tra <m>c</m> e <m>a_{n}</m>.
         </p>
       </proof>
-
     </proposition>
 
     <lemma xml:id="lem-raccoglimento_mcd">
       <statement>
         <p>
-          Dati i numeri interi <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n}</m> e un naturale <m>c</m> risulta <m>(a_{1},\ldots,a_{n})c=(a_{1}c,\ldots,a_{n}c)</m>.
+          Dati i numeri interi <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>,
+          <m>a_{n}</m> e un naturale <m>c</m> risulta
+          <m>(a_{1},\ldots,a_{n})c=(a_{1}c,\ldots,a_{n}c)</m>.
         </p>
       </statement>
 
@@ -859,17 +1217,34 @@
         <p>
           Se <m>c=0</m>, l'uguaglianza è banale.
         </p>
+
         <p>
-          Sia allora <m>c\ne 0</m>. Poniamo per comodità <m>d\coloneqq (a_{1},\ldots,a_{n})</m> e <m>e\coloneqq (a_{1}c,\ldots,a_{n}c)</m>. Per definizione, <m>d</m> divide ogni <m>a_{i}</m> e,  quindi, <m>dc</m> divide ogni <m>a_{i}c</m>. Di conseguenza, <m>dc</m> divide il massimo comun divisore degli <m>a_{i}c</m>, cioè <m>e</m> e, dunque, esiste un intero <m>f</m> tale che <m>e=fdc</m>. Ora <m>e</m> divide <m>a_{i}c</m>, per ogni <m>i</m> e, quindi, esistono interi <m>u_{i}</m> tali che <m>u_{i}e=a_{i}c</m>, cioè <m>u_{i}fdc=a_{i}c</m>. Poiché <m>c\ne0</m>, segue che <m>u_{i}fd=a_{i}</m> e, quindi, <m>fd</m> divide ogni <m>a_{i}</m>: di conseguenza, <m>fd</m> divide <m>d</m>. Dunque, <m>e=fdc</m> divide <m>dc</m>. Riassumendo, <m>e</m> e <m>dc</m> sono naturali che si dividono reciprocamente e sono, quindi, uguali.
+          Sia allora <m>c\ne 0</m>.
+          Poniamo per comodità <m>d\coloneqq (a_{1},\ldots,a_{n})</m> e
+          <m>e\coloneqq (a_{1}c,\ldots,a_{n}c)</m>.
+          Per definizione, <m>d</m> divide ogni <m>a_{i}</m> e, quindi,
+          <m>dc</m> divide ogni <m>a_{i}c</m>.
+          Di conseguenza, <m>dc</m> divide il massimo comun divisore degli
+          <m>a_{i}c</m>, cioè <m>e</m> e, dunque, esiste un intero <m>f</m> tale
+          che <m>e=fdc</m>.
+          Ora <m>e</m> divide <m>a_{i}c</m>, per ogni <m>i</m> e, quindi,
+          esistono interi <m>u_{i}</m> tali che <m>u_{i}e=a_{i}c</m>, cioè
+          <m>u_{i}fdc=a_{i}c</m>.
+          Poiché <m>c\ne0</m>, segue che <m>u_{i}fd=a_{i}</m> e, quindi,
+          <m>fd</m> divide ogni <m>a_{i}</m>: di conseguenza, <m>fd</m> divide
+          <m>d</m>.
+          Dunque, <m>e=fdc</m> divide <m>dc</m>.
+          Riassumendo, <m>e</m> e <m>dc</m> sono naturali che si dividono
+          reciprocamente e sono, quindi, uguali.
         </p>
       </proof>
-
     </lemma>
 
     <definition xml:id="def-interi_coprimi">
       <statement>
         <p>
-          Due numeri interi <m>a</m> e <m>b</m> si dicono <term>coprimi</term> se il loro massimo comun divisore è <m>1</m>.
+          Due numeri interi <m>a</m> e <m>b</m> si dicono <term>coprimi</term>
+          se il loro massimo comun divisore è <m>1</m>.
         </p>
       </statement>
     </definition>
@@ -877,45 +1252,50 @@
     <corollary xml:id="cor-diviso_MCD_da_coprimi">
       <statement>
         <p>
-          Siano <m>a</m> e <m>b</m> interi tali che <m>d\coloneqq(a,b)\ne 0</m>. Allora, gli interi <m>a'</m> e <m>b'</m> tali che <m>a=da'</m> e <m>b=db'</m> sono coprimi.
+          Siano <m>a</m> e <m>b</m> interi tali che <m>d\coloneqq(a,b)\ne 0</m>.
+          Allora, gli interi <m>a'</m> e <m>b'</m> tali che <m>a=da'</m> e
+          <m>b=db'</m> sono coprimi.
         </p>
       </statement>
 
       <proof>
         <p>
-          Per il <xref ref="lem-raccoglimento_mcd"/>, si ha che <m>d=(da',db')=d(a',b')</m>: poiché <m>d\ne 0</m>, la tesi segue immediatamente.
+          Per il <xref ref="lem-raccoglimento_mcd"/>, si ha che
+          <m>d=(da',db')=d(a',b')</m>: poiché <m>d\ne 0</m>, la tesi segue
+          immediatamente.
         </p>
       </proof>
-
     </corollary>
 
-
     <exercises xml:id="exercises-divisibilita_interi">
-
       <exercisegroup cols="2">
         <introduction>
           <p>
             Calcolare il massimo comun divisore delle seguenti coppie di interi.
           </p>
         </introduction>
+
         <exercise>
           <statement>
             <p>
               <m>3256</m> e <m>275</m>
             </p>
           </statement>
+
           <answer>
             <p>
               <m>11</m>
             </p>
           </answer>
         </exercise>
+
         <exercise>
           <statement>
             <p>
               <m>176</m> e <m>57</m>
             </p>
           </statement>
+
           <answer>
             <p>
               <m>1</m>
@@ -929,6 +1309,7 @@
               <m>2251</m> e <m>174</m>
             </p>
           </statement>
+
           <answer>
             <p>
               <m>1</m>
@@ -942,6 +1323,7 @@
               <m>1170</m> e <m>486</m>
             </p>
           </statement>
+
           <answer>
             <p>
               <m>18</m>
@@ -955,39 +1337,42 @@
               <m>225741</m> e <m>19872</m>
             </p>
           </statement>
+
           <answer>
             <p>
               <m>3</m>
             </p>
           </answer>
         </exercise>
+
         <exercise>
           <statement>
             <p>
               <m>123456</m> e <m>654321</m>
             </p>
           </statement>
+
           <answer>
             <p>
               <m>3</m>
             </p>
           </answer>
         </exercise>
-
       </exercisegroup>
-
       <exercisegroup cols="2">
         <introduction>
           <p>
             Trovare il massimo comun divisore delle seguenti liste di numeri.
           </p>
         </introduction>
+
         <exercise>
           <statement>
             <p>
               <m>225</m>, <m>63</m> e <m>245</m>
             </p>
           </statement>
+
           <answer>
             <p>
               <m>1</m>
@@ -1001,25 +1386,27 @@
               <m>684</m>, <m>288</m>, <m>612</m> e <m>1092</m>
             </p>
           </statement>
+
           <answer>
             <p>
               <m>12</m>
             </p>
           </answer>
         </exercise>
+
         <exercise>
           <statement>
             <p>
               <m>2345</m>, <m>126</m>, <m>0</m>
             </p>
           </statement>
+
           <answer>
             <p>
               <m>7</m>
             </p>
           </answer>
         </exercise>
-
       </exercisegroup>
 
       <exercise>
@@ -1028,9 +1415,11 @@
             Dimostrare il <xref ref="lem-divisibilita_prodotto"/>.
           </p>
         </statement>
+
         <solution>
           <p>
-            Sappiamo che esiste un intero <m>a</m> tale che <m>m=la</m>. Allora <m>mn=l(an)</m>.
+            Sappiamo che esiste un intero <m>a</m> tale che <m>m=la</m>.
+            Allora <m>mn=l(an)</m>.
           </p>
         </solution>
       </exercise>
@@ -1041,9 +1430,13 @@
             Dimostrare il <xref ref="lem-divisibilita_somma"/>.
           </p>
         </statement>
+
         <solution>
           <p>
-            Sappiamo che esistono interi <m>a</m> e <m>b</m> tali che <m>m=la</m> e <m>n=lb</m>. Allora <m>m+n=la+lb=l(a+b)</m>. Il caso generale si prova per induzione.
+            Sappiamo che esistono interi <m>a</m> e <m>b</m> tali che
+            <m>m=la</m> e <m>n=lb</m>.
+            Allora <m>m+n=la+lb=l(a+b)</m>.
+            Il caso generale si prova per induzione.
           </p>
         </solution>
       </exercise>
@@ -1051,16 +1444,22 @@
       <exercise>
         <statement>
           <p>
-            Dati tre interi <m>a</m>, <m>b</m> e <m>c</m> con <m>c\ne 0</m>, dimostrare che <m>a\mid b</m> se e solo se <m>ac\mid bc</m>.
+            Dati tre interi <m>a</m>, <m>b</m> e <m>c</m> con <m>c\ne 0</m>,
+            dimostrare che <m>a\mid b</m> se e solo se <m>ac\mid bc</m>.
           </p>
         </statement>
 
         <solution>
           <p>
-            Se <m>a \mid b</m>, esiste un intero <m>d</m> tale che <m>b=ad</m>: dunque, <m>bc=acd</m> e, quindi, <m>ac\mid bc</m> (l'ipotesi <m>c\ne0</m> in questa direzione non serve),
+            Se <m>a \mid b</m>, esiste un intero <m>d</m> tale che <m>b=ad</m>:
+            dunque, <m>bc=acd</m> e, quindi, <m>ac\mid bc</m> (l'ipotesi
+            <m>c\ne0</m> in questa direzione non serve),
           </p>
+
           <p>
-            Viceversa, sia <m>ac\mid bc</m> e sia <m>e</m> un intero tale che <m>eac=bc</m>: poiché <m>c\ne 0</m>, possiamo semplificare e ottenere <m>ea=b</m>, da cui segue che <m>a\mid b</m>
+            Viceversa, sia <m>ac\mid bc</m> e sia <m>e</m> un intero tale che
+            <m>eac=bc</m>: poiché <m>c\ne 0</m>, possiamo semplificare e
+            ottenere <m>ea=b</m>, da cui segue che <m>a\mid b</m>
           </p>
         </solution>
       </exercise>
@@ -1068,18 +1467,25 @@
       <exercise>
         <statement>
           <p>
-            Mostrare che gli interi <m>3n+2</m> e <m>9n+5</m> sono coprimi per ogni intero <m>n</m>.
+            Mostrare che gli interi <m>3n+2</m> e <m>9n+5</m> sono coprimi per
+            ogni intero <m>n</m>.
           </p>
         </statement>
+
         <solution>
           <p>
-            Se cerchiamo di dividere uno dei due interi per l'altro, il risultato della divisione dipende dall'intero <m>n</m>. Tuttavia, notiamo che <m>9n+5=3(3n+2)-1</m>, vale a dire <m>1=3(3n+2)-(9n+5)</m>. Dunque, ogni divisore comune di <m>3n+2</m> e <m>9n+5</m> divide anche <m>1</m>. Pertanto, il massimo comun divisore di <m>3n+2</m> e <m>9n+5</m> è <m>1</m>.
+            Se cerchiamo di dividere uno dei due interi per l'altro, il
+            risultato della divisione dipende dall'intero <m>n</m>.
+            Tuttavia, notiamo che <m>9n+5=3(3n+2)-1</m>, vale a dire
+            <m>1=3(3n+2)-(9n+5)</m>.
+            Dunque, ogni divisore comune di <m>3n+2</m> e <m>9n+5</m> divide
+            anche <m>1</m>.
+            Pertanto, il massimo comun divisore di <m>3n+2</m> e <m>9n+5</m> è
+            <m>1</m>.
           </p>
         </solution>
       </exercise>
-
     </exercises>
-
   </section>
 
   <section xml:id="sec-fattorizzazione_interi">
@@ -1088,37 +1494,50 @@
     <lemma xml:id="lem-divisore_coprimo_con_fattore">
       <statement>
         <p>
-          Siano <m>a</m>, <m>b</m> e <m>c</m> interi tali che <m>a</m> e <m>b</m> sono coprimi e <m>a\mid bc</m>. Allora <m>a\mid c</m>.
+          Siano <m>a</m>, <m>b</m> e <m>c</m> interi tali che <m>a</m> e
+          <m>b</m> sono coprimi e <m>a\mid bc</m>.
+          Allora <m>a\mid c</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Per ipotesi esiste un intero <m>d</m> tale che <m>ad=bc</m>. Dall'<xref ref="alg-euclide" text="title"/>, sappiamo inoltre che esistono interi <m>u</m> e <m>v</m> tali che <m>au+bv=1</m>. Dunque,
+          Per ipotesi esiste un intero <m>d</m> tale che <m>ad=bc</m>.
+          Dall' <xref ref="alg-euclide" text="title"/>, sappiamo inoltre che
+          esistono interi <m>u</m> e <m>v</m> tali che <m>au+bv=1</m>.
+          Dunque,
           <md>
-           c=c(au+bv)=acu+bcv=acu+adv=a(cu+dv)
+            c=c(au+bv)=acu+bcv=acu+adv=a(cu+dv)
           </md>,
           da cui la tesi.
         </p>
       </proof>
-
     </lemma>
 
     <p>
-      Ogni numero intero <m>a</m> ha tra i suoi divisori <m>a</m> stesso e <m>1</m>: ci sono numeri che hanno solo questi (e i loro opposti) come propri divisori.
+      Ogni numero intero <m>a</m> ha tra i suoi divisori <m>a</m> stesso e
+      <m>1</m>: ci sono numeri che hanno solo questi (e i loro opposti) come
+      propri divisori.
     </p>
 
     <definition xml:id="def-numeri_primi">
       <statement>
         <p>
-          Un numero naturale <m>p</m> è detto primo se <m>p\ne 1</m> e i suoi unici divisori naturali sono <m>1</m> e <m>p</m> stesso.
+          Un numero naturale <m>p</m> è detto primo se <m>p\ne 1</m> e i suoi
+          unici divisori naturali sono <m>1</m> e <m>p</m> stesso.
         </p>
       </statement>
     </definition>
 
     <note>
       <p>
-        Secondo la definizione data, il numero <m>1</m> non è primo: alcuni autori (soprattutto in passato, ora quasi nessuno) includono <m>1</m> tra i numeri primi. Entrambe le scelte sono legittime, non ce ne è una giusta e una sbagliata: escludere <m>1</m> dai numeri primi, come fanno praticamente tutti i testi, permette però di enunciare alcuni risultati in maniera più semplice.
+        Secondo la definizione data, il numero <m>1</m> non è primo: alcuni
+        autori (soprattutto in passato, ora quasi nessuno) includono <m>1</m>
+        tra i numeri primi.
+        Entrambe le scelte sono legittime, non ce ne è una giusta e una
+        sbagliata: escludere <m>1</m> dai numeri primi, come fanno praticamente
+        tutti i testi, permette però di enunciare alcuni risultati in maniera
+        più semplice.
       </p>
     </note>
 
@@ -1131,14 +1550,22 @@
 
       <proof>
         <p>
-          Procediamo per induzione completa su <m>n</m> (<xref ref="principle-induzione_completa"/>). Se <m>n</m> è primo abbiamo già il risultato, altrimenti <m>n</m> ha un divisore naturale <m>m</m> con <m>m\ne 1</m> e <m>m\ne n</m>. Per la <xref ref="prop-divisori_finiti"/>, abbiamo allora <m>1 \lt m \lt n</m>: per ipotesi induttiva, esiste un primo che divide <m>m</m> e, di conseguenza, divide <m>n</m>.
+          Procediamo per induzione completa su <m>n</m> (
+          <xref ref="principle-induzione_completa"/> ).
+          Se <m>n</m> è primo abbiamo già il risultato, altrimenti <m>n</m> ha
+          un divisore naturale <m>m</m> con <m>m\ne 1</m> e <m>m\ne n</m>.
+          Per la <xref ref="prop-divisori_finiti"/>, abbiamo allora
+          <m>1 \lt m \lt n</m>: per ipotesi induttiva, esiste un primo che
+          divide <m>m</m> e, di conseguenza, divide <m>n</m>.
         </p>
       </proof>
-
     </lemma>
 
     <theorem xml:id="thm-infiniti_primi">
-      <creator>Euclide</creator>
+      <creator>
+        Euclide
+      </creator>
+
       <statement>
         <p>
           Esistono infiniti numeri primi.
@@ -1147,59 +1574,92 @@
 
       <proof>
         <p>
-          Per assurdo, esista un numero finito di numeri primi, siano <m>p_{1}</m>, <m>p_{2}</m>, <m>\ldots</m>, <m>p_{r}</m>. Sia <m>n\coloneqq p_{1}p_{2}\cdots p_{r}+1</m>. Per il <xref ref="lem-divisore_primo"/>, esiste un primo che divide <m>n</m>: questo primo deve essere <m>p_{i}</m> per un certo <m>i</m>. Ma allora <m>p_{i}</m> dividerebbe anche <m>1=n-p_{1}p_{2}\cdots p_{r}</m>, il che è assurdo.
+          Per assurdo, esista un numero finito di numeri primi, siano
+          <m>p_{1}</m>, <m>p_{2}</m>, <m>\ldots</m>, <m>p_{r}</m>.
+          Sia <m>n\coloneqq p_{1}p_{2}\cdots p_{r}+1</m>.
+          Per il <xref ref="lem-divisore_primo"/>, esiste un primo che divide
+          <m>n</m>: questo primo deve essere <m>p_{i}</m> per un certo <m>i</m>.
+          Ma allora <m>p_{i}</m> dividerebbe anche
+          <m>1=n-p_{1}p_{2}\cdots p_{r}</m>, il che è assurdo.
         </p>
       </proof>
-
     </theorem>
-
 
     <lemma xml:id="lem-primo_prodotto">
       <statement>
         <p>
-          Se <m>a</m> e <m>b</m> sono due numeri naturali tali che <m>ab</m> è uguale a un primo <m>p</m> allora uno tra <m>a</m> e <m>b</m> è uguale a <m>1</m> e l'altro a <m>p</m>.
+          Se <m>a</m> e <m>b</m> sono due numeri naturali tali che <m>ab</m> è
+          uguale a un primo <m>p</m> allora uno tra <m>a</m> e <m>b</m> è uguale
+          a <m>1</m> e l'altro a <m>p</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Sia <m>a</m> che <m>b</m> sono divisori di <m>p</m> e, quindi, sono uguali a <m>1</m> o a <m>p</m>. Se fossero entrambi uguali a <m>1</m> avremmo <m>p=1\cdot 1</m> contro l'ipotesi che <m>p</m> sia primo. Dunque, almeno uno tra essi, ad esempio <m>a</m>, è uguale a <m>p</m>: di conseguenza, <m>pb=p=p\cdot 1</m> e, per la <xref ref="prop-cancellazione_moltiplicazione_interi_senza_dimostrazione"/>, otteniamo che <m>b=1</m>.
+          Sia <m>a</m> che <m>b</m> sono divisori di <m>p</m> e, quindi, sono
+          uguali a <m>1</m> o a <m>p</m>.
+          Se fossero entrambi uguali a <m>1</m> avremmo <m>p=1\cdot 1</m> contro
+          l'ipotesi che <m>p</m> sia primo.
+          Dunque, almeno uno tra essi, ad esempio <m>a</m>, è uguale a <m>p</m>:
+          di conseguenza, <m>pb=p=p\cdot 1</m> e, per la
+          <xref ref="prop-cancellazione_moltiplicazione_interi_senza_dimostrazione"/>,
+          otteniamo che <m>b=1</m>.
         </p>
       </proof>
-
     </lemma>
 
     <lemma xml:id="lem-massimo_comun_divisore_primo">
       <statement>
         <p>
-          Se <m>p</m> è un numero primo e <m>a</m> un numero intero si ha che <m>(p,a)=p</m> se <m>p</m> divide <m>a</m> e <m>(p,a)=1</m> se <m>p</m> non divide <m>a</m>.
+          Se <m>p</m> è un numero primo e <m>a</m> un numero intero si ha che
+          <m>(p,a)=p</m> se <m>p</m> divide <m>a</m> e <m>(p,a)=1</m> se
+          <m>p</m> non divide <m>a</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          I divisori naturali di <m>p</m> sono solo <m>1</m> e <m>p</m>. Di questi <m>1</m> divide sicuramente <m>a</m>. Se <m>p\mid a</m> allora <m>(p,a)=p</m> per il <xref ref="lem-mcd_tra_divisori"/>. Se invece <m>p\nmid a</m>, allora l'unico divisore comune naturale è <m>1</m> che è, quindi, il massimo comun divisore.
+          I divisori naturali di <m>p</m> sono solo <m>1</m> e <m>p</m>.
+          Di questi <m>1</m> divide sicuramente <m>a</m>.
+          Se <m>p\mid a</m> allora <m>(p,a)=p</m> per il
+          <xref ref="lem-mcd_tra_divisori"/>.
+          Se invece <m>p\nmid a</m>, allora l'unico divisore comune naturale è
+          <m>1</m> che è, quindi, il massimo comun divisore.
         </p>
       </proof>
-
     </lemma>
 
     <proposition xml:id="prop-coprimo_con_prodotto">
       <statement>
         <p>
-          Un intero <m>a</m> è coprimo con gli interi <m>b_{1}</m>, <m>b_{2}</m>, <m>\ldots</m>, e <m>b_{r}</m> se e solo se <m>a</m> è coprimo con <m>b_{1}b_{2}\cdots b_{r}</m>.
+          Un intero <m>a</m> è coprimo con gli interi <m>b_{1}</m>,
+          <m>b_{2}</m>, <m>\ldots</m>, e <m>b_{r}</m> se e solo se <m>a</m> è
+          coprimo con <m>b_{1}b_{2}\cdots b_{r}</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Supponiamo che <m>a</m> sia coprimo con <m>b_{1}b_{2}\cdots b_{r}</m>. Preso un indice <m>i</m>, sia <m>d_{i}</m> il massimo comun divisore di <m>a</m> e <m>b_{i}</m>. Allora <m>d_{i}</m> divide <m>b_{1}b_{2}\cdots b_{r}</m> e, quindi, <m>d_{i}</m> divide il massimo comun divisore di <m>a</m> e <m>b_{1}b_{2}\cdots b_{r}</m>, cioè <m>1</m>, e, pertanto, <m>d_{i}=1</m>.
+          Supponiamo che <m>a</m> sia coprimo con <m>b_{1}b_{2}\cdots b_{r}</m>.
+          Preso un indice <m>i</m>, sia <m>d_{i}</m> il massimo comun divisore
+          di <m>a</m> e <m>b_{i}</m>.
+          Allora <m>d_{i}</m> divide <m>b_{1}b_{2}\cdots b_{r}</m> e, quindi,
+          <m>d_{i}</m> divide il massimo comun divisore di <m>a</m> e
+          <m>b_{1}b_{2}\cdots b_{r}</m>, cioè <m>1</m>, e, pertanto,
+          <m>d_{i}=1</m>.
         </p>
+
         <p>
-          Viceversa, supponiamo che <m>a</m> sia coprimo con ciascun <m>b_{i}</m> e mostriamo, per induzione su <m>r</m>, che è coprimo con il loro prodotto: il caso <m>r=1</m> è banale.
+          Viceversa, supponiamo che <m>a</m> sia coprimo con ciascun
+          <m>b_{i}</m> e mostriamo, per induzione su <m>r</m>, che è coprimo con
+          il loro prodotto: il caso <m>r=1</m> è banale.
         </p>
+
         <p>
-          Il caso chiave è quando <m>r=2</m>. Per l'<xref ref="alg-euclide" text="title"/>, sappiamo che esistono interi <m>u_{1}</m>, <m>v_{1}</m>, <m>u_{2}</m> e <m>v_{2}</m> tali che
+          Il caso chiave è quando <m>r=2</m>.
+          Per l' <xref ref="alg-euclide" text="title"/>, sappiamo che esistono
+          interi <m>u_{1}</m>, <m>v_{1}</m>, <m>u_{2}</m> e <m>v_{2}</m> tali
+          che
           <md>
             <mrow> au_{1}+b_{1}v_{1} \amp =1</mrow>
             <mrow> au_{2}+b_{2}v_{2} \amp =1</mrow>
@@ -1208,32 +1668,48 @@
           <md>
             a(au_{1}u_{2}+u_{1}b_{2}v_{2}+u_{2}b_{1}v_{1})+b_{1}b_{2}v_{1}v_{2}=1
           </md>.
-          Se <m>d</m> è il massimo comun divisore di <m>a</m> e <m>b_{1}b_{2}</m>, allora <m>d</m> deve dividere il primo membro della precedente uguaglianza e, di conseguenza, il secondo, cioè <m>d</m> divide <m>1</m> ed è, dunque, esattamente <m>1</m>.
+          Se <m>d</m> è il massimo comun divisore di <m>a</m> e
+          <m>b_{1}b_{2}</m>, allora <m>d</m> deve dividere il primo membro della
+          precedente uguaglianza e, di conseguenza, il secondo, cioè <m>d</m>
+          divide <m>1</m> ed è, dunque, esattamente <m>1</m>.
         </p>
+
         <p>
-          Supponiamo allora che <m>r \gt 2</m>. Per ipotesi induttiva, <m>a</m> è coprimo con il prodotto <m>b_{1}b_{2}\cdots b_{r-1}</m>. D'altra parte, per ipotesi è coprimo con <m>b_{r}</m>, e il risultato segue dal caso <m>r=2</m>.
+          Supponiamo allora che <m>r \gt 2</m>.
+          Per ipotesi induttiva, <m>a</m> è coprimo con il prodotto
+          <m>b_{1}b_{2}\cdots b_{r-1}</m>.
+          D'altra parte, per ipotesi è coprimo con <m>b_{r}</m>, e il risultato
+          segue dal caso <m>r=2</m>.
         </p>
       </proof>
-
     </proposition>
 
     <corollary xml:id="cor-i_primi_sono_primi">
       <statement>
         <p>
-          Sia <m>p</m> un numero primo e siano <m>b_{1}</m>, <m>b_{2}</m>, <m>\ldots</m>, e <m>b_{r}</m> interi. Se <m>p\mid b_{1}\cdots b_{r}</m> allora <m>p\mid b_{i}</m> per qualche <m>i</m>.
+          Sia <m>p</m> un numero primo e siano <m>b_{1}</m>, <m>b_{2}</m>,
+          <m>\ldots</m>, e <m>b_{r}</m> interi.
+          Se <m>p\mid b_{1}\cdots b_{r}</m> allora <m>p\mid b_{i}</m> per
+          qualche <m>i</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Per ipotesi, <m>p</m> non è coprimo con <m>b_{1}\cdots b_{r}</m>: dunque, per la <xref ref="prop-coprimo_con_prodotto"/>, <m>p</m> non è coprimo con almeno uno dei <m>b_{i}</m>, cioè, per il <xref ref="lem-divisore_coprimo_con_fattore"/>, <m>p</m> divide almeno uno dei <m>b_{i}</m>.
+          Per ipotesi, <m>p</m> non è coprimo con <m>b_{1}\cdots b_{r}</m>:
+          dunque, per la <xref ref="prop-coprimo_con_prodotto"/>, <m>p</m> non è
+          coprimo con almeno uno dei <m>b_{i}</m>, cioè, per il
+          <xref ref="lem-divisore_coprimo_con_fattore"/>, <m>p</m> divide almeno
+          uno dei <m>b_{i}</m>.
         </p>
       </proof>
-
     </corollary>
 
     <p>
-      Per <m>p=2</m>, la proposizione precedente esprime il ben noto fatto che il prodotto di numeri interi è pari se e solo se almeno uno dei fattori è pari. Possiamo ora enunciare e dimostrare il
+      Per <m>p=2</m>, la proposizione precedente esprime il ben noto fatto che
+      il prodotto di numeri interi è pari se e solo se almeno uno dei fattori è
+      pari.
+      Possiamo ora enunciare e dimostrare il
     </p>
 
     <theorem xml:id="thm-teorema_fondamentale_aritmetica">
@@ -1241,59 +1717,131 @@
 
       <statement>
         <p>
-            Ogni numero naturale <m>n</m> con <m>n\ge 2</m> si scrive come prodotto di primi in maniera essenzialmente unica, vale a dire che se <m>n=p_{1}p_{2}\cdots p_{r}</m> e <m>n=q_{1}q_{2}\cdots q_{s}</m> con <m>p_{1}</m>, <m>\ldots</m>, <m>p_{r}</m>, <m>q_{1}</m>, <m>\ldots</m>, <m>q_{s}</m> primi, allora <m>r=s</m> e, pur di riordinare i <m>q_{i}</m>, si ha <m>p_{1}=q_{1}</m>, <m>\ldots</m>, <m>p_{r}=q_{r}</m>.
+          Ogni numero naturale <m>n</m> con <m>n\ge 2</m> si scrive come
+          prodotto di primi in maniera essenzialmente unica, vale a dire che se
+          <m>n=p_{1}p_{2}\cdots p_{r}</m> e <m>n=q_{1}q_{2}\cdots q_{s}</m> con
+          <m>p_{1}</m>, <m>\ldots</m>, <m>p_{r}</m>, <m>q_{1}</m>,
+          <m>\ldots</m>, <m>q_{s}</m> primi, allora <m>r=s</m> e, pur di
+          riordinare i <m>q_{i}</m>, si ha <m>p_{1}=q_{1}</m>, <m>\ldots</m>,
+          <m>p_{r}=q_{r}</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Dimostriamo innanzitutto l'esistenza di una tale fattorizzazione. Sia <m>n</m> un naturale maggiore o uguale a <m>2</m> e procediamo per induzione completa (<xref ref="principle-induzione_completa"/>): assumiamo, pertanto, che ogni intero minore di <m>n</m> e maggiore o uguale a <m>2</m> sia prodotto di primi e dimostriamo che <m>n</m> è prodotto di primi. Se <m>n</m> è primo, abbiamo già il risultato, altrimenti esiste un divisore naturale <m>a</m> di <m>n</m> tale che <m>a\ne 1</m> e <m>a\ne n</m> e, dunque, esiste un naturale <m>b</m> tale che <m>n=ab</m>. Poiché <m>a\ne 1</m> segue che <m>b\ne n</m> e poiché <m>a\ne n</m> segue che <m>b\ne 1</m>. Per la <xref ref="prop-divisori_finiti"/>, abbiamo, dunque, che <m>1 \lt a \lt n</m> e che <m>1 \lt b \lt n</m>. Per ipotesi induttiva <m>a</m> e <m>b</m> sono entrambi prodotto di primi e, quindi, anche <m>n=ab</m> lo è.
+          Dimostriamo innanzitutto l'esistenza di una tale fattorizzazione.
+          Sia <m>n</m> un naturale maggiore o uguale a <m>2</m> e procediamo per
+          induzione completa ( <xref ref="principle-induzione_completa"/> ):
+          assumiamo, pertanto, che ogni intero minore di <m>n</m> e maggiore o
+          uguale a <m>2</m> sia prodotto di primi e dimostriamo che <m>n</m> è
+          prodotto di primi.
+          Se <m>n</m> è primo, abbiamo già il risultato, altrimenti esiste un
+          divisore naturale <m>a</m> di <m>n</m> tale che <m>a\ne 1</m> e
+          <m>a\ne n</m> e, dunque, esiste un naturale <m>b</m> tale che
+          <m>n=ab</m>.
+          Poiché <m>a\ne 1</m> segue che <m>b\ne n</m> e poiché <m>a\ne n</m>
+          segue che <m>b\ne 1</m>.
+          Per la <xref ref="prop-divisori_finiti"/>, abbiamo, dunque, che
+          <m>1 \lt a \lt n</m> e che <m>1 \lt b \lt n</m>.
+          Per ipotesi induttiva <m>a</m> e <m>b</m> sono entrambi prodotto di
+          primi e, quindi, anche <m>n=ab</m> lo è.
         </p>
+
         <p>
-          Per quanto riguarda l'unicità, supponiamo che <m>r\le s</m> e procediamo per induzione su <m>r</m>. Se <m>r=1</m>, allora <m>n=p_{1}</m>: in particolare, <m>n</m> è primo e per il <xref ref="lem-primo_prodotto"/> otteniamo che <m>s=1</m> e <m>p_{1}=q_{1}</m>.
+          Per quanto riguarda l'unicità, supponiamo che <m>r\le s</m> e
+          procediamo per induzione su <m>r</m>.
+          Se <m>r=1</m>, allora <m>n=p_{1}</m>: in particolare, <m>n</m> è primo
+          e per il <xref ref="lem-primo_prodotto"/> otteniamo che <m>s=1</m> e
+          <m>p_{1}=q_{1}</m>.
         </p>
+
         <p>
-          Sia ora <m>r \gt 1</m>. Poiché <m>p_{1}</m> divide <m>n=q_{1}\cdots q_{s}</m>, per il <xref ref="cor-i_primi_sono_primi"/> abbiamo che <m>p_{1}</m> divide uno dei <m>q_{i}</m>: pur di riordinare, possiamo supporre che <m>p_{1}</m> divide <m>q_{1}</m>. Poiché <m>p_{1}</m> e <m>q_{1}</m> sono primi ciò significa che <m>p_{1}=q_{1}</m>. Abbiamo allora <m>n=p_{1}p_{2}\cdots p_{r}=p_{1}q_{2}\cdots q_{s}</m>: per la <xref ref="prop-cancellazione_moltiplicazione_interi_senza_dimostrazione"/> otteniamo allora <m>p_{2}\cdots p_{r}=q_{2}\cdots q_{s}=n'</m>. Per ipotesi induttiva, queste due fattorizzazioni dello stesso numero <m>n'</m> sono essenzialmente la stessa, cioè <m>r-1=s-1</m> (da cui segue <m>r=s</m>) e, pur di riordinare i <m>q_{i}</m> si ha <m>p_{2}=q_{2}</m>, <m>\ldots</m>, <m>p_{r}=q_{r}</m>. Avevamo già notato che <m>p_{1}=q_{1}</m> e questo conclude la dimostrazione.
+          Sia ora <m>r \gt 1</m>.
+          Poiché <m>p_{1}</m> divide <m>n=q_{1}\cdots q_{s}</m>, per il
+          <xref ref="cor-i_primi_sono_primi"/> abbiamo che <m>p_{1}</m> divide
+          uno dei <m>q_{i}</m>: pur di riordinare, possiamo supporre che
+          <m>p_{1}</m> divide <m>q_{1}</m>.
+          Poiché <m>p_{1}</m> e <m>q_{1}</m> sono primi ciò significa che
+          <m>p_{1}=q_{1}</m>.
+          Abbiamo allora <m>n=p_{1}p_{2}\cdots p_{r}=p_{1}q_{2}\cdots q_{s}</m>:
+          per la
+          <xref ref="prop-cancellazione_moltiplicazione_interi_senza_dimostrazione"/>
+          otteniamo allora <m>p_{2}\cdots p_{r}=q_{2}\cdots q_{s}=n'</m>.
+          Per ipotesi induttiva, queste due fattorizzazioni dello stesso numero
+          <m>n'</m> sono essenzialmente la stessa, cioè <m>r-1=s-1</m> (da cui
+          segue <m>r=s</m> ) e, pur di riordinare i <m>q_{i}</m> si ha
+          <m>p_{2}=q_{2}</m>, <m>\ldots</m>, <m>p_{r}=q_{r}</m>.
+          Avevamo già notato che <m>p_{1}=q_{1}</m> e questo conclude la
+          dimostrazione.
         </p>
       </proof>
-
     </theorem>
 
     <p>
-      Data una fattorizzazione in primi di un numero <m>n</m> maggiore o uguale a <m>2</m> possiamo raccogliere tutte le diverse occorrenze di ciascun primo e ottenere una scrittura del tipo
+      Data una fattorizzazione in primi di un numero <m>n</m> maggiore o uguale
+      a <m>2</m> possiamo raccogliere tutte le diverse occorrenze di ciascun
+      primo e ottenere una scrittura del tipo
       <md>
         n=p_{1}^{\alpha_{1}}p_{2}^{\alpha_{2}}\cdots p_{t}^{\alpha_{t}}
       </md>
-      dove <m>p_{1}</m>, <m>p_{2}</m>, <m>\ldots</m>, <m>p_{t}</m> sono primi diversi e <m>\alpha_{1}</m>, <m>\alpha_{2}</m>, <m>\ldots</m>, <m>\alpha_{t}</m> sono interi positivi. Se ammettiamo che gli interi <m>\alpha_{i}</m> possano essere anche uguali a <m>0</m> questa scrittura si estende anche a <m>1</m>. Tale scrittura è unica a meno dell'ordinamento dei primi e del possibile inserimento o cancellazione di termini del tipo <m>p_{i}^{0}</m>. Ad esempio il numero <m>12</m> può essere scritto come <m>2^{2}\cdot 3^{1}</m> o <m>2^{2}\cdot 3^{1}\cdot 5^{0}</m> o <m>3^{1}\cdot 13^{0}\cdot 2^{3}\cdot 17^{0}</m> e così via.
+      dove <m>p_{1}</m>, <m>p_{2}</m>, <m>\ldots</m>, <m>p_{t}</m> sono primi
+      diversi e <m>\alpha_{1}</m>, <m>\alpha_{2}</m>, <m>\ldots</m>,
+      <m>\alpha_{t}</m> sono interi positivi.
+      Se ammettiamo che gli interi <m>\alpha_{i}</m> possano essere anche uguali
+      a <m>0</m> questa scrittura si estende anche a <m>1</m>.
+      Tale scrittura è unica a meno dell'ordinamento dei primi e del possibile
+      inserimento o cancellazione di termini del tipo <m>p_{i}^{0}</m>.
+      Ad esempio il numero <m>12</m> può essere scritto come
+      <m>2^{2}\cdot 3^{1}</m> o <m>2^{2}\cdot 3^{1}\cdot 5^{0}</m> o
+      <m>3^{1}\cdot 13^{0}\cdot 2^{3}\cdot 17^{0}</m> e così via.
     </p>
 
     <lemma xml:id="lem-divisibilita_dalla_fattorizzazione">
       <statement>
         <p>
-          Dati due interi positivi <m>a</m> e <m>b</m>, è possibile scriverli nella forma
+          Dati due interi positivi <m>a</m> e <m>b</m>, è possibile scriverli
+          nella forma
           <md>
             <mrow>a \amp =p_{1}^{\alpha_{1}}p_{2}^{\alpha_{2}}\cdots p_{t}^{\alpha_{t}}</mrow>
             <mrow>b \amp =p_{1}^{\beta_{1}}p_{2}^{\beta_{2}}\cdots p_{t}^{\beta_{t}}</mrow>
           </md>
-          con <m>p_{1}</m>, <m>p_{2}</m>, <m>\ldots</m>, <m>p_{t}</m> primi diversi e gli <m>\alpha_{i}</m> e i <m>\beta_{i}</m> naturali.
+          con <m>p_{1}</m>, <m>p_{2}</m>, <m>\ldots</m>, <m>p_{t}</m> primi
+          diversi e gli <m>\alpha_{i}</m> e i <m>\beta_{i}</m> naturali.
         </p>
+
         <p>
-          Si ha poi che <m>a\mid b</m> se e solo se <m>\alpha_{i}\le\beta_{i}</m> per ogni <m>i</m>.
+          Si ha poi che <m>a\mid b</m> se e solo se
+          <m>\alpha_{i}\le\beta_{i}</m> per ogni <m>i</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Per poter scrivere <m>a</m> e <m>b</m> in tal modo, basta inserire, se necessario, fattori del tipo <m>p_{i}^{0}</m> nell'una o nell'altra fattorizzazione in primi.
+          Per poter scrivere <m>a</m> e <m>b</m> in tal modo, basta inserire, se
+          necessario, fattori del tipo <m>p_{i}^{0}</m> nell'una o nell'altra
+          fattorizzazione in primi.
         </p>
+
         <p>
-          Supponiamo allora che <m>\alpha_{i}\le\beta_{i}</m> per ogni <m>i</m>: allora, posto <m>c\coloneqq p_{1}^{\beta_{1}-\alpha_{1}}\cdots p_{t}^{\beta_{t}-\alpha_{t}}</m>, si ottiene <m>b=ca</m> e, di conseguenza, <m>a\mid b</m>.
+          Supponiamo allora che <m>\alpha_{i}\le\beta_{i}</m> per ogni <m>i</m>:
+          allora, posto
+          <m>c\coloneqq p_{1}^{\beta_{1}-\alpha_{1}}\cdots p_{t}^{\beta_{t}-\alpha_{t}}</m>,
+          si ottiene <m>b=ca</m> e, di conseguenza, <m>a\mid b</m>.
         </p>
+
         <p>
-          Viceversa sia <m>a\mid b</m> e sia <m>d</m> naturale tale che <m>b=da</m>. Se scriviamo <m>d</m> come prodotto di potenze di primi in modo analogo a <m>a</m> e <m>b</m>, cioè <m>d=p_{1}^{\gamma_{1}}p_{2}^{\gamma_{2}}\cdots p_{t}^{\gamma_{t}}</m>, otteniamo allora che <m>p_{1}^{\alpha_{1}+\gamma_{1}}\cdots p_{t}^{\alpha_{t}+\gamma_{t}}=p_{1}^{\beta_{1}}\cdots p_{t}^{\beta_{t}}</m>: per l'unicità della decomposizione segue che <m>\beta_{i}=\alpha_{i}+\gamma_{i}</m> e, quindi, <m>\alpha_{i}\le\beta_{i}</m> per ogni <m>i</m>.
+          Viceversa sia <m>a\mid b</m> e sia <m>d</m> naturale tale che
+          <m>b=da</m>.
+          Se scriviamo <m>d</m> come prodotto di potenze di primi in modo
+          analogo a <m>a</m> e <m>b</m>, cioè
+          <m>d=p_{1}^{\gamma_{1}}p_{2}^{\gamma_{2}}\cdots p_{t}^{\gamma_{t}}</m>,
+          otteniamo allora che
+          <m>p_{1}^{\alpha_{1}+\gamma_{1}}\cdots p_{t}^{\alpha_{t}+\gamma_{t}}=p_{1}^{\beta_{1}}\cdots p_{t}^{\beta_{t}}</m>:
+          per l'unicità della decomposizione segue che
+          <m>\beta_{i}=\alpha_{i}+\gamma_{i}</m> e, quindi,
+          <m>\alpha_{i}\le\beta_{i}</m> per ogni <m>i</m>.
         </p>
       </proof>
-
     </lemma>
 
     <p>
@@ -1308,7 +1856,9 @@
             <mrow>a \amp =p_{1}^{\alpha_{1}}p_{2}^{\alpha_{2}}\cdots p_{t}^{\alpha_{t}}</mrow>
             <mrow>b \amp =p_{1}^{\beta_{1}}p_{2}^{\beta_{2}}\cdots p_{t}^{\beta_{t}}</mrow>
           </md>
-          con <m>p_{1}</m>, <m>p_{2}</m>, <m>\ldots</m>, <m>p_{t}</m> primi diversi e gli <m>\alpha_{i}</m> e i <m>\beta_{i}</m> naturali, si ha che
+          con <m>p_{1}</m>, <m>p_{2}</m>, <m>\ldots</m>, <m>p_{t}</m> primi
+          diversi e gli <m>\alpha_{i}</m> e i <m>\beta_{i}</m> naturali, si ha
+          che
           <md>
             (a,b)=p_{1}^{\gamma_{1}}p_{2}^{\gamma_{2}}\cdots p_{t}^{\gamma_{t}}
           </md>
@@ -1318,20 +1868,37 @@
     </proposition>
 
     <p>
-      La proposizione precedente fornisce il metodo per il calcolo del massimo comun divisore di due interi probabilmente più familiare agli studenti: val la pena notare che l'algoritmo di Euclide è estremamente più efficiente e non richiede la conoscenza della fattorizzazione in primi degli interi coinvolti.
+      La proposizione precedente fornisce il metodo per il calcolo del massimo
+      comun divisore di due interi probabilmente più familiare agli studenti:
+      val la pena notare che l'algoritmo di Euclide è estremamente più
+      efficiente e non richiede la conoscenza della fattorizzazione in primi
+      degli interi coinvolti.
     </p>
 
     <exercises xml:id="exercises-fattorizzazione_interi">
-
       <exercise>
         <statement>
           <p>
-            Mostrare che ogni numero primo maggiore di <m>3</m> si scrive nella forma <m>6n+1</m> o <m>6n+5</m> per qualche intero <m>n</m>.
+            Mostrare che ogni numero primo maggiore di <m>3</m> si scrive nella
+            forma <m>6n+1</m> o <m>6n+5</m> per qualche intero <m>n</m>.
           </p>
         </statement>
+
         <solution>
           <p>
-            Ogni numero intero può scriversi nella forma <m>6n+r</m> con <m>n</m> intero e <m>0\le r\le 5</m>. Se <m>r=0</m>, <m>r=2</m> o <m>r=4</m> allora <m>6n+r</m> è divisibile per <m>2</m> e, quindi, non è primo a meno che sia <m>2</m>: dunque, non c'è alcun primo maggiore di <m>3</m> che si scrive nella forma <m>6n+r</m> con <m>r=0</m>, <m>r=2</m> o <m>r=4</m>. Se <m>r=3</m> allora <m>6n+3</m> è divisibile per <m>3</m> e, quindi, non è primo a meno che sia <m>3</m>: dunque, non c'è alcun primo maggiore di <m>3</m> che si scrive nella forma <m>6n+r</m> con <m>r=3</m>. Concludendo, i primi maggiori di <m>3</m> sono del tipo <m>6n+r</m> con <m>r=1</m> o <m>r=5</m>.
+            Ogni numero intero può scriversi nella forma <m>6n+r</m> con
+            <m>n</m> intero e <m>0\le r\le 5</m>.
+            Se <m>r=0</m>, <m>r=2</m> o <m>r=4</m> allora <m>6n+r</m> è
+            divisibile per <m>2</m> e, quindi, non è primo a meno che sia
+            <m>2</m>: dunque, non c'è alcun primo maggiore di <m>3</m> che si
+            scrive nella forma <m>6n+r</m> con <m>r=0</m>, <m>r=2</m> o
+            <m>r=4</m>.
+            Se <m>r=3</m> allora <m>6n+3</m> è divisibile per <m>3</m> e,
+            quindi, non è primo a meno che sia <m>3</m>: dunque, non c'è alcun
+            primo maggiore di <m>3</m> che si scrive nella forma <m>6n+r</m> con
+            <m>r=3</m>.
+            Concludendo, i primi maggiori di <m>3</m> sono del tipo <m>6n+r</m>
+            con <m>r=1</m> o <m>r=5</m>.
           </p>
         </solution>
       </exercise>
@@ -1339,35 +1906,60 @@
       <exercise>
         <introduction>
           <p>
-            Scopo di questo esercizio è introdurre il concetto di <term>minimo comune multiplo</term> di due numeri e le sue proprietà. Dati due interi positivi <m>a</m> e <m>b</m>, sia <m>d</m> il loro massimo comun divisore.
+            Scopo di questo esercizio è introdurre il concetto di
+            <term>minimo comune multiplo</term> di due numeri e le sue
+            proprietà.
+            Dati due interi positivi <m>a</m> e <m>b</m>, sia <m>d</m> il loro
+            massimo comun divisore.
           </p>
         </introduction>
 
         <task xml:id="task-esistenza_mcmc">
           <statement>
             <p>
-              Dimostrare che esiste un unico naturale <m>m</m> tale che <m>md=ab</m>.
-            </p>
-          </statement>
-          <solution>
-            <p>
-              Siano <m>a=a'd</m> e <m>b=b'd</m> per opportuni naturali <m>a'</m> e <m>b'</m>. Poniamo allora <m>m\coloneqq a'b'd</m>. Si verifica immediatamente che <m>m</m> soddisfa l'identità richiesta. L'unicità segue dal fatto che <m>d\ne0</m> e dalla <xref ref="prop-cancellazione_moltiplicazione_interi_senza_dimostrazione" text="title"/>.
-            </p>
-          </solution>
-        </task>
-        <task>
-          <statement>
-            <p>
-              Mostrare che <m>m</m> è multiplo sia di <m>a</m> che di <m>b</m> e che <m>m</m> divide ogni multiplo comune di <m>a</m> e <m>b</m>.
+              Dimostrare che esiste un unico naturale <m>m</m> tale che
+              <m>md=ab</m>.
             </p>
           </statement>
 
           <solution>
             <p>
-              Per definizione <m>m</m> è multiplo di <m>a'd</m>, cioè di <m>a</m> e,  analogamente, di <m>b</m>. Se <m>c</m> è un multiplo comune di <m>a</m> e <m>b</m>, abbiamo che <m>c=au=bv</m> per opportuni interi <m>u</m> e <m>v</m>: dunque, <m>c=da'u=db'v</m>. Poiché <m>d\ne 0</m>, abbiamo allora <m>a'u=b'v</m>. Per il <xref ref="cor-diviso_MCD_da_coprimi"/>, <m>a'</m> e <m>b'</m> sono coprimi e poiché <m>a'\mid b'v</m>, dal <xref ref="lem-divisore_coprimo_con_fattore"/> segue che <m>a'\mid v</m>. Ma allora <m>a'b'd\mid vb'd</m>, cioè <m>m\mid c</m>.
+              Siano <m>a=a'd</m> e <m>b=b'd</m> per opportuni naturali <m>a'</m>
+              e <m>b'</m>.
+              Poniamo allora <m>m\coloneqq a'b'd</m>.
+              Si verifica immediatamente che <m>m</m> soddisfa l'identità
+              richiesta.
+              L'unicità segue dal fatto che <m>d\ne0</m> e dalla
+              <xref ref="prop-cancellazione_moltiplicazione_interi_senza_dimostrazione" text="title"/>.
             </p>
           </solution>
         </task>
+
+        <task>
+          <statement>
+            <p>
+              Mostrare che <m>m</m> è multiplo sia di <m>a</m> che di <m>b</m> e
+              che <m>m</m> divide ogni multiplo comune di <m>a</m> e <m>b</m>.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Per definizione <m>m</m> è multiplo di <m>a'd</m>, cioè di
+              <m>a</m> e, analogamente, di <m>b</m>.
+              Se <m>c</m> è un multiplo comune di <m>a</m> e <m>b</m>, abbiamo
+              che <m>c=au=bv</m> per opportuni interi <m>u</m> e <m>v</m>:
+              dunque, <m>c=da'u=db'v</m>.
+              Poiché <m>d\ne 0</m>, abbiamo allora <m>a'u=b'v</m>.
+              Per il <xref ref="cor-diviso_MCD_da_coprimi"/>, <m>a'</m> e
+              <m>b'</m> sono coprimi e poiché <m>a'\mid b'v</m>, dal
+              <xref ref="lem-divisore_coprimo_con_fattore"/> segue che
+              <m>a'\mid v</m>.
+              Ma allora <m>a'b'd\mid vb'd</m>, cioè <m>m\mid c</m>.
+            </p>
+          </solution>
+        </task>
+
         <task>
           <statement>
             <p>
@@ -1376,7 +1968,9 @@
                 <mrow>a \amp =p_{1}^{\alpha_{1}}p_{2}^{\alpha_{2}}\cdots p_{t}^{\alpha_{t}}</mrow>
                 <mrow>b \amp =p_{1}^{\beta_{1}}p_{2}^{\beta_{2}}\cdots p_{t}^{\beta_{t}}</mrow>
               </md>
-              con <m>p_{1}</m>, <m>p_{2}</m>, <m>\ldots</m>, <m>p_{t}</m> primi diversi e gli <m>\alpha_{i}</m> e i <m>\beta_{i}</m> naturali, si ha che
+              con <m>p_{1}</m>, <m>p_{2}</m>, <m>\ldots</m>, <m>p_{t}</m> primi
+              diversi e gli <m>\alpha_{i}</m> e i <m>\beta_{i}</m> naturali, si
+              ha che
               <md>
                 m=p_{1}^{\delta_{1}}p_{2}^{\delta_{2}}\cdots p_{t}^{\delta_{t}}
               </md>
@@ -1386,29 +1980,43 @@
 
           <hint>
             <p>
-              Usare il <xref ref="task-esistenza_mcmc" text="type-local"/> e la <xref ref="prop-massimo_comun_divisore_da_fattorizzazione"/>.
+              Usare il <xref ref="task-esistenza_mcmc" text="type-local"/> e la
+              <xref ref="prop-massimo_comun_divisore_da_fattorizzazione"/>.
             </p>
           </hint>
         </task>
-
       </exercise>
 
       <exercise xml:id="exer-multiplo_di_coprimi">
         <statement>
           <p>
-            Dimostrare che se <m>n_{1}</m>, <m>n_{2}</m>, <m>\ldots</m>, <m>n_{r}</m> sono interi a due a due coprimi, allora un intero <m>a</m> è multiplo di ogni <m>n_{i}</m> se e solo se è multiplo di <m>n\coloneqq n_{1}n_{2}\cdots n_{r}</m>.
+            Dimostrare che se <m>n_{1}</m>, <m>n_{2}</m>, <m>\ldots</m>,
+            <m>n_{r}</m> sono interi a due a due coprimi, allora un intero
+            <m>a</m> è multiplo di ogni <m>n_{i}</m> se e solo se è multiplo di
+            <m>n\coloneqq n_{1}n_{2}\cdots n_{r}</m>.
           </p>
         </statement>
+
         <solution>
           <p>
-            Se <m>a</m> è multiplo di <m>n</m> allora è ovviamente multiplo di ciascun <m>n_{i}</m>.
+            Se <m>a</m> è multiplo di <m>n</m> allora è ovviamente multiplo di
+            ciascun <m>n_{i}</m>.
           </p>
+
           <p>
-            Per il viceversa, procediamo per induzione su <m>r</m>, il caso <m>r=1</m> essendo banale. Se <m>r \gt 1</m>, allora, per ipotesi induttiva <m>a</m> è multiplo di <m>n'\coloneqq n_{1}n_{2}\cdots n_{r-1}</m> e, quindi, <m>a=n'u</m> per un opportuno intero <m>u</m>. Per la <xref ref="prop-coprimo_con_prodotto"/>, <m>n_{r}</m> è coprimo con <m>n'</m>: poiché <m>n_{r}</m> divide <m>a</m>, il <xref ref="lem-divisore_coprimo_con_fattore"/> implica che <m>n_{r}</m> divide <m>u</m> e, quindi, <m>n=n'n_{r}</m> divide <m>n'u=a</m>.
+            Per il viceversa, procediamo per induzione su <m>r</m>, il caso
+            <m>r=1</m> essendo banale.
+            Se <m>r \gt 1</m>, allora, per ipotesi induttiva <m>a</m> è multiplo
+            di <m>n'\coloneqq n_{1}n_{2}\cdots n_{r-1}</m> e, quindi,
+            <m>a=n'u</m> per un opportuno intero <m>u</m>.
+            Per la <xref ref="prop-coprimo_con_prodotto"/>, <m>n_{r}</m> è
+            coprimo con <m>n'</m>: poiché <m>n_{r}</m> divide <m>a</m>, il
+            <xref ref="lem-divisore_coprimo_con_fattore"/> implica che
+            <m>n_{r}</m> divide <m>u</m> e, quindi, <m>n=n'n_{r}</m> divide
+            <m>n'u=a</m>.
           </p>
         </solution>
       </exercise>
-
     </exercises>
   </section>
 
@@ -1416,25 +2024,44 @@
     <title>Equazioni lineari diofantine</title>
 
     <p>
-      Diofanto<fn><url href="https://it.wikipedia.org/wiki/Diofanto_di_Alessandria" visual="">Diofanto di Alessandria</url>, III o IV secolo <abbr>d.C.</abbr></fn> fu un matematico greco, il cui nome è rimasto legato alla ricerca di soluzioni intere di equazioni che, per questo motivo, vengono dette <term>diofantine</term> o <term>diofantee</term>. Qui ne studieremo un particolare tipo, quelle lineari.
+      Diofanto
+      <fn><url href="https://it.wikipedia.org/wiki/Diofanto_di_Alessandria" visual="">Diofanto di Alessandria</url>, III o IV secolo <abbr>d.C.</abbr></fn>
+      fu un matematico greco, il cui nome è rimasto legato alla ricerca di
+      soluzioni intere di equazioni che, per questo motivo, vengono dette
+      <term>diofantine</term> o <term>diofantee</term>.
+      Qui ne studieremo un particolare tipo, quelle lineari.
     </p>
 
     <p>
-      Prima di darne una definizione precisa, supponiamo di avere un'equazione del tipo
+      Prima di darne una definizione precisa, supponiamo di avere un'equazione
+      del tipo
       <md>
         ax+by=c
       </md>
-      dove <m>a</m>, <m>b</m> e <m>c</m> sono interi assegnati e cerchiamo le coppie di interi <m>x</m> e <m>y</m> che soddisfano l'equazione assegnata.
+      dove <m>a</m>, <m>b</m> e <m>c</m> sono interi assegnati e cerchiamo le
+      coppie di interi <m>x</m> e <m>y</m> che soddisfano l'equazione assegnata.
     </p>
 
     <p>
-      Notiamo che, se cercassimo le coppie di numeri razionali che soddisfano l'equazione data, il problema sarebbe molto più semplice. Supponendo, ad esempio, che <m>a\ne 0</m>, potremmo assegnare a <m>y</m> un valore arbitrario <m>h</m> e ricavare il valore corrispondente <m>\frac{c-bh}{a}</m> di <m>x</m>. Dunque, le soluzioni sono tutte e sole le coppie del tipo <m>(x,y)=(\frac{c-bh}{a},h)</m> al variare di <m>h</m> in <m>\Razionali</m>. La ricerca delle coppie di interi richiede invece più attenzione: se assegniamo a <m>y</m> un valore intero arbitrario, non è detto che il valore di <m>x</m> corrispondente sia pure intero. Vediamo qualche esempio.
+      Notiamo che, se cercassimo le coppie di numeri razionali che soddisfano
+      l'equazione data, il problema sarebbe molto più semplice.
+      Supponendo, ad esempio, che <m>a\ne 0</m>, potremmo assegnare a <m>y</m>
+      un valore arbitrario <m>h</m> e ricavare il valore corrispondente
+      <m>\frac{c-bh}{a}</m> di <m>x</m>.
+      Dunque, le soluzioni sono tutte e sole le coppie del tipo
+      <m>(x,y)=(\frac{c-bh}{a},h)</m> al variare di <m>h</m> in
+      <m>\Razionali</m>.
+      La ricerca delle coppie di interi richiede invece più attenzione: se
+      assegniamo a <m>y</m> un valore intero arbitrario, non è detto che il
+      valore di <m>x</m> corrispondente sia pure intero.
+      Vediamo qualche esempio.
     </p>
 
     <example xml:id="ex-equazione_lineare_diofantina">
       <statement>
         <p>
-          Cerchiamo le soluzioni formate da coppie di interi per ciascuna delle equazioni
+          Cerchiamo le soluzioni formate da coppie di interi per ciascuna delle
+          equazioni
           <md>
             8x+20y=6
           </md>
@@ -1443,17 +2070,33 @@
             8x+20y=12
           </md>.
         </p>
+
         <p>
-          Ci accorgiamo immediatamente che, sostituendo a <m>x</m> e <m>y</m> valori interi nella prima equazione, a primo membro otteniamo sempre un multiplo di <m>4</m> e, poiché <m>6</m> non è multiplo di <m>4</m>, l'uguaglianza non può essere soddisfatta.
+          Ci accorgiamo immediatamente che, sostituendo a <m>x</m> e <m>y</m>
+          valori interi nella prima equazione, a primo membro otteniamo sempre
+          un multiplo di <m>4</m> e, poiché <m>6</m> non è multiplo di <m>4</m>,
+          l'uguaglianza non può essere soddisfatta.
         </p>
+
         <p>
-          Per quanto riguarda la seconda equazione, il cui primo membro è uguale a quello della prima equazione, vediamo che il secondo membro è multiplo di <m>4</m> e, quindi, potrebbero esserci soluzioni. In effetti ci sono soluzioni: ad esempio, <m>x=-1</m> e <m>y=1</m>, ma anche <m>x=4</m> e <m>y=-1</m> e altre. Non sappiamo però ancora come determinarle tutte.
+          Per quanto riguarda la seconda equazione, il cui primo membro è uguale
+          a quello della prima equazione, vediamo che il secondo membro è
+          multiplo di <m>4</m> e, quindi, potrebbero esserci soluzioni.
+          In effetti ci sono soluzioni: ad esempio, <m>x=-1</m> e <m>y=1</m>, ma
+          anche <m>x=4</m> e <m>y=-1</m> e altre.
+          Non sappiamo però ancora come determinarle tutte.
         </p>
       </statement>
     </example>
 
     <p>
-      L'esempio precedente è in qualche modo tipico. Il caso in cui l'equazione non ha soluzione si può facilmente generalizzare a una condizione necessaria per la risolubilità. Per quanto riguarda il caso in cui invece l'equazione ha soluzione, ci rendiamo conto che è necessario un'analisi più approfondita: non possiamo certo provare tutte le possibili coppie e sperare che qualcuna di esse sia soluzione della nostra equazione.
+      L'esempio precedente è in qualche modo tipico.
+      Il caso in cui l'equazione non ha soluzione si può facilmente
+      generalizzare a una condizione necessaria per la risolubilità.
+      Per quanto riguarda il caso in cui invece l'equazione ha soluzione, ci
+      rendiamo conto che è necessario un'analisi più approfondita: non possiamo
+      certo provare tutte le possibili coppie e sperare che qualcuna di esse sia
+      soluzione della nostra equazione.
     </p>
 
     <definition xml:id="def-equazione_lineare_diofantina">
@@ -1463,7 +2106,10 @@
           <md>
             a_{1}x_{1}+\cdots+a_{n}x_{n}=b
           </md>
-          con <m>a_{1}</m>, <m>\ldots</m>, <m>a_{n}</m> e <m>b</m> interi, <m>x_{1}</m>, <m>\ldots</m>, <m>x_{n}</m> incognite e di cui cerchiamo soluzioni con ciascun <m>x_{i}</m> intero è detta <term>equazione lineare diofantina</term>.
+          con <m>a_{1}</m>, <m>\ldots</m>, <m>a_{n}</m> e <m>b</m> interi,
+          <m>x_{1}</m>, <m>\ldots</m>, <m>x_{n}</m> incognite e di cui cerchiamo
+          soluzioni con ciascun <m>x_{i}</m> intero è detta
+          <term>equazione lineare diofantina</term>.
         </p>
       </statement>
     </definition>
@@ -1479,54 +2125,85 @@
           <md>
             ax+by=c
           </md>
-          nelle incognite <m>x</m> e <m>y</m> con <m>a</m>, <m>b</m> e <m>c</m> interi. L'equazione ha soluzione se e solo se il massimo comun divisore <m>(a,b)</m> divide <m>c</m>.
+          nelle incognite <m>x</m> e <m>y</m> con <m>a</m>, <m>b</m> e <m>c</m>
+          interi.
+          L'equazione ha soluzione se e solo se il massimo comun divisore
+          <m>(a,b)</m> divide <m>c</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Qualunque valore intero sostituiamo a <m>x</m> e <m>y</m>, otteniamo a primo membro un multiplo di <m>(a,b)</m>: quindi, se <m>(a,b)</m> non divide <m>c</m>, non esistono valori interi che soddisfano l'equazione.
+          Qualunque valore intero sostituiamo a <m>x</m> e <m>y</m>, otteniamo a
+          primo membro un multiplo di <m>(a,b)</m>: quindi, se <m>(a,b)</m> non
+          divide <m>c</m>, non esistono valori interi che soddisfano
+          l'equazione.
         </p>
+
         <p>
-          Supponiamo ora che <m>(a,b)</m> divida <m>c</m>, cioè <m>c=(a,b)e</m> per un opportuno intero <m>e</m>. Sappiamo che esistono interi <m>u</m> e <m>v</m> per cui vale l'identità di Bezout
+          Supponiamo ora che <m>(a,b)</m> divida <m>c</m>, cioè <m>c=(a,b)e</m>
+          per un opportuno intero <m>e</m>.
+          Sappiamo che esistono interi <m>u</m> e <m>v</m> per cui vale
+          l'identità di Bezout
           <md>
             au+bv=(a,b)
           </md>.
-          Allora <m>aue+bve=(a,b)e=c</m>, cioè una soluzione intera è data da <m>x=ue</m> e <m>y=ve</m>.
+          Allora <m>aue+bve=(a,b)e=c</m>, cioè una soluzione intera è data da
+          <m>x=ue</m> e <m>y=ve</m>.
         </p>
       </proof>
-
     </proposition>
 
     <remark xml:id="rem-combinazione_lineare_multiplo_MCD">
       <p>
-        La proposizione precedente può essere reinterpretata dicendo che, dati due interi <m>a</m> e <m>b</m>, l'espressione <m>ax+by</m> assume, al variare di <m>x</m> e <m>y</m> in <m>\Interi</m>, esattamente i valori multipli del massimo comun divisore di <m>a</m> e <m>b</m>.
+        La proposizione precedente può essere reinterpretata dicendo che, dati
+        due interi <m>a</m> e <m>b</m>, l'espressione <m>ax+by</m> assume, al
+        variare di <m>x</m> e <m>y</m> in <m>\Interi</m>, esattamente i valori
+        multipli del massimo comun divisore di <m>a</m> e <m>b</m>.
       </p>
     </remark>
 
     <example xml:id="ex-equazione_lineare_diofantina_risolta">
       <statement>
         <p>
-          Riprendiamo ora l'equazione dell'<xref ref="ex-equazione_lineare_diofantina"/> e vediamo come possiamo determinarne delle soluzioni
+          Riprendiamo ora l'equazione dell'
+          <xref ref="ex-equazione_lineare_diofantina"/> e vediamo come possiamo
+          determinarne delle soluzioni
           <md>
             8x+20y=12
           </md>.
         </p>
+
         <p>
-          Il massimo comun divisore tra <m>8</m> e <m>20</m> è <m>4</m> che divide <m>12</m>: l'equazione è effettivamente risolubile. Un'identità di Bezout tra <m>8</m> e <m>20</m> e il loro massimo comun divisore <m>4</m> si vede facilmente: <m>8(-2)+20\cdot 1=4</m> (ovviamente non sempre si vede così facilmente, ma sappiamo che possiamo usare l'algoritmo di Euclide per trovarne una). Ora, <m>12=4\cdot 3</m>: dunque, <m>8(-6)+20\cdot 3=12</m> e <m>x=-6</m> e <m>y=3</m> è una soluzione particolare. Vogliamo ora vedere se ci sono altre soluzioni. Possiamo innanzitutto semplificarci un po' la vita e dividere tutto per <m>4</m> e ottenere così l'equazione equivalente
+          Il massimo comun divisore tra <m>8</m> e <m>20</m> è <m>4</m> che
+          divide <m>12</m>: l'equazione è effettivamente risolubile.
+          Un'identità di Bezout tra <m>8</m> e <m>20</m> e il loro massimo comun
+          divisore <m>4</m> si vede facilmente: <m>8(-2)+20\cdot 1=4</m>
+          (ovviamente non sempre si vede così facilmente, ma sappiamo che
+          possiamo usare l'algoritmo di Euclide per trovarne una).
+          Ora, <m>12=4\cdot 3</m>: dunque, <m>8(-6)+20\cdot 3=12</m> e
+          <m>x=-6</m> e <m>y=3</m> è una soluzione particolare.
+          Vogliamo ora vedere se ci sono altre soluzioni.
+          Possiamo innanzitutto semplificarci un po' la vita e dividere tutto
+          per <m>4</m> e ottenere così l'equazione equivalente
           <md>
             2x+5y=3
           </md>.
-          A dire il vero, avremmo potuto farlo subito, prima ancora di determinare la soluzione particolare. Notiamo ora che se sommiamo <m>5</m> a <m>-6</m> e sommiamo <m>-2</m> a <m>3</m> otteniamo un'altra soluzione dell'equazione data, infatti:
+          A dire il vero, avremmo potuto farlo subito, prima ancora di
+          determinare la soluzione particolare.
+          Notiamo ora che se sommiamo <m>5</m> a <m>-6</m> e sommiamo <m>-2</m>
+          a <m>3</m> otteniamo un'altra soluzione dell'equazione data, infatti:
           <md>
             2(-6+5)+5(3-2)=2(-6)+2\cdot5+5\cdot3+5(-2)=2(-6)+5\cdot3=3
           </md>.
-          Possiamo ovviamente ripetere il procedimento quante volte vogliamo e ottenere, quindi, infinite soluzioni dell'equazione
+          Possiamo ovviamente ripetere il procedimento quante volte vogliamo e
+          ottenere, quindi, infinite soluzioni dell'equazione
           <md>
             <mrow>x \amp =-6+5h</mrow>
             <mrow>y \amp =3-2h</mrow>
           </md>
-          al variare di <m>h</m> in <m>\Interi</m>. Dimostreremo che queste sono tutte le soluzioni dell'equazione data.
+          al variare di <m>h</m> in <m>\Interi</m>.
+          Dimostreremo che queste sono tutte le soluzioni dell'equazione data.
         </p>
       </statement>
     </example>
@@ -1538,17 +2215,26 @@
           <md>
             ax+by=c
           </md>
-          nelle incognite <m>x</m> e <m>y</m> con <m>a</m>, <m>b</m> e <m>c</m> interi tale che <m>d\coloneqq (a,b)</m> divide <m>c</m> (dunque, l'equazione è risolubile).
+          nelle incognite <m>x</m> e <m>y</m> con <m>a</m>, <m>b</m> e <m>c</m>
+          interi tale che <m>d\coloneqq (a,b)</m> divide <m>c</m> (dunque,
+          l'equazione è risolubile).
         </p>
+
         <p>
           Se <m>d=0</m>, l'equazione è un'identità.
         </p>
+
         <p>
-          Se <m>d\ne 0</m>,  posto <m>a=da'</m>, <m>b=db'</m> e <m>c=dc'</m>, l'equazione è equivalente a
+          Se <m>d\ne 0</m>, posto <m>a=da'</m>, <m>b=db'</m> e <m>c=dc'</m>,
+          l'equazione è equivalente a
           <md>
             a'x+b'y=c'
           </md>:
-          in tal caso, detta <m>x=\bar{x}</m> e <m>y=\bar{y}</m> una soluzione particolare dell'equazione (determinata ad esempio, con un'identità di Bezout come nella <xref ref="prop-equazione_lineare_diofantina_due_incognite"/>), l'equazione ha infinite soluzioni date da
+          in tal caso, detta <m>x=\bar{x}</m> e <m>y=\bar{y}</m> una soluzione
+          particolare dell'equazione (determinata ad esempio, con un'identità di
+          Bezout come nella
+          <xref ref="prop-equazione_lineare_diofantina_due_incognite"/> ),
+          l'equazione ha infinite soluzioni date da
           <md>
             <mrow>x \amp =\bar{x}+b'h</mrow>
             <mrow>y \amp =\bar{y}-a'h</mrow>
@@ -1559,33 +2245,63 @@
 
       <proof>
         <p>
-          Sappiamo che <m>d=(a,b)=0</m> se e solo se <m>a=b=0</m>: poiché <m>d\mid c</m>, ciò significa che <m>c=0</m> e l'equazione è un'identità.
+          Sappiamo che <m>d=(a,b)=0</m> se e solo se <m>a=b=0</m>: poiché
+          <m>d\mid c</m>, ciò significa che <m>c=0</m> e l'equazione è
+          un'identità.
         </p>
+
         <p>
-          Supponiamo ora <m>d\ne 0</m>: l'equazione è allora equivalente a <m>a'x+b'y=c'</m> e, sostituendo in essa le espressioni date nell'enunciato, si vede immediatamente che sono effettivamente soluzioni.
+          Supponiamo ora <m>d\ne 0</m>: l'equazione è allora equivalente a
+          <m>a'x+b'y=c'</m> e, sostituendo in essa le espressioni date
+          nell'enunciato, si vede immediatamente che sono effettivamente
+          soluzioni.
         </p>
+
         <p>
-          Viceversa, se <m>x=\hat{x}</m> e <m>y=\hat{y}</m> è una soluzione dell'equazione diofantina, allora <m>a'\hat{x}+b'\hat{y}=c'</m> e, poiché <m>a'\bar{x}+b'\bar{y}=c'</m>, uguagliando, otteniamo <m>a'(\hat{x}-\bar{x})=b'(\bar{y}-\hat{y})</m>. Per il <xref ref="cor-diviso_MCD_da_coprimi"/>, abbiamo che <m>a'</m> e <m>b'</m> sono coprimi. Per il <xref ref="lem-divisore_coprimo_con_fattore"/>, abbiamo che <m>b' \mid \hat{x}-\bar{x}</m> e <m>a'\mid \bar{y}-\hat{y}</m>, cioè esistono interi <m>h</m> e <m>k</m> tali che <m>\bar{y}-\hat{y}=a'k</m> e <m>\hat{x}-\bar{x}=b'h</m>, cioè
+          Viceversa, se <m>x=\hat{x}</m> e <m>y=\hat{y}</m> è una soluzione
+          dell'equazione diofantina, allora <m>a'\hat{x}+b'\hat{y}=c'</m> e,
+          poiché <m>a'\bar{x}+b'\bar{y}=c'</m>, uguagliando, otteniamo
+          <m>a'(\hat{x}-\bar{x})=b'(\bar{y}-\hat{y})</m>.
+          Per il <xref ref="cor-diviso_MCD_da_coprimi"/>, abbiamo che <m>a'</m>
+          e <m>b'</m> sono coprimi.
+          Per il <xref ref="lem-divisore_coprimo_con_fattore"/>, abbiamo che
+          <m>b' \mid \hat{x}-\bar{x}</m> e <m>a'\mid \bar{y}-\hat{y}</m>, cioè
+          esistono interi <m>h</m> e <m>k</m> tali che
+          <m>\bar{y}-\hat{y}=a'k</m> e <m>\hat{x}-\bar{x}=b'h</m>, cioè
           <md>
             <mrow>\hat{x} \amp =\bar{x}+b'h</mrow>
             <mrow>\hat{y} \amp =\bar{y}-a'k</mrow>
           </md>
-          Abbiamo, dunque, <m>a'b'h=a'b'k</m>. Distinguiamo ora due casi: <m>a'b'\ne 0</m> e <m>a'b'=0</m>. Nel primo caso, otteniamo immediatamente che <m>h=k</m>; nel secondo caso <m>a'=0</m> o <m>b'=0</m>: se, ad esempio, <m>a'=0</m>, abbiamo <m>\hat{y}=\bar{y}-0\cdot k=\bar{y}-0\cdot h</m>, cioè possiamo comunque rimpiazzare <m>k</m> con <m>h</m>.
+          Abbiamo, dunque, <m>a'b'h=a'b'k</m>.
+          Distinguiamo ora due casi: <m>a'b'\ne 0</m> e <m>a'b'=0</m>.
+          Nel primo caso, otteniamo immediatamente che <m>h=k</m>; nel secondo
+          caso <m>a'=0</m> o <m>b'=0</m>: se, ad esempio, <m>a'=0</m>, abbiamo
+          <m>\hat{y}=\bar{y}-0\cdot k=\bar{y}-0\cdot h</m>, cioè possiamo
+          comunque rimpiazzare <m>k</m> con <m>h</m>.
         </p>
       </proof>
-
     </proposition>
 
     <p>
-      Possiamo ora rileggere l'<xref ref="ex-equazione_lineare_diofantina_risolta"/>: le soluzioni trovate sono, dunque, tutte e sole le soluzioni.
+      Possiamo ora rileggere l'
+      <xref ref="ex-equazione_lineare_diofantina_risolta"/>: le soluzioni
+      trovate sono, dunque, tutte e sole le soluzioni.
     </p>
 
     <p>
-      Descriviamo ora sommariamente il procedimento con cui affrontare equazioni lineari diofantine in più di due incognite. Cominciamo a considerare il caso di un'equazione in <m>3</m> incognite <m>x</m>, <m>y</m> e <m>z</m>
+      Descriviamo ora sommariamente il procedimento con cui affrontare equazioni
+      lineari diofantine in più di due incognite.
+      Cominciamo a considerare il caso di un'equazione in <m>3</m> incognite
+      <m>x</m>, <m>y</m> e <m>z</m>
       <md>
         ax+by+cz=d
       </md>
-      Assegnando valori arbitrari interi a <m>x</m> e <m>y</m>, dall'<xref ref="rem-combinazione_lineare_multiplo_MCD"/> sappiamo che <m>ax+by</m> assume esattamente tutti e soli i valori multipli del massimo comun divisore <m>e</m> di <m>a</m> e <m>b</m>. Possiamo allora introdurre un'incognita supplementare <m>w</m> e riscrivere l'equazione come un sistema:
+      Assegnando valori arbitrari interi a <m>x</m> e <m>y</m>, dall'
+      <xref ref="rem-combinazione_lineare_multiplo_MCD"/> sappiamo che
+      <m>ax+by</m> assume esattamente tutti e soli i valori multipli del massimo
+      comun divisore <m>e</m> di <m>a</m> e <m>b</m>.
+      Possiamo allora introdurre un'incognita supplementare <m>w</m> e
+      riscrivere l'equazione come un sistema:
       <md>
         \left\{
           \begin{aligned}
@@ -1594,7 +2310,19 @@
 	        \end{aligned}
         \right.
       </md>
-      La seconda equazione ha soluzione se e solo se il massimo comun divisore tra <m>e</m> e <m>c</m> divide <m>d</m>. Ma <m>e</m> è il massimo comun divisore tra <m>a</m> e <m>b</m> e, quindi, per la <xref ref="prop-massimo_comun_divisore_molti"/>, abbiamo che <m>(e,c)=((a,b),c)=(a,b,c)</m>. Dunque, la seconda equazione ha soluzione se e solo se <m>(a,b,c)</m> divide <m>d</m>. Data poi una qualunque soluzione per la seconda equazione, e sostituito il valore di <m>w</m> nella prima equazione, il termine noto è multiplo di <m>e</m>, per cui la prima equazione ha sicuramente soluzione. Riassumendo, il sistema (e, quindi, l'equazione originale) è risolubile se e solo se <m>(a,b,c)</m> divide <m>d</m>. Vediamo un esempio.
+      La seconda equazione ha soluzione se e solo se il massimo comun divisore
+      tra <m>e</m> e <m>c</m> divide <m>d</m>.
+      Ma <m>e</m> è il massimo comun divisore tra <m>a</m> e <m>b</m> e, quindi,
+      per la <xref ref="prop-massimo_comun_divisore_molti"/>, abbiamo che
+      <m>(e,c)=((a,b),c)=(a,b,c)</m>.
+      Dunque, la seconda equazione ha soluzione se e solo se <m>(a,b,c)</m>
+      divide <m>d</m>.
+      Data poi una qualunque soluzione per la seconda equazione, e sostituito il
+      valore di <m>w</m> nella prima equazione, il termine noto è multiplo di
+      <m>e</m>, per cui la prima equazione ha sicuramente soluzione.
+      Riassumendo, il sistema (e, quindi, l'equazione originale) è risolubile se
+      e solo se <m>(a,b,c)</m> divide <m>d</m>.
+      Vediamo un esempio.
     </p>
 
     <example>
@@ -1602,8 +2330,15 @@
         <p>
           Consideriamo l'equazione lineare diofantina <m>12x+18y-10z=14</m>.
         </p>
+
         <p>
-          Il massimo comun divisore di <m>12</m>, <m>18</m> e <m>-10</m> è <m>2</m> che divide <m>14</m>: l'equazione è, quindi, risolubile. Possiamo innanzitutto dividere l'equazione per <m>2</m> e ottenere l'equazione equivalente <m>6x+9y-5z=7</m>. Il massimo comun divisore tra <m>6</m> e <m>9</m> è <m>3</m>. Introduciamo allora l'incognita ausiliaria <m>w</m> e consideriamo il sistema:
+          Il massimo comun divisore di <m>12</m>, <m>18</m> e <m>-10</m> è
+          <m>2</m> che divide <m>14</m>: l'equazione è, quindi, risolubile.
+          Possiamo innanzitutto dividere l'equazione per <m>2</m> e ottenere
+          l'equazione equivalente <m>6x+9y-5z=7</m>.
+          Il massimo comun divisore tra <m>6</m> e <m>9</m> è <m>3</m>.
+          Introduciamo allora l'incognita ausiliaria <m>w</m> e consideriamo il
+          sistema:
           <md>
             \left\{
               \begin{aligned}
@@ -1612,7 +2347,8 @@
     	        \end{aligned}
             \right.
           </md>
-          Possiamo anche dividere la prima equazione per <m>3</m> e ottenere il sistema equivalente:
+          Possiamo anche dividere la prima equazione per <m>3</m> e ottenere il
+          sistema equivalente:
           <md>
             \left\{
               \begin{aligned}
@@ -1621,16 +2357,25 @@
     	        \end{aligned}
             \right.
           </md>
-          Risolviamo allora la seconda equazione. Un'identità di Bezout tra <m>3</m> e <m>5</m> è, ad esempio, <m>3\cdot 2-5\cdot1=1</m> (lasciamo i calcoli necessari a determinare questa e altre identità per esercizio). Una soluzione particolare della seconda equazione è allora <m>w=14</m> e <m>z=7</m>, mentre la soluzione generale è data da
+          Risolviamo allora la seconda equazione.
+          Un'identità di Bezout tra <m>3</m> e <m>5</m> è, ad esempio,
+          <m>3\cdot 2-5\cdot1=1</m> (lasciamo i calcoli necessari a determinare
+          questa e altre identità per esercizio).
+          Una soluzione particolare della seconda equazione è allora <m>w=14</m>
+          e <m>z=7</m>, mentre la soluzione generale è data da
           <md>
             <mrow>w \amp = 14+5h</mrow>
             <mrow>z \amp = 7+3h</mrow>
           </md>
-          al variare di <m>h</m> in <m>\Interi</m>. La prima equazione allora diviene
+          al variare di <m>h</m> in <m>\Interi</m>.
+          La prima equazione allora diviene
           <md>
             2x+3y=14+5h
           </md>
-          dove <m>h</m> viene considerato come un parametro. Un'identità di Bezout tra <m>2</m> e <m>3</m> è, ad esempio, <m>2\cdot 2+3\cdot(-1)=1</m> e, quindi, una soluzione particolare per l'equazione è
+          dove <m>h</m> viene considerato come un parametro.
+          Un'identità di Bezout tra <m>2</m> e <m>3</m> è, ad esempio,
+          <m>2\cdot 2+3\cdot(-1)=1</m> e, quindi, una soluzione particolare per
+          l'equazione è
           <md>
             <mrow>x \amp =28+10h</mrow>
             <mrow>y \amp =-14-5h</mrow>
@@ -1640,7 +2385,10 @@
             <mrow>x \amp =28+10h+3k</mrow>
             <mrow>y \amp =-14-5h-2k</mrow>
           </md>
-          al variare di <m>k</m> in <m>\Interi</m> (notare che abbiano usato un parametro diverso da <m>h</m>). Riassumendo, le soluzioni dell'equazione diofantina assegnata sono date da
+          al variare di <m>k</m> in <m>\Interi</m> (notare che abbiano usato un
+          parametro diverso da <m>h</m> ).
+          Riassumendo, le soluzioni dell'equazione diofantina assegnata sono
+          date da
           <md>
             <mrow>x \amp =28+10h+3k</mrow>
             <mrow>y \amp =-14-5h-2k</mrow>
@@ -1652,8 +2400,11 @@
     </example>
 
     <p>
-      Quanto visto nel caso di tre incognite, si può generalizzare al caso di un numero qualunque di incognite. Lasciamo la dimostrazione per esercizio.
+      Quanto visto nel caso di tre incognite, si può generalizzare al caso di un
+      numero qualunque di incognite.
+      Lasciamo la dimostrazione per esercizio.
     </p>
+
     <proposition xml:id="prop-equazione_lineare_diofanti_molte">
       <statement>
         <p>
@@ -1661,17 +2412,20 @@
           <md>
             a_{1}x_{1}+\cdots+a_{n}x_{n}=b
           </md>
-          è risolubile se e solo se <m>(a_{1},\ldots,a_{n})</m> divide <m>b</m>. Se <m>(a_{1},\ldots,a_{n})=0</m>, l'equazione è un'identità. Se <m>(a_{1},\ldots,a_{n})\ne 0</m>, le soluzioni dipendono da <m>n-1</m> parametri interi.
+          è risolubile se e solo se <m>(a_{1},\ldots,a_{n})</m> divide <m>b</m>.
+          Se <m>(a_{1},\ldots,a_{n})=0</m>, l'equazione è un'identità.
+          Se <m>(a_{1},\ldots,a_{n})\ne 0</m>, le soluzioni dipendono da
+          <m>n-1</m> parametri interi.
         </p>
       </statement>
     </proposition>
 
     <exercises xml:id="exercises-equazioni_lineari_diofantine">
-
       <exercisegroup cols="2">
         <introduction>
           <p>
-            Stabilire se le seguenti equazioni hanno soluzioni intere e, in caso affermativo, determinarle tutte.
+            Stabilire se le seguenti equazioni hanno soluzioni intere e, in caso
+            affermativo, determinarle tutte.
           </p>
         </introduction>
 
@@ -1681,13 +2435,14 @@
               <m>12x+15y=9</m>
             </p>
           </statement>
+
           <answer>
             <p>
-              <m>x=-3+5h</m>, <m>y=3-4h</m> al variare di <m>h</m> in <m>\Interi</m>.
+              <m>x=-3+5h</m>, <m>y=3-4h</m> al variare di <m>h</m> in
+              <m>\Interi</m>.
             </p>
           </answer>
         </exercise>
-
 
         <exercise>
           <statement>
@@ -1695,6 +2450,7 @@
               <m>27x+15y=13</m>
             </p>
           </statement>
+
           <answer>
             <p>
               Non ci sono soluzioni.
@@ -1708,9 +2464,11 @@
               <m>48x+10y+45z=7</m>
             </p>
           </statement>
+
           <answer>
             <p>
-              <m>x=-1+5h</m>, <m>y=1-24h+9k</m>, <m>z=1-2k</m> al variare di <m>h</m> e <m>k</m> in <m>\Interi</m>.
+              <m>x=-1+5h</m>, <m>y=1-24h+9k</m>, <m>z=1-2k</m> al variare di
+              <m>h</m> e <m>k</m> in <m>\Interi</m>.
             </p>
           </answer>
         </exercise>
@@ -1721,6 +2479,7 @@
               <m>48x+15y+45z=7</m>
             </p>
           </statement>
+
           <answer>
             <p>
               Non ci sono soluzioni.
@@ -1734,6 +2493,7 @@
               <m>6x+12y+15z=10</m>
             </p>
           </statement>
+
           <answer>
             <p>
               Non ci sono soluzioni.
@@ -1747,30 +2507,58 @@
               <m>6x+8y+12z=10</m>
             </p>
           </statement>
+
           <answer>
             <p>
-              <m>x=-5+6h+4k</m>, <m>y=5-6h-3k</m>, <m>z=h</m> al variare di <m>h</m> e <m>k</m> in <m>\Interi</m>.
+              <m>x=-5+6h+4k</m>, <m>y=5-6h-3k</m>, <m>z=h</m> al variare di
+              <m>h</m> e <m>k</m> in <m>\Interi</m>.
             </p>
           </answer>
         </exercise>
-
       </exercisegroup>
 
       <exercise>
         <statement>
           <p>
-            In uno stato ormai cancellato dalle carte geografiche esistevano due tipi di monete d'argento: quelle quadrate, del peso di <m>12</m> grammi e quelle circolari del peso di <m>7</m> grammi. Un contadino deve acquistare un cavallo al prezzo di <m>88</m> grammi d'argento. Quante monete quadrate e quante monete circolari dovrà portare con sé?
+            In uno stato ormai cancellato dalle carte geografiche esistevano due
+            tipi di monete d'argento: quelle quadrate, del peso di <m>12</m>
+            grammi e quelle circolari del peso di <m>7</m> grammi.
+            Un contadino deve acquistare un cavallo al prezzo di <m>88</m>
+            grammi d'argento.
+            Quante monete quadrate e quante monete circolari dovrà portare con
+            sé?
           </p>
         </statement>
+
         <solution>
           <p>
-            Detto <m>q</m> il numero delle monete quadrate e <m>c</m> il numero delle monete circolari, sappiamo che <m>q</m> e <m>c</m> sono interi non negativi e che <m>12q+7c=88</m>. Cerchiamo innanzitutto le soluzioni intere di questa equazione lineare diofantina. Poiché <m>12</m> e <m>7</m> sono coprimi è possibile determinare (ad esempio, tramite l'<xref ref="alg-euclide" text="title"/>) un'identità di Bezout che lega <m>12</m> e <m>7</m> a <m>1</m>: troviamo così <m>12\cdot 3+7\cdot(-5)=1</m>. Moltiplicando per <m>88</m> troviamo <m>12\cdot (3\cdot88)+7\cdot(-5\cdot 88)=1</m>. Una soluzione particolare è, quindi, <m>q=264</m>, <m>c=-440</m>. La soluzione generale è allora <m>q=264+7t</m>, <m>c=-440-12t</m> al variare di <m>t</m> in <m>\Interi</m>. Imponiamo ora la condizione che <m>q</m> e <m>c</m> siano non negativi. Abbiamo allora <m>264+7t\ge 0</m>, da cui otteniamo <m>t\ge-\frac{264}{7}</m>, che, essendo <m>t</m> intero, si riduce a <m>t\ge -37</m>. Abbiamo poi <m>-440-12t\ge 0</m>, da cui otteniamo <m>t\le-\frac{440}{12}</m>, che, essendo <m>t</m> intero, si riduce a <m>t\le -37</m>. Dunque, deve essere <m>t=-37</m> che, sostituito nell'espressione della soluzione generale, dà <m>q=5</m> e <m>c=4</m>.
+            Detto <m>q</m> il numero delle monete quadrate e <m>c</m> il numero
+            delle monete circolari, sappiamo che <m>q</m> e <m>c</m> sono interi
+            non negativi e che <m>12q+7c=88</m>.
+            Cerchiamo innanzitutto le soluzioni intere di questa equazione
+            lineare diofantina.
+            Poiché <m>12</m> e <m>7</m> sono coprimi è possibile determinare (ad
+            esempio, tramite l' <xref ref="alg-euclide" text="title"/> )
+            un'identità di Bezout che lega <m>12</m> e <m>7</m> a <m>1</m>:
+            troviamo così <m>12\cdot 3+7\cdot(-5)=1</m>.
+            Moltiplicando per <m>88</m> troviamo
+            <m>12\cdot (3\cdot88)+7\cdot(-5\cdot 88)=1</m>.
+            Una soluzione particolare è, quindi, <m>q=264</m>, <m>c=-440</m>.
+            La soluzione generale è allora <m>q=264+7t</m>, <m>c=-440-12t</m> al
+            variare di <m>t</m> in <m>\Interi</m>.
+            Imponiamo ora la condizione che <m>q</m> e <m>c</m> siano non
+            negativi.
+            Abbiamo allora <m>264+7t\ge 0</m>, da cui otteniamo
+            <m>t\ge-\frac{264}{7}</m>, che, essendo <m>t</m> intero, si riduce a
+            <m>t\ge -37</m>.
+            Abbiamo poi <m>-440-12t\ge 0</m>, da cui otteniamo
+            <m>t\le-\frac{440}{12}</m>, che, essendo <m>t</m> intero, si riduce
+            a <m>t\le -37</m>.
+            Dunque, deve essere <m>t=-37</m> che, sostituito nell'espressione
+            della soluzione generale, dà <m>q=5</m> e <m>c=4</m>.
           </p>
         </solution>
       </exercise>
-
     </exercises>
-
   </section>
-
 </chapter>

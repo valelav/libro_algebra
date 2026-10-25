@@ -1,1024 +1,1394 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-  <chapter xml:id="ch-gruppi">
-    <title>Monoidi e gruppi</title>
+<chapter xml:id="ch-gruppi">
+  <title>Monoidi e gruppi</title>
 
-    <introduction>
+  <introduction>
+    <p>
+      Ora che abbiamo dato un senso al concetto di operazione e ne abbiamo
+      studiato le principali proprietà, vogliamo analizzare più in dettaglio
+      insiemi dotati di operazioni.
+      I gruppi (e, più in generale, i monoidi) sono una delle strutture
+      algebriche più significative e utilizzate nei diversi ambiti della
+      matematica.
+    </p>
+  </introduction>
+
+  <section xml:id="sec-monoidi">
+    <title>Monoidi</title>
+
+    <definition xml:id="def-monoide">
+      <idx><h>monoide</h></idx>
+      <idx><h>monoide</h><h>commutativo</h></idx>
+      <statement>
+        <p>
+          Un insieme in cui è definita un'operazione associativa e dotata di
+          elemento neutro è detto <term>monoide</term>.
+          Nel caso in cui l'operazione sia commutativa diremo che il monoide è
+          <term>commutativo</term>.
+        </p>
+      </statement>
+    </definition>
+
+    <note>
       <p>
-        Ora che abbiamo dato un senso al concetto di operazione e ne abbiamo studiato le principali proprietà, vogliamo analizzare più in dettaglio insiemi dotati di operazioni. I gruppi (e, più in generale, i monoidi) sono una delle strutture algebriche più significative e utilizzate nei diversi ambiti della matematica.
+        Più precisamente, bisognerebbe dire che un monoide è una coppia
+        <m>(M,\cdot)</m> formata da un insieme <m>M</m> e un'operazione
+        associativa <m>\cdot</m> definita in <m>M</m> che sia dotata di un
+        elemento neutro rispetto a tale operazione.
+        Per semplicità, useremo il termine monoide per riferirci al solo insieme
+        <m>M</m>, sottintendendo l'operazione, salvo dichiararla esplicitamente
+        in caso di ambiguità.
       </p>
-    </introduction>
+    </note>
 
-    <section xml:id="sec-monoidi">
-      <title>Monoidi</title>
-
-      <definition xml:id="def-monoide">
-        <idx><h>monoide</h></idx>
-        <idx><h>monoide</h><h>commutativo</h></idx>
-        <statement>
-          <p>
-            Un insieme in cui è definita un'operazione associativa e dotata di elemento neutro è detto <term>monoide</term>. Nel caso in cui l'operazione sia commutativa diremo che il monoide è <term>commutativo</term>.
-          </p>
-        </statement>
-      </definition>
-
-      <note>
+    <example>
+      <statement>
         <p>
-          Più precisamente, bisognerebbe dire che un monoide è una coppia <m>(M,\cdot)</m> formata da un insieme <m>M</m> e un'operazione associativa <m>\cdot</m> definita in <m>M</m> che sia dotata di un elemento neutro rispetto a tale operazione. Per semplicità, useremo il termine monoide per riferirci al solo insieme <m>M</m>, sottintendendo l'operazione, salvo dichiararla esplicitamente in caso di ambiguità.
+          Gli insiemi <m>\Naturali</m>, <m>\Interi</m>, <m>\Razionali</m>,
+          <m>\Reali</m> e <m>\Complessi</m> sono monoidi commutativi sia
+          rispetto all'addizione (con elemento neutro <m>0</m> ), sia rispetto
+          alla moltiplicazione (con elemento neutro <m>1</m> ).
         </p>
-      </note>
 
-      <example>
-        <statement>
-          <p>
-            Gli insiemi <m>\Naturali</m>, <m>\Interi</m>, <m>\Razionali</m>, <m>\Reali</m> e <m>\Complessi</m> sono monoidi commutativi sia rispetto all'addizione (con elemento neutro <m>0</m>), sia rispetto alla moltiplicazione (con elemento neutro <m>1</m>).
-          </p>
-          <p>
-            L'insieme <m>\Interi/n</m> è un monoide commutativo sia rispetto all'addizione (con elemento neutro <m>\class[n]{0}</m>), sia rispetto alla moltiplicazione (con elemento neutro <m>\class[n]{1}</m>), definite nel <xref ref="ch-classidiresto"/>.
-          </p>
-        </statement>
-      </example>
-
-      <example>
-        <statement>
-          <p>
-            L'insieme delle matrici <m>\matt{m}{n}{R}</m> a <m>m</m> righe e <m>n</m> colonne a coefficienti in un anello <m>R</m> è un monoide commutativo rispetto all'addizione (con elemento neutro la matrice nulla).
-          </p>
-          <p>
-            L'insieme delle matrici quadrate <m>\mat{n}{R}</m> a <m>n</m> righe e <m>n</m> colonne a coefficienti in un anello <m>R</m> è un monoide rispetto alla moltiplicazione (con elemento neutro la matrice identica). A meno che <m>n=1</m> e l'anello <m>R</m> sia commutativo, il monoide è non commutativo.
-          </p>
-        </statement>
-      </example>
-
-      <example xml:id="ex-monoide_funzioni">
-        <statement>
-          <p>
-            Dato un insieme <m>X</m>, l'insieme <m>X^{X}</m> è un monoide rispetto alla composizione (con elemento neutro la funzione identica). Se <m>X</m> contiene almeno due elementi, il monoide <m>X^{X}</m> è non commutativo (<xref ref="ex-composizione_insieme_due_elementi_non_commutativa"/>).
-          </p>
-        </statement>
-      </example>
-
-      <example>
-        <statement>
-          <p>
-            Dato un insieme <m>X</m>, il suo booleano <m>\parti{X}</m> è un monoide commutativo sia rispetto all'unione insiemistica (con elemento neutro <m>\vuoto</m>), sia rispetto all'intersezione insiemistica (con elemento neutro <m>X</m>).
-          </p>
-        </statement>
-      </example>
-
-      <definition xml:id="def-elemento_invertibile">
-        <statement>
-          <p>
-            Un elemento <m>a</m> di un monoide <m>M</m> è detto <term>invertibile</term> se esiste un elemento <m>b</m> in <m>M</m> tale che
-            <md>
-              a\cdot b=b\cdot a=1
-            </md>.
-          </p>
-        </statement>
-      </definition>
-
-      <remark xml:id="rem-neutro_invertibile">
         <p>
-          L'elemento neutro <m>1</m> di un monoide <m>M</m> è ovviamente invertibile: infatti, <m>1\cdot 1=1\cdot 1=1</m>.
+          L'insieme <m>\Interi/n</m> è un monoide commutativo sia rispetto
+          all'addizione (con elemento neutro <m>\class[n]{0}</m> ), sia rispetto
+          alla moltiplicazione (con elemento neutro <m>\class[n]{1}</m> ),
+          definite nel <xref ref="ch-classidiresto"/>.
         </p>
-      </remark>
+      </statement>
+    </example>
 
+    <example>
+      <statement>
+        <p>
+          L'insieme delle matrici <m>\matt{m}{n}{R}</m> a <m>m</m> righe e
+          <m>n</m> colonne a coefficienti in un anello <m>R</m> è un monoide
+          commutativo rispetto all'addizione (con elemento neutro la matrice
+          nulla).
+        </p>
+
+        <p>
+          L'insieme delle matrici quadrate <m>\mat{n}{R}</m> a <m>n</m> righe e
+          <m>n</m> colonne a coefficienti in un anello <m>R</m> è un monoide
+          rispetto alla moltiplicazione (con elemento neutro la matrice
+          identica).
+          A meno che <m>n=1</m> e l'anello <m>R</m> sia commutativo, il monoide
+          è non commutativo.
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id="ex-monoide_funzioni">
+      <statement>
+        <p>
+          Dato un insieme <m>X</m>, l'insieme <m>X^{X}</m> è un monoide rispetto
+          alla composizione (con elemento neutro la funzione identica).
+          Se <m>X</m> contiene almeno due elementi, il monoide <m>X^{X}</m> è
+          non commutativo (
+          <xref ref="ex-composizione_insieme_due_elementi_non_commutativa"/> ).
+        </p>
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          Dato un insieme <m>X</m>, il suo booleano <m>\parti{X}</m> è un
+          monoide commutativo sia rispetto all'unione insiemistica (con elemento
+          neutro <m>\vuoto</m> ), sia rispetto all'intersezione insiemistica
+          (con elemento neutro <m>X</m> ).
+        </p>
+      </statement>
+    </example>
+
+    <definition xml:id="def-elemento_invertibile">
+      <statement>
+        <p>
+          Un elemento <m>a</m> di un monoide <m>M</m> è detto
+          <term>invertibile</term> se esiste un elemento <m>b</m> in <m>M</m>
+          tale che
+          <md>
+            a\cdot b=b\cdot a=1
+          </md>.
+        </p>
+      </statement>
+    </definition>
+
+    <remark xml:id="rem-neutro_invertibile">
       <p>
-        Diamo ora alcune proprietà degli elementi invertibili le cui dimostrazioni sono praticamente identiche a quelle date nei casi particolari delle matrici (<xref ref="sec-operazioni_matrici"/>) e delle classi di resto (<xref ref="prop-classi_resto_invertibili"/>).
+        L'elemento neutro <m>1</m> di un monoide <m>M</m> è ovviamente
+        invertibile: infatti, <m>1\cdot 1=1\cdot 1=1</m>.
       </p>
+    </remark>
 
+    <p>
+      Diamo ora alcune proprietà degli elementi invertibili le cui dimostrazioni
+      sono praticamente identiche a quelle date nei casi particolari delle
+      matrici ( <xref ref="sec-operazioni_matrici"/> ) e delle classi di resto (
+      <xref ref="prop-classi_resto_invertibili"/> ).
+    </p>
 
-      <proposition xml:id="prop-unicita_inverso">
-        <statement>
-          <p>
-            Se <m>a</m> è un elemento invertibile di un monoide <m>M</m>, allora l'elemento <m>b</m> tale che
-            <md>
-              a\cdot b=b\cdot a=1
-            </md>
-            è univocamente determinato e viene detto <term>inverso</term> di <m>a</m> (o opposto, se stiamo usando la notazione additiva). Per il momento lo denoteremo con <m>\invprov{a}</m>.
-          </p>
-        </statement>
-
-        <proof>
-          <p>
-            Sia <m>c</m> un elemento tale che
-            <md>
-              a\cdot c=c\cdot a=1
-            </md>.
-            Abbiamo allora
-            <md>
-              b=b\cdot 1=b\cdot (a\cdot c)=(b\cdot a)\cdot c=1\cdot c=c
-            </md>.
-          </p>
-        </proof>
-
-      </proposition>
-
-      <proposition xml:id="prop-inverso_inverso">
-        <statement>
-          <p>
-            Se <m>a</m> è un elemento invertibile di un monoide <m>M</m>, allora <m>\invprov{a}</m> è invertibile e l'inverso di <m>\invprov{a}</m> è proprio <m>a</m>.
-          </p>
-        </statement>
-
-        <proof>
-          <p>
-            Per mostrare che <m>\invprov{a}</m> è invertibile basta mostrare che esiste un elemento <m>b</m> tale che <m>\invprov{a}\cdot b=b\cdot\invprov{a}=1</m>: prendendo <m>b=a</m>, tali uguaglianze sono soddisfatte.
-          </p>
-        </proof>
-
-      </proposition>
-
-      <proposition xml:id="prop-inverso_prodotto">
-        <statement>
-          <p>
-            Se <m>a</m> e <m>b</m> sono elementi invertibili di un monoide <m>M</m>, allora <m>a\cdot b</m> è invertibile e <m>\invprov{a\cdot b}=\invprov{b}\cdot\invprov{a}</m>.
-          </p>
-        </statement>
-
-        <proof>
-          <p>
-            Basta osservare che, usando ripetutamente la proprietà associativa, si ha
-            <md>
-              (a\cdot b)\cdot(\invprov{b}\cdot\invprov{a})= ((a\cdot b)\cdot\invprov{b})\cdot\invprov{a}=(a\cdot (b\cdot\invprov{b}))\cdot\invprov{a}= (a\cdot 1)\cdot\invprov{a}=a\cdot\invprov{a}=1
-            </md>
-            e, analogamente, <m>(\invprov{b}\cdot\invprov{a})\cdot(a\cdot b)=1</m>.
-          </p>
-        </proof>
-
-      </proposition>
-
-      <remark xml:id="rem-inverso_in_ordine_inverso">
+    <proposition xml:id="prop-unicita_inverso">
+      <statement>
         <p>
-          Nella <xref ref="prop-inverso_prodotto"/> abbiamo mostrato che l'inverso del prodotto è uguale al prodotto degli inversi dei fattori ma l'ordinamento in cui prendiamo gli inversi è opposto all'ordinamento in cui abbiamo i fattori. Ovviamente, se gli elementi commutano, questo non fa differenza, ma in generale occorre fare attenzione.
+          Se <m>a</m> è un elemento invertibile di un monoide <m>M</m>, allora
+          l'elemento <m>b</m> tale che
+          <md>
+            a\cdot b=b\cdot a=1
+          </md>
+          è univocamente determinato e viene detto <term>inverso</term> di
+          <m>a</m> (o opposto, se stiamo usando la notazione additiva).
+          Per il momento lo denoteremo con <m>\invprov{a}</m>.
         </p>
-      </remark>
+      </statement>
 
+      <proof>
+        <p>
+          Sia <m>c</m> un elemento tale che
+          <md>
+            a\cdot c=c\cdot a=1
+          </md>.
+          Abbiamo allora
+          <md>
+            b=b\cdot 1=b\cdot (a\cdot c)=(b\cdot a)\cdot c=1\cdot c=c
+          </md>.
+        </p>
+      </proof>
+    </proposition>
 
-      <definition xml:id="def-potenza_in_monoide">
-        <statement>
-          <p>
-            Dato un elemento <m>a</m> di un monoide <m>M</m> e un numero naturale <m>n</m>, la <term>potenza</term> <m>n</m>-esima <m>a^{n}</m> di <m>a</m> è così definita ricorsivamente:
-            <md>
-              a^{n}\coloneqq
+    <proposition xml:id="prop-inverso_inverso">
+      <statement>
+        <p>
+          Se <m>a</m> è un elemento invertibile di un monoide <m>M</m>, allora
+          <m>\invprov{a}</m> è invertibile e l'inverso di <m>\invprov{a}</m> è
+          proprio <m>a</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Per mostrare che <m>\invprov{a}</m> è invertibile basta mostrare che
+          esiste un elemento <m>b</m> tale che
+          <m>\invprov{a}\cdot b=b\cdot\invprov{a}=1</m>: prendendo <m>b=a</m>,
+          tali uguaglianze sono soddisfatte.
+        </p>
+      </proof>
+    </proposition>
+
+    <proposition xml:id="prop-inverso_prodotto">
+      <statement>
+        <p>
+          Se <m>a</m> e <m>b</m> sono elementi invertibili di un monoide
+          <m>M</m>, allora <m>a\cdot b</m> è invertibile e
+          <m>\invprov{a\cdot b}=\invprov{b}\cdot\invprov{a}</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Basta osservare che, usando ripetutamente la proprietà associativa, si
+          ha
+          <md>
+            (a\cdot b)\cdot(\invprov{b}\cdot\invprov{a})= ((a\cdot b)\cdot\invprov{b})\cdot\invprov{a}=(a\cdot (b\cdot\invprov{b}))\cdot\invprov{a}= (a\cdot 1)\cdot\invprov{a}=a\cdot\invprov{a}=1
+          </md>
+          e, analogamente,
+          <m>(\invprov{b}\cdot\invprov{a})\cdot(a\cdot b)=1</m>.
+        </p>
+      </proof>
+    </proposition>
+
+    <remark xml:id="rem-inverso_in_ordine_inverso">
+      <p>
+        Nella <xref ref="prop-inverso_prodotto"/> abbiamo mostrato che l'inverso
+        del prodotto è uguale al prodotto degli inversi dei fattori ma
+        l'ordinamento in cui prendiamo gli inversi è opposto all'ordinamento in
+        cui abbiamo i fattori.
+        Ovviamente, se gli elementi commutano, questo non fa differenza, ma in
+        generale occorre fare attenzione.
+      </p>
+    </remark>
+
+    <definition xml:id="def-potenza_in_monoide">
+      <statement>
+        <p>
+          Dato un elemento <m>a</m> di un monoide <m>M</m> e un numero naturale
+          <m>n</m>, la <term>potenza</term> <m>n</m>-esima <m>a^{n}</m> di
+          <m>a</m> è così definita ricorsivamente:
+          <md>
+            a^{n}\coloneqq
               \begin{cases}
                 1              \amp \text{se }n=0\\
                 a^{n-1}\cdot a \amp \text{se }n \gt 0
               \end{cases}
-            </md>
-          </p>
-          <p>
-            Se <m>a</m> è invertibile e <m>n</m> è un numero intero negativo poniamo inoltre
-            <md>
-              a^{n}\coloneqq\invprov{a}^{-n}
-            </md>
-            dove abbiamo usato il fatto che <m>-n</m> è un intero positivo.
-          </p>
-          <p>
-            Se utilizziamo la notazione additiva, parleremo di <term>multiplo</term> <m>n</m>-esimo e scriveremo <m>na</m> invece di <m>a^{n}</m>.
-          </p>
-        </statement>
-      </definition>
-
-      <remark xml:id="rem-potenza_con_esponente_1_e_-1">
-        <p>
-          Per definizione abbiamo <m>a^{1}=a^{0}\cdot a=1\cdot a=a</m>. Se <m>a</m> è un elemento invertibile, abbiamo <m>a^{-1}=\invprov{a}^{1}=\invprov{a}</m>, cioè <m>a^{-1}</m> è l'inverso di <m>a</m>. D'ora in poi indicheremo così l'inverso di <m>a</m>.
+          </md>
         </p>
-      </remark>
 
-      <p>
-        Possiamo allora riscrivere la <xref ref="prop-inverso_inverso"/> e la <xref ref="prop-inverso_prodotto"/>.
-      </p>
-
-      <proposition xml:id="prop-proprieta_inverso_rivisto">
-        <statement>
-          <p>
-            Se <m>a</m> è un elemento invertibile di un monoide <m>M</m>, allora <m>a^ {-1}</m> è invertibile e <m>(a^{-1})^{-1}=a</m>.
-          </p>
-          <p>
-            Se <m>a</m> e <m>b</m> sono elementi invertibili di un monoide <m>M</m>, allora <m>a\cdot b</m> è invertibile e <m>(a\cdot b)^{-1}=b^{-1}a^{-1}</m>.
-          </p>
-        </statement>
-      </proposition>
-
-      <remark xml:id="rem-potenze_di_1">
         <p>
-          Si verifica facilmente che <m>1^{n}=1</m> per ogni intero <m>n</m>.
+          Se <m>a</m> è invertibile e <m>n</m> è un numero intero negativo
+          poniamo inoltre
+          <md>
+            a^{n}\coloneqq\invprov{a}^{-n}
+          </md>
+          dove abbiamo usato il fatto che <m>-n</m> è un intero positivo.
         </p>
-      </remark>
 
-      <p>
-        Utilizzando la proprietà associativa è possibile generalizzare alcune delle usuali proprietà delle potenze.
-      </p>
-
-      <proposition xml:id="prop-proprieta_potenze_monoide">
-        <statement>
-          <p>
-            Sia <m>a</m> un elemento di un monoide <m>M</m> e siano <m>m</m> e <m>n</m> due numeri naturali. Abbiamo allora:
-            <ol>
-              <li xml:id="item-somma_esponenti">
-                <p>
-                  <m>a^{m}\cdot a^{n}=a^{m+n}</m>;
-                </p>
-              </li>
-              <li xml:id="item-prodotto_esponenti">
-                <p>
-                  <m>(a^{m})^{n}=a^{mn}</m>.
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-
-        <proof>
-          <p>
-            Mostriamo il <xref ref="item-somma_esponenti"/> per induzione su <m>n</m>. Se <m>n=0</m>, abbiamo <m>a^{m}\cdot a^{0}=a^{m}\cdot 1=a^{m}</m> e <m>a^{m+0}=a^{m}</m>.
-          </p>
-          <p>
-            Sia allora <m>k</m> un naturale per cui vale la proprietà e mostriamo che vale per <m>k+1</m>. Dunque
-            <md>
-              <mrow> a^{m}\cdot a^{k+1} \amp = a^{m}\cdot (a^{k}\cdot a)          \amp\text{definizione di potenza} </mrow>
-              <mrow>           \amp = (a^{m}\cdot a^{k})\cdot a) \amp\text{proprietà associativa}  </mrow>
-              <mrow>           \amp = a^{m+k}\cdot a \amp\text{ipotesi induttiva}      </mrow>
-              <mrow>           \amp = a^{m+k+1}  \amp\text{definizione di potenza} </mrow>
-            </md>
-          </p>
-          <p>
-            Mostriamo ora il <xref ref="item-prodotto_esponenti"/>, sempre per induzione su <m>n</m>. Se <m>n=0</m>, abbiamo <m>(a^{m})^{0}=1</m> e <m>a^{m\cdot 0}=a^{0}=1</m>.
-          </p>
-          <p>
-            Sia allora <m>k</m> un naturale per cui vale la proprietà e mostriamo che vale per <m>k+1</m>. Dunque
-            <md>
-              <mrow> (a^{m})^{k+1} \amp = (a^{m})^{k}\cdot a^{m}                 \amp\text{definizione di potenza} </mrow>
-              <mrow>              \amp = a^{mk}\cdot a^{m}      \amp \text{ipotesi induttiva}</mrow>
-              <mrow>              \amp = a^{mk+m} \amp <xref ref="item-somma_esponenti"/></mrow>
-              <mrow>              \amp = a^{m(k+1)}          \amp\text{proprietà operazioni dei naturali}</mrow>
-            </md>
-          </p>
-        </proof>
-
-      </proposition>
-
-      <p>
-        Le proprietà precedenti si possono estendere a potenze con esponente negativo nel caso in cui l'elemento sia invertibile. Abbiamo bisogno del
-      </p>
-
-      <lemma xml:id="lem-inverso_di_potenze">
-        <statement>
-          <p>
-            Se <m>a</m> è un elemento invertibile di un monoide e <m>n</m> è un intero, allora <m>a^{n}</m> e <m>a^{-n}</m> sono uno l'inverso dell'altro.
-          </p>
-        </statement>
-
-        <proof>
-          <p>
-            Senza perdere in generalità, possiamo supporre che <m>n \ge 0</m>. Procediamo per induzione su <m>n</m>. Il caso <m>n=0</m> è ovvio: infatti, <m>a^{0}=1</m>.
-          </p>
-          <p>
-            Sia allora <m>k</m> un naturale tale che <m>a^{k}</m> è invertibile con inverso <m>a^{-k}</m>. Per la <xref ref="prop-inverso_prodotto"/>, <m>a^{k+1}=a^{k}\cdot a</m> è invertibile e il suo inverso è <m>a^{-1}\cdot a^{-k}</m>. Per definizione, <m>a^{-1}=\invprov{a}^{1}</m> e <m>a^{-k}=\invprov{a}^{k}</m>, e, per la <xref ref="prop-proprieta_potenze_monoide"/>, abbiamo <m>\invprov{a}^{1}\cdot \invprov{a}^{k}=\invprov{a}^{1+k}=a^{-k-1}</m>.
-          </p>
-        </proof>
-
-      </lemma>
-
-      <proposition xml:id="prop-proprieta_potenze_elemento_invertibile">
-        <statement>
-          <p>
-            Sia <m>a</m> un elemento invertibile di un monoide <m>M</m> e siano <m>m</m> e <m>n</m> due numeri interi. Abbiamo allora:
-            <ol>
-              <li xml:id="item-somma_esponenti_interi">
-                <p>
-                  <m>a^{m}\cdot a^{n}=a^{m+n}</m>;
-                </p>
-              </li>
-              <li xml:id="item-prodotto_esponenti_interi">
-                <p>
-                  <m>(a^{m})^{n}=a^{mn}</m>.
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-
-        <proof>
-          <p>
-            Dimostriamo il <xref ref="item-somma_esponenti_interi"/>. Occorre distinguere vari casi e sottocasi.
-            <ul>
-              <li>
-                <p>
-                  Se <m>m+n \ge 0</m>, consideriamo i sottocasi:
-                  <ul>
-                    <li>
-                      <p>
-                        se <m>m \ge 0</m> e <m>n \ge 0</m>, basta considerare la <xref ref="prop-proprieta_potenze_monoide"/>;
-                      </p>
-                    </li>
-                    <li>
-                      <p>
-                        se uno tra <m>m</m> e <m>n</m> è negativo (ad esempio, <m>n \lt 0</m>, l'altro caso è analogo) allora, per la <xref ref="prop-proprieta_potenze_monoide"/>, abbiamo
-                        <md>
-                          a^{m+n}a^{-n}=a^{m+n-n}=a^{m}
-                        </md>.
-                        Moltiplicando a destra ambo i membri per <m>a^{n}</m>, otteniamo
-                        <md>
-                          (a^{m+n}a^{-n})a^{n}=a^{m}a^{n}
-                        </md>
-                        che, per la proprietà associativa, dà
-                        <md>
-                          a^{m+n}(a^{-n}a^{n})=a^{m}a^{n}
-                        </md>:
-                        poiché <m>a^{-n}a^{n}=1</m> per il <xref ref="lem-inverso_di_potenze"/>, otteniamo immediatamente l'uguaglianza voluta.
-                      </p>
-                    </li>
-                  </ul>
-                </p>
-              </li>
-              <li>
-                <p>
-                  Se <m>m+n\lt 0</m> abbiamo
-                  <md>
-                    a^{m+n}=\invprov{a}^{-m-n}=\invprov{a}^{-m}\cdot\invprov{a}^{-n}=a^{m}\cdot a^{n}
-                  </md>
-                  dove abbiamo usato il caso precedente.
-                </p>
-              </li>
-            </ul>
-          </p>
-          <p>
-            Lasciamo la dimostrazione del <xref ref="item-prodotto_esponenti_interi"/> per esercizio: anche qui occorrerà distinguere vari casi.
-          </p>
-        </proof>
-
-      </proposition>
-
-      <corollary xml:id="cor-potenze_di_un_elemento_commutano">
-        <statement>
-          <p>
-            Le potenze di un elemento <m>a</m> di un monoide commutano fra loro (dove le potenze vanno considerate con esponenti solo naturali se <m>a</m> non è invertibile).
-          </p>
-        </statement>
-
-        <proof>
-          <p>
-            Per ogni <m>m</m> e <m>n</m> naturali si ha, grazie alla <xref ref="prop-proprieta_potenze_monoide"/>
-            <md>
-              a^{m}\cdot a^{n}=a^{m+n}=a^{n+m}=a^{n}\cdot a^{m}
-            </md>.
-            Se <m>a</m> è invertibile si estende al caso di esponenti interi qualunque usando la <xref ref="prop-proprieta_potenze_elemento_invertibile"/>.
-          </p>
-        </proof>
-
-      </corollary>
-
-      <proposition xml:id="prop-potenze_di_commutabili">
-        <statement>
-          <p>
-            Siano <m>a</m> e <m>b</m> due elementi commutabili di un monoide. Allora ogni potenza di <m>a</m> commuta con ogni potenza di <m>b</m> (dove le potenze vanno prese con esponenti solo naturali per gli elementi non invertibili).
-          </p>
-        </statement>
-
-        <proof>
-          <p>
-            Dimostriamo innanzitutto che <m>a</m> commuta con <m>b^{n}</m> per ogni naturale <m>n</m>. Procediamo per induzione su <m>n</m>. Il caso <m>n=0</m> è banale: infatti, <m>b^{0}=1</m> commuta con ogni altro elemento. Sia allora <m>k</m> un naturale tale per cui <m>a</m> commuta con <m>b^{k}</m> e mostriamo che <m>a</m> commuta con <m>b^{k+1}</m>. Dunque:
-            <md>
-              <mrow> a\cdot b^{k+1} \amp = a\cdot(b^{k}\cdot b)  \amp \text{definizione di potenza} </mrow>
-              <mrow>                \amp = (a\cdot b^{k})\cdot b \amp \text{proprietà associativa} </mrow>
-              <mrow>                \amp = (b^{k}\cdot a)\cdot b \amp \text{ipotesi induttiva} </mrow>
-              <mrow>                \amp = b^{k}\cdot (a\cdot b) \amp \text{proprietà associativa} </mrow>
-              <mrow>                \amp = b^{k}\cdot (b\cdot a) \amp \text{ipotesi} </mrow>
-              <mrow>                \amp = (b^{k}\cdot b)\cdot a \amp \text{proprietà associativa} </mrow>
-              <mrow>                \amp = b^{k+1}\cdot a        \amp \text{definizione di potenza} </mrow>
-            </md>
-          </p>
-          <p>
-            Supponiamo ora che <m>b</m> sia invertibile e mostriamo che <m>a</m> commuta con <m>b^{n}</m> con <m>n</m> intero negativo. Sappiamo che <m>a</m> commuta con <m>b^{-n}</m> perché <m>-n</m> è positivo:
-            <md>
-              ab^{-n}=b^{-n}a
-            </md>.
-            Moltiplicando ambo i membri di questa uguaglianza a sinistra e a destra per <m>b^{n}</m> (non scriviamo le parentesi perché usiamo la proprietà associativa), abbiamo
-            <md>
-              b^{n}ab^{-n}b^{n}=b^{n}b^{-n}ab^{n}
-            </md>.
-            Usiamo ora il <xref ref="lem-inverso_di_potenze"/> e otteniamo
-            <md>
-              b^{n}a\cdot 1=1\cdot ab^{n}
-            </md>
-            da cui segue la tesi.
-          </p>
-          <p>
-            Abbiamo mostrato che se due elementi commutano, allora il primo commuta con ogni potenza del secondo: se ora prendiamo <m>b^{n}</m> come primo elemento e <m>a</m> come secondo elemento, vediamo che ogni potenza di <m>b</m> commuta con ogni potenza di <m>a</m>.
-          </p>
-        </proof>
-
-      </proposition>
-
-      <proposition xml:id="prop-potenza_del_prodotto_di_commutabili">
-        <statement>
-          <p>
-            Siano <m>a</m> e <m>b</m> due elementi commutabili di un monoide. Per ogni naturale <m>n</m> si ha <m>(a\cdot b)^{n}=a^{n}\cdot b^{n}</m>: se <m>a</m> e <m>b</m> sono invertibili, l'identità vale per <m>n</m> intero qualunque.
-          </p>
-        </statement>
-
-        <proof>
-          <p>
-            Consideriamo prima il caso in cui <m>n</m> sia naturale e procediamo per induzione su <m>n</m>. Se <m>n=0</m>, abbiamo <m>(a\cdot b)^{0}=1</m> e <m>a^{0}\cdot b^{0}=1\cdot 1=1</m>.
-          </p>
-          <p>
-            Sia allora <m>k</m> un naturale per cui vale la proprietà e mostriamo che vale per <m>k+1</m>. Dunque
-            <md>
-              <mrow> (a\cdot b)^{k+1} \amp = (a\cdot b)^{k}\cdot(a\cdot b)     \amp \text{definizione di potenza} </mrow>
-              <mrow>                \amp = (a^{k}\cdot b^{k})\cdot(a\cdot b)   \amp \text{ipotesi induttiva}</mrow>
-              <mrow>                \amp = (a^{k} \cdot b^{k})\cdot(b\cdot a)  \amp \text{ipotesi}</mrow>
-              <mrow>                \amp = a^{k} \cdot (b^{k}\cdot(b\cdot a))  \amp \text{proprietà associativa}</mrow>
-              <mrow>                \amp = a^{k} \cdot ((b^{k}\cdot b)\cdot a) \amp \text{proprietà associativa}</mrow>
-              <mrow>                \amp = a^{k} \cdot (b^{k+1}\cdot a)        \amp \text{definizione di potenza}</mrow>
-              <mrow>                \amp = a^{k} \cdot (a\cdot b^{k+1})        \amp <xref ref="prop-potenze_di_commutabili"/></mrow>
-              <mrow>                \amp = (a^{k} \cdot a)\cdot b^{k+1}        \amp \text{proprietà associativa}</mrow>
-              <mrow>                \amp = a^{k+1} \cdot b^{k+1}               \amp \text{definizione di potenza}</mrow>
-            </md>
-          </p>
-          <p>
-            Supponiamo ora che <m>a</m> e <m>b</m> siano invertibili e sia <m>n</m> un intero negativo. Allora
-            <md>
-              <mrow>(a\cdot b)^{n} \amp = ((a\cdot b)^{-n})^{-1} \amp <xref ref="prop-proprieta_potenze_elemento_invertibile"/></mrow>
-              <mrow> \amp =(a^{-n}\cdot b^{-n})^{-1} \amp \text{perché }-n\text{ è naturale}</mrow>
-              <mrow> \amp =(b^{-n})^{-1}\cdot (a^{-n})^{-1} \amp <xref ref="prop-proprieta_inverso_rivisto"/></mrow>
-              <mrow> \amp =b^{n}\cdot a^{n} \amp <xref ref="prop-proprieta_potenze_elemento_invertibile"/></mrow>
-              <mrow> \amp =a^{n}\cdot b^{n} \amp <xref ref="prop-potenze_di_commutabili"/></mrow>
-            </md>
-          </p>
-        </proof>
-
-      </proposition>
-
-      <note>
         <p>
-          In questo paragrafo siamo stati molto espliciti nelle dimostrazioni, motivando ciascun passaggio. Nel seguito utilizzeremo spesso in maniera implicita la proprietà associativa e le altre proprietà di base che abbiamo dimostrato.
+          Se utilizziamo la notazione additiva, parleremo di
+          <term>multiplo</term> <m>n</m>-esimo e scriveremo <m>na</m> invece di
+          <m>a^{n}</m>.
         </p>
-      </note>
+      </statement>
+    </definition>
 
-      <exercises xml:id="exercises-monoidi">
+    <remark xml:id="rem-potenza_con_esponente_1_e_-1">
+      <p>
+        Per definizione abbiamo <m>a^{1}=a^{0}\cdot a=1\cdot a=a</m>.
+        Se <m>a</m> è un elemento invertibile, abbiamo
+        <m>a^{-1}=\invprov{a}^{1}=\invprov{a}</m>, cioè <m>a^{-1}</m> è
+        l'inverso di <m>a</m>.
+        D'ora in poi indicheremo così l'inverso di <m>a</m>.
+      </p>
+    </remark>
 
-        <exercise>
+    <p>
+      Possiamo allora riscrivere la <xref ref="prop-inverso_inverso"/> e la
+      <xref ref="prop-inverso_prodotto"/>.
+    </p>
+
+    <proposition xml:id="prop-proprieta_inverso_rivisto">
+      <statement>
+        <p>
+          Se <m>a</m> è un elemento invertibile di un monoide <m>M</m>, allora
+          <m>a^ {-1}</m> è invertibile e <m>(a^{-1})^{-1}=a</m>.
+        </p>
+
+        <p>
+          Se <m>a</m> e <m>b</m> sono elementi invertibili di un monoide
+          <m>M</m>, allora <m>a\cdot b</m> è invertibile e
+          <m>(a\cdot b)^{-1}=b^{-1}a^{-1}</m>.
+        </p>
+      </statement>
+    </proposition>
+
+    <remark xml:id="rem-potenze_di_1">
+      <p>
+        Si verifica facilmente che <m>1^{n}=1</m> per ogni intero <m>n</m>.
+      </p>
+    </remark>
+
+    <p>
+      Utilizzando la proprietà associativa è possibile generalizzare alcune
+      delle usuali proprietà delle potenze.
+    </p>
+
+    <proposition xml:id="prop-proprieta_potenze_monoide">
+      <statement>
+        <p>
+          Sia <m>a</m> un elemento di un monoide <m>M</m> e siano <m>m</m> e
+          <m>n</m> due numeri naturali.
+          Abbiamo allora:
+          <ol>
+            <li xml:id="item-somma_esponenti">
+              <p>
+                <m>a^{m}\cdot a^{n}=a^{m+n}</m>;
+              </p>
+            </li>
+
+            <li xml:id="item-prodotto_esponenti">
+              <p>
+                <m>(a^{m})^{n}=a^{mn}</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Mostriamo il <xref ref="item-somma_esponenti"/> per induzione su
+          <m>n</m>.
+          Se <m>n=0</m>, abbiamo <m>a^{m}\cdot a^{0}=a^{m}\cdot 1=a^{m}</m> e
+          <m>a^{m+0}=a^{m}</m>.
+        </p>
+
+        <p>
+          Sia allora <m>k</m> un naturale per cui vale la proprietà e mostriamo
+          che vale per <m>k+1</m>.
+          Dunque
+          <md>
+            <mrow> a^{m}\cdot a^{k+1} \amp = a^{m}\cdot (a^{k}\cdot a)          \amp\text{definizione di potenza} </mrow>
+            <mrow>           \amp = (a^{m}\cdot a^{k})\cdot a) \amp\text{proprietà associativa}  </mrow>
+            <mrow>           \amp = a^{m+k}\cdot a \amp\text{ipotesi induttiva}      </mrow>
+            <mrow>           \amp = a^{m+k+1}  \amp\text{definizione di potenza} </mrow>
+          </md>
+        </p>
+
+        <p>
+          Mostriamo ora il <xref ref="item-prodotto_esponenti"/>, sempre per
+          induzione su <m>n</m>.
+          Se <m>n=0</m>, abbiamo <m>(a^{m})^{0}=1</m> e
+          <m>a^{m\cdot 0}=a^{0}=1</m>.
+        </p>
+
+        <p>
+          Sia allora <m>k</m> un naturale per cui vale la proprietà e mostriamo
+          che vale per <m>k+1</m>.
+          Dunque
+          <md>
+            <mrow> (a^{m})^{k+1} \amp = (a^{m})^{k}\cdot a^{m}                 \amp\text{definizione di potenza} </mrow>
+            <mrow>              \amp = a^{mk}\cdot a^{m}      \amp \text{ipotesi induttiva}</mrow>
+            <mrow>              \amp = a^{mk+m} \amp <xref ref="item-somma_esponenti"/></mrow>
+            <mrow>              \amp = a^{m(k+1)}          \amp\text{proprietà operazioni dei naturali}</mrow>
+          </md>
+        </p>
+      </proof>
+    </proposition>
+
+    <p>
+      Le proprietà precedenti si possono estendere a potenze con esponente
+      negativo nel caso in cui l'elemento sia invertibile.
+      Abbiamo bisogno del
+    </p>
+
+    <lemma xml:id="lem-inverso_di_potenze">
+      <statement>
+        <p>
+          Se <m>a</m> è un elemento invertibile di un monoide e <m>n</m> è un
+          intero, allora <m>a^{n}</m> e <m>a^{-n}</m> sono uno l'inverso
+          dell'altro.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Senza perdere in generalità, possiamo supporre che <m>n \ge 0</m>.
+          Procediamo per induzione su <m>n</m>.
+          Il caso <m>n=0</m> è ovvio: infatti, <m>a^{0}=1</m>.
+        </p>
+
+        <p>
+          Sia allora <m>k</m> un naturale tale che <m>a^{k}</m> è invertibile
+          con inverso <m>a^{-k}</m>.
+          Per la <xref ref="prop-inverso_prodotto"/>,
+          <m>a^{k+1}=a^{k}\cdot a</m> è invertibile e il suo inverso è
+          <m>a^{-1}\cdot a^{-k}</m>.
+          Per definizione, <m>a^{-1}=\invprov{a}^{1}</m> e
+          <m>a^{-k}=\invprov{a}^{k}</m>, e, per la
+          <xref ref="prop-proprieta_potenze_monoide"/>, abbiamo
+          <m>\invprov{a}^{1}\cdot \invprov{a}^{k}=\invprov{a}^{1+k}=a^{-k-1}</m>.
+        </p>
+      </proof>
+    </lemma>
+
+    <proposition xml:id="prop-proprieta_potenze_elemento_invertibile">
+      <statement>
+        <p>
+          Sia <m>a</m> un elemento invertibile di un monoide <m>M</m> e siano
+          <m>m</m> e <m>n</m> due numeri interi.
+          Abbiamo allora:
+          <ol>
+            <li xml:id="item-somma_esponenti_interi">
+              <p>
+                <m>a^{m}\cdot a^{n}=a^{m+n}</m>;
+              </p>
+            </li>
+
+            <li xml:id="item-prodotto_esponenti_interi">
+              <p>
+                <m>(a^{m})^{n}=a^{mn}</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Dimostriamo il <xref ref="item-somma_esponenti_interi"/>.
+          Occorre distinguere vari casi e sottocasi.
+          <ul>
+            <li>
+              <p>
+                Se <m>m+n \ge 0</m>, consideriamo i sottocasi:
+                <ul>
+                  <li>
+                    <p>
+                      se <m>m \ge 0</m> e <m>n \ge 0</m>, basta considerare la
+                      <xref ref="prop-proprieta_potenze_monoide"/>;
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      se uno tra <m>m</m> e <m>n</m> è negativo (ad esempio,
+                      <m>n \lt 0</m>, l'altro caso è analogo) allora, per la
+                      <xref ref="prop-proprieta_potenze_monoide"/>, abbiamo
+                      <md>
+                        a^{m+n}a^{-n}=a^{m+n-n}=a^{m}
+                      </md>.
+                      Moltiplicando a destra ambo i membri per <m>a^{n}</m>,
+                      otteniamo
+                      <md>
+                        (a^{m+n}a^{-n})a^{n}=a^{m}a^{n}
+                      </md>
+                      che, per la proprietà associativa, dà
+                      <md>
+                        a^{m+n}(a^{-n}a^{n})=a^{m}a^{n}
+                      </md>:
+                      poiché <m>a^{-n}a^{n}=1</m> per il
+                      <xref ref="lem-inverso_di_potenze"/>, otteniamo
+                      immediatamente l'uguaglianza voluta.
+                    </p>
+                  </li>
+                </ul>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Se <m>m+n\lt 0</m> abbiamo
+                <md>
+                  a^{m+n}=\invprov{a}^{-m-n}=\invprov{a}^{-m}\cdot\invprov{a}^{-n}=a^{m}\cdot a^{n}
+                </md>
+                dove abbiamo usato il caso precedente.
+              </p>
+            </li>
+          </ul>
+        </p>
+
+        <p>
+          Lasciamo la dimostrazione del
+          <xref ref="item-prodotto_esponenti_interi"/> per esercizio: anche qui
+          occorrerà distinguere vari casi.
+        </p>
+      </proof>
+    </proposition>
+
+    <corollary xml:id="cor-potenze_di_un_elemento_commutano">
+      <statement>
+        <p>
+          Le potenze di un elemento <m>a</m> di un monoide commutano fra loro
+          (dove le potenze vanno considerate con esponenti solo naturali se
+          <m>a</m> non è invertibile).
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Per ogni <m>m</m> e <m>n</m> naturali si ha, grazie alla
+          <xref ref="prop-proprieta_potenze_monoide"/>
+          <md>
+            a^{m}\cdot a^{n}=a^{m+n}=a^{n+m}=a^{n}\cdot a^{m}
+          </md>.
+          Se <m>a</m> è invertibile si estende al caso di esponenti interi
+          qualunque usando la
+          <xref ref="prop-proprieta_potenze_elemento_invertibile"/>.
+        </p>
+      </proof>
+    </corollary>
+
+    <proposition xml:id="prop-potenze_di_commutabili">
+      <statement>
+        <p>
+          Siano <m>a</m> e <m>b</m> due elementi commutabili di un monoide.
+          Allora ogni potenza di <m>a</m> commuta con ogni potenza di <m>b</m>
+          (dove le potenze vanno prese con esponenti solo naturali per gli
+          elementi non invertibili).
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Dimostriamo innanzitutto che <m>a</m> commuta con <m>b^{n}</m> per
+          ogni naturale <m>n</m>.
+          Procediamo per induzione su <m>n</m>.
+          Il caso <m>n=0</m> è banale: infatti, <m>b^{0}=1</m> commuta con ogni
+          altro elemento.
+          Sia allora <m>k</m> un naturale tale per cui <m>a</m> commuta con
+          <m>b^{k}</m> e mostriamo che <m>a</m> commuta con <m>b^{k+1}</m>.
+          Dunque:
+          <md>
+            <mrow> a\cdot b^{k+1} \amp = a\cdot(b^{k}\cdot b)  \amp \text{definizione di potenza} </mrow>
+            <mrow>                \amp = (a\cdot b^{k})\cdot b \amp \text{proprietà associativa} </mrow>
+            <mrow>                \amp = (b^{k}\cdot a)\cdot b \amp \text{ipotesi induttiva} </mrow>
+            <mrow>                \amp = b^{k}\cdot (a\cdot b) \amp \text{proprietà associativa} </mrow>
+            <mrow>                \amp = b^{k}\cdot (b\cdot a) \amp \text{ipotesi} </mrow>
+            <mrow>                \amp = (b^{k}\cdot b)\cdot a \amp \text{proprietà associativa} </mrow>
+            <mrow>                \amp = b^{k+1}\cdot a        \amp \text{definizione di potenza} </mrow>
+          </md>
+        </p>
+
+        <p>
+          Supponiamo ora che <m>b</m> sia invertibile e mostriamo che <m>a</m>
+          commuta con <m>b^{n}</m> con <m>n</m> intero negativo.
+          Sappiamo che <m>a</m> commuta con <m>b^{-n}</m> perché <m>-n</m> è
+          positivo:
+          <md>
+            ab^{-n}=b^{-n}a
+          </md>.
+          Moltiplicando ambo i membri di questa uguaglianza a sinistra e a
+          destra per <m>b^{n}</m> (non scriviamo le parentesi perché usiamo la
+          proprietà associativa), abbiamo
+          <md>
+            b^{n}ab^{-n}b^{n}=b^{n}b^{-n}ab^{n}
+          </md>.
+          Usiamo ora il <xref ref="lem-inverso_di_potenze"/> e otteniamo
+          <md>
+            b^{n}a\cdot 1=1\cdot ab^{n}
+          </md>
+          da cui segue la tesi.
+        </p>
+
+        <p>
+          Abbiamo mostrato che se due elementi commutano, allora il primo
+          commuta con ogni potenza del secondo: se ora prendiamo <m>b^{n}</m>
+          come primo elemento e <m>a</m> come secondo elemento, vediamo che ogni
+          potenza di <m>b</m> commuta con ogni potenza di <m>a</m>.
+        </p>
+      </proof>
+    </proposition>
+
+    <proposition xml:id="prop-potenza_del_prodotto_di_commutabili">
+      <statement>
+        <p>
+          Siano <m>a</m> e <m>b</m> due elementi commutabili di un monoide.
+          Per ogni naturale <m>n</m> si ha
+          <m>(a\cdot b)^{n}=a^{n}\cdot b^{n}</m>: se <m>a</m> e <m>b</m> sono
+          invertibili, l'identità vale per <m>n</m> intero qualunque.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Consideriamo prima il caso in cui <m>n</m> sia naturale e procediamo
+          per induzione su <m>n</m>.
+          Se <m>n=0</m>, abbiamo <m>(a\cdot b)^{0}=1</m> e
+          <m>a^{0}\cdot b^{0}=1\cdot 1=1</m>.
+        </p>
+
+        <p>
+          Sia allora <m>k</m> un naturale per cui vale la proprietà e mostriamo
+          che vale per <m>k+1</m>.
+          Dunque
+          <md>
+            <mrow> (a\cdot b)^{k+1} \amp = (a\cdot b)^{k}\cdot(a\cdot b)     \amp \text{definizione di potenza} </mrow>
+            <mrow>                \amp = (a^{k}\cdot b^{k})\cdot(a\cdot b)   \amp \text{ipotesi induttiva}</mrow>
+            <mrow>                \amp = (a^{k} \cdot b^{k})\cdot(b\cdot a)  \amp \text{ipotesi}</mrow>
+            <mrow>                \amp = a^{k} \cdot (b^{k}\cdot(b\cdot a))  \amp \text{proprietà associativa}</mrow>
+            <mrow>                \amp = a^{k} \cdot ((b^{k}\cdot b)\cdot a) \amp \text{proprietà associativa}</mrow>
+            <mrow>                \amp = a^{k} \cdot (b^{k+1}\cdot a)        \amp \text{definizione di potenza}</mrow>
+            <mrow>                \amp = a^{k} \cdot (a\cdot b^{k+1})        \amp <xref ref="prop-potenze_di_commutabili"/></mrow>
+            <mrow>                \amp = (a^{k} \cdot a)\cdot b^{k+1}        \amp \text{proprietà associativa}</mrow>
+            <mrow>                \amp = a^{k+1} \cdot b^{k+1}               \amp \text{definizione di potenza}</mrow>
+          </md>
+        </p>
+
+        <p>
+          Supponiamo ora che <m>a</m> e <m>b</m> siano invertibili e sia
+          <m>n</m> un intero negativo.
+          Allora
+          <md>
+            <mrow>(a\cdot b)^{n} \amp = ((a\cdot b)^{-n})^{-1} \amp <xref ref="prop-proprieta_potenze_elemento_invertibile"/></mrow>
+            <mrow> \amp =(a^{-n}\cdot b^{-n})^{-1} \amp \text{perché }-n\text{ è naturale}</mrow>
+            <mrow> \amp =(b^{-n})^{-1}\cdot (a^{-n})^{-1} \amp <xref ref="prop-proprieta_inverso_rivisto"/></mrow>
+            <mrow> \amp =b^{n}\cdot a^{n} \amp <xref ref="prop-proprieta_potenze_elemento_invertibile"/></mrow>
+            <mrow> \amp =a^{n}\cdot b^{n} \amp <xref ref="prop-potenze_di_commutabili"/></mrow>
+          </md>
+        </p>
+      </proof>
+    </proposition>
+
+    <note>
+      <p>
+        In questo paragrafo siamo stati molto espliciti nelle dimostrazioni,
+        motivando ciascun passaggio.
+        Nel seguito utilizzeremo spesso in maniera implicita la proprietà
+        associativa e le altre proprietà di base che abbiamo dimostrato.
+      </p>
+    </note>
+
+    <exercises xml:id="exercises-monoidi">
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare il <xref ref="item-prodotto_esponenti_interi"/> della
+            <xref ref="prop-proprieta_potenze_elemento_invertibile"/>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Dimostrare che se <m>a</m> è un elemento di un monoide ed esiste un
+            intero positivo <m>n</m> tale per cui <m>a^{n}=1</m>, allora
+            <m>a</m> è invertibile.
+          </p>
+        </statement>
+
+        <answer>
+          <p>
+            Basta considerare <m>a^{n-1}</m>.
+          </p>
+        </answer>
+      </exercise>
+    </exercises>
+  </section>
+
+  <section xml:id="sec-gruppi">
+    <title>Gruppi</title>
+
+    <definition xml:id="def-gruppo">
+      <idx><h>gruppo</h></idx>
+      <idx><h>gruppo</h><h>abeliano</h></idx>
+      <idx><h>gruppo</h><h>commutativo</h></idx>
+      <statement>
+        <p>
+          Un monoide <m>G</m> in cui ogni elemento ha inverso è detto
+          <term>gruppo</term>.
+          Più esplicitamente, un gruppo <m>G</m> è un insieme in cui sia
+          definita un'operazione <m>\cdot</m> tale che:
+          <ul>
+            <li>
+              <p>
+                <m>(g\cdot h)\cdot k=g\cdot(h\cdot k)</m> per ogni <m>g</m>,
+                <m>h</m> e <m>k</m> in <m>G</m>;
+              </p>
+            </li>
+
+            <li>
+              <p>
+                esiste un elemento <m>1</m> in <m>G</m> tale che
+                <m>1\cdot g=g\cdot 1=g</m> per ogni <m>g</m> in <m>G</m>;
+              </p>
+            </li>
+
+            <li>
+              <p>
+                per ogni elemento <m>g</m> in <m>G</m> esiste un elemento,
+                denotato con <m>g^{-1}</m>, tale che
+                <m>g\cdot g^{-1}=g^{-1}\cdot g=1</m>.
+              </p>
+            </li>
+          </ul>
+          Nel caso in cui risulti
+          <md>
+            g\cdot h=h\cdot g\text{ per ogni }g\text{ e }h\text{ in }G
+          </md>
+          diremo che il gruppo è <term>commutativo</term> o
+          <term>abeliano</term>.
+          <fn><url href="https://it.wikipedia.org/wiki/Niels_Henrik_Abel" visual="">Niels Henrik Abel</url>, 1802<ndash/>1829.</fn>
+          <idx><h>Abel, Niels Henrik</h></idx>
+        </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-ordine_di_un_gruppo">
+      <notation>
+        <usage><m>\abs{G}</m></usage>
+        <description>ordine del gruppo <m>G</m></description>
+      </notation>
+
+      <statement>
+        <p>
+          Dato un gruppo <m>G</m>, l' <term>ordine</term> di <m>G</m> è la
+          cardinalità <m>\abs{G}</m> dell'insieme <m>G</m>.
+          Un gruppo è detto <term>finito</term> o di <term>ordine finito</term>
+          se <m>\abs{G}</m> è finito, è detto <term>infinito</term> o di
+          <term>ordine infinito</term>, altrimenti.
+        </p>
+      </statement>
+    </definition>
+
+    <example>
+      <statement>
+        <p>
+          Gli insiemi <m>\Interi</m>, <m>\Razionali</m>, <m>\Reali</m> e
+          <m>\Complessi</m> sono gruppi abeliani infiniti rispetto all'addizione
+          (con elemento neutro <m>0</m> ).
+        </p>
+
+        <p>
+          L'insieme <m>\Interi/n</m> è un gruppo abeliano di ordine <m>n</m>
+          rispetto all'addizione (con elemento neutro <m>\class[n]{0}</m> ).
+        </p>
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          L'insieme delle matrici <m>\matt{m}{n}{R}</m> a <m>m</m> righe e
+          <m>n</m> colonne a coefficienti in un anello <m>R</m> è un gruppo
+          abeliano rispetto all'addizione (con elemento neutro la matrice
+          nulla).
+          L'ordine di questo gruppo dipende dall'ordine di <m>R</m> (in
+          particolare, è finito se e solo se <m>R</m> è finito).
+        </p>
+      </statement>
+    </example>
+
+    <proposition xml:id="prop-invertibili_di_monoide">
+      <statement>
+        <p>
+          <notation>
+            <usage><m>\Inv{M}</m></usage>
+            <description>gruppo degli invertibili di un monoide</description>
+          </notation>
+          Dato un monoide <m>M</m> e il sottoinsieme <m>\Inv{M}</m> formato
+          dagli elementi invertibili di <m>M</m>, l'operazione di <m>M</m>
+          induce un'operazione in <m>\Inv{M}</m>, rispetto a cui <m>\Inv{M}</m>
+          forma un gruppo.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Dati due elementi invertibili, il loro prodotto è invertibile (
+          <xref ref="prop-proprieta_inverso_rivisto"/> ).
+          Dunque, possiamo definire un'operazione in <m>\Inv{M}</m>.
+          L'operazione è ovviamente associativa, perché è associativa in tutto
+          <m>M</m>.
+          L'elemento neutro <m>1</m> è invertibile (
+          <xref ref="rem-neutro_invertibile"/> ) e, ovviamente, è elemento
+          neutro per l'operazione indotta.
+          L'inverso di un elemento invertibile è invertibile (
+          <xref ref="prop-proprieta_inverso_rivisto"/> ): dunque, ogni elemento
+          di <m>\Inv{M}</m> ha inverso in <m>\Inv{M}</m>.
+        </p>
+      </proof>
+    </proposition>
+
+    <remark xml:id="rem-invertibili_di_gruppo_e_gruppo">
+      <p>
+        Se <m>M</m> è un gruppo, <m>\Inv{M}</m> coincide con <m>M</m>.
+      </p>
+    </remark>
+
+    <example>
+      <statement>
+        <p>
+          Consideriamo alcuni monoidi che abbiamo introdotto nel
+          <xref ref="sec-monoidi"/> e determiniamone il gruppo degli elementi
+          invertibili.
+        </p>
+
+        <p>
+          Se prendiamo i monoidi <m>\Naturali</m>, <m>\Interi</m>,
+          <m>\Razionali</m>, <m>\Reali</m> e <m>\Complessi</m> rispetto alla
+          moltiplicazione, i corrispondenti gruppi degli invertibili sono
+          rispettivamente <m>\{1\}</m>, <m>\{1,-1\}</m>,
+          <m>\Razionali\setminus\{0\}</m>, <m>\Reali\setminus\{0\}</m>,
+          <m>\Complessi\setminus\{0\}</m>.
+        </p>
+
+        <p>
+          Se prendiamo il monoide <m>\Interi/n</m> rispetto alla
+          moltiplicazione, il gruppo degli invertibili è
+          <m>\{\class[n]{a}\in\Interi/n\mid (a,n)=1\}</m> (si veda
+          <xref ref="prop-caratterizzazione_classe_invertibile"/> ).
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id="ex-gruppo_lineare">
+      <idx><h>gruppo</h><h>lineare generale</h></idx>
+      <statement>
+        <p>
+          <notation>
+            <usage><m>\GL{n}{R}</m></usage>
+            <description>
+              gruppo lineare generale a coefficienti in <m>R</m>
+            </description>
+          </notation>
+          Dato il monoide <m>\mat{n}{R}</m> rispetto alla moltiplicazione, il
+          gruppo delle matrici invertibili è denotato con <m>\GL{n}{R}</m> e
+          detto <term>gruppo lineare generale</term>.
+          Nel caso in cui <m>R</m> sia un campo, questo corrisponde alle matrici
+          con determinante non nullo.
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id="ex-gruppo_simmetrico">
+      <idx><h>gruppo</h><h>simmetrico</h></idx>
+      <statement>
+        <p>
+          <notation>
+            <usage><m>\Sym(X)</m></usage>
+            <description>gruppo simmetrico di un insieme <m>X</m></description>
+          </notation>
+
+          <notation>
+            <usage><m>\Sym_{n}</m></usage>
+            <description>gruppo simmetrico su <m>n</m> lettere</description>
+          </notation>
+          Dato il monoide <m>X^{X}</m> delle funzioni da un insieme non vuoto
+          <m>X</m> in sé, il gruppo delle funzioni invertibili è formato dalle
+          funzioni biiettive ( <xref ref="thm-caratterizzazione_invertibile"/>
+          ).
+          Questo gruppo è detto <term>gruppo simmetrico</term> di <m>X</m> e
+          denotato con <m>\Sym(X)</m>.
+          Nel caso in cui <m>X</m> è l'insieme finito <m>\{1,2,\ldots,n\}</m>,
+          il gruppo è detto <term>gruppo simmetrico su <m>n</m> lettere</term> e
+          denotato con <m>\Sym_{n}</m>.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Ovviamente, tutte le proprietà che abbiamo dimostrato per i monoidi
+      valgono anche per i gruppi.
+      Vediamo alcune proprietà specifiche nei gruppi.
+    </p>
+
+    <proposition xml:id="prop-cancellazione_gruppo">
+      <title>Leggi di cancellazione</title>
+
+      <statement>
+        <p>
+          Siano <m>a</m>, <m>b</m> e <m>c</m> tre elementi di un gruppo
+          <m>G</m>.
+          <ol>
+            <li xml:id="item-cancellazione_sinistra">
+              <p>
+                Se <m>ab=ac</m> allora <m>b=c</m>.
+              </p>
+            </li>
+
+            <li xml:id="item-cancellazione_destra">
+              <p>
+                Se <m>ba=ca</m> allora <m>b=c</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Sia <m>ab=ac</m>.
+          Moltiplicando a sinistra ambo i membri per <m>a^{-1}</m>, otteniamo
+          <m>a^{-1}ab=a^{-1}ac</m>, da cui segue <m>1b=1c</m>, cioè <m>b=c</m>:
+          questo prova il <xref ref="item-cancellazione_sinistra"/>.
+          Il <xref ref="item-cancellazione_destra"/> si prova in maniera
+          analoga, moltiplicando a destra per l'inverso di <m>a</m>.
+        </p>
+      </proof>
+    </proposition>
+
+    <proposition xml:id="prop-equazione_gruppo">
+      <statement>
+        <p>
+          Dati due elementi <m>a</m> e <m>b</m> in un gruppo, esiste un unico
+          elemento <m>x</m> tale che <m>ax=b</m>: precisamente <m>x=a^{-1}b</m>.
+          Analogamente, esiste un unico elemento <m>y</m> tale che <m>ya=b</m>:
+          precisamente <m>y=ba^{-1}</m>.
+        </p>
+      </statement>
+
+      <proof>
+        <p>
+          Si verifica facilmente che <m>a(a^{-1}b)=b</m>.
+          Per le <xref ref="prop-cancellazione_gruppo" text="title"/>,
+          l'elemento <m>x=a^{-1}b</m> è univocamente determinato.
+          L'altra affermazione si prova analogamente.
+        </p>
+      </proof>
+    </proposition>
+
+    <remark xml:id="rem-tabelle-cayley-gruppi">
+      <p>
+        La <xref ref="prop-equazione_gruppo"/> può essere interpretata in
+        termini della tabella di Cayley di un gruppo.
+        Sulla riga corrispondente a un elemento <m>a</m> di un gruppo <m>G</m>
+        troviamo gli elementi del tipo <m>ax</m> al variare di <m>x</m> in
+        <m>G</m>: dato un certo <m>b</m> in <m>G</m>, esso appare esattamente
+        una volta su questa riga, in corrispondenza di <m>a^{-1}b</m>.
+        Analogamente, ogni elemento di <m>G</m> compare esattamente una volta su
+        ciascuna colonna.
+      </p>
+    </remark>
+
+    <exercises xml:id="exercises-gruppi">
+      <exercise xml:id="exercise-unita_e_inverso_destro_implica_gruppo">
+        <statement>
+          <p>
+            Sia <m>G</m> un insieme dotato di un'operazione associativa.
+            Si supponga che esista un elemento <m>e</m> tale che <m>ge=g</m> per
+            ogni <m>g\in G</m> e che, per ogni <m>g\in G</m>, esista un elemento
+            <m>h</m> tale che <m>gh=e</m>.
+            Mostrare che <m>G</m> è un gruppo di elemento neutro <m>e</m>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Dato un elemento <m>g</m>, sappiamo che esiste <m>h</m> tale che
+            <m>gh=e</m>.
+            Applicando la stessa ipotesi a <m>h</m>, sappiamo che esiste
+            <m>k</m> tale che <m>hk=e</m>.
+            Ora
+            <md>
+              hg=(hg)e=(hg)(hk)=h(gh)k=(he)k=hk=e
+            </md>.
+            Inoltre,
+            <md>
+              eg=(gh)g=g(hg)=ge=g
+            </md>.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            In un insieme <m>G</m>, sia data un'operazione associativa la cui
+            tabella di Cayley riporta su ciascuna riga e su ciascuna colonna
+            ogni elemento di <m>G</m> esattamente una volta.
+            Dimostrare che <m>G</m> è un gruppo.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Scegliamo arbitrariamente un elemento <m>x</m> in <m>G</m>.
+            Sulla colonna di <m>x</m> compare, in particolare, <m>x</m> stesso,
+            cioè esiste un elemento <m>e</m> tale che <m>ex=x</m>.
+            Preso un elemento <m>g</m> qualunque, si ha allora
+            <m>gx=g(ex)=(ge)x</m>: ora <m>gx</m> e <m>(ge)x</m> compaiono sulla
+            colonna di <m>x</m> e, poiché ogni elemento compare solo una volta
+            su ciascuna colonna, ciò significa che <m>ge=g</m> per ogni <m>g</m>
+            in <m>G</m>.
+          </p>
+
+          <p>
+            Sulla riga di <m>g</m> deve apparire l'elemento <m>e</m>, cioè deve
+            esistere <m>h</m> in <m>G</m> tale che <m>gh=e</m>.
+            Possiamo ora applicare l'
+            <xref ref="exercise-unita_e_inverso_destro_implica_gruppo"/> e
+            concludere che <m>G</m> è un gruppo.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Sia <m>G\coloneqq\Razionali\setminus\{-1\}</m>.
+            Dimostrare che <m>x\ast y\coloneqq x+y+xy</m> è un'operazione ben
+            definita in <m>G</m> e che rispetto a questa operazione <m>G</m> è
+            un gruppo abeliano.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Dobbiamo innanzitutto verificare che il prodotto sia ben definito,
+            cioè che se <m>x</m> e <m>y</m> sono in <m>G</m>, allora
+            <m>x\ast y</m> è in <m>G</m>.
+            Supponiamo infatti per assurdo che <m>x\ast y</m> non sia in
+            <m>G</m>, cioè che <m>x\ast y=-1</m>, vale a dire <m>x+y+xy=-1</m>.
+            Con semplici calcoli, ciò implicherebbe che <m>(x+1)(y+1)=0</m>, da
+            cui seguirebbe che <m>x+1=0</m> o <m>y+1=0</m>, il che non avviene
+            se <m>x</m> e <m>y</m> appartengono a <m>G</m>.
+            Dunque, l'operazione è ben definita.
+          </p>
+
+          <p>
+            La verifica che l'operazione sia associativa richiede solo un po' di
+            attenzione.
+            Per ogni <m>x</m>, <m>y</m> e <m>z</m> in <m>G</m> si ha
+            <md>
+              <mrow> (x\ast y)\ast z \amp =(x+y+xy)\ast z =x+y+xy+z+(x+y+xy)z </mrow>
+              <mrow> \amp =x+y+xy+z+xz+yz+xyz </mrow>
+              <mrow> \amp =x+y+z+yz+x(y+z+yz)</mrow>
+              <mrow> \amp =x \ast(y+z+yz)=x\ast(y\ast z)</mrow>
+            </md>.
+          </p>
+
+          <p>
+            L'operazione è commutativa.
+            Infatti, per ogni <m>x</m> e <m>y</m> in <m>G</m> si ha
+            <md>
+              x\ast y=x+y+xy=y+x+yx=y\ast x
+            </md>.
+          </p>
+
+          <p>
+            L'operazione ammette elemento neutro <m>0</m>: infatti, per ogni
+            <m>x\in G</m> si ha
+            <md>
+              x\ast 0 =x+0+x\cdot 0=x
+            </md>.
+          </p>
+
+          <p>
+            Infine, verifichiamo che ogni elemento <m>x</m> in <m>G</m> ha
+            inverso.
+            Questo deve essere un elemento <m>y</m> tale che <m>x\ast y=0</m>,
+            cioè <m>x+y+xy=0</m>, cioè <m>(x+1)y=-x</m>.
+            Poiché <m>x+1\ne 0</m>, otteniamo allora <m>y=-\frac{x}{x+1}</m> e
+            questo è effettivamente un elemento di <m>G</m>, dato che, se fosse
+            <m>y=-1</m>, otterremmo <m>x=x+1</m>.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise xml:id="exercise-triangolari_nascoste">
+        <introduction>
+          <p>
+            Sia <m>G</m> l'insieme formato dagli elementi del tipo
+            <m>(a,b,c)</m> con <m>a</m>, <m>b</m> e <m>c</m> in <m>\Interi</m>
+            dotato dell'operazione <m>\diamond</m> definita da
+            <md>
+              (a_{1},b_{1},c_{1})\diamond(a_{2},b_{2},c_{2})\coloneqq
+                (a_{1}+a_{2},b_{1}+b_{2},c_{1}+c_{2}+a_{1}b_{2})
+            </md>.
+          </p>
+        </introduction>
+
+        <task>
           <statement>
             <p>
-              Dimostrare il <xref ref="item-prodotto_esponenti_interi"/> della <xref ref="prop-proprieta_potenze_elemento_invertibile"/>.
+              Dimostrare che <m>G</m> è un gruppo.
             </p>
           </statement>
-        </exercise>
+
+          <solution>
+            <p>
+              Mostriamo che l'operazione è associativa.
+              Siano <m>(a_{1},b_{1},c_{1})</m>, <m>(a_{2},b_{2},c_{2})</m> e
+              <m>(a_{3},b_{3},c_{3})</m> elementi di <m>G</m>.
+              Abbiamo allora:
+              <md>
+                <mrow>
+                  ((a_{1},b_{1},c_{1})\diamond(a_{2},b_{2},c_{2}))\diamond (a_{3},b_{3},c_{3})
+                  </mrow>
+                <mrow> = (a_{1}+a_{2},b_{1}+b_{2},c_{1}+c_{2}+a_{1}b_{2})\diamond (a_{3},b_{3},c_{3})</mrow>
+                <mrow> = (a_{1}+a_{2}+a_{3},b_{1}+b_{2}+b_{3},c_{1}+c_{2}+a_{1}b_{2}+c_{3}+(a_{1}+a_{2})b_{3})</mrow>
+                <mrow> = (a_{1}+a_{2}+a_{3},b_{1}+b_{2}+b_{3},c_{1}+c_{2}+c_{3}+a_{1}b_{2}+a_{1}b_{3}+a_{2}b_{3})</mrow>
+              </md>
+              e
+              <md>
+                <mrow>
+                  (a_{1},b_{1},c_{1})\diamond((a_{2},b_{2},c_{2})\diamond (a_{3},b_{3},c_{3}))
+                  </mrow>
+                <mrow> =(a_{1},b_{1},c_{1})\diamond(a_{2}+a_{3},b_{2}+b_{3},c_{2}+c_{3}+a_{2}b_{3})
+                  </mrow>
+                <mrow> =(a_{1}+a_{2}+a_{3},b_{1}+b_{2}+b_{3},c_{1}+c_{2}+c_{3}+a_{2}b_{3}+a_{1}(b_{2}+b_{3}))
+                  </mrow>
+                <mrow> =(a_{1}+a_{2}+a_{3},b_{1}+b_{2}+b_{3},c_{1}+c_{2}+c_{3}+a_{2}b_{3}+a_{1}b_{2}+a_{1}b_{3})
+                  </mrow>
+              </md>
+              Poiché i risultati coincidono, l'operazione è associativa.
+            </p>
+
+            <p>
+              Verifichiamo che esiste un elemento neutro: questo deve essere una
+              terna <m>(x,y,z)</m> tale che per ogni <m>(a,b,c)</m> in <m>G</m>
+              si abbia
+              <md>
+                (a,b,c)\diamond(x,y,z)=(a,b,c)
+              </md>
+              e
+              <md>
+                (x,y,z)\diamond(a,b,c)=(a,b,c)
+              </md>,
+              vale a dire <m>(a+x,b+y,c+z+ay)=(a,b,c)</m> e
+              <m>(x+a,y+b,z+c+xb)=(a,b,c)</m>.
+              Si vede immediatamente che la terna <m>(0,0,0)</m> soddisfa questa
+              condizione.
+            </p>
+
+            <p>
+              Verifichiamo se ogni elemento <m>(a,b,c)</m> in <m>G</m> ammette
+              inverso: questo deve essere una terna <m>(x,y,z)</m> tale che
+              <md>
+                (a,b,c)\diamond(x,y,z)=(0,0,0)
+              </md>
+              e
+              <md>
+                (x,y,z)\diamond(a,b,c)=(0,0,0)
+              </md>,
+              vale a dire <m>(a+x,b+x,c+z+ay)=(0,0,0)</m> e
+              <m>(x+a,y+b,z+c+xb)=(0,0,0)</m>.
+              Si vede immediatamente che la terna <m>(-a,-b,-c+ab)</m> soddisfa
+              questa condizione.
+            </p>
+          </solution>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Stabilire se <m>G</m> è abeliano.
+            </p>
+          </statement>
+
+          <solution>
+            <p>
+              Per stabilire se <m>G</m> è abeliano consideriamo i prodotti
+              <md>
+                (a_{1},b_{1},c_{1})\diamond(a_{2},b_{2},c_{2})=(a_{1}+a_{2},b_{1}+b_{2},c_{1}+c_{2}+a_{1}b_{2})
+              </md>
+              e
+              <md>
+                (a_{2},b_{2},c_{2})\diamond(a_{1},b_{1},c_{1})=(a_{2}+a_{1},b_{2}+b_{1},c_{2}+c_{1}+a_{2}b_{1})
+              </md>.
+              In generale questi prodotti non coincidono: ad esempio
+              <m>(1,0,0)\diamond(0,1,0)=(1,1,1)</m> mentre
+              <m>(0,1,0)\diamond(1,0,0)=(1,1,0)</m> e, dunque, il gruppo non è
+              abeliano.
+            </p>
+          </solution>
+        </task>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Sia <m>G</m> un gruppo finito di ordine pari.
+            Mostrare che in <m>G</m> esiste <m>x</m> tale che <m>x\ne 1</m> e
+            <m>x^{2}=1</m>.
+          </p>
+        </statement>
+
+        <hint>
+          <p>
+            Mostrare che c'è un elemento non banale che coincide con il proprio
+            inverso.
+          </p>
+        </hint>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Sia <m>G</m> un gruppo e sia <m>x^{2}=1</m> per ogni <m>x</m> in
+            <m>G</m>.
+            Mostrare che <m>G</m> è abeliano.
+          </p>
+        </statement>
+
+        <hint>
+          <p>
+            Notare che <m>x=x^{-1}</m> per ogni <m>x</m> in <m>G</m>.
+          </p>
+        </hint>
+      </exercise>
+      <exercisegroup cols="2">
+        <introduction>
+          <p>
+            Si consideri il prodotto cartesiano
+            <m>S\coloneqq \Interi\times\Razionali</m>; stabilire se è un gruppo
+            rispetto alle operazioni così definite:
+          </p>
+        </introduction>
 
         <exercise>
           <statement>
             <p>
-              Dimostrare che se <m>a</m> è un elemento di un monoide ed esiste un intero positivo <m>n</m> tale per cui <m>a^{n}=1</m>, allora <m>a</m> è invertibile.
+              <m>(a,b)\odot(c,d)\coloneqq(a+c,2^{c}b+d)</m>
             </p>
           </statement>
 
           <answer>
             <p>
-              Basta considerare <m>a^{n-1}</m>.
+              È un gruppo.
             </p>
           </answer>
         </exercise>
 
-      </exercises>
+        <exercise>
+          <statement>
+            <p>
+              <m>(a,b)\diamond(c,d)\coloneqq(a+c,2^{c}b-d)</m>
+            </p>
+          </statement>
 
-    </section>
+          <answer>
+            <p>
+              Non è un gruppo: non vale la proprietà associativa.
+            </p>
+          </answer>
+        </exercise>
 
-    <section xml:id="sec-gruppi">
-      <title>Gruppi</title>
+        <exercise>
+          <statement>
+            <p>
+              <m>(a,b)\bullet(c,d)\coloneqq(a+c,2^{-c}b+d)</m>
+            </p>
+          </statement>
 
-      <definition xml:id="def-gruppo">
-        <idx><h>gruppo</h></idx>
-        <idx><h>gruppo</h><h>abeliano</h></idx>
-        <idx><h>gruppo</h><h>commutativo</h></idx>
+          <answer>
+            <p>
+              È un gruppo.
+            </p>
+          </answer>
+        </exercise>
+      </exercisegroup>
+
+      <exercise>
         <statement>
           <p>
-            Un monoide <m>G</m> in cui ogni elemento ha inverso è detto <term>gruppo</term>. Più esplicitamente, un gruppo <m>G</m> è un insieme in cui sia definita un'operazione <m>\cdot</m> tale che:
-            <ul>
-              <li>
-                <p>
-                  <m>(g\cdot h)\cdot k=g\cdot(h\cdot k)</m> per ogni <m>g</m>, <m>h</m> e <m>k</m> in <m>G</m>;
-                </p>
-              </li>
-              <li>
-                <p>
-                  esiste un elemento <m>1</m> in <m>G</m> tale che <m>1\cdot g=g\cdot 1=g</m> per ogni <m>g</m> in <m>G</m>;
-                </p>
-              </li>
-              <li>
-                <p>
-                  per ogni elemento <m>g</m> in <m>G</m> esiste un elemento, denotato con <m>g^{-1}</m>, tale che <m>g\cdot g^{-1}=g^{-1}\cdot g=1</m>.
-                </p>
-              </li>
-            </ul>
-            Nel caso in cui risulti
+            Siano <m>h</m>, <m>k</m> e <m>l</m> tre numeri reali fissati.
+            In <m>\Reali</m> sia definita un'operazione nel modo seguente:
+            <m>x\ast y\coloneqq hx+ky+l</m>.
+            Stabilire per quali valori di <m>h</m>, <m>k</m> e <m>l</m>
+            l'insieme <m>\Reali</m> è un gruppo rispetto all'operazione
+            <m>\ast</m>.
+          </p>
+        </statement>
+
+        <solution>
+          <p>
+            Verifichiamo se esiste un elemento neutro: supponiamo che <m>e</m>
+            sia un tale elemento.
+            Dobbiamo avere allora <m>hx+ke+l=x</m> per ogni <m>x</m> in
+            <m>\Reali</m>, cioè <m>(h-1)x+ke+l=0</m> per ogni <m>x</m>.
+            Ciò avviene se e solo se <m>h=1</m> e <m>ke+l=0</m>.
+            Analogamente, deve essere <m>he+ky+l=y</m> per ogni <m>y</m>, cioè
+            <m>he+l+(k-1)y=0</m> per ogni <m>y</m>.
+            Ciò avviene se e solo se <m>k=1</m> e <m>he+l=0</m>.
+            Quindi l'operazione ammette elemento neutro se e solo se
+            <m>h=k=1</m> e, in tal caso l'elemento neutro è uguale a <m>-l</m>.
+            Consideriamo allora il caso in cui <m>h=k=1</m> e <m>l</m> è
+            qualsiasi.
+            Verifichiamo se vale la proprietà associativa.
+            Abbiamo allora
             <md>
-              g\cdot h=h\cdot g\text{ per ogni }g\text{ e }h\text{ in }G
+              (x\ast y)\ast z=(x+y+l)\ast z=(x+y+l)+z+l=x+y+z+2l
             </md>
-            diremo che il gruppo è <term>commutativo</term> o <term>abeliano</term>.<fn><url href="https://it.wikipedia.org/wiki/Niels_Henrik_Abel" visual="">Niels Henrik Abel</url>, 1802<ndash/>1829.</fn><idx><h>Abel, Niels Henrik</h></idx>
+            e
+            <md>
+              x\ast(y\ast z)=x\ast(y+z+l)=x+(y+z+l)+l=x+y+z+2l
+            </md>.
+            Dunque, la proprietà associativa è soddisfatta.
           </p>
-        </statement>
-      </definition>
 
-      <definition xml:id="def-ordine_di_un_gruppo">
-        <notation>
-          <usage><m>\abs{G}</m></usage>
-          <description>ordine del gruppo <m>G</m></description>
-        </notation>
-        <statement>
           <p>
-            Dato un gruppo <m>G</m>, l'<term>ordine</term> di <m>G</m> è la cardinalità <m>\abs{G}</m> dell'insieme <m>G</m>. Un gruppo è detto <term>finito</term> o di <term>ordine finito</term> se <m>\abs{G}</m> è finito, è detto <term>infinito</term> o di <term>ordine infinito</term>, altrimenti.
+            Sappiamo già che l'operazione ammette elemento neutro <m>-l</m>.
+            Verifichiamo se ogni <m>x</m> in <m>\Reali</m> ha inverso <m>y</m>,
+            cioè un elemento tale che <m>x\ast y=-l</m> e <m>y\ast x=-l</m>.
+            Ora <m>x\ast y =y\ast x=x+y+l</m>.
+            Ponendo <m>x+y+l=-l</m> si trova che l'elemento <m>y</m> esiste
+            sempre ed è uguale a <m>-x-2l</m>.
+            Pertanto, <m>\Reali</m> è un gruppo rispetto all'operazione
+            <m>\ast</m> se e solo se <m>h=k=1</m> e <m>l</m> è qualsiasi.
           </p>
-        </statement>
-      </definition>
+        </solution>
+      </exercise>
+    </exercises>
+  </section>
 
-      <example>
-        <statement>
-          <p>
-            Gli insiemi <m>\Interi</m>, <m>\Razionali</m>, <m>\Reali</m> e <m>\Complessi</m> sono gruppi abeliani infiniti rispetto all'addizione (con elemento neutro <m>0</m>).
-          </p>
-          <p>
-            L'insieme <m>\Interi/n</m> è un gruppo abeliano di ordine <m>n</m> rispetto all'addizione (con elemento neutro <m>\class[n]{0}</m>).
-          </p>
-        </statement>
-      </example>
+  <section xml:id="sec-gruppi_piccoli">
+    <title>Alcuni esempi di gruppi piccoli</title>
 
-      <example>
-        <statement>
-          <p>
-            L'insieme delle matrici <m>\matt{m}{n}{R}</m> a <m>m</m> righe e <m>n</m> colonne a coefficienti in un anello <m>R</m> è un gruppo abeliano rispetto all'addizione (con elemento neutro la matrice nulla). L'ordine di questo gruppo dipende dall'ordine di <m>R</m> (in particolare, è finito se e solo se <m>R</m> è finito).
-          </p>
-        </statement>
-      </example>
+    <p>
+      Sappiamo che per ciascun intero <m>n</m> esiste almeno un gruppo di ordine
+      <m>n</m>: il gruppo <m>\Interi/n</m> delle classi di resto modulo <m>n</m>
+      rispetto all'addizione.
+      Per <m>n\le 4</m>, abbiamo dato la tabella di Cayley di questi gruppi (
+      <xref ref="tabelle_classi_di_resto"/> ).
+    </p>
 
-      <proposition xml:id="prop-invertibili_di_monoide">
-        <statement>
-          <p>
-            <notation>
-              <usage><m>\Inv{M}</m></usage>
-              <description>gruppo degli invertibili di un monoide</description>
-            </notation>
-            Dato un monoide <m>M</m> e il sottoinsieme <m>\Inv{M}</m> formato dagli elementi invertibili di <m>M</m>, l'operazione di <m>M</m> induce un'operazione in <m>\Inv{M}</m>, rispetto a cui <m>\Inv{M}</m> forma un gruppo.
-          </p>
-        </statement>
-
-        <proof>
-          <p>
-            Dati due elementi invertibili, il loro prodotto è invertibile (<xref ref="prop-proprieta_inverso_rivisto"/>). Dunque, possiamo definire un'operazione in <m>\Inv{M}</m>. L'operazione è ovviamente associativa, perché è associativa in tutto <m>M</m>. L'elemento neutro <m>1</m> è invertibile (<xref ref="rem-neutro_invertibile"/>) e, ovviamente, è elemento neutro per l'operazione indotta. L'inverso di un elemento invertibile è invertibile (<xref ref="prop-proprieta_inverso_rivisto"/>): dunque, ogni elemento di <m>\Inv{M}</m> ha inverso in <m>\Inv{M}</m>.
-          </p>
-        </proof>
-
-      </proposition>
-
-      <remark xml:id="rem-invertibili_di_gruppo_e_gruppo">
-        <p>
-          Se <m>M</m> è un gruppo, <m>\Inv{M}</m> coincide con <m>M</m>.
-        </p>
-      </remark>
-
-      <example>
-        <statement>
-          <p>
-            Consideriamo alcuni monoidi che abbiamo introdotto nel <xref ref="sec-monoidi"/> e determiniamone il gruppo degli elementi invertibili.
-          </p>
-          <p>
-            Se prendiamo i monoidi <m>\Naturali</m>, <m>\Interi</m>, <m>\Razionali</m>, <m>\Reali</m> e <m>\Complessi</m> rispetto alla moltiplicazione, i corrispondenti gruppi degli invertibili sono rispettivamente <m>\{1\}</m>, <m>\{1,-1\}</m>, <m>\Razionali\setminus\{0\}</m>, <m>\Reali\setminus\{0\}</m>, <m>\Complessi\setminus\{0\}</m>.
-          </p>
-          <p>
-            Se prendiamo il monoide <m>\Interi/n</m> rispetto alla moltiplicazione, il gruppo degli invertibili è <m>\{\class[n]{a}\in\Interi/n\mid (a,n)=1\}</m> (si veda <xref ref="prop-caratterizzazione_classe_invertibile"/>).
-          </p>
-        </statement>
-      </example>
-
-      <example xml:id="ex-gruppo_lineare">
-        <idx><h>gruppo</h><h>lineare generale</h></idx>
-        <statement>
-          <p>
-            <notation>
-              <usage><m>\GL{n}{R}</m></usage>
-              <description>gruppo lineare generale a coefficienti in <m>R</m></description>
-            </notation>
-            Dato il monoide <m>\mat{n}{R}</m> rispetto alla moltiplicazione, il gruppo delle matrici invertibili è denotato con <m>\GL{n}{R}</m> e detto <term>gruppo lineare generale</term>. Nel caso in cui <m>R</m> sia un campo, questo corrisponde alle matrici con determinante non nullo.
-          </p>
-        </statement>
-      </example>
-
-      <example xml:id="ex-gruppo_simmetrico">
-        <idx><h>gruppo</h><h>simmetrico</h></idx>
-        <statement>
-          <p>
-            <notation>
-              <usage><m>\Sym(X)</m></usage>
-              <description>gruppo simmetrico di un insieme <m>X</m></description>
-            </notation>
-            <notation>
-              <usage><m>\Sym_{n}</m></usage>
-              <description>gruppo simmetrico su <m>n</m> lettere</description>
-            </notation>
-            Dato il monoide <m>X^{X}</m> delle funzioni da un insieme non vuoto <m>X</m> in sé, il gruppo delle funzioni invertibili è formato dalle funzioni biiettive (<xref ref="thm-caratterizzazione_invertibile"/>). Questo gruppo è detto <term>gruppo simmetrico</term> di <m>X</m> e denotato con <m>\Sym(X)</m>. Nel caso in cui <m>X</m> è l'insieme finito <m>\{1,2,\ldots,n\}</m>, il gruppo è detto <term>gruppo simmetrico su <m>n</m> lettere</term> e denotato con <m>\Sym_{n}</m>.
-          </p>
-        </statement>
-      </example>
-
-      <p>
-        Ovviamente, tutte le proprietà che abbiamo dimostrato per i monoidi valgono anche per i gruppi. Vediamo alcune proprietà specifiche nei gruppi.
-      </p>
-
-      <proposition xml:id="prop-cancellazione_gruppo">
-        <title>Leggi di cancellazione</title>
-        <statement>
-          <p>
-            Siano <m>a</m>, <m>b</m> e <m>c</m> tre elementi di un gruppo <m>G</m>.
-            <ol>
-              <li xml:id="item-cancellazione_sinistra">
-                <p>
-                  Se <m>ab=ac</m> allora <m>b=c</m>.
-                </p>
-              </li>
-              <li xml:id="item-cancellazione_destra">
-                <p>
-                  Se <m>ba=ca</m> allora <m>b=c</m>.
-                </p>
-              </li>
-            </ol>
-          </p>
-        </statement>
-
-        <proof>
-          <p>
-            Sia <m>ab=ac</m>. Moltiplicando a sinistra ambo i membri per <m>a^{-1}</m>, otteniamo <m>a^{-1}ab=a^{-1}ac</m>, da cui segue <m>1b=1c</m>, cioè <m>b=c</m>: questo prova il <xref ref="item-cancellazione_sinistra"/>. Il <xref ref="item-cancellazione_destra"/> si prova in maniera analoga, moltiplicando a destra per l'inverso di <m>a</m>.
-          </p>
-        </proof>
-
-      </proposition>
-
-      <proposition xml:id="prop-equazione_gruppo">
-        <statement>
-          <p>
-            Dati due elementi <m>a</m> e <m>b</m> in un gruppo, esiste un unico elemento <m>x</m> tale che <m>ax=b</m>: precisamente <m>x=a^{-1}b</m>. Analogamente, esiste un unico elemento <m>y</m> tale che <m>ya=b</m>: precisamente <m>y=ba^{-1}</m>.
-          </p>
-        </statement>
-
-        <proof>
-          <p>
-            Si verifica facilmente che <m>a(a^{-1}b)=b</m>. Per le <xref ref="prop-cancellazione_gruppo" text="title"/>, l'elemento <m>x=a^{-1}b</m> è univocamente determinato. L'altra affermazione si prova analogamente.
-          </p>
-        </proof>
-
-      </proposition>
-
-      <remark xml:id="rem-tabelle-cayley-gruppi">
-        <p>
-          La <xref ref="prop-equazione_gruppo"/> può essere interpretata in termini della tabella di Cayley di un gruppo. Sulla riga corrispondente a un elemento <m>a</m> di un gruppo <m>G</m> troviamo gli elementi del tipo <m>ax</m> al variare di <m>x</m> in <m>G</m>: dato un certo <m>b</m> in <m>G</m>, esso appare esattamente una volta su questa riga, in corrispondenza di <m>a^{-1}b</m>. Analogamente, ogni elemento di <m>G</m> compare esattamente una volta su ciascuna colonna.
-        </p>
-      </remark>
-
-      <exercises xml:id="exercises-gruppi">
-
-        <exercise xml:id="exercise-unita_e_inverso_destro_implica_gruppo">
-          <statement>
-            <p>
-              Sia <m>G</m> un insieme dotato di un'operazione associativa. Si supponga che esista un elemento <m>e</m> tale che <m>ge=g</m> per ogni <m>g\in G</m> e che, per ogni <m>g\in G</m>, esista un elemento <m>h</m> tale che <m>gh=e</m>. Mostrare che <m>G</m> è un gruppo di elemento neutro <m>e</m>.
-            </p>
-          </statement>
-
-          <solution>
-            <p>
-              Dato un elemento <m>g</m>, sappiamo che esiste <m>h</m> tale che <m>gh=e</m>. Applicando la stessa ipotesi a <m>h</m>, sappiamo che esiste <m>k</m> tale che <m>hk=e</m>. Ora
-              <md>
-                hg=(hg)e=(hg)(hk)=h(gh)k=(he)k=hk=e
-              </md>.
-              Inoltre,
-              <md>
-                eg=(gh)g=g(hg)=ge=g
-              </md>.
-            </p>
-          </solution>
-        </exercise>
-
-        <exercise>
-          <statement>
-            <p>
-              In un insieme <m>G</m>, sia data un'operazione associativa la cui tabella di Cayley riporta su ciascuna riga e su ciascuna colonna ogni elemento di <m>G</m> esattamente una volta. Dimostrare che <m>G</m> è un gruppo.
-            </p>
-          </statement>
-
-          <solution>
-            <p>
-              Scegliamo arbitrariamente un elemento <m>x</m> in <m>G</m>. Sulla colonna di <m>x</m> compare, in particolare, <m>x</m> stesso, cioè esiste un elemento <m>e</m> tale che <m>ex=x</m>. Preso un elemento <m>g</m> qualunque, si ha allora <m>gx=g(ex)=(ge)x</m>: ora <m>gx</m> e <m>(ge)x</m> compaiono sulla colonna di <m>x</m> e, poiché ogni elemento compare solo una volta su ciascuna colonna, ciò significa che <m>ge=g</m> per ogni <m>g</m> in <m>G</m>.
-            </p>
-            <p>
-              Sulla riga di <m>g</m> deve apparire l'elemento <m>e</m>, cioè deve esistere <m>h</m> in <m>G</m> tale che <m>gh=e</m>. Possiamo ora applicare l'<xref ref="exercise-unita_e_inverso_destro_implica_gruppo"/> e concludere che <m>G</m> è un gruppo.
-            </p>
-          </solution>
-        </exercise>
-
-
-        <exercise>
-          <statement>
-            <p>
-              Sia <m>G\coloneqq\Razionali\setminus\{-1\}</m>. Dimostrare che <m>x\ast y\coloneqq x+y+xy</m> è un'operazione ben definita in <m>G</m> e che rispetto a questa operazione <m>G</m> è un gruppo abeliano.
-            </p>
-          </statement>
-
-          <solution>
-            <p>
-              Dobbiamo innanzitutto verificare che il prodotto sia ben definito, cioè che se <m>x</m> e <m>y</m> sono in <m>G</m>, allora <m>x\ast y</m> è in <m>G</m>. Supponiamo infatti per assurdo che <m>x\ast y</m> non sia in <m>G</m>, cioè che <m>x\ast y=-1</m>, vale a dire <m>x+y+xy=-1</m>. Con semplici calcoli, ciò implicherebbe che <m>(x+1)(y+1)=0</m>, da cui seguirebbe che <m>x+1=0</m> o <m>y+1=0</m>, il che non avviene se <m>x</m> e <m>y</m> appartengono a <m>G</m>. Dunque, l'operazione è ben definita.
-            </p>
-            <p>
-              La verifica che l'operazione sia associativa richiede solo un po' di attenzione. Per ogni <m>x</m>, <m>y</m> e <m>z</m> in <m>G</m> si ha
-              <md>
-                <mrow> (x\ast y)\ast z \amp =(x+y+xy)\ast z =x+y+xy+z+(x+y+xy)z </mrow>
-                <mrow> \amp =x+y+xy+z+xz+yz+xyz </mrow>
-                <mrow> \amp =x+y+z+yz+x(y+z+yz)</mrow>
-                <mrow> \amp =x \ast(y+z+yz)=x\ast(y\ast z)</mrow>
-              </md>.
-            </p>
-            <p>
-              L'operazione è commutativa. Infatti, per ogni <m>x</m> e <m>y</m> in <m>G</m> si ha
-              <md>
-                x\ast y=x+y+xy=y+x+yx=y\ast x
-              </md>.
-            </p>
-            <p>
-              L'operazione ammette elemento neutro <m>0</m>: infatti, per ogni <m>x\in G</m> si ha
-              <md>
-                x\ast 0 =x+0+x\cdot 0=x
-              </md>.
-            </p>
-            <p>
-              Infine, verifichiamo che ogni elemento <m>x</m> in <m>G</m> ha inverso. Questo deve essere un elemento <m>y</m> tale che <m>x\ast y=0</m>, cioè <m>x+y+xy=0</m>, cioè <m>(x+1)y=-x</m>. Poiché <m>x+1\ne 0</m>, otteniamo allora <m>y=-\frac{x}{x+1}</m> e questo è effettivamente un elemento di <m>G</m>, dato che, se fosse <m>y=-1</m>, otterremmo <m>x=x+1</m>.
-            </p>
-          </solution>
-        </exercise>
-
-        <exercise xml:id="exercise-triangolari_nascoste">
-          <introduction>
-            <p>
-              Sia <m>G</m> l'insieme formato dagli elementi del tipo <m>(a,b,c)</m> con <m>a</m>, <m>b</m> e <m>c</m> in <m>\Interi</m> dotato dell'operazione <m>\diamond</m> definita da
-              <md>
-                (a_{1},b_{1},c_{1})\diamond(a_{2},b_{2},c_{2})\coloneqq
-                (a_{1}+a_{2},b_{1}+b_{2},c_{1}+c_{2}+a_{1}b_{2})
-              </md>.
-            </p>
-          </introduction>
-          <task>
-            <statement>
-              <p>
-                Dimostrare che <m>G</m> è un gruppo.
-              </p>
-            </statement>
-
-            <solution>
-              <p>
-                Mostriamo che l'operazione è associativa. Siano <m>(a_{1},b_{1},c_{1})</m>, <m>(a_{2},b_{2},c_{2})</m> e <m>(a_{3},b_{3},c_{3})</m> elementi di <m>G</m>. Abbiamo allora:
-                <md>
-                  <mrow>
-                  ((a_{1},b_{1},c_{1})\diamond(a_{2},b_{2},c_{2}))\diamond (a_{3},b_{3},c_{3})
-                  </mrow>
-                  <mrow> = (a_{1}+a_{2},b_{1}+b_{2},c_{1}+c_{2}+a_{1}b_{2})\diamond (a_{3},b_{3},c_{3})</mrow>
-                  <mrow> = (a_{1}+a_{2}+a_{3},b_{1}+b_{2}+b_{3},c_{1}+c_{2}+a_{1}b_{2}+c_{3}+(a_{1}+a_{2})b_{3})</mrow>
-                  <mrow> = (a_{1}+a_{2}+a_{3},b_{1}+b_{2}+b_{3},c_{1}+c_{2}+c_{3}+a_{1}b_{2}+a_{1}b_{3}+a_{2}b_{3})</mrow>
-                </md>
-                e
-                <md>
-                  <mrow>
-                  (a_{1},b_{1},c_{1})\diamond((a_{2},b_{2},c_{2})\diamond (a_{3},b_{3},c_{3}))
-                  </mrow>
-                  <mrow> =(a_{1},b_{1},c_{1})\diamond(a_{2}+a_{3},b_{2}+b_{3},c_{2}+c_{3}+a_{2}b_{3})
-                  </mrow>
-                  <mrow> =(a_{1}+a_{2}+a_{3},b_{1}+b_{2}+b_{3},c_{1}+c_{2}+c_{3}+a_{2}b_{3}+a_{1}(b_{2}+b_{3}))
-                  </mrow>
-                  <mrow> =(a_{1}+a_{2}+a_{3},b_{1}+b_{2}+b_{3},c_{1}+c_{2}+c_{3}+a_{2}b_{3}+a_{1}b_{2}+a_{1}b_{3})
-                  </mrow>
-                </md>
-                Poiché i risultati coincidono, l'operazione è associativa.
-              </p>
-              <p>
-                Verifichiamo che esiste un elemento neutro: questo deve essere una terna <m>(x,y,z)</m> tale che per ogni <m>(a,b,c)</m> in <m>G</m> si abbia
-                <md>
-                  (a,b,c)\diamond(x,y,z)=(a,b,c)
-                </md>
-                e
-                <md>
-                  (x,y,z)\diamond(a,b,c)=(a,b,c)
-                </md>,
-                vale a dire <m>(a+x,b+y,c+z+ay)=(a,b,c)</m> e <m>(x+a,y+b,z+c+xb)=(a,b,c)</m>. Si vede immediatamente che la terna <m>(0,0,0)</m> soddisfa questa condizione.
-              </p>
-
-              <p>
-                Verifichiamo se ogni elemento <m>(a,b,c)</m> in <m>G</m> ammette inverso: questo deve essere una terna <m>(x,y,z)</m> tale che
-                <md>
-                  (a,b,c)\diamond(x,y,z)=(0,0,0)
-                </md>
-                e
-                <md>
-                  (x,y,z)\diamond(a,b,c)=(0,0,0)
-                </md>,
-                vale a dire <m>(a+x,b+x,c+z+ay)=(0,0,0)</m> e <m>(x+a,y+b,z+c+xb)=(0,0,0)</m>. Si vede immediatamente che la terna <m>(-a,-b,-c+ab)</m> soddisfa questa condizione.
-              </p>
-            </solution>
-          </task>
-
-          <task>
-            <statement>
-              <p>
-                Stabilire se <m>G</m> è abeliano.
-              </p>
-            </statement>
-
-            <solution>
-              <p>
-                Per stabilire se <m>G</m> è abeliano consideriamo i prodotti
-                <md>
-                  (a_{1},b_{1},c_{1})\diamond(a_{2},b_{2},c_{2})=(a_{1}+a_{2},b_{1}+b_{2},c_{1}+c_{2}+a_{1}b_{2})
-                </md>
-                e <md>
-                  (a_{2},b_{2},c_{2})\diamond(a_{1},b_{1},c_{1})=(a_{2}+a_{1},b_{2}+b_{1},c_{2}+c_{1}+a_{2}b_{1})
-                </md>.
-                In generale questi prodotti non coincidono: ad esempio <m>(1,0,0)\diamond(0,1,0)=(1,1,1)</m> mentre <m>(0,1,0)\diamond(1,0,0)=(1,1,0)</m> e, dunque, il gruppo non è abeliano.
-              </p>
-            </solution>
-          </task>
-
-        </exercise>
-
-        <exercise>
-          <statement>
-            <p>
-              Sia <m>G</m> un gruppo finito di ordine pari. Mostrare che in <m>G</m> esiste <m>x</m> tale che <m>x\ne 1</m> e <m>x^{2}=1</m>.
-            </p>
-          </statement>
-
-          <hint>
-            <p>
-              Mostrare che c'è un elemento non banale che coincide con il proprio inverso.
-            </p>
-          </hint>
-
-        </exercise>
-
-        <exercise>
-          <statement>
-            <p>
-              Sia <m>G</m> un gruppo e sia <m>x^{2}=1</m> per ogni <m>x</m> in <m>G</m>. Mostrare che <m>G</m> è abeliano.
-            </p>
-          </statement>
-
-          <hint>
-            <p>
-              Notare che <m>x=x^{-1}</m> per ogni <m>x</m> in <m>G</m>.
-            </p>
-          </hint>
-        </exercise>
-
-        <exercisegroup cols="2">
-          <introduction>
-            <p>
-              Si consideri il prodotto cartesiano <m>S\coloneqq \Interi\times\Razionali</m>; stabilire se è un gruppo rispetto alle operazioni così definite:
-            </p>
-          </introduction>
-
-          <exercise>
-            <statement>
-              <p>
-                <m>(a,b)\odot(c,d)\coloneqq(a+c,2^{c}b+d)</m>
-              </p>
-            </statement>
-            <answer>
-              <p>
-                È un gruppo.
-              </p>
-            </answer>
-          </exercise>
-
-          <exercise>
-            <statement>
-              <p>
-                <m>(a,b)\diamond(c,d)\coloneqq(a+c,2^{c}b-d)</m>
-              </p>
-            </statement>
-
-            <answer>
-              <p>
-                Non è un gruppo: non vale la proprietà associativa.
-              </p>
-            </answer>
-          </exercise>
-
-          <exercise>
-            <statement>
-              <p>
-                <m>(a,b)\bullet(c,d)\coloneqq(a+c,2^{-c}b+d)</m>
-              </p>
-            </statement>
-
-            <answer>
-              <p>
-                È un gruppo.
-              </p>
-            </answer>
-          </exercise>
-
-        </exercisegroup>
-
-        <exercise>
-          <statement>
-            <p>
-              Siano <m>h</m>, <m>k</m> e <m>l</m> tre numeri reali fissati. In <m>\Reali</m> sia definita un'operazione nel modo seguente: <m>x\ast y\coloneqq hx+ky+l</m>. Stabilire per quali valori di <m>h</m>, <m>k</m> e <m>l</m> l'insieme <m>\Reali</m> è un gruppo rispetto all'operazione <m>\ast</m>.
-            </p>
-          </statement>
-
-          <solution>
-            <p>
-              Verifichiamo se esiste un elemento neutro: supponiamo che <m>e</m> sia un tale elemento. Dobbiamo avere allora <m>hx+ke+l=x</m> per ogni <m>x</m> in <m>\Reali</m>, cioè <m>(h-1)x+ke+l=0</m> per ogni <m>x</m>. Ciò avviene se e solo se <m>h=1</m> e <m>ke+l=0</m>. Analogamente, deve essere <m>he+ky+l=y</m> per ogni <m>y</m>, cioè <m>he+l+(k-1)y=0</m> per ogni <m>y</m>. Ciò avviene se e solo se <m>k=1</m> e <m>he+l=0</m>. Quindi l'operazione ammette elemento neutro se e solo se <m>h=k=1</m> e, in tal caso l'elemento neutro è uguale a <m>-l</m>. Consideriamo allora il caso in cui <m>h=k=1</m> e <m>l</m> è qualsiasi. Verifichiamo se vale la proprietà associativa. Abbiamo allora
-              <md>
-                (x\ast y)\ast z=(x+y+l)\ast z=(x+y+l)+z+l=x+y+z+2l
-              </md>
-              e
-              <md>
-                x\ast(y\ast z)=x\ast(y+z+l)=x+(y+z+l)+l=x+y+z+2l
-              </md>.
-              Dunque, la proprietà associativa è soddisfatta.
-            </p>
-
-            <p>
-              Sappiamo già che l'operazione ammette elemento neutro <m>-l</m>. Verifichiamo se ogni <m>x</m> in <m>\Reali</m> ha inverso <m>y</m>, cioè un elemento tale che <m>x\ast y=-l</m> e <m>y\ast x=-l</m>. Ora <m>x\ast y =y\ast x=x+y+l</m>. Ponendo <m>x+y+l=-l</m> si trova che l'elemento <m>y</m> esiste sempre ed è uguale a <m>-x-2l</m>. Pertanto, <m>\Reali</m> è un gruppo rispetto all'operazione <m>\ast</m> se e solo se <m>h=k=1</m> e <m>l</m> è qualsiasi.
-            </p>
-          </solution>
-
-
-        </exercise>
-
-      </exercises>
-
-    </section>
-
-    <section xml:id="sec-gruppi_piccoli">
-      <title>Alcuni esempi di gruppi piccoli</title>
-      <p>
-        Sappiamo che per ciascun intero <m>n</m> esiste almeno un gruppo di ordine <m>n</m>: il gruppo <m>\Interi/n</m> delle classi di resto modulo <m>n</m> rispetto all'addizione. Per <m>n\le 4</m>, abbiamo dato la tabella di Cayley di questi gruppi (<xref ref="tabelle_classi_di_resto"/>).
-      </p>
-      <p>
-        Descriviamo adesso i gruppi di ordine piccolo, per mezzo delle loro tabelle di Cayley. Sappiamo che ci deve essere un elemento neutro e che su ogni riga e ogni colonna ciascun elemento deve apparire esattamente una volta. Cominciamo con <m>n=1</m>. C'è ovviamente un'unica possibilità
-        <md>
-          \begin{array}{c|c}
+    <p>
+      Descriviamo adesso i gruppi di ordine piccolo, per mezzo delle loro
+      tabelle di Cayley.
+      Sappiamo che ci deve essere un elemento neutro e che su ogni riga e ogni
+      colonna ciascun elemento deve apparire esattamente una volta.
+      Cominciamo con <m>n=1</m>.
+      C'è ovviamente un'unica possibilità
+      <md>
+        \begin{array}{c|c}
               \amp 1 \\
             \hline
             1 \amp 1
           \end{array}
-        </md>
-        Questa tabella corrisponde in maniera ovvia alla tabella dell'addizione tra le classi di resto modulo <m>1</m>: basta sostituire a <m>\class[1]{0}</m> il simbolo <m>1</m>.
-      </p>
-      <p>
-        Passiamo ora a considerare il caso <m>n=2</m>. Oltre all'elemento neutro, denotato con <m>1</m>, abbiamo un altro elemento, che possiamo indicare con il simbolo <m>a</m>. Abbiamo così una tabella incompleta
-        <md>
-          \begin{array}{c|cc}
+      </md>
+      Questa tabella corrisponde in maniera ovvia alla tabella dell'addizione
+      tra le classi di resto modulo <m>1</m>: basta sostituire a
+      <m>\class[1]{0}</m> il simbolo <m>1</m>.
+    </p>
+
+    <p>
+      Passiamo ora a considerare il caso <m>n=2</m>.
+      Oltre all'elemento neutro, denotato con <m>1</m>, abbiamo un altro
+      elemento, che possiamo indicare con il simbolo <m>a</m>.
+      Abbiamo così una tabella incompleta
+      <md>
+        \begin{array}{c|cc}
               \amp 1 \amp a\\
             \hline
             1 \amp 1 \amp a\\
             a \amp a \amp \\
           \end{array}
-        </md>
-        Rimane da riempire una casella. Non dovendoci essere ripetizioni sulle righe e sulle colonne, l'unica possibilità è avere un simbolo <m>1</m> nella casella vuota.
-        <md>
-          \begin{array}{c|cc}
+      </md>
+      Rimane da riempire una casella.
+      Non dovendoci essere ripetizioni sulle righe e sulle colonne, l'unica
+      possibilità è avere un simbolo <m>1</m> nella casella vuota.
+      <md>
+        \begin{array}{c|cc}
               \amp 1 \amp a\\
             \hline
             1 \amp 1 \amp a\\
             a \amp a \amp 1\\
           \end{array}
-        </md>
-        Anche questa tabella corrisponde in maniera ovvia alla tabella dell'addizione tra le classi di resto modulo <m>2</m>: basta sostituire a <m>\class[2]{0}</m> il simbolo <m>1</m> e a <m>\class[2]{1}</m> il simbolo <m>a</m>.
-      </p>
-      <p>
-        Consideriamo ora il caso <m>n=3</m>. Oltre all'elemento neutro, denotato con <m>1</m>, abbiamo altri due elementi, che possiamo indicare con i simboli <m>a</m> e <m>b</m>. Abbiamo così una tabella incompleta
-        <md>
-          \begin{array}{c|ccc}
+      </md>
+      Anche questa tabella corrisponde in maniera ovvia alla tabella
+      dell'addizione tra le classi di resto modulo <m>2</m>: basta sostituire a
+      <m>\class[2]{0}</m> il simbolo <m>1</m> e a <m>\class[2]{1}</m> il simbolo
+      <m>a</m>.
+    </p>
+
+    <p>
+      Consideriamo ora il caso <m>n=3</m>.
+      Oltre all'elemento neutro, denotato con <m>1</m>, abbiamo altri due
+      elementi, che possiamo indicare con i simboli <m>a</m> e <m>b</m>.
+      Abbiamo così una tabella incompleta
+      <md>
+        \begin{array}{c|ccc}
               \amp 1 \amp a \amp b\\
             \hline
             1 \amp 1 \amp a \amp b\\
             a \amp a \amp   \amp \\
             b \amp b \amp   \amp \\
           \end{array}
-        </md>
-        Rimangono da riempire alcune caselle. All'incrocio della riga <m>a</m> con la riga <m>b</m> non ci può essere <m>a</m>, già presente nella riga, e non ci può essere <m>b</m>, già presente nella colonna: dunque, non ci può che essere <m>1</m>. Allo stesso modo all'incrocio della riga <m>b</m> con la colonna <m>a</m>. Procedendo poi a riempire le ulteriori caselle vuote, evitando ripetizioni sulle righe e sulle colonne otteniamo l'unica possibilità.
-        <md>
-          \begin{array}{c|ccc}
+      </md>
+      Rimangono da riempire alcune caselle.
+      All'incrocio della riga <m>a</m> con la riga <m>b</m> non ci può essere
+      <m>a</m>, già presente nella riga, e non ci può essere <m>b</m>, già
+      presente nella colonna: dunque, non ci può che essere <m>1</m>.
+      Allo stesso modo all'incrocio della riga <m>b</m> con la colonna <m>a</m>.
+      Procedendo poi a riempire le ulteriori caselle vuote, evitando ripetizioni
+      sulle righe e sulle colonne otteniamo l'unica possibilità.
+      <md>
+        \begin{array}{c|ccc}
               \amp 1 \amp a \amp b\\
             \hline
             1 \amp 1 \amp a \amp b\\
             a \amp a \amp b \amp 1\\
             b \amp b \amp 1 \amp a\\
           \end{array}
-        </md>
-        Pure questa tabella corrisponde in maniera ovvia alla tabella dell'addizione tra le classi di resto modulo <m>3</m>: basta sostituire a <m>\class[3]{0}</m> il simbolo <m>1</m>, a <m>\class[3]{1}</m> il simbolo <m>a</m>, e a <m>\class[3]{2}</m> il simbolo <m>b</m> (ma possiamo anche scambiare il ruolo di <m>a</m> e <m>b</m>).
-      </p>
-      <p>
-        Consideriamo ora il caso <m>n=4</m>. Oltre all'elemento neutro, denotato con <m>1</m>, abbiamo altri tre elementi, che possiamo indicare con i simboli <m>a</m>, <m>b</m> e <m>c</m>. Abbiamo così una tabella incompleta
-        <md>
-          \begin{array}{c|cccc}
+      </md>
+      Pure questa tabella corrisponde in maniera ovvia alla tabella
+      dell'addizione tra le classi di resto modulo <m>3</m>: basta sostituire a
+      <m>\class[3]{0}</m> il simbolo <m>1</m>, a <m>\class[3]{1}</m> il simbolo
+      <m>a</m>, e a <m>\class[3]{2}</m> il simbolo <m>b</m> (ma possiamo anche
+      scambiare il ruolo di <m>a</m> e <m>b</m> ).
+    </p>
+
+    <p>
+      Consideriamo ora il caso <m>n=4</m>.
+      Oltre all'elemento neutro, denotato con <m>1</m>, abbiamo altri tre
+      elementi, che possiamo indicare con i simboli <m>a</m>, <m>b</m> e
+      <m>c</m>.
+      Abbiamo così una tabella incompleta
+      <md>
+        \begin{array}{c|cccc}
               \amp 1 \amp a \amp b \amp c\\
             \hline
             1 \amp 1 \amp a \amp b \amp c\\
@@ -1026,10 +1396,17 @@
             b \amp b \amp   \amp   \amp  \\
             c \amp c \amp   \amp   \amp  \\
           \end{array}
-        </md>
-        Ora le caselle da riempire sono diverse e non possiamo andare per esclusione come in precedenza. Sappiamo che ogni elemento deve avere un inverso: oltre a <m>1</m>, che sappiamo essere inverso di sé stesso, non conosciamo gli inversi degli altri elementi. Consideriamo prima il caso in cui ci sia almeno un elemento che non sia inverso di sé stesso: pur di rinominare gli elementi possiamo supporre che <m>a</m> e <m>b</m> siano uno l'inverso dell'altro.
-        <md>
-          \begin{array}{c|cccc}
+      </md>
+      Ora le caselle da riempire sono diverse e non possiamo andare per
+      esclusione come in precedenza.
+      Sappiamo che ogni elemento deve avere un inverso: oltre a <m>1</m>, che
+      sappiamo essere inverso di sé stesso, non conosciamo gli inversi degli
+      altri elementi.
+      Consideriamo prima il caso in cui ci sia almeno un elemento che non sia
+      inverso di sé stesso: pur di rinominare gli elementi possiamo supporre che
+      <m>a</m> e <m>b</m> siano uno l'inverso dell'altro.
+      <md>
+        \begin{array}{c|cccc}
               \amp 1 \amp a \amp b \amp c\\
             \hline
             1 \amp 1 \amp a \amp b \amp c\\
@@ -1037,10 +1414,15 @@
             b \amp b \amp 1 \amp   \amp  \\
             c \amp c \amp   \amp   \amp  \\
           \end{array}
-        </md>
-        Possiamo ora completare la tabella per esclusione: ad esempio, all'incrocio della riga <m>a</m> con la colonna <m>c</m> non ci può essere né <m>a</m>, né <m>1</m> già presenti nella riga e non ci può essere <m>c</m>, già presente nella colonna. Ci deve, quindi, essere <m>b</m>. Proseguendo così possiamo completare la tabella:
-        <md>
-          \begin{array}{c|cccc}
+      </md>
+      Possiamo ora completare la tabella per esclusione: ad esempio,
+      all'incrocio della riga <m>a</m> con la colonna <m>c</m> non ci può essere
+      né <m>a</m>, né <m>1</m> già presenti nella riga e non ci può essere
+      <m>c</m>, già presente nella colonna.
+      Ci deve, quindi, essere <m>b</m>.
+      Proseguendo così possiamo completare la tabella:
+      <md>
+        \begin{array}{c|cccc}
               \amp 1 \amp a \amp b \amp c\\
             \hline
             1 \amp 1 \amp a \amp b \amp c\\
@@ -1048,10 +1430,10 @@
             b \amp b \amp 1 \amp c \amp a\\
             c \amp c \amp b \amp a \amp 1\\
           \end{array}
-        </md>
-        Consideriamo ora il caso in cui ogni elemento è inverso di sé stesso:
-        <md>
-          \begin{array}{c|cccc}
+      </md>
+      Consideriamo ora il caso in cui ogni elemento è inverso di sé stesso:
+      <md>
+        \begin{array}{c|cccc}
               \amp 1 \amp a \amp b \amp c\\
             \hline
             1 \amp 1 \amp a \amp b \amp c \\
@@ -1059,10 +1441,15 @@
             b \amp b \amp   \amp 1 \amp   \\
             c \amp c \amp   \amp   \amp 1 \\
           \end{array}
-        </md>
-        Anche qui possiamo ora completare per esclusione: ad esempio, all'incrocio della riga <m>a</m> con la colonna <m>c</m> non ci può essere né <m>a</m>, né <m>1</m> già presenti nella riga e non ci può essere <m>c</m>, già presente nella colonna. Ci deve, quindi, essere <m>b</m>. Proseguendo così possiamo completare la tabella:
-        <md>
-          \begin{array}{c|cccc}
+      </md>
+      Anche qui possiamo ora completare per esclusione: ad esempio, all'incrocio
+      della riga <m>a</m> con la colonna <m>c</m> non ci può essere né <m>a</m>,
+      né <m>1</m> già presenti nella riga e non ci può essere <m>c</m>, già
+      presente nella colonna.
+      Ci deve, quindi, essere <m>b</m>.
+      Proseguendo così possiamo completare la tabella:
+      <md>
+        \begin{array}{c|cccc}
               \amp 1 \amp a \amp b \amp c\\
             \hline
             1 \amp 1 \amp a \amp b \amp c \\
@@ -1070,13 +1457,14 @@
             b \amp b \amp c \amp 1 \amp a \\
             c \amp c \amp b \amp a \amp 1 \\
           \end{array}
-        </md>
-        Abbiamo, quindi, trovato due tabelle possibili
-      </p>
-      <sidebyside>
-        <p>
-          <md>
-            \begin{array}{c|cccc}
+      </md>
+      Abbiamo, quindi, trovato due tabelle possibili
+    </p>
+
+    <sidebyside>
+      <p>
+        <md>
+          \begin{array}{c|cccc}
                 \amp 1 \amp a \amp b \amp c\\
               \hline
               1 \amp 1 \amp a \amp b \amp c\\
@@ -1084,11 +1472,12 @@
               b \amp b \amp 1 \amp c \amp a\\
               c \amp c \amp b \amp a \amp 1\\
             \end{array}
-          </md>
-        </p>
-        <p>
-          <md>
-            \begin{array}{c|cccc}
+        </md>
+      </p>
+
+      <p>
+        <md>
+          \begin{array}{c|cccc}
                 \amp 1 \amp a \amp b \amp c\\
               \hline
               1 \amp 1 \amp a \amp b \amp c \\
@@ -1096,19 +1485,43 @@
               b \amp b \amp c \amp 1 \amp a \\
               c \amp c \amp b \amp a \amp 1 \\
             \end{array}
-          </md>
-        </p>
-      </sidebyside>
-      <p>
-        Ci chiediamo però se queste tabelle corrispondano effettivamente a dei gruppi. Le abbiamo determinate imponendo delle condizioni necessarie (l'esistenza di un elemento neutro e la non ripetizione di elementi su ciascuna riga e su ciascuna colonna), ma potrebbero non corrispondere ad alcun gruppo. Almeno una delle due deve corrispondere alla tabella dell'addizione in <m>\Interi/4</m>: vediamo facilmente che è la prima, basta sostituire a <m>\class[4]{0}</m> il simbolo <m>1</m>, a <m>\class[4]{1}</m> il simbolo <m>a</m>, a <m>\class[4]{2}</m> il simbolo <m>c</m> e a <m>\class[4]{3}</m> il simbolo <m>b</m> (ma possiamo anche scambiare il ruolo di <m>a</m> e <m>c</m>).
+        </md>
       </p>
-      <p>
-        E per quanto riguarda la seconda tabella? Dovremmo verificare che l'operazione definita da questa tabella soddisfa la proprietà associativa e avremmo, dunque, molte combinazioni da considerare. Evitiamo di farlo esplicitamente perché vedremo più avanti (<xref ref="def-gruppo_di_Klein"/>) che c'è effettivamente un gruppo che ha una tabella equivalente a questa.
-      </p>
-      <p>
-        Ci rendiamo conto facilmente che se continuassimo a considerare tabelle di questo tipo per valori più alti di <m>n</m>, otterremmo sempre più tabelle e, quindi, questo metodo diventa poco efficiente. Come già accennato, non tutte le tabelle che rispettano le condizioni imposte definiscono effettivamente un'operazione di gruppo. Ad esempio, per <m>n=5</m>, la tabella
-        <md>
-          \begin{array}{c|ccccc}
+    </sidebyside>
+
+    <p>
+      Ci chiediamo però se queste tabelle corrispondano effettivamente a dei
+      gruppi.
+      Le abbiamo determinate imponendo delle condizioni necessarie (l'esistenza
+      di un elemento neutro e la non ripetizione di elementi su ciascuna riga e
+      su ciascuna colonna), ma potrebbero non corrispondere ad alcun gruppo.
+      Almeno una delle due deve corrispondere alla tabella dell'addizione in
+      <m>\Interi/4</m>: vediamo facilmente che è la prima, basta sostituire a
+      <m>\class[4]{0}</m> il simbolo <m>1</m>, a <m>\class[4]{1}</m> il simbolo
+      <m>a</m>, a <m>\class[4]{2}</m> il simbolo <m>c</m> e a
+      <m>\class[4]{3}</m> il simbolo <m>b</m> (ma possiamo anche scambiare il
+      ruolo di <m>a</m> e <m>c</m> ).
+    </p>
+
+    <p>
+      E per quanto riguarda la seconda tabella?
+      Dovremmo verificare che l'operazione definita da questa tabella soddisfa
+      la proprietà associativa e avremmo, dunque, molte combinazioni da
+      considerare.
+      Evitiamo di farlo esplicitamente perché vedremo più avanti (
+      <xref ref="def-gruppo_di_Klein"/> ) che c'è effettivamente un gruppo che
+      ha una tabella equivalente a questa.
+    </p>
+
+    <p>
+      Ci rendiamo conto facilmente che se continuassimo a considerare tabelle di
+      questo tipo per valori più alti di <m>n</m>, otterremmo sempre più tabelle
+      e, quindi, questo metodo diventa poco efficiente.
+      Come già accennato, non tutte le tabelle che rispettano le condizioni
+      imposte definiscono effettivamente un'operazione di gruppo.
+      Ad esempio, per <m>n=5</m>, la tabella
+      <md>
+        \begin{array}{c|ccccc}
               \amp 1 \amp a \amp b \amp c \amp d \\
             \hline
             1 \amp 1 \amp a \amp b \amp c \amp d \\
@@ -1117,22 +1530,22 @@
             c \amp c \amp d \amp a \amp 1 \amp b \\
             d \amp d \amp b \amp c \amp a \amp 1 \\
           \end{array}
-        </md>
-        non ha ripetizioni su righe e colonne e ha un elemento neutro, ma non definisce un'operazione associativa: ad esempio, <m>(aa)b=1b=b</m> e <m>a(ab)=ad=c</m>. Questa non è, quindi, la tabella di Cayley di un gruppo.
-      </p>
+      </md>
+      non ha ripetizioni su righe e colonne e ha un elemento neutro, ma non
+      definisce un'operazione associativa: ad esempio, <m>(aa)b=1b=b</m> e
+      <m>a(ab)=ad=c</m>.
+      Questa non è, quindi, la tabella di Cayley di un gruppo.
+    </p>
 
-      <exercises xml:id="exercises-gruppi_piccoli">
-
-        <exercise>
-          <statement>
-            <p>
-              Verificare che la seconda tabella di Cayley di ordine <m>4</m> è effettivamente quella di un gruppo.
-            </p>
-          </statement>
-        </exercise>
-
-      </exercises>
-
-    </section>
-
-  </chapter>
+    <exercises xml:id="exercises-gruppi_piccoli">
+      <exercise>
+        <statement>
+          <p>
+            Verificare che la seconda tabella di Cayley di ordine <m>4</m> è
+            effettivamente quella di un gruppo.
+          </p>
+        </statement>
+      </exercise>
+    </exercises>
+  </section>
+</chapter>

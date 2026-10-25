@@ -5,7 +5,10 @@
 
   <introduction>
     <p>
-      In matematica è importante non solo considerare certi oggetti e le loro proprietà ma anche i legami esistenti tra questi oggetti. Iniziamo quindi a introdurre il concetto di <q>corrispondenza</q> tra insiemi.
+      In matematica è importante non solo considerare certi oggetti e le loro
+      proprietà ma anche i legami esistenti tra questi oggetti.
+      Iniziamo quindi a introdurre il concetto di <q>corrispondenza</q> tra
+      insiemi.
     </p>
   </introduction>
 
@@ -13,16 +16,37 @@
     <title>Corrispondenze tra insiemi</title>
 
     <p>
-      Consideriamo l'insieme <m>A</m> formato dalle tre amiche Alice, Bianca e Chiara, e l'insieme <m>C</m> formato da alcune capitali europee: Berlino, Londra, Madrid e Parigi. Possiamo mettere in corrispondenza gli elementi dell'insieme <m>A</m> con gli elementi dell'insieme <m>C</m> in vari modi. Ad esempio, una corrispondenza è <q>avere visitato</q>: Alice ha visitato Berlino e Madrid, Bianca non ha mai visitato nessuna di quelle città e Chiara ha visitato Londra, Madrid e Parigi. Possiamo descrivere ciò in questo modo: consideriamo tutte le coppie ordinate formate da un elemento di <m>A</m> e da un elemento di <m>C</m>, cioè gli elementi del prodotto cartesiano <m>A\times C</m>, e prendiamo le coppie per cui il primo elemento della coppia ha visitato il secondo elemento e scartiamo le altre. Dunque, prendiamo la coppia (Alice,Madrid) e scartiamo la coppia (Chiara,Berlino) e così via. In altri termini, stiamo considerando un sottoinsieme del prodotto cartesiano. Ciò suggerisce la
+      Consideriamo l'insieme <m>A</m> formato dalle tre amiche Alice, Bianca e
+      Chiara, e l'insieme <m>C</m> formato da alcune capitali europee: Berlino,
+      Londra, Madrid e Parigi.
+      Possiamo mettere in corrispondenza gli elementi dell'insieme <m>A</m> con
+      gli elementi dell'insieme <m>C</m> in vari modi.
+      Ad esempio, una corrispondenza è <q>avere visitato</q>: Alice ha visitato
+      Berlino e Madrid, Bianca non ha mai visitato nessuna di quelle città e
+      Chiara ha visitato Londra, Madrid e Parigi.
+      Possiamo descrivere ciò in questo modo: consideriamo tutte le coppie
+      ordinate formate da un elemento di <m>A</m> e da un elemento di <m>C</m>,
+      cioè gli elementi del prodotto cartesiano <m>A\times C</m>, e prendiamo le
+      coppie per cui il primo elemento della coppia ha visitato il secondo
+      elemento e scartiamo le altre.
+      Dunque, prendiamo la coppia (Alice,Madrid) e scartiamo la coppia
+      (Chiara,Berlino) e così via.
+      In altri termini, stiamo considerando un sottoinsieme del prodotto
+      cartesiano.
+      Ciò suggerisce la
     </p>
 
     <definition xml:id="def-corrispondenza">
-
       <idx><h>corrispondenza</h></idx>
-
       <statement>
         <p>
-          Dati due insiemi <m>A</m> e <m>B</m>, una <term>corrispondenza</term> <m>S</m> tra <m>A</m> e <m>B</m> è un sottoinsieme del prodotto cartesiano <m>A\times B</m>. Se una coppia <m>(a,b)</m> del prodotto cartesiano appartiene a <m>S</m> scriveremo <m>a\mathrel{S}b</m>. Scriveremo invece <m>a\not\mathrel{S}b</m> per indicare che <m>(a,b)\notin S</m>.
+          Dati due insiemi <m>A</m> e <m>B</m>, una <term>corrispondenza</term>
+          <m>S</m> tra <m>A</m> e <m>B</m> è un sottoinsieme del prodotto
+          cartesiano <m>A\times B</m>.
+          Se una coppia <m>(a,b)</m> del prodotto cartesiano appartiene a
+          <m>S</m> scriveremo <m>a\mathrel{S}b</m>.
+          Scriveremo invece <m>a\not\mathrel{S}b</m> per indicare che
+          <m>(a,b)\notin S</m>.
         </p>
       </statement>
     </definition>
@@ -34,18 +58,45 @@
     <example xml:id="ex-corrispondenza_divisibilita">
       <statement>
         <p>
-          Dati due numeri interi <m>m</m> e <m>n</m>, diciamo che <m>m</m> <term>divide</term> <m>n</m> e scriviamo <m>m\mid n</m> se esiste un intero <m>c</m> tale che <m>n=cm</m>. Consideriamo allora gli insiemi <m>A\coloneqq \{2,3,5\}</m> e <m>B\coloneqq \{4,6,7\}</m> e mettiamo in corrispondenza un elemento  <m>a\in A</m> con un elemento <m>b\in B</m> se <m>a</m> divide <m>b</m>. Dunque, vediamo che <m>2</m> divide <m>4</m> e <m>6</m>, mentre <m>3</m> divide solo <m>6</m> e infine <m>5</m> non divide nessun elemento di <m>B</m>. Come sottoinsieme del prodotto cartesiano <m>A\times B</m>, questa corrispondenza è, dunque, <m>\{(2,4),(2,6),(3,6)\}</m>. Notiamo che ciascun elemento di <m>A</m> o di <m>B</m> può comparire in nessuna, una o più coppie.
+          Dati due numeri interi <m>m</m> e <m>n</m>, diciamo che <m>m</m>
+          <term>divide</term> <m>n</m> e scriviamo <m>m\mid n</m> se esiste un
+          intero <m>c</m> tale che <m>n=cm</m>.
+          Consideriamo allora gli insiemi <m>A\coloneqq \{2,3,5\}</m> e
+          <m>B\coloneqq \{4,6,7\}</m> e mettiamo in corrispondenza un elemento
+          <m>a\in A</m> con un elemento <m>b\in B</m> se <m>a</m> divide
+          <m>b</m>.
+          Dunque, vediamo che <m>2</m> divide <m>4</m> e <m>6</m>, mentre
+          <m>3</m> divide solo <m>6</m> e infine <m>5</m> non divide nessun
+          elemento di <m>B</m>.
+          Come sottoinsieme del prodotto cartesiano <m>A\times B</m>, questa
+          corrispondenza è, dunque, <m>\{(2,4),(2,6),(3,6)\}</m>.
+          Notiamo che ciascun elemento di <m>A</m> o di <m>B</m> può comparire
+          in nessuna, una o più coppie.
         </p>
+
         <p>
-          Possiamo visualizzare la corrispondenza nel seguente modo, collegando con una freccia un elemento di <m>A</m> e un elemento di <m>B</m> se sono in corrispondenza.
+          Possiamo visualizzare la corrispondenza nel seguente modo, collegando
+          con una freccia un elemento di <m>A</m> e un elemento di <m>B</m> se
+          sono in corrispondenza.
         </p>
+
         <figure>
-          <caption>Corrispondenza di divisibilità tra insiemi di interi</caption>
+          <caption>
+            Corrispondenza di divisibilità tra insiemi di interi
+          </caption>
+
           <image xml:id="image-corrispondenza_divisibilita">
-            <shortdescription>Diagrammi di Venn dei due insiemi con frecce che collegano gli elementi corrispondenti.</shortdescription>
+            <shortdescription>
+              Diagrammi di Venn dei due insiemi con frecce che collegano gli
+              elementi corrispondenti.
+            </shortdescription>
+
             <description>
               <p>
-                Due diagrammi di Venn, uno contenente gli elementi di <m>A</m> e uno contenente gli elementi di <m>B</m> con frecce che vanno da ciascun elemento di <m>A</m> verso gli elementi di <m>B</m> di cui è divisore.
+                Due diagrammi di Venn, uno contenente gli elementi di <m>A</m> e
+                uno contenente gli elementi di <m>B</m> con frecce che vanno da
+                ciascun elemento di <m>A</m> verso gli elementi di <m>B</m> di
+                cui è divisore.
               </p>
             </description>
             <latex-image>
@@ -69,23 +120,48 @@
             </latex-image>
           </image>
         </figure>
+
         <p>
-          Se ora scambiamo il ruolo degli insiemi <m>A</m> e <m>B</m>, vediamo che nessun elemento di <m>B</m> divide qualche elemento di <m>A</m>. La corrispondenza è cioè il sottoinsieme vuoto di <m>B\times A</m>: quindi, se volessimo rappresentarla tramite un disegno simile al precedente, non dovremmo tracciare nessuna freccia.
+          Se ora scambiamo il ruolo degli insiemi <m>A</m> e <m>B</m>, vediamo
+          che nessun elemento di <m>B</m> divide qualche elemento di <m>A</m>.
+          La corrispondenza è cioè il sottoinsieme vuoto di <m>B\times A</m>:
+          quindi, se volessimo rappresentarla tramite un disegno simile al
+          precedente, non dovremmo tracciare nessuna freccia.
         </p>
       </statement>
     </example>
+
     <example xml:id="ex-corrispondenza_somma_pari">
       <statement>
         <p>
-          Riprendiamo gli insiemi <m>A\coloneqq \{2,3,5\}</m> e <m>B\coloneqq \{4,6,7\}</m> considerati nell'<xref ref="ex-corrispondenza_divisibilita"/> e diciamo che <m>a</m> in <m>A</m> è in corrispondenza con <m>b</m> in <m>B</m> se <m>a+b</m> è un numero pari. Dunque, <m>2</m> è in corrispondenza con <m>4</m> e <m>6</m>, mentre <m>3</m> e <m>5</m> sono in corrispondenza con <m>7</m>. Come sottoinsieme del prodotto cartesiano questa corrispondenza è, dunque, <m>\{(2,4),(2,6),(3,7),(5,7)\}</m>.
+          Riprendiamo gli insiemi <m>A\coloneqq \{2,3,5\}</m> e
+          <m>B\coloneqq \{4,6,7\}</m> considerati nell'
+          <xref ref="ex-corrispondenza_divisibilita"/> e diciamo che <m>a</m> in
+          <m>A</m> è in corrispondenza con <m>b</m> in <m>B</m> se <m>a+b</m> è
+          un numero pari.
+          Dunque, <m>2</m> è in corrispondenza con <m>4</m> e <m>6</m>, mentre
+          <m>3</m> e <m>5</m> sono in corrispondenza con <m>7</m>.
+          Come sottoinsieme del prodotto cartesiano questa corrispondenza è,
+          dunque, <m>\{(2,4),(2,6),(3,7),(5,7)\}</m>.
         </p>
+
         <figure>
-          <caption>Corrispondenza tra insiemi di interi data dalla parità</caption>
+          <caption>
+            Corrispondenza tra insiemi di interi data dalla parità
+          </caption>
+
           <image xml:id="image-corrispondenza_somma_pari">
-            <shortdescription>Rappresentazione della corrispondenza tra insiemi di interi data dalla parità</shortdescription>
+            <shortdescription>
+              Rappresentazione della corrispondenza tra insiemi di interi data
+              dalla parità
+            </shortdescription>
+
             <description>
               <p>
-                Due diagrammi di Venn, uno contenente gli elementi di <m>A</m> e uno contenente gli elementi di <m>B</m> con frecce che vanno da ciascun elemento di <m>A</m> verso gli elementi di <m>B</m> tali che la somma dei due elementi collegati è pari.
+                Due diagrammi di Venn, uno contenente gli elementi di <m>A</m> e
+                uno contenente gli elementi di <m>B</m> con frecce che vanno da
+                ciascun elemento di <m>A</m> verso gli elementi di <m>B</m> tali
+                che la somma dei due elementi collegati è pari.
               </p>
             </description>
             <latex-image>
@@ -110,37 +186,44 @@
             </latex-image>
           </image>
         </figure>
-
       </statement>
     </example>
 
     <exercises xml:id="exercises-corrispondenze_definizione">
       <exercise>
-
         <idx><h>corrispondenza</h><h>composizione</h></idx>
         <idx><h>composizione</h><h>di corrispondenze</h></idx>
-
         <statement>
           <p>
-            Dati tre insiemi <m>A</m>, <m>B</m> e <m>C</m> e due corrispondenze <m>S</m> tra <m>A</m> e <m>B</m> e <m>T</m> tra <m>B</m> e <m>C</m>, la <term>composizione</term> di <m>S</m> e <m>T</m> è la corrispondenza <m>ST</m> tra <m>A</m> e <m>C</m> così definita: dati <m>a\in A</m> e <m>c \in C</m> si ha <m>a\mathrel{ST}c</m> se esiste <m>b\in B</m> tale che <m>a\mathrel{S}b</m> e <m>b\mathrel{T}c</m>.
-           </p>
-           <p>
-             Dato un altro insieme <m>D</m> e una corrispondenza <m>U</m> tra <m>C</m> e <m>D</m>, mostrare che <m>(ST)U=S(TU)</m>.
-           </p>
+            Dati tre insiemi <m>A</m>, <m>B</m> e <m>C</m> e due corrispondenze
+            <m>S</m> tra <m>A</m> e <m>B</m> e <m>T</m> tra <m>B</m> e <m>C</m>,
+            la <term>composizione</term> di <m>S</m> e <m>T</m> è la
+            corrispondenza <m>ST</m> tra <m>A</m> e <m>C</m> così definita: dati
+            <m>a\in A</m> e <m>c \in C</m> si ha <m>a\mathrel{ST}c</m> se esiste
+            <m>b\in B</m> tale che <m>a\mathrel{S}b</m> e <m>b\mathrel{T}c</m>.
+          </p>
+
+          <p>
+            Dato un altro insieme <m>D</m> e una corrispondenza <m>U</m> tra
+            <m>C</m> e <m>D</m>, mostrare che <m>(ST)U=S(TU)</m>.
+          </p>
         </statement>
       </exercise>
 
       <exercise>
         <introduction>
           <p>
-            Siano dati gli insiemi <m>A\coloneqq \{3,5,7\}</m> e <m>B\coloneqq \{6,11,20\}</m>.
+            Siano dati gli insiemi <m>A\coloneqq \{3,5,7\}</m> e
+            <m>B\coloneqq \{6,11,20\}</m>.
           </p>
         </introduction>
 
         <task>
           <statement>
             <p>
-              Descrivere come sottoinsieme di <m>A\times B</m> la corrispondenza <m>S</m> da <m>A</m> a <m>B</m> così definita: <m>a\mathrel{S}b</m> se <m>a+b</m> è un quadrato perfetto.
+              Descrivere come sottoinsieme di <m>A\times B</m> la corrispondenza
+              <m>S</m> da <m>A</m> a <m>B</m> così definita:
+              <m>a\mathrel{S}b</m> se <m>a+b</m> è un quadrato perfetto.
             </p>
           </statement>
         </task>
@@ -148,7 +231,9 @@
         <task>
           <statement>
             <p>
-              Descrivere come sottoinsieme di <m>A\times B</m> la corrispondenza <m>T</m> da <m>A</m> a <m>B</m> così definita: <m>a\mathrel{T}b</m> se <m>a-b</m> è multiplo di <m>3</m>.
+              Descrivere come sottoinsieme di <m>A\times B</m> la corrispondenza
+              <m>T</m> da <m>A</m> a <m>B</m> così definita:
+              <m>a\mathrel{T}b</m> se <m>a-b</m> è multiplo di <m>3</m>.
             </p>
           </statement>
         </task>
@@ -156,13 +241,15 @@
         <task>
           <statement>
             <p>
-              Confrontare le corrispondenze <m>S</m> e <m>T</m>: cosa possiamo dire?
+              Confrontare le corrispondenze <m>S</m> e <m>T</m>: cosa possiamo
+              dire?
             </p>
           </statement>
 
           <answer>
             <p>
-              Le corrispondenze <m>S</m> e <m>T</m> coincidono anche se sono descritte in maniera differente.
+              Le corrispondenze <m>S</m> e <m>T</m> coincidono anche se sono
+              descritte in maniera differente.
             </p>
           </answer>
         </task>
@@ -171,16 +258,18 @@
       <exercise>
         <statement>
           <p>
-            Quante differenti corrispondenze esistono da un insieme finito <m>A</m> con <m>n</m> elementi a un insieme finito <m>B</m> con <m>m</m> elementi?
+            Quante differenti corrispondenze esistono da un insieme finito
+            <m>A</m> con <m>n</m> elementi a un insieme finito <m>B</m> con
+            <m>m</m> elementi?
           </p>
         </statement>
+
         <answer>
           <p>
             <m>2^{mn}</m>
           </p>
         </answer>
       </exercise>
-
     </exercises>
   </section>
 
@@ -188,42 +277,46 @@
     <title>Relazioni di equivalenza</title>
 
     <definition xml:id="def-relazione">
-
       <idx><h>relazione</h></idx>
-
       <statement>
         <p>
-          Una corrispondenza da un insieme <m>A</m> in sé stesso è detta <term>relazione</term> di <m>A</m>.
+          Una corrispondenza da un insieme <m>A</m> in sé stesso è detta
+          <term>relazione</term> di <m>A</m>.
         </p>
       </statement>
     </definition>
 
     <definition xml:id="def-equivalenza">
-
       <idx><h>relazione</h><h>di equivalenza</h></idx>
       <idx><h>equivalenza (relazione di)</h></idx>
-
       <statement>
         <p>
-          Una relazione <m>R</m> di un insieme <m>A</m> è detta di <term>equivalenza</term> se soddisfa le proprietà seguenti:
+          Una relazione <m>R</m> di un insieme <m>A</m> è detta di
+          <term>equivalenza</term> se soddisfa le proprietà seguenti:
           <ul>
             <li>
               <p>
-                <m>a\mathrel{R}a</m> per ogni <m>a</m> in <m>A</m> (<term>proprietà riflessiva</term>);
+                <m>a\mathrel{R}a</m> per ogni <m>a</m> in <m>A</m> (
+                <term>proprietà riflessiva</term> );
               </p>
             </li>
+
             <li>
               <p>
-                se <m>a\mathrel{R}b</m> allora <m>b\mathrel{R}a</m> (<term>proprietà simmetrica</term>);
+                se <m>a\mathrel{R}b</m> allora <m>b\mathrel{R}a</m> (
+                <term>proprietà simmetrica</term> );
               </p>
             </li>
+
             <li>
               <p>
-                se <m>a\mathrel{R}b</m> e <m>b\mathrel{R}c</m> allora <m>a\mathrel{R}c</m> (<term>proprietà transitiva</term>).
+                se <m>a\mathrel{R}b</m> e <m>b\mathrel{R}c</m> allora
+                <m>a\mathrel{R}c</m> ( <term>proprietà transitiva</term> ).
               </p>
             </li>
           </ul>
-          Solitamente una relazione di equivalenza è indicata con un simbolo del tipo <m>\sim</m>, <m>\simeq</m>, <m>\equiv</m>, <etc />
+          Solitamente una relazione di equivalenza è indicata con un simbolo del
+          tipo <m>\sim</m>, <m>\simeq</m>, <m>\equiv</m>, <etc/>
         </p>
       </statement>
     </definition>
@@ -231,7 +324,12 @@
     <example xml:id="ex-equivalenze_banali">
       <statement>
         <p>
-          Dato un insieme <m>A</m>, la relazione di uguaglianza (quella cioè in cui ogni elemento è in relazione solo con sé stesso) è ovviamente una relazione di equivalenza. All'estremo opposto, la relazione in cui ogni elemento è in relazione con tutti gli altri è, altrettanto ovviamente, una relazione di equivalenza.
+          Dato un insieme <m>A</m>, la relazione di uguaglianza (quella cioè in
+          cui ogni elemento è in relazione solo con sé stesso) è ovviamente una
+          relazione di equivalenza.
+          All'estremo opposto, la relazione in cui ogni elemento è in relazione
+          con tutti gli altri è, altrettanto ovviamente, una relazione di
+          equivalenza.
         </p>
       </statement>
     </example>
@@ -239,7 +337,11 @@
     <example xml:id="ex-valore_assoluto">
       <statement>
         <p>
-          Nell'insieme dei numeri reali <m>\Reali</m>, la relazione <m>\sim</m> definita da <m>a\sim b</m> se <m>\abs{a}=\abs{b}</m> è una relazione di equivalenza. Si noti che ogni numero reale è in relazione con sé stesso e il proprio opposto.
+          Nell'insieme dei numeri reali <m>\Reali</m>, la relazione <m>\sim</m>
+          definita da <m>a\sim b</m> se <m>\abs{a}=\abs{b}</m> è una relazione
+          di equivalenza.
+          Si noti che ogni numero reale è in relazione con sé stesso e il
+          proprio opposto.
         </p>
       </statement>
     </example>
@@ -247,51 +349,73 @@
     <example xml:id="ex-costruzione_interi">
       <statement>
         <p>
-          Consideriamo l'insieme <m>S\coloneqq \Naturali\times\Naturali</m>. Definiamo in <m>S</m> la relazione <m>\sim</m> tramite <m>(a,b)\sim(c,d)</m> se <m>a+d=b+c</m>. Verifichiamo che è una relazione di equivalenza.
+          Consideriamo l'insieme <m>S\coloneqq \Naturali\times\Naturali</m>.
+          Definiamo in <m>S</m> la relazione <m>\sim</m> tramite
+          <m>(a,b)\sim(c,d)</m> se <m>a+d=b+c</m>.
+          Verifichiamo che è una relazione di equivalenza.
         </p>
+
         <p>
           <ul>
             <li>
               <p>
-                Proprietà riflessiva. <m>(a,b)\sim(a,b)</m> per ogni <m>(a,b)\in S</m>: infatti, <m>a+b=b+a</m>.
+                Proprietà riflessiva.
+                <m>(a,b)\sim(a,b)</m> per ogni <m>(a,b)\in S</m>: infatti,
+                <m>a+b=b+a</m>.
               </p>
             </li>
+
             <li>
               <p>
-                Proprietà simmetrica. Se <m>(a,b)\sim (c,d)</m>, cioè <m>a+d=b+c</m>, allora <m>c+b=d+a</m>, cioè <m>(c,d)\sim (a,b)</m>.
+                Proprietà simmetrica.
+                Se <m>(a,b)\sim (c,d)</m>, cioè <m>a+d=b+c</m>, allora
+                <m>c+b=d+a</m>, cioè <m>(c,d)\sim (a,b)</m>.
               </p>
             </li>
+
             <li>
               <p>
-                Proprietà transitiva. Se <m>(a,b)\sim (c,d)</m>, cioè <m>a+d=b+c</m>, e <m>(c,d)\sim (e,f)</m>, cioè <m>c+f=d+e</m>, allora, sommando membro a membro, troviamo <m>a+d+c+f=b+c+d+e</m> da cui, per la legge di cancellazione, otteniamo <m>a+f=b+e</m>, cioè <m>(a,b)\sim (e,f)</m>.
+                Proprietà transitiva.
+                Se <m>(a,b)\sim (c,d)</m>, cioè <m>a+d=b+c</m>, e
+                <m>(c,d)\sim (e,f)</m>, cioè <m>c+f=d+e</m>, allora, sommando
+                membro a membro, troviamo <m>a+d+c+f=b+c+d+e</m> da cui, per la
+                legge di cancellazione, otteniamo <m>a+f=b+e</m>, cioè
+                <m>(a,b)\sim (e,f)</m>.
               </p>
             </li>
           </ul>
         </p>
       </statement>
-
     </example>
 
     <definition xml:id="def-classe">
-
       <idx><h>classe di equivalenza</h></idx>
       <idx><h>insieme</h><h>quoziente</h></idx>
-
       <notation>
         <usage><m>\class[\sim]{a}</m></usage>
         <description>classe di equivalenza di <m>a</m></description>
       </notation>
+
       <notation>
         <usage><m>A/\sim</m></usage>
-        <description>insieme quoziente di <m>A</m> rispetto a <m>\sim</m></description>
+        <description>
+          insieme quoziente di <m>A</m> rispetto a <m>\sim</m>
+        </description>
       </notation>
 
       <statement>
         <p>
-          Sia <m>\sim</m> una relazione di equivalenza in un insieme <m>A</m>. Dato un elemento <m>a\in A</m>, la <term>classe di equivalenza</term> di <m>a</m>, indicata con il simbolo <m>\class[\sim]{a}</m> è il sottoinsieme di <m>A</m> così definito: <m>\class[\sim]{a}\coloneqq \{x\in A\mid a\sim x\}</m>.
+          Sia <m>\sim</m> una relazione di equivalenza in un insieme <m>A</m>.
+          Dato un elemento <m>a\in A</m>, la <term>classe di equivalenza</term>
+          di <m>a</m>, indicata con il simbolo <m>\class[\sim]{a}</m> è il
+          sottoinsieme di <m>A</m> così definito:
+          <m>\class[\sim]{a}\coloneqq \{x\in A\mid a\sim x\}</m>.
         </p>
+
         <p>
-          L'insieme delle classi di equivalenza viene denotato con il simbolo <m>A/\sim</m> e detto <term>insieme quoziente</term> di <m>A</m> rispetto alla relazione <m>\sim</m>.
+          L'insieme delle classi di equivalenza viene denotato con il simbolo
+          <m>A/\sim</m> e detto <term>insieme quoziente</term> di <m>A</m>
+          rispetto alla relazione <m>\sim</m>.
         </p>
       </statement>
     </definition>
@@ -299,21 +423,26 @@
     <proposition xml:id="prop-classe_equivalenza">
       <statement>
         <p>
-          Sia <m>\sim</m> una relazione di equivalenza in un insieme <m>A</m>. Allora:
+          Sia <m>\sim</m> una relazione di equivalenza in un insieme <m>A</m>.
+          Allora:
           <ol>
             <li>
               <p>
                 per ogni <m>a\in A</m> si ha che <m>a\in\class[\sim]{a}</m>
               </p>
             </li>
+
             <li>
               <p>
-                se <m>b\in\class[\sim]{a}</m> allora <m>\class[\sim]{a}=\class[\sim]{b}</m>
+                se <m>b\in\class[\sim]{a}</m> allora
+                <m>\class[\sim]{a}=\class[\sim]{b}</m>
               </p>
             </li>
+
             <li>
               <p>
-                se <m>\class[\sim]{a}\cap\class[\sim]{b}\ne\vuoto</m> allora <m>\class[\sim]{a}=\class[\sim]{b}</m>
+                se <m>\class[\sim]{a}\cap\class[\sim]{b}\ne\vuoto</m> allora
+                <m>\class[\sim]{a}=\class[\sim]{b}</m>
               </p>
             </li>
           </ol>
@@ -322,42 +451,59 @@
 
       <proof>
         <p>
-          Poiché vale la proprietà riflessiva si ha che <m>a\sim a</m> e, dunque, <m>a\in\class[\sim]{a}</m>.
+          Poiché vale la proprietà riflessiva si ha che <m>a\sim a</m> e,
+          dunque, <m>a\in\class[\sim]{a}</m>.
         </p>
+
         <p>
-          Sia ora <m>b\in\class[\sim]{a}</m>, cioè <m>a\sim b</m>. Per ogni <m>c\in\class[\sim]{b}</m>, cioè tale che <m>b\sim c</m>, la proprietà transitiva implica che <m>a\sim c</m>, cioè <m>c\in\class[\sim]{a}</m>: dunque, <m>\class[\sim]{b}\subseteq\class[\sim]{a}</m>. D'altra parte, per la proprietà simmetrica si ha <m>b\sim a</m> e lo stesso argomento mostra che <m>\class[\sim]{a}\subseteq\class[\sim]{b}</m>. In conclusione, <m>\class[\sim]{a}=\class[\sim]{b}</m>.
+          Sia ora <m>b\in\class[\sim]{a}</m>, cioè <m>a\sim b</m>.
+          Per ogni <m>c\in\class[\sim]{b}</m>, cioè tale che <m>b\sim c</m>, la
+          proprietà transitiva implica che <m>a\sim c</m>, cioè
+          <m>c\in\class[\sim]{a}</m>: dunque,
+          <m>\class[\sim]{b}\subseteq\class[\sim]{a}</m>.
+          D'altra parte, per la proprietà simmetrica si ha <m>b\sim a</m> e lo
+          stesso argomento mostra che
+          <m>\class[\sim]{a}\subseteq\class[\sim]{b}</m>.
+          In conclusione, <m>\class[\sim]{a}=\class[\sim]{b}</m>.
         </p>
+
         <p>
-          L'ultima affermazione segue immediatamente dalla precedente se notiamo che, dato <m>c\in\class[\sim]{a}\cap\class[\sim]{b}</m>, si ha <m>\class[\sim]{a}=\class[\sim]{c}=\class[\sim]{b}</m>.
+          L'ultima affermazione segue immediatamente dalla precedente se notiamo
+          che, dato <m>c\in\class[\sim]{a}\cap\class[\sim]{b}</m>, si ha
+          <m>\class[\sim]{a}=\class[\sim]{c}=\class[\sim]{b}</m>.
         </p>
       </proof>
-
     </proposition>
 
     <p>
-      In particolare, un qualunque elemento di una classe individua la classe stessa. Ciò motiva la seguente definizione:
+      In particolare, un qualunque elemento di una classe individua la classe
+      stessa.
+      Ciò motiva la seguente definizione:
     </p>
 
     <definition xml:id="def-rappresentante">
-
       <idx><h>classe di equivalenza</h><h>rappresentante</h></idx>
       <idx><h>rappresentante di una classe di equivalenza</h></idx>
-
       <statement>
         <p>
-          Data una relazione di equivalenza <m>\sim</m> in un insieme <m>A</m> e una classe di equivalenza <m>C</m> di tale relazione, un qualunque elemento <m>a</m> di <m>C</m> (cioè un elemento per cui si ha <m>\class[\sim]{a}=C</m>) è detto <term>rappresentante</term> della classe <m>C</m>.
+          Data una relazione di equivalenza <m>\sim</m> in un insieme <m>A</m> e
+          una classe di equivalenza <m>C</m> di tale relazione, un qualunque
+          elemento <m>a</m> di <m>C</m> (cioè un elemento per cui si ha
+          <m>\class[\sim]{a}=C</m> ) è detto <term>rappresentante</term> della
+          classe <m>C</m>.
         </p>
       </statement>
     </definition>
 
     <definition xml:id="def-partizione">
-
       <idx><h>partizione</h></idx>
       <idx><h>insieme</h><h>partizione</h></idx>
-
       <statement>
         <p>
-          Una <term>partizione</term> di un insieme <m>A</m> è una collezione <m>\{C_{i}\}_{i\in I}</m> di sottoinsiemi non vuoti di <m>A</m> tali che <m>\bigcup_{i\in I}C_{i}=A</m> e <m>C_{i}\cap C_{j}=\vuoto</m> se <m>i\ne j</m>.
+          Una <term>partizione</term> di un insieme <m>A</m> è una collezione
+          <m>\{C_{i}\}_{i\in I}</m> di sottoinsiemi non vuoti di <m>A</m> tali
+          che <m>\bigcup_{i\in I}C_{i}=A</m> e <m>C_{i}\cap C_{j}=\vuoto</m> se
+          <m>i\ne j</m>.
         </p>
       </statement>
     </definition>
@@ -365,31 +511,65 @@
     <theorem xml:id="thm-classi_equivalenza">
       <statement>
         <p>
-          Data una relazione di equivalenza <m>\sim</m> in un insieme <m>A</m>, l'insieme delle sue classi di equivalenza forma una partizione di <m>A</m>. Viceversa, data una partizione <m>\{C_{i}\}_{i\in I}</m> di <m>A</m>, esiste una relazione di equivalenza le cui classi sono esattamente gli elementi della partizione.
+          Data una relazione di equivalenza <m>\sim</m> in un insieme <m>A</m>,
+          l'insieme delle sue classi di equivalenza forma una partizione di
+          <m>A</m>.
+          Viceversa, data una partizione <m>\{C_{i}\}_{i\in I}</m> di <m>A</m>,
+          esiste una relazione di equivalenza le cui classi sono esattamente gli
+          elementi della partizione.
         </p>
       </statement>
 
       <proof>
         <p>
-          Dalla <xref ref="prop-classe_equivalenza"/>, la classe <m>\class[\sim]{a}</m> contiene l'elemento <m>a</m>: in particolare, ogni classe è non vuota e ogni elemento di <m>A</m> è contenuto in (almeno) una classe, da cui segue che l'unione delle classi è uguale ad <m>A</m>. La <xref ref="prop-classe_equivalenza"/> afferma inoltre che classi distinte hanno intersezione vuota. Pertanto, le classi formano una partizione.
+          Dalla <xref ref="prop-classe_equivalenza"/>, la classe
+          <m>\class[\sim]{a}</m> contiene l'elemento <m>a</m>: in particolare,
+          ogni classe è non vuota e ogni elemento di <m>A</m> è contenuto in
+          (almeno) una classe, da cui segue che l'unione delle classi è uguale
+          ad <m>A</m>.
+          La <xref ref="prop-classe_equivalenza"/> afferma inoltre che classi
+          distinte hanno intersezione vuota.
+          Pertanto, le classi formano una partizione.
         </p>
 
         <p>
-          Viceversa, data la partizione <m>\{C_{i}\}_{i\in I}</m>, definiamo la relazione <m>\approx</m> così: <m>a\approx b</m> se esiste <m>i\in I</m> tale che <m>a\in C_{i}</m> e <m>b\in C_{i}</m>. La relazione <m>\approx</m> è chiaramente simmetrica. Poiché <m>\bigcup_{i\in I}C_{i}=A</m>, per ogni <m>a\in A</m> esiste un <m>i\in I</m> tale che <m>a\in C_{i}</m>: dunque, <m>\approx</m> è riflessiva. Infine, se <m>a\approx b</m> e <m>b\approx c</m>, allora esistono <m>i</m> e <m>j</m> in <m>I</m> tali che <m>a\in C_{i}</m>, <m>b\in C_{i}</m>, <m>b\in C_{j}</m> e <m>c\in C_{j}</m>.
-          Dunque, <m>C_{i}\cap C_{j}</m> contiene <m>b</m> ed è, quindi, non vuoto: per definizione di partizione, ciò significa che <m>i=j</m> e, di conseguenza, c'è un elemento della partizione che contiene sia <m>a</m> che <m>c</m> e, pertanto, <m>a\approx c</m>, cioè <m>\approx</m> è transitiva. Dato <m>a</m> in <m>A</m>, gli elementi a esso equivalenti sono tutti e soli quelli appartenenti all'unico <m>C_{i}</m> contenente <m>a</m>, cioè la classe di equivalenza di <m>a</m> coincide con <m>C_{i}</m>.
+          Viceversa, data la partizione <m>\{C_{i}\}_{i\in I}</m>, definiamo la
+          relazione <m>\approx</m> così: <m>a\approx b</m> se esiste
+          <m>i\in I</m> tale che <m>a\in C_{i}</m> e <m>b\in C_{i}</m>.
+          La relazione <m>\approx</m> è chiaramente simmetrica.
+          Poiché <m>\bigcup_{i\in I}C_{i}=A</m>, per ogni <m>a\in A</m> esiste
+          un <m>i\in I</m> tale che <m>a\in C_{i}</m>: dunque, <m>\approx</m> è
+          riflessiva.
+          Infine, se <m>a\approx b</m> e <m>b\approx c</m>, allora esistono
+          <m>i</m> e <m>j</m> in <m>I</m> tali che <m>a\in C_{i}</m>,
+          <m>b\in C_{i}</m>, <m>b\in C_{j}</m> e <m>c\in C_{j}</m>.
+          Dunque, <m>C_{i}\cap C_{j}</m> contiene <m>b</m> ed è, quindi, non
+          vuoto: per definizione di partizione, ciò significa che <m>i=j</m> e,
+          di conseguenza, c'è un elemento della partizione che contiene sia
+          <m>a</m> che <m>c</m> e, pertanto, <m>a\approx c</m>, cioè
+          <m>\approx</m> è transitiva.
+          Dato <m>a</m> in <m>A</m>, gli elementi a esso equivalenti sono tutti
+          e soli quelli appartenenti all'unico <m>C_{i}</m> contenente <m>a</m>,
+          cioè la classe di equivalenza di <m>a</m> coincide con <m>C_{i}</m>.
         </p>
       </proof>
-
     </theorem>
 
     <p>
-      Il teorema precedente ci dice che una relazione di equivalenza e la partizione ad essa associata sono essenzialmente due modi diversi di presentare le stesse informazioni.
+      Il teorema precedente ci dice che una relazione di equivalenza e la
+      partizione ad essa associata sono essenzialmente due modi diversi di
+      presentare le stesse informazioni.
     </p>
 
     <example>
       <statement>
         <p>
-          Riprendiamo l'<xref ref="ex-equivalenze_banali"/>. Rispetto alla relazione di uguaglianza le classi di equivalenza sono esattamente i sottoinsiemi di <m>A</m> formati da singoli elementi. Rispetto alla relazione di equivalenza in cui ogni elemento è in relazione con ogni altro elemento c'è invece un'unica classe e cioè <m>A</m> stesso.
+          Riprendiamo l' <xref ref="ex-equivalenze_banali"/>.
+          Rispetto alla relazione di uguaglianza le classi di equivalenza sono
+          esattamente i sottoinsiemi di <m>A</m> formati da singoli elementi.
+          Rispetto alla relazione di equivalenza in cui ogni elemento è in
+          relazione con ogni altro elemento c'è invece un'unica classe e cioè
+          <m>A</m> stesso.
         </p>
       </statement>
     </example>
@@ -397,17 +577,24 @@
     <example>
       <statement>
         <p>
-          Riprendiamo l'<xref ref="ex-valore_assoluto"/>. Ricordando che ciascun numero è in relazione con sé stesso e il proprio opposto, possiamo affermare che c'è una classe di equivalenza formata da unico numero reale, e cioè <m>0</m>, mentre tutte le altre classi contengono esattamente due elementi.
+          Riprendiamo l' <xref ref="ex-valore_assoluto"/>.
+          Ricordando che ciascun numero è in relazione con sé stesso e il
+          proprio opposto, possiamo affermare che c'è una classe di equivalenza
+          formata da unico numero reale, e cioè <m>0</m>, mentre tutte le altre
+          classi contengono esattamente due elementi.
         </p>
       </statement>
     </example>
 
     <exercises xml:id="exercises-relazioni_equivalenza">
-
       <exercise>
         <statement>
           <p>
-            Sia <m>T</m> una relazione in un insieme <m>A</m>. Dimostrare che <m>T</m> è una relazione di equivalenza se e solo se soddisfa la proprietà riflessiva e la proprietà seguente: se <m>a\mathrel{T}b</m> e <m>a\mathrel{T}c</m> allora <m>b\mathrel{T}c</m>.
+            Sia <m>T</m> una relazione in un insieme <m>A</m>.
+            Dimostrare che <m>T</m> è una relazione di equivalenza se e solo se
+            soddisfa la proprietà riflessiva e la proprietà seguente: se
+            <m>a\mathrel{T}b</m> e <m>a\mathrel{T}c</m> allora
+            <m>b\mathrel{T}c</m>.
           </p>
         </statement>
       </exercise>
@@ -415,28 +602,36 @@
       <exercise>
         <statement>
           <p>
-            In un insieme <m>A</m>, siano date delle relazioni di equivalenza <m>\{R_{i}\}_{i\in I}</m> pensate come sottoinsiemi di <m>A\times A</m>. Dimostrare che <m>\bigcap_{i\in I}R_{i}</m> è una relazione di equivalenza.
+            In un insieme <m>A</m>, siano date delle relazioni di equivalenza
+            <m>\{R_{i}\}_{i\in I}</m> pensate come sottoinsiemi di
+            <m>A\times A</m>.
+            Dimostrare che <m>\bigcap_{i\in I}R_{i}</m> è una relazione di
+            equivalenza.
           </p>
         </statement>
       </exercise>
-
       <exercisegroup>
-      
         <introduction>
           <p>
-            Stabilire se le relazioni date sono di equivalenza e, in caso affermativo, determinare l'insieme quoziente.
+            Stabilire se le relazioni date sono di equivalenza e, in caso
+            affermativo, determinare l'insieme quoziente.
           </p>
         </introduction>
-      
+
         <exercise>
           <statement>
             <p>
-              Nell'insieme degli interi <m>\Interi</m> sia definita la relazione <m>P</m> nel modo seguente <m>a\mathrel{P}b</m> se <m>a+b</m> è pari. 
+              Nell'insieme degli interi <m>\Interi</m> sia definita la relazione
+              <m>P</m> nel modo seguente <m>a\mathrel{P}b</m> se <m>a+b</m> è
+              pari.
             </p>
           </statement>
+
           <answer>
             <p>
-              La relazione <m>P</m> è di equivalenza. L'insieme quoziente è formato da due elementi: la classe che contiene i numeri pari e la classe che contiene i numeri dispari.
+              La relazione <m>P</m> è di equivalenza.
+              L'insieme quoziente è formato da due elementi: la classe che
+              contiene i numeri pari e la classe che contiene i numeri dispari.
             </p>
           </answer>
         </exercise>
@@ -444,12 +639,16 @@
         <exercise>
           <statement>
             <p>
-              Nell'insieme degli interi <m>\Interi</m> sia definita la relazione <m>D</m> nel modo seguente <m>a\mathrel{D}b</m> se <m>a+b</m> è dispari.
+              Nell'insieme degli interi <m>\Interi</m> sia definita la relazione
+              <m>D</m> nel modo seguente <m>a\mathrel{D}b</m> se <m>a+b</m> è
+              dispari.
             </p>
           </statement>
+
           <answer>
             <p>
-              La relazione non è di equivalenza: soddisfa solo la relazione simmetrica.
+              La relazione non è di equivalenza: soddisfa solo la relazione
+              simmetrica.
             </p>
           </answer>
         </exercise>
@@ -457,12 +656,16 @@
         <exercise>
           <statement>
             <p>
-              Nell'insieme degli interi <m>\Interi</m> sia definita la relazione <m>T</m> nel modo seguente <m>a\mathrel{T}b</m> se <m>a+b</m> è multiplo di <m>3</m>.
+              Nell'insieme degli interi <m>\Interi</m> sia definita la relazione
+              <m>T</m> nel modo seguente <m>a\mathrel{T}b</m> se <m>a+b</m> è
+              multiplo di <m>3</m>.
             </p>
           </statement>
+
           <answer>
             <p>
-              La relazione non è di equivalenza: soddisfa solo la relazione simmetrica.
+              La relazione non è di equivalenza: soddisfa solo la relazione
+              simmetrica.
             </p>
           </answer>
         </exercise>
@@ -470,12 +673,16 @@
         <exercise>
           <statement>
             <p>
-              Nell'insieme degli interi <m>\Interi</m> sia definita la relazione <m>U</m> nel modo seguente <m>a\mathrel{U}b</m> se <m>ab\ge 0</m>.
+              Nell'insieme degli interi <m>\Interi</m> sia definita la relazione
+              <m>U</m> nel modo seguente <m>a\mathrel{U}b</m> se <m>ab\ge 0</m>.
             </p>
           </statement>
+
           <answer>
             <p>
-              La relazione non è di equivalenza: è riflessiva e simmetrica, ma non transitiva (<m>1</m> e <m>-1</m> non sono in relazione tra loro, ma sono entrambi in relazione con <m>0</m>).
+              La relazione non è di equivalenza: è riflessiva e simmetrica, ma
+              non transitiva ( <m>1</m> e <m>-1</m> non sono in relazione tra
+              loro, ma sono entrambi in relazione con <m>0</m> ).
             </p>
           </answer>
         </exercise>
@@ -483,12 +690,15 @@
         <exercise>
           <statement>
             <p>
-              Nell'insieme degli interi <m>\Interi</m> sia definita la relazione <m>V</m> nel modo seguente <m>a\mathrel{V}b</m> se <m>ab\gt 0</m>.
+              Nell'insieme degli interi <m>\Interi</m> sia definita la relazione
+              <m>V</m> nel modo seguente <m>a\mathrel{V}b</m> se <m>ab\gt 0</m>.
             </p>
           </statement>
+
           <answer>
             <p>
-              La relazione non è di equivalenza: è simmetrica e transitiva, ma non riflessiva (<m>0</m> non è in relazione con sé stesso).
+              La relazione non è di equivalenza: è simmetrica e transitiva, ma
+              non riflessiva ( <m>0</m> non è in relazione con sé stesso).
             </p>
           </answer>
         </exercise>
@@ -496,27 +706,40 @@
         <exercise>
           <statement>
             <p>
-              Nell'insieme degli interi non nulli <m>\Interi\setminus\{0\}</m> sia definita la relazione <m>V</m> nel modo seguente <m>a\mathrel{V}b</m> se <m>ab\gt 0</m>.
+              Nell'insieme degli interi non nulli <m>\Interi\setminus\{0\}</m>
+              sia definita la relazione <m>V</m> nel modo seguente
+              <m>a\mathrel{V}b</m> se <m>ab\gt 0</m>.
             </p>
           </statement>
+
           <answer>
             <p>
-              La relazione è di equivalenza. L'insieme quoziente è formato da due elementi: la classe che contiene i numeri positivi e la classe che contiene i numeri negativi.
+              La relazione è di equivalenza.
+              L'insieme quoziente è formato da due elementi: la classe che
+              contiene i numeri positivi e la classe che contiene i numeri
+              negativi.
             </p>
           </answer>
         </exercise>
-     
       </exercisegroup>
 
       <exercise>
         <statement>
           <p>
-            Sia data una collezione <m>\{C_{i}\}_{i\in I}</m> di sottoinsiemi non vuoti di un insieme <m>A</m> tali che <m>\bigcup_{i\in I}C_{i}=A</m> e si definisca in <m>A</m> la relazione <m>\approx</m> così: <m>a\approx b</m> se esiste <m>i\in I</m> tale che <m>a\in C_{i}</m> e <m>b\in C_{i}</m>. Quali proprietà soddisfa questa relazione? Possiamo garantire che la relazione data è di equivalenza?
+            Sia data una collezione <m>\{C_{i}\}_{i\in I}</m> di sottoinsiemi
+            non vuoti di un insieme <m>A</m> tali che
+            <m>\bigcup_{i\in I}C_{i}=A</m> e si definisca in <m>A</m> la
+            relazione <m>\approx</m> così: <m>a\approx b</m> se esiste
+            <m>i\in I</m> tale che <m>a\in C_{i}</m> e <m>b\in C_{i}</m>.
+            Quali proprietà soddisfa questa relazione?
+            Possiamo garantire che la relazione data è di equivalenza?
           </p>
         </statement>
+
         <answer>
           <p>
-            La relazione è riflessiva e simmetrica ma non necessariamente transitiva.
+            La relazione è riflessiva e simmetrica ma non necessariamente
+            transitiva.
           </p>
         </answer>
       </exercise>
@@ -524,54 +747,70 @@
       <exercise>
         <statement>
           <p>
-            Sia data una collezione <m>\{C_{i}\}_{i\in I}</m> di sottoinsiemi non vuoti di un insieme <m>A</m> tali che <m>C_{i}\cap C_{j}=\vuoto</m> se <m>i\ne j</m> e si definisca in <m>A</m> la relazione <m>\approx</m> così: <m>a\approx b</m> se esiste <m>i\in I</m> tale che <m>a\in C_{i}</m> e <m>b\in C_{i}</m>. Quali proprietà soddisfa questa relazione? Possiamo garantire che la relazione data è di equivalenza?
+            Sia data una collezione <m>\{C_{i}\}_{i\in I}</m> di sottoinsiemi
+            non vuoti di un insieme <m>A</m> tali che
+            <m>C_{i}\cap C_{j}=\vuoto</m> se <m>i\ne j</m> e si definisca in
+            <m>A</m> la relazione <m>\approx</m> così: <m>a\approx b</m> se
+            esiste <m>i\in I</m> tale che <m>a\in C_{i}</m> e <m>b\in C_{i}</m>.
+            Quali proprietà soddisfa questa relazione?
+            Possiamo garantire che la relazione data è di equivalenza?
           </p>
         </statement>
+
         <answer>
           <p>
-            La relazione è simmetrica e transitiva ma non necessariamente riflessiva.
+            La relazione è simmetrica e transitiva ma non necessariamente
+            riflessiva.
           </p>
         </answer>
       </exercise>
-
     </exercises>
-
   </section>
 
   <section xml:id="sec-relazioni_ordine">
     <title>Relazioni d'ordine</title>
-    <definition xml:id="def-relazione_ordine">
 
+    <definition xml:id="def-relazione_ordine">
       <idx><h>relazione</h><h>d'ordine</h></idx>
       <idx><h>relazione</h><h>d'ordine parziale</h></idx>
       <idx><h>ordine (relazione di)</h></idx>
       <idx><h>insieme</h><h>parzialmente ordinato</h></idx>
       <idx><h>insieme</h><h>ordinato</h></idx>
-
       <statement>
         <p>
-          Una relazione <m>R</m> di un insieme <m>A</m> è detta d'<term>ordine parziale</term> (o, più semplicemente, d'<term>ordine</term>) se soddisfa le proprietà seguenti:
+          Una relazione <m>R</m> di un insieme <m>A</m> è detta d'
+          <term>ordine parziale</term> (o, più semplicemente, d'
+          <term>ordine</term> ) se soddisfa le proprietà seguenti:
           <ul>
             <li>
               <p>
-                <m>a\mathrel{R}a</m> per ogni <m>a</m> in <m>A</m> (<term>proprietà riflessiva</term>);
+                <m>a\mathrel{R}a</m> per ogni <m>a</m> in <m>A</m> (
+                <term>proprietà riflessiva</term> );
               </p>
             </li>
+
             <li>
               <p>
-                se <m>a\mathrel{R}b</m> e <m>b\mathrel{R}a</m> allora <m>a=b</m> (<term>proprietà antisimmetrica</term>);
+                se <m>a\mathrel{R}b</m> e <m>b\mathrel{R}a</m> allora <m>a=b</m>
+                ( <term>proprietà antisimmetrica</term> );
               </p>
             </li>
+
             <li>
               <p>
-                se <m>a\mathrel{R}b</m> e <m>b\mathrel{R}c</m> allora <m>a\mathrel{R}c</m> (<term>proprietà transitiva</term>).
+                se <m>a\mathrel{R}b</m> e <m>b\mathrel{R}c</m> allora
+                <m>a\mathrel{R}c</m> ( <term>proprietà transitiva</term> ).
               </p>
             </li>
           </ul>
-          L'insieme <m>A</m> viene detto allora insieme <term>parzialmente ordinato</term> (o, più semplicemente, <term>ordinato</term>) rispetto alla relazione <m>R</m>.
+          L'insieme <m>A</m> viene detto allora insieme
+          <term>parzialmente ordinato</term> (o, più semplicemente,
+          <term>ordinato</term> ) rispetto alla relazione <m>R</m>.
         </p>
+
         <p>
-          Solitamente una relazione d'ordine è indicata con un simbolo del tipo <m>\le</m>, <m>\subseteq</m>, <etc />
+          Solitamente una relazione d'ordine è indicata con un simbolo del tipo
+          <m>\le</m>, <m>\subseteq</m>, <etc/>
         </p>
       </statement>
     </definition>
@@ -579,7 +818,11 @@
     <example xml:id="ex-minore_uguale">
       <statement>
         <p>
-          Nell'insieme dei numeri naturali <m>\Naturali</m>, così come nell'insieme dei numeri interi <m>\Interi</m>, nell'insieme dei numeri razionali <m>\Razionali</m> e nell'insieme dei numeri reali <m>\Reali</m>, l'usuale relazione di <q>minore o uguale</q> <m>\le</m> è una relazione d'ordine.
+          Nell'insieme dei numeri naturali <m>\Naturali</m>, così come
+          nell'insieme dei numeri interi <m>\Interi</m>, nell'insieme dei numeri
+          razionali <m>\Razionali</m> e nell'insieme dei numeri reali
+          <m>\Reali</m>, l'usuale relazione di <q>minore o uguale</q> <m>\le</m>
+          è una relazione d'ordine.
         </p>
       </statement>
     </example>
@@ -587,7 +830,13 @@
     <example xml:id="ex-divide">
       <statement>
         <p>
-          Nell'insieme dei numeri naturali <m>\Naturali</m> la relazione <q>divide</q> è una relazione d'ordine. Nell'insieme dei numeri interi <m>\Interi</m> la relazione <q>divide</q> non è invece una relazione d'ordine perché non soddisfa la proprietà antisimmetrica: preso un qualunque numero intero non nullo <m>n</m> si ha che <m>n\mid -n</m> e <m>-n\mid n</m> ma <m>n\ne -n</m>.
+          Nell'insieme dei numeri naturali <m>\Naturali</m> la relazione
+          <q>divide</q> è una relazione d'ordine.
+          Nell'insieme dei numeri interi <m>\Interi</m> la relazione
+          <q>divide</q> non è invece una relazione d'ordine perché non soddisfa
+          la proprietà antisimmetrica: preso un qualunque numero intero non
+          nullo <m>n</m> si ha che <m>n\mid -n</m> e <m>-n\mid n</m> ma
+          <m>n\ne -n</m>.
         </p>
       </statement>
     </example>
@@ -595,19 +844,24 @@
     <example xml:id="ex-inclusione_sottoinsiemi">
       <statement>
         <p>
-          Dato un insieme <m>A</m>, l'insieme delle parti <m>\parti{A}</m> è un insieme ordinato rispetto all'inclusione insiemistica.
+          Dato un insieme <m>A</m>, l'insieme delle parti <m>\parti{A}</m> è un
+          insieme ordinato rispetto all'inclusione insiemistica.
         </p>
       </statement>
     </example>
 
     <definition xml:id="def-maggiorante-minorante">
-
       <idx><h>maggiorante</h></idx>
       <idx><h>minorante</h></idx>
-
       <statement>
         <p>
-          Dato un sottoinsieme <m>S</m> di un insieme parzialmente ordinato <m>A</m> rispetto a una relazione <m>\le</m>, un <term>maggiorante</term> di <m>S</m> è un elemento <m>a</m> appartenente a <m>A</m> tale che <m>x\le a</m> per ogni <m>x\in S</m>; analogamente, un <term>minorante</term> di <m>S</m> è un elemento <m>b</m> appartenente a <m>A</m> tale che <m>b\le x</m> per ogni <m>x\in S</m>.
+          Dato un sottoinsieme <m>S</m> di un insieme parzialmente ordinato
+          <m>A</m> rispetto a una relazione <m>\le</m>, un
+          <term>maggiorante</term> di <m>S</m> è un elemento <m>a</m>
+          appartenente a <m>A</m> tale che <m>x\le a</m> per ogni <m>x\in S</m>;
+          analogamente, un <term>minorante</term> di <m>S</m> è un elemento
+          <m>b</m> appartenente a <m>A</m> tale che <m>b\le x</m> per ogni
+          <m>x\in S</m>.
         </p>
       </statement>
     </definition>
@@ -615,32 +869,54 @@
     <example>
       <statement>
         <p>
-          Consideriamo i numeri reali <m>\Reali</m> rispetto alla usuale relazione d'ordine di minore o uguale. Il sottoinsieme <m>\Interi</m> degli interi non ha né minoranti né maggioranti; il sottoinsieme <m>\Naturali</m> dei naturali non ha maggioranti, ma tutti i numeri reali non positivi sono minoranti di <m>\Naturali</m> (in particolare, <m>0</m> è un minorante di <m>\Naturali</m> che appartiene a <m>\Naturali</m> stesso); il sottoinsieme <m>T</m> dei reali negativi non ha minoranti ma tutti i numeri reali non negativi sono suoi maggioranti (in particolare, nessuno di essi appartiene a <m>T</m> stesso).
+          Consideriamo i numeri reali <m>\Reali</m> rispetto alla usuale
+          relazione d'ordine di minore o uguale.
+          Il sottoinsieme <m>\Interi</m> degli interi non ha né minoranti né
+          maggioranti; il sottoinsieme <m>\Naturali</m> dei naturali non ha
+          maggioranti, ma tutti i numeri reali non positivi sono minoranti di
+          <m>\Naturali</m> (in particolare, <m>0</m> è un minorante di
+          <m>\Naturali</m> che appartiene a <m>\Naturali</m> stesso); il
+          sottoinsieme <m>T</m> dei reali negativi non ha minoranti ma tutti i
+          numeri reali non negativi sono suoi maggioranti (in particolare,
+          nessuno di essi appartiene a <m>T</m> stesso).
         </p>
       </statement>
     </example>
 
     <definition xml:id="def-massimo_minimo">
-
       <idx><h>massimo</h></idx>
       <idx><h>minimo</h></idx>
-
       <statement>
         <p>
-          Dato un sottoinsieme <m>S</m> di un insieme parzialmente ordinato <m>A</m>, un elemento <m>x</m> che sia maggiorante di <m>S</m> e appartenga a <m>S</m> è detto <term>massimo</term> di <m>S</m>; un elemento <m>b</m> che sia minorante di <m>S</m> e appartenga a <m>S</m> è detto <term>minimo</term> di <m>S</m>.
+          Dato un sottoinsieme <m>S</m> di un insieme parzialmente ordinato
+          <m>A</m>, un elemento <m>x</m> che sia maggiorante di <m>S</m> e
+          appartenga a <m>S</m> è detto <term>massimo</term> di <m>S</m>; un
+          elemento <m>b</m> che sia minorante di <m>S</m> e appartenga a
+          <m>S</m> è detto <term>minimo</term> di <m>S</m>.
         </p>
       </statement>
     </definition>
+
     <remark>
       <p>
-        Se un sottoinsieme <m>S</m> di un insieme parzialmente ordinato ha un massimo, la proprietà antisimmetrica implica immediatamente che questo è unico. Diremo, quindi, che un certo elemento è <q>il</q> massimo di <m>S</m>. Analogamente, nel caso esista un minimo.
+        Se un sottoinsieme <m>S</m> di un insieme parzialmente ordinato ha un
+        massimo, la proprietà antisimmetrica implica immediatamente che questo è
+        unico.
+        Diremo, quindi, che un certo elemento è <q>il</q> massimo di <m>S</m>.
+        Analogamente, nel caso esista un minimo.
       </p>
     </remark>
 
     <example>
       <statement>
         <p>
-          Consideriamo l'insieme dei naturali <m>\Naturali</m>. Rispetto all'ordine usuale, il numero <m>0</m> è minimo di <m>\Naturali</m>, mentre non c'è un massimo. Rispetto all'ordine dato dalla divisibilità, invece, il numero <m>0</m> è massimo (perché è multiplo di tutti i numeri naturali) e il numero <m>1</m> è minimo (perché è divisore di tutti i numeri naturali).
+          Consideriamo l'insieme dei naturali <m>\Naturali</m>.
+          Rispetto all'ordine usuale, il numero <m>0</m> è minimo di
+          <m>\Naturali</m>, mentre non c'è un massimo.
+          Rispetto all'ordine dato dalla divisibilità, invece, il numero
+          <m>0</m> è massimo (perché è multiplo di tutti i numeri naturali) e il
+          numero <m>1</m> è minimo (perché è divisore di tutti i numeri
+          naturali).
         </p>
       </statement>
     </example>
@@ -650,36 +926,48 @@
       <idx><h>minimale</h></idx>
       <statement>
         <p>
-          Sia <m>A</m> un insieme parzialmente ordinato rispetto a una relazione <m>\le</m>. Un elemento <m>x</m> si dice <term>massimale</term> se non esiste alcun elemento <m>y</m> tale che <m>x\le y</m> con <m>x\ne y</m>. Un elemento <m>x</m> si dice <term>minimale</term> se non esiste alcun elemento <m>y</m> tale che <m>x\ge y</m> con <m>x\ne y</m>.
+          Sia <m>A</m> un insieme parzialmente ordinato rispetto a una relazione
+          <m>\le</m>.
+          Un elemento <m>x</m> si dice <term>massimale</term> se non esiste
+          alcun elemento <m>y</m> tale che <m>x\le y</m> con <m>x\ne y</m>.
+          Un elemento <m>x</m> si dice <term>minimale</term> se non esiste alcun
+          elemento <m>y</m> tale che <m>x\ge y</m> con <m>x\ne y</m>.
         </p>
       </statement>
     </definition>
 
     <remark>
       <p>
-        Chiaramente un massimo di un insieme parzialmente ordinato è l'unico massimale per quell'insieme, e, analogamente, un minimo è l'unico minimale per quell'insieme.
+        Chiaramente un massimo di un insieme parzialmente ordinato è l'unico
+        massimale per quell'insieme, e, analogamente, un minimo è l'unico
+        minimale per quell'insieme.
       </p>
     </remark>
 
     <example>
       <statement>
         <p>
-          Consideriamo l'insieme <m>S</m> dei numeri interi da <m>2</m> a <m>10</m> rispetto alla relazione di divisibilità. Si può verificare facilmente che i numeri <m>6</m>, <m>7</m>, <m>8</m>, <m>9</m> e <m>10</m> sono massimali, mentre <m>2</m>, <m>3</m>, <m>5</m>, <m>7</m> sono minimali.
+          Consideriamo l'insieme <m>S</m> dei numeri interi da <m>2</m> a
+          <m>10</m> rispetto alla relazione di divisibilità.
+          Si può verificare facilmente che i numeri <m>6</m>, <m>7</m>,
+          <m>8</m>, <m>9</m> e <m>10</m> sono massimali, mentre <m>2</m>,
+          <m>3</m>, <m>5</m>, <m>7</m> sono minimali.
         </p>
       </statement>
     </example>
 
     <definition xml:id="def-relazione_ordine_totale">
-
       <idx><h>relazione</h><h>d'ordine totale</h></idx>
-
       <statement>
         <p>
-          Una relazione d'ordine <m>R</m> in un insieme <m>A</m> è detta <term>totale</term> se vale l'ulteriore proprietà:
+          Una relazione d'ordine <m>R</m> in un insieme <m>A</m> è detta
+          <term>totale</term> se vale l'ulteriore proprietà:
           <ul>
             <li>
               <p>
-                per ogni <m>a</m> e <m>b</m> in <m>A</m> vale almeno una tra <m>a\mathrel{R}b</m> e <m>b\mathrel{R}a</m> (<term>confrontabilità</term>).
+                per ogni <m>a</m> e <m>b</m> in <m>A</m> vale almeno una tra
+                <m>a\mathrel{R}b</m> e <m>b\mathrel{R}a</m> (
+                <term>confrontabilità</term> ).
               </p>
             </li>
           </ul>
@@ -690,7 +978,9 @@
     <example>
       <statement>
         <p>
-          Riprendiamo l'<xref ref="ex-minore_uguale"/>. La relazione di <q>minore o uguale</q> è una relazione d'ordine totale in ciascuno degli insiemi considerati.
+          Riprendiamo l' <xref ref="ex-minore_uguale"/>.
+          La relazione di <q>minore o uguale</q> è una relazione d'ordine totale
+          in ciascuno degli insiemi considerati.
         </p>
       </statement>
     </example>
@@ -698,7 +988,11 @@
     <example>
       <statement>
         <p>
-          Riprendiamo l'<xref ref="ex-divide"/>. La relazione di <q>divide</q> nei naturali <m>\Naturali</m> non è una relazione d'ordine totale. Esistono, infatti, coppie di numeri non confrontabili: ad esempio, presi <m>2</m> e <m>3</m>, nessuno dei due divide l'altro.
+          Riprendiamo l' <xref ref="ex-divide"/>.
+          La relazione di <q>divide</q> nei naturali <m>\Naturali</m> non è una
+          relazione d'ordine totale.
+          Esistono, infatti, coppie di numeri non confrontabili: ad esempio,
+          presi <m>2</m> e <m>3</m>, nessuno dei due divide l'altro.
         </p>
       </statement>
     </example>
@@ -706,34 +1000,44 @@
     <example>
       <statement>
         <p>
-          Riprendiamo l'esempio <xref ref="ex-inclusione_sottoinsiemi"/>. Se l'insieme <m>A</m> contiene almeno due elementi distinti <m>a</m> e <m>b</m>, la relazione di inclusione in <m>\parti{A}</m> non è una relazione d'ordine totale: i sottoinsiemi <m>\{a\}</m> e <m>\{b\}</m> non sono infatti confrontabili.
+          Riprendiamo l'esempio <xref ref="ex-inclusione_sottoinsiemi"/>.
+          Se l'insieme <m>A</m> contiene almeno due elementi distinti <m>a</m> e
+          <m>b</m>, la relazione di inclusione in <m>\parti{A}</m> non è una
+          relazione d'ordine totale: i sottoinsiemi <m>\{a\}</m> e <m>\{b\}</m>
+          non sono infatti confrontabili.
         </p>
       </statement>
     </example>
 
     <exercises xml:id="exercises-relazioni_ordine">
-
       <exercise>
         <statement>
           <p>
-            Dimostrare che in un insieme <m>A</m> l'unica relazione che è al tempo stesso di equivalenza e di ordine è la relazione di uguaglianza.
+            Dimostrare che in un insieme <m>A</m> l'unica relazione che è al
+            tempo stesso di equivalenza e di ordine è la relazione di
+            uguaglianza.
           </p>
         </statement>
       </exercise>
 
       <exercise>
-
         <idx><h>relazione</h><h>d'ordine stretta</h></idx>
         <introduction>
           <p>
-            Una relazione <m>\lt</m> in un insieme <m>A</m> che soddisfa la proprietà transitiva e la <term>proprietà asimmetrica</term>, cioè per cui non esistano <m>a</m> e <m>b</m> in <m>A</m> tali che <m>a \lt b</m> e <m>b \lt a</m>, è detta <term>relazione d'ordine stretta</term>.
+            Una relazione <m>\lt</m> in un insieme <m>A</m> che soddisfa la
+            proprietà transitiva e la <term>proprietà asimmetrica</term>, cioè
+            per cui non esistano <m>a</m> e <m>b</m> in <m>A</m> tali che
+            <m>a \lt b</m> e <m>b \lt a</m>, è detta
+            <term>relazione d'ordine stretta</term>.
           </p>
         </introduction>
 
         <task>
           <statement>
             <p>
-              Sia <m>\le</m> una relazione d'ordine in un insieme <m>A</m>. Dimostrare che la relazione <m>\lt</m> definita da <m>a \lt b</m> se <m>a\le b</m> e <m>a\ne b</m> è una relazione d'ordine stretta.
+              Sia <m>\le</m> una relazione d'ordine in un insieme <m>A</m>.
+              Dimostrare che la relazione <m>\lt</m> definita da <m>a \lt b</m>
+              se <m>a\le b</m> e <m>a\ne b</m> è una relazione d'ordine stretta.
             </p>
           </statement>
         </task>
@@ -741,61 +1045,72 @@
         <task>
           <statement>
             <p>
-              Sia <m>\lt</m> una relazione d'ordine stretta in un insieme <m>A</m>. Dimostrare che la relazione <m>\le</m> definita da <m>a\le b</m> se <m>a \lt b</m> o <m>a=b</m> è una relazione d'ordine.
+              Sia <m>\lt</m> una relazione d'ordine stretta in un insieme
+              <m>A</m>.
+              Dimostrare che la relazione <m>\le</m> definita da <m>a\le b</m>
+              se <m>a \lt b</m> o <m>a=b</m> è una relazione d'ordine.
             </p>
           </statement>
         </task>
-
       </exercise>
 
       <exercise>
         <statement>
           <p>
-            Sia <m>A</m> un insieme totalmente ordinato. Dimostrare che un elemento massimale è necessariamente un massimo e, analogamente, un elemento minimale è necessariamente un minimo.
+            Sia <m>A</m> un insieme totalmente ordinato.
+            Dimostrare che un elemento massimale è necessariamente un massimo e,
+            analogamente, un elemento minimale è necessariamente un minimo.
           </p>
         </statement>
       </exercise>
 
       <exercise xml:id="exercise-preordine">
-
         <idx><h>preordine</h></idx>
-
         <introduction>
           <p>
-            Sia <m>\preceq</m> una relazione in un insieme <m>A</m> che soddisfa le proprietà transitiva e riflessiva (una tale relazione è detta <term>preordine</term>).
+            Sia <m>\preceq</m> una relazione in un insieme <m>A</m> che soddisfa
+            le proprietà transitiva e riflessiva (una tale relazione è detta
+            <term>preordine</term> ).
           </p>
         </introduction>
+
         <task>
           <statement>
             <p>
-              Dimostrare che la relazione <m>\sim</m> in <m>A</m> data da <m>a\sim b</m> se <m>a\preceq b</m> e <m>b\preceq a</m> è una relazione di equivalenza.
+              Dimostrare che la relazione <m>\sim</m> in <m>A</m> data da
+              <m>a\sim b</m> se <m>a\preceq b</m> e <m>b\preceq a</m> è una
+              relazione di equivalenza.
             </p>
           </statement>
         </task>
+
         <task>
           <statement>
             <p>
-              Dimostrare che è possibile definire una relazione <m>\le</m> in <m>A/\sim</m> ponendo <m>\class[\sim]{a}\le\class[\sim]{b}</m> se <m>a\preceq b</m>.
+              Dimostrare che è possibile definire una relazione <m>\le</m> in
+              <m>A/\sim</m> ponendo <m>\class[\sim]{a}\le\class[\sim]{b}</m> se
+              <m>a\preceq b</m>.
             </p>
           </statement>
 
           <hint>
             <p>
-              Fare attenzione al fatto che <m>\le</m> deve essere ben definita, cioè che se <m>a\sim a'</m> e <m>b\sim b'</m> allora <m>a\preceq b</m> se e solo se <m>a'\preceq b'</m>.
+              Fare attenzione al fatto che <m>\le</m> deve essere ben definita,
+              cioè che se <m>a\sim a'</m> e <m>b\sim b'</m> allora
+              <m>a\preceq b</m> se e solo se <m>a'\preceq b'</m>.
             </p>
           </hint>
         </task>
+
         <task>
           <statement>
             <p>
-              Dimostrare che <m>\le</m> è una relazione di ordine in <m>A/\sim</m>.
+              Dimostrare che <m>\le</m> è una relazione di ordine in
+              <m>A/\sim</m>.
             </p>
           </statement>
         </task>
       </exercise>
-
     </exercises>
-
   </section>
-
 </chapter>

@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <chapter xml:id="ch-quozienti">
-
   <title>Gruppi quoziente</title>
 
   <introduction>
     <p>
-      Nel <xref ref="ch-classidiresto"/> abbiamo definito le congruenze modulo un intero positivo <m>n</m> e abbiamo mostrato la compatibilità di questa relazione di equivalenza con le operazione di addizione e moltiplicazione: ciò ci aveva permesso di definire delle operazioni nell'insieme delle classi di resto, cioè delle classi di equivalenza rispetto alla relazione di congruenza. Ci proponiamo di fare qualcosa di simile rispetto a un'operazione qualsiasi.
+      Nel <xref ref="ch-classidiresto"/> abbiamo definito le congruenze modulo
+      un intero positivo <m>n</m> e abbiamo mostrato la compatibilità di questa
+      relazione di equivalenza con le operazione di addizione e moltiplicazione:
+      ciò ci aveva permesso di definire delle operazioni nell'insieme delle
+      classi di resto, cioè delle classi di equivalenza rispetto alla relazione
+      di congruenza.
+      Ci proponiamo di fare qualcosa di simile rispetto a un'operazione
+      qualsiasi.
     </p>
   </introduction>
 
@@ -14,17 +20,35 @@
     <title>Congruenze in gruppi e monoidi</title>
 
     <p>
-      Supponiamo che in un insieme <m>S</m> sia definita un'operazione <m>\cdot</m> e una relazione di equivalenza <m>\sim</m>. Preso l'insieme quoziente <m>S/\sim</m>, cioè l'insieme delle classi di equivalenza (si veda la <xref ref="def-classe"/>), vogliamo definire in <m>S/\sim</m> un'operazione ponendo
+      Supponiamo che in un insieme <m>S</m> sia definita un'operazione
+      <m>\cdot</m> e una relazione di equivalenza <m>\sim</m>.
+      Preso l'insieme quoziente <m>S/\sim</m>, cioè l'insieme delle classi di
+      equivalenza (si veda la <xref ref="def-classe"/> ), vogliamo definire in
+      <m>S/\sim</m> un'operazione ponendo
       <md>
         \class[\sim]{x}\class[\sim]{y}\coloneqq\class[\sim]{xy}
       </md>.
-      Prima ancora di verificarne le eventuali proprietà, dovremmo controllare se la definizione è posta in maniera corretta. L'elemento <m>x</m> e l'elemento <m>y</m> sono dei rappresentanti delle rispettive classi, ma non sono (in generale) gli unici elementi di queste classi: se scelgo altri rappresentanti <m>x'</m> e <m>y'</m> rispettivamente, non è detto che <m>x'y'</m> stia nella stessa classe di <m>xy</m>. L'operazione è ben definita se e solo se soddisfa la proprietà data dalla definizione seguente.
+      Prima ancora di verificarne le eventuali proprietà, dovremmo controllare
+      se la definizione è posta in maniera corretta.
+      L'elemento <m>x</m> e l'elemento <m>y</m> sono dei rappresentanti delle
+      rispettive classi, ma non sono (in generale) gli unici elementi di queste
+      classi: se scelgo altri rappresentanti <m>x'</m> e <m>y'</m>
+      rispettivamente, non è detto che <m>x'y'</m> stia nella stessa classe di
+      <m>xy</m>.
+      L'operazione è ben definita se e solo se soddisfa la proprietà data dalla
+      definizione seguente.
     </p>
 
     <definition xml:id="def-congruenza">
       <statement>
         <p>
-          Una relazione di equivalenza <m>\sim</m> definita in un insieme <m>S</m> dotato di un'operazione <m>\cdot</m>, è detta <term>congruenza</term> se, per ogni scelta di <m>x</m>, <m>x'</m>, <m>y</m> e <m>y'</m> in <m>S</m> tali che <m>x\sim x'</m> e <m>y\sim y'</m>, risulta <m>xy\sim x'y'</m>. In tal caso diremo anche che l'operazione e la relazione di equivalenza sono <term>compatibili</term>.
+          Una relazione di equivalenza <m>\sim</m> definita in un insieme
+          <m>S</m> dotato di un'operazione <m>\cdot</m>, è detta
+          <term>congruenza</term> se, per ogni scelta di <m>x</m>, <m>x'</m>,
+          <m>y</m> e <m>y'</m> in <m>S</m> tali che <m>x\sim x'</m> e
+          <m>y\sim y'</m>, risulta <m>xy\sim x'y'</m>.
+          In tal caso diremo anche che l'operazione e la relazione di
+          equivalenza sono <term>compatibili</term>.
         </p>
       </statement>
     </definition>
@@ -32,22 +56,36 @@
     <example xml:id="ex-congruenza_e_no_nel_simmetrico">
       <statement>
         <p>
-          In <m>\Sym_{4}</m> consideriamo la relazione di equivalenza <m>\sim</m> le cui classi sono formate dagli elementi dello stesso tipo. Le verifiche da fare sarebbero molte. Notiamo che <m>(1\;2)\sim (2\;3)</m>, che <m>(1\;2\;3)\sim (1\;3\;4)</m> ma <m>(1\;2)(1\;2\;3)=(1\;3)</m> e <m>(2\;3)(1\;3\;4)=(1\;3\;2\;4)</m> e <m>(1\;3)\nsim (1\;3\;2\;4)</m>. Pertanto, questa relazione non è una congruenza.
+          In <m>\Sym_{4}</m> consideriamo la relazione di equivalenza
+          <m>\sim</m> le cui classi sono formate dagli elementi dello stesso
+          tipo.
+          Le verifiche da fare sarebbero molte.
+          Notiamo che <m>(1\;2)\sim (2\;3)</m>, che
+          <m>(1\;2\;3)\sim (1\;3\;4)</m> ma <m>(1\;2)(1\;2\;3)=(1\;3)</m> e
+          <m>(2\;3)(1\;3\;4)=(1\;3\;2\;4)</m> e <m>(1\;3)\nsim (1\;3\;2\;4)</m>.
+          Pertanto, questa relazione non è una congruenza.
         </p>
+
         <p>
-          Se invece consideriamo la relazione le cui classi sono formate dalle permutazioni aventi la stessa parità, allora possiamo verificare facilmente che questa è una congruenza.
+          Se invece consideriamo la relazione le cui classi sono formate dalle
+          permutazioni aventi la stessa parità, allora possiamo verificare
+          facilmente che questa è una congruenza.
         </p>
       </statement>
     </example>
 
     <p>
-      Possiamo ora definire un'operazione nell'insieme quoziente rispetto a una congruenza e chiederci quali proprietà dell'operazione si trasmettano a proprietà dell'operazione nell'insieme quoziente.
+      Possiamo ora definire un'operazione nell'insieme quoziente rispetto a una
+      congruenza e chiederci quali proprietà dell'operazione si trasmettano a
+      proprietà dell'operazione nell'insieme quoziente.
     </p>
 
     <proposition xml:id="prop-quoziente-eredita">
       <statement>
         <p>
-          Se <m>\sim</m> è una congruenza in un insieme <m>S</m> dotato di un'operazione, allora nell'insieme quoziente <m>S/\sim</m> è possibile definire un'operazione ponendo
+          Se <m>\sim</m> è una congruenza in un insieme <m>S</m> dotato di
+          un'operazione, allora nell'insieme quoziente <m>S/\sim</m> è possibile
+          definire un'operazione ponendo
           <md>
             \class[\sim]{x}\class[\sim]{y}\coloneqq\class[\sim]{xy}
           </md>.
@@ -55,22 +93,32 @@
           <ol>
             <li>
               <p>
-                se l'operazione in <m>S</m> è associativa, allora l'operazione in <m>S/\sim</m> è associativa;
+                se l'operazione in <m>S</m> è associativa, allora l'operazione
+                in <m>S/\sim</m> è associativa;
               </p>
             </li>
+
             <li>
               <p>
-                se l'operazione in <m>S</m> è commutativa, allora l'operazione in <m>S/\sim</m> è commutativa;
+                se l'operazione in <m>S</m> è commutativa, allora l'operazione
+                in <m>S/\sim</m> è commutativa;
               </p>
             </li>
+
             <li>
               <p>
-                se l'operazione in <m>S</m> è dotata di elemento neutro <m>1_{S}</m>, allora <m>\class[\sim]{1_{S}}</m> è elemento neutro in <m>S/\sim</m>;
+                se l'operazione in <m>S</m> è dotata di elemento neutro
+                <m>1_{S}</m>, allora <m>\class[\sim]{1_{S}}</m> è elemento
+                neutro in <m>S/\sim</m>;
               </p>
             </li>
+
             <li>
               <p>
-                se <m>S</m> è un monoide e <m>x</m> è un elemento invertibile in <m>S</m>, di inverso <m>x^{-1}</m>, allora <m>\class[\sim]{x}</m> è un elemento invertibile di inverso <m>\class[\sim]{x^{-1}}</m>.
+                se <m>S</m> è un monoide e <m>x</m> è un elemento invertibile in
+                <m>S</m>, di inverso <m>x^{-1}</m>, allora
+                <m>\class[\sim]{x}</m> è un elemento invertibile di inverso
+                <m>\class[\sim]{x^{-1}}</m>.
               </p>
             </li>
           </ol>
@@ -79,28 +127,38 @@
 
       <proof>
         <p>
-          Per definizione di congruenza, l'operazione è ben definita: infatti, scegliendo un qualunque elemento <m>x'\in\class[\sim]{x}</m> e un qualunque elemento <m>y'\in\class[\sim]{y}</m>, si ha <m>x'y'\sim xy</m>, cioè <m>\class[\sim]{xy}=\class[\sim]{x'y'}</m>.
+          Per definizione di congruenza, l'operazione è ben definita: infatti,
+          scegliendo un qualunque elemento <m>x'\in\class[\sim]{x}</m> e un
+          qualunque elemento <m>y'\in\class[\sim]{y}</m>, si ha
+          <m>x'y'\sim xy</m>, cioè <m>\class[\sim]{xy}=\class[\sim]{x'y'}</m>.
         </p>
+
         <p>
-          Le verifiche delle altre affermazioni sono immediate. Ad esempio, supponendo che l'operazione in <m>S</m> sia associativa, vediamo che, dati tre elementi <m>\class[\sim]{x}</m>, <m>\class[\sim]{y}</m> e <m>\class[\sim]{z}</m> in <m>S/\sim</m>, si ha
+          Le verifiche delle altre affermazioni sono immediate.
+          Ad esempio, supponendo che l'operazione in <m>S</m> sia associativa,
+          vediamo che, dati tre elementi <m>\class[\sim]{x}</m>,
+          <m>\class[\sim]{y}</m> e <m>\class[\sim]{z}</m> in <m>S/\sim</m>, si
+          ha
           <md>
-           (\class[\sim]{x}\class[\sim]{y})\class[\sim]{z} = \class[\sim]{xy}\class[\sim]{z} = \class[\sim]{(xy)z} = \class[\sim]{x(yz)} = \class[\sim]{x}\class[\sim]{yz}= \class[\sim]{x}(\class[\sim]{y}\class[\sim]{z})
+            (\class[\sim]{x}\class[\sim]{y})\class[\sim]{z} = \class[\sim]{xy}\class[\sim]{z} = \class[\sim]{(xy)z} = \class[\sim]{x(yz)} = \class[\sim]{x}\class[\sim]{yz}= \class[\sim]{x}(\class[\sim]{y}\class[\sim]{z})
           </md>.
           Le altre verifiche sono simili.
         </p>
-
       </proof>
-
     </proposition>
 
     <corollary xml:id="cor-monoide_quoziente">
       <statement>
         <p>
-          Se <m>\sim</m> è una congruenza in un monoide <m>M</m>, allora nell'insieme quoziente <m>M/\sim</m> è possibile definire un'operazione ponendo
+          Se <m>\sim</m> è una congruenza in un monoide <m>M</m>, allora
+          nell'insieme quoziente <m>M/\sim</m> è possibile definire
+          un'operazione ponendo
           <md>
             \class[\sim]{x}\class[\sim]{y}\coloneqq\class[\sim]{xy}
           </md>
-          e, rispetto a tale operazione, <m>M/\sim</m> è un monoide, detto <term>monoide quoziente</term>. Se <m>M</m> è commutativo, allora <m>M/\sim</m> è commutativo.
+          e, rispetto a tale operazione, <m>M/\sim</m> è un monoide, detto
+          <term>monoide quoziente</term>.
+          Se <m>M</m> è commutativo, allora <m>M/\sim</m> è commutativo.
         </p>
       </statement>
     </corollary>
@@ -108,68 +166,130 @@
     <corollary xml:id="cor-gruppo_quoziente">
       <statement>
         <p>
-          Se <m>\sim</m> è una congruenza in un gruppo <m>G</m>, allora nell'insieme quoziente <m>G/\sim</m> è possibile definire un'operazione ponendo
+          Se <m>\sim</m> è una congruenza in un gruppo <m>G</m>, allora
+          nell'insieme quoziente <m>G/\sim</m> è possibile definire
+          un'operazione ponendo
           <md>
             \class[\sim]{x}\class[\sim]{y}\coloneqq\class[\sim]{xy}
           </md>
-          e, rispetto a tale operazione, <m>G/\sim</m> è un gruppo, detto <term>gruppo quoziente</term>. Se <m>G</m> è abeliano, allora <m>G/\sim</m> è abeliano.
+          e, rispetto a tale operazione, <m>G/\sim</m> è un gruppo, detto
+          <term>gruppo quoziente</term>.
+          Se <m>G</m> è abeliano, allora <m>G/\sim</m> è abeliano.
         </p>
       </statement>
-
     </corollary>
 
     <p>
-      Le congruenze in un gruppo possono essere meglio descritte in termini di sottogruppi normali. Ricordiamo innanzitutto che i laterali destri e sinistri di un sottogruppo normale coincidono (<xref ref="thm-caratterizzazione_sottogruppi_normali"/>): quindi, possiamo riferirci ai laterali di un sottogruppo normale senza specificare se stiamo parlando di laterali destri o sinistri.
+      Le congruenze in un gruppo possono essere meglio descritte in termini di
+      sottogruppi normali.
+      Ricordiamo innanzitutto che i laterali destri e sinistri di un sottogruppo
+      normale coincidono (
+      <xref ref="thm-caratterizzazione_sottogruppi_normali"/> ): quindi,
+      possiamo riferirci ai laterali di un sottogruppo normale senza specificare
+      se stiamo parlando di laterali destri o sinistri.
     </p>
 
     <theorem xml:id="thm-quozienti_su_normali">
       <statement>
         <p>
-          Se <m>G</m> è un gruppo e <m>\sim</m> è una congruenza in <m>G</m>, allora <m>\class[\sim]{1}</m> è un sottogruppo normale di <m>G</m> e le classi di equivalenza rispetto a <m>\sim</m> sono i laterali di <m>\class[\sim]{1}</m>.
+          Se <m>G</m> è un gruppo e <m>\sim</m> è una congruenza in <m>G</m>,
+          allora <m>\class[\sim]{1}</m> è un sottogruppo normale di <m>G</m> e
+          le classi di equivalenza rispetto a <m>\sim</m> sono i laterali di
+          <m>\class[\sim]{1}</m>.
         </p>
+
         <p>
           <notation>
             <usage><m>G/N</m></usage>
-            <description>gruppo quoziente di <m>G</m> su un sottogruppo normale <m>N</m></description>
+            <description>
+              gruppo quoziente di <m>G</m> su un sottogruppo normale <m>N</m>
+            </description>
           </notation>
-          Viceversa, se <m>N</m> è un sottogruppo normale di un gruppo <m>G</m>, la relazione di equivalenza le cui classi sono i laterali di <m>N</m> in <m>G</m> è una congruenza. Indicheremo, pertanto, con <m>G/N</m> il gruppo quoziente rispetto a tale congruenza.
+          Viceversa, se <m>N</m> è un sottogruppo normale di un gruppo <m>G</m>,
+          la relazione di equivalenza le cui classi sono i laterali di <m>N</m>
+          in <m>G</m> è una congruenza.
+          Indicheremo, pertanto, con <m>G/N</m> il gruppo quoziente rispetto a
+          tale congruenza.
         </p>
       </statement>
 
       <proof>
         <p>
-          Denotiamo con <m>H</m> la classe <m>\class[\sim]{1}</m>. Chiaramente <m>H</m> è non vuoto. Presi <m>h_{1}</m> e <m>h_{2}</m> in <m>H</m>, cioè <m>h_{1}\sim 1</m> e <m>h_{2}\sim 1</m>, abbiamo
+          Denotiamo con <m>H</m> la classe <m>\class[\sim]{1}</m>.
+          Chiaramente <m>H</m> è non vuoto.
+          Presi <m>h_{1}</m> e <m>h_{2}</m> in <m>H</m>, cioè <m>h_{1}\sim 1</m>
+          e <m>h_{2}\sim 1</m>, abbiamo
           <md>
             h_{1}h_{2}^{-1}\sim 1\cdot h_{2}^{-1}\sim h_{2}h_{2}^{-1}=1
           </md>
-          cioè <m>h_{1}h_{2}^{-1}</m> appartiene ad <m>H</m>: pertanto, <m>H</m> è un sottogruppo di <m>G</m>.
+          cioè <m>h_{1}h_{2}^{-1}</m> appartiene ad <m>H</m>: pertanto, <m>H</m>
+          è un sottogruppo di <m>G</m>.
         </p>
+
         <p>
-          Siano ora <m>h\in H</m> e <m>g\in G</m>. Abbiamo
+          Siano ora <m>h\in H</m> e <m>g\in G</m>.
+          Abbiamo
           <md>
             g^{-1}hg\sim g^{-1}\cdot 1\cdot g=1
           </md>
-          cioè <m>g^{-1}hg</m> appartiene ad <m>H</m>, che è, quindi, normale in <m>G</m>.
-        </p>
-        <p>
-          Mostriamo ora che le classi di equivalenza sono i laterali di <m>H</m>, cioè che per ogni <m>g\in G</m> si ha <m>\class[\sim]{g}=gH</m>. Gli elementi di <m>gH</m> sono del tipo <m>gh</m> con <m>h\sim 1</m>: dunque, <m>gh\sim g\cdot 1=g</m>, cioè <m>gH\subseteq\class[\sim]{g}</m>. Viceversa, se <m>g'\sim g</m>, allora <m>g^{-1}g'\sim g^{-1}g=1</m>, cioè <m>g^{-1}g'\in H</m> e <m>g'=g(g^{-1}g')\in gH</m>, cioè <m>\class[\sim]{g}\subseteq gH</m>.
+          cioè <m>g^{-1}hg</m> appartiene ad <m>H</m>, che è, quindi, normale in
+          <m>G</m>.
         </p>
 
         <p>
-          Sia ora <m>N</m> un sottogruppo normale di un gruppo <m>G</m> e consideriamo la relazione di equivalenza <m>\approx</m> le cui classi sono i laterali di <m>N</m> in <m>G</m>: in altri termini, <m>g\approx g'</m> se e solo se <m>g'\in gN</m>. Siano allora <m>g</m>, <m>g'</m>, <m>h</m> e <m>h'</m> in <m>G</m> tali che <m>g\approx g'</m> e <m>h\approx h'</m>: dunque, esistono <m>n_{1}</m> e <m>n_{2}</m> in <m>N</m>, tali che <m>g'=gn_{1}</m> e <m>h'=hn_{2}</m>. Ma allora <m>g'h'=gn_{1}hn_{2}</m>: ora <m>n_{1}h\in Nh=hN</m>, dal momento che <m>N</m> è normale in <m>G</m>: dunque, <m>n_{1}h=hn_{3}</m> per qualche <m>n_{3}\in N</m>. Di conseguenza, <m>g'h'=ghn_{3}n_{2}\in ghN</m>, vale a dire <m>g'h'\approx gh</m>.
+          Mostriamo ora che le classi di equivalenza sono i laterali di
+          <m>H</m>, cioè che per ogni <m>g\in G</m> si ha
+          <m>\class[\sim]{g}=gH</m>.
+          Gli elementi di <m>gH</m> sono del tipo <m>gh</m> con <m>h\sim 1</m>:
+          dunque, <m>gh\sim g\cdot 1=g</m>, cioè
+          <m>gH\subseteq\class[\sim]{g}</m>.
+          Viceversa, se <m>g'\sim g</m>, allora <m>g^{-1}g'\sim g^{-1}g=1</m>,
+          cioè <m>g^{-1}g'\in H</m> e <m>g'=g(g^{-1}g')\in gH</m>, cioè
+          <m>\class[\sim]{g}\subseteq gH</m>.
+        </p>
+
+        <p>
+          Sia ora <m>N</m> un sottogruppo normale di un gruppo <m>G</m> e
+          consideriamo la relazione di equivalenza <m>\approx</m> le cui classi
+          sono i laterali di <m>N</m> in <m>G</m>: in altri termini,
+          <m>g\approx g'</m> se e solo se <m>g'\in gN</m>.
+          Siano allora <m>g</m>, <m>g'</m>, <m>h</m> e <m>h'</m> in <m>G</m>
+          tali che <m>g\approx g'</m> e <m>h\approx h'</m>: dunque, esistono
+          <m>n_{1}</m> e <m>n_{2}</m> in <m>N</m>, tali che <m>g'=gn_{1}</m> e
+          <m>h'=hn_{2}</m>.
+          Ma allora <m>g'h'=gn_{1}hn_{2}</m>: ora <m>n_{1}h\in Nh=hN</m>, dal
+          momento che <m>N</m> è normale in <m>G</m>: dunque,
+          <m>n_{1}h=hn_{3}</m> per qualche <m>n_{3}\in N</m>.
+          Di conseguenza, <m>g'h'=ghn_{3}n_{2}\in ghN</m>, vale a dire
+          <m>g'h'\approx gh</m>.
         </p>
       </proof>
-
     </theorem>
 
     <p>
-      Il teorema precedente ci dice che tutte e sole le congruenze di un gruppo <m>G</m> provengono da sottogruppi normali. Dato un sottogruppo normale <m>N</m> di <m>G</m>, l'operazione in <m>G/N</m> è, dunque, definita da <m>gN\cdot hN\coloneqq ghN</m>: se provassimo a usare questa definizione con un sottogruppo non normale, non avremmo un prodotto ben definito, cioè al variare dei rappresentanti dei laterali coinvolti non otterremmo sempre come risultato lo stesso laterale.
+      Il teorema precedente ci dice che tutte e sole le congruenze di un gruppo
+      <m>G</m> provengono da sottogruppi normali.
+      Dato un sottogruppo normale <m>N</m> di <m>G</m>, l'operazione in
+      <m>G/N</m> è, dunque, definita da <m>gN\cdot hN\coloneqq ghN</m>: se
+      provassimo a usare questa definizione con un sottogruppo non normale, non
+      avremmo un prodotto ben definito, cioè al variare dei rappresentanti dei
+      laterali coinvolti non otterremmo sempre come risultato lo stesso
+      laterale.
     </p>
 
     <example xml:id="ex-quoziente_su_non_normale">
       <statement>
         <p>
-          Nell'<xref ref="ex-sottogruppo_non_normale"/> abbiamo mostrato che <m>H\coloneqq\grgen{(1\;2)}</m> non è un sottogruppo normale di <m>\Sym_{3}</m>. I laterali sinistri di <m>H</m> in <m>G</m> sono <m>H=\{\Id,(1\;2)\}</m>, <m>(1\;3)H=\{(1\;3),(1\;3\;2)\}</m> e <m>(2\;3)H=\{(2\;3),(1\;2\;3)\}</m>. Ora <m>\Id(1\;3)=(1\;3)</m> e <m>(1\;2)(1\;3\;2)=(2\;3)</m>: in entrambi i prodotti il primo fattore sta nel laterale <m>H</m> e il secondo fattore sta nel laterale <m>(1\;3)H</m> ma i prodotti ottenuti stanno in laterali diversi.
+          Nell' <xref ref="ex-sottogruppo_non_normale"/> abbiamo mostrato che
+          <m>H\coloneqq\grgen{(1\;2)}</m> non è un sottogruppo normale di
+          <m>\Sym_{3}</m>.
+          I laterali sinistri di <m>H</m> in <m>G</m> sono
+          <m>H=\{\Id,(1\;2)\}</m>, <m>(1\;3)H=\{(1\;3),(1\;3\;2)\}</m> e
+          <m>(2\;3)H=\{(2\;3),(1\;2\;3)\}</m>.
+          Ora <m>\Id(1\;3)=(1\;3)</m> e <m>(1\;2)(1\;3\;2)=(2\;3)</m>: in
+          entrambi i prodotti il primo fattore sta nel laterale <m>H</m> e il
+          secondo fattore sta nel laterale <m>(1\;3)H</m> ma i prodotti ottenuti
+          stanno in laterali diversi.
         </p>
       </statement>
     </example>
@@ -177,7 +297,16 @@
     <example>
       <statement>
         <p>
-          Un gruppo <m>G</m> ha almeno due sottogruppi normali (eventualmente coincidenti, se <m>G=1</m>): <m>G</m> stesso e <m>1</m>. Il gruppo <m>G</m> ha un unico laterale in sé stesso e, quindi, il gruppo quoziente <m>G/G</m> è un gruppo con un unico elemento, cioè è un gruppo banale. I laterali del sottogruppo <m>1</m> contengono ciascuno un elemento: dunque, il gruppo quoziente <m>G/1</m> è il gruppo i cui elementi sono i sottoinsiemi di <m>G</m> con un unico elemento. Vedremo nell'<xref ref="rem-quoziente_su_1"/> che questo gruppo è isomorfo a <m>G</m> stesso.
+          Un gruppo <m>G</m> ha almeno due sottogruppi normali (eventualmente
+          coincidenti, se <m>G=1</m> ): <m>G</m> stesso e <m>1</m>.
+          Il gruppo <m>G</m> ha un unico laterale in sé stesso e, quindi, il
+          gruppo quoziente <m>G/G</m> è un gruppo con un unico elemento, cioè è
+          un gruppo banale.
+          I laterali del sottogruppo <m>1</m> contengono ciascuno un elemento:
+          dunque, il gruppo quoziente <m>G/1</m> è il gruppo i cui elementi sono
+          i sottoinsiemi di <m>G</m> con un unico elemento.
+          Vedremo nell' <xref ref="rem-quoziente_su_1"/> che questo gruppo è
+          isomorfo a <m>G</m> stesso.
         </p>
       </statement>
     </example>
@@ -186,26 +315,45 @@
       <exercise>
         <introduction>
           <p>
-            Abbiamo visto che una congruenza in un gruppo è determinata completamente dalla classe di <m>1</m> e questa classe è un sottogruppo normale. Vediamo che una classificazione simile per i monoidi non è possibile.
+            Abbiamo visto che una congruenza in un gruppo è determinata
+            completamente dalla classe di <m>1</m> e questa classe è un
+            sottogruppo normale.
+            Vediamo che una classificazione simile per i monoidi non è
+            possibile.
           </p>
         </introduction>
+
         <task>
           <statement>
             <p>
-              Mostrare che se <m>\sim</m> è una congruenza in un monoide <m>M</m>, allora <m>\class[\sim]{1_{M}}</m> è un sottomonoide di <m>M</m>
+              Mostrare che se <m>\sim</m> è una congruenza in un monoide
+              <m>M</m>, allora <m>\class[\sim]{1_{M}}</m> è un sottomonoide di
+              <m>M</m>
             </p>
           </statement>
         </task>
+
         <task>
           <statement>
             <p>
-              Nel monoide <m>\Naturali</m> dei naturali rispetto all'addizione, sia fissato un naturale <m>n</m>. Definiamo in <m>\Naturali</m> una relazione <m>\sim_{n}</m> ponendo <m>a\sim_{n}b</m> se <m>a=b</m> o se sia <m>a</m> che <m>b</m> sono maggiori di <m>n</m>. Mostrare che <m>\sim_{n}</m> è una congruenza avente <m>n+2</m> classi e che <m>\class[\sim_{n}]{0}=\{0\}</m>, qualunque sia <m>n</m>.
+              Nel monoide <m>\Naturali</m> dei naturali rispetto all'addizione,
+              sia fissato un naturale <m>n</m>.
+              Definiamo in <m>\Naturali</m> una relazione <m>\sim_{n}</m>
+              ponendo <m>a\sim_{n}b</m> se <m>a=b</m> o se sia <m>a</m> che
+              <m>b</m> sono maggiori di <m>n</m>.
+              Mostrare che <m>\sim_{n}</m> è una congruenza avente <m>n+2</m>
+              classi e che <m>\class[\sim_{n}]{0}=\{0\}</m>, qualunque sia
+              <m>n</m>.
             </p>
           </statement>
         </task>
+
         <conclusion>
           <p>
-            Abbiamo mostrato che in <m>\Naturali</m> ci sono infinite congruenze rispetto a cui la classe di <m>0</m> è sempre la medesima: dunque, la conoscenza della classe dell'elemento neutro non è sufficiente a ricostruire la congruenza.
+            Abbiamo mostrato che in <m>\Naturali</m> ci sono infinite congruenze
+            rispetto a cui la classe di <m>0</m> è sempre la medesima: dunque,
+            la conoscenza della classe dell'elemento neutro non è sufficiente a
+            ricostruire la congruenza.
           </p>
         </conclusion>
       </exercise>
@@ -213,16 +361,20 @@
       <exercise>
         <statement>
           <p>
-            Sia <m>H</m> un sottogruppo di un gruppo <m>G</m>. Mostrare che le seguenti proprietà sono equivalenti:
+            Sia <m>H</m> un sottogruppo di un gruppo <m>G</m>.
+            Mostrare che le seguenti proprietà sono equivalenti:
             <ol>
               <li>
                 <p>
-                  <m>H</m> è normale in <m>G</m> e il quoziente <m>G/H</m> è abeliano;
+                  <m>H</m> è normale in <m>G</m> e il quoziente <m>G/H</m> è
+                  abeliano;
                 </p>
               </li>
+
               <li>
                 <p>
-                  <m>x^{-1}y^{-1}xy</m> appartiene a <m>H</m> per ogni <m>x</m> e <m>y</m> appartenenti a <m>G</m>.
+                  <m>x^{-1}y^{-1}xy</m> appartiene a <m>H</m> per ogni <m>x</m>
+                  e <m>y</m> appartenenti a <m>G</m>.
                 </p>
               </li>
             </ol>
@@ -231,37 +383,71 @@
 
         <solution>
           <p>
-            Supponiamo che <m>H</m> sia normale in <m>G</m> e che <m>G/H</m> sia abeliano. Siano <m>x</m> e <m>y</m> due elementi di <m>G</m>: poiché <m>G/H</m> è abeliano, abbiamo che <m>(xH)(yH)=(yH)(xH)</m>. Ma ciò significa che <m>xyH=yxH</m>: moltiplicando a sinistra per <m>x^{-1}y^{-1}H</m> otteniamo allora <m>x^{-1}y^{-1}xyH=H</m>. Ma questo implica che <m>x^{-1}y^{-1}xy</m> appartiene a <m>H</m>.
+            Supponiamo che <m>H</m> sia normale in <m>G</m> e che <m>G/H</m> sia
+            abeliano.
+            Siano <m>x</m> e <m>y</m> due elementi di <m>G</m>: poiché
+            <m>G/H</m> è abeliano, abbiamo che <m>(xH)(yH)=(yH)(xH)</m>.
+            Ma ciò significa che <m>xyH=yxH</m>: moltiplicando a sinistra per
+            <m>x^{-1}y^{-1}H</m> otteniamo allora <m>x^{-1}y^{-1}xyH=H</m>.
+            Ma questo implica che <m>x^{-1}y^{-1}xy</m> appartiene a <m>H</m>.
           </p>
+
           <p>
-            Viceversa, sia <m>x^{-1}y^{-1}xy</m> in <m>H</m> per ogni <m>x</m> e <m>y</m> in <m>G</m>. Scegliamo in particolare, <m>x</m> in <m>H</m>: allora <m>x^{y}=y^{-1}xy=x(x^{-1}y^{-1}xy)</m> è un elemento di <m>H</m> perché prodotto di due elementi di <m>H</m>. Per l'arbitrarietà della scelta di <m>x</m> in <m>H</m> e di <m>y</m> in <m>G</m> abbiamo che <m>H</m> è normale in <m>G</m>. Mostriamo ora che <m>G/H</m> è abeliano: siano <m>xH</m> e <m>yH</m> due elementi di <m>G/H</m>. Poiché <m>x^{-1}y^{-1}xy</m> appartiene a <m>H</m> si ha <m>x^{-1}y^{-1}xyH=H</m> e moltiplicando a sinistra per <m>yxH</m>, otteniamo <m>xyH=yxH</m>, cioè <m>(xH)(yH)=(yH)(xH)</m>.
+            Viceversa, sia <m>x^{-1}y^{-1}xy</m> in <m>H</m> per ogni <m>x</m> e
+            <m>y</m> in <m>G</m>.
+            Scegliamo in particolare, <m>x</m> in <m>H</m>: allora
+            <m>x^{y}=y^{-1}xy=x(x^{-1}y^{-1}xy)</m> è un elemento di <m>H</m>
+            perché prodotto di due elementi di <m>H</m>.
+            Per l'arbitrarietà della scelta di <m>x</m> in <m>H</m> e di
+            <m>y</m> in <m>G</m> abbiamo che <m>H</m> è normale in <m>G</m>.
+            Mostriamo ora che <m>G/H</m> è abeliano: siano <m>xH</m> e <m>yH</m>
+            due elementi di <m>G/H</m>.
+            Poiché <m>x^{-1}y^{-1}xy</m> appartiene a <m>H</m> si ha
+            <m>x^{-1}y^{-1}xyH=H</m> e moltiplicando a sinistra per <m>yxH</m>,
+            otteniamo <m>xyH=yxH</m>, cioè <m>(xH)(yH)=(yH)(xH)</m>.
           </p>
         </solution>
       </exercise>
 
       <exercise>
-
         <introduction>
           <p>
-            Si consideri il gruppo <m>G\coloneqq\frac{\Razionali}{\Interi}</m> rispetto all'addizione.
+            Si consideri il gruppo <m>G\coloneqq\frac{\Razionali}{\Interi}</m>
+            rispetto all'addizione.
           </p>
         </introduction>
 
         <task>
           <statement>
             <p>
-              Dato un numero razionale <m>\frac{m}{n}</m> di <m>\Razionali</m> con <m>n>0</m> determinare il periodo di <m>\frac{m}{n}+\Interi</m> in <m>G</m>.
+              Dato un numero razionale <m>\frac{m}{n}</m> di <m>\Razionali</m>
+              con <m>n&gt;0</m> determinare il periodo di
+              <m>\frac{m}{n}+\Interi</m> in <m>G</m>.
             </p>
           </statement>
+
           <hint>
             <p>
-               Ridurre <m>\frac{m}{n}</m> ai minimi termini.
+              Ridurre <m>\frac{m}{n}</m> ai minimi termini.
             </p>
           </hint>
 
           <solution>
             <p>
-              Sia <m>d=(m,n)</m> il massimo comun divisore di <m>m</m> e <m>n</m>. Abbiamo allora <m>\frac{m}{n}=\frac{m'}{n'}</m> con <m>m=dm'</m> e <m>n=dn'</m>. Per ogni intero <m>r</m> si ha <m>r(\frac{m'}{n'}+\Interi)=\frac{rm'}{n'}+\Interi</m>: dunque, <m>r(\frac{m'}{n'}+\Interi)</m> è l'elemento neutro di <m>G</m> se e solo se <m>\frac{rm'}{n'}</m>  è un intero, cioè se e solo se <m>rm'</m> è multiplo di <m>n'</m>. Poiché <m>n'</m> e <m>m'</m> sono coprimi ciò avviene se e solo se <m>r</m> è multiplo di <m>n'</m>: dunque, il periodo di <m>\frac{m'}{n'}+\Interi</m> è esattamente <m>n'</m>. Riassumendo, il periodo di <m>\frac{m}{n}+\Interi</m> è uguale a <m>\frac{n}{(n,m)}</m>.
+              Sia <m>d=(m,n)</m> il massimo comun divisore di <m>m</m> e
+              <m>n</m>.
+              Abbiamo allora <m>\frac{m}{n}=\frac{m'}{n'}</m> con <m>m=dm'</m> e
+              <m>n=dn'</m>.
+              Per ogni intero <m>r</m> si ha
+              <m>r(\frac{m'}{n'}+\Interi)=\frac{rm'}{n'}+\Interi</m>: dunque,
+              <m>r(\frac{m'}{n'}+\Interi)</m> è l'elemento neutro di <m>G</m> se
+              e solo se <m>\frac{rm'}{n'}</m> è un intero, cioè se e solo se
+              <m>rm'</m> è multiplo di <m>n'</m>.
+              Poiché <m>n'</m> e <m>m'</m> sono coprimi ciò avviene se e solo se
+              <m>r</m> è multiplo di <m>n'</m>: dunque, il periodo di
+              <m>\frac{m'}{n'}+\Interi</m> è esattamente <m>n'</m>.
+              Riassumendo, il periodo di <m>\frac{m}{n}+\Interi</m> è uguale a
+              <m>\frac{n}{(n,m)}</m>.
             </p>
           </solution>
         </task>
@@ -269,17 +455,33 @@
         <task>
           <statement>
             <p>
-              Mostrare che per ogni intero positivo <m>n</m> esiste almeno un elemento di <m>G</m> avente periodo <m>n</m>. Determinare poi il numero esatto di elementi di periodo <m>n</m>.
+              Mostrare che per ogni intero positivo <m>n</m> esiste almeno un
+              elemento di <m>G</m> avente periodo <m>n</m>.
+              Determinare poi il numero esatto di elementi di periodo <m>n</m>.
             </p>
           </statement>
 
           <solution>
             <p>
-               Dal punto precedente sappiamo che se <m>m</m> è un intero coprimo con <m>n</m> allora <m>\frac{m}{n}+\Interi</m> ha periodo <m>n</m>: basta prendere ad esempio <m>m=1</m>.
+              Dal punto precedente sappiamo che se <m>m</m> è un intero coprimo
+              con <m>n</m> allora <m>\frac{m}{n}+\Interi</m> ha periodo
+              <m>n</m>: basta prendere ad esempio <m>m=1</m>.
             </p>
 
             <p>
-              Per determinare esplicitamente il numero di elementi di periodo <m>n</m> consideriamo due elementi <m>\frac{m_{1}}{n}+\Interi</m> e <m>\frac{m_{2}}{n}+\Interi</m> di periodo <m>n</m> (quindi, con <m>m_{1}</m> e <m>m_{2}</m> coprimi con <m>n</m>). Questi due elementi di <m>G</m> coincidono se e solo se <m>\frac{m_{1}}{n}-\frac{m_{2}}{n}</m> è un intero, cioè se e solo se <m>m_{1}-m_{2}</m> è multiplo di <m>n</m>: in altri termini, se e solo se <m>m_{1}</m> e <m>m_{2}</m> sono congrui modulo <m>n</m>. Dunque, possiamo limitarci a considerare elementi del tipo <m>\frac{m}{n}+\Interi</m> con <m>0\le m \lt n</m>: tra questi, esattamente <m>\euler{n}</m> sono coprimi con <m>n</m> e, quindi, questo è il numero di elementi di periodo <m>n</m>.
+              Per determinare esplicitamente il numero di elementi di periodo
+              <m>n</m> consideriamo due elementi <m>\frac{m_{1}}{n}+\Interi</m>
+              e <m>\frac{m_{2}}{n}+\Interi</m> di periodo <m>n</m> (quindi, con
+              <m>m_{1}</m> e <m>m_{2}</m> coprimi con <m>n</m> ).
+              Questi due elementi di <m>G</m> coincidono se e solo se
+              <m>\frac{m_{1}}{n}-\frac{m_{2}}{n}</m> è un intero, cioè se e solo
+              se <m>m_{1}-m_{2}</m> è multiplo di <m>n</m>: in altri termini, se
+              e solo se <m>m_{1}</m> e <m>m_{2}</m> sono congrui modulo
+              <m>n</m>.
+              Dunque, possiamo limitarci a considerare elementi del tipo
+              <m>\frac{m}{n}+\Interi</m> con <m>0\le m \lt n</m>: tra questi,
+              esattamente <m>\euler{n}</m> sono coprimi con <m>n</m> e, quindi,
+              questo è il numero di elementi di periodo <m>n</m>.
             </p>
           </solution>
         </task>
@@ -287,13 +489,22 @@
         <task>
           <statement>
             <p>
-              Mostrare che per ogni intero positivo <m>n</m> esiste un unico sottogruppo ciclico di <m>G</m> di ordine <m>n</m>.
+              Mostrare che per ogni intero positivo <m>n</m> esiste un unico
+              sottogruppo ciclico di <m>G</m> di ordine <m>n</m>.
             </p>
           </statement>
 
           <solution>
             <p>
-              Dal punto precedente sappiamo che esistono elementi di periodo <m>n</m> e, quindi, c'è almeno un sottogruppo ciclico <m>C_{n}</m> di ordine <m>n</m>. Un gruppo ciclico di ordine <m>n</m> contiene esattamente <m>\euler{n}</m> elementi di ordine <m>n</m>. Dal punto precedente sappiamo che <m>G</m> contiene esattamente <m>\euler{n}</m> elementi di ordine <m>n</m>: dunque, <m>C_{n}</m> contiene tutti gli elementi di ordine <m>n</m> di <m>G</m> ed è allora l'unico sottogruppo ciclico di ordine <m>n</m>.
+              Dal punto precedente sappiamo che esistono elementi di periodo
+              <m>n</m> e, quindi, c'è almeno un sottogruppo ciclico <m>C_{n}</m>
+              di ordine <m>n</m>.
+              Un gruppo ciclico di ordine <m>n</m> contiene esattamente
+              <m>\euler{n}</m> elementi di ordine <m>n</m>.
+              Dal punto precedente sappiamo che <m>G</m> contiene esattamente
+              <m>\euler{n}</m> elementi di ordine <m>n</m>: dunque, <m>C_{n}</m>
+              contiene tutti gli elementi di ordine <m>n</m> di <m>G</m> ed è
+              allora l'unico sottogruppo ciclico di ordine <m>n</m>.
             </p>
           </solution>
         </task>
@@ -307,115 +518,166 @@
 
           <solution>
             <p>
-              Sia <m>H</m> un sottogruppo finito di <m>G</m> di ordine <m>n</m> e sia <m>C_{n}</m> l'unico sottogruppo ciclico di ordine <m>n</m> di <m>G</m>. Mostriamo che ogni elemento di <m>H</m> è contenuto in <m>C_{n}</m> e, quindi, <m>H=C_{n}</m>. Sia <m>x</m> un elemento di <m>H</m>: il periodo di <m>x</m> è un divisore <m>d</m> di <m>n</m>. Poiché <m>C_{n}</m> è un gruppo ciclico finito, esso contiene  un sottogruppo ciclico <m>C_{d}</m> di ordine <m>d</m>. Ma in <m>G</m> esiste un unico sottogruppo ciclico di ordine <m>d</m> e, pertanto, il sottogruppo generato da <m>x</m> coincide con <m>C_{d}</m>, e allora <m>x\in C_{d}\le C_{n}</m>.
+              Sia <m>H</m> un sottogruppo finito di <m>G</m> di ordine <m>n</m>
+              e sia <m>C_{n}</m> l'unico sottogruppo ciclico di ordine <m>n</m>
+              di <m>G</m>.
+              Mostriamo che ogni elemento di <m>H</m> è contenuto in
+              <m>C_{n}</m> e, quindi, <m>H=C_{n}</m>.
+              Sia <m>x</m> un elemento di <m>H</m>: il periodo di <m>x</m> è un
+              divisore <m>d</m> di <m>n</m>.
+              Poiché <m>C_{n}</m> è un gruppo ciclico finito, esso contiene un
+              sottogruppo ciclico <m>C_{d}</m> di ordine <m>d</m>.
+              Ma in <m>G</m> esiste un unico sottogruppo ciclico di ordine
+              <m>d</m> e, pertanto, il sottogruppo generato da <m>x</m> coincide
+              con <m>C_{d}</m>, e allora <m>x\in C_{d}\le C_{n}</m>.
             </p>
           </solution>
         </task>
       </exercise>
-
-
-
     </exercises>
-
   </section>
 
   <section xml:id="sec-proprieta_quozienti">
     <title>Proprietà dei gruppi quoziente</title>
 
     <p>
-      Dal <xref ref="cor-nucleo_normale"/> sappiamo che il nucleo di un omomorfismo di gruppi è un sottogruppo normale del gruppo di partenza. Viceversa, ogni sottogruppo normale è il nucleo di qualche omomorfismo. Abbiamo, infatti, la
+      Dal <xref ref="cor-nucleo_normale"/> sappiamo che il nucleo di un
+      omomorfismo di gruppi è un sottogruppo normale del gruppo di partenza.
+      Viceversa, ogni sottogruppo normale è il nucleo di qualche omomorfismo.
+      Abbiamo, infatti, la
     </p>
 
     <proposition xml:id="prop-omomorfismo_canonico">
       <statement>
         <p>
-          Dato un gruppo <m>G</m> e un sottogruppo normale <m>N</m>, la funzione <m>\phi\colon G\to G/N</m> data da <m>g\phi\coloneqq gN</m> è un omomorfismo suriettivo con nucleo <m>N</m>, detto <term>omomorfismo canonico</term>.
+          Dato un gruppo <m>G</m> e un sottogruppo normale <m>N</m>, la funzione
+          <m>\phi\colon G\to G/N</m> data da <m>g\phi\coloneqq gN</m> è un
+          omomorfismo suriettivo con nucleo <m>N</m>, detto
+          <term>omomorfismo canonico</term>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Per definizione dell'operazione nel gruppo quoziente, abbiamo, per ogni <m>g</m> e <m>h</m> in <m>G</m>:
+          Per definizione dell'operazione nel gruppo quoziente, abbiamo, per
+          ogni <m>g</m> e <m>h</m> in <m>G</m>:
           <md>
             (gh)\phi=ghN=gN\cdot hN=g\phi\cdot h\phi
           </md>.
           Pertanto, <m>\phi</m> è un omomorfismo.
         </p>
+
         <p>
-          Un elemento <m>g</m> appartiene al nucleo di <m>\phi</m> se e solo se <m>gN</m> è l'elemento neutro di <m>G/N</m>: ma l'elemento neutro di <m>G/N</m> è proprio <m>N</m> e, quindi, <m>g\in\ker\phi</m> se e solo se <m>gN=N</m>, cioè <m>g\in N</m>.
+          Un elemento <m>g</m> appartiene al nucleo di <m>\phi</m> se e solo se
+          <m>gN</m> è l'elemento neutro di <m>G/N</m>: ma l'elemento neutro di
+          <m>G/N</m> è proprio <m>N</m> e, quindi, <m>g\in\ker\phi</m> se e solo
+          se <m>gN=N</m>, cioè <m>g\in N</m>.
         </p>
+
         <p>
-          Infine, <m>\phi</m> è ovviamente suriettivo: preso un qualunque elemento <m>gN</m> di <m>G/N</m>, si ha che <m>gN=g\phi</m>.
+          Infine, <m>\phi</m> è ovviamente suriettivo: preso un qualunque
+          elemento <m>gN</m> di <m>G/N</m>, si ha che <m>gN=g\phi</m>.
         </p>
       </proof>
-
     </proposition>
 
     <remark xml:id="rem-quoziente_su_1">
       <p>
-        Se consideriamo il sottogruppo banale <m>1</m> di <m>G</m>, l'omomorfismo canonico realizza un isomorfismo tra <m>G</m> e <m>G/1</m>: infatti, l'omomorfismo è suriettivo e, avendo nucleo <m>1</m>, è anche iniettivo.
+        Se consideriamo il sottogruppo banale <m>1</m> di <m>G</m>,
+        l'omomorfismo canonico realizza un isomorfismo tra <m>G</m> e
+        <m>G/1</m>: infatti, l'omomorfismo è suriettivo e, avendo nucleo
+        <m>1</m>, è anche iniettivo.
       </p>
     </remark>
 
     <proposition xml:id="prop-generatori_quoziente">
       <statement>
         <p>
-          Sia <m>G</m> un gruppo generato da un suo sottoinsieme <m>X</m> e sia <m>N</m> un sottogruppo normale di <m>G</m>. Indicato con <m>\bar{X}</m> il sottoinsieme di <m>G/N</m> formato dai laterali <m>xN</m> al variare di <m>x</m> in <m>X</m>, si ha che <m>G/N</m> è generato da <m>\bar{X}</m>. In particolare, se <m>G</m> è ciclico, anche <m>G/N</m> è ciclico.
+          Sia <m>G</m> un gruppo generato da un suo sottoinsieme <m>X</m> e sia
+          <m>N</m> un sottogruppo normale di <m>G</m>.
+          Indicato con <m>\bar{X}</m> il sottoinsieme di <m>G/N</m> formato dai
+          laterali <m>xN</m> al variare di <m>x</m> in <m>X</m>, si ha che
+          <m>G/N</m> è generato da <m>\bar{X}</m>.
+          In particolare, se <m>G</m> è ciclico, anche <m>G/N</m> è ciclico.
         </p>
       </statement>
 
       <proof>
         <p>
-          Il sottoinsieme <m>\bar{X}</m> è, evidentemente, l'immagine di <m>X</m> tramite l'omomorfismo canonico di <m>G</m> su <m>G/N</m>. Per la <xref ref="prop-omomorfismo_canonico"/>, l'omomorfismo canonico è suriettivo: la tesi segue allora dalla <xref ref="prop-immagine_sottogruppo_generato"/>.
+          Il sottoinsieme <m>\bar{X}</m> è, evidentemente, l'immagine di
+          <m>X</m> tramite l'omomorfismo canonico di <m>G</m> su <m>G/N</m>.
+          Per la <xref ref="prop-omomorfismo_canonico"/>, l'omomorfismo canonico
+          è suriettivo: la tesi segue allora dalla
+          <xref ref="prop-immagine_sottogruppo_generato"/>.
         </p>
       </proof>
-
     </proposition>
 
     <example>
       <statement>
         <p>
-          Per <m>n\ge 2</m>, il sottogruppo alterno <m>A_{n}</m> è un sottogruppo normale di indice <m>2</m> in <m>\Sym_{n}</m>: dunque, <m>\Sym_{n}/A_{n}</m> è un gruppo di ordine <m>2</m> e, quindi, ciclico e, a maggior ragione, abeliano. Per <m>n\ge 3</m>, <m>\Sym_{n}</m> non è abeliano: pertanto, un quoziente di un gruppo non abeliano può essere ciclico.
+          Per <m>n\ge 2</m>, il sottogruppo alterno <m>A_{n}</m> è un
+          sottogruppo normale di indice <m>2</m> in <m>\Sym_{n}</m>: dunque,
+          <m>\Sym_{n}/A_{n}</m> è un gruppo di ordine <m>2</m> e, quindi,
+          ciclico e, a maggior ragione, abeliano.
+          Per <m>n\ge 3</m>, <m>\Sym_{n}</m> non è abeliano: pertanto, un
+          quoziente di un gruppo non abeliano può essere ciclico.
         </p>
       </statement>
     </example>
 
     <p>
-      Ricordiamo che il centro di un gruppo è un sottogruppo normale (<xref ref="prop-sottogruppi_centro_normali"/>).
+      Ricordiamo che il centro di un gruppo è un sottogruppo normale (
+      <xref ref="prop-sottogruppi_centro_normali"/> ).
     </p>
 
     <theorem xml:id="thm-quoziente_sul_centro">
       <statement>
         <p>
-          Sia <m>G</m> un gruppo non abeliano. Allora <m>G/\centro(G)</m> non è ciclico.
+          Sia <m>G</m> un gruppo non abeliano.
+          Allora <m>G/\centro(G)</m> non è ciclico.
         </p>
       </statement>
 
       <proof>
         <p>
-          Supponiamo per assurdo che <m>G/\centro(G)</m> sia ciclico, generato da un certo elemento <m>c\centro(G)</m>, e mostriamo che <m>G</m> è abeliano. Per ogni elemento <m>g</m> di <m>G</m>, si ha che <m>g\centro(G)</m> è una potenza di <m>c\centro(G)</m>, cioè esiste un intero <m>n</m> tale che <m>g\centro(G)=c^{n}\centro(G)</m>, vale a dire esiste <m>z\in\centro(G)</m> tale che <m>g=c^{n}z</m>. Se ora <m>h</m> è un altro elemento di <m>G</m>, esiste un intero <m>m</m> e un elemento <m>z'\in\centro(G)</m> tale che <m>h=c^{m}z'</m>. Ma allora
+          Supponiamo per assurdo che <m>G/\centro(G)</m> sia ciclico, generato
+          da un certo elemento <m>c\centro(G)</m>, e mostriamo che <m>G</m> è
+          abeliano.
+          Per ogni elemento <m>g</m> di <m>G</m>, si ha che <m>g\centro(G)</m> è
+          una potenza di <m>c\centro(G)</m>, cioè esiste un intero <m>n</m> tale
+          che <m>g\centro(G)=c^{n}\centro(G)</m>, vale a dire esiste
+          <m>z\in\centro(G)</m> tale che <m>g=c^{n}z</m>.
+          Se ora <m>h</m> è un altro elemento di <m>G</m>, esiste un intero
+          <m>m</m> e un elemento <m>z'\in\centro(G)</m> tale che
+          <m>h=c^{m}z'</m>.
+          Ma allora
           <md>
             gh=c^{n}zc^{m}z'=c^{n}c^{m}z'z=c^{m}c^{n}z'z=c^{m}z'c^{n}z=hg
           </md>,
-          dove abbiamo usato il fatto che <m>z</m> e <m>z'</m> commutano con ogni altro elemento (e, quindi, possono essere spostati in qualunque punto del prodotto) e <m>c^{n}</m> e <m>c^{m}</m> commutano fra loro.
+          dove abbiamo usato il fatto che <m>z</m> e <m>z'</m> commutano con
+          ogni altro elemento (e, quindi, possono essere spostati in qualunque
+          punto del prodotto) e <m>c^{n}</m> e <m>c^{m}</m> commutano fra loro.
         </p>
       </proof>
-
     </theorem>
 
     <corollary xml:id="cor-quoziente_sul_centro_non_primo">
       <statement>
         <p>
-          Il centro di un gruppo <m>G</m> non può avere indice primo in <m>G</m>.
+          Il centro di un gruppo <m>G</m> non può avere indice primo in
+          <m>G</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Se <m>\ind{G}{\centro(G)}</m> fosse un numero primo, allora <m>G/\centro(G)</m> sarebbe ciclico per il <xref ref="cor-ordine_primo_ciclico"/>: dunque, <m>G</m> sarebbe abeliano, cioè <m>\ind{G}{\centro(G)}=1</m>.
+          Se <m>\ind{G}{\centro(G)}</m> fosse un numero primo, allora
+          <m>G/\centro(G)</m> sarebbe ciclico per il
+          <xref ref="cor-ordine_primo_ciclico"/>: dunque, <m>G</m> sarebbe
+          abeliano, cioè <m>\ind{G}{\centro(G)}=1</m>.
         </p>
       </proof>
-
     </corollary>
 
     <corollary xml:id="cor-ordine_quadrato_di_primo_implica_abeliano">
@@ -427,18 +689,24 @@
 
       <proof>
         <p>
-          Sia <m>\abs{G}=p^{2}</m> con <m>p</m> primo. Per il <xref ref="thm-lagrange" text="title"/>, il centro di <m>G</m> potrebbe avere ordine <m>1</m>, <m>p</m> o <m>p^{2}</m>: per la <xref ref="prop-centro_p_gruppo"/>, <m>\abs{\centro(G)}\ne 1</m>; se fosse <m>\abs{\centro(G)}=p</m>, allora <m>\ind{G}{\centro(G)}=p^{2}/p=p</m>, contro il <xref ref="cor-quoziente_sul_centro_non_primo"/>. Dunque, <m>\abs{\centro(G)}=p^{2}</m>, cioè <m>G=\centro(G)</m>.
+          Sia <m>\abs{G}=p^{2}</m> con <m>p</m> primo.
+          Per il <xref ref="thm-lagrange" text="title"/>, il centro di <m>G</m>
+          potrebbe avere ordine <m>1</m>, <m>p</m> o <m>p^{2}</m>: per la
+          <xref ref="prop-centro_p_gruppo"/>, <m>\abs{\centro(G)}\ne 1</m>; se
+          fosse <m>\abs{\centro(G)}=p</m>, allora
+          <m>\ind{G}{\centro(G)}=p^{2}/p=p</m>, contro il
+          <xref ref="cor-quoziente_sul_centro_non_primo"/>.
+          Dunque, <m>\abs{\centro(G)}=p^{2}</m>, cioè <m>G=\centro(G)</m>.
         </p>
       </proof>
-
     </corollary>
 
     <exercises xml:id="exercises-proprieta_quozienti">
-
       <exercise>
         <statement>
           <p>
-            Mostrare che se <m>G</m> è un gruppo non abeliano, allora <m>\ind{G}{\centro(G)}\ge 4</m>.
+            Mostrare che se <m>G</m> è un gruppo non abeliano, allora
+            <m>\ind{G}{\centro(G)}\ge 4</m>.
           </p>
         </statement>
       </exercise>
@@ -446,12 +714,28 @@
       <exercise>
         <statement>
           <p>
-            Sia <m>G</m> un gruppo finito dotato di <m>4</m> classi di coniugio. Sapendo che <m>G</m> ha due classi di coniugio di cardinalità <m>2</m>, determinare le cardinalità delle altre due classi.
+            Sia <m>G</m> un gruppo finito dotato di <m>4</m> classi di coniugio.
+            Sapendo che <m>G</m> ha due classi di coniugio di cardinalità
+            <m>2</m>, determinare le cardinalità delle altre due classi.
           </p>
         </statement>
+
         <solution>
           <p>
-            La classe di coniugio dell'elemento neutro contiene, come sempre, un solo elemento. Dunque, l'equazione delle classi di <m>G</m> è <m>1+2+2+c=\abs{G}</m>, dove <m>c</m> è la cardinalità dell'ultima classe che dobbiamo determinare. Per il <xref ref="cor-ordine_classe_coniugio"/> sappiamo che <m>c</m> divide <m>\abs{G}</m>. Poiché <m>c=\abs{G}-5</m>, ne discende che <m>c</m> divide <m>5</m>, cioè i valori possibili per <m>c</m> sono <m>1</m> e <m>5</m>. Se fosse <m>c=1</m>, avremmo esattamente due classi di ordine <m>1</m>, il centro di <m>G</m> avrebbe ordine <m>2</m> e <m>G</m> avrebbe ordine <m>6</m>, il che non può essere per il <xref ref="cor-quoziente_sul_centro_non_primo"/>. Dunque, <m>c=5</m>.
+            La classe di coniugio dell'elemento neutro contiene, come sempre, un
+            solo elemento.
+            Dunque, l'equazione delle classi di <m>G</m> è
+            <m>1+2+2+c=\abs{G}</m>, dove <m>c</m> è la cardinalità dell'ultima
+            classe che dobbiamo determinare.
+            Per il <xref ref="cor-ordine_classe_coniugio"/> sappiamo che
+            <m>c</m> divide <m>\abs{G}</m>.
+            Poiché <m>c=\abs{G}-5</m>, ne discende che <m>c</m> divide <m>5</m>,
+            cioè i valori possibili per <m>c</m> sono <m>1</m> e <m>5</m>.
+            Se fosse <m>c=1</m>, avremmo esattamente due classi di ordine
+            <m>1</m>, il centro di <m>G</m> avrebbe ordine <m>2</m> e <m>G</m>
+            avrebbe ordine <m>6</m>, il che non può essere per il
+            <xref ref="cor-quoziente_sul_centro_non_primo"/>.
+            Dunque, <m>c=5</m>.
           </p>
         </solution>
       </exercise>
@@ -459,7 +743,10 @@
       <exercise>
         <introduction>
           <p>
-            Sia <m>G</m> un gruppo e sia <m>H</m> un sottogruppo avente la seguente proprietà: per ogni <m>x\in G</m> e ogni <m>y\in G\setminus H</m> esiste un unico <m>u\in H</m> tale che <m>x^{y}=x^{u}</m>.
+            Sia <m>G</m> un gruppo e sia <m>H</m> un sottogruppo avente la
+            seguente proprietà: per ogni <m>x\in G</m> e ogni
+            <m>y\in G\setminus H</m> esiste un unico <m>u\in H</m> tale che
+            <m>x^{y}=x^{u}</m>.
           </p>
         </introduction>
 
@@ -469,9 +756,18 @@
               Dimostrare che <m>H</m> è normale in <m>G</m>.
             </p>
           </statement>
+
           <solution>
             <p>
-              Sia <m>x</m> un elemento di <m>H</m> e <m>y</m> un elemento di <m>G</m>. Se <m>y</m> appartiene a <m>H</m> ovviamente <m>x^{y}</m> appartiene a <m>H</m>. Se <m>y</m> non appartiene a <m>H</m>, per ipotesi esiste allora <m>u</m> in <m>H</m> tale che <m>x^{y}=x^{u}</m>: chiaramente <m>x^{u}</m> appartiene a <m>H</m>, cioè <m>x^{y}</m> appartiene a <m>H</m>. In entrambi i casi <m>x^{y}</m> appartiene a <m>H</m>.
+              Sia <m>x</m> un elemento di <m>H</m> e <m>y</m> un elemento di
+              <m>G</m>.
+              Se <m>y</m> appartiene a <m>H</m> ovviamente <m>x^{y}</m>
+              appartiene a <m>H</m>.
+              Se <m>y</m> non appartiene a <m>H</m>, per ipotesi esiste allora
+              <m>u</m> in <m>H</m> tale che <m>x^{y}=x^{u}</m>: chiaramente
+              <m>x^{u}</m> appartiene a <m>H</m>, cioè <m>x^{y}</m> appartiene a
+              <m>H</m>.
+              In entrambi i casi <m>x^{y}</m> appartiene a <m>H</m>.
             </p>
           </solution>
         </task>
@@ -482,13 +778,20 @@
               Dimostrare che <m>G/H</m> è abeliano.
             </p>
           </statement>
+
           <solution>
             <p>
-              Siano <m>xH</m> e <m>yH</m> due elementi di <m>G/H</m>. Se <m>x</m> appartiene a <m>H</m> allora <m>xH=H</m>, cioè <m>xH</m> è l'unità di <m>G/H</m> e, quindi, commuta con <m>yH</m>. Se <m>x</m> non appartiene a <m>H</m>, sappiamo che esiste <m>u</m> in <m>H</m> tale che <m>x^{y}=x^{u}</m>: ma allora
+              Siano <m>xH</m> e <m>yH</m> due elementi di <m>G/H</m>.
+              Se <m>x</m> appartiene a <m>H</m> allora <m>xH=H</m>, cioè
+              <m>xH</m> è l'unità di <m>G/H</m> e, quindi, commuta con
+              <m>yH</m>.
+              Se <m>x</m> non appartiene a <m>H</m>, sappiamo che esiste
+              <m>u</m> in <m>H</m> tale che <m>x^{y}=x^{u}</m>: ma allora
               <md>
                 (xH)^{yH}=x^{y}H=x^{u}H=(xH)^{uH}=(xH)^{H}=xH
               </md>,
-              cioè <m>xH</m> e <m>yH</m> commutano (si noti che abbiamo usato il fatto che <m>uH=H</m> è l'unità di <m>G/H</m>).
+              cioè <m>xH</m> e <m>yH</m> commutano (si noti che abbiamo usato il
+              fatto che <m>uH=H</m> è l'unità di <m>G/H</m> ).
             </p>
           </solution>
         </task>
@@ -496,52 +799,70 @@
         <task>
           <statement>
             <p>
-              Dimostrare che se <m>x\in G\setminus H</m> allora <m>\cent{G}{x}\cap H=1</m>.
+              Dimostrare che se <m>x\in G\setminus H</m> allora
+              <m>\cent{G}{x}\cap H=1</m>.
             </p>
           </statement>
+
           <solution>
             <p>
-              Sia <m>y\in\cent{G}{x}\cap H</m>. Dunque, <m>x^{y}=x</m>. D'altra parte <m>x^{1}=x</m>: poiché sappiamo che c'è un unico elemento <m>u</m> di <m>H</m> tale che <m>x^{u}=x^{y}</m>, ne segue che <m>y=u=1</m>, cioè <m>y=1</m>.
+              Sia <m>y\in\cent{G}{x}\cap H</m>.
+              Dunque, <m>x^{y}=x</m>.
+              D'altra parte <m>x^{1}=x</m>: poiché sappiamo che c'è un unico
+              elemento <m>u</m> di <m>H</m> tale che <m>x^{u}=x^{y}</m>, ne
+              segue che <m>y=u=1</m>, cioè <m>y=1</m>.
             </p>
           </solution>
         </task>
       </exercise>
-
-
-
     </exercises>
-
   </section>
 
   <section xml:id="sec-teoremi_di_isomorfismo">
     <title>I teoremi di isomorfismo</title>
 
     <p>
-      Diamo ora tre teoremi, storicamente noti come i teoremi di isomorfismo. Vengono spesso chiamati come primo, secondo e terzo teorema di isomorfismo: purtroppo però vengono presentati in ordine diverso, per cui, quello che per qualche autore è il primo teorema, per altri è il secondo, e così per gli altri. Per questo motivo non daremo loro un nome specifico.
+      Diamo ora tre teoremi, storicamente noti come i teoremi di isomorfismo.
+      Vengono spesso chiamati come primo, secondo e terzo teorema di
+      isomorfismo: purtroppo però vengono presentati in ordine diverso, per cui,
+      quello che per qualche autore è il primo teorema, per altri è il secondo,
+      e così per gli altri.
+      Per questo motivo non daremo loro un nome specifico.
     </p>
 
     <theorem xml:id="thm-isomorfismo_quoziente_sul_nucleo">
       <statement>
         <p>
-          Sia <m>\phi\colon G\to H</m> un omomorfismo di gruppi. Allora <m>\im\phi\simeq G/\ker\phi</m>.
+          Sia <m>\phi\colon G\to H</m> un omomorfismo di gruppi.
+          Allora <m>\im\phi\simeq G/\ker\phi</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Dalla <xref ref="prop-controimmagini_omomorfismo"/>, sappiamo che, dati due elementi <m>x</m> e <m>y</m> in <m>G</m>, risulta <m>x\phi=y\phi</m> se e solo se <m>x\ker\phi=y\ker\phi</m>. Dunque, possiamo definire una funzione <m>\psi\colon G/\ker\phi\to \im\phi</m> ponendo <m>(x\ker\phi)\psi\coloneqq x\phi</m> e questa funzione è iniettiva. Questa funzione è anche, evidentemente, suriettiva. Rimane da mostrare che è un omomorfismo, ma anche questo è immediato, infatti, per ogni <m>x\ker\phi</m> e <m>y\ker\phi</m> in <m>G/\ker\phi</m> risulta
+          Dalla <xref ref="prop-controimmagini_omomorfismo"/>, sappiamo che,
+          dati due elementi <m>x</m> e <m>y</m> in <m>G</m>, risulta
+          <m>x\phi=y\phi</m> se e solo se <m>x\ker\phi=y\ker\phi</m>.
+          Dunque, possiamo definire una funzione
+          <m>\psi\colon G/\ker\phi\to \im\phi</m> ponendo
+          <m>(x\ker\phi)\psi\coloneqq x\phi</m> e questa funzione è iniettiva.
+          Questa funzione è anche, evidentemente, suriettiva.
+          Rimane da mostrare che è un omomorfismo, ma anche questo è immediato,
+          infatti, per ogni <m>x\ker\phi</m> e <m>y\ker\phi</m> in
+          <m>G/\ker\phi</m> risulta
           <md>
             (x\ker\phi\cdot y\ker\phi)\psi=(xy\ker\phi)\psi=(xy)\phi=x\phi\cdot y\phi =(x\ker\phi)\psi\cdot (y\ker\phi)\psi
           </md>.
         </p>
       </proof>
-
     </theorem>
 
     <theorem xml:id="thm-quoziente_su_intersezione">
       <statement>
         <p>
-          Sia <m>G</m> un gruppo e siano <m>H</m> e <m>N</m> due sottogruppi di <m>G</m>, tali che <m>N</m> è normale in <m>G</m>. Allora <m>H\cap N</m> è normale in <m>H</m> e
+          Sia <m>G</m> un gruppo e siano <m>H</m> e <m>N</m> due sottogruppi di
+          <m>G</m>, tali che <m>N</m> è normale in <m>G</m>.
+          Allora <m>H\cap N</m> è normale in <m>H</m> e
           <md>
             \frac{HN}{N}\simeq\frac{H}{H\cap N}
           </md>.
@@ -550,30 +871,49 @@
 
       <proof>
         <p>
-          Per la <xref ref="prop-prodotto_di_normale"/>, <m>HN</m> è un sottogruppo di <m>G</m>: poiché <m>N</m> è normale in <m>G</m>, a maggior ragione è normale in <m>HN</m>. Consideriamo ora l'omomorfismo di inclusione di <m>H</m> in <m>HN</m> e l'omomorfismo canonico da <m>HN</m> su <m>HN/N</m>: la loro composizione è, quindi, l'omomorfismo <m>\phi\colon H\to HN/N</m> così definito
+          Per la <xref ref="prop-prodotto_di_normale"/>, <m>HN</m> è un
+          sottogruppo di <m>G</m>: poiché <m>N</m> è normale in <m>G</m>, a
+          maggior ragione è normale in <m>HN</m>.
+          Consideriamo ora l'omomorfismo di inclusione di <m>H</m> in <m>HN</m>
+          e l'omomorfismo canonico da <m>HN</m> su <m>HN/N</m>: la loro
+          composizione è, quindi, l'omomorfismo <m>\phi\colon H\to HN/N</m> così
+          definito
           <md>
             h\phi\coloneqq hN
           </md>.
-          Questo omomorfismo è suriettivo: infatti, un elemento generico di <m>HN/N</m> è del tipo <m>hnN</m> con <m>h\in H</m> e <m>n\in N</m>, ma <m>hn\in hN</m>, cioè <m>hnN=hN=h\phi</m>.
+          Questo omomorfismo è suriettivo: infatti, un elemento generico di
+          <m>HN/N</m> è del tipo <m>hnN</m> con <m>h\in H</m> e <m>n\in N</m>,
+          ma <m>hn\in hN</m>, cioè <m>hnN=hN=h\phi</m>.
         </p>
+
         <p>
-          Il nucleo di <m>\phi</m> è dato dagli elementi <m>h\in H</m> tali che <m>h\phi</m>, cioè <m>hN</m>, è uguale all'elemento neutro di <m>HN/N</m>, cioè <m>N</m>. Dunque
+          Il nucleo di <m>\phi</m> è dato dagli elementi <m>h\in H</m> tali che
+          <m>h\phi</m>, cioè <m>hN</m>, è uguale all'elemento neutro di
+          <m>HN/N</m>, cioè <m>N</m>.
+          Dunque
           <md>
             \ker\phi=\{h\in H\mid hN=N\}=\{h\in H\mid h\in N\}=H\cap N
           </md>.
-          Per il <xref ref="cor-nucleo_normale"/>, <m>H\cap N\trianglelefteq H</m> e, per il <xref ref="thm-isomorfismo_quoziente_sul_nucleo"/>,
+          Per il <xref ref="cor-nucleo_normale"/>,
+          <m>H\cap N\trianglelefteq H</m> e, per il
+          <xref ref="thm-isomorfismo_quoziente_sul_nucleo"/>,
           <md>
             \frac{H}{H\cap N}=\frac{H}{\ker\phi}\simeq\im\phi=\frac{HN}{N}
           </md>.
         </p>
       </proof>
-
     </theorem>
 
     <theorem xml:id="thm-sottogruppi_quoziente">
       <statement>
         <p>
-          Sia <m>G</m> un gruppo e sia <m>N</m> un suo sottogruppo normale. I sottogruppi di <m>G/N</m> sono i quozienti del tipo <m>H/N</m> con <m>H</m> sottogruppo di <m>G</m> contenente <m>N</m>. Inoltre <m>H/N\le K/N</m> se e solo se <m>H\le K</m> (in particolare, <m>H/N=K/N</m> se e solo se <m>H=K</m>). Un sottogruppo <m>H/N</m> di <m>G/N</m> è normale in <m>G/N</m> se e solo se <m>H\trianglelefteq G</m>: in tal caso
+          Sia <m>G</m> un gruppo e sia <m>N</m> un suo sottogruppo normale.
+          I sottogruppi di <m>G/N</m> sono i quozienti del tipo <m>H/N</m> con
+          <m>H</m> sottogruppo di <m>G</m> contenente <m>N</m>.
+          Inoltre <m>H/N\le K/N</m> se e solo se <m>H\le K</m> (in particolare,
+          <m>H/N=K/N</m> se e solo se <m>H=K</m> ).
+          Un sottogruppo <m>H/N</m> di <m>G/N</m> è normale in <m>G/N</m> se e
+          solo se <m>H\trianglelefteq G</m>: in tal caso
           <md>
             \frac{G/N}{H/N}\simeq \frac{G}{H}
           </md>.
@@ -582,43 +922,74 @@
 
       <proof>
         <p>
-          Consideriamo l'omomorfismo canonico <m>\phi</m> da <m>G</m> su <m>G/N</m>. Per il <xref ref="cor-corrispondenza_immagini_dirette_inverse_sottogruppi"/> c'è una biiezione tra i sottogruppi di <m>G</m> contenenti <m>\ker\phi</m> e i sottogruppi di <m>G/N</m> contenuti in <m>\im\phi</m>: in vista della <xref ref="prop-omomorfismo_canonico"/>, ciò significa che abbiamo una biiezione tra i sottogruppi di <m>G</m> contenenti <m>N</m> e i sottogruppi di <m>G/N</m> e questa biiezione è precisamente quella che manda un sottogruppo <m>H</m> di <m>G</m> contenente <m>N</m> nel quoziente <m>H/N</m>.
+          Consideriamo l'omomorfismo canonico <m>\phi</m> da <m>G</m> su
+          <m>G/N</m>.
+          Per il
+          <xref ref="cor-corrispondenza_immagini_dirette_inverse_sottogruppi"/>
+          c'è una biiezione tra i sottogruppi di <m>G</m> contenenti
+          <m>\ker\phi</m> e i sottogruppi di <m>G/N</m> contenuti in
+          <m>\im\phi</m>: in vista della
+          <xref ref="prop-omomorfismo_canonico"/>, ciò significa che abbiamo una
+          biiezione tra i sottogruppi di <m>G</m> contenenti <m>N</m> e i
+          sottogruppi di <m>G/N</m> e questa biiezione è precisamente quella che
+          manda un sottogruppo <m>H</m> di <m>G</m> contenente <m>N</m> nel
+          quoziente <m>H/N</m>.
         </p>
+
         <p>
-          Consideriamo un sottogruppo <m>H/N</m> di <m>G/N</m>: ora <m>H/N</m> è normale in <m>G/N</m> se e solo se per ogni <m>hN\in H/N</m> e ogni <m>gN\in G/N</m> risulta <m>hN^{gN}\in H/N</m>. Ma
+          Consideriamo un sottogruppo <m>H/N</m> di <m>G/N</m>: ora <m>H/N</m> è
+          normale in <m>G/N</m> se e solo se per ogni <m>hN\in H/N</m> e ogni
+          <m>gN\in G/N</m> risulta <m>hN^{gN}\in H/N</m>.
+          Ma
           <md>
             hN^{gN}=(gN)^{-1}\cdot hN\cdot gN=g^{-1}N\cdot hN\cdot gN=g^{-1}hgN=h^{g}N
           </md>:
-          dunque, <m>hN^{gN}\in H/N</m> se e solo se <m>h^{g}\in H</m>. Ma allora, <m>H/N\trianglelefteq G/N</m> se e solo se <m>H\trianglelefteq G</m>. In tal caso, definiamo una funzione <m>\psi\colon G/N\to G/H</m> ponendo
+          dunque, <m>hN^{gN}\in H/N</m> se e solo se <m>h^{g}\in H</m>.
+          Ma allora, <m>H/N\trianglelefteq G/N</m> se e solo se
+          <m>H\trianglelefteq G</m>.
+          In tal caso, definiamo una funzione <m>\psi\colon G/N\to G/H</m>
+          ponendo
           <md>
             gN\psi\coloneqq gH
           </md>.
-          Mostriamo innanzitutto che <m>\psi</m> è ben definita: infatti, se <m>gN=g'N</m>, allora <m>g'=gn</m> per qualche <m>n\in N</m>. Ma <m>N\le H</m>, e, dunque, <m>n\in H</m> e <m>g'\in gH</m>, cioè <m>gH=g'H</m>, come richiesto.
+          Mostriamo innanzitutto che <m>\psi</m> è ben definita: infatti, se
+          <m>gN=g'N</m>, allora <m>g'=gn</m> per qualche <m>n\in N</m>.
+          Ma <m>N\le H</m>, e, dunque, <m>n\in H</m> e <m>g'\in gH</m>, cioè
+          <m>gH=g'H</m>, come richiesto.
         </p>
+
         <p>
-          La funzione <m>\psi</m> è un omomorfismo. Infatti
+          La funzione <m>\psi</m> è un omomorfismo.
+          Infatti
           <md>
             (g_{1}N\cdot g_{2}N)\psi=(g_{1}g_{2}N)\psi=g_{1}g_{2}H=g_{1}H\cdot g_{2}H=g_{1}N\psi\cdot g_{2}N\psi
           </md>.
-          La funzione <m>\psi</m> è evidentemente suriettiva: infatti, se <m>gH</m> è un generico elemento di <m>G/H</m>, per definizione di <m>\psi</m> risulta <m>gN\psi=gH</m>. Il nucleo di <m>\psi</m> è formato dagli elementi <m>gN</m> di <m>G/N</m>, tali che <m>gH</m> è l'elemento neutro di <m>G/H</m>, cioè l'elemento <m>H</m>: dunque
+          La funzione <m>\psi</m> è evidentemente suriettiva: infatti, se
+          <m>gH</m> è un generico elemento di <m>G/H</m>, per definizione di
+          <m>\psi</m> risulta <m>gN\psi=gH</m>.
+          Il nucleo di <m>\psi</m> è formato dagli elementi <m>gN</m> di
+          <m>G/N</m>, tali che <m>gH</m> è l'elemento neutro di <m>G/H</m>, cioè
+          l'elemento <m>H</m>: dunque
           <md>
             \ker\psi=\{gN\in G/N\mid gH=H\}=\{gN\in G/N\mid g\in H\}=H/N
           </md>.
-          Applicando il <xref ref="thm-isomorfismo_quoziente_sul_nucleo"/> otteniamo allora che
+          Applicando il <xref ref="thm-isomorfismo_quoziente_sul_nucleo"/>
+          otteniamo allora che
           <md>
             \frac{G/N}{H/N}=\frac{G/N}{\ker\psi}\simeq \im\psi=\frac{G}{H}
           </md>.
         </p>
       </proof>
-
     </theorem>
 
     <exercises xml:id="exercises-teoremi_di_isomorfismo">
-
       <exercise>
         <statement>
           <p>
-            Sia <m>N</m> un sottogruppo normale di un gruppo <m>G</m> e sia <m>H</m> un sottogruppo di <m>G</m>. Dimostrare che l'immagine di <m>H</m> tramite l'omomorfismo canonico da <m>G</m> in <m>G/N</m> è <m>HN/N</m>.
+            Sia <m>N</m> un sottogruppo normale di un gruppo <m>G</m> e sia
+            <m>H</m> un sottogruppo di <m>G</m>.
+            Dimostrare che l'immagine di <m>H</m> tramite l'omomorfismo canonico
+            da <m>G</m> in <m>G/N</m> è <m>HN/N</m>.
           </p>
         </statement>
       </exercise>
@@ -626,46 +997,83 @@
       <exercise xml:id="exercise-omomorfismi_da_sym_3_in_C_4">
         <statement>
           <p>
-            Determinare tutti gli omomorfismi da <m>\Sym_{3}</m> in <m>C_{4}</m>.
+            Determinare tutti gli omomorfismi da <m>\Sym_{3}</m> in
+            <m>C_{4}</m>.
           </p>
         </statement>
 
         <solution>
           <p>
-            Sappiamo che i possibili nuclei degli omomorfismi cercati sono i sottogruppi normali di <m>\Sym_{3}</m>. Dall'<xref ref="ex-sottogruppi_normali_simmetrico"/>, sappiamo che i sottogruppi normali di <m>\Sym_{3}</m> sono <m>\Id</m>, <m>A_{3}</m> e <m>\Sym_{3}</m>.
+            Sappiamo che i possibili nuclei degli omomorfismi cercati sono i
+            sottogruppi normali di <m>\Sym_{3}</m>.
+            Dall' <xref ref="ex-sottogruppi_normali_simmetrico"/>, sappiamo che
+            i sottogruppi normali di <m>\Sym_{3}</m> sono <m>\Id</m>,
+            <m>A_{3}</m> e <m>\Sym_{3}</m>.
           </p>
+
           <p>
-            Dato un omomorfismo <m>\phi\colon\Sym_{3}\to C_{4}</m>, per il <xref ref="thm-isomorfismo_quoziente_sul_nucleo"/>, abbiamo che <m>\Sym_{3}/\ker\phi\simeq\im\phi</m>.
+            Dato un omomorfismo <m>\phi\colon\Sym_{3}\to C_{4}</m>, per il
+            <xref ref="thm-isomorfismo_quoziente_sul_nucleo"/>, abbiamo che
+            <m>\Sym_{3}/\ker\phi\simeq\im\phi</m>.
           </p>
+
           <p>
-            Il quoziente <m>\Sym_{3}/\Id</m> è isomorfo a <m>\Sym_{3}</m>: poiché <m>\Sym_{3}</m> ha ordine <m>6</m> e <m>C_{4}</m> ha ordine <m>4</m> non c'è alcun omomorfismo da <m>\Sym_{3}</m> in <m>C_{4}</m> di nucleo <m>1</m>.
+            Il quoziente <m>\Sym_{3}/\Id</m> è isomorfo a <m>\Sym_{3}</m>:
+            poiché <m>\Sym_{3}</m> ha ordine <m>6</m> e <m>C_{4}</m> ha ordine
+            <m>4</m> non c'è alcun omomorfismo da <m>\Sym_{3}</m> in
+            <m>C_{4}</m> di nucleo <m>1</m>.
           </p>
+
           <p>
-            Il quoziente <m>\Sym_{3}/\Sym_{3}</m> è il gruppo banale <m>\Id</m>. In corrispondenza abbiamo l'omomorfismo banale.
+            Il quoziente <m>\Sym_{3}/\Sym_{3}</m> è il gruppo banale <m>\Id</m>.
+            In corrispondenza abbiamo l'omomorfismo banale.
           </p>
+
           <p>
-            Il quoziente <m>\Sym_{3}/A_{3}</m> ha ordine <m>2</m> ed è quindi ciclico: i suoi elementi sono <m>A_{3}</m> e <m>(12)A_{3}</m>. Detto <m>c</m> un generatore di <m>C_{4}</m>, esso contiene un unico sottogruppo (necessariamente ciclico) di ordine <m>2</m>: il sottogruppo generato da <m>c^{2}</m>. Un omomorfismo da <m>\Sym_{3}</m> in <m>C_{4}</m> di nucleo <m>A_{3}</m> si fattorizza allora come la composizione dell'omomorfismo canonico da <m>\Sym_{3}</m> su <m>\Sym_{3}/A_{3}</m>, di un isomorfismo tra <m>\Sym_{3}/A_{3}</m> e <m>\grgen{c^{2}}</m> e dell'inclusione di <m>\grgen{c^{2}}</m> in <m>C_{4}</m>. C'è un solo isomorfismo tra <m>\Sym_{3}/A_{3}</m> e <m>\grgen{c^{2}}</m>: quello che manda il generatore nel generatore. Dunque, esiste un unico omomorfismo <m>\Sym_{3}</m> in <m>C_{4}</m> di nucleo <m>A_{3}</m>: quello che manda tutti gli elementi di <m>A_{3}</m> in <m>1</m> e tutti gli altri elementi in <m>c^{2}</m>.
+            Il quoziente <m>\Sym_{3}/A_{3}</m> ha ordine <m>2</m> ed è quindi
+            ciclico: i suoi elementi sono <m>A_{3}</m> e <m>(12)A_{3}</m>.
+            Detto <m>c</m> un generatore di <m>C_{4}</m>, esso contiene un unico
+            sottogruppo (necessariamente ciclico) di ordine <m>2</m>: il
+            sottogruppo generato da <m>c^{2}</m>.
+            Un omomorfismo da <m>\Sym_{3}</m> in <m>C_{4}</m> di nucleo
+            <m>A_{3}</m> si fattorizza allora come la composizione
+            dell'omomorfismo canonico da <m>\Sym_{3}</m> su
+            <m>\Sym_{3}/A_{3}</m>, di un isomorfismo tra <m>\Sym_{3}/A_{3}</m> e
+            <m>\grgen{c^{2}}</m> e dell'inclusione di <m>\grgen{c^{2}}</m> in
+            <m>C_{4}</m>.
+            C'è un solo isomorfismo tra <m>\Sym_{3}/A_{3}</m> e
+            <m>\grgen{c^{2}}</m>: quello che manda il generatore nel generatore.
+            Dunque, esiste un unico omomorfismo <m>\Sym_{3}</m> in <m>C_{4}</m>
+            di nucleo <m>A_{3}</m>: quello che manda tutti gli elementi di
+            <m>A_{3}</m> in <m>1</m> e tutti gli altri elementi in <m>c^{2}</m>.
           </p>
         </solution>
-
       </exercise>
 
       <exercise>
         <statement>
           <p>
-            Sia <m>N</m> un sottogruppo normale di un gruppo <m>G</m> tale che <m>G/N</m> è abeliano. Mostrare che, per ogni sottogruppo <m>K</m> di <m>G</m>, il prodotto <m>KN</m> è un sottogruppo normale di <m>G</m>.
+            Sia <m>N</m> un sottogruppo normale di un gruppo <m>G</m> tale che
+            <m>G/N</m> è abeliano.
+            Mostrare che, per ogni sottogruppo <m>K</m> di <m>G</m>, il prodotto
+            <m>KN</m> è un sottogruppo normale di <m>G</m>.
           </p>
         </statement>
 
         <solution>
           <p>
-            Poiché <m>N</m> è normale in <m>G</m>, il prodotto <m>KN</m> è un sottogruppo di <m>G</m>, per la <xref ref="prop-prodotto_di_normale"/>. Chiaramente <m>KN</m> contiene <m>N</m>; dunque, per il <xref ref="thm-sottogruppi_quoziente"/> è un sottogruppo di <m>G/N</m>. Dal momento che <m>G/N</m> è abeliano, <m>KN/N</m> è normale in <m>G/N</m> e, sempre per il <xref ref="thm-sottogruppi_quoziente"/>, segue che <m>KN</m> è normale in <m>G</m>.
+            Poiché <m>N</m> è normale in <m>G</m>, il prodotto <m>KN</m> è un
+            sottogruppo di <m>G</m>, per la
+            <xref ref="prop-prodotto_di_normale"/>.
+            Chiaramente <m>KN</m> contiene <m>N</m>; dunque, per il
+            <xref ref="thm-sottogruppi_quoziente"/> è un sottogruppo di
+            <m>G/N</m>.
+            Dal momento che <m>G/N</m> è abeliano, <m>KN/N</m> è normale in
+            <m>G/N</m> e, sempre per il <xref ref="thm-sottogruppi_quoziente"/>,
+            segue che <m>KN</m> è normale in <m>G</m>.
           </p>
         </solution>
       </exercise>
-
     </exercises>
-
   </section>
-
 </chapter>

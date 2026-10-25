@@ -5,7 +5,14 @@
 
   <introduction>
     <p>
-      Finora abbiamo approfondito lo studio di strutture algebriche dotate di una singola operazione, anche se abbiamo già incontrato esempi di insiemi dotati di due operazioni legate da proprietà distributive: gli interi, i razionali, i reali, le classi di resto, le matrici, <etc /> e abbiamo già usato, sia pure informalmente, il termine di anello. Vogliamo ora introdurre questa nozione in maniera più precisa. Come vedremo, alcuni dei risultati e concetti validi per i gruppi avranno un'immediata traduzione nell'ambito degli anelli.
+      Finora abbiamo approfondito lo studio di strutture algebriche dotate di
+      una singola operazione, anche se abbiamo già incontrato esempi di insiemi
+      dotati di due operazioni legate da proprietà distributive: gli interi, i
+      razionali, i reali, le classi di resto, le matrici, <etc/> e abbiamo già
+      usato, sia pure informalmente, il termine di anello.
+      Vogliamo ora introdurre questa nozione in maniera più precisa.
+      Come vedremo, alcuni dei risultati e concetti validi per i gruppi avranno
+      un'immediata traduzione nell'ambito degli anelli.
     </p>
   </introduction>
 
@@ -17,59 +24,85 @@
       <idx><h>anello</h><h>commutativo</h></idx>
       <statement>
         <p>
-          Un <term>anello</term> è un insieme <m>R</m> in cui sono definite un'operazione di addizione <m>+</m> e un'operazione di moltiplicazione <m>\cdot</m> tali che
+          Un <term>anello</term> è un insieme <m>R</m> in cui sono definite
+          un'operazione di addizione <m>+</m> e un'operazione di moltiplicazione
+          <m>\cdot</m> tali che
           <ul>
             <li>
               <p>
-                <m>(R,+)</m> è un gruppo abeliano il cui elemento neutro denotiamo con <m>0</m>;
+                <m>(R,+)</m> è un gruppo abeliano il cui elemento neutro
+                denotiamo con <m>0</m>;
               </p>
             </li>
+
             <li>
               <p>
-                <m>(R,\cdot)</m> è un monoide il cui elemento neutro denotiamo con <m>1</m>;
+                <m>(R,\cdot)</m> è un monoide il cui elemento neutro denotiamo
+                con <m>1</m>;
               </p>
             </li>
+
             <li>
               <p>
-                <m>(a+b)c=ac+bc</m> per ogni <m>a</m>, <m>b</m> e <m>c</m> in <m>R</m>;
+                <m>(a+b)c=ac+bc</m> per ogni <m>a</m>, <m>b</m> e <m>c</m> in
+                <m>R</m>;
               </p>
             </li>
+
             <li>
               <p>
-                <m>a(b+c)=ab+ac</m> per ogni <m>a</m>, <m>b</m> e <m>c</m> in <m>R</m>.
+                <m>a(b+c)=ab+ac</m> per ogni <m>a</m>, <m>b</m> e <m>c</m> in
+                <m>R</m>.
               </p>
             </li>
           </ul>
-          Nel caso in cui la moltiplicazione è commutativa, diremo che l'anello è <term>commutativo</term>.
+          Nel caso in cui la moltiplicazione è commutativa, diremo che l'anello
+          è <term>commutativo</term>.
         </p>
       </statement>
     </definition>
 
     <note>
       <p>
-        Nelle ultime due richieste della definizione di anello, dette <term>proprietà distributive</term>, abbiamo usato delle regole di precedenza modellate su quelle delle operazioni tra numeri. Abbiamo così potuto scrivere <m>ac+bc</m> invece di <m>(ac)+(bc)</m>.
+        Nelle ultime due richieste della definizione di anello, dette
+        <term>proprietà distributive</term>, abbiamo usato delle regole di
+        precedenza modellate su quelle delle operazioni tra numeri.
+        Abbiamo così potuto scrivere <m>ac+bc</m> invece di <m>(ac)+(bc)</m>.
       </p>
     </note>
 
     <note>
       <p>
-        Alcuni autori non richiedono nella definizione di anello che esista l'elemento neutro rispetto alla moltiplicazione.
+        Alcuni autori non richiedono nella definizione di anello che esista
+        l'elemento neutro rispetto alla moltiplicazione.
       </p>
     </note>
 
     <remark xml:id="rem-distributive_indipendenti">
       <p>
-        Le due proprietà distributive sono indipendenti: per verificare che un certo insieme con operazioni date è un anello, occorre dimostrarle entrambe. Nell'<xref ref="exercise-solo_una_distributiva"/> mostreremo una struttura che soddisfa tutte le proprietà che definiscono un anello tranne una delle due distributive. Ovviamente, quando la moltiplicazione è commutativa, se vale una delle due proprietà distributive, vale automaticamente anche l'altra.
+        Le due proprietà distributive sono indipendenti: per verificare che un
+        certo insieme con operazioni date è un anello, occorre dimostrarle
+        entrambe.
+        Nell' <xref ref="exercise-solo_una_distributiva"/> mostreremo una
+        struttura che soddisfa tutte le proprietà che definiscono un anello
+        tranne una delle due distributive.
+        Ovviamente, quando la moltiplicazione è commutativa, se vale una delle
+        due proprietà distributive, vale automaticamente anche l'altra.
       </p>
     </remark>
 
     <example>
       <statement>
         <p>
-          Gli insiemi <m>\Interi</m>, <m>\Razionali</m>, <m>\Reali</m> e <m>\Complessi</m> sono anelli commutativi rispetto alle usuali operazioni di addizione e moltiplicazione.
+          Gli insiemi <m>\Interi</m>, <m>\Razionali</m>, <m>\Reali</m> e
+          <m>\Complessi</m> sono anelli commutativi rispetto alle usuali
+          operazioni di addizione e moltiplicazione.
         </p>
+
         <p>
-          L'insieme <m>\Interi/n</m> è un anello commutativo rispetto all'addizione e alla moltiplicazione definite nel <xref ref="ch-classidiresto"/>.
+          L'insieme <m>\Interi/n</m> è un anello commutativo rispetto
+          all'addizione e alla moltiplicazione definite nel
+          <xref ref="ch-classidiresto"/>.
         </p>
       </statement>
     </example>
@@ -77,7 +110,9 @@
     <example>
       <statement>
         <p>
-          L'insieme <m>\Naturali</m> non è un anello rispetto alle usuali operazioni di addizione e moltiplicazione: infatti, soddisfa tutte le proprietà tranne l'esistenza dell'opposto per ciascun elemento.
+          L'insieme <m>\Naturali</m> non è un anello rispetto alle usuali
+          operazioni di addizione e moltiplicazione: infatti, soddisfa tutte le
+          proprietà tranne l'esistenza dell'opposto per ciascun elemento.
         </p>
       </statement>
     </example>
@@ -85,7 +120,11 @@
     <example>
       <statement>
         <p>
-          L'insieme delle matrici quadrate <m>\mat{n}{R}</m> a <m>n</m> righe e <m>n</m> colonne a coefficienti in un anello <m>R</m> è un anello rispetto all'addizione e alla moltiplicazione riga per colonna. A meno che <m>n=1</m> e l'anello <m>R</m> sia commutativo, questo anello è non commutativo.
+          L'insieme delle matrici quadrate <m>\mat{n}{R}</m> a <m>n</m> righe e
+          <m>n</m> colonne a coefficienti in un anello <m>R</m> è un anello
+          rispetto all'addizione e alla moltiplicazione riga per colonna.
+          A meno che <m>n=1</m> e l'anello <m>R</m> sia commutativo, questo
+          anello è non commutativo.
         </p>
       </statement>
     </example>
@@ -93,74 +132,112 @@
     <example>
       <statement>
         <p>
-          Se <m>R</m> è un insieme formato da un singolo elemento <m>a</m>, possiamo definire in esso due operazioni nell'unico modo possibile: <m>a+a\coloneqq a</m> e <m>a\cdot a\coloneqq a</m>. Si verifica facilmente che con queste operazioni <m>R</m> è un anello, detto <term>banale</term>. In questo caso <m>a</m> è, ovviamente, elemento neutro sia rispetto all'addizione che alla moltiplicazione, cioè <m>1=0</m>: come vedremo, questo è l'unico caso in cui ciò accade.
+          Se <m>R</m> è un insieme formato da un singolo elemento <m>a</m>,
+          possiamo definire in esso due operazioni nell'unico modo possibile:
+          <m>a+a\coloneqq a</m> e <m>a\cdot a\coloneqq a</m>.
+          Si verifica facilmente che con queste operazioni <m>R</m> è un anello,
+          detto <term>banale</term>.
+          In questo caso <m>a</m> è, ovviamente, elemento neutro sia rispetto
+          all'addizione che alla moltiplicazione, cioè <m>1=0</m>: come vedremo,
+          questo è l'unico caso in cui ciò accade.
         </p>
       </statement>
     </example>
 
     <remark xml:id="rem-anello_gruppo_monoide">
       <p>
-        Poiché un anello <m>R</m> è, in particolare, un gruppo rispetto all'addizione e un monoide rispetto alla moltiplicazione, potremo assumere e utilizzare tutte le proprietà e la terminologia che si usa in questi casi. In particolare, diremo che un elemento è invertibile se è invertibile rispetto alla moltiplicazione, che due elementi commutano se commutano rispetto alla moltiplicazione (visto che rispetto all'addizione commutano per definizione, non c'è bisogno di specificarlo).
+        Poiché un anello <m>R</m> è, in particolare, un gruppo rispetto
+        all'addizione e un monoide rispetto alla moltiplicazione, potremo
+        assumere e utilizzare tutte le proprietà e la terminologia che si usa in
+        questi casi.
+        In particolare, diremo che un elemento è invertibile se è invertibile
+        rispetto alla moltiplicazione, che due elementi commutano se commutano
+        rispetto alla moltiplicazione (visto che rispetto all'addizione
+        commutano per definizione, non c'è bisogno di specificarlo).
       </p>
     </remark>
 
     <proposition xml:id="prop-zero_assorbente">
       <statement>
         <p>
-          Sia <m>R</m> un anello. Per ogni <m>a</m> in <m>R</m> risulta <m>a0=0</m> e <m>0a=0</m>.
+          Sia <m>R</m> un anello.
+          Per ogni <m>a</m> in <m>R</m> risulta <m>a0=0</m> e <m>0a=0</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          La dimostrazione è pressoché identica a quella con cui avevamo dimostrato l'analoga proprietà per le classi di resto (<xref ref="cor-classe_zero_assorbente"/>).
+          La dimostrazione è pressoché identica a quella con cui avevamo
+          dimostrato l'analoga proprietà per le classi di resto (
+          <xref ref="cor-classe_zero_assorbente"/> ).
         </p>
+
         <p>
-          Poiché <m>0</m> è elemento neutro per l'addizione, sappiamo che <m>0+0=0</m>: moltiplicando a sinistra ambo i membri per <m>a</m> otteniamo <m>a(0+0)=a0</m> che, per la proprietà distributiva, dà  <m>a0+a0=a0</m>. Usando ancora una volta il fatto che <m>0</m> è elemento neutro, otteniamo <m>a0+a0=a0+0</m> da cui segue la tesi, grazie alle <xref ref="prop-cancellazione_gruppo" text="title"/>.
+          Poiché <m>0</m> è elemento neutro per l'addizione, sappiamo che
+          <m>0+0=0</m>: moltiplicando a sinistra ambo i membri per <m>a</m>
+          otteniamo <m>a(0+0)=a0</m> che, per la proprietà distributiva, dà
+          <m>a0+a0=a0</m>.
+          Usando ancora una volta il fatto che <m>0</m> è elemento neutro,
+          otteniamo <m>a0+a0=a0+0</m> da cui segue la tesi, grazie alle
+          <xref ref="prop-cancellazione_gruppo" text="title"/>.
         </p>
+
         <p>
           Analogamente, si prova che <m>0a=0</m>.
         </p>
       </proof>
-
     </proposition>
 
     <corollary xml:id="cor-0ne1">
       <statement>
         <p>
-          Se <m>R</m> è un anello con almeno due elementi, allora <m>0\ne 1</m>. Inoltre <m>0</m> non è invertibile (in particolare, <m>R</m> non è un gruppo rispetto alla moltiplicazione).
+          Se <m>R</m> è un anello con almeno due elementi, allora <m>0\ne 1</m>.
+          Inoltre <m>0</m> non è invertibile (in particolare, <m>R</m> non è un
+          gruppo rispetto alla moltiplicazione).
         </p>
       </statement>
 
       <proof>
         <p>
-          Poiché <m>R</m> ha più di un elemento, esiste <m>a</m> in <m>R</m> con <m>a\ne 0</m>. Per la <xref ref="prop-zero_assorbente"/>, abbiamo allora <m>a0=0</m>, mentre dalla definizione di anello segue che <m>a1=a</m>. Se fosse <m>0=1</m>, dovrebbe essere <m>a0=a1</m>. Il fatto che <m>0</m> non sia invertibile segue poi dal fatto che dovrebbe esistere <m>b</m> in <m>R</m> tale che <m>0b=1</m>, ma <m>0b=0\ne 1</m> per ogni <m>b</m> in <m>R</m>.
+          Poiché <m>R</m> ha più di un elemento, esiste <m>a</m> in <m>R</m> con
+          <m>a\ne 0</m>.
+          Per la <xref ref="prop-zero_assorbente"/>, abbiamo allora <m>a0=0</m>,
+          mentre dalla definizione di anello segue che <m>a1=a</m>.
+          Se fosse <m>0=1</m>, dovrebbe essere <m>a0=a1</m>.
+          Il fatto che <m>0</m> non sia invertibile segue poi dal fatto che
+          dovrebbe esistere <m>b</m> in <m>R</m> tale che <m>0b=1</m>, ma
+          <m>0b=0\ne 1</m> per ogni <m>b</m> in <m>R</m>.
         </p>
       </proof>
-
     </corollary>
 
     <note>
       <p>
-        Nel seguito, quando parleremo di un anello, assumeremo implicitamente che sia non banale e che quindi, <m>0\ne 1</m>.
+        Nel seguito, quando parleremo di un anello, assumeremo implicitamente
+        che sia non banale e che quindi, <m>0\ne 1</m>.
       </p>
     </note>
 
     <proposition xml:id="prop-moltiplicazione_opposti">
       <statement>
         <p>
-          Sia <m>R</m> un anello. Abbiamo allora
+          Sia <m>R</m> un anello.
+          Abbiamo allora
           <ol>
             <li xml:id="item-prodotto_opposto">
               <p>
-                <m>a(-b)=(-a)b=-(ab)</m> per ogni <m>a</m> e <m>b</m> in <m>R</m> (e quindi scriveremo semplicemente <m>-ab</m> senza ambiguità);
+                <m>a(-b)=(-a)b=-(ab)</m> per ogni <m>a</m> e <m>b</m> in
+                <m>R</m> (e quindi scriveremo semplicemente <m>-ab</m> senza
+                ambiguità);
               </p>
             </li>
+
             <li>
               <p>
                 <m>a(-1)=(-1)a=-a</m> per ogni <m>a</m> in <m>R</m>;
               </p>
             </li>
+
             <li>
               <p>
                 <m>(-a)(-b)=ab</m> per ogni <m>a</m> e <m>b</m> in <m>R</m>.
@@ -172,45 +249,69 @@
 
       <proof>
         <p>
-          Proviamo il <xref ref="item-prodotto_opposto"/>. Per mostrare che <m>a(-b)</m> è <m>-(ab)</m>, basta provare che <m>a(-b)+ab=0</m>: ma <m>a(-b)+ab=a(-b+b)=a0=0</m> per la <xref ref="prop-zero_assorbente"/>. Analogamente, si prova che <m>(-a)b=-(ab)</m>.
+          Proviamo il <xref ref="item-prodotto_opposto"/>.
+          Per mostrare che <m>a(-b)</m> è <m>-(ab)</m>, basta provare che
+          <m>a(-b)+ab=0</m>: ma <m>a(-b)+ab=a(-b+b)=a0=0</m> per la
+          <xref ref="prop-zero_assorbente"/>.
+          Analogamente, si prova che <m>(-a)b=-(ab)</m>.
         </p>
+
         <p>
           Gli altri punti sono casi particolari del precedente.
         </p>
       </proof>
-
     </proposition>
 
     <p>
-      Quando abbiamo studiato <m>\Interi/n</m>, abbiamo mostrato che il prodotto di due elementi non nulli può essere nullo, ad esempio <m>\class[6]{2}\class[6]{3}=\class[6]{0}</m>. Ciò suggerisce la
+      Quando abbiamo studiato <m>\Interi/n</m>, abbiamo mostrato che il prodotto
+      di due elementi non nulli può essere nullo, ad esempio
+      <m>\class[6]{2}\class[6]{3}=\class[6]{0}</m>.
+      Ciò suggerisce la
     </p>
 
     <definition xml:id="def-divisori_zero">
       <statement>
         <p>
-          Sia <m>R</m> un anello. Un elemento <m>a</m> di <m>R</m> è detto <term>divisore (sinistro) dello zero</term> se esiste <m>b</m> non nullo in <m>R</m> tale che <m>ab=0</m>. Analogamente, <m>a</m> è detto <term>divisore (destro) dello zero</term> se esiste <m>b</m> non nullo in <m>R</m> tale che <m>ba=0</m>.
+          Sia <m>R</m> un anello.
+          Un elemento <m>a</m> di <m>R</m> è detto
+          <term>divisore (sinistro) dello zero</term> se esiste <m>b</m> non
+          nullo in <m>R</m> tale che <m>ab=0</m>.
+          Analogamente, <m>a</m> è detto
+          <term>divisore (destro) dello zero</term> se esiste <m>b</m> non nullo
+          in <m>R</m> tale che <m>ba=0</m>.
         </p>
       </statement>
     </definition>
 
     <remark xml:id="rem-zero_divisore_dello_zero">
       <p>
-        Per la <xref ref="prop-zero_assorbente"/>, <m>0</m> è un divisore dello zero sia destro che sinistro. In alcuni testi, si richiede che un divisore dello zero sia diverso da <m>0</m>: in tal caso l'enunciazione delle proprietà correlate va adattata di conseguenza.
+        Per la <xref ref="prop-zero_assorbente"/>, <m>0</m> è un divisore dello
+        zero sia destro che sinistro.
+        In alcuni testi, si richiede che un divisore dello zero sia diverso da
+        <m>0</m>: in tal caso l'enunciazione delle proprietà correlate va
+        adattata di conseguenza.
       </p>
     </remark>
 
     <example>
       <statement>
         <p>
-          Consideriamo le matrici <m>A\coloneqq
+          Consideriamo le matrici
+          <m>A\coloneqq
           \begin{psmallmatrix}
             0 \amp 1 \\
             0 \amp 0
-          \end{psmallmatrix}</m> e <m>B\coloneqq
+          \end{psmallmatrix}</m>
+          e
+          <m>B\coloneqq
           \begin{psmallmatrix}
             1 \amp 0 \\
             0 \amp 0
-          \end{psmallmatrix}</m> nell'anello <m>\mat{2}{\Interi}</m>. Abbiamo allora che <m>AB</m> è la matrice nulla e, dunque, <m>A</m> e <m>B</m> sono divisori dello zero. Notiamo che <m>BA\ne 0</m>.
+          \end{psmallmatrix}</m>
+          nell'anello <m>\mat{2}{\Interi}</m>.
+          Abbiamo allora che <m>AB</m> è la matrice nulla e, dunque, <m>A</m> e
+          <m>B</m> sono divisori dello zero.
+          Notiamo che <m>BA\ne 0</m>.
         </p>
       </statement>
     </example>
@@ -218,22 +319,30 @@
     <proposition xml:id="prop-invertibili_non_divisori_zero">
       <statement>
         <p>
-          Sia <m>a</m> un elemento invertibile di un anello <m>R</m>. Allora <m>a</m> non è divisore dello zero (né sinistro, né destro).
+          Sia <m>a</m> un elemento invertibile di un anello <m>R</m>.
+          Allora <m>a</m> non è divisore dello zero (né sinistro, né destro).
         </p>
       </statement>
 
       <proof>
         <p>
-          Sia <m>b</m> tale che <m>ab=0</m>. Per la <xref ref="prop-zero_assorbente"/>, abbiamo <m>a^{-1}ab=a^{-1}0=0</m>. D'altra parte, <m>a^{-1}ab=1b=b</m>, da cui segue <m>b=0</m>. Il caso in cui <m>ba=0</m> si tratta analogamente.
+          Sia <m>b</m> tale che <m>ab=0</m>.
+          Per la <xref ref="prop-zero_assorbente"/>, abbiamo
+          <m>a^{-1}ab=a^{-1}0=0</m>.
+          D'altra parte, <m>a^{-1}ab=1b=b</m>, da cui segue <m>b=0</m>.
+          Il caso in cui <m>ba=0</m> si tratta analogamente.
         </p>
       </proof>
-
     </proposition>
 
     <example>
       <statement>
         <p>
-          Abbiamo visto che gli elementi invertibili non sono divisori dello zero. Non vale però il viceversa: ad esempio, in <m>\Interi</m> tutti gli elementi non nulli non sono divisori dello zero, ma di essi solo <m>1</m> e <m>-1</m> sono invertibili.
+          Abbiamo visto che gli elementi invertibili non sono divisori dello
+          zero.
+          Non vale però il viceversa: ad esempio, in <m>\Interi</m> tutti gli
+          elementi non nulli non sono divisori dello zero, ma di essi solo
+          <m>1</m> e <m>-1</m> sono invertibili.
         </p>
       </statement>
     </example>
@@ -241,7 +350,12 @@
     <definition xml:id="def-anello_intero">
       <statement>
         <p>
-          Un anello <m>R</m> in cui non ci sono divisori dello zero non banali è detto <term>intero</term>. In altri termini, un anello è detto intero se, dati <m>a</m> e <m>b</m> non nulli in <m>R</m>, si ha che <m>ab\ne 0</m>. Un anello intero commutativo è detto <term>dominio d'integrità</term> o, più semplicemente, <term>dominio</term>.
+          Un anello <m>R</m> in cui non ci sono divisori dello zero non banali è
+          detto <term>intero</term>.
+          In altri termini, un anello è detto intero se, dati <m>a</m> e
+          <m>b</m> non nulli in <m>R</m>, si ha che <m>ab\ne 0</m>.
+          Un anello intero commutativo è detto <term>dominio d'integrità</term>
+          o, più semplicemente, <term>dominio</term>.
         </p>
       </statement>
     </definition>
@@ -249,20 +363,38 @@
     <example>
       <statement>
         <p>
-          Gli anelli <m>\Interi</m>, <m>\Razionali</m>, <m>\Reali</m>, <m>\Complessi</m> sono domini di integrità. L'anello <m>\Interi/n</m> è un dominio di integrità se e solo se <m>n</m> è primo (<xref ref="exercise-divisori_zero_classi_resto"/>).
+          Gli anelli <m>\Interi</m>, <m>\Razionali</m>, <m>\Reali</m>,
+          <m>\Complessi</m> sono domini di integrità.
+          L'anello <m>\Interi/n</m> è un dominio di integrità se e solo se
+          <m>n</m> è primo ( <xref ref="exercise-divisori_zero_classi_resto"/>
+          ).
         </p>
       </statement>
     </example>
 
     <p>
-      Poiché un anello rispetto all'addizione è un gruppo, possiamo usare la legge di cancellazione rispetto all'addizione (l'abbiamo già fatto nella dimostrazione della <xref ref="prop-zero_assorbente"/>). Rispetto alla moltiplicazione la legge di cancellazione invece non vale: se <m>b</m> e <m>c</m> sono elementi diversi di un anello <m>R</m>, per la <xref ref="prop-zero_assorbente"/> abbiamo che <m>0b=0c</m>. Non possiamo, cioè, <q>semplificare</q> lo zero. Più in generale, abbiamo la
+      Poiché un anello rispetto all'addizione è un gruppo, possiamo usare la
+      legge di cancellazione rispetto all'addizione (l'abbiamo già fatto nella
+      dimostrazione della <xref ref="prop-zero_assorbente"/> ).
+      Rispetto alla moltiplicazione la legge di cancellazione invece non vale:
+      se <m>b</m> e <m>c</m> sono elementi diversi di un anello <m>R</m>, per la
+      <xref ref="prop-zero_assorbente"/> abbiamo che <m>0b=0c</m>.
+      Non possiamo, cioè, <q>semplificare</q> lo zero.
+      Più in generale, abbiamo la
     </p>
 
     <proposition xml:id="prop-elementi_cancellabili">
       <statement>
         <p>
-          Sia <m>a</m> un elemento di un anello <m>R</m>. Se <m>a</m> è un divisore sinistro dello zero, allora esistono <m>b</m> e <m>c</m> diversi in <m>R</m> tali che <m>ab=ac</m> (cioè non possiamo semplificare <m>a</m>). Se <m>a</m> non è un divisore sinistro dello zero e <m>b</m> e <m>c</m> sono elementi di <m>R</m> tali che <m>ab=ac</m>, allora <m>b=c</m> (cioè possiamo semplificare per <m>a</m>).
+          Sia <m>a</m> un elemento di un anello <m>R</m>.
+          Se <m>a</m> è un divisore sinistro dello zero, allora esistono
+          <m>b</m> e <m>c</m> diversi in <m>R</m> tali che <m>ab=ac</m> (cioè
+          non possiamo semplificare <m>a</m> ).
+          Se <m>a</m> non è un divisore sinistro dello zero e <m>b</m> e
+          <m>c</m> sono elementi di <m>R</m> tali che <m>ab=ac</m>, allora
+          <m>b=c</m> (cioè possiamo semplificare per <m>a</m> ).
         </p>
+
         <p>
           Analoghe proprietà valgono con la moltiplicazione a destra.
         </p>
@@ -270,35 +402,48 @@
 
       <proof>
         <p>
-          Se <m>a</m> è un divisore sinistro dello zero allora esiste <m>b</m> non nullo tale che <m>ab=0</m>: possiamo allora prendere <m>c\coloneqq 0</m> e ottenere <m>ab=ac</m>.
+          Se <m>a</m> è un divisore sinistro dello zero allora esiste <m>b</m>
+          non nullo tale che <m>ab=0</m>: possiamo allora prendere
+          <m>c\coloneqq 0</m> e ottenere <m>ab=ac</m>.
         </p>
+
         <p>
-          Supponiamo ora che <m>a</m> non sia un divisore sinistro dello zero, e siano <m>b</m> e <m>c</m> elementi di <m>R</m> tali che <m>ab=ac</m>. Abbiamo allora
+          Supponiamo ora che <m>a</m> non sia un divisore sinistro dello zero, e
+          siano <m>b</m> e <m>c</m> elementi di <m>R</m> tali che <m>ab=ac</m>.
+          Abbiamo allora
           <md>
             a(b-c)=ab+a(-c)=ab-ac=0
           </md>.
-          Poiché <m>a</m> non è un divisore sinistro dello zero, ciò implica che <m>b-c=0</m>, cioè <m>b=c</m>.
+          Poiché <m>a</m> non è un divisore sinistro dello zero, ciò implica che
+          <m>b-c=0</m>, cioè <m>b=c</m>.
         </p>
       </proof>
-
     </proposition>
 
     <remark xml:id="rem-anello_intero_cancellazione">
       <p>
-        Per definizione, un anello intero non ha divisori dello zero non banali e, quindi, in esso gli elementi non nulli sono semplificabili sia a destra che a sinistra.
+        Per definizione, un anello intero non ha divisori dello zero non banali
+        e, quindi, in esso gli elementi non nulli sono semplificabili sia a
+        destra che a sinistra.
       </p>
     </remark>
 
     <remark xml:id="rem-invertibili_cancellabili">
       <p>
-        Poiché abbiamo mostrato nella <xref ref="prop-invertibili_non_divisori_zero"/> che gli elementi invertibili non sono divisori dello zero, otteniamo immediatamente che gli elementi invertibili sono semplificabili sia a destra che a sinistra.
+        Poiché abbiamo mostrato nella
+        <xref ref="prop-invertibili_non_divisori_zero"/> che gli elementi
+        invertibili non sono divisori dello zero, otteniamo immediatamente che
+        gli elementi invertibili sono semplificabili sia a destra che a
+        sinistra.
       </p>
     </remark>
 
     <definition xml:id="def-corpo_campo">
       <statement>
         <p>
-          Un anello <m>R</m> in cui ogni elemento diverso da <m>0</m> è invertibile è detto <term>corpo</term>. Un corpo commutativo è detto <term>campo</term>.
+          Un anello <m>R</m> in cui ogni elemento diverso da <m>0</m> è
+          invertibile è detto <term>corpo</term>.
+          Un corpo commutativo è detto <term>campo</term>.
         </p>
       </statement>
     </definition>
@@ -306,37 +451,52 @@
     <example xml:id="ex-campi">
       <statement>
         <p>
-          Gli anelli <m>\Razionali</m>, <m>\Reali</m>, <m>\Complessi</m> e <m>\Interi/p</m> con <m>p</m> primo sono campi.
+          Gli anelli <m>\Razionali</m>, <m>\Reali</m>, <m>\Complessi</m> e
+          <m>\Interi/p</m> con <m>p</m> primo sono campi.
         </p>
       </statement>
     </example>
 
     <p>
-      Dare un esempio di un corpo non commutativo non è immediato: lo faremo più avanti (<xref ref="ex-quaternioni"/>).
+      Dare un esempio di un corpo non commutativo non è immediato: lo faremo più
+      avanti ( <xref ref="ex-quaternioni"/> ).
     </p>
 
     <p>
-      Poiché abbiamo mostrato nella <xref ref="prop-invertibili_non_divisori_zero"/> che gli elementi invertibili non sono divisori dello zero, abbiamo immediatamente la
+      Poiché abbiamo mostrato nella
+      <xref ref="prop-invertibili_non_divisori_zero"/> che gli elementi
+      invertibili non sono divisori dello zero, abbiamo immediatamente la
     </p>
 
     <proposition xml:id="prop-corpi_interi">
       <statement>
         <p>
-          Un corpo <m>R</m> è intero (e, quindi, un campo è un dominio di integrità).
+          Un corpo <m>R</m> è intero (e, quindi, un campo è un dominio di
+          integrità).
         </p>
       </statement>
     </proposition>
 
     <exercises xml:id="exercises-prime_proprieta_anelli">
-
       <exercise xml:id="exercise-solo_una_distributiva">
         <statement>
           <p>
-            Sia <m>G</m> un gruppo abeliano non banale, scritto in notazione additiva. Sia <m>R\coloneqq G^{G}</m> l'insieme delle funzioni da <m>G</m> in sé. Si definisca un'addizione di due funzioni <m>\phi</m> e <m>\psi</m> di <m>R</m> ponendo
+            Sia <m>G</m> un gruppo abeliano non banale, scritto in notazione
+            additiva.
+            Sia <m>R\coloneqq G^{G}</m> l'insieme delle funzioni da <m>G</m> in
+            sé.
+            Si definisca un'addizione di due funzioni <m>\phi</m> e <m>\psi</m>
+            di <m>R</m> ponendo
             <md>
               g(\phi+\psi)\coloneqq g\phi+g\psi
             </md>
-            per ogni <m>g</m> in <m>G</m>. Mostrare che <m>R</m> è un gruppo abeliano rispetto all'operazione così definita. Ricordando che <m>R</m> è un monoide rispetto alla composizione (<xref ref="ex-monoide_funzioni"/>), mostrare che <m>R</m> soddisfa solo una delle proprietà distributive e, quindi, <m>R</m> non è un anello.
+            per ogni <m>g</m> in <m>G</m>.
+            Mostrare che <m>R</m> è un gruppo abeliano rispetto all'operazione
+            così definita.
+            Ricordando che <m>R</m> è un monoide rispetto alla composizione (
+            <xref ref="ex-monoide_funzioni"/> ), mostrare che <m>R</m> soddisfa
+            solo una delle proprietà distributive e, quindi, <m>R</m> non è un
+            anello.
           </p>
         </statement>
 
@@ -344,9 +504,11 @@
           <p>
             Si verifica facilmente che <m>(R,+)</m> è un gruppo abeliano.
           </p>
+
           <p>
-            Per ogni <m>g</m> in <m>G</m> e ogni <m>\phi</m>, <m>\psi</m> e <m>\theta</m> in <m>R</m> si ha che
-             <md>
+            Per ogni <m>g</m> in <m>G</m> e ogni <m>\phi</m>, <m>\psi</m> e
+            <m>\theta</m> in <m>R</m> si ha che
+            <md>
               g\phi(\psi+\theta)=g\phi\psi+g\phi\theta=g(\phi\psi+\phi\theta)
             </md>
             cioè
@@ -354,12 +516,16 @@
               \phi(\psi+\theta)=\phi\psi+\phi\theta
             </md>.
           </p>
+
           <p>
             Tuttavia non vale in generale che
             <md>
-             g(\phi+\psi)\theta=g\phi\theta+g\psi\theta
-           </md>.
-           Prendiamo, ad esempio, come <m>\theta</m> la funzione che manda ogni elemento di <m>G</m> in un elemento non nullo <m>h</m> di <m>G</m> fissato: a primo membro abbiamo <m>h</m> e a secondo membro abbiamo <m>h+h</m> (e <m>h\ne h+h</m> perché <m>h\ne 0</m>).
+              g(\phi+\psi)\theta=g\phi\theta+g\psi\theta
+            </md>.
+            Prendiamo, ad esempio, come <m>\theta</m> la funzione che manda ogni
+            elemento di <m>G</m> in un elemento non nullo <m>h</m> di <m>G</m>
+            fissato: a primo membro abbiamo <m>h</m> e a secondo membro abbiamo
+            <m>h+h</m> (e <m>h\ne h+h</m> perché <m>h\ne 0</m> ).
           </p>
         </solution>
       </exercise>
@@ -367,9 +533,12 @@
       <exercise>
         <statement>
           <p>
-            Sia <m>R</m> un anello non banale. Dimostrare che le due operazioni sono diverse cioè che esistono <m>a</m> e <m>b</m> in <m>R</m> tali che <m>a+b\ne ab</m>.
+            Sia <m>R</m> un anello non banale.
+            Dimostrare che le due operazioni sono diverse cioè che esistono
+            <m>a</m> e <m>b</m> in <m>R</m> tali che <m>a+b\ne ab</m>.
           </p>
         </statement>
+
         <solution>
           <p>
             Basta prendere <m>a=0</m> e <m>b\ne 0</m>.
@@ -380,7 +549,12 @@
       <exercise>
         <statement>
           <p>
-            Dato un gruppo abeliano <m>G</m> scritto in notazione additiva, si  definiscano in <m>\End(G)</m> delle operazioni di addizione e moltiplicazione come nell'<xref ref="exercise-solo_una_distributiva"/>. Verificare che rispetto a queste operazioni, <m>\End(G)</m> è un anello.
+            Dato un gruppo abeliano <m>G</m> scritto in notazione additiva, si
+            definiscano in <m>\End(G)</m> delle operazioni di addizione e
+            moltiplicazione come nell'
+            <xref ref="exercise-solo_una_distributiva"/>.
+            Verificare che rispetto a queste operazioni, <m>\End(G)</m> è un
+            anello.
           </p>
         </statement>
       </exercise>
@@ -388,11 +562,15 @@
       <exercise>
         <statement>
           <p>
-            Sia <m>R</m> un anello. Sia definita in <m>R</m> un'operazione <m>\ast</m> ponendo
+            Sia <m>R</m> un anello.
+            Sia definita in <m>R</m> un'operazione <m>\ast</m> ponendo
             <md>
               a \ast b\coloneqq b\cdot a
             </md>.
-            Verificare che rispetto all'operazione di addizione e a questa nuova operazione <m>\ast</m>, <m>R</m> è un anello, detto <term>anello opposto</term> di <m>R</m> e denotato con <m>R^{\text{op}}</m>.
+            Verificare che rispetto all'operazione di addizione e a questa nuova
+            operazione <m>\ast</m>, <m>R</m> è un anello, detto
+            <term>anello opposto</term> di <m>R</m> e denotato con
+            <m>R^{\text{op}}</m>.
           </p>
         </statement>
       </exercise>
@@ -400,7 +578,8 @@
       <exercise xml:id="exercise-anello_booleano">
         <statement>
           <p>
-            Sia <m>A</m> un insieme. Mostrare che <m>\parti{A}</m> con le operazioni così definite
+            Sia <m>A</m> un insieme.
+            Mostrare che <m>\parti{A}</m> con le operazioni così definite
             <md>
               <mrow> X+Y \amp \coloneqq (X\setminus Y)\cup (Y\setminus X)</mrow>
               <mrow> X\cdot Y\amp\coloneqq X\cap Y </mrow>
@@ -409,50 +588,71 @@
           </p>
         </statement>
       </exercise>
-
     </exercises>
-
   </section>
 
   <section xml:id="sec-multipli_potenze">
     <title>Multipli e potenze in un anello</title>
 
     <p>
-      Quando abbiamo studiato i monoidi e poi i gruppi, abbiamo descritto le proprietà delle potenze di un elemento che, in notazione additiva, abbiamo chiamato multipli (<xref ref="prop-proprieta_potenze_monoide"/>, <xref ref="prop-proprieta_potenze_elemento_invertibile"/> e <xref ref="prop-potenza_del_prodotto_di_commutabili"/>). Visto che in un anello abbiamo due operazioni, possiamo fare potenze e multipli degli elementi. Richiamiamone le proprietà
+      Quando abbiamo studiato i monoidi e poi i gruppi, abbiamo descritto le
+      proprietà delle potenze di un elemento che, in notazione additiva, abbiamo
+      chiamato multipli ( <xref ref="prop-proprieta_potenze_monoide"/>,
+      <xref ref="prop-proprieta_potenze_elemento_invertibile"/> e
+      <xref ref="prop-potenza_del_prodotto_di_commutabili"/> ).
+      Visto che in un anello abbiamo due operazioni, possiamo fare potenze e
+      multipli degli elementi.
+      Richiamiamone le proprietà
     </p>
+
     <proposition xml:id="prop-multipli_potenze_anello">
       <statement>
         <p>
-          Siano <m>a</m> e <m>b</m> elementi di un anello <m>R</m>. Abbiamo allora
+          Siano <m>a</m> e <m>b</m> elementi di un anello <m>R</m>.
+          Abbiamo allora
           <ol>
             <li>
               <p>
-                <m>(n+m)a=na+ma</m> per ogni <m>n</m> e <m>m</m> in <m>\Interi</m>;
+                <m>(n+m)a=na+ma</m> per ogni <m>n</m> e <m>m</m> in
+                <m>\Interi</m>;
               </p>
             </li>
+
             <li>
               <p>
-                <m>n(ma)=(nm)a</m> per ogni <m>n</m> e <m>m</m> in <m>\Interi</m>;
+                <m>n(ma)=(nm)a</m> per ogni <m>n</m> e <m>m</m> in
+                <m>\Interi</m>;
               </p>
             </li>
+
             <li>
               <p>
                 <m>n(a+b)=na+nb</m> per ogni <m>n</m> in <m>\Interi</m>;
               </p>
             </li>
+
             <li>
               <p>
-                <m>a^{n}a^{m}=a^{n+m}</m> per ogni <m>n</m> e <m>m</m> in <m>\Naturali</m> (se <m>a</m> è invertibile, vale per ogni <m>m</m> e <m>n</m> in <m>\Interi</m>);
+                <m>a^{n}a^{m}=a^{n+m}</m> per ogni <m>n</m> e <m>m</m> in
+                <m>\Naturali</m> (se <m>a</m> è invertibile, vale per ogni
+                <m>m</m> e <m>n</m> in <m>\Interi</m> );
               </p>
             </li>
+
             <li>
               <p>
-                <m>(a^{n})^{m}=a^{nm}</m> per ogni <m>n</m> e <m>m</m> in <m>\Naturali</m> (se <m>a</m> è invertibile, vale per ogni <m>m</m> e <m>n</m> in <m>\Interi</m>);
+                <m>(a^{n})^{m}=a^{nm}</m> per ogni <m>n</m> e <m>m</m> in
+                <m>\Naturali</m> (se <m>a</m> è invertibile, vale per ogni
+                <m>m</m> e <m>n</m> in <m>\Interi</m> );
               </p>
             </li>
+
             <li>
               <p>
-                se <m>a</m> e <m>b</m> commutano, allora <m>(ab)^{n}=a^{n}b^{n}</m> per ogni <m>n</m> in <m>\Naturali</m> (se <m>a</m> e <m>b</m> sono invertibili, vale per ogni <m>n</m> in <m>\Interi</m>).
+                se <m>a</m> e <m>b</m> commutano, allora
+                <m>(ab)^{n}=a^{n}b^{n}</m> per ogni <m>n</m> in <m>\Naturali</m>
+                (se <m>a</m> e <m>b</m> sono invertibili, vale per ogni <m>n</m>
+                in <m>\Interi</m> ).
               </p>
             </li>
           </ol>
@@ -461,13 +661,19 @@
     </proposition>
 
     <p>
-      Le prime tre affermazioni della proposizione precedente riguardano solo l'operazione di addizione e le ultime tre solo l'operazione di moltiplicazione. Vediamo cosa possiamo dire se facciamo multipli di prodotti e potenze di somme.
+      Le prime tre affermazioni della proposizione precedente riguardano solo
+      l'operazione di addizione e le ultime tre solo l'operazione di
+      moltiplicazione.
+      Vediamo cosa possiamo dire se facciamo multipli di prodotti e potenze di
+      somme.
     </p>
 
     <proposition xml:id="prop-multiplo_di_prodotti">
       <statement>
         <p>
-          Siano <m>a</m> e <m>b</m> elementi di un anello <m>R</m> e sia <m>n</m> un intero. Allora
+          Siano <m>a</m> e <m>b</m> elementi di un anello <m>R</m> e sia
+          <m>n</m> un intero.
+          Allora
           <md>
             n(ab)=(na)b=a(nb)
           </md>.
@@ -476,59 +682,98 @@
 
       <proof>
         <p>
-          Dimostriamo l'uguaglianza <m>n(ab)=(na)b</m>, considerando prima il caso in cui <m>n</m> è un naturale. Procediamo allora per induzione su <m>n</m>. Se <m>n</m> è il numero naturale <m>0</m>, allora, per definizione si ha <m>0(ab)=0_{R}</m> e <m>0a=0_{R}</m>. Ora <m>(0a)b=0_{R}b=0_{R}</m> per la <xref ref="prop-zero_assorbente"/>. Sia allora <m>k</m> un naturale per cui si ha <m>k(ab)=(ka)b</m>. Per definizione di multiplo, si ha <m>(k+1)(ab)=k(ab)+ab</m> e <m>(k+1)a=ka+a</m>. Abbiamo allora
+          Dimostriamo l'uguaglianza <m>n(ab)=(na)b</m>, considerando prima il
+          caso in cui <m>n</m> è un naturale.
+          Procediamo allora per induzione su <m>n</m>.
+          Se <m>n</m> è il numero naturale <m>0</m>, allora, per definizione si
+          ha <m>0(ab)=0_{R}</m> e <m>0a=0_{R}</m>.
+          Ora <m>(0a)b=0_{R}b=0_{R}</m> per la
+          <xref ref="prop-zero_assorbente"/>.
+          Sia allora <m>k</m> un naturale per cui si ha <m>k(ab)=(ka)b</m>.
+          Per definizione di multiplo, si ha <m>(k+1)(ab)=k(ab)+ab</m> e
+          <m>(k+1)a=ka+a</m>.
+          Abbiamo allora
           <md>
             (k+1)(ab)=k(ab)+ab=(ka)b+ab=(ka+a)b=((k+1)a)b
           </md>
-          dove abbiamo usato l'ipotesi induttiva e una delle proprietà distributive.
+          dove abbiamo usato l'ipotesi induttiva e una delle proprietà
+          distributive.
         </p>
+
         <p>
-          Supponiamo ora che <m>n</m> sia un intero negativo. Per definizione di multiplo si ha <m>n(ab)=-n(-(ab))</m> e <m>na=(-n)(-a)</m>. Abbiamo allora
+          Supponiamo ora che <m>n</m> sia un intero negativo.
+          Per definizione di multiplo si ha <m>n(ab)=-n(-(ab))</m> e
+          <m>na=(-n)(-a)</m>.
+          Abbiamo allora
           <md>
             n(ab)=-n(-(ab))=-n((-a)b)=(-n(-a))b=(na)b
           </md>
-          dove abbiamo usato la <xref ref="prop-moltiplicazione_opposti"/> e il caso in cui l'intero sia positivo (<m>-n</m> è positivo).
+          dove abbiamo usato la <xref ref="prop-moltiplicazione_opposti"/> e il
+          caso in cui l'intero sia positivo ( <m>-n</m> è positivo).
         </p>
+
         <p>
           L'uguaglianza <m>n(ab)=a(nb)</m> si dimostra in maniera analoga.
         </p>
       </proof>
-
     </proposition>
 
     <note>
       <p>
-        La proprietà precedente non è, a dispetto delle apparenze, una proprietà associativa. Infatti, <m>n(ab)</m> è il multiplo intero del prodotto <m>ab</m>, mentre <m>(na)b</m> è il prodotto del multiplo intero <m>na</m> di <m>a</m> per l'elemento <m>b</m>.
+        La proprietà precedente non è, a dispetto delle apparenze, una proprietà
+        associativa.
+        Infatti, <m>n(ab)</m> è il multiplo intero del prodotto <m>ab</m>,
+        mentre <m>(na)b</m> è il prodotto del multiplo intero <m>na</m> di
+        <m>a</m> per l'elemento <m>b</m>.
       </p>
     </note>
 
     <p>
-      Per quanto riguarda invece la potenza di una somma? Dati <m>a</m> e <m>b</m> in un anello <m>R</m> e <m>n</m> numero naturale, come possiamo esprimere <m>(a+b)^{n}</m>? Per fissare le idee, prendiamo il caso <m>n=2</m>. Abbiamo allora
+      Per quanto riguarda invece la potenza di una somma?
+      Dati <m>a</m> e <m>b</m> in un anello <m>R</m> e <m>n</m> numero naturale,
+      come possiamo esprimere <m>(a+b)^{n}</m>?
+      Per fissare le idee, prendiamo il caso <m>n=2</m>.
+      Abbiamo allora
       <md>
         (a+b)^{2}=(a+b)(a+b)=a(a+b)+b(a+b)=a^{2}+ab+ba+b^{2}
       </md>:
-      se <m>a</m> e <m>b</m> commutano, possiamo allora scrivere <m>(a+b)^{2}=a^{2}+2ab+b^{2}</m>, cioè una formula simile all'usuale prodotto notevole. Ciò suggerisce che possiamo dare una formula relativamente compatta se <m>a</m> e <m>b</m> commutano:
+      se <m>a</m> e <m>b</m> commutano, possiamo allora scrivere
+      <m>(a+b)^{2}=a^{2}+2ab+b^{2}</m>, cioè una formula simile all'usuale
+      prodotto notevole.
+      Ciò suggerisce che possiamo dare una formula relativamente compatta se
+      <m>a</m> e <m>b</m> commutano:
     </p>
+
     <theorem xml:id="thm-binomiale">
       <statement>
         <p>
-          Se <m>a</m> e <m>b</m> sono elementi che commutano in un anello <m>R</m> e <m>n</m> è un numero naturale si ha
+          Se <m>a</m> e <m>b</m> sono elementi che commutano in un anello
+          <m>R</m> e <m>n</m> è un numero naturale si ha
           <md>
             (a+b)^{n}=\sum_{i=0}^{n}\binom{n}{i}a^{i}b^{n-i}
           </md>
-          dove <m>\binom{n}{i}</m> indica l'usuale coefficiente binomiale definito da <m>\binom{n}{i}=\frac{n!}{i!(n-i)!}</m>.
+          dove <m>\binom{n}{i}</m> indica l'usuale coefficiente binomiale
+          definito da <m>\binom{n}{i}=\frac{n!}{i!(n-i)!}</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          La dimostrazione è identica alla dimostrazione per l'analoga formula per lo sviluppo binomiale in <m>\Reali</m>: la riportiamo per completezza.
+          La dimostrazione è identica alla dimostrazione per l'analoga formula
+          per lo sviluppo binomiale in <m>\Reali</m>: la riportiamo per
+          completezza.
         </p>
+
         <p>
-          Procediamo per induzione su <m>n</m>. Il caso <m>n=0</m> è immediato, in vista del fatto che <m>0!=1</m>: abbiamo, dunque, <m>(a+b)^{0}=1</m> e <m>\sum_{i=0}^{0}\binom{0}{0}a^{0}b^{0}=1</m>.
+          Procediamo per induzione su <m>n</m>.
+          Il caso <m>n=0</m> è immediato, in vista del fatto che <m>0!=1</m>:
+          abbiamo, dunque, <m>(a+b)^{0}=1</m> e
+          <m>\sum_{i=0}^{0}\binom{0}{0}a^{0}b^{0}=1</m>.
         </p>
+
         <p>
-          Sia allora <m>k</m> un intero per cui valga la formula. Abbiamo
+          Sia allora <m>k</m> un intero per cui valga la formula.
+          Abbiamo
           <md>
             <mrow> (a+b)^{k+1}\amp =(a+b)^{k}(a+b)=\sum_{i=0}^{k}\binom{k}{i}a^{i}b^{k-i}(a+b)</mrow>
             <mrow> \amp = \sum_{i=0}^{k}\binom{k}{i}a^{i}b^{k-i}a+\sum_{i=0}^{k}\binom{k}{i}a^{i}b^{k-i}b</mrow>
@@ -537,10 +782,10 @@
             <mrow>  \amp=\sum_{i=1}^{k}\left(\binom{k}{i-1}+\binom{k}{i}\right)a^{i}b^{k+1-i}+ a^{k+1}+b^{k+1}</mrow>
             <mrow>  \amp =\sum_{i=0}^{k+1}\binom{k+1}{i}a^{i}b^{k+1-i}</mrow>
           </md>
-          dove abbiamo usato la relazione <m>\binom{k}{i-1}+\binom{k}{i}=\binom{k+1}{i}</m>.
+          dove abbiamo usato la relazione
+          <m>\binom{k}{i-1}+\binom{k}{i}=\binom{k+1}{i}</m>.
         </p>
       </proof>
-
     </theorem>
 
     <definition xml:id="def-caratteristica">
@@ -550,9 +795,13 @@
         <usage><m>\car R</m></usage>
         <description>caratteristica di un anello <m>R</m></description>
       </notation>
+
       <statement>
         <p>
-          Dato un anello <m>R</m> la sua <term>caratteristica</term>, denotata con <m>\car R</m>, è il periodo additivo di <m>1</m>. Per convenzione, poniamo <m>\car R\coloneqq 0</m> se il periodo additivo di <m>1</m> è infinito.
+          Dato un anello <m>R</m> la sua <term>caratteristica</term>, denotata
+          con <m>\car R</m>, è il periodo additivo di <m>1</m>.
+          Per convenzione, poniamo <m>\car R\coloneqq 0</m> se il periodo
+          additivo di <m>1</m> è infinito.
         </p>
       </statement>
     </definition>
@@ -560,7 +809,9 @@
     <example>
       <statement>
         <p>
-          Gli anelli <m>\Interi</m>, <m>\Razionali</m>, <m>\Reali</m> e <m>\Complessi</m> hanno caratteristica <m>0</m>, mentre <m>\Interi/n</m> ha caratteristica <m>n</m>.
+          Gli anelli <m>\Interi</m>, <m>\Razionali</m>, <m>\Reali</m> e
+          <m>\Complessi</m> hanno caratteristica <m>0</m>, mentre
+          <m>\Interi/n</m> ha caratteristica <m>n</m>.
         </p>
       </statement>
     </example>
@@ -574,7 +825,10 @@
     <proposition xml:id="prop-caratteristica">
       <statement>
         <p>
-          Se <m>R</m> è un anello di caratteristica <m>n</m>, allora, per ogni <m>a</m> in <m>R</m> si ha <m>na=0</m>. In particolare, se <m>n\ne0</m>, ogni elemento di <m>R</m> ha periodo additivo finito che divide <m>n</m>.
+          Se <m>R</m> è un anello di caratteristica <m>n</m>, allora, per ogni
+          <m>a</m> in <m>R</m> si ha <m>na=0</m>.
+          In particolare, se <m>n\ne0</m>, ogni elemento di <m>R</m> ha periodo
+          additivo finito che divide <m>n</m>.
         </p>
       </statement>
 
@@ -582,43 +836,74 @@
         <p>
           Se <m>n=0</m>, l'affermazione è banale.
         </p>
+
         <p>
-          Se <m>n\ne 0</m>, allora, per ogni elemento <m>a</m> di <m>R</m>, si ha <m>na=n(1a)=(n1)a=0a=0</m>, dove abbiamo usato la <xref ref="prop-multiplo_di_prodotti"/>.
+          Se <m>n\ne 0</m>, allora, per ogni elemento <m>a</m> di <m>R</m>, si
+          ha <m>na=n(1a)=(n1)a=0a=0</m>, dove abbiamo usato la
+          <xref ref="prop-multiplo_di_prodotti"/>.
         </p>
       </proof>
-
     </proposition>
 
     <proposition xml:id="prop-caratteristica_anello_intero">
       <statement>
         <p>
-          Se <m>R</m> è un anello intero, allora <m>\car R=0</m> o <m>\car R=p</m> con <m>p</m> primo. Inoltre tutti gli elementi diversi da <m>0</m> hanno lo stesso periodo additivo, e cioè infinito se <m>\car R=0</m> e <m>p</m> se <m>\car R=p</m>.
+          Se <m>R</m> è un anello intero, allora <m>\car R=0</m> o
+          <m>\car R=p</m> con <m>p</m> primo.
+          Inoltre tutti gli elementi diversi da <m>0</m> hanno lo stesso periodo
+          additivo, e cioè infinito se <m>\car R=0</m> e <m>p</m> se
+          <m>\car R=p</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Consideriamo prima il caso in cui tutti gli elementi non nulli hanno periodo additivo infinito: in particolare, <m>1</m> ha periodo additivo infinito e, quindi, <m>R</m> ha caratteristica <m>0</m>.
+          Consideriamo prima il caso in cui tutti gli elementi non nulli hanno
+          periodo additivo infinito: in particolare, <m>1</m> ha periodo
+          additivo infinito e, quindi, <m>R</m> ha caratteristica <m>0</m>.
         </p>
+
         <p>
-          Consideriamo ora il caso ci sia almeno un elemento non nullo <m>a</m> di periodo additivo finito <m>n</m>. Poiché <m>a\ne0</m>, abbiamo che <m>n\ne1</m> e, quindi, esiste un primo <m>p</m> che divide <m>n</m>: pur di rimpiazzare <m>a</m> con <m>\frac{n}{p}a</m>, possiamo supporre che <m>a</m> abbia periodo primo <m>p</m>. Per la <xref ref="prop-multiplo_di_prodotti"/>, si ha allora <m>a(pb)=(pa)b=0b=0</m> per ogni <m>b</m> in <m>R</m>: poiché <m>R</m> è intero e <m>a\ne0</m>, ciò significa che <m>pb=0</m> e, quindi, <m>b</m> ha periodo additivo che divide <m>p</m>, cioè <m>1</m> o <m>p</m>: ma l'unico elemento di periodo additivo <m>1</m> è <m>0</m> e, pertanto, tutti gli elementi non nulli di <m>R</m> hanno periodo additivo <m>p</m>. In particolare, <m>1</m> ha periodo additivo <m>p</m> che è, quindi, la caratteristica di <m>R</m>.
+          Consideriamo ora il caso ci sia almeno un elemento non nullo <m>a</m>
+          di periodo additivo finito <m>n</m>.
+          Poiché <m>a\ne0</m>, abbiamo che <m>n\ne1</m> e, quindi, esiste un
+          primo <m>p</m> che divide <m>n</m>: pur di rimpiazzare <m>a</m> con
+          <m>\frac{n}{p}a</m>, possiamo supporre che <m>a</m> abbia periodo
+          primo <m>p</m>.
+          Per la <xref ref="prop-multiplo_di_prodotti"/>, si ha allora
+          <m>a(pb)=(pa)b=0b=0</m> per ogni <m>b</m> in <m>R</m>: poiché <m>R</m>
+          è intero e <m>a\ne0</m>, ciò significa che <m>pb=0</m> e, quindi,
+          <m>b</m> ha periodo additivo che divide <m>p</m>, cioè <m>1</m> o
+          <m>p</m>: ma l'unico elemento di periodo additivo <m>1</m> è <m>0</m>
+          e, pertanto, tutti gli elementi non nulli di <m>R</m> hanno periodo
+          additivo <m>p</m>.
+          In particolare, <m>1</m> ha periodo additivo <m>p</m> che è, quindi,
+          la caratteristica di <m>R</m>.
         </p>
       </proof>
-
     </proposition>
 
     <remark xml:id="rem-periodo_additivo_diverso">
       <p>
-        Se <m>R</m> è un anello non intero possono esserci elementi non nulli aventi periodo additivo diverso. Ad esempio, il gruppo additivo di <m>\Interi/n</m> è un gruppo ciclico di ordine <m>n</m> e, quindi, per il <xref ref="thm-sottogruppi_di_gruppo_ciclico_finito"/>, contiene elementi di periodo additivo ciascun divisore di <m>n</m>. Se <m>n</m> non è primo, ci sono quindi elementi di periodo additivo diverso.
+        Se <m>R</m> è un anello non intero possono esserci elementi non nulli
+        aventi periodo additivo diverso.
+        Ad esempio, il gruppo additivo di <m>\Interi/n</m> è un gruppo ciclico
+        di ordine <m>n</m> e, quindi, per il
+        <xref ref="thm-sottogruppi_di_gruppo_ciclico_finito"/>, contiene
+        elementi di periodo additivo ciascun divisore di <m>n</m>.
+        Se <m>n</m> non è primo, ci sono quindi elementi di periodo additivo
+        diverso.
       </p>
     </remark>
 
     <exercises xml:id="exercises-multipli_potenze">
-
       <exercise>
         <statement>
           <p>
-            Sia <m>R</m> un anello commutativo di caratteristica <m>p</m> con <m>p</m> primo. Mostrare che <m>(a+b)^{p}=a^{p}+b^{p}</m> per ogni <m>a</m> e <m>b</m> in <m>R</m>.
+            Sia <m>R</m> un anello commutativo di caratteristica <m>p</m> con
+            <m>p</m> primo.
+            Mostrare che <m>(a+b)^{p}=a^{p}+b^{p}</m> per ogni <m>a</m> e
+            <m>b</m> in <m>R</m>.
           </p>
         </statement>
       </exercise>
@@ -626,7 +911,8 @@
       <exercise>
         <statement>
           <p>
-            Qual è la caratteristica di <m>\parti{A}</m> con le operazioni definite nell'<xref ref="exercise-anello_booleano"/>?
+            Qual è la caratteristica di <m>\parti{A}</m> con le operazioni
+            definite nell' <xref ref="exercise-anello_booleano"/>?
           </p>
         </statement>
 
@@ -636,52 +922,59 @@
           </p>
         </answer>
       </exercise>
-
     </exercises>
-
   </section>
 
   <section xml:id="sec-sottoanelli">
     <title>Sottoanelli</title>
 
     <p>
-      Cosi come abbiamo introdotto il concetto di sottomonoide e sottogruppo nel <xref ref="ch-sottogruppi"/>, possiamo introdurre la nozione di sottoanello.
+      Cosi come abbiamo introdotto il concetto di sottomonoide e sottogruppo nel
+      <xref ref="ch-sottogruppi"/>, possiamo introdurre la nozione di
+      sottoanello.
     </p>
 
     <definition xml:id="def-sottoanello">
       <idx><h>sottoanello</h></idx>
       <statement>
         <p>
-          Dato un anello <m>R</m>, un suo sottoinsieme <m>S</m> è detto <term>sottoanello</term> di <m>R</m> se
+          Dato un anello <m>R</m>, un suo sottoinsieme <m>S</m> è detto
+          <term>sottoanello</term> di <m>R</m> se
           <ul>
             <li>
               <p>
                 <m>S</m> è sottogruppo del gruppo additivo <m>(R,+)</m>;
               </p>
             </li>
+
             <li>
               <p>
-                <m>S</m> è sottomonoide del monoide moltiplicativo <m>(R,\cdot)</m>.
+                <m>S</m> è sottomonoide del monoide moltiplicativo
+                <m>(R,\cdot)</m>.
               </p>
             </li>
           </ul>
-          Esplicitamente, possiamo dire che <m>S</m> è un sottoanello di <m>R</m> se
+          Esplicitamente, possiamo dire che <m>S</m> è un sottoanello di
+          <m>R</m> se
           <ul>
             <li>
               <p>
                 <m>a+b\in S</m> per ogni <m>a</m> e <m>b</m> in <m>S</m>;
               </p>
             </li>
+
             <li>
               <p>
                 <m>-a\in S</m> per ogni <m>a</m> in <m>S</m>;
               </p>
             </li>
+
             <li>
               <p>
                 <m>1\in S</m>;
               </p>
             </li>
+
             <li>
               <p>
                 <m>ab\in S</m> per ogni <m>a</m> e <m>b</m> in <m>S</m>.
@@ -694,49 +987,67 @@
 
     <remark xml:id="rem-sottoanello_non_vuoto">
       <p>
-        Nel riportare le proprietà da verificare per stabilire che <m>S</m> è sottogruppo del gruppo additivo <m>(R,+)</m>, non abbiamo posto esplicitamente la richiesta che <m>S</m> sia non vuoto: se, infatti, si verifica che <m>1</m> appartiene a <m>S</m>, allora <m>S</m> è ovviamente non vuoto; se, invece, <m>1\notin S</m>, il sottoinsieme non è un sottoanello, indipendentemente dal fatto che sia vuoto o no.
+        Nel riportare le proprietà da verificare per stabilire che <m>S</m> è
+        sottogruppo del gruppo additivo <m>(R,+)</m>, non abbiamo posto
+        esplicitamente la richiesta che <m>S</m> sia non vuoto: se, infatti, si
+        verifica che <m>1</m> appartiene a <m>S</m>, allora <m>S</m> è
+        ovviamente non vuoto; se, invece, <m>1\notin S</m>, il sottoinsieme non
+        è un sottoanello, indipendentemente dal fatto che sia vuoto o no.
       </p>
     </remark>
 
     <remark xml:id="rem-sottoanello_non_proprio">
-
       <idx><h>sottoanello</h><h>proprio</h></idx>
-
       <p>
-        Ovviamente, un anello <m>R</m> è un sottoanello di sé stesso. I sottoanelli di <m>R</m> diversi da <m>R</m> sono detti sottoanelli <term>propri</term>. Il sottoinsieme formato solo da <m>0</m> non è invece un sottoanello perché non contiene <m>1</m>.
+        Ovviamente, un anello <m>R</m> è un sottoanello di sé stesso.
+        I sottoanelli di <m>R</m> diversi da <m>R</m> sono detti sottoanelli
+        <term>propri</term>.
+        Il sottoinsieme formato solo da <m>0</m> non è invece un sottoanello
+        perché non contiene <m>1</m>.
       </p>
     </remark>
 
     <remark xml:id="rem-multipli_potenze_in_sottoanello">
       <p>
-        Se <m>S</m> è un sottoanello di <m>R</m> e <m>a</m> è un elemento di <m>S</m>, allora, ovviamente, i multipli <m>na</m> con <m>n</m> in <m>\Interi</m> e le potenze <m>a^{n}</m> con <m>n</m> in <m>\Naturali</m> appartengono a <m>S</m>. Se <m>a</m> è invertibile e, quindi, sono definite le potenze <m>a^{n}</m> con <m>n</m> intero negativo, non è detto che queste appartengano a <m>S</m>: nella definizione di sottoanello non richiediamo che <m>a^{-1}</m> appartenga a <m>S</m>.
+        Se <m>S</m> è un sottoanello di <m>R</m> e <m>a</m> è un elemento di
+        <m>S</m>, allora, ovviamente, i multipli <m>na</m> con <m>n</m> in
+        <m>\Interi</m> e le potenze <m>a^{n}</m> con <m>n</m> in
+        <m>\Naturali</m> appartengono a <m>S</m>.
+        Se <m>a</m> è invertibile e, quindi, sono definite le potenze
+        <m>a^{n}</m> con <m>n</m> intero negativo, non è detto che queste
+        appartengano a <m>S</m>: nella definizione di sottoanello non
+        richiediamo che <m>a^{-1}</m> appartenga a <m>S</m>.
       </p>
     </remark>
 
     <remark xml:id="rem-caratteristica_sottoanello">
       <p>
-        Se <m>S</m> è un sottoanello di <m>R</m>, dalla <xref ref="def-caratteristica"/> segue immediatamente che <m>R</m> e <m>S</m> hanno la stessa caratteristica.
+        Se <m>S</m> è un sottoanello di <m>R</m>, dalla
+        <xref ref="def-caratteristica"/> segue immediatamente che <m>R</m> e
+        <m>S</m> hanno la stessa caratteristica.
       </p>
     </remark>
 
     <p>
-      Analogamente a quanto visto per sottomonoidi e sottogruppi, abbiamo immediatamente la
+      Analogamente a quanto visto per sottomonoidi e sottogruppi, abbiamo
+      immediatamente la
     </p>
 
     <proposition xml:id="prop-sottoanello_e_anello">
-
       <statement>
         <p>
-          Se <m>S</m> è un sottoanello di un anello <m>R</m>, allora <m>S</m> è un anello rispetto alle operazioni indotte.
+          Se <m>S</m> è un sottoanello di un anello <m>R</m>, allora <m>S</m> è
+          un anello rispetto alle operazioni indotte.
         </p>
       </statement>
-
     </proposition>
 
     <example>
       <statement>
         <p>
-          L'anello <m>\Interi</m> è sottoanello dell'anello <m>\Razionali</m> che è sottoanello dell'anello <m>\Reali</m> che è sottoanello di <m>\Complessi</m>.
+          L'anello <m>\Interi</m> è sottoanello dell'anello <m>\Razionali</m>
+          che è sottoanello dell'anello <m>\Reali</m> che è sottoanello di
+          <m>\Complessi</m>.
         </p>
       </statement>
     </example>
@@ -744,7 +1055,13 @@
     <example>
       <statement>
         <p>
-          Consideriamo l'anello <m>\mat{n}{R}</m> delle matrici quadrate di ordine <m>n</m> a coefficienti in un anello <m>R</m>. Il sottoinsieme <m>T</m> formato dalle matrici triangolari superiori, cioè dalle matrici <m>A\coloneqq(a_{ij})</m> tali che <m>a_{ij}=0</m> se <m>i \gt 0</m> è un sottoanello. Analogamente, l'insieme delle matrici triangolari inferiori e l'insieme delle matrici diagonali sono sottoanelli.
+          Consideriamo l'anello <m>\mat{n}{R}</m> delle matrici quadrate di
+          ordine <m>n</m> a coefficienti in un anello <m>R</m>.
+          Il sottoinsieme <m>T</m> formato dalle matrici triangolari superiori,
+          cioè dalle matrici <m>A\coloneqq(a_{ij})</m> tali che <m>a_{ij}=0</m>
+          se <m>i \gt 0</m> è un sottoanello.
+          Analogamente, l'insieme delle matrici triangolari inferiori e
+          l'insieme delle matrici diagonali sono sottoanelli.
         </p>
       </statement>
     </example>
@@ -752,7 +1069,9 @@
     <proposition xml:id="prop-transitivita_sottoanelli">
       <statement>
         <p>
-          Se <m>R</m> è un anello, <m>S</m> è un sottoanello di <m>R</m> e <m>T</m> è un sottoanello di <m>S</m>, allora <m>T</m> è un sottoanello di <m>R</m>.
+          Se <m>R</m> è un anello, <m>S</m> è un sottoanello di <m>R</m> e
+          <m>T</m> è un sottoanello di <m>S</m>, allora <m>T</m> è un
+          sottoanello di <m>R</m>.
         </p>
       </statement>
     </proposition>
@@ -761,21 +1080,31 @@
       <p>
         Un sottoanello di un anello commutativo è, ovviamente, commutativo.
       </p>
+
       <p>
         Un sottoanello di un anello intero è, ovviamente, intero
       </p>
+
       <p>
         Di conseguenza, un sottoanello di un dominio è un dominio.
       </p>
+
       <p>
-        Non è invece detto che un sottoanello di un campo sia un campo: ad esempio, <m>\Interi</m>, che non è un campo, è un sottoanello del campo <m>\Razionali</m>.
+        Non è invece detto che un sottoanello di un campo sia un campo: ad
+        esempio, <m>\Interi</m>, che non è un campo, è un sottoanello del campo
+        <m>\Razionali</m>.
       </p>
     </remark>
 
     <example>
       <statement>
         <p>
-          Se consideriamo il sottoinsieme <m>P</m> dei numeri pari in <m>\Interi</m>, vediamo subito che <m>P</m> non è un sottoanello perché non contiene <m>1</m>, pur soddisfacendo le altre proprietà di chiusura. Gli autori che non richiedono l'esistenza di <m>1</m> nella definizione di anello considerano invece <m>P</m> un sottoanello.
+          Se consideriamo il sottoinsieme <m>P</m> dei numeri pari in
+          <m>\Interi</m>, vediamo subito che <m>P</m> non è un sottoanello
+          perché non contiene <m>1</m>, pur soddisfacendo le altre proprietà di
+          chiusura.
+          Gli autori che non richiedono l'esistenza di <m>1</m> nella
+          definizione di anello considerano invece <m>P</m> un sottoanello.
         </p>
       </statement>
     </example>
@@ -783,43 +1112,61 @@
     <example xml:id="ex-quaternioni">
       <statement>
         <p>
-          Consideriamo l'anello <m>\mat{2}{\Complessi}</m> e sia <m>Q</m> il sottoinsieme delle matrici del tipo
+          Consideriamo l'anello <m>\mat{2}{\Complessi}</m> e sia <m>Q</m> il
+          sottoinsieme delle matrici del tipo
           <md>
-          A\coloneqq
+            A\coloneqq
             \begin{pmatrix}
               z \amp w \\
               -\bar{w} \amp \bar{z}
             \end{pmatrix}
           </md>
-          al variare di <m>z</m> e <m>w</m> in <m>\Complessi</m> (con <m>\bar{z}</m> indichiamo l'usuale complesso coniugato di <m>z</m>). Si verifica facilmente che <m>Q</m> è un sottoanello di <m>\mat{2}{\Complessi}</m>. Mostriamo che <m>Q</m> è un corpo, cioè che ogni elemento diverso da <m>0</m> ha inverso in <m>Q</m>. Data una matrice <m>A</m> come sopra, si vede che <m>\det A=z\bar{z}+w\bar{w}=\abs{z}^{2}+\abs{w}^{2}</m> e, dunque, <m>\det A</m> è un numero reale positivo se <m>A</m> è non nulla. Si può allora verificare direttamente che
+          al variare di <m>z</m> e <m>w</m> in <m>\Complessi</m> (con
+          <m>\bar{z}</m> indichiamo l'usuale complesso coniugato di <m>z</m> ).
+          Si verifica facilmente che <m>Q</m> è un sottoanello di
+          <m>\mat{2}{\Complessi}</m>.
+          Mostriamo che <m>Q</m> è un corpo, cioè che ogni elemento diverso da
+          <m>0</m> ha inverso in <m>Q</m>.
+          Data una matrice <m>A</m> come sopra, si vede che
+          <m>\det A=z\bar{z}+w\bar{w}=\abs{z}^{2}+\abs{w}^{2}</m> e, dunque,
+          <m>\det A</m> è un numero reale positivo se <m>A</m> è non nulla.
+          Si può allora verificare direttamente che
           <md>
             \begin{pmatrix}
               \frac{\bar{z}}{\det A} \amp -\frac{w}{\det A} \\
               \frac{\bar{w}}{\det A} \amp \frac{z}{\det A}
             \end{pmatrix}
           </md>
-          è la matrice inversa di <m>A</m> e appartiene a <m>Q</m>. Dunque, <m>Q</m> è un corpo, detto corpo dei <term>quaternioni</term>. Il corpo <m>Q</m> non è commutativo: ad esempio, le due matrici <m>\begin{psmallmatrix}
+          è la matrice inversa di <m>A</m> e appartiene a <m>Q</m>.
+          Dunque, <m>Q</m> è un corpo, detto corpo dei <term>quaternioni</term>.
+          Il corpo <m>Q</m> non è commutativo: ad esempio, le due matrici
+          <m>\begin{psmallmatrix}
             i \amp 0 \\
             0 \amp -i
-          \end{psmallmatrix}</m> e <m>\begin{psmallmatrix}
+          \end{psmallmatrix}</m>
+          e
+          <m>\begin{psmallmatrix}
             0 \amp i \\
             i \amp 0
-          \end{psmallmatrix}</m> non commutano.
+          \end{psmallmatrix}</m>
+          non commutano.
         </p>
       </statement>
     </example>
 
     <p>
-      Analogamente alla <xref ref="prop-intersezione_di_sottogruppi"/> abbiamo la
+      Analogamente alla <xref ref="prop-intersezione_di_sottogruppi"/> abbiamo
+      la
     </p>
 
     <proposition xml:id="prop-intersezione_di_sottoanelli">
-      
       <idx><h>intersezione</h><h>di sottoanelli</h></idx>
       <idx><h>sottoanello</h><h>intersezione</h></idx>
       <statement>
         <p>
-          Se <m>R</m> è un anello e <m>\{S_{i}\}_{i\in I}</m> è una famiglia di sottoanelli di <m>R</m> (indicizzata da un insieme di indici <m>\Omega</m>), allora
+          Se <m>R</m> è un anello e <m>\{S_{i}\}_{i\in I}</m> è una famiglia di
+          sottoanelli di <m>R</m> (indicizzata da un insieme di indici
+          <m>\Omega</m> ), allora
           <md>
             \bigcap_{i\in \Omega}S_{i}
           </md>
@@ -829,117 +1176,144 @@
     </proposition>
 
     <p>
-      Abbiamo visto che il sottoinsieme formato solo da <m>0</m> non è un sottoanello di un anello, non c'è cioè un sottoanello <q>banale</q>. Tuttavia la <xref ref="prop-intersezione_di_sottoanelli"/> ci suggerisce di dare la
+      Abbiamo visto che il sottoinsieme formato solo da <m>0</m> non è un
+      sottoanello di un anello, non c'è cioè un sottoanello <q>banale</q>.
+      Tuttavia la <xref ref="prop-intersezione_di_sottoanelli"/> ci suggerisce
+      di dare la
     </p>
 
     <proposition xml:id="prop-sottoanello_minimo">
-
       <idx><h>sottoanello</h><h>minimo</h></idx>
-
       <statement>
         <p>
-          Dato un anello <m>R</m>, l'intersezione di tutti i sottoanelli di <m>R</m> è un sottoanello <m>S</m>, detto <term>sottoanello minimo</term>. Gli elementi di <m>S</m> sono i multipli interi di <m>1_{R}</m>, cioè
+          Dato un anello <m>R</m>, l'intersezione di tutti i sottoanelli di
+          <m>R</m> è un sottoanello <m>S</m>, detto
+          <term>sottoanello minimo</term>.
+          Gli elementi di <m>S</m> sono i multipli interi di <m>1_{R}</m>, cioè
           <md>
             S=\{n1_{R}\mid n\in\Interi\}
           </md>.
-          Se <m>\car R=0</m>, allora <m>S</m> è infinito, mentre se <m>\car R=n</m> con <m>n\ne0</m>, allora <m>\abs{S}=n</m>.
+          Se <m>\car R=0</m>, allora <m>S</m> è infinito, mentre se
+          <m>\car R=n</m> con <m>n\ne0</m>, allora <m>\abs{S}=n</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Sappiamo che l'intersezione di tutti i sottoanelli è un sottoanello <m>S</m>: in particolare, questo contiene <m>1_{R}</m> e, come notato nell'<xref ref="rem-multipli_potenze_in_sottoanello"/>, tutti i multipli <m>n1_{R}</m> al variare di <m>n</m> in <m>\Interi</m>. Se mostriamo che l'insieme <m>M</m> di questi multipli è un sottoanello, abbiamo che <m>M=S</m>. Ovviamente, <m>M</m> contiene <m>1_{R}</m> ed è un sottogruppo di <m>(R,+)</m> (è il sottogruppo ciclico generato da <m>1_{R}</m>). Per concludere basta mostrare che il prodotto di due elementi di <m>M</m> appartiene a <m>M</m>. Per ogni <m>n</m> e <m>m</m> interi, applicando la <xref ref="prop-multiplo_di_prodotti"/> e la <xref ref="prop-multipli_potenze_anello"/>, abbiamo allora
+          Sappiamo che l'intersezione di tutti i sottoanelli è un sottoanello
+          <m>S</m>: in particolare, questo contiene <m>1_{R}</m> e, come notato
+          nell' <xref ref="rem-multipli_potenze_in_sottoanello"/>, tutti i
+          multipli <m>n1_{R}</m> al variare di <m>n</m> in <m>\Interi</m>.
+          Se mostriamo che l'insieme <m>M</m> di questi multipli è un
+          sottoanello, abbiamo che <m>M=S</m>.
+          Ovviamente, <m>M</m> contiene <m>1_{R}</m> ed è un sottogruppo di
+          <m>(R,+)</m> (è il sottogruppo ciclico generato da <m>1_{R}</m> ).
+          Per concludere basta mostrare che il prodotto di due elementi di
+          <m>M</m> appartiene a <m>M</m>.
+          Per ogni <m>n</m> e <m>m</m> interi, applicando la
+          <xref ref="prop-multiplo_di_prodotti"/> e la
+          <xref ref="prop-multipli_potenze_anello"/>, abbiamo allora
           <md>
             (n1_{R})(m1_{R})=n(1_{R}(m1_{R}))=n(m(1_{R}1_{R}))=(nm)1_{R}
           </md>.
-          L'affermazione sulla cardinalità di <m>M</m> segue poi immediatamente dal fatto che <m>S</m> è il sottogruppo additivo di <m>R</m> generato da <m>1_{R}</m> e dalla definizione di caratteristica.
+          L'affermazione sulla cardinalità di <m>M</m> segue poi immediatamente
+          dal fatto che <m>S</m> è il sottogruppo additivo di <m>R</m> generato
+          da <m>1_{R}</m> e dalla definizione di caratteristica.
         </p>
       </proof>
-
     </proposition>
 
     <definition xml:id="def-sottoanello_generato">
-
       <idx><h>sottoanello</h><h>generato da un sottoinsieme</h></idx>
-
       <statement>
         <p>
-          Dato un sottoinsieme <m>X</m> di un anello <m>R</m>, il <term>sottoanello generato</term> da <m>X</m> è l'intersezione di tutti i sottoanelli di <m>S</m> contenenti <m>X</m>.
+          Dato un sottoinsieme <m>X</m> di un anello <m>R</m>, il
+          <term>sottoanello generato</term> da <m>X</m> è l'intersezione di
+          tutti i sottoanelli di <m>S</m> contenenti <m>X</m>.
         </p>
       </statement>
     </definition>
 
     <p>
-      La descrizione esplicita degli elementi del sottoanello generato da un sottoinsieme di un anello non è molto pratica. La rimandiamo all'<xref ref="exercise-sottoanello-generato"/>.
+      La descrizione esplicita degli elementi del sottoanello generato da un
+      sottoinsieme di un anello non è molto pratica.
+      La rimandiamo all' <xref ref="exercise-sottoanello-generato"/>.
     </p>
 
     <definition xml:id="def-sottocampo">
       <idx><h>sottocampo</h></idx>
       <statement>
         <p>
-          Dato un campo <m>K</m>, un suo sottoinsieme <m>F</m> è detto <term>sottocampo</term> di <m>K</m> se <m>F</m> è un sottoanello di <m>K</m> e, per ogni elemento non nullo <m>a</m> di <m>F</m> si ha che <m>a^{-1}</m> appartiene a <m>F</m>.
+          Dato un campo <m>K</m>, un suo sottoinsieme <m>F</m> è detto
+          <term>sottocampo</term> di <m>K</m> se <m>F</m> è un sottoanello di
+          <m>K</m> e, per ogni elemento non nullo <m>a</m> di <m>F</m> si ha che
+          <m>a^{-1}</m> appartiene a <m>F</m>.
         </p>
       </statement>
     </definition>
 
     <p>
-      Ovviamente un sottocampo è un campo rispetto alle operazioni indotte. Analogamente a quanto fatto per sottomonoidi, sottogruppi, <etc /> si può mostrare la
+      Ovviamente un sottocampo è un campo rispetto alle operazioni indotte.
+      Analogamente a quanto fatto per sottomonoidi, sottogruppi, <etc/> si può
+      mostrare la
     </p>
 
     <proposition xml:id="prop-intersezione_di_sottocampi">
-
-      
       <idx><h>intersezione</h><h>di sottocampi</h></idx>
       <idx><h>sottocampo</h><h>intersezione</h></idx>
       <statement>
         <p>
-          Se <m>K</m> è un campo e <m>\{F_{i}\}_{i\in I}</m> è una famiglia di sottocampi di <m>F</m> (indicizzata da un insieme di indici <m>\Omega</m>), allora
+          Se <m>K</m> è un campo e <m>\{F_{i}\}_{i\in I}</m> è una famiglia di
+          sottocampi di <m>F</m> (indicizzata da un insieme di indici
+          <m>\Omega</m> ), allora
           <md>
             \bigcap_{i\in \Omega}F_{i}
           </md>
           è un sottocampo di <m>F</m>.
         </p>
       </statement>
-    </proposition>    
+    </proposition>
 
     <proposition xml:id="prop-sottocampo_minimo">
-
       <idx><h>sottocampo</h><h>minimo</h></idx>
-
       <statement>
         <p>
-          Dato un campo <m>K</m>, l'intersezione di tutti i sottocampi di <m>K</m> è un sottocampo <m>F</m>, detto <term>sottocampo minimo</term>. Il sottocampo minimo contiene il sottoanello minimo <m>S</m>.
+          Dato un campo <m>K</m>, l'intersezione di tutti i sottocampi di
+          <m>K</m> è un sottocampo <m>F</m>, detto
+          <term>sottocampo minimo</term>.
+          Il sottocampo minimo contiene il sottoanello minimo <m>S</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Sappiamo che l'intersezione di tutti i sottocampi di <m>K</m> è un sottocampo <m>F</m>: in particolare, <m>F</m> è un sottoanello e, quindi, contiene l'intersezione <m>S</m> di tutti i sottoanelli di <m>K</m>.
+          Sappiamo che l'intersezione di tutti i sottocampi di <m>K</m> è un
+          sottocampo <m>F</m>: in particolare, <m>F</m> è un sottoanello e,
+          quindi, contiene l'intersezione <m>S</m> di tutti i sottoanelli di
+          <m>K</m>.
         </p>
       </proof>
-
     </proposition>
-    
+
     <p>
-      Preciseremo più avanti (<xref ref="prop-sottocampo_sottoanello_minimo"/>) il legame esistente tra sottocampo minimo e sottoanello minimo di un campo.
+      Preciseremo più avanti ( <xref ref="prop-sottocampo_sottoanello_minimo"/>
+      ) il legame esistente tra sottocampo minimo e sottoanello minimo di un
+      campo.
     </p>
 
     <definition xml:id="def-sottocampo_generato">
-
       <idx><h>sottocampo</h><h>generato da un sottoinsieme</h></idx>
-
       <statement>
         <p>
-          Dato un sottoinsieme <m>X</m> di un anello <m>R</m>, il <term>sottoanello generato</term> da <m>X</m> è l'intersezione di tutti i sottoanelli di <m>S</m> contenenti <m>X</m>.
+          Dato un sottoinsieme <m>X</m> di un anello <m>R</m>, il
+          <term>sottoanello generato</term> da <m>X</m> è l'intersezione di
+          tutti i sottoanelli di <m>S</m> contenenti <m>X</m>.
         </p>
       </statement>
     </definition>
 
-
     <definition xml:id="def-centralizzante">
-
       <idx><h>centralizzante</h><h>di un elemento di un anello</h></idx>
-
       <notation>
         <usage><m>\cent{R}{a}</m></usage>
         <description>centralizzante in <m>R</m> di <m>a</m></description>
@@ -947,7 +1321,11 @@
 
       <statement>
         <p>
-          Dato un elemento <m>a</m> di un anello <m>R</m>, il <term>centralizzante</term> di <m>a</m> in <m>R</m>, denotato con <m>\cent{R}{a}</m>, è il sottoinsieme di <m>R</m> formato dagli elementi di <m>R</m> che commutano con <m>a</m>. In simboli
+          Dato un elemento <m>a</m> di un anello <m>R</m>, il
+          <term>centralizzante</term> di <m>a</m> in <m>R</m>, denotato con
+          <m>\cent{R}{a}</m>, è il sottoinsieme di <m>R</m> formato dagli
+          elementi di <m>R</m> che commutano con <m>a</m>.
+          In simboli
           <md>
             \cent{R}{a}\coloneqq \{b\in R\mid ba=ab\}
           </md>.
@@ -958,42 +1336,50 @@
     <proposition xml:id="prop-centralizzante_sottoanello">
       <statement>
         <p>
-          Dato un elemento <m>a</m> di un anello <m>R</m>, il centralizzante in <m>R</m> di <m>a</m> è un sottoanello contenente <m>a</m>.
+          Dato un elemento <m>a</m> di un anello <m>R</m>, il centralizzante in
+          <m>R</m> di <m>a</m> è un sottoanello contenente <m>a</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Chiaramente <m>a</m> commuta con sé stesso: dunque, <m>a\in\cent{R}{a}</m> e, in particolare, <m>\cent{R}{a}\ne\vuoto</m>.
+          Chiaramente <m>a</m> commuta con sé stesso: dunque,
+          <m>a\in\cent{R}{a}</m> e, in particolare, <m>\cent{R}{a}\ne\vuoto</m>.
         </p>
+
         <p>
-          Sappiamo già che <m>\cent{R}{a}</m> è un sottogruppo additivo di <m>(R,+)</m> (<xref ref="prop-centralizzante_sottogruppo"/>).
+          Sappiamo già che <m>\cent{R}{a}</m> è un sottogruppo additivo di
+          <m>(R,+)</m> ( <xref ref="prop-centralizzante_sottogruppo"/> ).
         </p>
+
         <p>
-          Siano <m>b</m> e <m>c</m> due elementi di <m>\cent{R}{a}</m>. Allora
+          Siano <m>b</m> e <m>c</m> due elementi di <m>\cent{R}{a}</m>.
+          Allora
           <md>
             bca=bac=abc
           </md>
-          e, dunque, <m>bc\in\cent{G}{a}</m>. Infine, <m>1a=a1=a</m>, cioè <m>1\in\cent{R}{a}</m>.
+          e, dunque, <m>bc\in\cent{G}{a}</m>.
+          Infine, <m>1a=a1=a</m>, cioè <m>1\in\cent{R}{a}</m>.
         </p>
       </proof>
-
     </proposition>
 
     <remark xml:id="rem-reciprocita_centralizzante_sottoanelli">
       <p>
-        Per definizione, un elemento <m>b</m> appartiene al centralizzante di un elemento <m>a</m> se e solo se <m>a</m> e <m>b</m> commutano: ma allora, ciò avviene se e solo se <m>a</m> appartiene al centralizzante di <m>b</m>.
+        Per definizione, un elemento <m>b</m> appartiene al centralizzante di un
+        elemento <m>a</m> se e solo se <m>a</m> e <m>b</m> commutano: ma allora,
+        ciò avviene se e solo se <m>a</m> appartiene al centralizzante di
+        <m>b</m>.
       </p>
     </remark>
 
     <p>
-      Possiamo estendere la definizione di centralizzante a sottoinsiemi di un anello.
+      Possiamo estendere la definizione di centralizzante a sottoinsiemi di un
+      anello.
     </p>
 
     <definition xml:id="def-centralizzante_di_sottoinsieme_anello">
-
       <idx><h>centralizzante</h><h>di un sottoinsieme di un anello</h></idx>
-
       <notation>
         <usage><m>\cent{R}{X}</m></usage>
         <description>centralizzante in <m>R</m> di <m>X</m></description>
@@ -1001,38 +1387,42 @@
 
       <statement>
         <p>
-          Dato un sottoinsieme <m>X</m> di un anello <m>R</m>, il <term>centralizzante</term> di <m>X</m> in <m>R</m>, denotato con <m>\cent{R}{X}</m>, è il sottoinsieme di <m>R</m> formato dagli elementi che commutano con ogni elemento di <m>X</m>.
+          Dato un sottoinsieme <m>X</m> di un anello <m>R</m>, il
+          <term>centralizzante</term> di <m>X</m> in <m>R</m>, denotato con
+          <m>\cent{R}{X}</m>, è il sottoinsieme di <m>R</m> formato dagli
+          elementi che commutano con ogni elemento di <m>X</m>.
         </p>
       </statement>
-
     </definition>
 
     <proposition xml:id="prop-centralizzante_di_sottoinsieme_sottoanello">
-
       <statement>
         <p>
-          Dato un sottoinsieme <m>X</m> di un anello <m>R</m>, il centralizzante di <m>X</m> in <m>R</m> è un sottoanello di <m>R</m>.
+          Dato un sottoinsieme <m>X</m> di un anello <m>R</m>, il centralizzante
+          di <m>X</m> in <m>R</m> è un sottoanello di <m>R</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Per definizione, abbiamo <m>\cent{R}{X}=\bigcap_{a\in X}\cent{R}{a}</m>: la tesi segue dalla <xref ref="prop-intersezione_di_sottoanelli"/>.
+          Per definizione, abbiamo
+          <m>\cent{R}{X}=\bigcap_{a\in X}\cent{R}{a}</m>: la tesi segue dalla
+          <xref ref="prop-intersezione_di_sottoanelli"/>.
         </p>
       </proof>
-
     </proposition>
 
     <remark xml:id="rem-centralizzante_non_contiene_sottoinsieme_anelli">
       <p>
-        Gli elementi di <m>X</m> non è detto che siano contenuti in <m>\cent{R}{X}</m>: più precisamente, un elemento di <m>X</m> appartiene a <m>\cent{R}{X}</m> se e solo se commuta con tutti gli altri elementi di <m>X</m>.
+        Gli elementi di <m>X</m> non è detto che siano contenuti in
+        <m>\cent{R}{X}</m>: più precisamente, un elemento di <m>X</m> appartiene
+        a <m>\cent{R}{X}</m> se e solo se commuta con tutti gli altri elementi
+        di <m>X</m>.
       </p>
     </remark>
 
     <definition xml:id="def-centro_di_anello">
-
       <idx><h>centro</h><h>di un anello</h></idx>
-
       <notation>
         <usage><m>\centro(R)</m></usage>
         <description>centro di un anello <m>R</m></description>
@@ -1040,43 +1430,70 @@
 
       <statement>
         <p>
-          Dato un anello <m>R</m>, il suo <term>centro</term>, denotato con <m>\centro(R)</m>, è il sottoinsieme di <m>R</m> formato dagli elementi che commutano con ogni altro elemento di <m>R</m>. In altri termini, <m>\centro(R)=\cent{R}{R}</m>.
+          Dato un anello <m>R</m>, il suo <term>centro</term>, denotato con
+          <m>\centro(R)</m>, è il sottoinsieme di <m>R</m> formato dagli
+          elementi che commutano con ogni altro elemento di <m>R</m>.
+          In altri termini, <m>\centro(R)=\cent{R}{R}</m>.
         </p>
       </statement>
     </definition>
 
     <remark xml:id="rem-centro_sottoanello_commutativo">
       <p>
-        Poiché <m>\centro(R)=\cent{R}{R}</m>, dalla <xref ref="prop-centralizzante_di_sottoinsieme_sottoanello"/> segue che il centro di un anello <m>R</m> è un sottoanello di <m>R</m>. Ovviamente, <m>\centro(R)</m> è commutativo e coincide con <m>R</m> se e solo se <m>R</m> è commutativo.
+        Poiché <m>\centro(R)=\cent{R}{R}</m>, dalla
+        <xref ref="prop-centralizzante_di_sottoinsieme_sottoanello"/> segue che
+        il centro di un anello <m>R</m> è un sottoanello di <m>R</m>.
+        Ovviamente, <m>\centro(R)</m> è commutativo e coincide con <m>R</m> se e
+        solo se <m>R</m> è commutativo.
       </p>
     </remark>
 
     <proposition xml:id="prop-elementi_che_commutano_generano_sottoanello_commutativo">
       <statement>
         <p>
-          Sia <m>R</m> un anello generato da un suo sottoinsieme <m>X</m>. Allora, <m>R</m> è commutativo se e solo se gli elementi di <m>X</m> commutano fra loro.
+          Sia <m>R</m> un anello generato da un suo sottoinsieme <m>X</m>.
+          Allora, <m>R</m> è commutativo se e solo se gli elementi di <m>X</m>
+          commutano fra loro.
         </p>
       </statement>
 
       <proof>
         <p>
-          Se <m>R</m> è commutativo, ovviamente gli elementi di <m>X</m> commutano fra loro.
+          Se <m>R</m> è commutativo, ovviamente gli elementi di <m>X</m>
+          commutano fra loro.
         </p>
+
         <p>
-          Viceversa, supponiamo che gli elementi di <m>X</m> commutino fra loro. Per l'<xref ref="rem-centralizzante_non_contiene_sottoinsieme_anelli"/>, ciò implica che <m>X</m> è contenuto in <m>\cent{R}{X}</m>. Poiché <m>X</m> genera <m>R</m>, ciò significa che <m>R=\cent{R}{X}</m>. Dunque, ogni elemento di <m>X</m> commuta con ogni elemento di <m>R</m> e, quindi, <m>X</m> è contenuto in <m>\cent{R}{R}</m>, cioè <m>X</m> è contenuto in <m>\centro(R)</m>. Utilizzando ancora una volta il fatto che <m>X</m> genera <m>R</m>, otteniamo allora che <m>R=\centro(R)</m>, cioè <m>R</m> è commutativo.
+          Viceversa, supponiamo che gli elementi di <m>X</m> commutino fra loro.
+          Per l'
+          <xref ref="rem-centralizzante_non_contiene_sottoinsieme_anelli"/>, ciò
+          implica che <m>X</m> è contenuto in <m>\cent{R}{X}</m>.
+          Poiché <m>X</m> genera <m>R</m>, ciò significa che
+          <m>R=\cent{R}{X}</m>.
+          Dunque, ogni elemento di <m>X</m> commuta con ogni elemento di
+          <m>R</m> e, quindi, <m>X</m> è contenuto in <m>\cent{R}{R}</m>, cioè
+          <m>X</m> è contenuto in <m>\centro(R)</m>.
+          Utilizzando ancora una volta il fatto che <m>X</m> genera <m>R</m>,
+          otteniamo allora che <m>R=\centro(R)</m>, cioè <m>R</m> è commutativo.
         </p>
       </proof>
-
     </proposition>
 
     <p>
-      Se consideriamo due sottoanelli <m>S</m> e <m>T</m> di un anello <m>R</m>, grazie all'<xref ref="rem-prodotto_sottogruppi_abeliano"/> sappiamo che la loro somma <m>S+T=\{s+t\mid s\in S, t\in T\}</m> è un sottogruppo del gruppo additivo di <m>R</m> (usiamo la notazione additiva, ovviamente). Ci chiediamo se <m>S+T</m> sia un sottoanello. L'esempio seguente ci mostra che in generale non è così.
+      Se consideriamo due sottoanelli <m>S</m> e <m>T</m> di un anello <m>R</m>,
+      grazie all' <xref ref="rem-prodotto_sottogruppi_abeliano"/> sappiamo che
+      la loro somma <m>S+T=\{s+t\mid s\in S, t\in T\}</m> è un sottogruppo del
+      gruppo additivo di <m>R</m> (usiamo la notazione additiva, ovviamente).
+      Ci chiediamo se <m>S+T</m> sia un sottoanello.
+      L'esempio seguente ci mostra che in generale non è così.
     </p>
 
     <example xml:id="ex-somma_non_sottoanello">
       <statement>
         <p>
-          Si consideri l'anello <m>\mat{3}{R}</m> delle matrici di ordine <m>3</m> a coefficienti in un anello <m>R</m>. Prendiamo i sottoanelli <m>S</m> delle matrici del tipo
+          Si consideri l'anello <m>\mat{3}{R}</m> delle matrici di ordine
+          <m>3</m> a coefficienti in un anello <m>R</m>.
+          Prendiamo i sottoanelli <m>S</m> delle matrici del tipo
           <md>
             \begin{pmatrix}
               a_{11} \amp 0      \amp 0 \\
@@ -1084,31 +1501,42 @@
               a_{31} \amp 0      \amp a_{33}
             \end{pmatrix}
           </md>
-          e il sottoanello <m>T</m> delle matrici triangolari superiori
-          (per la verifica che <m>S</m> sia un sottoanello si veda l'<xref ref="exercise-quasi_triangolari"/>). La matrice <m>A\coloneqq
+          e il sottoanello <m>T</m> delle matrici triangolari superiori (per la
+          verifica che <m>S</m> sia un sottoanello si veda l'
+          <xref ref="exercise-quasi_triangolari"/> ).
+          La matrice
+          <m>A\coloneqq
             \begin{psmallmatrix}
               0 \amp 0 \amp 0 \\
               0 \amp 0 \amp 0 \\
               1 \amp 0 \amp 0
             \end{psmallmatrix}
-          </m> appartiene a <m>S</m> e, quindi, a <m>S+T</m>, mentre la matrice <m>B\coloneqq
+          </m>
+          appartiene a <m>S</m> e, quindi, a <m>S+T</m>, mentre la matrice
+          <m>B\coloneqq
             \begin{psmallmatrix}
               0 \amp 1 \amp 0 \\
               0 \amp 0 \amp 0 \\
               0 \amp 0 \amp 0
             \end{psmallmatrix}
-          </m> appartiene a <m>T</m> e, quindi, a <m>S+T</m>. Il prodotto <m>AB=
+          </m>
+          appartiene a <m>T</m> e, quindi, a <m>S+T</m>.
+          Il prodotto
+          <m>AB=
           \begin{psmallmatrix}
             0 \amp 0 \amp 0 \\
             0 \amp 0 \amp 0 \\
             0 \amp 1 \amp 0
-          \end{psmallmatrix}</m> non appartiene a <m>S+T</m> (infatti, in posizione <m>(2,3)</m> sia le matrici di <m>S</m> che le matrici di <m>T</m> hanno valore nullo e così pure, quindi, le loro somme). Di conseguenza, <m>S+T</m> non è un sottoanello di <m>R</m>.
+          \end{psmallmatrix}</m>
+          non appartiene a <m>S+T</m> (infatti, in posizione <m>(2,3)</m> sia le
+          matrici di <m>S</m> che le matrici di <m>T</m> hanno valore nullo e
+          così pure, quindi, le loro somme).
+          Di conseguenza, <m>S+T</m> non è un sottoanello di <m>R</m>.
         </p>
       </statement>
     </example>
 
     <exercises xml:id="exercises-sottoanelli">
-
       <exercise>
         <statement>
           <p>
@@ -1120,7 +1548,7 @@
       <exercise>
         <statement>
           <p>
-            Completare le verifiche nell'<xref ref="ex-quaternioni"/>.
+            Completare le verifiche nell' <xref ref="ex-quaternioni"/>.
           </p>
         </statement>
       </exercise>
@@ -1136,12 +1564,21 @@
       <exercise xml:id="exercise-sottoanello-generato">
         <statement>
           <p>
-            Sia <m>R</m> un anello e sia <m>X</m> un sottoinsieme di <m>R</m>. Sia <m>Y</m> l'insieme formato da <m>1_{R}</m> e dai prodotti finiti di elementi di <m>X</m> (dunque, se <m>X=\vuoto</m>, <m>Y</m> contiene solo <m>1_{R}</m>). Dimostrare che il sottoanello generato da <m>X</m> è formato dalle somme finite di elementi del tipo <m>na</m>, dove <m>n</m> è un numero intero e <m>a</m> appartiene a <m>Y</m>.
+            Sia <m>R</m> un anello e sia <m>X</m> un sottoinsieme di <m>R</m>.
+            Sia <m>Y</m> l'insieme formato da <m>1_{R}</m> e dai prodotti finiti
+            di elementi di <m>X</m> (dunque, se <m>X=\vuoto</m>, <m>Y</m>
+            contiene solo <m>1_{R}</m> ).
+            Dimostrare che il sottoanello generato da <m>X</m> è formato dalle
+            somme finite di elementi del tipo <m>na</m>, dove <m>n</m> è un
+            numero intero e <m>a</m> appartiene a <m>Y</m>.
           </p>
         </statement>
+
         <hint>
           <p>
-            Mostrare che un sottoanello che contiene <m>X</m> deve contenere tutti gli elementi descritti, e che questi elementi formano un sottoanello contenente <m>X</m>.
+            Mostrare che un sottoanello che contiene <m>X</m> deve contenere
+            tutti gli elementi descritti, e che questi elementi formano un
+            sottoanello contenente <m>X</m>.
           </p>
         </hint>
       </exercise>
@@ -1152,37 +1589,59 @@
             Dimostrare la <xref ref="prop-intersezione_di_sottocampi"/>.
           </p>
         </statement>
-      </exercise>      
+      </exercise>
 
       <exercise xml:id="exercise-quasi_triangolari">
         <statement>
           <p>
-            Sia dato l'anello delle matrici <m>\mat{n}{R}</m> delle matrici quadrate di ordine <m>n</m> a coefficienti in un anello <m>R</m> e sia <m>S</m> il sottoanello delle matrici triangolari inferiori. Dimostrare che il sottoinsieme <m>U</m> di <m>S</m> formato dalle matrici triangolari inferiori le cui entrate di posto <m>(i+1,i)</m> sono nulle è un sottoanello.
+            Sia dato l'anello delle matrici <m>\mat{n}{R}</m> delle matrici
+            quadrate di ordine <m>n</m> a coefficienti in un anello <m>R</m> e
+            sia <m>S</m> il sottoanello delle matrici triangolari inferiori.
+            Dimostrare che il sottoinsieme <m>U</m> di <m>S</m> formato dalle
+            matrici triangolari inferiori le cui entrate di posto <m>(i+1,i)</m>
+            sono nulle è un sottoanello.
           </p>
         </statement>
 
         <solution>
           <p>
-            Chiaramente <m>U</m> è un sottogruppo del gruppo additivo di <m>S</m> e <m>U</m> contiene la matrice identica. Siano allora <m>A\coloneqq(a_{ij})</m> e <m>B\coloneqq(b_{ij})</m> due matrici di <m>U</m>: poiché <m>A</m> e <m>B</m> sono triangolari inferiori abbiamo che <m>a_{ij}=b_{ij}=0</m> se <m>i \lt j</m>. Inoltre, la condizione che definisce <m>U</m> mi dice che <m>a_{ij}=b_{ij}=0</m> se <m>i=j+1</m>. Consideriamo ora la matrice <m>AB</m>: sappiamo che è una matrice triangolare inferiore e dobbiamo, quindi, verificare che si annulla in ogni posizione <m>(i+1,i)</m>. L'elemento di posto <m>(i+1,i)</m> in <m>AB</m> si calcola così
+            Chiaramente <m>U</m> è un sottogruppo del gruppo additivo di
+            <m>S</m> e <m>U</m> contiene la matrice identica.
+            Siano allora <m>A\coloneqq(a_{ij})</m> e <m>B\coloneqq(b_{ij})</m>
+            due matrici di <m>U</m>: poiché <m>A</m> e <m>B</m> sono triangolari
+            inferiori abbiamo che <m>a_{ij}=b_{ij}=0</m> se <m>i \lt j</m>.
+            Inoltre, la condizione che definisce <m>U</m> mi dice che
+            <m>a_{ij}=b_{ij}=0</m> se <m>i=j+1</m>.
+            Consideriamo ora la matrice <m>AB</m>: sappiamo che è una matrice
+            triangolare inferiore e dobbiamo, quindi, verificare che si annulla
+            in ogni posizione <m>(i+1,i)</m>.
+            L'elemento di posto <m>(i+1,i)</m> in <m>AB</m> si calcola così
             <md>
               \sum_{h=1}^{n}a_{i+1,h}b_{h,i}
             </md>.
-            Ora se <m>h \lt i</m> abbiamo che <m>b_{h,i}=0</m>, se <m>h=i</m> abbiamo che <m>a_{i+1,h}=0</m>, se <m>h=i+1</m> abbiamo che <m>b_{h,i}=0</m> e se <m>h \gt i+1</m> abbiamo che <m>a_{i+1,h}=0</m>. In ogni caso, almeno uno dei fattori nei prodotti della sommatoria si annulla e, quindi, <m>AB</m> appartiene a <m>U</m>.
+            Ora se <m>h \lt i</m> abbiamo che <m>b_{h,i}=0</m>, se <m>h=i</m>
+            abbiamo che <m>a_{i+1,h}=0</m>, se <m>h=i+1</m> abbiamo che
+            <m>b_{h,i}=0</m> e se <m>h \gt i+1</m> abbiamo che
+            <m>a_{i+1,h}=0</m>.
+            In ogni caso, almeno uno dei fattori nei prodotti della sommatoria
+            si annulla e, quindi, <m>AB</m> appartiene a <m>U</m>.
           </p>
         </solution>
       </exercise>
-
       <exercisegroup cols="2">
         <introduction>
           <p>
-            Stabilire se i seguenti sottoinsiemi sono sottoanelli degli anelli dati.
+            Stabilire se i seguenti sottoinsiemi sono sottoanelli degli anelli
+            dati.
           </p>
         </introduction>
 
         <exercise>
           <statement>
             <p>
-              In <m>\Razionali</m>, il sottoinsieme <m>\{x\in\Razionali\mid nx\in\Interi\}</m> con <m>n</m> intero fissato.
+              In <m>\Razionali</m>, il sottoinsieme
+              <m>\{x\in\Razionali\mid nx\in\Interi\}</m> con <m>n</m> intero
+              fissato.
             </p>
           </statement>
 
@@ -1196,7 +1655,8 @@
         <exercise>
           <statement>
             <p>
-              In <m>\Razionali</m>, il sottoinsieme <m>\{x\in\Razionali\mid x^{2}\in\Interi\}</m>.
+              In <m>\Razionali</m>, il sottoinsieme
+              <m>\{x\in\Razionali\mid x^{2}\in\Interi\}</m>.
             </p>
           </statement>
 
@@ -1210,7 +1670,8 @@
         <exercise>
           <statement>
             <p>
-              In <m>\Razionali</m>, il sottoinsieme <m>\{x^{2}\mid x\in\Razionali\}</m>.
+              In <m>\Razionali</m>, il sottoinsieme
+              <m>\{x^{2}\mid x\in\Razionali\}</m>.
             </p>
           </statement>
 
@@ -1224,7 +1685,8 @@
         <exercise>
           <statement>
             <p>
-              In <m>\Reali</m>, il sottoinsieme <m>\{a+b\sqrt{2}\mid  a\in\Interi, b\in\Interi\}</m>
+              In <m>\Reali</m>, il sottoinsieme
+              <m>\{a+b\sqrt{2}\mid  a\in\Interi, b\in\Interi\}</m>
             </p>
           </statement>
 
@@ -1238,7 +1700,8 @@
         <exercise>
           <statement>
             <p>
-              In <m>\Reali</m>, il sottoinsieme <m>\{a+b\sqrt[3]{2}\mid  a\in\Interi, b\in\Interi\}</m>
+              In <m>\Reali</m>, il sottoinsieme
+              <m>\{a+b\sqrt[3]{2}\mid  a\in\Interi, b\in\Interi\}</m>
             </p>
           </statement>
 
@@ -1252,7 +1715,8 @@
         <exercise>
           <statement>
             <p>
-              In <m>\mat{2}{\Interi}</m>, il sottoinsieme <m>\{
+              In <m>\mat{2}{\Interi}</m>, il sottoinsieme
+              <m>\{
               \begin{psmallmatrix}
                 a \amp b\\
                 b \amp c
@@ -1270,11 +1734,13 @@
         <exercise>
           <statement>
             <p>
-              In <m>\mat{2}{\Interi}</m>, il sottoinsieme <m>\{
+              In <m>\mat{2}{\Interi}</m>, il sottoinsieme
+              <m>\{
               \begin{psmallmatrix}
                 a \amp nb\\
                 b \amp a
-              \end{psmallmatrix}\mid a\in\Interi, b\in\Interi\}</m> con <m>n</m> intero fissato.
+              \end{psmallmatrix}\mid a\in\Interi, b\in\Interi\}</m>
+              con <m>n</m> intero fissato.
             </p>
           </statement>
 
@@ -1288,7 +1754,8 @@
         <exercise>
           <statement>
             <p>
-              In <m>\mat{2}{\Interi}</m>, il sottoinsieme <m>\{
+              In <m>\mat{2}{\Interi}</m>, il sottoinsieme
+              <m>\{
               \begin{psmallmatrix}
                 a \amp 0\\
                 0 \amp a^{2}
@@ -1306,7 +1773,8 @@
         <exercise>
           <statement>
             <p>
-              In <m>\mat{2}{\Interi}</m>, il sottoinsieme <m>\{
+              In <m>\mat{2}{\Interi}</m>, il sottoinsieme
+              <m>\{
               \begin{psmallmatrix}
                 a \amp a\\
                 b \amp b
@@ -1320,22 +1788,19 @@
             </p>
           </answer>
         </exercise>
-
-
       </exercisegroup>
 
       <exercise>
         <statement>
           <p>
-            Dato l'anello <m>\parti{A}</m> dell'<xref ref="exercise-anello_booleano"/>, mostrare che il sottoinsieme <m>F</m> formato dai sottoinsiemi <m>C</m> di <m>A</m> tali che <m>A</m> è finito o <m>A\setminus C</m> è finito è un sottoanello di <m>\parti{A}</m>.
+            Dato l'anello <m>\parti{A}</m> dell'
+            <xref ref="exercise-anello_booleano"/>, mostrare che il sottoinsieme
+            <m>F</m> formato dai sottoinsiemi <m>C</m> di <m>A</m> tali che
+            <m>A</m> è finito o <m>A\setminus C</m> è finito è un sottoanello di
+            <m>\parti{A}</m>.
           </p>
         </statement>
       </exercise>
-
-
     </exercises>
-
-
   </section>
-
 </chapter>

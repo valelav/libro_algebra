@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <chapter xml:id="ch-sottogruppi">
   <title>Sottogruppi</title>
 
   <introduction>
     <p>
-      Se consideriamo un sottoinsieme <m>S</m> di un gruppo <m>G</m> (o, più in generale, di un monoide <m>M</m>), viene spontaneo chiedersi se <m>S</m> sia a sua volta un gruppo (o un monoide). Dopotutto, dati due elementi di <m>S</m>, possiamo calcolarne il prodotto: rispetto a questa operazione, il sottoinsieme <m>S</m> è un gruppo?
+      Se consideriamo un sottoinsieme <m>S</m> di un gruppo <m>G</m> (o, più in
+      generale, di un monoide <m>M</m> ), viene spontaneo chiedersi se <m>S</m>
+      sia a sua volta un gruppo (o un monoide).
+      Dopotutto, dati due elementi di <m>S</m>, possiamo calcolarne il prodotto:
+      rispetto a questa operazione, il sottoinsieme <m>S</m> è un gruppo?
     </p>
+
     <p>
-      Dobbiamo però fare un passo indietro: è vero che possiamo fare il prodotto di due elementi di <m>S</m>, ma questo in generale non basta a definire un'operazione in <m>S</m>. Ricordiamo, infatti, che un'operazione in un insieme <m>S</m> è una funzione da <m>S\times S</m> in <m>S</m>, cioè, detto altrimenti, è una legge che associa a una coppia di elementi di <m>S</m> un elemento di <m>S</m> e, per quanto ne sappiamo, non è detto che applicando l'operazione di <m>G</m> a una coppia di elementi di <m>S</m> otteniamo sempre come risultato un elemento in <m>S</m>.
+      Dobbiamo però fare un passo indietro: è vero che possiamo fare il prodotto
+      di due elementi di <m>S</m>, ma questo in generale non basta a definire
+      un'operazione in <m>S</m>.
+      Ricordiamo, infatti, che un'operazione in un insieme <m>S</m> è una
+      funzione da <m>S\times S</m> in <m>S</m>, cioè, detto altrimenti, è una
+      legge che associa a una coppia di elementi di <m>S</m> un elemento di
+      <m>S</m> e, per quanto ne sappiamo, non è detto che applicando
+      l'operazione di <m>G</m> a una coppia di elementi di <m>S</m> otteniamo
+      sempre come risultato un elemento in <m>S</m>.
     </p>
   </introduction>
 
@@ -17,7 +31,12 @@
     <definition xml:id="def-chiusura_insieme">
       <statement>
         <p>
-          Dato un sottoinsieme <m>S</m> di un insieme <m>T</m> dotato di un'operazione, diciamo che <m>S</m> è <term>chiuso</term> rispetto all'operazione se, per ogni <m>a</m> e <m>b</m> in <m>S</m>, risulta <m>ab\in S</m>. In tal caso, è definita in <m>S</m> un'operazione detta operazione <term>indotta</term> dall'operazione di <m>T</m>.
+          Dato un sottoinsieme <m>S</m> di un insieme <m>T</m> dotato di
+          un'operazione, diciamo che <m>S</m> è <term>chiuso</term> rispetto
+          all'operazione se, per ogni <m>a</m> e <m>b</m> in <m>S</m>, risulta
+          <m>ab\in S</m>.
+          In tal caso, è definita in <m>S</m> un'operazione detta operazione
+          <term>indotta</term> dall'operazione di <m>T</m>.
         </p>
       </statement>
     </definition>
@@ -25,7 +44,12 @@
     <example>
       <statement>
         <p>
-          Il sottoinsieme <m>S</m> di <m>\Naturali</m> formato dai numeri maggiori o uguali di <m>2</m> è chiuso sia rispetto all'addizione che alla moltiplicazione. Il sottoinsieme <m>R\coloneqq\{0,1\}</m> è invece chiuso rispetto alla moltiplicazione ma non rispetto all'addizione (infatti, <m>1+1=2\notin R</m>).
+          Il sottoinsieme <m>S</m> di <m>\Naturali</m> formato dai numeri
+          maggiori o uguali di <m>2</m> è chiuso sia rispetto all'addizione che
+          alla moltiplicazione.
+          Il sottoinsieme <m>R\coloneqq\{0,1\}</m> è invece chiuso rispetto alla
+          moltiplicazione ma non rispetto all'addizione (infatti,
+          <m>1+1=2\notin R</m> ).
         </p>
       </statement>
     </example>
@@ -34,16 +58,19 @@
       <idx><h>sottomonoide</h></idx>
       <statement>
         <p>
-          Sia dato un monoide <m>M</m> e un suo sottoinsieme <m>L</m>. Diciamo che <m>L</m> è un <term>sottomonoide</term> di <m>M</m> se
+          Sia dato un monoide <m>M</m> e un suo sottoinsieme <m>L</m>.
+          Diciamo che <m>L</m> è un <term>sottomonoide</term> di <m>M</m> se
           <ul>
             <li>
               <p>
                 <m>1\in L</m>;
               </p>
             </li>
+
             <li>
               <p>
-                <m>ab\in L</m> per ogni <m>a</m> e <m>b</m> in <m>L</m> (<m>L</m> è chiuso rispetto all'operazione).
+                <m>ab\in L</m> per ogni <m>a</m> e <m>b</m> in <m>L</m> (
+                <m>L</m> è chiuso rispetto all'operazione).
               </p>
             </li>
           </ul>
@@ -53,14 +80,22 @@
 
     <remark xml:id="rem-sottomonoidi_banali">
       <p>
-        Dato un monoide <m>M</m>, il sottoinsieme <m>\{1\}</m> e il sottoinsieme <m>M</m> sono sottomonoidi di <m>M</m> (ovviamente, questi due sottomonoidi coincidono se <m>M=\{1\}</m>).
+        Dato un monoide <m>M</m>, il sottoinsieme <m>\{1\}</m> e il sottoinsieme
+        <m>M</m> sono sottomonoidi di <m>M</m> (ovviamente, questi due
+        sottomonoidi coincidono se <m>M=\{1\}</m> ).
       </p>
     </remark>
 
     <example>
       <statement>
         <p>
-          Dato il monoide <m>\Naturali</m> rispetto alla moltiplicazione, il sottoinsieme <m>L\coloneqq\{2^{n}\mid n\in\Naturali\}</m> è un sottomonoide perché il prodotto di due potenze di <m>2</m> è una potenza di <m>2</m> e <m>1=2^{0}</m> appartiene a <m>L</m>. Il sottoinsieme <m>P</m> dei numeri pari non è invece un sottomonoide perché, pur essendo chiuso rispetto alla moltiplicazione, non contiene l'elemento neutro <m>1</m>.
+          Dato il monoide <m>\Naturali</m> rispetto alla moltiplicazione, il
+          sottoinsieme <m>L\coloneqq\{2^{n}\mid n\in\Naturali\}</m> è un
+          sottomonoide perché il prodotto di due potenze di <m>2</m> è una
+          potenza di <m>2</m> e <m>1=2^{0}</m> appartiene a <m>L</m>.
+          Il sottoinsieme <m>P</m> dei numeri pari non è invece un sottomonoide
+          perché, pur essendo chiuso rispetto alla moltiplicazione, non contiene
+          l'elemento neutro <m>1</m>.
         </p>
       </statement>
     </example>
@@ -68,55 +103,81 @@
     <proposition xml:id="prop-sottomonoide_e_monoide">
       <statement>
         <p>
-          Se <m>L</m> è un sottomonoide di un monoide <m>M</m>, allora <m>L</m> è un monoide rispetto all'operazione indotta.
+          Se <m>L</m> è un sottomonoide di un monoide <m>M</m>, allora <m>L</m>
+          è un monoide rispetto all'operazione indotta.
         </p>
       </statement>
 
       <proof>
         <p>
-          Dal momento che <m>(ab)c=a(bc)</m> per ogni <m>a</m>, <m>b</m> e <m>c</m> in <m>M</m>, a maggior ragione ciò vale se <m>a</m>, <m>b</m> e <m>c</m> variano in <m>L</m>: dunque, l'operazione indotta è associativa.
+          Dal momento che <m>(ab)c=a(bc)</m> per ogni <m>a</m>, <m>b</m> e
+          <m>c</m> in <m>M</m>, a maggior ragione ciò vale se <m>a</m>, <m>b</m>
+          e <m>c</m> variano in <m>L</m>: dunque, l'operazione indotta è
+          associativa.
         </p>
+
         <p>
-          Poiché <m>1</m> appartiene a <m>L</m>, l'operazione indotta in <m>L</m> ha elemento neutro.
+          Poiché <m>1</m> appartiene a <m>L</m>, l'operazione indotta in
+          <m>L</m> ha elemento neutro.
         </p>
       </proof>
-
     </proposition>
 
     <p>
-      Nella <xref ref="def-sottomonoide"/>, abbiamo richiesto che il sottoinsieme <m>L</m> del monoide <m>M</m> sia chiuso rispetto all'operazione (il che permette di definire un'operazione indotta in <m>L</m>) e che <m>L</m> contenga l'elemento neutro. Si potrebbe anche definire sottomonoide un sottoinsieme che sia chiuso rispetto all'operazione e che sia un monoide rispetto all'operazione indotta. Potrebbe sembrare la stessa cosa, ma l'esempio seguente mostra che così non è.
+      Nella <xref ref="def-sottomonoide"/>, abbiamo richiesto che il
+      sottoinsieme <m>L</m> del monoide <m>M</m> sia chiuso rispetto
+      all'operazione (il che permette di definire un'operazione indotta in
+      <m>L</m> ) e che <m>L</m> contenga l'elemento neutro.
+      Si potrebbe anche definire sottomonoide un sottoinsieme che sia chiuso
+      rispetto all'operazione e che sia un monoide rispetto all'operazione
+      indotta.
+      Potrebbe sembrare la stessa cosa, ma l'esempio seguente mostra che così
+      non è.
     </p>
 
     <example xml:id="ex-sottomonoide_falso">
       <statement>
         <p>
-          Consideriamo il monoide <m>\mat{2}{R}</m> delle matrici quadrate di ordine <m>2</m> a coefficienti in un anello <m>R</m> rispetto alla moltiplicazione. Sia <m>L</m> il sottoinsieme formato dalle matrici del tipo
+          Consideriamo il monoide <m>\mat{2}{R}</m> delle matrici quadrate di
+          ordine <m>2</m> a coefficienti in un anello <m>R</m> rispetto alla
+          moltiplicazione.
+          Sia <m>L</m> il sottoinsieme formato dalle matrici del tipo
           <md>
             \begin{pmatrix}
               a \amp 0 \\
               0 \amp 0
             \end{pmatrix}
           </md>
-          al variare di <m>a</m> in <m>R</m>. Il prodotto di due matrici di <m>L</m> è ancora una matrice di <m>L</m> e la matrice
+          al variare di <m>a</m> in <m>R</m>.
+          Il prodotto di due matrici di <m>L</m> è ancora una matrice di
+          <m>L</m> e la matrice
           <md>
             \begin{pmatrix}
               1 \amp 0 \\
               0 \amp 0
             \end{pmatrix}
           </md>
-          è elemento neutro per l'operazione indotta. Dunque, <m>L</m> è un monoide rispetto all'operazione indotta dall'operazione di <m>\mat{2}{R}</m>, ma non è un sottomonoide, perché il suo elemento neutro non è l'elemento neutro di <m>\mat{2}{R}</m>.
+          è elemento neutro per l'operazione indotta.
+          Dunque, <m>L</m> è un monoide rispetto all'operazione indotta
+          dall'operazione di <m>\mat{2}{R}</m>, ma non è un sottomonoide, perché
+          il suo elemento neutro non è l'elemento neutro di <m>\mat{2}{R}</m>.
         </p>
       </statement>
     </example>
 
     <p>
-      Abbiamo allora visto che, se chiamassimo sottomonoide un sottoinsieme chiuso di un monoide che sia un monoide rispetto all'operazione indotta, avremmo una nozione diversa. Ma perché scegliere una definizione rispetto a un'altra? Non ce ne è una giusta e una sbagliata, sarebbero entrambe legittime, ma la definizione, per così dire alternativa, darebbe alcuni problemi: ad esempio, l'intersezione di sottomonoidi non sarebbe necessariamente un sottomonoide (<xref ref="exercise-intersezione_monoidi_non_monoide"/>).
+      Abbiamo allora visto che, se chiamassimo sottomonoide un sottoinsieme
+      chiuso di un monoide che sia un monoide rispetto all'operazione indotta,
+      avremmo una nozione diversa.
+      Ma perché scegliere una definizione rispetto a un'altra?
+      Non ce ne è una giusta e una sbagliata, sarebbero entrambe legittime, ma
+      la definizione, per così dire alternativa, darebbe alcuni problemi: ad
+      esempio, l'intersezione di sottomonoidi non sarebbe necessariamente un
+      sottomonoide ( <xref ref="exercise-intersezione_monoidi_non_monoide"/> ).
     </p>
 
     <definition xml:id="def-sottogruppo">
-
       <idx><h>sottogruppo</h></idx>
-
       <notation>
         <usage><m>H \le G</m></usage>
         <description><m>H</m> è sottogruppo di <m>G</m></description>
@@ -124,47 +185,60 @@
 
       <statement>
         <p>
-          Dato un gruppo <m>G</m>, un sottoinsieme <m>H</m> di <m>G</m> è detto <term>sottogruppo</term> di <m>G</m> se
+          Dato un gruppo <m>G</m>, un sottoinsieme <m>H</m> di <m>G</m> è detto
+          <term>sottogruppo</term> di <m>G</m> se
           <ul>
             <li>
               <p>
                 <m>1\in H</m>;
               </p>
             </li>
+
             <li>
               <p>
-                <m>ab\in H</m> per ogni <m>a</m> e <m>b</m> in <m>H</m> (<m>H</m> è chiuso rispetto all'operazione);
+                <m>ab\in H</m> per ogni <m>a</m> e <m>b</m> in <m>H</m> (
+                <m>H</m> è chiuso rispetto all'operazione);
               </p>
             </li>
+
             <li>
               <p>
-                <m>a^{-1}\in H</m> per ogni <m>a</m> in <m>H</m> (<m>H</m> è chiuso rispetto al prendere inversi).
+                <m>a^{-1}\in H</m> per ogni <m>a</m> in <m>H</m> ( <m>H</m> è
+                chiuso rispetto al prendere inversi).
               </p>
             </li>
           </ul>
-          Per indicare il fatto che <m>H</m> è sottogruppo di <m>G</m> scriveremo <m>H\le G</m>.
+          Per indicare il fatto che <m>H</m> è sottogruppo di <m>G</m>
+          scriveremo <m>H\le G</m>.
         </p>
       </statement>
     </definition>
 
     <remark xml:id="rem-sottogruppi_banali">
-
       <idx><h>sottogruppo</h><h>banale</h></idx>
       <idx><h>sottogruppo</h><h>proprio</h></idx>
-
       <p>
-        Dato un gruppo <m>G</m>, questo ha almeno i sottogruppi <m>\{1\}</m> e <m>G</m>. Indicheremo semplicemente con <m>1</m> il sottogruppo <m>\{1\}</m>: dal contesto sarà chiaro se questo simbolo indica l'elemento neutro o il sottogruppo il cui unico elemento è l'elemento neutro. Il sottogruppo <m>1</m> è detto sottogruppo <term>banale</term>. I sottogruppi di <m>G</m> diversi da <m>G</m> sono detti sottogruppi <term>propri</term>.
+        Dato un gruppo <m>G</m>, questo ha almeno i sottogruppi <m>\{1\}</m> e
+        <m>G</m>.
+        Indicheremo semplicemente con <m>1</m> il sottogruppo <m>\{1\}</m>: dal
+        contesto sarà chiaro se questo simbolo indica l'elemento neutro o il
+        sottogruppo il cui unico elemento è l'elemento neutro.
+        Il sottogruppo <m>1</m> è detto sottogruppo <term>banale</term>.
+        I sottogruppi di <m>G</m> diversi da <m>G</m> sono detti sottogruppi
+        <term>propri</term>.
       </p>
     </remark>
 
     <p>
-      Lasciamo per esercizio la dimostrazione del seguente risultato, analogo alla <xref ref="prop-sottomonoide_e_monoide"/>.
+      Lasciamo per esercizio la dimostrazione del seguente risultato, analogo
+      alla <xref ref="prop-sottomonoide_e_monoide"/>.
     </p>
 
     <proposition xml:id="prop-sottogruppo_e_gruppo">
       <statement>
         <p>
-          Se <m>H</m> è un sottogruppo di un gruppo <m>G</m>, allora <m>H</m> è un gruppo rispetto all'operazione indotta.
+          Se <m>H</m> è un sottogruppo di un gruppo <m>G</m>, allora <m>H</m> è
+          un gruppo rispetto all'operazione indotta.
         </p>
       </statement>
     </proposition>
@@ -172,21 +246,32 @@
     <example xml:id="ex-nZ">
       <statement>
         <p>
-          Dato il gruppo <m>\Interi</m> rispetto all'addizione e un intero fissato <m>n</m>, il sottoinsieme <m>n\Interi</m> formato dai multipli di <m>n</m> è un sottogruppo di <m>\Interi</m>. Infatti:
+          Dato il gruppo <m>\Interi</m> rispetto all'addizione e un intero
+          fissato <m>n</m>, il sottoinsieme <m>n\Interi</m> formato dai multipli
+          di <m>n</m> è un sottogruppo di <m>\Interi</m>.
+          Infatti:
           <ul>
             <li>
               <p>
-                l'elemento neutro <m>0</m> è multiplo di <m>n</m> e appartiene, quindi, a <m>n\Interi</m>;
+                l'elemento neutro <m>0</m> è multiplo di <m>n</m> e appartiene,
+                quindi, a <m>n\Interi</m>;
               </p>
             </li>
+
             <li>
               <p>
-                se <m>a</m> e <m>b</m> sono elementi di <m>n\Interi</m>, allora <m>a=nu</m> e <m>b=nv</m> per opportuni interi <m>u</m> e <m>v</m>: pertanto, <m>a+b=nu+nv=n(u+v)</m> è multiplo di <m>n</m> e appartiene, quindi, a <m>n\Interi</m>;
+                se <m>a</m> e <m>b</m> sono elementi di <m>n\Interi</m>, allora
+                <m>a=nu</m> e <m>b=nv</m> per opportuni interi <m>u</m> e
+                <m>v</m>: pertanto, <m>a+b=nu+nv=n(u+v)</m> è multiplo di
+                <m>n</m> e appartiene, quindi, a <m>n\Interi</m>;
               </p>
             </li>
+
             <li>
               <p>
-                se <m>a</m> è un elemento di <m>n\Interi</m>, allora <m>a=nu</m> per un opportuno intero <m>u</m>: pertanto, <m>-a=-nu=n(-u)</m> è multiplo di <m>n</m> e appartiene, quindi, a <m>n\Interi</m>.
+                se <m>a</m> è un elemento di <m>n\Interi</m>, allora <m>a=nu</m>
+                per un opportuno intero <m>u</m>: pertanto, <m>-a=-nu=n(-u)</m>
+                è multiplo di <m>n</m> e appartiene, quindi, a <m>n\Interi</m>.
               </p>
             </li>
           </ul>
@@ -195,7 +280,6 @@
     </example>
 
     <exercises xml:id="exercises-sottomonoidi_sottogruppi">
-
       <exercise>
         <statement>
           <p>
@@ -203,11 +287,11 @@
           </p>
         </statement>
       </exercise>
-
       <exercisegroup cols="2">
         <introduction>
           <p>
-            Dati i seguenti sottoinsiemi di <m>\Naturali</m>, stabilire se sono sottomonoidi di <m>(\Naturali,+)</m> e di <m>(\Naturali,\cdot)</m>.
+            Dati i seguenti sottoinsiemi di <m>\Naturali</m>, stabilire se sono
+            sottomonoidi di <m>(\Naturali,+)</m> e di <m>(\Naturali,\cdot)</m>.
           </p>
         </introduction>
 
@@ -217,9 +301,11 @@
               <m>\{n\in\Naturali\mid n\ne 1\}</m>.
             </p>
           </statement>
+
           <answer>
             <p>
-              È sottomonoide di <m>(\Naturali,+)</m> ma non di <m>(\Naturali,\cdot)</m> (non contiene <m>1</m>).
+              È sottomonoide di <m>(\Naturali,+)</m> ma non di
+              <m>(\Naturali,\cdot)</m> (non contiene <m>1</m> ).
             </p>
           </answer>
         </exercise>
@@ -230,9 +316,11 @@
               <m>\{n\in\Naturali\mid n\ne 2\}</m>.
             </p>
           </statement>
+
           <answer>
             <p>
-              È sottomonoide di <m>(\Naturali,\cdot)</m> ma non di <m>(\Naturali,+)</m> (contiene <m>1</m> ma non <m>1+1</m>).
+              È sottomonoide di <m>(\Naturali,\cdot)</m> ma non di
+              <m>(\Naturali,+)</m> (contiene <m>1</m> ma non <m>1+1</m> ).
             </p>
           </answer>
         </exercise>
@@ -243,9 +331,12 @@
               <m>\{n\in\Naturali\mid n\ge 3\}</m>.
             </p>
           </statement>
+
           <answer>
             <p>
-              Non è sottomonoide né di <m>(\Naturali,+)</m> (non contiene <m>0</m>) né di <m>(\Naturali,\cdot)</m> (non contiene <m>1</m>).
+              Non è sottomonoide né di <m>(\Naturali,+)</m> (non contiene
+              <m>0</m> ) né di <m>(\Naturali,\cdot)</m> (non contiene <m>1</m>
+              ).
             </p>
           </answer>
         </exercise>
@@ -256,19 +347,22 @@
               <m>\{n\in\Naturali\mid n\ge 3\}\cup\{0\}</m>.
             </p>
           </statement>
+
           <answer>
             <p>
-              È sottomonoide di <m>(\Naturali,+)</m> ma non di <m>(\Naturali,\cdot)</m> (non contiene <m>1</m>).
+              È sottomonoide di <m>(\Naturali,+)</m> ma non di
+              <m>(\Naturali,\cdot)</m> (non contiene <m>1</m> ).
             </p>
           </answer>
         </exercise>
-
       </exercisegroup>
 
       <exercise>
         <statement>
           <p>
-            Sia <m>S</m> un sottoinsieme non vuoto e chiuso rispetto al prodotto di un monoide <m>M</m>. Mostrare che <m>S\cup \{1\}</m> è un sottomonoide di <m>M</m>.
+            Sia <m>S</m> un sottoinsieme non vuoto e chiuso rispetto al prodotto
+            di un monoide <m>M</m>.
+            Mostrare che <m>S\cup \{1\}</m> è un sottomonoide di <m>M</m>.
           </p>
         </statement>
       </exercise>
@@ -276,28 +370,38 @@
       <exercise>
         <statement>
           <p>
-            Mostrare che l'insieme <m>M</m> formato dai numeri <m>0</m> e <m>1</m> è un monoide rispetto alla moltiplicazione, che i suoi sottoinsiemi <m>\{0\}</m> e <m>\{1\}</m> sono chiusi rispetto all'operazione e sono monoidi per l'operazione indotta, ma solo il secondo è un sottomonoide di <m>M</m>.
+            Mostrare che l'insieme <m>M</m> formato dai numeri <m>0</m> e
+            <m>1</m> è un monoide rispetto alla moltiplicazione, che i suoi
+            sottoinsiemi <m>\{0\}</m> e <m>\{1\}</m> sono chiusi rispetto
+            all'operazione e sono monoidi per l'operazione indotta, ma solo il
+            secondo è un sottomonoide di <m>M</m>.
           </p>
         </statement>
       </exercise>
-
       <exercisegroup cols="2">
         <introduction>
           <p>
-            Dati i seguenti sottoinsiemi di <m>\mat{n}{R}</m> (matrici quadrate di ordine <m>n</m> a coefficienti in un anello <m>R</m>), stabilire se sono sottogruppi di <m>(\mat{n}{R},+)</m> e sottomonoidi di <m>(\mat{n}{R},\cdot)</m>.
+            Dati i seguenti sottoinsiemi di <m>\mat{n}{R}</m> (matrici quadrate
+            di ordine <m>n</m> a coefficienti in un anello <m>R</m> ), stabilire
+            se sono sottogruppi di <m>(\mat{n}{R},+)</m> e sottomonoidi di
+            <m>(\mat{n}{R},\cdot)</m>.
           </p>
         </introduction>
 
         <exercise>
           <statement>
             <p>
-              Il sottoinsieme <m>T</m> delle matrici triangolari superiori, cioè delle matrici del tipo <m>(a_{ij})</m> con <m>a_{ij}=0</m> per <m>i \gt j</m> (<abbr>N.B.</abbr> questo non significa che <m>a_{ij}\ne 0</m> se <m>i \le j</m>).
+              Il sottoinsieme <m>T</m> delle matrici triangolari superiori, cioè
+              delle matrici del tipo <m>(a_{ij})</m> con <m>a_{ij}=0</m> per
+              <m>i \gt j</m> ( <abbr>N.B.</abbr> questo non significa che
+              <m>a_{ij}\ne 0</m> se <m>i \le j</m> ).
             </p>
           </statement>
 
           <answer>
             <p>
-              È sottogruppo di <m>(\mat{n}{R},+)</m> e sottomonoide di <m>(\mat{n}{R},\cdot)</m>.
+              È sottogruppo di <m>(\mat{n}{R},+)</m> e sottomonoide di
+              <m>(\mat{n}{R},\cdot)</m>.
             </p>
           </answer>
         </exercise>
@@ -305,28 +409,36 @@
         <exercise>
           <statement>
             <p>
-              Il sottoinsieme <m>D</m> delle matrici diagonali, cioè delle matrici del tipo <m>(a_{ij})</m> con <m>a_{ij}=0</m> per <m>i \ne j</m>.
+              Il sottoinsieme <m>D</m> delle matrici diagonali, cioè delle
+              matrici del tipo <m>(a_{ij})</m> con <m>a_{ij}=0</m> per
+              <m>i \ne j</m>.
             </p>
           </statement>
 
           <answer>
             <p>
-              È sottogruppo di <m>(\mat{n}{R},+)</m> e sottomonoide di <m>(\mat{n}{R},\cdot)</m>.
+              È sottogruppo di <m>(\mat{n}{R},+)</m> e sottomonoide di
+              <m>(\mat{n}{R},\cdot)</m>.
             </p>
           </answer>
         </exercise>
 
-
         <exercise>
           <statement>
             <p>
-              Il sottoinsieme <m>S</m> delle matrici simmetriche, cioè delle matrici del tipo <m>(a_{ij})</m> con <m>a_{ij}=a_{ji}</m> per ogni <m>i</m> e <m>j</m>.
+              Il sottoinsieme <m>S</m> delle matrici simmetriche, cioè delle
+              matrici del tipo <m>(a_{ij})</m> con <m>a_{ij}=a_{ji}</m> per ogni
+              <m>i</m> e <m>j</m>.
             </p>
           </statement>
 
           <answer>
             <p>
-              È sottogruppo di <m>(\mat{n}{R},+)</m> ma non è sottomonoide di <m>(\mat{n}{R},\cdot)</m> (a parte il caso banale in cui <m>n=1</m>). Per <m>n=2</m> ecco due matrici simmetriche il cui prodotto non è una matrice simmetrica:
+              È sottogruppo di <m>(\mat{n}{R},+)</m> ma non è sottomonoide di
+              <m>(\mat{n}{R},\cdot)</m> (a parte il caso banale in cui
+              <m>n=1</m> ).
+              Per <m>n=2</m> ecco due matrici simmetriche il cui prodotto non è
+              una matrice simmetrica:
               <md>
                 \begin{pmatrix}
                   1 \amp 0 \\
@@ -349,22 +461,21 @@
         <exercise>
           <statement>
             <p>
-              Il sottoinsieme <m>U</m> delle matrici unitriangolari superiori, cioè delle matrici del tipo <m>(a_{ij})</m> con <m>a_{ij}=0</m> per <m>i \gt j</m> e <m>a_{ii}=1</m> per ogni <m>i</m>.
+              Il sottoinsieme <m>U</m> delle matrici unitriangolari superiori,
+              cioè delle matrici del tipo <m>(a_{ij})</m> con <m>a_{ij}=0</m>
+              per <m>i \gt j</m> e <m>a_{ii}=1</m> per ogni <m>i</m>.
             </p>
           </statement>
 
           <answer>
             <p>
-              Non è sottogruppo di <m>(\mat{n}{R},+)</m> ma è sottomonoide di <m>(\mat{n}{R},\cdot)</m>.
+              Non è sottogruppo di <m>(\mat{n}{R},+)</m> ma è sottomonoide di
+              <m>(\mat{n}{R},\cdot)</m>.
             </p>
           </answer>
         </exercise>
-
-
       </exercisegroup>
-
     </exercises>
-
   </section>
 
   <section xml:id="sec-prime_proprieta_sottogruppi">
@@ -377,39 +488,52 @@
     <proposition xml:id="prop-transitivita_sottomonoidi_sottogruppi">
       <statement>
         <p>
-          Se <m>M</m> è un monoide, <m>N</m> è un sottomonoide di <m>M</m> e <m>L</m> è un sottomonoide di <m>N</m>, allora <m>L</m> è un sottomonoide di <m>M</m>.
+          Se <m>M</m> è un monoide, <m>N</m> è un sottomonoide di <m>M</m> e
+          <m>L</m> è un sottomonoide di <m>N</m>, allora <m>L</m> è un
+          sottomonoide di <m>M</m>.
         </p>
+
         <p>
-          Se <m>G</m> è un gruppo, <m>H</m> è un sottogruppo di <m>G</m> e <m>K</m> è un sottogruppo di <m>H</m>, allora <m>K</m> è un sottogruppo di <m>G</m>.
+          Se <m>G</m> è un gruppo, <m>H</m> è un sottogruppo di <m>G</m> e
+          <m>K</m> è un sottogruppo di <m>H</m>, allora <m>K</m> è un
+          sottogruppo di <m>G</m>.
         </p>
       </statement>
     </proposition>
 
     <remark xml:id="rem-sottomonoide_sottogruppo_commutativo">
       <p>
-        Un sottomonoide di un monoide commutativo è, ovviamente, commutativo. Analogamente, un sottogruppo di un gruppo abeliano è abeliano.
+        Un sottomonoide di un monoide commutativo è, ovviamente, commutativo.
+        Analogamente, un sottogruppo di un gruppo abeliano è abeliano.
       </p>
     </remark>
 
     <p>
-      Per verificare che un certo sottoinsieme di un gruppo sia un sottogruppo, occorre verificare che soddisfi le richieste della <xref ref="def-sottogruppo"/>. Diamo ora delle formulazioni equivalenti che utilizzeremo poi secondo convenienza.
+      Per verificare che un certo sottoinsieme di un gruppo sia un sottogruppo,
+      occorre verificare che soddisfi le richieste della
+      <xref ref="def-sottogruppo"/>.
+      Diamo ora delle formulazioni equivalenti che utilizzeremo poi secondo
+      convenienza.
     </p>
 
     <proposition xml:id="prop-non_vuoto_equivalente_esistenza_1">
       <statement>
         <p>
-          Dato un gruppo <m>G</m>, un sottoinsieme <m>H</m> di <m>G</m> è un sottogruppo di <m>G</m> se e solo se
+          Dato un gruppo <m>G</m>, un sottoinsieme <m>H</m> di <m>G</m> è un
+          sottogruppo di <m>G</m> se e solo se
           <ul>
             <li>
               <p>
                 <m>H\ne\vuoto</m>;
               </p>
             </li>
+
             <li>
               <p>
                 <m>ab\in H</m> per ogni <m>a</m> e <m>b</m> in <m>H</m>;
               </p>
             </li>
+
             <li>
               <p>
                 <m>a^{-1}\in H</m> per ogni <m>a</m> in <m>H</m>.
@@ -421,16 +545,25 @@
 
       <proof>
         <p>
-          Notiamo che abbiamo semplicemente rimpiazzato la richiesta che <m>1</m> appartenga a <m>H</m> con la richiesta che <m>H</m> sia non vuoto, mentre le altre due condizioni sono rimaste immutate.
+          Notiamo che abbiamo semplicemente rimpiazzato la richiesta che
+          <m>1</m> appartenga a <m>H</m> con la richiesta che <m>H</m> sia non
+          vuoto, mentre le altre due condizioni sono rimaste immutate.
         </p>
+
         <p>
-          Se <m>H</m> è un sottogruppo, allora <m>1</m> appartiene a <m>H</m> e, quindi, <m>H</m> è non vuoto.
+          Se <m>H</m> è un sottogruppo, allora <m>1</m> appartiene a <m>H</m> e,
+          quindi, <m>H</m> è non vuoto.
         </p>
+
         <p>
-          Per il viceversa, sia <m>H</m> un sottoinsieme che soddisfa le tre condizioni dell'enunciato, e mostriamo che <m>1</m> appartiene a <m>H</m>. Poiché <m>H</m> è non vuoto, contiene un elemento <m>a</m>, il cui inverso <m>a^{-1}</m> appartiene a <m>H</m>: ora <m>1=aa^{-1}</m> è prodotto di due elementi di <m>H</m> e appartiene, dunque, a <m>H</m>.
+          Per il viceversa, sia <m>H</m> un sottoinsieme che soddisfa le tre
+          condizioni dell'enunciato, e mostriamo che <m>1</m> appartiene a
+          <m>H</m>.
+          Poiché <m>H</m> è non vuoto, contiene un elemento <m>a</m>, il cui
+          inverso <m>a^{-1}</m> appartiene a <m>H</m>: ora <m>1=aa^{-1}</m> è
+          prodotto di due elementi di <m>H</m> e appartiene, dunque, a <m>H</m>.
         </p>
       </proof>
-
     </proposition>
 
     <p>
@@ -440,13 +573,15 @@
     <proposition xml:id="prop-condizione_sottogruppo_prodotto_per_inverso">
       <statement>
         <p>
-          Dato un gruppo <m>G</m>, un sottoinsieme <m>H</m> di <m>G</m> è un sottogruppo di <m>G</m> se e solo se
+          Dato un gruppo <m>G</m>, un sottoinsieme <m>H</m> di <m>G</m> è un
+          sottogruppo di <m>G</m> se e solo se
           <ul>
             <li>
               <p>
                 <m>H\ne\vuoto</m>;
               </p>
             </li>
+
             <li>
               <p>
                 <m>ab^{-1}\in H</m> per ogni <m>a</m> e <m>b</m> in <m>H</m>.
@@ -458,29 +593,44 @@
 
       <proof>
         <p>
-          Se <m>H</m> è un sottogruppo, ovviamente è non vuoto e, presi <m>a</m> e <m>b</m> in <m>H</m>, si ha che <m>b^{-1}\in H</m> e, di conseguenza, <m>ab^{-1}\in H</m> in quanto prodotto di elementi di <m>H</m>.
+          Se <m>H</m> è un sottogruppo, ovviamente è non vuoto e, presi <m>a</m>
+          e <m>b</m> in <m>H</m>, si ha che <m>b^{-1}\in H</m> e, di
+          conseguenza, <m>ab^{-1}\in H</m> in quanto prodotto di elementi di
+          <m>H</m>.
         </p>
+
         <p>
-          Per il viceversa, sia <m>H</m> un sottoinsieme non vuoto tale che <m>ab^{-1}\in H</m> per ogni <m>a</m> e <m>b</m> in <m>H</m>. Allora, preso un elemento arbitrario <m>a</m> in <m>H</m>, si ha che <m>1=aa^{-1}</m>, appartiene a <m>H</m>. Inoltre <m>a^{-1}=1a^{-1}</m> appartiene a <m>H</m>. Infine, dato <m>b</m> in <m>H</m>, abbiamo mostrato che <m>b^{-1}</m> appartiene a <m>H</m>: di conseguenza, <m>ab=a(b^{-1})^{-1}</m> appartiene a <m>H</m>. Abbiamo, quindi, verificato tutte e tre le proprietà che definiscono un sottogruppo.
+          Per il viceversa, sia <m>H</m> un sottoinsieme non vuoto tale che
+          <m>ab^{-1}\in H</m> per ogni <m>a</m> e <m>b</m> in <m>H</m>.
+          Allora, preso un elemento arbitrario <m>a</m> in <m>H</m>, si ha che
+          <m>1=aa^{-1}</m>, appartiene a <m>H</m>.
+          Inoltre <m>a^{-1}=1a^{-1}</m> appartiene a <m>H</m>.
+          Infine, dato <m>b</m> in <m>H</m>, abbiamo mostrato che <m>b^{-1}</m>
+          appartiene a <m>H</m>: di conseguenza, <m>ab=a(b^{-1})^{-1}</m>
+          appartiene a <m>H</m>.
+          Abbiamo, quindi, verificato tutte e tre le proprietà che definiscono
+          un sottogruppo.
         </p>
       </proof>
-
     </proposition>
 
     <p>
-      Nel caso in cui il sottoinsieme sia finito, si possono ridurre le verifiche.
+      Nel caso in cui il sottoinsieme sia finito, si possono ridurre le
+      verifiche.
     </p>
 
     <proposition xml:id="prop-sottogruppi_finiti">
       <statement>
         <p>
-          Dato un gruppo <m>G</m>, un sottoinsieme finito <m>H</m> di <m>G</m> è un sottogruppo di <m>G</m> se e solo se
+          Dato un gruppo <m>G</m>, un sottoinsieme finito <m>H</m> di <m>G</m> è
+          un sottogruppo di <m>G</m> se e solo se
           <ul>
             <li>
               <p>
                 <m>H\ne\vuoto</m>;
               </p>
             </li>
+
             <li>
               <p>
                 <m>ab\in H</m> per ogni <m>a</m> e <m>b</m> in <m>H</m>.
@@ -492,49 +642,81 @@
 
       <proof>
         <p>
-          Per la <xref ref="prop-non_vuoto_equivalente_esistenza_1"/>, basta provare che, se <m>H</m> soddisfa le proprietà date in enunciato e <m>a\in H</m>, allora <m>a^{-1}\in H</m>. Si verifica facilmente per induzione che <m>a^{r}\in H</m> per ogni intero positivo <m>r</m>. Poiché gli interi positivi sono infiniti e <m>H</m> è finito, ciò significa che esistono due interi positivi diversi <m>r</m> e <m>s</m> tali che <m>a^{r}=a^{s}</m>. Sia, ad esempio, <m>r \gt s</m>: allora, posto <m>t\coloneqq r-s</m>, si ha <m>t\ge 1</m> e
+          Per la <xref ref="prop-non_vuoto_equivalente_esistenza_1"/>, basta
+          provare che, se <m>H</m> soddisfa le proprietà date in enunciato e
+          <m>a\in H</m>, allora <m>a^{-1}\in H</m>.
+          Si verifica facilmente per induzione che <m>a^{r}\in H</m> per ogni
+          intero positivo <m>r</m>.
+          Poiché gli interi positivi sono infiniti e <m>H</m> è finito, ciò
+          significa che esistono due interi positivi diversi <m>r</m> e <m>s</m>
+          tali che <m>a^{r}=a^{s}</m>.
+          Sia, ad esempio, <m>r \gt s</m>: allora, posto <m>t\coloneqq r-s</m>,
+          si ha <m>t\ge 1</m> e
           <md>
             a^{t}=a^{r-s}=a^{r}(a^{s})^{-1}=a^{r}(a^{r})^{-1}=1
           </md>.
-          Di conseguenza, <m>a^{2t}=(a^{t})^{2}=1^{2}=1</m> e <m>2t\ge 2</m>: pertanto, <m>2t-1\ge 1</m> e <m>a^{2t-1}\in H</m>. Ma <m>a^{2t-1}a=1=a^{-1}a</m>: per le <xref ref="prop-cancellazione_gruppo" text="title"/>, abbiamo allora che <m>a^{-1}=a^{2t-1}\in H</m>, come richiesto.
-         </p>
+          Di conseguenza, <m>a^{2t}=(a^{t})^{2}=1^{2}=1</m> e <m>2t\ge 2</m>:
+          pertanto, <m>2t-1\ge 1</m> e <m>a^{2t-1}\in H</m>.
+          Ma <m>a^{2t-1}a=1=a^{-1}a</m>: per le
+          <xref ref="prop-cancellazione_gruppo" text="title"/>, abbiamo allora
+          che <m>a^{-1}=a^{2t-1}\in H</m>, come richiesto.
+        </p>
       </proof>
-
     </proposition>
 
     <remark xml:id="rem-sottogruppi_di_gruppi_finiti">
       <p>
-        Ovviamente, il criterio dato dalla proposizione precedente si può sempre usare se il gruppo <m>G</m> è finito.
+        Ovviamente, il criterio dato dalla proposizione precedente si può sempre
+        usare se il gruppo <m>G</m> è finito.
       </p>
     </remark>
 
     <example>
       <statement>
         <p>
-          Consideriamo il gruppo <m>\GL{n}{\Razionali}</m> delle matrici quadrate invertibili di ordine <m>n</m> a coefficienti in <m>\Razionali</m>. Sia <m>H</m> il sottoinsieme formato dalle matrici diagonali tali che gli elementi sulla diagonale sono <m>1</m> o <m>-1</m>. Questo sottoinsieme è chiaramente non vuoto e finito (abbiamo <m>2</m> scelte per ogni elemento sulla diagonale, per un totale di <m>2^{n}</m> scelte). Il prodotto di due matrici di <m>H</m> è ancora una matrice di <m>H</m>: dunque, <m>H</m> è un sottogruppo di <m>\GL{n}{\Razionali}</m>.
+          Consideriamo il gruppo <m>\GL{n}{\Razionali}</m> delle matrici
+          quadrate invertibili di ordine <m>n</m> a coefficienti in
+          <m>\Razionali</m>.
+          Sia <m>H</m> il sottoinsieme formato dalle matrici diagonali tali che
+          gli elementi sulla diagonale sono <m>1</m> o <m>-1</m>.
+          Questo sottoinsieme è chiaramente non vuoto e finito (abbiamo <m>2</m>
+          scelte per ogni elemento sulla diagonale, per un totale di
+          <m>2^{n}</m> scelte).
+          Il prodotto di due matrici di <m>H</m> è ancora una matrice di
+          <m>H</m>: dunque, <m>H</m> è un sottogruppo di
+          <m>\GL{n}{\Razionali}</m>.
         </p>
       </statement>
     </example>
 
     <p>
-      Senza l'ipotesi che <m>H</m> sia finito, la chiusura rispetto all'operazione non è sufficiente a garantire che <m>H</m> sia un sottogruppo (e nemmeno a garantire che <m>H</m> sia un sottomonoide).
+      Senza l'ipotesi che <m>H</m> sia finito, la chiusura rispetto
+      all'operazione non è sufficiente a garantire che <m>H</m> sia un
+      sottogruppo (e nemmeno a garantire che <m>H</m> sia un sottomonoide).
     </p>
 
     <example>
       <statement>
         <p>
-           Prendiamo il gruppo <m>(\Interi,+)</m>. Il sottoinsieme <m>\Naturali</m> è chiuso rispetto all'operazione ma non è un sottogruppo (non tutti gli elementi hanno opposto, anzi solo l'elemento neutro <m>0</m> ha opposto). Il sottoinsieme <m>P</m> degli interi positivi è chiuso rispetto all'operazione ma non è neanche un sottomonoide (non contiene l'elemento neutro <m>0</m>).
+          Prendiamo il gruppo <m>(\Interi,+)</m>.
+          Il sottoinsieme <m>\Naturali</m> è chiuso rispetto all'operazione ma
+          non è un sottogruppo (non tutti gli elementi hanno opposto, anzi solo
+          l'elemento neutro <m>0</m> ha opposto).
+          Il sottoinsieme <m>P</m> degli interi positivi è chiuso rispetto
+          all'operazione ma non è neanche un sottomonoide (non contiene
+          l'elemento neutro <m>0</m> ).
         </p>
       </statement>
     </example>
 
     <proposition xml:id="prop-intersezione_di_sottogruppi">
-
       <idx><h>intersezione</h><h>di sottogruppi</h></idx>
       <idx><h>sottogruppo</h><h>intersezione</h></idx>
       <statement>
         <p>
-          Se <m>G</m> è un gruppo e <m>\{H_{i}\}_{i\in \Omega}</m> è una famiglia di sottogruppi di <m>G</m> (indicizzata da un insieme di indici <m>\Omega</m>), allora
+          Se <m>G</m> è un gruppo e <m>\{H_{i}\}_{i\in \Omega}</m> è una
+          famiglia di sottogruppi di <m>G</m> (indicizzata da un insieme di
+          indici <m>\Omega</m> ), allora
           <md>
             \bigcap_{i\in \Omega}H_{i}
           </md>
@@ -546,54 +728,76 @@
         <p>
           Indichiamo <m>\bigcap_{i\in \Omega}H_{i}</m> con <m>H</m>.
         </p>
+
         <p>
-          Poiché <m>1\in H_{i}</m> per ciascun <m>i</m>, abbiamo che <m>1\in H</m>.
+          Poiché <m>1\in H_{i}</m> per ciascun <m>i</m>, abbiamo che
+          <m>1\in H</m>.
         </p>
+
         <p>
-          Se <m>a</m> e <m>b</m> sono elementi di <m>H</m>, allora sono elementi di <m>H_{i}</m> per ciascun <m>i</m>: poiché ciascun <m>H_{i}</m> è un sottogruppo, ciò significa che <m>ab</m> appartiene a ciascun <m>H_{i}</m> e, di conseguenza, appartiene a <m>H</m>.
+          Se <m>a</m> e <m>b</m> sono elementi di <m>H</m>, allora sono elementi
+          di <m>H_{i}</m> per ciascun <m>i</m>: poiché ciascun <m>H_{i}</m> è un
+          sottogruppo, ciò significa che <m>ab</m> appartiene a ciascun
+          <m>H_{i}</m> e, di conseguenza, appartiene a <m>H</m>.
         </p>
+
         <p>
-          Analogamente, si vede facilmente che, se <m>a\in H</m>, allora <m>a^{-1}\in H</m>.
+          Analogamente, si vede facilmente che, se <m>a\in H</m>, allora
+          <m>a^{-1}\in H</m>.
         </p>
       </proof>
-
     </proposition>
 
     <p>
-      Viene naturale chiedersi se l'unione di sottogruppi sia in sottogruppo. In generale non è detto:
+      Viene naturale chiedersi se l'unione di sottogruppi sia in sottogruppo.
+      In generale non è detto:
     </p>
 
     <example xml:id="ex-unione_sottogruppi">
       <statement>
         <p>
-          Consideriamo i sottogruppi <m>2\Interi</m> e <m>3\Interi</m> di <m>\Interi</m>, come nell'<xref ref="ex-nZ"/>. L'unione di questi sottogruppi è formata dagli interi che sono multipli di <m>2</m> o di <m>3</m>. In particolare, notiamo che <m>2</m> e <m>3</m> appartengono a tale unione ma <m>2+3=5</m> no: dunque, <m>2\Interi\cup 3\Interi</m> non è un sottogruppo di <m>\Interi</m>.
+          Consideriamo i sottogruppi <m>2\Interi</m> e <m>3\Interi</m> di
+          <m>\Interi</m>, come nell' <xref ref="ex-nZ"/>.
+          L'unione di questi sottogruppi è formata dagli interi che sono
+          multipli di <m>2</m> o di <m>3</m>.
+          In particolare, notiamo che <m>2</m> e <m>3</m> appartengono a tale
+          unione ma <m>2+3=5</m> no: dunque, <m>2\Interi\cup 3\Interi</m> non è
+          un sottogruppo di <m>\Interi</m>.
         </p>
       </statement>
     </example>
 
     <p>
-      Dato un sottoinsieme <m>X</m> di un gruppo <m>G</m>, vorremmo descrivere un sottogruppo di <m>G</m> che contenga <m>X</m> ma che non sia troppo grande.
+      Dato un sottoinsieme <m>X</m> di un gruppo <m>G</m>, vorremmo descrivere
+      un sottogruppo di <m>G</m> che contenga <m>X</m> ma che non sia troppo
+      grande.
     </p>
 
     <definition xml:id="def-sottogruppo_generato">
-
       <idx><h>sottogruppo</h><h>generato da un sottoinsieme</h></idx>
       <idx><h>sottogruppo</h><h>generatori di</h></idx>
       <idx><h>generatori</h><h>di un sottogruppo</h></idx>
-
       <notation>
         <usage><m>\grgen{X}</m></usage>
-        <description>sottogruppo generato da un sottoinsieme <m>X</m></description>
+        <description>
+          sottogruppo generato da un sottoinsieme <m>X</m>
+        </description>
       </notation>
 
       <statement>
         <p>
-          Dato un sottoinsieme <m>X</m> di un gruppo <m>G</m>, il <term>sottogruppo generato</term> da <m>X</m> è l'intersezione di tutti i sottogruppi di <m>G</m> contenenti <m>X</m>, denotata con <m>\grgen{X}</m>. In simboli
+          Dato un sottoinsieme <m>X</m> di un gruppo <m>G</m>, il
+          <term>sottogruppo generato</term> da <m>X</m> è l'intersezione di
+          tutti i sottogruppi di <m>G</m> contenenti <m>X</m>, denotata con
+          <m>\grgen{X}</m>.
+          In simboli
           <md>
             \grgen{X}\coloneqq\bigcap_{X\subseteq H\le G}H
           </md>.
-          Gli elementi di <m>X</m> sono detti <term>generatori</term> di <m>\grgen{X}</m>.
-          Nel caso in cui <m>X\coloneqq\{x_{1},\ldots,x_{r}\}</m> sia un insieme finito, scriveremo semplicemente <m>\grgen{x_{1},\ldots,x_{r}}</m>.
+          Gli elementi di <m>X</m> sono detti <term>generatori</term> di
+          <m>\grgen{X}</m>.
+          Nel caso in cui <m>X\coloneqq\{x_{1},\ldots,x_{r}\}</m> sia un insieme
+          finito, scriveremo semplicemente <m>\grgen{x_{1},\ldots,x_{r}}</m>.
         </p>
       </statement>
     </definition>
@@ -601,30 +805,51 @@
     <proposition xml:id="prop-sottogruppo_generato_minimo_sottogruppo">
       <statement>
         <p>
-          Dato un sottoinsieme <m>X</m> di un gruppo <m>G</m>, <m>\grgen{X}</m> è effettivamente un sottogruppo ed è il più piccolo sottogruppo di <m>G</m> contenente <m>X</m>, nel senso che, se <m>H</m> è un sottogruppo di <m>G</m> che contiene <m>X</m>, allora <m>H</m> contiene <m>\grgen{X}</m>.
+          Dato un sottoinsieme <m>X</m> di un gruppo <m>G</m>, <m>\grgen{X}</m>
+          è effettivamente un sottogruppo ed è il più piccolo sottogruppo di
+          <m>G</m> contenente <m>X</m>, nel senso che, se <m>H</m> è un
+          sottogruppo di <m>G</m> che contiene <m>X</m>, allora <m>H</m>
+          contiene <m>\grgen{X}</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Sappiamo che c'è almeno un sottogruppo di <m>G</m> contenente <m>X</m> e cioè <m>G</m> stesso: quindi, <m>\grgen{X}</m> è un sottogruppo per la <xref ref="prop-intersezione_di_sottogruppi"/>. Per la <xref ref="def-sottogruppo_generato"/>, <m>\grgen{X}</m> è intersezione di tutti i sottogruppi contenenti <m>X</m> ed è, quindi, contenuto in ciascuno di essi.
+          Sappiamo che c'è almeno un sottogruppo di <m>G</m> contenente <m>X</m>
+          e cioè <m>G</m> stesso: quindi, <m>\grgen{X}</m> è un sottogruppo per
+          la <xref ref="prop-intersezione_di_sottogruppi"/>.
+          Per la <xref ref="def-sottogruppo_generato"/>, <m>\grgen{X}</m> è
+          intersezione di tutti i sottogruppi contenenti <m>X</m> ed è, quindi,
+          contenuto in ciascuno di essi.
         </p>
       </proof>
-
     </proposition>
 
     <p>
-      Supponiamo ora di voler dare una descrizione più esplicita degli elementi di <m>\grgen{X}</m>. Per fissare le idee, supponiamo che <m>X\coloneqq\{a,b,c\}</m>. Allora <m>\grgen{X}</m> deve contenere, ad esempio, <m>ab</m>, <m>bb</m>, <m>ca</m> <etc /> (può anche essere che qualcuno di questi elementi sia uguale a uno degli elementi di <m>X</m>). Inoltre <m>\grgen{X}</m> deve contenere anche gli inversi degli elementi di <m>X</m>, cioè <m>a^{-1}</m>, <m>b^{-1}</m>, <m>c^{-1}</m> e, di conseguenza, anche i prodotti di questi con gli altri elementi che avevamo già considerato, ad esempio, <m>abc^{-1}</m>, <m>a^{-1}bb</m> e così via. Possiamo allora dare la
+      Supponiamo ora di voler dare una descrizione più esplicita degli elementi
+      di <m>\grgen{X}</m>.
+      Per fissare le idee, supponiamo che <m>X\coloneqq\{a,b,c\}</m>.
+      Allora <m>\grgen{X}</m> deve contenere, ad esempio, <m>ab</m>, <m>bb</m>,
+      <m>ca</m> <etc/> (può anche essere che qualcuno di questi elementi sia
+      uguale a uno degli elementi di <m>X</m> ).
+      Inoltre <m>\grgen{X}</m> deve contenere anche gli inversi degli elementi
+      di <m>X</m>, cioè <m>a^{-1}</m>, <m>b^{-1}</m>, <m>c^{-1}</m> e, di
+      conseguenza, anche i prodotti di questi con gli altri elementi che avevamo
+      già considerato, ad esempio, <m>abc^{-1}</m>, <m>a^{-1}bb</m> e così via.
+      Possiamo allora dare la
     </p>
 
     <proposition xml:id="prop-elementi_del_sottogruppo_generato">
       <statement>
         <p>
-          Dato un sottoinsieme <m>X</m> di un gruppo <m>G</m>, il sottogruppo <m>\grgen{X}</m> è uguale a <m>1</m> se <m>X=\vuoto</m>, altrimenti è l'insieme dei prodotti del tipo
+          Dato un sottoinsieme <m>X</m> di un gruppo <m>G</m>, il sottogruppo
+          <m>\grgen{X}</m> è uguale a <m>1</m> se <m>X=\vuoto</m>, altrimenti è
+          l'insieme dei prodotti del tipo
           <md>
             x_{1}x_{2}\cdots x_{r}
           </md>
-          dove <m>r</m> è un intero positivo e ciascun <m>x_{i}</m> appartiene a <m>X</m> o è l'inverso di un elemento di <m>X</m>.
+          dove <m>r</m> è un intero positivo e ciascun <m>x_{i}</m> appartiene a
+          <m>X</m> o è l'inverso di un elemento di <m>X</m>.
         </p>
       </statement>
 
@@ -632,26 +857,44 @@
         <p>
           Se <m>X=\vuoto</m>, ovviamente <m>\grgen{X}=1</m>.
         </p>
+
         <p>
-          Supponiamo, dunque, che <m>X</m> non sia vuoto e sia <m>S</m> l'insieme dei prodotti dati in enunciato. Gli elementi di <m>X</m> e i loro inversi appartengono a <m>\grgen{X}</m> e, di conseguenza, tutti gli elementi di <m>S</m>, essendo prodotti di elementi di <m>\grgen{X}</m>, appartengono a <m>\grgen{X}</m>. Inoltre, ogni elemento di <m>X</m> appartiene a <m>S</m>.
+          Supponiamo, dunque, che <m>X</m> non sia vuoto e sia <m>S</m>
+          l'insieme dei prodotti dati in enunciato.
+          Gli elementi di <m>X</m> e i loro inversi appartengono a
+          <m>\grgen{X}</m> e, di conseguenza, tutti gli elementi di <m>S</m>,
+          essendo prodotti di elementi di <m>\grgen{X}</m>, appartengono a
+          <m>\grgen{X}</m>.
+          Inoltre, ogni elemento di <m>X</m> appartiene a <m>S</m>.
         </p>
+
         <p>
-          Riassumendo, <m>X\subseteq S\subseteq\grgen{X}</m>: per la <xref ref="prop-sottogruppo_generato_minimo_sottogruppo"/> basta provare che <m>S</m> è un sottogruppo. Chiaramente <m>S</m>, contenendo <m>X</m>, è non vuoto. Il prodotto di due elementi di <m>S</m> è ancora un elemento di <m>S</m>. Se <m>x_{1}x_{2}\cdots x_{r}</m> è un elemento di <m>S</m>, per la <xref ref="prop-proprieta_inverso_rivisto"/> il suo inverso è <m>x_{r}^{-1}\cdots x_{2}^{-1}x_{1}^{-1}</m>: poiché ciascun <m>x_{i}</m> appartiene a <m>X</m> o è inverso di un elemento di <m>X</m>, lo stesso si può dire di <m>x_{i}^{-1}</m>. Dunque, <m>S</m> è un sottogruppo, come richiesto.
+          Riassumendo, <m>X\subseteq S\subseteq\grgen{X}</m>: per la
+          <xref ref="prop-sottogruppo_generato_minimo_sottogruppo"/> basta
+          provare che <m>S</m> è un sottogruppo.
+          Chiaramente <m>S</m>, contenendo <m>X</m>, è non vuoto.
+          Il prodotto di due elementi di <m>S</m> è ancora un elemento di
+          <m>S</m>.
+          Se <m>x_{1}x_{2}\cdots x_{r}</m> è un elemento di <m>S</m>, per la
+          <xref ref="prop-proprieta_inverso_rivisto"/> il suo inverso è
+          <m>x_{r}^{-1}\cdots x_{2}^{-1}x_{1}^{-1}</m>: poiché ciascun
+          <m>x_{i}</m> appartiene a <m>X</m> o è inverso di un elemento di
+          <m>X</m>, lo stesso si può dire di <m>x_{i}^{-1}</m>.
+          Dunque, <m>S</m> è un sottogruppo, come richiesto.
         </p>
       </proof>
-
     </proposition>
 
     <remark xml:id="rem-espressione_elemento_generato_non_unica">
       <p>
-        L'espressione per un elemento di <m>\grgen{X}</m> data dalla <xref ref="prop-elementi_del_sottogruppo_generato"/> non è in generale unica.
+        L'espressione per un elemento di <m>\grgen{X}</m> data dalla
+        <xref ref="prop-elementi_del_sottogruppo_generato"/> non è in generale
+        unica.
       </p>
     </remark>
 
     <definition xml:id="def-centralizzante_anello">
-
       <idx><h>centralizzante</h><h>di un elemento di un gruppo</h></idx>
-
       <notation>
         <usage><m>\cent{G}{a}</m></usage>
         <description>centralizzante in <m>G</m> di <m>a</m></description>
@@ -659,7 +902,11 @@
 
       <statement>
         <p>
-          Dato un elemento <m>a</m> di un gruppo <m>G</m>, il <term>centralizzante</term> di <m>a</m> in <m>G</m>, denotato con <m>\cent{G}{a}</m>, è il sottoinsieme di <m>G</m> formato dagli elementi di <m>G</m> che commutano con <m>a</m>. In simboli
+          Dato un elemento <m>a</m> di un gruppo <m>G</m>, il
+          <term>centralizzante</term> di <m>a</m> in <m>G</m>, denotato con
+          <m>\cent{G}{a}</m>, è il sottoinsieme di <m>G</m> formato dagli
+          elementi di <m>G</m> che commutano con <m>a</m>.
+          In simboli
           <md>
             \cent{G}{a}\coloneqq \{g\in G\mid ga=ag\}
           </md>.
@@ -670,39 +917,47 @@
     <proposition xml:id="prop-centralizzante_sottogruppo">
       <statement>
         <p>
-          Dato un elemento <m>a</m> di un gruppo <m>G</m>, il centralizzante in <m>G</m> di <m>a</m> è un sottogruppo contenente <m>a</m>.
+          Dato un elemento <m>a</m> di un gruppo <m>G</m>, il centralizzante in
+          <m>G</m> di <m>a</m> è un sottogruppo contenente <m>a</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Chiaramente <m>a</m> commuta con sé stesso: dunque, <m>a\in\cent{G}{a}</m> e, in particolare, <m>\cent{G}{a}\ne\vuoto</m>.
+          Chiaramente <m>a</m> commuta con sé stesso: dunque,
+          <m>a\in\cent{G}{a}</m> e, in particolare, <m>\cent{G}{a}\ne\vuoto</m>.
         </p>
+
         <p>
-          Siano <m>g</m> e <m>h</m> due elementi di <m>\cent{G}{a}</m>. Allora
+          Siano <m>g</m> e <m>h</m> due elementi di <m>\cent{G}{a}</m>.
+          Allora
           <md>
             gha=gah=agh
           </md>
-          e, dunque, <m>gh\in\cent{G}{a}</m>. Infine, sia <m>g</m> un elemento di <m>\cent{G}{a}</m>. Allora, per la <xref ref="prop-potenze_di_commutabili"/>, <m>g^{-1}</m> commuta con <m>a</m>.
+          e, dunque, <m>gh\in\cent{G}{a}</m>.
+          Infine, sia <m>g</m> un elemento di <m>\cent{G}{a}</m>.
+          Allora, per la <xref ref="prop-potenze_di_commutabili"/>,
+          <m>g^{-1}</m> commuta con <m>a</m>.
         </p>
       </proof>
-
     </proposition>
 
     <remark xml:id="rem-reciprocita_centralizzante">
       <p>
-        Per definizione, un elemento <m>b</m> appartiene al centralizzante di un elemento <m>a</m> se e solo se <m>a</m> e <m>b</m> commutano: ma allora, ciò avviene se e solo se <m>a</m> appartiene al centralizzante di <m>b</m>.
+        Per definizione, un elemento <m>b</m> appartiene al centralizzante di un
+        elemento <m>a</m> se e solo se <m>a</m> e <m>b</m> commutano: ma allora,
+        ciò avviene se e solo se <m>a</m> appartiene al centralizzante di
+        <m>b</m>.
       </p>
     </remark>
 
     <p>
-      Possiamo estendere la definizione di centralizzante a sottoinsiemi di un gruppo.
+      Possiamo estendere la definizione di centralizzante a sottoinsiemi di un
+      gruppo.
     </p>
 
     <definition xml:id="def-centralizzante_di_sottoinsieme">
-
       <idx><h>centralizzante</h><h>di un sottoinsieme di un gruppo</h></idx>
-
       <notation>
         <usage><m>\cent{G}{X}</m></usage>
         <description>centralizzante in <m>G</m> di <m>X</m></description>
@@ -710,38 +965,42 @@
 
       <statement>
         <p>
-          Dato un sottoinsieme <m>X</m> di un gruppo <m>G</m>, il <term>centralizzante</term> di <m>X</m> in <m>G</m>, denotato con <m>\cent{G}{X}</m>, è il sottoinsieme di <m>G</m> formato dagli elementi che commutano con ogni elemento di <m>X</m>.
+          Dato un sottoinsieme <m>X</m> di un gruppo <m>G</m>, il
+          <term>centralizzante</term> di <m>X</m> in <m>G</m>, denotato con
+          <m>\cent{G}{X}</m>, è il sottoinsieme di <m>G</m> formato dagli
+          elementi che commutano con ogni elemento di <m>X</m>.
         </p>
       </statement>
-
     </definition>
 
     <proposition xml:id="prop-centralizzante_di_sottoinsieme_sottogruppo">
-
       <statement>
         <p>
-          Dato un sottoinsieme <m>X</m> di un gruppo <m>G</m>, il centralizzante di <m>X</m> in <m>G</m> è un sottogruppo di <m>G</m>.
+          Dato un sottoinsieme <m>X</m> di un gruppo <m>G</m>, il centralizzante
+          di <m>X</m> in <m>G</m> è un sottogruppo di <m>G</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Per definizione abbiamo <m>\cent{G}{X}=\bigcap_{a\in X}\cent{G}{a}</m>: la tesi segue dalla <xref ref="prop-intersezione_di_sottogruppi"/>.
+          Per definizione abbiamo
+          <m>\cent{G}{X}=\bigcap_{a\in X}\cent{G}{a}</m>: la tesi segue dalla
+          <xref ref="prop-intersezione_di_sottogruppi"/>.
         </p>
       </proof>
-
     </proposition>
 
     <remark xml:id="rem-centralizzante_non_contiene_sottoinsieme">
       <p>
-        Gli elementi di <m>X</m> non è detto che siano contenuti in <m>\cent{G}{X}</m>: più precisamente, un elemento di <m>X</m> appartiene a <m>\cent{G}{X}</m> se e solo se commuta con tutti gli altri elementi di <m>X</m>.
+        Gli elementi di <m>X</m> non è detto che siano contenuti in
+        <m>\cent{G}{X}</m>: più precisamente, un elemento di <m>X</m> appartiene
+        a <m>\cent{G}{X}</m> se e solo se commuta con tutti gli altri elementi
+        di <m>X</m>.
       </p>
     </remark>
 
     <definition xml:id="def-centro_di_gruppo">
-
       <idx><h>centro</h><h>di un gruppo</h></idx>
-
       <notation>
         <usage><m>\centro(G)</m></usage>
         <description>centro di un gruppo <m>G</m></description>
@@ -749,48 +1008,71 @@
 
       <statement>
         <p>
-          Dato un gruppo <m>G</m>, il suo <term>centro</term>, denotato con <m>\centro(G)</m>, è il sottoinsieme di <m>G</m> formato dagli elementi che commutano con ogni altro elemento di <m>G</m>. In altri termini, <m>\centro(G)=\cent{G}{G}</m>.
+          Dato un gruppo <m>G</m>, il suo <term>centro</term>, denotato con
+          <m>\centro(G)</m>, è il sottoinsieme di <m>G</m> formato dagli
+          elementi che commutano con ogni altro elemento di <m>G</m>.
+          In altri termini, <m>\centro(G)=\cent{G}{G}</m>.
         </p>
       </statement>
     </definition>
 
     <remark xml:id="rem-centro_sottogruppo_abeliano">
       <p>
-        Poiché <m>\centro(G)=\cent{G}{G}</m>, dalla <xref ref="prop-centralizzante_di_sottoinsieme_sottogruppo"/> segue che il centro di un gruppo <m>G</m> è un sottogruppo di <m>G</m>. Ovviamente, <m>\centro(G)</m> è abeliano e coincide con <m>G</m> se e solo se <m>G</m> è abeliano.
+        Poiché <m>\centro(G)=\cent{G}{G}</m>, dalla
+        <xref ref="prop-centralizzante_di_sottoinsieme_sottogruppo"/> segue che
+        il centro di un gruppo <m>G</m> è un sottogruppo di <m>G</m>.
+        Ovviamente, <m>\centro(G)</m> è abeliano e coincide con <m>G</m> se e
+        solo se <m>G</m> è abeliano.
       </p>
     </remark>
 
     <proposition xml:id="prop-elementi_che_commutano_generano_sottogruppo_abeliano">
       <statement>
         <p>
-          Sia <m>G</m> un gruppo generato da un suo sottoinsieme <m>X</m>. Allora, <m>G</m> è abeliano se e solo se gli elementi di <m>X</m> commutano fra loro.
+          Sia <m>G</m> un gruppo generato da un suo sottoinsieme <m>X</m>.
+          Allora, <m>G</m> è abeliano se e solo se gli elementi di <m>X</m>
+          commutano fra loro.
         </p>
       </statement>
 
       <proof>
         <p>
-          Se <m>G</m> è abeliano, ovviamente gli elementi di <m>X</m> commutano fra loro.
+          Se <m>G</m> è abeliano, ovviamente gli elementi di <m>X</m> commutano
+          fra loro.
         </p>
+
         <p>
-          Viceversa, supponiamo che gli elementi di <m>X</m> commutino fra loro. Grazie all'<xref ref="rem-centralizzante_non_contiene_sottoinsieme"/>, ciò implica che <m>X</m> è contenuto in <m>\cent{G}{X}</m>. Poiché <m>X</m> genera <m>G</m>, ciò significa che <m>G=\cent{G}{X}</m>. Dunque, ogni elemento di <m>X</m> commuta con ogni elemento di <m>G</m> e, quindi, <m>X</m> è contenuto in <m>\cent{G}{G}</m>, cioè <m>X</m> è contenuto in <m>\centro(G)</m>. Utilizzando ancora una volta il fatto che <m>X</m> genera <m>G</m>, otteniamo allora che <m>G=\centro(G)</m>, cioè <m>G</m> è abeliano.
+          Viceversa, supponiamo che gli elementi di <m>X</m> commutino fra loro.
+          Grazie all'
+          <xref ref="rem-centralizzante_non_contiene_sottoinsieme"/>, ciò
+          implica che <m>X</m> è contenuto in <m>\cent{G}{X}</m>.
+          Poiché <m>X</m> genera <m>G</m>, ciò significa che
+          <m>G=\cent{G}{X}</m>.
+          Dunque, ogni elemento di <m>X</m> commuta con ogni elemento di
+          <m>G</m> e, quindi, <m>X</m> è contenuto in <m>\cent{G}{G}</m>, cioè
+          <m>X</m> è contenuto in <m>\centro(G)</m>.
+          Utilizzando ancora una volta il fatto che <m>X</m> genera <m>G</m>,
+          otteniamo allora che <m>G=\centro(G)</m>, cioè <m>G</m> è abeliano.
         </p>
       </proof>
-
     </proposition>
 
     <exercises xml:id="exercises-prime_proprieta_sottogruppi">
-
       <exercise xml:id="exercise-prodotto_in_sottogruppo_dentro_fuori">
         <task>
           <statement>
             <p>
-              Mostrare che, se <m>H</m> è un sottogruppo di un gruppo <m>G</m> e <m>x\in H</m> ma <m>y\notin H</m>, allora <m>xy\notin H</m>.
+              Mostrare che, se <m>H</m> è un sottogruppo di un gruppo <m>G</m> e
+              <m>x\in H</m> ma <m>y\notin H</m>, allora <m>xy\notin H</m>.
             </p>
           </statement>
 
           <solution>
             <p>
-              Poiché <m>x\in H</m>, anche <m>x^{-1}</m> appartiene a <m>H</m>. Se <m>xy</m> appartenesse ad <m>H</m>, di conseguenza <m>y=x^{-1}(xy)</m> apparterrebbe a <m>H</m>, contro l'ipotesi. Dunque, <m>xy\notin H</m>.
+              Poiché <m>x\in H</m>, anche <m>x^{-1}</m> appartiene a <m>H</m>.
+              Se <m>xy</m> appartenesse ad <m>H</m>, di conseguenza
+              <m>y=x^{-1}(xy)</m> apparterrebbe a <m>H</m>, contro l'ipotesi.
+              Dunque, <m>xy\notin H</m>.
             </p>
           </solution>
         </task>
@@ -798,13 +1080,18 @@
         <task>
           <statement>
             <p>
-              Mostrare con un esempio che una proprietà analoga non vale per monoidi e sottomonoidi.
+              Mostrare con un esempio che una proprietà analoga non vale per
+              monoidi e sottomonoidi.
             </p>
           </statement>
 
           <solution>
             <p>
-              Prendiamo ora il monoide <m>(\Naturali,+)</m> e consideriamo il sottomonoide <m>L\coloneqq\Naturali\setminus\{1\}</m> come nell'<xref ref="exercise-N-1"/>. Allora <m>1+2=3\in L</m> ma uno solo dei due addendi <m>1</m> e <m>2</m> appartiene a <m>L</m>.
+              Prendiamo ora il monoide <m>(\Naturali,+)</m> e consideriamo il
+              sottomonoide <m>L\coloneqq\Naturali\setminus\{1\}</m> come nell'
+              <xref ref="exercise-N-1"/>.
+              Allora <m>1+2=3\in L</m> ma uno solo dei due addendi <m>1</m> e
+              <m>2</m> appartiene a <m>L</m>.
             </p>
           </solution>
         </task>
@@ -813,13 +1100,23 @@
       <exercise>
         <statement>
           <p>
-            Sia <m>G</m> un gruppo con più di due elementi e sia <m>y</m> un elemento di <m>G</m>. Mostrare che <m>H\coloneqq G\setminus\{y\}</m> non è un sottogruppo di <m>G</m>.
+            Sia <m>G</m> un gruppo con più di due elementi e sia <m>y</m> un
+            elemento di <m>G</m>.
+            Mostrare che <m>H\coloneqq G\setminus\{y\}</m> non è un sottogruppo
+            di <m>G</m>.
           </p>
         </statement>
 
         <solution>
           <p>
-            Poiché <m>G</m> contiene più di due elementi, in <m>H</m> esiste un elemento <m>x</m> con <m>x\ne 1</m>. Ora <m>xy\ne y</m> per le <xref ref="prop-cancellazione_gruppo" text="title"/> e, dunque, <m>xy\in H</m>. Se <m>H</m> fosse un sottogruppo, per l'<xref ref="exercise-prodotto_in_sottogruppo_dentro_fuori"/>, <m>xy</m> dovrebbe non appartenere a <m>H</m>.
+            Poiché <m>G</m> contiene più di due elementi, in <m>H</m> esiste un
+            elemento <m>x</m> con <m>x\ne 1</m>.
+            Ora <m>xy\ne y</m> per le
+            <xref ref="prop-cancellazione_gruppo" text="title"/> e, dunque,
+            <m>xy\in H</m>.
+            Se <m>H</m> fosse un sottogruppo, per l'
+            <xref ref="exercise-prodotto_in_sottogruppo_dentro_fuori"/>,
+            <m>xy</m> dovrebbe non appartenere a <m>H</m>.
           </p>
         </solution>
       </exercise>
@@ -827,25 +1124,36 @@
       <exercise>
         <statement>
           <p>
-            Mostrare che l'unione di due sottogruppi <m>H</m> e <m>K</m> di un gruppo <m>G</m> è un sottogruppo se e solo se uno dei due contiene l'altro.
+            Mostrare che l'unione di due sottogruppi <m>H</m> e <m>K</m> di un
+            gruppo <m>G</m> è un sottogruppo se e solo se uno dei due contiene
+            l'altro.
           </p>
         </statement>
 
         <solution>
           <p>
-            Se uno dei due è contenuto nell'altro, ovviamente l'unione è un sottogruppo.
+            Se uno dei due è contenuto nell'altro, ovviamente l'unione è un
+            sottogruppo.
           </p>
+
           <p>
-            Viceversa, supponiamo che né <m>H</m> sia contenuto in <m>K</m> (e, quindi, esista <m>h\in H\setminus K</m>), e che né <m>K</m> sia contenuto in <m>H</m> (e, quindi, esista <m>k\in K\setminus H</m>). Per l'<xref ref="exercise-prodotto_in_sottogruppo_dentro_fuori"/>, <m>hk</m> non appartiene né a <m>H</m>, né a <m>K</m>: ma allora, <m>h</m> e <m>k</m> sono due elementi di <m>H\cup K</m> il cui prodotto non appartiene a <m>H\cup K</m> che non è, quindi, un sottogruppo.
+            Viceversa, supponiamo che né <m>H</m> sia contenuto in <m>K</m> (e,
+            quindi, esista <m>h\in H\setminus K</m> ), e che né <m>K</m> sia
+            contenuto in <m>H</m> (e, quindi, esista <m>k\in K\setminus H</m> ).
+            Per l' <xref ref="exercise-prodotto_in_sottogruppo_dentro_fuori"/>,
+            <m>hk</m> non appartiene né a <m>H</m>, né a <m>K</m>: ma allora,
+            <m>h</m> e <m>k</m> sono due elementi di <m>H\cup K</m> il cui
+            prodotto non appartiene a <m>H\cup K</m> che non è, quindi, un
+            sottogruppo.
           </p>
         </solution>
-
       </exercise>
 
       <exercise>
         <statement>
           <p>
-            Mostrare che l'intersezione di sottomonoidi di un monoide è un sottomonoide.
+            Mostrare che l'intersezione di sottomonoidi di un monoide è un
+            sottomonoide.
           </p>
         </statement>
       </exercise>
@@ -853,13 +1161,18 @@
       <exercise xml:id="exercise-intersezione_monoidi_non_monoide">
         <introduction>
           <p>
-            Sia dato l'insieme <m>X\coloneqq\{a,b,c,d\}</m> e sia <m>M\coloneqq\parti{X}</m> il monoide dato dall'operazione di unione.
+            Sia dato l'insieme <m>X\coloneqq\{a,b,c,d\}</m> e sia
+            <m>M\coloneqq\parti{X}</m> il monoide dato dall'operazione di
+            unione.
           </p>
         </introduction>
 
         <task>
           <p>
-            Dato un sottoinsieme <m>A</m> di <m>M</m> che sia chiuso rispetto all'unione, mostrare che <m>A</m> è un monoide rispetto all'operazione indotta se e solo se uno degli elementi di <m>A</m> è contenuto in tutti gli altri elementi di <m>A</m>.
+            Dato un sottoinsieme <m>A</m> di <m>M</m> che sia chiuso rispetto
+            all'unione, mostrare che <m>A</m> è un monoide rispetto
+            all'operazione indotta se e solo se uno degli elementi di <m>A</m> è
+            contenuto in tutti gli altri elementi di <m>A</m>.
           </p>
         </task>
 
@@ -873,22 +1186,24 @@
             <md>
               B\coloneqq\{\{b\},\{a,b,c\},\{a,b,d\},\{a,b,c,d\}\}
             </md>
-            sono chiusi rispetto all'operazione di <m>M</m> e sono monoidi rispetto all'operazione indotta.
+            sono chiusi rispetto all'operazione di <m>M</m> e sono monoidi
+            rispetto all'operazione indotta.
           </p>
         </task>
 
         <task>
           <p>
-            Mostrare che <m>A\cap B</m> è chiuso rispetto all'operazione di <m>M</m> ma non è un monoide rispetto all'operazione indotta.
+            Mostrare che <m>A\cap B</m> è chiuso rispetto all'operazione di
+            <m>M</m> ma non è un monoide rispetto all'operazione indotta.
           </p>
         </task>
-
       </exercise>
 
       <exercise>
         <introduction>
           <p>
-            Dato il gruppo <m>G\coloneqq\GL{n}{\Razionali}</m>, stabilire se i seguenti sono sottogruppi di <m>G</m>.
+            Dato il gruppo <m>G\coloneqq\GL{n}{\Razionali}</m>, stabilire se i
+            seguenti sono sottogruppi di <m>G</m>.
           </p>
         </introduction>
 
@@ -905,22 +1220,30 @@
 
           <solution>
             <p>
-              Chiaramente <m>H</m> è non vuoto perché contiene la matrice identica. Siano <m>A\coloneqq
+              Chiaramente <m>H</m> è non vuoto perché contiene la matrice
+              identica.
+              Siano
+              <m>A\coloneqq
                 \begin{psmallmatrix}
                   a_{1} \amp b_{1} \\
                   c_{1} \amp d_{1}
-                \end{psmallmatrix}</m> e
+                \end{psmallmatrix}</m>
+              e
               <m>B\coloneqq
                 \begin{psmallmatrix}
                   a_{2} \amp b_{2} \\
                   c_{2} \amp d_{2}
                 \end{psmallmatrix}</m>
-              due matrici di <m>H</m>. Facendone il prodotto, troviamo la matrice <m>AB=
+              due matrici di <m>H</m>.
+              Facendone il prodotto, troviamo la matrice
+              <m>AB=
               \begin{psmallmatrix}
                 a_{1}a_{2}+b_{1}c_{2} \amp a_{1}b_{2}+b_{1}d_{2} \\
                 c_{1}a_{2}+d_{1}c_{2} \amp c_{1}b_{2}+d_{1}d_{2}
               \end{psmallmatrix}</m>.
-              Per verificare se appartiene ad <m>H</m> sommiamo gli elementi di ciascuna colonna. Otteniamo
+              Per verificare se appartiene ad <m>H</m> sommiamo gli elementi di
+              ciascuna colonna.
+              Otteniamo
               <md>
                 <mrow> (a_{1}a_{2}+b_{1}c_{2})+(c_{1}a_{2}+d_{1}c_{2}) \amp =(a_{1}+c_{1})a_{2}+(b_{1}+d_{1})c_{2}</mrow>
                 <mrow> \amp =1\cdot a_{2}+1\cdot c_{2}=a_{2}+c_{2}=1</mrow>
@@ -930,14 +1253,16 @@
                 <mrow> (a_{1}b_{2}+b_{1}d_{2})+(c_{1}b_{2}+d_{1}d_{2}) \amp =(a_{1}+c_{1})b_{2}+(b_{1}+d_{1})d_{2}</mrow>
                 <mrow> \amp =1\cdot b_{2}+1\cdot d_{2}=b_{2}+d_{2}=1</mrow>
               </md>.
-              Quindi <m>AB</m> appartiene ad <m>H</m>. L'inversa di <m>A</m> è la matrice
+              Quindi <m>AB</m> appartiene ad <m>H</m>.
+              L'inversa di <m>A</m> è la matrice
               <md>
                 \begin{pmatrix}
                   \frac{d_{1}}{\Delta} \amp -\frac{b_{1}}{\Delta} \\
                   -\frac{c_{1}}{\Delta} \amp \frac{a_{1}}{\Delta}
                 \end{pmatrix}
               </md>
-              dove <m>\Delta=a_{1}d_{1}-b_{1}c_{1}</m>. Abbiamo allora
+              dove <m>\Delta=a_{1}d_{1}-b_{1}c_{1}</m>.
+              Abbiamo allora
               <md>
                 <mrow> \frac{d_{1}}{\Delta}-\frac{c_{1}}{\Delta} \amp =\frac{d_{1}-c_{1}}{\Delta}=\frac{d_{1}-c_{1}}{a_{1}d_{1}-b_{1}c_{1}}=\frac{d_{1}-c_{1}}{(1-c_{1})d_{1}-b_{1}c_{1}}</mrow>
                 <mrow> \amp =\frac{d_{1}-c_{1}}{d_{1}-c_{1}d_{1}-b_{1}c_{1}}=\frac{d_{1}-c_{1}}{d_{1}-c_{1}(d_{1}+b_{1})}=\frac{d_{1}-c_{1}}{d_{1}-c_{1}\cdot1}=1</mrow>
@@ -947,7 +1272,8 @@
                 <mrow> -\frac{b_{1}}{\Delta}+\frac{a_{1}}{\Delta}\amp =\frac{-b_{1}+a_{1}}{\Delta}=\frac{-b_{1}+a_{1}}{a_{1}d_{1}-b_{1}c_{1}}=\frac{-b_{1}+a_{1}}{a_{1}(1-b_{1})-b_{1}c_{1}}</mrow>
                 <mrow> \amp =\frac{-b_{1}+a_{1}}{a_{1}-a_{1}b_{1}-b_{1}c_{1}}=\frac{-b_{1}+a_{1}}{a_{1}-b_{1}(a_{1}+c_{1})}=\frac{-b_{1}+a_{1}}{a_{1}-b_{1}\cdot1}=1</mrow>
               </md>
-              Dunque, <m>A^{-1}</m> appartiene a <m>H</m> che è, quindi, un sottogruppo.
+              Dunque, <m>A^{-1}</m> appartiene a <m>H</m> che è, quindi, un
+              sottogruppo.
             </p>
           </solution>
         </task>
@@ -962,9 +1288,11 @@
                 \end{psmallmatrix}\in G\mid a+c=b+d=0\}</m>
             </p>
           </statement>
+
           <solution>
             <p>
-              Il sottoinsieme <m>K</m> non è un sottogruppo: infatti, non contiene la matrice identica.
+              Il sottoinsieme <m>K</m> non è un sottogruppo: infatti, non
+              contiene la matrice identica.
             </p>
           </solution>
         </task>
@@ -980,19 +1308,21 @@
                   \end{psmallmatrix}\in G\mid a-c=d-b=1\}</m>
             </p>
           </statement>
+
           <answer>
             <p>
-              Il sottoinsieme <m>L</m> è un sottogruppo. Le verifiche sono simili a quelli fatte per <m>H</m>.
+              Il sottoinsieme <m>L</m> è un sottogruppo.
+              Le verifiche sono simili a quelli fatte per <m>H</m>.
             </p>
           </answer>
         </task>
-
       </exercise>
 
       <exercise>
         <statement>
           <p>
-            Dimostrare che il sottoinsieme <m>H</m> di <m>\GL{2}{\Complessi}</m> formato dalle matrici del tipo
+            Dimostrare che il sottoinsieme <m>H</m> di <m>\GL{2}{\Complessi}</m>
+            formato dalle matrici del tipo
             <m>
               \begin{psmallmatrix}
                 \epsilon_{1} \amp 0 \\
@@ -1005,14 +1335,22 @@
                 0 \amp \epsilon_{3} \\
                 \epsilon_{4} \amp 0
               \end{psmallmatrix}
-            </m> dove ciascun <m>\epsilon_{i}</m> appartiene al gruppo moltiplicativo <m>U\coloneqq\{1,-1,i,-i\}</m> delle radici quarte dell'unità è un sottogruppo.
+            </m>
+            dove ciascun <m>\epsilon_{i}</m> appartiene al gruppo moltiplicativo
+            <m>U\coloneqq\{1,-1,i,-i\}</m> delle radici quarte dell'unità è un
+            sottogruppo.
           </p>
         </statement>
 
         <solution>
           <p>
-            Abbiamo <m>16</m> matrici del primo tipo e <m>16</m> matrici del secondo tipo. In particolare, <m>H</m> è finito e, per la <xref ref="prop-sottogruppi_finiti"/>, basta verificare che <m>H</m> è chiuso rispetto al prodotto.
+            Abbiamo <m>16</m> matrici del primo tipo e <m>16</m> matrici del
+            secondo tipo.
+            In particolare, <m>H</m> è finito e, per la
+            <xref ref="prop-sottogruppi_finiti"/>, basta verificare che <m>H</m>
+            è chiuso rispetto al prodotto.
           </p>
+
           <p>
             Consideriamo tutti i possibili prodotti di matrici di <m>H</m>.
             <md>
@@ -1076,16 +1414,22 @@
               \end{pmatrix}
               </mrow>
             </md>
-            I prodotti sono tutti elementi di <m>H</m> (i coefficienti che appaiono sono prodotti di elementi di <m>U</m> e sono quindi elementi di <m>U</m>).
+            I prodotti sono tutti elementi di <m>H</m> (i coefficienti che
+            appaiono sono prodotti di elementi di <m>U</m> e sono quindi
+            elementi di <m>U</m> ).
           </p>
         </solution>
       </exercise>
 
       <exercise>
-
         <introduction>
           <p>
-            Sia <m>(G,\cdot)</m> un gruppo. Sia <m>u</m> un elemento fissato di <m>G</m>. Siano definite in <m>G</m> due nuove operazioni <m>\ast</m> e <m>\diamond</m> nel modo seguente: <m>a\ast b\coloneqq a\cdot u\cdot b</m> e <m>a\diamond b\coloneqq a\cdot b\cdot u</m>.
+            Sia <m>(G,\cdot)</m> un gruppo.
+            Sia <m>u</m> un elemento fissato di <m>G</m>.
+            Siano definite in <m>G</m> due nuove operazioni <m>\ast</m> e
+            <m>\diamond</m> nel modo seguente:
+            <m>a\ast b\coloneqq a\cdot u\cdot b</m> e
+            <m>a\diamond b\coloneqq a\cdot b\cdot u</m>.
           </p>
         </introduction>
 
@@ -1098,15 +1442,37 @@
 
           <solution>
             <p>
-              Mostriamo che <m>\ast</m> è associativa. Dati <m>a</m>, <m>b</m> e <m>c</m> in <m>G</m> abbiamo:
+              Mostriamo che <m>\ast</m> è associativa.
+              Dati <m>a</m>, <m>b</m> e <m>c</m> in <m>G</m> abbiamo:
               <md>
                 (a\ast b)\ast c=(a\cdot u\cdot b)\cdot u\cdot c=a\cdot u\cdot (b\cdot u\cdot c)=a\ast (b\ast c)
               </md>.
-              Per mostrare che <m>(G,\ast)</m> ha elemento neutro, dobbiamo trovare un elemento <m>e</m> tale che, per ogni <m>a\in G</m>, si abbia <m>a\ast e=e\ast a=a</m>. Ora <m>a\ast e=a\cdot u\cdot e</m>. Ponendo tale elemento uguale ad <m>a</m> troviamo <m>a\cdot u\cdot e=a</m>, da cui ricaviamo <m>e=u^{-1}</m> (dove l'inverso è inteso in <m>(G,\cdot)</m>). Abbiamo, dunque, <m>a\ast u^{-1}=a</m>. Se ora calcoliamo <m>u^{-1}\ast a</m> troviamo <m>u^{-1}\cdot u\cdot a=a</m>. Dunque, <m>u^{-1}</m> è unità sia destra che sinistra.
+              Per mostrare che <m>(G,\ast)</m> ha elemento neutro, dobbiamo
+              trovare un elemento <m>e</m> tale che, per ogni <m>a\in G</m>, si
+              abbia <m>a\ast e=e\ast a=a</m>.
+              Ora <m>a\ast e=a\cdot u\cdot e</m>.
+              Ponendo tale elemento uguale ad <m>a</m> troviamo
+              <m>a\cdot u\cdot e=a</m>, da cui ricaviamo <m>e=u^{-1}</m> (dove
+              l'inverso è inteso in <m>(G,\cdot)</m> ).
+              Abbiamo, dunque, <m>a\ast u^{-1}=a</m>.
+              Se ora calcoliamo <m>u^{-1}\ast a</m> troviamo
+              <m>u^{-1}\cdot u\cdot a=a</m>.
+              Dunque, <m>u^{-1}</m> è unità sia destra che sinistra.
             </p>
 
             <p>
-              Per mostrare che ogni elemento <m>a</m> di <m>(G,\ast)</m> ammette inverso dobbiamo trovare <m>b</m> in <m>G</m> tale che <m>a\ast b=b\ast a=u^{-1}</m>. Ponendo <m>a\ast b=u^{-1}</m>  troviamo <m>a\cdot u\cdot b=u^{-1}</m>, da cui ricaviamo <m>b=u^{-1}a^{-1}u^{-1}</m> (dove l'inverso è inteso in <m>(G,\cdot)</m>). Abbiamo, dunque, <m>a\ast b=u^{-1}</m>.  Se ora calcoliamo <m>b\ast a</m> troviamo <m>(u^{-1}a^{-1}u^{-1})\cdot u\cdot a=u^{-1}</m>. Dunque, <m>u^{-1}a^{-1}u^{-1}</m> è inverso sia destro che sinistro di <m>a</m>.
+              Per mostrare che ogni elemento <m>a</m> di <m>(G,\ast)</m> ammette
+              inverso dobbiamo trovare <m>b</m> in <m>G</m> tale che
+              <m>a\ast b=b\ast a=u^{-1}</m>.
+              Ponendo <m>a\ast b=u^{-1}</m> troviamo
+              <m>a\cdot u\cdot b=u^{-1}</m>, da cui ricaviamo
+              <m>b=u^{-1}a^{-1}u^{-1}</m> (dove l'inverso è inteso in
+              <m>(G,\cdot)</m> ).
+              Abbiamo, dunque, <m>a\ast b=u^{-1}</m>.
+              Se ora calcoliamo <m>b\ast a</m> troviamo
+              <m>(u^{-1}a^{-1}u^{-1})\cdot u\cdot a=u^{-1}</m>.
+              Dunque, <m>u^{-1}a^{-1}u^{-1}</m> è inverso sia destro che
+              sinistro di <m>a</m>.
             </p>
           </solution>
         </task>
@@ -1114,31 +1480,42 @@
         <task>
           <statement>
             <p>
-              Dimostrare che <m>(G,\diamond)</m> è un gruppo se e solo se <m>u</m> appartiene al centro di <m>(G,\cdot)</m>.
+              Dimostrare che <m>(G,\diamond)</m> è un gruppo se e solo se
+              <m>u</m> appartiene al centro di <m>(G,\cdot)</m>.
             </p>
           </statement>
 
           <solution>
             <p>
-              Se <m>u</m> appartiene al centro di <m>(G,\cdot)</m> le operazioni <m>\ast</m> e <m>\diamond</m> coincidono e, quindi, <m>(G,\diamond)</m> è un gruppo.
+              Se <m>u</m> appartiene al centro di <m>(G,\cdot)</m> le operazioni
+              <m>\ast</m> e <m>\diamond</m> coincidono e, quindi,
+              <m>(G,\diamond)</m> è un gruppo.
             </p>
 
             <p>
-              Viceversa, se <m>(G,\diamond)</m> è un gruppo allora, per ogni <m>a</m>, <m>b</m> e <m>c</m> in <m>G</m> si ha <m>(a\diamond b)\diamond c=a\diamond (b\diamond c)</m> ovvero
+              Viceversa, se <m>(G,\diamond)</m> è un gruppo allora, per ogni
+              <m>a</m>, <m>b</m> e <m>c</m> in <m>G</m> si ha
+              <m>(a\diamond b)\diamond c=a\diamond (b\diamond c)</m> ovvero
               <md>
                 (a\cdot b\cdot u)\cdot c\cdot u=a\cdot(b\cdot c\cdot u)\cdot u
               </md>.
-              Rimuovendo le parentesi (in <m>(G,\cdot)</m> vale la legge associativa) e cancellando <m>a\cdot b</m> a sinistra e <m>u</m> a destra troviamo <m>u\cdot c=c\cdot u</m>: per l'arbitrarietà di <m>c</m> in <m>G</m>, ciò implica che <m>u</m> appartiene al centro di <m>(G,\cdot)</m>.
+              Rimuovendo le parentesi (in <m>(G,\cdot)</m> vale la legge
+              associativa) e cancellando <m>a\cdot b</m> a sinistra e <m>u</m> a
+              destra troviamo <m>u\cdot c=c\cdot u</m>: per l'arbitrarietà di
+              <m>c</m> in <m>G</m>, ciò implica che <m>u</m> appartiene al
+              centro di <m>(G,\cdot)</m>.
             </p>
           </solution>
         </task>
-
       </exercise>
-
       <exercisegroup cols="2">
         <introduction>
           <p>
-            Per ciascuno dei seguenti sottoinsiemi di <m>\Complessi</m>, stabilire se è sottogruppo di <m>(\Complessi,+)</m> e se la sua intersezione con <m>\Complessi^{*}\coloneqq\Complessi\setminus\{0\}</m> è sottogruppo di <m>(\Complessi^{*}.\cdot)</m>.
+            Per ciascuno dei seguenti sottoinsiemi di <m>\Complessi</m>,
+            stabilire se è sottogruppo di <m>(\Complessi,+)</m> e se la sua
+            intersezione con
+            <m>\Complessi^{*}\coloneqq\Complessi\setminus\{0\}</m> è sottogruppo
+            di <m>(\Complessi^{*}.\cdot)</m>.
           </p>
         </introduction>
 
@@ -1151,7 +1528,9 @@
 
           <answer>
             <p>
-              <m>H</m> non è sottogruppo di <m>(\Complessi,+)</m> e <m>H\cap\Complessi^{*}</m> non è sottogruppo di <m>(\Complessi^{*},\cdot)</m>.
+              <m>H</m> non è sottogruppo di <m>(\Complessi,+)</m> e
+              <m>H\cap\Complessi^{*}</m> non è sottogruppo di
+              <m>(\Complessi^{*},\cdot)</m>.
             </p>
           </answer>
         </exercise>
@@ -1165,7 +1544,9 @@
 
           <answer>
             <p>
-              <m>K</m> non è sottogruppo di <m>(\Complessi,+)</m> e <m>K\cap\Complessi^{*}</m> non è sottogruppo di <m>(\Complessi^{*},\cdot)</m>.
+              <m>K</m> non è sottogruppo di <m>(\Complessi,+)</m> e
+              <m>K\cap\Complessi^{*}</m> non è sottogruppo di
+              <m>(\Complessi^{*},\cdot)</m>.
             </p>
           </answer>
         </exercise>
@@ -1179,7 +1560,9 @@
 
           <answer>
             <p>
-              <m>L</m> è sottogruppo di <m>(\Complessi,+)</m> e <m>L\cap\Complessi^{*}</m> non è sottogruppo di <m>(\Complessi^{*},\cdot)</m>.
+              <m>L</m> è sottogruppo di <m>(\Complessi,+)</m> e
+              <m>L\cap\Complessi^{*}</m> non è sottogruppo di
+              <m>(\Complessi^{*},\cdot)</m>.
             </p>
           </answer>
         </exercise>
@@ -1193,43 +1576,67 @@
 
           <answer>
             <p>
-              <m>M</m> non è sottogruppo di <m>(\Complessi,+)</m> e <m>M\cap\Complessi^{*}</m> è sottogruppo di <m>(\Complessi^{*},\cdot)</m>.
+              <m>M</m> non è sottogruppo di <m>(\Complessi,+)</m> e
+              <m>M\cap\Complessi^{*}</m> è sottogruppo di
+              <m>(\Complessi^{*},\cdot)</m>.
             </p>
           </answer>
         </exercise>
-
       </exercisegroup>
-
     </exercises>
-
   </section>
 
   <section xml:id="sec-gruppi_del_piano">
     <title>Gruppi di trasformazioni del piano</title>
+
     <p>
       <notation>
         <usage><m>\dist(P,Q)</m></usage>
         <description>distanza tra i punti <m>P</m> e <m>Q</m></description>
       </notation>
-      Se prendiamo l'usuale piano euclideo <m>\Pi</m>, possiamo considerare il gruppo simmetrico <m>\Sym(\Pi)</m> delle funzioni biiettive del piano in sé rispetto all'operazione di composizione. Di per sé questo gruppo non reca nessuna informazione geometrica del piano. Possiamo però considerare sottogruppi formati da trasformazioni che rispettano proprietà geometriche: potremmo così introdurre il gruppo delle <term>affinità</term>, il gruppo delle <term>similitudini</term> e altri. Qui ci limiteremo a studiare il gruppo delle cosiddette <term>isometrie</term>. Allo scopo ricordiamo che, dati due punti <m>P</m> e <m>Q</m> nel piano, indichiamo con <m>\dist(P,Q)</m> la distanza di <m>P</m> da <m>Q</m>.
+      Se prendiamo l'usuale piano euclideo <m>\Pi</m>, possiamo considerare il
+      gruppo simmetrico <m>\Sym(\Pi)</m> delle funzioni biiettive del piano in
+      sé rispetto all'operazione di composizione.
+      Di per sé questo gruppo non reca nessuna informazione geometrica del
+      piano.
+      Possiamo però considerare sottogruppi formati da trasformazioni che
+      rispettano proprietà geometriche: potremmo così introdurre il gruppo delle
+      <term>affinità</term>, il gruppo delle <term>similitudini</term> e altri.
+      Qui ci limiteremo a studiare il gruppo delle cosiddette
+      <term>isometrie</term>.
+      Allo scopo ricordiamo che, dati due punti <m>P</m> e <m>Q</m> nel piano,
+      indichiamo con <m>\dist(P,Q)</m> la distanza di <m>P</m> da <m>Q</m>.
     </p>
 
     <definition xml:id="def-isometria">
       <statement>
         <p>
-          Una funzione <m>\sigma</m> dal piano <m>\Pi</m> in sé che rispetta le distanze, cioè tale che <m>\dist(P,Q)=\dist(P\sigma,Q\sigma)</m> per ogni scelta dei punti <m>P</m> e <m>Q</m> in <m>\Pi</m> è detta <term>isometria</term>.
+          Una funzione <m>\sigma</m> dal piano <m>\Pi</m> in sé che rispetta le
+          distanze, cioè tale che <m>\dist(P,Q)=\dist(P\sigma,Q\sigma)</m> per
+          ogni scelta dei punti <m>P</m> e <m>Q</m> in <m>\Pi</m> è detta
+          <term>isometria</term>.
         </p>
       </statement>
     </definition>
 
     <p>
-      Tra le isometrie c'è, ovviamente, l'identità. Altri esempi di isometrie sono le traslazioni, le rotazioni e le riflessioni rispetto a rette e punti (ma una riflessione rispetto a un punto può anche essere descritta come una rotazione di un angolo piatto). Diamo ora, senza dimostrazione:
+      Tra le isometrie c'è, ovviamente, l'identità.
+      Altri esempi di isometrie sono le traslazioni, le rotazioni e le
+      riflessioni rispetto a rette e punti (ma una riflessione rispetto a un
+      punto può anche essere descritta come una rotazione di un angolo piatto).
+      Diamo ora, senza dimostrazione:
     </p>
 
     <fact xml:id="fact-isometria_biiettiva">
       <statement>
         <p>
-          Se <m>\sigma</m> è un'isometria del piano allora <m>\sigma</m> è biiettiva. In particolare, l'insieme delle isometrie è un sottoinsieme di <m>\Sym(\Pi)</m>. Inoltre, <m>\sigma</m> manda rette in rette. Se <m>\sigma</m> e <m>\tau</m> sono due isometrie che coincidono su tre punti non allineati del piano, allora <m>\sigma=\tau</m>.
+          Se <m>\sigma</m> è un'isometria del piano allora <m>\sigma</m> è
+          biiettiva.
+          In particolare, l'insieme delle isometrie è un sottoinsieme di
+          <m>\Sym(\Pi)</m>.
+          Inoltre, <m>\sigma</m> manda rette in rette.
+          Se <m>\sigma</m> e <m>\tau</m> sono due isometrie che coincidono su
+          tre punti non allineati del piano, allora <m>\sigma=\tau</m>.
         </p>
       </statement>
     </fact>
@@ -1241,55 +1648,80 @@
     <proposition xml:id="prop-gruppo_isometrie">
       <statement>
         <p>
-          La composizione di isometrie è un'isometria e l'inversa di un'isometria è un'isometria. In particolare, le isometrie formano un sottogruppo di <m>\Sym(\Pi)</m>.
+          La composizione di isometrie è un'isometria e l'inversa di
+          un'isometria è un'isometria.
+          In particolare, le isometrie formano un sottogruppo di
+          <m>\Sym(\Pi)</m>.
         </p>
       </statement>
 
       <proof>
         <p>
-          Siano <m>\sigma</m> e <m>\tau</m> due isometrie. Allora, presi due punti arbitrari <m>P</m> e <m>Q</m> del piano si ha
+          Siano <m>\sigma</m> e <m>\tau</m> due isometrie.
+          Allora, presi due punti arbitrari <m>P</m> e <m>Q</m> del piano si ha
           <md>
             \dist(P\sigma\tau,Q\sigma\tau)=\dist(P\sigma,Q\sigma)=\dist(P,Q)
           </md>
           cioè <m>\sigma\tau</m> è un'isometria.
         </p>
+
         <p>
-          Per il <xref ref="fact-isometria_biiettiva"/>, sappiamo ora che <m>\sigma^{-1}</m> esiste. Presi due punti arbitrari <m>P</m> e <m>Q</m> del piano si ha
+          Per il <xref ref="fact-isometria_biiettiva"/>, sappiamo ora che
+          <m>\sigma^{-1}</m> esiste.
+          Presi due punti arbitrari <m>P</m> e <m>Q</m> del piano si ha
           <md>
             \dist(P\sigma^{-1},Q\sigma^{-1})=\dist(P\sigma^{-1}\sigma,Q\sigma^{-1}\sigma)= \dist(P\Id,Q\Id)=\dist(P,Q)
           </md>
           cioè <m>\sigma^{-1}</m> è un'isometria.
         </p>
       </proof>
-
     </proposition>
 
     <p>
-      Come già detto, tra le isometrie abbiamo le traslazioni e si può mostrare che queste formano un sottogruppo. Le rotazioni, invece, non formano un sottogruppo: la composizione di due rotazioni di centri diversi non è in genere una rotazione. Se però fissiamo un punto <m>P</m> del piano e prendiamo il sottoinsieme formato dalle rotazioni aventi centro <m>P</m>, queste formano un sottogruppo.
+      Come già detto, tra le isometrie abbiamo le traslazioni e si può mostrare
+      che queste formano un sottogruppo.
+      Le rotazioni, invece, non formano un sottogruppo: la composizione di due
+      rotazioni di centri diversi non è in genere una rotazione.
+      Se però fissiamo un punto <m>P</m> del piano e prendiamo il sottoinsieme
+      formato dalle rotazioni aventi centro <m>P</m>, queste formano un
+      sottogruppo.
     </p>
 
     <p>
-      I sottogruppi che però vogliamo studiare più in dettaglio sono i gruppi di simmetrie di figure del piano. Più precisamente:
+      I sottogruppi che però vogliamo studiare più in dettaglio sono i gruppi di
+      simmetrie di figure del piano.
+      Più precisamente:
     </p>
 
     <proposition xml:id="prop-isometrie_che_fissano_figura_sottogruppo">
       <statement>
         <p>
-          Sia <m>F</m> un sottoinsieme del piano <m>\Pi</m>. Il sottoinsieme <m>H</m> delle isometrie <m>\sigma</m> del piano tali che <m>F\sigma=F</m> è un sottogruppo del gruppo delle isometrie.
+          Sia <m>F</m> un sottoinsieme del piano <m>\Pi</m>.
+          Il sottoinsieme <m>H</m> delle isometrie <m>\sigma</m> del piano tali
+          che <m>F\sigma=F</m> è un sottogruppo del gruppo delle isometrie.
         </p>
       </statement>
 
       <proof>
         <p>
-          Ovviamente, <m>F\Id=F</m> e, dunque, <m>H</m> è non vuoto. Se <m>\sigma</m> e <m>\tau</m> appartengono a <m>H</m>, allora <m>F\sigma\tau=F\tau=F</m> e, dunque, <m>\sigma\tau</m> appartiene a <m>H</m>. Inoltre, applicando <m>\sigma^{-1}</m> a entrambi i membri dell'uguaglianza <m>F\sigma=F</m>, otteniamo <m>F=F\sigma^{-1}</m> e, dunque, <m>\sigma^{-1}</m> appartiene a <m>H</m>.
-         </p>
+          Ovviamente, <m>F\Id=F</m> e, dunque, <m>H</m> è non vuoto.
+          Se <m>\sigma</m> e <m>\tau</m> appartengono a <m>H</m>, allora
+          <m>F\sigma\tau=F\tau=F</m> e, dunque, <m>\sigma\tau</m> appartiene a
+          <m>H</m>.
+          Inoltre, applicando <m>\sigma^{-1}</m> a entrambi i membri
+          dell'uguaglianza <m>F\sigma=F</m>, otteniamo <m>F=F\sigma^{-1}</m> e,
+          dunque, <m>\sigma^{-1}</m> appartiene a <m>H</m>.
+        </p>
       </proof>
-
     </proposition>
 
     <p>
-      Nel caso in cui la figura <m>F</m> sia poco <q>simmetrica</q>, il gruppo che manda <m>F</m> in sé è piccolo, eventualmente ridotto all'identità. Ad esempio prendiamo un triangolo avente i lati tutti diversi come quello in figura
+      Nel caso in cui la figura <m>F</m> sia poco <q>simmetrica</q>, il gruppo
+      che manda <m>F</m> in sé è piccolo, eventualmente ridotto all'identità.
+      Ad esempio prendiamo un triangolo avente i lati tutti diversi come quello
+      in figura
     </p>
+
     <figure>
       <caption>Simmetrie di un triangolo scaleno</caption>
       <image xml:id="image-simmetrie_triangolo_scaleno">
@@ -1302,25 +1734,39 @@
             \draw (A) -- (B) -- (C) -- (A);
           \end{tikzpicture}
         </latex-image>
-
       </image>
-
     </figure>
 
     <p>
-      Poiché un'isometria manda rette in rette, un'isometria che manda il triangolo <m>ABC</m> in sé manda le rette dei lati nelle rette dei lati e, di conseguenza, i vertici (che sono intersezioni di tali rette) nei vertici: in particolare, ciascun lato deve andare in un lato. Ma i lati hanno tutte lunghezze diverse: quindi, ciascun lato deve andare in sé e ciascun vertice deve essere fissato. Per il <xref ref="fact-isometria_biiettiva"/>, ciò significa che l'unica isometria siffatta è l'identità.
+      Poiché un'isometria manda rette in rette, un'isometria che manda il
+      triangolo <m>ABC</m> in sé manda le rette dei lati nelle rette dei lati e,
+      di conseguenza, i vertici (che sono intersezioni di tali rette) nei
+      vertici: in particolare, ciascun lato deve andare in un lato.
+      Ma i lati hanno tutte lunghezze diverse: quindi, ciascun lato deve andare
+      in sé e ciascun vertice deve essere fissato.
+      Per il <xref ref="fact-isometria_biiettiva"/>, ciò significa che l'unica
+      isometria siffatta è l'identità.
     </p>
+
     <p>
-      Consideriamo ora un poligono regolare con <m>n</m> lati, con <m>n\ge 3</m>. Etichettiamo i vertici con i numeri da <m>1</m> a <m>n</m>.
+      Consideriamo ora un poligono regolare con <m>n</m> lati, con
+      <m>n\ge 3</m>.
+      Etichettiamo i vertici con i numeri da <m>1</m> a <m>n</m>.
     </p>
 
     <figure xml:id="fig-simmetrie_poligono_regolare">
       <caption>Simmetrie di un poligono regolare</caption>
       <image xml:id="image-simmetrie_poligono_regolare">
-        <shortdescription>Disegno (parziale) di un poligono regolare</shortdescription>
+        <shortdescription>
+          Disegno (parziale) di un poligono regolare
+        </shortdescription>
+
         <description>
           <p>
-            Disegno di un poligono regolare con <m>n</m> elementi. Poiché <m>n</m> non è fissato, sono disegnati i vertici da <m>1</m> a <m>7</m>, poi c'è uno spazio vuoto e il poligono si chiude con il vertice <m>n</m>. 
+            Disegno di un poligono regolare con <m>n</m> elementi.
+            Poiché <m>n</m> non è fissato, sono disegnati i vertici da <m>1</m>
+            a <m>7</m>, poi c'è uno spazio vuoto e il poligono si chiude con il
+            vertice <m>n</m>.
           </p>
         </description>
         <latex-image>
@@ -1339,22 +1785,43 @@
 
           \end{tikzpicture}
         </latex-image>
-
       </image>
-
     </figure>
 
     <p>
-      Anche in questo caso i vertici devono andare nei vertici e i lati nei lati. Vediamo quante possibilità ci sono. Per individuare un'isometria basta dare le immagini di <m>3</m> punti non allineati, ad esempio, <m>3</m> vertici consecutivi. Poiché però i vertici vanno in vertici, basta in realtà conoscere l'immagine di <m>2</m> vertici consecutivi, ad esempio, quelli etichettati con <m>1</m> e <m>2</m>. Determinata l'immagine di <m>1</m> (e ci sono <m>n</m> possibilità) il vertice <m>2</m> deve andare in uno dei due vertici adiacenti all'immagine di <m>1</m>: ci sono <m>2</m> possibilità (ad esempio, se il vertice <m>1</m> va nel vertice <m>4</m>, il vertice <m>2</m> può andare nel vertice <m>3</m> o nel vertice <m>5</m>). Dunque, in tutto ci sono al più <m>2n</m> elementi in questo gruppo. Mostriamo ora che ci sono almeno <m>2n</m> elementi: abbiamo, infatti, le <m>n</m> rotazioni di angoli <m>\frac{2k\pi}{n}</m> con <m>0\le k\le n-1</m> e le <m>n</m> riflessioni assiali. Pertanto, abbiamo esattamente <m>2n</m> elementi in questo gruppo. Diamo, quindi, la
+      Anche in questo caso i vertici devono andare nei vertici e i lati nei
+      lati.
+      Vediamo quante possibilità ci sono.
+      Per individuare un'isometria basta dare le immagini di <m>3</m> punti non
+      allineati, ad esempio, <m>3</m> vertici consecutivi.
+      Poiché però i vertici vanno in vertici, basta in realtà conoscere
+      l'immagine di <m>2</m> vertici consecutivi, ad esempio, quelli etichettati
+      con <m>1</m> e <m>2</m>.
+      Determinata l'immagine di <m>1</m> (e ci sono <m>n</m> possibilità) il
+      vertice <m>2</m> deve andare in uno dei due vertici adiacenti all'immagine
+      di <m>1</m>: ci sono <m>2</m> possibilità (ad esempio, se il vertice
+      <m>1</m> va nel vertice <m>4</m>, il vertice <m>2</m> può andare nel
+      vertice <m>3</m> o nel vertice <m>5</m> ).
+      Dunque, in tutto ci sono al più <m>2n</m> elementi in questo gruppo.
+      Mostriamo ora che ci sono almeno <m>2n</m> elementi: abbiamo, infatti, le
+      <m>n</m> rotazioni di angoli <m>\frac{2k\pi}{n}</m> con
+      <m>0\le k\le n-1</m> e le <m>n</m> riflessioni assiali.
+      Pertanto, abbiamo esattamente <m>2n</m> elementi in questo gruppo.
+      Diamo, quindi, la
     </p>
+
     <definition xml:id="def-gruppo_diedrale">
       <notation>
         <usage><m>D_{2n}</m></usage>
         <description>gruppo diedrale con <m>2n</m> elementi</description>
       </notation>
+
       <statement>
         <p>
-          Il gruppo delle isometrie del piano che manda un poligono regolare di <m>n</m> lati in sé è detto gruppo <term>diedrale</term> e denotato con il simbolo <m>D_{2n}</m>.<fn>Alcuni testi lo denotano con il simbolo <m>D_{n}</m>.</fn>
+          Il gruppo delle isometrie del piano che manda un poligono regolare di
+          <m>n</m> lati in sé è detto gruppo <term>diedrale</term> e denotato
+          con il simbolo <m>D_{2n}</m>.
+          <fn>Alcuni testi lo denotano con il simbolo <m>D_{n}</m>.</fn>
         </p>
       </statement>
     </definition>
@@ -1372,7 +1839,8 @@
     </proposition>
 
     <p>
-      Utilizzeremo spesso il gruppo diedrale nei nostri esempi. Per il momento diamo la
+      Utilizzeremo spesso il gruppo diedrale nei nostri esempi.
+      Per il momento diamo la
     </p>
 
     <proposition xml:id="prop-diedrale_non_abeliano">
@@ -1384,37 +1852,53 @@
 
       <proof>
         <p>
-          Consideriamo la rotazione <m>\rho</m> che manda il vertice <m>1</m> in <m>2</m> e la riflessione <m>\sigma</m> per l'asse passante per il vertice <m>1</m> (quindi, la riflessione <m>\sigma</m> scambia tra loro i vertici <m>2</m> e <m>n</m>). Ora <m>1\rho\sigma=2\sigma=n</m> e <m>1\sigma\rho=1\rho=2</m>: poiché <m>2\ne n</m> (stiamo supponendo che <m>n\ge 3</m>) ne segue che <m>\rho\sigma\ne\sigma\rho</m>.
+          Consideriamo la rotazione <m>\rho</m> che manda il vertice <m>1</m> in
+          <m>2</m> e la riflessione <m>\sigma</m> per l'asse passante per il
+          vertice <m>1</m> (quindi, la riflessione <m>\sigma</m> scambia tra
+          loro i vertici <m>2</m> e <m>n</m> ).
+          Ora <m>1\rho\sigma=2\sigma=n</m> e <m>1\sigma\rho=1\rho=2</m>: poiché
+          <m>2\ne n</m> (stiamo supponendo che <m>n\ge 3</m> ) ne segue che
+          <m>\rho\sigma\ne\sigma\rho</m>.
         </p>
       </proof>
-
     </proposition>
 
-
-
     <p>
-      Diamo ora un ulteriore esempio di gruppo di isometrie che manda una figura in sé.
+      Diamo ora un ulteriore esempio di gruppo di isometrie che manda una figura
+      in sé.
     </p>
 
     <definition xml:id="def-gruppo_di_Klein">
       <statement>
         <p>
-          Dato un rettangolo <m>R</m> che non sia un quadrato, il gruppo delle isometrie del piano che mandano <m>R</m> in sé è detto gruppo <term>trirettangolo</term> o gruppo di <term>Klein</term>.<fn><url href="https://it.wikipedia.org/wiki/Felix_Klein" visual="">Felix Klein</url>, 1849<ndash/>1925.</fn><idx><h>Klein, Felix</h></idx>
+          Dato un rettangolo <m>R</m> che non sia un quadrato, il gruppo delle
+          isometrie del piano che mandano <m>R</m> in sé è detto gruppo
+          <term>trirettangolo</term> o gruppo di <term>Klein</term>.
+          <fn><url href="https://it.wikipedia.org/wiki/Felix_Klein" visual="">Felix Klein</url>, 1849<ndash/>1925.</fn>
+          <idx><h>Klein, Felix</h></idx>
         </p>
       </statement>
     </definition>
 
     <p>
-      Vogliamo ora determinare l'ordine del gruppo trirettangolo e la sua tabella di Cayley. Etichettiamo allora i vertici del rettangolo <m>R</m> con i numeri da <m>1</m> a <m>4</m> come in figura.
+      Vogliamo ora determinare l'ordine del gruppo trirettangolo e la sua
+      tabella di Cayley.
+      Etichettiamo allora i vertici del rettangolo <m>R</m> con i numeri da
+      <m>1</m> a <m>4</m> come in figura.
     </p>
 
     <figure xml:id="fig-simmetrie_rettangolo">
       <caption>Simmetrie di un rettangolo</caption>
       <image xml:id="image-simmetrie_rettangolo">
-        <shortdescription>Disegno di un rettangolo non quadrato</shortdescription>
+        <shortdescription>
+          Disegno di un rettangolo non quadrato
+        </shortdescription>
+
         <description>
           <p>
-            Disegno di un rettangolo non quadrato con i vertici etichettati con i numeri da <m>1</m> a <m>4</m>, in modo tale che i lati <m>12</m> e <m>34</m> sono più corti degli altri.
+            Disegno di un rettangolo non quadrato con i vertici etichettati con
+            i numeri da <m>1</m> a <m>4</m>, in modo tale che i lati <m>12</m> e
+            <m>34</m> sono più corti degli altri.
           </p>
         </description>
         <latex-image>
@@ -1426,18 +1910,53 @@
                -- cycle;
           \end{tikzpicture}
         </latex-image>
-
       </image>
-
     </figure>
+
     <p>
-      Ancora una volta un'isometria deve mandare i vertici nei vertici e i lati nei lati. Ora però, una volta individuata l'immagine di <m>1</m> vediamo che l'immagine di <m>2</m> non può essere uno qualunque dei due vertici adiacenti all'immagine di <m>1</m> ma solo quello per cui le distanze sono rispettate (in altri termini: i lati corti devono andare nei lati corti e i lati lunghi nei lati lunghi). Dunque, abbiamo al più <m>4</m> possibilità.
+      Ancora una volta un'isometria deve mandare i vertici nei vertici e i lati
+      nei lati.
+      Ora però, una volta individuata l'immagine di <m>1</m> vediamo che
+      l'immagine di <m>2</m> non può essere uno qualunque dei due vertici
+      adiacenti all'immagine di <m>1</m> ma solo quello per cui le distanze sono
+      rispettate (in altri termini: i lati corti devono andare nei lati corti e
+      i lati lunghi nei lati lunghi).
+      Dunque, abbiamo al più <m>4</m> possibilità.
     </p>
+
     <p>
-      Ma esistono effettivamente <m>4</m> isometrie siffatte: una è l'identità <m>\Id</m>; poi abbiamo la riflessione <m>\sigma</m> il cui asse di simmetria è la retta che passa per i punti medi dei lati <m>12</m> e <m>34</m> (dunque, <m>\sigma</m> scambia tra loro i vertici <m>1</m> e <m>2</m> e scambia tra loro i vertici <m>3</m> e <m>4</m>); poi abbiamo la riflessione <m>\tau</m> il cui asse di simmetria è la retta che passa per i punti medi dei lati <m>14</m> e <m>23</m> (dunque, <m>\tau</m> scambia tra loro i vertici <m>1</m> e <m>4</m> e scambia tra loro i vertici <m>2</m> e <m>3</m>); infine abbiamo la rotazione <m>\rho</m> di un angolo piatto e di centro il centro del rettangolo (dunque, <m>\rho</m> scambia tra loro i vertici <m>1</m> e <m>3</m> e scambia tra loro i vertici <m>2</m> e <m>4</m>). Possiamo fermarci: sapevamo già che il numero delle isometrie cercate è al massimo <m>4</m> e, dunque, il gruppo trirettangolo ha ordine <m>4</m>.
+      Ma esistono effettivamente <m>4</m> isometrie siffatte: una è l'identità
+      <m>\Id</m>; poi abbiamo la riflessione <m>\sigma</m> il cui asse di
+      simmetria è la retta che passa per i punti medi dei lati <m>12</m> e
+      <m>34</m> (dunque, <m>\sigma</m> scambia tra loro i vertici <m>1</m> e
+      <m>2</m> e scambia tra loro i vertici <m>3</m> e <m>4</m> ); poi abbiamo
+      la riflessione <m>\tau</m> il cui asse di simmetria è la retta che passa
+      per i punti medi dei lati <m>14</m> e <m>23</m> (dunque, <m>\tau</m>
+      scambia tra loro i vertici <m>1</m> e <m>4</m> e scambia tra loro i
+      vertici <m>2</m> e <m>3</m> ); infine abbiamo la rotazione <m>\rho</m> di
+      un angolo piatto e di centro il centro del rettangolo (dunque, <m>\rho</m>
+      scambia tra loro i vertici <m>1</m> e <m>3</m> e scambia tra loro i
+      vertici <m>2</m> e <m>4</m> ).
+      Possiamo fermarci: sapevamo già che il numero delle isometrie cercate è al
+      massimo <m>4</m> e, dunque, il gruppo trirettangolo ha ordine <m>4</m>.
     </p>
+
     <p>
-      Vogliamo ora determinare la tabella di Cayley del gruppo trirettangolo. Ovviamente, potremmo calcolare tutti i prodotti: non sono molti. Alternativamente, ricordiamo che nel <xref ref="sec-gruppi_piccoli"/> abbiamo determinato le possibili tabelle di Cayley di gruppi di ordine <m>4</m>. Una di esse è la tabella di <m>\Interi/4</m> rispetto all'addizione; per quanto riguarda l'altra tabella non avevamo verificato la proprietà associativa e non sapevamo, quindi, se fosse effettivamente la tabella di un gruppo. Notiamo ora che tutti gli elementi del gruppo trirettangolo coincidono con il proprio inverso e, dunque, sulla diagonale della tabella di Cayley deve sempre esserci l'elemento neutro. La tabella di <m>\Interi/4</m> non soddisfa questa proprietà e, quindi, la tabella di Cayley del gruppo trirettangolo è la seconda tabella che qui riportiamo
+      Vogliamo ora determinare la tabella di Cayley del gruppo trirettangolo.
+      Ovviamente, potremmo calcolare tutti i prodotti: non sono molti.
+      Alternativamente, ricordiamo che nel <xref ref="sec-gruppi_piccoli"/>
+      abbiamo determinato le possibili tabelle di Cayley di gruppi di ordine
+      <m>4</m>.
+      Una di esse è la tabella di <m>\Interi/4</m> rispetto all'addizione; per
+      quanto riguarda l'altra tabella non avevamo verificato la proprietà
+      associativa e non sapevamo, quindi, se fosse effettivamente la tabella di
+      un gruppo.
+      Notiamo ora che tutti gli elementi del gruppo trirettangolo coincidono con
+      il proprio inverso e, dunque, sulla diagonale della tabella di Cayley deve
+      sempre esserci l'elemento neutro.
+      La tabella di <m>\Interi/4</m> non soddisfa questa proprietà e, quindi, la
+      tabella di Cayley del gruppo trirettangolo è la seconda tabella che qui
+      riportiamo
       <md>
         \begin{array}{c|cccc}
             \amp 1 \amp a \amp b \amp c\\
@@ -1448,33 +1967,37 @@
           c \amp c \amp b \amp a \amp 1 \\
         \end{array}
       </md>
-      Ora sappiamo che questa tabella è effettivamente la tabella di un gruppo, precisamente il gruppo trirettangolo, e che questo gruppo è abeliano.
+      Ora sappiamo che questa tabella è effettivamente la tabella di un gruppo,
+      precisamente il gruppo trirettangolo, e che questo gruppo è abeliano.
     </p>
 
     <remark xml:id="rem-gruppi_di_ordine_4_abeliani">
       <p>
-        I gruppi di ordine <m>4</m> sono abeliani: le loro tabelle di Cayley, infatti, coincidono con quella di <m>\Interi/4</m> o quella del gruppo trirettangolo ed entrambi questi gruppi sono abeliani. Vedremo poi che ogni gruppo di ordine quadrato di un primo è abeliano (<xref ref="cor-ordine_quadrato_di_primo_implica_abeliano"/>).
+        I gruppi di ordine <m>4</m> sono abeliani: le loro tabelle di Cayley,
+        infatti, coincidono con quella di <m>\Interi/4</m> o quella del gruppo
+        trirettangolo ed entrambi questi gruppi sono abeliani.
+        Vedremo poi che ogni gruppo di ordine quadrato di un primo è abeliano (
+        <xref ref="cor-ordine_quadrato_di_primo_implica_abeliano"/> ).
       </p>
     </remark>
 
     <exercises xml:id="exercises-gruppi_del_piano">
-
       <exercise>
         <statement>
           <p>
-            Determinare esplicitamente la tabella di Cayley del gruppo trirettangolo, facendo tutti i prodotti necessari.
+            Determinare esplicitamente la tabella di Cayley del gruppo
+            trirettangolo, facendo tutti i prodotti necessari.
           </p>
         </statement>
 
         <hint>
           <p>
-            Poiché un elemento del gruppo trirettangolo è determinato dall'immagine del vertice <m>1</m>, basta calcolare le immagini di questo vertice tramite le varie composizioni.
+            Poiché un elemento del gruppo trirettangolo è determinato
+            dall'immagine del vertice <m>1</m>, basta calcolare le immagini di
+            questo vertice tramite le varie composizioni.
           </p>
         </hint>
       </exercise>
-
     </exercises>
-
   </section>
-
 </chapter>
