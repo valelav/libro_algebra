@@ -46,7 +46,7 @@
     </p>
 
     <p>
-      Se gli elementi da elencare sono troppi (o addirittura infiniti), in qualche caso potremo usare dei puntini di sospensione. Ad esempio, indicheremo con <m>\{0,1,\ldots,n\}</m> l'insieme dei naturali da <m>0</m> a <m>n</m> e con  <m>\{1,3,5,\ldots\}</m> l'insieme dei numeri naturali dispari: occorre fare attenzione perché queste scritture sono potenzialmente ambigue.
+      Se gli elementi da elencare sono troppi (o addirittura infiniti), in qualche caso potremo usare dei puntini di sospensione. Ad esempio, indicheremo con <m>\{0,1,\ldots,n\}</m> l'insieme dei naturali da <m>0</m> a <m>n</m> e con <m>\{1,3,5,\ldots\}</m> l'insieme dei numeri naturali dispari: occorre fare attenzione perché queste scritture sono potenzialmente ambigue.
     </p>
 
     <p>
@@ -339,7 +339,7 @@
         </p>
         <figure>
           <caption>Diagrammi di Venn di unione, intersezione e differenza</caption>
-          <image xml:id="image-diagrammi_venn_unione_intesezione_differenza">
+          <image xml:id="image-diagrammi_venn_unione_intersezione_differenza">
             <shortdescription>Diagrammi di Venn di unione, intersezione e differenza</shortdescription>
             <latex-image>
               \begin{tikzpicture}[keepsize]
@@ -446,11 +446,12 @@
         </p>
 
         <p>
+          Proviamo prima che <m>(A\cap C)\cup (B\cap C)\subseteq (A\cup B)\cap C</m>.
           Dal <xref ref="inclusione_intersezione"/>, sappiamo che <m>A\cap C</m> è contenuto in <m>A</m>, mentre dal <xref ref="inclusione_unione"/>, sappiamo che <m>A</m> è contenuto in <m>A\cup B</m>: quindi, per la <xref ref="prop-inclusione_transitiva"/>, <m>A\cap C\subseteq A\cup B</m>. Ancora dal <xref ref="inclusione_intersezione"/>, <m>A\cap C\subseteq C</m>: per il <xref ref="intersezione_minimo_contenente"/> si ha allora che <m>A\cap C \subseteq (A\cup B)\cap C</m>. Analogamente, <m>B\cap C\subseteq (A\cup B)\cap C</m>. Per il <xref ref="unione_massimo_contenuto"/>, risulta <m>(A\cap C)\cup (B\cap C)\subseteq (A\cup B)\cap C</m>.
         </p>
 
         <p>
-          Per il viceversa, sia <m>x</m> un elemento di <m>(A\cup B)\cap C</m>: dunque, <m>x\in A\cup B</m> e <m>x\in C</m>. La prima condizione ci dice che <m>x</m> appartiene ad almeno uno tra <m>A</m> e <m>B</m>. Se <m>x</m> appartiene ad <m>A</m> allora, appartenendo anche a <m>C</m>, appartiene a <m>A\cap C</m> e, per il <xref ref="inclusione_unione"/>, appartiene a <m>(A\cap C)\cup (B\cap C)</m>. Analogamente se <m>x</m> appartiene a <m>B</m>. Per l'arbitrarietà di <m>x</m> abbiamo che <m>(A\cup B)\cap C\subseteq(A\cap C)\cup (B\cap C)</m>.
+          Per l'inclusione opposta, sia <m>x</m> un elemento di <m>(A\cup B)\cap C</m>: dunque, <m>x\in A\cup B</m> e <m>x\in C</m>. La prima condizione ci dice che <m>x</m> appartiene ad almeno uno tra <m>A</m> e <m>B</m>. Se <m>x</m> appartiene ad <m>A</m> allora, appartenendo anche a <m>C</m>, appartiene a <m>A\cap C</m> e, per il <xref ref="inclusione_unione"/>, appartiene a <m>(A\cap C)\cup (B\cap C)</m>. Analogamente se <m>x</m> appartiene a <m>B</m>. Per l'arbitrarietà di <m>x</m> abbiamo che <m>(A\cup B)\cap C\subseteq(A\cap C)\cup (B\cap C)</m>.
         </p>
       </proof>
     </proposition>
