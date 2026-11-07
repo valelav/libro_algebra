@@ -1231,7 +1231,7 @@
             Calcoliamo allora <m>7^{3}</m> modulo <m>12</m>: notiamo che <m>7^{2}=49\equiv 1\pmod{12}</m> e, quindi, <m>7^{3}\equiv 7\pmod{12}</m>.
           </p>
           <p>
-            Consideriamo ora <m>23^{2347}</m>: notiamo innanzitutto che <m>23\equiv 11\pmod{12}</m>. Potremmo ora procedere come sopra, però notiamo che <m>23\equiv -1\pmod{12}</m>: questo permette di semplificare i calcoli. Infatti, senza bisogno di invocare il <xref ref="thm-eulero" text="title"/>, abbiamo che <m>23^{2347}\equiv(-1)^{2347}\pmod{12}</m>. Poiché <m>2347</m> è dispari,  <m>-1^{2347}=-1</m> e, dunque, <m>23^{2347}\equiv -1\pmod{12}</m>.
+            Consideriamo ora <m>23^{2347}</m>: notiamo innanzitutto che <m>23\equiv 11\pmod{12}</m>. Potremmo ora procedere come sopra, però notiamo che <m>23\equiv -1\pmod{12}</m>: questo permette di semplificare i calcoli. Infatti, senza bisogno di invocare il <xref ref="thm-eulero" text="title"/>, abbiamo che <m>23^{2347}\equiv(-1)^{2347}\pmod{12}</m>. Poiché <m>2347</m> è dispari, <m>(-1)^{2347}=-1</m> e, dunque, <m>23^{2347}\equiv -1\pmod{12}</m>.
           </p>
           <p>
             Riassumendo, <m>31^{3215}+23^{2347}\equiv 7-1\pmod{12}\equiv 6\pmod{12}</m>. Poiché <m>0\le 6 \lt 12</m>, il resto della divisione cercata è proprio <m>6</m>.
@@ -1297,7 +1297,7 @@
 
           <solution>
             <p>
-              Poiché <m>1033\equiv 3\pmod{10}</m>, abbiamo <m>1033^{150}\equiv3^{150}\pmod{10}</m>. Poiché <m>3</m> è coprimo con <m>10</m>, per il <xref ref="thm-eulero" text="title"/> abbiamo <m>3^{\euler{10}}\equiv 1\pmod{10}</m>. Ora <m>\euler{10}=4</m>. Poiché <m>150\equiv 2\pmod{4}</m>, abbiamo <m>3^{150}\equiv 3^{2}\pmod{10}</m>, cioè <m>3^{150}\equiv 9\pmod{10}</m>. Abbiamo poi <m>11\equiv 1\pmod{10}</m> e, di conseguenza, <m>11^{14}\equiv1\pmod{10}</m>, Infine <m>18\equiv 8\pmod{10}</m>. Riassumendo, <m>1033^{150}+11^{14}+18\equiv 9+1+8\pmod{10}\equiv 8\pmod{10}</m>. L'ultima cifra è, dunque, <m>8</m>.
+              Poiché <m>1033\equiv 3\pmod{10}</m>, abbiamo <m>1033^{150}\equiv3^{150}\pmod{10}</m>. Poiché <m>3</m> è coprimo con <m>10</m>, per il <xref ref="thm-eulero" text="title"/> abbiamo <m>3^{\euler{10}}\equiv 1\pmod{10}</m>. Ora <m>\euler{10}=4</m>. Poiché <m>150\equiv 2\pmod{4}</m>, abbiamo <m>3^{150}\equiv 3^{2}\pmod{10}</m>, cioè <m>3^{150}\equiv 9\pmod{10}</m>. Abbiamo poi <m>11\equiv 1\pmod{10}</m> e, di conseguenza, <m>11^{14}\equiv1\pmod{10}</m>. Infine <m>18\equiv 8\pmod{10}</m>. Riassumendo, <m>1033^{150}+11^{14}+18\equiv 9+1+8\pmod{10}\equiv 8\pmod{10}</m>. L'ultima cifra è, dunque, <m>8</m>.
             </p>
           </solution>
         </exercise>
