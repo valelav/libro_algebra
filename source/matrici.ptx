@@ -164,7 +164,7 @@
         <definition xml:id="def-matrice_trasposta">
             <statement>
                 <p> 
-                    Data una matrice <m>A</m> ha <m>m</m> righe e <m>n</m> colonne, la sua <term>
+                    Data una matrice <m>A</m> che ha <m>m</m> righe e <m>n</m> colonne, la sua <term>
                     trasposta</term>, denotata con il simbolo <m>\tr{A}</m>, è la matrice a <m>n</m>
                     righe e <m>m</m> colonne, il cui elemento di posto <m>(i,j)</m> è <m>
                     \posto{A}{j}{i}</m>. 
@@ -610,7 +610,7 @@
                     x+2z \amp y+2w \\
                     2x+4z \amp 2y+4w \\
                     \end{psmallmatrix}
-                    </m>: se si scelgono <m>x</m> e <m>z</m> in modo che l'elemento in posizione <m>(1,1)</m> sia <m>1</m>, allora l'elemento in posizione <m>(1,2)</m> risulta <m>2</m>, quindi non otteniamo mai la matrice identica.
+                    </m>: se si scelgono <m>x</m> e <m>z</m> in modo che l'elemento in posizione <m>(1,1)</m> sia <m>1</m>, allora l'elemento in posizione <m>(2,1)</m> risulta <m>2</m>, quindi non otteniamo mai la matrice identica.
                 </p>
             </statement>
         </example>
@@ -627,7 +627,7 @@
             </statement>
             <proof>
                 <p>
-                    Siano <m>B</m> e <m>C</m> matrici tali che <m>AB=BA=\Idmatrix</m> e <m>AC=BC=\Idmatrix</m>. Si ha allora <m>B=B\Idmatrix=B(AC)=(BA)C=\Idmatrix C=C</m>.
+                    Siano <m>B</m> e <m>C</m> matrici tali che <m>AB=BA=\Idmatrix</m> e <m>AC=CA=\Idmatrix</m>. Si ha allora <m>B=B\Idmatrix=B(AC)=(BA)C=\Idmatrix C=C</m>.
                 </p>
             </proof>
         </proposition>
@@ -774,7 +774,7 @@
                         6x + 9y - 2z \\
                         3x - 5y + 4z \\
                         \end{pmatrix}
-                    </md>. Dunque, se, indichiamo con <m>B</m> la matrice
+                    </md>. Dunque, se indichiamo con <m>B</m> la matrice
                     <md>
                        \begin{pmatrix}
                         3 \\

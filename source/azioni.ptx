@@ -306,7 +306,7 @@
           Poiché <m>x1_{G}=x</m>, il sottoinsieme <m>\stab{G}{x}</m> è non vuoto.
         </p>
         <p>
-          Siano ora <m>g</m> e <m>h</m> elementi di <m>\stab{G}{x}</m>: dunque, <m>xg=x</m> e <m>xh=x</m>. Pertanto, <m>x(gh)=(xg)h=xh=</m>, cioè <m>gh\in \stab{G}{x}</m>. Inoltre, applicando <m>g^{-1}</m> ad ambo i membri di <m>x=xg</m>, otteniamo
+          Siano ora <m>g</m> e <m>h</m> elementi di <m>\stab{G}{x}</m>: dunque, <m>xg=x</m> e <m>xh=x</m>. Pertanto, <m>x(gh)=(xg)h=xh=x</m>, cioè <m>gh\in \stab{G}{x}</m>. Inoltre, applicando <m>g^{-1}</m> ad ambo i membri di <m>x=xg</m>, otteniamo
           <md>
             xg^{-1}=(xg)g^{-1}=x(gg^{-1})=x1_{G}=x
           </md>.
@@ -589,7 +589,7 @@
           <md>
             H^{g}\coloneqq\{h^{g}\mid h\in H\}
           </md>
-          è un sottogruppo di <m>G</m> isomorfo a <m>H</m>. Tale sottogruppo è detto <term>coniugato</term> di <m>H</m> tramite <m>G</m>.
+          è un sottogruppo di <m>G</m> isomorfo a <m>H</m>. Tale sottogruppo è detto <term>coniugato</term> di <m>H</m> tramite <m>g</m>.
         </p>
       </statement>
     </proposition>
@@ -968,7 +968,7 @@
       <md>
         n\phi_{g}\phi_{h}=(g^{-1}ng)\phi_{h}=h^{-1}g^{-1}ngh=(gh)^{-1}ngh=n\phi_{gh}
       </md>
-      cioè <m>\phi{g}\phi_{h}=\phi_{gh}</m>. possiamo riassumere tutto ciò nella
+      cioè <m>\phi_{g}\phi_{h}=\phi_{gh}</m>. possiamo riassumere tutto ciò nella
     </p>
 
     <proposition xml:id="prop-automorfismi_interni">
@@ -1161,7 +1161,7 @@
 
         <introduction>
           <p>
-            Sia <m>H</m> un sottogruppo di un gruppo <m>H</m>. Dato un elemento <m>g</m> di <m>G</m> si ponga <m>F(g)\coloneqq\{x\in G\mid g^{x}\in H\}</m>.
+            Sia <m>H</m> un sottogruppo di un gruppo <m>G</m>. Dato un elemento <m>g</m> di <m>G</m> si ponga <m>F(g)\coloneqq\{x\in G\mid g^{x}\in H\}</m>.
           </p>
         </introduction>
 
@@ -1348,7 +1348,7 @@
             </p>
 
             <p>
-              Per mostrare che <m>H^{G}</m> è normale in <m>G</m>, dobbiamo mostrare che per ogni <m>g'\in G</m> si ha <m>(H^{G})^{g'}\le H_{G}</m>. Il coniugio tramite <m>g'</m> è un omomorfismo di gruppi (anzi, è un automorfismo di <m>G</m>). Dunque, per la <xref ref="prop-immagine_sottogruppo_generato"/>, <m>(H^{G})^{g'}</m> è generato da <m>(H^{g})^{g'}=H^{gg'}</m> al variare di <m>g</m> in <m>G</m>. Ma ciascun <m>H^{gg'}</m> è un coniugato di <m>H</m> e, per definizione di <m>H^{G}</m>, è contenuto in <m>H^{G}</m>. Di conseguenza, <m>(H^{G})^{g'}\le H^{G}</m>, come richiesto.
+              Per mostrare che <m>H^{G}</m> è normale in <m>G</m>, dobbiamo mostrare che per ogni <m>g'\in G</m> si ha <m>(H^{G})^{g'}\le H^{G}</m>. Il coniugio tramite <m>g'</m> è un omomorfismo di gruppi (anzi, è un automorfismo di <m>G</m>). Dunque, per la <xref ref="prop-immagine_sottogruppo_generato"/>, <m>(H^{G})^{g'}</m> è generato da <m>(H^{g})^{g'}=H^{gg'}</m> al variare di <m>g</m> in <m>G</m>. Ma ciascun <m>H^{gg'}</m> è un coniugato di <m>H</m> e, per definizione di <m>H^{G}</m>, è contenuto in <m>H^{G}</m>. Di conseguenza, <m>(H^{G})^{g'}\le H^{G}</m>, come richiesto.
             </p>
           </solution>
         </task>
@@ -1854,7 +1854,7 @@
 
           <solution>
             <p>
-              la classe di coniugio di <m>\sigma</m> è formata dalle permutazioni del tipo <m>(a\;b\;c\;d)(e\;f)</m> con <m>a</m>, <m>b</m>, <m>c</m>, <m>d</m>, <m>e</m> ed <m>f</m> interi distinti compresi tra <m>1</m> e <m>7</m>. Possiamo scegliere <m>a</m> in <m>7</m> modi, poi <m>b</m> in <m>6</m> modi, <m>c</m> in <m>5</m> modi e così via fino a <m>2</m> scelte per <m>f</m>. Tuttavia queste <m>7\cdot6\cdot5\cdot4\cdot3\cdot2=7!</m> scelte non danno origine a permutazioni distinte. Infatti, scambiando fra loro <m>e</m> e <m>f</m> otteniamo la stessa permutazione, e, allo stesso modo, <m>(a\;b\;c\;d)</m> può essere scritto in <m>4</m> modi distinti. Dunque, il numero di elementi nella classe di <m>\sigma</m> è uguale a <m>\frac{7!}{4\cdot2}</m>: questo numero è uguale all'indice in <m>\Sym_{7}</m> di <m>\cent{\Sym_{7}}{\sigma}</m>. Poiché <m>\abs{\Sym_{7}}=7!</m>, il centralizzante di <m>\sigma</m> contiene <m>8</m> elementi.
+              La classe di coniugio di <m>\sigma</m> è formata dalle permutazioni del tipo <m>(a\;b\;c\;d)(e\;f)</m> con <m>a</m>, <m>b</m>, <m>c</m>, <m>d</m>, <m>e</m> ed <m>f</m> interi distinti compresi tra <m>1</m> e <m>7</m>. Possiamo scegliere <m>a</m> in <m>7</m> modi, poi <m>b</m> in <m>6</m> modi, <m>c</m> in <m>5</m> modi e così via fino a <m>2</m> scelte per <m>f</m>. Tuttavia queste <m>7\cdot6\cdot5\cdot4\cdot3\cdot2=7!</m> scelte non danno origine a permutazioni distinte. Infatti, scambiando fra loro <m>e</m> e <m>f</m> otteniamo la stessa permutazione, e, allo stesso modo, <m>(a\;b\;c\;d)</m> può essere scritto in <m>4</m> modi distinti. Dunque, il numero di elementi nella classe di <m>\sigma</m> è uguale a <m>\frac{7!}{4\cdot2}</m>: questo numero è uguale all'indice in <m>\Sym_{7}</m> di <m>\cent{\Sym_{7}}{\sigma}</m>. Poiché <m>\abs{\Sym_{7}}=7!</m>, il centralizzante di <m>\sigma</m> contiene <m>8</m> elementi.
             </p>
           </solution>
         </task>
@@ -1919,7 +1919,7 @@
 
           <solution>
             <p>
-              Ripetendo lo stesso ragionamento fatto in precedenza vediamo che in <m>\Sym_{12}</m> non ci sono cicli di ordine <m>35</m>, ma possiamo determinare un ciclo di ordine <m>7</m> e un ciclo di ordine <m>5</m> disgiunti: preso il prodotto di due cicli siffatti, dal momento che <m>7+5=12</m>, nello sviluppo della permutazione come prodotto di cicli disgiunti non possiamo aggiungere altri cicli. Le permutazioni di <m>\Sym_{12}</m> di periodo <m>12</m> sono allora tutte del tipo <m>(a_{1}\;\ldots \;a_{7})(a_{8}\;\ldots\;a_{12})</m>. Possiamo allora scegliere <m>a_{1}</m> in <m>12</m> modi, <m>a_{2}</m> in <m>11</m> modi e così via fino ad <m>a_{12}</m> in un modo, per un totale di <m>12!</m> scelte, che però non corrispondono a differenti permutazioni: il <m>7</m>-ciclo può essere riscritto in <m>7</m> modi diversi e il <m>5</m>-ciclo può essere riscritto in <m>5</m> modi diversi. Dunque, abbiamo <m>\frac{12!}{35}</m> permutazioni di periodo <m>35</m>.
+              Ripetendo lo stesso ragionamento fatto in precedenza vediamo che in <m>\Sym_{12}</m> non ci sono cicli di ordine <m>35</m>, ma possiamo determinare un ciclo di ordine <m>7</m> e un ciclo di ordine <m>5</m> disgiunti: preso il prodotto di due cicli siffatti, dal momento che <m>7+5=12</m>, nello sviluppo della permutazione come prodotto di cicli disgiunti non possiamo aggiungere altri cicli. Le permutazioni di <m>\Sym_{12}</m> di periodo <m>35</m> sono allora tutte del tipo <m>(a_{1}\;\ldots \;a_{7})(a_{8}\;\ldots\;a_{12})</m>. Possiamo allora scegliere <m>a_{1}</m> in <m>12</m> modi, <m>a_{2}</m> in <m>11</m> modi e così via fino ad <m>a_{12}</m> in un modo, per un totale di <m>12!</m> scelte, che però non corrispondono a differenti permutazioni: il <m>7</m>-ciclo può essere riscritto in <m>7</m> modi diversi e il <m>5</m>-ciclo può essere riscritto in <m>5</m> modi diversi. Dunque, abbiamo <m>\frac{12!}{35}</m> permutazioni di periodo <m>35</m>.
             </p>
           </solution>
         </task>

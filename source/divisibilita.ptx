@@ -750,7 +750,7 @@
 
     <remark xml:id="rem-esempio_non_UDF">
       <p>
-        Riprendiamo ancora una volta il dominio <m>\Interi[\sqrt{5}i]</m>. Per l'<xref ref="exercise-norma"/>, ogni elemento non nullo e non invertibile si fattorizza come prodotto di irriducibili. Nell'<xref ref="ex-irriducibile_non_primo"/> abbiamo mostrato che esistono irriducibili non primi e abbiamo esibito due fattorizzazioni in primi essenzialmente diverse di <m>9</m>. Infine, nell'<xref ref="ex-dominio_senza_MCD"/> abbiamo mostrato che ci sono coppie di elementi che non hanno massimo comun divisore. Pertanto abbiamo mostrato esplicitamente che questo dominio non soddisfa nessuna delle proprietà date dal teorema precedente.
+        Riprendiamo ancora una volta il dominio <m>\Interi[\sqrt{5}i]</m>. Per l'<xref ref="exercise-norma"/>, ogni elemento non nullo e non invertibile si fattorizza come prodotto di irriducibili. Nell'<xref ref="ex-irriducibile_non_primo"/> abbiamo mostrato che esistono irriducibili non primi e abbiamo esibito due fattorizzazioni in irriducibili essenzialmente diverse di <m>9</m>. Infine, nell'<xref ref="ex-dominio_senza_MCD"/> abbiamo mostrato che ci sono coppie di elementi che non hanno massimo comun divisore. Pertanto abbiamo mostrato esplicitamente che questo dominio non soddisfa nessuna delle proprietà date dal teorema precedente.
       </p>
     </remark>
 
@@ -1017,7 +1017,7 @@
       <idx><h>algoritmo di Euclide</h><h>in un dominio Euclideo</h></idx>
       <statement>
         <p>
-          Sia <m>D</m> un dominio euclideo rispetto alla mappa <m>\euclidean</m> e siano <m>a</m> e <m>b</m> due elementi di <m>D</m>. Se <m>b=0</m> allora <m>(a,b)\sim 0</m> e un'identità di Bezout è banalmente data da <m>a\cdot0+b\cdot0=0</m>.
+          Sia <m>D</m> un dominio euclideo rispetto alla mappa <m>\euclidean</m> e siano <m>a</m> e <m>b</m> due elementi di <m>D</m>. Se <m>b=0</m> allora <m>(a,b)\sim a</m> e un'identità di Bezout è banalmente data da <m>a\cdot1+b\cdot0=a</m>.
         </p>
         <p>
           Se <m>b\ne0</m> consideriamo la successione di divisioni
@@ -1155,7 +1155,7 @@
               </md>.
               L'ultimo resto cercato è <m>1-5i</m> che è, dunque, il massimo comun divisore. Possiamo poi scrivere facilmente un'identità di Bezout
               <md>
-                1+5i=(7+17i)\cdot1+(8-14i)(1-i)
+                1-5i=(7+17i)\cdot1+(8-14i)(1-i)
               </md>.
             </p>
           </solution>

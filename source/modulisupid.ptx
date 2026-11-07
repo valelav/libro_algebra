@@ -78,7 +78,7 @@
 
       <proof>
         <p>
-          Un modulo ciclico è isomorfo a un quoziente <m>D/\ideal{d}</m> per qualche <m>d</m> in <m>D</m>. Per il <xref ref="thm-sottomoduli_quoziente"/>, i sottomoduli di <m>D/\ideal{d}</m> sono del tipo <m>L/\ideal{d}</m> dove <m>L</m> è un sottomodulo di <m>D_{D}</m> contenente <m>\ideal{d}</m>, ovvero un ideale di <m>D</m> contenente <m>\ideal{d}</m>: poiché <m>D</m> è un domino a ideali principali, <m>L</m> è generato come ideale (e, quindi, come modulo) da un singolo elemento <m>x</m>. Pertanto, il quoziente <m>L/\ideal{d}</m> è generato dal laterale <m>\ideal{d}+x</m>.
+          Un modulo ciclico è isomorfo a un quoziente <m>D/\ideal{d}</m> per qualche <m>d</m> in <m>D</m>. Per il <xref ref="thm-sottomoduli_quoziente"/>, i sottomoduli di <m>D/\ideal{d}</m> sono del tipo <m>L/\ideal{d}</m> dove <m>L</m> è un sottomodulo di <m>D_{D}</m> contenente <m>\ideal{d}</m>, ovvero un ideale di <m>D</m> contenente <m>\ideal{d}</m>: poiché <m>D</m> è un dominio a ideali principali, <m>L</m> è generato come ideale (e, quindi, come modulo) da un singolo elemento <m>x</m>. Pertanto, il quoziente <m>L/\ideal{d}</m> è generato dal laterale <m>\ideal{d}+x</m>.
         </p>
       </proof>
 
@@ -264,7 +264,7 @@
       <exercise>
         <statement>
           <p>
-            Dimostrare che se <m>x</m> è un elemento di un <m>D</m>-modulo e <m>a</m> è un elemento di <m>R</m>, allora <m>xa=0</m> se e solo se l'ordine di <m>x</m> divide <m>a</m>. In particolare, se <m>a</m> è irriducibile. allora <m>x</m> ha ordine <m>0</m> oppure <m>a</m>.
+            Dimostrare che se <m>x</m> è un elemento di un <m>D</m>-modulo e <m>a</m> è un elemento di <m>R</m>, allora <m>xa=0</m> se e solo se l'ordine di <m>x</m> divide <m>a</m>. In particolare, se <m>a</m> è irriducibile, allora <m>x</m> ha ordine <m>0</m> oppure <m>a</m>.
           </p>
         </statement>
 
@@ -284,7 +284,7 @@
 
         <solution>
           <p>
-             Sia <m>d</m> l'ordine di <m>x</m>: allora <m>(x\phi)d=(xd)\phi=0\phi=0</m>: poiché <m>d</m> annulla <m>x\phi</m> l'ordine di <m>x\phi</m> è un divisore di <m>d</m>. Supponiamo ora che <m>\phi</m> sia iniettivo e che <m>e</m> sia l'ordine di <m>x\phi</m>: abbiamo allora <m>(xe)\phi=(x\phi)e=0</m> e, poiché <m>\phi</m> è iniettivo abbiamo che <m>xe=0</m> cioè <m>e</m> annulla <m>x</m>. L'ordine di <m>x</m> divide allora l'ordine di <m>x</m> e, poiché l'ordine di <m>x</m> e l'ordine di <m>x\phi</m> si dividono reciprocamente sono, dunque, associati) cioè <m>x</m> e <m>x\phi</m> hanno lo stesso ordine).
+             Sia <m>d</m> l'ordine di <m>x</m>: allora <m>(x\phi)d=(xd)\phi=0\phi=0</m>: poiché <m>d</m> annulla <m>x\phi</m> l'ordine di <m>x\phi</m> è un divisore di <m>d</m>. Supponiamo ora che <m>\phi</m> sia iniettivo e che <m>e</m> sia l'ordine di <m>x\phi</m>: abbiamo allora <m>(xe)\phi=(x\phi)e=0</m> e, poiché <m>\phi</m> è iniettivo abbiamo che <m>xe=0</m> cioè <m>e</m> annulla <m>x</m>. L'ordine di <m>x</m> divide allora l'ordine di <m>x\phi</m> e, poiché l'ordine di <m>x</m> e l'ordine di <m>x\phi</m> si dividono reciprocamente sono, dunque, associati (cioè <m>x</m> e <m>x\phi</m> hanno lo stesso ordine).
           </p>
         </solution>
       </exercise>
@@ -330,7 +330,7 @@
 
       <proof>
         <p>
-          Poiché <m>0\in M_{p}</m> si ha <m>M_{p}\ne\vuoto</m>. Siano <m>x</m> e <m>y</m> due elementi di <m>M_{p}</m> di ordini <m>p^{i}</m> e <m>p^{j}</m> rispettivamente. Detto <m>l=\max(i,j)</m>, abbiamo <m>(x+y)p^{l}=xp^{l}+yp^{l}=xp^{i}p^{l-i}+yp^{j}p^{l-j}=0p^{l-i}+0p^{l-j}=0</m>; inoltre, per ogni <m>a</m> in <m>D</m> si ha <m>(xa)p^{i}=(xp^{i})a=0a=0</m>;, dunque, <m>x+y</m> e <m>xa</m> appartengono a <m>M_{p}</m>, cioè <m>M_{p}</m> è un sottomodulo. Poiché <m>M_{p}</m> è formato esattamente da tutti i <m>p</m>-elementi di <m>M</m>, è il più grande sottomodulo <m>p</m>-primario di <m>M</m>.
+          Poiché <m>0\in M_{p}</m> si ha <m>M_{p}\ne\vuoto</m>. Siano <m>x</m> e <m>y</m> due elementi di <m>M_{p}</m> di ordini <m>p^{i}</m> e <m>p^{j}</m> rispettivamente. Detto <m>l=\max(i,j)</m>, abbiamo <m>(x+y)p^{l}=xp^{l}+yp^{l}=xp^{i}p^{l-i}+yp^{j}p^{l-j}=0p^{l-i}+0p^{l-j}=0</m>; inoltre, per ogni <m>a</m> in <m>D</m> si ha <m>(xa)p^{i}=(xp^{i})a=0a=0</m>, dunque, <m>x+y</m> e <m>xa</m> appartengono a <m>M_{p}</m>, cioè <m>M_{p}</m> è un sottomodulo. Poiché <m>M_{p}</m> è formato esattamente da tutti i <m>p</m>-elementi di <m>M</m>, è il più grande sottomodulo <m>p</m>-primario di <m>M</m>.
         </p>
       </proof>
 
@@ -515,7 +515,7 @@
       <proof>
         <p>
           Procediamo per induzione su <m>n</m>, notando che il caso <m>n=0</m> è banale. Sia allora <m>n>0</m> e identifichiamo <m>M</m> con <m>D^{n}</m>. Sia <m>T\coloneqq\{(a_{1},\ldots,a_{n})\in D^{n}\mid a_{n}=0\}</m>. Poiché <m>T</m> è libero di rango <m>n-1</m>, per ipotesi induttiva <m>N\cap T</m> è libero di rango al più <m>n-1</m>. Se <m>N\subseteq T</m> abbiamo finito, altrimenti consideriamo l'omomorfismo di proiezione <m>\pi\colon D^{n}\to D</m> che manda <m>(a_{1},\ldots,a_{n})</m> in <m>a_{n}</m>: il nucleo di <m>\pi</m> è ovviamente <m>T</m> e, pertanto, <m>N\pi</m> è un sottomodulo di <m>D</m> non nullo, cioè un ideale non nullo di <m>D</m>.
-          Se <m>x</m> è un elemento di <m>N</m> tale che <m>x\pi</m> genera <m>N\pi</m>, applicando il <xref ref="lem-omomorfismo_in_D"/> alla restrizione di <m>\pi</m> a <m>N</m>, abbiamo che <m>N=xD\oplus(N\cap T)</m>. Poiché <m>xD</m> è libero di rango <m>1</m>, dalla <xref ref="prop-somma_diretta_di_liberi"/> segue che <m>L</m> è libero di rango al più <m>n</m>.
+          Se <m>x</m> è un elemento di <m>N</m> tale che <m>x\pi</m> genera <m>N\pi</m>, applicando il <xref ref="lem-omomorfismo_in_D"/> alla restrizione di <m>\pi</m> a <m>N</m>, abbiamo che <m>N=xD\oplus(N\cap T)</m>. Poiché <m>xD</m> è libero di rango <m>1</m>, dalla <xref ref="prop-somma_diretta_di_liberi"/> segue che <m>N</m> è libero di rango al più <m>n</m>.
         </p>
       </proof>
 
@@ -651,7 +651,7 @@
           <md>
             N\simeq \frac{D}{\ideal{c_{1}}}\oplus\cdots\oplus\frac{D}{\ideal{c_{s}}}\oplus D^{r}
           </md>
-          con <m>s</m> e <m>r</m> naturali e <m>c_{1}</m>, <m>\ldots</m>, <m>c_{s}</m> elementi non nulli e non invertibili di <m>D</m>. Inoltre. <m>\Tor(N)\simeq \frac{D}{\ideal{c_{1}}}\oplus\cdots\oplus\frac{D}{\ideal{c_{s}}}</m> e <m>N/\Tor(N)</m> è libero di rango <m>r</m>.
+          con <m>s</m> e <m>r</m> naturali e <m>c_{1}</m>, <m>\ldots</m>, <m>c_{s}</m> elementi non nulli e non invertibili di <m>D</m>. Inoltre, <m>\Tor(N)\simeq \frac{D}{\ideal{c_{1}}}\oplus\cdots\oplus\frac{D}{\ideal{c_{s}}}</m> e <m>N/\Tor(N)</m> è libero di rango <m>r</m>.
         </p>
       </statement>
 

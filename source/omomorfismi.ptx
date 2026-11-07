@@ -275,7 +275,7 @@
       <exercise>
         <statement>
           <p>
-            Dimostrare che se <m>\phi\colon M\to N</m> è una funzione suriettiva tra monoidi tale che <m>(x\cdot y)\phi=x\phi\cdot x\phi</m> per ogni <m>x</m> e <m>y</m> in <m>M</m>, allora <m>\phi</m> è un omomorfismo di monoidi.
+            Dimostrare che se <m>\phi\colon M\to N</m> è una funzione suriettiva tra monoidi tale che <m>(x\cdot y)\phi=x\phi\cdot y\phi</m> per ogni <m>x</m> e <m>y</m> in <m>M</m>, allora <m>\phi</m> è un omomorfismo di monoidi.
           </p>
         </statement>
 
@@ -295,7 +295,7 @@
       <exercise>
         <statement>
           <p>
-            Sia <m>\phi\colon M\to N</m> un omomorfismo di monoidi e sia <m>x</m> un elemento di <m>G</m>. Mostrare che  <m>(x^{n})\phi=(x\phi)^{n}</m> per ogni naturale <m>n</m> e che se <m>x</m> è invertibile allora <m>x\phi</m> è invertibile e <m>(x^{n})\phi=(x\phi)^{n}</m> per ogni intero <m>n</m>.
+            Sia <m>\phi\colon M\to N</m> un omomorfismo di monoidi e sia <m>x</m> un elemento di <m>M</m>. Mostrare che  <m>(x^{n})\phi=(x\phi)^{n}</m> per ogni naturale <m>n</m> e che se <m>x</m> è invertibile allora <m>x\phi</m> è invertibile e <m>(x^{n})\phi=(x\phi)^{n}</m> per ogni intero <m>n</m>.
           </p>
         </statement>
       </exercise>
@@ -476,7 +476,7 @@
         <exercise>
           <statement>
             <p>
-              <m>\phi\colon\Sym_{4}\to\Sym_{3}</m> che manda <m>\sigma\in\Sym_{4}</m> in <m>\tau\in\Sym_{4}</m> così definita
+              <m>\phi\colon\Sym_{4}\to\Sym_{3}</m> che manda <m>\sigma\in\Sym_{4}</m> in <m>\tau\in\Sym_{3}</m> così definita
               <m>i\tau\coloneqq i\sigma</m>.
             </p>
           </statement>
@@ -686,7 +686,7 @@
 
       <proof>
         <p>
-          Se <m>X=\vuoto</m> allora <m>X\phi=\vuoto</m>: per la <xref ref="prop-elementi_del_sottogruppo_generato"/>, <m>\grgen{X}=1_{G}</m> e <m>\grgen{X\phi}=1_{H}</m>, da cui segue le tesi.
+          Se <m>X=\vuoto</m> allora <m>X\phi=\vuoto</m>: per la <xref ref="prop-elementi_del_sottogruppo_generato"/>, <m>\grgen{X}=1_{G}</m> e <m>\grgen{X\phi}=1_{H}</m>, da cui segue la tesi.
         </p>
         <p>
           Se <m>X\ne\vuoto</m>, sempre dalla <xref ref="prop-elementi_del_sottogruppo_generato"/>, sappiamo che <m>\grgen{X}</m> è l'insieme degli elementi del tipo
@@ -855,7 +855,7 @@
 
       <proof>
         <p>
-          La dimostrazione è puramente insiemistica e non dipende dal fatto che stiamo lavorando con gruppi e omomorfismi. Gli elementi di <m>=L\phi^{-1}\phi</m> sono quelli del tipo <m>x\phi</m> al variare di <m>x\in L\phi^{-1}</m>. Un elemento <m>x</m> di <m>G</m> appartiene a <m>L\phi^{-1}</m> se e solo se <m>x\phi\in L</m>. Dunque, <m>L\phi^{-1}\phi</m> è formato da tutti e soli gli elementi <m>x\phi</m> tali che <m>x\in G</m> e <m>x\phi\in L</m>: in altri termini, <m>L\phi^{-1}\phi=L\cap\im\phi</m>.
+          La dimostrazione è puramente insiemistica e non dipende dal fatto che stiamo lavorando con gruppi e omomorfismi. Gli elementi di <m>L\phi^{-1}\phi</m> sono quelli del tipo <m>x\phi</m> al variare di <m>x\in L\phi^{-1}</m>. Un elemento <m>x</m> di <m>G</m> appartiene a <m>L\phi^{-1}</m> se e solo se <m>x\phi\in L</m>. Dunque, <m>L\phi^{-1}\phi</m> è formato da tutti e soli gli elementi <m>x\phi</m> tali che <m>x\in G</m> e <m>x\phi\in L</m>: in altri termini, <m>L\phi^{-1}\phi=L\cap\im\phi</m>.
         </p>
       </proof>
 
@@ -987,7 +987,7 @@
                   0 \amp a^{2}b^{2}
                 \end{psmallmatrix}
               </md>
-              Poiché le due matrici coincidono (ovviamente <m>(ab)^{2}=a^{2}b^{2}</m> e <m>(ab)^{5}=a^{4}b^{4}</m>) la mappa <m>\phi</m> è un omomorfismo. Il nucleo di <m>\phi</m> è dato dagli elementi <m>a</m> tali che <m>a\phi</m> è la matrice identica: ciò avviene se e solo se <m>a^{4}=1</m> e <m>a^{2}=1</m>, il che avviene se e solo se <m>a=1</m> o <m>a=-1</m>. Il nucleo di <m>\phi</m> è formato da <m>1</m> e <m>-1</m>.
+              Poiché le due matrici coincidono (ovviamente <m>(ab)^{2}=a^{2}b^{2}</m> e <m>(ab)^{4}=a^{4}b^{4}</m>) la mappa <m>\phi</m> è un omomorfismo. Il nucleo di <m>\phi</m> è dato dagli elementi <m>a</m> tali che <m>a\phi</m> è la matrice identica: ciò avviene se e solo se <m>a^{4}=1</m> e <m>a^{2}=1</m>, il che avviene se e solo se <m>a=1</m> o <m>a=-1</m>. Il nucleo di <m>\phi</m> è formato da <m>1</m> e <m>-1</m>.
             </p>
           </solution>
         </exercise>
@@ -1034,7 +1034,7 @@
           <solution>
             <p>
               Dal punto precedente sappiamo che <m>\phi</m> è un endomorfismo. Se <m>x</m> è un elemento del nucleo di <m>\phi</m> abbiamo che<m>x^{n}=1</m> e, quindi, il periodo di <m>x</m> divide <m>n</m>. D'altra parte, il periodo di <m>x</m> deve dividere l'ordine <m>r</m> del gruppo e, poiché, <m>n</m> e <m>r</m> sono coprimi ciò significa che <m>x</m> ha periodo <m>1</m> cioè è <m>1</m>. Di conseguenza, <m>\phi</m> è iniettivo e, poiché, <m>G</m> è finito è necessariamente anche suriettivo. Dunque
-              <m>\phi</m> è un automorfismo biiettivo, cioè un automorfismo.
+              <m>\phi</m> è un endomorfismo biiettivo, cioè un automorfismo.
             </p>
           </solution>
         </task>

@@ -230,7 +230,7 @@
           Per ogni <m>i \gt\max(m,n)</m>, si ha <m>a_{i}+b_{i}=0+0</m> e, quindi, <m>f+g=0</m> o <m>\deg(f+g)\le\max(m,n)</m>: questo prova il <xref ref="item-grado_somma"/>. Se <m>m\ne n</m> (senza perdere in generalità possiamo supporre che <m>m \lt n</m>) allora <m>a_{n}+b_{n}=0+b_{n}=b_{n}\ne 0</m>, cioè <m>\deg(f+g)=n=\max(m,n)</m>: questo prova il <xref ref="item-grado_somma_gradi_diversi"/>.
         </p>
         <p>
-          Per ogni <m>i \gt m+n</m> si ha che nella somma <m>c_{i}\coloneqq\sum_{h+k=i}a_{h}b_{k}</m> o <m>h \gt m</m> e, quindi, <m>a_{h}=0</m> o <m>k \gt n</m> e, quindi, <m>b_{k}=0</m>: pertanto, <m>c_{i}=0</m>: questo prova il <xref ref="item-grado_prodotto"/>. Se <m>a_{n}b_{m}\ne 0</m> allora <m>\sum_{h+k=i}a_{h}b_{k}=a_{n}b_{m}\ne 0</m>: questo prova il <xref ref="item-grado_prodotto_non_zero"/>.
+          Per ogni <m>i \gt m+n</m> si ha che nella somma <m>c_{i}\coloneqq\sum_{h+k=i}a_{h}b_{k}</m> o <m>h \gt m</m> e, quindi, <m>a_{h}=0</m> o <m>k \gt n</m> e, quindi, <m>b_{k}=0</m>: pertanto, <m>c_{i}=0</m>: questo prova il <xref ref="item-grado_prodotto"/>. Se <m>a_{m}b_{n}\ne 0</m> allora <m>\sum_{h+k=m+n}a_{h}b_{k}=a_{m}b_{n}\ne 0</m>: questo prova il <xref ref="item-grado_prodotto_non_zero"/>.
         </p>
       </proof>
 
@@ -452,10 +452,10 @@
           </md>
           e
           <md>
-            <mrow>(fg)\theta \amp =u_{0}\psi + c_{1}\psi u+\cdots</mrow>
+            <mrow>(fg)\theta \amp =c_{0}\psi + c_{1}\psi u+\cdots</mrow>
             <mrow> \amp = (a_{0}b_{0})\psi+(a_{0}b_{1}+a_{1}b_{0})\psi \cdot u+\cdots </mrow>
             <mrow>  \amp = a_{0}\psi\cdot b_{0}\psi +(a_{0}\psi \cdot b_{1}\psi+a_{1}\psi \cdot b_{0}\psi) \cdot u+\cdots</mrow>
-            <mrow>  \amp =(a_{0}\psi+a_{1}\psi\cdot c+\cdots)(b_{0}\psi+b_{1}\psi\cdot u+\cdots) </mrow>
+            <mrow>  \amp =(a_{0}\psi+a_{1}\psi\cdot u+\cdots)(b_{0}\psi+b_{1}\psi\cdot u+\cdots) </mrow>
             <mrow>  \amp =f\theta\cdot g\theta</mrow>
           </md>.
           Notiamo che abbiamo usato la commutatività di <m>S</m> nel penultimo passaggio.
@@ -702,7 +702,7 @@
     <example>
       <statement>
         <p>
-          Consideriamo in <m>\Interi/4[x]</m> il polinomio <m>x^{2}</m>. Chiaramente <m>\class[4]{0}</m> è radice del polinomio di molteplicità <m>2</m>. Anche <m>\class[4]{2}</m> è radice di molteplicità <m>2</m>: infatti <m>(x-\class[4]{2}^{2}=x^{2}</m>. La somma delle molteplicità eccede, dunque, il grado.
+          Consideriamo in <m>\Interi/4[x]</m> il polinomio <m>x^{2}</m>. Chiaramente <m>\class[4]{0}</m> è radice del polinomio di molteplicità <m>2</m>. Anche <m>\class[4]{2}</m> è radice di molteplicità <m>2</m>: infatti <m>(x-\class[4]{2})^{2}=x^{2}</m>. La somma delle molteplicità eccede, dunque, il grado.
         </p>
       </statement>
     </example>

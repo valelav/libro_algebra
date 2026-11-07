@@ -265,7 +265,7 @@
               B_{1}  \amp 0      \amp \dots  \amp 0 \\
               0      \amp B_{2}  \amp \dots  \amp 0 \\
               \vdots \amp \vdots \amp \ddots \amp \vdots\\
-              0      \amp 0      \amp \dots  \amp B_{s}
+              0      \amp 0      \amp \dots  \amp B_{r}
             \end{pmatrix}
           </md>.
         </p>
@@ -392,7 +392,7 @@
       <proof>
         <p>
           Determiniamo la matrice rappresentativa di <m>\theta</m> rispetto alla base prescelta. Osserviamo che, per <m>1\le i\le n-1</m>, si ha <m>\vect{v}_{i}\theta=\vect{v}_{i+1}</m>. In particolare, <m>\vect{v}_{1}\theta= \vect{v}_{1}\cdot 0+\vect{v}_{2}\cdot 1+\vect{v}_{3}\cdot 0+\cdots+\vect{v}_{n}\cdot 0</m>: quindi, i coefficienti sulla prima riga della matrice rappresentativa di <m>\theta</m> sono <m>(0,1,0,\dots,0)</m>.
-          In maniera analoga determiniamo le righe della matrice fino alla <m>n-1</m>-esima. Per determinare l'ultima riga, osserviamo che <m>\vect{v}p=\vect{0}</m>, cioè <m>\vect{v}a_{0}+\vect{v}\theta a_{1}+\dots+\vect{v}\theta^{n}=\vect{0}</m> vale a dire <m>\vect{v}\theta^{n}=-\vect{v}a_{0}-\vect{v}\theta a_{1}+\dots-\vect{v}\theta^{n-1}a_{n-1}</m>. Ma allora
+          In maniera analoga determiniamo le righe della matrice fino alla <m>n-1</m>-esima. Per determinare l'ultima riga, osserviamo che <m>\vect{v}p=\vect{0}</m>, cioè <m>\vect{v}a_{0}+\vect{v}\theta a_{1}+\dots+\vect{v}\theta^{n}=\vect{0}</m> vale a dire <m>\vect{v}\theta^{n}=-\vect{v}a_{0}-\vect{v}\theta a_{1}-\dots-\vect{v}\theta^{n-1}a_{n-1}</m>. Ma allora
           <md>
             \vect{v}_{n}\theta=\vect{v}\theta^{n-1}\theta=\vect{v}\theta^{n}=
             -\vect{v}_{1}a_{0}-\vect{v}_{2}a_{1}-\cdots-\vect{v}_{n}a_{n-1}
@@ -554,7 +554,7 @@
 
       <proof>
         <p>
-          Questo teorema è semplicemente la traduzione in termini matriciali del precedente. Notiamo solo che il determinante di una matrice diagonale a blocchi è il prodotto dei determinanti dei blocchi (<xref ref="prop-diagonali_blocchi"/>) e, di conseguenza, il polinomio caratteristico di <m>C</m> (e, quindi di <m>A</m>) è il prodotto dei polinomi caratteristici dei singoli blocchi, che, per la <xref ref="prop-compagna"/> sono esattamente i polinomi, che, per la <xref ref="prop-compagna"/> sono esattamente gli <m>f_{i}</m>.
+          Questo teorema è semplicemente la traduzione in termini matriciali del precedente. Notiamo solo che il determinante di una matrice diagonale a blocchi è il prodotto dei determinanti dei blocchi (<xref ref="prop-diagonali_blocchi"/>) e, di conseguenza, il polinomio caratteristico di <m>C</m> (e, quindi di <m>A</m>) è il prodotto dei polinomi caratteristici dei singoli blocchi, che, per la <xref ref="prop-compagna"/> sono esattamente i polinomi <m>f_{i}</m>.
         </p>
       </proof>
 
@@ -1018,12 +1018,12 @@
           Si noti che gli elementi dell'ultima riga sono i coefficienti cambiati di segno del polinomio a partire dal termine noto e di grado crescente (tranne il coefficiente direttivo).
         </p>
         <p>
-          Al blocco di Jordan di ordine <m>3</m> relativo a <m>2</m> sostituiamo la matrice compagna del polinomio <m>(x-2)^{3}=x^{3}-2x^{2}+4x-8</m> cioè:
+          Al blocco di Jordan di ordine <m>3</m> relativo a <m>2</m> sostituiamo la matrice compagna del polinomio <m>(x-2)^{3}=x^{3}-6x^{2}+12x-8</m> cioè:
           <md>
           \begin{pmatrix}
             0 \amp 1  \amp 0 \\
             0 \amp 0  \amp 1 \\
-            8 \amp -4 \amp 2
+            8 \amp -12 \amp 6
           \end{pmatrix}
           </md>.
           Infine i due blocchi di Jordan di ordine <m>1</m> sono anche matrici compagne di polinomi di primo
@@ -1073,7 +1073,7 @@
 
           <solution>
             <p>
-              Il polinomio caratteristico di <m>A</m> può essere calcolato facilmente: si ha <m>\det(x\Idmatrix-A)=(x-2)^{6}</m>. Il polinomio caratteristico è totalmente riducibile e la matrice <m>A</m> ha come unico autovalore <m>2</m> di molteplicità algebrica <m>6</m>. Dunque, la matrice è simile a una matrice di Jordan in cui avremo blocchi di Jordan di ordine complessivo <m>6</m>. Calcoliamo la successione dei ranghi associati all'autovalore <m>6</m> partendo, come sempre, dall'ordine della matrice che in questo caso è <m>6</m>. Consideriamo ora il rango della matrice <m>A-2\Idmatrix</m>, vale a dire la matrice
+              Il polinomio caratteristico di <m>A</m> può essere calcolato facilmente: si ha <m>\det(x\Idmatrix-A)=(x-2)^{6}</m>. Il polinomio caratteristico è totalmente riducibile e la matrice <m>A</m> ha come unico autovalore <m>2</m> di molteplicità algebrica <m>6</m>. Dunque, la matrice è simile a una matrice di Jordan in cui avremo blocchi di Jordan di ordine complessivo <m>6</m>. Calcoliamo la successione dei ranghi associati all'autovalore <m>2</m> partendo, come sempre, dall'ordine della matrice che in questo caso è <m>6</m>. Consideriamo ora il rango della matrice <m>A-2\Idmatrix</m>, vale a dire la matrice
               <md>
                 \begin{pmatrix}
                   0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 2 \\
@@ -1187,9 +1187,9 @@
                   0  \amp 1  \amp 0 \amp 0 \amp 0 \amp 0 \\
                   -4 \amp 4  \amp 0 \amp 0 \amp 0 \amp 0 \\
                    0 \amp 0  \amp 0 \amp 1 \amp 0 \amp 0 \\
-                   0 \amp 0\amp0 \amp 0 \amp 1 \amp 0 \amp \\
-                   0 \amp 0\amp0 \amp 0 \amp 0 \amp 1 \amp \\
-                   0 \amp 0 \amp-16 \amp 32 \amp -24 \amp 8
+                   0 \amp 0  \amp 0 \amp 0 \amp 1 \amp 0  \\
+                   0 \amp 0  \amp 0 \amp 0 \amp 0 \amp 1  \\
+                   0 \amp 0  \amp-16 \amp 32 \amp -24 \amp 8
                 \end{pmatrix}
               </md>.
             </p>
@@ -1237,7 +1237,7 @@
 
           <solution>
             <p>
-              Possiamo riprendere i calcoli del punto precedente. Poiché <m>F=\Interi/p</m> dobbiamo stabilire, in dipendenza da <m>p</m>, se gli autovalori sono distinti o meno. Gli autovalori <m>1</m> e <m>-1</m> coincidono se e solo se la loro differenza <m>1-(-1)</m> è multipla di <m>p</m>, cioè se e solo se <m>p=2</m>. Analogamente <m>1</m> e <m>3</m> coincidono se e solo se <m>3-1</m> è multiplo di <m>p</m>, il che avviene se e solo se <m>p=2</m>. Infine <m>-1</m> e <m>3</m> coincidono se e solo se <m>3-(-1)</m> è multiplo di <m>2</m> il che avviene, ancora una volta, se e solo se <m>p=2</m>. Riassumendo: se <m>p\ne2</m> la matrice <m>A</m> ha tre autovalori aventi molteplicità algebrica <m>1</m> e, quindi, come nel caso <m>F=\Razionali</m> la matrice è simile alla matrice diagonale <m>
+              Possiamo riprendere i calcoli del punto precedente. Poiché <m>F=\Interi/p</m> dobbiamo stabilire, in dipendenza da <m>p</m>, se gli autovalori sono distinti o meno. Gli autovalori <m>1</m> e <m>-1</m> coincidono se e solo se la loro differenza <m>1-(-1)</m> è multipla di <m>p</m>, cioè se e solo se <m>p=2</m>. Analogamente <m>1</m> e <m>3</m> coincidono se e solo se <m>3-1</m> è multiplo di <m>p</m>, il che avviene se e solo se <m>p=2</m>. Infine <m>-1</m> e <m>3</m> coincidono se e solo se <m>3-(-1)</m> è multiplo di <m>p</m> il che avviene, ancora una volta, se e solo se <m>p=2</m>. Riassumendo: se <m>p\ne2</m> la matrice <m>A</m> ha tre autovalori aventi molteplicità algebrica <m>1</m> e, quindi, come nel caso <m>F=\Razionali</m> la matrice è simile alla matrice diagonale <m>
               \begin{psmallmatrix}
                 1 \amp  0 \amp 0 \\
                 0 \amp -1 \amp 0 \\
@@ -1289,7 +1289,7 @@
             </p>
 
             <p>
-              Il polinomio caratteristico di <m>B</m> è <m>\det(x\Idmatrix-A)</m> cioè <m>
+              Il polinomio caratteristico di <m>B</m> è <m>\det(x\Idmatrix-B)</m> cioè <m>
               \begin{vsmallmatrix}
               x-1 \amp -4 \amp 0 \\
               -1 \amp x-3 \amp -2 \\
@@ -1437,7 +1437,7 @@
             \begin{aligned}
             A^{n}B_{n-1}\amp=A^{n}\\
             A^{n-1}B_{n-2}-A^{n}B_{n-1}\amp=a_{n-1}A^{n-1}\\
-            A^{n-2}B_{n-3}-A^{n-1}B_{n-2}\amp=a_{n-2}A^{n-1}\\
+            A^{n-2}B_{n-3}-A^{n-1}B_{n-2}\amp=a_{n-2}A^{n-2}\\
             \amp\vdotswithin{=}\\
             AB_{0}-A^{2}B_{1}\amp=a_{1}A\\
             -AB_{0}\amp=a_{0}\Idmatrix
@@ -1476,7 +1476,7 @@
         <mrow> p(B) \amp =a_{0}\Idmatrix+a_{1}B+\dots+a_{t}B^{t} </mrow>
         <mrow> \amp =a_{0}M^{-1}\Idmatrix M+a_{1}M^{-1}AM+\dots+a_{t}(M^{-1}AM)^{t}</mrow>
         <mrow>  \amp =a_{0}M^{-1}\Idmatrix M+a_{1}M^{-1}AM+\dots+a_{t}M^{-1}A^{t}M</mrow>
-        <mrow>  \amp =M^{-1}(a_{0}\Idmatrix+a_{1}B+\dots+a_{t}B^{t})M=M^{-1}p(A)M</mrow>
+        <mrow>  \amp =M^{-1}(a_{0}\Idmatrix+a_{1}A+\dots+a_{t}A^{t})M=M^{-1}p(A)M</mrow>
       </md>.
       In particolare, il polinomio <m>p</m> si annulla in <m>A</m> se e solo se si annulla in <m>B</m>. Abbiamo, dunque, la
     </p>

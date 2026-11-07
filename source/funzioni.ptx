@@ -456,7 +456,7 @@
       </notation>
       <statement>
         <p>
-          Data una funzione <m>f\colon A\to B</m> e un sottoinsieme <m>S</m> di <m>A</m> la <term>restrizione</term> <m>\restrizione{f}{S}</m> di <m>f</m> a <m>S</m> è la funzione <m>\restrizione{f}{S}\colon S \to B</m> definita semplicemente da <m>\restrizione{f}{S}\coloneqq af</m> per ogni <m>a</m> in <m>S</m>.
+          Data una funzione <m>f\colon A\to B</m> e un sottoinsieme <m>S</m> di <m>A</m> la <term>restrizione</term> <m>\restrizione{f}{S}</m> di <m>f</m> a <m>S</m> è la funzione <m>\restrizione{f}{S}\colon S \to B</m> definita semplicemente da <m>a\restrizione{f}{S}\coloneqq af</m> per ogni <m>a</m> in <m>S</m>.
         </p>
       </statement>
     </definition>
@@ -777,7 +777,7 @@
             <shortdescription>Diagrammi di Venn e frecce che descrivono una funzione suriettiva.</shortdescription>
             <description>
               <p>
-                Diagrammi di Venn per gli insiemi <m>A\coloneqq\{1,2,3,4\}</m> e <m>B\coloneqq\{a,b.c\}</m> e frecce da <m>A</m> a <m>B</m> che mandano <m>1</m> in <m>a</m>, <m>2</m> e <m>3</m> in <m>b</m> e <m>4</m> in <m>c</m>.
+                Diagrammi di Venn per gli insiemi <m>A\coloneqq\{1,2,3,4\}</m> e <m>B\coloneqq\{a,b,c\}</m> e frecce da <m>A</m> a <m>B</m> che mandano <m>1</m> in <m>a</m>, <m>2</m> e <m>3</m> in <m>b</m> e <m>4</m> in <m>c</m>.
               </p>
             </description>
             <latex-image>
@@ -828,7 +828,7 @@
           Consideriamo la funzione <m>f\colon\Reali\to\Reali</m> data da <m>xf\coloneqq x^{2}</m>. Sia <m>b</m> un numero reale qualunque (pensato come elemento dell'insieme di arrivo): dobbiamo vedere se esiste un numero reale <m>a</m> tale che <m>af=b</m>, cioè <m>a^{2}=b</m>. Ciò è possibile se <m>b\ge 0</m>, ma se <m>b \lt 0</m> non esiste alcun numero reale il cui quadrato è <m>b</m>: dunque, <m>f</m> non è suriettiva.
         </p>
         <p>
-          Consideriamo invece la funzione <m>g\colon\Reali\to\Reali^{\ge0}\coloneqq \{x\in\Reali\mid x\ge 0\}</m> data da <m>xg\coloneqq x^{2}</m>. Sia <m>b</m> un numero reale non negativo qualunque (pensato come elemento dell'insieme di arrivo): dobbiamo vedere se esiste un numero reale <m>a</m> tale che <m>af=b</m>, cioè <m>a^{2}=b</m>. Esiste almeno un numero reale che soddisfa tale uguaglianza e, quindi, <m>g</m> è suriettiva.
+          Consideriamo invece la funzione <m>g\colon\Reali\to\Reali^{\ge0}\coloneqq \{x\in\Reali\mid x\ge 0\}</m> data da <m>xg\coloneqq x^{2}</m>. Sia <m>b</m> un numero reale non negativo qualunque (pensato come elemento dell'insieme di arrivo): dobbiamo vedere se esiste un numero reale <m>a</m> tale che <m>ag=b</m>, cioè <m>a^{2}=b</m>. Esiste almeno un numero reale che soddisfa tale uguaglianza e, quindi, <m>g</m> è suriettiva.
         </p>
       </statement>
     </example>
@@ -839,7 +839,7 @@
           Sia <m>A</m> un insieme dotato di una relazione di equivalenza <m>\sim</m> e sia <m>B\coloneqq A/\sim</m> l'insieme quoziente rispetto a questa relazione. Consideriamo la funzione <m>f\colon A\to B</m> definita da <m>af\coloneqq \class[\sim]{a}</m>. Questa funzione è chiaramente suriettiva: data infatti una qualsiasi classe di equivalenza, essa è immagine di tutti i propri elementi.
         </p>
         <p>
-          Notiamo che non è possibile definire una funzione <m>g\colon B\to A</m> ponendo <m>\class[\sim]{a}\coloneqq a</m>: infatti, la stessa classe può essere rappresentata tramite elementi diversi.
+          Notiamo che non è possibile definire una funzione <m>g\colon B\to A</m> ponendo <m>\class[\sim]{a}g\coloneqq a</m>: infatti, la stessa classe può essere rappresentata tramite elementi diversi.
         </p>
       </statement>
     </example>
@@ -1179,7 +1179,7 @@
     </p>
 
     <p>
-      Come già accennato, non tutti gli insiemi infiniti hanno la stessa cardinalità, cioè dati due insiemi infiniti <m>A</m> e <m>B</m> non è detto esista una funzione biiettiva da <m>A</m> e <m>B</m>. Cantor<fn><url href="https://it.wikipedia.org/wiki/Georg_Cantor" visual="">Georg Cantor</url>, 1845<ndash/>1918.</fn><idx><h>Cantor, Georg</h></idx> ha dimostrato che un insieme e il suo booleano hanno cardinalità diverse: in particolare, un insieme infinito e il suo booleano (che è ovviamente pure infinito) hanno cardinalità diverse.
+      Come già accennato, non tutti gli insiemi infiniti hanno la stessa cardinalità, cioè dati due insiemi infiniti <m>A</m> e <m>B</m> non è detto esista una funzione biiettiva da <m>A</m> a <m>B</m>. Cantor<fn><url href="https://it.wikipedia.org/wiki/Georg_Cantor" visual="">Georg Cantor</url>, 1845<ndash/>1918.</fn><idx><h>Cantor, Georg</h></idx> ha dimostrato che un insieme e il suo booleano hanno cardinalità diverse: in particolare, un insieme infinito e il suo booleano (che è ovviamente pure infinito) hanno cardinalità diverse.
     </p>
 
   </section>

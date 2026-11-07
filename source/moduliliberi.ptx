@@ -19,7 +19,7 @@
     <definition xml:id="def-somma_diretta_esterna_moduli">
       <notation>
         <usage><m>M_{1}\oplus M_{2}\oplus \cdots \oplus M_{r}</m></usage>
-        <description>somma diretta dei moduli <m>M_{1}</m>, <m>M_{2}</m>, <m>\ldots</m>, <m>m_{r}</m></description>
+        <description>somma diretta dei moduli <m>M_{1}</m>, <m>M_{2}</m>, <m>\ldots</m>, <m>M_{r}</m></description>
       </notation>
       <statement>
         <p>
@@ -64,7 +64,7 @@
     <proposition xml:id="prop-sottomoduli_somma_diretta_isomorfi_addendi">
       <statement>
         <p>
-          Sia data la somma diretta esterna <m>M_{1}\oplus M_{2}\oplus\cdots \oplus M_{r}</m>. Fissato <m>i</m> con <m>1\le i\le n</m>, il sottoinsieme
+          Sia data la somma diretta esterna <m>M_{1}\oplus M_{2}\oplus\cdots \oplus M_{r}</m>. Fissato <m>i</m> con <m>1\le i\le r</m>, il sottoinsieme
           <md>
             N_{i}\coloneqq\{(0_{M_{1}},\ldots,0_{M_{i-1}},x_{i},0_{M_{i+1}},\ldots,0_{M_{r}})\mid x_{i}\in M_{i}\}
           </md>
@@ -92,7 +92,7 @@
             </li>
             <li xml:id="item-intersezione_coi_rimanenti_moduli">
               <p>
-                ciascun <m>N_{i}</m> ha intersezione banale con la somma dei rimanenti (in particolare, <m>N_{i}\cap N_{j}=1</m> se <m>i\ne j</m>).
+                ciascun <m>N_{i}</m> ha intersezione banale con la somma dei rimanenti (in particolare, <m>N_{i}\cap N_{j}=0</m> se <m>i\ne j</m>).
               </p>
             </li>
           </ol>
@@ -158,7 +158,7 @@
         <p>
           Sia <m>N\coloneqq N_{1}\oplus N_{2}\oplus\cdots\oplus N_{r}</m> e sia <m>\phi\colon N\to M</m> definita da
           <md>
-            (x_{1},x_{2},\cdots,x_{r})\coloneqq x_{1}+x_{2}+\cdots +x_{r}
+            (x_{1},x_{2},\cdots,x_{r})\phi\coloneqq x_{1}+x_{2}+\cdots +x_{r}
           </md>.
           Poiché <m>M=N_{1}+N_{2}+\cdots +N_{r}</m>, la funzione <m>\phi</m> è suriettiva.
         </p>
@@ -201,7 +201,7 @@
     <proposition xml:id="prop-somma_diretta_quozienti">
       <statement>
         <p>
-          Sia <m>M\coloneqq M_{1}\oplus\cdots\oplus M_{r}</m> un <m>R</m>-modulo e siano <m>N_{1}</m>, <m>\ldots</m>, <m>N_{r}</m> sottomoduli di <m>M_{1}</m>, <m>\ldots</m>, <m>M_{n}</m> rispettivamente. Posto allora <m>N\coloneqq N_{1}\oplus\cdots\oplus N_{n}</m> si ha <m>M/N\simeq M_{1}/N_{1}\oplus\cdots\oplus M_{n}/N_{n}</m>.
+          Sia <m>M\coloneqq M_{1}\oplus\cdots\oplus M_{r}</m> un <m>R</m>-modulo e siano <m>N_{1}</m>, <m>\ldots</m>, <m>N_{r}</m> sottomoduli di <m>M_{1}</m>, <m>\ldots</m>, <m>M_{r}</m> rispettivamente. Posto allora <m>N\coloneqq N_{1}\oplus\cdots\oplus N_{r}</m> si ha <m>M/N\simeq M_{1}/N_{1}\oplus\cdots\oplus M_{r}/N_{r}</m>.
         </p>
       </statement>
 
@@ -523,7 +523,7 @@
           <md>
             y_{1}b_{1}+\cdots+y_{n}b_{n}=0
           </md>
-          e, essendo gli <m>a_{i}</m> linearmente indipendenti, otteniamo che tutti gli <m>a_{i}</m> sono nulli e, analogamente, per i <m>b_{j}</m>. Dunque, gli <m>m+n</m> elementi dati sono linearmente indipendenti.
+          e, essendo gli <m>x_{i}</m> linearmente indipendenti, otteniamo che tutti gli <m>a_{i}</m> sono nulli e, analogamente, per i <m>b_{j}</m>. Dunque, gli <m>m+n</m> elementi dati sono linearmente indipendenti.
         </p>
         <p>
           Sia ora <m>(x,y)</m> un generico elemento di <m>M_{1}\oplus M_{2}</m>. Allora <m>x</m> è combinazione lineare degli <m>x_{i}</m> e <m>y</m> è combinazione lineare degli <m>y_{j}</m>. Ma allora si vede immediatamente che <m>(x,0)</m> è combinazione lineare degli elementi <m>(x_{i},0)</m> e <m>(0,y)</m> è combinazione lineare degli elementi <m>(0,y_{j})</m>. Ma allora, <m>(x,y)=(x,0)+(0,y)</m> è combinazione lineare degli <m>m+n</m> elementi dati che sono, quindi, generatori di <m>M_{1}\oplus M_{2}</m>.

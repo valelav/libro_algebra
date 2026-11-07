@@ -213,7 +213,7 @@
     <title>Tecniche di fattorizzazione</title>
 
     <p>
-      Abbiamo visto che l'anello dei polinomi a coefficienti in un domino a fattorizzazione unica è, a sua volta, un dominio a fattorizzazione unica. Vediamo ora alcune tecniche di fattorizzazione. Useremo spesso il seguente semplice risultato.
+      Abbiamo visto che l'anello dei polinomi a coefficienti in un dominio a fattorizzazione unica è, a sua volta, un dominio a fattorizzazione unica. Vediamo ora alcune tecniche di fattorizzazione. Useremo spesso il seguente semplice risultato.
     </p>
 
     <proposition xml:id="prop-irriducibilita_e_radici">
@@ -494,7 +494,7 @@
           <md>
             p=x^{4}+(a+c)x^{3}+(d+ac+b)x^{2}+(ad+bc)x+bd
           </md>
-          Uguagliando i coefficienti troviamo <m>a+c=0</m>, <m>d+ac+b=2</m>, <m>ad+bc=0</m> e <m>bd=-5</m>. Dalla prima uguaglianza troviamo <m>c=-a</m>. Le altre uguaglianze diventano <m>d+b-a^{2}=2</m>, <m>a(d-b)=0</m> e <m>bd=-5</m>. Dalla seconda di queste uguaglianze troviamo <m>a=0</m> o <m>b=d</m>: se fosse <m>b=d</m>, l'ultima uguaglianza diverrebbe <m>b^{2}=5</m> che non può essere soddisfatta per nessun valore intero di <m>b</m>; se, invece <m>a=0</m>, otteniamo <m>c=0</m> e le altre uguaglianze diventano <m>d+b=2</m> e <m>db=-5</m>: il prodotto di due numeri interi è <m>-5</m> se uno dei due è <m>1</m> e l'altro <m>-5</m> oppure uno dei due è <m>1</m> e l'altro <m>-5</m> e, in nessuno di questi casi, la somma di questi numeri è <m>2</m>. Pertanto <m>p</m> è irriducibile in <m>\Razionali[x]</m>.
+          Uguagliando i coefficienti troviamo <m>a+c=0</m>, <m>d+ac+b=2</m>, <m>ad+bc=0</m> e <m>bd=-5</m>. Dalla prima uguaglianza troviamo <m>c=-a</m>. Le altre uguaglianze diventano <m>d+b-a^{2}=2</m>, <m>a(d-b)=0</m> e <m>bd=-5</m>. Dalla seconda di queste uguaglianze troviamo <m>a=0</m> o <m>b=d</m>: se fosse <m>b=d</m>, l'ultima uguaglianza diverrebbe <m>b^{2}=5</m> che non può essere soddisfatta per nessun valore intero di <m>b</m>; se, invece <m>a=0</m>, otteniamo <m>c=0</m> e le altre uguaglianze diventano <m>d+b=2</m> e <m>db=-5</m>: il prodotto di due numeri interi è <m>-5</m> se uno dei due è <m>1</m> e l'altro <m>-5</m> oppure uno dei due è <m>-1</m> e l'altro <m>5</m> e, in nessuno di questi casi, la somma di questi numeri è <m>2</m>. Pertanto <m>p</m> è irriducibile in <m>\Razionali[x]</m>.
         </p>
 
         <p>
@@ -540,7 +540,7 @@
 
           <solution>
             <p>
-              Si applica il <xref ref="lem-eisenstein" text="title"/> con <m>p=7</m>. Il polinomio dato è irriducibile anche in <m>\Razionali[x]</m> perché è primitivo.
+              Si applica il <xref ref="lem-eisenstein" text="title"/> con <m>p=7</m>. Il polinomio dato è irriducibile anche in <m>\Interi[x]</m> perché è primitivo.
             </p>
           </solution>
         </exercise>
@@ -568,7 +568,7 @@
 
           <solution>
             <p>
-              Il polinomio non è irriducibile in <m>\Interi[x[</m> perché multiplo di <m>2</m>.
+              Il polinomio non è irriducibile in <m>\Interi[x]</m> perché multiplo di <m>2</m>.
               Dividendo per <m>2</m>, si ottiene il polinomio <m>7x^{4}-6x^{3}+20x+10</m> a cui applichiamo il <xref ref="lem-eisenstein" text="title"/> con <m>p=2</m>: questo polinomio è associato in <m>\Razionali[x]</m> (ma non in <m>\Interi[x]</m>) al polinomio dato che è, quindi, irriducibile in <m>\Razionali[x]</m>.
             </p>
           </solution>

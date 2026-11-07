@@ -5,7 +5,7 @@
 
   <introduction>
     <p>
-      Una delle basi fondanti della matematica moderna è la teoria degli insiemi. Definire con precisione un insieme è però molto più complicato di quanto si possa pensare, soprattutto per chi sta utilizzando per la prima volta un approccio astratto alla disciplina.
+      Una delle basi fondanti della matematica moderna è la teoria degli insiemi. Definire con precisione un insieme è però molto più complicato di quanto si possa pensare, soprattutto per chi utilizza per la prima volta un approccio astratto alla disciplina.
     </p>
   </introduction>
 
@@ -500,6 +500,14 @@
     </definition>
 
     <definition xml:id="def-unione_intersezione_infinita">
+      <notation>
+        <usage><m>\bigcup_{i\in I}A_{i}</m></usage>
+        <description>unione degli insiemi <m>A_{i}</m> indicizzati da <m>i\in I</m></description>
+      </notation>
+      <notation>
+        <usage><m>\bigcap_{i\in I}A_{i}</m></usage>
+        <description>intersezione degli insiemi <m>A_{i}</m> indicizzati da <m>i\in I</m></description>
+      </notation>
       <statement>
         <p>
           Se <m>\{A_{i}\}_{i\in I}</m> è una famiglia di insiemi indicizzata da un insieme (finito o infinito) non vuoto di indici <m>I</m> allora possiamo fare l'unione e l'intersezione degli <m>A_{i}</m>. Più precisamente, l'unione degli <m>A_{i}</m>, indicata con <m>\bigcup_{i\in I}A_{i}</m>, è l'insieme degli elementi che appartengono ad almeno uno degli <m>A_{i}</m>, mentre l'intersezione degli <m>A_{i}</m>, indicata con <m>\bigcap_{i\in I}A_{i}</m>, è l'insieme degli elementi che appartengono a tutti gli <m>A_{i}</m>.
@@ -697,7 +705,7 @@
       Chiamiamo allora <q>comuni</q> gli insiemi che non sono elementi di sé stessi e <q>strani</q> gli insiemi che sono elementi di sé stessi: questa non è una terminologia standard, si capisce. Consideriamo ora il sottoinsieme <m>C</m> di <m>T</m> formato dagli insiemi comuni, cioè che non hanno questa proprietà. Come detto, tutti gli esempi di insiemi visti prima d'ora non sono elementi di sé stessi e sono, dunque, elementi di <m>C</m>. Ci chiediamo ora se <m>C</m> sia, a sua volta, un insieme comune o un insieme strano. Se <m>C</m> fosse un insieme comune, allora dovrebbe appartenere all'insieme degli insiemi comuni, cioè <m>C\in C</m>: ma questa è la proprietà che definisce un insieme strano, contro l'ipotesi che <m>C</m> sia comune. Se <m>C</m> fosse un insieme strano, allora non dovrebbe appartenere all'insieme degli insiemi comuni, cioè <m>C\notin C</m>: ma questa è la proprietà che definisce un insieme comune, contro l'ipotesi che <m>C</m> sia strano. In entrambi i casi abbiamo una contraddizione.
     </p>
     <p>
-      Come si risolve questo paradosso? Per farlo è stato necessario rifondare in maniera diversa la teoria degli insiemi: il sistema di assiomi più comunemente accettato è il cosiddetto sistema ZF (Zermelo<fn>Ernst Zermelo, 1871<ndash/>1953.</fn> e Fraenkel<fn>Abraham Fraenkel, 1891<ndash />1965.</fn>), formulato nella sua forma attuale intorno agli anni venti del secolo ventesimo ed eventualmente esteso con il cosiddetto assioma della scelta. Non daremo qui dettagli su questo sistema di assiomi: diciamo solo che in questo libro potremo usare l'approccio ingenuo, senza incorrere nei problemi che questo comporta.
+      Come si risolve questo paradosso? Per farlo è stato necessario rifondare in maniera diversa la teoria degli insiemi: il sistema di assiomi più comunemente accettato è il cosiddetto sistema ZF (Zermelo<fn>Ernst Zermelo, 1871<ndash/>1953.</fn> e Fraenkel<fn>Abraham Fraenkel, 1891<ndash />1965.</fn>), formulato nella sua forma attuale intorno agli anni Venti del Novecento ed eventualmente esteso con il cosiddetto assioma della scelta. Non daremo qui dettagli su questo sistema di assiomi: diciamo solo che in questo libro potremo usare l'approccio ingenuo, senza incorrere nei problemi che questo comporta.
     </p>
 
   </section>

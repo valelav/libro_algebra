@@ -198,7 +198,7 @@
     <title>Sottomoduli</title>
 
     <p>
-      Cosi come abbiamo introdotto i concetti di sottomonoide, sottogruppo, sottoanello, possiamo introdurre la nozione di sottomodulo.
+      Così come abbiamo introdotto i concetti di sottomonoide, sottogruppo, sottoanello, possiamo introdurre la nozione di sottomodulo.
     </p>
 
     <definition xml:id="def-sottomodulo">
@@ -324,9 +324,9 @@
 
       <statement>
         <p>
-          Se <m>M</m> è un <m>R</m>-modulo e <m>\{N_{i}\}_{i\in I}</m> è una famiglia di sottomoduli di <m>M</m> (indicizzata da un insieme di indici <m>\Omega</m>), allora
+          Se <m>M</m> è un <m>R</m>-modulo e <m>\{N_{i}\}_{i\in I}</m> è una famiglia di sottomoduli di <m>M</m> (indicizzata da un insieme di indici <m>I</m>), allora
           <md>
-            \bigcap_{i\in \Omega}N_{i}
+            \bigcap_{i\in I}N_{i}
           </md>
           è un sottomodulo di <m>M</m>.
         </p>
@@ -472,7 +472,7 @@
     <definition xml:id="def-omomorfismo_moduli">
       <statement>
         <p>
-          Dati due <m>R</m>-moduli e <m>M</m> e <m>N</m>, un <term>omomorfismo</term> di <m>R</m>-moduli da <m>M</m> in <m>N</m> è una funzione <m>\phi\colon M\to N</m> tale che
+          Dati due <m>R</m>-moduli <m>M</m> e <m>N</m>, un <term>omomorfismo</term> di <m>R</m>-moduli da <m>M</m> in <m>N</m> è una funzione <m>\phi\colon M\to N</m> tale che
           <ul>
             <li>
               <p>
@@ -604,7 +604,7 @@
         </statement>
         <solution>
           <p>
-            Dai due elementi <m>x</m> e <m>y</m> in <m>M</m> e un elemento <m>a</m> di <m>R</m> si ha
+            Dati due elementi <m>x</m> e <m>y</m> in <m>M</m> e un elemento <m>a</m> di <m>R</m> si ha
             <md>
               <mrow>(x+y)\phi_{r} \amp = (x+y)r=xr+yr=x\phi_{r}+y\phi_{r}</mrow>
               <mrow> (xa)\phi_{r} \amp = (xa)r=x(ar)=x(ra)=(xr)a=x\phi_{r}\cdot a</mrow>
@@ -690,7 +690,7 @@
     <proposition xml:id="prop-omomorfismo_canonico_moduli">
       <statement>
         <p>
-          Dato un <m>R</m>.modulo <m>M</m> e un sottomodulo <m>N</m>, la funzione <m>\phi\colon M\to M/N</m> data da <m>x\phi\coloneqq N+x</m> è un omomorfismo suriettivo con nucleo <m>N</m>, detto <term>omomorfismo canonico</term>.
+          Dato un <m>R</m>-modulo <m>M</m> e un sottomodulo <m>N</m>, la funzione <m>\phi\colon M\to M/N</m> data da <m>x\phi\coloneqq N+x</m> è un omomorfismo suriettivo con nucleo <m>N</m>, detto <term>omomorfismo canonico</term>.
         </p>
       </statement>
 

@@ -744,7 +744,7 @@
     <example>
       <statement>
         <p>
-          Consideriamo l'anello <m>\mat{n}{R}</m> delle matrici quadrate di ordine <m>n</m> a coefficienti in un anello <m>R</m>. Il sottoinsieme <m>T</m> formato dalle matrici triangolari superiori, cioè dalle matrici <m>A\coloneqq(a_{ij})</m> tali che <m>a_{ij}=0</m> se <m>i \gt 0</m> è un sottoanello. Analogamente, l'insieme delle matrici triangolari inferiori e l'insieme delle matrici diagonali sono sottoanelli.
+          Consideriamo l'anello <m>\mat{n}{R}</m> delle matrici quadrate di ordine <m>n</m> a coefficienti in un anello <m>R</m>. Il sottoinsieme <m>T</m> formato dalle matrici triangolari superiori, cioè dalle matrici <m>A\coloneqq(a_{ij})</m> tali che <m>a_{ij}=0</m> se <m>i \gt j</m> è un sottoanello. Analogamente, l'insieme delle matrici triangolari inferiori e l'insieme delle matrici diagonali sono sottoanelli.
         </p>
       </statement>
     </example>
@@ -823,7 +823,7 @@
           <md>
             \bigcap_{i\in \Omega}S_{i}
           </md>
-          è un sottoanello di <m>S</m>.
+          è un sottoanello di <m>R</m>.
         </p>
       </statement>
     </proposition>
@@ -864,7 +864,7 @@
 
       <statement>
         <p>
-          Dato un sottoinsieme <m>X</m> di un anello <m>R</m>, il <term>sottoanello generato</term> da <m>X</m> è l'intersezione di tutti i sottoanelli di <m>S</m> contenenti <m>X</m>.
+          Dato un sottoinsieme <m>X</m> di un anello <m>R</m>, il <term>sottoanello generato</term> da <m>X</m> è l'intersezione di tutti i sottoanelli di <m>R</m> contenenti <m>X</m>.
         </p>
       </statement>
     </definition>
@@ -893,11 +893,11 @@
       <idx><h>sottocampo</h><h>intersezione</h></idx>
       <statement>
         <p>
-          Se <m>K</m> è un campo e <m>\{F_{i}\}_{i\in I}</m> è una famiglia di sottocampi di <m>F</m> (indicizzata da un insieme di indici <m>\Omega</m>), allora
+          Se <m>K</m> è un campo e <m>\{F_{i}\}_{i\in I}</m> è una famiglia di sottocampi di <m>K</m> (indicizzata da un insieme di indici <m>\Omega</m>), allora
           <md>
             \bigcap_{i\in \Omega}F_{i}
           </md>
-          è un sottocampo di <m>F</m>.
+          è un sottocampo di <m>K</m>.
         </p>
       </statement>
     </proposition>    
@@ -930,7 +930,7 @@
 
       <statement>
         <p>
-          Dato un sottoinsieme <m>X</m> di un anello <m>R</m>, il <term>sottoanello generato</term> da <m>X</m> è l'intersezione di tutti i sottoanelli di <m>S</m> contenenti <m>X</m>.
+          Dato un sottoinsieme <m>X</m> di un campo <m>K</m>, il <term>sottocampo generato</term> da <m>X</m> è l'intersezione di tutti i sottocampi di <m>K</m> contenenti <m>X</m>.
         </p>
       </statement>
     </definition>
@@ -974,7 +974,7 @@
           <md>
             bca=bac=abc
           </md>
-          e, dunque, <m>bc\in\cent{G}{a}</m>. Infine, <m>1a=a1=a</m>, cioè <m>1\in\cent{R}{a}</m>.
+          e, dunque, <m>bc\in\cent{R}{a}</m>. Infine, <m>1a=a1=a</m>, cioè <m>1\in\cent{R}{a}</m>.
         </p>
       </proof>
 
@@ -1102,7 +1102,7 @@
             0 \amp 0 \amp 0 \\
             0 \amp 0 \amp 0 \\
             0 \amp 1 \amp 0
-          \end{psmallmatrix}</m> non appartiene a <m>S+T</m> (infatti, in posizione <m>(2,3)</m> sia le matrici di <m>S</m> che le matrici di <m>T</m> hanno valore nullo e così pure, quindi, le loro somme). Di conseguenza, <m>S+T</m> non è un sottoanello di <m>R</m>.
+          \end{psmallmatrix}</m> non appartiene a <m>S+T</m> (infatti, in posizione <m>(3,2)</m> sia le matrici di <m>S</m> che le matrici di <m>T</m> hanno valore nullo e così pure, quindi, le loro somme). Di conseguenza, <m>S+T</m> non è un sottoanello di <m>R</m>.
         </p>
       </statement>
     </example>
@@ -1327,7 +1327,7 @@
       <exercise>
         <statement>
           <p>
-            Dato l'anello <m>\parti{A}</m> dell'<xref ref="exercise-anello_booleano"/>, mostrare che il sottoinsieme <m>F</m> formato dai sottoinsiemi <m>C</m> di <m>A</m> tali che <m>A</m> è finito o <m>A\setminus C</m> è finito è un sottoanello di <m>\parti{A}</m>.
+            Dato l'anello <m>\parti{A}</m> dell'<xref ref="exercise-anello_booleano"/>, mostrare che il sottoinsieme <m>F</m> formato dai sottoinsiemi <m>C</m> di <m>A</m> tali che <m>C</m> è finito o <m>A\setminus C</m> è finito è un sottoanello di <m>\parti{A}</m>.
           </p>
         </statement>
       </exercise>

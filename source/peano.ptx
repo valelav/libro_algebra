@@ -37,7 +37,7 @@
     <example xml:id="ex-sottoalgebre_banali">
       <statement>
         <p>
-          Data un algebra induttiva <m>A</m>, l'insieme vuoto <m>\vuoto</m> e l'insieme <m>A</m> sono ovviamente sottoalgebre induttive di <m>A</m>.
+          Data un'algebra induttiva <m>A</m>, l'insieme vuoto <m>\vuoto</m> e l'insieme <m>A</m> sono ovviamente sottoalgebre induttive di <m>A</m>.
         </p>
       </statement>
     </example>
@@ -603,7 +603,7 @@
             </li>
             <li>
               <p>
-                Se <m>n</m> è un naturale tale che <m>f_{n}</m> sia iniettiva, allora <m>f_{ns}=f_{n}f_{1}=f_{n}s</m> e, quindi, <m>f_ns</m> è iniettiva perché composta di iniettive (<xref ref="prop-composizione_iniettive_suriettive"/>).
+                Se <m>n</m> è un naturale tale che <m>f_{n}</m> sia iniettiva, allora <m>f_{ns}=f_{n}f_{1}=f_{n}s</m> e, quindi, <m>f_{ns}</m> è iniettiva perché composta di iniettive (<xref ref="prop-composizione_iniettive_suriettive"/>).
               </p>
             </li>
           </ul>
@@ -1040,7 +1040,7 @@
           Per definizione di ordine abbiamo che <m>\{h\in\Naturali\mid h\ge m\}=\alg{m}</m>. Posto <m>A\coloneqq \{m+t\mid t\in\Naturali\}</m>, dobbiamo allora provare che <m>A=\alg{m}</m>.
         </p>
         <p>
-          Per mostrare che <m>A\subseteq\alg{a}</m>, proviamo per induzione su <m>t</m> che <m>m+t\in\alg{m}</m> per ogni <m>t</m> naturale.
+          Per mostrare che <m>A\subseteq\alg{m}</m>, proviamo per induzione su <m>t</m> che <m>m+t\in\alg{m}</m> per ogni <m>t</m> naturale.
           <ul>
             <li>
               <p>
@@ -1049,7 +1049,7 @@
             </li>
             <li>
               <p>
-                Sia <m>t</m> un naturale tale che <m>m+t\in\alg{a}</m>. Allora <m>m+ts=(m+t)s\in\alg{a}s\subseteq\alg{a}</m>, dove abbiamo usato il <xref ref="lem-preassociativa_addizione"/> e il fatto che <m>\alg{a}</m> è una sottoalgebra.
+                Sia <m>t</m> un naturale tale che <m>m+t\in\alg{m}</m>. Allora <m>m+ts=(m+t)s\in\alg{m}s\subseteq\alg{m}</m>, dove abbiamo usato il <xref ref="lem-preassociativa_addizione"/> e il fatto che <m>\alg{m}</m> è una sottoalgebra.
               </p>
             </li>
           </ul>
@@ -1094,7 +1094,7 @@
           Se <m>m\le n</m>, dalla <xref ref="prop-ordine_differenza"/> esiste un naturale <m>t</m> tale che <m>n=m+t</m>. Allora <m>n\cdot l=(m+t)\cdot l=m\cdot l+t\cdot l</m> da cui segue che <m>m\cdot l\le n\cdot l</m> ancora per la <xref ref="prop-ordine_differenza"/> (abbiamo usato ripetutamente le varie proprietà delle operazioni dimostrate in precedenza).
         </p>
         <p>
-          Per il viceversa, basta provare che se <m>m \gt n</m> allora <m>m\cdot l \gt n\cdot l</m>. Dal punto precedente sappiamo che <m>m\cdot l\cdot n+l</m> e la <xref ref="prop-cancellazione_moltiplicazione"/> implica che <m>m\cdot l\ne n\cdot l</m>.
+          Per il viceversa, basta provare che se <m>m \gt n</m> allora <m>m\cdot l \gt n\cdot l</m>. Dal punto precedente sappiamo che <m>m\cdot l\ge n\cdot l</m> e la <xref ref="prop-cancellazione_moltiplicazione"/> implica che <m>m\cdot l\ne n\cdot l</m>.
         </p>
       </proof>
 
@@ -1203,7 +1203,7 @@
         <p>
           Ora <m>1\phi=\class[\sim]{(1,0)}</m>, cioè <m>\phi</m> manda l'elemento neutro di <m>\cdot</m> in <m>\Naturali</m> nell'elemento neutro di <m>\cdot</m> in <m>\Interi</m>. Inoltre
           <md>
-          m\phi\cdot n\phi=\class[\sim]{(m,0)}\cdot \class[\sim]{(n,0)}=\class[\sim]{(m\cdot 0+0\cdot n,0)}=\class[\sim]{(m\cdot n,0)}=(m\cdot n)\phi
+          m\phi\cdot n\phi=\class[\sim]{(m,0)}\cdot \class[\sim]{(n,0)}=\class[\sim]{(m\cdot n,0)}=(m\cdot n)\phi
           </md>.
           Dunque, <m>\phi</m> è un omomorfismo di monoidi moltiplicativi.
         </p>

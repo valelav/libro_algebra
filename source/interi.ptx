@@ -26,7 +26,7 @@
 
       <statement>
         <p>
-          I <term>numeri naturali</term> sono un insieme <m>\Naturali</m> dotati di una funzione <m>s\colon\Naturali\to\Naturali</m> detta <term>successore</term> e di un elemento fissato di <m>\Naturali</m> che denotiamo con il simbolo <m>0</m> tali che:
+          I <term>numeri naturali</term> sono un insieme <m>\Naturali</m> dotato di una funzione <m>s\colon\Naturali\to\Naturali</m> detta <term>successore</term> e di un elemento fissato di <m>\Naturali</m> che denotiamo con il simbolo <m>0</m> tali che:
           <ol>
             <li>
               <p>
@@ -561,7 +561,7 @@
     <lemma xml:id="lem-divisibilita_somma">
       <statement>
         <p>
-          Se <m>l\mid m</m> e <m>l\mid n</m>, allora <m>l\mid m+n</m>. Più in generale se <m>l\mid m_{i}</m> per <m>i=1,\ldots,r</m>, allora <m>l\mid m_{1}+\cdots+m_{r}</m>.
+          Se <m>l\mid m</m> e <m>l\mid n</m>, allora <m>l\mid m+n</m>. Più in generale, se <m>l\mid m_{i}</m> per <m>i=1,\ldots,r</m>, allora <m>l\mid m_{1}+\cdots+m_{r}</m>.
         </p>
       </statement>
     </lemma>
@@ -783,7 +783,7 @@
     </remark>
 
     <p>
-      Il fatto che il massimo comun divisore di due numeri sia multiplo di ogni comune, permette di ridefinire il massimo comun divisore, rimuovendo la limitazione che i numeri non siano entrambi nulli.
+      Il fatto che il massimo comun divisore di due numeri sia multiplo di ogni divisore comune, permette di ridefinire il massimo comun divisore, rimuovendo la limitazione che i numeri non siano entrambi nulli.
     </p>
 
     <definition xml:id="def-massimo_comun_divisore_anche_per_0">
@@ -827,11 +827,11 @@
           Procediamo ora per induzione su <m>n</m>: il caso <m>n=1</m> è banale.
         </p>
         <p>
-          Sia allora <m>n \gt 1</m>. Per ipotesi induttiva il massimo comun divisore <m>c</m> tra <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n-1}</m> esiste e, per opportuni interi <m>v_{1}</m>, <m>\ldots</m>, <m>v_{n_{1}}</m> si ha
+          Sia allora <m>n \gt 1</m>. Per ipotesi induttiva il massimo comun divisore <m>c</m> tra <m>a_{1}</m>, <m>a_{2}</m>, <m>\ldots</m>, <m>a_{n-1}</m> esiste e, per opportuni interi <m>v_{1}</m>, <m>\ldots</m>, <m>v_{n-1}</m> si ha
           <md>
             a_{1}v_{1}+\cdots+a_{n-1}v_{n-1}=c
           </md>.
-          Per l'<xref ref="alg-euclide" text="title"/> esiste <m>d\coloneqq (c,a_{n})</m> e <m>d=cu+a_{n}u_{n}</m> per opportuni interi <m>v</m> e <m>u_{n}</m>. Dunque, abbiamo
+          Per l'<xref ref="alg-euclide" text="title"/> esiste <m>d\coloneqq (c,a_{n})</m> e <m>d=cu+a_{n}u_{n}</m> per opportuni interi <m>u</m> e <m>u_{n}</m>. Dunque, abbiamo
           <md>
             d=cu+a_{n}u_{n}=(a_{1}v_{1}+\cdots+a_{n-1}v_{n-1})u+a_{n}u_{n}=a_{1}u_{1}+\cdots+a_{n}u_{n}
           </md>
@@ -1226,7 +1226,7 @@
 
       <proof>
         <p>
-          Per ipotesi, <m>p</m> non è coprimo con <m>b_{1}\cdots b_{r}</m>: dunque, per la <xref ref="prop-coprimo_con_prodotto"/>, <m>p</m> non è coprimo con almeno uno dei <m>b_{i}</m>, cioè, per il <xref ref="lem-divisore_coprimo_con_fattore"/>, <m>p</m> divide almeno uno dei <m>b_{i}</m>.
+          Per ipotesi, <m>p</m> non è coprimo con <m>b_{1}\cdots b_{r}</m>: dunque, per la <xref ref="prop-coprimo_con_prodotto"/>, <m>p</m> non è coprimo con almeno uno dei <m>b_{i}</m>, cioè, per il <xref ref="lem-massimo_comun_divisore_primo"/>, <m>p</m> divide almeno uno dei <m>b_{i}</m>.
         </p>
       </proof>
 
@@ -1318,7 +1318,7 @@
     </proposition>
 
     <p>
-      La proposizione precedente fornisce il metodo per il calcolo del massimo comun divisore di due interi probabilmente più familiare agli studenti: val la pena notare che l'algoritmo di Euclide è estremamente più efficiente e non richiede la conoscenza della fattorizzazione in primi degli interi coinvolti.
+      La proposizione precedente fornisce il metodo per il calcolo del massimo comun divisore di due interi probabilmente più familiare agli studenti: vale la pena notare che l'algoritmo di Euclide è estremamente più efficiente e non richiede la conoscenza della fattorizzazione in primi degli interi coinvolti.
     </p>
 
     <exercises xml:id="exercises-fattorizzazione_interi">
@@ -1453,7 +1453,7 @@
     </example>
 
     <p>
-      L'esempio precedente è in qualche modo tipico. Il caso in cui l'equazione non ha soluzione si può facilmente generalizzare a una condizione necessaria per la risolubilità. Per quanto riguarda il caso in cui invece l'equazione ha soluzione, ci rendiamo conto che è necessario un'analisi più approfondita: non possiamo certo provare tutte le possibili coppie e sperare che qualcuna di esse sia soluzione della nostra equazione.
+      L'esempio precedente è in qualche modo tipico. Il caso in cui l'equazione non ha soluzione si può facilmente generalizzare a una condizione necessaria per la risolubilità. Per quanto riguarda il caso in cui invece l'equazione ha soluzione, ci rendiamo conto che è necessaria un'analisi più approfondita: non possiamo certo provare tutte le possibili coppie e sperare che qualcuna di esse sia soluzione della nostra equazione.
     </p>
 
     <definition xml:id="def-equazione_lineare_diofantina">
@@ -1640,7 +1640,7 @@
             <mrow>x \amp =28+10h+3k</mrow>
             <mrow>y \amp =-14-5h-2k</mrow>
           </md>
-          al variare di <m>k</m> in <m>\Interi</m> (notare che abbiano usato un parametro diverso da <m>h</m>). Riassumendo, le soluzioni dell'equazione diofantina assegnata sono date da
+          al variare di <m>k</m> in <m>\Interi</m> (notare che abbiamo usato un parametro diverso da <m>h</m>). Riassumendo, le soluzioni dell'equazione diofantina assegnata sono date da
           <md>
             <mrow>x \amp =28+10h+3k</mrow>
             <mrow>y \amp =-14-5h-2k</mrow>

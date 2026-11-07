@@ -147,7 +147,7 @@
     <proposition xml:id="prop-sottogruppi_prodotto_diretto_isomorfi_fattori">
       <statement>
         <p>
-          Sia dato il prodotto diretto esterno <m>G_{1}\times G_{2}\times \cdots \times G_{r}</m>. Fissato <m>i</m> con <m>1\le i\le n</m>, il sottoinsieme
+          Sia dato il prodotto diretto esterno <m>G_{1}\times G_{2}\times \cdots \times G_{r}</m>. Fissato <m>i</m> con <m>1\le i\le r</m>, il sottoinsieme
           <md>
             H_{i}\coloneqq\{(1_{G_{1}},\ldots,1_{G_{i-1}},x_{i},1_{G_{i+1}},\ldots,1_{G_{r}})\mid x_{i}\in G_{i}\}
           </md>
@@ -485,7 +485,7 @@
         <p>
           Sia <m>H\coloneqq H_{1}\times H_{2}\times\cdots\times H_{r}</m> e sia <m>\phi\colon H\to G</m> definita da
           <md>
-            (g_{1},g_{2},\ldots,g_{r})\coloneqq g_{1}g_{2}\cdots g_{r}
+            (g_{1},g_{2},\ldots,g_{r})\phi\coloneqq g_{1}g_{2}\cdots g_{r}
           </md>.
           Poiché <m>G=H_{1}H_{2}\cdots H_{r}</m>, la funzione <m>\phi</m> è suriettiva.
         </p>
@@ -501,7 +501,7 @@
           <md>
             g_{i}^{-1}=g_{1}\cdots g_{i-1}g_{i+1}\cdots g_{r}
           </md>.
-          Ma allora, <m>g_{i}^{-1}</m> appartiene a <m>G_{i}</m> e al prodotto dei rimanenti ed è, dunque, uguale a <m>1</m> e, quindi, <m>g_{i}=1</m>, come richiesto.
+          Ma allora, <m>g_{i}^{-1}</m> appartiene a <m>H_{i}</m> e al prodotto dei rimanenti ed è, dunque, uguale a <m>1</m> e, quindi, <m>g_{i}=1</m>, come richiesto.
         </p>
       </proof>
 

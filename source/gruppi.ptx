@@ -238,7 +238,7 @@
             Sia allora <m>k</m> un naturale per cui vale la proprietà e mostriamo che vale per <m>k+1</m>. Dunque
             <md>
               <mrow> a^{m}\cdot a^{k+1} \amp = a^{m}\cdot (a^{k}\cdot a)          \amp\text{definizione di potenza} </mrow>
-              <mrow>           \amp = (a^{m}\cdot a^{k})\cdot a) \amp\text{proprietà associativa}  </mrow>
+              <mrow>           \amp = (a^{m}\cdot a^{k})\cdot a \amp\text{proprietà associativa}  </mrow>
               <mrow>           \amp = a^{m+k}\cdot a \amp\text{ipotesi induttiva}      </mrow>
               <mrow>           \amp = a^{m+k+1}  \amp\text{definizione di potenza} </mrow>
             </md>
@@ -816,7 +816,7 @@
                 <md>
                   (x,y,z)\diamond(a,b,c)=(0,0,0)
                 </md>,
-                vale a dire <m>(a+x,b+x,c+z+ay)=(0,0,0)</m> e <m>(x+a,y+b,z+c+xb)=(0,0,0)</m>. Si vede immediatamente che la terna <m>(-a,-b,-c+ab)</m> soddisfa questa condizione.
+                vale a dire <m>(a+x,b+y,c+z+ay)=(0,0,0)</m> e <m>(x+a,y+b,z+c+xb)=(0,0,0)</m>. Si vede immediatamente che la terna <m>(-a,-b,-c+ab)</m> soddisfa questa condizione.
               </p>
             </solution>
           </task>
@@ -1003,7 +1003,7 @@
             b \amp b \amp   \amp \\
           \end{array}
         </md>
-        Rimangono da riempire alcune caselle. All'incrocio della riga <m>a</m> con la riga <m>b</m> non ci può essere <m>a</m>, già presente nella riga, e non ci può essere <m>b</m>, già presente nella colonna: dunque, non ci può che essere <m>1</m>. Allo stesso modo all'incrocio della riga <m>b</m> con la colonna <m>a</m>. Procedendo poi a riempire le ulteriori caselle vuote, evitando ripetizioni sulle righe e sulle colonne otteniamo l'unica possibilità.
+        Rimangono da riempire alcune caselle. All'incrocio della riga <m>a</m> con la colonna <m>b</m> non ci può essere <m>a</m>, già presente nella riga, e non ci può essere <m>b</m>, già presente nella colonna: dunque, non ci può che essere <m>1</m>. Allo stesso modo all'incrocio della riga <m>b</m> con la colonna <m>a</m>. Procedendo poi a riempire le ulteriori caselle vuote, evitando ripetizioni sulle righe e sulle colonne otteniamo l'unica possibilità.
         <md>
           \begin{array}{c|ccc}
               \amp 1 \amp a \amp b\\

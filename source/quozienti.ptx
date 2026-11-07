@@ -496,12 +496,12 @@
         <task>
           <statement>
             <p>
-              Dimostrare che se <m>x\in G\setminus H</m> allora <m>\cent{G}{x}\cap H=1</m>.
+              Dimostrare che se <m>y\in G\setminus H</m> allora <m>\cent{G}{y}\cap H=1</m>.
             </p>
           </statement>
           <solution>
             <p>
-              Sia <m>y\in\cent{G}{x}\cap H</m>. Dunque, <m>x^{y}=x</m>. D'altra parte <m>x^{1}=x</m>: poiché sappiamo che c'è un unico elemento <m>u</m> di <m>H</m> tale che <m>x^{u}=x^{y}</m>, ne segue che <m>y=u=1</m>, cioè <m>y=1</m>.
+              Sia <m>x\in\cent{G}{y}\cap H</m>. Dunque, <m>x^{y}=x</m>. D'altra parte <m>x^{x}=x</m> e <m>x^{1}=x</m>: poiché sappiamo che c'è un unico elemento <m>u</m> di <m>H</m> tale che <m>x^{u}=x^{y}</m>, ne segue che <m>x=1</m>.
             </p>
           </solution>
         </task>
@@ -659,7 +659,7 @@
 
         <solution>
           <p>
-            Poiché <m>N</m> è normale in <m>G</m>, il prodotto <m>KN</m> è un sottogruppo di <m>G</m>, per la <xref ref="prop-prodotto_di_normale"/>. Chiaramente <m>KN</m> contiene <m>N</m>; dunque, per il <xref ref="thm-sottogruppi_quoziente"/> è un sottogruppo di <m>G/N</m>. Dal momento che <m>G/N</m> è abeliano, <m>KN/N</m> è normale in <m>G/N</m> e, sempre per il <xref ref="thm-sottogruppi_quoziente"/>, segue che <m>KN</m> è normale in <m>G</m>.
+            Poiché <m>N</m> è normale in <m>G</m>, il prodotto <m>KN</m> è un sottogruppo di <m>G</m>, per la <xref ref="prop-prodotto_di_normale"/>. Chiaramente <m>KN</m> contiene <m>N</m>; dunque, per il <xref ref="thm-sottogruppi_quoziente"/>, <m>KN/N</m> è un sottogruppo di <m>G/N</m>. Dal momento che <m>G/N</m> è abeliano, <m>KN/N</m> è normale in <m>G/N</m> e, sempre per il <xref ref="thm-sottogruppi_quoziente"/>, segue che <m>KN</m> è normale in <m>G</m>.
           </p>
         </solution>
       </exercise>

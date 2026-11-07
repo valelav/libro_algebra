@@ -780,7 +780,7 @@
 
       <remark xml:id="rem-divisibilita">
         <p>
-          Le proposizioni precedente si traducono immediatamente negli usuali criteri per testare la divisibilità per <m>9</m>, per <m>3</m> e per <m>11</m> di un numero: per <m>3</m> e <m>9</m> basta sommarne le cifre ed eventualmente ripetere il procedimento più volte fino a ottenere un numero relativamente piccolo più facile da trattare rispetto al numero di partenza; per <m>11</m> basta sommare le cifre a segni alterni.
+          Le proposizioni precedenti si traducono immediatamente negli usuali criteri per testare la divisibilità per <m>9</m>, per <m>3</m> e per <m>11</m> di un numero: per <m>3</m> e <m>9</m> basta sommarne le cifre ed eventualmente ripetere il procedimento più volte fino a ottenere un numero relativamente piccolo più facile da trattare rispetto al numero di partenza; per <m>11</m> basta sommare le cifre a segni alterni.
         </p>
       </remark>
 
@@ -1224,7 +1224,7 @@
       <example xml:id="ex-resto_con_eulero">
         <statement>
           <p>
-            Supponiamo di voler determinare il resto della divisione di <m>31^{3215}+23^{2347}</m> per <m>12</m>. In altri termini, dobbiamo cercare un intero compreso tra <m>0</m> e <m>11</m> congruo a <m>31^{3215}+23^{2347}</m> modulo <m>12</m>. Consideriamo prima <m>31^{3215}</m>: notiamo innanzitutto che <m>31\equiv 7\pmod{12}</m> e, quindi, <m>31^{3215}\equiv 7^{3215}\pmod{12}</m>. Poiché <m>7</m> è coprimo con <m>12</m>, il <xref ref="thm-eulero" text="title"/> ci dice che <m>7^{\euler{12}}\equiv 1\pmod{12}</m>: si vede facilmente che <m>\euler{12}=4</m>. Ora <m>3215\equiv 3\pmod{4}</m>, cioè <m>3125=4h+3</m> per qualche naturale <m>h</m>: dunque
+            Supponiamo di voler determinare il resto della divisione di <m>31^{3215}+23^{2347}</m> per <m>12</m>. In altri termini, dobbiamo cercare un intero compreso tra <m>0</m> e <m>11</m> congruo a <m>31^{3215}+23^{2347}</m> modulo <m>12</m>. Consideriamo prima <m>31^{3215}</m>: notiamo innanzitutto che <m>31\equiv 7\pmod{12}</m> e, quindi, <m>31^{3215}\equiv 7^{3215}\pmod{12}</m>. Poiché <m>7</m> è coprimo con <m>12</m>, il <xref ref="thm-eulero" text="title"/> ci dice che <m>7^{\euler{12}}\equiv 1\pmod{12}</m>: si vede facilmente che <m>\euler{12}=4</m>. Ora <m>3215\equiv 3\pmod{4}</m>, cioè <m>3215=4h+3</m> per qualche naturale <m>h</m>: dunque
             <md>
               7^{3215}=7^{4h+3}=(7^{4})^{h}7^{3}\equiv 1^{h}7^{3}\pmod{12}\equiv 7^{3}\pmod{12}
             </md>
@@ -1699,7 +1699,7 @@
 
         <proof>
           <p>
-            Per la <xref ref="prop-funzione_di_eulero_di_potenza_di_primo"/>, sappiamo che <m>\euler{p_{i}^{\alpha_{i}}}=p_{i}^{\alpha_{i}}-p_{t}^{\alpha_{i}-1}</m> per ogni <m>i</m>. Le formule seguono allora dal <xref ref="lem-moltiplicativita_eulero"/> e da semplici calcoli.
+            Per la <xref ref="prop-funzione_di_eulero_di_potenza_di_primo"/>, sappiamo che <m>\euler{p_{i}^{\alpha_{i}}}=p_{i}^{\alpha_{i}}-p_{i}^{\alpha_{i}-1}</m> per ogni <m>i</m>. Le formule seguono allora dal <xref ref="lem-moltiplicativita_eulero"/> e da semplici calcoli.
           </p>
         </proof>
 
